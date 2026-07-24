@@ -351,8 +351,8 @@ export default function FineDiningChefsPage() {
                 <MessageCircle className="h-4 w-4" />
                 Reserve with Adriano
               </a>
-              <Link to="/fine-dining/chefs-table" className="inline-flex items-center gap-2 text-sm font-medium text-white/[80%] transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded px-1">
-                View Chef&apos;s Table
+              <Link to="/chefs/adriano" className="inline-flex items-center gap-2 text-sm font-medium text-white/[80%] transition-colors hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded px-1">
+                Meet Adriano
                 <ChevronRight className="h-4 w-4" />
               </Link>
             </div>
@@ -537,6 +537,22 @@ export default function FineDiningChefsPage() {
         </div>
         <div className="mt-14">
           <TrustStrip dark />
+        </div>
+      </section>
+
+      <section className="py-10 px-6 bg-[#141414]">
+        <div className="max-w-[960px] mx-auto flex flex-wrap justify-center gap-x-8 gap-y-3">
+          {[
+            { label: 'Fine Dining Overview', href: '/fine-dining' },
+            { label: 'Tasting Menu', href: '/fine-dining/tasting-menu' },
+            { label: 'Our Menus', href: '/fine-dining/menus' },
+            { label: 'All Chefs', href: '/chefs' },
+            { label: 'Meet Adriano', href: '/chefs/adriano' },
+          ].map((l) => (
+            <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
+              {l.label}
+            </Link>
+          ))}
         </div>
       </section>
       <StickyMobileCTA

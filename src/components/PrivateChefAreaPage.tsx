@@ -84,6 +84,32 @@ const SERVICE_CARDS = [
   },
 ]
 
+// Route-specific internal links that aren't covered by the service grid or nearby-areas mesh.
+const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
+  canggu: [
+    { to: '/villa-chef', label: 'daily villa chef service' },
+    { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+    { to: '/journal/private-chef-canggu-guide', label: 'Canggu local' },
+  ],
+  pererenan: [
+    { to: '/villa-chef', label: 'daily villa chef service' },
+    { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+  ],
+  sanur: [
+    { to: '/villa-chef', label: 'daily villa chef service' },
+    { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+  ],
+  seminyak: [
+    { to: '/', label: 'private chef Bali' },
+    { to: '/journal/private-chef-seminyak-guide', label: 'Seminyak local' },
+  ],
+  ubud: [
+    { to: '/catering/retreat-catering', label: 'retreat catering programme' },
+    { to: '/fine-dining/menus', label: 'menus (incl. vegetarian)' },
+    { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
+  ],
+}
+
 const OCCASIONS = [
   { key: 'romantic', label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner' },
   { key: 'birthday', label: 'Birthday Party', href: '/events/birthdays' },
@@ -552,7 +578,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             </a>
             <p className="text-white/50 text-xs mt-4">
               <Link to="/pricing" className="underline hover:text-white transition-colors">
-                Full pricing guide →
+                pricing guide
               </Link>
             </p>
           </div>
@@ -608,7 +634,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
                   className="flex items-center gap-3 bg-white border border-[#E5E3E0] rounded-xl px-4 py-3 hover:border-[#C5A028] hover:text-[#C5A028] transition-all text-sm font-medium"
                 >
                   <MapPin className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
-                  {n.name}
+                  private chef in {n.name}
                 </Link>
               ))}
             </div>
@@ -664,8 +690,21 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               to={`/locations/${area.slug}`}
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all"
             >
-              View {area.name} Location Page <ArrowRight className="w-4 h-4" />
+              {area.name} dining guide <ArrowRight className="w-4 h-4" />
             </Link>
+            {AREA_RELATED_LINKS[area.slug] && (
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm text-[#4A4745]">
+                <span>Also see:</span>
+                {AREA_RELATED_LINKS[area.slug].map((link, i, arr) => (
+                  <span key={link.to}>
+                    <Link to={link.to} className="text-[#C5A028] hover:underline font-medium">
+                      {link.label}
+                    </Link>
+                    {i < arr.length - 1 ? <span className="text-[#8A8785]"> · </span> : null}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}

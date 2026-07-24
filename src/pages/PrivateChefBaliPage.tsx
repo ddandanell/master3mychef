@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { hasLocationPage } from '@/data/siteArchitecture'
+import { siteFacts } from '@/data/siteFacts'
 import { MessageCircle, Check, MapPin, ChevronRight, Star } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -12,17 +13,15 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
 import { Breadcrumb } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { siteFacts } from '@/data/siteFacts'
-
 gsap.registerPlugin(ScrollTrigger)
 
 const SITE = 'https://mychef.id'
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20check%20availability%20for%20a%20private%20chef%20fine-dining%20evening.%20Date%3A%20%20Guests%3A%20%20Villa%3A%20'
 
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Message the team on WhatsApp', body: 'Date, villa, guest count, menu preference. We reply within 2 hours with a fixed quote.' },
+  { step: '01', title: 'Message the team on WhatsApp', body: 'Tell us your date, villa, guest count, and menu preference. We reply within 2 hours with a fixed quote.' },
   { step: '02', title: 'Confirm your menu', body: 'A 50% deposit locks your date, your chef, and your arrival plan.' },
-  { step: '03', title: 'We arrive three hours early', body: 'The brigade sets the table, preps the kitchen, sources nothing you haven\'t approved.' },
+  { step: '03', title: 'We arrive three hours early', body: 'The brigade sets the table, preps the kitchen, and sources nothing you haven\'t approved.' },
   { step: '04', title: 'You dine. We clean.', body: 'Courses at your pace; the kitchen restored before we leave.' },
 ]
 
@@ -31,41 +30,41 @@ const MENUS = [
     id: 'mediterranean',
     name: 'Mediterranean Sea',
     price: 'IDR 2,200,000++',
-    tagline: 'Five courses from the coast Adriano grew up on. Italian technique, Bali\'s morning catch.',
+    tagline: 'Five courses. Italian seafood. Open kitchen.',
     accent: '#2C5F7C',
     image: '/generated/mychef-experience-bali-luna-gallery-1.webp',
     courses: [
       'Passione di Dentice — red snapper carpaccio, passion fruit, basil gelato',
-      'Burrata — prawn mousse, giardiniera, cold-pressed olive oil',
-      'Lobster Tagliatelle — handmade pasta rolled in your kitchen that afternoon, lobster reduction, cherry tomatoes',
+      'Burrata — prawn mousse, giardiniera, extra virgin olive oil',
+      'Lobster Tagliatelle — handmade pasta, lobster reduction, cherry tomatoes, basil',
       'Barramundi and the Sea — barramundi roll, clams, Mediterranean sauce, green beans',
-      'Tiramisu — house-made ladyfingers, mascarpone, Illy espresso, dark cocoa',
+      'Tiramisu — house-made lady fingers, mascarpone, Illy espresso, dark cocoa',
     ],
   },
   {
     id: 'wagyu',
     name: 'Wagyu Experience',
     price: 'IDR 2,400,000++',
-    tagline: 'Wagyu Tokusen in three forms. Open flame, live in front of your guests.',
+    tagline: 'Wagyu Tokusen in three forms. Open flame.',
     accent: '#8B4513',
     image: '/generated/mychef-finedining-bali-luna-plating.webp',
     courses: [
       'My Beef Tartare — Wagyu chuck tender, polenta chips, cured egg, rocket, basil oil',
       'Ravioli di Coda — oxtail ragout, Grana Padano sauce, kale foam',
       'Ribollita — white bean, kale, rosemary, Parmigiano Reggiano',
-      'Wagyu Ribeye — Tokusen over open flame, topinambur cream, blue cheese, walnuts',
+      'Wagyu Ribeye — Tokusen, open flame, topinambur cream, blue cheese sauce, walnuts',
       'Tenerina Cake — Callebaut 56% chocolate, salted caramel gelato, sea salt',
     ],
   },
 ]
 
 const INCLUDED = [
-  { icon: '👨‍🍳', label: 'Michelin-trained executive chef', desc: 'Plus kitchen and service brigade' },
-  { icon: '🛒', label: 'All ingredients', desc: 'Premium suppliers and same-morning market runs' },
-  { icon: '🕯️', label: 'Full table setting', desc: 'Linens, glassware, tableware, candles' },
-  { icon: '🍷', label: 'Service across every course', desc: 'At your pace, with wine service included' },
-  { icon: '🥗', label: 'Dietary adaptation', desc: 'Vegan, halal, gluten-free, allergies — no extra charge' },
-  { icon: '✨', label: 'Complete kitchen cleanup', desc: 'Before departure' },
+  { icon: '🍽️', label: 'Chef team of 6–10', desc: 'Executive chef, sous chef, line cook, server, and kitchen assistant' },
+  { icon: '🛒', label: 'Grocery sourcing', desc: 'Same-day market and premium supplier runs included' },
+  { icon: '🕯️', label: 'Full table setup', desc: 'Linens, glassware, tableware, and presentation candles' },
+  { icon: '🍷', label: 'Wine service', desc: 'Bring your own wine or add our pairing at +IDR 850K/person' },
+  { icon: '✨', label: 'Kitchen cleanup', desc: 'We restore your villa kitchen to exactly how we found it' },
+  { icon: '🥗', label: 'Dietary adaptation', desc: 'Vegan, gluten-free, halal, allergy-friendly — no extra charge' },
 ]
 
 const LOCATIONS = [
@@ -98,12 +97,14 @@ const TESTIMONIALS = [
 ]
 
 const FAQS = [
-  { q: 'Is your chef really Michelin-trained?', a: 'Adriano trained under a Michelin-starred chef in Milan and worked in Michelin-level kitchens in Modena and Tokyo. He trains every myCHEF chef personally for six to twelve months. Bali has no Michelin Guide — we describe training, not stars.' },
-  { q: 'What does a Michelin private chef in Bali cost?', a: 'The two signature menus are IDR 2,200,000++ (Mediterranean Sea) and IDR 2,400,000++ (Wagyu Experience) per person, including the full brigade, all ingredients, service and cleanup. The wider set-menu library starts at IDR 1,250,000++ per guest.' },
-  { q: 'What is the minimum group size?', a: 'Four guests for the signature menus. For two-person dinners, message us — we arrange them with a small setup premium. See our <a href="/fine-dining/romantic-dinner">romantic dinner for two</a>.' },
-  { q: 'What does "++" mean?', a: 'Eleven percent government tax plus ten percent service charge, added to the listed price. IDR 2,200,000++ is approximately IDR 2,662,000 all-in.' },
-  { q: 'How far ahead should we book?', a: 'Seven days or more is ideal; July–August and December book out two weeks ahead. We occasionally accommodate 48-hour requests — ask.' },
-  { q: 'Which villas do you cover?', a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and beyond. Remote locations may carry a small travel allowance, quoted upfront.' },
+  { q: 'What does a private chef cost in Bali?', a: 'myCHEF private chef dinners start at IDR 2,200,000 per person for the Mediterranean Sea menu, or IDR 2,400,000 for the Wagyu Experience. Both prices include the full chef team, all groceries, table service, and kitchen cleanup. Add-ons like wine pairing (IDR 850K/person) are optional.' },
+  { q: 'What is the minimum group size?', a: 'Four guests for the signature menus. For two-person dinners, message us — we arrange them with a small setup premium. See our <a href="/fine-dining/romantic-dinner">romantic dinner for two →</a>' },
+  { q: 'Do you come to any villa in Bali?', a: 'Yes — we cover all major villa areas: Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur, and surrounding areas. There may be a small travel surcharge for very remote locations.' },
+  { q: 'How far in advance do I need to book?', a: '7+ days is ideal. Peak season (July–August, December) often books 2 weeks out. For last-minute needs, message us — we sometimes accommodate 48-hour requests.' },
+  { q: 'What kitchen equipment do you need?', a: 'Any villa kitchen works. We bring specialized equipment when needed — induction burners, sous vide, plating tools. We assess every villa before confirming.' },
+  { q: 'Can you cook for guests with dietary restrictions?', a: 'Every course is adaptable. Gluten-free, vegan, halal, shellfish allergy, pregnancy-safe, nut-free — no extra charge. Tell us when booking.' },
+  { q: 'Does the price include wine?', a: 'No — wine is optional. Add our sommelier wine pairing at IDR 850,000 per person, or bring your own bottles and we will open and serve them.' },
+  { q: 'What is "++" in the pricing?', a: '"++" means 10% service charge and 11% government tax are added. So IDR 2,200,000++ equals approximately IDR 2,640,000 per person all-in.' },
 ]
 
 export default function PrivateChefBaliPage() {
@@ -129,17 +130,13 @@ export default function PrivateChefBaliPage() {
         canonical={`${SITE}/fine-dining/private-chef-bali`}
         ogImage={`${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`}
         jsonLd={[
-          {
-            ...detailedServiceSchema(
-              'Michelin-Trained Private Chef Bali',
-              'A Michelin-trained executive chef and full brigade serve two signature five-course menus — Mediterranean Sea and Wagyu Experience — privately in Bali villas.',
-              `${SITE}/fine-dining/private-chef-bali`
-            ),
-            offers: [
-              offerSchema('Mediterranean Sea (5 courses)', 2200000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
-              offerSchema('Wagyu Experience (5 courses)', 2400000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
-            ],
-          },
+          detailedServiceSchema(
+            'Michelin-Trained Private Chef Bali',
+            'A Michelin-trained executive chef and full brigade serve two signature five-course menus — Mediterranean Sea and Wagyu Experience — privately in Bali villas.',
+            `${SITE}/fine-dining/private-chef-bali`
+          ),
+          offerSchema('Mediterranean Sea (5 courses)', 2200000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
+          offerSchema('Wagyu Experience (5 courses)', 2400000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           breadcrumbSchema('Michelin Private Chef Bali', `${SITE}/fine-dining/private-chef-bali`, 'Fine Dining', `${SITE}/fine-dining`),
         ]}
@@ -168,17 +165,17 @@ export default function PrivateChefBaliPage() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24">
           <p className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            myCHEF.id · Michelin-Trained Private Chef · Bali
+            myCHEF.id · Private Chef Service · Bali
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             A Michelin-Trained Private Chef.<br />
             <span className="italic">At Your Villa.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-3 max-w-2xl mx-auto leading-relaxed">
-            A full chef brigade arrives at your villa three hours before the first course. Everything is cooked in your kitchen, plated at your table, and cleaned away before you notice. Two signature menus, one fixed standard: the discipline of a decade in Michelin kitchens, delivered privately.
+            We arrive at your villa 3 hours early. We cook, serve every course, and leave your kitchen spotless.
           </p>
           <p className="text-white/[55%] text-sm mb-10 tracking-wide">
-            Mediterranean Sea — IDR 2,200,000++ per person · Wagyu Experience — IDR 2,400,000++ per person · Minimum 4 guests · Bali-wide
+            From IDR 2,200,000 per person · All ingredients included · Bali-wide service
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
@@ -193,12 +190,12 @@ export default function PrivateChefBaliPage() {
               to="/fine-dining/menus"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
             >
-              Browse All 24 Set Menus <ChevronRight className="w-4 h-4" />
+              Browse Menus <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Michelin-trained chef team</span>
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> All ingredients included</span>
+            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> All groceries included</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full cleanup after dinner</span>
           </div>
         </div>
@@ -206,7 +203,7 @@ export default function PrivateChefBaliPage() {
 
       <TrustStrip />
 
-      {/* ══════════════════════════════════ WHAT MICHELIN-TRAINED MEANS ══════════════════════════════════ */}
+      {/* ══════════════════════════════════ THE EXPERIENCE ══════════════════════════════════ */}
       <section className="py-24 px-6 bg-[#1A1A1A]">
         <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="pcb-reveal">
@@ -218,53 +215,41 @@ export default function PrivateChefBaliPage() {
           </div>
           <div className="pcb-reveal">
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              The Standard
+              What This Is
             </p>
             <h2 className="text-white text-3xl md:text-4xl mb-6 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-              What "Michelin-Trained"<br />Means Here
+              No other table.<br />No other guests.
             </h2>
             <p className="text-white/[70%] text-base leading-relaxed mb-6">
-              Bali has no Michelin Guide — anyone promising you a "Michelin-starred dinner in Bali" is inventing it. What exists here is Michelin-calibre training, and it is worth being precise about what that means.
-            </p>
-            <p className="text-white/[70%] text-base leading-relaxed mb-6">
-              It means your menu is led by chefs trained inside Michelin-starred kitchens — kitchens where seasoning is measured, sauces are passed, and a plate goes back if it is not exact. It means mise en place done three hours before you sit down, ingredients bought that morning, and a brigade that has cooked the same menu together until the timing is reflex.
+              Just your space, your people, and a chef who trained for a decade in fine-dining kitchens in {siteFacts.founderTrainingCity}. The menu is Italian in technique, Balinese in setting — adapted to your preferences, your dietary needs, and the season.
             </p>
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
-              It is a standard of work, not a sticker. We would rather show it to you than claim it.
+              We bring the kitchen to you. The team arrives 3 hours before your first course — setting the table, preparing the mise en place, sourcing that morning's freshest catch. You arrive to a table already set.
             </p>
             <Link to="/fine-dining" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
-              See the fine dining collection <ChevronRight className="w-4 h-4" />
+              See the full fine dining experience <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════ THE CHEF BEHIND THE STANDARD ══════════════════════════════════ */}
+      {/* ══════════════════════════════════ HOW IT WORKS ══════════════════════════════════ */}
       <section className="py-24 px-6 bg-[#FAFAF8]">
-        <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div className="pcb-reveal order-2 md:order-1">
-            <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              The Chef Behind the Standard
+        <div className="max-w-[1080px] mx-auto">
+          <div className="text-center mb-14 pcb-reveal">
+            <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              Simple Process
             </p>
-            <h2 className="text-[#1A1A1A] text-3xl md:text-4xl mb-6 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-              He left Italy with a knife, a notebook, and a decade in Michelin kitchens.
-            </h2>
-            <p className="text-[#4A4745] text-base leading-relaxed mb-4">
-              Adriano, myCHEF's founder and executive chef, trained under a Michelin-starred chef in Milan and spent over a decade in fine-dining kitchens across Italy and Japan — including Modena and a formative stage in Tokyo — before moving to Bali.
-            </p>
-            <p className="text-[#4A4745] text-base leading-relaxed mb-8">
-              He did not come to open a restaurant. He came to take restaurant-grade technique out of the dining room and into private villas — and to build a team that could hold his standard without him in the room. Every myCHEF chef trains under him for six to twelve months before leading a booking. He still leads the signature tasting menus, the <Link to="/fine-dining/chefs-table" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Chef's Table</Link>, and every training session for a team of 50+ Indonesian hospitality professionals.
-            </p>
-            <Link to="/chefs/adriano" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
-              Read Adriano's full profile <ChevronRight className="w-4 h-4" />
-            </Link>
+            <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>How It Works</h2>
           </div>
-          <div className="pcb-reveal order-1 md:order-2">
-            <img
-              src="/generated/mychef-finedining-bali-luna-chef-portrait.webp"
-              alt="Adriano — myCHEF executive chef, Michelin-trained, Bali private dining"
-              width={800} height={1000} loading="lazy" decoding="async"
-              className="w-full h-auto object-cover rounded-[20px]" />
+          <div className="grid md:grid-cols-4 gap-8">
+            {HOW_IT_WORKS.map((item) => (
+              <div key={item.step} className="pcb-reveal">
+                <p className="text-5xl font-light text-[#C5A028] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.step}</p>
+                <h3 className="text-lg mb-3 font-medium">{item.title}</h3>
+                <p className="text-[#4A4745] text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -276,7 +261,7 @@ export default function PrivateChefBaliPage() {
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Two Menus
             </p>
-            <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>Two Signature Menus</h2>
+            <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>Choose Your Dinner</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {MENUS.map((menu) => (
@@ -295,53 +280,43 @@ export default function PrivateChefBaliPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/fine-dining/menus" className="inline-flex items-center gap-1.5 text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5" style={{ color: menu.accent }}>
-                    Browse all 24 set menus <ChevronRight className="w-4 h-4" />
+                  <Link to="/fine-dining" className="inline-flex items-center gap-1.5 text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5" style={{ color: menu.accent }}>
+                    See full experience <ChevronRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-center mt-12 text-[#4A4745] text-sm leading-relaxed max-w-2xl mx-auto pcb-reveal">
-            Add sommelier wine pairing at <strong>+IDR 850,000 per guest</strong>, or bring your own bottles and we open and serve them. Both menus adapt fully to dietary needs at no extra charge. Looking for a progression built course-by-course around you? See <Link to="/fine-dining/tasting-menu" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">the five-act tasting menu</Link>.
-          </p>
         </div>
       </section>
 
-      {/* ══════════════════════════════════ HOW AN EVENING WORKS ══════════════════════════════════ */}
-      <section className="py-24 px-6 bg-[#FAFAF8]">
-        <div className="max-w-[1080px] mx-auto">
-          <div className="text-center mb-14 pcb-reveal">
-            <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-              Simple Process
-            </p>
-            <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>How an Evening Works</h2>
-          </div>
-          <div className="grid md:grid-cols-4 gap-8">
-            {HOW_IT_WORKS.map((item) => (
-              <div key={item.step} className="pcb-reveal">
-                <p className="text-5xl font-light text-[#C5A028] mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.step}</p>
-                <h3 className="text-lg mb-3 font-medium">{item.title}</h3>
-                <p className="text-[#4A4745] text-sm leading-relaxed">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════ WHO BOOKS ══════════════════════════════════ */}
+      {/* ══════════════════════════════════ ADRIANO'S STORY ══════════════════════════════════ */}
       <section className="py-24 px-6 bg-[#1A1A1A]">
-        <div className="max-w-[900px] mx-auto text-center pcb-reveal">
-          <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            Who Books
-          </p>
-          <h2 className="text-3xl md:text-4xl mb-8 text-white" style={{ fontFamily: "'Playfair Display', serif" }}>Who Books a Michelin Private Chef</h2>
-          <p className="text-white/[70%] text-base leading-relaxed mb-8">
-            Guests who would otherwise book Bali's top restaurants — and want the same standard without the room. Milestone birthdays and anniversaries. Executive dinners where the conversation is private. VIP stays where the villa is the point. And food-focused travellers who want the <Link to="/fine-dining/chefs-table" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Chef's Table</Link>: six seats, Adriano at the counter, Friday and Saturday only.
-          </p>
-          <Link to="/fine-dining/our-chefs" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
-            Meet the fine-dining brigade <ChevronRight className="w-4 h-4" />
-          </Link>
+        <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div className="pcb-reveal order-2 md:order-1">
+            <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+              The Founder
+            </p>
+            <h2 className="text-white text-3xl md:text-4xl mb-6 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+              He left Italy with a knife, a notebook, and a decade in Michelin kitchens.
+            </h2>
+            <p className="text-white/[70%] text-base leading-relaxed mb-4">
+              Adriano, myCHEF's founder and executive chef, trained under a Michelin-starred chef in Milan and spent over a decade in fine-dining kitchens across Italy and Japan — including Modena and a formative stage in Tokyo — before moving to Bali.
+            </p>
+            <p className="text-white/[70%] text-base leading-relaxed mb-8">
+              He still leads every tasting menu, every Chef's Table, and every training session for the team of 50+ Indonesian hospitality professionals he has built.
+            </p>
+            <Link to="/chefs/adriano" className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
+              Meet Adriano <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="pcb-reveal order-1 md:order-2">
+            <img
+              src="/generated/mychef-finedining-bali-luna-chef-portrait.webp"
+              alt="Adriano — myCHEF executive chef, Michelin-trained, Bali private dining"
+              width={800} height={1000} loading="lazy" decoding="async"
+              className="w-full h-auto object-cover rounded-[20px]" />
+          </div>
         </div>
       </section>
 
@@ -352,7 +327,7 @@ export default function PrivateChefBaliPage() {
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               Everything Included
             </p>
-            <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>What's Included</h2>
+            <h2 className="text-3xl md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>What You Get</h2>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {INCLUDED.map((item) => (
@@ -363,9 +338,6 @@ export default function PrivateChefBaliPage() {
               </div>
             ))}
           </div>
-          <p className="text-center mt-12 text-[#4A4745] text-sm leading-relaxed max-w-2xl mx-auto pcb-reveal">
-            "++" adds 11% government tax and 10% service charge — your quote is fixed in writing before you commit. See <Link to="/pricing" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">full pricing</Link> for the wider menu library.
-          </p>
         </div>
       </section>
 
@@ -454,18 +426,19 @@ export default function PrivateChefBaliPage() {
         >
           <MessageCircle className="w-5 h-5" /> Check Availability on WhatsApp
         </a>
-        <p className="text-white/[30%] text-xs mt-6">+62 896-7407-2020 · Replies within 2 hours · No booking fee · Bali-wide</p>
+        <p className="text-white/[30%] text-xs mt-6">Replies within 2 hours · No booking fee · Bali-wide</p>
       </section>
 
       <section className="py-10 px-6 bg-[#141414]">
         <div className="max-w-[960px] mx-auto flex flex-wrap justify-center gap-x-8 gap-y-3">
           {[
-            { label: 'Fine Dining', href: '/fine-dining' },
-            { label: 'Our Menus', href: '/fine-dining/menus' },
+            { label: 'Fine Dining Overview', href: '/fine-dining' },
             { label: 'Tasting Menu', href: '/fine-dining/tasting-menu' },
+            { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner' },
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
+            { label: 'Our Menus', href: '/fine-dining/menus' },
             { label: 'Our Chefs', href: '/fine-dining/our-chefs' },
-            { label: 'Adriano', href: '/chefs/adriano' },
+            { label: 'Meet Adriano', href: '/chefs/adriano' },
             { label: 'Pricing', href: '/pricing' },
           ].map((l) => (
             <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -477,8 +450,9 @@ export default function PrivateChefBaliPage() {
       <StickyMobileCTA
         pageSource="private-chef-bali"
         serviceType="private-chef"
-        label="Check Availability via WhatsApp"
-        message="Hi myCHEF, I'd like to check availability for a private chef fine-dining evening. Date:  Guests:  Villa: "
+        label="Book a Private Chef via WhatsApp"
+        serviceName="a private chef in Bali"
+        intent="pricing and availability"
       />
     </div>
   )

@@ -27,9 +27,10 @@ export function BarServiceDeliverables({ deliverables, image, imagePosition = 'r
             <h3 className="text-lg font-semibold text-[#F5F2EB] mb-3">
               {d.title}
             </h3>
-            <p className="text-[#F5F2EB]/65 text-sm leading-relaxed">
-              {d.description}
-            </p>
+            <p
+              className="text-[#F5F2EB]/65 text-sm leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: d.description }}
+            />
           </div>
         ))}
       </div>

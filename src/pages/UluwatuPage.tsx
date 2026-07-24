@@ -2,72 +2,77 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { CITY_CONTENT } from '@/data/cityContent'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
-const WA_MSG = encodeURIComponent('Hi myCHEF, I want to book a private chef in Uluwatu. Can you send me pricing?')
+const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Uluwatu. Can you send a menu proposal?')
 
 const FAQS = [
   {
-    q: 'Do you provide private chef services in Uluwatu?',
-    a: 'Yes — myCHEF operates throughout Uluwatu, Bingin, Padang-Padang, Pecatu, and Ungasan. We have experience with the unique access logistics of cliff-facing villas and work with the wind and sunset conditions specific to the area.',
+    q: 'Where should we eat out in Uluwatu?',
+    a: 'Clifftop sunset venues for the big-view experience, Bingin and Padang-Padang beach grills for barefoot seafood, and the Ungasan corridor for casual local meals. Everything requires transport — plan around the sunset.',
   },
   {
-    q: 'What makes Uluwatu dining different from other Bali areas?',
-    a: 'Uluwatu villas are built for drama — clifftop terraces, open-air dining rooms, and unobstructed Indian Ocean views. We plan every event around this backdrop, timing courses to sunset, managing wind exposure for open-fire cooking, and sourcing directly from the Bingin and Padang-Padang fish landings for maximum freshness.',
+    q: 'Is Uluwatu dining really that spread out?',
+    a: "Yes — venues are kilometres apart along cliff roads, and there is no walkable dining strip. It's the main reason in-villa dining is so popular with Bukit villa guests.",
   },
   {
-    q: 'How much does a private chef cost in Uluwatu?',
-    a: 'Private chef pricing in Uluwatu starts at IDR 700K–750K per person for intimate villa dinners (2–10 guests). Wedding rehearsal dinners and event catering typically range from IDR 700K–1.5M per person depending on menu, staffing, and guest count. All prices are subject to 11% tax + 10% service charge.',
+    q: 'How much does private dining in Uluwatu cost?',
+    a: 'Clifftop villa dinners start at IDR 700K–750K per person and seafood BBQs at IDR 700K–900K, quoted ++ (11% tax plus 10% service). Wedding and event menus range higher depending on production. Quotes are fixed upfront.',
   },
   {
-    q: 'Can you cater weddings and rehearsal dinners in Uluwatu?',
-    a: 'Yes — wedding and event catering is a primary service in Uluwatu. We handle rehearsal dinners, post-wedding brunches, and intimate villa ceremonies. Our team coordinates with villa managers and wedding planners, and we supply chefs, waitstaff, and bartenders for a seamless event.',
+    q: 'How does sunset timing work for a villa dinner?',
+    a: "We plan the run sheet around the day's sunset: aperitifs in the light, first course as the sun drops, mains under the stars — adjusted for the season and your terrace's exposure.",
   },
   {
-    q: 'Do you do seafood BBQs in Uluwatu?',
-    a: 'Absolutely. Our clifftop seafood BBQ is one of our most requested Uluwatu experiences — live-fire grilling of lobster, local snapper, and whole prawns, sourced from the Bingin and Padang-Padang fish landings on the day of your event. We manage the setup, fire, and cleanup on your terrace.',
+    q: 'Can you cater a clifftop wedding dinner?',
+    a: 'Yes — rehearsal dinners and wedding receptions with full chef brigade, waitstaff, bar service and complete production, coordinated with your villa or venue manager.',
   },
   {
-    q: 'Are your Uluwatu chefs Indonesian?',
-    a: 'Yes — all myCHEF chefs are Indonesian professionals trained to international culinary standards. They are deeply familiar with local Balinese ingredients, surf-town culture, and the hospitality expectations of Uluwatu\'s international villa guests.',
+    q: 'Are there travel fees for remote villas?',
+    a: 'A small travel allowance can apply for remote headland properties; it\'s always quoted upfront before you confirm.',
   },
 ]
 
-const AREAS = [
-  { name: 'Uluwatu Clifftops', note: 'The dramatic edge. Clifftop villas with Indian Ocean panoramas — ideal for sunset tasting menus.' },
-  { name: 'Bingin', note: 'Intimate and local. Smaller villas close to the surf break. Seafood BBQs and casual fine dining.' },
-  { name: 'Padang-Padang', note: 'Boutique enclave with direct fish landing access. Our freshest catch comes from here.' },
-  { name: 'Pecatu & Ungasan', note: 'Larger estate properties. Full catering brigade and villa-scale events.' },
-  { name: 'Balangan', note: 'Quieter white-sand approach. Private dinners for couples and small family groups.' },
-  { name: 'Nyang Nyang', note: 'Remote clifftop. Exclusive access for ultra-private dining experiences.' },
+const SCENE = [
+  {
+    name: 'Clifftop sunset venues',
+    detail: 'The famous end of the spectrum: big-view restaurants and beach clubs cantilevered over the ocean, built for sunset sessions with DJs, cocktails and sharing plates. Unforgettable atmosphere — but expect peak-season crowds, minimum spends at golden hour, and a table that\'s very much not your own.',
+  },
+  {
+    name: 'Bingin & Padang-Padang: barefoot seafood',
+    detail: 'Down the cliff stairs, the surf beaches run a looser operation: family-run grills and warungs serving the day\'s catch metres from the sand. Unpolished, excellent value, and the freshest eating in the area — the same landings our chefs buy from each morning.',
+  },
+  {
+    name: 'Ungasan & Pecatu: estate dining and local warungs',
+    detail: 'Inland and along the resort corridor, the scene thins to hotel restaurants, a few polished independents, and simple local warungs on the main roads. Fine for lunch; thin for a special dinner — one reason so many Bukit villa guests eat in.',
+  },
 ]
 
 const SERVICES = [
   {
-    name: 'Clifftop Villa Dining',
+    name: 'Clifftop villa dinners',
     range: 'IDR 700K–750K / person',
     for: '2–12 guests',
-    detail: 'Multi-course plated dinners designed for Uluwatu\'s open-air terraces. Sunset timing included — first course as the sun drops, mains under the stars. Seafood-forward menus available.',
+    detail: 'Multi-course menus with sunset timing included.',
   },
   {
-    name: 'Seafood BBQ Feast',
+    name: 'Live-fire seafood BBQs',
     range: 'IDR 700K–900K / person',
     for: '8–40 guests',
-    detail: 'Live-fire seafood BBQ using lobster, whole snapper, and jumbo prawns sourced from local landings. Our chefs manage the fire, the timing, and the cleanup. No restaurants can match this freshness.',
+    detail: 'Lobster, whole snapper and jumbo prawns from the local landings.',
   },
   {
-    name: 'Wedding & Rehearsal Dinners',
-    range: 'IDR 700K–1.8M / person',
-    for: '20–150 guests',
-    detail: 'Rehearsal dinners, post-ceremony brunches, and intimate villa weddings with full F&B production — chefs, waitstaff, bar service, linen, and full cleanup included.',
+    name: 'Wedding and rehearsal dinners',
+    range: 'From IDR 700K / person',
+    for: 'Large clifftop events',
+    detail: 'With full service brigades.',
   },
   {
-    name: 'Surf Retreat Catering',
+    name: 'Surf retreat catering',
     range: 'From IDR 700K / person',
     for: '6–30 guests',
-    detail: 'Multi-day catering packages for surf retreats, wellness groups, and yoga retreat guests. Three meals a day, dietary flexibility, and a menu that fuels active days in the water.',
+    detail: 'Multi-day packages for active groups.',
   },
 ]
 
@@ -76,34 +81,24 @@ export default function UluwatuPage() {
 
   const localBizUluwatu = {
     ...localBusinessSchema,
-    name: 'myCHEF.id Uluwatu',
-    description: 'Private chef, clifftop villa dining, seafood BBQ, and wedding catering in Uluwatu, Bali',
-    areaServed: {
-      '@type': 'Place',
-      name: 'Uluwatu, Bali',
-    },
+    name: 'myCHEF',
+    description: 'Premium clifftop in-villa dining and chef services in Uluwatu, Bali — sunset-timed menus, seafood from local landings, HACCP-certified, fixed upfront pricing.',
+    areaServed: { '@type': 'Place', name: 'Uluwatu, Bali' },
+    priceRange: 'IDR 700,000+ per person',
+    url: canonical,
   }
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Uluwatu | Seafood BBQ & Wedding Catering — myCHEF"
-        description="Book a private chef in Uluwatu for clifftop villa dinners, seafood BBQs & weddings. Indonesian chefs, Indian Ocean views, Michelin standards. Request a quote."
+        title="Private Dining in Uluwatu | Dining Guide & Chef Services"
+        description="Where to eat in Uluwatu: the area dining guide — restaurants, private dining and in-villa chef services for your Uluwatu stay. By myCHEF."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-uluwatu.webp"
         jsonLd={[
           localBizUluwatu,
-          breadcrumbSchema('Private Chef Uluwatu', canonical, 'Locations', 'https://mychef.id/locations'),
-          faqPageSchema([...FAQS, ...CITY_CONTENT['uluwatu'].faqs].map(f => ({ question: f.q, answer: f.a }))),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'Private Chef Uluwatu',
-            description: 'Premium private chef, clifftop villa dining, seafood BBQ, and wedding catering across Uluwatu, Bingin, Padang-Padang, Pecatu, and Ungasan.',
-            provider: { '@id': 'https://mychef.id/#business' },
-            areaServed: { '@type': 'Place', name: 'Uluwatu, Bali' },
-            url: canonical,
-          },
+          breadcrumbSchema('Uluwatu', canonical, 'Locations', 'https://mychef.id/locations'),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />
 
@@ -112,7 +107,7 @@ export default function UluwatuPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-uluwatu.webp"
-            alt="Private chef service in Uluwatu, Bali by myCHEF — clifftop sunset dinner over the ocean"
+            alt="Private dining in Uluwatu, Bali — in-villa chef dinner by myCHEF"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"
@@ -122,12 +117,12 @@ export default function UluwatuPage() {
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.20) 100%)' }} />
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Uluwatu</p>
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Uluwatu Dining Guide</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Chef<br />in Uluwatu
+            Private Dining in Uluwatu: Where to Eat & In-Villa Chef Options
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Clifftop villa dining with the Indian Ocean as your backdrop. Seafood BBQs, sunset tasting menus, and wedding catering across Uluwatu's most dramatic estates.
+            Uluwatu does drama better than anywhere else in Bali. The Bukit Peninsula's southern edge is all sheer limestone cliffs, world-famous surf breaks and estates perched above the Indian Ocean. Below: where to eat out across the cliffs, what private dining means in an area with this much sky, and why the best sunset table in Uluwatu might be the one on your own terrace.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -136,7 +131,7 @@ export default function UluwatuPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> Get an Uluwatu Quote
+              <MessageCircle className="w-4 h-4" /> Plan an Uluwatu Dinner
             </a>
             <Link
               to="/pricing"
@@ -148,33 +143,27 @@ export default function UluwatuPage() {
         </div>
       </section>
 
-      {/* Why myCHEF in Uluwatu */}
+      {/* What Makes Dining in Uluwatu Different */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Uluwatu's Private Chef Specialists</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-6">The myCHEF Standard in Uluwatu</h2>
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">What Makes It Different</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">What Makes Dining in Uluwatu Different</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-4 leading-relaxed">
-              Uluwatu is Bali's most dramatic address — sheer limestone cliffs, world-class surf breaks, and private estates perched at the edge of the Indian Ocean. The villas here are built for the view, with sweeping open-air terraces and outdoor dining rooms that demand a culinary experience worthy of the setting. Discover what <Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">cliffside fine dining</Link> looks like with a private chef.
-            </p>
-            <p className="mb-4 leading-relaxed">
-              myCHEF has operated in Uluwatu since our founding, building deep knowledge of cliff-facing property logistics, local supplier networks, and the high expectations of the international guests who stay here. We source seafood directly from the Bingin and Padang-Padang fish landings — often within hours of the catch arriving. Our menus are designed around Uluwatu's wind patterns and sun timing, so your sunset course lands precisely as the horizon turns gold.
-            </p>
-            <p className="mb-0 leading-relaxed">
-              Every chef on our Uluwatu team is Indonesian, fluent in English, and experienced in both traditional Balinese cuisine and European fine dining techniques. Whether you are hosting an intimate dinner for two, a cliff-side seafood BBQ for twenty, or <Link to="/events" className="text-[#C5A028] hover:underline font-medium">Uluwatu villa weddings and events</Link> for eighty, we bring Michelin-level execution to your villa terrace. See <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">our pricing guide</Link> for a full overview.
+              Three realities shape eating here. <strong>Distance</strong>: venues are strung along kilometres of cliff road from Balangan to Ungasan — there is no "strip" to stroll, and dinner usually means a drive. <strong>The sun</strong>: the entire area faces west, and golden hour is the daily centrepiece; every venue, and every good villa dinner, is timed around it. <strong>The setting</strong>: clifftop villas here are built with open-air dining pavilions and horizon views that most restaurants would kill for. The airport is roughly 40 minutes away, and the guest mix — luxury villa stays, wedding parties, surf crews — expects the food to match the view.
             </p>
           </div>
 
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {[
-              'Clifftop villa specialists — experienced with open-air cooking',
-              'Direct access to Bingin & Padang-Padang fish landings',
-              'Sunset-timed course pacing on request',
-              'HACCP-certified kitchen practices, same-day food safety',
-              '50% deposit to secure your date — balance 48h before event',
-              'WhatsApp response within 2 hours (07:00–22:00 WITA)',
-              'Full service team: chefs, waitstaff, sommelier on request',
-              'Indonesian chefs trained to international culinary standards',
+              'Dramatic clifftop and open-air villa settings',
+              'Sunset is the daily dining centrepiece',
+              'Seafood sourced from Bingin and Padang-Padang landings',
+              'No walkable dining strip — venues are kilometres apart',
+              'HACCP-certified Indonesian cliff-specialist chefs',
+              'Sunset-timed course pacing as standard',
+              'Fixed upfront pricing quoted ++',
+              'Wedding, proposal and surf-retreat catering',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[#C5A028] flex-shrink-0 mt-0.5" />
@@ -185,11 +174,53 @@ export default function UluwatuPage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Scene by Category */}
       <section className="py-20 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">What We Offer</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-12">Private Chef Services in Uluwatu</h2>
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Where to Eat Out</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-12">Where to Eat in Uluwatu: The Scene by Category</h2>
+          <p className="text-[#4A4745] mb-10 max-w-2xl leading-relaxed">
+            We cook on these cliffs every week; this is the honest layout.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {SCENE.map((s, i) => (
+              <div key={i} className="border border-[#E8E6E3] rounded-2xl p-6 hover:border-[#C5A028] transition-colors">
+                <h3 className="font-playfair text-xl mb-2">{s.name}</h3>
+                <p className="text-[#4A4745] text-sm leading-relaxed">{s.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Private Dining Options */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Formats</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">Your Private Dining Options in Uluwatu</h2>
+          <div className="prose prose-lg text-[#4A4745] max-w-none">
+            <ul className="list-disc pl-5 mb-4 space-y-2">
+              <li><strong>Eating out</strong> — unbeatable views at the clifftop venues, traded against crowds, drives and fixed seatings.</li>
+              <li><strong>Resort restaurants</strong> — polished and reliable, with resort pricing and other guests.</li>
+              <li><strong>In-villa private dining</strong> — a chef team cooks and serves on your own cliff terrace, with courses timed to the sunset you're already watching. In an area where the setting is the restaurant, your villa is often the best room in town.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Chef Services */}
+      <section className="py-20 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">The In-Villa Answer</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">The In-Villa Answer: Chef Services in Uluwatu</h2>
+          <div className="prose prose-lg text-[#4A4745] max-w-none mb-10">
+            <p className="mb-4 leading-relaxed">
+              Our Uluwatu teams are cliff specialists: experienced with open-air kitchens, wind exposure and access-logistics for estate properties. Seafood comes direct from the Bingin and Padang-Padang landings — often within hours of the catch — and menus are paced around the sun: first course as the light drops, mains under the stars. All chefs are Indonesian and HACCP-certified.
+            </p>
+            <p className="mb-0 leading-relaxed">
+              All prices quoted ++ (11% government tax plus 10% service charge), fixed upfront, with any travel allowance for remote headlands confirmed before you book. Full menus and availability: <Link to="/private-chef/uluwatu" className="text-[#C5A028] hover:underline font-medium">hire a private chef in Uluwatu</Link>. See our <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">transparent per-person pricing</Link> for the full picture.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 gap-6">
             {SERVICES.map((svc, i) => (
               <div key={i} className="border border-[#E8E6E3] rounded-2xl p-6 hover:border-[#C5A028] transition-colors">
@@ -202,29 +233,42 @@ export default function UluwatuPage() {
               </div>
             ))}
           </div>
-          <p className="text-[#999] text-xs mt-6">All prices subject to 11% tax + 10% service charge (++). Final pricing depends on guest count, menu complexity, and date.</p>
+          <p className="text-[#999] text-xs mt-6">All prices quoted ++ (11% government tax plus 10% service charge). Final pricing depends on guest count, menu complexity, and date.</p>
         </div>
       </section>
 
-      {/* Areas */}
+      {/* Sunset/Wedding */}
       <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Coverage Area</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-4">Uluwatu Areas We Serve</h2>
-          <p className="text-[#4A4745] mb-10 max-w-2xl leading-relaxed">
-            Our Uluwatu team covers the entire southern Bukit Peninsula. From the iconic clifftops to the quieter white-sand coves, we handle the logistics of remote and cliff-access properties.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {AREAS.map((a, i) => (
-              <div key={i} className="flex items-start gap-3 border border-[#E8E6E3] rounded-xl p-4">
-                <ChevronRight className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-semibold text-[#1A1A1A] mb-1">Private Chef {a.name}</div>
-                  <div className="text-[#8A8785] text-sm leading-snug">{a.note}</div>
-                </div>
-              </div>
-            ))}
+        <div className="max-w-4xl mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Milestones</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">Sunset Dinners, Proposals & Wedding Tables</h2>
+          <div className="prose prose-lg text-[#4A4745] max-w-none">
+            <p className="mb-0 leading-relaxed">
+              Uluwatu is where Bali comes for milestones. Elopement dinners for two to ten guests on a private cliff edge; proposal evenings where the ring appears as the horizon turns gold; rehearsal dinners and wedding receptions for up to 150 guests with the ocean as backdrop. We coordinate course pacing with the light, manage wind for open-fire cooking, and handle every logistical detail of clifftop service. For dedicated celebration formats, see our <Link to="/fine-dining/romantic-dinner" className="text-[#C5A028] hover:underline font-medium">private romantic dinner service</Link> and <Link to="/events/weddings" className="text-[#C5A028] hover:underline font-medium">wedding catering in Bali</Link>. And if seafood is the point, <Link to="/locations/jimbaran" className="text-[#C5A028] hover:underline font-medium">the Jimbaran seafood dining guide</Link> covers the bay just north of the cliffs.
+            </p>
           </div>
+        </div>
+      </section>
+
+      {/* How Booking Works */}
+      <section className="py-20 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">How It Works</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">How Booking In-Villa Dining Works</h2>
+          <ol className="space-y-4">
+            <li className="flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-[#C5A028] text-black text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+              <span className="text-[#4A4745]"><strong>WhatsApp +62 896-7407-2020</strong> with your date, villa, guest count and any dietary requirements — replies within 2 hours (07:00–22:00 WITA).</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-[#C5A028] text-black text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+              <span className="text-[#4A4745]"><strong>Receive a menu proposal and fixed quote</strong> within about 24 hours, sunset timing noted.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-[#C5A028] text-black text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+              <span className="text-[#4A4745]"><strong>Confirm with a 50% deposit.</strong> Dinners need a few days' notice; weddings and large events should be planned weeks ahead.</span>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -232,9 +276,9 @@ export default function UluwatuPage() {
       <section className="py-16 bg-[#1A1A1A] text-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Ready to Book?</p>
-          <h2 className="font-playfair text-3xl mb-4">Get Your Uluwatu Quote in 2 Hours</h2>
+          <h2 className="font-playfair text-3xl mb-4">Plan Your Uluwatu Evening</h2>
           <p className="text-white/60 mb-8 leading-relaxed">
-            Send us your date, villa, guest count, and any dietary requirements via WhatsApp. We respond within 2 hours and send a full menu proposal within 24 hours.
+            The sunset will happen with or without a booking — the question is where you're sitting. Message +62 896-7407-2020 on WhatsApp with your date and headcount, and we'll send a menu proposal, timed to the light, within 24 hours.
           </p>
           <a
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
@@ -251,9 +295,9 @@ export default function UluwatuPage() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
-          <h2 className="font-playfair text-3xl mb-10">Uluwatu Private Chef FAQ</h2>
+          <h2 className="font-playfair text-3xl mb-10">Uluwatu Dining FAQ</h2>
           <div className="space-y-4">
-            {[...FAQS, ...CITY_CONTENT['uluwatu'].faqs].map((faq, i) => (
+            {FAQS.map((faq, i) => (
               <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
                 <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
                   {faq.q}
@@ -268,40 +312,15 @@ export default function UluwatuPage() {
         </div>
       </section>
 
-      {/* Guides & Resources */}
-      <section className="py-16 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-5xl mx-auto px-6">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Guides &amp; Resources</p>
-          <h2 className="font-playfair text-2xl mb-8">Helpful reads for Uluwatu guests</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { label: 'How to hire a private chef in Bali', path: '/blog/how-to-hire-private-chef', desc: 'Complete step-by-step hiring guide — vetting, pricing, what to expect' },
-              { label: 'Chef hiring & credentials guide', path: '/blog/chef-qualifications-credentials-bali-hiring', desc: 'What qualifications to look for and red flags to avoid' },
-              { label: 'Uluwatu villa weddings & events', path: '/events', desc: 'Rehearsal dinners, cliff-side ceremonies, and celebration catering' },
-              { label: 'Private chef pricing', path: '/pricing', desc: 'Transparent starting prices for every Uluwatu service format' },
-            ].map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="group block bg-[#FAFAF8] border border-[#E8E6E3] rounded-xl p-5 hover:border-[#C5A028] transition-colors"
-              >
-                <div className="font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors mb-1">{link.label}</div>
-                <div className="text-[#8A8785] text-sm">{link.desc}</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Internal links */}
       <section className="py-16 bg-[#F5F3F0] border-t border-[#E8E6E3]">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-playfair text-2xl mb-8 text-center">Explore More Bali Locations</h2>
+          <h2 className="font-playfair text-2xl mb-8 text-center">Explore More Bali Dining Areas</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { label: 'Private Chef Seminyak', path: '/locations/seminyak', desc: 'Beach clubs, luxury villas, Bali\'s most vibrant dining scene' },
-              { label: 'Private Chef Canggu', path: '/locations/canggu', desc: 'Surf culture, creative menus, digital nomad communities' },
-              { label: 'Private Chef Ubud', path: '/locations/ubud', desc: 'Rice terraces, wellness retreats, Balinese cultural immersion' },
+              { label: 'Jimbaran dining guide', path: '/locations/jimbaran', desc: 'Bayfront seafood BBQs, fresh Kedonganan catch, sunset bay dinners' },
+              { label: 'Seminyak dining guide', path: '/locations/seminyak', desc: 'Beach clubs, luxury villas, Bali\'s most vibrant dining scene' },
+              { label: 'Ubud dining guide', path: '/locations/ubud', desc: 'Jungle villa dining, wellness retreats, Balinese feasts' },
             ].map((link) => (
               <Link
                 key={link.path}
@@ -315,13 +334,14 @@ export default function UluwatuPage() {
           </div>
         </div>
       </section>
-          {/* Cross-link to private-chef page */}
+
+      {/* Cross-link to private-chef page */}
       <section className="py-12 px-6">
         <div className="max-w-[960px] mx-auto text-center">
-          <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Private Chef in Uluwatu</h3>
-          <p className="text-gray-600 mb-6">Hire a dedicated private chef for your villa in Uluwatu. Custom menus, full service, and seamless cleanup.</p>
+          <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Looking for a Dedicated Private Chef in Uluwatu?</h3>
+          <p className="text-gray-600 mb-6">If you already know you want a private chef for your villa, our Uluwatu service page has menus, formats and fixed pricing.</p>
           <Link to="/private-chef/uluwatu" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all">
-            View Private Chef Options <ChevronRight className="w-4 h-4" />
+            Hire a private chef in Uluwatu <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

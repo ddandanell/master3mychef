@@ -1,58 +1,125 @@
 import { Link } from 'react-router-dom'
-import { MessageCircle, ArrowRight, PartyPopper, Heart, Cake, Users, Briefcase, Gem, ChefHat, CalendarCheck, MapPin } from 'lucide-react'
+import { MessageCircle, ArrowRight, PartyPopper, Heart, Flame, Users, Briefcase, Gem, ChefHat, CalendarCheck, MapPin } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
-import { getLocationCanonical } from '@/data/siteArchitecture'
-import { PILLARS } from '@/data/siteArchitecture'
 
 const SITE = 'https://mychef.id'
 const WA = 6289674072020
 
-const ICONS: Record<string, React.FC<{ className?: string; style?: React.CSSProperties; strokeWidth?: number }>> = {
-  'villa-parties': PartyPopper,
-  'romantic-dinners': Heart,
-  'birthday-celebrations': Cake,
-  'family-reunions': Users,
-  'corporate-events': Briefcase,
-  'wedding-celebrations': Gem,
-  'cooking-classes': ChefHat,
-  'weekly-meal-prep': CalendarCheck,
-}
+const SERVICES = [
+  {
+    slug: 'fine-dining',
+    label: 'Fine Dining',
+    description: 'Multi-course tasting menus — Italian, French, Mediterranean, Wagyu — plated in your villa by a Michelin-trained team. From 6 guests (2 for romantic dinners).',
+    price: 'From IDR 950K++ per person.',
+    url: '/fine-dining',
+    cta: 'Explore fine dining',
+    icon: Gem,
+  },
+  {
+    slug: 'villa-catering',
+    label: 'Villa Catering',
+    description: 'Buffets, plated group dinners, grazing tables and babi guling for 8–150 guests — the same chef team at group scale.',
+    price: 'From IDR 700K++ per person.',
+    url: '/catering',
+    cta: 'Explore catering',
+    icon: Users,
+  },
+  {
+    slug: 'bbq-live-fire',
+    label: 'BBQ & Live Fire',
+    description: 'Poolside seafood grills, satay and slow-cooked meats with full setup and service.',
+    price: 'From IDR 700K++ per person (min. 10 guests).',
+    url: '/catering/bbq-catering',
+    cta: 'BBQ catering',
+    icon: Flame,
+  },
+  {
+    slug: 'events-weddings',
+    label: 'Events & Weddings',
+    description: 'Full-service hospitality for weddings, birthdays and corporate gatherings up to 200 guests — chef, staff, setup, cleanup.',
+    price: 'Weddings from IDR 1.5M++ per person.',
+    url: '/events',
+    cta: 'Explore events',
+    icon: PartyPopper,
+  },
+  {
+    slug: 'daily-villa-chef',
+    label: 'Daily Villa Chef',
+    description: 'Breakfast, lunch and dinner across your whole stay. Groceries at cost, receipts provided.',
+    price: 'Sessions from IDR 1,350K; daily hire from IDR 600K–1,500K/day.',
+    url: '/villa-chef',
+    cta: 'daily villa chef service',
+    icon: ChefHat,
+  },
+  {
+    slug: 'monthly-long-stay-chef',
+    label: 'Monthly & Long-Stay Chef',
+    description: 'Recurring chef days and meal-prep plans for long stays and residents.',
+    price: 'From IDR 4.5M/week (2 people); live-in from IDR 8M/month.',
+    url: '/hire-private-chef-bali-monthly',
+    cta: 'monthly chef arrangements',
+    icon: CalendarCheck,
+  },
+  {
+    slug: 'in-villa-service-staff',
+    label: 'In-Villa Service Staff',
+    description: 'Waiters, bartenders, butlers and sommeliers by the shift — restaurant-grade front-of-house in your villa.',
+    price: 'From IDR 250K/hour.',
+    url: '/in-villa-service',
+    cta: 'in-villa service staff',
+    icon: Heart,
+  },
+  {
+    slug: 'villa-staffing-placement',
+    label: 'Villa Staffing & Placement',
+    description: 'Long-term chefs and household teams for villas, hotels and residences — sourced, vetted and placed.',
+    price: 'Placement from IDR 15M fee.',
+    url: '/staffing',
+    cta: 'villa staff placement',
+    icon: Briefcase,
+  },
+]
 
 const FAQS = [
   {
-    q: 'What services does myCHEF offer in Bali?',
-    a: 'myCHEF offers eight premium private chef experiences in Bali: villa parties, romantic dinners, birthday celebrations, family reunions, corporate events, wedding celebrations, cooking classes, and weekly meal prep. Every service includes menu planning, ingredient sourcing, on-site preparation, and full cleanup.',
+    q: "What's the difference between fine dining and catering?",
+    a: 'Fine dining is a multi-course plated experience served course by course for smaller groups. Catering serves larger groups buffet-, family- or grazing-style. Same chefs, same ingredients — different format.',
   },
   {
-    q: 'How do I book a private chef for my villa?',
-    a: 'Booking is simple. Message us on WhatsApp or fill out the quote form on our website. Tell us your dates, guest count, occasion, and any dietary preferences. We will confirm availability and send a custom proposal — usually within the hour.',
+    q: 'Can I combine services?',
+    a: 'Yes — a common pairing is a chef plus waiters and a bartender for a celebration, or a daily villa chef with one fine-dining evening mid-stay. One quote covers everything.',
   },
   {
-    q: 'What is the difference between fine dining and catering?',
-    a: 'Fine dining is a multi-course plated experience served course by course, ideal for intimate dinners and special occasions. Catering covers larger groups with buffet, family-style, or grazing setups — perfect for villa parties, weddings, and corporate events. Both use the same chef team and premium ingredients.',
+    q: 'Do you handle dietary requirements?',
+    a: "Yes — vegan, gluten-free, halal, allergies and kids' menus across every service, at no extra charge.",
   },
   {
-    q: 'Can myCHEF handle dietary restrictions?',
-    a: 'Absolutely. Our chefs are experienced with vegan, vegetarian, gluten-free, dairy-free, halal, keto, and allergen-sensitive menus. Just let us know your requirements when booking and we will design a menu that everyone can enjoy safely.',
+    q: 'How far ahead should I book?',
+    a: 'A few days for dinners, longer for events and weddings. Same-week requests are often possible — a 50% deposit locks your date.',
   },
-  {
-    q: 'How far in advance should I book?',
-    a: 'We recommend booking at least 1–2 weeks ahead for standard services and 3–4 weeks for weddings or large corporate events. Last-minute bookings are sometimes possible depending on chef availability — just ask.',
-  },
-  {
-    q: 'What areas in Bali do you serve?',
-    a: 'We serve all major areas of Bali including Seminyak, Canggu, Uluwatu, Jimbaran, Nusa Dua, Sanur, Ubud, and the surrounding regions. Travel fees may apply for remote locations — we will confirm this in your proposal.',
-  },
-  {
-    q: 'Do you provide all equipment and ingredients?',
-    a: 'Yes. Our chefs bring all necessary ingredients and specialty tools. We use your villa kitchen for preparation and plating. If your kitchen lacks basic cookware, let us know in advance and we will arrange everything needed.',
-  },
-  {
-    q: 'How do I pay for myCHEF services?',
-    a: 'We accept bank transfer (IDR), Wise, and major credit cards. A 50% deposit secures your date, with the balance due 48 hours before the event. Corporate clients can request invoicing with NET-14 terms.',
-  },
+]
+
+const OCCASION_SELECTOR = [
+  { occasion: 'Dinner for 2–10', fit: 'Fine dining or a private villa dinner' },
+  { occasion: 'Family week in a villa', fit: 'Daily villa chef or weekly meal prep' },
+  { occasion: 'Group of 10–40, relaxed', fit: 'BBQ or buffet catering' },
+  { occasion: 'Wedding or milestone event', fit: 'Events & weddings team' },
+  { occasion: 'Month or season in Bali', fit: 'Monthly chef arrangement' },
+  { occasion: 'You already have a cook, need polish', fit: 'In-villa service staff' },
+]
+
+const LOCATIONS = [
+  { name: 'Seminyak', slug: 'seminyak' },
+  { name: 'Canggu', slug: 'canggu' },
+  { name: 'Ubud', slug: 'ubud' },
+  { name: 'Uluwatu', slug: 'uluwatu' },
+  { name: 'Sanur', slug: 'sanur' },
+  { name: 'Nusa Dua', slug: 'nusa-dua' },
+  { name: 'Jimbaran', slug: 'jimbaran' },
+  { name: 'Berawa', slug: 'berawa' },
+  { name: 'Pererenan', slug: 'pererenan' },
 ]
 
 const ACCENTS = [
@@ -67,31 +134,37 @@ const ACCENTS = [
 ]
 
 export default function ServicesPage() {
-  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to know more about your services.')}`
+  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like help choosing the right service for my occasion.')}`
 
-  const itemListSchema = {
+  const collectionPageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: Object.values(PILLARS).map((s, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': 'Service',
-        name: s.label,
-        description: s.description,
-        url: `${SITE}${s.url}`,
-      },
-    })),
+    '@type': 'CollectionPage',
+    name: 'Private Chef Services in Bali',
+    url: `${SITE}/services`,
+    about: { '@id': `${SITE}/#business` },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: SERVICES.map((s, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'Service',
+          name: s.label,
+          description: s.description,
+          url: `${SITE}${s.url}`,
+        },
+      })),
+    },
   }
 
   return (
     <div className="min-h-screen bg-[#050505] text-white">
       <SeoHead
-        title="Private Chef Services Bali | All-In Villa Experiences — myCHEF"
+        title="Private Chef Services in Bali | Compare Every myCHEF Service"
         description="Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit."
         canonical={`${SITE}/services`}
         ogImage={`${SITE}/generated/mychef-location-bali-hub-hero.webp`}
-        jsonLd={[itemListSchema, breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[collectionPageSchema, breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* ── HERO ── */}
@@ -118,10 +191,10 @@ export default function ServicesPage() {
             className="text-5xl md:text-7xl lg:text-8xl mb-6 leading-[1.02] max-w-[900px]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Our <span className="italic">Services</span>
+            Private Chef Services in Bali — <span className="italic">Every Experience, One Team</span>
           </h1>
           <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[640px] leading-relaxed">
-            Eight ways we bring extraordinary food to your villa — from intimate dinners for two to full-scale weddings and corporate retreats.
+            Eight services, one standard: extraordinary food in your villa, with zero stress. Every service includes menu planning, fresh shopping, on-site cooking and a spotless kitchen afterwards — and every one starts with a clear price.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4">
             <a
@@ -130,13 +203,13 @@ export default function ServicesPage() {
               rel="noopener noreferrer" data-source="services-cta"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-xs md:text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded-full"
             >
-              <MessageCircle className="w-4 h-4" /> Enquire on WhatsApp
+              <MessageCircle className="w-4 h-4" /> Help Me Choose — WhatsApp
             </a>
             <Link
-              to="/quote"
+              to="/pricing"
               className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs md:text-sm tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
             >
-              Get a Quote <ArrowRight className="w-4 h-4" />
+              full pricing <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -149,13 +222,13 @@ export default function ServicesPage() {
             className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Eight Experiences
+            Compare
           </p>
           <h2
             className="text-4xl md:text-5xl mb-4"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Something for Every Occasion
+            The Services
           </h2>
           <p className="text-white/[50%] max-w-xl mx-auto">
             Each service is built around the same principle: extraordinary food, in your villa, with zero stress.
@@ -163,8 +236,8 @@ export default function ServicesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {Object.values(PILLARS).map((service, i) => {
-            const Icon = ICONS[service.slug] || PartyPopper
+          {SERVICES.map((service, i) => {
+            const Icon = service.icon
             const accent = ACCENTS[i]
             return (
               <Link
@@ -184,18 +257,56 @@ export default function ServicesPage() {
                 >
                   {service.label}
                 </h3>
-                <p className="text-white/[50%] text-sm leading-relaxed mb-6">
+                <p className="text-white/[50%] text-sm leading-relaxed mb-4">
                   {service.description}
+                </p>
+                <p className="text-sm font-semibold text-white mb-6" style={{ color: accent }}>
+                  {service.price}
                 </p>
                 <span
                   className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-300 group-hover:gap-3"
                   style={{ color: accent }}
                 >
-                  Learn more <ArrowRight className="w-4 h-4" />
+                  {service.cta} <ArrowRight className="w-4 h-4" />
                 </span>
               </Link>
             )
           })}
+        </div>
+      </section>
+
+      {/* ── WHICH SERVICE FITS YOUR OCCASION? ── */}
+      <section className="px-6 md:px-12 py-24 md:py-32 border-t border-white/[0.08]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-14 md:mb-20">
+            <p
+              className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4"
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            >
+              Quick Match
+            </p>
+            <h2
+              className="text-3xl md:text-5xl mb-4"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Which Service Fits Your Occasion?
+            </h2>
+          </div>
+          <div className="max-w-3xl mx-auto grid gap-4">
+            {OCCASION_SELECTOR.map((item) => (
+              <div
+                key={item.occasion}
+                className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 p-6 rounded-2xl border border-white/[0.08] bg-white/[0.02]"
+              >
+                <p className="font-semibold text-white min-w-[220px]">{item.occasion}</p>
+                <div className="hidden sm:block w-px h-6 bg-white/10" />
+                <p className="text-white/[60%]">→ {item.fit}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-white/[40%] text-sm mt-8">
+            All prices ++ (11% government tax + 10% service charge). A 50% deposit confirms any booking.
+          </p>
         </div>
       </section>
 
@@ -207,44 +318,28 @@ export default function ServicesPage() {
               className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4"
               style={{ fontFamily: "'Cormorant Garamond', serif" }}
             >
-              Where We Serve
+              Locations
             </p>
             <h2
               className="text-3xl md:text-5xl mb-4"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Available Across Bali
+              Where We Serve
             </h2>
             <p className="text-white/[50%] max-w-xl mx-auto">
-              Every service is available in every region. We know the local markets, the villa kitchens, and the best suppliers.
+              Every service is available in every major villa area — our teams know the local markets, kitchens and suppliers.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
-            {[
-              { name: 'Seminyak', slug: 'seminyak' },
-              { name: 'Canggu', slug: 'canggu' },
-              { name: 'Ubud', slug: 'ubud' },
-              { name: 'Uluwatu', slug: 'uluwatu' },
-              { name: 'Sanur', slug: 'sanur' },
-              { name: 'Nusa Dua', slug: 'nusa-dua' },
-              { name: 'Jimbaran', slug: 'jimbaran' },
-              { name: 'Berawa', slug: 'berawa' },
-              { name: 'Pererenan', slug: 'pererenan' },
-              { name: 'Bukit', slug: 'bukit' },
-            ].map((city) => (
+            {LOCATIONS.map((city) => (
               <Link
                 key={city.slug}
-                to={getLocationCanonical(city.slug)}
+                to={`/private-chef/${city.slug}`}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-sm text-white/[70%] hover:border-[#C5A028]/50 hover:text-[#C5A028] transition-all focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <MapPin className="w-3.5 h-3.5" /> {city.name}
               </Link>
             ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link to="/locations" className="inline-flex items-center gap-2 text-sm text-[#C5A028] hover:gap-3 transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              View All Locations <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </div>
       </section>
@@ -256,25 +351,33 @@ export default function ServicesPage() {
             className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Not Sure Which Service?
+            Get Help
           </p>
           <h2
             className="text-4xl md:text-5xl mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            We Will Guide You
+            Not Sure Which Service?
           </h2>
           <p className="text-white/[50%] mb-10 max-w-lg mx-auto">
-            Tell us about your occasion, guest count, and vision. We will recommend the right service and build a custom proposal — usually within the hour.
+            Tell us your occasion, guest count and dates. We will recommend the right fit and send a custom proposal — usually within 2 hours.
           </p>
-          <a
-            href={waLink}
-            target="_blank"
-            rel="noopener noreferrer" data-source="services-cta"
-            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded-full"
-          >
-            <MessageCircle className="w-4 h-4" /> Message Us on WhatsApp
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer" data-source="services-cta"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-[0.25em] uppercase rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded-full"
+            >
+              <MessageCircle className="w-4 h-4" /> Get Matched on WhatsApp
+            </a>
+            <a
+              href="mailto:bali@mychef.id"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 border border-white/30 text-white text-xs md:text-sm tracking-[0.25em] uppercase rounded-full hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              Email bali@mychef.id <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -294,14 +397,17 @@ export default function ServicesPage() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
-              { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated dinners & grazing tables.' },
+              { label: 'Catering', href: '/catering', desc: 'Buffets, plated dinners & grazing tables.' },
+              { label: 'BBQ catering', href: '/catering/bbq-catering', desc: 'Poolside grills, satay & live fire.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays, corporate & villa parties.' },
-              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily private chef for your villa stay.' },
-              { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, bartenders, butlers & sommelier.' },
-              { label: 'Recommended Services', href: '/recommended-services', desc: 'Not sure what you need? We match you to the right service.' },
-              { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
-              { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Michelin-trained private chef in your villa.' },
-              { label: 'Cost Breakdown', href: '/blog/private-chef-cost-bali', desc: 'What a private chef in Bali actually costs.' },
+              { label: 'wedding catering', href: '/events/weddings', desc: 'Full-service wedding hospitality.' },
+              { label: 'daily villa chef service', href: '/villa-chef', desc: 'Daily private chef for your villa stay.' },
+              { label: 'monthly chef arrangements', href: '/hire-private-chef-bali-monthly', desc: 'Recurring chef days & meal prep.' },
+              { label: 'in-villa service staff', href: '/in-villa-service', desc: 'Waiters, bartenders, butlers & sommelier.' },
+              { label: 'villa staff placement', href: '/staffing', desc: 'Long-term chefs & household teams.' },
+              { label: 'full pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
+              { label: 'Private Chef Seminyak', href: '/private-chef/seminyak', desc: 'Private chef services in Seminyak.' },
+              { label: 'Private Chef Canggu', href: '/private-chef/canggu', desc: 'Private chef services in Canggu.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-[#FAFAF8] border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>

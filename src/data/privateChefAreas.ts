@@ -63,43 +63,51 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-seminyak.webp',
     heroAlt: 'Private chef plating a fine dining course at a luxury Seminyak villa pool at sunset',
     intro:
-      'Seminyak is where Bali\'s villa dining culture started — Petitenget road, Oberoi corridor, and a dense belt of 5-star private estates a short walk from the beach. myCHEF cooks everything here: intimate tasting menus for couples, poolside BBQs for 30, and fully staffed weddings in the villa gardens.',
+      `Seminyak is where Bali's villa dining culture began — the Petitenget road, the Oberoi corridor, and a dense belt of five-star private estates a short walk from the beach. The people staying here know what they want: couples marking an anniversary or honeymoon, friends splitting a design villa for a long weekend, families who came for the restaurant scene but want one evening no restaurant can give them. That evening is what we cook. A myCHEF private chef in Seminyak shops that morning, cooks in your villa kitchen, serves at your table and leaves the kitchen spotless — whether it's a tasting menu for two beside the pool or a staffed dinner for thirty on the terrace.`,
     villaDensity:
-      'Seminyak has the highest concentration of private pool villas in Bali. The Oberoi–Petitenget strip alone has 200+ rentable luxury villas within two kilometres of the beach.',
+      `Seminyak has the highest concentration of private pool villas in Bali. The Oberoi–Petitenget strip alone holds 200+ rentable luxury villas within two kilometres of the beach.`,
     guestProfile:
-      'European and Australian couples celebrating anniversaries or honeymoons, groups of friends splitting a villa for a long weekend, and families who come for the food scene and want one private evening that beats any restaurant.',
+      `Villa groups, couples celebrating anniversaries or honeymoons, expats and event hosts in Seminyak, Petitenget and Oberoi.`,
     landmarks: [
-      'Petitenget Beach',
-      'Jl. Kayu Aya (Oberoi strip)',
-      'Seminyak Square',
-      'La Plancha beach bar',
-      'Potato Head Beach Club',
-      'Pasar Seminyak market',
+      'Petitenget',
+      'Oberoi (Jl. Kayu Aya)',
+      'Seminyak Beach & La Plancha stretch',
+      'Batu Belig edge',
+      'Kerobokan & Umalas fringe',
+      'Legian border',
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Villa catering for groups starts from IDR 700,000 per person. Fine dining tasting menus from IDR 980,000 per person. 50% deposit confirms the booking.',
+      'Villa catering from IDR 700,000 per person. Tasting menus from IDR 980,000 per person. A 25% deposit secures your date; the balance is due on the day.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Seminyak?',
-        a: 'A private chef session in Seminyak starts from IDR 1,350,000 and covers grocery shopping, cooking, serving, and clean-up. Villa catering for groups of 8–30 guests starts from IDR 700,000 per person. Request a free itemised quote via WhatsApp.',
+        a: `A session starts from IDR 1,350,000 (up to 6 guests) plus groceries at cost with receipts. Group catering runs from IDR 700,000 per person and tasting menus from IDR 980,000 per person. Prices are subject to 11% tax + 10% service. Your itemised quote is fixed before you commit.`,
       },
       {
-        q: 'Can I book a private chef at my Seminyak villa for one evening?',
-        a: 'Yes. Most Seminyak bookings are single-evening dinners. We confirm chef availability, agree the menu, handle grocery shopping from Pasar Seminyak, and arrive at your villa ready to cook. Same-day bookings are often possible.',
+        q: 'Is there a travel fee for Seminyak villas?',
+        a: `Travel within Seminyak, Petitenget and Oberoi is part of our core service zone; any allowance beyond it is always quoted upfront before you confirm. [BUSINESS CONFIRMATION REQUIRED: confirm no travel surcharge within Seminyak]`,
       },
       {
-        q: 'Do you cater events and villa parties in Seminyak?',
-        a: 'Yes — villa parties, weddings, birthday dinners, and corporate events are all within our scope in Seminyak. We bring the full team: chef, sous chef, waiters, bartender, and equipment. Groups of 8 to 100+ guests.',
+        q: 'Can you time dinner to the Seminyak sunset?',
+        a: `Yes — the beach faces due west, and sunset courses are one of our most-requested formats. Tell us your villa's aspect and we'll pace the menu so the main course lands just after the sun drops.`,
       },
       {
-        q: 'What cuisines do your Seminyak chefs cook?',
-        a: 'Mediterranean tasting menus, traditional Balinese rice-table dinners, modern Asian fusion, wood-fired Italian, plant-based and vegan menus. Our chefs hold HACCP certification and adapt every menu to dietary requirements.',
+        q: 'Do you cook for kids and families?',
+        a: `Absolutely — child-friendly plates, earlier seatings and split menus (kids first, tasting menu for the adults after) are standard, at no extra charge.`,
       },
       {
-        q: 'How far in advance should I book a private chef in Seminyak?',
-        a: '1–3 days is ideal for private dinners; 2–4 weeks for events and catering. Peak season (July–August and December) books out quickly — the earlier you confirm, the better the chef and menu options.',
+        q: 'Can you cater a villa party or large group in Seminyak?',
+        a: `Yes — groups of 8 to 100+ guests with the full team: chef, sous chef, waiters, bartender and equipment. Local villas with large pools and terraces comfortably host 60–80.`,
+      },
+      {
+        q: 'Will our villa or its management allow a private chef?',
+        a: `In almost all cases, yes. We coordinate access and house rules with your villa manager before the day, bring our own equipment where kitchens are compact, and leave everything as we found it.`,
+      },
+      {
+        q: 'How far in advance should I book?',
+        a: `1–3 days is ideal for dinners, 2–4 weeks for events — and same-day requests are often possible. The earlier you confirm in peak season, the better your chef and menu options.`,
       },
     ],
     nearbyAreas: [
@@ -109,12 +117,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'legian', name: 'Legian' },
       { slug: 'kuta', name: 'Kuta' },
     ],
-    metaTitle: 'Private Chef in Seminyak, Bali | Hire a Chef for Your Villa | myCHEF',
+    metaTitle: 'Private Chef in Seminyak, Bali | Hire a Chef for Your Villa',
     metaDescription:
-      'Hire a private chef in Seminyak, Bali. Villa dinners, fine dining, catering, and events. HACCP chefs, from IDR 1.35M. WhatsApp myCHEF.',
+      'Hire a private chef in Seminyak, Bali. Villa dinners, tasting menus and events from IDR 700K/person. HACCP chefs, fixed quotes. WhatsApp myCHEF.',
     coordinates: { lat: -8.6748, lng: 115.1612 },
     bookingNote:
-      'Book 1–3 days ahead for private dinners, 2–4 weeks for events. Peak season (July–August, December) fills fast.',
+      'Book 1–3 days ahead for private dinners, 2–4 weeks for events. Peak season (July–August, December) fills fast — same-day bookings are often possible.',
     published: true,
   },
   {
@@ -125,43 +133,50 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-canggu.webp',
     heroAlt: 'Balinese chef preparing poolside brunch at a modern Canggu villa with rice field views',
     intro:
-      'Canggu is the epicentre of long-stay Bali life — surf families, digital nomads, and villa groups who want great food without restaurant queues. myCHEF cooks weekly meal prep for month-long stays, casual poolside lunches for 15, and Saturday night dinners that beat anything on Jl. Batu Bolong.',
+      `Canggu runs on a different clock to the rest of Bali. Surf before breakfast, laptop until four, dinner whenever the light goes. The people staying here — surf families sharing a villa for a month, digital nomads on their third Bali winter, groups of friends splitting a Berawa compound — don't want a reservation. They want food that fits the house: a Saturday dinner that beats anything on Jl. Batu Bolong, a poolside lunch for fifteen, or a chef who quietly handles the whole week's eating. That's our version of the service here. A private chef in Canggu from myCHEF cooks in your kitchen on your schedule — one memorable night, or every day of your stay.`,
     villaDensity:
-      'Canggu has the fastest-growing villa stock in Bali — especially the Echo Beach, Batu Bolong, Berawa, and Pererenan corridors. Most villas are equipped with proper cooking kitchens.',
+      `Canggu has the fastest-growing villa stock in Bali — especially along Echo Beach, Batu Bolong and Berawa — and most kitchens here are genuinely good to cook in.`,
     guestProfile:
-      'Long-stay digital nomad families, surf groups sharing a villa for a week, and health-conscious travellers who want consistent meal prep throughout their stay.',
+      `Surf families, digital nomads, health-conscious long-stayers, expats and villa groups who want great food without restaurant queues.`,
     landmarks: [
+      'Batu Bolong',
       'Echo Beach',
-      'Batu Bolong beach',
-      'Jl. Pantai Batu Mejan',
-      'Canggu Club',
-      'Pasar Canggu',
-      'Tanah Lot road corridor',
+      'Berawa',
+      'Pererenan border',
+      'Tibubeneng & the Tanah Lot road corridor',
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Weekly meal prep packages from IDR 4,500,000 per week for 2 people. Group catering from IDR 700,000 per person. No travel surcharge within Canggu–Berawa.',
+      `Weekly meal prep from IDR 4,500,000 per week for 2 people. [BUSINESS CONFIRMATION REQUIRED: reconcile weekly package pricing with /villa-chef hourly model] No travel surcharge within the Canggu–Berawa–Batu Bolong corridor.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Canggu?',
-        a: `Private chef sessions in Canggu start from IDR 1,350,000 (${siteFacts.groceryPolicy.toLowerCase()}). Weekly meal prep packages for 2 people from IDR 4,500,000. Group catering from IDR 700,000 per person. Free quote via WhatsApp.`,
-      },
-      {
-        q: 'Can I hire a chef for my entire stay in Canggu?',
-        a: 'Yes — weekly and monthly meal prep is one of our most popular services in Canggu. We create a meal plan, shop daily from local markets, and cook breakfast, lunch, or dinner on a schedule that fits your villa life.',
-      },
-      {
-        q: 'Do you cater villa birthday parties and events in Canggu?',
-        a: 'Absolutely. Villa birthday parties, beach BBQs, and group dinners up to 80 guests are a specialty in Canggu. We handle the menu, staff, setup, and cleanup — you enjoy the event.',
+        a: `Sessions start from IDR 1,350,000 plus groceries at cost. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, weekly meal prep from IDR 4,500,000 per week for two. All subject to 11% tax + 10% service, quoted as one fixed figure.`,
       },
       {
         q: 'Are there travel fees for Canggu?',
-        a: 'No travel surcharge within the Canggu–Berawa–Batu Bolong corridor. For villas further towards Pererenan or Seseh, a small travel allowance applies — always quoted upfront.',
+        a: `No travel surcharge within the Canggu–Berawa–Batu Bolong corridor. Villas further toward Pererenan or Seseh carry a small travel allowance — always quoted upfront before you confirm.`,
       },
       {
-        q: 'Do you cater for vegan and plant-based diets in Canggu?',
-        a: 'Yes. Canggu has one of Bali\'s most health-conscious guest profiles and we\'re very experienced with vegan, plant-based, gluten-free, and raw food menus. All dietary requirements are handled without extra charge.',
+        q: 'Can I hire a chef for my entire stay in Canggu?',
+        a: `Yes — weekly and monthly meal prep is one of our most popular services here. We design a meal plan, shop daily from local markets, and cook breakfast, lunch or dinner on a schedule that fits your villa life.`,
+      },
+      {
+        q: 'Do you cater vegan and plant-based diets?',
+        a: `Extensively. Vegan, plant-based, gluten-free and raw menus are core to what we cook here — at no extra charge.`,
+      },
+      {
+        q: 'Can you cook for a surf family with kids?',
+        a: `All the time. Early seatings after the beach, child-friendly plates alongside the adult menu, and flexible timing around naps and tides. Kids' needs are priced into the quote, not added on.`,
+      },
+      {
+        q: 'Do you cater birthday parties and events in Canggu?',
+        a: `Yes — villa birthdays, beach BBQs and group dinners up to 80 guests are a specialty of ours in the area. We bring the full setup: chef, staff, equipment and complete cleanup, so the host actually relaxes.`,
+      },
+      {
+        q: 'How far ahead should I book?',
+        a: `1–2 days for dinners, 3–5 days for weekly plans, 2–4 weeks for events — earlier in the busy months, though short-notice requests are often possible.`,
       },
     ],
     nearbyAreas: [
@@ -171,7 +186,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'kerobokan', name: 'Kerobokan' },
       { slug: 'ubud', name: 'Ubud' },
     ],
-    metaTitle: 'Private Chef in Canggu, Bali | Villa Dining & Meal Prep | myCHEF',
+    metaTitle: 'Private Chef in Canggu, Bali | Villa Dining & Meal Prep',
     metaDescription:
       'Hire a private chef in Canggu, Bali. Weekly meal prep, villa dinners, catering, and birthday parties. HACCP chefs. WhatsApp myCHEF.',
     coordinates: { lat: -8.6522, lng: 115.1279 },
@@ -187,43 +202,50 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-ubud.webp',
     heroAlt: 'Balinese chef preparing a plant-based feast at a jungle villa in Ubud with rice terrace views',
     intro:
-      'Ubud villas are spread through Sayan, Penestanan, and the rice terraces of Tegallalang — smaller, more private, often surrounded by jungle. myCHEF cooks plant-based menus for wellness retreats, authentic Balinese tasting dinners for first-time visitors, and full-board catering for yoga and creative programs.',
+      `Ubud's villas don't sit on a strip — they're scattered through Sayan, Penestanan and the rice terraces of Tegallalang: smaller, more private, often wrapped in jungle. The people in them come for a reason. A week of yoga and meditation. A first trip to Bali that should taste like Bali. A month of writing or painting that runs on clean, consistent food rather than restaurant logistics. A myCHEF private chef in Ubud cooks to all three: plant-based menus for wellness programmes, authentic Balinese tasting dinners for travellers who want the real table, and quiet, excellent dinners for couples in jungle villas.`,
     villaDensity:
-      'Ubud has 300+ boutique villas scattered across rice terraces and jungle ravines. Most are intimate 2–4 bedroom properties with outdoor kitchens or pavilions — perfect for private dining.',
+      `Ubud holds 300+ boutique villas across rice terraces and jungle ravines — most built for exactly this kind of outdoor dining.`,
     guestProfile:
-      'Wellness travellers doing a yoga retreat or meditation programme, cultural tourists wanting to eat authentically Balinese, and creatives on longer stays who want consistent plant-based or whole-food cooking.',
+      `Wellness and retreat guests, couples, cultural travellers and creatives on longer stays.`,
     landmarks: [
-      'Sayan Ridge',
-      'Campuhan Ridge Walk',
-      'Penestanan rice terraces',
-      'Pasar Ubud (Ubud Market)',
-      'Tegallalang rice fields',
-      'Tjampuhan Hotel area',
+      'Sayan',
+      'Penestanan',
+      'Campuhan',
+      'Tegallalang',
+      'Ubud central / Pasar Ubud',
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'A small travel allowance applies to villas beyond Ubud central — always quoted upfront. Retreat full-board packages quoted per head per day. 50% deposit confirms the booking.',
+      'A small travel allowance applies for villas beyond Ubud central — always quoted upfront. Retreat full-board quoted per person per day. A 25% deposit confirms your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Ubud?',
-        a: 'Private chef sessions in Ubud start from IDR 1,500,000 (a small travel allowance applies for remote jungle villas). Retreat full-board packages are quoted per person per day. Free quote via WhatsApp.',
+        a: `Sessions start from IDR 1,500,000 plus groceries at cost — slightly above our coastal base because of remote-villa logistics. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, retreat full-board quoted per person per day. All subject to 11% tax + 10% service.`,
       },
       {
-        q: 'Do you cook for yoga retreats and wellness programs in Ubud?',
-        a: 'Yes — retreat catering is one of our most common Ubud bookings. We design full-board plant-based, vegan, or Ayurvedic menus for 6–30 participants and cook twice or three times daily for the duration of the program.',
+        q: 'Is there a travel fee for Sayan, Penestanan or Tegallalang?',
+        a: `We cook in all three regularly. A small travel allowance applies for villas beyond Ubud central and for very remote access points — always quoted before confirmation, never added afterwards.`,
       },
       {
-        q: 'Can I get a traditional Balinese dinner at my Ubud villa?',
-        a: 'Absolutely. We cook authentic Balinese rijsttafel (rice table) dinners — nasi campur, lawar, sate lilit, bebek betutu, and seasonal vegetables sourced from Ubud\'s morning market. A genuine cultural experience at your table.',
+        q: 'Do you cater yoga retreats and wellness programmes?',
+        a: `Yes — retreat catering is one of our most common Ubud bookings. We design full-board plant-based, vegan or Ayurvedic menus for 6–30 participants and cook two or three times daily for the programme's duration.`,
       },
       {
-        q: 'Do you travel to remote villas in Sayan and Penestanan?',
-        a: 'Yes. We regularly cook at villas in Sayan, Penestanan, Campuhan, and Tegallalang. A travel allowance applies for very remote access points — always quoted before confirmation.',
+        q: 'Can you cook a traditional Balinese dinner at our villa?',
+        a: `Absolutely — the rijsttafel: nasi campur, lawar, sate lilit, bebek betutu and market vegetables, served family-style. A genuine cultural dinner at your own table.`,
       },
       {
-        q: 'What plant-based and vegan options do you offer in Ubud?',
-        a: 'Full vegan menus, raw food, macrobiotics, and Ayurvedic cooking are all available. Our Ubud chefs have extensive experience with plant-forward and whole-food approaches and source ingredients from local organic farms.',
+        q: 'Do you cook for families with children?',
+        a: `Yes. Jungle villas are wonderful for family dinners — child-friendly plates, flexible timing and mild versions of Balinese dishes are all standard at no extra charge.`,
+      },
+      {
+        q: 'What group sizes work in Ubud villas?',
+        a: `Most Ubud properties are intimate, which suits dinners of 2–10 beautifully; we cater groups up to 30 and retreat programmes in that range. For larger events we'll advise on the right format for your villa's layout.`,
+      },
+      {
+        q: 'How far in advance should I book?',
+        a: `2–3 days for dinners, 1–2 weeks for retreats — longer in peak season. Same-day and next-day requests are sometimes possible for Ubud central.`,
       },
     ],
     nearbyAreas: [
@@ -232,12 +254,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'nusa-dua', name: 'Nusa Dua' },
     ],
-    metaTitle: 'Private Chef in Ubud, Bali | Villa Dining, Retreat Catering | myCHEF',
+    metaTitle: 'Private Chef in Ubud, Bali | Villa Dining, Retreat Catering',
     metaDescription:
-      'Hire a private chef in Ubud, Bali. Balinese tasting menus, plant-based retreat catering, and villa dinners. HACCP chefs. WhatsApp myCHEF.',
+      'Hire a private chef in Ubud, Bali. Balinese rijsttafel, plant-based retreat catering and jungle villa dinners from IDR 700K/person. WhatsApp myCHEF.',
     coordinates: { lat: -8.5069, lng: 115.2625 },
     bookingNote:
-      'Book 2–3 days ahead for single dinners. Retreat programs need 1–2 weeks notice. Remote jungle villa access confirmed on booking.',
+      'Book 2–3 days ahead for single dinners. Retreat programmes need 1–2 weeks notice. Remote jungle villa access confirmed on booking.',
     published: true,
   },
   {
@@ -248,55 +270,62 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-uluwatu.webp',
     heroAlt: 'Private chef serving a seafood platter at a clifftop villa in Uluwatu with Indian Ocean views',
     intro:
-      'Uluwatu villas hang on limestone cliffs above the Indian Ocean — the most dramatic villa setting in Bali. myCHEF brings fine dining that matches: freshly landed seafood, Wagyu under the stars, wine pairings timed to the sunset. We cook for elopements, surf group dinners, and clifftop weddings for 200 guests.',
+      `Uluwatu's villas hang on limestone cliffs above the Indian Ocean — the most dramatic dining setting in Bali, and the least forgiving of average food. The guests here know it: honeymooning couples who booked the cliff-edge pool villa precisely for the view, surf groups splitting a premium house above Bingin, wedding parties who want the ceremony and the dinner in the same golden light. A myCHEF private chef in Uluwatu brings cooking that matches the setting — freshly landed seafood, tasting menus paced to the sunset, and a team that has worked these clifftop kitchens hundreds of times.`,
     villaDensity:
-      'The Uluwatu–Bingin–Padang Padang cliff belt has 150+ high-end villas built into the limestone. Most have outdoor dining areas engineered for the ocean view — spectacular settings for private dinners.',
+      `The Uluwatu–Bingin–Padang Padang belt holds 150+ high-end villas built into the limestone, most with outdoor dining areas engineered for the view.`,
     guestProfile:
-      'Couples celebrating a honeymoon or elopement, surf groups sharing a premium villa, and wedding parties looking for a clifftop ceremony followed by a seated dinner.',
+      `Luxury villa guests, honeymooners and eloping couples, surf groups and wedding parties.`,
     landmarks: [
-      'Uluwatu Temple (Pura Luhur)',
-      'Bingin Beach',
-      'Padang Padang Beach',
-      'Dreamland Beach',
-      'Suluban surf break',
-      'Jl. Labuan Sait cliff road',
+      'Uluwatu & Suluban',
+      'Bingin',
+      'Padang Padang',
+      'Dreamland',
+      'Pecatu & Ungasan',
     ],
     priceFrom: 'From IDR 1,500,000 per session',
     pricingNote:
-      'Clifftop fine dining tasting menus from IDR 1,100,000 per person. Wedding catering quoted per head. A travel allowance applies from our Seminyak base — always included in the quote.',
+      'A travel allowance of IDR 150,000–250,000 is included in every quote. Sunset tasting menus from IDR 1,100,000 per person. A 25% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Uluwatu?',
-        a: 'Private chef sessions in Uluwatu start from IDR 1,500,000 (a travel allowance from our Seminyak base is included in all quotes). Fine dining tasting menus from IDR 1,100,000 per person. Free quote via WhatsApp.',
-      },
-      {
-        q: 'Can I hire a private chef for a clifftop elopement dinner in Uluwatu?',
-        a: 'Yes — clifftop elopement dinners are one of our signature Uluwatu experiences. We design the menu, bring the full table setup, and coordinate the timing with the sunset for you. Available for 2–10 guests.',
-      },
-      {
-        q: 'Do you cater weddings in Uluwatu?',
-        a: 'Yes. We cater Uluwatu clifftop weddings for 20–200 guests — cocktail receptions, seated plated dinners, and live buffet stations. We coordinate with your villa or venue coordinator and supply the full kitchen and service team.',
+        a: `Sessions start from IDR 1,500,000 plus groceries at cost. Sunset tasting menus from IDR 1,100,000 per person, villa catering from IDR 700,000 per person. All subject to 11% tax + 10% service, quoted as one fixed figure including travel.`,
       },
       {
         q: 'Is there a travel fee from Seminyak to Uluwatu?',
-        a: 'Yes — a travel allowance of around IDR 150,000–250,000 applies depending on the exact Uluwatu address. This is always quoted upfront and included in your total before you confirm.',
+        a: `Yes — an allowance of around IDR 150,000–250,000 depending on your exact address, always quoted upfront and included in your total before you confirm. No surprises on the day.`,
       },
       {
-        q: 'What seafood options are available at my Uluwatu villa?',
-        a: 'We source daily from the Kedonganan fish landing in Jimbaran — barramundi, lobster, prawns, snapper, crab, and local reef fish. Your seafood is caught the same morning we cook it. Custom seafood platters and BBQ grills are a speciality.',
+        q: 'Can dinner be timed to the clifftop sunset?',
+        a: `That's the point of dining here. We build the run of courses backwards from golden hour for your villa's aspect — drinks at first light, main course just after the sun drops.`,
+      },
+      {
+        q: 'Do you cater clifftop elopement dinners?',
+        a: `Yes — one of our signature experiences for 2–10 guests. We design the menu, bring the full table setup, and coordinate timing with the sunset.`,
+      },
+      {
+        q: 'Do you cater Uluwatu weddings?',
+        a: `Yes, for 20–200 guests — receptions, seated dinners and live stations, coordinated with your venue's team. Book 3–6 weeks ahead.`,
+      },
+      {
+        q: 'Can you cook for kids and mixed groups in a surf villa?',
+        a: `All the time. Early kids' seatings before the adults' sunset menu, child-friendly plates, and flexible service around surf schedules — no extra charge for dietary or kids' needs.`,
+      },
+      {
+        q: 'What if our clifftop kitchen is small?',
+        a: `Common on the cliff, and not a problem. We confirm your setup at booking, bring our own equipment where needed, and can cook live-fire outdoors if the villa suits it.`,
       },
     ],
     nearbyAreas: [
       { slug: 'jimbaran', name: 'Jimbaran' },
       { slug: 'nusa-dua', name: 'Nusa Dua' },
       { slug: 'bukit', name: 'Bukit Peninsula' },
-      { slug: 'seminyak', name: 'Seminyak' },
-      { slug: 'canggu', name: 'Canggu' },
+      { slug: 'pecatu', name: 'Pecatu' },
+      { slug: 'ungasan', name: 'Ungasan' },
     ],
-    metaTitle: 'Private Chef in Uluwatu, Bali | Clifftop Villa Dining | myCHEF',
+    metaTitle: 'Private Chef in Uluwatu, Bali | Clifftop Villa Dining',
     metaDescription:
-      'Book a private chef in Uluwatu, Bali. Clifftop fine dining, wedding catering, and villa dinners. HACCP-certified chefs, transparent pricing. WhatsApp myCHEF.',
+      'Book a private chef in Uluwatu, Bali. Sunset-timed clifftop dinners, elopements and wedding catering. Travel fees quoted upfront. WhatsApp myCHEF.',
     coordinates: { lat: -8.8293, lng: 115.0849 },
     bookingNote:
       'Book 2–3 days ahead for single dinners. Weddings and large events need 3–6 weeks. Travel time from Seminyak is 45–60 min — confirm your villa address on booking.',
@@ -310,43 +339,50 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-jimbaran.webp',
     heroAlt: 'Indonesian chef grilling fresh seafood at a Jimbaran villa with Jimbaran Bay in the background',
     intro:
-      'Jimbaran is where Bali eats seafood — the bay\'s morning fish landing supplies the freshest barramundi, prawns, and lobster on the island. myCHEF brings the boat-to-villa supply chain directly to your table: fish landed at dawn, cooked at sunset, served with your feet near the sand.',
+      `Jimbaran is where Bali eats seafood. Every dawn, the Kedonganan fish landing takes in the night's catch — barramundi, prawns, lobster, snapper — and by evening the bay's famous grills are smoking. The guests who stay here come for exactly that: seafood-loving families, couples celebrating over a bay sunset, and resort-villa guests who want the catch without the crowds. A myCHEF private chef in Jimbaran shortens the supply chain to a single day: fish landed at dawn, shopped that morning, cooked at your villa at sunset. The same catch as the bay — at your own table.`,
     villaDensity:
-      'Jimbaran has a mix of clifftop resort villas on Jl. Uluwatu and beach-access properties along the bay. Many are large family estates built for multi-generational groups.',
+      `Jimbaran has a mix of beach-access properties along the bay and clifftop resort villas on Jl. Uluwatu. Many are large family estates built for multi-generational groups.`,
     guestProfile:
-      'Seafood-loving families, couples celebrating anniversaries, and resort guests who want a private dining upgrade from the hotel restaurants.',
+      `Seafood-loving families, couples celebrating over a bay sunset, resort-villa guests and celebration groups.`,
     landmarks: [
-      'Jimbaran Bay',
-      'Kedonganan fish market',
-      'Jl. Uluwatu (cliff road)',
-      'Four Seasons Jimbaran',
-      'Intercontinental Bali',
-      'Jimbaran beach seafood grills',
+      'Jimbaran Bay beachside',
+      'Kedonganan',
+      'Muaya & the south bay',
+      'Jl. Uluwatu clifftop',
+      'Four Seasons, Intercontinental & Karma Kandara villas',
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Seafood BBQ packages from IDR 720,000 per person (includes fresh catch, charcoal grill, full service). Fine dining from IDR 980,000 per person.',
+      'Seafood BBQ from IDR 720,000 per person including fresh catch, charcoal grill and full service. A 25% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Jimbaran?',
-        a: 'Private chef sessions in Jimbaran start from IDR 1,350,000. Seafood BBQ packages with fresh catch from IDR 720,000 per person. Fine dining tasting menus from IDR 980,000 per person. Free quote via WhatsApp.',
+        a: `Sessions start from IDR 1,350,000 plus groceries at cost. Seafood BBQ packages from IDR 720,000 per person including catch, charcoal grill and full service; tasting menus from IDR 980,000. All subject to 11% tax + 10% service.`,
       },
       {
-        q: 'Can I get fresh seafood cooked at my villa in Jimbaran?',
-        a: 'Yes — this is our most popular Jimbaran service. We source from the Kedonganan fish landing each morning and cook the same evening at your villa. Choose your catch: barramundi, lobster, tiger prawns, snapper, or crab.',
+        q: 'Can I really get fresh seafood cooked at my villa?',
+        a: `Yes — it's our most popular Jimbaran service. We source from the Kedonganan fish landing each morning and cook it the same evening. Choose your catch: barramundi, lobster, tiger prawns, snapper or crab.`,
       },
       {
-        q: 'Do you do BBQ catering for villa parties in Jimbaran?',
-        a: 'Absolutely. Villa BBQ parties with fresh seafood, satay, and grilled meats are a Jimbaran specialty. We bring the full setup — chef, charcoal grill, serving staff, and cleanup. Ideal for 8–40 guests.',
+        q: 'Can dinner be timed to the Jimbaran sunset?',
+        a: `Absolutely — the bay faces due west, and sunset is Jimbaran's main event. We pace courses to golden hour so the main lands just as the sky does its best work.`,
+      },
+      {
+        q: 'Do you cater BBQ parties for groups?',
+        a: `Yes — villa BBQ parties for 8–40 guests are a local specialty: chef, charcoal grill, seafood, satay, grilled meats, serving staff and complete cleanup.`,
       },
       {
         q: 'Is Jimbaran the same as Uluwatu?',
-        a: 'Jimbaran is at the base of the Uluwatu peninsula, on the bay. Uluwatu is on the clifftops 20 minutes south. Both areas are served by myCHEF. Jimbaran is known for its seafood culture and bay views; Uluwatu for its clifftop drama.',
+        a: `No — Jimbaran sits on the bay at the base of the peninsula; Uluwatu is on the clifftops about 20 minutes south. Jimbaran is seafood culture and sunsets over the water; Uluwatu is cliff drama. We serve both.`,
       },
       {
-        q: 'Do you cater for resort villa events in Jimbaran?',
-        a: 'Yes. We regularly cater for villas in the Four Seasons, Intercontinental, and Karma Kandara resort complexes in Jimbaran. We coordinate with resort management and work within property guidelines.',
+        q: 'Will our resort villa allow a private chef?',
+        a: `Yes — we regularly cook within the Four Seasons, Intercontinental and Karma Kandara complexes, coordinating with resort management and working within property guidelines.`,
+      },
+      {
+        q: 'Do you cook for kids and multi-generational families?',
+        a: `All the time — Jimbaran's large family estates are built for it. Child-friendly plates, milder marinades, early seatings and split menus come at no extra charge.`,
       },
     ],
     nearbyAreas: [
@@ -356,12 +392,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'kuta', name: 'Kuta' },
     ],
-    metaTitle: 'Private Chef in Jimbaran, Bali | Seafood Villa Dining | myCHEF',
+    metaTitle: 'Private Chef in Jimbaran, Bali | Seafood Villa Dining',
     metaDescription:
-      'Book a private chef in Jimbaran, Bali. Fresh seafood BBQ, fine dining, and villa events. Boat-to-villa seafood sourcing. Transparent pricing. WhatsApp myCHEF.',
+      'Book a private chef in Jimbaran, Bali. Fresh seafood BBQ, fine dining, and villa events. Boat-to-villa seafood sourcing. Transparent pricing. WhatsApp.',
     coordinates: { lat: -8.7897, lng: 115.1683 },
     bookingNote:
-      'Book 1–2 days ahead for private dinners and seafood BBQ. Seafood availability dependent on daily catch — confirm the day before.',
+      'Book 1–2 days ahead for private dinners and seafood BBQs; earlier for weekends and holiday sunsets. Seafood availability confirmed the day before.',
     published: true,
   },
   {
@@ -372,43 +408,50 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-nusa-dua.webp',
     heroAlt: 'Private chef serving a formal plated course at a Nusa Dua luxury estate with pool and ocean view',
     intro:
-      'Nusa Dua is the home of Bali\'s five-star resort enclave — gated estates, polished hospitality, and a guest profile that expects precision. myCHEF caters corporate retreats, executive private dinners, and high-end residential events with the same exacting standards as the surrounding five-star kitchens.',
+      `The five-star enclave runs on precision — gated estates, manicured grounds, service that arrives exactly when promised. Guests here expect the same standard at a private table, whether they're a board of twelve flying in for an incentive week, a family occupying a six-bedroom estate, or honeymooners who want one evening above the resort restaurants. A myCHEF private chef in Nusa Dua delivers exactly that: the discipline of a five-star kitchen, at your own table, quoted to the rupiah before you commit.`,
     villaDensity:
-      'Nusa Dua\'s ITDC resort zone has some of the largest villa estates in Bali — 5+ bedroom properties with full kitchens, private pools, and event spaces. Many are used for corporate and incentive travel.',
+      `Nusa Dua's ITDC resort zone has some of Bali's largest villa estates — 5+ bedroom properties with full kitchens, pools and event spaces.`,
     guestProfile:
-      'Corporate retreat groups using incentive travel villas, high-net-worth families on multi-generational holidays, and luxury honeymooners who want a private dining upgrade from their five-star resort.',
+      `Corporate retreat groups, high-net-worth families, luxury honeymooners and resort guests.`,
     landmarks: [
-      'ITDC resort complex',
-      'Nusa Dua Beach',
-      'Bali International Convention Centre',
-      'Tanjung Benoa peninsula',
-      'Pandanus Beach',
-      'Grand Hyatt Bali',
+      'ITDC resort zone',
+      'Beachfront estates',
+      'Sawangan',
+      'Tanjung Benoa',
+      'Benoa & the Bukit edge',
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Corporate retreat catering quoted per person per day (full board available). Executive fine dining from IDR 1,200,000 per person. 50% deposit confirms the booking.',
+      'Executive fine dining from IDR 1,200,000 per person. Corporate full-board quoted per person per day. A 25% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Nusa Dua?',
-        a: 'Private chef sessions in Nusa Dua start from IDR 1,350,000. Corporate full-board catering is quoted per person per day. Executive fine dining from IDR 1,200,000 per person. Free quote via WhatsApp.',
+        a: `Sessions start from IDR 1,350,000 plus groceries at cost. Executive fine dining from IDR 1,200,000 per person, villa catering from IDR 700,000 per person, corporate full-board quoted per person per day. All subject to 11% tax + 10% service, fixed in one upfront quote.`,
       },
       {
-        q: 'Do you cater corporate retreats and incentive travel in Nusa Dua?',
-        a: 'Yes — corporate retreat catering is one of our main Nusa Dua services. We cater teambuilding dinners, executive lunches, conference refreshments, and end-of-program gala dinners for groups of 10–200 people.',
+        q: 'Do you cater corporate retreats and incentive travel?',
+        a: `Yes — it's one of our main services here: teambuilding dinners, executive lunches, conference refreshments and gala dinners for 10–200 people, with run-sheets built around your agenda.`,
       },
       {
-        q: 'Can I hire a private chef at an ITDC resort villa?',
-        a: 'Yes. We are experienced working within the ITDC resort complex — we coordinate with property management, comply with access procedures, and bring a fully equipped team. We can serve villas in Grand Hyatt, Melia, St. Regis, and surrounding estates.',
+        q: 'Can you cook at a villa inside the ITDC resort complex?',
+        a: `Yes. We coordinate with property management, comply with access procedures and bring a fully equipped team — including villas in the Grand Hyatt, Melia, St. Regis and surrounding estates.`,
       },
       {
-        q: 'Do you offer wine service and sommelier pairing in Nusa Dua?',
-        a: 'Yes. Our fine dining service in Nusa Dua includes optional sommelier wine pairing — we curate a wine list aligned to the menu and guest preferences. Custom champagne and cocktail service also available.',
+        q: 'Do you offer wine service or a sommelier?',
+        a: `Yes. Our fine dining format includes optional sommelier wine pairing, with a list curated to the menu and your guests' preferences; champagne and cocktail service also available.`,
       },
       {
-        q: 'Is Tanjung Benoa the same as Nusa Dua?',
-        a: 'Tanjung Benoa is the narrow peninsula directly north of Nusa Dua, about 10–15 minutes away. myCHEF serves both areas. Nusa Dua is the five-star resort enclave; Tanjung Benoa has a mix of boutique resorts and private villas.',
+        q: 'Is Tanjung Benoa the same area?',
+        a: `Almost — it's the narrow peninsula directly north, about 10–15 minutes away. The enclave is the five-star resort zone; Tanjung Benoa mixes boutique resorts and private villas. We serve both.`,
+      },
+      {
+        q: 'Can you handle children and mixed dietary needs in one group?',
+        a: `Yes — child-friendly plates, halal, vegetarian, gluten-free and allergy-aware menus across a single table, planned in advance at no extra charge.`,
+      },
+      {
+        q: 'How far ahead should we book?',
+        a: `2–3 days for estate dinners; 1–2 weeks for corporate programmes, longer in peak conference season.`,
       },
     ],
     nearbyAreas: [
@@ -418,12 +461,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'kuta', name: 'Kuta' },
     ],
-    metaTitle: 'Private Chef Nusa Dua, Bali | Corporate, Luxury Villa Dining | myCHEF',
+    metaTitle: 'Private Chef Nusa Dua, Bali | Corporate, Luxury Villa Dining',
     metaDescription:
       'Hire a private chef in Nusa Dua, Bali. Corporate retreat catering, executive fine dining, and villa events. Five-star service. WhatsApp myCHEF.',
     coordinates: { lat: -8.8007, lng: 115.2302 },
     bookingNote:
-      'Book 2–3 days ahead for private dinners. Corporate retreat programs need 1–2 weeks. ITDC villa access requires advance coordination — confirm property details on booking.',
+      'Book 2–3 days ahead for estate dinners and 1–2 weeks for corporate programmes. ITDC villa access requires advance coordination — confirm property details on booking.',
     published: true,
   },
   {
@@ -434,43 +477,50 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-sanur.webp',
     heroAlt: 'Private chef setting a multi-generational family dinner table at a Sanur villa with sunrise beach views',
     intro:
-      'Sanur is Bali\'s relaxed east-coast beach town — calmer surf, multi-generational family villas, and a guest profile that values consistency over spectacle. myCHEF cooks gentle, classic menus here: handmade pasta, fresh reef fish, traditional Balinese, and weekly meal plans that handle three generations of dietary preferences.',
+      `Sanur doesn't do spectacle, and that's why people love it. The east-coast beach town runs at a gentler pace: calmer water, morning walks on the promenade, and villas full of families — grandparents, parents, grandkids — staying a fortnight rather than a weekend. Alongside them, a settled expat community that treats Bali as home, not holiday. The cooking they want matches: consistent, generous, and considerate of everyone at the table. A myCHEF private chef in Sanur cooks gentle, classic menus — handmade pasta, fresh reef fish, traditional Balinese — and weekly meal plans that quietly handle three generations of dietary preferences at once.`,
     villaDensity:
-      'Sanur has a settled villa market — mostly large 3–5 bedroom family homes along the beachside corridors and Bypass Ngurah Rai. Many are long-term rental properties used by expat families.',
+      `Sanur has a settled villa market — mostly large 3–5 bedroom family homes along the beachside corridors and Bypass Ngurah Rai. Many are long-term rental properties used by expat families.`,
     guestProfile:
-      'Multi-generational families on a 2-week Bali holiday, expat residents who want recurring private chef service, and older couples who prefer Sanur\'s quieter pace to Seminyak\'s bustle.',
+      `Multi-generational families on longer holidays, long-term expat residents and older couples who prefer a quieter pace.`,
     landmarks: [
-      'Sanur Beach promenade',
-      'Pasar Sindhu market',
-      'Le Mayeur Museum',
+      'Beachside corridors',
+      'Sindhu',
       'Jl. Danau Tamblingan',
-      'Matahari beach',
-      'Sanur night market',
+      'Mertasari & the south end',
+      'Bypass Ngurah Rai villas',
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Weekly meal prep for 2–4 people from IDR 4,500,000 per week. Family catering for larger groups from IDR 700,000 per person. No travel surcharge within Sanur.',
+      `Weekly meal plans from IDR 4,500,000 per week for 2–4 people. [BUSINESS CONFIRMATION REQUIRED: reconcile weekly package pricing with /villa-chef hourly model] No travel surcharge anywhere in Sanur.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Sanur?',
-        a: 'Private chef sessions in Sanur start from IDR 1,350,000 with no travel surcharge. Weekly meal prep for 2–4 people from IDR 4,500,000 per week. Family catering from IDR 700,000 per person. Free quote via WhatsApp.',
+        a: `Sessions start from IDR 1,350,000 plus groceries at cost — no travel surcharge anywhere in Sanur. Family catering from IDR 700,000 per person, weekly meal plans from IDR 4,500,000 for 2–4 people. All subject to 11% tax + 10% service.`,
       },
       {
-        q: 'Do you offer weekly meal prep in Sanur?',
-        a: 'Yes — recurring weekly meal prep is very popular with Sanur\'s expat and long-stay community. We design a rotating weekly menu, shop Pasar Sindhu each morning, and cook daily at your villa on your schedule.',
+        q: 'Is there any travel fee for Sanur villas?',
+        a: `No. Sanur is a no-surcharge zone — the price in your quote is the price you pay.`,
       },
       {
         q: 'Can you cook for a multi-generational family with different dietary needs?',
-        a: 'Absolutely. Our chefs are experienced managing multiple dietary requirements in one sitting — gluten-free for one grandparent, vegan for the adult children, child-friendly for the grandkids. We customise every course at no extra charge.',
+        a: `Absolutely — it's our signature Sanur brief. Gluten-free for one grandparent, vegan for the adult children, child-friendly for the grandkids, all in one sitting, customised per course at no extra charge.`,
+      },
+      {
+        q: 'Do you offer weekly or recurring chef service?',
+        a: `Yes — very popular with Sanur's expat and long-stay community. We design a rotating weekly menu, shop Pasar Sindhu each morning and cook daily on your schedule. Many clients book three to five times a week.`,
+      },
+      {
+        q: 'What about kids?',
+        a: `Children are half the brief in Sanur. Early seatings, familiar dishes done well, and patient service around bedtimes — all standard, never surcharged.`,
+      },
+      {
+        q: 'Do you do breakfast and brunch?',
+        a: `Yes — villa breakfast and brunch service from IDR 700,000 per person: fresh fruit, proper coffee, cooked-to-order plates, and a kitchen left spotless.`,
       },
       {
         q: 'Is Sanur far from Ubud and Canggu?',
-        a: 'Sanur is 45 minutes to Ubud and 40 minutes to Canggu by car. We operate across all three areas — if your itinerary covers Sanur and Ubud, we can coordinate chef service at both locations.',
-      },
-      {
-        q: 'Do you work with expat residents in Sanur for regular chef service?',
-        a: 'Yes. Many of our Sanur clients are long-term residents who use myCHEF 3–5 times per week. We accommodate recurring schedules, standing weekly menus, and special event dinners on request.',
+        a: `Sanur is 45 minutes to Ubud and 40 minutes to Canggu by car. We operate across all three and can coordinate chef service across a multi-stop itinerary.`,
       },
     ],
     nearbyAreas: [
@@ -480,12 +530,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'canggu', name: 'Canggu' },
     ],
-    metaTitle: 'Private Chef in Sanur, Bali | Family Villa Dining, Meal Prep | myCHEF',
+    metaTitle: 'Private Chef in Sanur, Bali | Family Villa Dining, Meal Prep',
     metaDescription:
-      'Book a private chef in Sanur, Bali. Family villa dinners, weekly meal prep, and event catering. HACCP-certified chefs, transparent pricing. WhatsApp myCHEF.',
+      'Hire a private chef in Sanur, Bali. Family dinners from IDR 700K/person, weekly meal plans from IDR 4.5M, no travel surcharge in Sanur. WhatsApp myCHEF.',
     coordinates: { lat: -8.7042, lng: 115.2607 },
     bookingNote:
-      'Book 1–2 days ahead for private dinners. Weekly meal prep packages start on Monday — confirm by the Friday before.',
+      'Book 1–2 days ahead for dinners; weekly meal plans start Mondays, confirmed by the Friday before.',
     published: true,
   },
   {
@@ -606,30 +656,50 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-pererenan.webp',
     heroAlt: 'Chef preparing romantic dinner at a secluded Pererenan villa at dusk',
     intro:
-      'Pererenan is what Canggu was before the beach clubs arrived — quieter surf breaks, architect-designed villas, and a guest profile who came for the privacy. myCHEF cooks romantic dinners, small-group fine dining, and weekly meal prep for the long-stayers who chose Pererenan specifically to escape the noise.',
+      `Pererenan is what Canggu was before the beach clubs arrived. The surf breaks are quieter, the villas are newer and often architect-designed, and the people who book them chose this address precisely because it isn't busy. Couples on a month-long stay. Remote workers who want silence until dinner. Small groups sharing a design villa who'd rather cook in than queue anywhere. That's exactly the brief a private chef answers. A myCHEF private chef in Pererenan brings restaurant-calibre cooking to villas built for privacy — intimate dinners, small-group fine dining, and weekly service for the long-stayers who came here to escape the noise, not to find a restaurant.`,
     villaDensity:
-      'Pererenan has emerging high-end villa stock — newer builds, often with private rice field or ocean views. Villas here tend to be more spacious and more isolated than central Canggu.',
+      `Pererenan's villa stock is newer and more spacious than central Canggu's, often with rice-field or ocean views and open-air dining areas made for evenings in.`,
     guestProfile:
-      'Couples on a longer Bali stay seeking privacy, digital nomads who want quieter surroundings, and small groups of friends sharing a design villa for a week.',
+      `Couples on longer stays, digital nomads wanting quiet, and small groups sharing architect-designed villas.`,
     landmarks: [
-      'Pererenan Beach',
-      'Jl. Pererenan',
-      'Yeh Gangga Beach',
-      'Seseh village',
+      'Pererenan Beach & Jl. Pererenan',
       'Echo Beach (northern end)',
+      'Batu Mejan fringe',
+      'Seseh village',
+      'Yeh Gangga',
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'A small travel allowance applies for very remote Pererenan addresses. Always included in the quote before confirmation.',
+      'A small travel allowance applies for addresses beyond the main Jl. Pererenan — always itemised before you confirm. [BUSINESS CONFIRMATION REQUIRED: publish IDR range for Pererenan travel allowance]. A 25% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
-        q: 'Do you serve private chefs in Pererenan?',
-        a: 'Yes. myCHEF covers the Pererenan corridor regularly. A small travel allowance applies for addresses beyond the main Jl. Pererenan — always quoted upfront.',
+        q: 'Do you serve Pererenan?',
+        a: `Yes — we cover the Pererenan corridor regularly, from Pererenan Beach to Seseh and Yeh Gangga. A small travel allowance applies for addresses beyond the main Jl. Pererenan, always quoted upfront. [BUSINESS CONFIRMATION REQUIRED: publish IDR range for Pererenan travel allowance]`,
       },
       {
-        q: 'How is Pererenan different from Canggu for private chef bookings?',
-        a: 'Pererenan is quieter and more remote. Villas tend to be larger and more private. myCHEF provides the same service quality but travel times are slightly longer — factor in an extra 10–15 minutes from our Seminyak base.',
+        q: 'How much does a private chef cost in Pererenan?',
+        a: `Sessions start from IDR 1,350,000 plus groceries at cost. Group dinners from IDR 700,000 per person, tasting menus from IDR 980,000, weekly service from IDR 4,500,000 per week for two. All subject to 11% tax + 10% service.`,
+      },
+      {
+        q: 'How is Pererenan different from Canggu for a chef booking?',
+        a: `Quieter and more spread out. Villas are newer, larger and more private — ideal for intimate dining and weekly service. Travel times run slightly longer, so we factor an extra 10–15 minutes from our Seminyak base.`,
+      },
+      {
+        q: 'Can we book a chef for our whole stay?',
+        a: `Yes — it's the most Pererenan booking we take. Recurring chef days each week, menus designed around your household, everything shopped fresh. Tell us your dates and we'll build the plan.`,
+      },
+      {
+        q: 'Do you cook for couples and very small groups?',
+        a: `Happily — much of our Pererenan work is dinners for two to six: tasting menus, relaxed family-style spreads, or a private BBQ for a small group of friends.`,
+      },
+      {
+        q: 'Do you cater for children and dietary requirements?',
+        a: `Yes — child-friendly plates, plant-based, gluten-free, halal and allergy-aware menus are all planned in advance at no extra charge.`,
+      },
+      {
+        q: 'How far ahead should we book?',
+        a: `1–2 days is usually enough; longer for weekly service in peak months so we can hold the same chef for your whole stay.`,
       },
     ],
     nearbyAreas: [
@@ -638,11 +708,12 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'ubud', name: 'Ubud' },
     ],
-    metaTitle: 'Private Chef in Pererenan, Bali | Villa Dining, Meal Prep | myCHEF',
+    metaTitle: 'Private Chef in Pererenan, Bali | Villa Dining, Meal Prep',
     metaDescription:
-      'Book a private chef in Pererenan, Bali. Private villa dinners, meal prep, and small-group fine dining. HACCP-certified, transparent pricing. WhatsApp myCHEF.',
+      'Book a private chef in Pererenan, Bali. Private villa dinners, meal prep, and small-group fine dining. HACCP-certified, transparent pricing. WhatsApp.',
     coordinates: { lat: -8.6338, lng: 115.1140 },
-    bookingNote: 'Book 1–2 days ahead. Confirm your villa address for accurate travel time and allowance.',
+    bookingNote:
+      'Book 1–2 days ahead. Confirm your exact villa address when you enquire so travel time and any allowance are quoted accurately.',
     published: true,
   },
   {

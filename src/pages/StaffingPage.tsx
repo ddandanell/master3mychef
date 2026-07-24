@@ -16,12 +16,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithAggregateOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { Breadcrumb } from '@/components/shared'
@@ -36,7 +31,6 @@ import { STAFFING_RELATED } from '@/data/related-services'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_NUMBER = 6289674072020
 const WA_MARCO = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
   "Hi Marco, I'm looking to hire hospitality staff for my villa/hotel in Bali. Can you help?",
@@ -48,6 +42,7 @@ const SERVICES = [
     icon: ChefHat,
     title: 'Private Chef Placement',
     slug: '/staffing/private-chef-placement',
+    linkLabel: 'Private chef placement in Bali',
     tag: 'Most Popular',
     price: 'From IDR 5,500,000/month',
     desc: 'Long-term chef placement for villas, residences, and family homes. Full-time, part-time, or seasonal. We source, vet, trial, and place — you get a chef who fits your kitchen and your household.',
@@ -62,6 +57,7 @@ const SERVICES = [
     icon: Home,
     title: 'Live-In Villa Chef',
     slug: '/staffing/live-in-chef',
+    linkLabel: 'Explore our live-in chef service',
     tag: 'Premium',
     price: 'From IDR 8,000,000/month',
     desc: 'Chef lives on-site. Daily market runs, full household board, dietary management, and guest catering — all without lifting a finger. The closest thing to a private restaurant in your villa.',
@@ -76,9 +72,10 @@ const SERVICES = [
     icon: Users,
     title: 'Villa & Household Staff',
     slug: '/staffing/villa-staff',
+    linkLabel: 'Hire villa staff long-term',
     tag: 'B2B & Bulk',
     price: 'Contact for pricing',
-    desc: 'Butlers, housekeepers, villa managers, waiters, and event staff — placed as individuals or as a full team. Used by villa management companies, hotels, and private property operators across Bali.',
+    desc: 'Villa managers, housekeepers, gardeners, pool attendants and security — placed as individuals or as a complete team for new or re-staffed properties. Long-term placement only.',
     features: [
       'Villa managers & household managers',
       'Butlers, waiters, housekeepers',
@@ -129,31 +126,128 @@ const STEPS = [
   },
 ]
 
-// ── 4. FAQ (5 questions) ────────────────────────────────────────────────────
+// ── 4. FAQ (6 questions) ────────────────────────────────────────────────────
 const FAQS = [
   {
     q: 'What types of staff do you place?',
-    a: 'Private chefs, live-in chefs, villa managers, butlers, housekeepers, waiters, event staff, and household managers. For hotels and restaurants we can build full-team briefs on request.',
+    a: 'Private chefs, live-in chefs, villa managers, butlers, housekeepers, nannies, drivers, estate managers, waiters and event staff. For hotels and restaurants we build full-team briefs across kitchen, service and management roles.',
   },
   {
     q: 'How quickly can you fill a position?',
-    a: 'Most private chef placements are confirmed within 48 hours of receiving a brief. For live-in arrangements or management roles, allow 3–5 days for profiling and a trial session. Urgent requests: message Marco directly on WhatsApp.',
+    a: 'Most private chef placements are confirmed within 48 hours of receiving a brief. Live-in arrangements and management roles take 3–5 days of profiling plus a trial session — allow 1–2 weeks end to end. Retainer clients with urgent gaps are typically filled in 48–72 hours.',
+  },
+  {
+    q: 'What does placement cost?',
+    a: 'Monthly salaries start from IDR 4,000,000 for household roles and IDR 5,500,000 for a part-time private chef. Our placement fee is one month\'s salary and covers sourcing, vetting, trials, contract preparation and six months of ongoing support.',
   },
   {
     q: 'What if the staff member is not the right fit?',
-    a: 'Every placement includes a 30-day trial period. If the match is not working — for any reason — we replace at no charge. We maintain a bench of vetted backup candidates for every active placement.',
+    a: 'Every placement includes a 30-day replacement guarantee. If the match is not working, we restart the search at no additional cost — no questions, no delays.',
   },
   {
-    q: 'Do you handle contracts and payroll?',
-    a: 'Yes. We provide standard Indonesian staffing contracts and payroll guidance. For long-term or full-team placements, we can advise on employment compliance and household structure. All included in the placement fee.',
+    q: 'Do you handle contracts, payroll and BPJS?',
+    a: 'We prepare standard Indonesian employment contracts and provide payroll guidance as part of the placement fee, and we explain employer obligations including BPJS and THR. For complex structures we recommend trusted local payroll partners. [BUSINESS CONFIRMATION REQUIRED: whether myCHEF administers BPJS registration directly.]',
   },
   {
-    q: 'What does it cost?',
-    a: 'Private chef placement starts from IDR 5,500,000/month (part-time) and IDR 9,500,000/month (full-time). Our placement fee is one month\'s salary, which covers sourcing, vetting, trials, contract, and six months of ongoing support. Villa & household staff pricing is quoted per role.',
+    q: 'Which areas do you cover?',
+    a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions — plus Jakarta. We have also placed chefs in Lombok and on private yachts; international placements are available on request.',
   },
 ]
 
-// ── 5. STATS BAR ─────────────────────────────────────────────────────────────
+// ── 5. JSON-LD ───────────────────────────────────────────────────────────────
+const STAFFING_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://mychef.id/staffing#service',
+      name: 'Villa Staff Placement Bali',
+      serviceType: 'Hospitality staff placement agency',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+      },
+      areaServed: ['Bali', 'Jakarta'],
+      description: 'Long-term placement of private chefs, live-in chefs, villa managers, butlers, housekeepers and hospitality teams for villas, hotels and private households in Bali and Jakarta. 48-hour average placement, 30-day replacement guarantee.',
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'IDR',
+        price: '4000000',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          priceCurrency: 'IDR',
+          price: '4000000',
+          unitText: 'MONTH',
+          description: "Monthly salaries from IDR 4,000,000; placement fee equal to one month's salary",
+        },
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What types of staff do you place?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Private chefs, live-in chefs, villa managers, butlers, housekeepers, nannies, drivers, estate managers, waiters and event staff. For hotels and restaurants we build full-team briefs across kitchen, service and management roles.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How quickly can you fill a position?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Most private chef placements are confirmed within 48 hours of brief. Live-in and management roles take 3–5 days of profiling plus a trial, or 1–2 weeks end to end. Retainer clients with urgent gaps are typically filled in 48–72 hours.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What does placement cost?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Monthly salaries start from IDR 4,000,000 for household roles and IDR 5,500,000 for a part-time private chef. The placement fee is one month\'s salary and covers sourcing, vetting, trials, contract preparation and six months of ongoing support.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What if the staff member is not the right fit?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Every placement includes a 30-day replacement guarantee. If the match is not working, we restart the search at no additional cost.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you handle contracts, payroll and BPJS?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We prepare standard Indonesian employment contracts and provide payroll guidance as part of the placement fee, and explain employer obligations including BPJS and THR. For complex structures we recommend trusted local payroll partners.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Which areas do you cover?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions — plus Jakarta. We have also placed chefs in Lombok and on private yachts; international placements on request.',
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+        { '@type': 'ListItem', position: 2, name: 'Staffing & Placement', item: 'https://mychef.id/staffing' },
+      ],
+    },
+  ],
+}
+
+// ── 6. STATS BAR ─────────────────────────────────────────────────────────────
 const STATS = [
   { icon: Users, value: '50+', label: 'Active Staff' },
   { icon: Home, value: '560+', label: 'Villas Served' },
@@ -189,28 +283,7 @@ export default function StaffingPage() {
         description={getPageMeta('staffing').description}
         canonical={getPageMeta('staffing').canonical}
         ogImage={getPageMeta('staffing').ogImage}
-        jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Hospitality Staffing Bali',
-            description: 'Private chef, live-in chef, and villa household staff placement across Bali. Vetted network, 48h confirmation, 30-day replacement guarantee.',
-            url: `${SITE}/staffing`,
-            lowPrice: '5500000',
-            highPrice: '8000000',
-            unitText: 'per month',
-          }),
-          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('Staffing', `${SITE}/staffing`),
-          howToSchema({
-            name: 'How to Hire Hospitality Staff in Bali',
-            description: 'Hire vetted private chefs, live-in chefs, and villa staff in Bali in 3 easy steps.',
-            totalTime: 'PT10M',
-            steps: [
-              { name: 'Brief us', text: 'Tell us the role, schedule, cuisine direction, and household size. Takes five minutes on WhatsApp.' },
-              { name: 'We match', text: 'Within 24 hours, we shortlist 2–3 vetted candidates from our active network for your review.' },
-              { name: 'We place', text: 'Contract signed, onboarding handled, and first-week check-in included. 30-day replacement guarantee.' },
-            ],
-          }),
-        ]}
+        jsonLd={STAFFING_JSON_LD}
       />
 
       {/* ── HERO ────────────────────────────────────────────────────────── */}
@@ -241,10 +314,10 @@ export default function StaffingPage() {
             className="text-[2.4rem] md:text-6xl lg:text-7xl leading-[1.06] mb-6 max-w-[860px]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Hire Vetted Hospitality Staff for Your Villa, Hotel or Home.
+            Hire Vetted Hospitality Staff for Your Villa, Hotel or Home
           </h1>
           <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[620px] leading-relaxed">
-            Private chefs, live-in chefs, villa staff, and household teams — placed within 48 hours. All background-checked, English-speaking, and trained. For villa managers, hotel owners, and private households across Bali.
+            Long-term villa staff placement in Bali and Jakarta — private chefs, live-in chefs, villa managers, butlers, housekeepers and full household teams. Every candidate is background-checked, English-speaking and personally known to our team. Most chef placements are confirmed within 48 hours of your brief, and every placement carries a 30-day replacement guarantee.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
@@ -255,7 +328,7 @@ export default function StaffingPage() {
             </Button>
             <Button asChild variant="secondary" size="brand" className="w-full sm:w-auto">
               <Link to="/staffing/private-chef-placement">
-                View Chef Placement
+                Private chef placement in Bali
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
@@ -340,6 +413,15 @@ export default function StaffingPage() {
                   {svc.price}
                 </p>
                 <p className="text-sm text-[#4A4745] leading-relaxed mb-6">{svc.desc}</p>
+                {svc.slug === '/staffing/villa-staff' && (
+                  <p className="text-sm text-[#4A4745] leading-relaxed mb-6">
+                    For one-off events and shift work, see our{' '}
+                    <Link to="/in-villa-service" className="font-semibold" style={{ color: '#C5A028' }}>
+                      shift-based service staff by the hour
+                    </Link>
+                    .
+                  </p>
+                )}
                 <ul className="space-y-2 mb-8 flex-1">
                   {svc.features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm text-[#4A4745]">
@@ -353,7 +435,7 @@ export default function StaffingPage() {
                   className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all group-hover:gap-3 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5"
                   style={{ color: '#C5A028' }}
                 >
-                  View {svc.title} <ArrowRight className="w-4 h-4" />
+                  {svc.linkLabel} <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
               <span
@@ -378,7 +460,7 @@ export default function StaffingPage() {
               <MessageCircle className="w-4 h-4" /> Get Staffing Availability & Pricing
             </a>
             <Link to="/staffing/private-chef-placement" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase rounded-full border border-[#E5E3E0] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: '#1A1A1A' }}>
-              View Chef Placement
+              Private chef placement in Bali
             </Link>
           </div>
         </div>
@@ -533,6 +615,13 @@ export default function StaffingPage() {
             <p className="text-white/[50%] text-sm mt-4">
               Free brief review · 30-day replacement guarantee · Response within 1 hour
             </p>
+            <p className="text-white/[60%] text-sm mt-4">
+              Looking for service staff for a single event instead? Our{' '}
+              <Link to="/in-villa-service" className="underline" style={{ color: '#C5A028' }}>
+                in-villa service team
+              </Link>{' '}
+              provides waiters, bartenders and butlers by the hour, from IDR 250,000/hour.
+            </p>
           </div>
           {/* Sub-service links */}
           <div className="space-y-3">
@@ -543,12 +632,12 @@ export default function StaffingPage() {
               Or explore a specific service
             </p>
             {[
-              { label: 'Private Chef Placement', href: '/staffing/private-chef-placement' },
-              { label: 'Live-In Villa Chef', href: '/staffing/live-in-chef' },
-              { label: 'Villa & Household Staff', href: '/staffing/villa-staff' },
-              { label: 'Household & Domestic Staff', href: '/staffing/household-staff' },
-              { label: 'For Villa Managers', href: '/staffing/for-villa-managers' },
-              { label: 'For Hotels & Restaurants', href: '/staffing/for-hotels-restaurants' },
+              { label: 'Private chef placement in Bali', href: '/staffing/private-chef-placement' },
+              { label: 'Explore our live-in chef service', href: '/staffing/live-in-chef' },
+              { label: 'Hire villa staff long-term', href: '/staffing/villa-staff' },
+              { label: 'Household staff for private residences', href: '/staffing/household-staff' },
+              { label: 'Staffing for villa managers', href: '/staffing/for-villa-managers' },
+              { label: 'Hotel & restaurant staffing', href: '/staffing/for-hotels-restaurants' },
             ].map((link) => (
               <Link
                 key={link.href}

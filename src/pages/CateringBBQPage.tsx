@@ -34,21 +34,24 @@ const SITE = 'https://mychef.id'
 const BBQ_PACKAGES = [
   {
     title: 'Indonesian BBQ',
-    description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert.',
+    price: 'IDR 700,000/person',
+    description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert. The authentic Balinese grill — our most requested menu.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
     image: '/generated/mychef-catering-bali-bbq-package-indonesian.webp',
   },
   {
     title: 'International BBQ',
-    description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, fresh fruit.',
+    price: 'IDR 700,000/person',
+    description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, fresh fruit. Familiar crowd-pleasers for mixed international groups.',
     includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
     image: '/generated/mychef-catering-bali-bbq-package-international.webp',
   },
   {
-    title: 'Premium Surf & Turf BBQ',
-    description: 'Wagyu steak, whole lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station.',
+    title: 'Premium Surf & Turf',
+    price: 'IDR 850,000/person',
+    description: 'Wagyu steak, whole lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station, plated service. The celebration-tier grill.',
     includes: ['Chef', '2 service staff', 'All equipment', 'Ingredients', 'Setup', '2-3h service', 'Plated service', 'Pack-up & cleanup'],
     minGuests: 'Min. 10 guests',
     image: '/generated/mychef-catering-bali-bbq-package-surfturf.webp',
@@ -78,12 +81,11 @@ const BBQ_MENU = [
 ]
 
 const SETUP_EQUIPMENT = [
-  { title: 'Portable Grills', desc: 'Charcoal and gas grills brought to your villa. Suitable for garden, poolside, or terrace.' },
-  { title: 'Cooking Tools', desc: 'Chef knives, tongs, brushes, thermometers, and all grilling equipment.' },
-  { title: 'Chafing Dishes', desc: 'Hot-holding equipment for buffet-style service. Food stays warm throughout.' },
-  { title: 'Serving Platters', desc: 'Stylish serving ware for table presentation. Rustic wood and ceramic options.' },
-  { title: 'Prep Stations', desc: 'Portable prep tables, cutting boards, and mise en place setup.' },
-  { title: 'Cleanup Supplies', desc: 'Bins, bags, cleaning products, and surface protectors. We leave nothing behind.' },
+  { title: 'Live grill + service team', desc: 'Private chef grilling live and two service staff managing plating and drinks.' },
+  { title: 'Portable grills & tools', desc: 'Charcoal and gas grills, cooking tools, chafing dishes, serving platters, and prep stations.' },
+  { title: 'Fuel, transport & waste', desc: 'Propane, charcoal, equipment transport, and waste disposal — all handled by us.' },
+  { title: 'Setup, service & cleanup', desc: 'Setup, 2–3 hours of service, and complete cleanup — we leave the villa spotless.' },
+  { title: 'Dietary coverage', desc: 'Seafood-free, pork-free, vegetarian grill, vegan sides, gluten-free sauces, halal-sensitive prep, nut-free, child-friendly.' },
 ]
 
 const ADDONS = [
@@ -98,11 +100,8 @@ const AREA_MINIMUMS = [
   { area: 'Seminyak / Canggu', min: '10 guests', fee: 'No travel fee' },
   { area: 'Berawa / Pererenan', min: '10 guests', fee: 'No travel fee' },
   { area: 'Ubud', min: '10 guests', fee: 'Travel fee applies' },
-  { area: 'Uluwatu', min: '20 guests', fee: 'Travel fee applies' },
-  { area: 'Nusa Dua', min: 'Quote required', fee: 'Quote required' },
-  { area: 'Sanur', min: 'Quote required', fee: 'Quote required' },
-  { area: 'Jimbaran', min: 'Quote required', fee: 'Quote required' },
-  { area: 'Tanah Lot', min: 'Quote required', fee: 'Travel fee applies' },
+  { area: 'Uluwatu / Bukit', min: '20 guests', fee: 'Travel fee applies' },
+  { area: 'Nusa Dua / Sanur / Jimbaran / Tanah Lot', min: 'Custom quote', fee: 'Quoted upfront' },
 ]
 
 const BBQ_VS_OTHERS = [
@@ -114,16 +113,14 @@ const BBQ_VS_OTHERS = [
 ]
 
 const FAQS = [
-  { q: 'Do you bring the BBQ grill and equipment?', a: 'Yes. We bring portable grills (charcoal and gas), all cooking tools, chafing dishes for hot holding, serving platters, prep stations, and cleanup supplies. You do not need to provide anything.' },
-  { q: 'Can you cook seafood at the BBQ?', a: 'Absolutely. Our International and Premium packages include prawns, lobster tail, salmon, Mahi-mahi, and whole fish. We can also customize any package to be seafood-focused.' },
-  { q: 'Can we choose the meat quality?', a: 'Yes. Our standard packages use high-quality local and imported meats. The Wagyu upgrade replaces standard beef with premium Wagyu. We also offer halal and pork-free options.' },
-  { q: 'Do you serve drinks and cocktails?', a: 'Drinks are not included in the base package, but you can add a bartender with a 3-hour open bar as a line item in your itemised quote. We also offer wine pairing and soft drink packages.' },
-  { q: 'What happens if it rains?', a: 'We monitor weather and can set up under covered terraces, verandas, or indoor kitchens. For uncovered outdoor setups, we bring pop-up tents. We always have a backup plan.' },
-  { q: 'How many guests do I need?', a: 'Minimum 10 guests in Seminyak/Canggu and Ubud, and 20 in Uluwatu. For other areas, contact us for a custom quote.' },
-  { q: 'Do you clean up after the BBQ?', a: 'Full cleanup is included. We pack up all equipment, dispose of waste, clean the grill area, and leave your villa as we found it.' },
-  { q: 'Can you do vegetarian or vegan BBQ?', a: 'Yes. We offer full vegetarian and vegan BBQ menus with grilled vegetables, plant-based proteins, salads, and sides. No compromise on flavor.' },
-  { q: 'How far in advance should I book?', a: 'For Seminyak/Canggu, 3–7 days is ideal. For other areas, 1–2 weeks. Last-minute bookings possible depending on chef availability.' },
-  { q: 'Can I customize the menu?', a: 'Every menu is customized for your group. Choose your protein focus, spice level, dietary needs, and add-ons. Nothing is off-the-shelf.' },
+  { q: 'How much does BBQ catering in Bali cost?', a: 'From IDR 700,000 per person for the Indonesian and International packages, IDR 850,000 for Premium Surf & Turf — chef, staff, equipment, ingredients, and cleanup included. Prices are ++ (11% government tax + 10% service charge).' },
+  { q: "What's the minimum number of guests?", a: 'Ten guests in Seminyak, Canggu, Berawa, Pererenan, and Ubud; twenty in Uluwatu. Other areas are quoted case by case.' },
+  { q: 'Do you bring the grill and equipment?', a: 'Yes — grills, fuel, tools, chafing dishes, platters, prep stations, and cleanup supplies. You do not need to own anything.' },
+  { q: 'Can you do a seafood-focused or vegetarian BBQ?', a: 'Absolutely. Any package can go seafood-heavy, and we run full vegetarian and vegan grills with plant-based proteins, grilled vegetables, salads, and sides. For a dedicated market-fresh seafood menu, see our seafood BBQ page.' },
+  { q: 'Are drinks included?', a: 'Not in the base package. Add a bartender with a 3-hour open bar for IDR 4,000,000 flat, or wine and soft-drink packages as line items in your quote.' },
+  { q: 'What if it rains?', a: 'We monitor the forecast and set up under covered terraces or verandas, or bring pop-up tents for uncovered areas. Every outdoor booking has a plan B at no extra charge.' },
+  { q: 'How far ahead should I book?', a: 'Three to seven days for Seminyak/Canggu, one to two weeks elsewhere; last-minute is often possible. A 50% deposit locks your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable.' },
+  { q: 'Can I customise the menu?', a: 'Every menu is built for your group — protein focus, spice levels, dietary needs, kids\' portions. Nothing is off-the-shelf.' },
 ]
 
 export default function CateringBBQPage() {
@@ -142,16 +139,16 @@ export default function CateringBBQPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="BBQ Catering Bali | Live-Fire Villa BBQ for Groups — myCHEF"
-        description="BBQ catering in Bali: chef grills live at your villa. Seafood, Wagyu & Indonesian menus for birthdays, parties & groups. WhatsApp for instant quote."
+        title="BBQ Catering Bali | Villa BBQ & Live Chef Grill | myCHEF"
+        description="Bali BBQ catering for villas, parties & events: fresh seafood, Wagyu, satay and sides grilled live at your villa. From IDR 700K/person. WhatsApp myCHEF."
         canonical={`${SITE}/catering/bbq-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-bbq.webp`}
         jsonLd={[
           serviceWithAggregateOfferSchema({
             name: 'BBQ Catering Bali',
-            description: 'Live-fire BBQ catering for Bali villas, birthdays, weddings, and relaxed private events with chefs grilling on site. myCHEF.id handles ingredients, setup, service, and cleanup across Bali.',
+            description: 'Chef-led BBQ catering for Bali villas, parties and events. Live grilling, service staff, equipment and cleanup included. Indonesian, International and Premium Surf & Turf packages.',
             url: `${SITE}/catering/bbq-catering`,
-            lowPrice: '550000',
+            lowPrice: '700000',
             highPrice: '850000',
           }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
@@ -192,26 +189,28 @@ export default function CateringBBQPage() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Chapter 1 — BBQ Catering Bali
+            BBQ Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            BBQ Catering Bali<br />
-            <span className="italic">for Villas, Parties, and Events</span>
+            BBQ Catering Bali for Villas, Parties & Events
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Fresh grills, chef-led cooking, villa-ready setup, and relaxed poolside service for groups who want a proper BBQ without managing anything.
+            A private chef grilling live at your villa — satay, seafood, Wagyu, and Balinese sides cooked over real fire while your guests relax. We bring the grills, the team, and the cleanup. You bring the appetite.
           </p>
-          <p className="text-white/[60%] text-sm mb-10">
-            Chef + staff + equipment included · Itemised quote within the hour · Bali-wide
+          <p className="text-white/[80%] text-base mb-6">
+            From IDR 700,000/person · Min. 10 guests · Chef + 2 service staff included
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <MessageCircle className="w-4 h-4" /> Build My BBQ Menu
             </a>
             <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              View BBQ Packages
+              See Package Prices
             </a>
           </div>
+          <p className="text-white/[55%] text-xs mb-8">
+            Itemised quote on WhatsApp within the hour. 50% deposit confirms your date.
+          </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Same-day WhatsApp reply</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Grill + equipment included</span>
@@ -237,6 +236,9 @@ export default function CateringBBQPage() {
               </p>
               <p className="text-[#4A4745]">
                 Every package includes a private chef who grills live, two service staff who manage plating and drinks, and full cleanup afterward. We handle propane, charcoal, equipment transport, and waste disposal.
+              </p>
+              <p className="text-[#4A4745]">
+                See <Link to="/catering" className="text-[#C5A028] hover:underline">all catering options</Link> to compare BBQ with buffet, plated, and grazing formats.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Villa gardens', 'Poolside decks', 'Terraces', 'Beach setups', 'Rooftops', 'Covered patios'].map((tag) => (
@@ -282,6 +284,9 @@ export default function CateringBBQPage() {
               </div>
             ))}
           </div>
+          <p className="text-center text-sm text-[#4A4745] mt-8">
+            Planning a dedicated party night at your villa? Our <Link to="/villa-bbq-catering-bali" className="text-[#C5A028] hover:underline">villa BBQ party packages</Link> are built for exactly that. Want the grill focused on the catch of the day? See our <Link to="/seafood-bbq-catering-bali" className="text-[#C5A028] hover:underline">seafood BBQ catering</Link>.
+          </p>
         </div>
       </section>
 
@@ -302,8 +307,8 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/villa-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore Villa Catering <ArrowRight className="w-4 h-4" />
+            Browse our <Link to="/bbq-grill" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              full BBQ menus <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -317,21 +322,28 @@ export default function CateringBBQPage() {
               <SectionHeader
                 align="left"
                 eyebrow="Chapter 5 — The Grill"
-                title="The Live Grill Experience"
-                subtitle="A chef at the grill is theater. Guests gather around, smell the smoke, watch the flames, and know their food is being cooked fresh. This is why BBQ catering creates the best memories."
+                title="Why Live-Fire Beats Pre-Cooked Catering"
+                subtitle="Most 'BBQ catering' in Bali is cooked off-site and reheated in trays. Ours isn't."
               />
               <div className="space-y-4 mt-6">
                 <p className="text-[#4A4745]">
-                  Our chefs do not pre-cook and reheat. They arrive with raw ingredients, prep on-site, and grill everything live. The sizzle, the smoke, the chef's interaction with guests — it turns dinner into an event.
+                  Our chefs arrive with raw ingredients, prep on-site, and grill everything live — the smoke, the sizzle, and the chef working the fire become part of the evening.
                 </p>
-                <p className="text-[#4A4745]">
-                  For villa parties, the grill station becomes a natural gathering point. Guests mingle, take photos, and chat with the chef while food is prepared. It breaks the ice and creates energy that a plated dinner cannot replicate.
-                </p>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {['Live-fire cooking', 'Chef-guest interaction', 'Fresh aroma', 'Photo moments', 'Natural icebreaker'].map((tag) => (
-                    <span key={tag} className="px-3 py-1.5 bg-[#FAFAF8] rounded-full text-xs text-[#4A4745] border border-[#E8E6E3]">{tag}</span>
+                <ul className="space-y-2">
+                  {[
+                    'Grilled to order, never reheated — food comes off the fire in waves, hot and timed to your group',
+                    'Sourced the morning of your event — fresh seafood, meats, and produce, not freezer stock',
+                    'A natural gathering point — guests drift to the grill, chat with the chef, and the ice breaks itself',
+                    'Any villa layout works — gardens, pool decks, terraces, rooftops, covered patios; gas or charcoal depending on your villa\'s open-flame rules',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                      <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                    </li>
                   ))}
-                </div>
+                </ul>
+                <p className="text-[#4A4745] pt-2">
+                  Looking for the full menu list? Browse our <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">full BBQ menus</Link>.
+                </p>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden">
@@ -353,7 +365,7 @@ export default function CateringBBQPage() {
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 6 — Setup"
-            title="Villa Setup and Equipment"
+            title="What's Included in Every BBQ Booking"
             subtitle="We bring everything. You do not need to own a grill, find propane, or buy serving platters. Our team arrives fully equipped."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
@@ -366,8 +378,11 @@ export default function CateringBBQPage() {
           </div>
           <div className="mt-8 bg-[#FAFAF8] rounded-2xl p-6 border border-[#E8E6E3]">
             <h3 className="font-semibold mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>What You Need to Provide</h3>
+            <p className="text-sm text-[#4A4745] mb-3">
+              Just a flat outdoor area and water access. If your villa restricts open flames, we bring gas grills or covered electric setups.
+            </p>
             <p className="text-sm text-[#4A4745]">
-              Just a flat outdoor area (garden, terrace, pool deck) and access to water. We handle grills, fuel, tools, serving ware, and cleanup. If your villa has restrictions on open flames, we use gas grills or covered electric setups.
+              <strong>Optional add-ons:</strong> bartender + 3h open bar (IDR 4,000,000 flat), Wagyu upgrade, gluten-free menu adaptation, plated table service, additional waiters from IDR 250,000/hour.
             </p>
           </div>
         </div>
@@ -378,10 +393,13 @@ export default function CateringBBQPage() {
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 7 — Packages"
-            title="BBQ Catering Packages"
-            subtitle="Chef, staff, equipment, setup, and cleanup included in every package. Every group receives a tailored, itemised quote — send your date, area, and guest count."
+            title="BBQ Catering Packages & Prices"
+            subtitle="Every package includes your chef, two service staff, all grilling equipment, ingredients, setup, 2–3 hours of service, and full cleanup. Prices are per person, ++ (11% government tax + 10% service charge)."
           />
           <div className="grid md:grid-cols-3 gap-6 mt-10">
+            <p className="text-sm text-[#4A4745]/80 text-center max-w-3xl mx-auto mb-8">
+              Price-model note: these are service packages (from IDR 700K/person, min. 10). Our <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">full BBQ menus</Link> list named signature menus priced per guest (from IDR 950K/guest, min. 8) — a different product, so the entry floors differ.
+            </p>
             {BBQ_PACKAGES.map((pkg) => (
               <div key={pkg.title} className="bbq-reveal bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden flex flex-col">
                 <div className="aspect-[16/10] overflow-hidden">
@@ -389,6 +407,7 @@ export default function CateringBBQPage() {
                 </div>
                 <div className="p-6 md:p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
+                  <p className="text-[#C5A028] font-semibold text-sm mb-1">{pkg.price}</p>
                   <p className="text-xs text-[#4A4745]/80 mb-4">{pkg.minGuests}</p>
                   <p className="text-sm text-[#4A4745] mb-4">{pkg.description}</p>
                   <ul className="space-y-1.5 mb-6 flex-1">
@@ -479,12 +498,12 @@ export default function CateringBBQPage() {
             ))}
           </div>
           <div className="mt-8 text-center">
-            <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore Buffet Catering <ArrowRight className="w-4 h-4" />
+            Explore <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              buffet catering <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
-            <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore Plated Dinners <ArrowRight className="w-4 h-4" />
+            Explore <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+              plated dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -495,7 +514,7 @@ export default function CateringBBQPage() {
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 10 — Coverage"
-            title="Minimum Guests and Travel Coverage"
+            title="BBQ Catering Across Bali"
             subtitle="BBQ catering across all major Bali villa areas. Minimums depend on travel time and staffing logistics."
           />
           <div className="hidden md:block overflow-x-auto mt-10">
@@ -529,6 +548,9 @@ export default function CateringBBQPage() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-[#4A4745] mt-8 max-w-3xl mx-auto text-center">
+            Out-of-area travel typically runs IDR 250K–700K depending on distance and team size — always itemised in your quote, never added later. We coordinate access, parking, and house rules directly with your villa manager; for larger parties, check outside-vendor permission and any banjar function fee with your villa — we'll flag it in the quote.
+          </p>
         </div>
       </section>
 
@@ -583,13 +605,13 @@ export default function CateringBBQPage() {
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Book BBQ Catering Bali
+            Book Your BBQ
           </p>
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Ready to Grill at Your Villa?
+            Book Your BBQ
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Send your date, area, guest count, and preferred BBQ package. We will confirm availability and send your itemised quote by WhatsApp within the hour.
+            Send your date, villa area, guest count, and preferred package. We confirm availability and send your itemised quote by WhatsApp within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
@@ -619,10 +641,10 @@ export default function CateringBBQPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Buffet Catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },
-              { label: 'Plated Dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
+              { label: 'buffet catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },
+              { label: 'plated dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
               { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
-              { label: 'Drop-Off Catering', href: '/catering/drop-off-catering', desc: 'Fresh food delivered to your villa.' },
+              { label: 'catering pricing', href: '/pricing', desc: 'Transparent catering and service pricing.' },
               { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
             ].map((item) => (

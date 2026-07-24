@@ -3,12 +3,8 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, Gem } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -22,8 +18,57 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'butler service in Bali', intent: 'availability and pricing' })
+
+const briefJsonLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      name: 'Private Butler Hire Bali',
+      serviceType: 'Butler hire',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+        email: 'bali@mychef.id',
+      },
+      areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
+      description: 'Hire a professional private butler in Bali by the day, event or residence stay. Arrival service, household coordination and anticipatory guest care from IDR 1,200,000 per day.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'IDR',
+        lowPrice: '1200000',
+        highPrice: '2500000',
+        offerCount: '3',
+        description: 'Day Butler IDR 1,200,000/day; Event Butler IDR 1,800,000/event; Residence Butler IDR 2,500,000/day. Subject to 11% tax + 10% service charge.',
+      },
+      url: 'https://mychef.id/in-villa-service/butlers',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'How much does it cost to hire a butler in Bali?', acceptedAnswer: { '@type': 'Answer', text: 'From IDR 1,200,000 per day for an 8-hour Day Butler; Event Butler IDR 1,800,000 per event (6 hours); Residence Butler IDR 2,500,000 per day (12 hours). Multi-day discounts apply. Rates are subject to 11% tax + 10% service charge.' } },
+        { '@type': 'Question', name: 'Is the butler live-in?', acceptedAnswer: { '@type': 'Answer', text: 'Day and Event Butlers are per-shift. Residence Butlers can be arranged as live-in for extended stays on request.' } },
+        { '@type': 'Question', name: 'Can the butler manage other villa staff?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Residence Butlers coordinate chefs, housekeepers, drivers and gardeners for seamless villa operations.' } },
+        { '@type': 'Question', name: 'What languages do your butlers speak?', acceptedAnswer: { '@type': 'Answer', text: 'All butlers speak fluent English; many also speak Mandarin, French or Japanese.' } },
+        { '@type': 'Question', name: 'How long should I book a butler for?', acceptedAnswer: { '@type': 'Answer', text: 'A Day Butler suits single events or short stays; for stays of 3+ days a Residence Butler delivers consistent, relationship-based service.' } },
+        { '@type': 'Question', name: 'How far in advance should I book?', acceptedAnswer: { '@type': 'Answer', text: '1–2 weeks for Day Butlers; 3–4 weeks for Residence Butlers in peak season. Shorter notice is often possible via WhatsApp.' } },
+        { '@type': 'Question', name: 'What areas do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' } },
+        { '@type': 'Question', name: 'What is the difference between hiring a butler and booking a villa with butler service?', acceptedAnswer: { '@type': 'Answer', text: 'Villas advertising butler service typically include a shared staff member during fixed hours. A hired myCHEF butler is dedicated to your group alone, briefed to your preferences, and booked for exactly the days and hours you choose.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
+        { '@type': 'ListItem', position: 2, name: 'In-Villa Service', item: 'https://mychef.id/in-villa-service' },
+        { '@type': 'ListItem', position: 3, name: 'Butlers', item: 'https://mychef.id/in-villa-service/butlers' },
+      ],
+    },
+  ],
+}
 
 const PRICING_TIERS = [
   {
@@ -34,19 +79,19 @@ const PRICING_TIERS = [
     bestFor: 'Villa stays, family holidays, small groups',
   },
   {
+    title: 'Event Butler',
+    price: 'IDR 1,800,000',
+    unit: '/event',
+    features: ['6-hour service', 'Guest reception', 'Coat check', 'Cigar service', 'Personal attendant', 'VIP support'],
+    bestFor: 'Weddings, corporate events, gala dinners',
+  },
+  {
     title: 'Residence Butler',
     price: 'IDR 2,500,000',
     unit: '/day',
     features: ['12-hour service', 'Full household management', 'Meal coordination', 'Vendor liaison', 'Inventory management', 'Event support'],
     bestFor: 'Extended stays, private villas, high-net-worth guests',
     highlight: true,
-  },
-  {
-    title: 'Event Butler',
-    price: 'IDR 1,800,000',
-    unit: '/event',
-    features: ['6-hour service', 'Guest reception', 'Coat check', 'Cigar service', 'Personal attendant', 'VIP support'],
-    bestFor: 'Weddings, corporate events, gala dinners',
   },
 ]
 
@@ -70,14 +115,14 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'What does a villa butler actually do?', a: 'A villa butler manages the guest experience — greeting arrivals, coordinating meals, managing household staff, handling requests, and ensuring every detail of the stay is flawless. They are the single point of contact for all guest needs.' },
-  { q: 'Is a butler different from a waiter?', a: 'Yes. A waiter serves meals. A butler manages the entire guest experience — from arrival to departure — including service coordination, preference management, and household oversight.' },
-  { q: 'How long should I book a butler for?', a: 'Day butlers are ideal for single events or short stays. Residence butlers are recommended for stays of 3+ days where consistent service and relationship-building matter.' },
-  { q: 'Can the butler manage other staff?', a: 'Yes. Our residence butlers are experienced in coordinating chefs, housekeepers, drivers, and gardeners to ensure seamless villa operations.' },
-  { q: 'What areas do you cover?', a: 'All Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'How far in advance should I book?', a: '1–2 weeks for day butlers. 3–4 weeks for residence butlers during peak season.' },
-  { q: 'Is the butler live-in?', a: 'Day and event butlers are per-shift. Residence butlers can be arranged as live-in for extended stays — please enquire for availability.' },
-  { q: 'What languages do butlers speak?', a: 'All butlers speak fluent English. Many speak additional languages including Mandarin, French, and Japanese.' },
+  { q: 'How much does it cost to hire a butler in Bali?', a: 'From IDR 1,200,000 per day for an 8-hour Day Butler. Event Butlers start at IDR 1,800,000 per event (6 hours), and Residence Butlers at IDR 2,500,000 per day (12 hours, full household management). Multi-day bookings receive discounted daily rates. All rates ++ (11% tax + 10% service).' },
+  { q: 'Is the butler live-in?', a: 'Day and Event Butlers are per-shift. Residence Butlers can be arranged as live-in for extended stays — please enquire for availability.' },
+  { q: 'Can the butler manage other villa staff?', a: 'Yes. Residence Butlers are experienced in coordinating chefs, housekeepers, drivers and gardeners so the villa operates seamlessly.' },
+  { q: 'What languages do your butlers speak?', a: 'All butlers speak fluent English; many also speak Mandarin, French or Japanese. Tell us your guest profile and we will match accordingly.' },
+  { q: 'How long should I book a butler for?', a: 'A Day Butler suits single events or short stays. For stays of 3+ days, a Residence Butler delivers the consistency and relationship that make a long stay effortless.' },
+  { q: 'How far in advance should I book?', a: '1–2 weeks for Day Butlers; 3–4 weeks for Residence Butlers in peak season (July–August, December–New Year). Shorter notice is often possible — ask on WhatsApp.' },
+  { q: 'What areas do you cover?', a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
+  { q: 'What is the difference between hiring a butler and booking a villa with butler service?', a: 'Villas advertising "butler service" typically include a shared staff member during fixed hours. A hired myCHEF butler is dedicated to your group alone, briefed to your preferences, and booked for exactly the days and hours you choose.' },
 ]
 
 export default function ServiceButlersPage() {
@@ -96,33 +141,11 @@ export default function ServiceButlersPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Butler Hire Bali Villa | Discreet In-Villa Service — myCHEF"
-        description="Hire a private butler in Bali for arrival service, discreet hosting & polished villa support. From IDR 1.2M/day. WhatsApp us to check availability."
-        canonical={`${SITE}/in-villa-service/butlers`}
-        ogImage={`${SITE}/generated/mychef-service-bali-hero-butlers.webp`}
-        jsonLd={[
-          serviceWithOfferSchema({
-            name: 'Butler Service Bali',
-            description: 'myCHEF.id provides private butler service in Bali for villa stays, events, and private guest hosting. Our team manages service flow, guest requests, and discreet household coordination throughout the booking.',
-            url: `${SITE}/in-villa-service/butlers`,
-            price: '1200000',
-            unitText: 'per day',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('Butler Service Bali', `${SITE}/in-villa-service/butlers`, 'In-Villa Service', `${SITE}/in-villa-service`),
-          howToSchema({
-            name: 'How to Hire a Villa Butler in Bali',
-            description: 'Book a professional butler for your Bali villa stay or event in 5 easy steps.',
-            totalTime: 'PT15M',
-            steps: [
-              { name: 'Consultation', text: 'We discuss your household needs, guest profile, and service expectations.' },
-              { name: 'Matching', text: 'We select a butler whose experience aligns with your villa type and guest expectations.' },
-              { name: 'Briefing', text: 'Detailed walkthrough of preferences, schedules, and special requirements.' },
-              { name: 'Service', text: 'Your butler arrives prepared and anticipates needs before they are voiced.' },
-              { name: 'Review', text: 'We follow up to ensure every expectation was exceeded and adjust for future bookings.' },
-            ],
-          }),
-        ]}
+        title={getPageMeta('in-villa-service-butlers').title}
+        description={getPageMeta('in-villa-service-butlers').description}
+        canonical={getPageMeta('in-villa-service-butlers').canonical}
+        ogImage={getPageMeta('in-villa-service-butlers').ogImage}
+        jsonLd={briefJsonLd}
       />
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
@@ -143,11 +166,10 @@ export default function ServiceButlersPage() {
     ]} theme="dark" className="px-0 pt-0 pb-8" />
     <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Butler Service in Bali
+            Hire a Private Butler in Bali
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Discreet, professional villa butlers for arrival service, guest experience, 
-            and household coordination. From IDR 1,200,000 per day.
+            Discreet, professional butlers for your villa stay, celebration or event — hired by the day, not bundled into a hotel room. Arrival service, household coordination and anticipatory guest care, from IDR 1,200,000 per day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-butlers-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -164,7 +186,7 @@ export default function ServiceButlersPage() {
 
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader eyebrow="Pricing" title="Butler Service Tiers" subtitle="Choose the level of service that matches your stay or event." />
+          <SectionHeader eyebrow="Pricing" title="Butler Hire Rates" subtitle="Three tiers, matched to how you actually use your villa. Multi-day bookings receive discounted daily rates." />
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {PRICING_TIERS.map((tier) => (
               <div key={tier.title} className={`rounded-2xl p-8 ${tier.highlight ? 'bg-[#1A1A1A] text-white' : 'bg-white border border-[#E8E6E3]'}`}>
@@ -296,21 +318,33 @@ export default function ServiceButlersPage() {
         <div className="max-w-[1000px] mx-auto">
           <h3 className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-6 font-semibold">Explore More Services</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link to="/in-villa-service/bartenders" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">Bartender Hire</h4>
-              <p className="text-xs text-[#4A4745]">Professional bartenders for your villa event.</p>
+            <Link to="/butler-service-bali-daily-rate" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1">full butler daily-rate breakdown</h4>
+              <p className="text-xs text-[#4A4745]">Full line-by-line butler pricing.</p>
+            </Link>
+            <Link to="/in-villa-service" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1">all in-villa service staff</h4>
+              <p className="text-xs text-[#4A4745]">All in-villa service staff.</p>
+            </Link>
+            <Link to="/in-villa-service/waiters" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1">waiters for table service</h4>
+              <p className="text-xs text-[#4A4745]">Professional villa waiters.</p>
             </Link>
             <Link to="/in-villa-service/sommelier" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">Sommelier Service</h4>
+              <h4 className="font-semibold text-sm mb-1">sommelier for wine-led dinners</h4>
               <p className="text-xs text-[#4A4745]">Tailored wine pairings for your villa dinner.</p>
             </Link>
-            <Link to="/events/corporate-events" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">Corporate Events</h4>
-              <p className="text-xs text-[#4A4745]">Professional catering for offsites, conferences, and launches.</p>
+            <Link to="/in-villa-service/host-hostess" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1">event hosts for larger functions</h4>
+              <p className="text-xs text-[#4A4745]">Reception and event-flow hosts.</p>
             </Link>
-            <Link to="/catering/villa-catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1">Villa Catering</h4>
-              <p className="text-xs text-[#4A4745]">Full-service catering for your Bali villa stay.</p>
+            <Link to="/catering" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1">villa catering to match</h4>
+              <p className="text-xs text-[#4A4745]">Full-service catering to match your butler.</p>
+            </Link>
+            <Link to="/staffing/household-staff" className="p-4 bg-[#FAFAF8] rounded-xl hover:bg-[#C5A028]/5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1">household staff placement service</h4>
+              <p className="text-xs text-[#4A4745]">Permanent household staffing.</p>
             </Link>
           </div>
         </div>

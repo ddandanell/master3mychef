@@ -10,163 +10,164 @@ import {
 } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
-const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20kids%20birthday%20party%20Bali%20chef%20party%20and%20would%20love%20to%20discuss%20menus%2C%20pricing%2C%20and%20availability.'
+const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20kids%20birthday%20chef%20party%20in%20Bali.%20Please%20send%20menus%2C%20pricing%20and%20availability.'
 const CANONICAL = 'https://mychef.id/experiences/kids-birthday-chef-party'
 
 const SECTIONS: PageSection[] = [
   {
     id: 'intro',
     type: 'content' as const,
-    subtitle: 'Kids Birthday Party Bali',
-    title: 'A Private Chef Birthday Party Designed Around Children',
+    subtitle: 'Kids Birthday Chef Party Bali',
+    title: 'Kids Birthday Chef Party in Bali — They Cook, You Relax',
     image: '/generated/mychef-kids-party-children-cooking-bali-landscape.webp',
     imageAlt: 'Colourful kids birthday party Bali setup at a villa with a private chef cooking station',
-    body: `<p>A <strong>kids birthday party Bali</strong> chef party is not a restaurant meal squeezed into a villa. It is a private, hands-on food experience where a myCHEF chef arrives at your property with everything needed to cook, serve, and clean up — while the children watch, build, and eat food they actually want. Parents get to host without hovering over a stove, and the birthday child gets an activity and a meal rolled into one moment.</p>
+    body: `<p>Here's a radical idea for your child's Bali birthday: the food <em>is</em> the entertainment. A myCHEF kids birthday chef party brings a private chef and full party team to your villa, where the birthday child becomes head chef for the day — rolling pizza dough by the pool, building sliders, decorating dessert with their friends — while you actually enjoy the party you planned.</p>
 
-    <p>The best children's parties in Bali happen at private villas. There is space for a pizza-making station by the pool, a build-your-own burger bar under a gazebo, or a pasta station where every child chooses their own shape and sauce. Our team sets up the cooking area, prepares ingredients in child-friendly portions, and guides the activity so it is safe, fun, and genuinely delicious. While the children are busy becoming junior chefs, our service staff keep drinks topped up, manage timing, and reset the space.</p>
+    <p>No cooking for a dozen picky eaters. No venue hire, no commute, no dishes. Just a hands-on activity, a meal the kids made themselves, and a villa left spotless.</p>
 
-    <p>What makes this different from a standard kids menu is the interaction. Children are not just served — they take part. The birthday child is the head chef for the day, the friends get involved, and the food becomes part of the entertainment. For parents, it removes the stress of cooking for a dozen picky eaters. For children, it turns lunch or dinner into the highlight of the party.</p>`,
+    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Plan a Kids Chef Party — WhatsApp +62 896-7407-2020</a>. Tell us your villa, date and number of children — we reply within the hour.</p>`,
   },
   {
-    id: 'what-to-expect',
+    id: 'concept',
     type: 'content' as const,
-    subtitle: 'What to Expect',
-    title: 'How a Kids Birthday Chef Party Works',
-    body: `<p>When you book a kids birthday party Bali chef party with myCHEF, the experience is structured so that the food activity fits naturally into the flow of the celebration. We arrive two to three hours before the children sit down, set up the cooking station, prep all ingredients, and brief the parents on the schedule. The party itself usually runs for two to two-and-a-half hours.</p>
+    subtitle: 'The Party Where the Kids Do the Cooking',
+    title: 'A Hands-On Food Experience for Children',
+    body: `<p>Standard kids' catering means food appears and children ignore it. A chef party flips that: every child takes part — choosing, building, decorating, cooking — guided by a chef who makes it safe, structured and genuinely fun. The result is the rare party activity that works for ages 3 to 12 and feeds everyone.</p>`,
+  },
+  {
+    id: 'how-it-works',
+    type: 'content' as const,
+    subtitle: 'How the Party Runs',
+    title: 'From Setup to Cleanup',
+    body: `<p><strong>1. We arrive 2–3 hours early.</strong> Portable cooking equipment, prepped ingredients in child-friendly portions, a shaded station by the pool or in the open kitchen — with hot equipment positioned away from small hands.</p>
 
-    <p><strong>Arrival and setup:</strong> Our chef and service team bring portable cooking equipment, prep containers, serving platters, and all ingredients. We choose a location that is safe for children — typically a shaded poolside pavilion, terrace, or open kitchen area — and keep hot equipment away from small hands.</p>
+    <p><strong>2. The cooking activity.</strong> Depending on your menu, children roll and top their own pizzas, assemble sliders, choose pasta shapes and sauces, or decorate desserts. The chef demonstrates, helps the little ones, and makes sure every child finishes with a plate they're proud of.</p>
 
-    <p><strong>The cooking activity:</strong> Depending on the menu chosen, children roll pizza dough, assemble sliders, choose pasta shapes and sauces, or decorate their own desserts. The chef demonstrates each step, helps younger children, and makes sure every child finishes with a plate they are proud of.</p>
+    <p><strong>3. Meal and cake moment.</strong> Children eat what they cooked; cake is timed perfectly; the kitchen resets between courses so the party never feels chaotic.</p>
 
-    <p><strong>Service and timing:</strong> While the children eat, our team serves parents and any adult guests with a separate adult-friendly menu if requested. Cake is coordinated for the right moment, and the kitchen is reset between courses so the villa never feels chaotic.</p>
-
-    <p><strong>Cleanup:</strong> Before we leave, the cooking area is wiped down, leftovers are packed or cleared, and the villa is returned in good order. Parents do not need to face a mountain of dishes after the party.</p>`,
+    <p><strong>4. Full cleanup.</strong> Cooking area wiped down, leftovers packed, villa returned in order. The party runs about 2–2.5 hours.</p>`,
   },
   {
     id: 'menus',
     type: 'content' as const,
-    subtitle: 'The Menus',
-    title: 'Six Chef Party Menus Children Actually Want to Eat',
+    subtitle: 'Six Chef-Party Menus',
+    title: 'Interactive Menus Children Actually Want to Eat',
     image: '/generated/mychef-kids-party-kids-hands-cooking-bali-landscape.webp',
     imageAlt: 'Children enjoying a hands-on chef party menu at a Bali villa',
-    body: `<p>Every kids birthday party Bali chef party is built around one of our six interactive kids menus. Each menu is designed for children aged 3–12, portioned correctly, nut-free as standard, halal adaptable, and mild enough that even cautious eaters enjoy the meal.</p>
+    body: `<p>Every menu is designed for ages 3–12, portioned for children, nut-free as standard, and mild enough for cautious eaters. Prices are per child, minimum six children:</p>
 
-    <p><strong>Mini Pizza Party — IDR 275,000 per child:</strong> Children roll and top their own 15cm personal pizzas with free-range chicken, mozzarella stars, sweetcorn, cherry tomatoes, and capsicum. The chef bakes each one to order. Finished with fresh fruit skewers and chocolate dipping sauce.</p>
+    <table class="w-full text-left border-collapse my-4">
+      <thead>
+        <tr class="border-b border-stone-700">
+          <th class="py-2 pr-4">Menu</th>
+          <th class="py-2 pr-4">Per child</th>
+          <th class="py-2">What the kids make and eat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b border-stone-800">
+          <td class="py-2 pr-4 font-semibold">Indonesian Kids</td>
+          <td class="py-2 pr-4">IDR 250K</td>
+          <td class="py-2">Mini chicken soto, mild nasi goreng, mini chicken satay, prawn crackers, pisang goreng with honey</td>
+        </tr>
+        <tr class="border-b border-stone-800">
+          <td class="py-2 pr-4 font-semibold">Pasta Lovers</td>
+          <td class="py-2 pr-4">IDR 260K</td>
+          <td class="py-2">Choose-your-own pasta shape, sauce and protein; star-shaped brownie with vanilla ice cream</td>
+        </tr>
+        <tr class="border-b border-stone-800">
+          <td class="py-2 pr-4 font-semibold">Mini Pizza Party</td>
+          <td class="py-2 pr-4">IDR 275K</td>
+          <td class="py-2">Roll and top personal pizzas — chicken, mozzarella, sweetcorn, capsicum; fruit skewers with chocolate dip</td>
+        </tr>
+        <tr class="border-b border-stone-800">
+          <td class="py-2 pr-4 font-semibold">Burger Bar</td>
+          <td class="py-2 pr-4">IDR 285K</td>
+          <td class="py-2">Build-your-own sliders with a toppings bar; self-serve ice cream sundae station</td>
+        </tr>
+        <tr class="border-b border-stone-800">
+          <td class="py-2 pr-4 font-semibold">Chicken & Chips</td>
+          <td class="py-2 pr-4">IDR 295K</td>
+          <td class="py-2">Mini chicken and sweetcorn soup, buttermilk tenders, hand-cut sweet potato fries, Bali banana split</td>
+        </tr>
+        <tr>
+          <td class="py-2 pr-4 font-semibold">Seafood Adventure</td>
+          <td class="py-2 pr-4">IDR 350K</td>
+          <td class="py-2">Crispy baked snapper fingers, chunky wedges, tropical fruit platter with coconut yoghurt</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <p><strong>Chicken & Chips — IDR 295,000 per child:</strong> A mini chicken and sweet corn soup starter, followed by crispy buttermilk chicken tenders with hand-cut sweet potato fries. The meal ends with a Bali banana split. This is the safest choice for groups with mixed tastes.</p>
-
-    <p><strong>Pasta Lovers — IDR 260,000 per child:</strong> Children choose their pasta shape, sauce, and protein. Options include mild tomato, creamy Alfredo, or nut-free basil pesto with grilled chicken or extra vegetables. Dessert is a warm star-shaped brownie with vanilla ice cream.</p>
-
-    <p><strong>Burger Bar — IDR 285,000 per child:</strong> A build-your-own slider station with mini beef or chicken patties, brioche buns, and a toppings bar. Children make two sliders each and finish with a self-serve ice cream sundae bar.</p>
-
-    <p><strong>Seafood Adventure — IDR 350,000 per child:</strong> Crispy baked snapper fingers with chunky potato wedges and tartare sauce, followed by a tropical fruit platter with coconut yoghurt. A gentle introduction to seafood for curious young eaters.</p>
-
-    <p><strong>Indonesian Kids — IDR 250,000 per child:</strong> A mild taste of Bali with mini chicken soto, nasi goreng without chilli, mini chicken satay, cucumber, prawn crackers, and warm pisang goreng with honey. This menu works beautifully for families who want a local flavour.</p>
-
-    <p>All menus require a minimum of six children. For full ingredient lists, allergen details, and add-ons, see our <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">dedicated kids menus page</a>.</p>`,
+    <p>Add-ons — extra protein, fresh juice, chef hats and aprons, birthday cake slices — run IDR 5K–50K per child. For full ingredient and allergen detail, see the <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">full kids</a> menu collection.</p>`,
   },
   {
     id: 'features',
     type: 'features' as const,
-    subtitle: 'What Makes It Special',
+    subtitle: 'Safety, Allergies & Peace of Mind',
     title: 'Why Parents Book a Chef Party with myCHEF',
     features: [
       {
-        icon: ChefHat,
-        title: 'Interactive Chef Activity',
-        desc: 'The food becomes part of the entertainment. Children cook with the chef, build their own plates, and stay engaged throughout the party.',
+        icon: Shield,
+        title: 'Nut-Free as Standard',
+        desc: 'Every menu is nut-free. Gluten-free, dairy-free, egg-free and halal adaptations at no extra charge with advance notice.',
       },
       {
-        icon: Shield,
-        title: 'Safety-First Setup',
-        desc: 'Hot equipment is positioned away from children, ingredients are prepped in child-safe portions, and the team keeps the cooking area supervised at all times.',
+        icon: ChefHat,
+        title: 'Allergen-Trained Chefs',
+        desc: 'Separate prep practices and ingredient-by-ingredient reviews for severe allergies.',
       },
       {
         icon: Heart,
-        title: 'Nut-Free as Standard',
-        desc: 'Every kids menu is nut-free. Gluten-free, dairy-free, and halal adaptations are available at no extra charge when confirmed in advance.',
+        title: 'Cooked Safe, Always',
+        desc: 'Poultry and beef patties well-done; snapper to at least 63°C. Sauces mild by default.',
       },
       {
         icon: UtensilsCrossed,
         title: 'Adult Food Available',
-        desc: 'Parents and adult guests do not have to eat from the kids menu. We can prepare a separate adult menu, grazing table, or BBQ alongside the children’s activity.',
+        desc: 'Add a separate adult menu, a grazing table for the parents, a BBQ, or a cocktail bar for the adults.',
       },
       {
         icon: Clock,
         title: 'Timed Around the Party',
-        desc: 'We plan the cooking activity, meal, cake moment, and cleanup around your schedule so the party flows without gaps or rushed transitions.',
+        desc: 'Cooking activity, meal, cake moment and cleanup planned around your schedule.',
       },
       {
         icon: Sparkles,
         title: 'Full Villa Cleanup',
-        desc: 'The team resets the kitchen and dining area before leaving. Parents can focus on the children instead of washing dishes after the last guest goes home.',
+        desc: 'The team resets the kitchen and dining area before leaving.',
       },
     ],
   },
   {
-    id: 'safety',
+    id: 'parents',
     type: 'content' as const,
-    subtitle: 'Allergies & Dietary Needs',
-    title: 'Keeping Every Child Safe and Happy',
-    image: '/generated/mychef-kids-party-family-table-bali-landscape.webp',
-    imageAlt: 'Family-friendly birthday table setup with fresh food and safe portions at a Bali villa',
-    body: `<p>Food safety at children's parties is non-negotiable. Every kids birthday party Bali chef party menu is nut-free as standard. We also adapt each menu for gluten-free, dairy-free, egg-free, and halal requirements when you tell us during the booking process. There is no additional charge for these adjustments.</p>
-
-    <p>Our chefs are trained in allergen management and use separate prep practices to avoid cross-contamination. Chicken, beef, and seafood are all cooked to safe internal temperatures — well-done for poultry and beef patties, and at least 63°C for snapper. We prepare sauces mild by default and serve any chilli or sambal on the side for adults or adventurous children.</p>
-
-    <p>If a child has a severe allergy, we ask for details at least one week before the event so the menu can be reviewed ingredient by ingredient. We also label all dishes clearly on the day and brief parents on what each course contains.</p>`,
-  },
-  {
-    id: 'add-ons',
-    type: 'content' as const,
-    subtitle: 'Make It a Full Party',
-    title: 'Add-Ons for the Celebration',
-    body: `<p>The chef party is the centrepiece, but most parents want a few extra pieces to make the day feel complete. These are the add-ons we coordinate most often alongside a kids birthday party Bali chef party.</p>
-
-    <p><strong>Birthday cake:</strong> We do not bake cakes ourselves, but we coordinate with trusted Bali cake designers and time the cake moment into the party. A cake slice add-on is available on each kids menu, or you can arrange a full custom cake through our recommended suppliers.</p>
-
-    <p><strong>Themed décor and balloons:</strong> We work with your decorator or refer you to villa party stylists in Seminyak, Canggu, and Uluwatu. Popular themes include tropical, unicorn, surfer, and Lego-inspired setups. Decor pricing depends on the property and design.</p>
-
-    <p><strong>Kids entertainment:</strong> From face painters and balloon artists to magicians and pool games, we coordinate timing so the entertainment does not clash with the food activity or cake.</p>
-
-    <p><strong>Photographer:</strong> A party photographer for one to two hours captures the cooking activity, cake moment, and group shots. This is especially popular for milestone birthdays where parents want professional memories.</p>
-
-    <p><strong>Adult grazing and beverages:</strong> A separate grazing board, cocktail bar, or BBQ for parents keeps adult guests comfortable while the children are occupied. See our <a href="/events/birthdays" class="text-[#7E6410] hover:underline font-medium">birthday events page</a> for adult-focused formats.</p>`,
+    subtitle: 'What the Parents Get',
+    title: 'You Do Not Have to Eat from the Kids Menu',
+    body: `<p>You don't have to eat from the kids' menu. Add a separate adult menu, <a href="/catering/grazing-tables" class="text-[#7E6410] hover:underline font-medium">a grazing table for the parents</a>, a BBQ, or <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">a cocktail bar for the adults</a>. We also coordinate the extras — a custom cake from a trusted Bali designer, themed décor through villa party stylists, kids' entertainers, a photographer — each quoted separately and timed so nothing clashes with the cooking or the cake.</p>`,
   },
   {
     id: 'pricing',
     type: 'content' as const,
-    subtitle: 'Investment',
+    subtitle: 'Pricing & Add-Ons',
     title: 'Kids Birthday Party Bali Pricing',
-    body: `<p>Kids birthday party Bali chef party menus are priced per child, with a minimum booking of six children. The menu prices are fixed and transparent:</p>
+    body: `<p>The maths is simple: per-child menu price × number of children (minimum six), plus any add-ons. Ten children on the Mini Pizza Party menu, for example, is IDR 2.75M ++ (11% government tax + 10% service charge) — chef, staff, ingredients, activity, meal and cleanup included. Adult menus, cakes, décor, entertainment and photography are itemised in your quote. Parties of 20+ children are welcome with advance notice — we add chefs and staff as the group grows.</p>
 
-    <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;margin-bottom:0.5rem;">
-      <li>Indonesian Kids — IDR 250,000 per child</li>
-      <li>Pasta Lovers — IDR 260,000 per child</li>
-      <li>Mini Pizza Party — IDR 275,000 per child</li>
-      <li>Burger Bar — IDR 285,000 per child</li>
-      <li>Chicken & Chips — IDR 295,000 per child</li>
-      <li>Seafood Adventure — IDR 350,000 per child</li>
-    </ul>
-
-    <p>Menu add-ons such as extra protein, fresh juice, chef hats and aprons, or birthday cake slices range from IDR 5,000 to IDR 50,000 per child. The base price includes the chef, service staff, all ingredients, the interactive cooking activity, and cleanup.</p>
-
-    <p>For a complete party package that includes themed décor, entertainment, a custom cake, and photography, total pricing depends on guest count, location, and the level of production. Message us on WhatsApp with your villa, date, and party size and we will reply within the hour with an itemised quote.</p>`,
+    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Get My Kids Party Quote — WhatsApp +62 896-7407-2020</a></p>`,
   },
   {
     id: 'faq',
     type: 'faq' as const,
-    subtitle: 'Common Questions',
-    title: 'Kids Birthday Chef Party FAQ',
+    subtitle: 'Kids Birthday Chef Party — FAQ',
+    title: 'Common Questions',
   },
   {
     id: 'cta',
     type: 'cta' as const,
-    subtitle: 'Start Planning',
+    subtitle: 'Plan the Party',
     title: 'Ready to Plan a Kids Birthday Chef Party?',
-    body: 'Tell us your villa location, party date, number of children, and preferred menu — we will respond within the hour with a custom plan and quote.',
+    body: `Tell us your villa, date, number of children and the menu they would love — we will reply within the hour with a plan and an itemised quote. Planning for mixed ages? See <a href="/events/birthdays" class="text-[#7E6410] hover:underline font-medium">birthday catering for adults and mixed-age groups</a>. Holidaying with the kids? <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">a family cooking class for the holiday</a> makes a great second act. See our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">full pricing guide</a>.`,
     primaryAction: {
-      label: 'Plan a Kids Birthday Chef Party',
+      label: 'Plan a Kids Chef Party',
       href: WA_LINK,
       external: true,
     },
@@ -178,56 +179,22 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: 'What age group is the kids birthday party Bali suitable for?',
-    answer: 'The experience is designed for children aged 3–12. Younger children can take part with help from parents or our team, while older children enjoy the full hands-on cooking activity.',
-  },
-  {
-    question: 'How many children can take part?',
-    answer: 'We require a minimum of six children per booking. We regularly cater parties of 20 or more children with advance notice, adding chefs and service staff as the group grows.',
-  },
-  {
-    question: 'Can you handle food allergies?',
-    answer: 'Yes. All kids menus are nut-free as standard. We also adapt for gluten-free, dairy-free, egg-free, and halal requirements at no extra charge when confirmed in advance.',
-  },
-  {
-    question: 'Do parents need to cook or supervise?',
-    answer: 'No. Our chef and service team manage the entire food experience. Parents are welcome to watch and take photos, but you do not need to cook or clean.',
-  },
-  {
-    question: 'Can you also feed the adult guests?',
-    answer: 'Yes. We can prepare a separate adult menu, grazing table, BBQ, or cocktail service alongside the kids chef party so parents enjoy the celebration too.',
-  },
-  {
-    question: 'How far in advance should we book?',
-    answer: 'We recommend booking at least 14 days in advance, especially if you want themed décor, entertainment, or a custom cake. Last-minute bookings may be possible depending on availability.',
-  },
-  {
-    question: 'What is included in the price?',
-    answer: 'The per-child price includes the chef, service staff, all ingredients, the interactive cooking activity, and cleanup. Add-ons such as cake, entertainment, photography, and décor are quoted separately.',
-  },
-  {
-    question: 'Which areas of Bali do you cover?',
-    answer: 'We cover Seminyak, Canggu, Uluwatu, Ubud, Jimbaran, Nusa Dua, Sanur, and surrounding villa areas across Bali.',
-  },
-  {
-    question: 'Can we choose more than one menu?',
-    answer: 'Yes. For mixed-age groups or parties with varied tastes, we can combine menus or create a custom tasting station format. Let us know your preferences when you enquire.',
-  },
-  {
-    question: 'Do you provide party decorations?',
-    answer: 'We coordinate with trusted Bali party stylists for themed décor, balloons, and table styling. Decor is quoted separately based on your chosen theme and villa.',
-  },
-  {
-    question: 'Can the party be indoors?',
-    answer: 'Yes. We can set up in a covered pavilion, indoor kitchen, or air-conditioned dining room if the weather or villa layout suits an indoor party better.',
-  },
+  { question: 'How much does a kids chef party cost in Bali?', answer: 'Menus run IDR 250K–350K per child (minimum six children), including the chef, service staff, all ingredients, the cooking activity, the meal and cleanup. Add-ons are IDR 5K–50K per child.' },
+  { question: 'What ages is it for?', answer: 'Designed for ages 3–12. Younger children take part with a little help; older children get the full hands-on experience.' },
+  { question: 'How many children can join?', answer: 'Six minimum. We regularly run parties of 20 or more with additional chefs and staff — just give us notice.' },
+  { question: 'How long does the party last?', answer: 'The party itself runs about 2–2.5 hours; our team arrives 2–3 hours before to set up.' },
+  { question: 'Can you handle allergies and dietary needs?', answer: 'Yes — nut-free as standard, with gluten-free, dairy-free, egg-free and halal adaptations at no extra charge when confirmed in advance. Severe allergies get an ingredient-by-ingredient review.' },
+  { question: 'Do parents need to cook or supervise?', answer: 'No — the chef and team run the entire food experience. Watch, take photos, relax.' },
+  { question: 'Can you feed the adults too?', answer: 'Yes — a separate adult menu, grazing table, BBQ or cocktail service can run alongside the kids\' party.' },
+  { question: 'What does our villa need?', answer: 'A shaded area or open kitchen for the station — we bring all cooking equipment. Villa suitability is confirmed when you book.' },
+  { question: 'How far in advance should we book?', answer: 'At least 14 days — earlier for school holidays, themed décor or custom cakes. Last-minute is sometimes possible; ask.' },
+  { question: 'What deposit is required?', answer: 'A deposit confirms your date and team [BUSINESS CONFIRMATION REQUIRED: deposit level — crawl for this URL is silent; live pages elsewhere show 50%]; the balance is due before the party.' },
 ]
 
 const RELATED_PAGES = [
   { label: "Kids' Menus", href: '/kids-menus', desc: 'Full collection of interactive kids menus with ingredients, allergens, and prices.' },
-  { label: 'Birthday Events', href: '/events/birthdays', desc: 'Villa birthday party formats including BBQ, fine dining, and kids parties.' },
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Overview of private chef services across Bali.' },
+  { label: 'Birthday Events', href: '/events/birthdays', desc: 'Birthday catering for adults and mixed-age groups.' },
+  { label: 'Family Cooking Class', href: '/experiences/private-cooking-class', desc: 'A private cooking class for the whole family at your villa.' },
   { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and event types.' },
 ]
 
@@ -235,24 +202,22 @@ export default function ExperienceKidsBirthdayChefPartyPage() {
   return (
     <PremiumPage
       slug="experiences/kids-birthday-chef-party"
-      title="Kids Birthday Party Bali | Private Chef Party | myCHEF"
-      description="Plan a kids birthday party in Bali with a private chef cooking party at your villa. Six interactive menus, nut-free, halal adaptable. WhatsApp myCHEF."
-      seoTitle="Kids Birthday Party Bali | Private Chef Party | myCHEF"
-      seoDescription="Plan a kids birthday party in Bali with a private chef cooking party at your villa. Six interactive menus, nut-free, halal adaptable. WhatsApp myCHEF."
+      title="Kids Birthday Party Bali | Chef-Led Cooking Party | myCHEF"
+      description="Kids cooking birthday parties at your Bali villa: pizza making, cupcakes, mocktails, chef hats, entertainment & cleanup. WhatsApp myCHEF."
+      seoTitle="Kids Birthday Party Bali | Chef-Led Cooking Party | myCHEF"
+      seoDescription="Kids cooking birthday parties at your Bali villa: pizza making, cupcakes, mocktails, chef hats, entertainment & cleanup. WhatsApp myCHEF."
       canonicalUrl={CANONICAL}
-      h1="Kids Birthday Party Bali — Private Chef Party at Your Villa"
+      h1="Kids Birthday Chef Party in Bali — They Cook, You Relax"
       subtitle="A Hands-On Private Chef Party Experience for Children at Your Villa"
       heroImage="/generated/mychef-kids-party-children-cooking-bali-landscape.webp"
       heroImageAlt="Children enjoying an interactive kids birthday party Bali chef party at a villa"
       ogImage="https://mychef.id/generated/mychef-kids-party-children-cooking-bali-landscape.webp"
       keywords={[
-        'kids birthday party Bali',
-        'kids birthday chef party Bali',
-        'private chef kids birthday Bali',
-        'kids cooking party Bali',
-        'children birthday chef party Bali villa',
-        'kids birthday catering Bali',
-        'Bali kids party chef',
+        'kids birthday chef party bali',
+        'kids cooking party bali',
+        'kids chef party bali',
+        'pizza party bali kids',
+        'kids birthday villa bali',
       ]}
       highlights={['6 Interactive Menus', 'Nut-Free as Standard', 'Ages 3–12', 'From IDR 250K/child']}
       sections={SECTIONS}
@@ -260,7 +225,7 @@ export default function ExperienceKidsBirthdayChefPartyPage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema(
-          'Kids Birthday Party Bali',
+          'Kids Birthday Chef Party Bali',
           CANONICAL,
           'Experiences',
           'https://mychef.id/experiences'
@@ -269,27 +234,27 @@ export default function ExperienceKidsBirthdayChefPartyPage() {
         {
           '@context': 'https://schema.org',
           '@type': 'Service',
-          name: 'Kids Birthday Party Bali',
-          description:
-            'Private chef kids birthday party experience in Bali with interactive cooking menus for children aged 3–12. Nut-free, halal adaptable, villa-based service.',
-          provider: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+          name: 'Kids Birthday Chef Party Bali',
+          provider: {
+            '@type': 'LocalBusiness',
+            name: 'myCHEF',
+            url: 'https://mychef.id',
+            telephone: '+62 896-7407-2020',
+            areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+          },
+          serviceType: 'Chef-led kids birthday cooking party',
+          description: 'A kids birthday chef party at your Bali villa: children cook with a private chef across six interactive menus from IDR 250K per child (min. 6 children). Nut-free as standard, ages 3–12, full setup and cleanup included.',
           offers: {
             '@type': 'AggregateOffer',
             priceCurrency: 'IDR',
             lowPrice: '250000',
             highPrice: '350000',
             offerCount: '6',
-            priceSpecification: {
-              '@type': 'UnitPriceSpecification',
-              priceCurrency: 'IDR',
-              unitText: 'per child',
-              description: 'Menu prices per child, minimum 6 children',
-            },
           },
+          url: CANONICAL,
         },
       ]}
-      ctaText="Plan a Kids Birthday Chef Party"
+      ctaText="Plan a Kids Chef Party"
       ctaSubtext="Tell us your villa, date, and number of children — we reply within the hour with a custom plan."
     />
   )

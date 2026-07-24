@@ -3,12 +3,8 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, X, Phone, Calendar, Star, ShieldCheck, Award, FlaskConical } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithAggregateOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -22,8 +18,57 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a mixology / cocktail experience in Bali', intent: 'availability and pricing' })
+
+const briefJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      name: 'Mixologist Hire Bali',
+      serviceType: 'Mixology and custom cocktail programs',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+        email: 'bali@mychef.id',
+      },
+      areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
+      description: 'Hire a professional mixologist in Bali for signature cocktail creation, interactive masterclasses and custom bar programs at your villa, from IDR 1,500,000 per session.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'IDR',
+        lowPrice: '1500000',
+        highPrice: '4000000',
+        offerCount: '3',
+        description: 'Cocktail Experience IDR 1,500,000/session; Mixology Masterclass IDR 2,500,000/session; Signature Program IDR 4,000,000/day. Spirits excluded. Subject to 11% tax + 10% service charge.',
+      },
+      url: 'https://mychef.id/in-villa-service/mixology',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'How much does it cost to hire a mixologist in Bali?', acceptedAnswer: { '@type': 'Answer', text: 'From IDR 1,500,000 for a 2-hour Cocktail Experience (up to 8 guests); IDR 2,500,000 for a 3-hour Masterclass (up to 12); IDR 4,000,000 for a full-day Signature Program. Spirits excluded; prices subject to 11% tax + 10% service charge.' } },
+        { '@type': 'Question', name: 'Is the alcohol included?', acceptedAnswer: { '@type': 'Answer', text: 'No. The package covers the mixologist, menu design, mixers, juices, syrups, garnishes, ice, tools and glassware. Spirits are bought separately via recommendations, a shopping list, or at-cost sourcing.' } },
+        { '@type': 'Question', name: 'Can guests participate in making the cocktails?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — the Masterclass tier is hands-on: guests learn techniques, build their own drinks and take home recipe cards.' } },
+        { '@type': 'Question', name: 'Do you use local Balinese ingredients?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — arak from licensed producers, tropical fruits, Balinese spices and botanicals feature throughout our menus.' } },
+        { '@type': 'Question', name: 'Can you create a non-alcoholic experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Zero-proof programs with complex, layered mocktails are available and increasingly popular.' } },
+        { '@type': 'Question', name: 'What is the difference between this and hiring a bartender?', acceptedAnswer: { '@type': 'Answer', text: 'Mixology is a designed experience — custom menus, storytelling and technique. Bartender service is high-quality, high-volume drink service. Many events book both.' } },
+        { '@type': 'Question', name: 'How far in advance should I book?', acceptedAnswer: { '@type': 'Answer', text: '1–2 weeks for standard sessions; 3–4 weeks for Signature Programs in peak season.' } },
+        { '@type': 'Question', name: 'Which areas do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'Travel included across South Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur; other areas quoted by location.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
+        { '@type': 'ListItem', position: 2, name: 'In-Villa Service', item: 'https://mychef.id/in-villa-service' },
+        { '@type': 'ListItem', position: 3, name: 'Mixology', item: 'https://mychef.id/in-villa-service/mixology' },
+      ],
+    },
+  ],
+}
 
 const PRICING_TIERS = [
   {
@@ -119,15 +164,14 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'Is the alcohol included in the price?', a: 'No — and this keeps your price fair. The package covers your mixologist, the cocktail menu, premium mixers, fresh juices, syrups, garnishes, bar tools and glassware. The base spirits (the alcohol itself) are bought separately, so you only pay for the bottles you actually want.' },
-  { q: 'So how does the alcohol work?', a: 'Three ways, your choice: (1) we recommend the exact bottles to match your menu and budget, (2) we send a simple shopping list for you or your villa to stock before we arrive, or (3) we source and bring everything for you, added to your quote at cost. Mixers, garnishes, tools and glassware are always included either way.' },
-  { q: 'What is the difference between a bartender and a mixologist?', a: 'A bartender serves drinks efficiently. A mixologist designs cocktails as culinary creations — balancing flavors, sourcing unique ingredients, and creating an experience around each drink. Think chef versus cook.' },
-  { q: 'Can guests participate in making cocktails?', a: 'Absolutely. Our masterclass tier is designed for hands-on participation. Guests learn techniques, build their own drinks, and take home recipe cards.' },
-  { q: 'Do you use local Balinese ingredients?', a: 'Yes. We incorporate arak, local fruits, Balinese spices, and tropical botanicals into our creations. It is Bali in a glass.' },
-  { q: 'How long does a session last?', a: 'Cocktail Experience: 2 hours. Mixology Masterclass: 3 hours. Signature Program: full day with breaks.' },
-  { q: 'What areas do you cover?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'How far in advance should I book?', a: '1–2 weeks for standard sessions. 3–4 weeks for signature programs during peak season.' },
-  { q: 'Can you create non-alcoholic experiences?', a: 'Yes. Our zero-proof programs are increasingly popular — complex, layered mocktails that rival their alcoholic counterparts.' },
+  { q: 'How much does it cost to hire a mixologist in Bali?', a: 'Sessions start at IDR 1,500,000 (2-hour Cocktail Experience, up to 8 guests). Masterclasses are IDR 2,500,000 (3 hours, up to 12), and full-day Signature Programs IDR 4,000,000. Spirits are separate; prices are ++ (11% tax + 10% service).' },
+  { q: 'Is the alcohol included?', a: 'No — and that keeps your price fair. The package covers the mixologist, menu design, mixers, juices, syrups, garnishes, ice, tools and glassware. Spirits are bought separately via bottle recommendations, a shopping list, or our at-cost sourcing service.' },
+  { q: 'Can guests participate in making the cocktails?', a: 'Yes — the Masterclass tier is built for hands-on participation. Guests learn techniques, build their own drinks and take home recipe cards.' },
+  { q: 'Do you use local Balinese ingredients?', a: 'Constantly — arak from licensed producers, tropical fruits, Balinese spices and botanicals. It is Bali in a glass.' },
+  { q: 'Can you create a non-alcoholic experience?', a: 'Yes. Zero-proof programs are increasingly popular: complex, layered mocktails that rival their alcoholic counterparts — ideal for family events and wellness retreats.' },
+  { q: 'What is the difference between this and hiring a bartender?', a: 'Mixology is a designed experience — custom menus, storytelling, technique and theatre. Bartender service is high-quality, high-volume drink service. For large parties we often recommend both.' },
+  { q: 'How far in advance should I book?', a: '1–2 weeks for standard sessions; 3–4 weeks for Signature Programs in peak season.' },
+  { q: 'Which areas do you cover?', a: 'Travel is included across South Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Other areas quoted by location.' },
 ]
 
 export default function ServiceMixologyPage() {
@@ -146,33 +190,11 @@ export default function ServiceMixologyPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Mixology Service Bali | Signature Cocktails for Villas — myCHEF"
-        description="Private mixology in Bali: signature cocktails, guided tastings & classes for villa events. From IDR 1.5M/session (spirits separate). WhatsApp us to book."
-        canonical={`${SITE}/in-villa-service/mixology`}
-        ogImage={`${SITE}/generated/mychef-service-bali-hero-mixology.webp`}
-        jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Mixology Experience Bali',
-            description: 'myCHEF.id creates private mixology experiences in Bali with signature cocktail menus, demonstrations, and premium bar service. We design the drinks, setup, and guest interaction for villa events and celebrations.',
-            url: `${SITE}/in-villa-service/mixology`,
-            lowPrice: '1500000',
-            highPrice: '4000000',
-            unitText: 'per session',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Book a Mixologist in Bali',
-            description: 'Book a private mixologist for your Bali villa event in 4 easy steps.',
-            totalTime: 'PT15M',
-            steps: [
-              { name: 'Choose your cocktail experience', text: 'Select from signature cocktail menu, interactive mixology class, or premium open bar.' },
-              { name: 'Share event details', text: 'Send your date, villa location, guest count, and preferred spirits via WhatsApp.' },
-              { name: 'Approve your cocktail menu', text: 'We design a custom cocktail list with garnishes, glassware, and setup plan within 1 hour.' },
-              { name: 'Shake and celebrate', text: 'The mixologist arrives with premium spirits, fresh ingredients, and bar tools. You enjoy crafted cocktails.' },
-            ],
-          }),
-          breadcrumbSchema('Mixology Experience Bali', `${SITE}/in-villa-service/mixology`, 'In-Villa Service', `${SITE}/in-villa-service`),
-        ]}
+        title={getPageMeta('in-villa-service-mixology').title}
+        description={getPageMeta('in-villa-service-mixology').description}
+        canonical={getPageMeta('in-villa-service-mixology').canonical}
+        ogImage={getPageMeta('in-villa-service-mixology').ogImage}
+        jsonLd={briefJsonLd}
       />
 
       {/* Hero */}
@@ -194,11 +216,10 @@ export default function ServiceMixologyPage() {
           ]} theme="dark" className="px-0 pt-0 pb-8" />
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Mixology in Bali
+            Mixology in Bali — Custom Cocktail Programs at Your Villa
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Signature cocktail programs and masterclasses in your villa. 
-            Signature drinks, fresh ingredients, unforgettable experiences. From IDR 1,500,000 per session — spirits not included, your choice how we handle them.
+            A professional mixologist designs and performs a cocktail experience built around your guests, your occasion and your tastes — signature serves, hands-on masterclasses and full-day custom programs. From IDR 1,500,000 per session at your villa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-mixology-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -409,22 +430,30 @@ export default function ServiceMixologyPage() {
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>
           <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link to="/in-villa-service/bartenders" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Bartender Hire</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">bartender service for high-volume events</h4>
               <p className="text-xs text-[#4A4745]">Bring in a service-led bar team for parties, receptions, and fast pours.</p>
             </Link>
             <Link to="/in-villa-service/sommelier" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Sommelier Service</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">sommelier wine pairing</h4>
               <p className="text-xs text-[#4A4745]">Layer in wine pairings and tableside storytelling for dinner service.</p>
             </Link>
+            <Link to="/experiences/private-cocktail-party" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">full private cocktail party package</h4>
+              <p className="text-xs text-[#4A4745]">A dedicated cocktail party package with menu, bar, and service.</p>
+            </Link>
             <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">in-villa service hub</h4>
               <p className="text-xs text-[#4A4745]">Explore the full staffing hub for drinks, dining, and guest experience support.</p>
             </Link>
-            <Link to="/events" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Events</h4>
-              <p className="text-xs text-[#4A4745]">Connect your cocktail program to weddings, retreats, and celebrations.</p>
+            <Link to="/bar-services/cocktail-menu-development/" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">cocktail menu development for venues</h4>
+              <p className="text-xs text-[#4A4745]">Bar and restaurant menu design for operators.</p>
+            </Link>
+            <Link to="/events/weddings" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">wedding events</h4>
+              <p className="text-xs text-[#4A4745]">Connect your cocktail program to weddings and celebrations.</p>
             </Link>
           </div>
         </div>
@@ -452,6 +481,9 @@ export default function ServiceMixologyPage() {
               <MessageCircle className="w-4 h-4" /> Check my date on WhatsApp
             </a>
           </div>
+          <p className="text-white/[70%] text-sm mt-10 max-w-[800px]">
+            Want the full party package? Combine mixology with our <Link to="/experiences/private-cocktail-party">full private cocktail party package</Link>, add <Link to="/in-villa-service/sommelier">sommelier wine pairing</Link> for the dinner that follows, or browse the <Link to="/in-villa-service">in-villa service hub</Link>. For high-volume events, add our <Link to="/in-villa-service/bartenders">bartender service for high-volume events</Link>. Venue or bar looking for menu development? See <Link to="/bar-services/cocktail-menu-development/">cocktail menu development for venues</Link>. Planning a wedding? See <Link to="/events/weddings">wedding events</Link>.
+          </p>
         </div>
       </section>
 

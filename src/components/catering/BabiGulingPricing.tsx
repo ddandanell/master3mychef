@@ -6,8 +6,6 @@ const TIERS = [
   { min: 16, max: 30, price: 600000, label: '16–30 guests' },
   { min: 31, max: 50, price: 550000, label: '31–50 guests' },
   { min: 51, max: 100, price: 525000, label: '51–100 guests' },
-  { min: 101, max: 200, price: 500000, label: '101–200 guests' },
-  { min: 201, max: 450, price: 475000, label: '201–450 guests' },
 ]
 
 function formatIdr(n: number) {
@@ -15,12 +13,12 @@ function formatIdr(n: number) {
 }
 
 function getTier(guests: number) {
-  if (guests >= 451) return null
+  if (guests >= 101) return null
   return TIERS.find((t) => guests >= t.min && guests <= t.max) ?? null
 }
 
 function calcStaff(guests: number) {
-  if (guests >= 451) return { chefs: 'Custom', assistants: 'Custom' }
+  if (guests >= 101) return { chefs: 'Custom', assistants: 'Custom' }
   return { chefs: Math.ceil(guests / 50), assistants: Math.ceil(guests / 10) }
 }
 
@@ -32,17 +30,17 @@ export default function BabiGulingPricing() {
   const total = tier ? guestNum * tier.price : 0
 
   return (
-    <section className="py-20 md:py-28 px-6">
+    <section id="pricing" className="py-20 md:py-28 px-6 scroll-mt-20">
       <div className="max-w-[1280px] mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Pricing
           </p>
           <h2 className="text-3xl md:text-4xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Babi Guling Pricing Estimate
+            Packages & Pricing by Group Size
           </h2>
           <p className="text-[#4A4745]">
-            Per-person pricing with a lower rate for larger groups. Minimum 6 guests. Final quote depends on add-ons, villa location, serving style, and equipment needs.
+            Every package includes the whole roasted pig, the full accompaniment spread, serving setup, delivery or on-site service, and cleanup. Per-person pricing drops as groups grow; minimum 6 guests.
           </p>
         </div>
 
@@ -57,7 +55,7 @@ export default function BabiGulingPricing() {
                 </div>
               ))}
               <div className="flex items-center justify-between py-2 border-b border-[#E8E6E3] last:border-0">
-                <span className="text-sm text-[#4A4745]">450+ guests</span>
+                <span className="text-sm text-[#4A4745]">100+ guests</span>
                 <span className="font-semibold text-sm">Custom quote</span>
               </div>
             </div>
@@ -100,12 +98,12 @@ export default function BabiGulingPricing() {
                 </div>
               </div>
             ) : (
-              <p className="text-white/70 text-sm">For events over 450 guests we prepare a custom quote and brigade plan.</p>
+              <p className="text-white/70 text-sm">For events over 100 guests we prepare a custom quote and brigade plan.</p>
             )}
 
             <div className="flex items-start gap-2 mt-6 text-xs text-white/50">
               <Info className="w-4 h-4 flex-shrink-0 mt-0.5" />
-              <p>This is an estimate. Add-ons, travel, extra equipment, and special requests may change the final price.</p>
+              <p>Final quotes depend on serving style, villa location, add-ons, and equipment. Prices are ++ (11% government tax + 10% service charge).</p>
             </div>
           </div>
         </div>

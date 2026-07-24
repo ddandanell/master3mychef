@@ -6,16 +6,13 @@ import {
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithOfferSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
 import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
-import TestimonialBlock from '@/components/shared/TestimonialBlock'
-
-import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
@@ -23,22 +20,22 @@ const WA_LINK = buildWhatsAppUrl({ serviceName: 'a wedding in Bali', intent: 'he
 const SITE = 'https://mychef.id'
 const ACCENT = '#C5A028'
 
-const MENU_DIRECTIONS = [
+const FORMAT_CARDS = [
   {
-    title: 'Classic Western & Luxury Plated',
-    desc: 'Multi-course plated receptions with precise timing and presentation that rivals the finest restaurants. Michelin-trained leadership, courses designed to flow naturally around speeches and celebration moments.',
+    title: 'Plated receptions',
+    desc: 'Multi-course fine dining with synchronised table service, led by Michelin-trained chefs. Plated service gives speeches a clean cadence and the evening a restaurant polish — inside your villa. Our standard ratio is one waiter per 8–10 guests, plus a service manager and kitchen lead.',
   },
   {
-    title: 'Balinese Heritage Menus',
-    desc: 'Authentic Balinese feasts built with local suppliers and traditional producers — from babi guling and bebek betutu to temple-style presentations that honour the island and root your celebration in place.',
+    title: 'Buffets and live stations',
+    desc: 'Abundant, social and ideal for larger guest counts: grazing tables, carving stations, satay grills and live cooking lines. Buffet formats scale comfortably to 150+ guests with temporary prep kitchens we build on site.',
   },
   {
-    title: 'Asian Fusion & Multicultural',
-    desc: 'Indonesian, Chinese, Japanese, Indian, and European influences blended to reflect both sides of a multicultural family — or a creative fusion that simply surprises and delights.',
+    title: 'Cocktail receptions',
+    desc: 'Canapés, tray-passed bites and a bar that never keeps guests waiting — perfect for sunset ceremonies that flow into dancing. We increase tray-pass staffing so drinks and food keep moving while portraits happen.',
   },
   {
-    title: 'Dietary & Children\u2019s Meals',
-    desc: 'Vegan, vegetarian, gluten-free, dairy-free, nut-free, halal-friendly, and children\u2019s meals are built into the menu design from the first draft — never treated as an afterthought.',
+    title: 'Balinese heritage feasts',
+    desc: 'Root your celebration in the island: a babi guling wedding feast, bebek betutu and temple-style presentations built with local suppliers — often run alongside a Western plated line for multicultural guest lists.',
   },
 ]
 
@@ -51,31 +48,16 @@ const ADDONS = [
   { icon: Clock, title: 'Guest Transport', desc: 'Per 50-guest coach' },
 ]
 
-const REAL_WEDDINGS = [
-  { names: 'Emma & James', date: 'March 2026', villa: 'Villa Aria, Uluwatu', image: '/generated/mychef-events-bali-hero-weddings.webp' },
-  { names: 'Anya & Mark', date: 'January 2026', villa: 'Villa Soma, Canggu', image: '/generated/mychef-events-bali-weddings-reception.webp' },
-  { names: 'Sarah & David', date: 'December 2025', villa: 'Villa Kali, Seminyak', image: '/generated/mychef-events-bali-weddings-cocktail.webp' },
-  { names: 'Priya & Raj', date: 'November 2025', villa: 'Villa Tirta, Uluwatu', image: '/generated/mychef-events-bali-weddings-ceremony.webp' },
-]
-
-const LEAD_TIMES = [
-  { phase: '3–10 months', label: 'Peak season booking', note: 'Jul–Sep, Dec–Jan. Full planning service requires 3+ months.' },
-  { phase: '1–3 months', label: 'Standard booking', note: 'Off-peak dates, subject to availability.' },
-  { phase: '2–4 weeks', note: 'Pre-event tasting', label: 'Tasting window' },
-  { phase: '1 month', label: 'Minimum off-peak', note: 'Intimate weddings only. Subject to availability.' },
-]
-
 const FAQS = [
+  { q: 'How much does wedding catering in Bali cost?', a: 'Full wedding receptions typically range IDR 1.5M–3M++ per person, with intimate formats from around IDR 700K++ per person. ++ adds 11% government tax and 10% service charge; every proposal shows the all-in total. See our wedding catering packages and per-person prices for tier breakdowns and guest-count scenarios.' },
+  { q: 'How many guests can you cater?', a: 'From 10-guest micro-weddings to 250+ guest receptions. Buffet and live-station formats typically work from 30 guests; across Bali, set-menu wedding catering commonly carries 20–25 guest minimums — intimate weddings below that are usually better served by our private chef dinner formats.' },
+  { q: 'Do you offer tastings?', a: 'Yes — a pre-event tasting is included in every wedding booking, scheduled 2–4 weeks before the day. We taste three dishes per course and finalise the menu together afterwards.' },
+  { q: 'What about banjar fees and villa permission?', a: 'Most Bali villages (banjar) charge a function fee for events — around USD 300 is market guidance from Bali venue norms, not a myCHEF charge [BUSINESS CONFIRMATION REQUIRED] — and many villas require outside-vendor approval and have noise curfews. We confirm all of it with your villa manager during planning and list every fee in your proposal.' },
+  { q: 'Can we bring our own alcohol?', a: 'Yes. Choose full bar service (bartenders, stock, ice, glassware managed by us) or BYO with service only. Where venues charge corkage, market guidance from Bali venue norms runs USD 35–47 per bottle [BUSINESS CONFIRMATION REQUIRED]; myCHEF\'s own corkage waiver for villa parties is a flat IDR 250,000 — we will tell you honestly which option costs less for your guest count.' },
+  { q: 'What happens if it rains?', a: 'Every wedding has a wet-weather backup in the booking: marquee hire and an indoor relocation plan. Wet season runs roughly November–March, and plan B is non-negotiable for outdoor receptions then.' },
+  { q: 'Can you cater dietary, halal or multicultural weddings?', a: 'Yes — halal-friendly lines, vegan and gluten-free menus, allergy protocols with separate prep, and multi-cuisine service (for example an Indonesian buffet alongside Western plated). Cultural and religious ceremony requirements are mapped at the consult.' },
+  { q: 'What does "++" mean, and what deposit is required?', a: '"++" means 11% government tax plus 10% service charge are added to the quoted price — we always show you the all-in figure. A 50% deposit confirms your date, with the balance due before the event. Cancellations follow written tiers: more than 90 days out, 50% of the deposit is refunded; 60–90 days, 25%; inside 60 days the deposit converts to credit toward a rescheduled date within 12 months.' },
   { q: 'How far in advance should I book?', a: 'Three to ten months for peak season (July–September, December–January). One month minimum for off-peak celebrations. Full planning and coordination requires at least three months\u2019 lead time.' },
-  { q: 'Do you do the wedding planning?', a: 'Yes — full planning and coordination is included for weddings of 80+ guests and available for any celebration on request. Intimate weddings include day-of coordination as standard.' },
-  { q: 'Can I use my own florist or photographer?', a: 'Yes — we coordinate any vendor you bring. We have preferred partners with negotiated rates if you prefer.' },
-  { q: 'How does tasting work?', a: 'Pre-event tasting for every wedding, scheduled 2–4 weeks before the day. We taste 3 dishes per course; you finalise the menu after.' },
-  { q: 'What if it rains?', a: 'Every wedding has a wet-weather backup plan in the booking. We coordinate marquee rental + indoor relocation if needed.' },
-  { q: 'Can you scope a three-day wedding weekend instead of one dinner?', a: 'Yes. We can split the brief into welcome night, ceremony day, and farewell brunch or lunch so each service format is costed and planned separately. That usually gives couples more control than forcing one package over the whole weekend.' },
-  { q: 'Can you plan for mixed cultural food expectations?', a: 'Yes. The consult is where we map must-have dishes, vegetarian or halal-friendly needs, spice levels, and how different family groups should be served. We shape the menu brief around the guest mix before the tasting stage.' },
-  { q: 'Do you handle non-Christian ceremonies?', a: 'Yes — Hindu, Muslim, Jewish, Balinese traditional, secular celebrant — all coordinated through our vetted officiant network.' },
-  { q: 'Can my guests stay nearby?', a: 'We work with private villa partners and can arrange room blocks. Arranged separately from your catering proposal.' },
-  { q: 'What\u2019s your cancellation policy?', a: 'Up to 90 days before: 50% refund of deposit. 60–90 days: 25%. Under 60 days: no refund but credit toward rescheduled event within 12 months.' },
 ]
 
 const FLOW_STEPS = [
@@ -97,41 +79,34 @@ const STAFFING_POINTS = [
 const SETTINGS_CARDS = [
   {
     icon: Flower2,
-    title: 'Décor & Styling Coordination',
-    desc: 'We coordinate trusted floral designers, rental companies, and lighting specialists so reception tables, bar areas, and food stations complement the aesthetic of your celebration — from linen and tableware to centrepieces and candles.',
+    title: 'Villa rules and access',
+    desc: 'Outside-vendor permission, access times, noise curfews and parking, confirmed with your villa manager in advance so there are no day-of surprises.',
   },
   {
     icon: Waves,
-    title: 'Beach Weddings',
-    desc: 'Sand-proof setups, weather-resistant equipment, power solutions for off-grid locations, and transport logistics that get fresh food and cold drinks to even remote beaches in perfect condition — then leave no trace behind.',
+    title: 'Mobile kitchens and power',
+    desc: 'Villa kitchens are rarely built for a hundred covers, so we bring mobile prep stations, refrigeration and generators where power is limited.',
   },
   {
     icon: Mountain,
-    title: 'Clifftop & Gardens',
-    desc: 'Wind exposure, limited access, and steep terrain are handled with experience and the right equipment. Rain backup is built into every outdoor plan — marquee rental and indoor relocation protect the day without sacrificing atmosphere.',
+    title: 'Rain plan B',
+    desc: 'Every outdoor reception carries a wet-weather backup: marquee rental and an indoor relocation plan, locked before the day.',
   },
 ]
 
 const WEDDING_WEEKEND_FORMATS = [
   {
-    title: 'Welcome Night / Sangeet-Style Evening',
-    desc: 'A more social format with canapes, family-style dishes, buffet stations, or live cooking so guests can move, meet, and settle into the weekend.',
+    title: 'Welcome dinner / rehearsal night',
+    desc: 'Relaxed family-style or BBQ formats the evening before. See our rehearsal dinner planning guide for the full approach.',
   },
   {
-    title: 'Ceremony + Reception Day',
-    desc: 'The most timing-sensitive service block. Menus and staffing are scoped around vows, portraits, speeches, and how long guests realistically wait between moments.',
+    title: 'Ceremony + reception day',
+    desc: 'The timing-sensitive centrepiece: arrival canapés 30–45 minutes pre-ceremony, cocktail hour during portraits, then plated, shared or hybrid dinner service.',
   },
   {
-    title: 'Farewell Brunch / Recovery Lunch',
-    desc: 'A softer final meal for villa guests the next day - simpler food, calmer pacing, and a clean way to close the wedding weekend without another formal event build.',
+    title: 'Recovery brunch',
+    desc: 'A softer final meal for villa guests the next morning; simpler food, calmer pacing, no second event build.',
   },
-]
-
-const MULTICULTURAL_MENU_POINTS = [
-  'Different events in the same wedding weekend can carry different food identities instead of forcing one cuisine across every moment.',
-  "Menu direction can be split by guest need: vegetarian-heavy family tables, halal-friendly lines, lower-spice options, children's meals, or late-night comfort dishes.",
-  'The proposal can be structured around must-have dishes and non-negotiable family preferences before the tasting stage, which makes sign-off easier for couples and planners.',
-  'If you already have a planner, family lead, or other decision-maker involved, we can shape the brief so timing, menu style, and service expectations are clear in one document.',
 ]
 
 export default function EventsWeddingsPage() {
@@ -154,17 +129,17 @@ export default function EventsWeddingsPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Wedding Catering Bali | Villa Weddings & Receptions — myCHEF"
-        description="Wedding catering in Bali for villa ceremonies & receptions. Michelin-trained chefs, full staffing, bespoke menus and complete coordination."
+        title="Wedding Catering Bali | Villa Wedding Specialists | myCHEF"
+        description="Wedding catering for Bali villa weddings: plated dinners, buffets & cocktail receptions with full team, tastings & transparent packages. WhatsApp myCHEF."
         canonical={`${SITE}/events/weddings`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-weddings.webp`}
         jsonLd={[
-          serviceWithOfferSchema({
+          serviceWithAggregateOfferSchema({
             name: 'Wedding Catering Bali',
-            description: 'myCHEF.id provides wedding catering in Bali with private chef menus, service staff, and full villa coordination. We support intimate ceremonies and reception dinners with setup, timing, and cleanup managed by one team.',
+            description: 'Villa wedding catering in Bali: plated receptions, buffets, live stations, cocktail receptions and Balinese heritage feasts with full service teams, tastings and coordination for 10–250+ guests.',
             url: `${SITE}/events/weddings`,
-            price: '600000',
-            unitText: 'per person',
+            lowPrice: '700000',
+            highPrice: '3000000',
           }),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           howToSchema({
@@ -204,24 +179,24 @@ export default function EventsWeddingsPage() {
         <div className="relative z-10 px-6 md:px-8 py-12 md:py-20 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-auto md:flex md:flex-col md:justify-center h-full w-full">
           <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Weddings' }]} theme="dark" className="mb-8" />
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Chapter 1 — Villa Weddings
+            Wedding Catering Bali
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Villa Weddings in Bali — Catering & Coordination
+            Wedding Catering in Bali — Villa Weddings, Run by One Team
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
-            One contract for menu planning, service staff, ceremony flow, setup, bar, and full cleanup. From intimate villa ceremonies to full reception dinners, myCHEF runs the food and the logistics together.
+            One contract covering menu design, the chef brigade, service staff, bar, setup, coordination with your planner and vendors — and a kitchen that leaves no trace behind.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Calendar className="w-4 h-4" /> Request Wedding Consult
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-weddings-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <MessageCircle className="w-4 h-4" /> Request a Wedding Consult
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-weddings-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <Calendar className="w-4 h-4" /> Open Wedding Inquiry Form
             </a>
           </div>
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
-            Bespoke proposals · Itemised quote before any deposit
+            Itemised proposal within 48 hours · Pre-event tasting for every wedding
           </p>
         </div>
       </section>
@@ -233,16 +208,16 @@ export default function EventsWeddingsPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                What We Cover
+                One Contract
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Food, floor service, coordination, setup, and cleanup in one wedding operation
+                One Team for Your Whole Wedding Day
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                A villa wedding only feels effortless when the catering team and the event timeline speak the same language. myCHEF builds both. We plan the menu around ceremony timing, cocktail hour, speeches, and the realities of working in a private villa kitchen. That means chef arrivals are aligned with rental drop-offs, waiters are briefed on the running order, and the coordinator is tracking guest flow while the kitchen tracks fire times and plate counts. Whether you want a formal plated reception, shared family-style dinner, or a hybrid evening with canapés and a seated main event, the food is never treated as a separate vendor.
+                Most Bali weddings involve five vendors who have never worked together: caterer, rental company, bar supplier, florist, planner. We replace the catering half of that puzzle with a single team — chefs, waiters, bartenders and a coordinator working from one run-sheet, briefed against your ceremony timing, speeches, portraits and first dance.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                We liaise directly with villa managers, rental suppliers, and any external vendors you have engaged, so everyone works from the same timeline and the same brief. This single-point-of-contact approach eliminates the confusion of multiple suppliers — and covers the operational details couples usually underestimate: staffing ratios, glassware reset, backup power planning, dietary mapping, late-night snack timing, and final cleanup after the last toast.
+                Your coordinator, Sofia, has run more than 100 villa weddings across Bali. She liaises directly with your villa manager, planner and any vendors you bring, so everyone works from the same timeline — and you work with one person, not a supplier chain.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -255,21 +230,21 @@ export default function EventsWeddingsPage() {
       <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
-            eyebrow="Chapter 2 — Your Menu"
-            title="Custom Menu Design — Western, Balinese, Asian Fusion & Beyond"
-            subtitle="Every menu is bespoke. Our culinary team designs each dish around your personal story, your cultural background, and the expectations of your guest list."
+            eyebrow="Formats"
+            title="Wedding Catering Formats"
+            subtitle="Plated, buffet, cocktail or Balinese heritage — we match the format to your guest count, villa layout and the rhythm of the evening."
           />
-          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            Our kitchen team includes Michelin-trained leadership and experienced chefs who understand the technical demands of cooking at volume while maintaining the refinement a wedding deserves. Menus are drafted after your consult, refined at a pre-event tasting, and finalised together — so what arrives at the table is exactly what you imagined.
-          </p>
           <div className="grid sm:grid-cols-2 gap-6">
-            {MENU_DIRECTIONS.map((item) => (
+            {FORMAT_CARDS.map((item) => (
               <div key={item.title} className="rounded-2xl border border-[#E8E6E3] bg-white p-6 md:p-8">
                 <h3 className="text-lg mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
                 <p className="text-[#4A4745] leading-relaxed text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
+          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mt-10">
+            For per-guest prices and guest-count scenarios: <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">see wedding catering packages & per-person prices</Link>. Marrying outside Bali? See <Link to="/wedding-catering-indonesia" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding catering across Indonesia</Link>.
+          </p>
         </div>
       </section>
 
@@ -316,7 +291,7 @@ export default function EventsWeddingsPage() {
                 Service ratios built for villa logistics, not restaurant assumptions
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                A wedding dinner in a private villa asks more of the team than a normal restaurant shift. Staff are carrying across garden paths, resetting glassware between outdoor and indoor moments, coordinating with the photographer, and working around speeches, dancing, and late arrivals. That is why we scope staffing against your event format rather than giving every wedding the same headcount. Seated receptions need enough hands to fire and clear each course properly, while cocktail-heavy weddings need stronger tray-pass and bar coverage.
+                A wedding dinner in a private villa asks more of the team than a normal restaurant shift. Staff are carrying across garden paths, resetting glassware between outdoor and indoor moments, coordinating with the photographer, and working around speeches, dancing, and late arrivals. That is why we scope staffing against your event format rather than giving every wedding the same headcount.
               </p>
               <div className="space-y-3">
                 {STAFFING_POINTS.map((item) => (
@@ -345,7 +320,7 @@ export default function EventsWeddingsPage() {
                 Our bar service extends far beyond standard wine and beer. We design a bespoke drinks menu that reflects your tastes, your heritage, or your wedding theme — perhaps a tropical gin creation that captures the spirit of Bali, a classic European cocktail with a local twist, or a non-alcoholic masterpiece that ensures every guest feels included.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                We curate wine selections and champagne service to complement your menu, and can arrange professional sommelier service with pairings designed for each course. Bar logistics are managed with the same rigour as the kitchen — consumption rates calculated in advance, stock, ice, glassware, and garnishes managed throughout — so the bar never runs dry and never looks dishevelled.
+                We curate wine selections and champagne service to complement your menu, and can arrange professional sommelier service with pairings designed for each course. Bar logistics are managed with the same rigour as the kitchen — consumption rates calculated in advance, stock, ice, glassware, and garnishes managed throughout — so the bar never runs dry and never looks dishevelled. See our dedicated <Link to="/in-villa-service/bartenders" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding bar service</Link>.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -358,9 +333,9 @@ export default function EventsWeddingsPage() {
       <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
-            eyebrow="Settings & Styling"
-            title="Villas, Beaches, and Clifftops — Styled and Under Control"
-            subtitle="We do not just cater in villas — we specialise in them. From Seminyak and Canggu estates to Uluwatu clifftops and Ubud jungle retreats, our team knows the access routes, kitchen facilities, and possibilities of Bali's most sought-after wedding settings."
+            eyebrow="Logistics"
+            title="Villa Wedding Logistics We Handle So You Don't"
+            subtitle="Villa kitchens are rarely built for a hundred covers — so we bring our own, and manage the unglamorous details that make or break a Bali wedding."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SETTINGS_CARDS.map((card) => (
@@ -371,53 +346,35 @@ export default function EventsWeddingsPage() {
               </div>
             ))}
           </div>
-          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mt-10">
-            Still selecting your venue? We work with villa partners and management companies across Bali and can advise on properties that suit your guest count, event format, and service requirements — based on real experience of which villas deliver both beauty and practicality. Planning more than a single day? Our <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Bali villa event packages</Link> wrap the whole stay — chef, staff, bar, transport and cleanup — into one tailored quotation.
-          </p>
+          <div className="mt-10 max-w-4xl mx-auto text-[#4A4745] leading-relaxed space-y-4">
+            <p>
+              <strong>Banjar (village) fees.</strong> Most Bali villages charge a function fee for events; around USD 300 is market guidance from Bali venue norms, not a myCHEF charge [BUSINESS CONFIRMATION REQUIRED]. We identify it early and include it in your budget planning.
+            </p>
+            <p>
+              <strong>Drinks your way.</strong> Full bar service with our wedding bartenders, or BYO: market guidance from Bali venue norms puts corkage at roughly USD 35–47 per bottle at venues that charge it [BUSINESS CONFIRMATION REQUIRED] — myCHEF's own published corkage waiver for villa parties is a flat IDR 250,000. We will tell you honestly which option costs less for your guest count.
+            </p>
+            <p>
+              For a deeper dive, read our <Link to="/journal/villa-wedding-catering-logistics-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa wedding logistics guide</Link>.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="py-20 md:py-28 bg-white wedding-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader
-            eyebrow="Chapter 3 — Real Weddings"
-            title="Wedding Stories"
-            subtitle="Recent villa weddings show the range: ceremony-led, reception-led, intimate, and full-scale celebration."
-          />
-          <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            These are not styled shoots. They are the kind of events we are actually briefed on every week: couples wanting an altar moment that flows cleanly into drinks, a reception dinner that feels polished without becoming formal, and staffing that can work inside a live villa environment. The gallery below reflects the wedding formats couples most often ask for in Bali right now.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {REAL_WEDDINGS.map((wedding) => (
-              <div key={wedding.names} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] overflow-hidden hover:shadow-lg transition-all">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <OptimizedImage src={wedding.image} alt={`${wedding.names} wedding at ${wedding.villa}`} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-semibold text-[#1A1A1A] text-sm mb-1">{wedding.names}</h3>
-                  <p className="text-[#4A4745] text-xs">{wedding.date} · {wedding.villa}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
-        <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Menu Planning
+                Tastings, Dietary & Cultural Menus
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Plated menus, dietary mapping, halal-friendly service, and tastings that answer real questions
+                Wedding menus have to satisfy mixed ages, cultures and dietary needs without slowing service
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Wedding menus need to satisfy more than taste. They need to serve mixed ages, dietary needs, and different guest expectations without slowing down service. We build menus around how the reception will actually run: plated if you want a cleaner speech cadence, family-style if you want warmth and movement, or a hybrid structure if you want canapés followed by a short plated dinner. Vegan, vegetarian, halal-friendly, gluten-free, dairy-free, nut-free, and children\'s meals are briefed in advance so the kitchen is not improvising on the night.
+                Vegan, vegetarian, halal-friendly, gluten-free, nut-free and children's meals are designed into the first draft — never improvised on the night. We regularly cater Hindu, Muslim, Jewish, Balinese-blessing and secular celebrations, and can split the menu by guest need: a halal Indonesian buffet line beside a Western plated service, lower-spice family tables, late-night comfort food after the formal courses.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                Tastings are typically scheduled 2–4 weeks before the event once timing, guest count, and style are clear. Couples often combine this page with our <a href="/catering/plated-catering" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">plated catering service</a> when they want a more restaurant-led reception feel. We can also build Indonesian-Western fusion menus, non-pork or halal-friendly spreads, and late-night comfort dishes that keep guests happy after the formal courses finish.
+                Every wedding booking includes a pre-event tasting, usually 2–4 weeks before the day — three dishes per course, then the menu is finalised together. For a Balinese-rooted celebration, explore our <Link to="/catering/babi-guling" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">babi guling wedding feast</Link> option.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -427,26 +384,32 @@ export default function EventsWeddingsPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white wedding-reveal">
+      <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Multi-Cultural & Multi-Day Planning
+                The Wedding Weekend
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Weddings with different family expectations need a clearer food plan, not a more generic one
+                Welcome Dinner to Recovery Brunch
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                The hardest wedding briefs are usually not about guest count alone. They are about different expectations meeting the same table: vegetarian relatives, halal-friendly lines, lower-spice options for one side of the family, late-night snacks for another, and a couple trying to balance elegance with comfort. The useful proposal is not only a per-person rate. It is a structure for how the whole weekend will actually eat.
+                Many couples now cater the whole weekend with one team, and it is usually calmer — and more cost-effective — than stitching together separate vendors. Each event is costed separately in one proposal, so you can scale the weekend up or down before committing.
               </p>
               <div className="space-y-3">
-                {MULTICULTURAL_MENU_POINTS.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
-                    <p className="text-[#4A4745] leading-relaxed">{item}</p>
-                  </div>
-                ))}
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Welcome dinner / rehearsal night</strong> — relaxed family-style or BBQ formats the evening before. See our <Link to="/journal/rehearsal-dinner-planning-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">rehearsal dinner planning guide</Link>.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Ceremony + reception day</strong> — the timing-sensitive centrepiece: arrival canapés 30–45 minutes pre-ceremony, cocktail hour during portraits, then plated, shared or hybrid dinner service.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Recovery brunch</strong> — a softer final meal for villa guests the next morning; simpler food, calmer pacing, no second event build.</p>
+                </div>
               </div>
             </div>
             <div className="space-y-4">
@@ -461,7 +424,7 @@ export default function EventsWeddingsPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
+      <section className="py-20 md:py-28 bg-white wedding-reveal">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
@@ -469,33 +432,32 @@ export default function EventsWeddingsPage() {
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Process & Lead Times
+                Process
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                What booking looks like from first message to event week
+                How We Cater a Villa Wedding
               </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-5">
-                Wedding planning moves faster when the operational decisions are made early. Once we have your date, villa, guest count, and preferred format, Sofia builds a proposal that covers menu direction, staffing, service style, rentals, and timing assumptions. After the deposit is in, we lock the service plan, liaise with the villa on access, and schedule any tasting or site visit that is needed. That gives the kitchen and floor team enough lead time to source correctly and brief every supplier against the same run-sheet.
-              </p>
-              <p className="text-[#4A4745] leading-relaxed mb-5">
-                We also assist with the practical realities of hosting a wedding on the island: villa access times, parking, power requirements, and noise restrictions, plus liaising with local authorities where permits are needed for beach ceremonies, amplified music, or large gatherings. For couples planning from abroad, this local backbone solves problems before they arise.
-              </p>
               <div className="space-y-4">
-                {LEAD_TIMES.map((item) => (
-                  <div key={item.label} className="flex items-start gap-4 rounded-2xl border border-[#E8E6E3] bg-white px-5 py-4">
-                    <div className="w-10 h-10 rounded-full bg-[#C5A028]/10 flex items-center justify-center shrink-0">
-                      <Clock className="w-4 h-4 text-[#C5A028]" />
-                    </div>
-                    <div>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
-                        <h3 className="text-sm font-semibold text-[#1A1A1A]">{item.label}</h3>
-                        <span className="text-sm font-semibold text-[#C5A028]">{item.phase}</span>
-                      </div>
-                      <p className="text-sm text-[#4A4745] leading-relaxed">{item.note}</p>
-                    </div>
-                  </div>
-                ))}
+                <div className="flex items-start gap-4 rounded-2xl border border-[#E8E6E3] bg-white px-5 py-4">
+                  <div className="w-8 h-8 rounded-full bg-[#C5A028]/10 flex items-center justify-center shrink-0 text-sm font-bold text-[#C5A028]">1</div>
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Consult.</strong> Share your date, villa, guest count and cuisine direction. Sofia replies — typically the same day — with availability and an initial direction.</p>
+                </div>
+                <div className="flex items-start gap-4 rounded-2xl border border-[#E8E6E3] bg-white px-5 py-4">
+                  <div className="w-8 h-8 rounded-full bg-[#C5A028]/10 flex items-center justify-center shrink-0 text-sm font-bold text-[#C5A028]">2</div>
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Proposal.</strong> One itemised document: menus, staffing, rentals, bar, timing and the all-in cost. For package frameworks: <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">see wedding catering packages & per-person prices</Link>.</p>
+                </div>
+                <div className="flex items-start gap-4 rounded-2xl border border-[#E8E6E3] bg-white px-5 py-4">
+                  <div className="w-8 h-8 rounded-full bg-[#C5A028]/10 flex items-center justify-center shrink-0 text-sm font-bold text-[#C5A028]">3</div>
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Tasting.</strong> Every wedding includes a pre-event tasting, usually 2–4 weeks before the day — three dishes per course, then the menu is finalised.</p>
+                </div>
+                <div className="flex items-start gap-4 rounded-2xl border border-[#E8E6E3] bg-white px-5 py-4">
+                  <div className="w-8 h-8 rounded-full bg-[#C5A028]/10 flex items-center justify-center shrink-0 text-sm font-bold text-[#C5A028]">4</div>
+                  <p className="text-[#4A4745] leading-relaxed"><strong>The day.</strong> Setup crews arrive around three hours before guests; the kitchen runs to the run-sheet; the villa is handed back spotless.</p>
+                </div>
               </div>
+              <p className="text-[#4A4745] leading-relaxed mt-6">
+                A 50% deposit confirms your date. Peak season (July–September, December–January) books 3–10 months ahead; off-peak intimate weddings can sometimes be confirmed a month out.
+              </p>
             </div>
           </div>
         </div>
@@ -503,7 +465,7 @@ export default function EventsWeddingsPage() {
 
       <section className="py-20 md:py-28 bg-[#0A0A0A] wedding-reveal">
         <div className="max-w-5xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 4 — Your Coordinator" title="Meet Sofia" subtitle="Your single point of contact from first message to final guest departure." dark />
+          <SectionHeader eyebrow="Your Coordinator" title="Meet Sofia" subtitle="Your single point of contact from first message to final guest departure." dark />
           <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center bg-white/5 border border-white/10 rounded-3xl overflow-hidden">
             <div className="p-8 md:p-10">
               <h3 className="text-2xl text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -528,7 +490,7 @@ export default function EventsWeddingsPage() {
 
       <section className="py-20 md:py-28 bg-[#FAFAF8] wedding-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 6 — Add-Ons" title="Wedding Add-Ons" subtitle="Use these to expand production once your food and staffing plan is locked." />
+          <SectionHeader eyebrow="Add-Ons" title="Wedding Add-Ons" subtitle="Use these to expand production once your food and staffing plan is locked." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
             We recommend treating add-ons as a second-stage decision. First we make sure the ceremony, kitchen, staffing, and reception service are sound. Then we layer in florals, music, film, cake, and transport based on what the villa can actually support. Every add-on is scoped and priced inside your itemised proposal — no surprises later.
           </p>
@@ -548,16 +510,6 @@ export default function EventsWeddingsPage() {
         </div>
       </section>
 
-      <TestimonialBlock
-        title="What Couples Say"
-        subtitle="Real reviews from real weddings across Bali."
-        testimonials={[
-          { name: 'Emma & James', location: 'Uluwatu Villa Wedding', quote: 'Sofia handled the whole flow from ceremony drinks to dinner service. We never had to chase a supplier or solve a timing issue ourselves.', rating: 5 },
-          { name: 'Anya & Mark', location: 'Canggu Villa Wedding', quote: 'The plated reception felt like a real restaurant service, but inside our villa. Dietary guests were looked after perfectly.', rating: 5 },
-          { name: 'Sarah & David', location: 'Seminyak Wedding', quote: 'The team arrived early, built everything quietly, and left the villa spotless. It felt organised from first WhatsApp to final cleanup.', rating: 5 },
-        ]}
-      />
-
       <section className="py-10 bg-[#0a0a0a]">
         <div className="max-w-3xl mx-auto px-6">
           <EmailCaptureBar />
@@ -566,7 +518,7 @@ export default function EventsWeddingsPage() {
 
       <section className="py-20 md:py-28 bg-white wedding-reveal">
         <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Questions" title="Wedding FAQ" subtitle="Everything you need to know about booking a villa wedding with myCHEF." />
+          <SectionHeader eyebrow="Questions" title="Wedding Catering Bali — FAQ" subtitle="Everything you need to know about booking a villa wedding with myCHEF." />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
@@ -576,16 +528,25 @@ export default function EventsWeddingsPage() {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <p className="text-sm uppercase tracking-widest text-[#C5A028] mb-3">Also available</p>
           <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
-          <p className="text-[#4A4745] leading-relaxed max-w-4xl mx-auto">
-            Explore <Link to="/bali-wedding-catering-packages" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">see wedding catering packages & per-person prices</Link>,{' '}
-            <Link to="/wedding-catering-indonesia" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wedding catering across Indonesia</Link>, or{' '}
-            <Link to="/events" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">all event catering</Link>. Plan supporting moments with our{' '}
-            <Link to="/journal/rehearsal-dinner-planning-bali" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">rehearsal dinner planning guide</Link> and{' '}
-            <Link to="/journal/villa-wedding-catering-logistics-bali" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa wedding logistics guide</Link>. Add a{' '}
-            <Link to="/catering/babi-guling" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">babi guling wedding feast</Link>,{' '}
-            <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wedding bar service</Link>, or host{' '}
-            <Link to="/events/villa-parties" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">the after-party</Link>. See the{' '}
-            <Link to="/pricing" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">full pricing guide</Link>.
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { to: '/bali-wedding-catering-packages', label: 'Wedding Packages' },
+              { to: '/wedding-catering-indonesia', label: 'Indonesia Weddings' },
+              { to: '/catering', label: 'Villa Catering' },
+              { to: '/pricing', label: 'Pricing Guide' },
+            ].map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="block py-3 px-4 rounded border border-[#C5A028]/30 text-[#1A1916] hover:bg-[#C5A028]/10 transition text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          <p className="text-[#4A4745] text-center max-w-3xl mx-auto mt-8 leading-relaxed">
+            Browse <Link to="/events" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">all event catering</Link> or see the{' '}
+            <Link to="/pricing" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">full pricing guide</Link>.
           </p>
         </div>
       </section>

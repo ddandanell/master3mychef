@@ -1,280 +1,205 @@
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, faqPageSchema, serviceSchema } from '@/components/SeoHead'
 import { ChefHat, Fish, UtensilsCrossed, Clock, Users, Wine } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
-const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20the%20sushi%20making%20class%20Bali%20experience.%20Can%20you%20share%20availability%20and%20pricing%3F'
+const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20sushi%20masterclass%20at%20my%20Bali%20villa.%20Please%20send%20availability%20and%20pricing.'
 const CANONICAL = 'https://mychef.id/experiences/sushi-masterclass'
 
 const SECTIONS: PageSection[] = [
   {
     id: 'intro',
     type: 'content' as const,
-    subtitle: 'Sushi Making Class Bali',
-    title: 'Learn the Art of Sushi in the Privacy of Your Bali Villa',
+    subtitle: 'Sushi Masterclass Bali',
+    title: 'Private Sushi Masterclass in Bali — Roll, Slice, Eat',
     image: '/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp',
     imageAlt: 'Sushi making class Bali with a chef teaching in a private villa kitchen',
-    body: `<p>Bali is a place people come to slow down, taste more carefully, and share moments that feel far removed from ordinary life. A <strong>sushi making class Bali</strong> experience fits that rhythm perfectly. Instead of sitting in a restaurant and watching a chef work behind a counter, you stand beside one — rolling, slicing, seasoning, and understanding why each step matters.</p>
+    body: `<p>Great sushi looks effortless. It isn't — and that's exactly what makes learning it so satisfying. A myCHEF private sushi masterclass brings a sushi-trained chef to your Bali villa with everything you need: fish sourced fresh that day, proper knives, bamboo mats, and the patience to teach you why seasoned rice, a clean cut and the right pressure turn simple ingredients into something extraordinary.</p>
 
-    <p>Our myCHEF sushi masterclasses are designed for guests who want more than a meal. They want the story behind it. Under the guidance of an experienced chef, you learn how to season sushi rice until it is glossy and just warm, how to handle a filleting knife with confidence, how to balance wasabi and soy, and how to present nigiri and maki that look as considered as they taste.</p>
+    <p>Two to three hours later, you're sitting at your own table eating nigiri and maki you made with your own hands. No restaurant, no crowd, no commute — just your group, your villa and a skill you take home.</p>
 
-    <p>Every class takes place in your villa. We bring the fish, the tools, the bamboo mats, and the quiet patience required to teach properly. By the end of the session you will not only have eaten exceptional sushi — you will know how to make it. For couples, families, and small groups looking for a memorable experience in Bali, this is one of the most intimate ways to spend an afternoon.</p>`,
+    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Reserve My Sushi Masterclass — WhatsApp +62 896-7407-2020</a>. Tell us your villa, group size and date — we reply within the hour.</p>`,
   },
   {
-    id: 'what-to-expect',
+    id: 'concept',
     type: 'content' as const,
-    subtitle: 'The Experience',
-    title: 'What Happens During a Private Sushi Masterclass',
+    subtitle: 'A Private Sushi Class, in Your Villa',
+    title: 'Learn Sushi Without the Classroom',
     image: '/generated/mychef-sushi-masterclass-instruction-bali-landscape.webp',
     imageAlt: 'Private chef teaching a sushi masterclass at a Bali villa',
-    body: `<p>The class begins when your chef arrives at your villa with everything needed for the lesson. There is no need to shop, prep, or rearrange the kitchen. We set up a clean station at your counter or island, lay out the ingredients in the order they will be used, and talk through the plan for the session before anyone picks up a knife.</p>
+    body: `<p>Bali has cooking schools aplenty, but a dedicated sushi masterclass — private, hands-on, in your own villa — is a different league: no shared classroom, no fixed menu, no travel. Ours is built for couples, families and small groups who want more than a meal: the story and the technique behind it.</p>
 
-    <p>We start with the rice because great sushi starts there. You will learn the ratio of rice to vinegar, how to fan and fold the grains without crushing them, and why temperature matters more than most home cooks realise. Once the rice is resting, we move to the fish. Your chef demonstrates how to assess freshness, how to slice for nigiri against the grain, and how to portion maki fillings so every roll is balanced.</p>
+    <p>You'll learn to season sushi rice until it's glossy and just warm, handle a sashimi knife with confidence, shape nigiri with the three-motion method, and roll maki that cuts cleanly into even pieces. Beginners are the norm, not the exception — the chef adjusts pace and depth to your group, and nobody leaves without a plate they're proud of.</p>`,
+  },
+  {
+    id: 'experience',
+    type: 'content' as const,
+    subtitle: 'What Happens During the Masterclass',
+    title: 'From Rice to Tasting in One Session',
+    body: `<p><strong>1. Setup at your villa.</strong> The chef arrives with fish, rice, nori, tools and boards, and builds a clean station at your kitchen counter or island. Nothing for you to shop or prep.</p>
 
-    <p>After the demonstration, it is your turn. With the chef beside you, you shape your first pieces of nigiri, roll your first maki, and learn how to cut a roll cleanly without squeezing the filling out. The afternoon becomes hands-on quickly, but it never feels rushed. Questions are welcome throughout. We keep the group small so everyone gets direct guidance and finishes the class with a plate of sushi they made themselves.</p>
+    <p><strong>2. Rice first.</strong> Washing, soaking, seasoning and fanning — the foundation everything else depends on.</p>
 
-    <p>The experience ends with a relaxed tasting at your villa table. You eat what you have prepared, often alongside a few extra pieces finished by the chef, with sake, wine, or tea available depending on your preference. It is a complete experience — educational, delicious, and entirely private.</p>`,
+    <p><strong>3. Fish and knife work.</strong> How to judge freshness, slice against the grain for nigiri, and portion fillings for balanced rolls.</p>
+
+    <p><strong>4. Your turn.</strong> Nigiri shaping, maki and hand rolls, with the chef beside you correcting form in real time.</p>
+
+    <p><strong>5. The tasting.</strong> You eat everything you made — plus a few pieces finished by the chef — with sake, wine or tea if you'd like it.</p>`,
   },
   {
     id: 'curriculum',
     type: 'content' as const,
-    subtitle: 'What You Will Learn',
-    title: 'A Practical Sushi Curriculum for Home Cooks',
+    subtitle: 'What You\'ll Learn',
+    title: 'A Practical Sushi Curriculum',
     image: '/generated/mychef-sushi-masterclass-ingredients-bali-portrait.webp',
     imageAlt: 'Fresh ingredients prepared for a private sushi making class in Bali',
-    body: `<p>The curriculum is built around the skills you can actually use again. We do not overload the session with theory; every topic is connected to something you will make with your own hands. By the end of the masterclass you will have covered the core techniques of traditional and contemporary sushi.</p>
-
-    <p><strong>Sushi rice fundamentals:</strong> Washing, soaking, cooking, seasoning, and cooling. You will understand why seasoned rice vinegar is added in stages, why a wooden bowl is used, and how to keep the rice at the right temperature while you work.</p>
-
-    <p><strong>Knife skills and fish handling:</strong> How to hold a sashimi knife, how to slice cleanly, and how to recognise the difference between cuts meant for nigiri, sashimi, and maki. We also cover safe handling, storage, and the simple signs that tell you fish is at its best.</p>
-
-    <p><strong>Nigiri technique:</strong> The three-motion shaping method, how much rice to use, how to apply wasabi, and how to place the topping so it adheres without being compressed. You will practise with several proteins and vegetables.</p>
-
-    <p><strong>Maki and uramaki rolling:</strong> How to spread rice evenly on nori, how to position fillings, how to roll with a bamboo mat, and how to cut six or eight even pieces. We also show a few simple decorative rolls for guests who want to push further.</p>
-
-    <p><strong>Garnish, plating, and service:</strong> Pickled ginger, wasabi, soy sauce etiquette, and how to arrange sushi on a plate so it looks like a restaurant presentation. We finish with guidance on how to recreate the experience back home, including a short ingredient-shopping checklist.</p>`,
+    body: `<ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;margin-bottom:0.5rem;">
+      <li><strong>Sushi rice fundamentals</strong> — ratios, seasoning in stages, temperature control</li>
+      <li><strong>Knife skills and fish handling</strong> — clean cuts, safe storage, freshness checks</li>
+      <li><strong>Nigiri technique</strong> — rice portioning, wasabi placement, the three-motion shape</li>
+      <li><strong>Maki and hand rolls</strong> — even spreading, filling balance, clean cutting</li>
+      <li><strong>Plating and etiquette</strong> — ginger, wasabi, soy, and how to present sushi like a restaurant</li>
+      <li><strong>A take-home checklist</strong> — what to buy and how to recreate the experience back home</li>
+    </ul>`,
   },
   {
     id: 'features',
     type: 'features' as const,
-    subtitle: 'What Is Included',
-    title: 'Everything You Need for a Sushi Making Class Bali',
+    subtitle: 'What\'s Included',
+    title: 'Everything You Need for a Sushi Masterclass',
     features: [
       {
         icon: ChefHat,
-        title: 'Expert Chef Instructor',
-        desc: 'A trained chef with experience in Japanese technique leads the class, answers questions, and corrects your form in real time.',
+        title: 'Sushi-Trained Chef',
+        desc: 'A chef instructor with Japanese technique, guiding your group from rice to plating.',
       },
       {
         icon: Fish,
         title: 'Fresh Fish & Produce',
-        desc: 'All seafood, vegetables, nori, and sushi rice are sourced on the day of your class and transported chilled to your villa.',
+        desc: 'All seafood, vegetables, sushi rice, nori and seasonings sourced fresh on the day.',
       },
       {
         icon: UtensilsCrossed,
         title: 'Professional Tools',
-        desc: 'We bring bamboo mats, sashimi knives, rice paddles, and bowls so you can learn on proper equipment.',
+        desc: 'Sashimi knives, bamboo mats, rice paddles, bowls and aprons brought to your villa.',
       },
       {
         icon: Clock,
         title: 'Flexible Timing',
-        desc: 'Classes are typically two to three hours and can be scheduled for lunch, afternoon, or early evening to suit your villa day.',
+        desc: 'Classes run two to three hours; lunch, afternoon or early-evening slots available.',
       },
       {
         icon: Users,
         title: 'Small Group Setting',
-        desc: 'Designed for couples, families, or groups of up to six guests so everyone receives hands-on attention.',
+        desc: 'Ideal for 2–6 guests so everyone gets hands-on guidance.',
       },
       {
         icon: Wine,
         title: 'Tasting & Pairing',
-        desc: 'Enjoy the sushi you make with recommended sake, wine, or tea. Beverages can be arranged to match your preferences.',
+        desc: 'Enjoy the sushi you make with sake, wine or tea. Beverages quoted separately.',
       },
     ],
   },
   {
-    id: 'who-is-it-for',
-    type: 'content' as const,
-    subtitle: 'Who Should Book',
-    title: 'A Sushi Masterclass for Couples, Families & Friends',
-    image: '/generated/mychef-sushi-masterclass-guests-dining-bali-landscape.webp',
-    imageAlt: 'Guests enjoying a private dining experience at a Bali villa table',
-    body: `<p>This experience works for almost any small group that enjoys food and wants to do something together that does not feel like a standard activity. Couples on a romantic Bali trip often book it as a memorable way to spend an afternoon before a private dinner. Families use it as a hands-on activity that keeps both adults and older children engaged. Groups of friends treat it as a relaxed prelude to a villa party or a sunset evening.</p>
-
-    <p>You do not need any prior cooking experience. The class is designed for home cooks and complete beginners. If you already cook regularly, the chef will adjust the pace and introduce more advanced techniques, knife details, or presentation tips. If you are travelling with mixed skill levels, we manage the group so everyone finishes at the same place: with a plate of sushi they are proud of.</p>
-
-    <p>Because the class takes place in your villa, it also suits guests who prefer privacy, families with young children who need flexibility, or anyone celebrating a special occasion. We can adapt the menu for dietary requirements, including vegetarian, pescatarian, and gluten-free guests. Simply let us know when you book.</p>
-
-    <p>If you are interested in other interactive culinary experiences, explore our full collection of <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">sushi making class Bali</a> and cooking experiences.</p>`,
-  },
-  {
-    id: 'locations',
-    type: 'content' as const,
-    subtitle: 'Where We Teach',
-    title: 'Sushi Masterclasses Across Bali',
-    body: `<p>We run private sushi classes at villas and estates across the island. Each region offers a slightly different atmosphere, and your chef adapts the menu and timing to what works locally.</p>
-
-    <p><strong>Seminyak & Petitenget:</strong> Mature villa estates with well-equipped kitchens and quiet walled gardens. A convenient choice for couples and small groups who want a refined, contained experience. See our <a href="/private-chef/seminyak" class="text-[#7E6410] hover:underline font-medium">Seminyak private chef page</a> for more villa dining options.</p>
-
-    <p><strong>Canggu & Berawa:</strong> Design-forward villas with open-plan kitchens and easygoing energy. Popular with groups who want a contemporary Bali experience. See our <a href="/private-chef/canggu" class="text-[#7E6410] hover:underline font-medium">Canggu private chef page</a>.</p>
-
-    <p><strong>Ubud:</strong> Jungle and rice-terrace villas with cooler mornings and a strong connection to Balinese culture. The slower pace suits a long, relaxed class. See our <a href="/private-chef/ubud" class="text-[#7E6410] hover:underline font-medium">Ubud private chef page</a>.</p>
-
-    <p><strong>Uluwatu:</strong> Clifftop villas with dramatic sunset views. A cooking class here pairs beautifully with an evening meal on the terrace. See our <a href="/private-chef/uluwatu" class="text-[#7E6410] hover:underline font-medium">Uluwatu private chef page</a>.</p>
-
-    <p>If your villa is outside these areas, <a href="https://wa.me/6289674072020" class="text-[#7E6410] hover:underline font-medium">message us on WhatsApp</a> and we will confirm availability and logistics.</p>`,
-  },
-  {
     id: 'pricing',
     type: 'content' as const,
-    subtitle: 'Investment',
-    title: 'Sushi Making Class Bali Pricing',
-    body: `<p>Pricing for a sushi making class Bali depends on the number of guests, the length of the class, the ingredients selected, and any beverage pairings you would like to add. Because these details change with each booking, we quote every class individually once we understand your group and preferences.</p>
+    subtitle: 'Sushi Masterclass Pricing',
+    title: 'From IDR 700K Per Person ++',
+    body: `<p>Private in-villa classes at myCHEF start from <strong>IDR 700K per person ++</strong> (11% government tax + 10% service charge), with the final quote depending on your group size, the fish selection and any sake or wine pairing you add. Every quote is itemised and confirmed before you commit.</p>
 
-    <p><strong>Starting from IDR 850,000 per person</strong> for a standard two-hour class with a curated selection of fish and vegetables. Larger groups, premium seafood upgrades, extended sessions, or added wine and sake pairings will adjust the final investment.</p>
+    <p>Classes suit 2–6 guests best so everyone gets direct, hands-on guidance; larger groups can be arranged with advance notice and additional chefs. Beverages are quoted separately so you choose exactly what you want.</p>
 
-    <p><strong>What is included in your quoted price:</strong></p>
-    <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;margin-bottom:0.5rem;">
-      <li>Chef instructor and assistant for the full session</li>
-      <li>All ingredients, including fresh fish, vegetables, sushi rice, nori, and seasonings</li>
-      <li>Use of professional sushi tools during the class</li>
-      <li>Hands-on instruction in rice, knife work, nigiri, and maki</li>
-      <li>Tasting of everything prepared during the session</li>
-      <li>Kitchen clean-down and packing away of equipment</li>
-    </ul>
-
-    <p>Beverages are typically quoted separately so you can choose exactly what you would like. For a full overview of how we structure private experiences, see our <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">fine dining page</a> or <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing page</a>. To receive a personalised quote for your villa date, <a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">message us on WhatsApp</a> — we reply within the hour.</p>`,
+    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Reserve My Sushi Masterclass — WhatsApp +62 896-7407-2020</a>. See our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">full pricing guide</a>.</p>`,
   },
   {
-    id: 'upgrades',
+    id: 'who-is-it-for',
     type: 'content' as const,
-    subtitle: 'Make It a Full Evening',
-    title: 'Popular Upgrades for Your Sushi Masterclass',
-    body: `<p>The most popular upgrade is to follow the class with a full dinner prepared by the chef. After you have rolled and tasted your own sushi, the chef serves additional courses such as sashimi, tempura, or a Japanese-inspired dessert. This turns a two-hour class into a complete evening.</p>
+    subtitle: 'Private Sushi Masterclass Bali',
+    title: 'For Couples, Families & Small Groups',
+    image: '/generated/mychef-sushi-masterclass-guests-dining-bali-landscape.webp',
+    imageAlt: 'Guests enjoying a private dining experience at a Bali villa table',
+    body: `<p>This experience works for almost any small group that enjoys food and wants to do something together. Couples on a romantic Bali trip often book it as a memorable afternoon before a private dinner. Families use it as a hands-on activity that keeps both adults and older children engaged. Groups of friends treat it as a relaxed prelude to a villa party.</p>
 
-    <p>Other upgrades include premium fish selections such as Hokkaido scallops or imported salmon, a sake or Japanese whisky pairing, and a personalised recipe booklet to take home. For celebrations, we can also arrange a decorated villa table and photography.</p>`,
+    <p>Want to keep cooking? See our <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">private cooking classes in more cuisines</a>, or browse <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">all private experiences</a>. Pair the evening with <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">add a cocktail class to the same evening</a>. For a full dinner, see <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">private chef fine dining</a>.</p>`,
   },
   {
     id: 'faq',
     type: 'faq' as const,
-    subtitle: 'Common Questions',
-    title: 'Sushi Masterclass FAQ',
+    subtitle: 'Private Sushi Masterclass Bali — FAQ',
+    title: 'Common Questions',
   },
   {
     id: 'cta',
     type: 'cta' as const,
     subtitle: 'Reserve Your Class',
     title: 'Ready to Roll Your Own Sushi in Bali?',
-    body: 'Tell us your villa location, group size, and preferred date. We will confirm chef availability and send a custom quote within the hour.',
+    body: 'Tell us your villa, group size and preferred date — we will confirm chef availability and send your itemised quote within the hour.',
     primaryAction: {
-      label: 'Message Us on WhatsApp',
+      label: 'Reserve My Sushi Masterclass',
       href: WA_LINK,
       external: true,
     },
     secondaryAction: {
-      label: 'View Pricing',
+      label: 'Full Pricing Guide',
       href: '/pricing',
     },
   },
 ]
 
 const FAQS = [
-  { question: 'Do I need any cooking experience to join the sushi masterclass?', answer: 'No experience is required. The class is designed for beginners and home cooks. Your chef adjusts the pace to your group and provides hands-on guidance throughout.' },
-  { question: 'Where does the sushi making class Bali take place?', answer: 'The class takes place in your Bali villa, hotel suite, or private residence. We bring all ingredients and equipment, so you only need a counter or island to work at.' },
-  { question: 'How long does a private sushi class last?', answer: 'Most classes run between two and three hours, including setup, instruction, hands-on rolling, and the final tasting. Shorter or longer sessions can be arranged on request.' },
-  { question: 'What ingredients will we use?', answer: 'We use fresh fish and seafood sourced on the day, along with seasonal vegetables, sushi rice, nori, and traditional seasonings. The exact selection depends on availability and your preferences.' },
-  { question: 'Can vegetarians or guests with allergies join?', answer: 'Yes. We can adapt the class for vegetarians, pescatarians, gluten-free guests, and most allergies. Let us know your requirements when you book so we can plan the menu accordingly.' },
-  { question: 'How many people can join a sushi making class Bali?', answer: 'The experience is best for couples, families, or small groups of up to six guests. Larger groups can be accommodated with advance notice and additional chefs.' },
-  { question: 'What should I wear or bring?', answer: 'Wear comfortable clothing and closed shoes. We provide aprons and all tools. You do not need to bring anything except your appetite and curiosity.' },
-  { question: 'How far in advance should I book?', answer: 'We recommend booking at least one week in advance, especially during peak season from July to August and December. Last-minute bookings are sometimes possible depending on chef availability.' },
-  { question: 'Can children participate?', answer: 'Yes, with supervision. Children from about eight years old can usually manage the rolling and shaping, while younger children can help with simpler tasks and tasting.' },
-  { question: 'Do you offer the class in Ubud, Uluwatu and Canggu?', answer: 'Yes. We teach sushi masterclasses across Bali, including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua and Jimbaran.' },
-  { question: 'Is the fish safe to eat raw?', answer: 'Yes. We source sushi-grade fish from trusted suppliers and transport it chilled. All seafood is handled according to strict food safety standards.' },
-  { question: 'Can we add a dinner after the class?', answer: 'Absolutely. Many groups extend the experience into a full Japanese dinner with extra courses prepared by the chef. Mention this when you enquire.' },
+  { question: 'How much does a private sushi masterclass in Bali cost?', answer: 'Private in-villa classes start from IDR 700K per person ++. The final quote depends on group size, fish selection and beverage pairings — always itemised upfront.' },
+  { question: 'How many people can join?', answer: 'Two to six guests is ideal. Larger groups are possible with advance notice and additional chefs.' },
+  { question: 'How long does the class take?', answer: 'Two to three hours, including setup, instruction, hands-on rolling and the final tasting. Lunch, afternoon and early-evening slots are all possible.' },
+  { question: 'Do I need any cooking experience?', answer: 'None at all. The class is designed for beginners and home cooks; confident cooks get deeper technique and presentation detail.' },
+  { question: 'What\'s included in the price?', answer: 'The chef instructor, all fresh ingredients, professional tools and aprons, hands-on instruction, the tasting, and full clean-down. Beverages are quoted separately.' },
+  { question: 'Can vegetarians, pescatarians or gluten-free guests join?', answer: 'Yes. The menu adapts — vegetable rolls, tamari instead of soy, and allergy-aware prep — when you tell us at booking.' },
+  { question: 'What does our villa need?', answer: 'A kitchen counter or island to work at. We bring everything else.' },
+  { question: 'How far in advance should I book?', answer: 'At least a week is recommended, more in July–August and December. Last-minute requests are sometimes possible — ask.' },
+  { question: 'What deposit is required?', answer: 'A deposit confirms your chef and date [BUSINESS CONFIRMATION REQUIRED: deposit level — crawl for this URL is silent; live pages elsewhere show 50%]; the balance is due before the class.' },
 ]
 
 const RELATED_PAGES = [
-  { label: 'Fine Dining Bali', href: '/fine-dining', desc: 'Private chef fine dining experiences across Bali villas and estates.' },
-  { label: "Chef's Table Bali", href: '/fine-dining/chefs-table', desc: 'An intimate 7-course counter dining experience led by Adriano.' },
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full overview of private chef services for any occasion in Bali.' },
-  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and experiences.' },
+  { label: 'Private Cooking Class', href: '/experiences/private-cooking-class', desc: 'Private cooking classes in more cuisines at your villa.' },
+  { label: 'Fine Dining Bali', href: '/fine-dining', desc: 'Private chef fine dining experiences across Bali villas.' },
+  { label: 'Mixology Service', href: '/in-villa-service/mixology', desc: 'Custom cocktail menu design for your villa.' },
+  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF experiences.' },
 ]
 
 export default function ExperienceSushiMasterclassPage() {
   return (
     <PremiumPage
       slug="experiences/sushi-masterclass"
-      title="Sushi Making Class Bali | Private In-Villa Masterclass | myCHEF"
-      description="Book a sushi making class in Bali at your villa. Learn nigiri, maki and sushi rice with a private chef. Fresh ingredients and equipment included. Enquire now."
-      seoTitle="Sushi Making Class Bali | Private In-Villa Masterclass | myCHEF"
-      seoDescription="Book a sushi making class in Bali at your villa. Learn nigiri, maki and sushi rice with a private chef. Fresh ingredients and equipment included. Enquire now."
+      title="Sushi Masterclass Bali | Private Villa Sushi Class | myCHEF"
+      description="Book a private sushi masterclass at your Bali villa — maki, nigiri & hand rolls with a sushi chef. Fish, tools & ingredients included. WhatsApp myCHEF."
+      seoTitle="Sushi Masterclass Bali | Private Villa Sushi Class | myCHEF"
+      seoDescription="Book a private sushi masterclass at your Bali villa — maki, nigiri & hand rolls with a sushi chef. Fish, tools & ingredients included. WhatsApp myCHEF."
       canonicalUrl={CANONICAL}
-      h1="Sushi Making Class Bali — Private In-Villa Masterclass"
+      h1="Private Sushi Masterclass in Bali — Roll, Slice, Eat"
       subtitle="Learn the Art of Sushi with a Private Chef in Your Villa"
       heroImage="/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp"
       heroImageAlt="Sushi making class Bali chef preparing fresh sushi in a private villa kitchen"
       ogImage="https://mychef.id/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp"
       keywords={[
-        'sushi making class Bali',
-        'sushi masterclass Bali',
-        'private sushi class Bali',
-        'in villa sushi experience Bali',
-        'private chef sushi experience Bali',
-        'Japanese cooking class Bali',
-        'sushi class for couples Bali',
-        'Bali villa cooking experience',
+        'private sushi masterclass bali',
+        'sushi masterclass bali',
+        'sushi making class bali',
+        'private sushi class bali',
+        'sushi chef experience villa bali',
       ]}
       highlights={['Private Villa Class', 'Hands-On Instruction', 'Fresh Ingredients', 'All Skill Levels']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema('Sushi Making Class Bali', CANONICAL, 'Experiences', 'https://mychef.id/experiences'),
+        breadcrumbSchema('Sushi Masterclass Bali', CANONICAL, 'Experiences', 'https://mychef.id/experiences'),
         faqPageSchema(FAQS),
-        {
-          '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
-          headline: 'Sushi Making Class Bali | Private In-Villa Masterclass',
-          description:
-            'Book a sushi making class in Bali. Learn nigiri, maki, and sushi rice in your villa with a myCHEF instructor. Personalised pricing.',
-          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          publisher: {
-            '@type': 'Organization',
-            name: 'myCHEF.id',
-            logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' },
-          },
-          datePublished: '2026-07-24',
-          dateModified: '2026-07-24',
-          image: 'https://mychef.id/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp',
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': CANONICAL,
-          },
-          url: CANONICAL,
-          wordCount: 1750,
-          keywords:
-            'sushi making class Bali, sushi masterclass Bali, private sushi class Bali, in villa sushi experience Bali, private chef sushi experience Bali',
-          about: {
-            '@type': 'Service',
-            name: 'Sushi Making Class Bali — Private In-Villa Masterclass',
-            provider: { '@type': 'Organization', name: 'myCHEF', url: 'https://mychef.id' },
-            areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-            offers: {
-              '@type': 'Offer',
-              priceCurrency: 'IDR',
-              price: '850000',
-              priceSpecification: {
-                '@type': 'UnitPriceSpecification',
-                price: '850000',
-                priceCurrency: 'IDR',
-                unitText: 'per person',
-                description: 'Starting price per person; confirmed on enquiry',
-              },
-            },
-          },
-        },
+        serviceSchema(
+          'Private Sushi Masterclass Bali',
+          'A private sushi masterclass at your Bali villa: learn maki, nigiri and hand rolls with a sushi chef. Fresh fish, professional tools and tasting included. Classes from IDR 700K per person ++, 2–3 hours, ideal for 2–6 guests.',
+          CANONICAL
+        ),
       ]}
-      ctaText="Book Your Sushi Masterclass"
+      ctaText="Reserve Your Sushi Masterclass"
       ctaSubtext="Tell us your group size and villa — we will reply within the hour with a bespoke quote."
     />
   )

@@ -2,72 +2,77 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { CITY_CONTENT } from '@/data/cityContent'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
-const WA_MSG = encodeURIComponent('Hi myCHEF, I want to book a private chef in Canggu. Can you send me pricing?')
+const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Canggu. Can you send a menu proposal?')
 
 const FAQS = [
   {
-    q: 'Do you provide private chef services in Canggu?',
-    a: 'Yes — Canggu is one of our core service areas. Our chefs are based here and cover everything from Batu Bolong and Echo Beach to Berawa, Babakan, and the Pererenan border. We offer same-day booking for simple dinners and fast confirmation for groups.',
+    q: 'Which part of Canggu is best for eating out?',
+    a: 'Batu Bolong for variety and nightlife energy, Echo Beach for sunset seafood, Berawa for boutique wine-bar dining, and the Babakan lanes for cheap, excellent local warungs.',
   },
   {
-    q: 'What kind of food does a private chef in Canggu typically cook?',
-    a: 'Canggu guests tend to want healthy, high-protein, and globally-influenced menus. We specialise in plant-forward dinners, fresh seafood grills, Asian fusion tasting menus, and casual poolside BBQs. We adapt completely to your preferences — just tell us your dietary requirements.',
+    q: 'Do Canggu restaurants take reservations?',
+    a: 'Many of the popular dinner spots do — and the best ones need them, especially for groups. Walk-ins at 7–8pm on Batu Bolong often mean a wait.',
   },
   {
-    q: 'How much does a private chef cost in Canggu?',
-    a: 'Villa dinners start from IDR 700K per person for a 3–4 course dinner (2–10 guests). Poolside BBQs for larger groups run IDR 700K–800K per person. Multi-day retreat packages have dedicated pricing. All prices are subject to 11% tax + 10% service charge.',
+    q: 'How much does private dining in Canggu cost?',
+    a: 'In-villa dinners start from IDR 700K per person, BBQ catering from IDR 700K–800K, and weekly meal prep from IDR 4.5M per week for two — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
   },
   {
-    q: 'Can I book a chef for a surf retreat or group stay in Canggu?',
-    a: 'Absolutely — multi-day retreat catering is a specialty. We build full-board programmes (breakfast, lunch, dinner) tailored for surf groups, yoga retreats, and digital nomad communities doing extended stays. High-protein, recovery-focused menus are our default for active groups.',
+    q: 'Is a villa dinner worth it versus eating out in Canggu?',
+    a: 'For groups of six or more, usually yes: one fixed price covers menu, chef, shopping, cooking and clean-up, with no queues, no split tables and no scooter ride home.',
   },
   {
-    q: 'How quickly can you set up in Canggu?',
-    a: 'Because our chefs are Canggu-based, we can often confirm same-day for simple dinners (subject to availability). Standard villa dinners work best with 24–48 hours notice. BBQs and group events benefit from 2–3 days of lead time for market sourcing.',
+    q: 'Can you handle vegan, gluten-free or high-protein diets?',
+    a: 'Yes — Canggu bookings are our most dietary-diverse. Menus are planned around your requirements before we shop.',
   },
   {
-    q: 'Are your Canggu chefs Indonesian?',
-    a: 'Yes — all myCHEF chefs are Indonesian professionals. They understand Canggu\'s international food culture intimately, from paleo and gluten-free to vegan and Ayurvedic, and deliver Michelin-standard execution from your villa kitchen.',
+    q: 'How far ahead should I book?',
+    a: 'A few days is ideal; same-day is often possible for dinners. Weekly services and retreats should be arranged at least a week ahead.',
   },
 ]
 
-const AREAS = [
-  { name: 'Batu Bolong', note: 'Canggu\'s creative heart. High villa density, coffee culture, and post-surf dinner vibes.' },
-  { name: 'Echo Beach', note: 'Beachfront access. Seafood grills, casual BBQs, and group dinners with ocean views.' },
-  { name: 'Berawa', note: 'Boutique hotel belt and luxury villas. Elegant dinners and wellness-focused menus.' },
-  { name: 'Babakan & Nelayan', note: 'Quieter rice-field lanes. Spacious compounds perfect for retreat catering.' },
-  { name: 'Pererenan', note: 'Northern Canggu. Emerging villa zone. Fast service from our local team.' },
-  { name: 'Seseh', note: 'Black-sand beach escape. Remote villa dinners for couples and small groups.' },
+const SCENE = [
+  {
+    name: 'Batu Bolong & the café strip',
+    detail: 'The busiest corridor — brunch institutions, taco joints, pizza ovens and chef-led bistros shoulder to shoulder. Quality is high; so are the queues. The best-known dinner spots fill by 7pm and parking is a contact sport. Book ahead or eat early.',
+  },
+  {
+    name: 'Echo Beach & sunset spots',
+    detail: 'The western end trades café polish for salt air: grilled-seafood warungs on the sand, sunset bars, and casual dining terraces above the break. The mood is flip-flop formal — great for groups who want atmosphere over ceremony.',
+  },
+  {
+    name: 'Health food, plant-based & everyday warungs',
+    detail: "Canggu's real signature. Dedicated vegan kitchens, macro bowls, cold-pressed everything — alongside excellent local warungs on the quieter lanes of Babakan and Nelayan where a nasi campur costs less than a flat white on Batu Bolong. Berawa adds a boutique row of bakeries and wine bars between the two.",
+  },
 ]
 
 const SERVICES = [
   {
-    name: 'Villa & Pool Dinners',
+    name: 'Villa and pool dinners',
     range: 'From IDR 700K / person',
     for: '2–12 guests',
-    detail: 'Casual-luxury private dinners at your Canggu villa — fresh seafood, modern Asian fusion, or a classic BBQ. Relaxed service, chef in residence, full cleanup included.',
+    detail: 'Fresh seafood, modern Asian, or a classic grill.',
   },
   {
-    name: 'Surf Retreat Catering',
-    range: 'From IDR 700K / person',
-    for: '6–30 guests',
-    detail: 'High-protein, recovery-focused meal programmes for surf groups and active retreat guests. Breakfast, lunch, and dinner daily packages with full dietary accommodation.',
-  },
-  {
-    name: 'Poolside BBQ Feast',
+    name: 'Poolside BBQ feasts',
     range: 'IDR 700K–800K / person',
     for: '10–40 guests',
-    detail: 'Live-fire grilling of whole seafood, local beef cuts, and vegetable skewers. Best for the social energy of Canggu\'s large villa pools. Full bar service available on request.',
+    detail: 'Bar service available.',
   },
   {
-    name: 'Weekly Meal Prep & Hosting',
+    name: 'Surf retreat and group catering',
     range: 'From IDR 700K / person',
-    for: 'Daily for 1–10 guests',
-    detail: 'Daily breakfast, lunches, and dinners for long-stay digital nomads, families, or wellness travellers. Grocery management and fridge stocking included in all packages.',
+    for: '6–30 guests',
+    detail: 'High-protein menus for active groups.',
+  },
+  {
+    name: 'Weekly meal prep',
+    range: 'From IDR 4.5M / week',
+    for: '2 guests',
+    detail: "Daily breakfasts, lunches and dinners planned around your household.",
   },
 ]
 
@@ -76,34 +81,24 @@ export default function CangguPage() {
 
   const localBizCanggu = {
     ...localBusinessSchema,
-    name: 'myCHEF.id Canggu',
-    description: 'Private chef, villa dining, surf retreat catering, and poolside BBQ in Canggu, Bali',
-    areaServed: {
-      '@type': 'Place',
-      name: 'Canggu, Bali',
-    },
+    name: 'myCHEF',
+    description: 'Premium in-villa dining, chef services and weekly meal prep in Canggu, Bali — Indonesian chefs, HACCP-certified, fixed upfront pricing.',
+    areaServed: { '@type': 'Place', name: 'Canggu, Bali' },
+    priceRange: 'IDR 700,000+ per person',
+    url: canonical,
   }
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Canggu | Villa Dining & Surf Retreats — myCHEF"
-        description="Book a private chef in Canggu for villa dinners, poolside BBQs & surf retreat catering. Indonesian chefs, healthy menus, same-day availability. Get a quote."
+        title="Private Dining in Canggu | Dining Guide & Chef Services"
+        description="Where to eat in Canggu: the area dining guide — restaurants, private dining and in-villa chef services for your Canggu stay. By myCHEF."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-canggu.webp"
         jsonLd={[
           localBizCanggu,
-          breadcrumbSchema('Private Chef Canggu', canonical, 'Locations', 'https://mychef.id/locations'),
-          faqPageSchema([...FAQS, ...CITY_CONTENT['canggu'].faqs].map(f => ({ question: f.q, answer: f.a }))),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'Private Chef Canggu',
-            description: 'Private chef, villa dining, poolside BBQs, surf retreat catering, and weekly meal prep in Canggu including Batu Bolong, Echo Beach, Berawa, and Pererenan.',
-            provider: { '@id': 'https://mychef.id/#business' },
-            areaServed: { '@type': 'Place', name: 'Canggu, Bali' },
-            url: canonical,
-          },
+          breadcrumbSchema('Canggu', canonical, 'Locations', 'https://mychef.id/locations'),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />
 
@@ -112,7 +107,7 @@ export default function CangguPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-canggu.webp"
-            alt="Private chef service in Canggu, Bali by myCHEF — poolside BBQ dinner setup"
+            alt="Private dining in Canggu, Bali — in-villa chef dinner by myCHEF"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"
@@ -122,12 +117,12 @@ export default function CangguPage() {
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.20) 100%)' }} />
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Canggu</p>
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Canggu Dining Guide</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Chef<br />in Canggu
+            Private Dining in Canggu: Where to Eat & In-Villa Chef Options
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Fresh, healthy, globally-influenced cooking for Canggu's surf villas and creative compounds. Poolside BBQs, retreat catering, and villa dinners — from 2 to 40 guests.
+            Canggu eats the way it lives: early, healthy and outdoors. This guide maps where to eat out in Canggu, what "private dining" actually means here, and when the smartest table in the neighbourhood is the one already inside your villa.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -136,7 +131,7 @@ export default function CangguPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
-              <MessageCircle className="w-4 h-4" /> Get a Canggu Quote
+              <MessageCircle className="w-4 h-4" /> Plan a Canggu Dinner
             </a>
             <Link
               to="/pricing"
@@ -148,33 +143,30 @@ export default function CangguPage() {
         </div>
       </section>
 
-      {/* Why myCHEF in Canggu */}
+      {/* What Makes Dining in Canggu Different */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Canggu's Private Chef Specialists</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-6">The myCHEF Standard in Canggu</h2>
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">What Makes It Different</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">What Makes Dining in Canggu Different</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-4 leading-relaxed">
-              Canggu is where surf culture meets villa living — a sprawling neighbourhood of modern pool villas, organic cafés, and long-stay guests who eat with intention. The food scene here is among Bali's best for healthy international cooking, and our Canggu guests expect the same from a private chef: fresh, nutrient-dense, globally-influenced food that matches their lifestyle. Not sure what a private chef setup looks like? Read our <Link to="/blog/how-to-hire-private-chef" className="text-[#C5A028] hover:underline font-medium">complete guide to hiring a private chef in Bali</Link>.
-            </p>
-            <p className="mb-4 leading-relaxed">
-              myCHEF is Canggu-based, which means faster deployment, lower travel fees, and chefs who know every villa kitchen layout from Echo Beach to the Pererenan border. We specialise in multi-day meal programmes for <Link to="/events" className="text-[#C5A028] hover:underline font-medium">surf retreats and villa parties</Link>, high-energy <Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Canggu villa catering</Link>, and elegant villa dinners that rival Canggu's best restaurants — served at your pool instead of a table on the strip.
+              Canggu is not one strip but a sprawl. Batu Bolong, Echo Beach and Berawa each have their own centre of gravity, connected by scooter-clogged shortcuts that make a ten-minute drive feel like an expedition at dinner hour. The food culture skews fresh and functional — smoothie bowls and specialty coffee by day, charcoal grills and natural wine by night — with more plant-based, gluten-free and high-protein options than anywhere else in Bali.
             </p>
             <p className="mb-0 leading-relaxed">
-              All of our Canggu chefs are Indonesian professionals trained to international culinary standards. They are fluent in English, experienced with the full range of dietary requirements common in the area — vegan, paleo, gluten-free, Ayurvedic — and built for the social, collaborative cooking style that Canggu guests love. See <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">private chef pricing in Canggu</Link> for a full breakdown.
+              The other defining fact: people stay. A week in Canggu is common; a month is normal. That changes the dining question from "where do we eat tonight?" to "how do we eat well all month?" — and it's why in-villa dining and weekly chef services matter more here than in any other Bali neighbourhood. The airport is roughly 45–60 minutes away, and sunsets over Echo Beach set the evening's timetable.
             </p>
           </div>
 
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {[
-              'Canggu-based team — fastest confirmation and lowest travel fees',
-              'Specialists in retreat catering and multi-day meal programmes',
-              'Full dietary flexibility: vegan, gluten-free, paleo, raw',
-              'HACCP-certified food safety practices',
-              '50% deposit to confirm — balance 48h before event',
+              'Sprawling scene from Batu Bolong to Berawa and Pererenan',
+              'Highest density of plant-based, gluten-free and high-protein menus in Bali',
+              'Long-stay guests shift the dining question to monthly eating well',
+              'Canggu-based chefs: faster confirmation, no travel surcharge within Canggu–Berawa',
+              'HACCP-certified Indonesian chefs',
+              'Fixed upfront pricing quoted ++',
               'WhatsApp response within 2 hours (07:00–22:00 WITA)',
-              'All ingredients sourced at cost — fully transparent pricing',
-              'Indonesian chefs trained to international culinary standards',
+              'Weekly meal prep and retreat catering available',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[#C5A028] flex-shrink-0 mt-0.5" />
@@ -185,11 +177,56 @@ export default function CangguPage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Scene by Category */}
       <section className="py-20 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">What We Offer</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-12">Private Chef Services in Canggu</h2>
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Where to Eat Out</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-12">Where to Eat in Canggu: The Scene by Category</h2>
+          <p className="text-[#4A4745] mb-10 max-w-2xl leading-relaxed">
+            We cook in Canggu kitchens daily, so consider this a local's working map.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {SCENE.map((s, i) => (
+              <div key={i} className="border border-[#E8E6E3] rounded-2xl p-6 hover:border-[#C5A028] transition-colors">
+                <h3 className="font-playfair text-xl mb-2">{s.name}</h3>
+                <p className="text-[#4A4745] text-sm leading-relaxed">{s.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Private Dining Options */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Formats</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">Your Private Dining Options in Canggu</h2>
+          <div className="prose prose-lg text-[#4A4745] max-w-none">
+            <ul className="list-disc pl-5 mb-4 space-y-2">
+              <li><strong>Eating out</strong> — unbeatable variety, but with queues, split tables for groups of eight-plus, and the nightly scooter shuffle.</li>
+              <li><strong>Takeaway and delivery</strong> — abundant, though quality drops fast for anything grilled or plated.</li>
+              <li><strong>In-villa private dining</strong> — a chef cooks and serves at your villa: restaurant-standard food, zero logistics, and the pool all to yourselves.</li>
+            </ul>
+            <p className="mb-0 leading-relaxed">
+              For a single night out, Batu Bolong wins on energy. For a group dinner, a celebration, or day twelve of a month-long stay, the villa table usually wins on everything else.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Chef Services */}
+      <section className="py-20 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">The In-Villa Answer</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">The In-Villa Answer: Chef Services in Canggu</h2>
+          <div className="prose prose-lg text-[#4A4745] max-w-none mb-10">
+            <p className="mb-4 leading-relaxed">
+              myCHEF is based in Canggu — which means faster confirmation, no travel surcharge within Canggu–Berawa, and chefs who already know the villa layouts from Echo Beach to the Pererenan border. Our Indonesian chefs shop fresh each morning, cook in your kitchen, and clean up completely. HACCP-certified food safety comes as standard.
+            </p>
+            <p className="mb-0 leading-relaxed">
+              Prices are quoted ++ (11% government tax plus 10% service charge) and fixed upfront. Dietary requirements — vegan, paleo, gluten-free, Ayurvedic — are planned in, not worked around. Full menus and availability: <Link to="/private-chef/canggu" className="text-[#C5A028] hover:underline font-medium">hire a private chef in Canggu</Link>. Rates are on our <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">transparent per-person pricing</Link> page.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 gap-6">
             {SERVICES.map((svc, i) => (
               <div key={i} className="border border-[#E8E6E3] rounded-2xl p-6 hover:border-[#C5A028] transition-colors">
@@ -202,29 +239,42 @@ export default function CangguPage() {
               </div>
             ))}
           </div>
-          <p className="text-[#999] text-xs mt-6">All prices subject to 11% tax + 10% service charge (++). Final pricing depends on guest count, menu complexity, and date.</p>
+          <p className="text-[#999] text-xs mt-6">All prices quoted ++ (11% government tax plus 10% service charge). Final pricing depends on guest count, menu complexity, and date.</p>
         </div>
       </section>
 
-      {/* Areas */}
+      {/* Long Stay */}
       <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Coverage Area</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-4">Canggu Neighbourhoods We Serve</h2>
-          <p className="text-[#4A4745] mb-10 max-w-2xl leading-relaxed">
-            Our Canggu team covers all areas from the busy beach strip to the quieter rice-field villas. No travel surcharge for central Canggu zones.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {AREAS.map((a, i) => (
-              <div key={i} className="flex items-start gap-3 border border-[#E8E6E3] rounded-xl p-4">
-                <ChevronRight className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-semibold text-[#1A1A1A] mb-1">Private Chef {a.name}</div>
-                  <div className="text-[#8A8785] text-sm leading-snug">{a.note}</div>
-                </div>
-              </div>
-            ))}
+        <div className="max-w-4xl mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Long Stays</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">Eating Well on a Long Canggu Stay</h2>
+          <div className="prose prose-lg text-[#4A4745] max-w-none">
+            <p className="mb-0 leading-relaxed">
+              If you're here for weeks, eating out twice a day gets old — and expensive — fast. The pattern that works for most long-stay households: cafés and warungs for spontaneous lunches, and a <Link to="/villa-chef" className="text-[#C5A028] hover:underline font-medium">daily villa chef service</Link> for the meals that matter. A consistent chef learns your household's preferences, manages the shopping and fridge, and builds menus that evolve across the stay. For the quieter end of the neighbourhood, see <Link to="/locations/pererenan" className="text-[#C5A028] hover:underline font-medium">the quieter Pererenan dining guide</Link>.
+            </p>
           </div>
+        </div>
+      </section>
+
+      {/* How Booking Works */}
+      <section className="py-20 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">How It Works</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">How Booking In-Villa Dining Works</h2>
+          <ol className="space-y-4">
+            <li className="flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-[#C5A028] text-black text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+              <span className="text-[#4A4745]"><strong>WhatsApp +62 896-7407-2020</strong> with your date, villa area, guest count and dietary needs — replies within 2 hours (07:00–22:00 WITA).</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-[#C5A028] text-black text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+              <span className="text-[#4A4745]"><strong>Receive a menu proposal and fixed quote</strong>, usually within 24 hours. No deposit required to enquire.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-[#C5A028] text-black text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+              <span className="text-[#4A4745]"><strong>Confirm with a 50% deposit.</strong> Same-day and next-day dinners are often possible in Canggu.</span>
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -232,9 +282,9 @@ export default function CangguPage() {
       <section className="py-16 bg-[#1A1A1A] text-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Ready to Book?</p>
-          <h2 className="font-playfair text-3xl mb-4">Get Your Canggu Quote in 2 Hours</h2>
+          <h2 className="font-playfair text-3xl mb-4">Plan Your Canggu Table</h2>
           <p className="text-white/60 mb-8 leading-relaxed">
-            Send us your date, villa location, guest count, and dietary requirements via WhatsApp. We respond within 2 hours and send a menu proposal within 24 hours.
+            Skip the Batu Bolong queue once this trip. Read <Link to="/journal/private-chef-canggu-guide" className="text-[#C5A028] hover:underline font-medium">our Canggu local</Link> for more area detail — or message +62 896-7407-2020 on WhatsApp with your date and headcount, and we'll send a menu proposal within 24 hours.
           </p>
           <a
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
@@ -251,9 +301,9 @@ export default function CangguPage() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
-          <h2 className="font-playfair text-3xl mb-10">Canggu Private Chef FAQ</h2>
+          <h2 className="font-playfair text-3xl mb-10">Canggu Dining FAQ</h2>
           <div className="space-y-4">
-            {[...FAQS, ...CITY_CONTENT['canggu'].faqs].map((faq, i) => (
+            {FAQS.map((faq, i) => (
               <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
                 <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
                   {faq.q}
@@ -268,40 +318,15 @@ export default function CangguPage() {
         </div>
       </section>
 
-      {/* Guides & Resources */}
-      <section className="py-16 bg-white border-t border-[#E8E6E3]">
-        <div className="max-w-5xl mx-auto px-6">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Guides &amp; Resources</p>
-          <h2 className="font-playfair text-2xl mb-8">Helpful reads for Canggu guests</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { label: 'How to hire a private chef in Bali', path: '/blog/how-to-hire-private-chef', desc: 'Complete step-by-step hiring guide — vetting, pricing, what to expect' },
-              { label: 'Chef hiring &amp; credentials guide', path: '/blog/chef-qualifications-credentials-bali-hiring', desc: 'What qualifications to look for and red flags to avoid' },
-              { label: 'Canggu villa catering', path: '/catering', desc: 'BBQ, buffet, grazing tables, and drop-off options' },
-              { label: 'Private chef pricing', path: '/pricing', desc: 'Transparent starting prices for every Canggu service format' },
-            ].map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="group block bg-[#FAFAF8] border border-[#E8E6E3] rounded-xl p-5 hover:border-[#C5A028] transition-colors"
-              >
-                <div className="font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors mb-1" dangerouslySetInnerHTML={{ __html: link.label }} />
-                <div className="text-[#8A8785] text-sm">{link.desc}</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Internal links */}
       <section className="py-16 bg-[#F5F3F0] border-t border-[#E8E6E3]">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-playfair text-2xl mb-8 text-center">Explore More Bali Locations</h2>
+          <h2 className="font-playfair text-2xl mb-8 text-center">Explore More Bali Dining Areas</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { label: 'Private Chef Seminyak', path: '/locations/seminyak', desc: 'Beachfront villa dining, events, and birthday celebrations' },
-              { label: 'Private Chef Uluwatu', path: '/locations/uluwatu', desc: 'Clifftop seafood BBQs, weddings, and sunset tasting menus' },
-              { label: 'Private Chef Ubud', path: '/locations/ubud', desc: 'Jungle villa dinners, wellness retreats, Balinese feasts' },
+              { label: 'Seminyak dining guide', path: '/locations/seminyak', desc: 'Beach clubs, luxury villas, Bali\'s most vibrant dining scene' },
+              { label: 'Pererenan dining guide', path: '/locations/pererenan', desc: 'Quiet north Canggu enclave, design villas, weekly chef service' },
+              { label: 'Ubud dining guide', path: '/locations/ubud', desc: 'Jungle villa dining, wellness retreats, Balinese feasts' },
             ].map((link) => (
               <Link
                 key={link.path}
@@ -315,13 +340,14 @@ export default function CangguPage() {
           </div>
         </div>
       </section>
-          {/* Cross-link to private-chef page */}
+
+      {/* Cross-link to private-chef page */}
       <section className="py-12 px-6">
         <div className="max-w-[960px] mx-auto text-center">
-          <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Private Chef in Canggu</h3>
-          <p className="text-gray-600 mb-6">Hire a dedicated private chef for your villa in Canggu. Custom menus, full service, and seamless cleanup.</p>
+          <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Looking for a Dedicated Private Chef in Canggu?</h3>
+          <p className="text-gray-600 mb-6">If you already know you want a private chef for your villa, our Canggu service page has menus, formats and fixed pricing.</p>
           <Link to="/private-chef/canggu" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all">
-            View Private Chef Options <ChevronRight className="w-4 h-4" />
+            Hire a private chef in Canggu <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
       </section>

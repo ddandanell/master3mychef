@@ -1,14 +1,11 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, ChefHat } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithAggregateOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -22,8 +19,96 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa staff in Bali', intent: 'availability and pricing' })
+
+const briefJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://mychef.id/staffing/villa-staff#service',
+      name: 'Hire Villa Staff Bali',
+      serviceType: 'Long-term villa staff placement',
+      provider: {
+        '@type': 'Organization',
+        name: 'myCHEF',
+        url: 'https://mychef.id',
+        telephone: '+62 896-7407-2020',
+      },
+      areaServed: 'Bali',
+      description:
+        'Long-term placement of villa managers, housekeepers, gardeners, pool staff and security for Bali villas and estates. Individual hires or full villa teams, with contracts, payroll guidance and a 30-day replacement guarantee.',
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'IDR',
+        lowPrice: '4500000',
+        highPrice: '25000000',
+        offerCount: '3',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How long does villa staff recruitment take?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Typically one to two weeks from brief to placement. Interviews are scheduled within three to five days of shortlist approval.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What if the staff member is not the right fit?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What roles can you fill for my villa?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Villa managers, housekeepers, hosts, gardeners, pool attendants, security guards, maintenance staff and drivers — as individual hires or a full villa team.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you handle contracts and payroll for villa staff?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We handle the employment-contract paperwork and advise on payroll, BPJS and THR obligations; complex multi-property arrangements are referred to trusted payroll partners.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Live-in or live-out staff?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Both. Live-in arrangements are common for housekeepers and villa managers and are defined in the employment contract; live-out staff are placed from the local area around your property.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is your placement fee?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'One month of the staff member\'s salary, covering sourcing, interviews, background verification, contract preparation and six months of ongoing support.',
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+        { '@type': 'ListItem', position: 2, name: 'Staffing', item: 'https://mychef.id/staffing' },
+        { '@type': 'ListItem', position: 3, name: 'Villa Staff', item: 'https://mychef.id/staffing/villa-staff' },
+      ],
+    },
+  ],
+}
 
 const PRICING_TIERS = [
   {
@@ -70,14 +155,15 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'How long does villa staff recruitment take?', a: 'Typically 1–2 weeks from brief to placement. Interviews are scheduled within 3–5 days of shortlist approval.' },
+  { q: 'How long does villa staff recruitment take?', a: 'Typically one to two weeks from brief to placement. Interviews are scheduled within three to five days of shortlist approval.' },
   { q: 'What if the staff member is not the right fit?', a: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.' },
-  { q: 'Do you handle contracts and payroll for villa staff?', a: 'We prepare standard employment contracts and provide payroll guidance. For complex arrangements, we can recommend local payroll partners.' },
-  { q: 'What roles can you fill for my villa?', a: 'Villa managers, housekeepers, hosts, gardeners, pool attendants, security guards, maintenance staff, and drivers.' },
-  { q: 'Can you provide a full villa team?', a: 'Yes. Our Full Villa Team package includes a manager, housekeepers, garden and pool staff, and security personnel.' },
-  { q: 'What areas do you cover for villa staff?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'Do you train the villa staff before placement?', a: 'We provide basic hospitality training and can arrange specialized training for guest-facing roles upon request.' },
-  { q: 'What is your villa staff placement fee?', a: 'One month of the staff salary as a placement fee. This covers sourcing, interviews, contract, and 6 months of ongoing support.' },
+  { q: 'Do you handle contracts and payroll for villa staff?', a: 'Yes. We handle the employment-contract paperwork and advise on payroll, BPJS and THR obligations; complex multi-property arrangements are referred to trusted payroll partners.' },
+  { q: 'What roles can you fill for my villa?', a: 'Villa managers, housekeepers, hosts, gardeners, pool attendants, security guards, maintenance staff and drivers.' },
+  { q: 'Can you provide a full villa team?', a: 'Yes. Our Full Villa Team package includes a manager, housekeepers, garden and pool staff and security, from IDR 25,000,000 per month.' },
+  { q: 'Live-in or live-out staff?', a: 'Both. Live-in arrangements are common for housekeepers and villa managers and are defined in the employment contract; live-out staff are placed from the local area around your property.' },
+  { q: 'Do you train villa staff before placement?', a: 'We provide basic hospitality training and can arrange specialised training for guest-facing roles on request.' },
+  { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
+  { q: 'What is your placement fee?', a: 'One month of the staff member\'s salary, covering sourcing, interviews, background verification, contract preparation and six months of ongoing support.' },
 ]
 
 export default function StaffingVillaStaffPage() {
@@ -104,33 +190,11 @@ export default function StaffingVillaStaffPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Villa Staff Bali | Managers, Housekeepers & More — myCHEF"
-        description="Hire villa staff in Bali: managers, housekeepers, gardeners, pool crew & front-of-house. One partner, vetted placements. WhatsApp to discuss your needs."
-        canonical={`${SITE}/staffing/villa-staff`}
-        ogImage={`${SITE}/generated/hub-villa.webp`}
-        jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Villa Staff Placement Bali',
-            description: 'Villa staff recruitment in Bali — managers, housekeepers, gardeners, pool attendants, and security. Vetted candidates and ongoing support.',
-            url: `${SITE}/staffing/villa-staff`,
-            lowPrice: '5500000',
-            highPrice: '15000000',
-            unitText: 'per month',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Hire Villa Staff in Bali',
-            description: 'Hire professional villa staff for your Bali property in 4 easy steps.',
-            totalTime: 'PT20M',
-            steps: [
-              { name: 'Define your staffing needs', text: 'Share the roles you need: villa manager, housekeeper, gardener, or pool maintenance.' },
-              { name: 'Share property details', text: 'Send your villa location, size, guest capacity, and current staff setup via WhatsApp.' },
-              { name: 'Review candidates', text: 'We shortlist pre-vetted candidates with relevant experience and references within 48 hours.' },
-              { name: 'Hire with confidence', text: 'Interview candidates, select the best fit, and we handle contracts and onboarding.' },
-            ],
-          }),
-          breadcrumbSchema('Villa Staff', `${SITE}/staffing/villa-staff`, 'Staffing', `${SITE}/staffing`),
-        ]}
+        title={getPageMeta('staffing-villa-staff').title}
+        description={getPageMeta('staffing-villa-staff').description}
+        canonical={getPageMeta('staffing-villa-staff').canonical}
+        ogImage={getPageMeta('staffing-villa-staff').ogImage}
+        jsonLd={briefJsonLd}
       />
 
       <Breadcrumb items={[
@@ -146,11 +210,13 @@ export default function StaffingVillaStaffPage() {
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-28 max-w-[1280px] mx-auto w-full">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">Staffing</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Villa Staff Placement in Bali
+            Hire Villa Staff in Bali — Long-Term Placement
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Recruit villa staff in Bali — managers, hosts, housekeepers, gardeners, 
-            pool, security. Vetted and trained. From IDR 4,500,000 per month.
+            A well-run villa runs on the people behind it. myCHEF recruits and places long-term villa staff across Bali — villa managers, housekeepers, hosts, gardeners, pool attendants and security — as individual hires or complete teams. Salaries from IDR 4,500,000 per month, profiles within 48 hours, and a 30-day replacement guarantee on every placement.
+          </p>
+          <p className="text-white/[70%] text-base max-w-[600px] mb-8">
+            Need staff for a single event or a guest's stay instead? That is our <Link to="/in-villa-service" className="underline hover:text-white">shift-based in-villa service</Link> — waiters, bartenders and butlers by the hour. This page is for permanent hires.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-villa-staff-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -258,6 +324,9 @@ export default function StaffingVillaStaffPage() {
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
+          <p className="text-white/[70%] text-sm mt-8">
+            Part of myCHEF <Link to="/staffing" className="underline hover:text-white">staffing & placement</Link>. Also hiring a chef? See <Link to="/staffing/private-chef-placement" className="underline hover:text-white">private chef placement</Link>. Staffing a private home rather than a rental villa? See <Link to="/staffing/household-staff" className="underline hover:text-white">household staff</Link>. Managing a portfolio? See <Link to="/staffing/for-villa-managers" className="underline hover:text-white">staffing for villa managers</Link>.
+          </p>
         </div>
       </section>
 

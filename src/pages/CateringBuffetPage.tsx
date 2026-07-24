@@ -36,24 +36,24 @@ const BUFFET_PACKAGES = [
   {
     title: 'Indonesian Buffet',
     price: 475000,
-    description: '3 main dishes, 2 vegetable/side dishes, rice and noodles, 2 salads or cold dishes, sambals, dessert and fruit.',
-    includes: ['Chef and kitchen team', 'Buffet equipment', 'Service staff', 'Setup and cleanup', 'Normal groceries included'],
+    description: '3 main dishes, 2 vegetable and side dishes, rice and noodles, 2 salads, sambals, dessert and fresh fruit.',
+    includes: ['Chef and kitchen team', 'Service staff (1 per 12 guests)', 'Buffet tables, linens & chafing dishes', 'Cutlery, setup & cleanup', '2.5 hours of service', 'Normal groceries included'],
     minGuests: 'Min. 30 guests',
     image: '/generated/mychef-catering-bali-buffet-package-indonesian.webp',
   },
   {
     title: 'International Buffet',
     price: 575000,
-    description: '3 premium proteins, pasta or potato dish, 2 salads, vegetables, bread, two desserts.',
-    includes: ['Chef and service team', 'Complete buffet setup', 'Service staff', 'Setup and cleanup', 'Normal groceries included'],
+    description: '3 premium proteins, pasta or potato dish, 2 salads, vegetables, bread, and two desserts.',
+    includes: ['Chef and kitchen team', 'Service staff (1 per 12 guests)', 'Buffet tables, linens & chafing dishes', 'Cutlery, setup & cleanup', '2.5 hours of service', 'Normal groceries included'],
     minGuests: 'Min. 30 guests',
     image: '/generated/mychef-catering-bali-buffet-package-international.webp',
   },
   {
     title: 'Premium Live-Station Buffet',
     price: 775000,
-    description: 'Two live stations, two prepared main dishes, premium sides and salads, dessert station. A third live station, lobster, imported tenderloin, sushi-grade fish or elaborate decorations are additional upgrades.',
-    includes: ['Dedicated station chefs', 'Complete staffing and equipment', 'Service staff', 'Setup and cleanup', 'Normal groceries included'],
+    description: 'Two live cooking stations, two prepared mains, premium sides and salads, and a dessert station — theatre plus volume.',
+    includes: ['Chef and kitchen team', 'Service staff (1 per 12 guests)', 'Buffet tables, linens & chafing dishes', 'Cutlery, setup & cleanup', '2.5 hours of service', 'Normal groceries included'],
     minGuests: 'Min. 30 guests',
     image: '/generated/mychef-catering-bali-buffet-package-premium.webp',
   },
@@ -151,26 +151,44 @@ const BUFFET_VS_PLATED = [
 ]
 
 const FAQS = [
-  { q: 'What is the minimum guest count for buffet catering in Bali?', a: 'Minimum 30 guests for all buffet packages. This ensures the food flow, service quality, and setup costs work properly. For smaller groups, consider our BBQ or plated catering options.' },
-  { q: 'What does IDR 475,000++ per person include?', a: 'It includes the Indonesian buffet menu, chef and kitchen team, service staff, buffet equipment, serving tables, linens, cutlery, setup, 2.5-hour service and cleanup. Normal groceries are included. Premium upgrades such as lobster or imported tenderloin are quoted separately.' },
-  { q: 'What is the difference between ++ and all-in pricing?', a: '++ means the price is subject to 10% government tax and 11% service charge. The all-in figure is the total after those charges. For example, IDR 475,000++ per person becomes approximately IDR 575,000 all-in.' },
-  { q: 'Do you bring tables and chafing dishes?', a: 'Yes. All buffet packages include serving tables, linens, full chafing dish setup, cutlery, and serving equipment. You do not need to provide anything.' },
-  { q: 'Can you do Indonesian and Western food together?', a: 'Absolutely. Many clients choose a mixed buffet with Indonesian mains and international sides. Our International Buffet package is designed for this.' },
-  { q: 'How long is the buffet service?', a: 'Standard service window is 2.5 hours. We set up 2–3 hours before guests arrive and begin cleanup after the last guest is served.' },
-  { q: 'Can you combine BBQ and buffet?', a: 'Yes. We can add a live BBQ station to any buffet package. This gives guests the theater of live grilling plus the variety of a full buffet.' },
-  { q: 'Do you handle dietary restrictions?', a: 'Yes. We label all dishes with dietary markers (V, GF, NF, spicy) and can prepare vegetarian, vegan, gluten-free, and halal options. Tell us when booking.' },
-  { q: 'How many staff do you provide?', a: 'We provide 1 service staff per 12 guests, plus a head chef. For 50 guests, that is 4–5 service staff plus chef. Live stations add dedicated station chefs.' },
-  { q: 'Do you clean up after the event?', a: 'Full cleanup is included. We pack up all equipment, clear the buffet area, dispose of waste, and leave your villa or venue as we found it.' },
-  { q: 'Do you charge travel fees?', a: 'Travel fees apply outside Seminyak/Canggu: IDR 250,000 to 700,000 depending on distance and event size. Confirmed before deposit.' },
-  { q: 'How far in advance should I book?', a: 'We recommend 1–2 weeks for buffet catering. For weddings and large events during peak season, 1+ month is ideal. Last-minute bookings possible depending on availability.' },
-  { q: 'Can I add a live station to the Indonesian or International buffet?', a: 'Yes. Live stations such as pasta, carving, sushi or BBQ can be added to any package. They are quoted as an upgrade based on the station type and guest count.' },
-  { q: 'Do you cater villa weddings in Bali?', a: 'Yes. Wedding buffet catering is one of our most popular services. We handle Indonesian buffet, international buffet and live-station setups for villa receptions across Bali.' },
-  { q: 'Is the food prepared on-site or delivered?', a: 'Most dishes are prepared fresh on-site or finished at your villa kitchen. Large events may use a combination of on-site prep and controlled transport to ensure quality and timing.' },
-  { q: 'Do you cater corporate events and retreats?', a: 'Yes. We provide corporate buffet Bali services for team lunches, offsites, product launches and multi-day retreats with reliable timing and dietary flexibility.' },
-  { q: 'What happens if guest numbers change after booking?', a: 'Guest counts can usually be adjusted up to 7 days before the event. Final numbers are confirmed 3 days prior so we can order the right amount of food and staff.' },
-  { q: 'Do you provide plates, cutlery and napkins?', a: 'Yes. Standard plates, cutlery, napkins and serving utensils are included. Upgraded tableware or themed linens can be arranged on request.' },
-  { q: 'Can we taste the menu before the event?', a: 'Complimentary tastings are offered for events of 40 guests or more. You will meet the head chef, sample the proposed dishes and confirm every detail before the big day.' },
-  { q: 'Which areas of Bali do you serve?', a: 'We serve Seminyak, Canggu, Berawa, Pererenan, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Tanah Lot and surrounding areas. Travel fees may apply outside the Seminyak/Canggu core.' },
+  { q: 'How much does buffet catering in Bali cost?', a: 'From IDR 475,000++ per person (Indonesian tier, 30–49 guests), with volume discounts from 50 guests and custom quotes at 100+. "++" adds 11% government tax and 10% service charge — your quote shows all-in totals.' },
+  { q: 'What\'s the minimum number of guests?', a: 'Thirty for standard pricing. Groups of 20–29 can be catered at slightly higher per-person rates; below 20, a family-style or plated format usually works better.' },
+  { q: 'Can you handle vegan, halal, and gluten-free guests at scale?', a: 'Yes — dietary dishes are built into the menu plan, prepared separately where required, and clearly labelled on the line. Halal-friendly and pork-free menus are standard options.' },
+  { q: 'What\'s included in the price?', a: 'Chef and kitchen team, service staff (1 per 12 guests), tables, linens, chafing dishes, cutlery, normal groceries, setup, 2.5 hours of service, and full cleanup.' },
+  { q: 'Do you offer tastings?', a: 'Yes — a sample tasting is included for bookings of 40+ guests once your date is confirmed.' },
+  { q: 'What happens if it rains?', a: 'Buffet lines set up under cover by default in wet season — verandas, tents, or indoor spaces. We confirm the position with you and your villa before the day.' },
+  { q: 'How far ahead should I book, and what\'s the deposit?', a: 'One to two weeks for most events; longer for peak-season weddings. A 50% deposit confirms your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+]
+
+const BUFFET_SERVICE_SCHEMA = (() => {
+  const base = serviceWithAggregateOfferSchema({
+    name: 'Buffet Catering Bali',
+    description: 'Buffet catering in Bali for weddings, retreats and large groups of 30–200+ guests. Chef, service staff, equipment, linens and cleanup included; volume pricing available.',
+    url: `${SITE}/catering/buffet`,
+    lowPrice: '450000',
+    highPrice: '850000',
+  })
+  return {
+    ...base,
+    serviceType: 'Buffet catering',
+    provider: { ...(base.provider as Record<string, unknown>), telephone: '+62 896-7407-2020' },
+    areaServed: 'Bali, Indonesia',
+    offers: {
+      ...(base.offers as Record<string, unknown>),
+      offerCount: '3',
+      description: 'Per person ++ (11% government tax + 10% service charge); min. 30 guests; volume bands at 20–29, 30–49, 50–99, 100+',
+    },
+  }
+})()
+
+const BUFFET_FAQ_SCHEMA_QUESTIONS = [
+  { question: 'How much does buffet catering in Bali cost?', answer: 'From IDR 475,000++ per person for the Indonesian tier (30–49 guests), with volume discounts from 50 guests and custom quotes at 100+. ++ adds 11% government tax and 10% service charge.' },
+  { question: 'What is the minimum number of guests for buffet catering?', answer: 'Thirty guests for standard pricing. Groups of 20–29 can be catered at higher per-person rates; below 20, family-style or plated formats usually work better.' },
+  { question: 'Can you cater vegan, halal and gluten-free diets at scale?', answer: 'Yes. Dietary dishes are built into the menu plan, prepared separately where required, and clearly labelled on the buffet line. Halal-friendly and pork-free menus are standard.' },
+  { question: 'What is included in a buffet catering package?', answer: 'Chef and kitchen team, service staff (1 per 12 guests), tables, linens, chafing dishes, cutlery, normal groceries, setup, 2.5 hours of service and full cleanup.' },
+  { question: 'Do you offer tastings before the event?', answer: 'Yes — a sample tasting is included for bookings of 40+ guests once the date is confirmed.' },
+  { question: 'What happens if it rains?', answer: 'Buffet lines set up under cover by default in wet season — verandas, tents or indoor spaces — confirmed with you and your villa before the day.' },
+  { question: 'How far ahead should I book and what is the deposit?', answer: 'One to two weeks for most events, longer for peak-season weddings. A 50% deposit confirms your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
 ]
 
 export default function CateringBuffetPage() {
@@ -189,19 +207,13 @@ export default function CateringBuffetPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Buffet Catering Bali from IDR 475K++ | Villa & Event Buffets — myCHEF"
-        description="Buffet catering in Bali from IDR 475,000++ per guest. Indonesian buffet, international buffet & live-station catering for villas, weddings & corporate events. Chef, staff & cleanup included."
+        title="Buffet Catering Bali | Large Group & Event Buffets | myCHEF"
+        description="Buffet catering in Bali for weddings, corporate retreats & large villa parties — full setup, service & cleanup included. WhatsApp myCHEF."
         canonical={`${SITE}/catering/buffet`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Buffet Catering Bali',
-            description: 'Full-service buffet catering for Bali villas, weddings, retreats, and large private events with Indonesian and international menu options. myCHEF.id brings chefs, service staff, buffet equipment, and cleanup across Bali.',
-            url: `${SITE}/catering/buffet`,
-            lowPrice: '475000',
-            highPrice: '775000',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          BUFFET_SERVICE_SCHEMA,
+          faqPageSchema(BUFFET_FAQ_SCHEMA_QUESTIONS),
           howToSchema({
             name: 'How to Book Buffet Catering in Bali',
             description: 'Book full-service buffet catering for your Bali villa event in 4 easy steps.',
@@ -242,20 +254,20 @@ export default function CateringBuffetPage() {
             Chapter 1 — Buffet Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Buffet Catering Bali for Villas, Weddings & Corporate Events
+            Buffet Catering Bali for Weddings, Retreats & Large Groups
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Indonesian buffet, international buffet and premium live-station catering for villa events, weddings and corporate groups across Bali.
+            When the guest count climbs past thirty, buffet catering Bali is the format that keeps the villa calm and the food moving. Guests eat what they want, at their own pace, while our team keeps every station full, hot, and tidy — from first plate to last.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            Buffet catering from IDR 475,000++ per guest, including food, chef, service staff, buffet setup and cleanup. Minimum 30 guests.
+            From IDR 475,000++/person · Min. 30 guests standard (20–29 possible at a higher per-person rate) · Chef, staff, equipment & cleanup included
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <MessageCircle className="w-4 h-4" /> Get Buffet Quote
             </a>
             <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              View Buffet Packages
+              See Packages
             </a>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
@@ -305,10 +317,13 @@ export default function CateringBuffetPage() {
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <div className="space-y-4">
               <p className="text-[#4A4745]">
-                For 30+ guests, buffet is often the cleanest format. People move at their own pace. Different diets are easier to cover. Hot dishes stay hot. The line keeps moving.
+                When the guest count climbs past thirty, buffet catering Bali is the format that keeps the villa calm and the food moving. Guests eat what they want, at their own pace, while our team keeps every station full, hot, and tidy — from first plate to last.
               </p>
               <p className="text-[#4A4745]">
-                You get a head chef, service staff, tables, linens, chafing dishes, cutlery, and clear labels. We build the setup around your villa or venue, then clear it down after the last plate.
+                Villa weddings and garden receptions, corporate dinners and retreats, milestone birthdays, family reunions, and any gathering of 30–200+ where variety and pace matter. Planning a wedding? See our dedicated <Link to="/events/weddings" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">wedding catering</Link> service. Multi-day programmes? <Link to="/catering/retreat-catering" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">retreat catering</Link> is priced per person per day.
+              </p>
+              <p className="text-[#4A4745]">
+                <strong>Buffet or plated?</strong> Buffet suits larger groups, mixed diets, and relaxed timelines. <Link to="/catering/plated-catering" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">plated dinners</Link> suit formal evenings up to 60 guests where pacing and presentation lead. Tell us your event and we'll recommend honestly — browse all <Link to="/catering" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">catering services</Link>.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Wedding buffet Bali', 'Corporate buffet Bali', 'Villa buffet Bali', 'Retreat catering', 'Birthday celebrations', 'Family gatherings'].map((tag) => (
@@ -377,11 +392,11 @@ export default function CateringBuffetPage() {
           </div>
           <div className="mt-8 text-center">
             <Link to="/catering/bbq-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore BBQ Catering <ArrowRight className="w-4 h-4" />
+              BBQ catering <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
             <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore Plated Dinners <ArrowRight className="w-4 h-4" />
+              plated dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -546,7 +561,9 @@ export default function CateringBuffetPage() {
           {/* Volume Pricing */}
           <div className="mt-8 bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 max-w-4xl mx-auto">
             <h3 className="font-semibold mb-3 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>Volume Pricing</h3>
-            <p className="text-sm text-[#4A4745] text-center mb-4">Larger groups benefit from economies of scale. Prices below are per person, ++.</p>
+            <p className="text-sm text-[#4A4745] text-center mb-4">
+              Larger groups benefit from economies of scale. Prices below are per person, ++. See full <Link to="/pricing" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">catering pricing</Link> for all formats.
+            </p>
             <div className="hidden md:block overflow-x-auto">
               <table className="w-full text-left text-sm">
                 <thead>
@@ -741,7 +758,7 @@ export default function CateringBuffetPage() {
           </div>
           <div className="mt-8 text-center">
             <Link to="/catering/plated-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore Plated Dinners <ArrowRight className="w-4 h-4" />
+              plated dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -881,8 +898,8 @@ export default function CateringBuffetPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
-              { label: 'Plated Dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
+              { label: 'BBQ catering', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
+              { label: 'plated dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
               { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
               { label: 'Drop-Off Catering', href: '/catering/drop-off-catering', desc: 'Fresh food delivered to your villa.' },
               { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },

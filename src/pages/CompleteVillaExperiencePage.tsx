@@ -1,13 +1,13 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  MessageCircle, Calendar, Check, Plane, ChefHat, PartyPopper, Users, Sparkles, ShieldCheck,
+  MessageCircle, Calendar, Check, Plane, ChefHat, PartyPopper, Wine, Users, Sparkles, ShieldCheck,
   Phone, Mail, Instagram, MapPin, Heart,
 } from 'lucide-react'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -21,49 +21,49 @@ const WA_LINK = buildWhatsAppUrl({ serviceName: 'Complete Villa Experience Bali'
 const SITE = 'https://mychef.id'
 
 const INCLUDED = [
-  { icon: Plane, title: 'Arrival, arranged', desc: 'Airport transfers coordinated through our trusted driver network: flight tracked, name board, chilled towels, the exact villa entrance briefed.' },
-  { icon: Sparkles, title: 'Villa preparation', desc: 'Fridge stocked, fresh flowers, refreshments waiting, air conditioning running before you land.' },
-  { icon: ChefHat, title: 'Daily private chef', desc: 'Breakfast, lunch, dinner and poolside grazing cooked fresh in your kitchen, with menus shaped around your group.' },
-  { icon: Users, title: 'In-villa staffing', desc: 'Uniformed, English-speaking waiters, butlers and housekeepers across your stay, from IDR 250K/hour.' },
-  { icon: PartyPopper, title: 'Events during your stay', desc: 'A birthday, anniversary or dinner party mid-week, produced end to end.' },
-  { icon: Heart, title: 'Concierge extras', desc: 'Restaurant reservations, spa therapists, yoga instructors, guides and excursions arranged through our partner network.' },
-  { icon: MessageCircle, title: 'On-call management', desc: 'Menu changes, extra guests, a sudden plan B: one message, handled.' },
-  { icon: ShieldCheck, title: 'Cleanup & handback', desc: 'Daily housekeeping rhythm, post-event breakdown, and direct coordination with your property manager so the villa is returned intact.' },
+  { icon: Plane, title: 'VIP Airport Transfers', desc: 'Luxury vehicles and English-speaking drivers arranged before you land.' },
+  { icon: Sparkles, title: 'Villa Preparation', desc: 'Pre-arrival setup, fresh flowers, stocked bar and a pristine welcome.' },
+  { icon: ChefHat, title: 'Daily Private Chef', desc: 'Breakfast, lunch, dinner and poolside grazing cooked fresh in your villa.' },
+  { icon: PartyPopper, title: 'Event Planning', desc: 'Birthdays, anniversaries, weddings and corporate retreats, coordinated end to end.' },
+  { icon: Wine, title: 'Bar & Bottle Service', desc: 'Mixologists, sommeliers and premium mobile bar setups at your villa.' },
+  { icon: Users, title: 'In-Villa Staffing', desc: 'Uniformed waiters, butlers, hostesses and cleaners briefed to your stay.' },
+  { icon: Heart, title: 'Concierge Extras', desc: 'Restaurant bookings, yacht charters, spa appointments and private excursions.' },
+  { icon: ShieldCheck, title: 'Cleanup & Handback', desc: 'Daily housekeeping, post-event breakdown and a seamless villa reset.' },
 ]
 
 const ARRIVAL_POINTS = [
-  'Flight tracked and driver briefed before you land, with a name board and chilled towels at the gate.',
-  'Luxury SUVs, executive sedans and minibuses through our trusted driver network.',
-  'Your villa entrance, access code and arrival time shared with the team in advance.',
-  'Details on our arrival transfers page — every leg coordinated as part of the stay plan.',
+  'Your driver tracks your flight and greets you at Ngurah Rai International Airport with a sign and a chilled towel.',
+  'Luxury SUVs, executive sedans and minibuses handle every leg of your journey through our VIP transport Bali service.',
+  'Your villa is prepared before arrival — air conditioning running, pool pristine, refreshments ready, music playing softly.',
+  'One WhatsApp thread connects you to the entire team from the moment you land until the moment you depart.',
 ]
 
 const CHEF_POINTS = [
-  'Menus shaped around your preferences, dietary requirements and the rhythm of your holiday.',
-  'Groceries sourced at cost with receipts; you only pay for what your chef actually uses.',
+  'Menus shaped around your preferences, dietary requirements and the rhythm of your holiday — from energising breakfasts to long, lazy dinners.',
+  'Groceries sourced at cost with complete transparency; you only pay for what your chef actually uses.',
   'Poolside grazing platters, sunset canapés, multi-course tasting menus or convivial family-style feasts.',
-  'A kitchen left spotless after every meal, so your villa always feels like a private retreat.',
+  'A kitchen left spotless after every meal, so your villa always feels like a private retreat, not a working kitchen.',
 ]
 
 const EVENT_POINTS = [
   'Milestone birthdays, anniversaries and engagement dinners transformed into fully staged villa occasions.',
-  'Single occasions are quoted as villa event packages; anything else sits in our events portfolio.',
+  'Intimate villa weddings and vow renewals with florist, photographer, officiant and entertainment coordination.',
+  'Corporate retreats where dining, presentations, team activities and transport flow under one plan.',
   'Every event supported by front-of-house staff, bar service and a cleanup team — you simply host.',
-  'Event permission, noise expectations and banjar notification confirmed with your villa manager before scheduling.',
 ]
 
 const STAFF_POINTS = [
   'Uniformed, English-speaking waiters and butlers trained to the highest standards of villa hospitality.',
   'Hostesses who greet guests, manage seating and keep the evening flowing without you lifting a finger.',
   'Daily housekeeping and HACCP-certified kitchen cleaning throughout your stay.',
-  'Longer placements via our villa staffing and in-villa service teams.',
+  'Discreet, silent professionals who understand that true luxury is felt, not noticed.',
 ]
 
 const CONCIERGE_POINTS = [
-  'Restaurant reservations at the island’s most sought-after tables.',
+  'Restaurant reservations at the island’s most sought-after tables, often with preferred seating.',
+  'Private yacht charters, sunset cruises and landing boats to Nusa Penida and Nusa Lembongan.',
   'In-villa spa therapists, yoga instructors and wellness practitioners arranged around your schedule.',
-  'Cultural excursions, temple visits and private guides arranged through our partner network.',
-  'Yacht charters and landing boats coordinated with trusted partners — no owned-fleet claims.',
+  'Cultural excursions, temple visits, private guides and VIP nightclub access through our established network.',
 ]
 
 const CLEANUP_POINTS = [
@@ -74,44 +74,19 @@ const CLEANUP_POINTS = [
 ]
 
 const GUESTS = [
-  { title: 'Multi-Generational Families', desc: 'Child-friendly menus, flexible mealtimes and staff who anticipate every need.' },
-  { title: 'Celebration Weeks', desc: 'A milestone or reunion with events threaded through the stay.' },
-  { title: 'Wedding Parties', desc: 'Rehearsal dinner, ceremony-day hospitality and recovery brunch across multiple villas.' },
-  { title: 'Executive Retreats', desc: 'Structured dining, presentation support and transport under one plan.' },
-  { title: 'HNW Travellers', desc: 'Absolute discretion and a team that adapts instantly.' },
+  { title: 'Multi-Generational Families', desc: 'Keep everyone relaxed with child-friendly menus, flexible mealtimes and staff who anticipate every need.' },
+  { title: 'Wellness & Yoga Retreats', desc: 'Plant-forward menus, calm service rhythms and group logistics managed from one point of contact.' },
+  { title: 'Wedding Parties', desc: 'Rehearsal dinners, ceremonies, receptions and guest hospitality across multiple villas.' },
+  { title: 'Corporate Groups', desc: 'Structured dining, presentation support, team activities and transport for leadership offsites.' },
+  { title: 'HNW Travellers', desc: 'Absolute discretion, bespoke experiences and a team that adapts instantly to changing plans.' },
 ]
 
 const FAQS = [
-  { q: 'What does the Complete Villa Experience actually include?', a: 'A fully managed stay: arranged airport transfers, villa preparation, daily private chef, in-villa staffing, event production during your stay, concierge extras, on-call management, and full cleanup and handback — all on one thread.' },
-  { q: 'Can I book just part of it?', a: 'Yes. Individual services — chef days, staff, a single event — can be scoped separately, though the integrated stay is where the value compounds. For a single occasion, see villa event packages.' },
-  { q: 'How much does a fully managed villa stay cost?', a: 'Quoted individually from published anchors: chef sessions from IDR 1.35M, weekly meal prep from IDR 4.5M (2–4 people), group dining from IDR 700K/person, staff from IDR 250K/hour. Every proposal is itemised per day.' },
-  { q: 'Which areas of Bali do you cover?', a: 'Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa, Pererenan and beyond. Remote estates and inter-island stays — message us and we will confirm logistics.' },
-  { q: 'How do you handle dietary needs across a whole week?', a: 'A full dietary intake at booking — allergies, preferences, kids menus, wellness-focused eating — then menus rotate daily around it. Vegan, gluten-free and halal-friendly service is standard.' },
-  { q: 'Can we host an event at the villa during our stay?', a: 'Usually, yes — we confirm event permission, noise expectations and banjar (community) notification with your villa manager before scheduling, and produce the event as part of the stay plan.' },
-  { q: 'What is the plan B if something goes wrong?', a: 'If a chef cannot make it, a replacement of equivalent calibre is dispatched within two hours or you receive a 100% refund. Outdoor plans always carry a covered fallback. Your stay manager is on call throughout.' },
-  { q: 'How do deposits, lead time and cancellation work?', a: 'A 50% deposit confirms your dates and locks the team. For peak season and full takeovers, book 4–6 weeks ahead; shorter stays often need only 1–2 weeks. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { q: 'What does the Complete Villa Experience actually include?', a: 'It is a fully managed villa stay: VIP airport transfers, villa preparation, daily private chef service, event planning, bar service, in-villa staffing, concierge extras and full cleanup/handback. Every element is tailored to your group, villa and occasion.' },
+  { q: 'Can I book just part of the experience, or does it have to be the full package?', a: 'The Complete Villa Experience is designed as an integrated package, but we can also scope individual services such as transport, chef days or event staffing. If you only need one element, explore our VIP Transport Bali, villa event packages or in-villa service pages.' },
+  { q: 'Which areas of Bali do you cover?', a: 'We operate across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa, Pererenan and beyond. For remote estates or inter-island stays, contact us on WhatsApp and we will confirm logistics.' },
+  { q: 'How far in advance should I book?', a: 'For peak season and full villa takeovers, 4–6 weeks is ideal. For shorter stays or transport-only arrangements, 1–2 weeks is usually sufficient. Last-minute requests are often possible — message us and we will confirm within the hour.' },
 ]
-
-const SERVICE_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Complete Villa Experience Bali',
-  serviceType: 'End-to-end multi-day villa hospitality and concierge',
-  provider: {
-    '@type': 'LocalBusiness',
-    name: 'myCHEF.id',
-    url: 'https://mychef.id/',
-    telephone: '+62 896-7407-2020',
-    address: { '@type': 'PostalAddress', streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan', addressLocality: 'Denpasar', addressRegion: 'Bali', postalCode: '80226', addressCountry: 'ID' },
-  },
-  areaServed: 'Bali, Indonesia',
-  description: 'Full-service villa hospitality for whole Bali stays: arranged airport transfers, villa preparation, daily private chef, in-villa staffing, events during the stay, concierge extras, on-call management and cleanup/handback on one WhatsApp thread.',
-  offers: [
-    { '@type': 'Offer', name: 'Daily Private Chef Session', price: '1350000', priceCurrency: 'IDR', description: 'From IDR 1.35M per session (Seminyak, Canggu, Sanur, Jimbaran, Nusa Dua); groceries at cost.' },
-    { '@type': 'Offer', name: 'Weekly Meal Prep', price: '4500000', priceCurrency: 'IDR', description: 'From IDR 4.5M per week for 2–4 people.' },
-    { '@type': 'Offer', name: 'In-Villa Service Staff', price: '250000', priceCurrency: 'IDR', description: 'From IDR 250K per hour per staff member.' },
-  ],
-}
 
 export default function CompleteVillaExperiencePage() {
   const ref = useRef<HTMLDivElement>(null)
@@ -133,14 +108,14 @@ export default function CompleteVillaExperiencePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Complete Villa Experience Bali | End-to-End Hospitality"
-        description="Full-service villa hospitality in Bali: airport transfers, daily private chef, events, staff, concierge & cleanup — one team, arrival to departure."
+        title="Complete Villa Experience Bali | End-to-End Hospitality — myCHEF"
+        description="Full-service villa hospitality in Bali: airport transfers, daily chef, events, staff, concierge & cleanup. One team handles everything end to end."
         canonical={`${SITE}/complete-villa-experience`}
         ogImage={`${SITE}/generated/mychef-complete-villa-chef-kitchen-bali-landscape.webp`}
         jsonLd={[
-          SERVICE_SCHEMA,
+          detailedServiceSchema('Complete Villa Experience Bali', 'myCHEF.id provides a complete villa experience in Bali: VIP airport transfers, villa preparation, daily private chef service, event planning, bar and bottle service, in-villa staffing, concierge extras and full cleanup/handback — one team managing every detail from arrival to departure.', `${SITE}/complete-villa-experience`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('Complete Villa Experience', `${SITE}/complete-villa-experience`),
+          breadcrumbSchema('Complete Villa Experience Bali', `${SITE}/complete-villa-experience`),
         ]}
       />
 
@@ -169,21 +144,21 @@ export default function CompleteVillaExperiencePage() {
             Arrival to Departure
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Complete Villa Experience Bali — Your Whole Stay, One Team
+            Complete Villa Experience Bali — We Handle Everything, From Arrival to Departure
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
-            A Bali villa should feel like a private sanctuary, not a logistics puzzle run from your phone. From the moment your flight is confirmed to the moment the villa is handed back, one team manages your transport, your chef, your staff, your events and your concierge — on a single WhatsApp thread, for the entire length of your stay.
+            One team, one WhatsApp thread, one perfectly orchestrated stay. VIP transport, villa preparation, daily private chef, events, staffing, concierge and cleanup — all managed for you.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="complete-villa-experience-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> Plan Your Complete Stay
             </a>
             <Link to="/villa-event-packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Calendar className="w-4 h-4" /> One-Event Version
+              <Calendar className="w-4 h-4" /> View Villa Packages
             </Link>
           </div>
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
-            Send your dates, villa and group size — itemised proposal, no obligation
+            Bespoke stays · Detailed proposal without obligation
           </p>
         </div>
       </section>
@@ -195,13 +170,19 @@ export default function CompleteVillaExperiencePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                The Problem This Solves
+                The Promise
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                A Bali Villa Should Feel Like a Sanctuary, Not a Logistics Puzzle
+                We help people — and do everything for them from start to end
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Too many Bali stays start the same way: an empty fridge on arrival, a driver who does not answer, a chef booked through one contact, a babysitter through another, a birthday dinner through a third — and you, coordinating it all from halfway around the world. The Complete Villa Experience exists to remove every one of those friction points. You arrive to a stocked villa and a planned week; while you are here, we stay on call; when you leave, the villa is restored and handed back flawlessly.
+                A Bali villa should feel like a private sanctuary, not a logistics puzzle. Yet too often, guests arrive to empty fridges, unanswered driver calls, and the quiet stress of coordinating chefs, cleaners, celebrations and transport from halfway around the world. The Complete Villa Experience exists to remove every one of those friction points.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                From the moment your flight is confirmed, our team begins preparing your stay. We arrange airport transfers, stock the villa, brief the chef, schedule staff and plan any celebrations. While you are in Bali, we remain on call — adjusting menus, adding excursions, handling surprises. When you leave, we restore the villa and hand it back flawlessly.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed">
+                This is not a collection of separate services. It is one integrated hospitality operation, led by a Michelin-trained culinary team and supported by villa professionals who understand that the best service is invisible.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -215,8 +196,8 @@ export default function CompleteVillaExperiencePage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
             eyebrow="One Stay, Every Detail"
-            title="What Your Stay Includes"
-            subtitle="Eight services, scoped around your villa, your group and the length of your stay — delivered by one integrated team."
+            title="What the Complete Villa Experience Includes"
+            subtitle="Eight services, one point of contact. Every element is scoped around your villa, your group and your occasion — then delivered by a single integrated team."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {INCLUDED.map((item) => (
@@ -238,10 +219,10 @@ export default function CompleteVillaExperiencePage() {
                 Chapter 1 — Arrival
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Arrival, Arranged — From Terminal to Villa Without Friction
+                VIP Transport Bali — From Terminal to Villa Without Friction
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Your experience begins before customs. We track your flight, dispatch a vehicle and brief your driver on the exact villa entrance. Whether you choose a premium SUV for two or a minibus for a group, every arrival is handled by our <Link to="/vip-transport-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">arrival transfers</Link> team.
+                Your experience begins before customs. We track your flight, dispatch a luxury vehicle and brief your driver on the exact villa entrance. Whether you choose a premium SUV for two or a minibus for a group, every arrival is handled by our <Link to="/vip-transport-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">arrival transfers, arranged</Link> team.
               </p>
               <div className="space-y-3">
                 {ARRIVAL_POINTS.map((item) => (
@@ -273,7 +254,7 @@ export default function CompleteVillaExperiencePage() {
                 Villa Preparation & Daily Private Chef Service
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                Imagine arriving to a villa that already feels like home — beds dressed, fridges stocked, flowers arranged, and your first refreshments waiting. Then, each morning, a <Link to="/villa-chef" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">private villa chef</Link> arrives to prepare breakfast while the housekeeping team quietly resets the space.
+                Imagine arriving to a villa that already feels like home — beds dressed, fridges stocked, flowers arranged, and your first refreshments waiting. Then, each morning, a <Link to="/villa-chef" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">private villa chef service</Link> arrives to prepare breakfast while the housekeeping team quietly resets the space.
               </p>
               <div className="space-y-3">
                 {CHEF_POINTS.map((item) => (
@@ -296,10 +277,10 @@ export default function CompleteVillaExperiencePage() {
                 Chapter 3 — Celebrations
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Events During Your Stay
+                Event Planning & Villa Celebrations
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                A private villa is the most extraordinary venue Bali offers — if the event is planned with precision. Our team transforms your residence into a celebration space, coordinating every supplier and timeline so you can simply arrive and enjoy. Explore dedicated options through our <Link to="/events" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">events</Link> hub or learn about bundled <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa event packages</Link>.
+                A private villa is the most extraordinary venue Bali offers — if the event is planned with precision. Our team transforms your residence into a celebration space, coordinating every supplier and timeline so you can simply arrive and enjoy. Explore dedicated options through our <Link to="/events" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">events during your stay</Link> hub, or learn about the <Link to="/villa-event-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">one-event version</Link>.
               </p>
               <div className="space-y-3">
                 {EVENT_POINTS.map((item) => (
@@ -328,10 +309,10 @@ export default function CompleteVillaExperiencePage() {
                 Chapter 4 — Your Team
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                In-Villa Staffing — Waiters, Butlers & Cleaners
+                In-Villa Service Staff — Waiters, Butlers, Bartenders & Cleaners
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                The difference between a rented villa and a true private residence is the quality of the people who run it. Our <Link to="/in-villa-service" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">in-villa service</Link> team provides uniformed, English-speaking professionals who make hospitality feel effortless. Longer placements are handled by our <Link to="/staffing" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">villa staffing</Link> team.
+                The difference between a rented villa and a true private residence is the quality of the people who run it. Our <Link to="/in-villa-service" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">in-villa staff</Link> team provides uniformed, English-speaking professionals who make hospitality feel effortless. For placements beyond the stay, see our <Link to="/staffing" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">longer-term staff placement</Link> service.
               </p>
               <div className="space-y-3">
                 {STAFF_POINTS.map((item) => (
@@ -354,10 +335,10 @@ export default function CompleteVillaExperiencePage() {
                 Chapter 5 — Beyond the Villa
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Concierge Extras — Restaurants, Spa & Excursions
+                Concierge Extras — Restaurants, Yachts, Spa & Excursions
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                The Complete Villa Experience extends well beyond your front gate. Our concierge team arranges experiences through trusted partners, turning a beautiful stay into an unforgettable journey. Simply share your mood, and we handle the reservations, timing and transport.
+                The Complete Villa Experience extends well beyond your front gate. Our concierge team opens doors across the island, turning a beautiful stay into an unforgettable journey. Simply share your mood, and we handle the reservations, timing and transport.
               </p>
               <div className="space-y-3">
                 {CONCIERGE_POINTS.map((item) => (
@@ -404,88 +385,11 @@ export default function CompleteVillaExperiencePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white cve-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                How a Managed Week Actually Looks
-              </p>
-              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Seven Days, One Rhythm
-              </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-5">
-                <strong>Day 1:</strong> Land to a name board and a stocked villa; a relaxed welcome dinner by your chef. <strong>Day 2:</strong> Slow breakfast, pool day, family-style dinner. <strong>Day 3:</strong> Excursion arranged — timing, transport and a late supper on return. <strong>Day 4:</strong> The celebration: a staffed event evening with bar, decor and a photographer — you host, we run it. <strong>Day 5:</strong> Recovery brunch, in-villa massages, quiet dinner. <strong>Day 6:</strong> Free day; chef on standby, fridge managed. <strong>Day 7:</strong> Farewell dinner; while you pack, we reset the villa. <strong>Departure:</strong> handback coordinated with the villa manager. You leave rested — the thread closes when you are home.
-              </p>
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-villa-interior-pool-living-bali-landscape.webp" alt="Luxury Bali villa living area prepared for a multi-day stay" width={1024} height={576} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-[#FAFAF8] cve-reveal">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4 text-center" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            How Pricing Works for a Full Stay
-          </p>
-          <h2 className="text-3xl md:text-4xl mb-6 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Published Anchors, Itemised Proposals
-          </h2>
-          <p className="text-[#4A4745] leading-relaxed mb-6 text-center">
-            Complete stays are quoted individually — but the building blocks are published, so your proposal never contains mysteries:
-          </p>
-          <div className="space-y-4 mb-6">
-            <div className="flex items-start gap-3">
-              <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
-              <p className="text-[#4A4745] leading-relaxed"><strong>Chef sessions</strong> from IDR 1,350,000 per session in Seminyak, Canggu, Sanur, Jimbaran and Nusa Dua (from IDR 1,500,000 in Ubud and Uluwatu, travel included) — groceries billed at cost with receipts.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
-              <p className="text-[#4A4745] leading-relaxed"><strong>Weekly meal prep</strong> from IDR 4,500,000 per week for 2–4 people — a lighter-touch option for simpler stays.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
-              <p className="text-[#4A4745] leading-relaxed"><strong>Group dinners and events</strong> from IDR 700K/person; staffed celebration evenings from IDR 850K++/guest.</p>
-            </div>
-            <div className="flex items-start gap-3">
-              <Check className="w-4 h-4 text-[#C5A028] mt-1 shrink-0" />
-              <p className="text-[#4A4745] leading-relaxed"><strong>Service staff</strong> from IDR 250K/hour per staff member.</p>
-            </div>
-          </div>
-          <p className="text-[#4A4745] leading-relaxed text-center">
-            "++" adds 11% government tax + 10% service charge. Your proposal itemises every day and every service line before you commit — the quote you accept is the price you pay.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-white cve-reveal">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/mychef-complete-villa-chef-kitchen-bali-landscape.webp" alt="myCHEF team preparing a private villa experience in Bali" width={1440} height={800} loading="lazy" decoding="async" className="w-full h-full object-cover" />
-            </div>
-            <div>
-              <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                One Thread, On Call
-              </p>
-              <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                One WhatsApp Thread, From Booking to Departure
-              </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-4">
-                From booking to departure, everything runs through a single WhatsApp thread with your stay manager. Menus adjust when plans change; a chef who falls ill is replaced within two hours or the booking is refunded in full; weather forces a dinner indoors without drama. High-profile guests are covered by our discretion guarantee — silent professionals, no posts, no exceptions. After 8+ years, 560+ villas and 12,000+ guests, the system is the luxury.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 md:py-28 bg-[#0A0A0A] cve-reveal">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
             eyebrow="Designed For"
-            title="Who Books the Complete Villa Experience"
+            title="Who the Complete Villa Experience Is For"
             subtitle="Every group is different, but the desire is the same — a flawless stay where every detail is handled."
             dark
           />
@@ -502,7 +406,7 @@ export default function CompleteVillaExperiencePage() {
 
       <section className="py-20 md:py-28 bg-white cve-reveal">
         <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Questions" title="Complete Villa Experience — FAQ" subtitle="Everything you need to know about our end-to-end villa hospitality service in Bali." />
+          <SectionHeader eyebrow="Questions" title="Complete Villa Experience FAQ" subtitle="Everything you need to know about our end-to-end villa hospitality service in Bali." />
           <FAQAccordion items={FAQS} defaultOpenCount={2} />
         </div>
       </section>
@@ -510,23 +414,23 @@ export default function CompleteVillaExperiencePage() {
       <section className="py-20 md:py-28 bg-[#FAFAF8] cve-reveal">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Plan Your Stay
+            The Done-for-You Philosophy
           </p>
           <h2 className="text-3xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Tell Us Your Dates, Villa and Group Size
+            You arrive. You live. You leave. We do the rest.
           </h2>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            Tell us your dates, your villa and your group. We will reply within the hour and follow with a detailed, day-by-day proposal — every service itemised, no obligation.
+            The Complete Villa Experience is built on a simple promise: one team assumes responsibility for every detail of your Bali stay. We coordinate transport, prepare the villa, cook your meals, plan your events, staff your residence, arrange your excursions and manage the cleanup. Your only job is to enjoy the people around you and the island around them.
           </p>
           <p className="text-[#4A4745] leading-relaxed mb-8">
-            One team. One thread. Arrival to departure.
+            Whether you are travelling with family, hosting a retreat, celebrating a wedding or rewarding a team, this is the most effortless way to experience Bali — with the confidence that every moment has been considered.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="complete-villa-experience-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              <MessageCircle className="w-4 h-4" /> Plan Your Complete Stay
+              <MessageCircle className="w-4 h-4" /> Start Your Enquiry
             </a>
             <Link to="/villa-event-packages" className="inline-flex items-center gap-2 px-8 py-4 border border-[#1A1A1A]/30 text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#1A1A1A]/5 transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              <Calendar className="w-4 h-4" /> One-Event Version
+              <Calendar className="w-4 h-4" /> Compare Packages
             </Link>
           </div>
         </div>
@@ -543,14 +447,12 @@ export default function CompleteVillaExperiencePage() {
         <div className="max-w-[960px] mx-auto">
           <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Explore More</p>
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Complete the Experience</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: 'VIP Transport', href: '/vip-transport-bali', desc: 'Arrival transfers, arranged.' },
-              { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, butlers & housekeepers.' },
-              { label: 'Villa Staffing', href: '/staffing', desc: 'Longer-term staff placement.' },
-              { label: 'Villa Chef', href: '/villa-chef', desc: 'Private villa chef service.' },
-              { label: 'Events', href: '/events', desc: 'Events during your stay.' },
-              { label: 'Villa Event Packages', href: '/villa-event-packages', desc: 'One-event version.' },
+              { label: 'VIP Transport', href: '/vip-transport-bali', desc: 'Luxury cars, yachts & event logistics.' },
+              { label: 'Villa Event Packages', href: '/villa-event-packages', desc: 'All-inclusive villa celebrations.' },
+              { label: 'In-Villa Staff', href: '/in-villa-service', desc: 'Waiters, butlers & bartenders.' },
+              { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>
@@ -570,7 +472,7 @@ export default function CompleteVillaExperiencePage() {
             Enquire About Your Complete Stay
           </p>
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Plan your complete stay
+            Let us design your effortless Bali stay
           </h2>
           <p className="text-white/[70%] leading-relaxed mb-4 max-w-2xl mx-auto">
             Every villa, every group and every occasion is unique. The Complete Villa Experience is offered as a bespoke service, with tailored quotations designed around your specific requirements.

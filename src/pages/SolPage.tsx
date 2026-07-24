@@ -7,7 +7,7 @@ import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const HOW_IT_WORKS = [
-  { step: '01', title: 'Message myCHEF on WhatsApp', desc: 'Tell us your villa, dates, and how many people. Most replies within 2 hours.', icon: MessageCircle },
+  { step: '01', title: 'Message Us on WhatsApp', desc: 'Tell us your villa, dates, and how many people. We reply within 2 hours.', icon: MessageCircle },
   { step: '02', title: 'We Design Your Meal Plan', desc: 'Menus tailored to your preferences, dietary needs, and schedule. You approve everything.', icon: Utensils },
   { step: '03', title: 'Chef Shops & Cooks Fresh', desc: 'Groceries sourced that morning. Chef arrives, cooks, serves, and handles everything.', icon: ShoppingBag },
   { step: '04', title: 'You Relax. We Clean.', desc: 'No grocery runs. No dishes. No planning. Just great food, every day of your stay.', icon: Sparkles },
@@ -32,17 +32,18 @@ const MEAL_PLANS = [
 ]
 
 const FAQS = [
-  { q: 'What does the hourly rate include?', a: 'Chef time, menu planning, cooking, table service and a full kitchen cleanup after every meal. Groceries are billed separately at cost with receipts — no markup.' },
-  { q: 'How many hours per day should we book?', a: 'Breakfast runs about 2 hours and dinner about 3. Most full-board families book 6–8 hours per day; the minimum booking is 4 hours.' },
-  { q: 'Which areas do you serve?', a: "Villas across Bali's main areas — Seminyak, Canggu, Pererenan, Ubud, Uluwatu, Sanur, Jimbaran and surrounds. Share your villa name and location pin when you enquire." },
-  { q: 'Can the chef handle dietary requirements and kids\' meals?', a: 'Yes — halal, vegan, gluten-free, keto, allergies and children\'s menus are part of the service at no extra charge.' },
-  { q: 'Do we need to buy groceries or equipment?', a: 'No. Your chef shops for everything and works in your villa kitchen, bringing any specialist tools the menu needs.' },
-  { q: 'How far ahead should we book?', a: 'Three or more days is comfortable for daily service; for peak season (July–August and December), two weeks ahead is recommended. A 50% deposit confirms your dates.' },
-  { q: 'Is this the right service for a party or wedding?', a: 'No — daily villa dining is designed for everyday meals for up to about 10 guests. For celebrations, BBQs and events, our events & catering team is the right fit.' },
+  { q: 'What does the hourly rate include?', a: 'Chef time, cooking, service, and cleanup. Groceries are billed separately at cost — no markup. You see every receipt.' },
+  { q: 'How many hours per day do I need?', a: 'Breakfast takes ~2 hours. Dinner ~3 hours. For full board, most families book 6–8 hours per day.' },
+  { q: 'Can the chef cook for dietary restrictions?', a: 'Absolutely. Gluten-free, vegan, halal, keto, allergies — our chefs are trained for all dietary needs. No extra charge.' },
+  { q: 'Do I need to buy groceries?', a: 'No. Your chef shops for everything and brings receipts. You only pay what the market charges.' },
+  { q: 'Will the chef use my kitchen equipment?', a: 'Yes, your kitchen. We bring any specialized tools we need. We have worked in every type of villa kitchen.' },
+  { q: 'Can I request specific dishes?', a: 'Of course. Before your stay, your chef will ask about your favorites, allergies, and must-haves. Every menu is customized.' },
+  { q: 'What if I want to eat out one night?', a: 'No problem. You only pay for the days and meals you use. Flexibility is the whole point.' },
+  { q: 'How far in advance should I book?', a: '3+ days for villa chef. For peak season (July–August, December), 2+ weeks is recommended.' },
 ]
 
 const TESTIMONIALS = [
-  { name: 'The Chen Family', location: 'Singapore', text: 'Having a villa chef changed our entire holiday. The kids looked forward to every meal. We did not cook once, shop once, or clean once. Pure bliss.' },
+  { name: 'The Chen Family', location: 'Singapore', text: 'Having a dedicated villa chef changed our entire holiday. The kids looked forward to every meal. We did not cook once, shop once, or clean once. Pure bliss.' },
   { name: 'Marco & Elena', location: 'Milan', text: 'We came for a week and extended to ten days just because of the food. Fresh, healthy, and always surprising. It felt like having a friend who happens to be an incredible chef.' },
 ]
 
@@ -124,9 +125,10 @@ export default function SolPage() {
             url: getPageMeta('villa-chef').canonical,
             lowPrice: '600000',
             highPrice: '1500000',
+            priceCurrency: 'IDR',
             unitText: 'per hour',
           }),
-          breadcrumbSchema('Villa Chef Bali', getPageMeta('villa-chef').canonical),
+          breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />
@@ -149,7 +151,7 @@ export default function SolPage() {
             Your Villa Chef<br /><span className="italic">for Everyday Dining in Bali</span>
           </h1>
           <p className="sol-hero-sub text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
-            The best part of a Bali villa stay should not be the daily logistics of eating. A villa chef changes that: breakfast appears after your swim, lunch when the kids are hungry, dinner when the light turns golden — all cooked fresh in your kitchen, every day of your stay, with the shopping, cooking and cleaning completely handled. This service is built for couples, families and groups of friends on multi-day stays: everyday dining, done beautifully.
+            The best part of a Bali villa stay should not be the daily logistics of eating. A villa chef changes that: breakfast appears after your swim, lunch when the kids are hungry, dinner when the light turns golden — all cooked fresh in your kitchen, every day of your stay, with the shopping, cooking and cleaning completely handled. (Hosting a party or event for 10+ guests? That's our <Link to="/events" className="underline hover:text-[#C5A028]">events &amp; catering</Link> team.)
           </p>
           <div className="sol-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="sol-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -164,10 +166,10 @@ export default function SolPage() {
               Not sure which service?
             </p>
             <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
-              Choose <span className="font-semibold text-white">daily villa chef service</span> if you want a chef dedicated to your villa stay, daily meals, or an intimate dinner at home. Choose <Link to="/events" className="font-semibold text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">events & catering</Link> if you are hosting 10+ guests, a celebration, or need buffet, BBQ, plated service, or wedding-style setup.
+              Daily villa dining is designed for everyday meals for up to about 10 guests. For celebrations, BBQs and events, our <Link to="/events" className="font-semibold text-white hover:text-[#C5A028]">events &amp; catering team</Link> is the right fit.
             </p>
             <Link to="/events" className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
-              View Events & Catering →
+              Explore events &amp; catering →
             </Link>
           </div>
         </div>
@@ -271,20 +273,38 @@ export default function SolPage() {
       </section>
 
       {/* What a Villa Chef Does */}
-      <section id="what-a-villa-chef-does" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
-        <div className="max-w-[800px] mx-auto text-center">
-          <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>The Service</p>
-          <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>What a Villa Chef Does</h2>
-          <p className="leading-relaxed mb-8" style={{ color: '#8A7B6B' }}>
-            Your chef is dedicated to your villa for the hours you book. They plan menus around your tastes, shop fresh each morning, cook in your kitchen, serve at your table, and leave the kitchen spotless after every meal. You approve every menu in advance — dietary needs, allergies, kids' favourites and must-have dishes included at no extra charge.
-          </p>
-          <div className="space-y-3 max-w-md mx-auto text-left">
-            {['Private villa chef dedicated to your stay', 'Full grocery shopping & ingredient sourcing', 'Breakfast, lunch & dinner preparation', 'Table service & presentation', 'Full kitchen cleanup after every meal', 'Menu planning based on your preferences', 'Dietary customization at no extra cost', 'Fresh, local ingredients + premium imports'].map((item) => (
-              <div key={item} className="flex items-center gap-3">
-                <Check className="w-4 h-4 text-[#6B8E5A]" />
-                <span className="text-sm" style={{ color: '#2C2419' }}>{item}</span>
+      <section id="team" className="py-24 md:py-32 px-6 scroll-mt-24" style={{ background: '#FFFFFF' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden max-w-[75%] mx-auto">
+              <img
+                src="/generated/mychef-finedining-bali-sol-chef-portrait.webp"
+                alt="myCHEF villa chef preparing a family meal in a Bali villa kitchen"
+                width={800}
+                height={1000}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async" />
+            </div>
+            <div>
+              <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Daily Service</p>
+              <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>What a Villa Chef Does</h2>
+              <div className="w-12 h-[2px] bg-[#6B8E5A] mb-8" />
+              <p className="mb-6 leading-relaxed" style={{ color: '#8A7B6B' }}>
+                Your chef is dedicated to your villa for the hours you book. They plan menus around your tastes, shop fresh each morning, cook in your kitchen, serve at your table, and leave the kitchen spotless after every meal.
+              </p>
+              <p className="mb-8 leading-relaxed" style={{ color: '#8A7B6B' }}>
+                You approve every menu in advance — dietary needs, allergies, kids' favourites and must-have dishes included at no extra charge. It is everyday dining, done beautifully, by a vetted myCHEF team member. See <Link to="/pricing" className="text-[#6B8E5A] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">all pricing</Link>, <Link to="/hire-private-chef-bali-monthly" className="text-[#6B8E5A] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">monthly arrangements</Link>, <Link to="/private-chef/pererenan" className="text-[#6B8E5A] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">weekly chef service</Link> in Pererenan, or read <Link to="/guide/private-chef-bali" className="text-[#6B8E5A] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">how hiring works</Link>.
+              </p>
+              <div className="space-y-3">
+                {['Dedicated chef for your villa stay', 'Fresh daily shopping with receipts', 'All dietary requirements accommodated', 'Groceries billed at cost — no markup'].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <Check className="w-4 h-4 text-[#6B8E5A]" />
+                    <span className="text-sm" style={{ color: '#2C2419' }}>{item}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -430,12 +450,12 @@ export default function SolPage() {
           <div className="text-center mb-16">
             <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Frequently Asked</h2>
-            <p style={{ color: '#8A7B6B' }}>Still unsure? Message myCHEF on WhatsApp — we respond within 2 hours.</p>
+            <p style={{ color: '#8A7B6B' }}>Still unsure? Message us on WhatsApp — we reply within 2 hours.</p>
           </div>
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
           <div className="text-center mt-12">
             <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="sol-testimonials" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
-              <MessageCircle className="w-4 h-4" /> Ask myCHEF on WhatsApp
+              <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
             </a>
           </div>
         </div>

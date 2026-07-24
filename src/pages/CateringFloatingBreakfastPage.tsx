@@ -11,9 +11,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  serviceWithAggregateOfferSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -38,39 +37,30 @@ const SITE = 'https://mychef.id'
 const FLOATING_PACKAGES = [
   {
     image: '/generated/mychef-catering-bali-floating-breakfast.webp',
-    title: 'Floating Breakfast Add-On',
-    price: 'From IDR 950,000/couple',
+    title: 'Floating Breakfast for 2',
+    price: 'IDR 950,000/couple',
     priceNum: 950000,
-    description: 'The perfect upgrade with Private Chef, Villa Breakfast Service, Multi-Day Chef Packages or Villa Catering.',
-    includes: ['Custom bamboo floating tray', 'Tropical fruit & flowers', 'Fresh pastries & eggs', 'Coffee, tea & juice', 'Pool setup & retrieval'],
-    minGuests: 'For 2+',
-  },
-  {
-    image: '/generated/mychef-catering-bali-floating-breakfast.webp',
-    title: 'Romantic Morning',
-    price: 'From IDR 1,450,000/couple',
-    priceNum: 1450000,
-    description: 'Floating breakfast + fresh flowers + fresh juice + coffee + seasonal fruit + private chef. Ideal for honeymoons and anniversaries.',
-    includes: ['Floating breakfast tray', 'Fresh tropical flowers', 'Fresh juice & barista coffee', 'Seasonal fruit platter', 'Private chef service'],
+    description: 'Custom bamboo tray with tropical fruit, croissants and pastries, eggs, coffee, tea and juice. The classic.',
+    includes: ['Custom bamboo tray', 'Tropical fruit & croissants', 'Eggs, coffee, tea & juice', 'Flowers & drinks included', 'Pool setup & retrieval'],
     minGuests: 'For 2',
   },
   {
     image: '/generated/mychef-catering-bali-floating-breakfast.webp',
-    title: 'Celebration Morning',
-    price: 'From IDR 2,200,000/couple',
-    priceNum: 2200000,
-    description: 'Floating breakfast + birthday cake + champagne + flowers + decoration + photography add-on. Made for birthdays and milestones.',
-    includes: ['Floating breakfast tray', 'Celebration cake', 'Champagne or sparkling wine', 'Floral decoration', 'Photography add-on available'],
-    minGuests: 'For 2+',
+    title: 'Floating Brunch for 2',
+    price: 'IDR 1,400,000/couple',
+    priceNum: 1400000,
+    description: 'Champagne, cured salmon, avocado toast and a mini grazing board. The celebration version.',
+    includes: ['Champagne', 'Cured salmon', 'Avocado toast', 'Mini grazing board', 'Celebration brunch'],
+    minGuests: 'For 2',
   },
   {
     image: '/generated/mychef-catering-bali-floating-breakfast.webp',
-    title: 'Luxury Villa Morning',
-    price: 'From IDR 1,200,000/person',
-    priceNum: 1200000,
-    description: 'Floating breakfast + chef cooking live + barista coffee + fresh pastries + tropical fruit + smoothie bowls + egg station + fresh juice.',
-    includes: ['Live chef cooking by the pool', 'Barista coffee & fresh juice', 'Fresh pastries & smoothie bowls', 'Tropical fruit & egg station', 'Full setup & cleanup'],
-    minGuests: 'Min. 2 guests',
+    title: 'Floating Group Brunch',
+    price: 'IDR 750,000/person',
+    priceNum: 750000,
+    description: 'Multiple bamboo trays, scaled fruit and pastry service, eggs and mains, coffee, tea and juice for the whole group.',
+    includes: ['Multiple bamboo trays', 'Scaled fruit & pastries', 'Eggs and mains', 'Coffee, tea & juice', 'For 4–10 guests'],
+    minGuests: '4–10 guests',
   },
 ]
 
@@ -167,30 +157,14 @@ const FLOATING_GALLERY = [
 ]
 
 const FAQS = [
-  { q: 'Can every villa have a floating breakfast?', a: 'Most private villas in Bali with a pool can host a floating breakfast. We need safe access, a calm water area or shallow shelf, and enough space for the tray. If your pool is very small or unusually shaped, we can adapt with a poolside or ledge setup.' },
-  { q: 'What is included in the Floating Breakfast Experience?', a: 'Every experience includes a custom bamboo floating tray, chef-prepared breakfast dishes, tropical fruit, fresh juice, coffee or tea, fresh flowers, pool setup, styling, and cleanup. Add-ons such as champagne, cake, photography, and extra décor are available.' },
-  { q: 'Can children enjoy a floating breakfast?', a: 'Yes. We offer a Floating Kids Breakfast with pool-ledge trays, mild flavours, pancakes, fruit skewers, and fun presentation. Safety is our priority, so young children use ledge setups rather than free-floating trays.' },
-  { q: 'Can we add champagne?', a: 'Absolutely. Champagne, sparkling wine, and Bali rosé upgrades are available for Romantic Morning, Celebration Morning, and Luxury Villa Morning packages.' },
-  { q: 'Can you decorate the pool and villa area?', a: 'Yes. We can add fresh flowers, petals, balloons, candles, signage, and themed décor. Celebration Morning includes decoration, and custom styling is available on request.' },
-  { q: 'Can we customise the menu?', a: 'Yes. Choose egg styles, pastries, healthy bowls, vegan options, Indonesian flavours, or Western classics. We accommodate allergies, gluten-free, dairy-free, halal, and kids preferences.' },
-  { q: 'Does the chef cook at the villa?', a: 'Our Luxury Villa Morning and Private Chef Breakfast add-on include live cooking by the pool. Other packages are freshly prepared and beautifully plated before arrival, then finished on-site.' },
-  { q: 'Is cleanup included?', a: 'Yes. We collect the tray, glassware, and décor 1.5–2 hours after delivery, leaving the pool area clean.' },
-  { q: 'Can we book for tomorrow?', a: 'We recommend 2–3 days notice, but last-minute bookings are often possible depending on villa location and chef availability. Contact us on WhatsApp and we will confirm quickly.' },
-  { q: 'Do you offer gluten-free options?', a: 'Yes. Gluten-free bread, granola, smoothie bowls, and dedicated preparation are available on request.' },
-  { q: 'Is this good for a honeymoon?', a: 'Very. Our Romantic Morning package is designed for honeymoons and anniversaries, with flowers, private chef service, and a photography-ready setup.' },
-  { q: 'Can we combine a floating breakfast with a private chef?', a: 'Yes. The Floating Breakfast Add-On is designed to pair with our Private Chef Experience, Villa Breakfast Service, Multi-Day Chef Packages, and Villa Catering.' },
-  { q: 'Can we book multiple mornings?', a: 'Yes. Many guests book a floating breakfast for the first morning of their stay and again for a birthday or anniversary. Multi-day packages can include a floating breakfast each morning.' },
-  { q: 'Can you serve floating breakfast during retreats?', a: 'Yes. Retreat Catering packages can include daily Floating Breakfast Experiences for yoga, wellness, and corporate retreat groups across Bali.' },
-  { q: 'Do you serve floating brunch?', a: 'Yes. Our Floating Brunch variation includes eggs Benedict, smoked salmon, avocado toast, pastries, and sparkling wine.' },
-  { q: 'What Bali areas do you cover?', a: 'We serve Seminyak, Canggu, Berawa, Pererenan, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Tanah Lot, Kerobokan, Kuta, Legian, and Denpasar. Travel fees may apply outside Seminyak and Canggu.' },
-  { q: 'What time slots are available?', a: 'Sunrise (6:00–7:30am), mid-morning (10:00–11:00am), and sunset (4:30–6:00pm). Custom timings are possible for private villas and retreats.' },
-  { q: 'How many guests can you serve?', a: 'Couple packages serve 2 guests. Larger groups use multiple trays and can scale to 10+ guests for Floating Family Breakfast or retreat groups.' },
-  { q: 'Do you serve vegan floating breakfasts?', a: 'Yes. We offer fully vegan menus with plant-based eggs, smoothie bowls, tropical fruit, tempeh, and dairy-free pastries.' },
-  { q: 'Can we add a photographer?', a: 'Yes. A one-hour professional poolside photo shoot can be added to any package. The Celebration Morning package pairs especially well with photography.' },
-  { q: 'What if it rains?', a: 'If rain is forecast, we offer an indoor villa table setup with the same styling and menu, or you can reschedule to the next available slot at no extra charge.' },
-  { q: 'Can we propose during a floating breakfast?', a: 'Yes. Our Floating Proposal variation includes discreet setup, flowers, a private corner of the pool, and optional photographer coordination.' },
-  { q: 'Is the floating tray safe for infinity pools?', a: 'Yes. We use stable ledges, weighted supports, or poolside placement for infinity pools to ensure both safety and beautiful photos.' },
-  { q: 'How far in advance should we book?', a: 'We recommend 2–3 days minimum. For peak season (June–August, December–January) or large retreat groups, 1–2 weeks is ideal.' },
+  { q: 'How much does a floating breakfast in Bali cost?', a: 'IDR 950,000 per couple for the classic tray, IDR 1,400,000 for the champagne brunch, or IDR 750,000 per person for groups of 4–10 — all ++ (11% government tax + 10% service charge). Tray, flowers and drinks are included.' },
+  { q: 'Do you deliver floating breakfast to Ubud, Uluwatu or Nusa Dua?', a: 'Yes. myCHEF serves Ubud, Uluwatu, Nusa Dua and Sanur as well as Seminyak, Canggu, Jimbaran and the rest of Bali. A small travel fee may apply outside Seminyak and Canggu, quoted upfront.' },
+  { q: 'Is there a minimum order for floating breakfast?', a: 'Couple packages start at two guests; the group brunch has a minimum of four guests.' },
+  { q: 'Can the floating breakfast be vegan, vegetarian, halal or gluten-free?', a: 'Yes. Vegetarian is standard; vegan and gluten-free versions are available on request, and everything can be prepared halal.' },
+  { q: 'What happens if it rains on the day?', a: 'An indoor villa table setup with the same styling and menu is offered, or a free reschedule to the next available morning slot.' },
+  { q: 'Is the floating tray included?', a: 'Yes, a custom bamboo floating tray is included in every package and collected 1.5–2 hours after delivery.' },
+  { q: 'How far in advance should I book a floating breakfast?', a: 'Two to three days minimum; one to two weeks in peak season (June–August, December–January).' },
+  { q: 'What deposit is required?', a: 'A 50% deposit confirms the booking; the balance is due before the service.' },
 ]
 
 export default function CateringFloatingBreakfastPage() {
@@ -209,34 +183,52 @@ export default function CateringFloatingBreakfastPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Luxury Floating Breakfast Bali | Private Villa Pool Experience | myCHEF"
-        description="Book a luxury floating breakfast experience at your Bali villa. Chef-prepared dishes, fresh coffee, champagne options and full setup. Perfect for honeymoons, birthdays and celebrations."
+        title="Floating Breakfast Bali | Chef-Prepared, Island-Wide"
+        description="Floating breakfast in your Bali villa pool — chef-prepared and styled, delivered island-wide incl. Ubud, Uluwatu & Nusa Dua. WhatsApp myCHEF."
         canonical={`${SITE}/catering/floating-breakfast`}
         ogImage={`${SITE}/breakfast-spread.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Luxury Floating Breakfast Experience in Bali',
-            description: 'Private villa floating breakfast experience in Bali. Chef-prepared dishes, fresh coffee, champagne options, full setup and cleanup for honeymoons, birthdays and celebrations.',
-            url: `${SITE}/catering/floating-breakfast`,
-            lowPrice: '950000',
-            highPrice: '2200000',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Book a Luxury Floating Breakfast in Bali',
-            description: 'Book a private floating breakfast at your Bali villa in 7 easy steps.',
-            totalTime: 'PT10M',
-            steps: [
-              { name: 'Book', text: 'Choose your package, date, and villa location via WhatsApp or the booking form.' },
-              { name: 'Menu', text: 'We tailor the menu to your dietary needs, occasion, and photo vision.' },
-              { name: 'Villa information', text: 'Share pool type, size, depth, access details, and villa contact.' },
-              { name: 'Arrival', text: 'The chef team arrives 1.5–2 hours before your chosen time slot.' },
-              { name: 'Setup', text: 'Tray is prepared, pool is styled, flowers and props are placed.' },
-              { name: 'Floating breakfast', text: 'You step into the pool to a ready, photogenic breakfast experience.' },
-              { name: 'Cleanup', text: 'We collect the tray, glassware, and décor when you are done.' },
+          {
+            ...serviceWithOfferSchema({
+              name: 'Floating Breakfast Bali',
+              description: 'Chef-prepared floating breakfast delivered and styled in your Bali villa pool, island-wide including Ubud, Uluwatu, Nusa Dua and Sanur.',
+              url: `${SITE}/catering/floating-breakfast`,
+              price: '950000',
+              priceCurrency: 'IDR',
+              unitText: 'per couple, before 11% government tax + 10% service charge',
+            }),
+            provider: {
+              '@type': 'Organization',
+              name: 'myCHEF.id',
+              url: 'https://mychef.id',
+              telephone: '+62 896-7407-2020',
+              email: 'bali@mychef.id',
+            },
+            areaServed: [
+              { '@type': 'Place', name: 'Ubud' },
+              { '@type': 'Place', name: 'Uluwatu' },
+              { '@type': 'Place', name: 'Nusa Dua' },
+              { '@type': 'Place', name: 'Sanur' },
+              { '@type': 'Place', name: 'Seminyak' },
+              { '@type': 'Place', name: 'Canggu' },
+              { '@type': 'Place', name: 'Bali' },
             ],
-          }),
-          cateringBreadcrumbSchema('Luxury Floating Breakfast Bali', `${SITE}/catering/floating-breakfast`),
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'IDR',
+              price: '950000',
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                price: '950000',
+                priceCurrency: 'IDR',
+                unitText: 'per couple, before 11% government tax + 10% service charge',
+              },
+              description: 'Floating breakfast for two from IDR 950,000++/couple; brunch IDR 1,400,000++/couple; group brunch IDR 750,000++/person',
+              url: `${SITE}/catering/floating-breakfast`,
+            },
+          },
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          cateringBreadcrumbSchema('Floating Breakfast Bali', `${SITE}/catering/floating-breakfast`),
         ]}
       />
 
@@ -283,7 +275,7 @@ export default function CateringFloatingBreakfastPage() {
                 className="text-[#C5A028] text-xs font-semibold uppercase tracking-[0.35em] mb-5"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
-                Luxury Floating Breakfast Bali
+                Floating Breakfast Bali
               </p>
 
               <h1
@@ -294,15 +286,15 @@ export default function CateringFloatingBreakfastPage() {
                   fontSize: 'clamp(42px, 6vw, 88px)',
                 }}
               >
-                Luxury Floating Breakfast Experience in Bali
+                Floating Breakfast in Bali — Chef-Prepared, Served in Your Villa Pool
               </h1>
 
-              <p className="text-white/85 text-base md:text-lg leading-[1.55] mb-8 max-w-[540px]">
-                Wake up to one of Bali’s most iconic holiday experiences. Our Floating Breakfast Experience combines beautifully presented breakfast dishes with private chef hospitality, creating a memorable start to your day in the comfort of your private villa.
+              <p className="text-white/85 text-base md:text-lg leading-[1.55] mb-6 max-w-[540px]">
+                A styled bamboo tray of chef-prepared breakfast, floating in your own pool at sunrise. We prepare everything fresh, deliver it to your villa, place the tray in the water — and collect it when you are done. From IDR 950,000 per couple, our floating breakfast Bali service includes flowers, drinks, a custom bamboo tray and island-wide villa delivery.
               </p>
 
               <p className="text-white/70 text-sm mb-8 max-w-[540px]">
-                Available as an upgrade with our <Link to="/fine-dining/private-chef-bali" className="text-[#C5A028] hover:underline">Private Chef Experience</Link>, <Link to="/catering/villa-catering" className="text-[#C5A028] hover:underline">Villa Breakfast Service</Link>, <Link to="/catering/villa-catering" className="text-[#C5A028] hover:underline">Multi-Day Chef Packages</Link> and <Link to="/catering/retreat-catering" className="text-[#C5A028] hover:underline">Retreat Catering</Link>. Standalone service available upon request, subject to villa location and minimum order requirements.
+                Available as an upgrade with a <Link to="/blog/private-chef-breakfast-bali-villas" className="text-[#C5A028] hover:underline">private chef breakfast in Bali villas</Link>, <Link to="/catering/villa-catering" className="text-[#C5A028] hover:underline">villa catering for the rest of your stay</Link>, or paired with a <Link to="/fine-dining/romantic-dinner" className="text-[#C5A028] hover:underline">romantic private dinner</Link>. Add a <Link to="/experiences/private-cooking-class" className="text-[#C5A028] hover:underline">private cooking class</Link> or see our <Link to="/pricing" className="text-[#C5A028] hover:underline">full price list</Link>. Standalone service available upon request, subject to villa location and minimum order requirements.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -311,19 +303,19 @@ export default function CateringFloatingBreakfastPage() {
                   data-source="floating-breakfast-hero-primary-cta"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded"
                 >
-                  <Calendar className="w-4 h-4" /> Reserve My Experience
+                  <Calendar className="w-4 h-4" /> Reserve My Tray
                 </a>
                 <a
-                  href="#packages"
+                  href="#menu-styles"
                   data-source="floating-breakfast-hero-secondary-cta"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/40 text-white text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:border-[#C5A028] hover:bg-white/5 backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
                 >
-                  <Utensils className="w-4 h-4" /> See the Packages
+                  <Utensils className="w-4 h-4" /> See the Menu Styles
                 </a>
               </div>
 
               <p className="text-white/60 text-sm">
-                Private floating breakfast · Chef-prepared dishes · Full setup & cleanup · Bali-wide villa service
+                From IDR 950,000/couple · Flowers, drinks and bamboo tray included · Serving Ubud, Uluwatu, Nusa Dua, Sanur, Seminyak, Canggu and beyond
               </p>
             </div>
           </div>
@@ -387,7 +379,7 @@ export default function CateringFloatingBreakfastPage() {
           </div>
           <div className="mt-6 text-center">
             <p className="text-sm text-[#4A4745]/80">
-              All-in fixed pricing for our signature experiences. Custom quotes available for large groups and retreats.
+              Fixed prices, no hidden fees. Prices are subject to 11% government tax + 10% service charge.
             </p>
           </div>
         </div>
@@ -462,8 +454,8 @@ export default function CateringFloatingBreakfastPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 6 — BUILD YOUR FLOATING BREAKFAST ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* ═══════ SECTION 6 — MENU STYLES ═══════ */}
+      <section id="menu-styles" className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Customise"
@@ -539,6 +531,9 @@ export default function CateringFloatingBreakfastPage() {
               <CateringAddOnCard key={addon.title} {...addon} />
             ))}
           </div>
+          <p className="text-center text-sm text-[#4A4745]/80 mt-8 max-w-2xl mx-auto">
+            Pair it with a <Link to="/blog/private-chef-breakfast-bali-villas" className="text-[#C5A028] hover:underline">private chef breakfast in Bali villas</Link> for larger groups, add <Link to="/catering/villa-catering" className="text-[#C5A028] hover:underline">villa catering for the rest of your stay</Link>, or make it a full day with a <Link to="/fine-dining/romantic-dinner" className="text-[#C5A028] hover:underline">romantic private dinner</Link>. Extend the experience with a <Link to="/experiences/private-cooking-class" className="text-[#C5A028] hover:underline">private cooking class</Link>; see our <Link to="/pricing" className="text-[#C5A028] hover:underline">full price list</Link>.
+          </p>
         </div>
       </section>
 
@@ -587,9 +582,9 @@ export default function CateringFloatingBreakfastPage() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { label: 'Private Chef', href: '/fine-dining/private-chef-bali', desc: 'Live chef cooking at your villa.' },
-              { label: 'Breakfast Catering', href: '/catering/villa-catering', desc: 'Daily villa breakfast service.' },
-              { label: 'Villa Catering', href: '/catering/villa-catering', desc: 'Group meals for multi-day stays.' },
-              { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner', desc: 'Candlelit private chef dinners.' },
+              { label: 'villa catering for the rest of your stay', href: '/catering/villa-catering', desc: 'Daily villa breakfast service.' },
+              { label: 'villa catering for the rest of your stay', href: '/catering/villa-catering', desc: 'Group meals for multi-day stays.' },
+              { label: 'romantic private dinner', href: '/fine-dining/romantic-dinner', desc: 'Candlelit private chef dinners.' },
               { label: 'Wedding Catering', href: '/events/weddings', desc: 'Full villa wedding catering.' },
               { label: 'Retreat Catering', href: '/catering/retreat-catering', desc: 'Multi-day wellness retreat meals.' },
               { label: 'Drop-Off Breakfast', href: '/catering/drop-off-catering', desc: 'Fresh food delivered to your villa.' },
@@ -598,7 +593,7 @@ export default function CateringFloatingBreakfastPage() {
               { label: 'Flowers', href: '/fine-dining/romantic-dinner', desc: 'Romantic floral styling.' },
               { label: 'Decoration', href: '/events/birthdays', desc: 'Themed villa celebration décor.' },
             ].map((item) => (
-              <Link key={item.href + item.label} to={item.href} className="block p-5 rounded-2xl bg-[#FAFAF8] border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <Link key={item.href + item.label + item.desc} to={item.href} className="block p-5 rounded-2xl bg-[#FAFAF8] border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>
                 <p className="text-xs text-[#4A4745]">{item.desc}</p>
               </Link>

@@ -28,11 +28,11 @@ const SITE = 'https://mychef.id'
 export const PAGE_META: Record<string, PageMeta> = {
   home: {
     path: '/',
-    title: 'Private Chef Bali | Dining, Catering & Events — myCHEF',
+    title: 'Private Chef Bali | Michelin-Trained Villa Dining & Events',
     description:
-      'Hire a private chef in Bali for villa dining, catering & events. Michelin-trained team, all-inclusive pricing, 560+ villas served. Book via WhatsApp.',
+      'Hire a private chef in Bali for villa dining, BBQs, weddings & events. Michelin-trained team, 560+ villas served, transparent pricing. WhatsApp myCHEF.',
     canonical: `${SITE}/`,
-    h1: 'A Michelin-Trained Private Chef, in Your Bali Villa.',
+    h1: 'Private Chef in Bali — Your Villa. Our Kitchen.',
     ogImage: `${SITE}/hero-home.webp`,
   },
 
@@ -68,21 +68,21 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'villa-chef': {
     path: '/villa-chef',
-    title: 'Private Chef Bali Villa | Michelin-Trained Dining',
+    title: 'Villa Chef Bali | Daily Chef Service for Your Stay | myCHEF',
     description:
-      'Hire a private chef for your Bali villa: ingredients, service & Michelin-trained standards included. 560+ villas served. WhatsApp to check availability.',
+      'A dedicated villa chef in Bali for breakfast, lunch & dinner every day of your stay. Groceries at cost, from IDR 600K/hour. WhatsApp myCHEF.',
     canonical: `${SITE}/villa-chef`,
-    h1: 'Private Chef in Bali',
+    h1: 'Your Villa Chef for Everyday Dining in Bali',
     ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,
   },
 
   'in-villa-service': {
     path: '/in-villa-service',
-    title: 'Villa Service Bali | Waiters, Butlers & Bartenders — myCHEF',
+    title: 'Villa Service Staff Bali | Waiters, Butlers & Bartenders',
     description:
-      'Hire villa waitstaff in Bali: waiters, butlers, bartenders, sommeliers & mixologists. Uniformed, English-speaking, same-day booking via WhatsApp.',
+      'Uniformed, English-speaking villa staff in Bali — waiters, butlers, bartenders & coordinators by the shift, from IDR 250K/hour. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service`,
-    h1: 'In-Villa Service Staff — Waiters, Butlers, Mixologists',
+    h1: 'Professional Villa Service Staff — Hired by the Shift',
     ogImage: `${SITE}/bartender.webp`,
   },
 
@@ -108,11 +108,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   staffing: {
     path: '/staffing',
-    title: 'Chef Staffing Bali | Villas, Hotels & Homes — myCHEF',
+    title: 'Villa Staff Placement Bali | Hospitality Staffing Agency',
     description:
-      'Hire vetted private chefs, live-in chefs & villa staff in Bali. 48-hour placement for hotels, villas & estates. WhatsApp us to start the search.',
+      'Villa staff placement in Bali & Jakarta: long-term private chefs, villa managers, butlers & hospitality teams. Vetted, guaranteed. WhatsApp myCHEF.',
     canonical: `${SITE}/staffing`,
-    h1: 'Hire Vetted Hospitality Staff for Your Villa, Hotel or Home.',
+    h1: 'Hire Vetted Hospitality Staff for Your Villa, Hotel or Home',
     ogImage: `${SITE}/generated/luna-chef-portrait.webp`,
   },
 
@@ -773,69 +773,69 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'in-villa-service-waiters': {
     path: '/in-villa-service/waiters',
-    title: 'Villa Waiters Bali | Professional Per-Shift Service',
+    title: 'Waiter Hire Bali | Professional Villa Servers | myCHEF',
     description:
-      'Hire villa waiters in Bali for dinners, weddings & events. Uniformed, English-speaking, trained in plated service. From IDR 250K/hour. WhatsApp us.',
+      'Hire waiters in Bali for villa dinners & events — uniformed, English-speaking, fine-dining trained. From IDR 250K/hour. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service/waiters`,
-    h1: 'Waiter Hire in Bali',
+    h1: 'Waiter Hire in Bali — Professional Servers for Your Villa',
     ogImage: `${SITE}/generated/aura-bartender.webp`,
   },
 
   'in-villa-service-butlers': {
     path: '/in-villa-service/butlers',
-    title: 'Butler Hire Bali Villa | Discreet In-Villa Service — myCHEF',
+    title: 'Hire a Butler in Bali | From IDR 1.2M/Day | myCHEF',
     description:
-      'Hire a private butler in Bali for arrival service, discreet hosting & polished villa support. From IDR 1.2M/day. WhatsApp us to check availability.',
+      'Hire a professional butler in Bali by the day or shift — discreet, anticipatory guest service for villas & estates. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service/butlers`,
-    h1: 'Butler Service in Bali',
+    h1: 'Hire a Private Butler in Bali',
     ogImage: `${SITE}/generated/hub-villa.webp`,
   },
 
   'in-villa-service-bartenders': {
     path: '/in-villa-service/bartenders',
-    title: 'Bartender Hire Bali | Villa Cocktail Service — myCHEF',
+    title: 'Private Bartender Bali | Hire for Your Villa Party | myCHEF',
     description:
-      'Hire a bartender in Bali for villa parties & dinners. Cocktails, glassware, ice & garnish prep included. From IDR 350K/hour. WhatsApp to book yours.',
+      'Hire a private bartender for your Bali villa party or wedding — classic cocktails, full bar setup, premium service. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service/bartenders`,
-    h1: 'Bartender Hire in Bali',
+    h1: 'Private Bartender Hire for Villas & Events in Bali',
     ogImage: `${SITE}/generated/aura-bartender.webp`,
   },
 
   'in-villa-service-mixology': {
     path: '/in-villa-service/mixology',
-    title: 'Mixology Service Bali | Signature Cocktails for Villas',
+    title: 'Mixologist Hire Bali | Custom Cocktail Programs | myCHEF',
     description:
-      'Private mixology in Bali: signature cocktail menus, guided tastings & cocktail classes for villa events. From IDR 1.5M/session. WhatsApp us to book.',
+      'Hire a mixologist in Bali: signature cocktail creation and custom bar programs for villa events & weddings. Premium ingredients. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service/mixology`,
-    h1: 'Private Mixology in Bali',
+    h1: 'Mixology in Bali — Custom Cocktail Programs at Your Villa',
     ogImage: `${SITE}/bartender.webp`,
   },
 
   'in-villa-service-sommelier': {
     path: '/in-villa-service/sommelier',
-    title: 'Sommelier Hire Bali | Villa Wine Pairings — myCHEF',
+    title: 'Private Sommelier Hire Bali | Wine Service at Your Villa',
     description:
-      'Hire a sommelier in Bali for villa dinners & tasting menus. Expert wine pairings, bottle selection & tableside service. WhatsApp us to add wine service.',
+      'Hire a private sommelier for your Bali villa dinner — pairings, sourcing advice and professional cellar service. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service/sommelier`,
-    h1: 'Sommelier Service in Bali',
+    h1: 'Private Sommelier Hire in Bali — Wine Service at Your Villa',
     ogImage: `${SITE}/generated/luna-wine.webp`,
   },
 
   'in-villa-service-host-hostess': {
     path: '/in-villa-service/host-hostess',
-    title: 'Event Host Hire Bali Villa | Host & Hostess — myCHEF',
+    title: 'Hostess Hire Bali | Professional Event Reception | myCHEF',
     description:
-      'Hire event hosts & hostesses in Bali for villa weddings, corporate events & parties. Guest greeting, arrival flow & reception management. WhatsApp us.',
+      'Hire professional event hosts & hostesses in Bali for guest reception and event flow at weddings and corporate events. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service/host-hostess`,
-    h1: 'Host & Hostess Hire in Bali',
+    h1: 'Host & Hostess Hire in Bali — Professional Event Reception',
     ogImage: `${SITE}/generated/misc-trust-hosts-lg.webp`,
   },
 
   'staffing-private-chef-placement': {
     path: '/staffing/private-chef-placement',
-    title: 'Private Chef Placement Bali | Villa Recruitment — myCHEF',
+    title: 'Private Chef Placement Bali | Full-Time Chef Hire | myCHEF',
     description:
-      'Fill long-term kitchen roles in Bali fast. Vetted private chef candidates, cooking trials, contracts & onboarding support. WhatsApp to start the search.',
+      'Permanent or seasonal private chef placement for your Bali villa or residence — vetting, trials and contracts handled. WhatsApp myCHEF.',
     canonical: `${SITE}/staffing/private-chef-placement`,
     h1: 'Private Chef Placement in Bali',
     ogImage: `${SITE}/generated/staffing-staffing-hero-xl.webp`,
@@ -843,51 +843,51 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'staffing-live-in-chef': {
     path: '/staffing/live-in-chef',
-    title: 'Live-In Chef Bali | Full-Time Villa Chef Placement — myCHEF',
+    title: 'Live-In Chef Bali | Full-Board Villa Chef | myCHEF',
     description:
-      'Find a live-in chef in Bali for daily family meals, estate stays & full-time kitchen coverage. Vetted placements from IDR 8M/month. WhatsApp us.',
+      'Live-in chefs in Bali who manage all meals, groceries and kitchen logistics for your family or guests. From IDR 8M/month. WhatsApp myCHEF.',
     canonical: `${SITE}/staffing/live-in-chef`,
-    h1: 'Live-In Chef Placement in Bali',
+    h1: 'Live-In Chef in Bali',
     ogImage: `${SITE}/generated/staffing-staffing-kitchen-lg.webp`,
   },
 
   'staffing-villa-staff': {
     path: '/staffing/villa-staff',
-    title: 'Villa Staff Bali | Managers, Housekeepers & More — myCHEF',
+    title: 'Hire Villa Staff Bali | Long-Term Villa Teams | myCHEF',
     description:
-      'Hire villa staff in Bali: managers, housekeepers, gardeners, pool crew & front-of-house. One partner, vetted placements. WhatsApp to discuss your needs.',
+      'Hire villa staff in Bali for estates & portfolios: villa managers, housekeepers and support teams. Vetted placements with guarantees. WhatsApp myCHEF.',
     canonical: `${SITE}/staffing/villa-staff`,
-    h1: 'Villa Staff Placement in Bali',
+    h1: 'Hire Villa Staff in Bali — Long-Term Placement',
     ogImage: `${SITE}/generated/hub-villa.webp`,
   },
 
   'staffing-household-staff': {
     path: '/staffing/household-staff',
-    title: 'Household Staff Bali | Private Estate Recruitment — myCHEF',
+    title: 'Hire Household Staff Bali | Estate Operations | myCHEF',
     description:
-      'Recruit household staff in Bali for private residences & estates. Housekeepers, drivers, nannies & heads of house. Vetted & placed in 48 hours.',
+      'Hire household staff in Bali: experienced managers & staff for large residences — scheduling, maintenance and vendor management. WhatsApp myCHEF.',
     canonical: `${SITE}/staffing/household-staff`,
-    h1: 'Household Staff Placement in Bali',
+    h1: 'Household Staff in Bali — Estate Operations',
     ogImage: `${SITE}/generated/staffing-staffing-table-lg.webp`,
   },
 
   'staffing-for-villa-managers': {
     path: '/staffing/for-villa-managers',
-    title: 'Villa Manager Staffing Bali | Chef & Service Hires — myCHEF',
+    title: 'Villa Manager Partnership Bali | myCHEF Partner Program',
     description:
-      'Outsource hospitality hiring to myCHEF for your Bali villa properties. Pre-vetted chefs & service staff, partnership rates, 48-hour placement. WhatsApp us.',
+      'Outsource hospitality staffing for your villa portfolio: pre-vetted chefs & staff, 48–72h fills, partnership rates. Apply via WhatsApp myCHEF.',
     canonical: `${SITE}/staffing/for-villa-managers`,
-    h1: 'Staffing for Villa Managers in Bali',
+    h1: 'Staffing & Partnerships for Villa Managers',
     ogImage: `${SITE}/generated/corp-villa.webp`,
   },
 
   'staffing-for-hotels-restaurants': {
     path: '/staffing/for-hotels-restaurants',
-    title: 'Chef Staffing Hotels Bali | Kitchen & Service Hires',
+    title: 'Hotel & Restaurant Staffing Bali | Culinary Teams | myCHEF',
     description:
-      'Hospitality staffing for Bali hotels, restaurants & beach clubs. Vetted chefs, servers & managers. Volume rates available. WhatsApp us to get started.',
+      'Temporary or permanent culinary staffing for Bali hotels and restaurants — vetted, high-standard professionals. WhatsApp myCHEF.',
     canonical: `${SITE}/staffing/for-hotels-restaurants`,
-    h1: 'Staffing for Hotels & Restaurants in Bali',
+    h1: 'Hotels & Restaurants Staffing',
     ogImage: `${SITE}/generated/aura-corporate.webp`,
   },
 

@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -26,19 +26,47 @@ const WA_LINK = buildWhatsAppUrl({ serviceName: 'a baby shower in Bali', intent:
 const SITE = 'https://mychef.id'
 const ACCENT = '#2C5F7C'
 
+const BABY_SHOWER_SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Baby Shower Catering Bali',
+  serviceType: 'Baby shower catering and styled villa brunches',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'myCHEF.id',
+    url: 'https://mychef.id/',
+    telephone: '+62 896-7407-2020',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
+      addressLocality: 'Denpasar',
+      addressRegion: 'Bali',
+      postalCode: '80226',
+      addressCountry: 'ID',
+    },
+  },
+  areaServed: 'Bali, Indonesia',
+  description: 'Baby shower catering in Bali villas: pregnancy-safe brunches, grazing tables, alcohol-free mocktail bars, themed decor, photography and full cleanup.',
+  offers: [
+    { '@type': 'Offer', name: 'Intimate Baby Shower Brunch', price: '750000', priceCurrency: 'IDR', description: 'Per person, 10–15 guests. Grazing brunch, mocktail bar, decor, photographer 1h. ++ 11% tax + 10% service.' },
+    { '@type': 'Offer', name: 'Larger Baby Shower', price: '1100000', priceCurrency: 'IDR', description: 'Per person, 16–30 guests. Full brunch, premium decor, photographer 2h, custom cake. ++ 11% tax + 10% service.' },
+    { '@type': 'Offer', name: 'Grand Shower Celebration', price: '350000', priceCurrency: 'IDR', description: 'Per person, 50+ guests. Scalable buffet, mocktail welcome drinks, gift table, staff. ++ 11% tax + 10% service.' },
+  ],
+}
+
 const FORMATS = [
   {
     title: 'Intimate Baby Shower Brunch',
     price: <AllInPrice price={750000} />,
     guestRange: '10–15 guests',
-    description: 'Grazing brunch + mocktail bar + pastel decor + signage + photographer 1h. Perfect for close friends and family.',
-    features: ['Grazing brunch (sweet + savoury)', 'Mocktail bar (3 signature drinks)', 'Pastel decor + signage', 'Photographer 1h', 'Service staff', 'Setup + cleanup'],
+    description: 'Grazing brunch (sweet + savoury), mocktail bar with 3 signature drinks, pastel decor + signage, photographer 1h, service staff, setup + cleanup.',
+    features: ['Grazing brunch (sweet + savoury)', 'Mocktail bar with 3 signature drinks', 'Pastel decor + signage', 'Photographer 1h', 'Service staff', 'Setup + cleanup'],
   },
   {
     title: 'Larger Baby Shower',
     price: <AllInPrice price={1100000} />,
     guestRange: '16–30 guests',
-    description: 'Full brunch + mocktail bar + premium decor + signage + guest table setup + photographer 2h + custom cake.',
+    description: 'Full brunch + mocktail bar, premium decor + signage, guest table setup, photographer 2h, custom cake, games setup, service staff.',
     features: ['Full brunch + mocktail bar', 'Premium decor + signage', 'Guest table setup', 'Photographer 2h', 'Custom cake', 'Games setup', 'Service staff'],
     highlighted: true,
   },
@@ -48,17 +76,17 @@ const GRAND_SHOWER = {
   title: 'Grand Shower Celebration',
   price: <AllInPrice price={350000} />,
   guestRange: '50+ guests',
-  description: 'Lighter per-person pricing for larger shower receptions with grazing, pregnancy-safe buffet service, and coordinated styling.',
-  features: ['Scalable brunch buffet', 'Mocktail welcome drinks', 'Styled gift table', 'Service staff + cleanup', 'Family-friendly setup', 'Vendor coordination'],
+  description: 'Scalable brunch buffet, mocktail welcome drinks, styled gift table, service staff + cleanup, vendor coordination.',
+  features: ['Scalable brunch buffet', 'Mocktail welcome drinks', 'Styled gift table', 'Service staff + cleanup', 'Vendor coordination'],
 }
 
-const THEMES = ['Boho', 'Pastel', 'Botanical', 'Classic / Gender-Reveal']
+const THEMES = ['Boho', 'Pastel', 'Botanical', 'Classic Gender-Reveal']
 
 const THEME_CARDS = [
-  { name: 'Boho', desc: 'Macramé, dried florals, earthy tones, rattan accents, dreamcatchers.', colour: 'from-[#D7CCC8]/40 to-[#BCAAA4]/20' },
-  { name: 'Pastel', desc: 'Soft pinks, blues, lavenders, balloon arches, candy bar.', colour: 'from-[#F8BBD0]/30 to-[#E1BEE7]/20' },
-  { name: 'Botanical', desc: 'Greenery walls, eucalyptus, white flowers, natural wood.', colour: 'from-[#C8E6C9]/40 to-[#A5D6A7]/20' },
-  { name: 'Classic Gender-Reveal', desc: 'Pink vs blue reveal moment, countdown signage, surprise cake.', colour: 'from-[#BBDEFB]/30 to-[#F8BBD0]/30' },
+  { name: 'Boho', desc: 'Macramé, dried florals, rattan accents, dreamcatchers.', colour: 'from-[#D7CCC8]/40 to-[#BCAAA4]/20' },
+  { name: 'Pastel', desc: 'Balloon arches, candy bar, soft pinks, blues, lavenders.', colour: 'from-[#F8BBD0]/30 to-[#E1BEE7]/20' },
+  { name: 'Botanical', desc: 'Greenery, eucalyptus, white flowers, natural wood.', colour: 'from-[#C8E6C9]/40 to-[#A5D6A7]/20' },
+  { name: 'Classic Gender-Reveal', desc: 'Pink-vs-blue reveal, countdown signage, surprise cake or balloon-pop moment.', colour: 'from-[#BBDEFB]/30 to-[#F8BBD0]/30' },
 ]
 
 const DECOR_DETAILS = [
@@ -69,9 +97,9 @@ const DECOR_DETAILS = [
 ]
 
 const MOCKTAIL_BAR = [
-  { name: 'Tropical Sunrise', desc: 'Mango, passionfruit, and coconut cream. Vibrant and refreshing.' },
-  { name: 'Berry Bliss', desc: 'Mixed berries, lime, and sparkling water. Tart and beautiful.' },
-  { name: 'Cucumber Mint Cooler', desc: 'Fresh cucumber, mint, and elderflower. Light and elegant.' },
+  { name: 'Tropical Sunrise', desc: 'Mango, passionfruit, coconut cream. Vibrant and refreshing.' },
+  { name: 'Berry Bliss', desc: 'Mixed berries, lime, sparkling water. Tart and beautiful.' },
+  { name: 'Cucumber Mint Cooler', desc: 'Cucumber, mint, elderflower. Light and elegant.' },
 ]
 
 const REAL_BABY_SHOWERS = [
@@ -82,8 +110,8 @@ const REAL_BABY_SHOWERS = [
 ]
 
 const ADDONS = [
-  { icon: Camera, title: 'Photographer Extended', price: '+IDR 3.6M (3h)' },
-  { icon: Music, title: 'Live Acoustic Guitarist', price: '+IDR 2.4M (1h)' },
+  { icon: Camera, title: 'Photographer (extended, 3h)', price: '+IDR 3.6M' },
+  { icon: Music, title: 'Live Acoustic Guitarist (1h)', price: '+IDR 2.4M' },
   { icon: Flower2, title: 'Premium Florals + Arch', price: '+IDR 3M – 6M' },
   { icon: Heart, title: 'Maternity Photoshoot', price: '+IDR 3.5M' },
   { icon: Baby, title: 'Henna Artist', price: '+IDR 1.5M' },
@@ -91,21 +119,21 @@ const ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'Is the mocktail bar truly alcohol-free?', a: 'Yes — mocktail bar is fully alcohol-free by default. We can add a separate alcohol bar for non-expecting guests at +IDR 350K/pp.' },
-  { q: 'Can you do a gender-reveal moment?', a: 'Yes — we can coordinate a gender-reveal cake (pink/blue inside) or a balloon-pop reveal. Tell us at booking.' },
-  { q: 'Is one hour of photography enough?', a: 'For intimate baby showers (10–15 guests) one hour captures the key moments. For larger showers, recommend 2–3 hours.' },
-  { q: 'Can the mother-to-be be involved in menu choice?', a: 'Yes — we coordinate dietary preferences with the mother-to-be specifically (avoiding pregnancy-cautioned foods).' },
-  { q: 'What\'s the typical group size?', a: '10–30. Most baby showers we cater are 15–22 guests.' },
-  { q: 'How far in advance?', a: '10–14 days standard. 21 days for full custom decor / cake design.' },
-  { q: 'Can it be evening instead of brunch?', a: 'Yes — evening baby shower with cocktail-style menu available; same price band.' },
-  { q: 'Do you handle the surprise factor?', a: 'Yes — we coordinate discreetly with the host. Suggest the location of the brunch reveal.' },
+  { q: 'How much does a baby shower in Bali cost?', a: 'From IDR 350K++/person for large receptions (50+ guests) to IDR 750K++/person for intimate brunches (10–15) and IDR 1.1M++/person for the full styled shower (16–30). "++" adds 11% government tax + 10% service charge. Example: 20 guests, fully styled, ~IDR 26.6M all-in.' },
+  { q: 'What\'s the minimum and typical group size?', a: 'Minimum 10 guests for the brunch format; most showers we cater are 15–22 guests; the Grand format scales to 50+.' },
+  { q: 'Is the food really pregnancy-safe?', a: 'Yes — it\'s the default, not an option. Freshly cooked proteins, pasteurised dairy, no raw fish or unpasteurised cheese, managed buffet times, and a menu briefed around the mother-to-be\'s specific needs.' },
+  { q: 'Can guests who drink alcohol be served too?', a: 'Yes. The mocktail bar is alcohol-free by default; a separate alcohol bar for other guests can be added at +IDR 350K per person, positioned away from the main station.' },
+  { q: 'Do we need the villa\'s permission?', a: 'A daytime brunch is low-impact, but we still confirm house rules with your villa manager — guest numbers, decor attachments, and any banjar (community) notification the property requires. We handle that coordination for you.' },
+  { q: 'Can you do a gender reveal or a surprise shower?', a: 'Both. Gender-reveal cakes (coloured centre) and balloon-pop reveals are planned at booking, and surprise showers are coordinated discreetly with one host — including where the reveal moment should happen.' },
+  { q: 'What if it rains?', a: 'Daytime showers move easily: we plan a covered terrace or indoor fallback with the same styling and menu, so the grazing table and mocktail bar simply relocate.' },
+  { q: 'How far ahead should we book, and how does payment work?', a: '10–14 days is standard; allow 21 days for full custom decor and cake design. A 50% deposit confirms your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
 ]
 
 const SAFETY_CHECKS = [
-  'We avoid raw fish, unpasteurised cheeses, deli-style cold cuts, and anything that is safer replaced with fully cooked alternatives.',
-  'Proteins are served freshly cooked, pasteurised ingredients are prioritised, and buffet exposure times are carefully managed.',
-  'We can build mocktail menus and lighter brunch dishes that still feel celebratory without leaning on risky ingredients.',
-  'If the mother-to-be has aversions, cravings, gestational dietary needs, or doctor-advised restrictions, we brief around those specifically.',
+  'Freshly cooked proteins and pasteurised dairy as standard — no raw fish, no unpasteurised cheeses, no deli-style cold cuts.',
+  'Lighter brunch dishes, warm pastries, seasonal fruit and safe dessert options that still feel celebratory.',
+  'Carefully managed buffet exposure times, so food sitting out in Bali heat stays safe.',
+  'Personal briefing around aversions, cravings, gestational dietary needs or doctor-advised restrictions — tell us and the menu bends around her.',
 ]
 
 export default function EventsBabyShowersPage() {
@@ -128,32 +156,14 @@ export default function EventsBabyShowersPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Baby Shower Bali Villa | Brunch & Catering — myCHEF"
-        description="Baby shower catering in Bali for villa brunches, grazing tables & plated lunches. Mocktail bar, elegant setup & service staff included. WhatsApp us."
+        title="Baby Shower Catering Bali | Styled Villa Brunches | myCHEF"
+        description="Baby shower catering in Bali: pregnancy-safe brunches, high tea, grazing tables, mocktail bars & themed decor for villa celebrations. WhatsApp myCHEF."
         canonical={`${SITE}/events/baby-showers`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-baby-showers.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Baby Shower Catering Bali',
-            description: 'myCHEF.id provides baby shower catering in Bali with brunch menus, grazing tables, mocktails, and elegant villa styling. We coordinate service, setup, and cleanup for relaxed celebrations at private villas and venues.',
-            url: `${SITE}/events/baby-showers`,
-            lowPrice: '750000',
-            highPrice: '1100000',
-            unitText: 'per person',
-          }),
+          BABY_SHOWER_SERVICE_SCHEMA,
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Plan a Baby Shower in Bali',
-            description: 'Plan a beautiful baby shower in your Bali villa in 4 easy steps.',
-            totalTime: 'PT20M',
-            steps: [
-              { name: 'Choose your shower style', text: 'Select from brunch, high tea, or grazing table based on your guest count and theme.' },
-              { name: 'Share shower details', text: 'Send your date, villa location, guest count, and any dietary needs via WhatsApp.' },
-              { name: 'Approve the menu and setup', text: 'We design a custom menu with mocktails, pastel decor, and gift table styling within 1 hour.' },
-              { name: 'Celebrate the new arrival', text: 'Chef and staff arrive early with everything. You enjoy the shower while we handle service and cleanup.' },
-            ],
-          }),
-          breadcrumbSchema('Baby Shower Catering Bali', `${SITE}/events/baby-showers`, 'Events', `${SITE}/events`),
+          breadcrumbSchema('Baby Showers', `${SITE}/events/baby-showers`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -177,18 +187,21 @@ export default function EventsBabyShowersPage() {
             Baby Shower Catering in Bali — Brunch, Grazing & Garden Parties
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
-            Beautiful, stress-free villa showers with brunch spreads, grazing tables, pregnancy-safe food, mocktail bars, styling, and full cleanup handled by one team.
+            A baby shower should feel soft, beautiful and completely un-stressed — especially for the mother-to-be. myCHEF runs villa baby showers across Bali as one gentle operation: a pregnancy-safe brunch or grazing spread, a mocktail bar that feels like a treat, styling that's already perfect when guests arrive, and a team that resets the villa before anyone notices the party ended.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Calendar className="w-4 h-4" /> Book Baby Shower
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-baby-showers-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <MessageCircle className="w-4 h-4" /> Plan a Baby Shower
             </a>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-baby-showers-cta" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> WhatsApp Sofia
+            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <Calendar className="w-4 h-4" /> Book Baby Shower
             </a>
           </div>
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
-            From IDR 750K++/guest · Styling, mocktails, and cleanup included
+            Send your date, guest count and any pregnancy-safe menu notes · Reply within the hour
+          </p>
+          <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left mt-2">
+            All prices "++" — 11% government tax + 10% service charge added
           </p>
         </div>
       </section>
@@ -206,10 +219,13 @@ export default function EventsBabyShowersPage() {
                 We handle the food, the look, and the practical details so the host can stay present
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Baby showers are usually at their best when they feel soft and well-paced, not over-programmed. That means the food should be easy to enjoy, the room should already feel beautiful when guests arrive, and the mother-to-be should never be worrying about whether the mocktails are ready or the grazing table is still full. myCHEF handles the brunch service, pregnancy-safe menu planning, styling coordination, and cleanup as one operation so the whole event feels gentle instead of busy.
+                From a ten-person brunch for close friends to a 50+ guest garden reception, you get published per-person pricing, one point of contact, and a host who actually gets to enjoy the day.
+              </p>
+              <p className="text-[#4A4745] leading-relaxed mb-4">
+                All prices "++" — 11% government tax + 10% service charge added. Quotes show the all-in total upfront.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                We can build a small brunch for close family and friends, a garden-style shower with more guests, or a larger reception with grazing tables, mocktails, and gift-table styling. The point is always the same: keep the atmosphere warm, photogenic, and easy for everyone attending — especially the guest of honour.
+                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="text-[#2C5F7C] underline hover:text-[#C5A028]">Plan a Baby Shower — WhatsApp +62 896-7407-2020</a>. Send your date, guest count and any pregnancy-safe menu notes — we reply within the hour.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -221,9 +237,9 @@ export default function EventsBabyShowersPage() {
 
       <section className="py-20 md:py-28 bg-[#FAFAF8] baby-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 2 — Formats" title="Baby Shower Formats" subtitle="Smaller brunches, styled mid-size showers, and larger family gatherings — each with the right food and staffing level." />
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Baby Shower Formats & Prices" subtitle="Smaller brunches, styled mid-size showers, and larger family gatherings — each with the right food and staffing level." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            Shower formats are mostly about scale and service style. Intimate gatherings can feel more plated and personal. Mid-size showers benefit from a stronger grazing and mocktail setup. Larger celebrations need lighter per-person pricing, flexible food presentation, and an approach that can absorb family guests, gift moments, and photos without the room feeling crowded.
+            <strong>Group totals:</strong> 12 guests runs IDR 9M++ (~IDR 10.9M all-in). 20 guests at the Larger format runs IDR 22M++ (~IDR 26.6M all-in). 60 guests at the Grand format runs IDR 21M++ (~IDR 25.4M all-in). Most showers we cater are 15–22 guests — and an evening shower with a cocktail-style menu works at the same price band if brunch doesn't suit.
           </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[...FORMATS, GRAND_SHOWER].map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}
@@ -247,10 +263,10 @@ export default function EventsBabyShowersPage() {
                 The grazing table becomes the centrepiece when it is built to look generous and stay tidy
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Grazing tables work beautifully for baby showers because they are social, photogenic, and easy for guests to enjoy throughout the event. We design them with balance in mind: artisan cheeses that are pregnancy-safe, cured options when appropriate for non-pregnant guests, seasonal fruit, crackers, dips, fresh breads, pastries, and edible flowers that bring colour without turning the table into decoration only. The layout has to be full enough to feel celebratory but practical enough that guests can actually serve themselves without collapsing the display.
+                Grazing tables work beautifully for baby showers because they are social, photogenic, and easy for guests to enjoy throughout the event. We design them with balance in mind: pregnancy-safe cheeses and freshly cooked options, seasonal fruit, crackers, dips, fresh breads, pastries, and edible flowers that bring colour without turning the table into decoration only. The layout has to be full enough to feel celebratory but practical enough that guests can actually serve themselves without collapsing the display.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                For larger showers, the grazing table often becomes the visual anchor while hot items, desserts, and mocktails sit on supporting stations around it. That keeps the main table beautiful while still letting the room function properly for photos, games, and conversation.
+                For larger showers, the grazing table often becomes the visual anchor while hot items, desserts, and mocktails sit on supporting stations around it. For dedicated grazing-centrepiece events, see our <Link to="/catering/grazing-tables" className="text-[#2C5F7C] underline hover:text-[#C5A028]">grazing tables</Link> service.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -271,10 +287,10 @@ export default function EventsBabyShowersPage() {
                 Pregnancy-Safe Menu
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Pregnancy-safe by default, but still built to feel celebratory
+                Pregnancy-Safe by Default
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                Shower food should never leave the host second-guessing what is safe to eat. We build the menu from a pregnancy-safe starting point and then adapt for the rest of the guest list around that. That usually means freshly cooked proteins, pasteurised dairy, lighter brunch dishes, fresh fruit, warm pastries, safe dessert options, and an alcohol-free drinks programme that still feels like a treat rather than a compromise.
+                Shower food should never leave the guest of honour second-guessing what's on her plate. We build every shower menu from a pregnancy-safe starting point, then adapt for the rest of the guest list around it:
               </p>
               <div className="space-y-3">
                 {SAFETY_CHECKS.map((item) => (
@@ -297,10 +313,10 @@ export default function EventsBabyShowersPage() {
                 Mocktails & Drinks Bar
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                A drinks bar that feels festive without centring alcohol
+                The Mocktail Bar
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                Mocktails matter more than people expect at baby showers. They set the tone immediately and help the mother-to-be feel included in the celebratory part of the day. We design them with fresh fruit, herbs, sparkling elements, and clean presentation so they look just as good in hand as any cocktail bar would. For mixed guest groups, we can also keep a separate alcohol service away from the main mocktail station.
+                The mocktail bar matters more than people expect — it's what makes the day feel festive without centring alcohol. Ours is fully alcohol-free by default, built with fresh fruit, herbs and sparkling elements, presented like a proper cocktail bar. Signatures include the <strong>Tropical Sunrise</strong> (mango, passionfruit, coconut cream), <strong>Berry Bliss</strong> (mixed berries, lime, sparkling water) and <strong>Cucumber Mint Cooler</strong> (cucumber, mint, elderflower). For mixed groups we can run a separate alcohol bar away from the mocktail station at +IDR 350K per person.
               </p>
               <div className="space-y-4">
                 {MOCKTAIL_BAR.map((drink) => (
@@ -334,10 +350,10 @@ export default function EventsBabyShowersPage() {
                 Styling & Setup
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Decor, flowers, balloons, and the small details that make the room feel complete
+                Styling, Decor & Photo Moments
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                Styling for a baby shower should feel cohesive rather than crowded. We usually focus the visual energy on the dining table, welcome sign, backdrop area, and one or two colour moments that photograph beautifully. That approach keeps the villa elegant, leaves room for guests to move, and gives the host a room that already feels "done" before anyone arrives. Themes can be soft and romantic, botanical, boho, or more playful for gender-reveal-style events.
+                We concentrate the visual energy where it photographs best — the dining table, the welcome sign, one backdrop moment — so the villa feels elegant rather than crowded. Themes: <strong>Boho</strong> (macramé, dried florals, rattan), <strong>Pastel</strong> (balloon arches, candy bar), <strong>Botanical</strong> (greenery, eucalyptus, white flowers) and <strong>Classic Gender-Reveal</strong> (pink-vs-blue reveal, countdown signage, surprise cake — we coordinate a reveal cake with a coloured centre or a balloon-pop moment). Add florals, signage and stationery, full table styling and a photo backdrop with props to any format.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 {THEME_CARDS.map((theme) => (
@@ -401,10 +417,10 @@ export default function EventsBabyShowersPage() {
                 Add-Ons
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Add the extras that matter most to the memory of the day
+                Add-Ons That Matter
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                For most showers, add-ons are about memory and atmosphere rather than scale. A longer photographer booking, premium florals, or a maternity shoot can make sense because they preserve the day. Live music only works if the host wants a stronger social mood. We help choose extras that support the shower rather than pulling attention away from it.
+                For most showers, the extras are about preserving the day rather than scaling it. Extra <Link to="/in-villa-service" className="text-[#2C5F7C] underline hover:text-[#C5A028]">service staff</Link> are available from IDR 250K/hour. For bigger grazing-centrepiece events, see our dedicated <Link to="/catering/grazing-tables" className="text-[#2C5F7C] underline hover:text-[#C5A028]">grazing tables</Link> service.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {ADDONS.map((addon) => (
@@ -443,7 +459,7 @@ export default function EventsBabyShowersPage() {
 
       <section className="py-20 md:py-28 bg-white baby-reveal">
         <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Questions" title="Baby Shower FAQ" subtitle="Everything you need to know about baby shower brunches with myCHEF." />
+          <SectionHeader eyebrow="Questions" title="Baby Shower Bali — FAQ" subtitle="Everything you need to know about baby shower brunches with myCHEF." />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
@@ -455,11 +471,10 @@ export default function EventsBabyShowersPage() {
           <h2 className="text-2xl font-semibold text-[#1A1916] mb-8">Explore More myCHEF Services</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { to: '/catering/grazing-tables', label: 'grazing tables' },
-              { to: '/events/birthdays', label: 'birthday catering' },
-              { to: '/events/villa-parties', label: 'villa party catering' },
-              { to: '/in-villa-service', label: 'service staff' },
-              { to: '/catering', label: 'all catering services' }
+              { to: '/events/birthdays', label: 'Birthday Catering' },
+              { to: '/events/villa-parties', label: 'Villa Party Catering' },
+              { to: '/catering/grazing-tables', label: 'Grazing Tables' },
+              { to: '/in-villa-service', label: 'Service Staff' }
             ].map((link) => (
               <Link
                 key={link.to}
@@ -470,6 +485,13 @@ export default function EventsBabyShowersPage() {
               </Link>
             ))}
           </div>
+          <p className="text-[#4A4745] text-center max-w-3xl mx-auto mt-8 leading-relaxed">
+            See our <Link to="/catering/grazing-tables" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">grazing tables</Link>,{' '}
+            <Link to="/events/birthdays" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">birthday catering</Link>,{' '}
+            <Link to="/events/villa-parties" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa party catering</Link>,{' '}
+            <Link to="/in-villa-service" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">service staff</Link>, and{' '}
+            <Link to="/catering" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">all catering services</Link>.
+          </p>
         </div>
       </section>
 
@@ -477,7 +499,7 @@ export default function EventsBabyShowersPage() {
         <div className="max-w-3xl mx-auto px-6">
           <BookingFormCatering
             title="Book Your Baby Shower"
-            subtitle="Tell us your guest count, preferred style, and any pregnancy-safe menu notes. We will shape the shower around those details."
+            subtitle="Tell us your guest count, preferred style and any pregnancy-safe menu notes — including cravings, aversions and surprises — and we'll shape the shower around them."
             packageOptions={['Intimate Baby Shower Brunch', 'Larger Baby Shower', 'Grand Shower Celebration']}
             fields={[
               { name: 'format', label: 'Format', type: 'select', required: true },

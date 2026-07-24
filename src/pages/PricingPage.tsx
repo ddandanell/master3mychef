@@ -299,14 +299,15 @@ const SECTIONS = [
     subtitle: 'Our Promise',
     title: 'Transparent Pricing. No Hidden Fees. No Markup on Groceries.',
     body: `<p>We believe pricing should be clear before you commit. No surprises, no hidden charges, no inflated grocery bills. Here is exactly how our pricing works:</p>
-    <p><strong>Fine Dining (6+ guests):</strong> Per-person menu pricing with ingredients included. Choose between two experience levels:</p>
+    <p><strong>Fine Dining (6+ guests):</strong> Per-person menu pricing with ingredients included. Choose between two experience levels: <a href="/fine-dining">explore fine dining menus</a> or <a href="/fine-dining/tasting-menu">see the tasting menus</a>.</p>
     <p><strong>Full-Service Experience:</strong> We bring all plates, glassware, cutlery, linen, and decorations. Complete table setting and service staff included. From IDR 2,200,000++ per guest.</p>
-    <p><strong>Kitchen-Service Experience:</strong> Our chef uses your villa's kitchen, plates, and glassware. Same food, same chef, more intimate atmosphere. From IDR 1,750,000++ per guest.</p>
+    <p><strong>Kitchen-Service Experience:</strong> Our chef uses your villa's kitchen, plates, and glassware. Same food, same chef, more intimate atmosphere. From IDR 1,750,000++ per guest. See <a href="/michelin-private-chef-bali-prices">Michelin-tier pricing explained</a> for premium chef-led experiences.</p>
     <p>Service charge (10%) and government tax (11%) are added to all prices. Wine pairing is optional at IDR 850,000 per guest.</p>
-    <p><strong>Villa Chef / Catering (5+ guests):</strong> Chef hourly rate plus groceries at cost. You see every receipt. We do not markup ingredients. Pricing depends on service style — from IDR 700,000 per person for drop-off catering to IDR 800,000 per person for plated service.</p>
-    <p><strong>Events:</strong> Custom quotes based on guest count, menu complexity, staffing needs, and equipment. We deliver a detailed proposal within 24 hours.</p>
+    <p><strong>Villa Chef / Catering (5+ guests):</strong> Chef hourly rate plus groceries at cost. You see every receipt. We do not markup ingredients. Pricing depends on service style — from IDR 700,000 per person for drop-off catering to IDR 800,000 per person for plated service. Browse <a href="/catering">catering services</a> or <a href="/villa-chef">daily villa chef service</a> rates, and <a href="/hire-private-chef-bali-monthly">monthly & long-stay rates</a> for extended stays.</p>
+    <p><strong>Events:</strong> Custom quotes based on guest count, menu complexity, staffing needs, and equipment. We deliver a detailed proposal within 24 hours. See <a href="/events/weddings">wedding catering</a> pricing for villa receptions.</p>
     <p><strong>In-Villa Staffing:</strong> Per-shift pricing from IDR 250,000/hour. Waiters, butlers, bartenders, mixologists, and sommeliers available.</p>
-    <p><strong>Staffing & Placement:</strong> 48-hour placement for private chefs and villa staff. 30-day replacement guarantee. Contact us for pricing.</p>`,
+    <p><strong>Staffing & Placement:</strong> 48-hour placement for private chefs and villa staff. 30-day replacement guarantee. Contact us for pricing.</p>
+    <p>Still comparing? <a href="/blog/private-chef-cost-bali">read the editorial cost guide</a> or visit <a href="/faq">more pricing questions</a> for quick answers.</p>`,
     image: '/generated/mychef-catering-bali-catering-hero.webp',
     imageAlt: 'Plated private chef fine dining course served in a Bali villa',
   },

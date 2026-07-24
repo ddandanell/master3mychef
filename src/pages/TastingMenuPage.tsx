@@ -534,10 +534,13 @@ export default function TastingMenuPage() {
         <div className="max-w-[960px] mx-auto flex flex-wrap justify-center gap-x-8 gap-y-3">
           {[
             { label: 'Fine Dining Overview', href: '/fine-dining' },
+            { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali' },
             { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner' },
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
             { label: 'Our Menus', href: '/fine-dining/menus' },
             { label: 'Our Chefs', href: '/chefs' },
+            { label: 'Pricing', href: '/pricing' },
+            { label: 'Tasting Menu Guide', href: '/blog/tasting-menu-bali' },
           ].map((l) => (
             <Link key={l.href} to={l.href} className="text-white/[40%] text-sm hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               {l.label}

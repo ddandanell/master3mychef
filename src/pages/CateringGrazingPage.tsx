@@ -11,7 +11,6 @@ import SeoHead, {
   cateringBreadcrumbSchema,
   serviceWithAggregateOfferSchema,
   faqPageSchema,
-  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -36,6 +35,11 @@ const GOLD = '#C5A028'
 
 /* ═══════════════════════════════════════════════════════════════
    PACKAGES — Grazing Table Sizes
+
+   [BUSINESS CONFIRMATION REQUIRED] Grazing from-price (IDR 650K small
+   board, traceable to this URL's crawl) conflicts with /pricing's
+   'grazing from IDR 4,500,000' — sitewide price reconciliation pending
+   business decision.
    ═══════════════════════════════════════════════════════════════ */
 const PACKAGES = [
   {
@@ -147,13 +151,13 @@ const SETUP_STEPS = [
    FAQ — exactly 7 questions per blueprint
    ═══════════════════════════════════════════════════════════════ */
 const FAQS = [
-  { q: 'How long can a grazing table stay out?', a: 'Grazing tables are designed for 2–4 hours of service. We use ice packs beneath boards for cheese and replenish perishable items throughout your event. For events longer than 4 hours, we recommend a mid-event refresh.' },
-  { q: 'Do you provide the table?', a: 'We provide all boards, linens, serving ware, and styling props. You provide a sturdy table or surface at your venue. For villa events without a suitable table, we can arrange rental at cost.' },
-  { q: 'Can the grazing table be vegetarian?', a: 'Yes. Our vegetarian grazing table replaces cured meats with extra cheeses, marinated vegetables, dips, fruit, nuts, and premium crackers. It is just as visually stunning and satisfying.' },
-  { q: 'Can you do cheese only?', a: 'Absolutely. We offer a cheese-only grazing table with 6–10 artisan cheeses, honeycomb, quince paste, crackers, bread, nuts, and dried fruit — perfect for wine-focused events.' },
-  { q: 'What areas in Bali do you cover?', a: 'We serve all major Bali areas including Canggu, Seminyak, Berawa, Pererenan, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Tanah Lot, Kerobokan, Kuta, Legian, and Denpasar. Travel fees may apply outside Canggu/Seminyak.' },
-  { q: 'Is there a minimum guest count?', a: 'Our small grazing board serves 2–4 guests with no minimum. Medium tables start at 8 guests. Full event grazing tables have a 15-guest minimum. Wedding and corporate tables start at 30 guests.' },
-  { q: 'Can you add drinks to the grazing table?', a: 'Yes. We can arrange wine pairings, champagne, craft cocktails, fresh juices, and sparkling water as add-ons. Let us know your preference and we will include it in your quote.' },
+  { q: 'How much does a grazing table in Bali cost?', a: 'From IDR 650,000 for a small board (2–4 guests) and IDR 2,700,000 for a medium table (8–12). Event, wedding, and corporate tables run IDR 700,000 per person.' },
+  { q: 'How do I size a grazing table for my guest count?', a: 'As a pre-dinner spread, plan one tier below your headcount — guests are grazing, not dining. As the main food, size at full headcount and tell us; we\'ll adjust quantities honestly.' },
+  { q: 'Can you do vegan, gluten-free, or pork-free tables?', a: 'Yes — fully vegan tables, gluten-free crackers, pork-free charcuterie, and nut-free zones are all standard, with clear labelling.' },
+  { q: 'Do you deliver and set up at villas?', a: 'Yes — delivery, full styling, and setup across Bali, from Seminyak and Canggu to Ubud, Uluwatu, and Nusa Dua. Remote areas may carry a quoted travel fee.' },
+  { q: 'Is a grazing table enough for a wedding?', a: 'For cocktail hour, absolutely. As the only food for a full reception, we\'d honestly recommend pairing it with a dinner format — we\'ll build the stack in one quote.' },
+  { q: 'How far ahead should I book?', a: 'Three to seven days for most tables; two weeks or more for wedding-season dates. A 50% deposit confirms. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { q: 'Can you add hot food or staff?', a: 'Yes — hot canapés, live stations, waiters, and bartenders are all add-ons. That\'s the advantage of booking grazing through a full catering company.' },
 ]
 
 /* ═══════════════════════════════════════════════════════════════
@@ -183,34 +187,37 @@ export default function CateringGrazingPage() {
 
   const schemaFaq = FAQS.map(f => ({ question: f.q, answer: f.a }))
 
+  const grazingServiceSchema = serviceWithAggregateOfferSchema({
+    name: 'Grazing Tables Bali',
+    description: 'Styled grazing tables in Bali: artisan cheese, charcuterie, tropical fruit and dips for weddings, welcome drinks, villa events and corporate receptions, from 2 to 150 guests.',
+    url: PAGE_URL,
+    lowPrice: '650000',
+    highPrice: '2700000',
+    unitText: 'per table or per person',
+  }) as Record<string, unknown>
+
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Grazing Table Bali | Styled Spreads for Villa Events — myCHEF"
-        description="Grazing tables in Bali for weddings, birthdays & villa parties. Styled cheese, charcuterie & tropical spreads designed and delivered to your villa."
+        title="Grazing Table Bali | Styled Event Platters & Spreads"
+        description="Grazing tables in Bali: artisan cheese, charcuterie & fresh fruit spreads styled for welcome drinks, weddings & poolside events. WhatsApp myCHEF."
         canonical={PAGE_URL}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-grazing.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Grazing Tables Bali',
-            description: 'Styled grazing tables in Bali for villa parties, weddings, poolside events, and welcome receptions with cheese, charcuterie, fruit, and breads. myCHEF.id designs, delivers, and sets each table across Bali.',
-            url: PAGE_URL,
-            lowPrice: '300000',
-            highPrice: '2700000',
-            unitText: 'per person or per table',
-          }),
+          {
+            ...grazingServiceSchema,
+            serviceType: 'Grazing table & event platter catering',
+            provider: {
+              ...(grazingServiceSchema.provider as Record<string, unknown>),
+              telephone: '+62 896-7407-2020',
+            },
+            offers: {
+              ...(grazingServiceSchema.offers as Record<string, unknown>),
+              offerCount: '5',
+              description: 'Flat prices for small/medium tables; event, wedding and corporate tables IDR 700,000 per person; 11% government tax + 10% service charge additional',
+            },
+          },
           faqPageSchema(schemaFaq),
-          howToSchema({
-            name: 'How to Book a Grazing Table in Bali',
-            description: 'Book a stunning grazing table for your Bali event in 4 easy steps.',
-            totalTime: 'PT15M',
-            steps: [
-              { name: 'Choose your grazing table style', text: 'Select Full Event, Wedding, or Corporate Reception based on guest count and theme.' },
-              { name: 'Share event details', text: 'Send your date, venue, guest count, and any dietary needs via WhatsApp.' },
-              { name: 'Approve your design', text: 'We share a custom board layout with cheeses, charcuterie, fruits, and dips within 1 hour.' },
-              { name: 'Setup and enjoy', text: 'We arrive early to artfully arrange the grazing table at your venue. No cleanup needed.' },
-            ],
-          }),
           cateringBreadcrumbSchema('Grazing Tables Bali', PAGE_URL),
         ]}
       />
@@ -249,10 +256,10 @@ export default function CateringGrazingPage() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Grazing Tables Bali for Events, Villas, and Parties
+            Grazing Tables Bali — Styled Spreads for Events, Weddings &amp; Villas
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-2xl mx-auto">
-            Styled grazing tables with cheese, charcuterie, fruit, dips, bread, sweets, and event-ready presentation for relaxed, refined hosting.
+            A grazing table is the moment guests walk in and reach for their phones. Artisan cheeses, charcuterie, tropical fruit, dips, and edible flowers, styled across teak boards and linen — food as décor, and the easiest hosting format there is. These are the grazing tables Bali event hosts, wedding planners and villa guests reach for when they want photo-ready food without the formal service.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
@@ -269,7 +276,7 @@ export default function CateringGrazingPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
           </div>
-          <p className="text-white/[60%] text-sm">From IDR 650,000 · Vegan options · Bali-wide</p>
+          <p className="text-white/[60%] text-sm">From IDR 650,000 · 2–150 guests · Vegan options · Bali-wide delivery &amp; setup</p>
         </div>
       </section>
 
@@ -288,6 +295,9 @@ export default function CateringGrazingPage() {
                 title="Instant Visual Impact That Reduces Formal Service Pressure"
                 subtitle="Grazing tables are built for events where people want beautiful food without a heavy meal structure. They create an immediate focal point, encourage mingling, and eliminate the need for passed service or plated courses."
               />
+              <p className="text-[#4A4745] mb-6">
+                As part of our broader <Link to="/catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">catering services</Link>, grazing tables work for everything from villa welcomes to corporate receptions.
+              </p>
               <div className="grid grid-cols-2 gap-3">
                 {['Villa welcome food', 'Poolside events', 'Wedding cocktail hour', 'Birthday celebrations', 'Wine nights', 'Corporate receptions', 'Pre-dinner grazing', 'Photo-ready brunch'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
@@ -296,6 +306,9 @@ export default function CateringGrazingPage() {
                   </div>
                 ))}
               </div>
+              <p className="text-[#4A4745] text-sm mt-6">
+                Hosts often pair grazing with <Link to="/events/weddings" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">wedding catering</Link> for cocktail hour, add a <Link to="/catering/bbq-catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">BBQ night</Link> for heartier appetites, or choose <Link to="/catering/drop-off-catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">drop-off catering</Link> when they want fresh food without on-site staff.
+              </p>
             </div>
             <div className="rounded-2xl overflow-hidden">
               <OptimizedImage
@@ -491,7 +504,7 @@ export default function CateringGrazingPage() {
           </div>
           <div className="mt-8 p-6 rounded-2xl border border-[#E8E6E3] bg-white text-center">
             <p className="text-[#4A4745] text-sm">
-              <strong>Many events need both.</strong> Grazing tables work beautifully as a welcome display while canapés are passed during cocktails. We can design a combined package that gives you the best of both worlds.
+              <strong>Many events need both.</strong> Grazing tables work beautifully as a welcome display while canapés are passed during cocktails. For a full seated meal, pair grazing with our <Link to="/catering/plated-catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">plated dinner</Link> service. We can design a combined package — complete with a <Link to="/in-villa-service/bartenders" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">private bartender</Link> if you want drinks handled — that gives you the best of both worlds.
             </p>
           </div>
         </div>
@@ -637,12 +650,12 @@ export default function CateringGrazingPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Drop-Off Catering', href: '/catering/drop-off-catering', desc: 'Fresh food delivered to your villa.' },
-              { label: 'BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
-              { label: 'Buffet Catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },
-              { label: 'Plated Dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
-              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
-              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
+              { label: 'catering services', href: '/catering', desc: 'Browse full-service catering across Bali.' },
+              { label: 'plated dinner', href: '/catering/plated-catering', desc: 'Multi-course seated dinner service.' },
+              { label: 'BBQ night', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
+              { label: 'wedding catering', href: '/events/weddings', desc: 'Ceremony to reception catering.' },
+              { label: 'private bartender', href: '/in-villa-service/bartenders', desc: 'Cocktails, pours and bar staff.' },
+              { label: 'drop-off catering', href: '/catering/drop-off-catering', desc: 'Fresh food delivered, no staff needed.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>

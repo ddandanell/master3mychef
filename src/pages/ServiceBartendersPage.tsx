@@ -3,12 +3,8 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, Wine } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, {
-  breadcrumbSchema,
-  serviceWithOfferSchema,
-  faqPageSchema,
-  howToSchema,
-} from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
+import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -22,8 +18,56 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'bartender service in Bali', intent: 'availability and pricing' })
+
+const briefJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Private Bartender Hire Bali",
+      "serviceType": "Private bartender hire",
+      "provider": {
+        "@type": "Organization",
+        "name": "myCHEF",
+        "url": "https://mychef.id",
+        "telephone": "+62 896-7407-2020",
+        "email": "bali@mychef.id"
+      },
+      "areaServed": ["Seminyak", "Canggu", "Ubud", "Uluwatu", "Nusa Dua", "Jimbaran", "Sanur", "Bali"],
+      "description": "Hire a private bartender for your Bali villa party, wedding or event. Classic and signature cocktails, full bar setup, glassware, ice and garnish prep — from IDR 350,000 per hour, 3-hour minimum.",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "IDR",
+        "price": "350000",
+        "unitText": "per hour",
+        "description": "Private bartender, 3-hour minimum. Alcohol separate: BYO from shopping list or full sourcing at +15% service fee. Subject to 11% tax + 10% service charge."
+      },
+      "url": "https://mychef.id/in-villa-service/bartenders"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How much does a private bartender cost in Bali?", "acceptedAnswer": { "@type": "Answer", "text": "IDR 350,000 per hour with a 3-hour minimum, covering the bartender, full bar kit, glassware, ice and garnishes. Alcohol is separate — BYO from a shopping list or full sourcing at a 15% service fee. Rates are subject to 11% tax + 10% service charge." } },
+        { "@type": "Question", "name": "Is the alcohol included?", "acceptedAnswer": { "@type": "Answer", "text": "No — the hourly rate covers staff, equipment and setup. You buy from a precise shopping list or we source everything for a 15% service fee." } },
+        { "@type": "Question", "name": "Is the alcohol you source genuine?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We purchase only from licensed distributors with excise-stamped stock, and local spirits such as arak come only from licensed Balinese producers." } },
+        { "@type": "Question", "name": "What cocktails can your bartenders make?", "acceptedAnswer": { "@type": "Answer", "text": "All classics (Martini, Old Fashioned, Mojito, Margarita) plus signature cocktails designed for your event; premium bartenders offer molecular and flair techniques." } },
+        { "@type": "Question", "name": "Do you offer non-alcoholic options?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — mocktails, fresh juices, infused waters and zero-proof cocktails are standard." } },
+        { "@type": "Question", "name": "Can you do a themed bar?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Tiki, Prohibition, Tropical, Mediterranean and more, with menu, garnishes and presentation designed to match." } },
+        { "@type": "Question", "name": "What happens if we run low on alcohol?", "acceptedAnswer": { "@type": "Answer", "text": "We monitor stock throughout service and alert you early; for remote villas we recommend a 20% buffer on initial purchases." } },
+        { "@type": "Question", "name": "How far in advance should I book, and which areas do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "3–7 days standard; 2–4 weeks for premium peak-season events; same-day often possible. All Bali covered, with a modest travel fee for remote areas quoted upfront." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mychef.id" },
+        { "@type": "ListItem", "position": 2, "name": "In-Villa Service", "item": "https://mychef.id/in-villa-service" },
+        { "@type": "ListItem", "position": 3, "name": "Bartenders", "item": "https://mychef.id/in-villa-service/bartenders" }
+      ]
+    }
+  ]
+}
 
 const PRICING_TIERS = [
   {
@@ -55,18 +99,19 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'Do I need to buy the alcohol?', a: 'Yes. We provide a detailed shopping list based on your cocktail menu. You purchase the alcohol — we bring everything else: equipment, glassware, ice, garnishes, and expertise. Alternatively, we can source everything for a 15% service fee.' },
-  { q: 'What cocktails can you make?', a: 'Our bartenders are trained in classics (Martini, Old Fashioned, Mojito, Margarita) and can create signature cocktails matched to your event theme. Premium bartenders offer molecular and flair techniques.' },
-  { q: 'How many bartenders do I need?', a: 'One bartender per 30 guests for cocktail service, or one per 50 guests for beer and wine only. For high-volume events, we recommend a bar team of two.' },
-  { q: 'Do you provide non-alcoholic options?', a: 'Absolutely. Mocktails, fresh juices, infused waters, and zero-proof cocktails are available and increasingly popular.' },
-  { q: 'What areas do you cover?', a: 'All Bali areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding regions.' },
-  { q: 'How far in advance should I book?', a: '3–7 days for standard service. 2–4 weeks for premium events during peak season.' },
-  { q: 'Can you do themed bars?', a: 'Yes. Tiki, Prohibition, Tropical, Mediterranean — we design the menu, garnishes, and presentation to match your theme.' },
-  { q: 'What happens if we run out of alcohol?', a: 'We monitor stock throughout service and alert you before running low. For remote villas, we recommend a 20% buffer on initial purchases.' },
+  { q: "How much does a private bartender cost in Bali?", a: "IDR 350,000 per hour with a 3-hour minimum, covering the bartender, full bar kit, glassware, ice and garnishes. Alcohol is separate — bring your own from our shopping list, or we source everything for a 15% service fee. Rates are ++ (11% tax + 10% service)." },
+  { q: "Is the alcohol included?", a: "Not in the hourly rate — this keeps pricing fair, since you only pay for the bottles you actually want. We provide an exact shopping list, or source certified, licensed-distributor stock for you." },
+  { q: "Is the alcohol you source genuine?", a: "Yes. We purchase only from licensed distributors with excise-stamped stock, and local spirits such as arak come only from licensed Balinese producers. Bali's counterfeit spirits market is real — sourcing is the one place never to cut corners." },
+  { q: "What cocktails can your bartenders make?", a: "All the classics — Martini, Old Fashioned, Mojito, Margarita — plus signature cocktails designed for your event. Premium bartenders offer molecular and flair techniques." },
+  { q: "Do you offer non-alcoholic options?", a: "Absolutely. Mocktails, fresh juices, infused waters and zero-proof cocktails are standard, and increasingly popular." },
+  { q: "Can you do a themed bar?", a: "Yes — Tiki, Prohibition, Tropical, Mediterranean and more. We design the menu, garnishes and presentation to match." },
+  { q: "What happens if we run low on alcohol?", a: "We monitor stock through service and alert you early. For remote villas we recommend a 20% buffer on initial purchases." },
+  { q: "How far in advance should I book, and which areas do you cover?", a: "3–7 days for standard service; 2–4 weeks for premium events in peak season. Same-day bookings are often possible. We cover all of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and beyond; remote areas may carry a modest travel fee." },
 ]
 
 export default function ServiceBartendersPage() {
   const ref = useRef<HTMLDivElement>(null)
+  const pageMeta = getPageMeta('in-villa-service-bartenders')
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -81,33 +126,11 @@ export default function ServiceBartendersPage() {
   return (
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Bartender Hire Bali | Villa Cocktail Service — myCHEF"
-        description="Hire a bartender in Bali for villa parties & dinners. Cocktails, glassware, ice & garnish prep included. From IDR 350K/hour. WhatsApp to book yours."
-        canonical={`${SITE}/in-villa-service/bartenders`}
-        ogImage={`${SITE}/generated/mychef-service-bali-hero-bartenders.webp`}
-        jsonLd={[
-          serviceWithOfferSchema({
-            name: 'Bartender Hire Bali',
-            description: 'myCHEF.id provides professional bartender hire in Bali for villa dinners, weddings, and private parties. We handle cocktail service, bar setup, glassware, and smooth event execution from first pour to last call.',
-            url: `${SITE}/in-villa-service/bartenders`,
-            price: '350000',
-            unitText: 'per hour',
-          }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('Bartender Hire Bali', `${SITE}/in-villa-service/bartenders`, 'In-Villa Service', `${SITE}/in-villa-service`),
-          howToSchema({
-            name: 'How to Hire a Bartender in Bali',
-            description: 'Book a professional bartender for your Bali villa party or event in 5 easy steps.',
-            totalTime: 'PT15M',
-            steps: [
-              { name: 'Share event details', text: 'Send your date, guest count, venue, and drink preferences via WhatsApp.' },
-              { name: 'Menu design', text: 'We create a custom cocktail menu matched to your theme and guest profile.' },
-              { name: 'Receive shopping list', text: 'We send a detailed spirits, mixers, and garnish list. You buy or we source for a 15% fee.' },
-              { name: 'Setup and service', text: 'Bartender arrives 1 hour early to build the bar. Professional service until last call.' },
-              { name: 'Breakdown', text: 'Bar packed, glassware cleaned, and space restored to original condition.' },
-            ],
-          }),
-        ]}
+        title={pageMeta.title}
+        description={pageMeta.description}
+        canonical={pageMeta.canonical}
+        ogImage={pageMeta.ogImage}
+        jsonLd={briefJsonLd}
       />
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">
@@ -128,11 +151,10 @@ export default function ServiceBartendersPage() {
     ]} theme="dark" className="px-0 pt-0 pb-8" />
     <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Bartender Hire in Bali
+            Private Bartender Hire for Villas &amp; Events in Bali
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Professional bartenders for your villa party, wedding, or event.
-            Classic cocktails, signature drinks, full bar setup. From IDR 350,000 per hour (minimum 3 hours).
+            A professional bartender at your villa — classic cocktails, signature serves, full bar setup and complete breakdown. From IDR 350,000 per hour, 3-hour minimum, for villa parties, weddings, sundowners and dinners across Bali.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-bartenders-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -199,6 +221,32 @@ export default function ServiceBartendersPage() {
                 <p className="text-sm text-[#4A4745]">{step.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeader eyebrow="Playbooks" title="Event Playbooks" subtitle="Three ways we run the bar, matched to your occasion." />
+          <div className="space-y-10 mt-12">
+            <div>
+              <h3 className="font-playfair text-2xl text-[#1A1A1A] mb-3">The Villa Party (20–60 guests)</h3>
+              <p className="text-[#4A4745] leading-relaxed">
+                One or two bartenders, a themed menu (Tiki, Tropical, Prohibition, Mediterranean), mocktails running in parallel for non-drinkers and kids. Pair with <Link to="/in-villa-service/waiters" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">floor service waiters</Link> and it becomes a real party — see the <Link to="/experiences/private-cocktail-party" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">full cocktail party experience</Link>.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-playfair text-2xl text-[#1A1A1A] mb-3">The Wedding Bar (40–150 guests)</h3>
+              <p className="text-[#4A4745] leading-relaxed">
+                A two-bartender team, a signature cocktail named for the couple, beer and wine service through dinner, and a bar that stays composed at peak volume. We coordinate timing with your planner and catering team.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-playfair text-2xl text-[#1A1A1A] mb-3">The Dinner Cocktail Hour (6–14 guests)</h3>
+              <p className="text-[#4A4745] leading-relaxed">
+                One bartender for an aperitivo hour before a chef-led dinner — a Negroni on the terrace as the sun drops, then wine handed to the table. The natural companion to our <Link to="/fine-dining" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">chef-led fine dining</Link> experiences. For bespoke cocktail design beyond service, see our <Link to="/in-villa-service/mixology" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">mixologist programs</Link>.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -280,22 +328,34 @@ export default function ServiceBartendersPage() {
         <div className="max-w-[1000px] mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-[#4A4745] mb-3 font-semibold">Explore More Services</p>
           <h3 className="font-playfair text-3xl text-[#1A1A1A] mb-6">You might also need</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link to="/in-villa-service/mixology" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Mixology</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">mixologist for custom cocktail programs</h4>
               <p className="text-xs text-[#4A4745]">Go beyond service with signature cocktails and interactive masterclasses.</p>
             </Link>
-            <Link to="/in-villa-service/waiters" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Waiter Hire</h4>
-              <p className="text-xs text-[#4A4745]">Add smooth floor service for plated dinners, parties, and receptions.</p>
+            <Link to="/experiences/private-cocktail-party" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">full cocktail party experience</h4>
+              <p className="text-xs text-[#4A4745]">A dedicated cocktail party package with menu, bar, and service.</p>
+            </Link>
+            <Link to="/bar-services/temporary-bartender-staffing/" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">temporary bar staffing for venues</h4>
+              <p className="text-xs text-[#4A4745]">Bars, hotels, and event venues: vetted bartenders on demand.</p>
             </Link>
             <Link to="/in-villa-service" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">In-Villa Service</h4>
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">in-villa service hub</h4>
               <p className="text-xs text-[#4A4745]">Browse the full staffing hub for drinks, dining, and guest-facing support.</p>
             </Link>
-            <Link to="/events" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">Events</h4>
+            <Link to="/in-villa-service/waiters" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">floor service waiters</h4>
+              <p className="text-xs text-[#4A4745]">Add smooth floor service for plated dinners, parties, and receptions.</p>
+            </Link>
+            <Link to="/events/villa-parties" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">villa party catering</h4>
               <p className="text-xs text-[#4A4745]">Plan the full event experience around your bar concept and guest count.</p>
+            </Link>
+            <Link to="/fine-dining" className="rounded-xl border border-[#C5A028]/20 bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028]/40 hover:bg-[#C5A028]/5 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+              <h4 className="font-semibold text-sm mb-1 text-[#1A1A1A]">chef-led dinners with cocktail hour</h4>
+              <p className="text-xs text-[#4A4745]">Pair your bartender with a private chef-led dinner.</p>
             </Link>
           </div>
           <p className="mt-8 text-sm text-[#4A4745]">
@@ -317,10 +377,9 @@ export default function ServiceBartendersPage() {
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="font-playfair text-3xl md:text-5xl text-white mb-6">Book Your Bartender</h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Tell us your event details and we will design the perfect bar experience.
-            Reply within 2 hours.
+            From a sunset dinner party in Uluwatu to a 100-person wedding in Canggu, myCHEF matches you with the right bartender for your event size, style and budget — priced in IDR, confirmed in writing, backed by a replacement guarantee.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-bartenders-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
@@ -328,6 +387,13 @@ export default function ServiceBartendersPage() {
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>
+          <p className="text-white/[70%] text-sm">
+            Venue, hotel or event company looking for shift cover? See our{' '}
+            <Link to="/bar-services/temporary-bartender-staffing/" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">temporary bar staffing for venues</Link>.
+            Planning the whole party? Explore{' '}
+            <Link to="/events/villa-parties" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa party catering</Link> and the{' '}
+            <Link to="/in-villa-service" className="font-medium text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">in-villa service hub</Link>.
+          </p>
         </div>
       </section>
 

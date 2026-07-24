@@ -14,7 +14,7 @@ const WA_KIDS = buildWhatsAppUrl({ serviceName: "Kids' Party Menus" })
 
 const FAQS = [
   {
-    q: 'How much do kids\' menus cost?',
+    q: "How much do kids' menus cost?",
     a: 'From IDR 250,000 to IDR 350,000 per child depending on the menu, including starter, main, dessert, the chef, ingredients and cleanup. Prices are subject to 11% government tax + 10% service charge.',
   },
   {
@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: 'Are the menus halal?',
-    a: 'Yes, all kids\' menus are halal adaptable. Tell us your requirements when booking and we source and prepare accordingly. (Any non-halal add-on, such as bacon, is always clearly marked.)',
+    a: "Yes, all kids' menus are halal adaptable. Tell us your requirements when booking and we source and prepare accordingly. (Any non-halal add-on, such as bacon, is always clearly marked.)",
   },
   {
     q: 'What ages are the menus designed for?',
@@ -44,12 +44,12 @@ const FAQS = [
 ]
 
 const RELATED_COLLECTIONS = [
-  { label: "Kids' Birthday Chef Party", href: '/experiences/kids-birthday-chef-party', price: 'Full party planning' },
-  { label: 'Family Cooking Class', href: '/experiences/private-cooking-class', price: 'Holiday activity' },
-  { label: 'Birthday Catering', href: '/events/birthdays', price: 'Parties & milestones' },
-  { label: 'Group Villa Dinners', href: '/group-villa-dinner-packages-bali', price: 'Kids table within groups' },
-  { label: 'BBQ Grill Menus', href: '/bbq-grill', price: 'From IDR 950K' },
-  { label: 'Transparent Pricing', href: '/pricing', price: 'See all rates' },
+  { label: 'kids', href: '/experiences/kids-birthday-chef-party', price: 'Full party planning' },
+  { label: 'family cooking class', href: '/experiences/private-cooking-class', price: 'Holiday activity' },
+  { label: 'birthday catering', href: '/events/birthdays', price: 'Parties & milestones' },
+  { label: 'group villa dinner packages', href: '/group-villa-dinner-packages-bali', price: 'Kids table within groups' },
+  { label: 'BBQ grill menus', href: '/bbq-grill', price: 'From IDR 950K' },
+  { label: 'transparent pricing', href: '/pricing', price: 'See all rates' },
 ]
 
 const WHY_PARENTS = [

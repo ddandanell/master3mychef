@@ -9,11 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  cateringServiceSchema,
-  offerSchema,
   faqPageSchema,
-  serviceWithOfferSchema,
-  howToSchema,
+  serviceWithAggregateOfferSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -42,17 +39,17 @@ const VILLA_PACKAGES = [
     price: 450000,
     people: '8 to 40 people',
     format: ['2 starters', '2 mains', '2 sides', 'Dessert', 'Soft drinks'],
-    bestFor: 'Family lunches, poolside dining, relaxed villa days',
+    bestFor: 'Family lunches, poolside days, relaxed villa afternoons',
   },
   {
     title: 'Villa Dinner',
     price: 650000,
     people: '8 to 60 people',
     format: ['3 starters', '2 mains', '3 sides', 'Dessert', 'Coffee & tea'],
-    bestFor: 'Birthdays, reunions, special occasions, group dinners',
+    bestFor: 'Birthdays, reunions, group dinners, celebration evenings',
   },
   {
-    title: 'Multi-Day Villa Catering',
+    title: 'Multi-Day Meal Plan',
     price: 550000,
     people: '8 to 200 people',
     format: ['Breakfast', 'Lunch', 'Dinner', 'Snacks', 'Full service team'],
@@ -126,19 +123,47 @@ const FAMILY_COVERAGE_OPTIONS = [
 ]
 
 const FAQS = [
-  { q: 'Can you cook inside my villa kitchen?', a: 'Yes. Our chefs are experienced in working with villa kitchens of all sizes. We bring any specialized equipment needed. If the kitchen is basic, we adapt the menu accordingly.' },
-  { q: 'Do you bring your own equipment?', a: 'We bring chef knives, portable burners, grills, chafing dishes, and serving equipment. Most villas have standard cookware — we use what is there and supplement as needed.' },
-  { q: 'How many guests can you cater for?', a: 'We cater villa groups from 8 to 200 guests. For groups over 60, we bring additional chefs and a larger service team.' },
-  { q: 'Can we customize the menu?', a: 'Absolutely. Every menu is designed for your group. Choose cuisine style, dishes, spice level, and dietary needs. Nothing is off-the-shelf.' },
-  { q: 'Do you handle dietary restrictions?', a: 'Yes — vegetarian, vegan, gluten-free, halal-friendly, allergies, children\'s menus, and low-spice options. We accommodate all needs at no extra charge.' },
-  { q: 'Do you clean up after the meal?', a: 'Full cleanup is included. Kitchen, dishes, surfaces, and dining area. You relax. We leave the villa as we found it.' },
-  { q: 'What areas in Bali do you serve?', a: 'All major villa areas: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Pererenan, Berawa, and surrounding regions.' },
-  { q: 'How far in advance should I book?', a: 'For villa dinners, 3–7 days is ideal. For multi-day catering or large groups, 2–4 weeks helps us assign the best chef.' },
-  { q: 'Can we book only key meals instead of full service every day?', a: 'Yes. Many groups use us for dinner only, breakfast + dinner, or a few high-impact days during a longer stay. We can scope the service around your actual villa schedule instead of forcing full-day coverage daily.' },
-  { q: 'Can you work to a grocery budget?', a: 'Yes. If you have a target grocery spend, tell us upfront and we will build the menu around it. That usually means balancing one or two premium meals with lighter breakfast or family-style service on other days.' },
-  { q: 'Can we add a bartender or waiters?', a: 'Yes. Bartenders, cocktail packages, waiters, and table styling are all available as add-ons. Ask when you book.' },
-  { q: 'Is grocery shopping included?', a: 'We shop for fresh ingredients and bill groceries at cost — no markup. You see every receipt.' },
+  { q: 'How much does villa catering in Bali cost?', a: 'From IDR 450,000++ per person for lunches, IDR 650,000++ for dinners, and IDR 550,000++ per person for multi-day meal plans. ++ adds 11% government tax and 10% service charge; your quote shows the all-in total.' },
+  { q: 'What\'s the minimum group size?', a: 'Eight guests for most packages. Smaller groups are usually better served by a private chef dinner — ask us and we\'ll point you to the right option.' },
+  { q: 'Are groceries included?', a: 'Normal groceries are included in your package; premium upgrades (lobster, Wagyu, oysters, extra live stations) are quoted separately with your approval. On private-chef-style arrangements, groceries can also be billed at cost with receipts.' },
+  { q: 'What does our villa kitchen need?', a: 'A working stove, fridge, and sink — most villas qualify. We bring specialised equipment, and if anything is missing, we arrange it. We need access 2–3 hours before meal time.' },
+  { q: 'Can you cater different dietary needs across a multi-day stay?', a: 'Yes — dietary requirements are mapped per guest at booking and applied across every meal of the plan, with separate prep where allergies require it.' },
+  { q: 'Do you travel to our area?', a: 'We cater across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, and beyond. Travel outside the Seminyak–Canggu core carries a quoted allowance — confirmed upfront.' },
+  { q: 'What\'s the deposit and cancellation policy?', a: 'A 50% deposit confirms your dates. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { q: 'Want privacy for a night instead?', a: 'Drop-off dinners deliver chef-prepared food with no staff in the villa — many groups mix both across a stay.' },
 ]
+
+const SCHEMA_FAQS = [
+  { question: 'How much does villa catering in Bali cost?', answer: 'From IDR 450,000++ per person for lunches, IDR 650,000++ for dinners, and IDR 550,000++ per person for multi-day meal plans. ++ adds 11% government tax and 10% service charge; quotes show the all-in total.' },
+  { question: 'What is the minimum group size for villa catering?', answer: 'Eight guests for most packages. Smaller groups are usually better served by a private chef dinner.' },
+  { question: 'Are groceries included in villa catering?', answer: 'Normal groceries are included in the package. Premium upgrades such as lobster, Wagyu or oysters are quoted separately with your approval.' },
+  { question: 'What does our villa kitchen need?', answer: 'A working stove, fridge and sink. We bring specialised equipment and arrange anything missing. Access is needed 2–3 hours before meal time.' },
+  { question: 'Can you handle dietary needs across a multi-day stay?', answer: 'Yes. Dietary requirements are mapped per guest at booking and applied across every meal of the plan, with separate prep where allergies require it.' },
+  { question: 'What is the deposit and cancellation policy?', answer: 'A 50% deposit confirms your dates. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+]
+
+const serviceSchemaBase = serviceWithAggregateOfferSchema({
+  name: 'Villa Catering Bali — Multi-Day Meal Plans',
+  description: 'In-villa catering for multi-day Bali stays: breakfast, lunch and dinner meal plans for families and groups of 8–200, with chef, service team and cleanup included.',
+  url: `${SITE}/catering/villa-catering`,
+  lowPrice: '450000',
+  highPrice: '650000',
+  priceCurrency: 'IDR',
+  unitText: 'per person',
+})
+
+const serviceSchema = {
+  ...serviceSchemaBase,
+  provider: {
+    ...(serviceSchemaBase.provider as Record<string, unknown>),
+    telephone: '+62 896-7407-2020',
+  },
+  offers: {
+    ...(serviceSchemaBase.offers as Record<string, unknown>),
+    offerCount: '3',
+    description: 'Per person ++ (11% government tax + 10% service charge); min. 8 guests',
+  },
+}
 
 export default function CateringVillaPage() {
   const ref = useRef<HTMLDivElement>(null)
@@ -156,35 +181,14 @@ export default function CateringVillaPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Villa Catering Bali | Daily Chef Service for Private Groups — myCHEF"
-        description="Villa catering in Bali for Seminyak, Canggu, Ubud & Uluwatu stays. Breakfast, lunch & dinner with chef setup, service & cleanup. WhatsApp for a quote."
+        title="Villa Catering Bali | Multi-Day Meal Plans for Groups"
+        description="In-villa catering for multi-day Bali stays: breakfast, lunch & dinner plans for families and groups of 8–200. From IDR 450K++/person. WhatsApp myCHEF."
         canonical={`${SITE}/catering/villa-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-villa.webp`}
         jsonLd={[
-          cateringServiceSchema('Villa Catering Bali', 'Villa catering in Bali for private lunches, dinners, birthdays, and multi-day stays with chef-led menus and on-site service. myCHEF.id brings the kitchen team, setup, service, and cleanup to your villa across Bali.', `${SITE}/catering/villa-catering`),
-          offerSchema('Villa Lunch', 450000, 'IDR', `${SITE}/catering/villa-catering`),
-          offerSchema('Villa Dinner', 650000, 'IDR', `${SITE}/catering/villa-catering`),
-          offerSchema('Multi-Day Villa Catering', 550000, 'IDR', `${SITE}/catering/villa-catering`),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+          serviceSchema,
           cateringBreadcrumbSchema('Villa Catering Bali', `${SITE}/catering/villa-catering`),
-          serviceWithOfferSchema({
-            name: 'Villa Catering Bali',
-            description: 'Villa catering in Bali for private lunches, dinners, birthdays, and multi-day stays with chef-led menus and on-site service. Setup, service, and cleanup included.',
-            url: `${SITE}/catering/villa-catering`,
-            price: '350000',
-            unitText: 'per person',
-          }),
-          howToSchema({
-            name: 'How to Book Villa Catering in Bali',
-            description: 'Book private villa catering for your Bali stay in 4 easy steps.',
-            totalTime: 'PT15M',
-            steps: [
-              { name: 'Send villa details', text: 'Share your villa location, dates, guest count, and occasion via WhatsApp.' },
-              { name: 'Pick your format', text: 'Choose lunch, dinner, BBQ, buffet, plated, grazing, or multi-day catering.' },
-              { name: 'Approve the menu', text: 'We design a custom menu around your dietary needs and preferences. Nothing is locked until you say yes.' },
-              { name: 'Chef arrives and handles everything', text: 'Groceries, equipment, and staff come with us. Full prep, service, and kitchen cleanup included.' },
-            ],
-          }),
+          faqPageSchema(SCHEMA_FAQS),
         ]}
       />
 
@@ -213,21 +217,21 @@ export default function CateringVillaPage() {
             Chapter 1 — Villa Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Villa Catering Bali,<br />
-            <span className="italic">for Easy Lunches, Dinners, and Long Stays</span>
+            Villa Catering Bali —<br />
+            Multi-Day Meal Plans &amp; Group Stays
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            You stay by the pool. Your group eats well. We handle shopping, prep, service, and cleanup in your villa kitchen.
+            Breakfast before the surf. Lunch by the pool. A proper dinner without anyone driving anywhere. Villa catering in Bali means your group eats well every day of the stay — one team, one plan, one fixed per-person price.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 700,000/person · Chef + team included · Groceries at cost · Bali-wide
+            From IDR 450,000++/person · Groups of 8–200 · Chef, staff &amp; cleanup included
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-catering-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> Plan My Villa Meals
             </a>
-            <a href="#menu-styles" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              View Menu Styles
+            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              See Packages &amp; Prices
             </a>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
@@ -255,7 +259,7 @@ export default function CateringVillaPage() {
               { title: 'Wedding Parties', desc: 'Pre-wedding dinners, rehearsal meals, and post-wedding brunches for villa-staying guests.' },
               { title: 'Corporate Retreats', desc: 'Multi-day catering for offsites, team buildings, and executive dinners.' },
               { title: 'Holiday Renters', desc: 'Airbnb and villa rental guests who want a private chef experience during their stay.' },
-              { title: 'Villa Managers', desc: 'Concierge-level catering for your guests. White-label available for partners.' },
+              { title: 'Villa Managers', desc: <>Concierge-level catering for your guests. <Link to="/certified-partner" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa manager partnerships</Link> and white-label available.</> },
               { title: 'Retreat Hosts', desc: 'Yoga, wellness, and surf retreats needing consistent, healthy multi-day catering.' },
               { title: 'Celebrations', desc: 'Anniversaries, reunions, graduations — any reason to gather and eat well.' },
             ].map((item) => (
@@ -289,7 +293,7 @@ export default function CateringVillaPage() {
           </div>
           <div className="mt-8 text-center">
             <Link to="/catering/bbq-catering" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              Explore BBQ Catering <ArrowRight className="w-4 h-4" />
+              a BBQ night <ArrowRight className="w-4 h-4" />
             </Link>
             <span className="mx-4 text-[#E8E6E3]">|</span>
             <Link to="/catering/buffet" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
@@ -300,6 +304,9 @@ export default function CateringVillaPage() {
               Explore Plated Dinners <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+          <p className="mt-6 text-center text-sm text-[#4A4745]">
+            Browse individual formats via <Link to="/catering" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">all catering services</Link>.
+          </p>
         </div>
       </section>
 
@@ -325,6 +332,9 @@ export default function CateringVillaPage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-sm text-[#4A4745] text-center max-w-3xl mx-auto">
+            Most groups build a rhythm around the stay: arrival-night welcome dinner, dinner-only middle days, and a big night that can be a <Link to="/villa-bbq-catering-bali" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa BBQ party</Link> or <Link to="/catering/bbq-catering" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">a BBQ night</Link>. For a single big dinner, see our <Link to="/group-villa-dinner-packages-bali" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">group dinner packages</Link>. Staying a month or more? <Link to="/hire-private-chef-bali-monthly" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">long-stay chef hire</Link> may suit better. For nights when you want chef-prepared food without staff in the villa, try our <Link to="/catering/drop-off-catering" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">drop-off dinners</Link>.
+          </p>
           <div className="mt-10 bg-[#FAFAF8] rounded-2xl p-6 md:p-8 border border-[#E8E6E3]">
             <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>What You Need to Provide</h3>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -372,12 +382,12 @@ export default function CateringVillaPage() {
       </section>
 
       {/* ═══════ SECTION 6: PACKAGES + PRICING ═══════ */}
-      <section className="py-20 md:py-28 px-6">
+      <section id="packages" className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 6 — Packages"
             title="Villa Catering Packages"
-            subtitle="Clear pricing per person. Chef, service team, setup, and cleanup included. Groceries billed at cost."
+            subtitle="Prices are per person, ++ (11% government tax + 10% service charge). Chef, service team, setup, and cleanup included. Premium upgrades quoted separately."
           />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8 mt-10">
             {VILLA_PACKAGES.map((pkg) => (
@@ -401,6 +411,9 @@ export default function CateringVillaPage() {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-center text-sm text-[#4A4745] max-w-3xl mx-auto">
+            <strong>Worked example:</strong> 14 guests on the Villa Dinner package = IDR 9.1M ++ (≈ IDR 11.0M all-in). Every quote shows the all-in total before you commit. See our full <Link to="/pricing" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">pricing</Link> page for more detail.
+          </p>
           <TaxFooter className="mt-8" />
         </div>
       </section>

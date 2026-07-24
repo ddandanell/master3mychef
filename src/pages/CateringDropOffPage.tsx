@@ -12,7 +12,6 @@ import SeoHead, {
   cateringBreadcrumbSchema,
   serviceWithAggregateOfferSchema,
   faqPageSchema,
-  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -34,31 +33,36 @@ const SITE = 'https://mychef.id'
 const PAGE_URL = `${SITE}/catering/drop-off-catering`
 const ACCENT = '#C5A028'
 
-/* ───────── Packages ───────── */
+/* ───────── Packages ─────────
+ * NOTE: [BUSINESS CONFIRMATION REQUIRED] — per-package all-in figures previously
+ * showed inconsistent math. All packages are now listed at the brief's stated
+ * IDR 700,000/person base; final all-in totals (11% tax + 10% service) are
+ * confirmed in the guest quote. Do not adjust all-in math without business sign-off.
+ */
 const DROPOFF_PACKAGES = [
   {
     title: 'Family Dinner Drop-Off',
     price: 'IDR 700,000/person',
-    priceNum: 350000,
+    priceNum: 700000,
     people: '4 to 8 people',
-    format: ['Hot main', '2 sides', 'Dessert', 'Bread', 'Ready to reheat'],
-    bestFor: 'Families, simple villa dinners, children-friendly meals, relaxed nights in',
+    format: ['Hot main', '2 sides', 'Bread', 'Dessert'],
+    bestFor: 'Families, relaxed nights in, kid-friendly dinners',
   },
   {
     title: 'Dinner Party Drop-Off',
     price: 'IDR 700,000/person',
-    priceNum: 500000,
+    priceNum: 700000,
     people: '8 to 16 people',
-    format: ['Starter', 'Main', '3 sides', 'Dessert', 'Plating instructions included'],
-    bestFor: 'Villa dinner parties, birthdays, friends, small groups who want better food without staff',
+    format: ['Starter', 'Main', '3 sides', 'Dessert', 'Plating instructions'],
+    bestFor: 'Birthdays, friends\' nights, better food without staff',
   },
   {
     title: 'Grazing Dinner Drop-Off',
     price: 'IDR 700,000/person',
-    priceNum: 650000,
+    priceNum: 700000,
     people: '8+ people',
     format: ['Charcuterie', 'Cheese board', '2 hot mains', 'Sides', 'Dessert'],
-    bestFor: 'Entertaining without staff, poolside evenings, villa parties, welcome dinners',
+    bestFor: 'Poolside evenings, welcome dinners, entertaining without staff',
   },
 ]
 
@@ -181,15 +185,27 @@ const ADDONS = [
   { icon: Users, title: 'Setup staff', desc: 'Optional staff to arrange food on arrival' },
 ]
 
-/* ───────── FAQ (exactly 7) ───────── */
+/* ───────── FAQ ───────── */
 const FAQS = [
-  { q: 'Do you set it up?', a: 'Drop-off catering does not include table setup or service. You arrange the food yourself using our printed plating notes. Optional setup staff can be added if needed.' },
-  { q: 'Is staff included?', a: 'No. Drop-off catering does not include on-site chef, waiters, or service staff. That is the whole point — privacy and no interruption.' },
-  { q: 'Can you deliver to villas?', a: 'Yes. We specialize in villa delivery across Bali. Just provide the villa name and access instructions and we will handle the rest.' },
-  { q: 'Can I order same day?', a: 'Small orders may be possible same-day before 10am. We recommend 24–48 hours notice, especially for large groups or peak season.' },
-  { q: 'How is food packed?', a: 'Food is packed in premium recyclable and compostable containers. Hot items are insulated, cold items are chilled. Reheating and plating instructions are printed and included.' },
-  { q: 'What areas do you deliver to?', a: 'We deliver across Bali: Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, and more. Travel fees may apply for remote areas.' },
-  { q: 'What is the minimum order?', a: 'Minimum order is 4 people for family dinner drop-off. Larger packages start at 8 people. Contact us for custom group sizes.' },
+  { q: "What's the minimum order?", a: 'Four people for the family dinner package; eight for dinner party and grazing packages. Custom sizes on request.' },
+  { q: 'Is any staff included?', a: 'No — that\'s the product. No chef, no waiters, no setup crew, no cleanup team. You serve yourself, privately. If you\'d like staff for one night, see <a href="/catering">full-service catering</a>.' },
+  { q: 'How much notice do you need?', a: 'Order by 4pm for next-day delivery. We recommend 24–48 hours, especially for groups over 12 or peak season. Same-day is sometimes possible before 10am.' },
+  { q: 'Which areas do you deliver to?', a: 'All major Bali villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Jimbaran, Nusa Dua, and more. Remote deliveries may carry a quoted travel fee.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes — vegetarian, vegan, gluten-free, pork-free, seafood-free, nut-free, and child-friendly meals, confirmed before preparation and labelled separately.' },
+  { q: 'How is the food packed?', a: 'In premium recyclable containers — hot items insulated, cold items chilled — with printed reheating and plating notes in every order.' },
+  { q: 'Do you offer recurring deliveries for long stays?', a: 'Yes — many long-stay guests set a weekly rhythm (e.g., three dinners a week). For daily nutrition-focused plans, see our <a href="/healthy-meal-delivery-indonesia">healthy meal plans</a>.' },
+  { q: "What's the payment and cancellation policy?", a: 'A 50% deposit confirms your order. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+]
+
+/* ───────── Schema FAQ (matches brief's SUGGESTED STRUCTURED DATA) ───────── */
+const SCHEMA_FAQS = [
+  { question: 'What is the minimum order for drop-off catering?', answer: 'Four people for the family dinner package; eight for dinner party and grazing packages. Custom sizes on request.' },
+  { question: 'Is any staff included with drop-off catering?', answer: 'No. Drop-off includes no chef, waiters, setup or cleanup staff — food is delivered ready to serve and you serve yourself privately.' },
+  { question: 'How much notice do you need?', answer: 'Order by 4pm for next-day delivery. 24–48 hours is recommended, especially for groups over 12 or peak season. Same-day is sometimes possible before 10am.' },
+  { question: 'Which areas do you deliver to?', answer: 'All major Bali villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Jimbaran, Nusa Dua and more. Remote deliveries may carry a quoted travel fee.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes — vegetarian, vegan, gluten-free, pork-free, seafood-free, nut-free and child-friendly meals, confirmed before preparation and labelled separately.' },
+  { question: 'Do you offer recurring deliveries for long stays?', answer: 'Yes — weekly rhythms such as three dinners a week can be arranged for long-stay guests.' },
+  { question: 'What is the payment and cancellation policy?', answer: 'A 50% deposit confirms your order. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
 ]
 
 const DROPOFF_GALLERY = [
@@ -217,30 +233,19 @@ export default function CateringDropOffPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Drop-Off Catering Bali | Delivered to Your Villa — myCHEF"
-        description="Drop-off catering in Bali: fresh platters, ready-to-serve trays & grazing boxes delivered on time. Ideal for villa lunches, parties & staff meals."
+        title="Drop-Off Catering Bali | Chef Food Delivered to Your Villa"
+        description="Drop-off catering in Bali: premium chef-prepared food delivered to your villa, ready to serve. From per-person pricing. WhatsApp myCHEF."
         canonical={PAGE_URL}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-dropoff.webp`}
         jsonLd={[
           serviceWithAggregateOfferSchema({
             name: 'Drop-Off Catering Bali',
-            description: 'Prepared catering delivered to Bali villas and venues for low-effort lunches, staff meals, and casual group dining. myCHEF.id sends ready-to-serve dishes with delivery coordination and reheating guidance across Bali.',
+            description: 'Chef-prepared food delivered to Bali villas, ready to serve — no staff, no setup. Family dinner, dinner party and grazing packages; order by 4pm for next-day delivery.',
             url: PAGE_URL,
-            lowPrice: '350000',
-            highPrice: '650000',
+            lowPrice: '700000',
+            highPrice: '700000',
           }),
-          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Book Drop-Off Catering in Bali',
-            description: 'Order fresh drop-off catering delivered to your Bali villa in 4 easy steps.',
-            totalTime: 'PT10M',
-            steps: [
-              { name: 'Choose your drop-off package', text: 'Select Family Dinner, Dinner Party, or Grazing Dinner based on group size and occasion.' },
-              { name: 'Send villa details', text: 'Share your delivery address, date, time, and any dietary preferences via WhatsApp.' },
-              { name: 'Receive confirmation', text: 'We confirm the menu, delivery time, and reheating instructions within 1 hour.' },
-              { name: 'Enjoy hassle-free dining', text: 'Your food arrives fresh, ready-to-serve, with clear reheating guidance if needed.' },
-            ],
-          }),
+          faqPageSchema(SCHEMA_FAQS),
           cateringBreadcrumbSchema('Drop-Off Catering Bali', PAGE_URL),
         ]}
       />
@@ -271,10 +276,10 @@ export default function CateringDropOffPage() {
             Drop-Off Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Drop-Off Catering — Bali Villa Dinners Delivered
+            Drop-Off Catering Bali — Chef-Prepared Dinners, Delivered. No Staff, No Fuss.
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-2xl mx-auto">
-            No staff in your villa. Chef-prepared dinners delivered with reheating instructions. Order by 4pm for next-day delivery.
+            Restaurant-quality food, cooked by our chefs that day, delivered to your villa ready to serve — and then we leave. No chef in your kitchen, no waiters at your table, no cleanup crew. Just a proper dinner and total privacy.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
@@ -291,7 +296,7 @@ export default function CateringDropOffPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp availability
             </a>
           </div>
-          <p className="text-white/[60%] text-sm">From IDR 700,000/person · No staff · Next-day delivery</p>
+          <p className="text-white/[60%] text-sm">From IDR 700,000/person · Min. 4 guests · Order by 4pm for next-day delivery</p>
         </div>
       </section>
 
@@ -403,6 +408,10 @@ export default function CateringDropOffPage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
+            For daily nutrition-focused plans, see our{' '}
+            <Link to="/healthy-meal-delivery-indonesia" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">healthy meal plans</Link>.
+          </p>
         </div>
       </section>
 
@@ -429,6 +438,12 @@ export default function CateringDropOffPage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
+            Halfway option: many groups book drop-off for quiet nights and a{' '}
+            <Link to="/catering/villa-catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">full-service villa catering</Link>{' '}
+            dinner for the celebration night. See all{' '}
+            <Link to="/catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">catering services</Link>.
+          </p>
         </div>
       </section>
 
@@ -503,6 +518,7 @@ export default function CateringDropOffPage() {
           <SectionHeader
             eyebrow="Packages"
             title="Choose Your Drop-Off Package"
+            subtitle={<>All packages are per person and include freshly prepared dishes, recyclable packaging, printed reheating and plating instructions, and delivery. Final all-in totals are confirmed in your quote. See full <Link to="/pricing" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">pricing</Link>.</>}
           />
           <div className="grid md:grid-cols-3 gap-6">
             {DROPOFF_PACKAGES.map((pkg) => (
@@ -524,6 +540,9 @@ export default function CateringDropOffPage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
+            Add <Link to="/catering/grazing-tables" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">grazing boxes & tables</Link> to any dinner package for a styled start.
+          </p>
         </div>
       </section>
 
@@ -736,7 +755,7 @@ export default function CateringDropOffPage() {
             {[
               { label: 'Private Chef Villa', href: '/villa-chef', desc: 'Daily chef service for your stay.' },
               { label: 'BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
-              { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
+              { label: 'grazing boxes & tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
               { label: 'Buffet Catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },
               { label: 'Plated Dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },

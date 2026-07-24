@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -31,15 +31,15 @@ const PARTY_FORMATS = [
     title: 'Cocktail Reception',
     price: <AllInPrice price={650000} />,
     guestRange: '20 — 80 guests',
-    description: 'Elegant standing reception with canapés, grazing stations, and flowing drinks. Perfect for arrivals, celebrations, and networking.',
-    features: ['6-8 canapé varieties', 'Grazing station', '2.5h open bar', 'Bartender', 'Service staff', 'Cocktail napkins & glassware', 'Cleanup'],
+    description: 'An elegant standing reception: 6–8 canapé varieties, a grazing station, a 2.5-hour open bar with bartender and full service staff. Ideal for arrivals, celebrations and corporate socials.',
+    features: ['6–8 canapé varieties', 'Grazing station', '2.5h open bar', 'Bartender & service staff', 'Cocktail napkins & glassware', 'Cleanup'],
     highlighted: false,
   },
   {
     title: 'Sundowner Party',
     price: <AllInPrice price={850000} />,
     guestRange: '15 — 50 guests',
-    description: 'Sunset-to-evening celebration with BBQ, cocktails, and music. The classic Bali villa party experience.',
+    description: 'The classic Bali villa party: sunset-to-evening BBQ or buffet, a three-hour open bar with cocktail menu, speaker, service staff and timing built around the sun going down.',
     features: ['BBQ or buffet menu', '3h open bar', 'Bartender + cocktail menu', 'Bluetooth speaker', 'Sunset timing', 'Service staff', 'Cleanup'],
     highlighted: true,
   },
@@ -47,7 +47,7 @@ const PARTY_FORMATS = [
     title: 'Casual Mixer',
     price: <AllInPrice price={950000} />,
     guestRange: '10 — 30 guests',
-    description: 'Relaxed dinner party with family-style sharing plates, wine, and conversation. Intimate but festive.',
+    description: 'A relaxed dinner-party format: family-style sharing plates, a wine selection, table styling and background music. Intimate but festive — the house party where nobody has to cook or clean.',
     features: ['Family-style sharing menu', 'Wine selection', 'Table styling', 'Background music', 'Personalised menu', 'Service staff', 'Cleanup'],
     highlighted: false,
   },
@@ -107,21 +107,21 @@ const PARTY_TESTIMONIALS = [
 ]
 
 const FAQS = [
-  { q: 'What is the minimum guest count for a villa party?', a: 'Cocktail Reception: 20 guests. Sundowner Party: 15 guests. Casual Mixer: 10 guests. We can accommodate smaller groups with adjusted pricing.' },
-  { q: 'Can we have a pool party?', a: 'Absolutely. Many of our villa parties are poolside. We provide pool floats, waterproof decor, and can arrange floating brunch add-ons.' },
-  { q: 'Do you provide the DJ and sound system?', a: 'We can arrange DJs, live bands, or provide Bluetooth speakers. Sound system rental is available for larger parties.' },
-  { q: 'Can we bring our own alcohol?', a: 'Yes. Our packages include a standard bar, but you are welcome to supplement with your own bottles. Corkage may apply depending on the package.' },
-  { q: 'What time do villa parties typically start?', a: 'Sundowner parties start at 5:30 PM for sunset. Cocktail receptions can start any time from 4 PM. Casual mixers typically begin at 7 PM.' },
-  { q: 'Do you handle noise restrictions?', a: 'We work with villa management to understand noise curfews. For parties with live music or DJs, we recommend villas with good sound insulation or remote locations.' },
-  { q: 'Can we do a themed party?', a: 'Yes. Our five standard themes are starting points. We love custom themes — send us your idea and we will make it happen.' },
-  { q: 'Is cleanup included?', a: 'Yes. All party packages include full cleanup. We leave the villa as we found it. Additional post-party deep cleaning can be arranged if needed.' },
+  { q: 'How much does villa party catering cost in Bali?', a: 'From IDR 650K++/person for a cocktail reception (20–80 guests), IDR 850K++ for a sundowner (15–50) and IDR 950K++ for a casual mixer (10–30). "++" adds 11% government tax + 10% service charge. Example: 30-guest reception ~IDR 23.6M all-in.' },
+  { q: "What's the minimum guest count?", a: '20 for cocktail receptions, 15 for sundowners, 10 for mixers. Smaller groups can be quoted with adjusted pricing — just ask.' },
+  { q: "Do we need the villa's permission — and what about noise rules?", a: "Yes, for parties beyond a quiet dinner. We coordinate with your villa manager on event approval, noise expectations and curfew times before confirming, and design the sound plan around the property. Some neighbourhoods also expect banjar (community) notification for larger events — we advise on what's customary for your location." },
+  { q: 'Can we bring our own alcohol?', a: "Yes. All formats include a standard bar, but you're welcome to supplement with your own bottles. Corkage may apply depending on the package — we'll confirm in your quote." },
+  { q: 'Can you handle dietary requirements?', a: 'Yes — vegetarian, vegan, gluten-free and allergy-aware options are planned into every menu at briefing, across canapés, BBQ and sharing formats.' },
+  { q: 'Can we have a pool party?', a: 'Absolutely — many of our villa parties are poolside. We provide pool floats and waterproof decor, and time food service around swimming.' },
+  { q: 'What happens if it rains?', a: 'Every outdoor format has a covered fallback planned in advance: grill stations move to sheltered areas, the bar relocates under cover, and the timeline flexes around the weather.' },
+  { q: 'How do deposits, timing and cancellation work?', a: 'Sundowners start at 5:30pm for sunset; cocktail receptions from 4pm; mixers from 7pm. A 50% deposit confirms your date (aligned to live page figure; sitewide unification pending business decision). Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
 ]
 
-const LATE_NIGHT_POINTS = [
-  'We confirm villa noise cut-off times before the event so the party format suits the property from the start.',
-  'Responsible service matters: bartenders are briefed to slow service when needed rather than pushing an open bar blindly.',
-  'Transport coordination for drivers or ride-hailing pickups can be built into the end-of-night plan for larger groups.',
-  'Cleanup begins in layers so glassware, rubbish, and buffet breakdown do not hit all at once at the end of the night.',
+const VILLA_RULES_POINTS = [
+  'Villa permission. Most villas require event approval for anything beyond a quiet dinner. Tell us your villa and we coordinate with the manager or owner before confirming the format.',
+  'Noise and curfews. We confirm the property\'s noise expectations and cut-off times before the event and design around them — speaker placement, DJ end-time, and a wind-down plan. For strict neighbourhoods we recommend formats that carry less sound (mixer or dinner formats over DJ-led parties).',
+  'Banjar notification. Some communities require advance notice or an event contribution for larger parties. We flag what\'s customary for your villa\'s location during planning so nothing surfaces on the day.',
+  'Departure flow. For larger groups we plan end-of-night transport so the party ends cleanly for guests and neighbours.',
 ]
 
 const ADDONS = [
@@ -151,32 +151,40 @@ export default function EventsVillaPartiesPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Villa Party Bali | BBQ, Cocktails & Private Events — myCHEF"
-        description="Villa party catering in Bali for birthdays, sunset BBQs & private celebrations. Chef stations, cocktail bar & full event staffing. WhatsApp to plan yours."
+        title="Villa Party Catering Bali | Social Events Done Right"
+        description="Villa party catering in Bali: cocktail receptions, pool parties & BBQs with food, bar staff and coordination. From IDR 650K++/guest. WhatsApp myCHEF."
         canonical={`${SITE}/events/villa-parties`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-villa-parties.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
             name: 'Villa Party Catering Bali',
-            description: 'myCHEF.id caters villa parties in Bali with BBQ menus, canapés, cocktails, bartenders, and service staff. We handle setup, live service, and cleanup so hosts can focus on the guest experience.',
-            url: `${SITE}/events/villa-parties`,
-            lowPrice: '650000',
-            highPrice: '950000',
-            unitText: 'per person',
-          }),
-          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Plan a Villa Party in Bali',
-            description: 'Plan an unforgettable villa party in Bali with private chef and full service in 4 easy steps.',
-            totalTime: 'PT20M',
-            steps: [
-              { name: 'Choose your party style', text: 'Select from pool party, sunset dinner, or themed celebration based on your vibe.' },
-              { name: 'Share party details', text: 'Send your date, villa location, guest count, and music or decoration needs via WhatsApp.' },
-              { name: 'Approve menu and setup', text: 'We design a custom menu, bar package, and service plan within 1 hour.' },
-              { name: 'Party without worries', text: 'Chef, bartenders, and service staff arrive early. You enjoy the party while we handle everything.' },
+            serviceType: 'Villa party catering, bar service and event staffing',
+            provider: {
+              '@type': 'LocalBusiness',
+              name: 'myCHEF.id',
+              url: `${SITE}/`,
+              telephone: '+62 896-7407-2020',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
+                addressLocality: 'Denpasar',
+                addressRegion: 'Bali',
+                postalCode: '80226',
+                addressCountry: 'ID',
+              },
+            },
+            areaServed: 'Bali, Indonesia',
+            description: 'Villa party catering in Bali: cocktail receptions, sundowner BBQ parties and casual mixers with food, open bar, service staff, entertainment coordination and full cleanup.',
+            offers: [
+              { '@type': 'Offer', name: 'Cocktail Reception', price: '650000', priceCurrency: 'IDR', description: 'Per person, 20–80 guests. Canapés, grazing station, 2.5h open bar, bartender, staff. ++ 11% tax + 10% service.' },
+              { '@type': 'Offer', name: 'Sundowner Party', price: '850000', priceCurrency: 'IDR', description: 'Per person, 15–50 guests. BBQ/buffet, 3h open bar, cocktail menu, sunset timing. ++ 11% tax + 10% service.' },
+              { '@type': 'Offer', name: 'Casual Mixer', price: '950000', priceCurrency: 'IDR', description: 'Per person, 10–30 guests. Family-style sharing menu, wine selection, styling. ++ 11% tax + 10% service.' },
             ],
-          }),
-          breadcrumbSchema('Villa Party Catering Bali', `${SITE}/events/villa-parties`, 'Events', `${SITE}/events`),
+          },
+          faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
+          breadcrumbSchema('Villa Parties', `${SITE}/events/villa-parties`, 'Events', `${SITE}/events`),
         ]}
       />
 
@@ -197,10 +205,10 @@ export default function EventsVillaPartiesPage() {
             Chapter 1 — Villa Parties
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Villa Parties in Bali — BBQ, Pool, Cocktail & Night Events
+            Villa Party Catering in Bali — Food, Bar, Staff & Cleanup, One Team
           </h1>
           <p className="text-lg md:text-xl text-white/[80%] mb-8 max-w-xl">
-            Sunset BBQs, pool parties, cocktail receptions, and late-night celebrations with food, drinks, bartender service, staffing, music coordination, and cleanup all handled by one team.
+            The best villa parties feel loose to the guests and tightly run underneath. We cater and staff villa parties across Bali — pool parties, house parties, cocktail receptions, BBQ sundowners and late-night formats — with published per-person prices and one team running the whole night.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-villa-parties-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
@@ -210,8 +218,11 @@ export default function EventsVillaPartiesPage() {
               <Wine className="w-4 h-4" /> View Formats
             </a>
           </div>
+          <p className="text-sm text-white/[70%] mb-2">
+            Send your date, guest count and vibe — we reply within the hour with formats and a fixed quote.
+          </p>
           <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em] text-left">
-            From IDR 700K++/guest · Bar, staffing, and cleanup handled
+            From IDR 650K++/guest · Food, bar, staff and cleanup handled
           </p>
         </div>
       </section>
@@ -223,33 +234,39 @@ export default function EventsVillaPartiesPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-12">
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                The Bali Party Brief
+                Party Formats & Prices
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                myCHEF is built for villa parties where food, bar, and timing all need to stay moving
+                Priced formats that bundle food, bar and staff from the start
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                Villa parties are usually at their best when they feel loose to the guest but tightly run underneath. Someone needs to think about the flow from sunset drinks into food service, the bar load after the first hour, what happens when guests move from the pool to the lounge, and how cleanup starts without flattening the mood. That is the gap we fill. We plan the party as an operational sequence, not just a menu and a bartender.
+                The best villa parties feel loose to the guests and tightly run underneath. Someone has to manage the flow from sunset drinks into food service, the bar load after the first hour, what happens when guests move from pool to lounge, and how cleanup starts without flattening the mood. That's myCHEF's job.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                Some groups want a proper cocktail reception, some want a sundowner BBQ, and some want a looser dinner-party format that can stretch into the night. The right choice depends on guest count, villa layout, neighbours, and how much movement the host wants. The cards below show the starting structures we use most often.
+                All prices "++" — 11% government tax + 10% service charge added. Every quote shows the all-in total upfront.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
               <OptimizedImage src="/generated/mychef-events-bali-hero-villa-parties.webp" alt="Bali villa party setup with bar and long-table dining" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
-          <SectionHeader eyebrow="Chapter 2 — Formats" title="Party Types & Formats" subtitle="Choose the structure first, then we dial the food, bar, and entertainment around it." />
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Party Formats & Prices" subtitle="Choose the structure first, then we dial the food, bar, and entertainment around it." />
           <div className="grid md:grid-cols-3 gap-6">
             {PARTY_FORMATS.map((format) => (
               <EventFormatCard key={format.title} {...format} accent={ACCENT} />
             ))}
           </div>
+          <p className="text-[#4A4745] leading-relaxed mt-8">
+            For a fully cocktail-led evening with signature menu design, see our <Link to="/experiences/private-cocktail-party" className="text-[#2C5F7C] hover:underline">dedicated cocktail party experience</Link>. For BBQ-specific menus and packages, see <Link to="/villa-bbq-catering-bali" className="text-[#2C5F7C] hover:underline">villa BBQ catering</Link> and our <Link to="/catering/bbq-catering" className="text-[#2C5F7C] hover:underline">BBQ catering menus</Link>.
+          </p>
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             <GroupTotalCalculator pricePerPerson={650000} minGuests={20} maxGuests={80} defaultGuests={30} accent={ACCENT} />
             <GroupTotalCalculator pricePerPerson={850000} minGuests={15} maxGuests={50} defaultGuests={25} accent={ACCENT} />
             <GroupTotalCalculator pricePerPerson={950000} minGuests={10} maxGuests={30} defaultGuests={18} accent={ACCENT} />
           </div>
+          <p className="text-[#4A4745] leading-relaxed mt-8">
+            <strong>Group totals:</strong> 30 guests at a cocktail reception runs IDR 19.5M++ (~IDR 23.6M all-in). 25 guests at a sundowner runs IDR 21.3M++ (~IDR 25.7M all-in). 18 guests at a mixer runs IDR 17.1M++ (~IDR 20.7M all-in). Smaller groups than the listed minimums can be quoted with adjusted pricing.
+          </p>
         </div>
       </section>
 
@@ -261,13 +278,10 @@ export default function EventsVillaPartiesPage() {
                 Food & BBQ Showcase
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Party food needs to eat well standing up, by the pool, and late into the night
+                Party Food That Keeps the Night Moving
               </h2>
-              <p className="text-[#4A4745] leading-relaxed mb-4">
-                Good villa party food keeps the room energised. That usually means a combination of live BBQ, finger food, grazing tables, and shareable dishes that can be eaten without forcing everyone into formal dining mode. Live stations work particularly well because they give the party a focal point, keep food hot, and create natural movement around the villa. We often pair that with passed snacks early, then add heavier items once the bar has been running for a while.
-              </p>
               <p className="text-[#4A4745] leading-relaxed">
-                For guests who stay late, after-party food matters more than people expect. Sliders, satay, tacos, noodles, or grilled skewers at the right moment can stabilise the night, keep the mood high, and make the event feel more generous overall. The menu is always designed around the party format, not the other way around.
+                Villa party food has to eat well standing up, by the pool, and late into the night. We build menus around live grills, finger food, grazing and shareable dishes — passed snacks early, heavier items once the bar has been running. A late-night station (sliders, satay, tacos, skewers) can be added at +IDR 180–320K per person to keep the night generous to the end.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -288,10 +302,10 @@ export default function EventsVillaPartiesPage() {
                 Bar & Cocktails
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                The bar is part of the production, not an afterthought in the corner
+                The Bar, Properly Run
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                At villa parties, the bar often becomes the social centre of the whole night. That means it needs enough ice, glassware, garnish prep, and staff to avoid queues and keep the mood from flattening. We design the bar around guest count and drink complexity: a standard open bar is fine for beer, wine, and simple mixed drinks, but once you want signature cocktails or faster service for bigger groups, the setup needs to scale.
+                At a villa party the bar is the social centre — it needs ice, glassware, garnish prep and enough staff to avoid queues. Every format includes a standard open bar (beer, wine, spirits, mixers, soft drinks). Upgrade to a <strong>cocktail bar</strong> (+IDR 1.5M) for signature cocktails and fresh ingredients, or a <strong>premium bar</strong> (+IDR 3M) for top-shelf spirits, champagne and a custom menu. Larger or more complex parties can add an extra bartender and barback (+IDR 1.8–3.2M), or hire a <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">private bartender hire</Link> from IDR 250K/hour for smaller gatherings. Our bartenders are briefed on responsible service — pacing drinks rather than pushing an open bar blindly.
               </p>
               <div className="space-y-4">
                 {BAR_PACKAGE.map((bar) => (
@@ -317,20 +331,20 @@ export default function EventsVillaPartiesPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Staffing & Logistics
+                Staffing & Production
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                The right staffing level is what makes a party feel easy instead of chaotic
+                Staffing & Production
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                Most villa party stress comes from underestimating what the team needs to do at once: greet guests, pass drinks, work a grill, reset tables, coordinate music, keep the bar full, and clean discreetly as the night moves on. We scope staff against those real actions. Bigger parties need more than a chef and bartender. They need floor staff, setup crew, and someone watching the timeline so the host does not become the event manager halfway through the evening.
+                Most party stress comes from underestimating what the team must do at once: greet, pour, grill, reset, coordinate music, clean as the night moves. We scope staff against those real actions — bigger parties get floor staff, a setup crew (on site roughly three hours before guests) and a coordinator watching the timeline so the host never becomes the event manager. DJs (from IDR 4M), live bands (from IDR 8M), sound upgrades (+IDR 3–12M) and security/guest check-in (+IDR 2–6M) are coordinated against the food run-sheet. Cleanup is staged through the night, not dumped at the end.
               </p>
               <div className="space-y-3">
                 {[
-                  'Setup crews usually arrive 3 hours before guest arrival to build the bar, food stations, and party styling.',
-                  'Service staffing is adjusted to the food style: more tray-pass for cocktail parties, more floor clearing for dinner-heavy formats.',
-                  'DJ, sound, and photographer coordination is handled against the food run-sheet so key moments land cleanly.',
-                  'Cleanup is staged throughout the night so glasses, rubbish, and buffet waste do not pile up at the end.',
+                  'Setup crew on site roughly three hours before guests arrive.',
+                  'A coordinator watches the timeline so the host never becomes the event manager.',
+                  'DJ, sound, live band and security coordination is handled against the food run-sheet.',
+                  'Cleanup is staged through the night, not dumped at the end.',
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
@@ -351,16 +365,16 @@ export default function EventsVillaPartiesPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
               <p className="text-[#2C5F7C] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Safety & Late Night Standards
+                Villa Rules & Permissions
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Late parties only stay fun when the practical limits are planned in advance
+                Villa Rules, Noise & Banjar — the Practical Stuff
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                The best night events do not feel heavily policed, but they are carefully bounded. We check villa curfews, sound rules, parking, and access before confirming the final format, because those details shape what kind of party the property can realistically support. We also plan drink pacing, end-of-night food, and guest departure flow early, which is how the night stays high-energy without becoming sloppy or difficult for the villa team.
+                This is the part most caterers skip, and the part that decides whether your party actually happens:
               </p>
               <div className="space-y-3">
-                {LATE_NIGHT_POINTS.map((point) => (
+                {VILLA_RULES_POINTS.map((point) => (
                   <div key={point} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
                     <p className="text-[#4A4745] leading-relaxed">{point}</p>
@@ -383,10 +397,10 @@ export default function EventsVillaPartiesPage() {
                 Themes & Upgrades
               </p>
               <h2 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Decor, music, and add-ons that change the energy of the night
+                Themes & Occasions
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                A villa party usually needs one strong identity rather than endless decoration. We use themes to guide colour, music, bar styling, and how the villa should feel once the sun goes down. From there, upgrades such as better sound, extra bartenders, or an after-party snack station make sense because they directly improve how the night runs for guests.
+                One strong identity beats endless decoration: Tropicana, Gatsby, Surfer, Disco or fully custom — guiding colour, music, bar styling and pool floats. We regularly run <strong>hens parties</strong>, <strong>bucks parties</strong>, milestone birthdays (see <Link to="/events/birthdays" className="text-[#2C5F7C] hover:underline">birthday catering</Link>) and corporate socials. Want the whole thing bundled with transport and staffing under one contract? See our <Link to="/villa-event-packages" className="text-[#2C5F7C] hover:underline">all-inclusive event packages</Link>.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 {ADDONS.map((addon) => (
@@ -492,7 +506,7 @@ export default function EventsVillaPartiesPage() {
 
       <section className="py-20 md:py-28 bg-white party-reveal">
         <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Questions" title="Villa Party FAQ" />
+          <SectionHeader eyebrow="Questions" title="Villa Party Bali — FAQ" />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
@@ -525,7 +539,7 @@ export default function EventsVillaPartiesPage() {
 
       <section className="py-20 md:py-28 bg-[#FAFAF8] party-reveal">
         <div className="max-w-3xl mx-auto px-6">
-          <SectionHeader eyebrow="Book" title="Plan Your Villa Party" subtitle="Tell us your date, group size, and vibe. Sofia will design the right food, bar, and party flow." />
+          <SectionHeader eyebrow="Book" title="Plan Your Party" subtitle="Tell us your date, group size and vibe — we'll recommend the format, bar level, staffing and entertainment, and send a fixed quote with nothing hidden." />
           <BookingFormCatering
             title="Villa Party Inquiry"
             subtitle="We will reply with format recommendations, pricing, and availability within the hour."

@@ -3,6 +3,9 @@ import { breadcrumbSchema } from '@/components/SeoHead'
 import { Wine, ChefHat, UtensilsCrossed, PartyPopper, Shell, Heart } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
+const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20experience%20in%20Bali.%20Please%20help%20me%20choose%20the%20right%20one.'
+const CANONICAL = 'https://mychef.id/experiences'
+
 const EXPERIENCES = [
   {
     slug: 'private-cocktail-party',
@@ -71,7 +74,7 @@ const SECTIONS: PageSection[] = [
     id: 'intro',
     type: 'content' as const,
     subtitle: 'Private Experiences Bali',
-    title: 'Curated Culinary & Celebration Experiences in Your Villa',
+    title: 'Private Experiences in Bali — The Villa Is the Venue',
     image: '/generated/mychef-experiences-hub-hero-bali-landscape.webp',
     imageAlt: 'Private experiences Bali collection at a luxury villa by myCHEF',
     body: `<p>Some moments deserve more than a restaurant reservation. The myCHEF <strong>private experiences Bali</strong> collection brings chefs, bartenders, teachers and event specialists directly to your villa, turning a normal evening into something your guests will remember long after the holiday ends.</p>
@@ -182,7 +185,7 @@ const SECTIONS: PageSection[] = [
     body: 'Tell us the experience, date, villa location and guest count — we will reply within the hour with availability and a tailored plan.',
     primaryAction: {
       label: 'Message Us on WhatsApp',
-      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20one%20of%20your%20private%20experiences%20in%20Bali.%20Please%20help%20me%20choose%20the%20right%20one.',
+      href: WA_LINK,
       external: true,
     },
     secondaryAction: {
@@ -220,7 +223,7 @@ export default function ExperiencesHubPage() {
       description="Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, kids’ parties, oyster bars and proposal dinners at your villa."
       seoTitle="Private Experiences Bali | Culinary & Celebration Experiences | myCHEF"
       seoDescription="Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, kids’ parties, oyster bars and proposal dinners at your villa."
-      canonicalUrl="https://mychef.id/experiences"
+      canonicalUrl={CANONICAL}
       h1="Private Experiences in Bali"
       subtitle="Curated Culinary & Celebration Experiences at Your Villa"
       heroImage="/generated/mychef-experiences-hub-hero-bali-landscape.webp"
@@ -244,7 +247,7 @@ export default function ExperiencesHubPage() {
       extraJsonLd={[
         breadcrumbSchema(
           'Private Experiences in Bali',
-          'https://mychef.id/experiences'
+          CANONICAL
         ),
         {
           '@context': 'https://schema.org',

@@ -1,69 +1,71 @@
+import { Link } from 'react-router-dom'
 import PremiumPage, { type PageSection } from '@/components/PremiumPage'
-import { breadcrumbSchema } from '@/components/SeoHead'
 
 const WA = 6289674072020
 
 const TRUST_PILLARS = [
   {
     emoji: '🎓',
-    title: 'Michelin-Trained Leadership',
-    desc: 'Adriano trained in Milan. Every menu reflects fine-dining discipline from prep to plating.',
+    title: 'Michelin-trained leadership',
+    desc: 'Adriano trained under a Michelin-starred chef in Milan, and his standards set the floor for every dish. The team includes eight named chefs, each with a published speciality, from live-fire BBQ to wellness retreat menus.',
+    link: { label: 'meet the chef team', href: '/chefs' },
   },
   {
-    emoji: '🇮🇩',
-    title: '50+ Local Professionals',
-    desc: 'Indonesian chefs, bartenders, and hosts who know Bali intimately and serve with genuine warmth.',
+    emoji: '👥',
+    title: 'A real team, not a contact list',
+    desc: '50+ local chefs, servers, bartenders and event staff — employed, vetted, background-checked and trained in-house. When you book myCHEF, you book a company that answers for the evening.',
   },
   {
     emoji: '⚡',
-    title: 'Same-Day Confirmation',
-    desc: 'WhatsApp inquiry to confirmed booking within 1 hour, with clear next steps and zero chasing.',
+    title: 'Speed you can plan around',
+    desc: 'WhatsApp enquiries answered within 2 hours; itemised proposals within 24 hours; same-day confirmation where possible. Bali trips move fast — so do we.',
   },
   {
     emoji: '🏡',
-    title: 'We Come to You',
-    desc: 'Your villa, your pool, your terrace. We bring the experience, set up beautifully, and clean up after.',
+    title: 'Built for villas, not restaurants',
+    desc: 'Villa kitchens vary wildly, timings slip, weather changes plans. Menus flex for dietary needs, kids and last-minute requests without drama — and the kitchen is left spotless, every time.',
   },
   {
-    emoji: '💯',
-    title: 'No-Stress Guarantee',
-    desc: 'If anything is not right, we fix it. No questions, no excuses, just calm and professional recovery.',
+    emoji: '🛡️',
+    title: 'Guarantees in writing',
+    desc: 'Chef replacement guarantee — if your chef can\'t make it, a verified replacement arrives within 2 hours or you receive a 100% refund. Transparent terms — a deposit confirms your booking [BUSINESS CONFIRMATION REQUIRED — live page states no figure], prices always quoted ++ (11% government tax + 10% service charge), groceries at cost with receipts.',
+    link: { label: 'transparent pricing', href: '/pricing' },
   },
 ]
 
 const STATS = [
   { value: '560+', label: 'Villas' },
   { value: '12,000+', label: 'Guests' },
-  { value: '500+', label: 'Events' },
-  { value: '5-Star', label: 'Average' },
+  { value: '4.9/5', label: 'Rating' },
+  { value: '98%', label: 'Repeat/Referred' },
 ]
 
 const FAQS = [
   {
-    question: 'How quickly can myCHEF confirm a booking?',
-    answer: 'Most villa enquiries sent by WhatsApp are answered within minutes and confirmed within the hour once we have your date, villa area, and guest count.',
+    question: 'Is myCHEF a company or a marketplace?',
+    answer: 'A company. Every chef and server is part of our in-house team — we don\'t broker strangers.',
   },
   {
-    question: 'What does myCHEF handle on the day?',
-    answer: 'We handle menu planning, prep, shopping, cooking, service, setup, and cleanup. You get the experience without the kitchen stress.',
+    question: 'What happens if something goes wrong on the day?',
+    answer: 'We fix it on the spot. If a chef is unavailable, a replacement of equivalent calibre arrives within 2 hours — same menu brief, same standard — or you receive a 100% refund.',
   },
   {
-    question: 'Who leads the culinary standard at myCHEF?',
-    answer: 'myCHEF was founded by Adriano, Michelin-trained in Milan. His standards shape the menus, service rhythm, and execution across the team.',
+    question: 'Why do guests book again?',
+    answer: '98% of bookings are repeat or referred. The pattern in reviews is consistent: fast replies, calm service, food that exceeds the setting, kitchens left cleaner than found.',
   },
   {
-    question: 'Why do villas keep booking myCHEF?',
-    answer: 'Because we combine refined food with villa practicality: fast response, local staff, smooth communication, and a team that respects the home it works in.',
+    question: 'Do you only do fine dining?',
+    answer: 'No — the same team cooks poolside BBQs, family dinners, retreat meal plans and weddings for up to 200 guests.',
   },
 ]
 
 const RELATED_PAGES = [
-  { label: 'About myCHEF', href: '/fine-dining/our-chefs', desc: 'Meet Adriano and the story behind the brand.' },
-  { label: 'Fine Dining', href: '/fine-dining', desc: 'Private tasting menus for special evenings.' },
-  { label: 'Catering', href: '/catering', desc: 'Relaxed chef service for groups and families.' },
-  { label: 'Events', href: '/events', desc: 'Villa parties, weddings, and celebrations.' },
-  { label: 'Staffing', href: '/staffing', desc: 'Ongoing chefs and hospitality staff for villas.' },
-  { label: 'Contact', href: '/contact', desc: 'Speak with the myCHEF concierge team.' },
+  { label: 'read dated guest reviews', href: '/reviews', desc: 'Read dated, located reviews from Bali villa guests.' },
+  { label: 'meet the chef team', href: '/chefs', desc: 'Meet Adriano and the named chef team.' },
+  { label: 'transparent pricing', href: '/pricing', desc: 'Full price tables published online.' },
+  { label: 'all services', href: '/services', desc: 'Private chef, catering, events and staffing.' },
+  { label: 'common questions', href: '/faq', desc: 'Answers to booking, menus and dietary requests.' },
+  { label: 'Private Chef in Bali', href: '/', desc: 'Start with the myCHEF homepage.' },
 ]
 
 export default function WhyMychefPage() {
@@ -94,7 +96,7 @@ export default function WhyMychefPage() {
       id: 'pillars',
       type: 'custom',
       subtitle: 'Why myCHEF',
-      title: 'Five trust pillars behind every booking',
+      title: 'Five Pillars — With Evidence',
       body: 'Premium villa service is not just about food. It is about speed, standards, calm communication, and a team that makes your stay easier from the first message to the last plate.',
       render: (
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
@@ -106,47 +108,95 @@ export default function WhyMychefPage() {
               <div className="text-3xl leading-none">{pillar.emoji}</div>
               <h3 className="mt-5 font-playfair text-2xl leading-tight text-[#1A1916]">{pillar.title}</h3>
               <p className="mt-4 text-sm leading-7 text-[#4A4745]">{pillar.desc}</p>
+              {pillar.link && (
+                <Link
+                  to={pillar.link.href}
+                  className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-[2px] text-[#8B6F1A] hover:text-[#C5A028] transition-colors"
+                >
+                  {pillar.link.label}
+                  <span aria-hidden="true">→</span>
+                </Link>
+              )}
             </article>
           ))}
         </div>
       ),
     },
     {
-      id: 'villa-system',
-      type: 'content',
-      subtitle: 'Villa-first service',
-      title: 'Restaurant discipline, adapted to real Bali villas',
-      body: `<p>Restaurants control the room. Villas do not. Kitchens vary wildly, timings shift, weather changes, and every guest group arrives with different expectations. myCHEF is built for that reality.</p>
-      <ul>
-        <li><strong>Menus that flex:</strong> romantic dinners, family-style sharing, children, dietary needs, and last-minute requests handled without drama.</li>
-        <li><strong>Hosts who stay relaxed:</strong> we arrive prepared, communicate clearly, and leave the kitchen spotless.</li>
-        <li><strong>Service that feels premium:</strong> elegant plating when you want it, warm approachable hospitality when you need it, and the right tempo for your villa.</li>
-      </ul>`,
-      image: '/generated/luna-experience-collage.webp',
-      imageAlt: 'myCHEF team preparing an in-villa dining experience in Bali',
+      id: 'comparison',
+      type: 'custom',
+      subtitle: 'Compare',
+      title: 'myCHEF vs the Alternatives',
+      body: 'See how a dedicated Bali villa chef company compares to a freelance chef or a marketplace listing.',
+      render: (
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[640px] text-left border-collapse">
+            <thead>
+              <tr className="border-b border-black/10">
+                <th className="py-4 pr-4 font-playfair text-lg text-[#1A1916]">What matters</th>
+                <th className="py-4 px-4 font-semibold text-[#4A4745]">Freelance chef</th>
+                <th className="py-4 px-4 font-semibold text-[#4A4745]">Marketplace</th>
+                <th className="py-4 pl-4 font-semibold text-[#1A1916]">myCHEF</th>
+              </tr>
+            </thead>
+            <tbody className="text-sm text-[#4A4745]">
+              <tr className="border-b border-black/5">
+                <td className="py-4 pr-4 font-medium text-[#1A1916]">Named, vetted chef team</td>
+                <td className="py-4 px-4">One person</td>
+                <td className="py-4 px-4">Rotating listings</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">8 named chefs, 50+ staff</td>
+              </tr>
+              <tr className="border-b border-black/5">
+                <td className="py-4 pr-4 font-medium text-[#1A1916]">Illness/no-show backup</td>
+                <td className="py-4 px-4">None</td>
+                <td className="py-4 px-4">Rebook & hope</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">Replacement in 2h or full refund</td>
+              </tr>
+              <tr className="border-b border-black/5">
+                <td className="py-4 pr-4 font-medium text-[#1A1916]">Published prices</td>
+                <td className="py-4 px-4">Rarely</td>
+                <td className="py-4 px-4">Estimates</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">Full tables online</td>
+              </tr>
+              <tr className="border-b border-black/5">
+                <td className="py-4 pr-4 font-medium text-[#1A1916]">Staffing (waiters, bar, sommelier)</td>
+                <td className="py-4 px-4">No</td>
+                <td className="py-4 px-4">No</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">From IDR 250K/hour</td>
+              </tr>
+              <tr className="border-b border-black/5">
+                <td className="py-4 pr-4 font-medium text-[#1A1916]">Track record</td>
+                <td className="py-4 px-4">Word of mouth</td>
+                <td className="py-4 px-4">Platform reviews</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">560+ villas, 12,000+ guests</td>
+              </tr>
+              <tr>
+                <td className="py-4 pr-4 font-medium text-[#1A1916]">Dietary & kids' menus</td>
+                <td className="py-4 px-4">Varies</td>
+                <td className="py-4 px-4">Varies</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">Included, no extra charge</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      ),
     },
     {
       id: 'testimonials',
       type: 'testimonials',
-      subtitle: 'Guest confidence',
+      subtitle: 'What guests say',
       title: 'Why guests book once, then book again',
       testimonials: [
         {
-          name: 'Emma & Louis',
-          location: 'Melbourne',
-          text: 'The biggest surprise was how easy it all felt. One WhatsApp message, a beautiful menu, a polished team, and our villa looked untouched when they left.',
+          name: 'Harper',
+          location: 'Uluwatu, January 2026',
+          text: 'Our wedding dinner for 42. Dinner landed exactly on schedule, the waiters were warm and calm, and our parents are still talking about the lamb and truffle jus.',
           rating: 5,
         },
         {
-          name: 'Darren P.',
-          location: 'Hong Kong',
-          text: 'You can feel the fine-dining discipline, but it never becomes stiff. It felt luxurious, personal, and incredibly well run.',
-          rating: 5,
-        },
-        {
-          name: 'Villa Manager, Uluwatu',
-          location: 'Bali',
-          text: 'myCHEF is the easiest team to recommend to our guests. Fast confirmation, no surprises, and consistently polished execution.',
+          name: 'Amelia',
+          location: 'Canggu, April 2025',
+          text: 'The chef worked around two coeliacs and a nut allergy without reducing the ambition of the menu at all. We booked again before we left.',
           rating: 5,
         },
       ],
@@ -155,16 +205,16 @@ export default function WhyMychefPage() {
       id: 'cta',
       type: 'cta',
       subtitle: 'Final step',
-      title: 'Want the easiest booking of your Bali stay?',
-      body: 'Message us on WhatsApp with your date, villa, and guest count. We will guide the menu, confirm fast, and take care of everything on-site.',
+      title: 'The Easiest Booking of Your Bali Stay',
+      body: 'One WhatsApp message with your date, villa and guest count. A clear quote within 24 hours. Nothing else to manage.',
       primaryAction: {
         label: 'Chat on WhatsApp',
         href: waLink,
         external: true,
       },
       secondaryAction: {
-        label: 'Explore Fine Dining',
-        href: '/fine-dining',
+        label: 'Email bali@mychef.id',
+        href: 'mailto:bali@mychef.id',
       },
     },
   ]
@@ -173,21 +223,28 @@ export default function WhyMychefPage() {
     <PremiumPage
       slug="why-mychef"
       title="Why 560+ Villas Choose myCHEF"
-      description="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, 50+ local professionals, same-day confirmation and a no-stress guarantee."
-      seoTitle="Best Private Chef Service Bali | Why myCHEF? — 560+ Villas"
-      seoDescription="Why 560+ Bali villas trust myCHEF: Michelin-trained leadership, 50+ local staff, same-day confirmation & no-stress guarantee. See the full difference."
+      description="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence."
+      seoTitle="Why myCHEF | The Private Chef Company 560+ Bali Villas Trust"
+      seoDescription="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence."
       h1="Why 560+ Villas Choose myCHEF"
-      subtitle="Michelin-trained leadership, 50+ local professionals, and calm villa-ready execution for dinners, events, and multi-day stays across Bali."
+      subtitle="Anyone can say they're the best private chef service in Bali. We'd rather show you the evidence: named chefs, published prices, guarantees in writing, and a repeat-booking rate that does the talking."
       heroImage="/generated/mychef-location-bali-hub-bali.webp"
       heroImageAlt="Luxury myCHEF dinner setup inside a Bali villa"
       ogImage="https://mychef.id/generated/mychef-location-bali-hub-bali.webp"
-      keywords={['why mychef', 'trusted private chef bali', 'villa chef bali']}
-      highlights={['Michelin-Trained in Milan', '50+ Local Professionals', 'Same-Day Confirmation', 'No-Stress Guarantee']}
+      keywords={['best private chef service bali', 'why mychef', 'trusted private chef bali', 'top rated private chef bali', 'mychef vs other chefs']}
+      highlights={['560+ Villas Served', '12,000+ Guests Hosted', '4.9/5 Guest Rating', '98% Repeat or Referred']}
       sections={sections}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema('Why myCHEF', 'https://mychef.id/why-mychef'),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Why 560+ Villas Choose myCHEF',
+          url: 'https://mychef.id/why-mychef',
+          about: { '@id': 'https://mychef.id/#business' },
+          description: 'The evidence behind myCHEF: Michelin-trained leadership, a 50+ Indonesian hospitality team, guarantees in writing and 12,000+ guests served.',
+        },
       ]}
       ctaText="Chat on WhatsApp"
       ctaSubtext="We reply quickly and confirm fast."

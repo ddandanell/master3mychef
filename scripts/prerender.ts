@@ -464,8 +464,8 @@ async function runPool(browser: Browser, routes: Route[]): Promise<{ success: nu
 }
 
 async function main(): Promise<void> {
-  if (process.env.SKIP_PRERENDER === '1' || process.env.VERCEL) {
-    console.log('⏭  Prerender skipped — running on Vercel or SKIP_PRERENDER=1')
+  if (process.env.SKIP_PRERENDER === '1') {
+    console.log('⏭  Prerender skipped — SKIP_PRERENDER=1')
     return
   }
 

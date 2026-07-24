@@ -36,8 +36,8 @@ const BUFFET_PACKAGES = [
   {
     title: 'Indonesian Buffet',
     price: 475000,
-    description: '3 main dishes, 2 vegetable or side dishes, rice & noodles, 2 salads or cold dishes, sambals, dessert & fresh fruit.',
-    includes: ['Chef & kitchen team', 'Service staff (1 per 12 guests)', 'Buffet equipment', 'Serving tables', 'Linens', 'Cutlery', '2.5h service', 'Setup & cleanup', 'Normal groceries included'],
+    description: '3 main dishes, 2 vegetable/side dishes, rice and noodles, 2 salads or cold dishes, sambals, dessert and fruit.',
+    includes: ['Chef and kitchen team', 'Buffet equipment', 'Service staff', 'Setup and cleanup', 'Normal groceries included'],
     minGuests: 'Min. 30 guests',
     image: '/generated/mychef-catering-bali-buffet-package-indonesian.webp',
   },
@@ -45,15 +45,15 @@ const BUFFET_PACKAGES = [
     title: 'International Buffet',
     price: 575000,
     description: '3 premium proteins, pasta or potato dish, 2 salads, vegetables, bread, two desserts.',
-    includes: ['Chef & service team', 'Service staff (1 per 12 guests)', 'Complete buffet setup', 'Tables', 'Linens', 'Cutlery', 'Serving equipment', '2.5h service', 'Setup & cleanup', 'Normal groceries included'],
+    includes: ['Chef and service team', 'Complete buffet setup', 'Service staff', 'Setup and cleanup', 'Normal groceries included'],
     minGuests: 'Min. 30 guests',
     image: '/generated/mychef-catering-bali-buffet-package-international.webp',
   },
   {
     title: 'Premium Live-Station Buffet',
     price: 775000,
-    description: 'Two live stations, two prepared main dishes, premium sides & salads, dessert station.',
-    includes: ['Head chef', 'Live-station chefs', 'Service staff (1 per 12 guests)', 'Full buffet & station setup', 'Premium serving equipment', 'Tables', 'Linens', 'Cutlery', '2.5h service', 'Setup & cleanup', 'Normal groceries included'],
+    description: 'Two live stations, two prepared main dishes, premium sides and salads, dessert station. A third live station, lobster, imported tenderloin, sushi-grade fish or elaborate decorations are additional upgrades.',
+    includes: ['Dedicated station chefs', 'Complete staffing and equipment', 'Service staff', 'Setup and cleanup', 'Normal groceries included'],
     minGuests: 'Min. 30 guests',
     image: '/generated/mychef-catering-bali-buffet-package-premium.webp',
   },
@@ -151,7 +151,9 @@ const BUFFET_VS_PLATED = [
 ]
 
 const FAQS = [
-  { q: 'What is the minimum guest count for buffet catering?', a: 'Minimum 30 guests for all buffet packages. This ensures the food flow, service quality, and setup costs work properly. For smaller groups, consider our BBQ or plated catering options.' },
+  { q: 'What is the minimum guest count for buffet catering in Bali?', a: 'Minimum 30 guests for all buffet packages. This ensures the food flow, service quality, and setup costs work properly. For smaller groups, consider our BBQ or plated catering options.' },
+  { q: 'What does IDR 475,000++ per person include?', a: 'It includes the Indonesian buffet menu, chef and kitchen team, service staff, buffet equipment, serving tables, linens, cutlery, setup, 2.5-hour service and cleanup. Normal groceries are included. Premium upgrades such as lobster or imported tenderloin are quoted separately.' },
+  { q: 'What is the difference between ++ and all-in pricing?', a: '++ means the price is subject to 10% government tax and 11% service charge. The all-in figure is the total after those charges. For example, IDR 475,000++ per person becomes approximately IDR 575,000 all-in.' },
   { q: 'Do you bring tables and chafing dishes?', a: 'Yes. All buffet packages include serving tables, linens, full chafing dish setup, cutlery, and serving equipment. You do not need to provide anything.' },
   { q: 'Can you do Indonesian and Western food together?', a: 'Absolutely. Many clients choose a mixed buffet with Indonesian mains and international sides. Our International Buffet package is designed for this.' },
   { q: 'How long is the buffet service?', a: 'Standard service window is 2.5 hours. We set up 2–3 hours before guests arrive and begin cleanup after the last guest is served.' },
@@ -161,6 +163,14 @@ const FAQS = [
   { q: 'Do you clean up after the event?', a: 'Full cleanup is included. We pack up all equipment, clear the buffet area, dispose of waste, and leave your villa or venue as we found it.' },
   { q: 'Do you charge travel fees?', a: 'Travel fees apply outside Seminyak/Canggu: IDR 250,000 to 700,000 depending on distance and event size. Confirmed before deposit.' },
   { q: 'How far in advance should I book?', a: 'We recommend 1–2 weeks for buffet catering. For weddings and large events during peak season, 1+ month is ideal. Last-minute bookings possible depending on availability.' },
+  { q: 'Can I add a live station to the Indonesian or International buffet?', a: 'Yes. Live stations such as pasta, carving, sushi or BBQ can be added to any package. They are quoted as an upgrade based on the station type and guest count.' },
+  { q: 'Do you cater villa weddings in Bali?', a: 'Yes. Wedding buffet catering is one of our most popular services. We handle Indonesian buffet, international buffet and live-station setups for villa receptions across Bali.' },
+  { q: 'Is the food prepared on-site or delivered?', a: 'Most dishes are prepared fresh on-site or finished at your villa kitchen. Large events may use a combination of on-site prep and controlled transport to ensure quality and timing.' },
+  { q: 'Do you cater corporate events and retreats?', a: 'Yes. We provide corporate buffet Bali services for team lunches, offsites, product launches and multi-day retreats with reliable timing and dietary flexibility.' },
+  { q: 'What happens if guest numbers change after booking?', a: 'Guest counts can usually be adjusted up to 7 days before the event. Final numbers are confirmed 3 days prior so we can order the right amount of food and staff.' },
+  { q: 'Do you provide plates, cutlery and napkins?', a: 'Yes. Standard plates, cutlery, napkins and serving utensils are included. Upgraded tableware or themed linens can be arranged on request.' },
+  { q: 'Can we taste the menu before the event?', a: 'Complimentary tastings are offered for events of 40 guests or more. You will meet the head chef, sample the proposed dishes and confirm every detail before the big day.' },
+  { q: 'Which areas of Bali do you serve?', a: 'We serve Seminyak, Canggu, Berawa, Pererenan, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Tanah Lot and surrounding areas. Travel fees may apply outside the Seminyak/Canggu core.' },
 ]
 
 export default function CateringBuffetPage() {
@@ -179,8 +189,8 @@ export default function CateringBuffetPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Buffet Catering Bali | Villa & Event Buffets — myCHEF"
-        description="Buffet catering in Bali for villas, weddings & retreats. Indonesian, international & live-station menus with chef, staff & cleanup. WhatsApp for pricing."
+        title="Buffet Catering Bali from IDR 475K++ | Villa & Event Buffets — myCHEF"
+        description="Buffet catering in Bali from IDR 475,000++ per guest. Indonesian buffet, international buffet & live-station catering for villas, weddings & corporate events. Chef, staff & cleanup included."
         canonical={`${SITE}/catering/buffet`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-buffet.webp`}
         jsonLd={[
@@ -232,13 +242,13 @@ export default function CateringBuffetPage() {
             Chapter 1 — Buffet Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Buffet Catering for Bali Villa Events
+            Buffet Catering Bali for Villas, Weddings & Corporate Events
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Three buffet tiers — from Indonesian classics to live-station premium with sushi, pasta, and carving. Minimum 30 guests. Sample tasting at 40+.
+            Indonesian buffet, international buffet and premium live-station catering for villa events, weddings and corporate groups across Bali.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 475,000++ per guest · Min. 30 guests · Food, chef, staff & cleanup included · Bali-wide
+            Buffet catering from IDR 475,000++ per guest, including food, chef, service staff, buffet setup and cleanup. Minimum 30 guests.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-buffet-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
@@ -258,11 +268,37 @@ export default function CateringBuffetPage() {
 
       <TrustStrip />
 
-      {/* ═══════ SECTION 2: BUFFET CATERING IN BALI ═══════ */}
+      {/* ═══════ SECTION 2: WHY CHOOSE MYCHEF BUFFET CATERING ═══════ */}
       <section className="buffet-content py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 2 — The Format"
+            eyebrow="Chapter 2 — Why Us"
+            title="Why Choose myCHEF Buffet Catering"
+            subtitle="We deliver full-service buffet catering in Bali with transparent per-guest pricing, experienced chefs and a complete setup that lets you host without lifting a finger."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+            {[
+              { title: 'All-Inclusive Pricing', desc: 'IDR 475,000++ per guest covers food, chef, service staff, buffet equipment, setup and cleanup. No hidden service fees.' },
+              { title: 'Michelin-Trained Leadership', desc: 'Every buffet is overseen by chefs with fine-dining and large-event experience across Bali villas and venues.' },
+              { title: 'Bali-Wide Coverage', desc: 'From Seminyak and Canggu to Ubud, Uluwatu and Nusa Dua, we travel to villas, beach clubs and event spaces island-wide.' },
+              { title: 'Dietary Flexibility', desc: 'Vegetarian, vegan, gluten-free, halal and allergy-aware options are clearly labelled and safely served.' },
+              { title: 'Live Stations', desc: 'Add pasta, carving, sushi or BBQ live stations for theater and freshness without slowing the line.' },
+              { title: 'Easy WhatsApp Booking', desc: 'Send your date, guest count and villa. We reply with a confirmed quote, usually within the hour.' },
+            ].map((item) => (
+              <div key={item.title} className="buffet-reveal bg-white rounded-xl border border-[#E8E6E3] p-5">
+                <h3 className="font-semibold text-sm mb-1 text-[#C5A028]">{item.title}</h3>
+                <p className="text-sm text-[#4A4745]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 3: BUFFET CATERING IN BALI ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Chapter 3 — The Format"
             title="Buffet Catering in Bali"
             subtitle="When the guest count climbs, buffet keeps the villa calm and the food moving. Guests eat at their own pace while our team keeps every station full and tidy."
           />
@@ -275,8 +311,8 @@ export default function CateringBuffetPage() {
                 You get a head chef, service staff, tables, linens, chafing dishes, cutlery, and clear labels. We build the setup around your villa or venue, then clear it down after the last plate.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
-                {['Weddings', 'Retreats', 'Corporate events', 'Villa parties', 'Birthdays', 'Family gatherings'].map((tag) => (
-                  <span key={tag} className="px-3 py-1.5 bg-white rounded-full text-xs text-[#4A4745] border border-[#E8E6E3]">{tag}</span>
+                {['Wedding buffet Bali', 'Corporate buffet Bali', 'Villa buffet Bali', 'Retreat catering', 'Birthday celebrations', 'Family gatherings'].map((tag) => (
+                  <span key={tag} className="px-3 py-1.5 bg-[#FAFAF8] rounded-full text-xs text-[#4A4745] border border-[#E8E6E3]">{tag}</span>
                 ))}
               </div>
             </div>
@@ -301,12 +337,12 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 3: WHEN BUFFET WORKS BEST ═══════ */}
+      {/* ═══════ SECTION 4: EVENT TYPES WE CATER ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 3 — Occasions"
-            title="When Buffet Catering Works Best"
+            eyebrow="Chapter 4 — Occasions"
+            title="Event Types We Cater"
             subtitle="Buffet is the right format when you need variety, speed, and scale. Here are the events where it outperforms every other catering style."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
@@ -323,12 +359,12 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 4: BUFFET MENU TYPES ═══════ */}
+      {/* ═══════ SECTION 5: BUFFET MENU STYLES ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 4 — The Menu"
-            title="Buffet Menu Types"
+            eyebrow="Chapter 5 — The Menu"
+            title="Buffet Menu Styles"
             subtitle="Eight buffet directions, each customizable for your group. Mix and match cuisines, or let us design a menu around your event theme."
           />
           <div className="grid sm:grid-cols-2 gap-4 mt-10">
@@ -351,11 +387,11 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 5: SETUP AND SERVICE FLOW ═══════ */}
+      {/* ═══════ SECTION 6: SETUP AND SERVICE FLOW ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 5 — Setup"
+            eyebrow="Chapter 6 — Setup"
             title="Setup and Service Flow"
             subtitle="A well-run buffet is invisible. Guests see beautiful food and smooth service. Behind the scenes, our team manages timing, temperature, replenishment, and cleanup with military precision."
           />
@@ -387,11 +423,11 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 6: GUEST COUNT PLANNING ═══════ */}
+      {/* ═══════ SECTION 7: GUEST COUNT PLANNING ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 6 — Planning"
+            eyebrow="Chapter 7 — Planning"
             title="Guest Count Planning"
             subtitle="The buffet setup changes based on group size. Here is how we scale from intimate villa dinners to large wedding receptions."
           />
@@ -409,11 +445,11 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 7: FOOD SAFETY AND TIMING ═══════ */}
+      {/* ═══════ SECTION 8: FOOD SAFETY AND TIMING ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 7 — Safety"
+            eyebrow="Chapter 8 — Safety"
             title="Food Safety and Timing"
             subtitle="For large-group catering, food safety is non-negotiable. Our protocols ensure every dish is safe, fresh, and served at the right temperature."
           />
@@ -434,14 +470,14 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 8: BUFFET STYLING ═══════ */}
+      {/* ═══════ SECTION 9: BUFFET STYLING ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <SectionHeader
                 align="left"
-                eyebrow="Chapter 8 — Styling"
+                eyebrow="Chapter 9 — Styling"
                 title="Buffet Styling"
                 subtitle="A buffet should look clean from the first plate to the last. We style each table to fit the villa, the guest count, and the pace of the event."
               />
@@ -471,13 +507,13 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 9: PACKAGES + PRICING ═══════ */}
+      {/* ═══════ SECTION 10: PACKAGES + PRICING ═══════ */}
       <section id="packages" className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 9 — Packages"
+            eyebrow="Chapter 10 — Packages"
             title="Buffet Catering Packages"
-            subtitle="Clear pricing per person. Chef, staff, tables, chafing dishes, linens, and cleanup included. Minimum 30 guests."
+            subtitle="Clear per-guest pricing for Indonesian buffet, international buffet and live-station catering in Bali. Normal groceries are included; premium upgrades are quoted separately. Minimum 30 guests."
           />
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {BUFFET_PACKAGES.map((pkg) => (
@@ -547,11 +583,54 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 10: GROUP SIZE GUIDE ═══════ */}
+      {/* ═══════ SECTION 11: WHAT IS INCLUDED ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 10 — Investment"
+            eyebrow="Chapter 11 — Inclusions"
+            title="What Is Included"
+            subtitle="Every buffet catering package in Bali includes the food, team and equipment you need for a stress-free event. Normal groceries are included; only premium upgrades are quoted separately."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+            {[
+              'Head chef and kitchen team',
+              'Service staff (1 per 12 guests)',
+              'Buffet tables, linens and skirting',
+              'Chafing dishes and serving equipment',
+              'Cutlery, plates and napkins',
+              'Menu labels with dietary markers',
+              '2.5-hour standard service window',
+              'Full setup before guests arrive',
+              'Complete cleanup after service',
+              'Normal groceries and ingredients',
+              'On-site event coordination',
+              'Bali-wide villa and venue travel',
+            ].map((item) => (
+              <div key={item} className="buffet-reveal bg-white rounded-xl border border-[#E8E6E3] p-5">
+                <div className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-[#C5A028] flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-[#4A4745]">{item}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 bg-white rounded-2xl border border-[#E8E6E3] p-6">
+            <h3 className="font-semibold mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Premium upgrades quoted separately</h3>
+            <p className="text-sm text-[#4A4745] mb-3">
+              Lobster, imported tenderloin, sushi-grade fish, a third live station, elaborate floral or themed decorations, premium bar service, and extended service hours are additional. We quote these clearly before you confirm.
+            </p>
+            <p className="text-sm text-[#4A4745]">
+              Everything else — standard proteins, vegetables, rice, noodles, salads, sambals, dessert, fruit, chef labour, service staff, equipment, setup and cleanup — is covered by the package price.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 12: GROUP SIZE GUIDE ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Chapter 12 — Investment"
             title="Group Size Guide"
             subtitle="All-in totals include 21% service charge and tax. Final quote confirmed before deposit."
           />
@@ -592,11 +671,11 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 11: ADD-ONS ═══════ */}
+      {/* ═══════ SECTION 13: ADD-ONS ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 11 — Add-Ons"
+            eyebrow="Chapter 13 — Add-Ons"
             title="Buffet Add-Ons"
             subtitle="Elevate your buffet with live stations, bartenders, premium seafood, and extended dessert options."
           />
@@ -621,11 +700,11 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 12: BUFFET VS PLATED ═══════ */}
+      {/* ═══════ SECTION 14: BUFFET VS PLATED ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 12 — Compare"
+            eyebrow="Chapter 14 — Compare"
             title="Buffet vs Plated Dinner"
             subtitle="Buffet gives flexibility and speed. Plated gives formality and control. Here is how to choose."
           />
@@ -668,12 +747,12 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 13: AREA MINIMUMS ═══════ */}
+      {/* ═══════ SECTION 14: LOCATIONS IN BALI ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 13 — Coverage"
-            title="Minimum Guests and Bali Travel Fees"
+            eyebrow="Chapter 15 — Coverage"
+            title="Locations in Bali"
             subtitle="Buffet catering across all major Bali villa areas. Minimums ensure service quality and logistics work properly."
           />
           <div className="hidden md:block overflow-x-auto mt-10">
@@ -710,7 +789,7 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 14: PRE-EVENT TASTING ═══════ */}
+      {/* ═══════ SECTION 16: PRE-EVENT TASTING ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C5A028]/10 text-[#C5A028] text-sm font-semibold mb-6">
@@ -729,7 +808,7 @@ export default function CateringBuffetPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 15: TESTIMONIALS ═══════ */}
+      {/* ═══════ SECTION 17: TESTIMONIALS ═══════ */}
       <TestimonialBlock
         testimonials={[
           { name: 'Sarah & James', location: 'Seminyak Villa Wedding', quote: 'The Indonesian buffet for 80 guests was incredible. The sate lilit and nasi kuning were authentic and delicious. The live pasta station was a huge hit.', rating: 5 },
@@ -740,17 +819,17 @@ export default function CateringBuffetPage() {
         subtitle="Real reviews from villa buffet events across Bali."
       />
 
-      {/* ═══════ SECTION 16: FAQ ═══════ */}
+      {/* ═══════ SECTION 18: FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
-          <SectionHeader eyebrow="Chapter 14 — FAQ" title="Buffet Catering FAQ" />
+          <SectionHeader eyebrow="Chapter 18 — FAQ" title="Buffet Catering FAQ" />
           <FAQAccordion items={FAQS} defaultOpenCount={4} />
         </div>
       </section>
 
       <PressStrip />
 
-      {/* ═══════ SECTION 17: FINAL CTA ═══════ */}
+      {/* ═══════ SECTION 19: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/generated/mychef-catering-bali-buffet-final.webp" alt="Completed buffet dinner at a Bali villa poolside at dusk" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />

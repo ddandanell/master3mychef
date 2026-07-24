@@ -121,7 +121,7 @@ export default function KidsMenusPage() {
           <Breadcrumb items={[{ label: "Kids' Menus" }]} theme="dark" className="px-0 pt-0 pb-8" />
           <p className="font-cormorant text-[#E8985E] text-sm uppercase tracking-[4px] mb-4">Kids&apos; Villa Dining</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Kids' Menus in Bali &mdash; Six Menus Children Actually Finish
+            {"Little Guests. Big Flavours."}
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4 leading-relaxed">
             Fun, healthy menus designed just for children — cooked fresh in your villa by our private chefs. Pizza parties, build-your-own burger bars and a gentle taste of Bali, every one nut-free as standard.

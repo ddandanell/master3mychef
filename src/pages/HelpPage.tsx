@@ -123,7 +123,7 @@ export default function HelpPage() {
           <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center text-white w-full">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair mb-8">How can we help?</h1>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair mb-8">{"How Can We Help?"}</h1>
           <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-14 leading-relaxed">
             Everything you need to know about booking a private chef, managing catering, and planning villa events in Bali.
           </p>

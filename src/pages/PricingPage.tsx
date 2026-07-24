@@ -223,7 +223,7 @@ export default function PricingPage() {
       seoTitle="Private Chef Bali Prices | Catering & Event Pricing | myCHEF"
       seoDescription="Transparent myCHEF pricing: private chef rates, menu prices, catering &amp; event packages in Bali. No hidden fees. Get a quote within 2 hours."
       canonicalUrl="https://mychef.id/pricing"
-      h1="Private Chef Bali Prices — Every Number, Upfront"
+      h1="Transparent Pricing for Every Experience"
       subtitle="This page publishes our real prices. The figure you see here is the figure your quote is built from — fixed, itemised, and confirmed before you pay anything."
       heroImage="/generated/mychef-catering-bali-catering-hero.webp"
       heroImageAlt="Elegant fine dining dish"

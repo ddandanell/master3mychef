@@ -248,7 +248,7 @@ export default function BbqGrillPage() {
           <Breadcrumb items={[{ label: 'BBQ Grill' }]} theme="dark" className="px-0 pt-0 pb-8 justify-center [&>ol]:justify-center" />
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">BBQ Grill Menu</p>
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6">
-            The BBQ Grill Menu — Fire, Smoke & Live Grilling at Your Villa
+            {"The BBQ Grill Menu — Fire. Smoke. Flavour."}
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4 leading-relaxed">
             Twelve live-grill menus, every one cooked in front of your guests on our own grill station — charcoal, gas and real wood smoke.

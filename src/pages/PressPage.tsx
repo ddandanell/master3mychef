@@ -61,7 +61,7 @@ export default function PressPage() {
         <div className="relative mx-auto grid max-w-[1240px] gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-[#8A857D]">Press &amp; Media</p>
-            <h1 className="mt-6 font-playfair text-5xl leading-tight md:text-7xl">myCHEF.id Media Kit</h1>
+            <h1 className="mt-6 font-playfair text-5xl leading-tight md:text-7xl">{"myCHEF Media Kit"}</h1>
             <p className="mt-6 max-w-[760px] text-lg leading-8 text-[#4A4745] md:text-xl">
               Bali&apos;s private chef and villa catering team — {siteFacts.reviewFraming}. Founded in {siteFacts.foundingYear} by a chef trained in {siteFacts.founderTrainingCity}, myCHEF.id delivers private dining, catering, events, and staffing across the island. Press kits, brand assets, and media enquiries available on request.
             </p>

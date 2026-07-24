@@ -81,7 +81,7 @@ export default function TermsPage() {
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Legal</p>
-          <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Payment & Booking Terms</h1>
+          <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{"Terms of Service"}</h1>
           <p className="text-white/[60%] text-sm">Effective: June 2026 &nbsp;|&nbsp; Last updated: June 2026 &nbsp;|&nbsp; Company: MyChef &nbsp;|&nbsp; NPWP: 1000000005064323</p>
         </div>
       </section>

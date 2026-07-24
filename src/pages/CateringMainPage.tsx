@@ -430,8 +430,7 @@ export default function CateringMainPage() {
               myCHEF Events & Catering
             </p>
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Premium Catering in Bali<br />
-              <span className="italic">For Every Occasion.</span>
+              {"Catering in Bali — Built for Groups, Parties & Hosted Dinners"}
             </h1>
             <div className="text-base md:text-lg text-white/[85%] max-w-3xl mx-auto space-y-4">
               <p>

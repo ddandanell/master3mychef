@@ -192,7 +192,7 @@ export default function ServicesPage() {
             className="text-5xl md:text-7xl lg:text-8xl mb-6 leading-[1.02] max-w-[900px]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Private Chef Services in Bali — <span className="italic">Every Experience, One Team</span>
+            {"Our Services"}
           </h1>
           <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[640px] leading-relaxed">
             Eight services, one standard: extraordinary food in your villa, with zero stress. Every service includes menu planning, fresh shopping, on-site cooking and a spotless kitchen afterwards — and every one starts with a clear price.

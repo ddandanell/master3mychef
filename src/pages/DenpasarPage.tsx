@@ -117,7 +117,7 @@ export default function DenpasarPage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Denpasar</p>
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Chef<br />in Denpasar</h1>
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">{"Private Dining in Denpasar: Where to Eat & In-Villa Chef Options"}</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Bali's operational centre, served with precision. Fast deployment, business lunch catering, daily home dining, and family celebration dinners — all from central Bali's best-positioned chef team.
           </p>

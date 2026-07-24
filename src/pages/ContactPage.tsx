@@ -192,7 +192,7 @@ export default function ContactPage() {
             className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7 max-w-[900px]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            We&rsquo;ll reply within 1 hour on WhatsApp.
+            {"Contact Us"}
           </h1>
           <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[640px] leading-relaxed">
             Choose the right concierge below or send one quick WhatsApp message and we will route your booking request instantly.

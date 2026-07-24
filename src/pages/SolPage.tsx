@@ -149,7 +149,7 @@ export default function SolPage() {
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <p className="sol-hero-label text-white text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Private Villa Dining</p>
           <h1 className="sol-hero-title text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] text-white mb-6 " style={{ fontFamily: "'Playfair Display', serif" }}>
-            Your Villa Chef<br /><span className="italic">for Everyday Dining in Bali</span>
+            {"Your Private Chef for Everyday Villa Dining"}
           </h1>
           <p className="sol-hero-sub text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
             The best part of a Bali villa stay should not be the daily logistics of eating. A villa chef changes that: breakfast appears after your swim, lunch when the kids are hungry, dinner when the light turns golden — all cooked fresh in your kitchen, every day of your stay, with the shopping, cooking and cleaning completely handled. (Hosting a party or event for 10+ guests? That's our <Link to="/events" className="underline hover:text-[#C5A028]">events &amp; catering</Link> team.)

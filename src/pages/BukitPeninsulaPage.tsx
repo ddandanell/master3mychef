@@ -117,7 +117,7 @@ export default function BukitPeninsulaPage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Bukit Peninsula</p>
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Chef<br />Bukit Peninsula</h1>
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">{"Private Dining in Bukit: Where to Eat & In-Villa Chef Options"}</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Clifftop tasting menus, surf retreat catering, and wedding dining across Bali's most dramatic peninsula. One team. Pecatu, Ungasan, Bingin, Padang-Padang — all covered.
           </p>

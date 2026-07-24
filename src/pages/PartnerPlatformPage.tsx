@@ -145,7 +145,7 @@ export default function PartnerPlatformPage() {
             myCHEF Certified Partner Programme
           </p>
           <h1 className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7 max-w-[1000px]" style={{ fontFamily: "'Playfair Display', serif" }}>
-            The myCHEF Certified Partner Programme
+            {"Partner Platform"}
           </h1>
           <p className="text-base md:text-xl text-white/[80%] mb-10 max-w-[720px] leading-relaxed">
             Most villas compete on view, pool, bedrooms and location. Very few compete on what guests actually remember. The Certified Partner Programme turns your villa — or your whole portfolio — into a Michelin-level private dining destination, without building a restaurant operation.

@@ -11,20 +11,20 @@ import { siteFacts } from '@/data/siteFacts'
 const WA = 6289674072020
 
 interface Concierge {
-  id: 'sofia' | 'daniel' | 'olivia' | 'marco'
+  id: 'dede' | 'david' | 'rina' | 'budi'
   name: string
   role: string
   area: string
   desc: string
   portrait: string
   accent: string
-  /** Pre-filled WhatsApp message text for this concierge. */
+  /** Pre-filled WhatsApp message text for this coordinator. */
   message: string
 }
 
 const FAQS = [
   { q: 'How do I contact myCHEF?', a: 'The fastest way is WhatsApp at +62 896-7407-2020. You can also email bali@mychef.id or call the same number. We usually reply within minutes on WhatsApp.' },
-  { q: 'Who is Sofia and what does she handle?', a: 'Sofia is our Fine Dining Concierge. She handles tasting-menu reservations, dietary preferences, wine pairings, and fine-dining experiences at your villa.' },
+  { q: 'Who is Dede and what does she handle?', a: 'Dede is our Fine Dining Coordinator. She handles tasting-menu reservations, dietary preferences, wine pairings, and fine-dining experiences at your villa.' },
   { q: 'How quickly will myCHEF respond?', a: 'We typically reply within minutes on WhatsApp. For email enquiries, expect a response within a few hours during business hours.' },
   { q: 'Can I call instead of using WhatsApp?', a: 'Yes. You can call +62 896-7407-2020 directly. Our lines are open daily from 08:00 to 22:00 WITA.' },
   { q: 'What information should I include in my first message?', a: 'Let us know your name, the service you are interested in, your villa or location in Bali, group size, and preferred date. The more detail, the faster we can help.' },
@@ -35,44 +35,44 @@ const FAQS = [
 
 const CONCIERGES: Concierge[] = [
   {
-    id: 'sofia',
-    name: 'Sofia',
-    role: 'Fine Dining Concierge',
+    id: 'dede',
+    name: 'Dede',
+    role: 'Coordinator',
     area: 'Fine Dining',
     desc: 'Menus, dietary preferences, wine pairings, and reservations for our two tasting experiences in your villa.',
-    portrait: '/generated/portrait-sofia.webp',
+    portrait: '/generated/portrait-dede-coordinator-bali.webp',
     accent: '#C5A028',
     message: "Hi myCHEF, I'd like to book a fine dining experience at my villa.",
   },
   {
-    id: 'daniel',
-    name: 'Daniel',
-    role: 'Villa Chef Coordinator',
+    id: 'david',
+    name: 'David',
+    role: 'Coordinator',
     area: 'Catering',
     desc: 'Daily chef bookings, meal plans, weekly stays, and matching the right chef to your kitchen.',
-    portrait: '/generated/portrait-daniel.webp',
+    portrait: '/generated/portrait-david-coordinator-bali.webp',
     accent: '#6B8E5A',
-    message: "Hi Daniel, I'd like to book a private chef for my villa.",
+    message: "Hi David, I'd like to book a private chef for my villa.",
   },
   {
-    id: 'olivia',
-    name: 'Olivia',
-    role: 'Events Manager',
+    id: 'rina',
+    name: 'Rina',
+    role: 'Coordinator',
     area: 'Events',
     desc: 'Weddings, corporate events, retreats, and celebrations from intimate dinners to 200-guest receptions.',
-    portrait: '/generated/portrait-olivia.webp',
+    portrait: '/generated/portrait-rina-coordinator-bali.webp',
     accent: '#2C5F7C',
-    message: "Hi Olivia, I'd like to plan an event in Bali.",
+    message: "Hi Rina, I'd like to plan an event in Bali.",
   },
   {
-    id: 'marco',
-    name: 'Marco',
-    role: 'Partnerships & Staffing',
+    id: 'budi',
+    name: 'Budi',
+    role: 'Coordinator',
     area: 'Partners & Staffing',
     desc: 'Villa partner program, long-term chef staffing, and corporate hospitality arrangements.',
-    portrait: '/generated/portrait-marco.webp',
+    portrait: '/generated/portrait-budi-coordinator-bali.webp',
     accent: '#8B4513',
-    message: "Hi Marco, I'd like to talk about a partnership / staffing arrangement.",
+    message: "Hi Budi, I'd like to talk about a partnership / staffing arrangement.",
   },
 ]
 
@@ -212,11 +212,11 @@ export default function ContactPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-end mb-12">
             <div>
-              <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">Concierges</p>
-              <h2 className="font-playfair text-4xl md:text-5xl leading-tight">The four leaders of myCHEF</h2>
+              <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">Coordinators</p>
+              <h2 className="font-playfair text-4xl md:text-5xl leading-tight">Your myCHEF coordinators</h2>
             </div>
             <p className="text-[#4A4745] text-lg">
-              Each of our four service areas has a dedicated Indonesian lead. You speak to a real person —
+              Every service area has a dedicated coordinator. You speak to a real person —
               one who knows the villa scene, the kitchens, and the people behind every booking.
             </p>
           </div>

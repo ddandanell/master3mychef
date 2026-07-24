@@ -1011,6 +1011,7 @@ export default function CateringRetreatPage() {
         pageSource="catering-retreat"
         serviceName="retreat catering in Bali"
         intent="retreat proposal and planning"
+        label="Request a Retreat Proposal"
       />
     </div>
   )

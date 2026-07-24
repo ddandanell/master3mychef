@@ -2,72 +2,77 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { CITY_CONTENT } from '@/data/cityContent'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
-const WA_MSG = encodeURIComponent('Hi myCHEF, I want to book a private chef in Nusa Dua. Can you send me pricing?')
+const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Nusa Dua. Can you send a menu proposal?')
 
 const FAQS = [
   {
-    q: 'Do you provide private chef services in Nusa Dua?',
-    a: "Yes — myCHEF operates throughout Nusa Dua's gated estates, branded residences, ITDC compounds, Geger Beach villas, and Sawangan properties. We coordinate security entry and logistics for the area's secure-access estates as standard.",
+    q: 'Where should we eat out in Nusa Dua?',
+    a: 'Bali Collection for the easiest walkable choice, resort dining rooms for formal occasions, and Tanjung Benoa for casual local seafood. Estate guests often find in-villa dining the best overall answer.',
   },
   {
-    q: 'Can you match five-star hotel standards for private villa dining in Nusa Dua?',
-    a: 'That is exactly what we are built for. Our Nusa Dua service is modelled on five-star resort operations — precise run sheets, polished waitstaff, refined plating, and zero visible friction during the dining experience. Guests upgrading a resort stay with a private villa dinner consistently tell us it exceeds what they received at the hotel restaurant.',
+    q: 'Is Nusa Dua expensive for dining?',
+    a: 'Resort and precinct restaurants price at international hotel levels, with tax and service added. In-villa chef dinners start from IDR 700K per person ++ — often comparable or better for groups, with privacy included.',
   },
   {
-    q: 'How much does a private chef cost in Nusa Dua?',
-    a: 'Fine-dining dinners in Nusa Dua start at IDR 700K–900K per person for 2–20 guests. Corporate and executive dining formats range from IDR 700K–800K per person. Event and celebration packages from IDR 700K–2M per person depending on production complexity. All prices subject to 11% tax + 10% service charge.',
+    q: 'How much does private dining in Nusa Dua cost?',
+    a: 'Villa fine dining runs IDR 700K–900K per person, corporate catering IDR 700K–800K, and celebrations from IDR 700K up depending on production — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
   },
   {
-    q: 'Do you cater for corporate offsites and executive groups in Nusa Dua?',
-    a: 'Yes — Nusa Dua is one of our primary corporate dining zones. We regularly cater board-level dinners, team retreat meals, and business breakfasts at private estates and conference villas. We supply all chefs, waiting staff, equipment, and run to your agenda — not ours.',
+    q: 'How do you handle gated-estate access?',
+    a: 'We coordinate security entry documentation with estate management in advance, arrive early to stage, and run service to the agreed brief. It\'s standard procedure for our peninsula teams.',
   },
   {
-    q: "Can you handle security and access coordination for Nusa Dua's gated estates?",
-    a: "Absolutely. We are experienced with the security protocols of Nusa Dua's ITDC zone and branded residential estates. We pre-register our team, coordinate vehicle access, and arrive with time to set up before guests arrive. No logistical surprises.",
+    q: 'Can you cater a corporate offsite or board dinner?',
+    a: 'Yes — structured breakfasts, working lunches and executive dinners for 10–60 guests, with full-board options for multi-day programmes and precise run sheets.',
   },
   {
-    q: 'Are your Nusa Dua chefs Indonesian?',
-    a: 'Yes — all myCHEF chefs are Indonesian professionals trained to international culinary standards. They are experienced with the expectations of five-star hotel guests, corporate executives, and international families who expect hotel-grade service in a private setting.',
+    q: 'Which areas do you cover?',
+    a: 'The full peninsula: the ITDC zone, Geger, Sawangan, the Benoa-side estates and Tanjung Benoa, plus nearby Bukit villas.',
   },
 ]
 
-const AREAS = [
-  { name: 'ITDC Nusa Dua', note: 'The core gated resort zone. Precision coordination for secure-estate access, large-team setups, and plated fine-dining.' },
-  { name: 'Geger Beach', note: 'Beachfront compounds and boutique villas. Intimate dinners, sunrise breakfasts, and relaxed group brunches.' },
-  { name: 'Sawangan', note: 'Larger estate villas and branded residences. Corporate offsites, executive dinners, and multi-day catering.' },
-  { name: 'Benoa Side Estates', note: 'Quieter residential zone adjacent to Nusa Dua. Family villas and private compound hosting.' },
-  { name: 'Nusa Dua Beach Hotel Zone', note: 'Resort-adjacent villas where guests upgrade to private dining. Hotel-grade standards, genuine privacy.' },
-  { name: 'Bali Collection District', note: 'Central Nusa Dua coverage with easy access for all service formats from breakfast through late dinner.' },
+const SCENE = [
+  {
+    name: 'Resort dining rooms',
+    detail: "The five-star hotels run the area's most formal kitchens — international fine dining, Japanese, Italian, grand seafood buffets. Standards are high and so are prices, and every bill arrives with tax and service on top. Hotel restaurants are open to outside guests, but booking ahead is wise in high season.",
+  },
+  {
+    name: 'Bali Collection & the ITDC precinct',
+    detail: "The open-air dining and shopping precinct inside the ITDC zone is the area's de facto restaurant row: a walkable loop of mid-range to upscale venues — Indonesian, Asian, European, cafés and dessert bars. It's the easiest evening out for villa guests: safe, stroller-friendly, and varied enough to please a mixed group.",
+  },
+  {
+    name: 'Beyond the gates: Tanjung Benoa & local warungs',
+    detail: "Just north, Tanjung Benoa's watersports strip adds casual seafood spots and local warungs at local prices — the best value eating near the peninsula, and where our own teams eat on days off.",
+  },
 ]
 
 const SERVICES = [
   {
-    name: 'Resort-Style Villa Fine Dining',
+    name: 'Resort-style villa fine dining',
     range: 'IDR 700K–900K / person',
     for: '2–20 guests',
-    detail: 'Multi-course tasting menus executed with hotel-grade precision. Polished waitstaff, refined plating, and quiet professional service — the experience of a five-star restaurant inside your private villa.',
+    detail: 'Multi-course tasting menus with polished waitstaff.',
   },
   {
-    name: 'Corporate & Executive Catering',
+    name: 'Corporate & executive catering',
     range: 'IDR 700K–800K / person',
     for: '10–60 guests',
-    detail: 'Structured breakfasts, working lunches, and plated executive dinners with precise run sheets. We coordinate security entry, villa setup, and service timing to match your business agenda exactly.',
+    detail: 'With precise run sheets.',
   },
   {
-    name: 'Celebration Events',
+    name: 'Celebration events',
     range: 'IDR 700K–2M / person',
     for: '10–100 guests',
-    detail: 'Anniversaries, milestone birthdays, and corporate receptions with full F&B production — chefs, waitstaff, bartenders, linen, and complete cleanup. Event-grade organisation at villa-level intimacy.',
+    detail: 'Anniversaries, milestone birthdays, receptions.',
   },
   {
-    name: 'Polished Brunch & Breakfast',
+    name: 'Brunch & breakfast service',
     range: 'From IDR 700K / person',
     for: '2–30 guests',
-    detail: 'Recovery brunches after long event nights, team breakfasts to open an offsite, or family mornings for multi-generational villa stays. Premium but relaxed — the perfect counterpoint to the evening before.',
+    detail: 'Recovery brunches, team breakfasts, family mornings.',
   },
 ]
 
@@ -76,31 +81,24 @@ export default function NusaDuaPage() {
 
   const localBizNusaDua = {
     ...localBusinessSchema,
-    name: 'myCHEF.id Nusa Dua',
-    description: 'Private chef, resort-style fine dining, corporate catering, and executive event service in Nusa Dua, Bali',
+    name: 'myCHEF',
+    description: 'Resort-grade in-villa dining, chef services and corporate catering across the Nusa Dua peninsula, Bali — HACCP-certified Indonesian chefs, fixed upfront pricing.',
     areaServed: { '@type': 'Place', name: 'Nusa Dua, Bali' },
+    priceRange: 'IDR 700,000+ per person',
+    url: canonical,
   }
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Chef Nusa Dua | Resort Villa & Executive Dining — myCHEF"
-        description="Hire a private chef in Nusa Dua for resort-grade villa dining, corporate offsites & celebration events. Indonesian chefs, five-star precision, full logistics."
+        title="Private Dining in Nusa Dua | Dining Guide & Chef Services"
+        description="Where to eat in Nusa Dua: the area dining guide — restaurants, private dining and in-villa chef services for your Nusa Dua stay. By myCHEF."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-nusa-dua.webp"
         jsonLd={[
           localBizNusaDua,
-          breadcrumbSchema('Private Chef Nusa Dua', canonical, 'Locations', 'https://mychef.id/locations'),
-          faqPageSchema([...FAQS, ...CITY_CONTENT['nusa-dua'].faqs].map(f => ({ question: f.q, answer: f.a }))),
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'Private Chef Nusa Dua',
-            description: "Premium private chef, resort-style fine dining, corporate catering, and celebration events across Nusa Dua's gated estates, Geger Beach, and Sawangan.",
-            provider: { '@id': 'https://mychef.id/#business' },
-            areaServed: { '@type': 'Place', name: 'Nusa Dua, Bali' },
-            url: canonical,
-          },
+          breadcrumbSchema('Nusa Dua', canonical, 'Locations', 'https://mychef.id/locations'),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />
 
@@ -108,7 +106,7 @@ export default function NusaDuaPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-nusa-dua.webp"
-            alt="Private chef service in Nusa Dua, Bali by myCHEF — resort villa fine dining"
+            alt="Private dining in Nusa Dua, Bali — in-villa chef dinner by myCHEF"
             width={1920} height={1080}
             className="w-full h-full object-cover"
             fetchPriority="high" decoding="async"
@@ -116,16 +114,16 @@ export default function NusaDuaPage() {
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.20) 100%)' }} />
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Nusa Dua</p>
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Chef<br />in Nusa Dua</h1>
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Nusa Dua Dining Guide</p>
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Dining in Nusa Dua: Where to Eat & In-Villa Chef Options</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Resort-grade precision in your private villa. Five-star plating, polished service, and corporate-level coordination for Nusa Dua's most demanding estates and executive guests.
+            Nusa Dua runs to a different standard from the rest of Bali — and dining here follows suit. The peninsula is a purpose-built enclave of five-star resorts, gated residential estates and manicured beachfront, twenty minutes from the airport and a world away from the island's usual happy chaos. This guide maps where to eat out in the enclave, what private dining looks like behind those gates, and when an in-villa chef dinner outclasses even the resort restaurants.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
               data-source="nusa-dua-cta"
               className="inline-flex items-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all">
-              <MessageCircle className="w-4 h-4" /> Get a Nusa Dua Quote
+              <MessageCircle className="w-4 h-4" /> Plan a Nusa Dua Dinner
             </a>
             <Link to="/pricing" className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all">
               View Pricing Guide
@@ -136,29 +134,24 @@ export default function NusaDuaPage() {
 
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Nusa Dua's Private Chef Specialists</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-6">The myCHEF Standard in Nusa Dua</h2>
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">What Makes It Different</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">What Makes Dining in Nusa Dua Different</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-4 leading-relaxed">
-              Nusa Dua operates at a different standard from the rest of Bali. The area is built around five-star resorts, gated residential estates, and private compounds where access, timing, and presentation are non-negotiable. Guests who stay here — executive families, corporate groups, destination wedding parties, and international travellers upgrading from hotel suites — expect the quality they see in the restaurant to be matched or exceeded in the private villa setting.
-            </p>
-            <p className="mb-4 leading-relaxed">
-              myCHEF approaches every Nusa Dua booking as a resort-level operation. That means we coordinate security entry documentation in advance, arrive with time to fully stage the dining area before guests sit down, and run a timed service that flows exactly as briefed. We bring the chefs, waitstaff, and all equipment. The villa simply provides the space and the view.
-            </p>
-            <p className="mb-0 leading-relaxed">
-              For corporate and executive formats, we build around your agenda: structured breakfasts that open a working day, efficient lunches that do not break the rhythm, and polished evening dinners that close a deal. For families and celebration guests, we offer everything from intimate two-person anniversary dinners to full milestone-event production for a hundred guests. Every chef on our Nusa Dua team is Indonesian, internationally trained, and experienced with the expectations that come with this address.
+              Unlike Seminyak or Canggu, this is not a neighbourhood you wander. The dining geography splits cleanly into three zones: the resort strip along the beach, the Bali Collection precinct in the ITDC gated zone, and the residential estates — Sawangan, Geger and the Benoa side — where the area's villas sit. Everything is landscaped, secure and calm. The upside: flawless infrastructure and a genuinely relaxed beach. The trade-off: less spontaneity, fewer independent restaurants, and resort pricing almost everywhere you sit down.
             </p>
           </div>
+
           <div className="mt-10 grid sm:grid-cols-2 gap-4">
             {[
-              'Security and access coordination for gated Nusa Dua estates',
-              'Corporate and executive dining with precise run sheets',
-              'Resort-standard plating and professional waitstaff',
-              'HACCP-certified kitchen practices, same-day food safety',
-              '50% deposit to secure your date — balance 48h before event',
+              'Purpose-built resort and gated-estate enclave',
+              'Three zones: resort strip, Bali Collection ITDC, residential estates',
+              'Security access coordination handled in advance',
+              'Resort-grade service standards for villa dining',
+              'HACCP-certified Indonesian chefs',
+              'Fixed upfront pricing quoted ++',
+              'Corporate and executive dining specialists',
               'WhatsApp response within 2 hours (07:00–22:00 WITA)',
-              'Full service team: chefs, waitstaff, sommelier on request',
-              'Indonesian chefs trained to international culinary standards',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-[#C5A028] flex-shrink-0 mt-0.5" />
@@ -171,8 +164,48 @@ export default function NusaDuaPage() {
 
       <section className="py-20 bg-white border-t border-[#E8E6E3]">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">What We Offer</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-12">Private Chef Services in Nusa Dua</h2>
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Where to Eat Out</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-12">Where to Eat in Nusa Dua: The Scene by Category</h2>
+          <p className="text-[#4A4745] mb-10 max-w-2xl leading-relaxed">
+            We cook across the peninsula every week; here is the working picture.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {SCENE.map((s, i) => (
+              <div key={i} className="border border-[#E8E6E3] rounded-2xl p-6 hover:border-[#C5A028] transition-colors">
+                <h3 className="font-playfair text-xl mb-2">{s.name}</h3>
+                <p className="text-[#4A4745] text-sm leading-relaxed">{s.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Formats</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">Your Private Dining Options in Nusa Dua</h2>
+          <div className="prose prose-lg text-[#4A4745] max-w-none">
+            <ul className="list-disc pl-5 mb-4 space-y-2">
+              <li><strong>Resort restaurants</strong> — polished and reliable, with hotel pricing and other guests.</li>
+              <li><strong>Bali Collection</strong> — the flexible mid-range option for evenings out.</li>
+              <li><strong>In-villa private dining</strong> — a professional chef team cooks and serves in your estate villa, with the same precision the area's resorts promise, and a privacy they can't. For groups of eight or more, the per-person maths frequently beats a resort dining room — before you count the wine markup and the transport.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">The In-Villa Answer</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">The In-Villa Answer: Chef Services in Nusa Dua</h2>
+          <div className="prose prose-lg text-[#4A4745] max-w-none mb-10">
+            <p className="mb-4 leading-relaxed">
+              Our peninsula teams run every booking like a resort operation: security entry documentation coordinated in advance, dining areas fully staged before guests sit down, and service that flows to a timed brief. All chefs are Indonesian, HACCP-certified, and experienced with the expectations that come with this address.
+            </p>
+            <p className="mb-0 leading-relaxed">
+              All prices quoted ++ (11% government tax plus 10% service charge), fixed upfront. Waiters, bartenders and sommeliers can be added from around IDR 250K per hour. Menus and availability: <Link to="/private-chef/nusa-dua" className="text-[#C5A028] hover:underline font-medium">hire a private chef in Nusa Dua</Link>. Full rates on our <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">transparent per-person pricing</Link> page.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 gap-6">
             {SERVICES.map((svc, i) => (
               <div key={i} className="border border-[#E8E6E3] rounded-2xl p-6 hover:border-[#C5A028] transition-colors">
@@ -185,36 +218,48 @@ export default function NusaDuaPage() {
               </div>
             ))}
           </div>
-          <p className="text-[#999] text-xs mt-6">All prices subject to 11% tax + 10% service charge (++). Final pricing depends on guest count, menu complexity, and date.</p>
+          <p className="text-[#999] text-xs mt-6">All prices quoted ++ (11% government tax plus 10% service charge). Final pricing depends on guest count, menu complexity, and date.</p>
         </div>
       </section>
 
       <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Coverage Area</p>
-          <h2 className="font-playfair text-3xl md:text-4xl mb-4">Nusa Dua Areas We Serve</h2>
-          <p className="text-[#4A4745] mb-10 max-w-2xl leading-relaxed">
-            Our Nusa Dua team covers the full estate and resort corridor — from the core ITDC gated zone to the Sawangan beachfront compounds and Benoa-adjacent residences. We are experienced with every access format in the area.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {AREAS.map((a, i) => (
-              <div key={i} className="flex items-start gap-3 border border-[#E8E6E3] rounded-xl p-4">
-                <ChevronRight className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-semibold text-[#1A1A1A] mb-1">Private Chef {a.name}</div>
-                  <div className="text-[#8A8785] text-sm leading-snug">{a.note}</div>
-                </div>
-              </div>
-            ))}
+        <div className="max-w-4xl mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Corporate</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">Corporate & Executive Dining in the Estate Zone</h2>
+          <div className="prose prose-lg text-[#4A4745] max-w-none">
+            <p className="mb-0 leading-relaxed">
+              The peninsula is Bali's boardroom, and food is part of the agenda. We build corporate formats around your programme: structured breakfasts that open a working day, efficient lunches that don't break rhythm, plated executive dinners that close it — plus full-board catering for multi-day offsites and <Link to="/events/corporate-events" className="text-[#C5A028] hover:underline font-medium">corporate event catering</Link> for larger functions. Access coordination, villa setup and service timing are handled against your run sheet, not ours. For a genuinely special closing dinner, our <Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">in-villa fine dining</Link> team runs multi-course tasting evenings with wine pairing.
+            </p>
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white border-t border-[#E8E6E3]">
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">How It Works</p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">How Booking In-Villa Dining Works</h2>
+          <ol className="space-y-4">
+            <li className="flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-[#C5A028] text-black text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+              <span className="text-[#4A4745]"><strong>WhatsApp +62 896-7407-2020</strong> with your date, estate or villa, guest count and dietary requirements — replies within 2 hours (07:00–22:00 WITA). Corporate enquiries: include your headcount and agenda outline.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-[#C5A028] text-black text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+              <span className="text-[#4A4745]"><strong>Receive a menu proposal and fixed quote</strong> within about 24 hours.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="w-6 h-6 rounded-full bg-[#C5A028] text-black text-xs font-semibold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+              <span className="text-[#4A4745]"><strong>Confirm with a 50% deposit.</strong> Allow one to two weeks for corporate functions and celebrations; intimate dinners can often be arranged in days.</span>
+            </li>
+          </ol>
         </div>
       </section>
 
       <section className="py-16 bg-[#1A1A1A] text-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Ready to Book?</p>
-          <h2 className="font-playfair text-3xl mb-4">Get Your Nusa Dua Quote in 2 Hours</h2>
-          <p className="text-white/60 mb-8 leading-relaxed">Send us your date, villa, guest count, and any dietary requirements via WhatsApp. We respond within 2 hours and send a full menu proposal within 24 hours.</p>
+          <h2 className="font-playfair text-3xl mb-4">Plan Your Nusa Dua Table</h2>
+          <p className="text-white/60 mb-8 leading-relaxed">Resort standards, your own dining room. Message +62 896-7407-2020 on WhatsApp with your date, headcount and — for corporate programmes — your agenda, and we'll return a fixed quote within 24 hours.</p>
           <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#C5A028] text-black font-semibold px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all text-sm uppercase tracking-[2px]">
             <MessageCircle className="w-4 h-4" /> WhatsApp Nusa Dua Team
@@ -225,9 +270,9 @@ export default function NusaDuaPage() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
-          <h2 className="font-playfair text-3xl mb-10">Nusa Dua Private Chef FAQ</h2>
+          <h2 className="font-playfair text-3xl mb-10">Nusa Dua Dining FAQ</h2>
           <div className="space-y-4">
-            {[...FAQS, ...CITY_CONTENT['nusa-dua'].faqs].map((faq, i) => (
+            {FAQS.map((faq, i) => (
               <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
                 <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
                   {faq.q}
@@ -242,12 +287,12 @@ export default function NusaDuaPage() {
 
       <section className="py-16 bg-[#F5F3F0] border-t border-[#E8E6E3]">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-playfair text-2xl mb-8 text-center">Explore More Bali Locations</h2>
+          <h2 className="font-playfair text-2xl mb-8 text-center">Explore More Bali Dining Areas</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { label: 'Private Chef Jimbaran', path: '/locations/jimbaran', desc: 'Bayfront seafood BBQs, fresh catch from Kedonganan, sunset dinners' },
-              { label: 'Private Chef Uluwatu', path: '/locations/uluwatu', desc: 'Clifftop drama, Indian Ocean views, wedding and event catering' },
-              { label: 'Private Chef Seminyak', path: '/locations/seminyak', desc: "Beachfront fine dining, villa parties, Bali's most vibrant scene" },
+              { label: 'Jimbaran dining guide', path: '/locations/jimbaran', desc: 'Bayfront seafood BBQs, fresh Kedonganan catch, sunset bay dinners' },
+              { label: 'Uluwatu dining guide', path: '/locations/uluwatu', desc: 'Clifftop drama, Indian Ocean views, wedding and event catering' },
+              { label: 'Seminyak dining guide', path: '/locations/seminyak', desc: "Beachfront fine dining, villa parties, Bali's most vibrant scene" },
             ].map((link) => (
               <Link key={link.path} to={link.path} className="group block bg-white border border-[#E8E6E3] rounded-xl p-5 hover:border-[#C5A028] transition-colors">
                 <div className="font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors mb-1">{link.label}</div>
@@ -257,18 +302,18 @@ export default function NusaDuaPage() {
           </div>
         </div>
       </section>
-          {/* Cross-link to private-chef page */}
-          <section className="py-12 px-6">
-            <div className="max-w-[960px] mx-auto text-center">
-              <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Private Chef in Nusa Dua</h3>
-              <p className="text-gray-600 mb-6">Hire a dedicated private chef for your villa in Nusa Dua. Custom menus, full service, and seamless cleanup.</p>
-              <Link to="/private-chef/nusa-dua" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all">
-                View Private Chef Options <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </section>
 
-          <CityDeepDive slug="nusa-dua" cityName="Nusa Dua" />
-</div>
+      <section className="py-12 px-6">
+        <div className="max-w-[960px] mx-auto text-center">
+          <h3 className="text-2xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Looking for a Dedicated Private Chef in Nusa Dua?</h3>
+          <p className="text-gray-600 mb-6">If you already know you want a private chef for your villa, our Nusa Dua service page has menus, formats and fixed pricing.</p>
+          <Link to="/private-chef/nusa-dua" className="inline-flex items-center gap-2 px-6 py-3 bg-[#C5A028] text-white rounded-full hover:bg-[#D4B43A] transition-all">
+            Hire a private chef in Nusa Dua <ChevronRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      <CityDeepDive slug="nusa-dua" cityName="Nusa Dua" />
+    </div>
   )
 }

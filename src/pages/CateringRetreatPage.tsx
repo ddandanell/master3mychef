@@ -11,12 +11,11 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  serviceWithAggregateOfferSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
-import { buildWhatsAppUrl } from '@/lib/whatsapp'
+
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
@@ -29,7 +28,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = buildWhatsAppUrl({ serviceName: 'retreat catering in Bali', intent: 'retreat proposal and planning' })
+const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20retreat%20meal%20plan.%20Dates%3A%20%20Guests%3A%20%20Dietary%20split%3A%20'
 const SITE = 'https://mychef.id'
 
 /* ── DATA ── */
@@ -170,12 +169,11 @@ function BriefcaseIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 const DAILY_MEALS = [
-  { time: '07:00', meal: 'Healthy Breakfast', desc: 'Tropical fruit platters, smoothie bowls, overnight oats, eggs any style, sourdough, homemade granola, herbal teas, and fresh Balinese coffee.' },
-  { time: '10:00', meal: 'Coffee & Tea Break', desc: 'Herbal infusions, ginger tonics, espresso, plant milks, fresh fruit, and light energy balls served between morning sessions.' },
-  { time: '12:30', meal: 'Lunch Buffet', desc: 'Colourful salads, grain bowls, grilled proteins, vegetarian curries, fermented vegetables, and hydrating fresh juices.' },
-  { time: '15:30', meal: 'Smoothie & Snack Station', desc: 'Cold-pressed juices, coconut smoothies, raw nuts, seasonal fruit, and light protein snacks to bridge the afternoon.' },
-  { time: '19:00', meal: 'Dinner', desc: 'Plated or family-style dinners featuring Balinese, Mediterranean, Italian, or globally inspired menus, adapted to the day\u2019s energy.' },
-  { time: '20:30', meal: 'Herbal Tea & Healthy Dessert', desc: 'Caffeine-free evening blends, raw cacao treats, tropical fruit, and light desserts designed to support restful sleep.' },
+  { time: '07:00–09:00', meal: 'Breakfast', desc: 'Tropical fruit bowls, smoothie bowls, eggs, granola, herbal tea and fresh coffee.' },
+  { time: 'All day', meal: 'Snacks & juices', desc: 'Fresh fruit, raw nuts, energy balls, cold-pressed juices, coconut water.' },
+  { time: '12:00–14:00', meal: 'Lunch', desc: 'Light, balanced plates — salads, grain bowls, grilled proteins, fresh vegetables.' },
+  { time: 'Post-activity', meal: 'Recovery', desc: 'Hydration, electrolytes and light proteins timed after yoga or training.' },
+  { time: '18:00–20:00', meal: 'Dinner', desc: 'Comforting, nourishing curries, grilled fish, roasted vegetables and rice.' },
 ]
 
 const MENU_DIRECTIONS = [
@@ -385,7 +383,7 @@ const LOCATIONS = [
   {
     slug: 'ubud',
     title: 'Ubud',
-    desc: 'Ubud is the spiritual and wellness centre of Bali, home to the island\u2019s densest concentration of yoga and meditation retreats. Our Ubud retreat catering Bali service handles jungle logistics, early morning yoga schedules, and access to organic produce from the surrounding highlands. We regularly cook in open-air villas overlooking rice terraces, bamboo shalas, and riverside estates where groups practise sunrise asana before a nourishing brunch. Because Ubud\u2019s roads are narrow and many venues sit on steep tracks, our team plans deliveries, equipment transport, and fresh-market shopping with local knowledge that keeps every meal on schedule.',
+    desc: 'Ubud is the spiritual and wellness centre of Bali, home to the island\u2019s densest concentration of yoga and meditation retreats. Our Ubud retreat catering Bali service handles jungle logistics, early morning yoga schedules, and access to organic produce from the surrounding highlands. We regularly cook in open-air villas overlooking rice terraces, bamboo shalas, and riverside estates where groups practise sunrise asana before a nourishing brunch. Most of our retreat work is in Ubud and the surrounding villages — see our <a href="/private-chef/ubud" className="text-[#C5A028] hover:underline">private chef in Ubud</a> page for jungle-villa logistics — and we cater retreats island-wide.</>,
   },
   {
     slug: 'canggu',
@@ -454,43 +452,14 @@ const TIMELINE = [
 ]
 
 const FAQS = [
-  { q: 'What is retreat catering Bali?', a: 'Retreat catering Bali is a specialised service providing multi-day, chef-prepared meals for yoga, wellness, corporate, and private retreats. It includes menu planning, dietary management, daily shopping, on-site cooking, service, and full kitchen cleanup.' },
-  { q: 'Do you cater 7-day and 14-day retreats?', a: 'Yes. Multi-day retreat catering is our core service. We plan menu rotation, shopping cycles, and chef scheduling so quality and variety remain high across 7, 14, or even 21 consecutive days.' },
-  { q: 'Can the chef stay on site for the full retreat?', a: 'Yes. For remote villas and large retreats, we arrange on-site or nearby accommodation for the culinary team, enabling early breakfasts, late dinners, and immediate response to schedule changes.' },
-  { q: 'Do you provide yoga retreat menus?', a: 'Yes. Yoga retreat catering Bali is one of our specialities. We design light pre-practice meals, nourishing post-practice brunches, and grounding dinners that support asana, meditation, and energy work.' },
-  { q: 'Can you create detox or juice-cleanse menus?', a: 'Yes. We design detox programs ranging from full juice cleanses to partial raw-food days, all integrated within a broader retreat menu for guests who are not cleansing.' },
-  { q: 'Do menus change every day?', a: 'Yes. We actively rotate breakfast, lunch, dinner, and snacks so guests rarely eat the same dish twice within a standard retreat. Repetition only happens by request, for example a favourite breakfast bowl.' },
-  { q: 'Can you mix cuisines across the retreat?', a: 'Absolutely. Many retreats feature themed nights such as Balinese Night, Italian Night, Mediterranean Night, Mexican Night, Japanese Night, Seafood Night, and BBQ Evening.' },
-  { q: 'How do you handle allergies?', a: 'We collect allergy information before arrival, flag anaphylactic risks, prevent cross-contact in the kitchen, and label all dishes. Severe allergies are discussed directly with the retreat leader.' },
-  { q: 'Can you cater to vegans and vegetarians?', a: 'Yes. Vegan retreat catering Bali and vegetarian retreat meals are standard for us. We build complete protein profiles and satisfying flavours for plant-based guests.' },
-  { q: 'Do you offer gluten-free retreat catering?', a: 'Yes. Gluten-free retreat catering Bali uses rice, quinoa, buckwheat, and root vegetables. We control cross-contamination and provide bread and pastry alternatives.' },
-  { q: 'Can you do keto, paleo, or low-carb?', a: 'Yes. We design keto, paleo, low-carb, and sugar-conscious menus with appropriate substitutions and clear labelling.' },
-  { q: 'Do you cater kids\u2019 meals?', a: 'Yes. We provide milder, familiar options for children and teenagers, scaled portions, and kid-friendly snacks alongside adult retreat menus.' },
-  { q: 'Is halal-friendly catering available?', a: 'Yes. Halal-friendly retreat catering Bali avoids pork and non-halal meats, sources from trusted suppliers, and can separate preparation where required.' },
-  { q: 'Do you provide smoothie and juice stations?', a: 'Yes. Smoothie bars, cold-pressed juice stations, and wellness shots are available for breakfast, afternoon breaks, or all-day self-service.' },
-  { q: 'Can you set up a coffee station?', a: 'Yes. We offer everything from self-service coffee and tea stations to a private barista preparing espresso, pour-over, and specialty drinks.' },
-  { q: 'Do you do snack stations?', a: 'Yes. Wellness snack stations with raw nuts, dried fruit, energy balls, fresh coconut water, and herbal teas can be available throughout the day.' },
-  { q: 'Can you serve late-night food?', a: 'Yes. Late dinners, post-event snacks, and evening herbal tea service can be scheduled for retreats with evening sessions or celebrations.' },
-  { q: 'Do you cater corporate retreats?', a: 'Yes. Corporate retreat catering Bali includes working lunches, coffee breaks, BBQ nights, formal dinners, and invoicing support for business groups.' },
-  { q: 'Can you cater yoga teacher trainings?', a: 'Yes. Teacher training catering Bali runs for 14 to 28 days with generous portions, menu variety, and precise dietary tracking for large groups.' },
-  { q: 'Do you provide tax invoices?', a: 'Yes. We provide NPWP-ready tax invoices for corporate retreats, teacher trainings, and business clients on request.' },
-  { q: 'Can you cater 150 guests?', a: 'Yes. We regularly cater retreats from 10 to 150 guests. Large groups receive a brigade-style team with multiple chefs, assistants, and service staff.' },
-  { q: 'Can you work from a villa kitchen?', a: 'Yes. We assess the villa kitchen before arrival, bring missing equipment, and adapt our prep flow to the available space, power, and water.' },
-  { q: 'Do you cater at retreat centres and boutique hotels?', a: 'Yes. We operate in private villas, retreat centres, boutique hotels, jungle lodges, and beachfront estates across Bali.' },
-  { q: 'How far in advance should we book?', a: 'For retreat catering, 1 to 3 months is ideal. Peak season and large groups benefit from earlier booking to secure chef availability and plan dietary requirements.' },
-  { q: 'Do you do excursions lunches?', a: 'Yes. We prepare packed lunches, cool boxes, and portable meals for temple visits, waterfall hikes, surf trips, and beach days.' },
-  { q: 'Can you accommodate religious fasting or prayer schedules?', a: 'Yes. We respect religious requirements, fasting windows, Ramadan schedules, and prayer times, and adjust meal timing accordingly.' },
-  { q: 'Do you use organic or local produce?', a: 'We use local, seasonal produce from Balinese markets and organic farms wherever possible. Specific organic requirements can be built into the menu plan.' },
-  { q: 'Can we request the same chef for the whole retreat?', a: 'Yes. Consistency is part of our service. The same lead chef stays for the full retreat, supported by assistants as needed.' },
-  { q: 'Do you handle kitchen cleanup?', a: 'Yes. Full kitchen cleanup is included after every service. The kitchen is reset and left spotless for villa staff or the next meal.' },
-  { q: 'Can you provide waiters and butlers?', a: 'Yes. We can add uniformed waiters, butlers, bartenders, and hosts to any retreat meal or event.', href: '/in-villa-service' },
-  { q: 'Do you offer BBQ or fine dining nights?', a: 'Yes. BBQ evenings, fine dining finales, seafood nights, and themed cuisine nights are popular highlights within a retreat program.', href: '/catering/bbq-catering' },
-  { q: 'How are prices calculated?', a: 'Every retreat receives a customised proposal based on guest numbers, menu style, duration, location, service level, and dietary complexity. We do not publish fixed prices because every retreat is different.' },
-  { q: 'Do you cater surf and fitness retreats?', a: 'Yes. Surf retreat catering Bali and fitness retreat catering Bali focus on high-protein recovery meals, hydration, and energy balance for active guests.' },
-  { q: 'What areas of Bali do you cover?', a: 'We cover Ubud, Canggu, Pererenan, Sanur, Uluwatu, Sidemen, Amed, Nusa Dua, Jimbaran, Seminyak, Munduk, and North Bali, plus surrounding areas by arrangement.' },
-  { q: 'Can guests with coeliac disease eat safely?', a: 'Yes. Coeliac disease is treated with strict cross-contamination controls, separate prep areas, and clear communication with the kitchen team.' },
-  { q: 'Do you provide baristas and cocktail service?', a: 'Yes. Private baristas, coffee stations, bartenders, and cocktail evenings can be added to elevate any retreat day or celebration night.', href: '/in-villa-service/bartenders' },
-  { q: 'How do we start planning?', a: 'Send us your retreat dates, location, estimated guest count, daily schedule, dietary profile, and preferred cuisines via WhatsApp. We will respond with a tailored retreat proposal and next steps.' },
+  { q: 'What does retreat catering in Bali cost?', a: 'Full-day meal plans start from IDR 400,000++ per person per day for plant-forward service and IDR 450,000++ for wellness and detox programmes, subject to 11% government tax + 10% service charge. The exact figure depends on group size, menu intensity and dietary complexity — quoted fixed before you commit.' },
+  { q: 'How many guests do you cater for, and is there a minimum?', a: 'We regularly cater retreats from 10 to 60 guests, and up to 100 for larger programmes. For 30 guests we typically assign a head chef plus two assistants, scaled to your villa kitchen.' },
+  { q: 'Can you do fully vegan, sattvic or detox retreat menus?', a: 'Yes. Fully vegan service is one of our most requested formats, and we design sattvic, juice-cleanse and partial-detox programmes with the same care — full protein profiles and menus that feel abundant, not restrictive.' },
+  { q: 'Can you cater five to seven days continuously?', a: 'Yes — multi-day continuity is the core of this service. Shopping cycles, menu rotation and staff scheduling are planned so quality on day seven matches day one.' },
+  { q: 'What if our villa kitchen is small?', a: 'We assess stove capacity, fridge space and equipment before arrival and bring whatever is missing. Most Bali villa kitchens are fully workable with minor preparation.' },
+  { q: 'What deposit is required?', a: 'A 50% deposit confirms your chef and dates; the balance is due before the retreat begins.' },
+  { q: 'How far ahead should we book?', a: 'Two to four weeks is ideal; for peak season (June–September), earlier is better so we can reserve the right chef for your full dates.' },
+  { q: 'Can guests have alcohol at a wellness retreat?', a: 'That is your call as the organiser — we serve to your programme rules, from fully dry retreats to a single wine-paired closing dinner.' },
 ]
 
 export default function CateringRetreatPage() {
@@ -509,30 +478,19 @@ export default function CateringRetreatPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Luxury Retreat Catering Bali | Yoga, Wellness & Corporate Retreat Hospitality | myCHEF"
-        description="Premium retreat catering across Bali for yoga, wellness, corporate and luxury retreats. Multi-day menu planning, healthy chef-prepared meals, dietary specialists and professional hospitality teams. Custom proposals for retreats of every size."
+        title="Retreat Catering Bali | Per-Day Meal Plans | myCHEF"
+        description="Retreat catering in Bali: plant-forward, nutrient-dense meal plans for multi-day retreats. Vegan, raw & gluten-free specialists. WhatsApp myCHEF."
         canonical={`${SITE}/catering/retreat-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-retreat.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Luxury Retreat Catering Bali',
-            description: 'Premium retreat catering across Bali for yoga, wellness, corporate and luxury retreats. Multi-day menu planning, healthy chef-prepared meals, dietary specialists and professional hospitality teams.',
+          serviceWithOfferSchema({
+            name: 'Retreat Catering Bali',
+            description: 'Per-day retreat meal plans in Bali: plant-forward, vegan, gluten-free and detox menus for multi-day retreats, with dietary intake, daily fresh shopping and a dedicated retreat chef.',
             url: `${SITE}/catering/retreat-catering`,
-            lowPrice: '700000',
-            highPrice: '2500000',
+            price: '400000',
+            unitText: 'per person per day, before 11% government tax + 10% service charge',
           }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Book Retreat Catering in Bali',
-            description: 'Book luxury retreat catering for your Bali group in 4 easy steps.',
-            totalTime: 'PT15M',
-            steps: [
-              { name: 'Share your retreat plan', text: 'Send dates, villa location, guest count, schedule, and dietary focus via WhatsApp.' },
-              { name: 'Review your proposal', text: 'We design a multi-day menu with cuisine themes, dietary management, and staffing plan.' },
-              { name: 'Confirm dietary details', text: 'Guest allergies, restrictions, and preferences are collected and built into the kitchen plan.' },
-              { name: 'Chef team executes', text: 'The team arrives, sets up the kitchen, and delivers every meal from day one to checkout.' },
-            ],
-          }),
           cateringBreadcrumbSchema('Retreat Catering Bali', `${SITE}/catering/retreat-catering`),
         ]}
       />
@@ -558,24 +516,23 @@ export default function CateringRetreatPage() {
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Retreat Catering Bali' }]} theme="dark" className="justify-center mb-8" />
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Premium Retreat Catering & Hospitality in Bali
+            Per-Day Retreat Meal Plans in Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Luxury Retreat Catering<br />
-            <span className="italic">for Yoga, Wellness & Corporate Retreats in Bali</span>
+            Retreat Catering Bali — Per-Day Meal Plans for Multi-Day Retreats
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Premium retreat catering with Bali-wide coverage, multi-day capability, private chefs, healthy menus, and professional hospitality teams.
+            Consistent, chef-led retreat catering Bali for programmes that run three, five or seven days: plant-forward menus, dietary-exact preparation, and a kitchen rhythm that sustains energy from the first breakfast to the farewell dinner.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            Every retreat receives a customised proposal based on guest numbers, menu style and duration.
+            From IDR 400,000++/person/day · Plant-forward, vegan & detox menus · Dedicated retreat chef · Bali-wide, Ubud specialists
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-retreat-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> Request a Retreat Proposal
+              <MessageCircle className="w-4 h-4" /> Request a Retreat Meal Plan
             </a>
-            <a href="#retreat-types" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              Explore Retreat Types
+            <a href="/events/retreats" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              Full Wellness Retreat Support
             </a>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
@@ -599,10 +556,10 @@ export default function CateringRetreatPage() {
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <div className="space-y-4">
               <p className="text-[#4A4745]">
-                Retreat catering in Bali is a specialised service. Unlike one-off events, multi-day retreats require a system: planned shopping cycles, prep schedules that adapt to villa kitchen limitations, and menus designed to sustain energy rather than spike it.
+                Feeding a retreat is a system, not a series of meals. Multi-day groups need planned shopping cycles, prep schedules adapted to the villa kitchen, menus that never repeat, and food timed to the programme — light before morning practice, stronger after training, clean before workshops, comforting at night.
               </p>
               <p className="text-[#4A4745]">
-                We design every retreat menu around digestion, energy, and sleep. Light before yoga. Stronger after training. Clean before workshops. Comforting at night. The food becomes part of the retreat experience — not a distraction from it.
+                We assign a dedicated chef for your full retreat duration, supported by assistants scaled to your group. Before arrival, every guest's dietary profile is collected through our intake process. During the retreat, menus rotate daily, the kitchen is reset spotless after every service, and your organiser has one point of contact for any schedule change. If you also need ceremony coordination, experience add-ons and full event support around the meals, that is our <a href="/events/retreats" className="text-[#C5A028] hover:underline">full wellness retreat support</a> service. Running a company offsite instead? See <a href="/corporate-retreat-catering-bali" className="text-[#C5A028] hover:underline">corporate retreat catering</a>.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Multi-day system', 'Energy-focused menus', 'Digestion-aware', 'Dietary control', 'Consistent quality', 'Villa kitchen adapted'].map((tag) => (
@@ -628,6 +585,49 @@ export default function CateringRetreatPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 1b: PRICING ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Pricing"
+            title="Retreat Catering Pricing — Per Person, Per Day"
+            subtitle="Prices are per person per day for full meal service, subject to 11% government tax + 10% service charge (++). Final quotes are fixed before you commit and depend on group size, menu intensity and dietary complexity."
+          />
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            <div className="retreat-reveal bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Plant-Forward Retreat Plan</h3>
+              <p className="text-3xl text-[#C5A028] font-semibold mb-4">from IDR 400,000++<span className="text-sm text-[#4A4745] font-normal">/person/day</span></p>
+              <p className="text-sm text-[#4A4745] leading-relaxed mb-4">
+                Vegetables, legumes and grains at the centre of every plate. Breakfast, lunch, dinner, snacks, juices and herbal teas for groups of 10–40. Ayurvedic options, gluten-free throughout, no refined sugar. Best for yoga retreats, meditation groups and holistic programmes.
+              </p>
+              <ul className="space-y-2 text-sm text-[#4A4745]">
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> 100% plant-forward base</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Gluten-free throughout</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Ideal for 10–40 guests</li>
+              </ul>
+            </div>
+            <div className="retreat-reveal bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Wellness & Detox Retreat Plan</h3>
+              <p className="text-3xl text-[#C5A028] font-semibold mb-4">from IDR 450,000++<span className="text-sm text-[#4A4745] font-normal">/person/day</span></p>
+              <p className="text-sm text-[#4A4745] leading-relaxed mb-4">
+                Balanced-macro, anti-inflammatory menus with organic produce where possible, cold-pressed juices and superfood options for groups of 10–60. Supports full juice-cleanse days or partial detox windows inside a broader menu. Best for detox retreats, spa programmes and fitness groups.
+              </p>
+              <ul className="space-y-2 text-sm text-[#4A4745]">
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Anti-inflammatory focus</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Juice-cleanse compatible</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Ideal for 10–60 guests</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-sm text-[#4A4745] mt-8 text-center">
+            Normal groceries are included in every plan. Premium upgrades — imported superfoods, oyster or seafood nights, an elevated closing dinner — are quoted separately in advance. See our <a href="/pricing" className="text-[#C5A028] hover:underline">transparent pricing</a> page for a broader pricing overview.
+          </p>
+          <p className="text-xs text-[#4A4745]/70 mt-4 text-center">
+            [BUSINESS CONFIRMATION REQUIRED] Retreat from-price (IDR 400K++/person/day on this page) conflicts with /pricing's 'retreat from 700K/person/day' — sitewide price reconciliation pending business decision.
+          </p>
         </div>
       </section>
 
@@ -722,8 +722,8 @@ export default function CateringRetreatPage() {
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
             eyebrow="Daily Rhythm"
-            title="Sample Retreat Schedule"
-            subtitle="A complete day of retreat catering — breakfast, coffee break, lunch, smoothie, dinner, and herbal tea."
+            title="A Sample Retreat Day on the Plate"
+            subtitle="A complete day of retreat catering — breakfast, snacks and juices, lunch, recovery, and dinner."
           />
           <div className="space-y-4 mt-10">
             {DAILY_MEALS.map((item, i) => (
@@ -774,7 +774,7 @@ export default function CateringRetreatPage() {
           </div>
           <div className="mt-12 text-center">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-retreat-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Calendar className="w-4 h-4" /> Request a Retreat Proposal
+              <Calendar className="w-4 h-4" /> Request a Retreat Meal Plan
             </a>
           </div>
         </div>
@@ -796,6 +796,9 @@ export default function CateringRetreatPage() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-[#4A4745] mt-8 text-center">
+            For guests who want chef-prepared nourishment outside the retreat schedule, we also offer <a href="/healthy-meal-delivery-indonesia" className="text-[#C5A028] hover:underline">chef-prepared healthy meal delivery</a> across Indonesia.
+          </p>
         </div>
       </section>
 
@@ -821,6 +824,9 @@ export default function CateringRetreatPage() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-[#4A4745] mt-8 text-center">
+            For lighter-touch programmes, combine an on-site chef for key meals with <a href="/catering/drop-off-catering" className="text-[#C5A028] hover:underline">drop-off catering</a> for the rest.
+          </p>
         </div>
       </section>
 
@@ -985,14 +991,14 @@ export default function CateringRetreatPage() {
             Book Retreat Catering Bali
           </p>
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Request a Retreat Proposal
+            Request a Retreat Meal Plan
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Tell us your retreat length, guest count, daily schedule, villa location, dietary profile, and preferred food style. We will design a custom menu and confirm chef availability within 24 hours.
+            Send your retreat dates, length, guest count, villa location and dietary split. We reply on WhatsApp within the hour with chef availability and send a sample meal plan with a fixed per-day quote within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-retreat-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> Request a Retreat Proposal
+              <MessageCircle className="w-4 h-4" /> Request a Retreat Meal Plan
             </a>
             <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> Call +62 896-7407-2020
@@ -1011,7 +1017,7 @@ export default function CateringRetreatPage() {
         pageSource="catering-retreat"
         serviceName="retreat catering in Bali"
         intent="retreat proposal and planning"
-        label="Request a Retreat Proposal"
+        label="Request a Retreat Meal Plan"
       />
     </div>
   )

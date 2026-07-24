@@ -9,9 +9,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  serviceWithAggregateOfferSchema,
+  serviceWithOfferSchema,
   faqPageSchema,
-  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -34,25 +33,25 @@ const SITE = 'https://mychef.id'
 
 const CORP_PACKAGES = [
   {
-    title: 'Board Dinner',
-    price: 850000,
-    people: '6 to 20 people',
-    format: ['Canapés', '3-course plated', 'Wine pairing', 'Dedicated service', 'Full cleanup'],
-    bestFor: 'Executive dinners, investor meetings, board retreats, C-suite entertaining',
+    title: 'Working Lunch & Office Catering',
+    price: 700000,
+    people: '10 to 60 guests',
+    format: ['Hot and cold buffets, lunch boxes or sharing platters', 'Lighter proteins, more vegetables, less refined starch', 'Dietary-labelled dishes', 'Professional service staff', 'Full cleanup'],
+    bestFor: 'Team lunches, training days, workshop breaks, regular office catering',
   },
   {
-    title: 'Team Offsite Catering',
+    title: 'Conference Day Catering',
     price: 700000,
-    people: '15 to 80 people',
-    format: ['Buffet or plated', '2-3 menu options', 'Dietary accommodation', 'Service staff', 'Invoiced'],
-    bestFor: 'Company offsites, team building, strategy retreats, department dinners',
-  },
-  {
-    title: 'Conference Catering',
-    price: 700000,
-    people: '30 to 200 people',
-    format: ['Coffee breaks', 'Working lunch', 'Buffet dinner', 'All-day service', 'Setup & breakdown'],
+    people: '30 to 200 delegates',
+    format: ['Breakfast, two coffee breaks, working lunch, afternoon snack', 'All-day hydration station', 'Timed to your agenda blocks', 'Professional service staff', 'Full cleanup'],
     bestFor: 'Conferences, seminars, product launches, corporate events',
+  },
+  {
+    title: 'Boardroom & Executive Dinner',
+    price: 850000,
+    people: '6 to 20 guests',
+    format: ['Canapés', 'Three-course plated dinner', 'Wine pairing', 'Discreet, dedicated service', 'Full cleanup'],
+    bestFor: 'Investor meetings, board retreats, C-suite entertaining',
   },
 ]
 
@@ -113,14 +112,13 @@ const CORP_ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'What does corporate catering cost?', a: 'Three per-person tiers: Standard IDR 700,000, Premium IDR 750,000, and Luxury IDR 1,200,000 (subject to 10% service charge + 11% government tax). Minimum spend is IDR 7,500,000.' },
-  { q: 'Can you invoice companies?', a: 'Yes. We provide full tax invoices (NPWP-registered) with detailed breakdowns of food costs, service charges, and applicable taxes. Net-14 payment terms available for regular corporate clients.' },
-  { q: 'Can you handle multi-day events?', a: 'Absolutely. Multi-day offsites and conferences are a specialty. We assign a dedicated team and event manager who stays with your group for the full duration.' },
-  { q: 'Do you serve in villas or venues?', a: 'Both. We cater at private villas, hotels, conference centers, co-working spaces, and outdoor venues across Bali. We coordinate with venue managers for kitchen access and logistics.' },
-  { q: 'Can menus be branded?', a: 'Yes. We offer branded menu cards, custom signage, and themed presentation for product launches, company milestones, and branded events.' },
-  { q: 'How far in advance should we book?', a: 'For corporate events, 2–4 weeks is ideal. For large conferences (100+ guests), 1–2 months helps us secure the best team and plan logistics.' },
-  { q: 'Do you provide staff uniforms?', a: 'Yes. All service staff wear professional black uniforms. Kitchen teams wear chef coats. We can match specific dress codes on request.' },
-  { q: 'What payment terms do you offer?', a: '50% deposit to confirm, balance due 7 days before the event. For regular corporate clients, we offer monthly billing and net-14 terms.' },
+  { q: 'What does corporate catering in Bali cost?', a: 'Three per-person tiers: Standard IDR 700,000, Premium IDR 750,000 and Luxury IDR 1,200,000, all ++ (11% government tax + 10% service charge). Minimum spend is IDR 7,500,000. Your quote is fixed and itemised before you commit.' },
+  { q: 'What does "++" mean on your quotes?', a: 'It means 11% government tax and 10% service charge are added on top of the listed price. IDR 700,000++ works out to approximately IDR 847,000 per person all-in. We always show both figures.' },
+  { q: 'Can you invoice our company properly?', a: 'Yes. We are NPWP-registered and issue full tax invoices with itemised breakdowns. Net-14 terms are available for regular corporate clients.' },
+  { q: 'How do you handle halal, vegan, gluten-free and allergy requirements across a large group?', a: 'Through a pre-event dietary intake form, a kitchen briefing against the actual guest list, labelled dishes, and separate prep zones for allergens. Dietary guests are integrated into the main service, not singled out.' },
+  { q: 'What deposit is required?', a: 'A 50% deposit confirms your date and team; the balance is due 7 days before the event.' },
+  { q: 'How far in advance should we book?', a: 'Two to four weeks is ideal for most corporate catering. For conferences of 100+ guests, one to two months secures the best team and logistics.' },
+  { q: 'Do you cater at offices and venues, or only villas?', a: 'All three — offices, villas, co-working spaces, hotels and conference venues, Bali-wide. For recurring office lunches, also see our <a href="/catering/drop-off-catering">drop-off catering for office lunches</a>.' },
 ]
 
 export default function CateringCorporatePage() {
@@ -139,30 +137,19 @@ export default function CateringCorporatePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Corporate Catering Bali | Offsites, Lunches & Launches — myCHEF"
-        description="Corporate catering in Bali for team offsites, board lunches & product launches. Buffet or plated, professional service & clear logistics. WhatsApp us."
+        title="Corporate Catering Bali | Boardroom to Conference | myCHEF"
+        description="Corporate catering in Bali for offsites, boardroom dinners & conferences. Tax invoices (NPWP), executive service, dietary-exact menus. WhatsApp myCHEF."
         canonical={`${SITE}/catering/corporate-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-corporate.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
+          serviceWithOfferSchema({
             name: 'Corporate Catering Bali',
-            description: 'Corporate catering in Bali for business lunches, workshops, offsites, launches, and executive dinners with reliable timing and professional presentation. myCHEF.id handles menu planning, staffing, invoicing, and service across Bali.',
+            description: 'Corporate catering in Bali for working lunches, office events, boardroom dinners and conference days. NPWP-registered tax invoices, dedicated event manager, dietary management at scale.',
             url: `${SITE}/catering/corporate-catering`,
-            lowPrice: '550000',
-            highPrice: '850000',
+            price: '700000',
+            unitText: 'per person, before 11% government tax + 10% service charge',
           }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Book Corporate Catering in Bali',
-            description: 'Book professional corporate catering for your Bali event in 4 easy steps.',
-            totalTime: 'PT30M',
-            steps: [
-              { name: 'Share your event brief', text: 'Send your event date, company size, schedule, venue, dietary needs, and budget via WhatsApp.' },
-              { name: 'Receive custom proposal', text: 'We respond with a tailored menu plan, staffing schedule, and detailed proposal within 24 hours.' },
-              { name: 'Confirm and contract', text: 'Approve the proposal, sign the contract, and pay the 50% deposit to secure your event date.' },
-              { name: 'Setup, service, and invoice', text: 'Our team arrives 2–3 hours early for quiet setup. Full service runs on schedule, followed by a detailed tax invoice within 48 hours.' },
-            ],
-          }),
           cateringBreadcrumbSchema('Corporate Catering Bali', `${SITE}/catering/corporate-catering`),
         ]}
       />
@@ -192,13 +179,13 @@ export default function CateringCorporatePage() {
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Corporate Catering Bali<br />
-            <span className="italic">for Teams, Meetings, and Events</span>
+            <span className="italic">— The Catering Line for Teams, Meetings & Conferences</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Reliable catering for business lunches, workshops, retreats, company dinners, product launches, and executive gatherings across Bali.
+            Reliable, tax-invoiced corporate catering in Bali for working lunches, office events, boardroom dinners and conference days. One dedicated event manager, one fixed per-person price, one clean invoice.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 700,000/person · Min. spend IDR 7,500,000 · Tax invoiced · Dedicated event manager · Bali-wide
+            From IDR 700,000++/person · Minimum spend IDR 7,500,000 · NPWP-registered tax invoices · Dedicated event manager · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
@@ -282,15 +269,21 @@ export default function CateringCorporatePage() {
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <div className="space-y-4">
               <p className="text-[#4A4745]">
-                We work with companies of all sizes — from 6-person board dinners to 200-delegate conferences. Every event gets a dedicated event manager who coordinates timing, dietary requirements, venue logistics, and post-event invoicing.
+                We cater for companies of all sizes — from six-person board dinners to 200-delegate conferences — at private villas, offices, co-working spaces, hotels and conference venues across Bali. Every event gets a dedicated event manager who coordinates timing, dietary requirements, venue logistics, and post-event invoicing.
               </p>
               <p className="text-[#4A4745]">
                 Our team arrives 2–3 hours before service, sets up quietly, and serves without disrupting presentations or discussions. After the event, we handle full cleanup and provide a detailed tax invoice within 48 hours.
               </p>
               <p className="text-[#4A4745]">
-                Curious how this works for a real brief? Our{' '}
-                <Link to="/corporate-case-studies" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">corporate case studies</Link>{' '}
-                walk through actual events — headcounts, menus, budgets, and outcomes.
+                Need AV, staging, branded builds or a full event producer on top of the food? That is our{' '}
+                <Link to="/events/corporate-events" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">full corporate event production in Bali</Link>.{' '}
+                Planning a multi-day offsite with every meal covered? See{' '}
+                <Link to="/corporate-retreat-catering-bali" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">multi-day corporate retreat catering</Link>.
+              </p>
+              <p className="text-[#4A4745]">
+                Curious how this works on real briefs? Our{' '}
+                <Link to="/corporate-case-studies" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">real corporate events, headcounts and outcomes</Link>{' '}
+                walk through actual menus and results.
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Tax invoiced', 'Dedicated manager', 'On-time service', 'Dietary tracking', 'Multi-day capable', 'Venue coordination'].map((tag) => (
@@ -479,6 +472,11 @@ export default function CateringCorporatePage() {
             title="Corporate Catering Packages"
             subtitle="Scalable solutions for every type of corporate event. Tax invoiced. Dedicated manager."
           />
+          <p className="text-[#4A4745] text-center max-w-2xl mx-auto -mt-4 mb-8">
+            All packages include menu planning, fresh ingredient shopping, cooking, professional service staff, setup and full cleanup. Prices are per person and subject to 11% government tax + 10% service charge (++). See our{' '}
+            <Link to="/pricing" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">transparent per-person pricing</Link>.{' '}
+            Minimum spend IDR 7,500,000.
+          </p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {CORP_PACKAGES.map((pkg) => (
               <div key={pkg.title} className="corp-reveal bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 flex flex-col">
@@ -504,9 +502,9 @@ export default function CateringCorporatePage() {
 
           {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <GroupTotalCalculator pricePerPerson={850000} minGuests={6} maxGuests={20} defaultGuests={12} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={700000} minGuests={15} maxGuests={80} defaultGuests={30} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={700000} minGuests={10} maxGuests={60} defaultGuests={30} accent="#C5A028" />
             <GroupTotalCalculator pricePerPerson={700000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
+            <GroupTotalCalculator pricePerPerson={850000} minGuests={6} maxGuests={20} defaultGuests={12} accent="#C5A028" />
           </div>
           <TaxFooter className="mt-6" />
         </div>
@@ -535,6 +533,11 @@ export default function CateringCorporatePage() {
             title="Corporate Add-Ons"
             subtitle="Elevate your corporate event with bartenders, coffee stations, branded materials, and more."
           />
+          <p className="text-[#4A4745] text-center max-w-2xl mx-auto -mt-4 mb-8">
+            Need extra front-of-house support? Add{' '}
+            <Link to="/in-villa-service" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">waiters, bartenders and event staff</Link>{' '}
+            to any corporate package.
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
             {CORP_ADDONS.map((addon) => (
               <div key={addon.title} className="corp-reveal bg-white rounded-xl border border-[#E8E6E3] p-5">

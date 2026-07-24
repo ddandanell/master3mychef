@@ -13,7 +13,6 @@ import SeoHead, {
   cateringBreadcrumbSchema,
   serviceWithAggregateOfferSchema,
   faqPageSchema,
-  howToSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -39,27 +38,27 @@ const PLATED_PACKAGES = [
   {
     image: '/generated/mychef-catering-bali-plated-3course-table.webp',
     title: '3-Course Plated',
-    price: 'IDR 800,000/person',
+    price: 'IDR 800,000++/person',
     priceNum: 800000,
-    description: 'Starter + Main + Dessert. Minimum IDR 5,000,000 total.',
+    description: 'Starter, main, dessert. Elegant and efficient — ideal for celebration dinners that want formality without a late night.',
     includes: ['English-speaking chef', 'Service manager', '1 waiter per 10 guests', 'Tables, linens, cutlery, porcelain, glassware'],
     minGuests: 'Min. IDR 5M',
   },
   {
     image: '/generated/mychef-catering-bali-plated-4course-table.webp',
     title: '4-Course Plated',
-    price: 'IDR 1,000,000/person',
+    price: 'IDR 1,000,000++/person',
     priceNum: 1000000,
-    description: 'Amuse + Starter + Main + Dessert. Minimum IDR 5,000,000 total.',
+    description: 'Amuse-bouche, starter, main, dessert. The most-booked format for anniversaries and executive dinners.',
     includes: ['English-speaking chef', 'Service manager', '1 waiter per 10 guests', 'Tables, linens, cutlery, porcelain, glassware'],
     minGuests: 'Min. IDR 5M',
   },
   {
     image: '/generated/mychef-catering-bali-plated-5course-premium-table.webp',
     title: '5-Course Premium',
-    price: 'IDR 1,300,000/person',
+    price: 'IDR 1,300,000++/person',
     priceNum: 1300000,
-    description: 'Amuse + Starter + Palate Cleanser + Main + Dessert + Petits Fours. Minimum IDR 5,000,000 total.',
+    description: 'Amuse, starter, palate cleanser, main, dessert, petits fours. Full fine-dining pacing for milestone evenings.',
     includes: ['English-speaking chef', 'Service manager', '1 waiter per 10 guests', 'Tables, linens, cutlery, porcelain, glassware', 'Kitchen tent if needed'],
     minGuests: 'Min. IDR 5M',
   },
@@ -108,12 +107,11 @@ const PLATED_GALLERY = [
 ]
 
 const WHY_PLATED_VS_BUFFET = [
-  { title: 'Formality', plated: 'Individual service, white-glove pacing', buffet: 'Self-serve, casual flow' },
-  { title: 'Group size', plated: 'Ideal for 10–60 guests', buffet: 'Better for 30–200 guests' },
-  { title: 'Presentation', plated: 'Restaurant-quality plating per guest', buffet: 'Chafing dishes, bulk display' },
-  { title: 'Pacing', plated: 'Timed courses, controlled rhythm', buffet: 'Guest-driven, variable timing' },
-  { title: 'Atmosphere', plated: 'Intimate, focused, elegant', buffet: 'Social, mobile, relaxed' },
-  { title: 'Kitchen output', plated: 'Precise, plated to order', buffet: 'Batch cooking, held in warmers' },
+  { title: 'Feel', plated: 'Formal, choreographed, intimate', buffet: 'Social, flexible, self-paced' },
+  { title: 'Best group size', plated: '10–60 guests', buffet: '30–200+ guests' },
+  { title: 'Pacing', plated: 'Controlled by the kitchen', buffet: 'Guest-driven' },
+  { title: 'Presentation', plated: 'Individually plated courses', buffet: 'Styled stations' },
+  { title: 'From price', plated: 'IDR 800K++/person', buffet: 'IDR 475K++/person' },
 ]
 
 const OCCASIONS = [
@@ -154,14 +152,39 @@ const WINE_PAIRINGS = [
 ]
 
 const FAQS = [
-  { q: 'How many courses can we choose?', a: 'We offer three-course, four-course, and five-course plated dinners. Each can be customized with amuse-bouche, palate cleansers, and petits fours.' },
-  { q: 'What is the minimum number of guests?', a: 'There is no strict minimum guest count, but there is a minimum spend of IDR 5,000,000 per event. This covers chef travel, prep time, equipment, and base staffing.' },
-  { q: 'Can the menu be fully vegetarian?', a: 'Yes. We create vegetarian and vegan tasting menus using seasonal Balinese produce. Plant-based multi-course dinners are a specialty.' },
-  { q: 'Do you bring plates, cutlery, and glassware?', a: 'Yes. Every plated dinner includes full tableware: porcelain plates, premium cutlery, glassware, linens, and chargers. You do not need to provide anything.' },
-  { q: 'How long does a plated dinner take?', a: 'A typical plated dinner runs 2.5 to 3.5 hours from the amuse-bouche to coffee and petits fours. Timing is adjusted to your preference.' },
-  { q: 'What areas in Bali do you serve?', a: 'We serve Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua, Jimbaran, and surrounding areas. Travel fees may apply for remote locations.' },
-  { q: 'How far in advance should we book?', a: 'We recommend booking 2–4 weeks ahead for full menu planning. Last-minute bookings are possible depending on availability.' },
+  { q: 'How much does a plated dinner in Bali cost?', a: 'From IDR 800,000++ per person for three courses, up to IDR 1,300,000++ for the five-course premium, with a minimum event spend of IDR 5,000,000. All-in totals (including 11% tax and 10% service) are shown in every quote.' },
+  { q: 'Is there a minimum number of guests?', a: 'No fixed guest minimum — the IDR 5M minimum spend covers the team, so even a six-person dinner works. The format suits up to about 60 guests.' },
+  { q: 'How many staff will be at our villa?', a: 'A chef, a service manager, and one waiter per ten guests as standard. Additional waiters are available from IDR 250,000/hour.' },
+  { q: 'Can every guest have a different dietary menu?', a: 'Yes — that\'s the strength of plated service. Vegan, gluten-free, halal, and allergy-specific courses are designed per guest and plated separately.' },
+  { q: 'Do you bring tableware and styling?', a: 'Everything: tables if needed, linens, chargers, porcelain, glassware, candles, and printed menus. A kitchen tent can be arranged if your villa kitchen is compact.' },
+  { q: 'Can we taste the menu beforehand?', a: 'Pre-event tastings are available for bookings of 40+ guests; for smaller dinners we refine the menu with you over WhatsApp until it\'s right.' },
+  { q: 'How far ahead should I book?', a: 'One to two weeks is ideal, more in peak season. A 50% deposit confirms your date; cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { q: 'Is this right for a rehearsal dinner or small wedding?', a: 'Very much so — it\'s our most-booked format for rehearsal dinners. For full wedding reception catering, see <a href="/events/weddings">wedding catering</a>.' },
 ]
+
+const BASE_PLATED_SERVICE_SCHEMA = serviceWithAggregateOfferSchema({
+  name: 'Plated Dinner Catering Bali',
+  description: 'Formal plated dinner catering at Bali villas: 3–5 course menus with chef, service manager, waiters, full table styling and cleanup.',
+  url: `${SITE}/catering/plated-catering`,
+  lowPrice: '800000',
+  highPrice: '1300000',
+})
+
+const PLATED_SERVICE_SCHEMA = {
+  ...BASE_PLATED_SERVICE_SCHEMA,
+  provider: {
+    '@type': 'Organization',
+    name: 'myCHEF',
+    url: 'https://mychef.id',
+    telephone: '+62 896-7407-2020',
+  },
+  serviceType: 'Plated dinner catering',
+  offers: {
+    ...(BASE_PLATED_SERVICE_SCHEMA.offers as Record<string, unknown>),
+    offerCount: '3',
+    description: 'Per person ++ (11% government tax + 10% service charge); minimum event spend IDR 5,000,000',
+  },
+}
 
 const SERVICE_FLOW = [
   { step: '1', title: 'Arrival & Setup', desc: 'Team arrives 3–4 hours before service with all equipment and ingredients.' },
@@ -198,31 +221,14 @@ export default function CateringPlatedPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Plated Dinner Bali | 3–5 Course Villa Catering — myCHEF"
-        description="Plated dinner catering in Bali for villa events, weddings & anniversaries. 3–5 course set menus with private chef, waiters & full service included."
+        title="Plated Catering Bali | Formal Villa Dinner Service | myCHEF"
+        description="Plated dinner catering in Bali: formal 3–5 course table service at your villa, from IDR 800K++/person with chef, waiters & full styling. WhatsApp myCHEF."
         canonical={`${SITE}/catering/plated-catering`}
         ogImage={`${SITE}/generated/mychef-events-bali-anniversaries-plated.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Plated Dinner Catering Bali',
-            description: 'Plated dinner catering in Bali for villas, anniversaries, weddings, and premium private events with multi-course menus. myCHEF.id provides chefs, service staff, elegant plating, and cleanup across Bali.',
-            url: `${SITE}/catering/plated-catering`,
-            lowPrice: '800000',
-            highPrice: '1300000',
-          }),
+          PLATED_SERVICE_SCHEMA,
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-          howToSchema({
-            name: 'How to Book a Plated Dinner in Bali',
-            description: 'Book a multi-course plated dinner for your Bali villa in 4 easy steps.',
-            totalTime: 'PT20M',
-            steps: [
-              { name: 'Choose your course tier', text: 'Select 3-Course, 4-Course, or 5-Course Premium based on your occasion and guest count.' },
-              { name: 'Share event details', text: 'Send your date, villa location, guest count, cuisine preference, and dietary needs via WhatsApp or the booking form.' },
-              { name: 'Approve your custom menu', text: 'We design a personalized menu with wine pairing options and send a detailed proposal for approval.' },
-              { name: 'Confirm and enjoy', text: 'Pay the deposit to lock your date. The team arrives 3–4 hours early for setup, table styling, and service.' },
-            ],
-          }),
-          cateringBreadcrumbSchema('Plated Dinner Catering Bali', `${SITE}/catering/plated-catering`),
+          cateringBreadcrumbSchema('Plated Catering Bali', `${SITE}/catering/plated-catering`),
         ]}
       />
 
@@ -250,10 +256,10 @@ export default function CateringPlatedPage() {
             Private Chef Fine Dining
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Plated Dinner Bali for Private Villa Fine Dining
+            Plated Dinner Catering Bali — Formal Multi-Course Service at Your Villa
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-2xl mx-auto">
-            A structured, multi-course dinner experience with chef-led cooking, elegant plating, service staff, and full villa setup.
+            Guests seated. Candles lit. Each course arriving individually plated, precisely timed, and served by waiters who know the menu. A plated dinner turns a villa evening into a private restaurant — with none of the restaurant.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
@@ -270,7 +276,7 @@ export default function CateringPlatedPage() {
               <Utensils className="w-4 h-4" /> View Sample Menus
             </a>
           </div>
-          <p className="text-white/[60%] text-sm">From IDR 800,000/person · Min. IDR 5,000,000 · Chef & staff included</p>
+          <p className="text-white/[60%] text-sm">From IDR 800,000++/person · Min. spend IDR 5,000,000 · 10–60 guests</p>
         </div>
       </section>
 
@@ -288,10 +294,10 @@ export default function CateringPlatedPage() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <p className="text-[#4A4745] leading-relaxed">
-                A <strong>plated dinner in Bali</strong> is the gold standard for private villa events. Unlike buffet service, where guests serve themselves from heated trays, a plated dinner is a choreographed experience: each course is individually prepared, artfully plated, and served to guests at the table by professional waitstaff.
+                <strong>Plated catering Bali</strong> is the gold standard for private villa events. Unlike buffet service, where guests serve themselves from heated trays, a plated dinner is a choreographed experience: each course is individually prepared, artfully plated, and served to guests at the table by professional waitstaff.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                This format gives you complete control over pacing, presentation, and atmosphere. Your private chef designs a multi-course menu tailored to your preferences, dietary needs, and the occasion. Whether it is a romantic dinner for two or a celebration for forty, plated service elevates the evening into something memorable.
+                This format gives you complete control over pacing, presentation, and atmosphere. Your private chef designs a multi-course menu tailored to your preferences, dietary needs, and the occasion. Whether it is a romantic dinner for two or a celebration for sixty, plated service elevates the evening into something memorable.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
@@ -397,7 +403,7 @@ export default function CateringPlatedPage() {
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="The Evening"
-            title="Service Flow"
+            title="What a Plated Evening Looks Like"
             subtitle="From arrival to departure, every step is choreographed for a seamless villa dining experience."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -417,7 +423,7 @@ export default function CateringPlatedPage() {
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="The Comparison"
-            title="Why Plated Beats Buffet for Formal Events"
+            title="Plated vs Buffet — Which Fits Your Event?"
             subtitle="Better pacing, better presentation, less guest movement, stronger atmosphere, and more controlled kitchen output."
           />
           <div className="hidden md:block overflow-x-auto">
@@ -451,6 +457,9 @@ export default function CateringPlatedPage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-sm text-[#4A4745] leading-relaxed text-center max-w-2xl mx-auto">
+            Rule of thumb: if the evening is the point, go plated. If the mingling is the point, go <Link to="/catering/buffet">buffet catering</Link>. Unsure? Send your occasion and headcount — we'll recommend. See all <Link to="/catering">catering services</Link>.
+          </p>
         </div>
       </section>
 
@@ -502,7 +511,7 @@ export default function CateringPlatedPage() {
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="The Pairing"
-            title="Wine and Cocktail Pairing"
+            title="Menu Directions & Wine Pairing"
             subtitle="Pair each course with wine, cocktails, mocktails, or non-alcoholic pairing selected by our team."
           />
           <div className="grid sm:grid-cols-2 gap-4">
@@ -518,7 +527,7 @@ export default function CateringPlatedPage() {
           </div>
           <div className="mt-6 bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-5 md:p-6">
             <p className="text-sm text-[#4A4745] leading-relaxed">
-              Our sommelier selects wines that complement each course — crisp whites for seafood starters, full-bodied reds for steak mains, and dessert wines or champagne to finish. Non-alcoholic pairings use fresh juices, herbal infusions, and craft mocktails.
+              For a deeper fine-dining format, explore <Link to="/fine-dining">private fine dining</Link> and our <Link to="/fine-dining/tasting-menu">tasting menus</Link>. Start the evening with a <Link to="/catering/grazing-tables">grazing table welcome</Link> for arrival drinks.
             </p>
           </div>
         </div>
@@ -529,7 +538,7 @@ export default function CateringPlatedPage() {
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Packages"
-            title="Choose Your Plated Experience"
+            title="Plated Dinner Packages & Prices"
           />
           <div className="grid md:grid-cols-3 gap-6">
             {PLATED_PACKAGES.map((pkg) => (
@@ -677,7 +686,7 @@ export default function CateringPlatedPage() {
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Questions"
-            title="Plated Dinner FAQ"
+            title="Plated Catering Bali FAQ"
           />
           <FAQAccordion items={FAQS} defaultOpenCount={3} />
         </div>
@@ -688,7 +697,7 @@ export default function CateringPlatedPage() {
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Book Now"
-            title="Request Your Plated Dinner"
+            title="Plan Your Plated Dinner"
             subtitle="Plan your private plated dinner with date, guest count, cuisine, dietary needs, and villa location."
           />
           <BookingFormCatering

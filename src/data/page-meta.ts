@@ -218,11 +218,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'catering-floating-breakfast': {
     path: '/catering/floating-breakfast',
-    title: 'Floating Breakfast Bali | Villa Pool Tray Service — myCHEF',
+    title: 'Luxury Floating Breakfast Bali | Private Villa Pool Experience | myCHEF',
     description:
-      'Floating breakfast Bali for Seminyak, Canggu & Uluwatu villas. Photo-ready pool trays with tropical fruit, pastries & eggs. WhatsApp to book yours.',
+      'Book a luxury floating breakfast experience at your Bali villa. Chef-prepared dishes, fresh coffee, champagne options and full setup. Perfect for honeymoons, birthdays and celebrations.',
     canonical: `${SITE}/catering/floating-breakfast`,
-    h1: 'Floating Breakfast Bali — Villa Pool Tray Brunch',
+    h1: 'Luxury Floating Breakfast Experience in Bali',
     ogImage: `${SITE}/breakfast-spread.webp`,
   },
 

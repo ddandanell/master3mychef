@@ -3,15 +3,20 @@ import { breadcrumbSchema, faqPageSchema, serviceSchema } from '@/components/Seo
 import { Wine, Shell, Clock, Shield, Users, Sparkles } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
+const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20the%20oyster%20bar%20Bali%20Champagne%20%26%20Oyster%20Experience.%20Can%20you%20send%20me%20details%20and%20pricing%3F'
+const CANONICAL = 'https://mychef.id/experiences/champagne-oyster-experience'
+
 const SECTIONS: PageSection[] = [
   {
     id: 'intro',
     type: 'content' as const,
-    subtitle: 'Champagne & Oyster Experience',
+    subtitle: 'Oyster Bar Bali',
     title: 'A Champagne & Oyster Experience in Your Bali Villa',
+    image: '/generated/oyster-bar-bali-champagne.webp',
+    imageAlt: 'Oyster bar Bali with champagne service at an elegant private villa',
     body: `<p>There is a particular kind of evening that begins with a single oyster and a glass of something cold and golden. It is unhurried, intentional, and quietly luxurious. The myCHEF Champagne & Oyster Experience brings that evening to your villa — not as a catering package, but as a curated private event built around two of the finest pleasures on any table.</p>
 
-    <p>We set up a fresh oyster station in your villa, source the best oysters available that day, chill the champagne, and pair everything to the setting and the company. Whether you are celebrating an anniversary, hosting a small group before a larger dinner, or simply want an afternoon that feels like the best kind of indulgence, the experience is designed around the moment.</p>
+    <p>We set up a fresh <strong>oyster bar Bali</strong> experience in your villa, source the best oysters available that day, chill the champagne, and pair everything to the setting and the company. Whether you are celebrating an anniversary, hosting a small group before a larger dinner, or simply want an afternoon that feels like the best kind of indulgence, the experience is designed around the moment.</p>
 
     <p>Our team handles every detail: sourcing, shucking, plating, champagne service, and cleanup. You do not need to know how to open an oyster or which champagne works best. You only need to choose the setting — poolside in Canggu, a clifftop terrace in Uluwatu, a garden pavilion in Ubud — and we build the rest around you.</p>`,
   },
@@ -36,7 +41,7 @@ const SECTIONS: PageSection[] = [
     id: 'offerings',
     type: 'features' as const,
     subtitle: 'What We Bring',
-    title: 'Everything Included in the Experience',
+    title: 'Everything Included in the Oyster Bar Bali Experience',
     features: [
       {
         icon: Shell,
@@ -117,10 +122,10 @@ const SECTIONS: PageSection[] = [
     id: 'pricing',
     type: 'content' as const,
     subtitle: 'Investment',
-    title: 'Champagne & Oyster Experience Pricing',
-    body: `<p>Pricing for the Champagne & Oyster Experience depends on guest count, oyster selection, and champagne choice. Because these inputs vary significantly, we quote each event individually rather than publishing a fixed menu price.</p>
+    title: 'Oyster Bar Bali Pricing',
+    body: `<p>Pricing for the oyster bar Bali experience depends on guest count, oyster selection, and champagne choice. Because these inputs vary significantly, we quote each event individually rather than publishing a fixed menu price.</p>
 
-    <p><strong>[PRICE REQUIRES CONFIRMATION]</strong> — please message us with your date, location, and guest count for an exact proposal.</p>
+    <p><strong>Starting from IDR 950,000 per person</strong> for a standard two-hour experience with fresh oysters, champagne service and full station setup. Premium oyster varieties, extended service, and larger group logistics will adjust the final investment.</p>
 
     <p><strong>What is typically included in the quote:</strong></p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;margin-bottom:0.5rem;">
@@ -133,6 +138,15 @@ const SECTIONS: PageSection[] = [
     </ul>
 
     <p>Add-ons such as caviar, chilled seafood towers, live musicians, floral styling, or a follow-on multi-course dinner can be included in the same proposal. For a full overview of private dining packages, see our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing page</a>.</p>`,
+  },
+  {
+    id: 'upgrades',
+    type: 'content' as const,
+    subtitle: 'Make It Bigger',
+    title: 'Popular Upgrades for Your Champagne & Oyster Experience',
+    body: `<p>The most common upgrade is to extend the oyster bar into a full tasting evening. We add chilled prawns, crab, or a caviar bump station, followed by a multi-course seafood dinner prepared by a private chef. This is a popular format for anniversaries and milestone birthdays.</p>
+
+    <p>For events, an <a href="/events/villa-parties" class="text-[#7E6410] hover:underline font-medium">oyster bar Bali</a> reception is a memorable way to welcome guests before a villa party or wedding dinner. We also coordinate live acoustic music, florals, and professional photography on request.</p>`,
   },
   {
     id: 'faq',
@@ -148,7 +162,7 @@ const SECTIONS: PageSection[] = [
     body: 'Tell us your date, villa location, and guest count. We will reply within the hour with a tailored proposal.',
     primaryAction: {
       label: 'Message Us on WhatsApp',
-      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20the%20Champagne%20%26%20Oyster%20Experience%20in%20Bali.%20Can%20you%20send%20me%20details%20and%20pricing%3F',
+      href: WA_LINK,
       external: true,
     },
     secondaryAction: {
@@ -166,38 +180,41 @@ const FAQS = [
   { question: 'How far in advance should I book?', answer: 'We recommend booking at least 5–7 days in advance to secure the best oyster selection and champagne. During peak season (July–August and December–January), 2–3 weeks is better. Short-notice requests are sometimes possible — ask us.' },
   { question: 'Can you accommodate shellfish allergies or dietary restrictions?', answer: 'Yes. We always ask about allergies and dietary requirements during planning. Guests with shellfish allergies can be offered an alternative seafood or canapé station while the rest of the group enjoys oysters.' },
   { question: 'Can this be part of a larger event?', answer: 'Absolutely. The Champagne & Oyster Experience is a popular pre-dinner reception or poolside opening to a private villa dinner, birthday party, or anniversary celebration. We coordinate timing with the main kitchen team.' },
+  { question: 'Are the oysters served raw?', answer: 'Yes. Oysters are shucked fresh on-site and served raw on ice with classic garnishes. If you prefer grilled or baked oysters as part of the menu, we can arrange that on request.' },
+  { question: 'Do I need to provide glasses or ice?', answer: 'No. We bring all glassware, ice, linens, shucking tools, and serving equipment. You only need to provide the space and the guests.' },
+  { question: 'Can I choose the oyster variety?', answer: 'We confirm what is available for your date and can usually offer a choice between two or three varieties. Special orders such as Gillardeau or Kumamoto may require advance notice and are subject to availability.' },
 ]
 
 const RELATED_PAGES = [
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private candlelit dinners for two in your Bali villa.' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full private chef services for villas across Bali.' },
   { label: 'Events & Celebrations', href: '/events', desc: 'Villa parties, weddings, and corporate events catered end-to-end.' },
-  { label: 'Fine Dining', href: '/fine-dining', desc: 'Bespoke tasting menus and private dining experiences.' },
   { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF experiences and services.' },
-  { label: 'Tasting Menu', href: '/fine-dining/tasting-menu', desc: 'Multi-course tasting menus designed by our chef team.' },
 ]
 
 export default function ExperienceChampagneOysterExperiencePage() {
   return (
     <PremiumPage
-      slug="experience/champagne-oyster-experience"
-      title="Champagne & Oyster Experience Bali"
-      description="Book a Champagne & Oyster Experience in your Bali villa. Fresh oysters, curated champagne, private chef service. Message myCHEF on WhatsApp for a tailored quote."
-      seoTitle="Champagne & Oyster Experience Bali | Private Villa — myCHEF"
-      seoDescription="Book a Champagne & Oyster Experience in your Bali villa. Fresh oysters, curated champagne, private chef service. Message myCHEF on WhatsApp for a tailored quote."
-      canonicalUrl="https://mychef.id/experience/champagne-oyster-experience"
-      h1="Champagne & Oyster Experience Bali"
+      slug="experiences/champagne-oyster-experience"
+      title="Oyster Bar Bali | Champagne & Oyster Experience | myCHEF"
+      description="Book a private oyster bar in Bali with champagne service at your villa. Fresh oysters, live shucking, premium glassware and tailored menus. Enquire now."
+      seoTitle="Oyster Bar Bali | Champagne & Oyster Experience | myCHEF"
+      seoDescription="Book a private oyster bar in Bali with champagne service at your villa. Fresh oysters, live shucking, premium glassware and tailored menus. Enquire now."
+      canonicalUrl={CANONICAL}
+      h1="Oyster Bar Bali — Champagne & Oyster Experience at Your Villa"
       subtitle="Fresh Oysters, Curated Champagne, and Private Villa Service"
-      heroImage="/generated/mychef-experience-bali-aura-toast.webp"
-      heroImageAlt="Champagne toast at an elegant private villa experience in Bali"
-      ogImage="https://mychef.id/generated/mychef-experience-bali-aura-toast.webp"
+      heroImage="/generated/oyster-bar-bali-champagne.webp"
+      heroImageAlt="Champagne toast and fresh oysters at an elegant private villa experience in Bali"
+      ogImage="https://mychef.id/generated/oyster-bar-bali-champagne.webp"
       keywords={[
-        'champagne oyster experience bali',
-        'oyster bar bali villa',
-        'champagne tasting bali',
-        'private chef oysters bali',
-        'luxury villa dining bali',
-        'bali champagne and oysters',
+        'oyster bar Bali',
+        'champagne oyster experience Bali',
+        'private oyster bar Bali',
+        'oyster catering Bali',
+        'Bali oyster shucking',
+        'luxury villa oysters Bali',
+        'seafood bar Bali',
+        'Bali champagne and oysters',
       ]}
       highlights={['Fresh Oysters', 'Curated Champagne', 'Villa Setup', 'Tailored Quote']}
       sections={SECTIONS}
@@ -205,14 +222,16 @@ export default function ExperienceChampagneOysterExperiencePage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema(
-          'Champagne & Oyster Experience Bali',
-          'https://mychef.id/experience/champagne-oyster-experience'
+          'Oyster Bar Bali',
+          CANONICAL,
+          'Experiences',
+          'https://mychef.id/experiences'
         ),
         faqPageSchema(FAQS),
         serviceSchema(
-          'Champagne & Oyster Experience Bali',
-          'A private Champagne & Oyster experience in your Bali villa, featuring fresh oysters, curated champagne service, and full in-villa setup.',
-          'https://mychef.id/experience/champagne-oyster-experience'
+          'Oyster Bar Bali',
+          'A private oyster bar Bali experience in your villa, featuring fresh oysters, curated champagne service, and full in-villa setup.',
+          CANONICAL
         ),
       ]}
       ctaText="Book the Experience"

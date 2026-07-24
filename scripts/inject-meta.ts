@@ -98,6 +98,13 @@ const OG_IMAGES: Record<string, string> = {
   '/book': '/generated/book-hero.webp',
   '/quote': '/og-image.webp',
   // Bar Services
+  '/experiences': '/generated/private-experiences-bali-hub.webp',
+  '/experiences/private-cocktail-party': '/generated/bartender-hire-bali-cocktail-party.webp',
+  '/experiences/sushi-masterclass': '/generated/sushi-making-class-bali-masterclass.webp',
+  '/experiences/private-cooking-class': '/generated/private-cooking-class-bali-villa.webp',
+  '/experiences/kids-birthday-chef-party': '/generated/kids-birthday-party-bali-chef.webp',
+  '/experiences/champagne-oyster-experience': '/generated/oyster-bar-bali-champagne.webp',
+  '/experiences/romantic-proposal-dinner': '/generated/proposal-package-bali-dinner.webp',
   '/bar-services/': '/generated/mychef-bar-services-bali-og-hub.jpg',
   '/bar-services/bar-staff-training/': '/generated/mychef-bar-services-bali-og-bar-staff-training.jpg',
   '/bar-services/cocktail-menu-development/': '/generated/mychef-bar-services-bali-og-cocktail-menu-development.jpg',

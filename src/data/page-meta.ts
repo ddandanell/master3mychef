@@ -1169,6 +1169,76 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-how-to-reduce-bar-shrinkage-bali.jpg`,
   },
 
+  experiences: {
+    path: '/experiences',
+    title: 'Private Experiences Bali | Culinary & Celebration Experiences | myCHEF',
+    description:
+      'Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, kids parties, oyster bars and proposal dinners at your villa.',
+    canonical: `${SITE}/experiences`,
+    h1: 'Private Experiences in Bali',
+    ogImage: `${SITE}/generated/private-experiences-bali-hub.webp`,
+  },
+
+  'experience-private-cocktail-party': {
+    path: '/experiences/private-cocktail-party',
+    title: 'Bartender Hire Bali | Private Cocktail Party in Your Villa | myCHEF',
+    description:
+      'Hire a bartender in Bali for a private cocktail party at your villa. Custom cocktails, canapés, full bar setup and professional service. WhatsApp myCHEF today.',
+    canonical: `${SITE}/experiences/private-cocktail-party`,
+    h1: 'Bartender Hire Bali — Private Cocktail Party in Your Villa',
+    ogImage: `${SITE}/generated/bartender-hire-bali-cocktail-party.webp`,
+  },
+
+  'experience-sushi-masterclass': {
+    path: '/experiences/sushi-masterclass',
+    title: 'Sushi Making Class Bali | Private In-Villa Masterclass | myCHEF',
+    description:
+      'Book a sushi making class in Bali at your villa. Learn nigiri, maki and sushi rice with a private chef. Fresh ingredients and equipment included. Enquire now.',
+    canonical: `${SITE}/experiences/sushi-masterclass`,
+    h1: 'Sushi Making Class Bali — Private In-Villa Masterclass',
+    ogImage: `${SITE}/generated/sushi-making-class-bali-masterclass.webp`,
+  },
+
+  'experience-private-cooking-class': {
+    path: '/experiences/private-cooking-class',
+    title: 'Private Cooking Class Bali | Chef at Your Villa | myCHEF',
+    description:
+      'Book a private cooking class in Bali. Learn Balinese and Indonesian cuisine hands-on in your villa with a myCHEF instructor. Groups 2–12. WhatsApp us.',
+    canonical: `${SITE}/experiences/private-cooking-class`,
+    h1: 'Private Cooking Class Bali — Learn in Your Villa',
+    ogImage: `${SITE}/generated/private-cooking-class-bali-villa.webp`,
+  },
+
+  'experience-kids-birthday-chef-party': {
+    path: '/experiences/kids-birthday-chef-party',
+    title: 'Kids Birthday Party Bali | Private Chef Party | myCHEF',
+    description:
+      'Plan a kids birthday party in Bali with a private chef cooking party at your villa. Six interactive menus, nut-free, halal adaptable. WhatsApp myCHEF.',
+    canonical: `${SITE}/experiences/kids-birthday-chef-party`,
+    h1: 'Kids Birthday Party Bali — Private Chef Party at Your Villa',
+    ogImage: `${SITE}/generated/kids-birthday-party-bali-chef.webp`,
+  },
+
+  'experience-champagne-oyster-experience': {
+    path: '/experiences/champagne-oyster-experience',
+    title: 'Oyster Bar Bali | Champagne & Oyster Experience | myCHEF',
+    description:
+      'Book a private oyster bar in Bali with champagne service at your villa. Fresh oysters, live shucking, premium glassware and tailored menus. Enquire now.',
+    canonical: `${SITE}/experiences/champagne-oyster-experience`,
+    h1: 'Oyster Bar Bali — Champagne & Oyster Experience at Your Villa',
+    ogImage: `${SITE}/generated/oyster-bar-bali-champagne.webp`,
+  },
+
+  'experience-romantic-proposal-dinner': {
+    path: '/experiences/romantic-proposal-dinner',
+    title: 'Proposal Package Bali | Romantic Proposal Dinner | myCHEF',
+    description:
+      'Plan a romantic proposal package in Bali. Private chef dinner, candlelit setup, flowers, photographer and discreet coordination. WhatsApp myCHEF confidentially.',
+    canonical: `${SITE}/experiences/romantic-proposal-dinner`,
+    h1: 'Proposal Package Bali — Romantic Dinner & Private Coordination',
+    ogImage: `${SITE}/generated/proposal-package-bali-dinner.webp`,
+  },
+
 } as const
 
 /** Helper to retrieve meta by route key with strict typing */

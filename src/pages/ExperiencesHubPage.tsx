@@ -11,18 +11,18 @@ const EXPERIENCES = [
     desc: 'Hire a professional bartender and complete mobile cocktail bar for your Bali villa, wedding, birthday or private event. Bar setup, staff, mixers and a custom cocktail menu included.',
     icon: Wine,
     href: '/experiences/private-cocktail-party',
-    image: '/generated/mychef-events-bali-villa-party-night.webp',
-    imageAlt: 'Bartender hire in Bali with mobile cocktail bar at a private villa party',
+    image: '/generated/bartender-hire-bali-cocktail-party.webp',
+    imageAlt: 'Bartender hire Bali service with mobile cocktail bar at a private villa party',
   },
   {
     slug: 'sushi-masterclass',
     title: 'Sushi Masterclass',
     keyword: 'sushi making class Bali',
-    desc: 'Book a private sushi-making class at your Bali villa. Learn maki, nigiri and hand rolls with a sushi chef, then enjoy the meal you created together.',
+    desc: 'Book a private sushi making class Bali experience at your villa. Learn maki, nigiri and hand rolls with a sushi chef, then enjoy the meal you created together.',
     icon: UtensilsCrossed,
     href: '/experiences/sushi-masterclass',
-    image: '/generated/mychef-finedining-bali-chefs-hero.webp',
-    imageAlt: 'Private sushi making class in Bali with a chef teaching in a villa kitchen',
+    image: '/generated/sushi-making-class-bali-masterclass.webp',
+    imageAlt: 'Sushi making class Bali with a chef teaching in a private villa kitchen',
   },
   {
     slug: 'private-cooking-class',
@@ -31,8 +31,8 @@ const EXPERIENCES = [
     desc: 'Choose your cuisine and learn from a private chef in your own villa. Italian, Indonesian, Japanese, French, healthy or kids’ cooking classes with ingredients included.',
     icon: ChefHat,
     href: '/experiences/private-cooking-class',
-    image: '/generated/mychef-experience-bali-luna-hero-v4.webp',
-    imageAlt: 'Private cooking class at a Bali villa with a chef teaching fresh recipes',
+    image: '/generated/private-cooking-class-bali-villa.webp',
+    imageAlt: 'Private cooking class Bali at a villa with a chef teaching fresh recipes',
   },
   {
     slug: 'kids-birthday-chef-party',
@@ -41,28 +41,28 @@ const EXPERIENCES = [
     desc: 'Turn your villa into a fully hosted children’s cooking party. Pizza making, cupcake decorating, kids’ sushi, mocktails, chef hats and cleanup handled by our team.',
     icon: PartyPopper,
     href: '/experiences/kids-birthday-chef-party',
-    image: '/generated/mychef-events-bali-party-birthday.webp',
-    imageAlt: 'Kids birthday chef party in Bali with pizza making and cupcake decorating',
+    image: '/generated/kids-birthday-party-bali-chef.webp',
+    imageAlt: 'Kids birthday party Bali chef party with pizza making and cupcake decorating',
   },
   {
     slug: 'champagne-oyster-experience',
     title: 'Champagne & Oyster Experience',
     keyword: 'oyster bar Bali',
-    desc: 'Book a private oyster bar and champagne reception at your Bali villa, wedding or event. Fresh oysters on ice, live shucking, premium glassware and professional service.',
+    desc: 'Book a private oyster bar Bali experience and champagne reception at your villa, wedding or event. Fresh oysters on ice, live shucking, premium glassware and professional service.',
     icon: Shell,
     href: '/experiences/champagne-oyster-experience',
-    image: '/generated/mychef-experience-bali-aura-toast.webp',
-    imageAlt: 'Private oyster bar and champagne experience at a Bali villa',
+    image: '/generated/oyster-bar-bali-champagne.webp',
+    imageAlt: 'Oyster bar Bali with champagne service at an elegant private villa',
   },
   {
     slug: 'romantic-proposal-dinner',
     title: 'Romantic Proposal Dinner',
     keyword: 'proposal package Bali',
-    desc: 'Plan a complete private proposal in Bali with dinner, flowers, candles, styling, photographer and confidential coordination through one dedicated team.',
+    desc: 'Plan a complete proposal package Bali experience with dinner, flowers, candles, styling, photographer and confidential coordination through one dedicated team.',
     icon: Heart,
     href: '/experiences/romantic-proposal-dinner',
-    image: '/generated/mychef-misc-bali-section-romantic-dinner.webp',
-    imageAlt: 'Romantic proposal dinner setup at a private villa in Bali',
+    image: '/generated/proposal-package-bali-dinner.webp',
+    imageAlt: 'Proposal package Bali romantic dinner setup at a private villa',
   },
 ]
 
@@ -72,25 +72,16 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Private Experiences Bali',
     title: 'Curated Culinary & Celebration Experiences in Your Villa',
-    body: `<p>Some moments deserve more than a restaurant reservation. myCHEF private experiences bring chefs, bartenders, teachers and event specialists directly to your Bali villa, turning a normal evening into something your guests will remember long after the holiday ends.</p>
+    image: '/generated/private-experiences-bali-hub.webp',
+    imageAlt: 'Private experiences Bali collection at a luxury villa by myCHEF',
+    body: `<p>Some moments deserve more than a restaurant reservation. The myCHEF <strong>private experiences Bali</strong> collection brings chefs, bartenders, teachers and event specialists directly to your villa, turning a normal evening into something your guests will remember long after the holiday ends.</p>
 
     <p>Every experience is designed around the setting you already have: your villa, your pool, your kitchen, your view. You choose the occasion and the mood, and we build the rest — ingredients, equipment, service staff, styling and cleanup. The result feels personal, seamless and unmistakably Bali.</p>
 
     <p>Whether you want a hands-on sushi class with friends, a floating cocktail bar by the pool, a stress-free kids’ cooking party, or a confidential proposal dinner planned down to the last candle, these experiences are built for guests who expect privacy, quality and attention to detail.</p>`,
   },
   {
-    id: 'why-private',
-    type: 'content' as const,
-    subtitle: 'Why Book a Private Experience',
-    title: 'The Difference Between a Reservation and an Experience',
-    body: `<p>Private experiences solve the problems that come with group travel and special occasions. There is no need to coordinate transport, no shared restaurant space, no fixed menu that does not suit everyone, and no pressure to leave when the evening is just getting started.</p>
-
-    <p>When the experience comes to your villa, the schedule is yours. A proposal can be timed to sunset. A kids’ party can start after nap time. A cocktail class can flow into dinner. A sushi lesson can become the meal. Everything adapts to your group rather than the other way around.</p>
-
-    <p>Our team handles the logistics that would normally fall to you: sourcing fresh ingredients, bringing equipment that villa kitchens may not have, setting up stations, managing dietary requirements, serving drinks and restoring the space afterwards. You are the host, but you are never the event manager.</p>`,
-  },
-  {
-    id: 'experiences',
+    id: 'collection',
     type: 'custom' as const,
     subtitle: 'Explore the Collection',
     title: 'Private Experiences in Bali by myCHEF',
@@ -132,11 +123,22 @@ const SECTIONS: PageSection[] = [
     ),
   },
   {
+    id: 'why-private',
+    type: 'content' as const,
+    subtitle: 'Why Book a Private Experience',
+    title: 'The Difference Between a Reservation and an Experience',
+    body: `<p>Private experiences solve the problems that come with group travel and special occasions. There is no need to coordinate transport, no shared restaurant space, no fixed menu that does not suit everyone, and no pressure to leave when the evening is just getting started.</p>
+
+    <p>When the experience comes to your villa, the schedule is yours. A proposal can be timed to sunset. A kids’ party can start after nap time. A cocktail class can flow into dinner. A sushi lesson can become the meal. Everything adapts to your group rather than the other way around.</p>
+
+    <p>Our team handles the logistics that would normally fall to you: sourcing fresh ingredients, bringing equipment that villa kitchens may not have, setting up stations, managing dietary requirements, serving drinks and restoring the space afterwards. You are the host, but you are never the event manager.</p>`,
+  },
+  {
     id: 'how-it-works',
     type: 'content' as const,
     subtitle: 'How It Works',
     title: 'From Idea to Experience in Four Steps',
-    body: `<p><strong>1. Choose your experience.</strong> Browse the collection and pick the activity or occasion that matches your group. Each page explains what is included, typical duration, group size and how it fits with other myCHEF services.</p>
+    body: `<p><strong>1. Choose your experience.</strong> Browse the <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">private experiences Bali</a> collection and pick the activity or occasion that matches your group. Each page explains what is included, typical duration, group size and how it fits with other myCHEF services.</p>
 
     <p><strong>2. Send a brief.</strong> A short WhatsApp message is enough to begin. Include your preferred date, villa location, number of guests and any dietary requests or special occasion details.</p>
 
@@ -199,13 +201,14 @@ const FAQS = [
   { question: 'How far in advance should I book?', answer: 'We recommend 2–4 weeks ahead for most experiences. Proposal dinners, peak-season dates and larger groups benefit from earlier planning. Last-minute bookings may be possible depending on availability.' },
   { question: 'Do you handle setup and cleanup?', answer: 'Yes. Our team sets up the experience, runs it from start to finish, and restores the villa afterwards. You should not need to manage logistics.' },
   { question: 'Can you host experiences at hotels or event venues?', answer: 'Most experiences are designed for private villas, but we can adapt to hotels, retreat centres and event venues with suitable facilities. Venue permission and logistics are confirmed during planning.' },
+  { question: 'Are your experiences only available in Bali?', answer: 'Yes. Our private experiences are designed for Bali villas and estates across all major regions of the island.' },
+  { question: 'How do I get a quote for a private experience?', answer: 'Send us a WhatsApp message with your preferred experience, date, villa location and guest count. We reply within the hour with availability and a tailored quote.' },
 ]
 
 const RELATED_PAGES = [
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full overview of private chef and dining experiences across Bali.' },
   { label: 'Villa Catering', href: '/catering/villa-catering', desc: 'Full-service catering for villa celebrations and group dining.' },
   { label: 'Event Catering', href: '/events', desc: 'Weddings, birthdays, corporate events and villa parties handled end-to-end.' },
-  { label: 'Bar Services', href: '/bar-services', desc: 'Bartenders, cocktail menus and full bar management for Bali events.' },
   { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and event types.' },
 ]
 
@@ -220,9 +223,9 @@ export default function ExperiencesHubPage() {
       canonicalUrl="https://mychef.id/experiences"
       h1="Private Experiences in Bali"
       subtitle="Curated Culinary & Celebration Experiences at Your Villa"
-      heroImage="/generated/mychef-experience-bali-aura-hero-v2.webp"
-      heroImageAlt="Private villa experience in Bali with elegant table styling and candlelight"
-      ogImage="https://mychef.id/generated/mychef-experience-bali-aura-hero-v2.webp"
+      heroImage="/generated/private-experiences-bali-hub.webp"
+      heroImageAlt="Private experiences Bali collection at a luxury villa by myCHEF"
+      ogImage="https://mychef.id/generated/private-experiences-bali-hub.webp"
       keywords={[
         'private experiences Bali',
         'villa experiences Bali',

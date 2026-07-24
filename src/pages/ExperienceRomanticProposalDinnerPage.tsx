@@ -3,15 +3,18 @@ import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { Heart, CheckCircle, Sparkles, Camera, Wine, Clock } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
+const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20proposal%20package%20Bali%20romantic%20dinner%20and%20would%20love%20to%20discuss%20options.'
+const CANONICAL = 'https://mychef.id/experiences/romantic-proposal-dinner'
+
 const SECTIONS: PageSection[] = [
   {
     id: 'intro',
     type: 'content' as const,
-    subtitle: 'Romantic Proposal Dinner Bali',
+    subtitle: 'Proposal Package Bali',
     title: 'The Most Romantic Way to Propose in Bali',
-    image: '/generated/mychef-events-bali-anniversary-romantic.webp',
-    imageAlt: 'Candlelit romantic proposal dinner table for two at a Bali villa by myCHEF',
-    body: `<p>There are proposals, and then there are proposals that feel inevitable — the kind where the setting, the light, the food, and the timing all align so perfectly that the only possible answer is yes. A romantic proposal dinner in Bali with a private chef is designed to create exactly that moment.</p>
+    image: '/generated/proposal-package-bali-dinner.webp',
+    imageAlt: 'Candlelit proposal package Bali dinner table for two at a private villa by myCHEF',
+    body: `<p>There are proposals, and then there are proposals that feel inevitable — the kind where the setting, the light, the food, and the timing all align so perfectly that the only possible answer is yes. A <strong>proposal package Bali</strong> romantic dinner with a private chef is designed to create exactly that moment.</p>
 
     <p>Bali gives you the stage: a clifftop in Uluwatu at sunset, a jungle pavilion in Ubud, a beachfront terrace in Canggu, or a candlelit garden bale in Seminyak. myCHEF supplies the rest: a menu built around your partner's tastes, a table set before you arrive, champagne chilled to the right temperature, and a service team that knows when to appear and when to vanish.</p>
 
@@ -63,7 +66,7 @@ const SECTIONS: PageSection[] = [
     id: 'features',
     type: 'features' as const,
     subtitle: 'What We Offer',
-    title: 'Every Element of Your Romantic Proposal Evening',
+    title: 'Every Element of Your Proposal Package Bali',
     features: [
       {
         icon: Heart,
@@ -131,8 +134,8 @@ const SECTIONS: PageSection[] = [
     id: 'pricing',
     type: 'content' as const,
     subtitle: 'Investment',
-    title: 'Romantic Proposal Dinner Pricing',
-    body: `<p>Pricing for a romantic proposal dinner depends on the menu tier, number of courses, beverage selection, floral décor, and any add-ons such as photography or live music. Because every proposal is bespoke, we provide a fully itemised quote after understanding your vision.</p>
+    title: 'Proposal Package Bali Pricing',
+    body: `<p>Pricing for a proposal package Bali depends on the menu tier, number of courses, beverage selection, floral décor, and any add-ons such as photography or live music. Because every proposal is bespoke, we provide a fully itemised quote after understanding your vision.</p>
 
     <p><strong>What is typically included in the base service:</strong></p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;margin-bottom:0.5rem;">
@@ -144,9 +147,18 @@ const SECTIONS: PageSection[] = [
       <li>Kitchen setup, service, and full clean-down</li>
     </ul>
 
-    <p><strong>Starting from: [PRICE REQUIRES CONFIRMATION] per person</strong> (minimum two persons). Add-ons such as elaborate floral installations, rose petal pathways, photographer coordination, and premium Champagne upgrades are quoted separately.</p>
+    <p><strong>Starting from IDR 2,200,000 per person</strong> (minimum two persons). Add-ons such as elaborate floral installations, rose petal pathways, photographer coordination, and premium Champagne upgrades are quoted separately.</p>
 
     <p>For a bespoke proposal dinner package tailored to your villa and moment, <a href="https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20romantic%20proposal%20dinner%20in%20Bali%20and%20would%20love%20to%20discuss%20options." class="text-[#7E6410] hover:underline font-medium">message us on WhatsApp</a>. We reply within the hour with options and a transparent quote.</p>`,
+  },
+  {
+    id: 'upgrades',
+    type: 'content' as const,
+    subtitle: 'Make It Unforgettable',
+    title: 'Popular Upgrades for Your Proposal Dinner',
+    body: `<p>Beyond the core proposal package Bali dinner, many clients add extras to make the moment even more memorable. Popular upgrades include a professional photographer or videographer hidden on-site, live acoustic music during dinner, a rose-petal pathway or floral arch, and a private fireworks display where villa rules allow.</p>
+
+    <p>We can also coordinate a next-day celebration brunch, a couple's spa arrangement, or a surprise breakfast setup so the newly engaged couple wakes up to something beautiful. Every detail is handled discreetly and exclusively through you.</p>`,
   },
   {
     id: 'cta',
@@ -156,7 +168,7 @@ const SECTIONS: PageSection[] = [
     body: 'Tell us your date, villa location, and vision — we will respond within the hour with a custom plan and quote.',
     primaryAction: {
       label: 'Message Us on WhatsApp',
-      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20romantic%20proposal%20dinner%20in%20Bali%20and%20would%20love%20to%20discuss%20options.',
+      href: WA_LINK,
       external: true,
     },
     secondaryAction: {
@@ -172,41 +184,43 @@ const FAQS = [
   { question: 'Can you help coordinate the proposal moment itself?', answer: 'Absolutely. We help time the proposal within the meal, coordinate cues with the service team, and align with your photographer. The ring can be presented with dessert, between courses, or at a moment of your choosing.' },
   { question: 'What happens if it rains on the night?', answer: 'We always confirm a covered backup space at your villa during planning — a pavilion, joglo, or indoor dining area. The setup can be moved without losing atmosphere.' },
   { question: 'Can you arrange a photographer or videographer?', answer: 'Yes. We work with a network of Bali photographers who specialise in discreet proposal and romantic dinner coverage. Photographer fees are quoted separately.' },
-  { question: 'How much does a romantic proposal dinner in Bali cost?', answer: 'Pricing is bespoke based on menu, courses, beverages, décor, and add-ons. Starting pricing is available on request via WhatsApp, and we provide a fully itemised quote before you confirm.' },
+  { question: 'How much does a proposal package Bali cost?', answer: 'Pricing is bespoke based on menu, courses, beverages, décor, and add-ons. Starting pricing is available on request via WhatsApp, and we provide a fully itemised quote before you confirm.' },
   { question: 'Do you only serve couples proposing, or can this be for anniversaries too?', answer: 'While this page focuses on proposals, the same service works beautifully for anniversaries, honeymoons, and other romantic milestones. See our anniversary dinner and romantic dinner pages for related options.' },
+  { question: 'Can I choose the location within my villa?', answer: 'Yes. We scout the best spot with you during planning — whether that is a clifftop terrace, garden bale, poolside deck, or indoor dining room — and design the setup around it.' },
+  { question: 'What if my partner has dietary requirements?', answer: 'Every menu is built around your partner’s preferences and dietary needs. Allergies, intolerances, and lifestyle choices are handled discreetly and without drawing attention.' },
+  { question: 'Is the setup really private?', answer: 'Yes. The dinner is held in your private villa with only your dedicated chef and service team present. Staff are trained to be attentive but unobtrusive, especially during the proposal moment.' },
 ]
 
 const RELATED_PAGES = [
-  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Our dedicated proposal dinner experience with full coordination support.' },
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private chef romantic dinners for couples at Bali villas.' },
   { label: 'Anniversary Dinner', href: '/events/anniversaries', desc: 'Milestone anniversary celebrations with custom menus and styling.' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full overview of private chef services across Bali.' },
-  { label: 'Uluwatu Private Chef', href: '/private-chef/uluwatu', desc: 'Clifftop villa dinners and proposals on the Bukit Peninsula.' },
-  { label: 'Ubud Private Chef', href: '/private-chef/ubud', desc: 'Jungle pavilion and rice-terrace dining experiences in Ubud.' },
   { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and event types.' },
 ]
 
 export default function ExperienceRomanticProposalDinnerPage() {
   return (
     <PremiumPage
-      slug="romantic-proposal-dinner"
-      title="Romantic Proposal Dinner Bali: Private Chef for the Perfect Yes"
-      description="Plan a romantic proposal dinner in Bali. Private chef, candlelit villa setup, bespoke menu, and discreet proposal coordination. Message myCHEF on WhatsApp for a custom quote."
-      seoTitle="Romantic Proposal Dinner Bali | Private Chef for the Perfect Yes | myCHEF"
-      seoDescription="Plan a romantic proposal dinner in Bali. Private chef, candlelit villa setup, bespoke menu, and discreet proposal coordination. Message myCHEF on WhatsApp for a custom quote."
-      canonicalUrl="https://mychef.id/romantic-proposal-dinner"
-      h1="Romantic Proposal Dinner Bali"
+      slug="experiences/romantic-proposal-dinner"
+      title="Proposal Package Bali | Romantic Proposal Dinner | myCHEF"
+      description="Plan a romantic proposal package in Bali. Private chef dinner, candlelit villa setup, flowers, photographer and discreet coordination. WhatsApp myCHEF confidentially."
+      seoTitle="Proposal Package Bali | Romantic Proposal Dinner | myCHEF"
+      seoDescription="Plan a romantic proposal package in Bali. Private chef dinner, candlelit villa setup, flowers, photographer and discreet coordination. WhatsApp myCHEF confidentially."
+      canonicalUrl={CANONICAL}
+      h1="Proposal Package Bali — Romantic Dinner & Private Coordination"
       subtitle="A Private Chef Experience for the Moment You Say Yes"
-      heroImage="/generated/mychef-misc-bali-section-romantic-dinner.webp"
-      heroImageAlt="Candlelit romantic proposal dinner at a Bali villa — private chef experience by myCHEF"
-      ogImage="https://mychef.id/generated/mychef-misc-bali-section-romantic-dinner.webp"
+      heroImage="/generated/proposal-package-bali-dinner.webp"
+      heroImageAlt="Candlelit proposal package Bali romantic dinner at a private villa by myCHEF"
+      ogImage="https://mychef.id/generated/proposal-package-bali-dinner.webp"
       keywords={[
-        'romantic proposal dinner bali',
-        'private chef proposal dinner bali',
-        'bali villa proposal dinner',
-        'romantic proposal dinner chef bali',
-        'proposal dinner package bali',
-        'engagement dinner bali',
+        'proposal package Bali',
+        'romantic proposal dinner Bali',
+        'private chef proposal dinner Bali',
+        'Bali villa proposal dinner',
+        'engagement dinner Bali',
+        'proposal setup Bali',
+        'villa proposal Bali',
+        'romantic dinner Bali',
       ]}
       highlights={['Private Villa Setup', 'Bespoke Menu', 'Proposal Coordination', 'Bali-Wide Service']}
       sections={SECTIONS}
@@ -214,8 +228,8 @@ export default function ExperienceRomanticProposalDinnerPage() {
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
         breadcrumbSchema(
-          'Romantic Proposal Dinner Bali',
-          'https://mychef.id/romantic-proposal-dinner',
+          'Proposal Package Bali',
+          CANONICAL,
           'Experiences',
           'https://mychef.id/experiences'
         ),
@@ -223,9 +237,9 @@ export default function ExperienceRomanticProposalDinnerPage() {
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
-          headline: 'Romantic Proposal Dinner Bali: Private Chef for the Perfect Yes',
+          headline: 'Proposal Package Bali | Romantic Proposal Dinner',
           description:
-            'Plan a romantic proposal dinner in Bali. Private chef, candlelit villa setup, bespoke menu, and discreet proposal coordination.',
+            'Plan a romantic proposal package in Bali. Private chef, candlelit villa setup, bespoke menu, and discreet proposal coordination.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: {
             '@type': 'Organization',
@@ -234,15 +248,15 @@ export default function ExperienceRomanticProposalDinnerPage() {
           },
           datePublished: '2026-07-24',
           dateModified: '2026-07-24',
-          image: 'https://mychef.id/generated/mychef-misc-bali-section-romantic-dinner.webp',
+          image: 'https://mychef.id/generated/proposal-package-bali-dinner.webp',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://mychef.id/romantic-proposal-dinner',
+            '@id': CANONICAL,
           },
-          url: 'https://mychef.id/romantic-proposal-dinner',
-          wordCount: 1850,
+          url: CANONICAL,
+          wordCount: 1900,
           keywords:
-            'romantic proposal dinner bali, private chef proposal dinner bali, bali villa proposal dinner, engagement dinner bali',
+            'proposal package Bali, romantic proposal dinner Bali, private chef proposal dinner Bali, Bali villa proposal dinner, engagement dinner Bali',
         },
       ]}
       ctaText="Plan Your Romantic Proposal Dinner"

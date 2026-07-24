@@ -67,7 +67,7 @@ const HOW_IT_WORKS = [
 
 const FAQS = [
   { q: 'How long does chef placement take?', a: 'Typically one to two weeks from brief to placement. Trial sessions are scheduled within three to five days of shortlist approval, and profiles are delivered within 48 hours.' },
-  { q: 'What is your placement fee?', a: 'One month of the chef\'s salary, covering sourcing, cooking trials, background verification, contract preparation and six months of ongoing support. [See fee-model conflict note above — BUSINESS CONFIRMATION REQUIRED.]' },
+  { q: 'What is your placement fee?', a: 'Placement fees are discussed once we understand the role and candidate requirements. We provide a written quote before any commitment.' },
   { q: 'What if the chef is not the right fit?', a: 'Every placement carries a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost — and we keep vetted backup candidates for every active placement.' },
   { q: 'Do you handle contracts and payroll?', a: 'Yes. We prepare standard Indonesian employment contracts and provide payroll guidance, including BPJS and THR obligations. For complex arrangements, we recommend local payroll partners.' },
   { q: 'What cuisines can your chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal and kosher — matched to your preference before shortlisting.' },
@@ -115,7 +115,7 @@ const briefJsonLd = {
           name: 'What is your placement fee?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'One month of the chef\'s salary, covering sourcing, cooking trials, background verification, contract preparation and six months of ongoing support.',
+            text: 'Placement fees are discussed once we understand the role and candidate requirements. We provide a written quote before any commitment.',
           },
         },
         {

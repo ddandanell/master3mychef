@@ -112,7 +112,7 @@ const CORP_ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'What does corporate catering in Bali cost?', a: 'Three per-person tiers: Standard IDR 700,000, Premium IDR 750,000 and Luxury IDR 1,200,000, all ++ (11% government tax + 10% service charge). Minimum spend is IDR 7,500,000. Your quote is fixed and itemised before you commit.' },
+  { q: 'What does corporate catering in Bali cost?', a: 'Three per-person tiers: Standard IDR 700,000, Premium IDR 750,000 and Luxury IDR 1,200,000, all ++ (11% government tax + 10% service charge). Minimum spend is IDR 50,000,000. Your quote is fixed and itemised before you commit.' },
   { q: 'What does "++" mean on your quotes?', a: 'It means 11% government tax and 10% service charge are added on top of the listed price. IDR 700,000++ works out to approximately IDR 847,000 per person all-in. We always show both figures.' },
   { q: 'Can you invoice our company properly?', a: 'Yes. We are NPWP-registered and issue full tax invoices with itemised breakdowns. Net-14 terms are available for regular corporate clients.' },
   { q: 'How do you handle halal, vegan, gluten-free and allergy requirements across a large group?', a: 'Through a pre-event dietary intake form, a kitchen briefing against the actual guest list, labelled dishes, and separate prep zones for allergens. Dietary guests are integrated into the main service, not singled out.' },
@@ -185,7 +185,7 @@ export default function CateringCorporatePage() {
             Reliable, tax-invoiced corporate catering in Bali for working lunches, office events, boardroom dinners and conference days. One dedicated event manager, one fixed per-person price, one clean invoice.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 700,000++/person · Minimum spend IDR 7,500,000 · NPWP-registered tax invoices · Dedicated event manager · Bali-wide
+            From IDR 700,000++/person · Minimum spend IDR 50,000,000 · NPWP-registered tax invoices · Dedicated event manager · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
@@ -479,7 +479,7 @@ export default function CateringCorporatePage() {
           <p className="text-[#4A4745] text-center max-w-2xl mx-auto -mt-4 mb-8">
             All packages include menu planning, fresh ingredient shopping, cooking, professional service staff, setup and full cleanup. Prices are per person and subject to 11% government tax + 10% service charge (++). See our{' '}
             <Link to="/pricing" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">transparent per-person pricing</Link>.{' '}
-            Minimum spend IDR 7,500,000.
+            Minimum spend IDR 50,000,000.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {CORP_PACKAGES.map((pkg) => (

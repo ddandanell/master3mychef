@@ -24,7 +24,7 @@ interface Concierge {
 
 const FAQS = [
   { q: 'How do I contact myCHEF?', a: 'The fastest way is WhatsApp at +62 896-7407-2020. You can also email bali@mychef.id or call the same number. We usually reply within minutes on WhatsApp.' },
-  { q: 'Who is Dede and what does she handle?', a: 'Dede is our Fine Dining Coordinator. She handles tasting-menu reservations, dietary preferences, wine pairings, and fine-dining experiences at your villa.' },
+  { q: 'Who is Dede and what does she handle?', a: 'Dede is a Coordinator at myCHEF. She handles tasting-menu reservations, dietary preferences, wine pairings, and fine-dining experiences at your villa.' },
   { q: 'How quickly will myCHEF respond?', a: 'We typically reply within minutes on WhatsApp. For email enquiries, expect a response within a few hours during business hours.' },
   { q: 'Can I call instead of using WhatsApp?', a: 'Yes. You can call +62 896-7407-2020 directly. Our lines are open daily from 08:00 to 22:00 WITA.' },
   { q: 'What information should I include in my first message?', a: 'Let us know your name, the service you are interested in, your villa or location in Bali, group size, and preferred date. The more detail, the faster we can help.' },
@@ -207,7 +207,7 @@ export default function ContactPage() {
       {/* ── RISK REVERSAL ─────────────────────────────────────────────── */}
       <ContactRiskReversal />
 
-      {/* ── THE FOUR INDONESIAN LEADERS ───────────────────────────────── */}
+      {/* ── YOUR MYCHEF COORDINATORS ──────────────────────────────────── */}
       <section className="px-6 md:px-12 py-20 md:py-28">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-end mb-12">

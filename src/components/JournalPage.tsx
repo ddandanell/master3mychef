@@ -4,6 +4,7 @@ import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '.
 import { JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
 import { JOURNAL_POSTS } from '@/data/content/journalPosts'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
+import { getPageMetaByPath } from '@/data/page-meta'
 import { SITEMAP } from '@/data/sitemap'
 
 // Every article route (data-driven BLOG_POSTS + standalone /journal & /guide page
@@ -180,6 +181,10 @@ export function JournalPostPage() {
   // Body moved to the lazy content store — hydrate once for schema + render.
   const postContent = post.content ?? ARTICLE_CONTENT[`/journal/${post.slug}`] ?? ''
   const canonical = `${SITE}/journal/${post.slug}`
+  const mappedMeta = getPageMetaByPath(`/journal/${post.slug}`)
+  const pageTitle = mappedMeta?.title ?? post.title
+  const pageDescription = mappedMeta?.description ?? post.excerpt
+  const pageH1 = mappedMeta?.h1 ?? post.title
   const category = JOURNAL_CATEGORIES.find((c) => c.slug === post.category)
 
   // Article schema: image (Google-recommended field). Use the first image in the
@@ -216,19 +221,19 @@ export function JournalPostPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={post.title}
-        description={post.excerpt}
+        title={pageTitle}
+        description={pageDescription}
         canonical={canonical}
         ogImage="/mychef-misc-bali-og-image.webp"
         ogType="article"
         jsonLd={[
           localBusinessSchema,
-          breadcrumbSchema(post.title, canonical),
+          breadcrumbSchema(pageTitle, canonical),
           {
             '@context': 'https://schema.org',
             '@type': 'Article',
-            headline: post.title,
-            description: post.excerpt,
+            headline: pageTitle,
+            description: pageDescription,
             url: canonical,
             datePublished: post.date,
             dateModified: post.date,
@@ -254,8 +259,8 @@ export function JournalPostPage() {
           <span>· {post.readTime}</span>
           {category && <span className="text-[#7E6410]">· {category.label}</span>}
         </div>
-        <h1 className="font-playfair text-3xl md:text-4xl leading-tight mb-6">{post.title}</h1>
-        <p className="text-lg text-[#4A4745] mb-10">{post.excerpt}</p>
+        <h1 className="font-playfair text-3xl md:text-4xl leading-tight mb-6">{pageH1}</h1>
+        <p className="text-lg text-[#4A4745] mb-10">{pageDescription}</p>
 
         <div
           className="prose prose-lg max-w-none text-[#4A4745] prose-p:leading-relaxed prose-p:text-[#4A4745] prose-p:mb-6"

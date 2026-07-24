@@ -65,7 +65,7 @@ const FAQS = [
   { question: 'How far in advance should I book retreat catering?', answer: '4+ weeks is ideal for multi-day retreats. This allows us to plan menus, source specialty ingredients, and coordinate staffing. For smaller groups, 2 weeks may suffice.' },
   { question: 'Do you provide service staff for retreats?', answer: 'Yes. We provide chefs, kitchen assistants, and service staff as needed. For larger retreats, we can also provide bartenders and event coordinators.' },
   { question: 'Can you set up a juice or smoothie bar?', answer: 'Yes. Fresh-pressed juice bars, smoothie stations, and specialty coffee service are popular additions to retreat catering. We source local tropical fruits and organic ingredients.' },
-  { question: 'What is the pricing for retreat catering?', answer: 'From IDR 700,000 per person per day for full-board packages. Pricing varies based on menu complexity, dietary requirements, and staffing needs. We provide detailed quotes within 24 hours.' },
+  { question: 'What is the pricing for retreat catering?', answer: 'Retreat programmes are priced per group, length and menu. Contact us for a tailored proposal with a fixed quote.' },
 ]
 
 const RELATED_PAGES = [

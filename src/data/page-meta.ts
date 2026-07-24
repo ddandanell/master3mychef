@@ -6,8 +6,6 @@
  * typed source of truth.
  */
 
-import { LOCATION_LANDING_PAGES } from './locationLandingPages'
-
 export interface PageMeta {
   /** Route path (e.g. '/', '/fine-dining') */
   path: string
@@ -1920,11 +1918,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   services: {
     path: '/services',
-    title: 'Private Chef Services in Bali | Compare Every myCHEF Service',
+    title: 'Private Chef Services Bali | Compare All Services | myCHEF',
     description:
       'Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit.',
     canonical: `${SITE}/services`,
-    h1: 'Private Chef Services in Bali — Every Experience, One Team',
+    h1: 'Our Services',
     ogImage: `${SITE}/generated/bali-hub-hero.webp`,
   },
 
@@ -1985,9 +1983,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'why-mychef': {
     path: '/why-mychef',
-    title: 'Why myCHEF | The Private Chef Company 560+ Bali Villas Trust',
+    title: 'Best Private Chef Service Bali | Why Villas Choose myCHEF',
     description:
-      'Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence.',
+      'Why 560+ Bali villas trust myCHEF: Michelin-trained leadership, 50+ local staff, same-day confirmation & no-stress guarantee. See the full difference.',
     canonical: `${SITE}/why-mychef`,
     h1: 'Why 560+ Villas Choose myCHEF',
     ogImage: `${SITE}/generated/misc-hub-bali-lg.webp`,
@@ -2017,9 +2015,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/villa-chef',
     title: 'Villa Chef Bali | Daily Chef Service for Your Stay | myCHEF',
     description:
-      'A dedicated villa chef in Bali for breakfast, lunch & dinner every day of your stay. Half-day from IDR 2M, full-day from IDR 4M. Groceries at cost. WhatsApp myCHEF.',
+      'A dedicated villa chef in Bali for breakfast, lunch & dinner every day of your stay. Half day IDR 2M, full day IDR 4M. Groceries at cost. WhatsApp myCHEF.',
     canonical: `${SITE}/villa-chef`,
-    h1: 'Your Villa Chef for Everyday Dining in Bali',
+    h1: 'Your Private Chef for Everyday Villa Dining',
     ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,
   },
 
@@ -2219,9 +2217,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/pricing',
     title: 'Private Chef Bali Prices | Catering & Event Pricing | myCHEF',
     description:
-      'Transparent myCHEF pricing: private chef rates, menu prices, catering & event packages in Bali. No hidden fees. Get a quote within 2 hours.',
+      'Transparent myCHEF pricing: private chef rates, menu prices, catering & event packages in Bali. No hidden fees. Get a quote in 1 hour.',
     canonical: `${SITE}/pricing`,
-    h1: 'Private Chef Bali Prices — Every Number, Upfront',
+    h1: 'Transparent Pricing for Every Experience',
     ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
   },
 
@@ -2390,297 +2388,6 @@ export const PAGE_META: Record<string, PageMeta> = {
     canonical: `${SITE}/blog/indonesian-street-food-private-chef-bali`,
     h1: 'Indonesian Street Food at Your Bali Villa',
   },
-
-
-  book: {
-    path: '/book',
-    title: 'Book a Private Chef Bali | Reserve Your Villa Dining',
-    description:
-      'Book a private chef, catering, event or staffing in Bali. Same-day WhatsApp confirmation and a 50% deposit secure your date.',
-    canonical: `${SITE}/book`,
-    h1: 'Book Your Experience',
-    ogImage: `${SITE}/generated/book-hero.webp`,
-  },
-
-
-  seminyak: {
-    path: '/seminyak',
-    title: 'Private Chef Seminyak | Beachfront Villa Dining — myCHEF',
-    description:
-      'Hire a private chef in Seminyak for beachfront villa dinners, BBQs & events. Michelin-trained, fast setup, all Seminyak areas covered. WhatsApp us.',
-    canonical: `${SITE}/seminyak`,
-    h1: 'Private Chef Seminyak — Fine Dining, Catering & Events',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
-  },
-
-
-  canggu: {
-    path: '/canggu',
-    title: 'Private Chef Canggu | Dining & Retreat Catering — myCHEF',
-    description:
-      'Hire a private chef in Canggu for villa dinners, poolside BBQs & retreat catering. Perfect for surf groups, families & long stays. WhatsApp us today.',
-    canonical: `${SITE}/canggu`,
-    h1: 'Private Chef Canggu — Villa Dining & Group Catering',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
-  },
-
-
-  ubud: {
-    path: '/ubud',
-    title: 'Private Chef Ubud | Jungle Villa & Retreat Dining — myCHEF',
-    description:
-      'Hire a private chef in Ubud for jungle villa dinners, wellness retreats & multi-day catering. Plant-forward menus, organic sourcing. WhatsApp to book.',
-    canonical: `${SITE}/ubud`,
-    h1: 'Private Chef Ubud — Jungle Villa Dining & Retreats',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
-  },
-
-
-  uluwatu: {
-    path: '/uluwatu',
-    title: 'Private Chef Uluwatu | Clifftop Villa Dining — myCHEF',
-    description:
-      'Hire a private chef in Uluwatu for clifftop villa dinners, sunset feasts & wedding catering. Seafood-forward menus, polished service. WhatsApp us.',
-    canonical: `${SITE}/uluwatu`,
-    h1: 'Private Chef Uluwatu — Clifftop & Villa Fine Dining',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
-  },
-
-
-  'nusa-dua': {
-    path: '/nusa-dua',
-    title: LOCATION_LANDING_PAGES['nusa-dua'].title,
-    description: LOCATION_LANDING_PAGES['nusa-dua'].description,
-    canonical: `${SITE}/nusa-dua`,
-    h1: LOCATION_LANDING_PAGES['nusa-dua'].h1,
-    ogImage: `${SITE}${LOCATION_LANDING_PAGES['nusa-dua'].heroImage}`,
-  },
-
-
-  jimbaran: {
-    path: '/jimbaran',
-    title: LOCATION_LANDING_PAGES.jimbaran.title,
-    description: LOCATION_LANDING_PAGES.jimbaran.description,
-    canonical: `${SITE}/jimbaran`,
-    h1: LOCATION_LANDING_PAGES.jimbaran.h1,
-    ogImage: `${SITE}${LOCATION_LANDING_PAGES.jimbaran.heroImage}`,
-  },
-
-
-  sanur: {
-    path: '/sanur',
-    title: LOCATION_LANDING_PAGES.sanur.title,
-    description: LOCATION_LANDING_PAGES.sanur.description,
-    canonical: `${SITE}/sanur`,
-    h1: LOCATION_LANDING_PAGES.sanur.h1,
-    ogImage: `${SITE}${LOCATION_LANDING_PAGES.sanur.heroImage}`,
-  },
-
-
-  berawa: {
-    path: '/berawa',
-    title: 'Private Chef Berawa | Villa Brunches, Dinners & Catering',
-    description:
-      'Private chef Berawa service for modern villas, brunches and group dinners. Healthy menus, cocktails and event catering near the beach.',
-    canonical: `${SITE}/berawa`,
-    h1: 'Private Chef Berawa — Villa Dining & Beach Club Events',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
-  },
-
-
-  pererenan: {
-    path: '/pererenan',
-    title: LOCATION_LANDING_PAGES.pererenan.title,
-    description: LOCATION_LANDING_PAGES.pererenan.description,
-    canonical: `${SITE}/pererenan`,
-    h1: LOCATION_LANDING_PAGES.pererenan.h1,
-    ogImage: `${SITE}${LOCATION_LANDING_PAGES.pererenan.heroImage}`,
-  },
-
-
-  bukit: {
-    path: '/bukit',
-    title: LOCATION_LANDING_PAGES.bukit.title,
-    description: LOCATION_LANDING_PAGES.bukit.description,
-    canonical: `${SITE}/bukit`,
-    h1: LOCATION_LANDING_PAGES.bukit.h1,
-    ogImage: `${SITE}${LOCATION_LANDING_PAGES.bukit.heroImage}`,
-  },
-
-
-  denpasar: {
-    path: '/denpasar',
-    title: LOCATION_LANDING_PAGES.denpasar.title,
-    description: LOCATION_LANDING_PAGES.denpasar.description,
-    canonical: `${SITE}/denpasar`,
-    h1: LOCATION_LANDING_PAGES.denpasar.h1,
-    ogImage: `${SITE}${LOCATION_LANDING_PAGES.denpasar.heroImage}`,
-  },
-
-
-  pecatu: {
-    path: '/pecatu',
-    title: 'Private Chef Pecatu | Surf Villa Dining & Sunset BBQs',
-    description:
-      'Private chef Pecatu service for surf villas, sunset BBQs and recovery brunches. Fast chef setup for stays across the Bukit coast.',
-    canonical: `${SITE}/pecatu`,
-    h1: 'Private Chef Pecatu — Surf & Sunset Dining',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
-  },
-
-
-
-  about: {
-    path: '/about',
-    title: 'About myCHEF Bali | Michelin-Trained Private Chef Team',
-    description:
-      'Meet the myCHEF Bali team: Michelin-trained founder Adriano, 50+ local professionals, 560+ villas served. See how we make villa dining exceptional.',
-    canonical: `${SITE}/about`,
-    h1: 'About myCHEF',
-    ogImage: `${SITE}/generated/luna-chef-portrait.webp`,
-  },
-
-
-  'partner-platform': {
-    path: '/partner-platform',
-    title: 'Villa Management Catering Bali | Partner Platform — myCHEF',
-    description:
-      'Co-branded private chef & catering for Bali villa managers. Live booking visibility, commission sharing & white-label dining offers for your guests.',
-    canonical: `${SITE}/partner-platform`,
-    h1: 'Partner Platform for Bali Villas',
-    ogImage: `${SITE}/generated/partner-platform-hero.webp`,
-  },
-
-
-  'join-our-team': {
-    path: '/join-our-team',
-    title: 'Chef Jobs Bali | Join the myCHEF Team — Apply via WhatsApp',
-    description:
-      'Chef jobs in Bali with myCHEF. Roles for chefs, bartenders, waiters & coordinators. Join a fast-moving team trusted by 560+ villas. Apply via WhatsApp.',
-    canonical: `${SITE}/join-our-team`,
-    h1: 'Join the myCHEF Team',
-    ogImage: `${SITE}/generated/staffing-staffing-hero-xl.webp`,
-  },
-
-
-  quote: {
-    path: '/quote',
-    title: 'Get a Custom Quote — Private Chef in Bali | myCHEF',
-    description:
-      'Send your date, guest count, and villa details to get a custom private chef Bali quote for dinners, parties, weddings, or multi-day stays.',
-    canonical: `${SITE}/quote`,
-    h1: 'Get Your Custom Quote',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
-
-  calculator: {
-    path: '/calculator',
-    title: 'Chef Cost Calculator Bali | Instant Estimate — myCHEF',
-    description:
-      'Estimate your private chef Bali cost in 30 seconds. Adjust guests, meals, menu style & add-ons for a realistic all-in budget. No hidden fees.',
-    canonical: `${SITE}/calculator`,
-    h1: 'Private Chef Pricing Calculator',
-    ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
-  },
-
-
-  'privacy-policy': {
-    path: '/privacy-policy',
-    title: 'Privacy Policy | myCHEF.id',
-    description:
-      'myCHEF.id privacy policy — how we collect, store and use your data when you book private chef or catering services in Bali.',
-    canonical: `${SITE}/privacy-policy`,
-    h1: 'Privacy Policy',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
-
-  'terms-of-service': {
-    path: '/terms-of-service',
-    title: 'Terms of Service | myCHEF.id',
-    description:
-      'myCHEF.id terms of service: payment terms, deposits, booking rules & service conditions for private chef & catering bookings in Bali.',
-    canonical: `${SITE}/terms-of-service`,
-    h1: 'Payment & Booking Terms',
-    ogImage: `${SITE}/og-image.webp`,
-  },
-
-
-  menus: {
-    path: '/menus',
-    title: 'Private Chef Menus in Bali | myCHEF',
-    description:
-      'Browse private chef menus for Bali villas, from Mediterranean tasting dinners to Indonesian feasts, BBQs, breakfasts, and custom group meals.',
-    canonical: `${SITE}/menus`,
-    h1: 'Private Chef Menus in Bali',
-    ogImage: `${SITE}/hero-fine-dining.webp`,
-  },
-
-
-  'fine-dining-our-chefs': {
-    path: '/fine-dining/our-chefs',
-    title: 'Hire a Private Chef Bali | Meet the myCHEF Team',
-    description:
-      'Meet myCHEF\'s private chefs in Bali: Michelin-trained Adriano & specialists in Mediterranean, seafood & fire cooking. Hire yours via WhatsApp today.',
-    canonical: `${SITE}/fine-dining/our-chefs`,
-    h1: 'Our Chefs — myCHEF Bali',
-    ogImage: `${SITE}/generated/finedining-chefs-hero-xl.webp`,
-  },
-
-
-  kuta: {
-    path: '/kuta',
-    title: 'Private Chef Kuta | Villa Dinners, Surf Trips & Catering',
-    description:
-      'Book a private chef in Kuta for villa dinners, surf-group meals, and last-night celebrations with fast setup near the airport and beach.',
-    canonical: `${SITE}/kuta`,
-    h1: 'Private Chef Kuta — Villa Dining & Group Meals',
-    ogImage: `${SITE}/generated/hub-villa.webp`,
-  },
-
-
-  'blog-private-chef-bali-cost-breakdown-2026': {
-    path: '/blog/private-chef-bali-cost-breakdown-2026',
-    title: 'Private Chef Bali Cost 2026 | Fees, Groceries & Service',
-    description:
-      'Private chef Bali cost breakdown for 2026, including chef fees, groceries, service charges and what changes the final villa quote.',
-    canonical: `${SITE}/blog/private-chef-bali-cost-breakdown-2026`,
-    h1: 'Private Chef Bali — Cost Breakdown 2026',
-    ogImage: `${SITE}/generated/journal-hero.webp`,
-  },
-
-
-  'blog-wedding-rehearsal-dinner-bali': {
-    path: '/blog/wedding-rehearsal-dinner-bali',
-    title: 'Wedding Rehearsal Dinner Bali | Villa Events Planning Guide',
-    description:
-      'Wedding rehearsal dinner Bali guide covering villa formats, menu ideas, timing and how to host guests before the ceremony.',
-    canonical: `${SITE}/blog/wedding-rehearsal-dinner-bali`,
-    h1: 'Wedding Rehearsal Dinner in Bali — Planning Guide',
-    ogImage: `${SITE}/generated/journal-hero.webp`,
-  },
-
-
-  'blog-yoga-retreat-chef-bali-meal-planning': {
-    path: '/blog/yoga-retreat-chef-bali-meal-planning',
-    title: 'Yoga Retreat Chef Bali | Meal Planning Guide',
-    description:
-      'Yoga retreat chef Bali guide to meal planning, plant-forward menus, dietary requests and service for multi-day wellness stays.',
-    canonical: `${SITE}/blog/yoga-retreat-chef-bali-meal-planning`,
-    h1: 'Yoga Retreat Chef in Bali — Meal Planning',
-    ogImage: `${SITE}/generated/journal-hero.webp`,
-  },
-
-  'pricing-calculator': {
-    path: '/pricing-calculator',
-    title: 'Pricing Calculator | Private Chef Bali — myCHEF',
-    description:
-      'Calculate your private chef Bali cost in seconds. Adjust guests, menu style & add-ons for an instant estimate. No hidden fees.',
-    canonical: `${SITE}/pricing-calculator`,
-    h1: 'Private Chef Pricing Calculator',
-    ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
-  },
 } as const
 
 /** Helper to retrieve meta by route key with strict typing */
@@ -2690,3 +2397,13 @@ export function getPageMeta(key: keyof typeof PAGE_META): PageMeta {
 
 /** All page meta entries as an array for bulk operations (sitemaps, audits, etc.) */
 export const ALL_PAGE_META: PageMeta[] = Object.values(PAGE_META)
+
+/** Lookup table by canonical route path (e.g. '/catering/bbq-catering') */
+export const PAGE_META_BY_PATH: Record<string, PageMeta> = Object.fromEntries(
+  ALL_PAGE_META.map((meta) => [meta.path, meta])
+)
+
+/** Retrieve metadata for a route by its path, if it exists. */
+export function getPageMetaByPath(path: string): PageMeta | undefined {
+  return PAGE_META_BY_PATH[path.replace(/\/$/, '') || '/']
+}

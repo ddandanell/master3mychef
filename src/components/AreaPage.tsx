@@ -4,6 +4,7 @@ import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '.
 import { AREAS, MICRO_AREAS } from '@/data/sitemap'
 import { getLocationBySlug, hasLocationPage } from '@/data/siteArchitecture'
 import { TOP_CITIES } from '@/data/topCities'
+import { getPageMetaByPath } from '@/data/page-meta'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -26,13 +27,17 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
 
   const top = TOP_CITIES.find((c) => c.slug === slug)
   const locationPage = kind === 'area' ? getLocationBySlug(slug) : undefined
-  const title = locationPage?.h1 ?? `Private Chef in ${entry.name}, Bali`
-  const description = locationPage?.description ?? (
+  const baseTitle = locationPage?.h1 ?? `Private Chef in ${entry.name}, Bali`
+  const baseDescription = locationPage?.description ?? (
     top
       ? `Private chef, villa catering, and full-service events in ${entry.name}. ${top.hook} Background-checked chefs, transparent pricing, same-day response.`
       : `Private chef services in ${entry.name}, Bali — villa dinners, weekly meal prep, events, and weddings. Background-checked chefs, transparent pricing, same-day response.`
   )
   const canonical = `${SITE}/${slug}`
+  const mappedMeta = getPageMetaByPath(pathname.replace(/\/$/, '') || '/')
+  const title = mappedMeta?.h1 ?? baseTitle
+  const pageTitle = mappedMeta?.title ?? `${title} | myCHEF`
+  const description = mappedMeta?.description ?? baseDescription
   const waLink = createWaLink(`Hi myCHEF, I'd like a private chef in ${entry.name}, Bali.`)
   const fineDiningWaLink = createWaLink(`Hi myCHEF, I'd like fine dining with a private chef in ${entry.name}, Bali.`)
   const cateringWaLink = createWaLink(`Hi myCHEF, I'd like catering in ${entry.name}, Bali.`)
@@ -90,7 +95,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={locationPage?.title ?? `${title} | myCHEF`}
+        title={pageTitle}
         description={description}
         canonical={canonical}
         ogImage={top ? `${SITE}${top.hero}` : undefined}

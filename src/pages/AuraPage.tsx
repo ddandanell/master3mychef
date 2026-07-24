@@ -273,7 +273,7 @@ export default function AuraPage() {
     <div ref={ref} data-universe="aura" className="min-h-screen" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>
       <SeoHead
         title="Bali Event Catering — Villas, Weddings & Corporate | myCHEF"
-        description="Bali event catering by myCHEF — villa parties, weddings, corporate dinners, retreats. Catering, bar, décor, staffing end-to-end. From IDR 15M."
+        description="Bali event catering by myCHEF — villa parties, weddings, corporate dinners, retreats. Catering, bar, décor, staffing end-to-end. From IDR 50M."
         canonical="https://mychef.id/events"
         ogImage="https://mychef.id/generated/mychef-experience-bali-aura-hero-v2.webp"
         jsonLd={[...eventSchemas, breadcrumbSchema('Events', 'https://mychef.id/events'), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
@@ -304,7 +304,7 @@ export default function AuraPage() {
             Bali Event Catering —<br /><span className="italic">Villas, Weddings & Corporate</span>
           </h1>
           <p className="aura-hero-sub text-lg md:text-xl text-white/[85%] mb-10 max-w-2xl mx-auto">
-            From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M total event minimum. Olivia replies within 24 hours.
+            From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 50M total event minimum. Olivia replies within 24 hours.
           </p>
           <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -678,7 +678,7 @@ export default function AuraPage() {
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  { label: 'Intimate (10–30)', price: 'From IDR 15M' },
+                  { label: 'Intimate (10–30)', price: 'From IDR 50M' },
                   { label: 'Villa Celebration (30–80)', price: 'From IDR 35M' },
                   { label: 'Grand (80–200)', price: 'From IDR 75M' },
                 ].map((p) => (

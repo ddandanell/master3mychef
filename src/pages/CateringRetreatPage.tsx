@@ -12,7 +12,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  serviceWithOfferSchema,
+  serviceSchema,
   faqPageSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -455,7 +455,7 @@ const TIMELINE = [
 ]
 
 const FAQS = [
-  { q: 'What does retreat catering in Bali cost?', a: 'Full-day meal plans start from IDR 400,000++ per person per day for plant-forward service and IDR 450,000++ for wellness and detox programmes, subject to 11% government tax + 10% service charge. The exact figure depends on group size, menu intensity and dietary complexity — quoted fixed before you commit.' },
+  { q: 'What does retreat catering in Bali cost?', a: 'Retreat programmes are priced per group, length and menu. Contact us for a tailored proposal with a fixed quote.' },
   { q: 'How many guests do you cater for, and is there a minimum?', a: 'We regularly cater retreats from 10 to 60 guests, and up to 100 for larger programmes. For 30 guests we typically assign a head chef plus two assistants, scaled to your villa kitchen.' },
   { q: 'Can you do fully vegan, sattvic or detox retreat menus?', a: 'Yes. Fully vegan service is one of our most requested formats, and we design sattvic, juice-cleanse and partial-detox programmes with the same care — full protein profiles and menus that feel abundant, not restrictive.' },
   { q: 'Can you cater five to seven days continuously?', a: 'Yes — multi-day continuity is the core of this service. Shopping cycles, menu rotation and staff scheduling are planned so quality on day seven matches day one.' },
@@ -486,13 +486,12 @@ export default function CateringRetreatPage() {
         canonical={`${SITE}/catering/retreat-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-retreat.webp`}
         jsonLd={[
-          serviceWithOfferSchema({
-            name: 'Retreat Catering Bali',
-            description: 'Per-day retreat meal plans in Bali: plant-forward, vegan, gluten-free and detox menus for multi-day retreats, with dietary intake, daily fresh shopping and a dedicated retreat chef.',
-            url: `${SITE}/catering/retreat-catering`,
-            price: '400000',
-            unitText: 'per person per day, before 11% government tax + 10% service charge',
-          }),
+          serviceSchema(
+            'Retreat Catering Bali',
+            'Per-day retreat meal plans in Bali: plant-forward, vegan, gluten-free and detox menus for multi-day retreats, with dietary intake, daily fresh shopping and a dedicated retreat chef.',
+            `${SITE}/catering/retreat-catering`,
+            '$$$$'
+          ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           cateringBreadcrumbSchema('Retreat Catering Bali', `${SITE}/catering/retreat-catering`),
         ]}
@@ -528,7 +527,7 @@ export default function CateringRetreatPage() {
             Consistent, chef-led retreat catering Bali for programmes that run three, five or seven days: plant-forward menus, dietary-exact preparation, and a kitchen rhythm that sustains energy from the first breakfast to the farewell dinner.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            From IDR 400,000++/person/day · Plant-forward, vegan & detox menus · Dedicated retreat chef · Bali-wide, Ubud specialists
+            Plant-forward, vegan & detox menus · Dedicated retreat chef · Bali-wide, Ubud specialists
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-retreat-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
@@ -595,14 +594,14 @@ export default function CateringRetreatPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Pricing"
-            title="Retreat Catering Pricing — Per Person, Per Day"
-            subtitle="Prices are per person per day for full meal service, subject to 11% government tax + 10% service charge (++). Final quotes are fixed before you commit and depend on group size, menu intensity and dietary complexity."
+            eyebrow="Packages"
+            title="Retreat Catering Packages"
+            subtitle="Every retreat is priced per group, length and menu. Contact us for a tailored proposal with a fixed quote."
           />
           <div className="grid md:grid-cols-2 gap-6 mt-10">
             <div className="retreat-reveal bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
               <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Plant-Forward Retreat Plan</h3>
-              <p className="text-3xl text-[#C5A028] font-semibold mb-4">from IDR 400,000++<span className="text-sm text-[#4A4745] font-normal">/person/day</span></p>
+              <p className="text-sm text-[#C5A028] font-semibold mb-4">Tailored quote</p>
               <p className="text-sm text-[#4A4745] leading-relaxed mb-4">
                 Vegetables, legumes and grains at the centre of every plate. Breakfast, lunch, dinner, snacks, juices and herbal teas for groups of 10–40. Ayurvedic options, gluten-free throughout, no refined sugar. Best for yoga retreats, meditation groups and holistic programmes.
               </p>
@@ -614,7 +613,7 @@ export default function CateringRetreatPage() {
             </div>
             <div className="retreat-reveal bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
               <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Wellness & Detox Retreat Plan</h3>
-              <p className="text-3xl text-[#C5A028] font-semibold mb-4">from IDR 450,000++<span className="text-sm text-[#4A4745] font-normal">/person/day</span></p>
+              <p className="text-sm text-[#C5A028] font-semibold mb-4">Tailored quote</p>
               <p className="text-sm text-[#4A4745] leading-relaxed mb-4">
                 Balanced-macro, anti-inflammatory menus with organic produce where possible, cold-pressed juices and superfood options for groups of 10–60. Supports full juice-cleanse days or partial detox windows inside a broader menu. Best for detox retreats, spa programmes and fitness groups.
               </p>
@@ -626,7 +625,7 @@ export default function CateringRetreatPage() {
             </div>
           </div>
           <p className="text-sm text-[#4A4745] mt-8 text-center">
-            Normal groceries are included in every plan. Premium upgrades — imported superfoods, oyster or seafood nights, an elevated closing dinner — are quoted separately in advance. See our <Link to="/pricing" className="text-[#C5A028] hover:underline">transparent pricing</Link> page for a broader pricing overview.
+            Normal groceries are included in every plan. Premium upgrades — imported superfoods, oyster or seafood nights, an elevated closing dinner — are quoted separately in advance.
           </p>
           <p className="text-xs text-[#4A4745]/70 mt-4 text-center">
             Retreat programmes are priced per group, length and menu. Contact us for a fixed quote.

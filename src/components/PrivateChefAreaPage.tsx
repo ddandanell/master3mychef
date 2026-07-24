@@ -25,6 +25,7 @@ import {
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import { hasLocationPage } from '@/data/siteArchitecture'
+import { getPageMetaByPath } from '@/data/page-meta'
 import { trackWhatsAppClick } from '@/lib/analytics'
 import { siteFacts } from '@/data/siteFacts'
 import { ArticleContentSection } from '@/components/shared'
@@ -131,6 +132,10 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
   const waFD = wa(`Hi myCHEF, I'd like a fine dining experience in ${area.name}, Bali.`)
 
   const canonical = `${SITE}/private-chef/${area.slug}`
+  const mappedMeta = getPageMetaByPath(`/private-chef/${area.slug}`)
+  const pageTitle = mappedMeta?.title ?? area.metaTitle
+  const pageDescription = mappedMeta?.description ?? area.metaDescription
+  const pageH1 = mappedMeta?.h1 ?? `Private Chef in ${area.name}, Bali`
 
   const structuredData = [
     {
@@ -154,7 +159,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       '@type': 'Service',
       '@id': `${canonical}#service`,
       name: `Private Chef in ${area.name}, Bali`,
-      description: area.metaDescription,
+      description: pageDescription,
       serviceType: 'Private Chef & Villa Dining',
       provider: { '@id': `${SITE}/#business` },
       areaServed: { '@type': 'Place', name: `${area.name}, Bali` },
@@ -186,8 +191,8 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={area.metaTitle}
-        description={area.metaDescription}
+        title={pageTitle}
+        description={pageDescription}
         canonical={canonical}
         ogImage={`${SITE}${area.heroImage}`}
         jsonLd={structuredData}
@@ -216,7 +221,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               Private Chef · {area.regency} · Bali
             </p>
             <h1 className="font-playfair text-4xl md:text-6xl leading-tight text-white mb-5">
-              {`Private Chef in ${area.name}, Bali`}
+              {pageH1}
             </h1>
             <p className="text-white/85 text-lg leading-relaxed max-w-[600px] mb-8">
               {area.intro}

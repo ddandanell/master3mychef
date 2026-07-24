@@ -50,7 +50,7 @@ const BOOKING_CARDS = [
     icon: Briefcase,
     accent: '#C5A028',
     waText: 'Hi myCHEF, I would like to request candidate profiles.',
-    features: ['Full-time chef placement', 'Villa staff', 'Background-checked', 'From IDR 15M placement'],
+    features: ['Full-time chef placement', 'Villa staff', 'Background-checked', 'Custom placement quote'],
   },
 ]
 

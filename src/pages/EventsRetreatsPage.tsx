@@ -6,13 +6,13 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 
@@ -28,14 +28,14 @@ const ACCENT = '#2C5F7C'
 const FORMATS = [
   {
     title: 'Wellness Retreat',
-    price: <AllInPrice price={1500000} suffix="/person/day" />,
+    price: <span className="text-[#2C5F7C] font-semibold">Custom quote</span>,
     guestRange: '10–30 guests',
     description: 'Plant-forward, anti-inflammatory, detox-focused. 3 meals + 2 snacks daily. On-site chef.',
     features: ['3 plant-forward meals', '2 healthy snacks', 'Anti-inflammatory focus', 'On-site chef', 'Daily fresh sourcing', 'Welcome ceremony'],
   },
   {
     title: 'Yoga Retreat',
-    price: <AllInPrice price={1500000} suffix="/person/day" />,
+    price: <span className="text-[#2C5F7C] font-semibold">Custom quote</span>,
     guestRange: '10–30 guests',
     description: 'Fully vegan, sattvic meals. 3 meals + 2 snacks + mid-morning and evening tea ritual.',
     features: ['3 sattvic vegan meals', '2 snacks + tea ritual', 'Fully vegan', 'On-site chef', 'Welcome water blessing', 'Recipe book option'],
@@ -43,7 +43,7 @@ const FORMATS = [
   },
   {
     title: 'Corporate-Style Retreat',
-    price: <AllInPrice price={2500000} suffix="/person/day" />,
+    price: <span className="text-[#2C5F7C] font-semibold">Custom quote</span>,
     guestRange: '10–50 guests',
     description: 'Mixed dietary management, team-building activities, retreat coordinator included.',
     features: ['3 meals + 2 snacks/day', 'Mixed dietary management', 'Team-building included', 'Retreat coordinator', 'Tax invoice', 'AV support'],
@@ -96,10 +96,10 @@ const SAMPLE_DAY_MENU = [
 ]
 
 const ADDONS = [
-  { icon: Coffee, title: 'Cooking Class', price: '+IDR 1.5M – 2.5M/pp' },
-  { icon: Leaf, title: 'Foraging Walk', price: '+IDR 1M/pp' },
-  { icon: Heart, title: 'Dietary Consultation', price: '+IDR 1.5M/session' },
-  { icon: Sun, title: 'Recipe Book', price: '+IDR 250K/participant' },
+  { icon: Coffee, title: 'Cooking Class', price: 'Available on request' },
+  { icon: Leaf, title: 'Foraging Walk', price: 'Available on request' },
+  { icon: Heart, title: 'Dietary Consultation', price: 'Available on request' },
+  { icon: Sun, title: 'Recipe Book', price: 'Available on request' },
 ]
 
 const FAQS = [
@@ -111,7 +111,7 @@ const FAQS = [
   { q: 'What happens if participant numbers shift during the week?', a: 'We confirm a working headcount before the retreat starts, then adjust daily service counts with the host when attendance changes. That keeps portions realistic and helps control waste.' },
   { q: 'Can the chef join the retreat ceremony?', a: 'Yes — our chefs are often part of the experience. Many retreat hosts include the chef in the welcome ceremony.' },
   { q: 'Can you cater off-island?', a: 'Currently not — refer to specialist outer-island operators. Bali island-wide only.' },
-  { q: 'Pricing for kids / accompanying family?', a: 'Kids 3–12 charged at 60% of adult rate. Under 3 free.' },
+  { q: 'Pricing for kids / accompanying family?', a: 'Kids 3–12 are charged at a reduced rate. Contact us for details. Under 3 free.' },
   { q: 'Cancellation for multi-day events?', a: '30+ days before: 50% refund. 14–30 days: 25%. Under 14 days: no refund but credit toward future retreat.' },
 ]
 
@@ -154,14 +154,11 @@ export default function EventsRetreatsPage() {
         canonical={`${SITE}/events/retreats`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-retreats.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Wellness Retreat Catering Bali',
-            description: 'myCHEF.id provides retreat catering in Bali with wellness-focused menus, dietary planning, and on-site chef support. We manage multi-day meal service, kitchen operations, and cleanup for private villas and retreat venues.',
-            url: `${SITE}/events/retreats`,
-            lowPrice: '1500000',
-            highPrice: '2500000',
-            unitText: 'per person per day',
-          }),
+          serviceSchema(
+            'Wellness Retreat Catering Bali',
+            'myCHEF.id provides retreat catering in Bali with wellness-focused menus, dietary planning, and on-site chef support. We manage multi-day meal service, kitchen operations, and cleanup for private villas and retreat venues.',
+            `${SITE}/events/retreats`
+          ),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           howToSchema({
             name: 'How to Book Wellness Retreat Catering in Bali',
@@ -209,7 +206,7 @@ export default function EventsRetreatsPage() {
             </a>
           </div>
           <p className="text-sm md:text-base text-white/[70%] uppercase tracking-[0.2em] text-left">
-            From IDR 1.5M++/guest/day · Dietary-coded menus and multi-day service
+            Dietary-coded menus and multi-day service · Contact us for a tailored proposal
           </p>
         </div>
       </section>
@@ -244,14 +241,21 @@ export default function EventsRetreatsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader eyebrow="Chapter 2 — Formats" title="Retreat Formats" subtitle="Wellness-led, yoga-led, or mixed-profile retreats — each with its own service rhythm and dietary intensity." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            These formats give retreat hosts a starting point for pricing and service design. Some retreats want deeply plant-forward menus, others need stricter sattvic or vegan service, and some need more mixed menus because spouses, facilitators, or corporate groups are sharing the same schedule. The point is not only what guests eat, but how consistently that experience can be maintained every day.
+            These formats give retreat hosts a starting point for service design. Some retreats want deeply plant-forward menus, others need stricter sattvic or vegan service, and some need more mixed menus because spouses, facilitators, or corporate groups are sharing the same schedule. The point is not only what guests eat, but how consistently that experience can be maintained every day.
           </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}
           </div>
-          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <GroupTotalCalculator pricePerPerson={1500000} minGuests={10} maxGuests={30} defaultGuests={16} accent={ACCENT} />
-            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={50} defaultGuests={20} accent={ACCENT} />
+          <div className="mt-12 flex justify-center">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-source="events-retreats-quote"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#2C5F7C] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#244e66] transition-all focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              <MessageCircle className="w-4 h-4" /> Request a Tailored Retreat Quote
+            </a>
           </div>
         </div>
       </section>

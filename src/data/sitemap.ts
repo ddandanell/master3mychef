@@ -8,7 +8,7 @@ import { GUIDES } from './content/guides'
 import { BLOG_POSTS } from './content/blogPosts'
 import { JOURNAL_POSTS } from './content/journalPosts'
 import { BAR_SERVICES, BAR_RESOURCES } from './bar-services'
-import { PAGE_META } from './page-meta'
+import { PAGE_META, PAGE_META_BY_PATH } from './page-meta'
 import { REDIRECT_MAP } from './redirects'
 
 // Re-export the (content-free) metadata arrays so existing importers of
@@ -371,7 +371,19 @@ export function buildSitemap(): SitemapEntry[] {
 
   // Safety net: never index redirect sources. A path that has a 301 rule should
   // not appear in the sitemap, inject-meta, or prerender output.
-  return entries.filter((entry) => !REDIRECT_MAP[entry.path])
+  const liveEntries = entries.filter((entry) => !REDIRECT_MAP[entry.path])
+
+  // Metadata-map override: every route with a matching PAGE_META entry uses the
+  // SEO-optimized title/description from the canonical source of truth.
+  return liveEntries.map((entry) => {
+    const mapped = PAGE_META_BY_PATH[entry.path]
+    if (!mapped) return entry
+    return {
+      ...entry,
+      title: mapped.title,
+      description: mapped.description,
+    }
+  })
 }
 
 export const SERVICES = Object.values(PILLARS).map((pillar) => ({

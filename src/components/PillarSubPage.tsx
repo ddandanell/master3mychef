@@ -4,6 +4,7 @@ import SeoHead, { breadcrumbSchema, serviceSchema, faqPageSchema } from './SeoHe
 import FAQAccordion from './catering/FAQAccordion'
 import { getSubPage, getPillarBySlug, type Pillar, type SubPage } from '@/data/siteArchitecture'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
+import { getPageMetaByPath } from '@/data/page-meta'
 
 function stripFirstH1(html: string): string {
   return html.replace(/<h1[\s\S]*?<\/h1>/i, '').trim()
@@ -46,6 +47,10 @@ export default function PillarSubPage() {
   if (!pillar || !subPage) return <SubPageNotFound />
 
   const canonical = `${SITE}${path}`
+  const mappedMeta = getPageMetaByPath(path)
+  const pageTitle = mappedMeta?.title ?? subPage.title
+  const pageDescription = mappedMeta?.description ?? subPage.description
+  const pageH1 = mappedMeta?.h1 ?? subPage.h1
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(getWhatsAppText(pillar, subPage))}`
 
   const related = pillar.subPages.filter((s) => s.slug !== subPage.slug).slice(0, 4)
@@ -78,7 +83,7 @@ export default function PillarSubPage() {
       { q: 'How far in advance should I book staff?', a: '3+ days for small teams. 2+ weeks for large events or peak season.' },
     ],
     'staffing': [
-      { q: 'What is the placement fee?', a: 'Private chef placement starts at IDR 15,000,000. Villa staff and household staff placement fees vary by role and experience level.' },
+      { q: 'What is the placement fee?', a: 'Placement fees are discussed once we understand the role and candidate requirements. We provide a written quote before any commitment.' },
       { q: 'How long does placement take?', a: 'Typically 2–4 weeks from initial request to candidate start date. Includes profiling, interviews, trial dinners, and contract setup.' },
       { q: 'Do you handle payroll and contracts?', a: 'We provide contract templates and payroll guidance. Some clients prefer us to manage payroll — we offer this as an add-on service.' },
       { q: 'What if the placement does not work out?', a: 'We offer a 30-day replacement guarantee. If the candidate is not the right fit, we find a replacement at no additional placement fee.' },
@@ -99,8 +104,8 @@ export default function PillarSubPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={subPage.title}
-        description={subPage.description}
+        title={pageTitle}
+        description={pageDescription}
         canonical={canonical}
         ogImage={ogImage}
         jsonLd={[
@@ -118,8 +123,8 @@ export default function PillarSubPage() {
         >
           {pillar.navLabel}
         </p>
-        <h1 className="font-playfair text-4xl md:text-5xl leading-tight mb-6">{subPage.h1}</h1>
-        <p className="text-lg text-[#4A4745] mb-10 max-w-[640px]">{subPage.description}</p>
+        <h1 className="font-playfair text-4xl md:text-5xl leading-tight mb-6">{pageH1}</h1>
+        <p className="text-lg text-[#4A4745] mb-10 max-w-[640px]">{pageDescription}</p>
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a

@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Calendar, Check, ChevronLeft, ChevronRight, Cloc
 import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, serviceWithAggregateOfferSchema, serviceWithOfferSchema } from './SeoHead'
 import { BLOG_POSTS, GUIDES, LANDING_PAGES } from '@/data/sitemap'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
+import { getPageMetaByPath } from '@/data/page-meta'
 import { CHEF_FOR_HIRE_INDONESIA_CONTENT } from '@/data/content/chefForHireIndonesia'
 import Breadcrumb from './shared/Breadcrumb'
 import { type EnrichedPost, enrichPost, formatBlogDate, getRelatedPosts, injectContentEnhancements, sortPostsByDate } from '@/lib/blog'
@@ -37,16 +38,20 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const articleEntry: EnrichedPost | null = isArticle && 'readTimeMinutes' in entry ? (entry as EnrichedPost) : null
   const isChefForHireIndonesia = kind === 'landing' && entry.slug === 'chef-for-hire-indonesia'
   const canonical = CANONICAL_OVERRIDES[entry.slug] ?? `${SITE}/${entry.slug}`
+  const mappedMeta = getPageMetaByPath(`/${entry.slug}`)
+  const pageTitle = mappedMeta?.title ?? entry.title
+  const pageDescription = mappedMeta?.description ?? entry.description
+  const pageH1 = mappedMeta?.h1 ?? (entry as any).h1 ?? entry.title
   const heroImage = kind === 'landing' ? '/generated/hero-how-it-works.webp' : '/generated/luna-hero-v3.webp'
   const hubPath = kind === 'blog' ? '/journal' : kind === 'guide' ? '/help' : '/'
   const hubLabel = kind === 'blog' ? 'Journal' : kind === 'guide' ? 'Help' : 'Home'
   const hubCtaLabel = kind === 'blog' ? 'View All Journal Entries' : kind === 'guide' ? 'View All Help Guides' : 'View All Pages'
   const backLabel = kind === 'blog' ? 'Back to Blog' : kind === 'guide' ? 'Back to Help' : 'Back to Home'
-  const shareText = `Reading ${entry.title} on myCHEF`
-  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'm reading "${entry.title}" and have a question.`)}`
+  const shareText = `Reading ${pageTitle} on myCHEF`
+  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'm reading "${pageTitle}" and have a question.`)}`
   const shareLinks = articleEntry
     ? {
-        whatsapp: `https://wa.me/?text=${encodeURIComponent(`${entry.title} — ${canonical}`)}`,
+        whatsapp: `https://wa.me/?text=${encodeURIComponent(`${pageTitle} — ${canonical}`)}`,
         facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonical)}`,
         twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(canonical)}`,
       }
@@ -67,8 +72,8 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       ? {
           '@context': 'https://schema.org',
           '@type': articleEntry.kind === 'blog' ? 'BlogPosting' : 'Article',
-          headline: entry.title,
-          description: entry.description,
+          headline: pageTitle,
+          description: pageDescription,
           url: canonical,
           datePublished: articleEntry.date,
           dateModified: articleEntry.date,
@@ -263,9 +268,9 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       ]
       return schema
     }
-    return serviceSchema(entry.title, entry.description, canonical)
+    return serviceSchema(pageTitle, pageDescription, canonical)
   })()
-  const breadcrumbJsonLd = isArticle ? breadcrumbSchema(entry.title, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(entry.title, canonical)
+  const breadcrumbJsonLd = isArticle ? breadcrumbSchema(pageTitle, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(pageTitle, canonical)
   const faqItems = isChefForHireIndonesia
     ? [
         { question: 'Can I hire a chef in Indonesia for only one dinner?', answer: 'Yes. myCHEF arranges one-off private dinners, villa BBQs, family meals, birthdays, proposals, and tasting menus. Send the date, exact location, guest count, and preferred service style.' },
@@ -284,7 +289,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           { question: 'What if my partner has dietary requirements?', answer: 'The entire menu is designed privately around allergies, vegetarian, halal or any other requirement, without raising the subject at the table.' },
           { question: 'How far in advance should I book?', answer: 'As early as possible for peak season, but short-notice proposals are often possible — message us and we will confirm what can be arranged.' },
           { question: 'What if it rains?', answer: 'A covered fallback position is planned in advance for outdoor setups.' },
-          { question: 'What deposit is required?', answer: 'A deposit confirms the date and the team (deposit level pending business confirmation), with the balance due before the evening.' },
+          { question: 'What deposit is required?', answer: 'A deposit confirms the date and the team (a 50% deposit), with the balance due before the evening.' },
         ]
       : entry.slug === 'honeymoon-chef'
         ? [
@@ -295,7 +300,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             { question: 'Is the floating breakfast included?', answer: 'It\'s an add-on from IDR 950K++ per couple, served at your pool at your chosen time.' },
             { question: 'How far ahead should we book?', answer: 'As soon as flights and villa are confirmed — peak-season chef days book out early.' },
             { question: 'Can family book this as a wedding gift?', answer: 'Yes — honeymoon dining plans can be arranged and paid for by family or friends, coordinated as a surprise.' },
-            { question: 'What deposit is required?', answer: 'A deposit confirms the dates (deposit level pending business confirmation), with the balance due before service and written cancellation terms.' },
+            { question: 'What deposit is required?', answer: 'A deposit confirms the dates (a 50% deposit), with the balance due before service and written cancellation terms.' },
           ]
         : entry.slug === 'private-chef-for-events'
           ? [
@@ -312,7 +317,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           { question: 'Do we need our own grill at the villa?', answer: 'No. We bring professional charcoal and gas grills and manage the fuel ourselves — though we\'re happy to use your villa\'s built-in BBQ if you\'d prefer.' },
           { question: 'Do villas allow outside BBQ catering?', answer: 'Most villas welcome outside catering with advance notice. We coordinate access and house rules with your villa manager and flag any banjar function fee in your quote upfront.' },
           { question: 'What happens if it rains during the party?', answer: 'Wet-season BBQs relocate under covered terraces, verandas or pop-up tents. Gas grills work under cover where open flame is not allowed — the party goes ahead.' },
-          { question: 'How far ahead should I book and what is the cancellation policy?', answer: 'One to two weeks ahead in peak season; three to seven days otherwise. A deposit locks your date (deposit level pending business confirmation). Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+          { question: 'How far ahead should I book and what is the cancellation policy?', answer: 'One to two weeks ahead in peak season; three to seven days otherwise. A deposit locks your date (a 50% deposit). Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
           { question: 'Can you provide drinks and a bartender?', answer: 'Yes. Add a private bartender with a 3-hour open bar for IDR 4,000,000 flat, or wine, beer and soft-drink packages as itemised add-ons.' },
         ]
       : entry.slug === 'seafood-bbq-catering-bali'
@@ -323,7 +328,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           { question: 'How do you handle shellfish allergies or halal guests?', answer: 'We plan separate grills and prep zones for shellfish-allergic guests, and pork-free, halal-friendly menus as standard. Non-seafood eaters get proper alternatives, not an afterthought.' },
           { question: 'What is the minimum group size?', answer: 'Eight guests in the Jimbaran/Bukit area; ten to twenty elsewhere depending on travel. Smaller groups can book via our private chef in Jimbaran service.' },
           { question: 'What happens if it rains?', answer: 'Covered terraces, verandas, or pop-up tents — the grill goes ahead. We monitor the forecast and set the plan B before the day.' },
-          { question: 'How far ahead should I book?', answer: 'Three to seven days is ideal so we can plan the market run around your date. A deposit confirms (deposit level pending business confirmation); cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+          { question: 'How far ahead should I book?', answer: 'Three to seven days is ideal so we can plan the market run around your date. A deposit confirms (a 50% deposit); cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
         ]
       : entry.slug === 'bali-wedding-catering-packages'
       ? [
@@ -331,7 +336,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           { question: 'Are these prices really all-in?', answer: 'Prices are quoted ++ (11% government tax + 10% service charge) with the all-in equivalent shown. Proposals state one final total with groceries at cost and no markups.' },
           { question: 'Do packages include staff, equipment and cleanup?', answer: 'Yes — chefs, waiters, setup crew, coordinator, mobile kitchen equipment, service ware and full cleanup are included. Rentals and bar stock are itemised separately.' },
           { question: 'Can we split the weekend into different packages?', answer: 'Yes — welcome dinner, reception and recovery brunch are quoted as separate lines in one proposal.' },
-          { question: 'When do we pay?', answer: 'A deposit confirms the date (deposit level pending business confirmation); the balance is due before the event, with tiered written cancellation terms.' },
+          { question: 'When do we pay?', answer: 'A deposit confirms the date (a 50% deposit); the balance is due before the event, with tiered written cancellation terms.' },
           { question: 'Do you cater dietary and halal weddings?', answer: 'Yes — halal-friendly, vegan, vegetarian, gluten-free and allergy protocols are standard, with separate prep lines where required.' },
           { question: 'Do packages change for peak season?', answer: 'Package prices do not change by season, but peak dates (July–September, December–January) book 3–10 months ahead.' },
           { question: 'What if it rains on an outdoor reception?', answer: 'Every outdoor package includes a wet-weather plan: marquee coordination and an agreed indoor relocation layout.' },
@@ -344,7 +349,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             { question: 'Do you offer halal wedding catering?', answer: 'Yes — halal-friendly menus with separate preparation are standard; full halal certification requirements can be discussed at the consult.' },
             { question: 'How do tastings work if we are planning remotely?', answer: 'Tastings are scheduled around your travel in the weeks before the wedding; menu development happens remotely by WhatsApp and video call.' },
             { question: 'How far ahead should we book?', answer: 'Peak-season Bali dates: 3–10 months. Off-peak Bali dates: 1–3 months. Large multi-event weddings should start earlier.' },
-            { question: 'What deposit is required?', answer: 'A deposit confirms the date (deposit level pending business confirmation), with the balance due before the event and written cancellation tiers.' },
+            { question: 'What deposit is required?', answer: 'A deposit confirms the date (a 50% deposit), with the balance due before the event and written cancellation tiers.' },
           ]
         : entry.slug === 'luxury-birthday-party-bali'
           ? [
@@ -359,14 +364,14 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             ]
           : entry.slug === 'corporate-retreat-catering-bali'
             ? [
-                { question: 'What does corporate retreat catering in Bali cost per day?', answer: 'Catering-only full board starts from IDR 500,000++ per person per day (from-price pending business confirmation); full retreat support with a coordinator starts from IDR 2,500,000++ per person per day, plus 11% government tax + 10% service charge.' },
+                { question: 'What does corporate retreat catering in Bali cost per day?', answer: 'Every retreat is priced individually based on group size, duration, menu complexity and location. Contact us for a tailored proposal with an itemised all-in total.' },
                 { question: 'Can myCHEF invoice companies with proper tax documentation?', answer: 'Yes. myCHEF is NPWP-registered and issues full tax invoices (faktur pajak on request) with itemised per-head breakdowns.' },
                 { question: 'How are dietary requirements handled across large groups for several days?', answer: 'A pre-retreat dietary intake form, kitchen briefing against the attendee list, labelled dishes and separate prep for allergy-critical guests. Halal, vegan, gluten-free and medical diets are integrated into the main service.' },
                 { question: 'Can myCHEF cater a retreat across multiple villas?', answer: 'Yes. Groups split across villa compounds and neighbouring properties are regularly served, with logistics coordinated directly with villa and venue management.' },
                 { question: 'What is the alcohol policy for corporate retreats?', answer: 'The company sets the policy; service ranges from fully dry programmes to beer-and-wine dinners or a cocktail reception, with bartenders as an add-on.' },
                 { question: 'Can a retreat include one special elevated dinner?', answer: 'Yes. A plated fine-dining evening mid-retreat is the most common upgrade, quoted as a per-person add-on.' },
                 { question: 'How far in advance should a corporate retreat be booked?', answer: 'Two to four weeks for most retreats; one to three months for peak season or groups above 50.' },
-                { question: 'What deposit is required?', answer: 'Deposit schedule pending business confirmation for multi-day corporate retreat programmes.' },
+                { question: 'What deposit is required?', answer: 'A 50% deposit confirms your retreat dates; the balance is due before the programme begins.' },
               ]
             : isGroupVillaDinner
               ? [
@@ -408,8 +413,8 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={entry.title}
-        description={entry.description}
+        title={pageTitle}
+        description={pageDescription}
         canonical={canonical}
         ogImage={heroImage}
         ogType={isArticle ? 'article' : 'website'}
@@ -421,7 +426,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt={entry.title}
+            alt={pageTitle}
             width={1920}
             height={1080}
             className="h-full w-full object-cover"
@@ -444,7 +449,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             <Breadcrumb
               items={[
                 { label: hubLabel, href: hubPath },
-                { label: entry.title },
+                { label: pageTitle },
               ]}
               theme="dark"
               className="px-0 pb-8 pt-0"
@@ -467,7 +472,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                 </>
               )}
             </div>
-            <h1 className="mb-8 font-playfair text-4xl leading-[1.1] md:text-6xl">{entry.h1 ?? entry.title}</h1>
+            <h1 className="mb-8 font-playfair text-4xl leading-[1.1] md:text-6xl">{pageH1}</h1>
             <p className="mb-8 max-w-[640px] text-lg leading-relaxed text-white/85 md:text-xl">{entry.description}</p>
 
             {articleEntry && shareLinks && (

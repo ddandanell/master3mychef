@@ -86,77 +86,77 @@ const RETREAT_TYPES = [
   {
     icon: Wind,
     title: 'Yoga Retreats',
-    desc: 'Yoga retreat catering Bali is the heart of our service. We understand that asana practice demands light, sattvic energy before class and complete replenishment after. Morning menus favour warm herbal tonics, fresh fruit, and small portions that do not weigh on the belly. Post-practice meals introduce plant proteins, healthy grains, and hydrating vegetables. We time service around sunrise and sunset sessions, and we keep caffeine options available without forcing stimulants on guests who prefer calm.',
+    desc: 'Yoga retreat catering Bali is the heart of our service. We understand that asana practice demands light, sattvic energy before class and complete replenishment after. Morning menus favour warm herbal tonics, fresh fruit, and small portions that do not weigh on the belly. Post-practice meals introduce plant proteins, healthy grains, and hydrating vegetables. We time service around sunrise and sunset sessions, and we keep caffeine options available without forcing stimulants on guests who prefer calm. Our chefs learn the retreat schedule, adapt to silent mornings, and design weekly menus that avoid repetition while supporting the physical work of the retreat.',
   },
   {
     icon: Heart,
     title: 'Wellness Retreats',
-    desc: 'Wellness retreat catering Bali balances nourishment with intention. Whether your program focuses on anti-inflammatory eating, gut health, hormonal balance, or mindful consumption, we design menus that reinforce your teaching. Meals are colourful, nutrient-dense, and free from hidden sugars or heavy processed oils. We work with retreat leaders to align food with workshops, spa treatments, and movement sessions so guests feel supported rather than distracted.',
+    desc: 'Wellness retreat catering Bali balances nourishment with intention. Whether your program focuses on anti-inflammatory eating, gut health, hormonal balance, or mindful consumption, we design menus that reinforce your teaching. Meals are colourful, nutrient-dense, and free from hidden sugars or heavy processed oils. We work with retreat leaders to align food with workshops, spa treatments, and movement sessions so guests feel supported rather than distracted. From turmeric-ginger shots at breakfast to magnesium-rich evening meals, every dish contributes to the wellness narrative of the retreat.',
   },
   {
     icon: Moon,
     title: 'Meditation Retreats',
-    desc: 'Meditation retreat catering Bali calls for food that is grounding, easy to digest, and quietly satisfying. Overstimulation from spice, sugar, or caffeine can interrupt practice, so we calibrate flavours to support stillness. Silence at meals is respected, service is unobtrusive, and portions are designed to sustain long sits without creating drowsiness or restlessness.',
+    desc: 'Meditation retreat catering Bali calls for food that is grounding, easy to digest, and quietly satisfying. Overstimulation from spice, sugar, or caffeine can interrupt practice, so we calibrate flavours to support stillness. Silence at meals is respected, service is unobtrusive, and portions are designed to sustain long sits without creating drowsiness or restlessness. We favour warm, cooked foods, gentle seasoning, and herbal teas that encourage inward focus. The kitchen becomes a silent partner in the retreat, producing meals that complement rather than compete with the work being done.',
   },
   {
     icon: Zap,
     title: 'Fitness Retreats',
-    desc: 'Fitness retreat catering Bali fuels training blocks, surf camps, and strength-focused programs. We build high-protein breakfasts, recovery lunches, and rehydrating snacks around your daily schedule. Macro balance matters here: lean proteins, complex carbohydrates, healthy fats, and targeted post-workout nutrition. Guests leave strong, not depleted.',
+    desc: 'Fitness retreat catering Bali fuels training blocks, surf camps, and strength-focused programs. We build high-protein breakfasts, recovery lunches, and rehydrating snacks around your daily schedule. Macro balance matters here: lean proteins, complex carbohydrates, healthy fats, and targeted post-workout nutrition. Guests leave strong, not depleted. We also track hydration, electrolyte intake, and anti-inflammatory ingredients to support recovery between sessions. Whether the program is HIIT, boxing, CrossFit, or functional training, the food keeps pace with the output.',
   },
   {
     icon: Sun,
     title: 'Surf Retreats',
-    desc: 'Surf retreat catering Bali has to match ocean time. Early dawn-patrol breakfasts, substantial post-surf brunches, and relaxed evening meals keep energy consistent across long days in the water. We emphasise hydration, electrolytes, and anti-inflammatory ingredients to support joints and skin after sun exposure.',
+    desc: 'Surf retreat catering Bali has to match ocean time. Early dawn-patrol breakfasts, substantial post-surf brunches, and relaxed evening meals keep energy consistent across long days in the water. We emphasise hydration, electrolytes, and anti-inflammatory ingredients to support joints and skin after sun exposure. Packed lunches and cool boxes can be prepared for boat trips or beach days. Our team understands that surf schedules change with tides and swell, so meal timing remains flexible and food stays fresh even when guests return late and hungry.',
   },
   {
     icon: BriefcaseIcon,
     title: 'Corporate Retreats',
-    desc: 'Corporate retreat catering Bali combines professional presentation with flexible logistics. We handle working lunches, coffee breaks, BBQ evenings, and formal celebration dinners. Menus are designed to sustain focus through strategy sessions while giving teams something to gather around at the end of the day. Invoicing, dietary reporting, and structured timelines are all available.',
+    desc: 'Corporate retreat catering Bali combines professional presentation with flexible logistics. We handle working lunches, coffee breaks, BBQ evenings, and formal celebration dinners. Menus are designed to sustain focus through strategy sessions while giving teams something to gather around at the end of the day. Invoicing, dietary reporting, and structured timelines are all available. We also accommodate mixed dietary profiles common in international teams, from halal and kosher-friendly options to vegan, gluten-free, and low-carb preferences, all clearly labelled and served efficiently.',
   },
   {
     icon: Sparkles,
     title: 'Leadership Retreats',
-    desc: 'Leadership retreat catering Bali is about understated quality. Executives expect consistent service, dietary discretion, and meals that feel refined without being fussy. We provide curated menus, polished presentation, and a team that understands professional hospitality standards.',
+    desc: 'Leadership retreat catering Bali is about understated quality. Executives expect consistent service, dietary discretion, and meals that feel refined without being fussy. We provide curated menus, polished presentation, and a team that understands professional hospitality standards. Meals can be served family-style to encourage conversation or plated for a more formal tone. Dietary preferences are handled privately and precisely, and the service team is briefed on guest profiles so every interaction feels natural and unobtrusive.',
   },
   {
     icon: Flower2,
     title: 'Creative Retreats',
-    desc: 'Creative retreat catering Bali keeps minds energised across long making, writing, or design sessions. We avoid heavy midday meals that induce afternoon slumps and instead serve colourful, brain-friendly plates with steady-release carbohydrates, fresh herbs, and vibrant vegetables.',
+    desc: 'Creative retreat catering Bali keeps minds energised across long making, writing, or design sessions. We avoid heavy midday meals that induce afternoon slumps and instead serve colourful, brain-friendly plates with steady-release carbohydrates, fresh herbs, and vibrant vegetables. Communal dinners become part of the creative process, giving participants a natural place to share work and build connections. We also adapt to irregular schedules, providing late-night snacks or early-morning coffee for groups working through deadlines or inspiration.',
   },
   {
     icon: Home,
     title: 'Luxury Villa Retreats',
-    desc: 'Luxury villa retreat catering Bali brings restaurant-standard dining into a private estate. Guests expect privacy, flexibility, and impeccable service. We match the tone of the villa, source premium ingredients, and provide discreet staff who understand high-end hospitality.',
+    desc: 'Luxury villa retreat catering Bali brings restaurant-standard dining into a private estate. Guests expect privacy, flexibility, and impeccable service. We match the tone of the villa, source premium ingredients, and provide discreet staff who understand high-end hospitality. From floating breakfasts and poolside lunches to candlelit tasting menus, every meal is designed to feel like a natural extension of the villa experience. We coordinate closely with villa managers to respect house rules, access times, and service expectations.',
   },
   {
     icon: Leaf,
     title: 'Detox Retreats',
-    desc: 'Detox retreat catering Bali supports guided cleanses with cold-pressed juices, light broths, raw salads, steamed vegetables, and herbal infusions. We follow your protocol precisely, whether it is a full juice cleanse, a mono-diet day, or a gradual whole-food reset.',
+    desc: 'Detox retreat catering Bali supports guided cleanses with cold-pressed juices, light broths, raw salads, steamed vegetables, and herbal infusions. We follow your protocol precisely, whether it is a full juice cleanse, a mono-diet day, or a gradual whole-food reset. Our team prepares cleanse kits, labels every item, and ensures that detox guests are not accidentally served off-protocol foods. For retreats with mixed participants, we can run detox menus alongside regular nourishing meals so everyone feels included.',
   },
   {
     icon: Heart,
     title: "Women's Retreats",
-    desc: "Women's retreat catering Bali creates communal tables where connection is as important as nutrition. Menus are nourishing, beautifully presented, and responsive to hormonal health, pregnancy, and postpartum needs where requested. We design shared meals that feel like ceremony.",
+    desc: "Women's retreat catering Bali creates communal tables where connection is as important as nutrition. Menus are nourishing, beautifully presented, and responsive to hormonal health, pregnancy, and postpartum needs where requested. We design shared meals that feel like ceremony, with floral styling, gentle lighting, and dishes that invite conversation. Dietary conversations are handled with care, and the kitchen is flexible enough to support cycle-aware eating, lactation-friendly ingredients, or simply a group of friends celebrating a milestone together.",
   },
   {
     icon: ShieldCheck,
     title: "Men's Retreats",
-    desc: "Men's retreat catering Bali emphasises generous portions, strong flavours, and high-quality protein. Whether the retreat centres on fitness, brotherhood, leadership, or adventure, we provide satisfying food that matches the energy of the group without defaulting to unhealthy heaviness.",
+    desc: "Men's retreat catering Bali emphasises generous portions, strong flavours, and high-quality protein. Whether the retreat centres on fitness, brotherhood, leadership, or adventure, we provide satisfying food that matches the energy of the group without defaulting to unhealthy heaviness. Steak nights, live-fire BBQs, hearty breakfasts, and recovery-focused dinners can all be part of the plan. We also respect quieter emotional work by offering grounding, comforting meals that support both physical and mental stamina.",
   },
   {
     icon: Moon,
     title: 'Spiritual Retreats',
-    desc: 'Spiritual retreat catering Bali respects the intention behind the gathering. We work with facilitators to align ingredients, preparation, and service with religious or energetic requirements. Fasting windows, ritual meals, and silent service can all be accommodated.',
+    desc: 'Spiritual retreat catering Bali respects the intention behind the gathering. We work with facilitators to align ingredients, preparation, and service with religious or energetic requirements. Fasting windows, ritual meals, and silent service can all be accommodated. Our team understands that food is part of the spiritual container, and we approach these retreats with reverence, discretion, and attention to detail. Whether the gathering follows Balinese Hindu tradition, yoga philosophy, or another path, the menu supports the practice.',
   },
   {
     icon: Users,
     title: 'Teacher Trainings',
-    desc: 'Yoga teacher training catering Bali requires reliability across 14 to 28 consecutive days. We keep menus varied, portions generous for long training days, and dietary records precise for large groups. The same team stays for the full program, becoming part of the training rhythm.',
+    desc: 'Yoga teacher training catering Bali requires reliability across 14 to 28 consecutive days. We keep menus varied, portions generous for long training days, and dietary records precise for large groups. The same team stays for the full program, becoming part of the training rhythm. We understand the intensity of teacher training schedules and design meals that sustain physical practice, long lectures, and late-night study sessions. Special celebration meals can mark graduation or mid-course milestones.',
   },
   {
     icon: Coffee,
     title: 'Digital Nomad Retreats',
-    desc: 'Digital nomad retreat catering Bali blends coworking schedules with social dining. We provide strong coffee stations, working lunches, communal dinners, and flexible timing for guests who move between desks, calls, and excursions.',
+    desc: 'Digital nomad retreat catering Bali blends coworking schedules with social dining. We provide strong coffee stations, working lunches, communal dinners, and flexible timing for guests who move between desks, calls, and excursions. Meals are designed to be social without being distracting, encouraging networking and friendship while respecting the workday. We also cater to diverse international palates and dietary trends common in remote-work communities, from vegan and keto to halal and gluten-free.',
   },
 ]
 
@@ -385,62 +385,62 @@ const LOCATIONS = [
   {
     slug: 'ubud',
     title: 'Ubud',
-    desc: 'Ubud is the spiritual and wellness centre of Bali, home to the island\u2019s densest concentration of yoga and meditation retreats. Our Ubud retreat catering Bali service handles jungle logistics, early morning yoga schedules, and access to organic produce from the surrounding highlands.',
+    desc: 'Ubud is the spiritual and wellness centre of Bali, home to the island\u2019s densest concentration of yoga and meditation retreats. Our Ubud retreat catering Bali service handles jungle logistics, early morning yoga schedules, and access to organic produce from the surrounding highlands. We regularly cook in open-air villas overlooking rice terraces, bamboo shalas, and riverside estates where groups practise sunrise asana before a nourishing brunch. Because Ubud\u2019s roads are narrow and many venues sit on steep tracks, our team plans deliveries, equipment transport, and fresh-market shopping with local knowledge that keeps every meal on schedule.',
   },
   {
     slug: 'canggu',
     title: 'Canggu',
-    desc: 'Canggu attracts surf, fitness, and digital nomad retreats with its open-plan villas and creative energy. We deliver flexible, health-focused retreat meals for groups that move between coworking, training, and beach time.',
+    desc: 'Canggu attracts surf, fitness, and digital nomad retreats with its open-plan villas and creative energy. We deliver flexible, health-focused retreat meals for groups that move between coworking, training, and beach time. Whether your guests need a protein-packed post-surf breakfast, a light lunch between workshops, or a family-style dinner after sunset, we adjust portions and timing to match the rhythm of the day. Our Canggu retreat catering teams understand villa kitchen layouts, pool-deck service, and the area\u2019s health-food culture, so menus feel contemporary without losing Balinese soul.'
   },
   {
     slug: 'pererenan',
     title: 'Pererenan',
-    desc: 'Pererenan offers design-led villas and a quieter pace than central Canggu. It is ideal for intimate luxury retreats where privacy, aesthetics, and refined service matter.',
+    desc: 'Pererenan offers design-led villas and a quieter pace than central Canggu. It is ideal for intimate luxury retreats where privacy, aesthetics, and refined service matter. Many retreats here combine daily yoga, meditation, and small-group coaching with long lunches by the pool and candlelit dinners under the palms. Our Pererenan catering respects the villa\u2019s architecture and vibe, plating beautifully and serving discreetly so the space still feels like a private home. We coordinate closely with villa managers to protect guest privacy and maintain seamless schedules.'
   },
   {
     slug: 'sanur',
     title: 'Sanur',
-    desc: 'Sanur\u2019s calm east-coast atmosphere suits family-friendly, wellness, and long-stay retreats. Our Sanur catering provides gentle, consistent service and classic Mediterranean-Indonesian menus.',
+    desc: 'Sanur\u2019s calm east-coast atmosphere suits family-friendly, wellness, and long-stay retreats. Our Sanur catering provides gentle, consistent service and classic Mediterranean-Indonesian menus. The flat beach paths and relaxed pace make it a favourite for multi-generational groups and older guests who want sunrise walks, poolside breakfasts, and early dinners. We plan comforting, familiar flavours for children while keeping adult menus interesting, and we adapt quickly to villa compounds that host several families at once.'
   },
   {
     slug: 'uluwatu',
     title: 'Uluwatu',
-    desc: 'Uluwatu\u2019s clifftop villas attract luxury and fitness retreats seeking dramatic settings. We plan around wind, lift access, and sunset timing to deliver polished clifftop dining.',
+    desc: 'Uluwatu\u2019s clifftop villas attract luxury and fitness retreats seeking dramatic settings. We plan around wind, lift access, and sunset timing to deliver polished clifftop dining. Many Uluwatu venues feature infinity pools, glass-fronted gyms, and private cliff-edge decks where guests train, meditate, and socialise. Our team times seafood deliveries, buffet setups, and plated courses around coastal breezes and golden-hour photography so every meal feels effortless. We also provide heartier recovery portions for fitness retreats that train twice daily.'
   },
   {
     slug: 'sidemen',
     title: 'Sidemen',
-    desc: 'Sidemen\u2019s rice terraces and slower pace are perfect for immersive wellness and spiritual retreats. Our team manages the longer travel distances and limited local supplier access.',
+    desc: 'Sidemen\u2019s rice terraces and slower pace are perfect for immersive wellness and spiritual retreats. Our team manages the longer travel distances and limited local supplier access. Retreats here often focus on silence, ceremony, meditation, and deep rest, so we keep meal service calm, nourishing, and unobtrusive. We source vegetables from local growers, prepare warming curries and grain bowls, and plan ahead for dry-goods deliveries because convenience stores are scarce. The result is honest, farm-close food that matches Sidemen\u2019s grounded energy.'
   },
   {
     slug: 'amed',
     title: 'Amed',
-    desc: 'Amed on Bali\u2019s east coast is known for diving, snorkelling, and quiet group retreats. We leverage fresh seafood and plan for the scenic but slower road access.',
+    desc: 'Amed on Bali\u2019s east coast is known for diving, snorkelling, and quiet group retreats. We leverage fresh seafood and plan for the scenic but slower road access. Amed\u2019s black-sand bays and coral reefs draw groups who want a digital detox, freediving intensives, or simply a slower rhythm away from the south. Our Amed retreat catering includes grilled reef fish, tropical fruit breakfasts, and packed lunches for boat trips. We leave extra time for procurement and travel so quality never depends on rushed logistics.'
   },
   {
     slug: 'nusa-dua',
     title: 'Nusa Dua',
-    desc: 'Nusa Dua\u2019s resort estates and gated compounds suit corporate and luxury wellness retreats. We provide executive-level service, formal dining options, and invoicing support.',
+    desc: 'Nusa Dua\u2019s resort estates and gated compounds suit corporate and luxury wellness retreats. We provide executive-level service, formal dining options, and invoicing support. These venues often require coordination with resort security, scheduled loading-bay access, and adherence to house rules, all of which our team manages discreetly. We can deliver plated gala dinners, buffet conferences, and daily healthy dining for international business groups who expect consistent quality and professional reporting.'
   },
   {
     slug: 'jimbaran',
     title: 'Jimbaran',
-    desc: 'Jimbaran\u2019s seafood market gives our retreat menus access to the freshest catch. It is a strong base for seafood nights, beachfront villas, and celebratory dinners.',
+    desc: 'Jimbaran\u2019s seafood market gives our retreat menus access to the freshest catch. It is a strong base for seafood nights, beachfront villas, and celebratory dinners. We buy fish at dawn for same-day preparation, then grill it simply with Balinese sambal, lemon, and coconut sides. Jimbaran\u2019s calm bay and wide beaches also make it ideal for retreats that want a relaxed seafood finale without travelling far from the airport. Our team can set up beachfront BBQs or elegant villa banquets depending on the occasion.'
   },
   {
     slug: 'seminyak',
     title: 'Seminyak',
-    desc: 'Seminyak offers high-end villas, excellent access, and a vibrant food scene. Our retreat catering here blends convenience with premium ingredients and polished presentation.',
+    desc: 'Seminyak offers high-end villas, excellent access, and a vibrant food scene. Our retreat catering here blends convenience with premium ingredients and polished presentation. It is a practical choice for retreats that want boutique shopping, spas, and restaurants within walking distance while still enjoying private villa dining. We design menus that feel restaurant-quality, source specialty ingredients quickly, and coordinate service around the area\u2019s lively schedule so guests never feel rushed.'
   },
   {
     slug: 'munduk',
     title: 'Munduk',
-    desc: 'Munduk\u2019s cool mountain air and jungle waterfalls attract nature and wellness retreats. We plan for the cooler climate and remote location with warming menus and full logistics.',
+    desc: 'Munduk\u2019s cool mountain air and jungle waterfalls attract nature and wellness retreats. We plan for the cooler climate and remote location with warming menus and full logistics. Groups come here for trekking, canyoning, meditation, and digital detox, so food needs to be hearty, grounding, and easy to serve after outdoor activities. Our Munduk catering includes warming soups, spiced rice dishes, herbal teas, and fire-cooked options that suit the mountain temperature. We also bring backup equipment because mountain weather can shift quickly.'
   },
   {
     slug: 'north-bali',
     title: 'North Bali',
-    desc: 'North Bali, including Lovina and the surrounding coast, offers dolphin-watching, quiet beaches, and a relaxed pace. We coordinate longer travel logistics and source fresh local produce for multi-day stays.',
+    desc: 'North Bali, including Lovina and the surrounding coast, offers dolphin-watching, quiet beaches, and a relaxed pace. We coordinate longer travel logistics and source fresh local produce for multi-day stays. Retreats in this region often last a week or more and focus on yoga, spirituality, or nature immersion away from tourist crowds. Our North Bali catering plans every delivery in advance, uses reef-safe packaging for beach outings, and builds menus around local bananas, root vegetables, freshwater fish, and tropical fruit so the food feels connected to the landscape.'
   },
 ]
 

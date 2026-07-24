@@ -11,6 +11,7 @@ const iconMap: Record<string, LucideIcon> = {
   Utensils: UtensilsCrossed,
   Heart,
   Crown,
+  ChefHat,
   BookOpen,
   Flame,
   Truck,
@@ -78,6 +79,13 @@ NAV_SUBPAGES['/dining-styles'] = [
 
 // Experience dropdown — hand-written (umbrella pillar for end-to-end villa stays)
 NAV_SUBPAGES['/complete-villa-experience'] = [
+  { label: 'All Experiences', href: '/experiences', icon: 'Heart' },
+  { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', icon: 'Wine' },
+  { label: 'Sushi Masterclass', href: '/experiences/sushi-masterclass', icon: 'Utensils' },
+  { label: 'Private Cooking Class', href: '/experiences/private-cooking-class', icon: 'ChefHat' },
+  { label: 'Kids Birthday Chef Party', href: '/experiences/kids-birthday-chef-party', icon: 'Baby' },
+  { label: 'Champagne & Oyster Experience', href: '/experiences/champagne-oyster-experience', icon: 'Crown' },
+  { label: 'Romantic Proposal Dinner', href: '/experiences/romantic-proposal-dinner', icon: 'Heart' },
   { label: 'Complete Villa Experience', href: '/complete-villa-experience', icon: 'Heart' },
   { label: 'Villa Event Packages', href: '/villa-event-packages', icon: 'Wine' },
   { label: 'VIP Transport Bali', href: '/vip-transport-bali', icon: 'Truck' },
@@ -121,6 +129,13 @@ const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
   '/complete-villa-experience': '/generated/mychef-catering-bali-catering-hero.webp',
   '/villa-event-packages': '/generated/mychef-villa-event-packages-hero.webp',
   '/vip-transport-bali': '/generated/mychef-vip-transport-bali-hero.webp',
+  '/experiences': '/generated/mychef-experience-bali-aura-hero-v2.webp',
+  '/experiences/private-cocktail-party': '/generated/mychef-events-bali-villa-party-night.webp',
+  '/experiences/sushi-masterclass': '/generated/mychef-finedining-bali-chefs-hero.webp',
+  '/experiences/private-cooking-class': '/generated/mychef-experience-bali-luna-hero-v4.webp',
+  '/experiences/kids-birthday-chef-party': '/generated/mychef-events-bali-party-birthday.webp',
+  '/experiences/champagne-oyster-experience': '/generated/mychef-experience-bali-aura-toast.webp',
+  '/experiences/romantic-proposal-dinner': '/generated/mychef-misc-bali-section-romantic-dinner.webp',
 }
 
 interface DropdownPreview {

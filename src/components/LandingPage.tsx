@@ -408,7 +408,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={`${entry.title} | myCHEF`}
+        title={entry.title}
         description={entry.description}
         canonical={canonical}
         ogImage={heroImage}

@@ -6,59 +6,68 @@ export const LANDING_PAGES: ContentEntry[] = [
     "slug": "villa-bbq-catering-bali",
     "title": "Villa BBQ Catering Bali | In-Villa BBQ Party Packages",
     "description": "In-villa BBQ party packages in Bali: chef, grill, setup & cleanup at your villa poolside. Packages for 6-80 guests with per-pax pricing. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "date": "2026-05-17",
+    "h1": "Villa BBQ Catering Bali — Private BBQ Parties at Your Villa",
+},
 {
     "slug": "bali-wedding-catering-packages",
-    "title": "Bali Wedding Catering Packages & Prices 2026",
+    "title": "Bali Wedding Catering Packages & Prices 2026 | myCHEF",
     "description": "Transparent Bali wedding catering packages: plated, buffet & cocktail reception pricing by guest count for private villa weddings. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "date": "2026-05-17",
+    "h1": "Bali Wedding Catering Packages — Transparent Pricing",
+},
 {
     "slug": "michelin-private-chef-bali-prices",
-    "title": "Michelin Private Chef Bali Prices | 2026 Cost Guide",
-    "description": "Transparent pricing for Michelin-standard private chef experiences in Bali. Cost breakdowns for menus and groceries.",
-    "date": "2026-05-17"
-  },
+    "title": "Michelin Private Chef Bali Prices | 2026 Premium Cost Guide",
+    "description": "What a Michelin-standard private chef costs in Bali: tasting menu pricing, groceries and service breakdowns. Transparent 2026 guide.",
+    "date": "2026-05-17",
+    "h1": "Michelin Private Chef Bali Prices — 2026 Cost Guide",
+},
 {
     "slug": "private-tasting-menu-bali",
-    "title": "Private Tasting Menu Bali | Michelin-Standard Villa Dining",
-    "description": "Experience 7-11 course private tasting menus in your Bali villa. Italian technique met with Balinese ingredients.",
-    "date": "2026-05-17"
-  },
+    "title": "Private Tasting Menu Bali | Legacy Page — See Tasting Menu",
+    "description": "This page consolidates into the myCHEF private tasting menu experience — multi-course degustation at your Bali villa.",
+    "date": "2026-05-17",
+    "h1": "Private Tasting Menu Bali",
+},
 {
     "slug": "chef-table-experience-bali",
-    "title": "Chef Table Experience Bali | Interactive Fine Dining",
-    "description": "An interactive, counter-side private dining experience. Watch our Michelin-trained chefs work course-by-course.",
-    "date": "2026-05-17"
-  },
+    "title": "Chef Table Experience Bali | Legacy Page — See Chefs Table",
+    "description": "This page consolidates into the myCHEF chef table experience — private counter dining with our chefs in Bali.",
+    "date": "2026-05-17",
+    "h1": "Chef Table Experience Bali",
+},
 {
     "slug": "seafood-bbq-catering-bali",
     "title": "Seafood BBQ Bali | Market-Fresh Grill at Your Villa | myCHEF",
     "description": "Fresh seafood BBQs for Bali villas: snapper, prawns, lobster grilled live poolside, sourced direct from Jimbaran market. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "date": "2026-05-17",
+    "h1": "Seafood BBQ Catering Bali — Direct-from-Market Freshness",
+},
 {
     "slug": "group-villa-dinner-packages-bali",
-    "title": "Group Villa Dinner Packages Bali | 10–150 Guests | myCHEF",
+    "title": "Group Villa Dinner Packages Bali | 10-150 Guests | myCHEF",
     "description": "All-inclusive villa dinner packages for groups of 10-150 in Bali — tiered per-person pricing for reunions & gatherings. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "date": "2026-05-17",
+    "h1": "Group Villa Dinner Packages Bali",
+},
 {
     "slug": "corporate-retreat-catering-bali",
     "title": "Corporate Retreat Catering Bali | Offsite Meal Programs",
     "description": "Multi-day catering for corporate retreats & offsites in Bali: full-day meal structures, NPWP invoices, executive service. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "date": "2026-05-17",
+    "h1": "Corporate Retreat Catering Bali — Professional Event Hospitality",
+},
 {
     "slug": "luxury-birthday-party-bali",
     "title": "Luxury Birthday Party Bali | Milestone Celebrations | myCHEF",
     "description": "Luxury milestone birthday parties in Bali: private chef, premium menus, drinks & styling for 30th/40th/50th celebrations. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "date": "2026-05-17",
+    "h1": "Luxury Birthday Parties in Bali — Chef-Led & Fully Styled",
+},
   {
     "slug": "hire-private-chef-bali-monthly",
-    "title": "Monthly Private Chef Bali | Long-Stay Chef Service",
+    "title": "Monthly Private Chef Bali | Long-Stay Chef Service | myCHEF",
     "description": "Monthly & long-term private chef service for Bali villas and residences — recurring meal plans by vetted chefs. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Hire a Private Chef in Bali by the Month",
@@ -85,7 +94,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "priceCurrency": "IDR",
             "lowPrice": "4500000",
             "highPrice": "8000000",
-            "description": "Weekly meal prep from IDR 4.5M/week (2 people); live-in chef from IDR 8M/month. Groceries billed at cost."
+            "description": "Monthly & long-term private chef service for Bali villas and residences — recurring meal plans by vetted chefs. WhatsApp myCHEF."
           }
         },
         {
@@ -147,9 +156,9 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
 {
     "slug": "villa-staff-bali-agency",
-    "title": "Villa Staff Placement Has Moved",
-    "h1": "Looking for a Villa Staff Agency in Bali?",
-    "description": "Our villa staff agency services now live on one page: vetted long-term villa staff placement in Bali — managers, housekeepers, chefs. See myCHEF.",
+    "title": "Villa Staff Agency Bali | Sourcing, Vetting & Placement",
+    "h1": "Villa Staff Agency Bali — Professional Household Placement",
+    "description": "The villa staff agency Bali owners trust: we source, vet and place housekeepers, butlers & villa managers. Replacement guarantee. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "jsonLd": [
       {
@@ -159,7 +168,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "@type": "WebPage",
             "@id": "https://mychef.id/villa-staff-bali-agency",
             "name": "Villa Staff Placement Has Moved | myCHEF Bali",
-            "description": "myCHEF's villa staff agency services now live on the villa staff placement page: vetted long-term villa staff for Bali villas and estates.",
+            "description": "The villa staff agency Bali owners trust: we source, vet and place housekeepers, butlers & villa managers. Replacement guarantee. WhatsApp myCHEF.",
             "isPartOf": { "@type": "WebSite", "name": "myCHEF", "url": "https://mychef.id" },
             "about": {
               "@type": "Organization",
@@ -182,14 +191,15 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
 {
     "slug": "butler-service-bali-daily-rate",
-    "title": "Butler Service Bali Daily Rate | Professional Villa Hosting",
-    "description": "Hire professional, English-speaking butlers in Bali by the day or shift. Discreet and anticipatory guest service.",
-    "date": "2026-05-17"
-  },
+    "title": "Butler Service Bali Cost: Daily Rates & Inclusions | myCHEF",
+    "description": "Butler service in Bali costs from IDR 1.2M per day — what’s included, shift options and how booking works. WhatsApp myCHEF.",
+    "date": "2026-05-17",
+    "h1": "Butler Service in Bali — Daily Rates Explained",
+},
   {
     "slug": "best-private-chef-indonesia",
     "title": "Best Private Chef Indonesia | Michelin-Standard Team",
-    "description": "How to judge the best private chef service in Indonesia — and the proof behind myCHEF: Michelin-trained leadership, 560+ villas, 4.9/5 rating. WhatsApp us.",
+    "description": "Why myCHEF is rated the best private chef service in Indonesia: Michelin-trained leadership, 560+ villas, world-class standards. WhatsApp us.",
     "date": "2026-05-17",
     "h1": "The Best Private Chef Service in Indonesia",
     "jsonLd": [{
@@ -214,7 +224,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "priceCurrency": "IDR",
             "lowPrice": "700000",
             "highPrice": "980000",
-            "description": "Private chef dinners from IDR 700K per person; tasting menus from IDR 950–980K per person, quoted ++ (11% tax + 10% service)."
+            "description": "Why myCHEF is rated the best private chef service in Indonesia: Michelin-trained leadership, 560+ villas, world-class standards. WhatsApp us."
           }
         },
         {
@@ -293,9 +303,10 @@ export const LANDING_PAGES: ContentEntry[] = [
 {
     "slug": "private-chef-for-events",
     "title": "Private Chef for Events Bali | Hire a Chef for Your Event",
-    "description": "Hire a private chef for your Bali event — villa parties, birthdays & celebrations. Transparent chef-fee model, optional service staff. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "description": "Hire a private chef for your Bali event — from intimate birthdays to large villa celebrations. Culinary team, menus & service. WhatsApp myCHEF.",
+    "date": "2026-05-17",
+    "h1": "Private Chef for Events in Bali",
+},
   {
     "slug": "luxury-chef-indonesia",
     "title": "Luxury Private Chef Indonesia | Estates & Residences",
@@ -319,7 +330,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "priceCurrency": "IDR",
             "lowPrice": "950000",
             "highPrice": "3500000",
-            "description": "Refined private dinners from IDR 950K++ per person; signature tasting menus from IDR 2.2M++; Chef's Table IDR 3.5M++ per guest (Fri & Sat, 6 guests max). Prices ++ (11% tax + 10% service)."
+            "description": "Luxury private chef services for high-end residences and estates across Indonesia — discreet, professional, refined. Enquire via WhatsApp."
           }
         },
         {
@@ -390,12 +401,13 @@ export const LANDING_PAGES: ContentEntry[] = [
 {
     "slug": "wedding-catering-indonesia",
     "title": "Wedding Catering Indonesia | Villa Wedding Specialists",
-    "description": "Premium wedding catering across Bali. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "description": "Premium wedding catering across Indonesia — Bali, Jakarta & beyond. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
+    "date": "2026-05-17",
+    "h1": "Wedding Catering Indonesia — Villa Wedding Specialists",
+},
   {
     "slug": "private-dining-indonesia",
-    "title": "Private Dining Indonesia | At-Home Fine Dining",
+    "title": "Private Dining Indonesia | At-Home Fine Dining | myCHEF",
     "description": "At-home fine dining across Indonesia: Michelin-trained chefs, premium ingredients and professional service in your home or villa. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Private Dining Indonesia — At-Home Fine Dining",
@@ -416,7 +428,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "priceCurrency": "IDR",
             "lowPrice": "700000",
             "highPrice": "980000",
-            "description": "Private dining from IDR 700K per person; fine dining and tasting menus from IDR 950–980K per person, quoted ++ (11% tax + 10% service)."
+            "description": "At-home fine dining across Indonesia: Michelin-trained chefs, premium ingredients and professional service in your home or villa. WhatsApp myCHEF."
           }
         },
         {
@@ -495,9 +507,9 @@ export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "healthy-meal-delivery-indonesia",
     "title": "Healthy Meal Delivery Bali | Chef-Prepared Meal Plans",
-    "description": "Healthy meal delivery in Bali: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
+    "description": "Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
     "date": "2026-05-17",
-    "h1": "Healthy Meal Delivery in Bali — Chef-Prepared, Not Factory-Made",
+    "h1": "Healthy Meal Delivery — Chef-Prepared, Delivered",
     "jsonLd": [{
       "@context": "https://schema.org",
       "@graph": [
@@ -517,7 +529,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "name": "Bali"
             }
           ],
-          "description": "Chef-prepared healthy meal delivery and weekly in-villa meal prep in Bali: personalised menus, fresh local ingredients, dietary-exact cooking.",
+          "description": "Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
           "offers": {
             "@type": "Offer",
             "priceCurrency": "IDR",
@@ -528,7 +540,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "priceCurrency": "IDR",
               "unitText": "per week for 2-4 people"
             },
-            "description": "Weekly in-villa meal prep from IDR 4,500,000 per week"
+            "description": "Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF."
           },
           "url": "https://mychef.id/healthy-meal-delivery-indonesia"
         },
@@ -615,8 +627,8 @@ export const LANDING_PAGES: ContentEntry[] = [
   },
   {
     "slug": "chef-for-hire-indonesia",
-    "title": "Chef for Hire Indonesia | Private & Personal Chefs",
-    "description": "Hire a vetted private chef in Bali — one dinner, daily villa service, recurring meals or full-time placement across Bali. WhatsApp myCHEF.",
+    "title": "Chef for Hire Indonesia | Private & Personal Chefs | myCHEF",
+    "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali & Jakarta. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Chef for Hire Indonesia — Private Chef Services",
     "jsonLd": [{
@@ -636,7 +648,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "priceCurrency": "IDR",
             "lowPrice": "700000",
             "highPrice": "8000000",
-            "description": "Dinners from IDR 700K pp; chef sessions from IDR 1.35M; weekly meal prep from IDR 4.5M/week; live-in placement from IDR 8M/month. Prices ++ (11% tax + 10% service)."
+            "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali & Jakarta. WhatsApp myCHEF."
           }
         },
         {
@@ -716,14 +728,16 @@ export const LANDING_PAGES: ContentEntry[] = [
     "slug": "proposal-dinner",
     "title": "Proposal Dinner Bali | Private Chef Proposal Experience",
     "description": "Plan the perfect proposal with a private chef dinner in your Bali villa — intimate, styled and unforgettable. Confidential planning. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "date": "2026-05-17",
+    "h1": "Proposal Dinner Bali — The Yes Starts at Dinner",
+},
 {
     "slug": "honeymoon-chef",
     "title": "Honeymoon Private Chef Bali | Villa Dining for Couples",
     "description": "Private chef experiences for honeymooners in Bali: romantic breakfasts, sunset dinners and intimate in-villa hosting. WhatsApp myCHEF.",
-    "date": "2026-05-17"
-  },
+    "date": "2026-05-17",
+    "h1": "Honeymoon Chef Bali — Private Villa Dining for Two",
+},
 {
     "slug": "private-chef-breakfast-bali",
     "title": "Private Chef Breakfast Bali | Poolside Villa Service",

@@ -12,7 +12,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Sushi Making Class Bali',
     title: 'Learn the Art of Sushi in the Privacy of Your Bali Villa',
-    image: '/generated/sushi-making-class-bali-masterclass.webp',
+    image: '/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp',
     imageAlt: 'Sushi making class Bali with a chef teaching in a private villa kitchen',
     body: `<p>Bali is a place people come to slow down, taste more carefully, and share moments that feel far removed from ordinary life. A <strong>sushi making class Bali</strong> experience fits that rhythm perfectly. Instead of sitting in a restaurant and watching a chef work behind a counter, you stand beside one — rolling, slicing, seasoning, and understanding why each step matters.</p>
 
@@ -25,7 +25,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'The Experience',
     title: 'What Happens During a Private Sushi Masterclass',
-    image: '/generated/mychef-experience-bali-luna-hero-v4.webp',
+    image: '/generated/mychef-sushi-masterclass-instruction-bali-landscape.webp',
     imageAlt: 'Private chef teaching a sushi masterclass at a Bali villa',
     body: `<p>The class begins when your chef arrives at your villa with everything needed for the lesson. There is no need to shop, prep, or rearrange the kitchen. We set up a clean station at your counter or island, lay out the ingredients in the order they will be used, and talk through the plan for the session before anyone picks up a knife.</p>
 
@@ -40,7 +40,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'What You Will Learn',
     title: 'A Practical Sushi Curriculum for Home Cooks',
-    image: '/generated/luna-ingredients.webp',
+    image: '/generated/mychef-sushi-masterclass-ingredients-bali-portrait.webp',
     imageAlt: 'Fresh ingredients prepared for a private sushi making class in Bali',
     body: `<p>The curriculum is built around the skills you can actually use again. We do not overload the session with theory; every topic is connected to something you will make with your own hands. By the end of the masterclass you will have covered the core techniques of traditional and contemporary sushi.</p>
 
@@ -97,7 +97,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Who Should Book',
     title: 'A Sushi Masterclass for Couples, Families & Friends',
-    image: '/generated/mychef-experience-bali-luna-table.webp',
+    image: '/generated/mychef-sushi-masterclass-guests-dining-bali-landscape.webp',
     imageAlt: 'Guests enjoying a private dining experience at a Bali villa table',
     body: `<p>This experience works for almost any small group that enjoys food and wants to do something together that does not feel like a standard activity. Couples on a romantic Bali trip often book it as a memorable way to spend an afternoon before a private dinner. Families use it as a hands-on activity that keeps both adults and older children engaged. Groups of friends treat it as a relaxed prelude to a villa party or a sunset evening.</p>
 
@@ -211,9 +211,9 @@ export default function ExperienceSushiMasterclassPage() {
       canonicalUrl={CANONICAL}
       h1="Sushi Making Class Bali — Private In-Villa Masterclass"
       subtitle="Learn the Art of Sushi with a Private Chef in Your Villa"
-      heroImage="/generated/sushi-making-class-bali-masterclass.webp"
+      heroImage="/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp"
       heroImageAlt="Sushi making class Bali chef preparing fresh sushi in a private villa kitchen"
-      ogImage="https://mychef.id/generated/sushi-making-class-bali-masterclass.webp"
+      ogImage="https://mychef.id/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp"
       keywords={[
         'sushi making class Bali',
         'sushi masterclass Bali',
@@ -245,7 +245,7 @@ export default function ExperienceSushiMasterclassPage() {
           },
           datePublished: '2026-07-24',
           dateModified: '2026-07-24',
-          image: 'https://mychef.id/generated/sushi-making-class-bali-masterclass.webp',
+          image: 'https://mychef.id/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': CANONICAL,

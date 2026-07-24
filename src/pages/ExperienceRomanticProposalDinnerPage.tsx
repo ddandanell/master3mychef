@@ -12,7 +12,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Proposal Package Bali',
     title: 'The Most Romantic Way to Propose in Bali',
-    image: '/generated/proposal-package-bali-dinner.webp',
+    image: '/generated/mychef-proposal-dinner-table-setting-bali-landscape.webp',
     imageAlt: 'Candlelit proposal package Bali dinner table for two at a private villa by myCHEF',
     body: `<p>There are proposals, and then there are proposals that feel inevitable — the kind where the setting, the light, the food, and the timing all align so perfectly that the only possible answer is yes. A <strong>proposal package Bali</strong> romantic dinner with a private chef is designed to create exactly that moment.</p>
 
@@ -44,7 +44,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'The Menu',
     title: 'What a Romantic Proposal Dinner Menu Looks Like',
-    image: '/generated/mychef-misc-bali-section-romantic-dinner.webp',
+    image: '/generated/mychef-proposal-dinner-plated-dish-bali-portrait.webp',
     imageAlt: 'Elegant private dining plate from a romantic proposal dinner in Bali',
     body: `<p>A romantic proposal menu is not a standard tasting menu — it is a story told in courses, building toward the question you are about to ask. Our chefs design each dish to match the pace of the evening: light and conversational at first, richer and more celebratory as the moment approaches.</p>
 
@@ -105,7 +105,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'The Proposal Moment',
     title: 'How We Coordinate the Question Itself',
-    image: '/generated/section-romantic-dinner.webp',
+    image: '/generated/mychef-proposal-dinner-plated-dish-bali-portrait.webp',
     imageAlt: 'Romantic candlelit dinner setting prepared for a Bali villa proposal',
     body: `<p>The proposal is the centre of the evening, and the dinner is built around it. Some clients want the question asked between courses, with the next course deliberately delayed. Others want it at the very end, with dessert carrying the ring or a hidden message. A few prefer it at sunset, before dinner even begins, so the rest of the evening is pure celebration.</p>
 
@@ -209,9 +209,9 @@ export default function ExperienceRomanticProposalDinnerPage() {
       canonicalUrl={CANONICAL}
       h1="Proposal Package Bali — Romantic Dinner & Private Coordination"
       subtitle="A Private Chef Experience for the Moment You Say Yes"
-      heroImage="/generated/proposal-package-bali-dinner.webp"
+      heroImage="/generated/mychef-proposal-dinner-table-setting-bali-landscape.webp"
       heroImageAlt="Candlelit proposal package Bali romantic dinner at a private villa by myCHEF"
-      ogImage="https://mychef.id/generated/proposal-package-bali-dinner.webp"
+      ogImage="https://mychef.id/generated/mychef-proposal-dinner-table-setting-bali-landscape.webp"
       keywords={[
         'proposal package Bali',
         'romantic proposal dinner Bali',
@@ -248,7 +248,7 @@ export default function ExperienceRomanticProposalDinnerPage() {
           },
           datePublished: '2026-07-24',
           dateModified: '2026-07-24',
-          image: 'https://mychef.id/generated/proposal-package-bali-dinner.webp',
+          image: 'https://mychef.id/generated/mychef-proposal-dinner-table-setting-bali-landscape.webp',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': CANONICAL,

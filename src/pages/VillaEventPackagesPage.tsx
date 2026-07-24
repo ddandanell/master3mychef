@@ -108,7 +108,7 @@ export default function VillaEventPackagesPage() {
         title="Bali Villa Event Packages | All-Inclusive — myCHEF"
         description="All-inclusive villa experience in Bali: airport pickup, daily private chef, event planning, bar service, staffing & cleanup. Tailored quotes."
         canonical={`${SITE}/villa-event-packages`}
-        ogImage={`${SITE}/generated/mychef-villa-event-packages-hero.webp`}
+        ogImage={`${SITE}/generated/mychef-villa-packages-banquet-lawn-bali-landscape.webp`}
         jsonLd={[
           detailedServiceSchema('Bali Villa Event Packages', 'myCHEF.id provides all-inclusive villa event packages in Bali: airport pickup, daily private chef service, event planning, bar and bottle service, professional staffing, post-event cleanup and concierge-level care — one tailored package for your entire villa stay.', `${SITE}/villa-event-packages`),
           breadcrumbSchema('Villa Event Packages', `${SITE}/villa-event-packages`),
@@ -118,7 +118,7 @@ export default function VillaEventPackagesPage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-villa-event-packages-hero.webp"
+            src="/generated/mychef-villa-packages-banquet-lawn-bali-landscape.webp"
             alt="Long banquet table with floral runners and candles set for a private event on a Bali villa lawn at dusk"
             width={1024}
             height={1024}
@@ -179,7 +179,7 @@ export default function VillaEventPackagesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/hub-villa.webp" alt="Open-plan living room of a luxury Bali villa prepared for guests" width={1024} height={576} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-villa-interior-pool-living-bali-landscape.webp" alt="Open-plan living room of a luxury Bali villa prepared for guests" width={1024} height={576} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -230,7 +230,7 @@ export default function VillaEventPackagesPage() {
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/bali-hub-hero.webp" alt="Infinity pool at a Bali villa at sunset, prepared for arriving guests" width={1440} height={800} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-villa-pool-infinity-pool-bali-landscape.webp" alt="Infinity pool at a Bali villa at sunset, prepared for arriving guests" width={1440} height={800} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -240,7 +240,7 @@ export default function VillaEventPackagesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/mychef-experience-bali-home-hero-ivory-villa.webp" alt="Candlelit private chef dinner table set inside a Bali villa" width={1216} height={832} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-villa-packages-chef-dinner-table-bali-landscape.webp" alt="Candlelit private chef dinner table set inside a Bali villa" width={1216} height={832} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -309,7 +309,7 @@ export default function VillaEventPackagesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-experience-bali-aura-bartender.webp" alt="myCHEF mixologist preparing craft cocktails at a Bali villa bar" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-villa-packages-packages-bartender-bali-landscape.webp" alt="myCHEF mixologist preparing craft cocktails at a Bali villa bar" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -319,7 +319,7 @@ export default function VillaEventPackagesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="rounded-2xl overflow-hidden aspect-[4/3] lg:order-first">
-              <img src="/generated/mychef-experience-bali-aura-hero-v2.webp" alt="Uniformed myCHEF service team setting a long dinner table at a Bali villa" width={1440} height={800} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-villa-packages-staff-setting-table-bali-landscape.webp" alt="Uniformed myCHEF service team setting a long dinner table at a Bali villa" width={1440} height={800} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
             <div>
               <p className="text-[#C5A028] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
@@ -367,7 +367,7 @@ export default function VillaEventPackagesPage() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="/generated/mychef-experience-bali-aura-tablescape.webp" alt="Immaculately reset event tablescape at a Bali villa after service" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              <img src="/generated/mychef-villa-tablescape-reset-table-bali-landscape.webp" alt="Immaculately reset event tablescape at a Bali villa after service" width={1920} height={1080} loading="lazy" decoding="async" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

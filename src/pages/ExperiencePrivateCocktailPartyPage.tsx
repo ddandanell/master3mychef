@@ -12,7 +12,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Bartender Hire Bali',
     title: 'Host a Private Cocktail Party in Bali with a Personal Bartender & Bar Team',
-    image: '/generated/bartender-hire-bali-cocktail-party.webp',
+    image: '/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp',
     imageAlt: 'Bartender hire Bali service crafting cocktails at a private villa party',
     body: `<p>Professional <strong>bartender hire Bali</strong> service is the fastest way to turn a beautiful villa into the only venue that matters. Whether you are celebrating a birthday, an anniversary, a villa welcome, a corporate retreat, or simply a night worth remembering, the right cocktail party brings people together without the queues, closing times, or generic drinks lists of a public bar.</p>
 
@@ -38,7 +38,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Cocktails & Canapés',
     title: 'What We Serve at a Private Cocktail Party',
-    image: '/generated/mychef-events-bali-villa-parties-bar.webp',
+    image: '/generated/mychef-cocktail-party-cocktails-canapes-bali-landscape.webp',
     imageAlt: 'Stylish private bar setup at a Bali villa cocktail party',
     body: `<p>The drinks menu is the centrepiece of any cocktail party. Our bartenders build each menu around your preferences and the occasion, balancing recognisable classics with signatures that feel specific to Bali and to your group.</p>
 
@@ -104,7 +104,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'How It Works',
     title: 'Planning Your Private Cocktail Party from First Message to Last Drink',
-    image: '/generated/mychef-service-bali-hero-bartenders.webp',
+    image: '/generated/mychef-cocktail-party-bartenders-setup-bali-portrait.webp',
     imageAlt: 'Professional bartenders preparing for a private cocktail event in Bali',
     body: `<p>The difference between a good cocktail party and a seamless one is planning. We break the process into clear stages so you always know what is happening and nothing is left to the last minute.</p>
 
@@ -140,7 +140,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Investment',
     title: 'Bartender Hire Bali Pricing',
-    image: '/generated/mychef-mixology-bali-bar-setup.webp',
+    image: '/generated/mychef-cocktail-party-mobile-bar-detail-bali-landscape.webp',
     imageAlt: 'Professional mobile bar setup for bartender hire Bali at a private party',
     body: `<p>Pricing for bartender hire Bali depends on guest count, menu complexity, bar package, service duration, and staffing requirements. Because every event is tailored, we quote each party individually after a brief planning call.</p>
 
@@ -223,9 +223,9 @@ export default function ExperiencePrivateCocktailPartyPage() {
       canonicalUrl={CANONICAL}
       h1="Bartender Hire Bali — Private Cocktail Party in Your Villa"
       subtitle="A Personal Bartender, Custom Cocktails & Canapés at Your Villa"
-      heroImage="/generated/bartender-hire-bali-cocktail-party.webp"
+      heroImage="/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp"
       heroImageAlt="Bartender hire Bali crafting a signature cocktail at a private villa party"
-      ogImage="https://mychef.id/generated/bartender-hire-bali-cocktail-party.webp"
+      ogImage="https://mychef.id/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp"
       keywords={[
         'bartender hire Bali',
         'private cocktail party Bali',

@@ -12,7 +12,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Oyster Bar Bali',
     title: 'A Champagne & Oyster Experience in Your Bali Villa',
-    image: '/generated/oyster-bar-bali-champagne.webp',
+    image: '/generated/mychef-oyster-champagne-station-pour-bali-landscape.webp',
     imageAlt: 'Oyster bar Bali with champagne service at an elegant private villa',
     body: `<p>There is a particular kind of evening that begins with a single oyster and a glass of something cold and golden. It is unhurried, intentional, and quietly luxurious. The myCHEF Champagne & Oyster Experience brings that evening to your villa — not as a catering package, but as a curated private event built around two of the finest pleasures on any table.</p>
 
@@ -25,7 +25,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'How It Works',
     title: 'From Booking to the First Pour',
-    image: '/generated/mychef-events-bali-party-medi.webp',
+    image: '/generated/mychef-oyster-champagne-seafood-station-bali-landscape.webp',
     imageAlt: 'Mediterranean seafood and oyster station setup at a Bali villa event',
     body: `<p>The experience is designed to feel effortless from the first message. We keep the planning process short and precise, because the evening itself should feel spontaneous.</p>
 
@@ -93,7 +93,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'The Champagne',
     title: 'Champagne & Sparkling Wine Pairing',
-    image: '/generated/mychef-experience-bali-aura-toast.webp',
+    image: '/generated/mychef-oyster-champagne-champagne-pour-bali-portrait.webp',
     imageAlt: 'Champagne being poured at an elegant Bali villa event',
     body: `<p>Champagne and oysters share a quiet logic: both are about restraint, acidity, and a kind of brightness that makes the palate feel alive. The right glass of Champagne turns a good oyster into something memorable.</p>
 
@@ -203,9 +203,9 @@ export default function ExperienceChampagneOysterExperiencePage() {
       canonicalUrl={CANONICAL}
       h1="Oyster Bar Bali — Champagne & Oyster Experience at Your Villa"
       subtitle="Fresh Oysters, Curated Champagne, and Private Villa Service"
-      heroImage="/generated/oyster-bar-bali-champagne.webp"
+      heroImage="/generated/mychef-oyster-champagne-station-pour-bali-landscape.webp"
       heroImageAlt="Champagne toast and fresh oysters at an elegant private villa experience in Bali"
-      ogImage="https://mychef.id/generated/oyster-bar-bali-champagne.webp"
+      ogImage="https://mychef.id/generated/mychef-oyster-champagne-station-pour-bali-landscape.webp"
       keywords={[
         'oyster bar Bali',
         'champagne oyster experience Bali',

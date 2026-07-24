@@ -19,7 +19,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Private Cooking Class Bali',
     title: 'Learn Balinese & Indonesian Cuisine with a Private Chef at Your Villa',
-    image: '/generated/private-cooking-class-bali-villa.webp',
+    image: '/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp',
     imageAlt: 'Private chef teaching a Balinese cooking class in a modern villa kitchen',
     body: `<p>Most visitors who want to learn Balinese cooking end up in a group tourist cooking school — a crowded kitchen, a fixed menu, and twenty strangers following the same simplified steps at the same pace. You leave with a few photos and a recipe card, but rarely with the confidence to recreate what you made once you are home.</p>
 
@@ -34,7 +34,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Class Menu',
     title: 'Private Cooking Class Experiences at Your Villa',
-    image: '/generated/mychef-experience-bali-luna-gallery-3.webp',
+    image: '/generated/mychef-cooking-class-balinese-ingredients-bali-landscape.webp',
     imageAlt: 'Colourful Balinese ingredients and spice pastes prepared for a private villa cooking class',
     body: `<p>Every class is led by a trained myCHEF chef and held entirely at your villa. We bring the specialist equipment and any ingredients your kitchen does not stock. You bring curiosity and an appetite. All classes include hands-on instruction, a full sit-down meal of what you cooked, printed recipe cards, and a digital recipe booklet emailed after the session.</p>
 
@@ -111,7 +111,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'For Every Group',
     title: 'A Private Cooking Class for Couples, Families & Celebrations',
-    image: '/generated/mychef-experience-bali-luna-table.webp',
+    image: '/generated/mychef-cooking-class-group-dining-bali-landscape.webp',
     imageAlt: 'Guests enjoying the meal they cooked during a private Balinese cooking class',
     body: `<p>A private cooking class is one of the most memorable activities you can add to a Bali villa stay. It works across almost every occasion because it combines activity, learning and a shared meal in one private experience.</p>
 
@@ -257,9 +257,9 @@ export default function ExperiencePrivateCookingClassPage() {
       canonicalUrl={CANONICAL}
       h1="Private Cooking Class Bali — Learn in Your Villa"
       subtitle="Learn Balinese & Indonesian Cuisine with a Private Chef at Your Villa"
-      heroImage="/generated/private-cooking-class-bali-villa.webp"
+      heroImage="/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp"
       heroImageAlt="Private chef teaching Balinese cooking at a luxury Bali villa"
-      ogImage="https://mychef.id/generated/private-cooking-class-bali-villa.webp"
+      ogImage="https://mychef.id/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp"
       keywords={[
         'private cooking class Bali',
         'Bali cooking class villa',
@@ -293,7 +293,7 @@ export default function ExperiencePrivateCookingClassPage() {
           provider: { '@type': 'Organization', name: 'myCHEF', url: 'https://mychef.id' },
           areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
           url: CANONICAL,
-          image: 'https://mychef.id/generated/private-cooking-class-bali-villa.webp',
+          image: 'https://mychef.id/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp',
           offers: {
             '@type': 'Offer',
             priceCurrency: 'IDR',

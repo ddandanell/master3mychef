@@ -19,7 +19,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Kids Birthday Party Bali',
     title: 'A Private Chef Birthday Party Designed Around Children',
-    image: '/generated/kids-birthday-party-bali-chef.webp',
+    image: '/generated/mychef-kids-party-children-cooking-bali-landscape.webp',
     imageAlt: 'Colourful kids birthday party Bali setup at a villa with a private chef cooking station',
     body: `<p>A <strong>kids birthday party Bali</strong> chef party is not a restaurant meal squeezed into a villa. It is a private, hands-on food experience where a myCHEF chef arrives at your property with everything needed to cook, serve, and clean up — while the children watch, build, and eat food they actually want. Parents get to host without hovering over a stove, and the birthday child gets an activity and a meal rolled into one moment.</p>
 
@@ -47,7 +47,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'The Menus',
     title: 'Six Chef Party Menus Children Actually Want to Eat',
-    image: '/generated/mychef-families-bali-kids-menus.webp',
+    image: '/generated/mychef-kids-party-kids-hands-cooking-bali-landscape.webp',
     imageAlt: 'Children enjoying a hands-on chef party menu at a Bali villa',
     body: `<p>Every kids birthday party Bali chef party is built around one of our six interactive kids menus. Each menu is designed for children aged 3–12, portioned correctly, nut-free as standard, halal adaptable, and mild enough that even cautious eaters enjoy the meal.</p>
 
@@ -108,7 +108,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Allergies & Dietary Needs',
     title: 'Keeping Every Child Safe and Happy',
-    image: '/generated/mychef-events-bali-birthdays-table.webp',
+    image: '/generated/mychef-kids-party-family-table-bali-landscape.webp',
     imageAlt: 'Family-friendly birthday table setup with fresh food and safe portions at a Bali villa',
     body: `<p>Food safety at children's parties is non-negotiable. Every kids birthday party Bali chef party menu is nut-free as standard. We also adapt each menu for gluten-free, dairy-free, egg-free, and halal requirements when you tell us during the booking process. There is no additional charge for these adjustments.</p>
 
@@ -242,9 +242,9 @@ export default function ExperienceKidsBirthdayChefPartyPage() {
       canonicalUrl={CANONICAL}
       h1="Kids Birthday Party Bali — Private Chef Party at Your Villa"
       subtitle="A Hands-On Private Chef Party Experience for Children at Your Villa"
-      heroImage="/generated/kids-birthday-party-bali-chef.webp"
+      heroImage="/generated/mychef-kids-party-children-cooking-bali-landscape.webp"
       heroImageAlt="Children enjoying an interactive kids birthday party Bali chef party at a villa"
-      ogImage="https://mychef.id/generated/kids-birthday-party-bali-chef.webp"
+      ogImage="https://mychef.id/generated/mychef-kids-party-children-cooking-bali-landscape.webp"
       keywords={[
         'kids birthday party Bali',
         'kids birthday chef party Bali',

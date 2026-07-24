@@ -11,7 +11,7 @@ const EXPERIENCES = [
     desc: 'Hire a professional bartender and complete mobile cocktail bar for your Bali villa, wedding, birthday or private event. Bar setup, staff, mixers and a custom cocktail menu included.',
     icon: Wine,
     href: '/experiences/private-cocktail-party',
-    image: '/generated/bartender-hire-bali-cocktail-party.webp',
+    image: '/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp',
     imageAlt: 'Bartender hire Bali service with mobile cocktail bar at a private villa party',
   },
   {
@@ -21,7 +21,7 @@ const EXPERIENCES = [
     desc: 'Book a private sushi making class Bali experience at your villa. Learn maki, nigiri and hand rolls with a sushi chef, then enjoy the meal you created together.',
     icon: UtensilsCrossed,
     href: '/experiences/sushi-masterclass',
-    image: '/generated/sushi-making-class-bali-masterclass.webp',
+    image: '/generated/mychef-sushi-masterclass-chef-hands-bali-landscape.webp',
     imageAlt: 'Sushi making class Bali with a chef teaching in a private villa kitchen',
   },
   {
@@ -31,7 +31,7 @@ const EXPERIENCES = [
     desc: 'Choose your cuisine and learn from a private chef in your own villa. Italian, Indonesian, Japanese, French, healthy or kids’ cooking classes with ingredients included.',
     icon: ChefHat,
     href: '/experiences/private-cooking-class',
-    image: '/generated/private-cooking-class-bali-villa.webp',
+    image: '/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp',
     imageAlt: 'Private cooking class Bali at a villa with a chef teaching fresh recipes',
   },
   {
@@ -41,7 +41,7 @@ const EXPERIENCES = [
     desc: 'Turn your villa into a fully hosted children’s cooking party. Pizza making, cupcake decorating, kids’ sushi, mocktails, chef hats and cleanup handled by our team.',
     icon: PartyPopper,
     href: '/experiences/kids-birthday-chef-party',
-    image: '/generated/kids-birthday-party-bali-chef.webp',
+    image: '/generated/mychef-kids-party-children-cooking-bali-landscape.webp',
     imageAlt: 'Kids birthday party Bali chef party with pizza making and cupcake decorating',
   },
   {
@@ -51,7 +51,7 @@ const EXPERIENCES = [
     desc: 'Book a private oyster bar Bali experience and champagne reception at your villa, wedding or event. Fresh oysters on ice, live shucking, premium glassware and professional service.',
     icon: Shell,
     href: '/experiences/champagne-oyster-experience',
-    image: '/generated/oyster-bar-bali-champagne.webp',
+    image: '/generated/mychef-oyster-champagne-station-pour-bali-landscape.webp',
     imageAlt: 'Oyster bar Bali with champagne service at an elegant private villa',
   },
   {
@@ -61,7 +61,7 @@ const EXPERIENCES = [
     desc: 'Plan a complete proposal package Bali experience with dinner, flowers, candles, styling, photographer and confidential coordination through one dedicated team.',
     icon: Heart,
     href: '/experiences/romantic-proposal-dinner',
-    image: '/generated/proposal-package-bali-dinner.webp',
+    image: '/generated/mychef-proposal-dinner-table-setting-bali-landscape.webp',
     imageAlt: 'Proposal package Bali romantic dinner setup at a private villa',
   },
 ]
@@ -72,7 +72,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Private Experiences Bali',
     title: 'Curated Culinary & Celebration Experiences in Your Villa',
-    image: '/generated/private-experiences-bali-hub.webp',
+    image: '/generated/mychef-experiences-hub-hero-bali-landscape.webp',
     imageAlt: 'Private experiences Bali collection at a luxury villa by myCHEF',
     body: `<p>Some moments deserve more than a restaurant reservation. The myCHEF <strong>private experiences Bali</strong> collection brings chefs, bartenders, teachers and event specialists directly to your villa, turning a normal evening into something your guests will remember long after the holiday ends.</p>
 
@@ -223,9 +223,9 @@ export default function ExperiencesHubPage() {
       canonicalUrl="https://mychef.id/experiences"
       h1="Private Experiences in Bali"
       subtitle="Curated Culinary & Celebration Experiences at Your Villa"
-      heroImage="/generated/private-experiences-bali-hub.webp"
+      heroImage="/generated/mychef-experiences-hub-hero-bali-landscape.webp"
       heroImageAlt="Private experiences Bali collection at a luxury villa by myCHEF"
-      ogImage="https://mychef.id/generated/private-experiences-bali-hub.webp"
+      ogImage="https://mychef.id/generated/mychef-experiences-hub-hero-bali-landscape.webp"
       keywords={[
         'private experiences Bali',
         'villa experiences Bali',

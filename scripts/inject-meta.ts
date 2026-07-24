@@ -86,7 +86,6 @@ const OG_IMAGES: Record<string, string> = {
   '/journal/private-chef-canggu-guide': '/generated/journal-hero.webp',
   '/journal/private-chef-ubud-villa-dining': '/generated/journal-hero.webp',
   '/journal/bali-wedding-catering-complete-guide': '/generated/journal-hero.webp',
-  '/journal/private-chef-jakarta-guide': '/generated/journal-hero.webp',
   '/journal/rehearsal-dinner-planning-bali': '/generated/journal-hero.webp',
   '/journal/live-in-chef-vs-daily-service': '/generated/journal-hero.webp',
   '/journal/bbq-catering-cost-breakdown-bali': '/generated/journal-hero.webp',

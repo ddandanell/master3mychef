@@ -968,6 +968,16 @@
       "source": "/journal/wedding-catering-bali-cost",
       "destination": "/bali-wedding-catering-packages",
       "permanent": true
+    },
+    {
+      "source": "/journal/private-chef-jakarta-guide",
+      "destination": "/locations/jakarta",
+      "permanent": true
+    },
+    {
+      "source": "/blog/private-chef-surabaya-guide",
+      "destination": "/locations/jakarta",
+      "permanent": true
     }
   ],
   "headers": [

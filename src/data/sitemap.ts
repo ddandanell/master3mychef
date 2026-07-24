@@ -55,6 +55,7 @@ export const AREAS: { slug: string; name: string }[] = [
   { slug: 'padang-bai', name: 'Padang Bai' },
   { slug: 'ungasan', name: 'Ungasan' },
   { slug: 'pecatu', name: 'Pecatu' },
+  { slug: 'jakarta', name: 'Jakarta' },
 ]
 
 export const MICRO_AREAS: { slug: string; name: string }[] = [

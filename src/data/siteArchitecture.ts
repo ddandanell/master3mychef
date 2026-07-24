@@ -208,6 +208,7 @@ export type LocationSlug =
   | 'padang-bai'
   | 'ungasan'
   | 'pecatu'
+  | 'jakarta'
 
 export interface LocationPage {
   slug: LocationSlug
@@ -419,6 +420,14 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
     description: 'Private chef services in Pecatu. Sunset BBQs and recovery brunches.',
     intro: 'In Pecatu, myCHEF provides the perfect culinary accompaniment to a day on the waves, with high-protein brunches and celebratory sunset dinners.',
   },
+  jakarta: {
+    slug: 'jakarta',
+    label: 'Jakarta',
+    h1: 'Private Chef in Jakarta',
+    title: 'Private Chef Jakarta | Residences & Corporate Dining',
+    description: 'Premium private chef and corporate catering in Jakarta — Menteng, SCBD, Kemang & Pondok Indah. Michelin-trained standards. WhatsApp myCHEF.',
+    intro: 'Jakarta is one of Southeast Asia’s most demanding dining markets. myCHEF brings Michelin-standard private chef service to residences, corporate suites and event spaces across the capital.',
+  },
 }
 
 /**
@@ -428,7 +437,7 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
  * the /locations routes in App.tsx.
  */
 export const LOCATION_PAGE_SLUGS: ReadonlySet<string> = new Set([
-  'bukit', 'canggu', 'denpasar', 'jimbaran', 'kuta',
+  'bukit', 'canggu', 'denpasar', 'jakarta', 'jimbaran', 'kuta',
   'nusa-dua', 'pererenan', 'sanur', 'seminyak', 'ubud', 'uluwatu',
 ])
 export const hasLocationPage = (slug: string): boolean => LOCATION_PAGE_SLUGS.has(slug)

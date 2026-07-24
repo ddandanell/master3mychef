@@ -279,6 +279,10 @@ export const REDIRECTS: Redirect[] = [
   { from: '/journal/bali-villa-dinner-party-guide', to: '/private-dining-indonesia', reason: 'Dead journal link → live private dining page.' },
   { from: '/journal/floating-breakfast-bali', to: '/catering/floating-breakfast', reason: 'Dead journal link → live floating breakfast page.' },
   { from: '/journal/wedding-catering-bali-cost', to: '/bali-wedding-catering-packages', reason: 'Dead journal link → live wedding catering packages page.' },
+
+  // --- 2026-07-25: pages in metadata map with no content/route → redirect to nearest live page ---
+  { from: '/journal/private-chef-jakarta-guide', to: '/locations/jakarta', reason: 'No dedicated journal content; Jakarta guide consolidated to location page.' },
+  { from: '/blog/private-chef-surabaya-guide', to: '/locations/jakarta', reason: 'No Surabaya content; nearest served city is Jakarta.' },
 ]
 
 /** Lookup map for the React Router fallback. */

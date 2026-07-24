@@ -138,11 +138,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'catering-buffet': {
     path: '/catering/buffet',
-    title: 'Buffet Catering Bali | Villa & Event Buffets — myCHEF',
+    title: 'Buffet Catering Bali from IDR 475K++ | Villa & Event Buffets — myCHEF',
     description:
-      'Buffet catering in Bali for villas, weddings & retreats. Indonesian, international & live-station menus with chef, staff & cleanup. WhatsApp for pricing.',
+      'Buffet catering in Bali from IDR 475,000++ per guest. Indonesian buffet, international buffet & live-station catering for villas, weddings & corporate events. Chef, staff & cleanup included.',
     canonical: `${SITE}/catering/buffet`,
-    h1: 'Buffet Catering in Bali — Group Buffets for Villas',
+    h1: 'Buffet Catering Bali for Villas, Weddings & Corporate Events',
     ogImage: `${SITE}/hero-catering.webp`,
   },
 

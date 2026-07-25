@@ -115,7 +115,7 @@ def apply_business_blockers(html: str, route: str = "") -> str:
     )
     html = re.sub(
         r"\[BUSINESS CONFIRMATION REQUIRED[^\]]*corporate[^\]]*minimum[^\]]*\]",
-        "Corporate events have a minimum spend of IDR 50,000,000",
+        "Corporate events have a minimum spend of IDR 15,000,000",
         html,
         flags=re.IGNORECASE,
     )

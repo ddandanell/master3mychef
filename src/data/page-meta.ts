@@ -2216,15 +2216,6 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/contact-hero.webp`,
   },
 
-      'partner-platform': {
-    path: '/partner-platform',
-    title: 'Partner Platform | myCHEF for Villas & Venues',
-    description:
-      'Join the myCHEF partner platform: preferred private chef partner for Bali villas, venues and hospitality brands.',
-    canonical: `${SITE}/partner-platform`,
-    h1: 'Partner Platform',
-  },
-
       'certified-partner': {
     path: '/certified-partner',
     title: 'Certified Partner Programme Bali | myCHEF for Villas',

@@ -7,8 +7,6 @@ export const LANDING_PAGE_SLUGS: string[] = [
   'villa-bbq-catering-bali',
   'bali-wedding-catering-packages',
   'michelin-private-chef-bali-prices',
-  'private-tasting-menu-bali',
-  'chef-table-experience-bali',
   'seafood-bbq-catering-bali',
   'group-villa-dinner-packages-bali',
   'corporate-retreat-catering-bali',

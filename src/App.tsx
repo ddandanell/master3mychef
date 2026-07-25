@@ -358,7 +358,6 @@ export default function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/partners" element={<PartnersPage />} />
           <Route path="/press" element={<PressPage />} />
-          <Route path="/partner-platform" element={<PartnerPlatformPage />} />
           <Route path="/certified-partner" element={<PartnerPlatformPage />} />
           <Route path="/corporate-events" element={<Navigate to="/events/corporate-events" replace />} />
           <Route path="/certified/:slug" element={<CertifiedPartnerPage />} />

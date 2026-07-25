@@ -179,7 +179,7 @@ export default function QuoteFunnel() {
       <noscript
         dangerouslySetInnerHTML={{
           __html: `<div class="px-8 pt-24 pb-8 max-w-[800px] mx-auto">
-          <h1 class="font-playfair text-3xl md:text-4xl mb-4">Get a Custom Quote</h1>
+          <h2 class="font-playfair text-3xl md:text-4xl mb-4">Get a Custom Quote</h2>
           <p class="text-[#4A4745] mb-6">JavaScript is required to use the interactive quote funnel. You can still reach us directly:</p>
           <form action="https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like a quote. Please contact me.')}" method="get" class="space-y-4">
             <label class="block"><span class="block text-sm font-medium mb-1">Name</span><input type="text" name="name" placeholder="Your name" class="w-full bg-white border-2 border-[#E5E3E0] rounded-xl p-3 text-sm focus:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]" /></label>

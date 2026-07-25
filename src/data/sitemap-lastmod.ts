@@ -158,7 +158,6 @@ export const SITEMAP_LASTMOD: Record<string, string> = {
   "/pricing": "2026-06-02",
   "/staffing": "2026-06-11",
   "/contact": "2026-05-16",
-  "/partner-platform": "2026-06-14",
   "/certified-partner": "2026-06-07",
   "/press": "2026-06-25",
   "/privacy": "2026-06-03",

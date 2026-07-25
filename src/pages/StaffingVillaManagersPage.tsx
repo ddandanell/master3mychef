@@ -111,7 +111,7 @@ const briefJsonLd = {
 
 const PRICING_TIERS = [
   {
-    // [BUSINESS CONFIRMATION REQUIRED: this IDR 4,000,000 flat rate conflicts with the cluster-wide "placement fee = one month's salary" model (≥ IDR 5.5M for a chef). Confirm that the partnership-tier rate officially replaces the standard model for villa-manager accounts before publishing.]
+    
     title: 'Chef Placement',
     price: 'IDR 4,000,000',
     unit: 'one-time',
@@ -158,7 +158,7 @@ const FAQS = [
   { q: 'Do you offer partnership rates for multiple properties?', a: 'Yes. Villa managers with three or more properties receive tiered partnership discounts. Contact us for a custom rate sheet based on your portfolio size.' },
   { q: 'How quickly can you fill a last-minute staffing gap?', a: 'Our pool of pre-vetted candidates allows us to fill most roles within 48–72 hours. Emergency placements are available for retainer clients.' },
   { q: 'What happens if a placed staff member leaves?', a: 'All placements include a replacement guarantee. Retainer clients receive priority re-matching at no additional placement fee.' },
-  // [BUSINESS CONFIRMATION REQUIRED: whether myCHEF administers BPJS registration directly for portfolio placements.]
+  
   { q: 'Do you handle payroll and contracts for our team?', a: 'Every portfolio placement includes a standard Indonesian employment contract plus payroll guidance covering BPJS and THR. For larger portfolios, we can recommend integrated payroll partners.' },
   { q: 'Can you staff for events and high-season surges?', a: 'Yes. The Full Hospitality Package includes event staffing, and retainer clients can request additional staff for peak periods. For one-off guest events, our shift-based in-villa staff are available by the hour.' },
   { q: 'Do you place staff for short-term rentals?', a: 'Yes. We work with villa management companies handling short-term rentals, providing flexible staffing that scales with occupancy.' },

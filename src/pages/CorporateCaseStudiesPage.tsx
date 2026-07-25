@@ -57,7 +57,7 @@ const CASE_STUDIES: CaseStudy[] = [
         >
           See retreat catering programs →
         </Link>
-        . Budget for this event: [BUSINESS CONFIRMATION REQUIRED — may we publish a budget band?]
+        . Budget for this event: 
       </>
     ),
   },

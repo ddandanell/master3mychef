@@ -147,7 +147,7 @@ const FAQS = [
   },
   {
     q: 'Do you handle contracts, payroll and BPJS?',
-    a: 'We prepare standard Indonesian employment contracts and provide payroll guidance as part of the placement fee, and we explain employer obligations including BPJS and THR. For complex structures we recommend trusted local payroll partners. [BUSINESS CONFIRMATION REQUIRED: whether myCHEF administers BPJS registration directly.]',
+    a: 'We prepare standard Indonesian employment contracts and provide payroll guidance as part of the placement fee, and we explain employer obligations including BPJS and THR. For complex structures we recommend trusted local payroll partners. ',
   },
   {
     q: 'Which areas do you cover?',

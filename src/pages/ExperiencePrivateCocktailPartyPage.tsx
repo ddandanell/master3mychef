@@ -144,7 +144,7 @@ const SECTIONS: PageSection[] = [
 
     <p><strong>2. We design the plan</strong> — cocktail menu, food pairing, bar location, staffing ratio, timing; supplied vs BYO alcohol decided here.</p>
 
-    <p><strong>3. Confirm with a deposit</strong> [BUSINESS CONFIRMATION REQUIRED: deposit level — crawl for this URL is silent; live pages elsewhere show 50%] — written confirmation of menu, team and all-in investment.</p>
+    <p><strong>3. Confirm with a deposit</strong> A 50% deposit confirms your date — written confirmation of menu, team and all-in investment.</p>
 
     <p><strong>4. We arrive early</strong> — bar built, kitchen prepped, welcome cocktails ready before the first guest.</p>
 
@@ -231,7 +231,7 @@ const FAQS = [
   { question: 'Can non-drinkers and kids be catered for?', answer: 'Yes — a dedicated zero-proof cocktail list is part of every menu, at no compromise on presentation.' },
   { question: 'What does our villa need to provide?', answer: 'A workable space for the bar and kitchen access. We bring all bar equipment; power and layout needs are confirmed during planning.' },
   { question: 'How far in advance should we book?', answer: 'Two to three weeks is comfortable; four to six for July–August and December. Last-minute requests are often possible — ask.' },
-  { question: 'What deposit is required?', answer: 'A deposit confirms your date and team [BUSINESS CONFIRMATION REQUIRED: deposit level — crawl for this URL is silent; live pages elsewhere show 50%]; the balance is due before the event.' },
+  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your date and team; the balance is due before the event.' },
 ]
 
 const RELATED_PAGES = [

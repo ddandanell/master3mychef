@@ -135,8 +135,8 @@ export default function RecommendedServicesPage() {
       title: "When We're Not the Right Fit",
       body: `<p>Honest recommendations include the ones that do not send you to us. A few examples of what we will tell you straight:</p>
       <ul>
-        <li><strong>You want the cheapest possible feed for a very large casual crowd</strong> — we are a chef-led, per-person service from IDR 700K/person; a local warung-style caterer may suit a tight budget better. [BUSINESS CONFIRMATION REQUIRED — confirm policy on referring budget enquiries to third parties]</li>
-        <li><strong>You need services outside food and hospitality</strong> — photography, florists, DJs, event furniture. We can suggest trusted local vendors we have worked alongside. [BUSINESS CONFIRMATION REQUIRED — confirm whether a preferred-vendor list exists and may be published]</li>
+        <li><strong>You want the cheapest possible feed for a very large casual crowd</strong> — we are a chef-led, per-person service from IDR 700K/person; a local warung-style caterer may suit a tight budget better. </li>
+        <li><strong>You need services outside food and hospitality</strong> — photography, florists, DJs, event furniture. We can suggest trusted local vendors we have worked alongside. </li>
         <li><strong>Your dates are already fully booked with us</strong> — we will say so immediately rather than take a deposit we cannot honour.</li>
       </ul>
       <p>If another provider genuinely fits better, we would rather earn your trust for the next trip than a bad booking for this one.</p>`,

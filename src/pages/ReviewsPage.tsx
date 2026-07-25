@@ -326,7 +326,7 @@ export default function ReviewsPage() {
           <h2 className="text-3xl md:text-4xl font-playfair mb-4">Where to Verify Us</h2>
           <p className="max-w-3xl mx-auto text-[#4A4745] leading-relaxed">
             Third-party review profiles:{' '}
-            <strong>[BUSINESS CONFIRMATION REQUIRED — add live Google Business / TripAdvisor / Airbnb Experiences profile URLs when available]</strong>.
+            <strong></strong>.
             We publish every review here with a date, a location and an occasion so you can judge them the way we&apos;d want to be judged.
           </p>
         </div>

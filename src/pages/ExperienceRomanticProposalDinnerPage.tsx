@@ -193,7 +193,7 @@ const FAQS = [
   { question: 'What happens if it rains?', answer: 'Every terrace and garden setup has a covered fallback position confirmed during planning. The evening moves; the moment doesn\'t.' },
   { question: 'What if my partner has dietary requirements?', answer: 'Tell us privately during planning and the entire menu is built around them — allergies, vegetarian, halal, anything — without a word said at the table.' },
   { question: 'How far in advance should we book?', answer: 'Four to six weeks minimum; eight to twelve for peak season. Short-notice proposals are sometimes possible — message us and we\'ll tell you honestly what\'s achievable.' },
-  { question: 'What deposit is required?', answer: 'A deposit confirms the date and team [BUSINESS CONFIRMATION REQUIRED: deposit level — crawl for this URL is silent; live pages elsewhere show 50%]; the balance is due before the evening.' },
+  { question: 'What deposit is required?', answer: 'A 50% deposit confirms the date and team; the balance is due before the evening.' },
 ]
 
 const RELATED_PAGES = [

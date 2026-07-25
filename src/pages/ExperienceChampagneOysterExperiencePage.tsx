@@ -79,7 +79,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'How Booking Works',
     title: 'Add the Hour to Your Evening',
-    body: `<p>The experience suits 2 to 30+ guests and works poolside, on a terrace or in the garden. We arrive 60–90 minutes before service. Book at least 5–7 days ahead for the best oyster selection — more in peak season — and mention any shellfish allergies: we'll run an alternative seafood or canapé station for those guests alongside. Every hour is quoted individually, itemised and confirmed before a deposit secures the date [BUSINESS CONFIRMATION REQUIRED: deposit level — crawl for this URL is silent; live pages elsewhere show 50%].</p>
+    body: `<p>The experience suits 2 to 30+ guests and works poolside, on a terrace or in the garden. We arrive 60–90 minutes before service. Book at least 5–7 days ahead for the best oyster selection — more in peak season — and mention any shellfish allergies: we'll run an alternative seafood or canapé station for those guests alongside. Every hour is quoted individually, itemised and confirmed before a 50% deposit secures the date.</p>
 
     <p>Popular pairings: <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">add it to a proposal dinner</a>, the <a href="/experiences/romantic-proposal-dinner" class="text-[#7E6410] hover:underline font-medium">full proposal package</a>, or a <a href="/fine-dining/romantic-dinner" class="text-[#7E6410] hover:underline font-medium">romantic dinner for two</a>.</p>
 

@@ -4,7 +4,7 @@ import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, Wine }
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { getPageMeta } from '@/data/page-meta'
-import SeoHead, { faqPageSchema } from '@/components/SeoHead'
+import SeoHead from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'

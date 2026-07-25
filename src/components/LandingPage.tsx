@@ -7,7 +7,6 @@ import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import { getPageMetaByPath } from '@/data/page-meta'
 import { CHEF_FOR_HIRE_INDONESIA_CONTENT } from '@/data/content/chefForHireIndonesia'
 import Breadcrumb from './shared/Breadcrumb'
-import FAQAccordion from './catering/FAQAccordion'
 import { type EnrichedPost, enrichPost, formatBlogDate, getRelatedPosts, injectContentEnhancements, sortPostsByDate } from '@/lib/blog'
 
 const SITE = 'https://mychef.id'
@@ -94,17 +93,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       : null
 
   const isGroupVillaDinner = kind === 'landing' && entry.slug === 'group-villa-dinner-packages-bali'
-  const showLandingFaq =
-    kind === 'landing' &&
-    [
-      'best-private-chef-indonesia',
-      'butler-service-bali-daily-rate',
-      'chef-for-hire-indonesia',
-      'corporate-retreat-catering-bali',
-      'group-villa-dinner-packages-bali',
-      'honeymoon-chef',
-      'private-dining-indonesia',
-    ].includes(entry.slug)
   const landingServiceSchema = (() => {
     if (kind !== 'landing') return null
     if (entry.slug === 'group-villa-dinner-packages-bali') {

@@ -141,6 +141,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/private-tasting-menu-bali', to: '/fine-dining/tasting-menu', reason: 'Thin duplicate → canonical tasting menu page.' },
   { from: '/chef-table-experience-bali', to: '/fine-dining/chefs-table', reason: 'Thin duplicate → canonical chef\'s table page.' },
   { from: '/fine-dining/our-chefs', to: '/chefs', reason: 'Duplicate chef roster → canonical /chefs roster.' },
+  { from: '/villa-staff-bali-agency', to: '/staffing/villa-staff', reason: 'Duplicate villa-staff page → canonical staffing owner.' },
 
   // GA4 (25 May–21 Jun 2026): live URLs hitting the 404 page. Map each to its real equivalent.
   { from: '/romantic-dinner', to: '/fine-dining/romantic-dinner', reason: 'GA4 404 (8 views). Bare URL → real romantic dinner page.' },

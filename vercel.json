@@ -420,6 +420,11 @@
       "permanent": true
     },
     {
+      "source": "/villa-staff-bali-agency",
+      "destination": "/staffing/villa-staff",
+      "permanent": true
+    },
+    {
       "source": "/romantic-dinner",
       "destination": "/fine-dining/romantic-dinner",
       "permanent": true

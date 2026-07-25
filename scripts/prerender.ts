@@ -429,10 +429,15 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
     return { ok: false, reason: 'inject-meta output missing (run inject-meta first)' }
   }
 
-  const page = await browser.newPage({
-    userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
-    viewport: { width: 1280, height: 1024 },
-  })
+  let page
+  try {
+    page = await browser.newPage({
+      userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+      viewport: { width: 1280, height: 1024 },
+    })
+  } catch (err) {
+    return { ok: false, reason: (err as Error).message.split('\n')[0] }
+  }
 
   async function captureRoot(timeoutMs: number): Promise<CaptureResult> {
     await page.goto(`${BASE_URL}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 20000 })
@@ -498,7 +503,7 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
   }
 }
 
-async function runPool(browser: Browser, routes: Route[]): Promise<{ success: number; failures: Array<{ path: string; reason: string }> }> {
+async function runPool(browser: Browser, routes: Route[], concurrency: number): Promise<{ success: number; failures: Array<{ path: string; reason: string }> }> {
   let cursor = 0
   let success = 0
   const failures: Array<{ path: string; reason: string }> = []
@@ -517,7 +522,7 @@ async function runPool(browser: Browser, routes: Route[]): Promise<{ success: nu
     }
   }
 
-  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, routes.length) }, () => worker()))
+  await Promise.all(Array.from({ length: Math.min(concurrency, routes.length) }, () => worker()))
   return { success, failures }
 }
 
@@ -543,8 +548,16 @@ async function launchBrowser(): Promise<Browser> {
         '  🧊 Falling back to @sparticuz/chromium (bundled system libraries)'
     )
     const { default: sparticuz } = await import('@sparticuz/chromium')
+    // Adapt the Lambda-oriented defaults for a multi-core build machine:
+    //  - drop --single-process/--no-zygote so one crashed renderer can't take
+    //    down the whole browser (with 8 concurrent pages it always did), and
+    //  - drop sparticuz's --headless='shell' flag; Playwright manages headless
+    //    mode itself.
+    const args = sparticuz.args.filter(
+      (a) => a !== '--single-process' && a !== '--no-zygote' && !a.startsWith('--headless')
+    )
     return chromium.launch({
-      args: sparticuz.args,
+      args,
       executablePath: await sparticuz.executablePath(),
       headless: true,
     })
@@ -584,7 +597,37 @@ async function main(): Promise<void> {
       return
     }
 
-    const { success, failures } = await runPool(browser, routes)
+    // Render pass 1 on the freshly launched browser, then ONE retry pass for any
+    // failed routes on a brand-new browser at low concurrency. This absorbs
+    // full-browser crashes (e.g. a renderer fault cascading on constrained build
+    // machines): pass 1 failures caused by a dead browser get a clean second shot
+    // instead of counting toward the 10% fail-rate threshold.
+    let pending: Route[] = routes
+    let success = 0
+    let failures: Array<{ path: string; reason: string }> = []
+
+    for (let attempt = 1; attempt <= 2 && pending.length; attempt++) {
+      const concurrency = attempt === 1 ? CONCURRENCY : 2
+      if (attempt > 1) {
+        console.log(`\n🔁 Pass 2: retrying ${pending.length} failed route(s) on a fresh browser (concurrency ${concurrency})`)
+        await browser.close().catch(() => {})
+        browser = await launchBrowser()
+      }
+      try {
+        const res = await runPool(browser, pending, concurrency)
+        success += res.success
+        failures = res.failures
+        const failedPaths = new Set(res.failures.map((f) => f.path))
+        pending = pending.filter((r) => failedPaths.has(r.path))
+      } catch (poolError) {
+        // The browser itself died mid-pass (runPool couldn't even report per-route
+        // results). Keep every still-pending route for the retry pass.
+        console.warn(`  ⚠️  Render pass ${attempt} aborted: ${(poolError as Error).message.split('\n')[0]}`)
+        if (attempt === 2) {
+          failures = pending.map((r) => ({ path: r.path, reason: 'browser crashed during render pass' }))
+        }
+      }
+    }
 
     console.log(`\n✅ Prerender complete: ${success}/${routes.length} routes`)
     if (failures.length) {

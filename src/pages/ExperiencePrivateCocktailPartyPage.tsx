@@ -2,7 +2,6 @@ import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from '@/components/SeoHead'
 import { Wine, Users, Music, Sparkles, Clock, GlassWater } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
-import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20cocktail%20party%20at%20my%20Bali%20villa.%20Please%20send%20availability%20and%20pricing.'
 const CANONICAL = 'https://mychef.id/experiences/private-cocktail-party'
@@ -88,12 +87,6 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Food That Keeps Pace with the Bar',
     title: 'Chef-Made Canapés & Grazing',
     body: `<p>Our chefs design the food to match the drinks and the mood: passed canapés (tuna tartare on crispy wonton, satay skewers, compressed watermelon with feta), grazing boards with cured meats and local cheeses, and station-style small plates for longer parties. Vegan, gluten-free, halal and allergy requirements are prepared separately and served with the same presentation.</p>`,
-  },
-  {
-    id: 'seo-content',
-    type: 'content' as const,
-    title: "Private Cocktail Party Bali — Your Villa, Our Bar",
-    body: ARTICLE_CONTENT['/experiences/private-cocktail-party'],
   },
   {
     id: 'features',

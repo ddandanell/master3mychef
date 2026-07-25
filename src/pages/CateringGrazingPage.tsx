@@ -3,24 +3,20 @@ import { useEffect, useRef } from 'react'
 import {
   MessageCircle, Check, Phone, Calendar, Users, MapPin,
   Utensils, Heart, Leaf, Flower2, Truck, ShieldCheck, Sparkles, Package,
-  Clock, Table2, Wine, Baby,
+  Clock, Table2, Wine, Baby, Wallet, ClipboardList, Send,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
   cateringBreadcrumbSchema,
-  serviceWithAggregateOfferSchema,
+  serviceSchema,
   faqPageSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import StaffingInfo from '@/components/catering/StaffingInfo'
-import BookingProcess from '@/components/catering/BookingProcess'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
-import TrustStrip from '@/components/shared/TrustStrip'
-import TaxFooter from '@/components/shared/TaxFooter'
+import { Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
@@ -34,52 +30,39 @@ const PAGE_URL = `${SITE}/catering/grazing-tables`
 const GOLD = '#C5A028'
 
 /* ═══════════════════════════════════════════════════════════════
-   PACKAGES — Grazing Table Sizes
+   PACKAGES — Grazing Table Service Levels
 
-   Pricing reflects the current page brief: small boards from IDR 650,000
-   and villa tables scaled to guest count. Confirm the latest all-in quote
-   for your event size on WhatsApp.
+   Per the page brief, grazing tables move to a custom-quotation model:
+   no fixed prices are published. Every table is quoted around guest
+   count, menu selection, styling, location, and service requirements.
+   Minimum booking: six guests.
    ═══════════════════════════════════════════════════════════════ */
+const CUSTOM_QUOTE_LINE = 'Custom quotation based on guest count, location, menu, and styling requirements.'
+
 const PACKAGES = [
   {
-    title: 'Small Grazing Board',
-    guests: '2–4 pax',
-    price: 'IDR 650,000',
-    priceNum: 650000,
-    includes: ['Cheese selection', 'Cold cuts', 'Crackers', 'Fresh fruit', 'Dips', 'Nuts', 'Small sweets', 'Styled board presentation'],
-    bestFor: 'Couples, villa arrival snack, honeymoon setup, private poolside snack, small wine night',
+    title: 'Intimate Villa Grazing Table',
+    guests: 'Available from 6 guests',
+    includes: ['Selection of cheeses', 'Cured meats or vegetarian alternatives', 'Fresh tropical fruit', 'Breads and crackers', 'Dips and spreads', 'Olives and vegetables', 'Nuts and sweet elements', 'Styled board presentation'],
+    bestFor: 'Smaller villa gatherings, welcome drinks, birthdays, wine evenings, bridal events, and poolside celebrations',
   },
   {
-    title: 'Medium Villa Table',
-    guests: '8–12 pax',
-    price: 'IDR 2,700,000',
-    priceNum: 2700000,
-    includes: ['4–6 cheeses', '3–4 cured meats', 'Sourdough & bread', 'Crackers', 'Marinated vegetables', 'Dips', 'Honey', 'Fresh & dried fruit', 'Nuts', 'Edible flowers'],
-    bestFor: 'Small villa parties, birthdays, wine nights, welcome drinks, group snacks',
-  },
-  {
-    title: 'Full Event Grazing Table',
-    guests: '15–30 guests',
-    price: 'IDR 700,000/person',
-    priceNum: 700000,
-    includes: ['Large styled grazing table', 'Sourdough', 'Crackers', '4–6 cheeses', '3–4 cured meats', 'Marinated vegetables', 'Dips', 'Honey', 'Fresh & dried fruit', 'Nuts', 'Edible flowers', 'Vegan version available'],
-    bestFor: 'Villa events, poolside parties, pre-dinner food, cocktail hour, corporate reception',
+    title: 'Event Grazing Table',
+    guests: 'Medium & large groups',
+    includes: ['Expanded cheese and charcuterie selection', 'Artisan breads and premium crackers', 'Seasonal fruit', 'Dips and marinated vegetables', 'Tropical styling', 'Dietary labels', 'Setup and breakdown options'],
+    bestFor: 'Villa parties, cocktail receptions, birthdays, retreats, and pre-dinner gatherings',
   },
   {
     title: 'Wedding Grazing Table',
-    guests: '30–80 guests',
-    price: 'IDR 700,000/person',
-    priceNum: 700000,
-    includes: ['Premium styled grazing table', 'Artisan breads', 'Crackers', '6–8 cheeses', '4–5 cured meats', 'Marinated vegetables', 'Dips & spreads', 'Honey & chutney', 'Fresh & dried fruit', 'Nuts & seeds', 'Edible flowers', 'Labels & signage', 'Vegan version available'],
-    bestFor: 'Weddings, bridal showers, large villa celebrations, boutique events',
+    guests: 'Scaled to your wedding',
+    includes: ['Premium table styling', 'Multiple grazing sections', 'Custom labels and signage', 'Vegetarian and vegan sections', 'Coordinated wedding styling', 'Optional attendants', 'Canapé and bar-service additions'],
+    bestFor: 'Wedding welcome receptions, cocktail hours, bridal celebrations, and post-ceremony gatherings',
   },
   {
-    title: 'Corporate Reception Table',
-    guests: '50–150 guests',
-    price: 'IDR 700,000/person',
-    priceNum: 700000,
-    includes: ['Executive grazing display', 'Artisan breads', 'Premium crackers', '6–8 cheeses', '4–5 cured meats', 'Marinated vegetables', 'Gourmet dips', 'Honey & preserves', 'Seasonal fruit', 'Nuts & seeds', 'Edible flowers', 'Branded labels', 'Dedicated setup staff'],
-    bestFor: 'Corporate launches, brand events, retreat welcome, networking receptions',
+    title: 'Corporate Grazing Table',
+    guests: 'Scalable for large groups',
+    includes: ['Branded labels', 'Individual dietary identification', 'Scalable setup for larger groups', 'Corporate styling', 'Delivery and venue coordination', 'Optional staff and beverage service'],
+    bestFor: 'Product launches, networking events, retreats, office celebrations, and brand activations',
   },
 ]
 
@@ -141,19 +124,75 @@ const SETUP_STEPS = [
   { icon: Clock, title: 'Arrival Time', desc: 'We arrive 60–90 minutes before your event to set up the grazing table.' },
   { icon: Table2, title: 'Table Requirements', desc: 'A sturdy table or surface is needed. We bring boards, linens, and all serving ware.' },
   { icon: ShieldCheck, title: 'Shaded Placement', desc: 'Outdoor setups require shade or cover to protect cheese and fruit from direct sun.' },
-  { icon: Sparkles, title: 'Freshness & Replenishment', desc: 'We refresh the table during the event and monitor food safety throughout.' },
-  { icon: Truck, title: 'Cleanup', desc: 'Full breakdown and cleanup included. We leave your space exactly as we found it.' },
+  { icon: Sparkles, title: 'Freshness & Replenishment', desc: 'With an on-site attendant, we refresh the table during the event and monitor food safety throughout.' },
+  { icon: Truck, title: 'Breakdown & Cleanup', desc: 'Breakdown and cleanup can be included according to your selected service level — confirmed in your quotation.' },
   { icon: Users, title: 'Staff Options', desc: 'Optional dedicated grazing attendant to serve, replenish, and answer guest questions.' },
 ]
 
 /* ═══════════════════════════════════════════════════════════════
-   FAQ — exactly 7 questions per blueprint
+   CUSTOMIZE YOUR GRAZING TABLE
+   ═══════════════════════════════════════════════════════════════ */
+const CUSTOMIZE_OPTIONS = [
+  'Classic cheese and charcuterie',
+  'Mediterranean grazing',
+  'Tropical Bali grazing',
+  'Vegetarian grazing',
+  'Vegan grazing',
+  'Pork-free grazing',
+  "Children's grazing table",
+  'Dessert grazing table',
+  'Breakfast and brunch grazing',
+  'Wedding cocktail-hour grazing',
+  'Corporate branded grazing',
+  'Premium cheese selection',
+  'Seafood and oyster additions',
+  'Indonesian-inspired grazing',
+  'Healthy retreat grazing',
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   SERVICE OPTIONS — replaces generic staffing ratios
+   ═══════════════════════════════════════════════════════════════ */
+const SERVICE_OPTIONS = [
+  { icon: Truck, title: 'Delivery & Styled Setup', desc: 'Our team delivers and styles the complete grazing table before your guests arrive.' },
+  { icon: Users, title: 'Grazing Table Attendant', desc: 'An optional attendant can remain on site to replenish food, maintain the display, and assist guests.' },
+  { icon: Sparkles, title: 'Full Event Service', desc: 'For larger celebrations, we can add waiters, bartenders, chefs, canapés, drinks, and full event support.' },
+  { icon: Package, title: 'Breakdown & Collection', desc: 'Breakdown, equipment collection, and final cleanup can be included according to the selected service package.' },
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   BOOKING FLOW — grazing-specific, replaces generic booking process
+   ═══════════════════════════════════════════════════════════════ */
+const BOOKING_FLOW = [
+  { icon: Send, title: 'Send event details', desc: 'Share your date, area, villa or venue, guest count, and occasion.' },
+  { icon: Utensils, title: 'Choose menu & styling', desc: 'Pick ingredients, dietary needs, and the styling direction of your table.' },
+  { icon: ClipboardList, title: 'Receive a custom quotation', desc: 'Priced around guest count, menu, styling, location, and service level.' },
+  { icon: Wallet, title: 'Confirm with deposit', desc: 'A 50% deposit secures your date. The balance is due before the event.' },
+  { icon: Truck, title: 'Delivery & setup', desc: 'We arrive 60–90 minutes before your event to deliver and style the table.' },
+  { icon: Sparkles, title: 'Optional service & breakdown', desc: 'Attendance, replenishment, and final collection according to your quotation.' },
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   TRUST STRIP — grazing-specific (replaces generic staffing claims)
+   ═══════════════════════════════════════════════════════════════ */
+const TRUST_ITEMS = [
+  { icon: MessageCircle, label: 'Same-day WhatsApp', desc: 'Confirmation within the hour' },
+  { icon: Wallet, label: 'Custom quotation', desc: 'Tailored to your event' },
+  { icon: Users, label: 'Minimum six guests', desc: 'Same minimum Bali-wide' },
+  { icon: Truck, label: 'Bali-wide delivery', desc: 'Styled setup at your venue' },
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   FAQ — custom-quotation model, minimum six guests
    ═══════════════════════════════════════════════════════════════ */
 const FAQS = [
-  { q: 'How much does a grazing table in Bali cost?', a: 'From IDR 650,000 for a small board (2–4 guests) and IDR 2,700,000 for a medium table (8–12). Event, wedding, and corporate tables run IDR 700,000 per person.' },
+  { q: 'How much does a grazing table in Bali cost?', a: 'Every grazing table is quoted individually. Pricing depends on the number of guests, ingredient selection, table size, styling, location, dietary requirements, and whether staff are required. Our minimum booking is for six guests. Send us your event details for a tailored quotation.' },
+  { q: 'What is the minimum order for a grazing table?', a: 'Our grazing tables are available for a minimum of six guests — the same minimum in every area we serve. For larger events, we adjust the table size, food quantities, styling, and service according to your guest count and event format.' },
   { q: 'How do I size a grazing table for my guest count?', a: 'As a pre-dinner spread, plan one tier below your headcount — guests are grazing, not dining. As the main food, size at full headcount and tell us; we\'ll adjust quantities honestly.' },
+  { q: 'Is the grazing table intended as a full meal?', a: 'It can be designed either as light welcome food, cocktail-hour grazing, or a more substantial meal. Tell us how the table will be used so we can recommend the correct quantity.' },
   { q: 'Can you do vegan, gluten-free, or pork-free tables?', a: 'Yes — fully vegan tables, gluten-free crackers, pork-free charcuterie, and nut-free zones are all standard, with clear labelling.' },
-  { q: 'Do you deliver and set up at villas?', a: 'Yes — delivery, full styling, and setup across Bali, from Seminyak and Canggu to Ubud, Uluwatu, and Nusa Dua. Remote areas may carry a quoted travel fee.' },
+  { q: 'Do you deliver and set up at villas?', a: 'Yes — delivery, full styling, and setup across Bali, from Seminyak and Canggu to Ubud, Uluwatu, and Nusa Dua. The minimum booking is six guests everywhere; remote areas may simply carry a quoted travel fee.' },
+  { q: 'Are setup and cleanup included?', a: 'Setup requirements are included in your quotation. Depending on the event, we can provide setup only or remain on site to replenish, supervise, and complete the final breakdown. The exact service level will be confirmed before booking.' },
   { q: 'Is a grazing table enough for a wedding?', a: 'For cocktail hour, absolutely. As the only food for a full reception, we\'d honestly recommend pairing it with a dinner format — we\'ll build the stack in one quote.' },
   { q: 'How far ahead should I book?', a: 'Three to seven days for most tables; two weeks or more for wedding-season dates. A 50% deposit confirms. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
   { q: 'Can you add hot food or staff?', a: 'Yes — hot canapés, live stations, waiters, and bartenders are all add-ons. That\'s the advantage of booking grazing through a full catering company.' },
@@ -164,7 +203,7 @@ const FAQS = [
    ═══════════════════════════════════════════════════════════════ */
 const TESTIMONIALS = [
   { name: 'Emma R.', location: 'Uluwatu Villa', quote: 'The grazing table was the highlight of our wedding cocktail hour. Every guest commented on how beautiful (and tasty) it was.', rating: 5 },
-  { name: 'Jessica & Mike', location: 'Canggu Villa', quote: 'We ordered the cheese platter for 10 and the mini box for our honeymoon suite. Both were stunning and the quality was top-notch.', rating: 5 },
+  { name: 'Jessica & Mike', location: 'Canggu Villa', quote: 'We ordered a styled grazing table for 10 at our villa. It was stunning and the quality was top-notch.', rating: 5 },
   { name: 'The Park Family', location: 'Seminyak Villa', quote: 'Wedding-scale grazing for 35 guests. The vegan option was just as beautiful as the regular one. myCHEF nailed it.', rating: 5 },
 ]
 
@@ -186,14 +225,11 @@ export default function CateringGrazingPage() {
 
   const schemaFaq = FAQS.map(f => ({ question: f.q, answer: f.a }))
 
-  const grazingServiceSchema = serviceWithAggregateOfferSchema({
-    name: 'Grazing Tables Bali',
-    description: 'Styled grazing tables in Bali: artisan cheese, charcuterie, tropical fruit and dips for weddings, welcome drinks, villa events and corporate receptions, from 2 to 150 guests.',
-    url: PAGE_URL,
-    lowPrice: '650000',
-    highPrice: '2700000',
-    unitText: 'per table or per person',
-  }) as Record<string, unknown>
+  const grazingServiceSchema = serviceSchema(
+    'Grazing Tables Bali',
+    'Styled grazing tables in Bali: artisan cheese, charcuterie, tropical fruit and dips for weddings, welcome drinks, villa events and corporate receptions. Minimum booking six guests; every table is individually quoted.',
+    PAGE_URL,
+  )
 
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
@@ -203,19 +239,7 @@ export default function CateringGrazingPage() {
         canonical={PAGE_URL}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-grazing.webp`}
         jsonLd={[
-          {
-            ...grazingServiceSchema,
-            serviceType: 'Grazing table & event platter catering',
-            provider: {
-              ...(grazingServiceSchema.provider as Record<string, unknown>),
-              telephone: '+62 896-7407-2020',
-            },
-            offers: {
-              ...(grazingServiceSchema.offers as Record<string, unknown>),
-              offerCount: '5',
-              description: 'Flat prices for small/medium tables; event, wedding and corporate tables IDR 700,000 per person; 11% government tax + 10% service charge additional',
-            },
-          },
+          grazingServiceSchema,
           faqPageSchema(schemaFaq),
           cateringBreadcrumbSchema('Grazing Tables Bali', PAGE_URL),
         ]}
@@ -275,11 +299,28 @@ export default function CateringGrazingPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
           </div>
-          <p className="text-white/[60%] text-sm">From IDR 650,000 · 2–150 guests · Vegan options · Bali-wide delivery &amp; setup</p>
+          <p className="text-white/[60%] text-sm">Minimum six guests · Custom menus · Vegan and dietary options · Bali-wide delivery &amp; setup</p>
         </div>
       </section>
 
-      <TrustStrip />
+      {/* ═══════ TRUST STRIP — grazing-specific ═══════ */}
+      <div className="bg-white border-y border-[#E8E6E3]">
+        <div className="max-w-7xl mx-auto px-6 py-8 md:py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {TRUST_ITEMS.map(({ icon: Icon, label, desc }) => (
+              <div key={label} className="flex items-start gap-3">
+                <div className="bg-[#6B8E5A]/10 rounded-xl p-2.5 shrink-0">
+                  <Icon className="w-5 h-5 text-[#6B8E5A]" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[#1A1A1A]">{label}</p>
+                  <p className="text-xs text-[#4A4745] mt-0.5">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ═══════════════════════════════════════════════════════════════
           SECTION 1 — Grazing Tables in Bali
@@ -379,6 +420,29 @@ export default function CateringGrazingPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
+          SECTION 3B — Customize Your Grazing Table
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Customize Your Grazing Table"
+            title="Design a Grazing Table Around Your Event"
+            subtitle="Every grazing table can be adapted to your event, guests, and preferred style — from classic charcuterie to fully vegan or Indonesian-inspired spreads."
+          />
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            {CUSTOMIZE_OPTIONS.map((item) => (
+              <span key={item} className="px-4 py-2 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745]">
+                {item}
+              </span>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
+            Tell us your direction and dietary requirements — we will shape the menu, quantities, and styling around them in your custom quotation.
+          </p>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
           SECTION 4 — Styling Direction
           ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
@@ -403,37 +467,39 @@ export default function CateringGrazingPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-          SECTION 5 — Grazing Table Sizes
+          SECTION 5 — Grazing Table Service Levels
           ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Grazing Table Sizes"
             title="Choose the Right Size for Your Event"
-            subtitle="From intimate boards to full-scale event displays — every size is styled with the same attention to detail."
+            subtitle="Every grazing table is individually quoted around your guest count, menu selection, styling, location, and service requirements. Minimum booking: six guests."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6">
             {PACKAGES.map((pkg) => (
-              <div key={pkg.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all">
+              <div key={pkg.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 hover:shadow-lg transition-all flex flex-col">
                 <h3 className="text-xl md:text-2xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
-                <p className="font-semibold text-lg mb-1" style={{ color: GOLD }}>{pkg.price}</p>
-                <p className="text-sm text-[#4A4745] mb-1">
-                  <AllInPrice price={pkg.priceNum} showPlusPlus={false} suffix={pkg.price.includes('/person') ? '/person' : ''} />
-                </p>
-                <p className="text-sm text-[#4A4745] mb-4">{pkg.guests}</p>
-                <div className="space-y-2 mb-4">
+                <p className="text-sm font-semibold mb-4" style={{ color: GOLD }}>{pkg.guests}</p>
+                <div className="space-y-2 mb-4 flex-1">
                   {pkg.includes.map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-[#4A4745]">
-                      <Check className="w-4 h-4" style={{ color: GOLD }} /> {item}
+                      <Check className="w-4 h-4 flex-shrink-0" style={{ color: GOLD }} /> {item}
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-[#4A4745]/80 pt-3 border-t border-[#E8E6E3]">
+                <p className="text-xs text-[#4A4745]/80 mb-3">
                   <strong>Best for:</strong> {pkg.bestFor}
+                </p>
+                <p className="text-xs pt-3 border-t border-[#E8E6E3] italic" style={{ color: GOLD }}>
+                  {CUSTOM_QUOTE_LINE}
                 </p>
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
+            Packages are individually quoted. Pricing depends on guest count, ingredients, styling, location, and whether setup, service, or breakdown staff are required.
+          </p>
         </div>
       </section>
 
@@ -534,6 +600,30 @@ export default function CateringGrazingPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
+          SECTION 8B — Service Options for Your Grazing Table
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Service Options"
+            title="Service Options for Your Grazing Table"
+            subtitle="From simple delivery and styled setup to full event service — choose the level of support that fits your event. The exact service level is confirmed in your quotation."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {SERVICE_OPTIONS.map((item) => (
+              <div key={item.title} className="bg-white rounded-xl border border-[#E8E6E3] p-6 hover:shadow-md transition-all">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ background: `${GOLD}15` }}>
+                  <item.icon className="w-5 h-5" style={{ color: GOLD }} />
+                </div>
+                <h4 className="font-medium text-[#1A1A1A] text-sm md:text-base mb-1">{item.title}</h4>
+                <p className="text-xs text-[#4A4745]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
           SECTION 9 — FAQ (7 questions)
           ═══════════════════════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6">
@@ -555,18 +645,38 @@ export default function CateringGrazingPage() {
           <SectionHeader
             eyebrow="Request a Quote"
             title="Design My Grazing Table"
-            subtitle="Tell us your guest count, location, preferred style, dietary restrictions, and event timing. We will reply with a tailored quote within the hour."
+            subtitle="Tell us your guest count, location, preferred style, dietary restrictions, and event timing. Minimum booking: six guests. We will reply with a tailored quote within the hour."
           />
           <BookingFormCatering
             title="Request Grazing Table Quote"
-            subtitle="We will confirm availability, styling options, and pricing within the hour."
+            subtitle="Minimum booking: six guests. We will confirm availability, styling options, and your custom quotation within the hour."
             fields={[
-              { name: 'package', label: 'Package', type: 'select', icon: Package, required: true },
+              { name: 'tableType', label: 'Type of Grazing Table', type: 'select', icon: Package, required: true, options: [
+                'Villa gathering',
+                'Birthday or celebration',
+                'Wedding or bridal event',
+                'Corporate event',
+                'Retreat',
+                'Pool party',
+                'Pre-dinner reception',
+                'Other',
+              ] },
               { name: 'date', label: 'Event Date', type: 'date', icon: Calendar, required: true },
               { name: 'time', label: 'Event Time', type: 'text', icon: Clock, placeholder: 'e.g. 5:00 PM' },
               { name: 'area', label: 'Location / Area', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...', required: true },
               { name: 'villa', label: 'Villa or Venue Name', type: 'text', required: true },
-              { name: 'guests', label: 'Guest Count', type: 'number', icon: Users, placeholder: 'e.g. 20', required: true },
+              { name: 'guests', label: 'Guest Count (minimum 6 guests)', type: 'number', icon: Users, placeholder: 'Minimum booking: 6 guests', required: true },
+              { name: 'mealRole', label: 'Main Food or Before Another Meal?', type: 'select', options: [
+                'Main food for the event',
+                'Light grazing before another meal',
+                'Not sure — please advise',
+              ] },
+              { name: 'serviceLevel', label: 'Setup Only or Full Service?', type: 'select', options: [
+                'Delivery and styled setup only',
+                'Setup, attendance and replenishment',
+                'Full service including breakdown',
+                'Not sure — please advise',
+              ] },
               { name: 'style', label: 'Style Preference', type: 'text', placeholder: 'Classic / Mediterranean / Vegan / Cheese-only' },
               { name: 'dietary', label: 'Dietary Restrictions', type: 'textarea', placeholder: 'Vegetarian, vegan, gluten-free, nut-free, pork-free...' },
               { name: 'addons', label: 'Add-ons', type: 'textarea', placeholder: 'Bamboo board, pool styling, extra flowers, drinks...' },
@@ -574,13 +684,6 @@ export default function CateringGrazingPage() {
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
               { name: 'email', label: 'Email', type: 'text' },
-            ]}
-            packageOptions={[
-              'Small Grazing Board (2–4 pax)',
-              'Medium Villa Table (8–12 pax)',
-              'Full Event Grazing Table (15–30 pax)',
-              'Wedding Grazing Table (30–80 pax)',
-              'Corporate Reception Table (50–150 pax)',
             ]}
             accent={GOLD}
           />
@@ -598,8 +701,33 @@ export default function CateringGrazingPage() {
 
       <PressStrip />
 
-      <StaffingInfo />
-      <BookingProcess />
+      {/* ═══════════════════════════════════════════════════════════════
+          BOOKING FLOW — grazing-specific six steps
+          ═══════════════════════════════════════════════════════════════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Booking Flow"
+            title="How Booking a Grazing Table Works"
+            subtitle="From first message to final collection — a simple process sized to your event."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {BOOKING_FLOW.map((step, idx) => (
+              <div key={step.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 relative">
+                <span className="absolute top-4 right-4 text-[#E8E6E3] text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {String(idx + 1).padStart(2, '0')}
+                </span>
+                <step.icon className="w-7 h-7 mb-4" style={{ color: GOLD }} />
+                <h3 className="font-medium text-sm mb-2">{step.title}</h3>
+                <p className="text-xs text-[#4A4745] leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
+            For large or technically complex events, we also arrange a villa inspection and venue coordination in advance.
+          </p>
+        </div>
+      </section>
 
       <CateringDiscoverySection page="grazing" />
 
@@ -620,7 +748,7 @@ export default function CateringGrazingPage() {
             Order a Grazing Table for Your Bali Event
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Send your date, area, guest count, and preferred grazing style. We will confirm availability, styling options, and final price by WhatsApp.
+            Send your date, area, guest count, and preferred grazing style. Minimum booking: six guests — every table is individually quoted based on guest count, ingredients, styling, location, and service requirements. We will confirm availability and your custom quotation by WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -639,8 +767,6 @@ export default function CateringGrazingPage() {
           </div>
         </div>
       </section>
-
-      <TaxFooter className="py-6" />
 
       {/* ═══════ RELATED SERVICES ═══════ */}
       <section className="py-16 px-6 bg-[#FAFAF8]">
@@ -665,13 +791,10 @@ export default function CateringGrazingPage() {
         </div>
       </section>
 
-      <TaxFooter className="py-6" />
-      <ArticleContentSection downgradeFirstH1 />
-
       <StickyMobileCTA
         pageSource="catering-grazing"
         serviceName="grazing table in Bali"
-        intent="grazing table options and pricing"
+        intent="grazing table options and a custom quotation"
       />
     </div>
   )

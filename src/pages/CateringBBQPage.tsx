@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users,
   Flame, Wine, Beef, WheatOff, Map, Heart,
-  ArrowRight, Droplets, Sun,
+  ArrowRight, Droplets, Sun, ChefHat, UserPlus,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -16,7 +16,6 @@ import SeoHead, {
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
 import { ArticleContentSection, Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
@@ -36,24 +35,24 @@ const BBQ_PACKAGES = [
     title: 'Indonesian BBQ',
     price: 'IDR 700,000/person',
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert. The authentic Balinese grill — our most requested menu.',
-    includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
-    minGuests: 'Min. 10 guests',
+    includes: ['Chef', '1 service assistant', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
+    minGuests: 'Min. 6 guests',
     image: '/generated/mychef-catering-bali-bbq-package-indonesian.webp',
   },
   {
     title: 'International BBQ',
-    price: 'IDR 700,000/person',
+    price: 'IDR 850,000/person',
     description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, fresh fruit. Familiar crowd-pleasers for mixed international groups.',
-    includes: ['Chef', '2 service staff', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
-    minGuests: 'Min. 10 guests',
+    includes: ['Chef', '1 service assistant', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
+    minGuests: 'Min. 6 guests',
     image: '/generated/mychef-catering-bali-bbq-package-international.webp',
   },
   {
     title: 'Premium Surf & Turf',
-    price: 'IDR 850,000/person',
+    price: 'IDR 950,000/person',
     description: 'Wagyu steak, whole lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station, plated service. The celebration-tier grill.',
-    includes: ['Chef', '2 service staff', 'All equipment', 'Ingredients', 'Setup', '2-3h service', 'Plated service', 'Pack-up & cleanup'],
-    minGuests: 'Min. 10 guests',
+    includes: ['Chef', '1 service assistant', 'All equipment', 'Ingredients', 'Setup', '2-3h service', 'Plated service', 'Pack-up & cleanup'],
+    minGuests: 'Min. 6 guests',
     image: '/generated/mychef-catering-bali-bbq-package-surfturf.webp',
   },
 ]
@@ -81,7 +80,7 @@ const BBQ_MENU = [
 ]
 
 const SETUP_EQUIPMENT = [
-  { title: 'Live grill + service team', desc: 'Private chef grilling live and two service staff managing plating and drinks.' },
+  { title: 'Live grill + service team', desc: 'Private chef grilling live with 1 service assistant managing plating and drinks — 2 assistants for groups over 11 guests.' },
   { title: 'Portable grills & tools', desc: 'Charcoal and gas grills, cooking tools, chafing dishes, serving platters, and prep stations.' },
   { title: 'Fuel, transport & waste', desc: 'Propane, charcoal, equipment transport, and waste disposal — all handled by us.' },
   { title: 'Setup, service & cleanup', desc: 'Setup, 2–3 hours of service, and complete cleanup — we leave the villa spotless.' },
@@ -96,25 +95,25 @@ const ADDONS = [
   { title: 'Out-of-area travel', desc: 'Available for areas outside Seminyak/Canggu. Scoped in your quote.' },
 ]
 
-const AREA_MINIMUMS = [
-  { area: 'Seminyak / Canggu', min: '10 guests', fee: 'No travel fee' },
-  { area: 'Berawa / Pererenan', min: '10 guests', fee: 'No travel fee' },
-  { area: 'Ubud', min: '10 guests', fee: 'Travel fee applies' },
-  { area: 'Uluwatu / Bukit', min: '20 guests', fee: 'Travel fee applies' },
-  { area: 'Nusa Dua / Sanur / Jimbaran / Tanah Lot', min: 'Custom quote', fee: 'Quoted upfront' },
+const AREA_COVERAGE = [
+  { area: 'Seminyak / Canggu', fee: 'No travel fee' },
+  { area: 'Berawa / Pererenan', fee: 'No travel fee' },
+  { area: 'Ubud', fee: 'Travel fee applies' },
+  { area: 'Uluwatu / Bukit', fee: 'Travel fee applies' },
+  { area: 'Nusa Dua / Sanur / Jimbaran / Tanah Lot', fee: 'Travel fee quoted per booking' },
 ]
 
 const BBQ_VS_OTHERS = [
   { aspect: 'Energy', bbq: 'Relaxed, social, live-fire atmosphere', buffet: 'Self-serve, efficient for large groups', plated: 'Formal, precise, restaurant-style' },
   { aspect: 'Best for', bbq: 'Villa parties, birthdays, poolside, casual events', buffet: 'Weddings, large groups, mixed dietary needs', plated: 'Anniversaries, corporate dinners, fine dining' },
-  { aspect: 'Group size', bbq: '10–40 guests ideal', buffet: '30–200 guests', plated: '10–60 guests' },
+  { aspect: 'Group size', bbq: '6–40 guests ideal', buffet: '30–200 guests', plated: '10–60 guests' },
   { aspect: 'Service style', bbq: 'Chef grills live, staff serves', buffet: 'Guests self-serve from stations', plated: 'Individual courses to each guest' },
   { aspect: 'Setup', bbq: 'Grill, prep station, serving table', buffet: 'Chafing dishes, multiple stations', plated: 'Full table setting, course pacing' },
 ]
 
 const FAQS = [
-  { q: 'How much does BBQ catering in Bali cost?', a: 'From IDR 700,000 per person for the Indonesian and International packages, IDR 850,000 for Premium Surf & Turf — chef, staff, equipment, ingredients, and cleanup included. Prices are ++ (11% government tax + 10% service charge).' },
-  { q: "What's the minimum number of guests?", a: 'Ten guests in Seminyak, Canggu, Berawa, Pererenan, and Ubud; twenty in Uluwatu. Other areas are quoted case by case.' },
+  { q: 'How much does BBQ catering in Bali cost?', a: 'From IDR 700,000 per person for Indonesian BBQ, IDR 850,000 for International BBQ, and IDR 950,000 for Premium Surf & Turf — chef, service assistant, equipment, ingredients, and cleanup included. Prices are ++ (11% government tax + 10% service charge).' },
+  { q: "What's the minimum number of guests?", a: 'Six guests — the same minimum in every area we serve, from Seminyak to Uluwatu. The only difference by location is a travel fee for farther areas, always quoted per booking and itemised upfront.' },
   { q: 'Do you bring the grill and equipment?', a: 'Yes — grills, fuel, tools, chafing dishes, platters, prep stations, and cleanup supplies. You do not need to own anything.' },
   { q: 'Can you do a seafood-focused or vegetarian BBQ?', a: 'Absolutely. Any package can go seafood-heavy, and we run full vegetarian and vegan grills with plant-based proteins, grilled vegetables, salads, and sides. For a dedicated market-fresh seafood menu, see our seafood BBQ page.' },
   { q: 'Are drinks included?', a: 'Not in the base package. Add a bartender with a 3-hour open bar for IDR 4,000,000 flat, or wine and soft-drink packages as line items in your quote.' },
@@ -149,7 +148,7 @@ export default function CateringBBQPage() {
             description: 'Chef-led BBQ catering for Bali villas, parties and events. Live grilling, service staff, equipment and cleanup included. Indonesian, International and Premium Surf & Turf packages.',
             url: `${SITE}/catering/bbq-catering`,
             lowPrice: '700000',
-            highPrice: '850000',
+            highPrice: '950000',
           }),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           howToSchema({
@@ -187,34 +186,47 @@ export default function CateringBBQPage() {
           />
           <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            BBQ Catering Bali
-          </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            BBQ Catering Bali for Villas, Parties & Events
-          </h1>
-          <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            A private chef grilling live at your villa — satay, seafood, Wagyu, and Balinese sides cooked over real fire while your guests relax. We bring the grills, the team, and the cleanup. You bring the appetite.
-          </p>
-          <p className="text-white/[80%] text-base mb-6">
-            From IDR 700,000/person · Min. 10 guests · Chef + 2 service staff included
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-              <MessageCircle className="w-4 h-4" /> Build My BBQ Menu
-            </a>
-            <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              See Package Prices
-            </a>
-          </div>
-          <p className="text-white/[55%] text-xs mb-8">
-            Itemised quote on WhatsApp within the hour. 50% deposit confirms your date.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Same-day WhatsApp reply</span>
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Grill + equipment included</span>
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full cleanup after</span>
+        <div className="relative z-10 px-6 max-w-3xl w-full mx-auto pt-20">
+          <div className="text-center rounded-3xl border border-white/10 bg-black/35 backdrop-blur-md px-6 py-10 md:px-12 md:py-12 shadow-2xl">
+            <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+              BBQ Catering Bali
+            </p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              BBQ Catering Bali for Villas, Parties & Events
+            </h1>
+            <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-2xl mx-auto">
+              A private chef grilling live at your villa — satay, seafood, Wagyu, and Balinese sides cooked over real fire while your guests relax. We bring the grills, the team, and the cleanup. You bring the appetite.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8">
+              <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#C5A028]/15 border border-[#C5A028]/40 text-[#E8C95A] text-xs sm:text-sm font-semibold tracking-wide">
+                <Flame className="w-3.5 h-3.5" /> From IDR 700,000/person
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs sm:text-sm tracking-wide">
+                <Users className="w-3.5 h-3.5 text-[#C5A028]" /> Min. 6 guests
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs sm:text-sm tracking-wide">
+                <ChefHat className="w-3.5 h-3.5 text-[#C5A028]" /> Chef + 1 assistant
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs sm:text-sm tracking-wide">
+                <UserPlus className="w-3.5 h-3.5 text-[#C5A028]" /> 2 assistants over 11 guests
+              </span>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+                <MessageCircle className="w-4 h-4" /> Build My BBQ Menu
+              </a>
+              <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+                See Package Prices
+              </a>
+            </div>
+            <p className="text-white/[55%] text-xs mb-6">
+              Itemised quote on WhatsApp within the hour. 50% deposit confirms your date.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-5 border-t border-white/10 text-white/[50%] text-xs">
+              <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Same-day WhatsApp reply</span>
+              <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Grill + equipment included</span>
+              <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full cleanup after</span>
+            </div>
           </div>
         </div>
       </section>
@@ -235,7 +247,7 @@ export default function CateringBBQPage() {
                 Our BBQ catering works across all villa types — from Canggu pool villas to Uluwatu clifftop estates. We set up in gardens, terraces, pool decks, and covered patios. The grill becomes the centerpiece of the evening.
               </p>
               <p className="text-[#4A4745]">
-                Every package includes a private chef who grills live, two service staff who manage plating and drinks, and full cleanup afterward. We handle propane, charcoal, equipment transport, and waste disposal.
+                Every package includes a private chef who grills live, one service assistant who manages plating and drinks — two assistants for groups over 11 guests — and full cleanup afterward. We handle propane, charcoal, equipment transport, and waste disposal.
               </p>
               <p className="text-[#4A4745]">
                 See <Link to="/catering" className="text-[#C5A028] hover:underline">all catering options</Link> to compare BBQ with buffet, plated, and grazing formats.
@@ -394,12 +406,12 @@ export default function CateringBBQPage() {
           <SectionHeader
             eyebrow="Chapter 7 — Packages"
             title="BBQ Catering Packages & Prices"
-            subtitle="Every package includes your chef, two service staff, all grilling equipment, ingredients, setup, 2–3 hours of service, and full cleanup. Prices are per person, ++ (11% government tax + 10% service charge)."
+            subtitle="Every package includes your chef and 1 service assistant — 2 assistants for groups over 11 guests — plus all grilling equipment, ingredients, setup, 2–3 hours of service, and full cleanup. Prices are per person, ++ (11% government tax + 10% service charge)."
           />
-          <div className="grid md:grid-cols-3 gap-6 mt-10">
-            <p className="text-sm text-[#4A4745]/80 text-center max-w-3xl mx-auto mb-8">
-              Price-model note: these are service packages (from IDR 700K/person, min. 10). Our <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">full BBQ menus</Link> list named signature menus priced per guest (from IDR 950K/guest, min. 8) — a different product, so the entry floors differ.
-            </p>
+          <p className="text-sm text-[#4A4745]/80 text-center max-w-3xl mx-auto mt-6">
+            Price-model note: these are service packages (from IDR 700K/person, min. 6). Our <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">full BBQ menus</Link> list named signature menus priced per guest (from IDR 950K/guest, min. 8) — a different product, so the entry floors differ.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mt-10 items-stretch">
             {BBQ_PACKAGES.map((pkg) => (
               <div key={pkg.title} className="bbq-reveal bg-white rounded-2xl border border-[#E8E6E3] overflow-hidden flex flex-col">
                 <div className="aspect-[16/10] overflow-hidden">
@@ -509,42 +521,42 @@ export default function CateringBBQPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 10: AREA MINIMUMS ═══════ */}
+      {/* ═══════ SECTION 10: AREA COVERAGE ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
             eyebrow="Chapter 10 — Coverage"
             title="BBQ Catering Across Bali"
-            subtitle="BBQ catering across all major Bali villa areas. Minimums depend on travel time and staffing logistics."
+            subtitle="BBQ catering across all major Bali villa areas. The minimum is the same everywhere — farther areas simply add a travel fee, quoted per booking."
           />
-          <div className="hidden md:block overflow-x-auto mt-10">
+          <p className="text-sm text-[#1A1A1A] font-semibold text-center mt-10 mb-6">
+            Minimum 6 guests in every area — the same island-wide. Only the travel fee changes with distance.
+          </p>
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b-2 border-[#1A1A1A]">
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Area</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Minimum Guests</th>
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Travel</th>
                 </tr>
               </thead>
               <tbody>
-                {AREA_MINIMUMS.map((row) => (
+                {AREA_COVERAGE.map((row) => (
                   <tr key={row.area} className="border-b border-[#E8E6E3]">
                     <td className="py-4 font-medium">{row.area}</td>
-                    <td className="py-4">{row.min}</td>
                     <td className="py-4 text-[#4A4745]">{row.fee}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <div className="md:hidden space-y-3 mt-10">
-            {AREA_MINIMUMS.map((row) => (
+          <div className="md:hidden space-y-3">
+            {AREA_COVERAGE.map((row) => (
               <div key={row.area} className="bg-white rounded-xl border border-[#E8E6E3] p-4">
-                <div className="flex items-center justify-between mb-1">
+                <div className="flex items-center justify-between gap-2">
                   <span className="font-medium">{row.area}</span>
-                  <span className="text-sm text-[#C5A028] font-semibold">{row.min}</span>
+                  <span className="text-sm text-[#C5A028] font-semibold text-right">{row.fee}</span>
                 </div>
-                <p className="text-xs text-[#4A4745]">{row.fee}</p>
               </div>
             ))}
           </div>
@@ -629,7 +641,33 @@ export default function CateringBBQPage() {
         </div>
       </section>
 
-      <StaffingInfo />
+      {/* ═══════ BBQ STAFFING ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Team"
+            title="Who's On Site at Your BBQ"
+            subtitle="Staffing is always included in your BBQ package — never an add-on. The rule is simple and the same for every booking."
+          />
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-10">
+            <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
+              <ChefHat className="w-8 h-8 text-[#C5A028] mb-4" />
+              <h3 className="font-medium text-lg mb-2">Your Chef</h3>
+              <p className="text-sm text-[#4A4745]">
+                <strong>Every BBQ booking includes a private chef.</strong> Your chef grills live from the first satay to the last dessert and runs the whole fire station — prepping, grilling, and timing every wave of food.
+              </p>
+            </div>
+            <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
+              <UserPlus className="w-8 h-8 text-[#C5A028] mb-4" />
+              <h3 className="font-medium text-lg mb-2">Service Assistants</h3>
+              <p className="text-sm text-[#4A4745]">
+                <strong>1 assistant is always included — groups over 11 guests get 2 assistants.</strong> Assistants manage plating, drinks, and clearing so service never slows down and your villa is left spotless.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <BookingProcess />
 
       <CateringDiscoverySection page="bbq" />

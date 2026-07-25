@@ -23,7 +23,6 @@ import BookingProcess from '@/components/catering/BookingProcess'
 import { ArticleContentSection, Breadcrumb, PressStrip, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
-import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
@@ -91,7 +90,7 @@ const RETREAT_TYPES = [
   {
     icon: Heart,
     title: 'Wellness Retreats',
-    desc: 'Wellness retreat catering Bali balances nourishment with intention. Whether your program focuses on anti-inflammatory eating, gut health, hormonal balance, or mindful consumption, we design menus that reinforce your teaching. Meals are colourful, nutrient-dense, and free from hidden sugars or heavy processed oils. We work with retreat leaders to align food with workshops, spa treatments, and movement sessions so guests feel supported rather than distracted. From turmeric-ginger shots at breakfast to magnesium-rich evening meals, every dish contributes to the wellness narrative of the retreat.',
+    desc: 'Wellness retreat catering Bali balances nourishment with intention. Whether your program focuses on balanced eating, gut-friendly menus, or mindful consumption, we design menus that reinforce your teaching. Meals are colourful, nutrient-dense, and free from hidden sugars or heavy processed oils. We work with retreat leaders to align food with workshops, spa treatments, and movement sessions so guests feel supported rather than distracted. From turmeric-ginger shots at breakfast to magnesium-rich evening meals, every dish contributes to the wellness narrative of the retreat.',
   },
   {
     icon: Moon,
@@ -101,12 +100,12 @@ const RETREAT_TYPES = [
   {
     icon: Zap,
     title: 'Fitness Retreats',
-    desc: 'Fitness retreat catering Bali fuels training blocks, surf camps, and strength-focused programs. We build high-protein breakfasts, recovery lunches, and rehydrating snacks around your daily schedule. Macro balance matters here: lean proteins, complex carbohydrates, healthy fats, and targeted post-workout nutrition. Guests leave strong, not depleted. We also track hydration, electrolyte intake, and anti-inflammatory ingredients to support recovery between sessions. Whether the program is HIIT, boxing, CrossFit, or functional training, the food keeps pace with the output.',
+    desc: 'Fitness retreat catering Bali fuels training blocks, surf camps, and strength-focused programs. We build high-protein breakfasts, recovery lunches, and rehydrating snacks around your daily schedule. Macro balance matters here: lean proteins, complex carbohydrates, healthy fats, and targeted post-workout nutrition. Guests leave strong, not depleted. We also track hydration, electrolyte intake, and recovery-focused ingredients to support guests between sessions. Whether the program is HIIT, boxing, CrossFit, or functional training, the food keeps pace with the output.',
   },
   {
     icon: Sun,
     title: 'Surf Retreats',
-    desc: 'Surf retreat catering Bali has to match ocean time. Early dawn-patrol breakfasts, substantial post-surf brunches, and relaxed evening meals keep energy consistent across long days in the water. We emphasise hydration, electrolytes, and anti-inflammatory ingredients to support joints and skin after sun exposure. Packed lunches and cool boxes can be prepared for boat trips or beach days. Our team understands that surf schedules change with tides and swell, so meal timing remains flexible and food stays fresh even when guests return late and hungry.',
+    desc: 'Surf retreat catering Bali has to match ocean time. Early dawn-patrol breakfasts, substantial post-surf brunches, and relaxed evening meals keep energy consistent across long days in the water. We emphasise hydration, electrolytes, and recovery-focused ingredients after long days in the sun. Packed lunches and cool boxes can be prepared for boat trips or beach days. Our team understands that surf schedules change with tides and swell, so meal timing remains flexible and food stays fresh even when guests return late and hungry.',
   },
   {
     icon: BriefcaseIcon,
@@ -136,7 +135,7 @@ const RETREAT_TYPES = [
   {
     icon: Heart,
     title: "Women's Retreats",
-    desc: "Women's retreat catering Bali creates communal tables where connection is as important as nutrition. Menus are nourishing, beautifully presented, and responsive to hormonal health, pregnancy, and postpartum needs where requested. We design shared meals that feel like ceremony, with floral styling, gentle lighting, and dishes that invite conversation. Dietary conversations are handled with care, and the kitchen is flexible enough to support cycle-aware eating, lactation-friendly ingredients, or simply a group of friends celebrating a milestone together.",
+    desc: "Women's retreat catering Bali creates communal tables where connection is as important as nutrition. Menus are nourishing, beautifully presented, and responsive to guest needs where requested. We design shared meals that feel like ceremony, with floral styling, gentle lighting, and dishes that invite conversation. Dietary conversations are handled with care, and the kitchen is flexible enough to support individual requests or simply a group of friends celebrating together.",
   },
   {
     icon: ShieldCheck,
@@ -217,7 +216,7 @@ const MENU_DIRECTIONS = [
 const DIETARY_EXPERTISE = [
   {
     title: 'Vegan Retreat Catering',
-    desc: 'Full plant-based menus built around complete proteins, B12-rich ingredients, healthy fats, and satisfying textures. We do not simply remove animal products; we rebuild dishes from the ground up so vegan guests feel fully catered to.',
+    desc: 'Full plant-based menus built around complete plant proteins, healthy fats, and satisfying textures. We do not simply remove animal products; we rebuild dishes from the ground up so vegan guests feel fully catered to.',
   },
   {
     title: 'Vegetarian Retreat Meals',
@@ -455,8 +454,10 @@ const TIMELINE = [
 ]
 
 const FAQS = [
-  { q: 'How much does retreat catering cost?', a: 'Retreat catering is quoted individually based on group size, menu intensity, dietary complexity and length of programme. Contact us for a custom per-person-per-day package.' },
+  { q: 'How much does retreat catering cost?', a: 'Retreat catering is quoted individually based on group size, menu intensity, dietary complexity and length of programme. Minimum booking applies, and applicable service charge and government tax are shown clearly in your quotation. Contact us for a custom per-person-per-day package.' },
+  { q: 'Do you cater one-day workshops?', a: 'Yes. We provide full one-day catering for workshops, trainings and retreats — welcome coffee, break stations, working lunch, afternoon refreshments, and a closing dinner where required, all timed to your agenda.' },
   { q: 'How do you handle dietary restrictions at retreats?', a: 'We use a structured pre-retreat dietary intake, per-guest meal mapping, and rotating menus so restricted guests are never served the same limited dish twice.' },
+  { q: 'Can you guarantee an allergen-free environment?', a: 'No. We take reasonable precautions — intake forms, dish labelling and separation procedures — but we cannot guarantee an entirely allergen-free environment, particularly in third-party villa or venue kitchens. Guests with serious allergies should provide complete written requirements before the event.' },
   { q: 'Can you cater a retreat of 20 / 30 / 50 people?', a: 'Yes. Staffing scales with headcount — for example, a 30-guest retreat typically runs with one chef and two support staff. Larger retreats are handled through our event team.' },
   { q: 'Do retreat menus rotate over multi-day stays?', a: 'Yes. Menus rotate across the programme with energy-timed meals around sessions and excursions. Sample rotations are available on request.' },
 ]
@@ -477,14 +478,14 @@ export default function CateringRetreatPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Retreat Catering Bali | Per-Day Meal Plans | myCHEF"
-        description="Retreat catering in Bali: plant-forward, nutrient-dense meal plans for multi-day retreats. Vegan, raw & gluten-free specialists. WhatsApp myCHEF."
+        title="Retreat Catering Bali | Workshops, Wellness & Multi-Day Events"
+        description="Retreat catering in Bali for one-day workshops, wellness programs and multi-day events. Chefs, service staff, dietary management and full coordination. WhatsApp myCHEF."
         canonical={`${SITE}/catering/retreat-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-retreat.webp`}
         jsonLd={[
           serviceSchema(
             'Retreat Catering Bali',
-            'Per-day retreat meal plans in Bali: plant-forward, vegan, gluten-free and detox menus for multi-day retreats, with dietary intake, daily fresh shopping and a dedicated retreat chef.',
+            'Retreat catering in Bali for one-day workshops, wellness programs, corporate offsites and multi-day group events, with dietary intake, daily fresh shopping and a dedicated retreat chef.',
             `${SITE}/catering/retreat-catering`
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
@@ -513,16 +514,16 @@ export default function CateringRetreatPage() {
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Retreat Catering Bali' }]} theme="dark" className="justify-center mb-8" />
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Per-Day Retreat Meal Plans in Bali
+            Retreat & Workshop Catering in Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Retreat Catering Bali — Per-Day Meal Plans for Multi-Day Retreats
+            Retreat Catering Bali for Workshops, Wellness Programs and Group Events
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Consistent, chef-led retreat catering Bali for programmes that run three, five or seven days: plant-forward menus, dietary-exact preparation, and a kitchen rhythm that sustains energy from the first breakfast to the farewell dinner.
+            Chef-led retreat catering in Bali for workshops, yoga and wellness programs, corporate offsites, creative retreats and private groups. We coordinate menus, chefs, service staff, timing, kitchen management, setup and cleanup — for one-day and multi-day programs alike.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            Plant-forward, vegan & detox menus · Dedicated retreat chef · Bali-wide, Ubud specialists
+            One-day & multi-day programs · Chefs, waiters & coordination · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-retreat-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
@@ -585,6 +586,148 @@ export default function CateringRetreatPage() {
         </div>
       </section>
 
+      {/* ═══════ SECTION 1a: ONE-DAY WORKSHOP & RETREAT CATERING ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="One-Day Programs"
+            title="One-Day Workshop & Retreat Catering"
+            subtitle="Full catering for single-day workshops, trainings and retreats — timed to your agenda from registration to closing."
+          />
+          <div className="grid md:grid-cols-2 gap-8 mt-10">
+            <div>
+              <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>What a One-Day Program Can Include</h3>
+              <div className="space-y-3">
+                {[
+                  'Registration breakfast or welcome coffee',
+                  'All-day coffee and tea station',
+                  'Morning snack or fruit break',
+                  'Working lunch — buffet, bowls or boxes',
+                  'Afternoon refreshments and hydration',
+                  'Networking drinks after the final session',
+                  'Closing dinner where required',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                    <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-[#FAFAF8] rounded-2xl p-6 border border-[#E8E6E3]">
+              <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>How We Run It</h3>
+              <div className="space-y-3">
+                {[
+                  'Meal times coordinated with your agenda blocks',
+                  'Quiet setup and reset during sessions',
+                  'Fast service designed for short breaks',
+                  'Labelled dietary meals for every guest',
+                  'Flexible timing if the program runs late',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                    <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-[#4A4745] mt-6">
+                Multi-day retreat programs are planned separately with rotating menus, daily procurement and a dedicated chef — see the planning section below.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 1c: EXAMPLE SCHEDULES ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Example Schedules"
+            title="Example Catering Schedules"
+            subtitle="Illustrative timings — every schedule is customised to your program."
+          />
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            <div className="retreat-reveal bg-white rounded-2xl border border-[#E8E6E3] p-6">
+              <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>One-Day Workshop</h3>
+              <div className="space-y-3">
+                {[
+                  ['08:00', 'Welcome coffee, tea and pastries at registration'],
+                  ['10:30', 'Morning break — fruit, snacks, coffee refill'],
+                  ['12:30', 'Working lunch — buffet or individual boxes'],
+                  ['15:30', 'Afternoon snacks, juices and hydration'],
+                  ['18:30', 'Closing dinner or networking drinks'],
+                ].map(([time, item]) => (
+                  <div key={time} className="flex items-start gap-3 text-sm text-[#4A4745]">
+                    <span className="font-semibold text-[#C5A028] w-12 flex-shrink-0">{time}</span> {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="retreat-reveal bg-white rounded-2xl border border-[#E8E6E3] p-6">
+              <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Three-Day Retreat</h3>
+              <div className="space-y-3">
+                {[
+                  ['Day 1', 'Arrival refreshments and a welcome dinner'],
+                  ['Day 2', 'Full day — breakfast, snacks, lunch, recovery, dinner'],
+                  ['Day 3', 'Breakfast, closing lunch and farewell drinks'],
+                ].map(([time, item]) => (
+                  <div key={time} className="flex items-start gap-3 text-sm text-[#4A4745]">
+                    <span className="font-semibold text-[#C5A028] w-12 flex-shrink-0">{time}</span> {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 1d: INCLUDED VS ADDITIONAL ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Scope"
+            title="What's Included — and What's Additional"
+            subtitle="Clear scope so there are no surprises on either side."
+          />
+          <div className="grid md:grid-cols-2 gap-6 mt-10">
+            <div className="retreat-reveal bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
+              <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Included in Retreat Catering</h3>
+              <div className="space-y-3">
+                {[
+                  'Menu planning with the retreat organizer',
+                  'Professional chefs scaled to your group',
+                  'Daily fresh grocery shopping (normal groceries included)',
+                  'Cooking, plating and meal service',
+                  'Dietary intake, mapping and dish labelling',
+                  'Kitchen organisation and full cleanup after service',
+                  'One designated catering contact throughout the program',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                    <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="retreat-reveal bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
+              <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Available as Additional Services</h3>
+              <div className="space-y-3">
+                {[
+                  'Waiters, bartenders and butlers',
+                  'Barista coffee stations and juice bars',
+                  'Premium ingredients and imported specialty items',
+                  'BBQ nights, seafood nights and fine-dining finales',
+                  'Table styling, flowers and event decoration',
+                  'Photography, live music and entertainment',
+                  'Equipment hire beyond standard kitchen kit',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                    <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ SECTION 1b: PRICING ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
@@ -598,7 +741,7 @@ export default function CateringRetreatPage() {
               <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Plant-Forward Retreat Plan</h3>
               <p className="text-sm text-[#C5A028] font-semibold mb-4">Tailored quote</p>
               <p className="text-sm text-[#4A4745] leading-relaxed mb-4">
-                Vegetables, legumes and grains at the centre of every plate. Breakfast, lunch, dinner, snacks, juices and herbal teas for groups of 10–40. Ayurvedic options, gluten-free throughout, no refined sugar. Best for yoga retreats, meditation groups and holistic programmes.
+                Vegetables, legumes and grains at the centre of every plate. Breakfast, lunch, dinner, snacks, juices and herbal teas for groups of 10–40. Sattvic-inspired or Ayurvedic-style menus can be developed in consultation with the retreat organizer. Gluten-free throughout, no refined sugar. Best for yoga retreats, meditation groups and holistic programmes.
               </p>
               <ul className="space-y-2 text-sm text-[#4A4745]">
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> 100% plant-forward base</li>
@@ -610,10 +753,10 @@ export default function CateringRetreatPage() {
               <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Wellness & Detox Retreat Plan</h3>
               <p className="text-sm text-[#C5A028] font-semibold mb-4">Tailored quote</p>
               <p className="text-sm text-[#4A4745] leading-relaxed mb-4">
-                Balanced-macro, anti-inflammatory menus with organic produce where possible, cold-pressed juices and superfood options for groups of 10–60. Supports full juice-cleanse days or partial detox windows inside a broader menu. Best for detox retreats, spa programmes and fitness groups.
+                Balanced-macro menus with organic produce where possible, cold-pressed juices and superfood options for groups of 10–60. Supports full juice-cleanse days or partial detox windows inside a broader menu. Best for detox retreats, spa programmes and fitness groups.
               </p>
               <ul className="space-y-2 text-sm text-[#4A4745]">
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Anti-inflammatory focus</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Balanced-macro focus</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Juice-cleanse compatible</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Ideal for 10–60 guests</li>
               </ul>
@@ -623,7 +766,7 @@ export default function CateringRetreatPage() {
             Normal groceries are included in every plan. Premium upgrades — imported superfoods, oyster or seafood nights, an elevated closing dinner — are quoted separately in advance.
           </p>
           <p className="text-xs text-[#4A4745]/70 mt-4 text-center">
-            Retreat programmes are priced per group, length and menu. Contact us for a fixed quote.
+            Retreat programmes are priced per group, length and menu. Minimum booking applies. One-day and multi-day retreat packages are available. Applicable service charge and government tax are shown clearly in your quotation. Contact us for a fixed quote.
           </p>
         </div>
       </section>
@@ -698,7 +841,7 @@ export default function CateringRetreatPage() {
                   { title: 'Lunch', desc: 'Balanced macros, raw and cooked vegetables, lean proteins, and complex carbs.' },
                   { title: 'Snacks', desc: 'Fresh fruit, raw nuts, energy balls, and hydrating juices.' },
                   { title: 'Dinner', desc: 'Grounding proteins, warming vegetables, and comforting starches.' },
-                  { title: 'Recovery', desc: 'Anti-inflammatory ingredients, electrolytes, and light proteins after activity.' },
+                  { title: 'Recovery', desc: 'Electrolytes, light proteins and fresh ingredients after activity.' },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#C5A028] mt-2" />
@@ -796,6 +939,9 @@ export default function CateringRetreatPage() {
           <p className="text-sm text-[#4A4745] mt-8 text-center">
             For guests who want chef-prepared nourishment outside the retreat schedule, we also offer <Link to="/healthy-meal-delivery-indonesia" className="text-[#C5A028] hover:underline">chef-prepared healthy meal delivery</Link> across Indonesia.
           </p>
+          <p className="text-xs text-[#4A4745]/70 mt-4 text-center max-w-2xl mx-auto">
+            We take reasonable precautions with allergies and dietary restrictions, but we cannot guarantee an entirely allergen-free environment, particularly in third-party villa or venue kitchens. Guests with serious allergies or medically prescribed diets should provide complete written requirements before the event.
+          </p>
         </div>
       </section>
 
@@ -820,6 +966,22 @@ export default function CateringRetreatPage() {
                 <p className="text-sm text-[#4A4745] leading-relaxed">{step.desc}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-10 bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
+            <h3 className="font-semibold text-xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Backup Planning</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                'Backup staff available if team members fall ill',
+                'Alternative menus if ingredients are unavailable',
+                'Extra equipment for limited villa kitchens',
+                'Contingency timing when workshops run late',
+                'Weather and rain backup for outdoor dining',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                  <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                </div>
+              ))}
+            </div>
           </div>
           <p className="text-sm text-[#4A4745] mt-8 text-center">
             For lighter-touch programmes, combine an on-site chef for key meals with <Link to="/catering/drop-off-catering" className="text-[#C5A028] hover:underline">drop-off catering</Link> for the rest.
@@ -957,22 +1119,53 @@ export default function CateringRetreatPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 14: TESTIMONIALS ═══════ */}
-      <TestimonialBlock
-        testimonials={[
-          { name: 'Yoga Retreat Center', location: 'Ubud', quote: 'We have worked with myCHEF for 3 years. Their retreat catering is exceptional — plant-based, delicious, and always on time. Our guests rave about the food.', rating: 5 },
-          { name: 'Wellness Resort', location: 'Sidemen', quote: 'Multi-day wellness retreat for 25 guests. The chef created beautiful Ayurvedic meals that aligned perfectly with our program. Highly professional team.', rating: 5 },
-          { name: 'Corporate Offsite', location: 'Canggu', quote: '5-day team offsite with 40 people. Breakfast, lunch, dinner, and snacks. The team adapted to our changing schedule without complaint. Food was outstanding.', rating: 5 },
-        ]}
-        title="What Retreat Organizers Say"
-        subtitle="Real reviews from retreat centers and wellness resorts across Bali."
-      />
+      {/* ═══════ SECTION 14: RETREAT CASE STUDIES ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Case Studies"
+            title="Retreat Case Studies"
+            subtitle="Recent retreats and workshops we have catered across Bali."
+          />
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
+            {[
+              {
+                title: 'Wellness Retreat — Ubud',
+                scope: ['24 guests over 3 days', 'Full meal plan — breakfast, lunch, dinner, snacks', 'Vegan, gluten-free, and nut-free requirements managed'],
+                result: 'Every dietary guest was served labelled, varied meals across all three days; the organizer has rebooked annually.',
+              },
+              {
+                title: 'Corporate Offsite — Canggu',
+                scope: ['40 people over 5 days', 'Breakfast, lunch, dinner, and snacks', 'Schedule adapted daily around sessions and excursions'],
+                result: 'The team adjusted to last-minute schedule changes without disruption; food quality held across all five days.',
+              },
+              {
+                title: 'Wellness Retreat — Sidemen',
+                scope: ['25 guests, multi-day program', 'Ayurvedic-style menus developed with the retreat leader', 'Remote-venue logistics and procurement planning'],
+                result: 'Menus aligned with the program philosophy and service stayed calm and unobtrusive throughout.',
+              },
+            ].map((cs) => (
+              <div key={cs.title} className="retreat-reveal bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 flex flex-col">
+                <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{cs.title}</h3>
+                <ul className="space-y-2 mb-4 flex-1">
+                  {cs.scope.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                      <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm text-[#4A4745]/80"><span className="font-semibold text-[#1A1A1A]">Result:</span> {cs.result}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ═══════ SECTION 15: FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="FAQ" title="Retreat Catering FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={3} />
+          <FAQAccordion items={FAQS} defaultOpenCount={6} />
         </div>
       </section>
 
@@ -997,8 +1190,23 @@ export default function CateringRetreatPage() {
             Request a Retreat Meal Plan
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Send your retreat dates, length, guest count, villa location and dietary split. We reply on WhatsApp within the hour with chef availability and send a sample meal plan with a custom per-day quote within 24 hours.
+            Send your retreat or workshop details and we reply on WhatsApp within the hour with chef availability, then a tailored proposal within 24 hours.
           </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 text-left">
+            <h3 className="text-white font-semibold mb-4 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>What to Send Us</h3>
+            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+              {[
+                'Retreat or workshop type', 'One-day or multi-day', 'Dates', 'Venue and area',
+                'Guest count (incl. staff meals)', 'Program agenda', 'Meals required', 'Dietary requirements',
+                'Preferred service format', 'Drinks and beverages', 'Kitchen facilities available', 'Service staff needed',
+                'Indicative budget', 'Invoice details',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-2 text-sm text-white/[80%]">
+                  <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-retreat-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> Request a Retreat Meal Plan

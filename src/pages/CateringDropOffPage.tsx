@@ -5,6 +5,7 @@ import {
   Utensils, Package, CreditCard, ChefHat, Truck, Clock, ShieldCheck,
   X, Home, Baby, Umbrella, Cake, Sparkles, Plane,
   Thermometer, ClipboardList, Box, Wine, Coffee, Leaf,
+  Dumbbell, Waves, Repeat, Sunrise, Building2, HeartPulse,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -17,10 +18,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import StaffingInfo from '@/components/catering/StaffingInfo'
-import BookingProcess from '@/components/catering/BookingProcess'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
-import TrustStrip from '@/components/shared/TrustStrip'
+import { Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
@@ -180,12 +178,129 @@ const ADDONS = [
   { icon: Coffee, title: 'Coffee', desc: 'Cold brew or hot coffee carafes' },
   { icon: Utensils, title: 'Disposable plates', desc: 'Eco-friendly cutlery, napkins, and serveware' },
   { icon: Box, title: 'Reusable equipment', desc: 'Chafing dishes and serving utensils for hire' },
-  { icon: Users, title: 'Setup staff', desc: 'Optional staff to arrange food on arrival' },
+  { icon: Users, title: 'Extra portions', desc: 'Additional trays and portions for unexpected guests' },
+]
+
+/* ───────── Trust Strip — drop-off specific (no staff, no cleanup) ───────── */
+const TRUST_ITEMS = [
+  { icon: MessageCircle, label: 'Delivery confirmation', desc: 'WhatsApp update on arrival' },
+  { icon: ClipboardList, label: 'Clearly labelled dishes', desc: 'Every container identified' },
+  { icon: Thermometer, label: 'Reheating instructions', desc: 'Printed in every order' },
+  { icon: Package, label: 'Recyclable packaging', desc: 'Insulated and chilled boxes' },
+  { icon: Home, label: 'No staff remaining on site', desc: 'Total privacy after delivery' },
+  { icon: Repeat, label: 'Optional recurring delivery', desc: 'Weekly rhythms for long stays' },
+]
+
+/* ───────── Healthy Menu Categories ───────── */
+const HEALTHY_MENU_CATEGORIES = [
+  'High-protein meal boxes',
+  'Macro-friendly rice bowls',
+  'Healthy salad bowls',
+  'Grilled protein packages',
+  'Vegan power bowls',
+  'Low-carb meals',
+  'Keto-friendly options',
+  'Gluten-free meals',
+  'Plant-based retreat menus',
+  'Breakfast & recovery boxes',
+  'Healthy snack boxes',
+  'Family wellness meals',
+  "Children's healthy meals",
+  'Surf & fitness group packages',
+  'Weekly villa meal packages',
+]
+
+/* ───────── Healthy Drop-Off Catering ───────── */
+const HEALTHY_DROPOFF = [
+  'Fresh, chef-prepared meals delivered directly to your villa',
+  'Balanced proteins, vegetables, carbohydrates, and healthy fats',
+  'Lighter meals for lunches, training days, and active holidays',
+  'Available as individual portions or shared family-style trays',
+  'Suitable for villa stays, retreats, offices, and production teams',
+  'Clearly labelled meals with storage and reheating instructions',
+]
+
+/* ───────── Fitness & High-Protein Meal Delivery ───────── */
+const FITNESS_DELIVERY = [
+  'High-protein chicken, fish, beef, egg, tofu, and tempeh meals',
+  'Protein-focused breakfasts, lunches, dinners, and snack boxes',
+  'Balanced carbohydrates for training and active days',
+  'Lighter cooking methods with less unnecessary oil',
+  'Portions adapted for smaller or larger appetites',
+  'Optional individual packaging for easy daily use',
+]
+
+/* ───────── Meals for Gym, Surf & Active Holidays ───────── */
+const ACTIVE_HOLIDAY_MEALS = [
+  'Pre-training breakfast boxes',
+  'Post-workout protein meals',
+  'Healthy lunches for surf groups',
+  'Recovery dinners after active days',
+  'Group meals for fitness camps and sports teams',
+  'Convenient villa meals without restaurant waiting times',
+  'Flexible orders for one day, several days, or a complete stay',
+]
+
+/* ───────── Yoga, Wellness & Fitness Retreat Catering ───────── */
+const RETREAT_CATERING = [
+  'Breakfast, lunch, dinner, snacks, and drinks',
+  'Plant-based, high-protein, gluten-free, and dairy-free options',
+  'Individual meal boxes or shared buffet-style trays',
+  'Meals coordinated around yoga, training, workshops, and excursions',
+  'Multi-day rotating menus',
+  'Separate labelling for dietary requirements',
+  'Delivery to villas and retreat venues throughout Bali',
+]
+
+/* ───────── Weekly Drop-Off Meals for Long Stays ───────── */
+const WEEKLY_MEALS = [
+  'Order several lunches or dinners together',
+  'Choose recurring deliveries throughout your stay',
+  'Meals selected specifically for safe storage and reheating',
+  'Individual portions available',
+  'Family and child-friendly alternatives',
+  'Suitable for digital nomads, expats, families, and villa guests',
+  'Reduce daily ordering and restaurant costs',
+]
+
+/* ───────── Build Your Healthy Meal Package ───────── */
+const BUILD_PACKAGE = [
+  { title: 'Choose your protein', desc: 'Chicken, fish, beef, eggs, tofu, or tempeh.' },
+  { title: 'Choose your carbohydrate', desc: 'Rice, potatoes, grains, or low-carb alternatives.' },
+  { title: 'Choose your vegetables', desc: 'Seasonal vegetables, cooked or fresh.' },
+  { title: 'Choose your salad or side', desc: 'Salads, grain bowls, and lighter sides.' },
+  { title: 'Individual or shared packaging', desc: 'Portioned meal boxes or family-style trays.' },
+  { title: 'Add extras', desc: 'Breakfast, snacks, fruit, juice, or dessert.' },
+  { title: 'Tell us your dietary needs', desc: 'Allergies and dietary restrictions labelled separately.' },
+]
+
+/* ───────── Healthy Breakfast & Snack Boxes ───────── */
+const BREAKFAST_SNACKS = [
+  'Egg and vegetable breakfast boxes',
+  'Overnight oats and chia pudding',
+  'Tropical fruit and yoghurt',
+  'Smoothie ingredient packs',
+  'Protein snack boxes',
+  'Sandwiches and wraps',
+  'Salads and grain bowls',
+  'Healthy office and retreat snacks',
+]
+
+/* ───────── Corporate Teams & Production Crews ───────── */
+const CORPORATE_TEAMS = [
+  'Individually packed staff lunches',
+  'Healthy crew meals',
+  'Office lunch delivery',
+  'Film production catering',
+  'Event setup-team meals',
+  'Workshop and conference lunches',
+  'Multi-day team catering',
+  'Vegetarian and allergy-labelled boxes',
 ]
 
 /* ───────── FAQ ───────── */
 const FAQS = [
-  { q: "What's the minimum order?", a: 'Four people for the family dinner package; eight for dinner party and grazing packages. Custom sizes on request.' },
+  { q: "What's the minimum order?", a: 'Four people for the family dinner package; eight for dinner party and grazing packages. The minimum is the same in every delivery area — remote locations simply carry a quoted travel fee. Custom sizes on request.' },
   { q: 'Is any staff included?', a: 'No — that\'s the product. No chef, no waiters, no setup crew, no cleanup team. You serve yourself, privately. If you\'d like staff for one night, see <a href="/catering">full-service catering</a>.' },
   { q: 'How much notice do you need?', a: 'Order by 4pm for next-day delivery. We recommend 24–48 hours, especially for groups over 12 or peak season. Same-day is sometimes possible before 10am.' },
   { q: 'Which areas do you deliver to?', a: 'All major Bali villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Jimbaran, Nusa Dua, and more. Remote deliveries may carry a quoted travel fee.' },
@@ -193,17 +308,31 @@ const FAQS = [
   { q: 'How is the food packed?', a: 'In premium recyclable containers — hot items insulated, cold items chilled — with printed reheating and plating notes in every order.' },
   { q: 'Do you offer recurring deliveries for long stays?', a: 'Yes — many long-stay guests set a weekly rhythm (e.g., three dinners a week). For daily nutrition-focused plans, see our <a href="/healthy-meal-delivery-indonesia">healthy meal plans</a>.' },
   { q: "What's the payment and cancellation policy?", a: 'A 50% deposit confirms your order. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { q: 'Do you offer healthy drop-off catering in Bali?', a: 'Yes — balanced, chef-prepared meals with quality proteins, vegetables, carbohydrates, and healthy fats, delivered to your villa as individual portions or shared trays. Lighter menus are available for training days and active holidays.' },
+  { q: 'Can you prepare high-protein or macro-friendly meals?', a: 'Yes — protein-focused meals built around chicken, fish, beef, eggs, tofu, and tempeh, with balanced carbohydrates and portion-conscious sizing. Tell us your training routine and appetite and we will suggest suitable options.' },
+  { q: 'Do you provide meals for fitness or yoga retreats?', a: 'Yes — we deliver breakfast, lunch, dinner, snacks, and drinks to retreat venues across Bali, with multi-day rotating menus, plant-based and high-protein options, and meals timed around yoga, training, and workshop schedules.' },
+  { q: 'Can meals be individually portioned and labelled?', a: 'Yes — individual meal boxes are available for every menu, each labelled with the dish name, dietary notes, and storage and reheating instructions. Shared family-style trays are also available.' },
+  { q: 'Can you prepare low-carb or keto meals?', a: 'Yes — low-carb and keto-friendly options are available across most menus, with extra vegetables or salads replacing rice, bread, and potatoes. Vegan and gluten-free guests can be accommodated in the same order with separate labelling.' },
+  { q: 'How many days can delivered meals be stored?', a: 'Most dishes keep well for up to 2–3 days refrigerated in their sealed containers. For recurring orders we recommend scheduling deliveries across the week so everything is eaten at its freshest.' },
+  { q: 'Can meals be delivered cold for reheating later?', a: 'Yes — meals can be delivered chilled with printed reheating instructions, which is ideal for long stays, late arrivals, and groups eating at different times. Most dishes reheat in 10–15 minutes in a standard oven.' },
 ]
 
-/* ───────── Schema FAQ (matches brief's SUGGESTED STRUCTURED DATA) ───────── */
+/* ───────── Schema FAQ (matches visible FAQ content) ───────── */
 const SCHEMA_FAQS = [
-  { question: 'What is the minimum order for drop-off catering?', answer: 'Four people for the family dinner package; eight for dinner party and grazing packages. Custom sizes on request.' },
+  { question: 'What is the minimum order for drop-off catering?', answer: 'Four people for the family dinner package; eight for dinner party and grazing packages. The minimum is the same in every delivery area — remote locations simply carry a quoted travel fee. Custom sizes on request.' },
   { question: 'Is any staff included with drop-off catering?', answer: 'No. Drop-off includes no chef, waiters, setup or cleanup staff — food is delivered ready to serve and you serve yourself privately.' },
   { question: 'How much notice do you need?', answer: 'Order by 4pm for next-day delivery. 24–48 hours is recommended, especially for groups over 12 or peak season. Same-day is sometimes possible before 10am.' },
   { question: 'Which areas do you deliver to?', answer: 'All major Bali villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Jimbaran, Nusa Dua and more. Remote deliveries may carry a quoted travel fee.' },
   { question: 'Can you handle dietary requirements?', answer: 'Yes — vegetarian, vegan, gluten-free, pork-free, seafood-free, nut-free and child-friendly meals, confirmed before preparation and labelled separately.' },
   { question: 'Do you offer recurring deliveries for long stays?', answer: 'Yes — weekly rhythms such as three dinners a week can be arranged for long-stay guests.' },
   { question: 'What is the payment and cancellation policy?', answer: 'A 50% deposit confirms your order. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { question: 'Do you offer healthy drop-off catering in Bali?', answer: 'Yes — balanced, chef-prepared meals with quality proteins, vegetables, carbohydrates and healthy fats, delivered to your villa as individual portions or shared trays.' },
+  { question: 'Can you prepare high-protein or macro-friendly meals?', answer: 'Yes — protein-focused meals built around chicken, fish, beef, eggs, tofu and tempeh, with balanced carbohydrates and portion-conscious sizing.' },
+  { question: 'Do you provide meals for fitness or yoga retreats?', answer: 'Yes — breakfast, lunch, dinner, snacks and drinks delivered to retreat venues across Bali, with multi-day rotating menus and plant-based and high-protein options.' },
+  { question: 'Can meals be individually portioned and labelled?', answer: 'Yes — individual meal boxes are available for every menu, each labelled with the dish name, dietary notes, and storage and reheating instructions.' },
+  { question: 'Can you prepare low-carb or keto meals?', answer: 'Yes — low-carb and keto-friendly options are available across most menus, and vegan and gluten-free guests can be accommodated in the same order with separate labelling.' },
+  { question: 'How many days can delivered meals be stored?', answer: 'Most dishes keep well for up to 2–3 days refrigerated in their sealed containers. Recurring deliveries across the week keep everything at its freshest.' },
+  { question: 'Can meals be delivered cold for reheating later?', answer: 'Yes — meals can be delivered chilled with printed reheating instructions. Most dishes reheat in 10–15 minutes in a standard oven.' },
 ]
 
 const DROPOFF_GALLERY = [
@@ -298,8 +427,24 @@ export default function CateringDropOffPage() {
         </div>
       </section>
 
-      {/* ═══════ TRUST STRIP ═══════ */}
-      <TrustStrip />
+      {/* ═══════ TRUST STRIP — drop-off specific (no staff, no cleanup) ═══════ */}
+      <div className="bg-white border-y border-[#E8E6E3]">
+        <div className="max-w-7xl mx-auto px-6 py-8 md:py-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+            {TRUST_ITEMS.map(({ icon: Icon, label, desc }) => (
+              <div key={label} className="flex items-start gap-3">
+                <div className="bg-[#6B8E5A]/10 rounded-xl p-2.5 shrink-0">
+                  <Icon className="w-5 h-5 text-[#6B8E5A]" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[#1A1A1A]">{label}</p>
+                  <p className="text-xs text-[#4A4745] mt-0.5">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* ═══════ SECTION 1 — WHY DROP-OFF ═══════ */}
       <section className="do-content py-20 md:py-28 px-6">
@@ -366,7 +511,7 @@ export default function CateringDropOffPage() {
           <SectionHeader
             eyebrow="What Is Included"
             title="Everything That Comes With Your Drop-Off Order"
-            subtitle="Prepared dishes, serving containers, labels, reheating instructions, disposable or upgraded serviceware, delivery, and optional setup."
+            subtitle="Prepared dishes, serving containers, labels, reheating instructions, disposable or upgraded serviceware, and delivery to your villa."
           />
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             {INCLUDED.map((item) => (
@@ -409,10 +554,181 @@ export default function CateringDropOffPage() {
               </div>
             ))}
           </div>
+          <div className="mt-10">
+            <h3 className="text-center font-semibold text-[#1A1A1A] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Healthy &amp; Fitness Menu Categories
+            </h3>
+            <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+              {HEALTHY_MENU_CATEGORIES.map((cat) => (
+                <span key={cat} className="px-3 py-1.5 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745]">
+                  {cat}
+                </span>
+              ))}
+            </div>
+          </div>
           <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
             For daily nutrition-focused plans, see our{' '}
             <Link to="/healthy-meal-delivery-indonesia" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">healthy meal plans</Link>.
           </p>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4B — HEALTHY DROP-OFF CATERING ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Healthy Catering Bali"
+            title="Healthy Drop-Off Catering in Bali"
+            subtitle="Fresh, balanced, chef-prepared meals delivered directly to your villa — healthy food delivery without the restaurant wait or the cleanup."
+          />
+          <div className="grid sm:grid-cols-2 gap-3 mt-10">
+            {HEALTHY_DROPOFF.map((item) => (
+              <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
+                <Check className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4C — FITNESS & HIGH-PROTEIN MEAL DELIVERY ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Fitness Catering Bali"
+            title="Fitness and High-Protein Meal Delivery"
+            subtitle="Macro-friendly, protein-focused meals for training days — portion-conscious without promising clinical precision."
+          />
+          <div className="grid sm:grid-cols-2 gap-3 mt-10">
+            {FITNESS_DELIVERY.map((item) => (
+              <div key={item} className="flex items-start gap-3 p-4 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
+                <Dumbbell className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4D — GYM, SURF & ACTIVE HOLIDAYS ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Active Holidays"
+            title="Meals for Gym, Surf and Active Holidays"
+            subtitle="Pre-training breakfasts, post-workout protein meals, and recovery dinners — fuel for Bali's active crowd, delivered to the villa."
+          />
+          <div className="grid sm:grid-cols-2 gap-3 mt-10">
+            {ACTIVE_HOLIDAY_MEALS.map((item) => (
+              <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
+                <Waves className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4E — RETREAT CATERING ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Retreat Catering Bali"
+            title="Yoga, Wellness and Fitness Retreat Catering"
+            subtitle="Nutrition-focused drop-off meals for yoga retreats, fitness retreats, wellness workshops, and multi-day programs across Bali."
+          />
+          <div className="grid sm:grid-cols-2 gap-3 mt-10">
+            {RETREAT_CATERING.map((item) => (
+              <div key={item} className="flex items-start gap-3 p-4 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
+                <HeartPulse className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
+            Hosting a retreat with on-site service? See our <Link to="/catering/retreat-catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">retreat catering</Link> page for staffed multi-day options.
+          </p>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4F — WEEKLY MEALS FOR LONG STAYS ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Meal Prep Bali"
+            title="Weekly Drop-Off Meals for Long Stays"
+            subtitle="Fridge-ready, pre-portioned meals and recurring delivery rhythms for digital nomads, expats, families, and long-stay villa guests."
+          />
+          <div className="grid sm:grid-cols-2 gap-3 mt-10">
+            {WEEKLY_MEALS.map((item) => (
+              <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
+                <Repeat className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm max-w-2xl mx-auto">
+            For structured daily nutrition plans, see our dedicated <Link to="/healthy-meal-delivery-indonesia" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">healthy meal delivery</Link> page.
+          </p>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4G — BUILD YOUR HEALTHY MEAL PACKAGE ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Custom Meal Plan Bali"
+            title="Build Your Healthy Meal Package"
+            subtitle="Mix and match proteins, carbohydrates, vegetables, and sides into a custom healthy catering package — individual boxes or shared trays."
+          />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
+            {BUILD_PACKAGE.map((step, idx) => (
+              <div key={step.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5">
+                <span className="text-xs font-bold tracking-wider" style={{ color: ACCENT }}>{String(idx + 1).padStart(2, '0')}</span>
+                <h4 className="font-medium text-sm mt-1 mb-1">{step.title}</h4>
+                <p className="text-xs text-[#4A4745]">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4H — HEALTHY BREAKFAST & SNACK BOXES ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Breakfast & Snacks"
+            title="Healthy Breakfast and Snack Boxes"
+            subtitle="Morning boxes and daytime snacks that travel well — for villas, offices, retreats, and training days."
+          />
+          <div className="grid sm:grid-cols-2 gap-3 mt-10">
+            {BREAKFAST_SNACKS.map((item) => (
+              <div key={item} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-[#E8E6E3]">
+                <Sunrise className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 4I — CORPORATE TEAMS & PRODUCTION CREWS ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Teams & Crews"
+            title="Food for Corporate Teams and Production Crews"
+            subtitle="Reliable, individually packed meals for offices, workshops, film productions, and event setup teams — delivered on schedule."
+          />
+          <div className="grid sm:grid-cols-2 gap-3 mt-10">
+            {CORPORATE_TEAMS.map((item) => (
+              <div key={item} className="flex items-start gap-3 p-4 bg-[#FAFAF8] rounded-xl border border-[#E8E6E3]">
+                <Building2 className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: ACCENT }} />
+                <span className="text-[#4A4745] text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -497,7 +813,7 @@ export default function CateringDropOffPage() {
           <SectionHeader
             eyebrow="Add-Ons"
             title="Extras to Complete Your Drop-Off Order"
-            subtitle="Drinks, fruit platters, grazing boxes, dessert, coffee, disposable plates, reusable equipment, and optional setup staff."
+            subtitle="Drinks, fruit platters, grazing boxes, dessert, coffee, disposable plates, reusable equipment, and extra portions."
           />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {ADDONS.map((item) => (
@@ -618,10 +934,10 @@ export default function CateringDropOffPage() {
           <Utensils className="w-10 h-10 mx-auto mb-4" style={{ color: ACCENT }} />
           <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Dietary Options</h2>
           <p className="text-[#4A4745] mb-6">
-            We can adjust menus for vegetarian, vegan, gluten-free, pork-free, seafood-free, nut-free, and child-friendly needs when confirmed before preparation.
+            We can adjust menus for vegetarian, vegan, gluten-free, dairy-free, keto, low-carb, high-protein, plant-based, pork-free, halal-friendly, nut-free, and child-friendly needs when confirmed before preparation — mixed diets in one order, labelled separately.
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
-            {['Vegetarian', 'Vegan', 'Gluten-free', 'Pork-free', 'Seafood-free', 'Nut-free', 'Child-friendly'].map((d) => (
+            {['Vegetarian', 'Vegan', 'Plant-based', 'Gluten-free', 'Dairy-free', 'Keto-friendly', 'Low-carb', 'High-protein', 'Pork-free', 'Halal-friendly', 'Seafood-free', 'Nut-free', 'Low-sugar', 'Child-friendly'].map((d) => (
               <span key={d} className="px-3 py-1.5 rounded-full bg-white border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
             ))}
           </div>
@@ -699,9 +1015,6 @@ export default function CateringDropOffPage() {
         </div>
       </section>
 
-      <StaffingInfo />
-      <BookingProcess />
-
       <CateringDiscoverySection page="dropOff" />
 
       {/* ═══════ FINAL CTA ═══════ */}
@@ -776,7 +1089,6 @@ export default function CateringDropOffPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="catering-dropoff"

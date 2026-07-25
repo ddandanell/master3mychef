@@ -20,7 +20,6 @@ import BookingProcess from '@/components/catering/BookingProcess'
 import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, CateringDiscoverySection } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
-import TestimonialBlock from '@/components/shared/TestimonialBlock'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
@@ -55,27 +54,66 @@ const CORP_PACKAGES = [
   },
 ]
 
-const EVENTS_SUPPORTED = [
-  { icon: Briefcase, title: 'Workshops', desc: 'Full-day or half-day sessions with scheduled meal breaks and coffee service.' },
-  { icon: Users, title: 'Team Offsites', desc: 'Multi-day retreats with breakfast, lunch, dinner, and snacks across the stay.' },
-  { icon: ChefHat, title: 'Board Dinners', desc: 'Intimate executive dining with plated service, wine, and discreet staff.' },
-  { icon: Coffee, title: 'Company Lunches', desc: 'Buffet or lunch boxes for regular team meals at villas or venues.' },
-  { icon: Sun, title: 'Conferences', desc: 'Coffee breaks, working lunches, and gala dinners for 50–200 delegates.' },
-  { icon: Wine, title: 'Product Launches', desc: 'Canapé receptions, branded menus, and cocktail service for press and partners.' },
-  { icon: Clock, title: 'Training Days', desc: 'Timed meal service that fits around session schedules without disruption.' },
-  { icon: Moon, title: 'Networking Events', desc: 'Standing cocktail receptions with passed canapés and grazing stations.' },
+const EVENT_GROUPS = [
+  {
+    group: 'Meetings & Working Sessions',
+    items: [
+      { icon: Briefcase, title: 'Board Meetings', desc: 'Discreet catering for boardrooms — coffee, working lunches, and plated dinners.' },
+      { icon: Clock, title: 'Workshops & Training Days', desc: 'Timed meal service that fits around session schedules without disruption.' },
+      { icon: Coffee, title: 'Strategy Sessions', desc: 'Executive breakfasts, working lunches, and coffee service for focused days.' },
+    ],
+  },
+  {
+    group: 'Company Events',
+    items: [
+      { icon: Users, title: 'Team Offsites & Anniversaries', desc: 'Staff celebrations, award dinners, and company milestones fully catered.' },
+      { icon: Wine, title: 'Networking Receptions', desc: 'Standing cocktail receptions with passed canapés and grazing stations.' },
+      { icon: Sun, title: 'Product Launches', desc: 'Canapé receptions, branded menus, and cocktail service for press and partners.' },
+    ],
+  },
+  {
+    group: 'Large & Multi-Day Programs',
+    items: [
+      { icon: ChefHat, title: 'Conferences', desc: 'Coffee breaks, working lunches, and gala dinners for 50–200 delegates.' },
+      { icon: Moon, title: 'Corporate Retreats & Incentive Travel', desc: 'Multi-day programs with breakfast, lunch, dinner, and snacks across the stay.' },
+      { icon: Utensils, title: 'Brand Activations & Gatherings', desc: 'Leadership programs, brand activations, and multi-day corporate gatherings.' },
+    ],
+  },
 ]
 
-const MENU_FORMATS = [
-  { name: 'Breakfast', desc: 'Continental, full English, Indonesian, or healthy wellness breakfast. From 6:30 AM.' },
-  { name: 'Coffee Breaks', desc: 'Pastries, fruit, coffee, tea, and light snacks between sessions.' },
-  { name: 'Lunch Boxes', desc: 'Individual packed lunches for working sessions or transport days.' },
-  { name: 'Buffet Lunch', desc: 'Self-serve hot and cold buffet for 30+ guests. Efficient and varied.' },
-  { name: 'Canapés', desc: 'Bite-sized starters for cocktail receptions and pre-dinner mingling.' },
-  { name: 'Plated Dinner', desc: 'Multi-course restaurant-style service for formal evenings.' },
-  { name: 'Grazing Tables', desc: 'Styled charcuterie, cheese, and fruit for relaxed networking.' },
-  { name: 'BBQ', desc: 'Live-fire grilling for casual team dinners and outdoor events.' },
-  { name: 'Full-Day Catering', desc: 'Breakfast through dinner with snacks and hydration stations.' },
+const MENU_FORMAT_GROUPS = [
+  {
+    group: 'Meetings & Working Days',
+    items: [
+      { name: 'Executive Breakfast', desc: 'Continental, full English, Indonesian, or healthy wellness breakfast. From 6:30 AM.' },
+      { name: 'Coffee Breaks', desc: 'Pastries, fruit, coffee, tea, and light snacks between sessions.' },
+      { name: 'Packed Lunch Boxes', desc: 'Individual packed lunches for working sessions or transport days.' },
+      { name: 'Working Lunch Buffet', desc: 'Self-serve hot and cold buffet for 30+ guests. Efficient and varied.' },
+      { name: 'Afternoon Snacks & Hydration', desc: 'Healthy snacks, smoothies, infused water, and hydration stations.' },
+    ],
+  },
+  {
+    group: 'Networking & Receptions',
+    items: [
+      { name: 'Canapés', desc: 'Bite-sized starters for cocktail receptions and pre-dinner mingling.' },
+      { name: 'Grazing Tables', desc: 'Styled charcuterie, cheese, and fruit for relaxed networking.' },
+      { name: 'Cocktail & Live Stations', desc: 'Branded displays, live cooking stations, and bar service.' },
+    ],
+  },
+  {
+    group: 'Dinners & Celebrations',
+    items: [
+      { name: 'Plated Dinner', desc: 'Multi-course restaurant-style service for formal evenings.' },
+      { name: 'Family-Style & Premium Buffet', desc: 'Generous shared dining for celebrations and gala evenings.' },
+      { name: 'BBQ', desc: 'Live-fire grilling for casual team dinners and outdoor events.' },
+    ],
+  },
+  {
+    group: 'Multi-Day Programs',
+    items: [
+      { name: 'Full-Day Catering', desc: 'Breakfast through dinner with snacks and hydration stations, across multiple days.' },
+    ],
+  },
 ]
 
 const FULL_DAY_STRUCTURE = [
@@ -91,9 +129,9 @@ const SERVICE_STANDARDS = [
   { title: 'Arrival Timing', desc: 'Team arrives 2–3 hours before service. Setup complete before guests enter.' },
   { title: 'Staff Uniforms', desc: 'Professional black uniforms for service staff. Chef coats for kitchen team.' },
   { title: 'Food Labeling', desc: 'Every dish labeled with name and dietary markers (V, GF, NF, spicy).' },
-  { title: 'Dietary Tracking', desc: 'Pre-event intake form collects all restrictions. Separate prep zones for allergens.' },
+  { title: 'Dietary Tracking', desc: 'Pre-event intake form collects all restrictions. Dishes clearly labelled; reasonable separation procedures during preparation.' },
   { title: 'Quiet Service', desc: 'Staff trained to serve discreetly. No disruption to presentations or discussions.' },
-  { title: 'Invoice Handling', desc: 'Formal tax invoices with detailed breakdowns. Net-14 terms for regular clients.' },
+  { title: 'Invoice Handling', desc: 'Formal tax invoices with detailed breakdowns. Approved recurring corporate accounts may qualify for alternative payment terms subject to written agreement.' },
   { title: 'Event Planner Communication', desc: 'Dedicated point of contact from booking through post-event follow-up.' },
 ]
 
@@ -111,10 +149,62 @@ const CORP_ADDONS = [
   { icon: ChefHat, title: 'Speaker Dinner', desc: 'Private plated dinner for VIPs, speakers, and executives.' },
 ]
 
+const QUOTE_FACTORS = [
+  'Event type and schedule',
+  'Number of guests',
+  'Number of service periods',
+  'Menu level and format',
+  'Venue and kitchen facilities',
+  'Staffing level and duration',
+  'Equipment and tableware',
+  'Dietary requirements',
+  'Branding and styling',
+  'Transport and location',
+  'Setup and breakdown scope',
+]
+
+const COORDINATION_ITEMS = [
+  'Catering menus and menu planning',
+  'Chefs and professional service staff',
+  'Bartenders and beverage service',
+  'Coffee and refreshment stations',
+  'Tableware and service equipment',
+  'Service timing around your agenda',
+  'Dietary management and labelling',
+  'Venue kitchen coordination',
+  'Setup, service, and full breakdown',
+]
+
+const CASE_STUDIES = [
+  {
+    title: 'Technology Conference — Nusa Dua',
+    scope: ['120 delegates over 2 days', 'Coffee breaks, working lunches, and gala dinner', 'Agenda-timed service across multiple rooms'],
+    result: 'Every service ran on schedule and the client rebooked for the following year.',
+  },
+  {
+    title: 'Company Offsite — Canggu',
+    scope: ['35 guests over 3 days', 'Breakfast, lunch, dinner, and snacks', 'Vegan, gluten-free, and halal-sensitive requirements managed'],
+    result: 'All dietary needs were labelled and served correctly; invoicing was seamless.',
+  },
+  {
+    title: 'Executive Board Dinner — Seminyak',
+    scope: ['12 guests, single evening', 'Custom multi-course plated menu', 'Discreet, dedicated service team'],
+    result: 'The menu impressed visiting investors; the firm now books recurring dinners.',
+  },
+]
+
+const PROPOSAL_CHECKLIST = [
+  'Company name', 'Event date', 'Venue and area', 'Guest count',
+  'Event schedule', 'Service periods needed', 'Preferred menu format', 'Dietary requirements',
+  'Beverage needs', 'Venue equipment available', 'Staffing requirements', 'Branding or styling needs',
+  'Indicative budget', 'Invoice details', 'Decision deadline',
+]
+
 const FAQS = [
-  { q: 'How much does corporate catering cost per person in Bali?', a: 'Corporate catering is priced in three tiers: Standard IDR 700K, Premium IDR 750K, and Luxury IDR 1.2M per person, all ++. Minimum spend is IDR 15,000,000, and full tax invoices are included.' },
-  { q: 'Do you provide invoices / NPWP for corporate catering?', a: 'Yes. We are NPWP-registered and issue full tax invoices with itemised breakdowns. We support purchase-order processes and offer Net-14 terms for regular corporate clients.' },
-  { q: 'How do you handle dietary requirements for large corporate groups?', a: 'Dietary requirements are collected with RSVPs through a structured intake process, dishes are labelled on the day, and customisation carries no extra charge. Allergen-critical guests receive separate prep where needed.' },
+  { q: 'How much does corporate catering cost in Bali?', a: 'Corporate catering is quoted per event based on guest count, menu format, service periods, staffing, and venue logistics. A minimum corporate booking of IDR 7,500,000 applies, subject to event scope and location. Every quotation shows the applicable service charge and government tax clearly.' },
+  { q: 'Do you provide invoices / NPWP for corporate catering?', a: 'Yes. We are NPWP-registered and issue formal tax invoices with itemised breakdowns. A deposit is required to confirm the booking, with the balance normally due before the event. Approved recurring corporate accounts may qualify for alternative payment terms subject to written agreement.' },
+  { q: 'How do you handle dietary requirements for large corporate groups?', a: 'Dietary requirements are collected with RSVPs through a structured intake process, dishes are labelled on the day, and we follow reasonable separation procedures during preparation. We cannot guarantee a completely allergen-free environment, so guests with serious allergies should provide full written requirements in advance.' },
+  { q: 'What is the deposit and payment schedule?', a: 'A deposit is required to confirm the booking. The remaining balance is normally due before the event. Approved recurring corporate accounts may qualify for alternative payment terms subject to written agreement.' },
   { q: 'Can you do last-minute corporate catering?', a: 'Small-group corporate orders are often possible within 24–48 hours. Larger productions need a few days to a week, with a dedicated event manager assigned.' },
 ]
 
@@ -134,14 +224,14 @@ export default function CateringCorporatePage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Corporate Catering Bali | Boardroom to Conference | myCHEF"
-        description="Corporate catering in Bali for offsites, boardroom dinners & conferences. Tax invoices (NPWP), executive service, dietary-exact menus. WhatsApp myCHEF."
+        title="Corporate Catering Bali | Meetings, Conferences & Company Events"
+        description="Corporate catering in Bali for meetings, conferences, offsites and company events. Formal written proposals, NPWP tax invoices, dietary management at scale. Request a corporate proposal from myCHEF."
         canonical={`${SITE}/catering/corporate-catering`}
         ogImage={`${SITE}/generated/mychef-catering-bali-hero-corporate.webp`}
         jsonLd={[
           serviceSchema(
             'Corporate Catering Bali',
-            'Corporate catering in Bali for working lunches, office events, boardroom dinners and conference days. NPWP-registered tax invoices, dedicated event manager, dietary management at scale.',
+            'Corporate catering in Bali for meetings, conferences, offsites and company events. NPWP-registered tax invoices, dedicated coordination, dietary management at scale.',
             `${SITE}/catering/corporate-catering`,
             '$$$'
           ),
@@ -171,31 +261,31 @@ export default function CateringCorporatePage() {
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
           <Breadcrumb items={[{ label: 'Catering', href: '/catering' }, { label: 'Corporate Catering Bali' }]} theme="dark" className="justify-center mb-8" />
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Chapter 1 — Corporate Catering Bali
+            Corporate Catering Bali
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             Corporate Catering Bali<br />
-            <span className="italic">— The Catering Line for Teams, Meetings & Conferences</span>
+            <span className="italic">for Meetings, Offsites and Company Events</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto">
-            Reliable, tax-invoiced corporate catering in Bali for working lunches, office events, boardroom dinners and conference days. One dedicated event manager, one fixed per-person price, one clean invoice.
+            Professional corporate catering in Bali with dedicated coordination, customized menus, dietary management, and full staffing — from setup and service to complete breakdown. Every event begins with a tailored written proposal.
           </p>
           <p className="text-white/[60%] text-sm mb-10">
-            NPWP-registered tax invoices · Dedicated event manager · Bali-wide
+            Custom corporate quotations · Minimum booking applies · Tax invoiced · Bali-wide
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              <MessageCircle className="w-4 h-4" /> Plan Corporate Catering
+              <MessageCircle className="w-4 h-4" /> Request a Corporate Proposal
             </a>
             <a href="#packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              View Corporate Packages
+              View Corporate Catering Options
             </a>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Tax invoices provided</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Dedicated event manager</span>
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> HACCP certified kitchen</span>
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> On-time, every time</span>
+            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Formal written proposals</span>
+            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Dietary management at scale</span>
           </div>
         </div>
       </section>
@@ -205,16 +295,13 @@ export default function CateringCorporatePage() {
       {/* ═══════ CORPORATE TRUST STRIP ═══════ */}
       <section className="py-8 px-6 bg-white border-b border-[#E8E6E3]">
         <div className="max-w-[1000px] mx-auto text-center">
-          <p className="text-xs text-[#4A4745]/80 uppercase tracking-widest mb-6">Trusted by teams from</p>
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-[#4A4745]/40">
-            {['Microsoft', 'Google', 'Airbnb', 'GoTo', 'Shopee', 'Bukalapak', 'Traveloka', 'BCA', 'Mandiri'].map((company) => (
-              <span key={company} className="text-sm font-semibold tracking-wide">{company}</span>
-            ))}
-          </div>
+          <p className="text-sm text-[#4A4745]/80">
+            Experience supporting international companies, executive groups, retreat organizers, agencies, and conference teams in Bali.
+          </p>
         </div>
       </section>
 
-      {/* ═══════ SECTION 1.5: OUR CHEFS ═══════ */}
+      {/* ═══════ SECTION: OUR CHEFS ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto grid md:grid-cols-[1fr_1fr] gap-12 items-center">
           <div className="relative">
@@ -234,7 +321,7 @@ export default function CateringCorporatePage() {
           </div>
           <div>
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-              Chapter 1.5 — The Team
+              The Team
             </p>
             <h2 className="text-2xl md:text-3xl leading-[1.1] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
               Indonesian Chefs, World-Class Standards
@@ -243,10 +330,10 @@ export default function CateringCorporatePage() {
               Our chefs combine authentic Indonesian culinary heritage with international fine-dining standards. Every corporate event is led by a senior chef who understands dietary requirements, timing, and professional presentation.
             </p>
             <p className="text-[#4A4745] mb-6">
-              With experience serving at Michelin-starred restaurants and luxury resorts across Southeast Asia, our team delivers restaurant-quality service directly to your venue — whether it's a villa, hotel, or conference center.
+              With experience in international luxury hotels and fine-dining kitchens across Southeast Asia, our team delivers restaurant-quality service directly to your venue — whether it's a villa, hotel, or conference center.
             </p>
             <div className="flex flex-wrap gap-2">
-              {['Michelin-trained', '500+ events', 'NPWP registered', 'Bali-wide', 'Multi-lingual'].map((tag) => (
+              {['Fine-dining experienced', 'NPWP registered', 'Bali-wide', 'Multi-lingual', 'Dietary trained'].map((tag) => (
                 <span key={tag} className="px-3 py-1.5 bg-white rounded-full text-xs text-[#4A4745] border border-[#E8E6E3]">{tag}</span>
               ))}
             </div>
@@ -254,11 +341,11 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 2: CORPORATE CATERING IN BALI ═══════ */}
+      {/* ═══════ SECTION: CORPORATE CATERING IN BALI ═══════ */}
       <section className="corp-content py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 2 — The Service"
+            eyebrow="The Service"
             title="Corporate Catering in Bali"
             subtitle="Businesses do not want surprises. They want reliable timing, clean setup, clear communication, and professional presentation. Our corporate catering is built around operational discipline — because a delayed lunch or a missing dietary option can derail an entire event."
           />
@@ -312,48 +399,58 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 3: EVENTS WE SUPPORT ═══════ */}
+      {/* ═══════ SECTION: EVENTS WE SUPPORT ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 3 — Events"
+            eyebrow="Corporate Events"
             title="Events We Support"
-            subtitle="From intimate board dinners to large-scale conferences — we have catered every type of corporate event in Bali."
+            subtitle="From intimate board meetings to large-scale conferences and multi-day programs — we cater every type of corporate event in Bali."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-            {EVENTS_SUPPORTED.map((event) => (
-              <div key={event.title} className="corp-reveal bg-[#FAFAF8] rounded-xl p-5 text-center">
-                <div className="w-10 h-10 rounded-full bg-[#C5A028]/10 flex items-center justify-center mx-auto mb-3">
-                  <event.icon className="w-5 h-5 text-[#C5A028]" />
-                </div>
-                <h3 className="font-semibold text-sm mb-1">{event.title}</h3>
-                <p className="text-sm text-[#4A4745]">{event.desc}</p>
+          {EVENT_GROUPS.map((group) => (
+            <div key={group.group} className="mt-10">
+              <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{group.group}</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {group.items.map((event) => (
+                  <div key={event.title} className="corp-reveal bg-[#FAFAF8] rounded-xl p-5">
+                    <div className="w-10 h-10 rounded-full bg-[#C5A028]/10 flex items-center justify-center mb-3">
+                      <event.icon className="w-5 h-5 text-[#C5A028]" />
+                    </div>
+                    <h4 className="font-semibold text-sm mb-1">{event.title}</h4>
+                    <p className="text-sm text-[#4A4745]">{event.desc}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ═══════ SECTION 4: MENU FORMATS ═══════ */}
+      {/* ═══════ SECTION: MENU FORMATS ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 4 — Menus"
-            title="Menu Formats"
-            subtitle="Nine service formats, mixable across a single event. Breakfast, breaks, lunch, dinner, and everything in between."
+            eyebrow="Catering Formats"
+            title="Menu Formats for Every Corporate Purpose"
+            subtitle="Formats grouped by event purpose, mixable across a single event. Breakfast, breaks, lunch, dinner, and everything in between."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
-            {MENU_FORMATS.map((menu) => (
-              <div key={menu.name} className="corp-reveal bg-white rounded-xl border border-[#E8E6E3] p-5">
-                <h3 className="font-semibold text-sm mb-1 text-[#C5A028]">{menu.name}</h3>
-                <p className="text-sm text-[#4A4745]">{menu.desc}</p>
+          {MENU_FORMAT_GROUPS.map((group) => (
+            <div key={group.group} className="mt-10">
+              <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{group.group}</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {group.items.map((menu) => (
+                  <div key={menu.name} className="corp-reveal bg-white rounded-xl border border-[#E8E6E3] p-5">
+                    <h4 className="font-semibold text-sm mb-1 text-[#C5A028]">{menu.name}</h4>
+                    <p className="text-sm text-[#4A4745]">{menu.desc}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ═══════ SECTION 4.5: GALLERY ═══════ */}
+      {/* ═══════ SECTION: GALLERY ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
@@ -383,18 +480,18 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 5: WHY FOOD AFFECTS EVENT PERFORMANCE ═══════ */}
+      {/* ═══════ SECTION: WHY FOOD AFFECTS EVENT PERFORMANCE ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 5 — Performance"
+            eyebrow="Menu Planning"
             title="Why Food Affects Event Performance"
-            subtitle="Heavy or poorly timed food kills energy. Light, balanced meals keep focus sharp. We design corporate menus around your schedule — not the other way around."
+            subtitle="Heavy or poorly timed food reduces energy. Light, balanced meals keep focus sharp. We design corporate menus around your schedule — not the other way around."
           />
           <div className="grid md:grid-cols-2 gap-8 mt-10">
             <div className="space-y-4">
               <p className="text-[#4A4745]">
-                A heavy lunch at 1 PM means a dead room by 2:30. We design working lunches that are satisfying but not sedating — lighter proteins, more vegetables, less refined starch. The goal is sustained energy through the afternoon session.
+                Heavy meals can reduce afternoon energy and concentration. For working sessions, we recommend balanced lunches with lean proteins, vegetables, fresh sides, and controlled portions — satisfying but not sedating, so focus holds through the afternoon.
               </p>
               <p className="text-[#4A4745]">
                 For retreats, we match food to the activity schedule. Light breakfast before yoga. Stronger protein after training. Clean lunch before workshops. Comfort food at dinner when the workday is done.
@@ -421,11 +518,11 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 6: FULL-DAY CATERING STRUCTURE ═══════ */}
+      {/* ═══════ SECTION: FULL-DAY CATERING STRUCTURE ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 6 — Schedule"
+            eyebrow="Full-Day Programs"
             title="Full-Day Catering Structure"
             subtitle="A typical corporate offsite or conference day, mapped to food service. Every meal is timed to support the event flow."
           />
@@ -445,11 +542,11 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 7: PROFESSIONAL SERVICE STANDARDS ═══════ */}
+      {/* ═══════ SECTION: PROFESSIONAL SERVICE STANDARDS ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 7 — Standards"
+            eyebrow="Service Standards"
             title="Professional Service Standards"
             subtitle="Corporate clients expect consistency. Our service standards ensure every event runs smoothly — from arrival to final invoice."
           />
@@ -464,17 +561,33 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 8: PACKAGES + PRICING ═══════ */}
+      {/* ═══════ SECTION: PRICING ═══════ */}
       <section id="packages" className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 8 — Packages"
+            eyebrow="Pricing"
             title="Corporate Catering Packages"
             subtitle="Scalable solutions for every type of corporate event. Tax invoiced. Dedicated manager."
           />
-          <p className="text-[#4A4745] text-center max-w-2xl mx-auto -mt-4 mb-8">
+          <p className="text-[#4A4745] text-center max-w-2xl mx-auto -mt-4 mb-4">
             All packages include menu planning, fresh ingredient shopping, cooking, professional service staff, setup and full cleanup. Every package is quoted individually based on group size, menu style and venue logistics.
           </p>
+          <p className="text-[#1A1A1A] font-semibold text-center max-w-2xl mx-auto mb-8">
+            Minimum corporate booking: IDR 7,500,000, subject to event scope and location.
+          </p>
+          <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 max-w-3xl mx-auto mb-10">
+            <h3 className="font-semibold mb-4 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>What Determines the Quotation?</h3>
+            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-2">
+              {QUOTE_FACTORS.map((factor) => (
+                <div key={factor} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                  <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {factor}
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-[#4A4745]/80 text-center mt-6">
+              Prices are subject to the applicable service charge and government tax, as shown clearly in your quotation.
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {CORP_PACKAGES.map((pkg) => (
               <div key={pkg.title} className="corp-reveal bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 flex flex-col">
@@ -502,12 +615,74 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 9: DIETARY MANAGEMENT ═══════ */}
+      {/* ═══════ SECTION: CORPORATE PROCUREMENT AND INVOICING ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Procurement"
+            title="Corporate Procurement and Invoicing"
+            subtitle="We work the way corporate procurement teams expect — formal documentation, clear breakdowns, and a single point of contact."
+          />
+          <div className="grid md:grid-cols-2 gap-8 mt-10">
+            <div className="bg-[#FAFAF8] rounded-2xl p-6 border border-[#E8E6E3]">
+              <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>What We Provide</h3>
+              <div className="space-y-3">
+                {[
+                  'Formal written proposals for every event',
+                  'Detailed cost breakdowns by category',
+                  'Company invoice information and NPWP tax invoices',
+                  'Purchase-order references on all documentation',
+                  'Vendor onboarding documents on request',
+                  'Event contracts for larger programs',
+                  'A single point of contact throughout',
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                    <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-[#FAFAF8] rounded-2xl p-6 border border-[#E8E6E3]">
+              <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Payment Terms</h3>
+              <p className="text-sm text-[#4A4745] mb-4">
+                A deposit is required to confirm the booking. The remaining balance is normally due before the event.
+              </p>
+              <p className="text-sm text-[#4A4745]">
+                Approved recurring corporate accounts may qualify for alternative payment terms subject to written agreement. Payment schedules for multi-day programs are set out clearly in the proposal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION: WHAT WE CAN COORDINATE ═══════ */}
+      <section className="py-20 md:py-28 px-6">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Coordination"
+            title="What We Can Coordinate"
+            subtitle="One catering partner for the full food and beverage scope of your corporate event."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+            {COORDINATION_ITEMS.map((item) => (
+              <div key={item} className="corp-reveal flex items-start gap-2 bg-white rounded-xl border border-[#E8E6E3] p-5 text-sm text-[#4A4745]">
+                <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+              </div>
+            ))}
+          </div>
+          <p className="text-[#4A4745] text-center max-w-2xl mx-auto mt-8">
+            Entertainment, production, furniture, decoration, transport, and venue sourcing can be coordinated separately where required — see our{' '}
+            <Link to="/events/corporate-events" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">corporate event production in Bali</Link>.
+          </p>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION: DIETARY MANAGEMENT ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto text-center">
           <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Dietary Management</h2>
           <p className="text-[#4A4745] mb-6">
-            Mixed dietary needs are standard in corporate groups. We collect restrictions in advance, label every dish, and maintain separate prep zones for allergens.
+            Mixed dietary needs are standard in corporate groups. We collect restrictions in advance, label every dish, and follow reasonable separation procedures during preparation. We cannot guarantee a completely allergen-free environment.
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
             {DIETARY_OPTIONS.map((d) => (
@@ -517,11 +692,11 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 10: CORPORATE ADD-ONS ═══════ */}
+      {/* ═══════ SECTION: CORPORATE ADD-ONS ═══════ */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1000px] mx-auto">
           <SectionHeader
-            eyebrow="Chapter 9 — Add-Ons"
+            eyebrow="Add-Ons"
             title="Corporate Add-Ons"
             subtitle="Elevate your corporate event with bartenders, coffee stations, branded materials, and more."
           />
@@ -542,22 +717,37 @@ export default function CateringCorporatePage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 11: TESTIMONIALS ═══════ */}
-      <TestimonialBlock
-        testimonials={[
-          { name: 'Tech Startup Team', location: 'Canggu Offsite', quote: 'Multi-day catering for 35 people. Breakfast, lunch, and dinner for 3 days. The team was professional, food was excellent, and invoicing was seamless.', rating: 5 },
-          { name: 'Investment Firm', location: 'Seminyak Board Dinner', quote: 'Board dinner for 12. The chef created a custom menu that impressed our investors. Service was discreet and professional. Will use again.', rating: 5 },
-          { name: 'Conference Organizer', location: 'Nusa Dua Conference', quote: 'Catering for 120 delegates over 2 days. Coffee breaks, working lunches, and gala dinner. Everything ran on time and the food was outstanding.', rating: 5 },
-        ]}
-        title="What Corporate Clients Say"
-        subtitle="Real reviews from corporate events across Bali."
-      />
+      {/* ═══════ SECTION: CORPORATE CASE STUDIES ═══════ */}
+      <section className="py-20 md:py-28 px-6 bg-white">
+        <div className="max-w-[1000px] mx-auto">
+          <SectionHeader
+            eyebrow="Case Studies"
+            title="Corporate Case Studies"
+            subtitle="Recent corporate events we have catered across Bali."
+          />
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
+            {CASE_STUDIES.map((cs) => (
+              <div key={cs.title} className="corp-reveal bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 flex flex-col">
+                <h3 className="font-semibold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{cs.title}</h3>
+                <ul className="space-y-2 mb-4 flex-1">
+                  {cs.scope.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-[#4A4745]">
+                      <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm text-[#4A4745]/80"><span className="font-semibold text-[#1A1A1A]">Result:</span> {cs.result}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* ═══════ SECTION 12: FAQ ═══════ */}
+      {/* ═══════ SECTION: FAQ ═══════ */}
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
-          <SectionHeader eyebrow="Chapter 10 — FAQ" title="Corporate Catering FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <SectionHeader eyebrow="FAQ" title="Corporate Catering FAQ" />
+          <FAQAccordion items={FAQS} defaultOpenCount={5} />
         </div>
       </section>
 
@@ -568,7 +758,7 @@ export default function CateringCorporatePage() {
 
       <CateringDiscoverySection page="corporate" />
 
-      {/* ═══════ SECTION 13: FINAL CTA ═══════ */}
+      {/* ═══════ SECTION: FINAL CTA ═══════ */}
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
         <div className="absolute inset-0">
           <OptimizedImage src="/generated/mychef-catering-bali-hero-corporate.webp" alt="Corporate event catering setup at a Bali villa by myCHEF" className="w-full h-full object-cover" loading="lazy" />
@@ -582,11 +772,21 @@ export default function CateringCorporatePage() {
             Plan Your Corporate Event
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Send your event date, company size, schedule, venue, dietary needs, and budget. We will respond with a custom proposal within 24 hours.
+            Send your event details and we will respond with a formal written proposal within 24 hours.
           </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 text-left">
+            <h3 className="text-white font-semibold mb-4 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>Information Needed for a Corporate Proposal</h3>
+            <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+              {PROPOSAL_CHECKLIST.map((item) => (
+                <div key={item} className="flex items-start gap-2 text-sm text-white/[80%]">
+                  <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> {item}
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-corporate-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              <MessageCircle className="w-4 h-4" /> Plan Corporate Catering
+              <MessageCircle className="w-4 h-4" /> Request a Corporate Proposal
             </a>
             <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> Call +62 896-7407-2020
@@ -595,7 +795,7 @@ export default function CateringCorporatePage() {
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> 24h proposal turnaround</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Tax invoiced</span>
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> No hidden fees</span>
+            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Formal written proposals</span>
           </div>
         </div>
       </section>

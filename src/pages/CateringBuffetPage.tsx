@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   MessageCircle, Check, Phone, Calendar, Users,
@@ -18,7 +18,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator, CateringDiscoverySection } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip, CateringDiscoverySection, formatIDR, calculateAllIn } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -120,23 +120,23 @@ const BEST_FOR = [
   { icon: Utensils, title: 'Venue Event', desc: 'Event space catering with full setup and service' },
 ]
 
-const AREA_MINIMUMS = [
-  { area: 'Seminyak / Canggu', min: '30 guests', fee: 'No travel fee' },
-  { area: 'Berawa / Pererenan', min: '30 guests', fee: 'No travel fee' },
-  { area: 'Ubud', min: '40 guests', fee: 'IDR 350,000' },
-  { area: 'Uluwatu', min: '50 guests', fee: 'IDR 500,000' },
-  { area: 'Nusa Dua', min: 'Quote required', fee: 'Quote required' },
-  { area: 'Sanur', min: 'Quote required', fee: 'Quote required' },
-  { area: 'Jimbaran', min: 'Quote required', fee: 'Quote required' },
-  { area: 'Tanah Lot', min: 'Quote required', fee: 'Travel fee applies' },
+const AREA_COVERAGE = [
+  { area: 'Seminyak / Canggu', fee: 'No travel fee' },
+  { area: 'Berawa / Pererenan', fee: 'No travel fee' },
+  { area: 'Ubud', fee: 'Travel fee quoted per booking' },
+  { area: 'Uluwatu', fee: 'Travel fee quoted per booking' },
+  { area: 'Nusa Dua', fee: 'Travel fee quoted per booking' },
+  { area: 'Sanur', fee: 'Travel fee quoted per booking' },
+  { area: 'Jimbaran', fee: 'Travel fee quoted per booking' },
+  { area: 'Tanah Lot', fee: 'Travel fee quoted per booking' },
 ]
 
 const GROUP_SIZE_GUIDE = [
-  { guests: 30, indonesian: 'IDR 17.24M', international: 'IDR 20.87M', premium: 'IDR 28.12M' },
-  { guests: 50, indonesian: 'IDR 28.74M', international: 'IDR 34.78M', premium: 'IDR 46.87M' },
-  { guests: 80, indonesian: 'IDR 45.98M', international: 'IDR 55.65M', premium: 'IDR 75.00M' },
-  { guests: 120, indonesian: 'IDR 68.97M', international: 'IDR 83.48M', premium: 'IDR 112.50M' },
-  { guests: 200, indonesian: 'IDR 114.95M', international: 'IDR 139.13M', premium: 'IDR 187.50M' },
+  { guests: 30, indonesian: 'IDR 14.25M', international: 'IDR 17.25M', premium: 'IDR 23.25M' },
+  { guests: 50, indonesian: 'IDR 23.75M', international: 'IDR 28.75M', premium: 'IDR 38.75M' },
+  { guests: 80, indonesian: 'IDR 38.00M', international: 'IDR 46.00M', premium: 'IDR 62.00M' },
+  { guests: 120, indonesian: 'IDR 57.00M', international: 'IDR 69.00M', premium: 'IDR 93.00M' },
+  { guests: 200, indonesian: 'IDR 95.00M', international: 'IDR 115.00M', premium: 'IDR 155.00M' },
 ]
 
 const BUFFET_VS_PLATED = [
@@ -190,6 +190,60 @@ const BUFFET_FAQ_SCHEMA_QUESTIONS = [
   { question: 'What happens if it rains?', answer: 'Buffet lines set up under cover by default in wet season — verandas, tents or indoor spaces — confirmed with you and your villa before the day.' },
   { question: 'How far ahead should I book and what is the deposit?', answer: 'One to two weeks for most events, longer for peak-season weddings. A 50% deposit confirms your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
 ]
+
+function BuffetGroupTotalCalculator({ pricePerPerson, defaultGuests = 50, accent = '#C5A028' }: { pricePerPerson: number; defaultGuests?: number; accent?: string }) {
+  const minGuests = 30
+  const maxGuests = 200
+  const [guests, setGuests] = useState(defaultGuests)
+  const totalPlusPlus = pricePerPerson * guests
+  const totalAllIn = calculateAllIn(totalPlusPlus)
+
+  return (
+    <div className="bg-white rounded-xl border border-[#E8E6E3] p-5">
+      <div className="flex items-center gap-2 mb-4">
+        <Users className="w-4 h-4" style={{ color: accent }} />
+        <span className="text-sm font-medium text-[#1A1A1A]">Group total calculator</span>
+      </div>
+
+      <div className="mb-4">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm text-[#4A4745]">Guests</span>
+          <span className="text-lg font-semibold text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {guests} guests
+          </span>
+        </div>
+        <input
+          type="range"
+          aria-label="Number of guests"
+          min={minGuests}
+          max={maxGuests}
+          value={guests}
+          onChange={(e) => setGuests(Number(e.target.value))}
+          className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+          style={{
+            background: `linear-gradient(to right, ${accent} 0%, ${accent} ${((guests - minGuests) / (maxGuests - minGuests)) * 100}%, #E8E6E3 ${((guests - minGuests) / (maxGuests - minGuests)) * 100}%, #E8E6E3 100%)`,
+          }}
+        />
+        <div className="flex justify-between text-xs text-[#4A4745]/80 mt-1">
+          <span>{minGuests}</span>
+          <span>{maxGuests}</span>
+        </div>
+      </div>
+
+      <div className="border-t border-[#E8E6E3] pt-4">
+        <div className="flex justify-between items-center">
+          <span className="text-sm font-medium text-[#1A1A1A]">Total (++)</span>
+          <span className="text-xl font-semibold" style={{ color: accent, fontFamily: "'Playfair Display', serif" }}>
+            {formatIDR(totalPlusPlus)}
+          </span>
+        </div>
+        <p className="text-xs text-[#4A4745]/50 mt-1">
+          Final all-in total with 10% service charge + 11% government tax: {formatIDR(totalAllIn)}
+        </p>
+      </div>
+    </div>
+  )
+}
 
 export default function CateringBuffetPage() {
   const ref = useRef<HTMLDivElement>(null)
@@ -539,7 +593,7 @@ export default function CateringBuffetPage() {
                 <div className="p-6 md:p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{pkg.title}</h3>
                   <div className="mb-1">
-                    <AllInPrice price={pkg.price} />
+                    <p className="text-[#1A1A1A] font-semibold">{formatIDR(pkg.price)}++/person</p>
                   </div>
                   <p className="text-xs text-[#4A4745]/80 mb-4">{pkg.minGuests}</p>
                   <p className="text-sm text-[#4A4745] mb-4">{pkg.description}</p>
@@ -557,6 +611,10 @@ export default function CateringBuffetPage() {
               </div>
             ))}
           </div>
+
+          <p className="text-xs text-[#4A4745]/80 text-center max-w-3xl mx-auto mt-6">
+            All prices on this page are shown "++" — before 10% service charge and 11% government tax. An "ALL IN" price is simply the same package price with those two already included (× 1.21), not a different or hidden rate. Your WhatsApp quote always confirms the final all-in total before you pay anything.
+          </p>
 
           {/* Volume Pricing */}
           <div className="mt-8 bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 max-w-4xl mx-auto">
@@ -592,9 +650,9 @@ export default function CateringBuffetPage() {
 
           {/* Group Total Calculators */}
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <GroupTotalCalculator pricePerPerson={475000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={575000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
-            <GroupTotalCalculator pricePerPerson={775000} minGuests={30} maxGuests={200} defaultGuests={50} accent="#C5A028" />
+            <BuffetGroupTotalCalculator pricePerPerson={475000} />
+            <BuffetGroupTotalCalculator pricePerPerson={575000} />
+            <BuffetGroupTotalCalculator pricePerPerson={775000} />
           </div>
           <TaxFooter className="mt-6" />
         </div>
@@ -649,7 +707,7 @@ export default function CateringBuffetPage() {
           <SectionHeader
             eyebrow="Chapter 12 — Investment"
             title="Group Size Guide"
-            subtitle="All-in totals include 21% service charge and tax. Final quote confirmed before deposit."
+            subtitle="Estimated group totals before 10% service charge and 11% government tax. Your final all-in total is simply × 1.21 — confirmed in your quote before deposit."
           />
           <div className="hidden md:block overflow-x-auto mt-10 bg-white rounded-2xl border border-[#E8E6E3] p-6">
             <table className="w-full text-left">
@@ -770,36 +828,36 @@ export default function CateringBuffetPage() {
           <SectionHeader
             eyebrow="Chapter 15 — Coverage"
             title="Locations in Bali"
-            subtitle="Buffet catering across all major Bali villa areas. Minimums ensure service quality and logistics work properly."
+            subtitle="Buffet catering across all major Bali villa areas. The minimum is the same everywhere — farther areas simply add a travel fee, quoted per booking."
           />
-          <div className="hidden md:block overflow-x-auto mt-10">
+          <p className="text-sm text-[#1A1A1A] font-semibold text-center mt-10 mb-6">
+            Minimum 30 guests in every area — the same island-wide (groups of 20–29 possible at a higher per-person rate). Only the travel fee changes with distance.
+          </p>
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b-2 border-[#1A1A1A]">
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Area</th>
-                  <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Minimum Guests</th>
                   <th className="pb-3 text-sm font-semibold uppercase tracking-wider">Travel Fee</th>
                 </tr>
               </thead>
               <tbody>
-                {AREA_MINIMUMS.map((row) => (
+                {AREA_COVERAGE.map((row) => (
                   <tr key={row.area} className="border-b border-[#E8E6E3]">
                     <td className="py-4 font-medium">{row.area}</td>
-                    <td className="py-4">{row.min}</td>
                     <td className="py-4 text-[#4A4745]">{row.fee}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <div className="md:hidden space-y-3 mt-10">
-            {AREA_MINIMUMS.map((row) => (
+          <div className="md:hidden space-y-3">
+            {AREA_COVERAGE.map((row) => (
               <div key={row.area} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-4">
-                <div className="flex items-center justify-between mb-1">
+                <div className="flex items-center justify-between gap-2">
                   <span className="font-medium">{row.area}</span>
-                  <span className="text-sm text-[#C5A028] font-semibold">{row.min}</span>
+                  <span className="text-sm text-[#C5A028] font-semibold text-right">{row.fee}</span>
                 </div>
-                <p className="text-xs text-[#4A4745]">{row.fee}</p>
               </div>
             ))}
           </div>

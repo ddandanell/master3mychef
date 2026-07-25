@@ -323,7 +323,7 @@ export default function CateringDiscoverySection({ page }: { page: CateringDisco
 
   return (
     <StrategicLinksSection
-      eyebrow="Catering internal links"
+      eyebrow="Related catering services"
       title={content.title}
       description={content.description}
       cards={content.cards}

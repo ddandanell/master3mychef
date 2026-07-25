@@ -39,7 +39,7 @@ const CONCIERGES: Concierge[] = [
     name: 'Dede',
     role: 'Project Coordinator',
     area: 'Fine Dining',
-    desc: 'Coordinates menus, dietary preferences, wine pairings, and reservations for tasting experiences in your villa.',
+    desc: 'Indonesian project coordinator. Coordinates menus, dietary preferences, wine pairings, and reservations for tasting experiences in your villa.',
     portrait: '/generated/portrait-dede-coordinator-bali.webp',
     accent: '#C5A028',
     message: "Hi myCHEF, I'd like to book a fine dining experience at my villa.",
@@ -49,7 +49,7 @@ const CONCIERGES: Concierge[] = [
     name: 'David',
     role: 'Project Coordinator',
     area: 'Catering',
-    desc: 'Coordinates daily chef bookings, meal plans, weekly stays, and matching the right chef to your kitchen. David is the international voice on the team.',
+    desc: 'Project coordinator and the only non-Indonesian on the team. Coordinates daily chef bookings, meal plans, weekly stays, and matching the right chef to your kitchen.',
     portrait: '/generated/portrait-david-coordinator-bali.webp',
     accent: '#6B8E5A',
     message: "Hi David, I'd like to book a private chef for my villa.",
@@ -59,7 +59,7 @@ const CONCIERGES: Concierge[] = [
     name: 'Rina',
     role: 'Project Coordinator',
     area: 'Events',
-    desc: 'Coordinates weddings, corporate events, retreats, and celebrations from intimate dinners to 200-guest receptions.',
+    desc: 'Indonesian project coordinator. Coordinates weddings, corporate events, retreats, and celebrations from intimate dinners to 200-guest receptions.',
     portrait: '/generated/portrait-rina-coordinator-bali.webp',
     accent: '#2C5F7C',
     message: "Hi Rina, I'd like to plan an event in Bali.",
@@ -69,7 +69,7 @@ const CONCIERGES: Concierge[] = [
     name: 'Budi',
     role: 'Project Coordinator',
     area: 'Partners & Staffing',
-    desc: 'Coordinates villa partner programs, long-term chef staffing, and corporate hospitality arrangements.',
+    desc: 'Indonesian project coordinator. Coordinates villa partner programs, long-term chef staffing, and corporate hospitality arrangements.',
     portrait: '/generated/portrait-budi-coordinator-bali.webp',
     accent: '#8B4513',
     message: "Hi Budi, I'd like to talk about a partnership / staffing arrangement.",
@@ -195,7 +195,7 @@ export default function ContactPage() {
             {"Meet your myCHEF project coordinators"}
           </h1>
           <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[640px] leading-relaxed">
-            These are the people you talk to when you call us. Every person here is a project coordinator: they handle events, staff and every moving part — matching the right chef, waiter, bartender or host to your villa and making sure everyone is exactly where they need to be.
+            These are the beautiful project coordinators you meet when planning a big event — the people you talk with when you call us. Every person here handles events, staff and every moving part, matching the right chef, waiter, bartender or host to your villa and making sure everyone is exactly where they need to be.
           </p>
           <div className="flex items-center gap-3 text-[#C5A028] text-sm">
             <span className="inline-block w-2 h-2 rounded-full bg-[#C5A028] animate-pulse" />
@@ -216,11 +216,12 @@ export default function ContactPage() {
               <h2 className="font-playfair text-4xl md:text-5xl leading-tight">Meet your myCHEF project coordinators</h2>
             </div>
             <p className="text-[#4A4745] text-lg">
-              These are the people you talk to when you call us. Every person on this page is a
-              project coordinator: they handle events, staff and every detail in between — matching
-              the right chef, waiter, bartender or host to your villa and making sure everyone is
-              exactly where they need to be. Whether it is an intimate dinner or a 200-guest
-              celebration, they are your single point of contact from first message to final cleanup.
+              These are the beautiful project coordinators you meet when planning a big event — the
+              people you talk with when you call us. Every person on this page handles events, staff
+              and every detail in between, matching the right chef, waiter, bartender or host to your
+              villa and making sure everyone is exactly where they need to be. Whether it is an
+              intimate dinner or a 200-guest celebration, they are your single point of contact from
+              first message to final cleanup.
             </p>
           </div>
 

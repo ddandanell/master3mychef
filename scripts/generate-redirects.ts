@@ -71,7 +71,7 @@ const vercelConfig = {
     {
       source: '/quote',
       headers: [
-        { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+        { key: 'X-Robots-Tag', value: 'noindex,follow' },
       ],
     },
     {

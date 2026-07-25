@@ -2247,7 +2247,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/partner-platform',
     title: 'Partner Platform | myCHEF for Villas & Venues',
     description:
-      'Partner with myCHEF to offer private chef dining, events and staffing at your Bali villa or venue — co-branded or white-label.',
+      'Join the myCHEF partner platform: preferred private chef partner for Bali villas, venues and hospitality brands.',
     canonical: `${SITE}/partner-platform`,
     h1: 'Partner Platform',
   },

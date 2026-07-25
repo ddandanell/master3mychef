@@ -5,7 +5,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
   <p>Hiring a chef in Indonesia can mean one unforgettable dinner — or a permanent member of your household. Those are completely different arrangements, and choosing the right one is the only decision you need to make first. myCHEF provides vetted, professional chefs across all four formats, with our strongest active coverage in Bali.</p>
   <div class="not-prose mt-8 flex flex-col gap-4 sm:flex-row">
     <a href="https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20hire%20a%20chef.%20Please%20help%20me%20choose%20the%20right%20format." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-[#C5A028] px-8 py-4 text-sm font-bold uppercase tracking-[2px] text-black transition hover:bg-[#D4B43A]">Tell Us What You Need on WhatsApp</a>
-    <a href="/pricing" class="inline-flex items-center justify-center rounded-full border border-black/10 px-8 py-4 text-sm font-bold uppercase tracking-[2px] text-[#1A1A1A] transition hover:bg-black/5">current pricing</a>
+    <a href="/pricing" class="inline-flex items-center justify-center rounded-full border border-black/10 px-8 py-4 text-sm font-bold uppercase tracking-[2px] text-[#1A1A1A] transition hover:bg-black/5">See Current Pricing</a>
   </div>
 </section>
 
@@ -64,7 +64,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
   <p>A chef on selected days each week for fresh meals, batch cooking and family routines — consistency first: predictable nutrition, menu variety, and a clear feedback rhythm. For stays of a month or more, see <a href="/hire-private-chef-bali-monthly">monthly arrangements</a>.</p>
 
   <h3>Full-time and live-in placement</h3>
-  <p>A permanent household chef must fit the food and the family. Our <a href="/staffing/private-chef-placement">placement service</a> is built around matching — vetted profiles, background verification, trial cooking and performance follow-up — and our <a href="/staffing/live-in-chef">live-in chef service</a> covers roles where accommodation is part of the position, from IDR 8M per month.</p>
+  <p>A permanent household chef must fit the food and the family. Our <a href="/staffing/private-chef-placement">placement service</a> is built around matching — vetted profiles, background verification, trial cooking and performance follow-up — and our <a href="/staffing/live-in-chef">live-in chef service</a> covers roles where accommodation is part of the position, with a tailored quote from our staffing team.</p>
 </section>
 
 <section aria-labelledby="what-includes">
@@ -82,9 +82,9 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
   <p>There is no single national price because the formats differ — so here are the real anchors per format:</p>
   <ul>
     <li><strong>Private dinners:</strong> from IDR 700K per person; tasting menus from IDR 950–980K per person</li>
-    <li><strong>Chef sessions (Bali):</strong> from IDR 1,350,000 per session, groceries at cost</li>
-    <li><strong>Weekly meal prep:</strong> from IDR 4,500,000 per week for two people</li>
-    <li><strong>Live-in placement:</strong> from IDR 8,000,000 per month</li>
+    <li><strong>Chef days (Bali):</strong> from IDR 2,500,000++ per half day, with one professional chef and one dedicated assistant included; groceries at cost with receipts</li>
+    <li><strong>Weekly chef service:</strong> from IDR 2,250,000++ per day at the weekly rate (10% off standard); monthly rate from IDR 2,000,000++ per day (20% off)</li>
+    <li><strong>Live-in placement:</strong> tailored quote from our staffing team, based on the household brief</li>
     <li><strong>Service staff:</strong> waiters and sommeliers from IDR 250K per hour; bartenders from IDR 350K per hour</li>
   </ul>
   <p>Prices are quoted ++ (11% government tax + 10% service charge) as one fixed figure before you commit — a deposit confirms your date. Full detail lives on the <a href="/pricing">current pricing</a>.</p>

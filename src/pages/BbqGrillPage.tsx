@@ -363,7 +363,7 @@ export default function BbqGrillPage() {
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Dietary</p>
           <h2 className="font-playfair text-3xl md:text-4xl mb-6 text-white">Dietary Options on the Grill</h2>
           <p className="text-white/[65%] leading-relaxed">
-            Most grill menus adapt to vegetarian, vegan, gluten-free and halal requirements, and mixed menus let seafood-lovers and meat-lovers eat at the same party. Younger guests are covered too — our <Link to="/kids-menus" className="text-[#C5A028] hover:underline">kids</Link> menu runs from IDR 250,000 per child alongside any grill night.
+            Most grill menus adapt to vegetarian, vegan, gluten-free and halal requirements, and mixed menus let seafood-lovers and meat-lovers eat at the same party. Younger guests are covered too — our <Link to="/kids-menus" className="text-[#C5A028] hover:underline">kids' menus</Link> run from IDR 250,000 per child alongside any grill night.
           </p>
         </div>
       </section>

@@ -32,7 +32,7 @@ const FAMILIES: FamilyCard[] = [
     name: 'Classic Set Menus',
     menuCount: CLASSIC_MENUS.length,
     price: 'From IDR 1.25M',
-    line: 'Our most formal format. Six-course fine dining, cooked and served in your villa.',
+    line: 'Six-course fine dining, cooked and served in your villa. Our most formal format.',
     href: '/fine-dining/menus',
     image: '/generated/mychef-families-bali-classic-set-menus.webp',
     imageWidth: 960,
@@ -43,7 +43,7 @@ const FAMILIES: FamilyCard[] = [
     name: 'Three-Course',
     menuCount: THREE_COURSE_MENUS.length,
     price: 'From IDR 850K',
-    line: 'Lighter three-course dining for relaxed villa evenings.',
+    line: 'Lighter three-course dining for relaxed villa evenings and casual lunches. Minimum 6 guests.',
     href: '/three-course',
     image: '/generated/mychef-families-bali-three-course.webp',
     imageWidth: 960,
@@ -54,7 +54,7 @@ const FAMILIES: FamilyCard[] = [
     name: 'BBQ Grill',
     menuCount: BBQ_MENUS.length,
     price: 'From IDR 950K',
-    line: 'A live grill station at your villa, cooked over open flame.',
+    line: 'A live grill station at your villa, cooked over open flame while your guests gather round.',
     href: '/bbq-grill',
     image: '/generated/mychef-families-bali-bbq-grill.webp',
     imageWidth: 960,
@@ -65,7 +65,7 @@ const FAMILIES: FamilyCard[] = [
     name: "Kids' Menus",
     menuCount: KIDS_MENUS.length,
     price: 'From IDR 250K',
-    line: 'Fun, healthy, nut-free menus children actually eat.',
+    line: "Fun, healthy, nut-free menus children actually eat — with hands-on moments built in.",
     href: '/kids-menus',
     image: '/generated/mychef-families-bali-kids-menus.webp',
     imageWidth: 960,
@@ -75,7 +75,7 @@ const FAMILIES: FamilyCard[] = [
   {
     name: 'Fine Dining Experience',
     price: 'From IDR 1.25M',
-    line: 'The full private-chef evening, from aperitif to dessert.',
+    line: 'The full private-chef evening, from aperitif to dessert, styled end to end.',
     href: '/fine-dining',
     image: '/generated/mychef-families-bali-fine-dining-experience.webp',
     imageWidth: 960,
@@ -85,7 +85,7 @@ const FAMILIES: FamilyCard[] = [
   {
     name: 'Catering & Events',
     price: 'Custom quotes',
-    line: 'Weddings, parties and corporate events, fully staffed.',
+    line: 'Weddings, parties and corporate events, fully staffed, priced per head.',
     href: '/catering',
     image: '/generated/mychef-families-bali-catering-events.webp',
     imageWidth: 960,
@@ -243,19 +243,19 @@ export default function DiningStylesPage() {
             <div>
               <h3 className="font-playfair text-xl text-white mb-2">Plated (course-by-course)</h3>
               <p className="text-white/70 leading-relaxed">
-                Each guest receives their own plate, served in sequence. Choose plated when the dinner <em>is</em> the event: anniversaries, client dinners, celebrations where you want restaurant pacing and presentation. Found in our <Link to="/fine-dining/menus" className="text-[#C5A028] hover:underline">classic set menus</Link> and <Link to="/three-course" className="text-[#C5A028] hover:underline">three-course</Link> collections.
+                Each guest receives their own plate, served in sequence. Choose plated when the dinner <em>is</em> the event: anniversaries, client dinners, celebrations where you want restaurant pacing and presentation. Needs a seated table and roughly 1.5&ndash;3 hours depending on courses. Found in our <Link to="/fine-dining/menus" className="text-[#C5A028] hover:underline">Classic Set Menus</Link> and <Link to="/three-course" className="text-[#C5A028] hover:underline">Three-Course</Link> collections.
               </p>
             </div>
             <div>
               <h3 className="font-playfair text-xl text-white mb-2">Family-style (shared platters)</h3>
               <p className="text-white/70 leading-relaxed">
-                Generous platters land in the middle of the table and guests help themselves. Choose family-style for groups who know each other — reunions, birthdays, long-table villa dinners. It is generous, social and relaxed.
+                Generous platters land in the middle of the table and guests help themselves. Choose family-style for groups who know each other — reunions, birthdays, long-table villa dinners. It is generous, social and relaxed, and it handles mixed appetites well. Many three-course starters are already served this way.
               </p>
             </div>
             <div>
               <h3 className="font-playfair text-xl text-white mb-2">Buffet</h3>
               <p className="text-white/70 leading-relaxed">
-                Guests serve themselves from a styled spread. Choose buffet for headcounts above ~15, mixed dietary needs, or events where people eat in waves. The most cost-efficient way to feed a big group well.
+                Guests serve themselves from a styled spread. Choose buffet for headcounts above ~15, mixed dietary needs, or events where people eat in waves rather than all at once — open-house parties, retreat meal times. The most cost-efficient way to feed a big group well.
               </p>
             </div>
             <div>
@@ -267,7 +267,7 @@ export default function DiningStylesPage() {
             <div>
               <h3 className="font-playfair text-xl text-white mb-2">Live-fire (BBQ grill station)</h3>
               <p className="text-white/70 leading-relaxed">
-                The chef cooks over open flame at a grill station built at your villa. Choose live-fire when you want theatre: smoke, aroma and a chef in action become part of the entertainment. See the <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">BBQ Grill collection</Link>.
+                The chef cooks over open flame at a grill station built at your villa. Choose live-fire when you want theatre: smoke, aroma and a chef in action become part of the entertainment. Suits casual-to-premium outdoor evenings. See the <Link to="/bbq-grill" className="text-[#C5A028] hover:underline">BBQ Grill collection</Link>.
               </p>
             </div>
           </div>
@@ -291,7 +291,7 @@ export default function DiningStylesPage() {
             <li><strong>Wedding or corporate event</strong> &rarr; <Link to="/catering" className="text-[#C5A028] hover:underline">Catering &amp; Events</Link>, custom-quoted per head</li>
           </ul>
           <p className="mt-8 text-white/60 text-center">
-            Want to see exactly how each format looks on the table? Read <Link to="/family-styling" className="text-[#C5A028] hover:underline">how we style each experience</Link>.
+            Want to see exactly how each format looks on the table — settings, pacing, staffing? Read <Link to="/family-styling" className="text-[#C5A028] hover:underline">how we style each experience</Link>.
           </p>
         </div>
       </section>
@@ -302,7 +302,7 @@ export default function DiningStylesPage() {
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Still Not Sure?</p>
           <h2 className="font-playfair text-3xl md:text-4xl mb-4">Tell Us the Occasion</h2>
           <p className="text-white/60 mb-10 leading-relaxed">
-            Tell us the occasion, guest count and the mood you want, and we will point you to the right collection in one WhatsApp message. A 50% deposit secures your date once you have chosen.
+            Tell us the occasion, guest count and the mood you want, and we will point you to the right collection in one WhatsApp message — usually within the hour. A 50% deposit secures your date once you have chosen.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

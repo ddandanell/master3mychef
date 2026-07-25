@@ -71,7 +71,7 @@ export default function RecommendedServicesPage() {
       id: 'scenarios',
       type: 'custom',
       subtitle: 'Start here',
-      title: 'Build Your Perfect Villa Experience',
+      title: 'Start With the Moment',
       body: 'You should not need to learn our service categories before you can ask a question. Start with what you are planning — we will handle the fit. Prefer to browse first? <a href="/services">Compare all services</a> or <a href="/dining-styles">browse menus by style</a>.',
       render: (
         <div className="grid gap-6 md:grid-cols-2">
@@ -101,7 +101,7 @@ export default function RecommendedServicesPage() {
       id: 'concierge-approach',
       type: 'content',
       subtitle: 'The myCHEF way',
-      title: 'A concierge approach, not a confusing booking maze',
+      title: 'An Honest Concierge, Not a Sales Funnel',
       body: `<p>Most guests do not arrive knowing whether they need fine dining, event catering, a daily chef or villa staffing. They know what they want the stay to <em>feel</em> like. That is where we start.</p>
       <p>Our concierge team listens first, then recommends based on your guest count, occasion, villa setup and the level of service you actually need — which sometimes means telling you a smaller (or different) service than the one you asked about. A three-course menu instead of a six-course tasting. A buffet instead of plated service for 30. The right fit, explained why.</p>`,
       image: '/generated/mychef-misc-bali-contact-concierge.webp',
@@ -111,8 +111,8 @@ export default function RecommendedServicesPage() {
       id: 'ask-us',
       type: 'custom',
       subtitle: 'What to send',
-      title: 'Three details that help us guide you quickly',
-      body: 'If you message us with these three things, we can usually point you in the right direction in minutes.',
+      title: 'Three Details That Get You an Answer in Minutes',
+      body: 'Message us these three things and we can usually point you in the right direction in one reply. That is it — one WhatsApp message covers everything; you do not need to know our internal categories before you write.',
       render: (
         <div className="grid gap-4 md:grid-cols-3">
           {[
@@ -146,7 +146,7 @@ export default function RecommendedServicesPage() {
       type: 'cta',
       subtitle: 'Tell us the moment',
       title: "Tell Us the Moment You're Planning",
-      body: 'We will handle the fit — and we will be honest if the fit is not us.',
+      body: 'We will handle the fit — and we will be honest if the fit is not us. Prices on this site are estimates and exclude 11% government tax and 10% service charge, which are added to your final quote.',
       primaryAction: {
         label: 'Get Guided',
         href: marcoLink,
@@ -167,7 +167,7 @@ export default function RecommendedServicesPage() {
       seoTitle="Build Your Perfect Villa Experience | myCHEF Bali"
       description="Tell myCHEF what you are hosting and get matched to the right service — guest count, mood and budget."
       h1="Not Sure What You Need? We’ll Help."
-      subtitle="myCHEF works like a concierge: tell us the occasion, the guest count and the mood you want, and we will guide you to the right service quickly — with honest advice, not a sales script."
+      subtitle="myCHEF works like a concierge: tell us the occasion, the guest count and the mood you want, and we will guide you to the right service quickly — with honest advice, not a sales script. 12,000+ guests served by a background-checked team, with same-day responses on WhatsApp."
       heroImage="/generated/mychef-experience-bali-aura-setup.webp"
       heroImageAlt="myCHEF concierge-style villa experience setup in Bali"
       ogImage="https://mychef.id/generated/mychef-experience-bali-aura-setup.webp"

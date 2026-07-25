@@ -75,7 +75,7 @@ const RELATED_COLLECTIONS = [
     note: '24 menus, from IDR 1.25M per guest',
   },
   {
-    to: '/',
+    to: '/fine-dining/private-chef-bali',
     label: 'Private Chef Service',
     title: 'Private chef service in Bali',
     note: 'For a more formal evening',
@@ -207,7 +207,7 @@ export default function ThreeCoursePage() {
             Starter. Main. Dessert. No fuss, all flavour — cooked fresh in your villa kitchen by a myCHEF chef, served at your table, and cleaned up completely afterwards.
           </p>
           <p className="text-base md:text-xl text-[#C5A028] font-medium mb-10">
-            From IDR 850,000 per guest &middot; Minimum 6 guests &middot; All prices ++
+            From IDR 850,000 per guest &middot; Minimum 6 guests &middot; All prices ++ (11% government tax + 10% service charge)
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4">
             <a
@@ -310,7 +310,7 @@ export default function ThreeCoursePage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-12">
             <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Explore More</p>
-            <h2 className="font-playfair text-3xl md:text-5xl text-white">Related Menu Collections</h2>
+            <h2 className="font-playfair text-3xl md:text-5xl text-white">Explore More Menu Collections</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {RELATED_COLLECTIONS.map((collection) => (

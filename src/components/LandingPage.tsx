@@ -375,17 +375,34 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             ]
           : entry.slug === 'corporate-retreat-catering-bali'
             ? [
-                { question: 'How much does corporate retreat catering cost?', answer: 'Corporate retreat catering is quoted individually based on group size, agenda, venue logistics and length of stay. Every proposal is built as a custom per-person-per-day package with no published price list.' },
-                { question: 'How far in advance should I book corporate retreat catering?', answer: 'Two to four weeks is typical, and two to three months for peak season. Menu proposals are sent within 24 hours of receiving your brief.' },
-                { question: 'How do you manage dietary needs on a corporate retreat (vegan, halal)?', answer: 'We collect dietary needs before the retreat, label dishes, and customise at no extra charge. The same structured process is used for wellness retreats.' },
+                { question: 'What does corporate retreat catering in Bali cost per day?', answer: 'Every corporate retreat programme is quoted individually based on group size, agenda, venue logistics and length of stay. Contact us for a fixed, itemised proposal.' },
                 { question: 'How much is retreat catering for 10 / 20 / 30 / 50 people?', answer: 'Pricing is built from a custom per-person-per-day model, with a group-size table and staffing notes for each headcount in your proposal.' },
-                { question: 'Can you invoice our company for retreat catering (NPWP)?', answer: 'Yes. We are NPWP-registered and issue tax invoices, support purchase orders, and offer Net-14 terms for regular clients.' },
+                { question: 'Can you invoice our company with proper tax documentation?', answer: 'Yes. We are NPWP-registered and issue full tax invoices (faktur pajak on request) with itemised per-head breakdowns — built for corporate expensing and procurement review.' },
+                { question: 'How do you handle dietary requirements across 20–100 people for several days?', answer: 'Through a pre-retreat dietary intake form, a kitchen briefing against the real attendee list, labelled dishes and separate prep for allergy-critical guests. Halal, vegan, gluten-free and medical diets are all integrated into the main service.' },
+                { question: 'Can you cater across multiple villas or a retreat venue?', answer: 'Yes. We regularly serve groups split across villa compounds and neighbouring properties, and coordinate directly with venue and villa management on access, loading and house rules.' },
+                { question: 'What is the alcohol policy for corporate retreats?', answer: 'Your company sets the policy — we serve to it. Options range from fully dry programmes to beer-and-wine dinners or a single cocktail reception, with bartenders available as an add-on.' },
+                { question: 'Can we include one special elevated dinner inside the retreat?', answer: 'Yes, and we recommend it. A plated fine-dining evening mid-retreat is the most common upgrade — quoted separately as a per-person add-on.' },
+                { question: 'How far in advance should we book a corporate retreat?', answer: 'Two to four weeks works for most retreats; one to three months for peak season or groups above 50. Lead time lets us reserve the same chef team for your full programme.' },
+                { question: 'What deposit is required for corporate retreat catering?', answer: 'A 50% deposit confirms your date and team; the balance is due the day before your retreat begins.' },
               ]
-            : isGroupVillaDinner
+            : entry.slug === 'michelin-private-chef-bali-prices'
               ? [
-                  { question: 'How much is a group villa dinner per person in Bali?', answer: 'Group villa dinners use tiered per-person pricing by group size from the IDR 700K per person model, with package totals shown for 6, 8, 12, and 20 guests.' },
-                  { question: 'How much is a private chef for 8 people in Bali?', answer: 'Eight guests typically start from around IDR 5.6M++ (~IDR 6.8M all-in) for a three to four course dinner. Alternatively, a chef session starts from IDR 1.35M plus groceries at cost.' },
-                  { question: 'Can you handle dietary restrictions in a group dinner?', answer: 'Yes. Mixed menus per guest — vegan, gluten-free, halal, allergies — are handled within one event at no extra charge. Requirements are collected at booking.' },
+                  { question: 'Is a Michelin-trained chef always the most expensive option?', answer: 'Not always. A premium tasting menu for 8 guests (from IDR 950K++ per person) can cost less per head than a fully staffed standard dinner with bar service. The tiers overlap — the difference is where the money goes: ingredients and craft, versus staffing scale.' },
+                  { question: 'Are groceries included in the price?', answer: 'Yes for fine-dining menus — the per-person price includes all ingredients. For daily or weekly chef service, groceries are billed separately at cost with receipts, never marked up.' },
+                  { question: 'What does the Chef’s Table cost?', answer: 'IDR 3,500K++ per person — approximately IDR 4.24M all-in — for 6 guests, always Full-Service, cooked counter-side by the chef.' },
+                  { question: 'Can two people book a Michelin-tier dinner?', answer: 'Yes — the Romantic Dinner for Two is IDR 3,500K per couple Full-Service (IDR 2,800K Kitchen-Service), with a customised menu, candles and full setup.' },
+                  { question: 'How far ahead should I book a premium dinner?', answer: 'A few days is often enough for tasting menus; custom menus need about 7 days. Peak dates fill earlier — a 50% deposit locks your chef.' },
+                ]
+              : isGroupVillaDinner
+              ? [
+                  { question: 'How much does a group villa dinner in Bali cost?', answer: 'Packages start from IDR 700,000++ per person for groups of 10–60, with larger events custom quoted. That is subject to 11% government tax + 10% service charge, and it covers the menu, chefs, service staff, setup and cleanup — everything except premium upgrades, which are quoted separately in advance.' },
+                  { question: 'What group sizes can you handle?', answer: 'Comfortably from 10 to 150 guests. Above 60 we build temporary prep stations and scale the brigade; above 30 we add a second chef.' },
+                  { question: 'Can you handle kids within the group?', answer: 'Yes — dedicated kids’ menus from IDR 250,000 per child, served early and separately if you like, so the adults’ dinner runs at an adult pace.' },
+                  { question: 'What about different dietary needs across a big group?', answer: 'Standard. We collect requirements in advance, design the menu so vegetarian, vegan, halal-sensitive, gluten-free and allergy-managed guests are covered by the main spread, and label every dish.' },
+                  { question: 'Is our villa kitchen big enough for 20+ guests?', answer: 'Almost always. We assess the kitchen, power and serving space before the date and bring any missing equipment — that check is part of every group booking.' },
+                  { question: 'Do villas charge extra for large gatherings?', answer: 'Some do — function fees or banjar permits can apply for gatherings beyond the villa’s sleeping capacity. We raise this early and coordinate with your villa manager.' },
+                  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your date and team; the balance is due the day before the event.' },
+                  { question: 'How far ahead should we book, and are there travel fees?', answer: 'A few days to a week is usually enough; earlier in peak season. Travel fees may apply for remote areas and are always quoted upfront.' },
                 ]
               : [
                   { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },

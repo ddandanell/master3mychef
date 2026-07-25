@@ -92,9 +92,9 @@ export const LANDING_PAGES: ContentEntry[] = [
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "IDR",
-            "lowPrice": "4500000",
-            "highPrice": "8000000",
-            "description": "Monthly & long-term private chef service for Bali villas and residences — recurring meal plans by vetted chefs. WhatsApp myCHEF."
+            "lowPrice": "2000000",
+            "highPrice": "3360000",
+            "description": "Monthly & long-term private chef service for Bali villas and residences — recurring daily chef service at monthly rates, per day. WhatsApp myCHEF."
           }
         },
         {
@@ -105,7 +105,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "name": "How much does a monthly private chef cost in Bali?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Weekly meal prep starts from IDR 4.5M per week for two people; a full-time live-in chef starts from IDR 8M per month. Recurring arrangements are quoted as one fixed monthly figure."
+                "text": "Monthly arrangements use discounted daily rates: from IDR 2,000,000++ per day for a half day, IDR 2,800,000++ for a full day, or IDR 3,360,000++ for a complete full day (20% off standard rates). Every booking includes one professional chef and one dedicated assistant; groceries are charged separately at cost, supported by receipts. Prices are subject to a 10% service charge and 11% tax. A full-time live-in chef is a separate employment model, quoted individually by our staffing team."
               }
             },
             {
@@ -114,6 +114,14 @@ export const LANDING_PAGES: ContentEntry[] = [
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Groceries are billed at cost with receipts and never marked up."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can the chef cook for dietary requirements and kids?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — vegan, gluten-free, halal, allergies and children's menus are part of the weekly plan at no extra charge."
               }
             },
             {
@@ -130,6 +138,14 @@ export const LANDING_PAGES: ContentEntry[] = [
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Most arrangements start at one month and extend for the length of the stay or season, with multi-month rates tailored to your dates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I add other staff to a monthly arrangement?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — waiters, bartenders or housekeepers can join the arrangement through our villa staffing service."
               }
             }
           ]
@@ -213,11 +229,6 @@ export const LANDING_PAGES: ContentEntry[] = [
         "areaServed": [
           "Bali"
         ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
         "offers": {
           "@type": "AggregateOffer",
           "priceCurrency": "IDR",
@@ -277,6 +288,24 @@ export const LANDING_PAGES: ContentEntry[] = [
               "@type": "Answer",
               "text": "A few days' notice is usually enough for an intimate dinner; larger events and peak season deserve one to two weeks. WhatsApp replies arrive within about two hours."
             }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://mychef.id/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Best Private Chef Indonesia",
+            "item": "https://mychef.id/best-private-chef-indonesia"
           }
         ]
       }
@@ -465,6 +494,24 @@ export const LANDING_PAGES: ContentEntry[] = [
             }
           }
         ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://mychef.id/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Private Dining Indonesia",
+            "item": "https://mychef.id/private-dining-indonesia"
+          }
+        ]
       }
     ]
   },
@@ -557,6 +604,14 @@ export const LANDING_PAGES: ContentEntry[] = [
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Weekly plans run week by week with no long subscription lock-ins. Most guests book for the length of their stay."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What deposit or payment terms apply?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A 50% deposit confirms your meal plan start date; the balance is due the day before your first chef session."
               }
             },
             {
@@ -665,6 +720,24 @@ export const LANDING_PAGES: ContentEntry[] = [
               "@type": "Answer",
               "text": "A verified replacement of equivalent calibre is dispatched within 2 hours, or you receive a 100% refund. Your event does not get cancelled."
             }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://mychef.id/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Chef for Hire Indonesia",
+            "item": "https://mychef.id/chef-for-hire-indonesia"
           }
         ]
       }

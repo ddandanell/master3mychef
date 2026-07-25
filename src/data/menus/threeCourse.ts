@@ -6,58 +6,6 @@ import type { Menu } from './types';
  */
 export const THREE_COURSE_MENUS: Menu[] = [
   {
-    code: '3C-A1',
-    name: 'Mediterranean Three-Course',
-    family: 'three-course',
-    theme: 'Mediterranean',
-    tier: 'A',
-    priceIdr: 895000,
-    minGuests: 6,
-    guestNoun: 'guest',
-    description:
-      'Charred halloumi salad, herb-crusted free-range chicken and a zesty lemon tart — a sun-drenched Mediterranean trio.',
-    courses: [
-      {
-        label: 'Starter',
-        dishes: [
-          {
-            name: 'Grilled Halloumi Salad',
-            description:
-              'Charred halloumi over organic greens with cherry tomatoes, cucumber, and lemon-oregano dressing. Shared platter for the table.',
-          },
-        ],
-      },
-      {
-        label: 'Main Course',
-        dishes: [
-          {
-            name: 'Herb-Crusted Chicken',
-            description:
-              'Free-range chicken breast with rosemary-thyme crust. Roasted until golden. Served with roasted Mediterranean vegetables.',
-          },
-        ],
-      },
-      {
-        label: 'Dessert',
-        dishes: [
-          {
-            name: 'Lemon Tart',
-            description:
-              'Classic tart with zesty lemon curd and buttery pastry. Individual portions.',
-          },
-        ],
-      },
-    ],
-    dietaryTags: ['Vegetarian', 'Vegan adaptable', 'GF adaptable', 'Halal'],
-    addOns: [
-      { name: 'Garlic bread basket', priceIdr: 50000, perGuest: true },
-      { name: 'Extra halloumi portion', priceIdr: 65000, perGuest: true },
-    ],
-    image: '/generated/mychef-events-bali-party-medi.webp',
-    imageAlt:
-      'Mediterranean Three-Course menu by myCHEF.id — grilled halloumi salad and herb-crusted chicken served family-style',
-  },
-  {
     code: '3C-A2',
     name: 'Indonesian Three-Course',
     family: 'three-course',
@@ -110,24 +58,24 @@ export const THREE_COURSE_MENUS: Menu[] = [
       'Indonesian Three-Course menu by myCHEF.id — gado-gado, chicken satay with nasi goreng and dadar gulung',
   },
   {
-    code: '3C-B1',
-    name: 'Italian Three-Course',
+    code: '3C-A1',
+    name: 'Mediterranean Three-Course',
     family: 'three-course',
-    theme: 'Italian',
-    tier: 'B',
-    priceIdr: 1300000,
+    theme: 'Mediterranean',
+    tier: 'A',
+    priceIdr: 895000,
     minGuests: 6,
     guestNoun: 'guest',
     description:
-      'Creamy burrata caprese, slow-braised Angus short rib in red wine and a classic espresso tiramisu — la dolce vita, villa-style.',
+      'Charred halloumi salad, herb-crusted free-range chicken and a zesty lemon tart — a sun-drenched Mediterranean trio.',
     courses: [
       {
         label: 'Starter',
         dishes: [
           {
-            name: 'Burrata Caprese',
+            name: 'Grilled Halloumi Salad',
             description:
-              'Creamy burrata with heirloom tomatoes, fresh basil, and extra virgin olive oil. Served family-style on a platter.',
+              'Charred halloumi over organic greens with cherry tomatoes, cucumber, and lemon-oregano dressing. Shared platter for the table.',
           },
         ],
       },
@@ -135,9 +83,9 @@ export const THREE_COURSE_MENUS: Menu[] = [
         label: 'Main Course',
         dishes: [
           {
-            name: 'Slow-Braised Beef Short Rib',
+            name: 'Herb-Crusted Chicken',
             description:
-              'Angus beef short rib braised 4 hours in red wine and herbs. Falling-off-the-bone tender. Rich jus.',
+              'Free-range chicken breast with rosemary-thyme crust. Roasted until golden. Served with roasted Mediterranean vegetables.',
           },
         ],
       },
@@ -145,21 +93,21 @@ export const THREE_COURSE_MENUS: Menu[] = [
         label: 'Dessert',
         dishes: [
           {
-            name: 'Tiramisu',
+            name: 'Lemon Tart',
             description:
-              'Classic layered tiramisu with espresso-soaked savoiardi and mascarpone cream. Made fresh that morning.',
+              'Classic tart with zesty lemon curd and buttery pastry. Individual portions.',
           },
         ],
       },
     ],
-    dietaryTags: ['Vegetarian'],
+    dietaryTags: ['Vegetarian', 'Vegan adaptable', 'GF adaptable', 'Halal'],
     addOns: [
-      { name: 'Truffle shaved on short rib', priceIdr: 175000, perGuest: true },
-      { name: 'Artisan bread basket', priceIdr: 50000, perGuest: true },
+      { name: 'Garlic bread basket', priceIdr: 50000, perGuest: true },
+      { name: 'Extra halloumi portion', priceIdr: 65000, perGuest: true },
     ],
-    image: '/generated/pkg-italian.webp',
+    image: '/generated/mychef-events-bali-party-medi.webp',
     imageAlt:
-      'Italian Three-Course menu by myCHEF.id — burrata caprese, slow-braised beef short rib and tiramisu',
+      'Mediterranean Three-Course menu by myCHEF.id — grilled halloumi salad and herb-crusted chicken served family-style',
   },
   {
     code: '3C-B2',
@@ -214,6 +162,58 @@ export const THREE_COURSE_MENUS: Menu[] = [
       'Seafood Three-Course menu by myCHEF.id — snapper ceviche, grilled whole snapper and coconut panna cotta',
   },
   {
+    code: '3C-B1',
+    name: 'Italian Three-Course',
+    family: 'three-course',
+    theme: 'Italian',
+    tier: 'B',
+    priceIdr: 1300000,
+    minGuests: 6,
+    guestNoun: 'guest',
+    description:
+      'Creamy burrata caprese, slow-braised Angus short rib in red wine and a classic espresso tiramisu — la dolce vita, villa-style.',
+    courses: [
+      {
+        label: 'Starter',
+        dishes: [
+          {
+            name: 'Burrata Caprese',
+            description:
+              'Creamy burrata with heirloom tomatoes, fresh basil, and extra virgin olive oil. Served family-style on a platter.',
+          },
+        ],
+      },
+      {
+        label: 'Main Course',
+        dishes: [
+          {
+            name: 'Slow-Braised Beef Short Rib',
+            description:
+              'Angus beef short rib braised 4 hours in red wine and herbs. Falling-off-the-bone tender. Rich jus.',
+          },
+        ],
+      },
+      {
+        label: 'Dessert',
+        dishes: [
+          {
+            name: 'Tiramisu',
+            description:
+              'Classic layered tiramisu with espresso-soaked savoiardi and mascarpone cream. Made fresh that morning.',
+          },
+        ],
+      },
+    ],
+    dietaryTags: ['Vegetarian'],
+    addOns: [
+      { name: 'Truffle shaved on short rib', priceIdr: 175000, perGuest: true },
+      { name: 'Artisan bread basket', priceIdr: 50000, perGuest: true },
+    ],
+    image: '/generated/pkg-italian.webp',
+    imageAlt:
+      'Italian Three-Course menu by myCHEF.id — burrata caprese, slow-braised beef short rib and tiramisu',
+  },
+  {
     code: '3C-B3',
     name: 'Western Three-Course',
     family: 'three-course',
@@ -266,24 +266,24 @@ export const THREE_COURSE_MENUS: Menu[] = [
       'Western Three-Course menu by myCHEF.id — Caesar salad, grilled Angus sirloin and chocolate fondant, plated table setting',
   },
   {
-    code: '3C-C1',
-    name: 'Japanese Three-Course',
+    code: '3C-C3',
+    name: 'BBQ Three-Course',
     family: 'three-course',
-    theme: 'Japanese',
+    theme: 'BBQ',
     tier: 'C',
-    priceIdr: 1750000,
+    priceIdr: 1600000,
     minGuests: 6,
     guestNoun: 'guest',
     description:
-      'Dashi miso soup and edamame, caramelised teriyaki salmon and a light matcha cheesecake — elegant simplicity throughout.',
+      'Smoky BBQ prawn skewers, low-and-slow smoked pork ribs and caramelised grilled pineapple with vanilla ice cream.',
     courses: [
       {
         label: 'Starter',
         dishes: [
           {
-            name: 'Miso Soup and Edamame',
+            name: 'BBQ Prawn Skewers',
             description:
-              'Dashi-based miso soup with tofu and wakame. Warm edamame with sea salt. Elegant simplicity.',
+              'Tiger prawns marinated in smoky BBQ glaze. Grilled on skewers. Lime squeeze at the table.',
           },
         ],
       },
@@ -291,9 +291,9 @@ export const THREE_COURSE_MENUS: Menu[] = [
         label: 'Main Course',
         dishes: [
           {
-            name: 'Teriyaki Salmon',
+            name: 'Smoked BBQ Ribs',
             description:
-              'Norwegian salmon fillet glazed with house-made teriyaki. Grilled until caramelised. Sesame and spring onion garnish.',
+              'Pork ribs smoked low and slow for 4 hours. House BBQ sauce. Finger-licking good. Shared platter.',
           },
         ],
       },
@@ -301,21 +301,21 @@ export const THREE_COURSE_MENUS: Menu[] = [
         label: 'Dessert',
         dishes: [
           {
-            name: 'Matcha Cheesecake',
+            name: 'Grilled Pineapple with Ice Cream',
             description:
-              'Creamy matcha cheesecake with biscuit base. Light and not too sweet. Individual slices.',
+              'Caramelised pineapple rings from the grill. Vanilla ice cream melting on top. Simple tropical finish.',
           },
         ],
       },
     ],
-    dietaryTags: ['Pescatarian', 'GF adaptable', 'Halal'],
+    dietaryTags: [],
     addOns: [
-      { name: 'Sashimi starter upgrade', priceIdr: 290000, perGuest: true },
-      { name: 'Extra salmon fillet', priceIdr: 220000, perGuest: true },
+      { name: 'Extra ribs', priceIdr: 175000, perGuest: true },
+      { name: 'Lobster tail upgrade on skewers', priceIdr: 365000, perGuest: true },
     ],
-    image: '/generated/fine-dining-plating.webp',
+    image: '/generated/mychef-catering-bali-bbq-grill-surfturf.webp',
     imageAlt:
-      'Japanese Three-Course menu by myCHEF.id — miso soup and edamame, teriyaki salmon and matcha cheesecake, fine-dining plating',
+      'BBQ Three-Course menu by myCHEF.id — BBQ prawn skewers, smoked ribs and grilled pineapple from the grill',
   },
   {
     code: '3C-C2',
@@ -370,24 +370,24 @@ export const THREE_COURSE_MENUS: Menu[] = [
       'French Three-Course menu by myCHEF.id — French onion soup, duck confit and creme brulee, fine-dining plating',
   },
   {
-    code: '3C-C3',
-    name: 'BBQ Three-Course',
+    code: '3C-C1',
+    name: 'Japanese Three-Course',
     family: 'three-course',
-    theme: 'BBQ',
+    theme: 'Japanese',
     tier: 'C',
-    priceIdr: 1600000,
+    priceIdr: 1750000,
     minGuests: 6,
     guestNoun: 'guest',
     description:
-      'Smoky BBQ prawn skewers, low-and-slow smoked pork ribs and caramelised grilled pineapple with vanilla ice cream.',
+      'Dashi miso soup and edamame, caramelised teriyaki salmon and a light matcha cheesecake — elegant simplicity throughout.',
     courses: [
       {
         label: 'Starter',
         dishes: [
           {
-            name: 'BBQ Prawn Skewers',
+            name: 'Miso Soup and Edamame',
             description:
-              'Tiger prawns marinated in smoky BBQ glaze. Grilled on skewers. Lime squeeze at the table.',
+              'Dashi-based miso soup with tofu and wakame. Warm edamame with sea salt. Elegant simplicity.',
           },
         ],
       },
@@ -395,9 +395,9 @@ export const THREE_COURSE_MENUS: Menu[] = [
         label: 'Main Course',
         dishes: [
           {
-            name: 'Smoked BBQ Ribs',
+            name: 'Teriyaki Salmon',
             description:
-              'Pork ribs smoked low and slow for 4 hours. House BBQ sauce. Finger-licking good. Shared platter.',
+              'Norwegian salmon fillet glazed with house-made teriyaki. Grilled until caramelised. Sesame and spring onion garnish.',
           },
         ],
       },
@@ -405,20 +405,20 @@ export const THREE_COURSE_MENUS: Menu[] = [
         label: 'Dessert',
         dishes: [
           {
-            name: 'Grilled Pineapple with Ice Cream',
+            name: 'Matcha Cheesecake',
             description:
-              'Caramelised pineapple rings from the grill. Vanilla ice cream melting on top. Simple tropical finish.',
+              'Creamy matcha cheesecake with biscuit base. Light and not too sweet. Individual slices.',
           },
         ],
       },
     ],
-    dietaryTags: [],
+    dietaryTags: ['Pescatarian', 'GF adaptable', 'Halal'],
     addOns: [
-      { name: 'Extra ribs', priceIdr: 175000, perGuest: true },
-      { name: 'Lobster tail upgrade on skewers', priceIdr: 365000, perGuest: true },
+      { name: 'Sashimi starter upgrade', priceIdr: 290000, perGuest: true },
+      { name: 'Extra salmon fillet', priceIdr: 220000, perGuest: true },
     ],
-    image: '/generated/mychef-catering-bali-bbq-grill-surfturf.webp',
+    image: '/generated/fine-dining-plating.webp',
     imageAlt:
-      'BBQ Three-Course menu by myCHEF.id — BBQ prawn skewers, smoked ribs and grilled pineapple from the grill',
+      'Japanese Three-Course menu by myCHEF.id — miso soup and edamame, teriyaki salmon and matcha cheesecake, fine-dining plating',
   },
 ];

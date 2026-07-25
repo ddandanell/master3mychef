@@ -202,9 +202,12 @@ const PROPOSAL_CHECKLIST = [
 
 const FAQS = [
   { q: 'How much does corporate catering cost in Bali?', a: 'Corporate catering is quoted per event based on guest count, menu format, service periods, staffing, and venue logistics. A minimum corporate booking of IDR 7,500,000 applies, subject to event scope and location. Every quotation shows the applicable service charge and government tax clearly.' },
+  { q: 'What does "++" mean on your quotes?', a: 'It means 11% government tax and 10% service charge are added on top of the quoted price. Your formal proposal shows the all-in total clearly before you commit.' },
   { q: 'Do you provide invoices / NPWP for corporate catering?', a: 'Yes. We are NPWP-registered and issue formal tax invoices with itemised breakdowns. A deposit is required to confirm the booking, with the balance normally due before the event. Approved recurring corporate accounts may qualify for alternative payment terms subject to written agreement.' },
   { q: 'How do you handle dietary requirements for large corporate groups?', a: 'Dietary requirements are collected with RSVPs through a structured intake process, dishes are labelled on the day, and we follow reasonable separation procedures during preparation. We cannot guarantee a completely allergen-free environment, so guests with serious allergies should provide full written requirements in advance.' },
-  { q: 'What is the deposit and payment schedule?', a: 'A deposit is required to confirm the booking. The remaining balance is normally due before the event. Approved recurring corporate accounts may qualify for alternative payment terms subject to written agreement.' },
+  { q: 'What is the deposit and payment schedule?', a: 'A 50% deposit confirms the booking and locks your date and chef team. The remaining balance is due the day before the event. Approved recurring corporate accounts may qualify for alternative payment terms subject to written agreement.' },
+  { q: 'How far in advance should we book corporate catering?', a: 'Two to four weeks is ideal for most corporate catering. For conferences of 100+ guests, one to two months secures the best team and logistics.' },
+  { q: 'Do you cater at offices and venues, or only villas?', a: 'All three — offices, villas, co-working spaces, hotels and conference venues, Bali-wide. For recurring office lunches, see our drop-off catering service.' },
   { q: 'Can you do last-minute corporate catering?', a: 'Small-group corporate orders are often possible within 24–48 hours. Larger productions need a few days to a week, with a dedicated event manager assigned.' },
 ]
 
@@ -611,6 +614,11 @@ export default function CateringCorporatePage() {
             ))}
           </div>
 
+          <p className="text-sm text-[#4A4745]/80 text-center mt-6">
+            Looking for published per-person menu rates? See our{' '}
+            <Link to="/pricing" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">transparent per-person pricing</Link>.
+          </p>
+
           <TaxFooter className="mt-6" />
         </div>
       </section>
@@ -792,7 +800,10 @@ export default function CateringCorporatePage() {
               <Phone className="w-4 h-4" /> Call +62 896-7407-2020
             </a>
           </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
+          <p className="mt-6 text-white/[60%] text-sm">
+            Prefer email? <a href="mailto:bali@mychef.id" className="text-[#C5A028] underline underline-offset-2 hover:text-[#D4B43A] transition-colors">bali@mychef.id</a>
+          </p>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> 24h proposal turnaround</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Tax invoiced</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Formal written proposals</span>

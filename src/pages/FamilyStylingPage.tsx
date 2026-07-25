@@ -23,6 +23,7 @@ interface FamilyStyle {
   title: string
   blurb: string
   bullets: string[]
+  bestFor: string
   image: { src: string; alt: string; width: number; height: number }
   link: { to: string; label: string }
   price: string
@@ -34,14 +35,15 @@ const STYLES: FamilyStyle[] = [
     eyebrow: 'Menu Family 01',
     title: 'Classic Set Menus',
     blurb:
-      'Our most formal service. The table is dressed before you sit down, and each course arrives in sequence — a restaurant-standard evening without leaving your villa.',
+      'Our most formal service. The table is fully dressed before you sit down, and each course arrives in sequence — a restaurant-standard evening without leaving your villa.',
     bullets: [
       'Full table setting with premium plates, glassware & cutlery',
       'Linen napkins & floral centrepieces',
-      'Course-by-course service',
+      'Course-by-course service, properly paced',
       'Wine pairing available',
-      '2.5–3 hour dining journey',
+      'A 2.5–3 hour dining journey',
     ],
+    bestFor: 'anniversaries, milestone dinners, evenings where the meal is the event',
     image: {
       src: '/generated/mychef-catering-bali-plated-5course-premium-table.webp',
       alt: 'Premium candlelit table set with fine plates, crystal glassware and an orchid centrepiece for a Classic set menu dinner in Bali',
@@ -59,10 +61,11 @@ const STYLES: FamilyStyle[] = [
       'The relaxed middle ground. A proper starter, main and dessert with a lighter setup and a quicker rhythm — ideal when the evening should feel easy rather than formal.',
     bullets: [
       'Simplified table setting',
-      'Relaxed, faster service (1.5–2 hours)',
+      'Relaxed, faster service — 1.5–2 hours',
       'Family-style sharing where possible',
-      'Perfect for casual lunches',
+      'Perfect for casual lunches and weeknight-style villa dinners',
     ],
+    bestFor: 'family holiday dinners, low-key celebrations, groups of 6+',
     image: {
       src: '/generated/mychef-catering-bali-plated-3course-table.webp',
       alt: 'Simply styled round table with linen cloth, wine glasses and white plates set beside a Bali villa pool for a three-course lunch',
@@ -79,12 +82,12 @@ const STYLES: FamilyStyle[] = [
     blurb:
       'Dinner with a live show. We build a full grill station at your villa and the chef cooks over open flame while your guests gather round — smoke, aroma and theatre included.',
     bullets: [
-      'Live grill station setup at the villa',
-      'Chef in action at the grill',
-      'Casual, social atmosphere',
-      'Guests can watch the cooking',
-      'Smoke, flame & theatre',
+      'Live grill station set up at the villa',
+      'Chef in action at the grill — guests can watch the cooking',
+      'Casual, social, outdoor atmosphere',
+      'Smoke, flame & theatre as part of the evening',
     ],
+    bestFor: 'pool parties, birthdays, surf-trip feasts, casual groups who want energy',
     image: {
       src: '/generated/mychef-catering-bali-bbq-grill-satay.webp',
       alt: 'Chef grilling satay skewers over glowing charcoal at a live BBQ station in a Bali villa garden at dusk',
@@ -101,11 +104,12 @@ const STYLES: FamilyStyle[] = [
     blurb:
       'Built for the youngest guests at the table. Bright plates, playful presentation and hands-on moments that keep children happy while the adults enjoy their own menu.',
     bullets: [
-      'Colourful presentation',
+      'Colourful, playful presentation',
       'Fun shapes & interactive elements',
       'Build-your-own stations',
-      'Kid-friendly tableware',
+      'Kid-friendly tableware, nut-free recipes',
     ],
+    bestFor: "family stays, kids' birthdays, any dinner where children eat alongside adults",
     image: {
       src: '/generated/mychef-events-bali-birthday-pool.webp',
       alt: "Festive poolside table with a birthday cake, candles and colourful styling for a children's celebration at a Bali villa",
@@ -115,6 +119,21 @@ const STYLES: FamilyStyle[] = [
     link: { to: '/kids-menus', label: "Browse Kids' menus" },
     price: 'from IDR 250K per child',
   },
+]
+
+const ALWAYS_INCLUDED = [
+  'Market-fresh shopping on the day',
+  'A professional chef cooking in your villa kitchen',
+  'Service staff at 1 waiter per 10 guests',
+  'Full setup before — and complete cleanup after',
+  'Dietary adaptations arranged in advance',
+]
+
+const OCCASION_MATCHES = [
+  { occasion: 'Anniversary / proposal / milestone', family: 'Classic Set Menus' },
+  { occasion: 'Family dinner, casual lunch', family: 'Three-Course' },
+  { occasion: 'Pool party, birthday, group feast', family: 'BBQ Grill' },
+  { occasion: 'Children at the table', family: "Kids' Menus (adds to any family)" },
 ]
 
 export default function FamilyStylingPage() {
@@ -175,7 +194,7 @@ export default function FamilyStylingPage() {
             How We Style Each Experience
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] max-w-2xl mb-10 leading-relaxed">
-            Every myCHEF menu family has its own look, feel and service style. The food changes from menu to menu — but the way an evening is <em>dressed, paced and served</em> is decided by which family you choose.
+            Every myCHEF menu family has its own look, feel and service style. The food changes from menu to menu — but the way an evening is <em>dressed, paced and served</em> is decided by which family you choose. Here&rsquo;s what each one feels like at your villa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -195,6 +214,20 @@ export default function FamilyStylingPage() {
               Browse All Dining Styles
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* The Four Menu Families — section intro */}
+      <section className="pt-16 md:pt-24 px-6" style={{ background: '#050505' }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">
+            Look, pacing &amp; table experience
+          </p>
+          <h2 className="font-playfair text-3xl md:text-4xl text-white mb-5">The Four Menu Families</h2>
+          <p className="text-white/[70%] leading-relaxed">
+            Each family below is styled and served differently at your villa — pick the look and
+            feel that suits your occasion, then browse its menus.
+          </p>
         </div>
       </section>
 
@@ -223,9 +256,9 @@ export default function FamilyStylingPage() {
               <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">
                 {style.eyebrow}
               </p>
-              <h2 className="font-playfair text-3xl md:text-4xl text-white mb-5">{style.title}</h2>
+              <h3 className="font-playfair text-3xl md:text-4xl text-white mb-5">{style.title}</h3>
               <p className="text-white/[70%] leading-relaxed mb-8">{style.blurb}</p>
-              <ul className="space-y-3 mb-10">
+              <ul className="space-y-3 mb-8">
                 {style.bullets.map((bullet) => (
                   <li key={bullet} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-[#C5A028] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -233,6 +266,7 @@ export default function FamilyStylingPage() {
                   </li>
                 ))}
               </ul>
+              <p className="text-white/60 text-sm italic mb-10">Best for: {style.bestFor}.</p>
               <Link
                 to={style.link.to}
                 data-source={`family-styling-${style.id}`}
@@ -246,6 +280,75 @@ export default function FamilyStylingPage() {
         </section>
       ))}
 
+      {/* What styling always includes */}
+      <section className="py-16 md:py-24 px-6 border-t border-white/10" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-[900px] mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4 text-center">
+            Every family, every time
+          </p>
+          <h2 className="font-playfair text-3xl md:text-4xl text-white mb-10 text-center">
+            What Styling Always Includes
+          </h2>
+          <ul className="grid sm:grid-cols-2 gap-x-10 gap-y-4 mb-10 max-w-2xl mx-auto">
+            {ALWAYS_INCLUDED.map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <Check className="w-5 h-5 text-[#C5A028] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                <span className="text-white/[85%]">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-white/60 text-sm leading-relaxed text-center max-w-2xl mx-auto">
+            All prices are quoted ++ (11% government tax + 10% service charge) and confirmed
+            upfront, so the evening you plan is the evening you pay for.
+          </p>
+        </div>
+      </section>
+
+      {/* Match a family to your occasion */}
+      <section className="py-16 md:py-24 px-6 border-t border-white/10" style={{ background: '#050505' }}>
+        <div className="max-w-[760px] mx-auto">
+          <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4 text-center">
+            Quick match
+          </p>
+          <h2 className="font-playfair text-3xl md:text-4xl text-white mb-10 text-center">
+            Match a Family to Your Occasion
+          </h2>
+          <div className="overflow-hidden rounded-2xl border border-white/10 mb-10">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="border-b border-white/10 bg-white/5">
+                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-[2px] text-[#C5A028]">
+                    Occasion
+                  </th>
+                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-[2px] text-[#C5A028]">
+                    Family
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {OCCASION_MATCHES.map((row) => (
+                  <tr key={row.occasion} className="border-b border-white/10 last:border-0">
+                    <td className="px-6 py-4 text-white/[85%]">{row.occasion}</td>
+                    <td className="px-6 py-4 text-white/[85%]">{row.family}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-white/[70%] leading-relaxed text-center">
+            Not sure which fits?{' '}
+            <Link to="/dining-styles" className="text-[#C5A028] hover:text-[#D4B43A] transition-colors">
+              Browse all dining styles
+            </Link>{' '}
+            to compare formats side by side, or{' '}
+            <Link to="/recommended-services" className="text-[#C5A028] hover:text-[#D4B43A] transition-colors">
+              let us recommend the right family
+            </Link>{' '}
+            from your occasion and guest count.
+          </p>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 px-6 border-t border-white/10" style={{ background: '#111111' }}>
         <div className="max-w-3xl mx-auto text-center">
@@ -257,7 +360,7 @@ export default function FamilyStylingPage() {
           </h2>
           <p className="text-white/[60%] mb-10 leading-relaxed">
             Share your date, villa and guest count on WhatsApp and we will recommend the right menu
-            family, styled to suit your group.
+            family, styled to suit your group. Confirmation within the hour.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

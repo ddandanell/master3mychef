@@ -137,6 +137,10 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
   const pageDescription = mappedMeta?.description ?? area.metaDescription
   const pageH1 = mappedMeta?.h1 ?? `Private Chef in ${area.name}, Bali`
 
+  // Travel-fee FAQs are kept in the visible accordion but excluded from the
+  // FAQPage schema until the business policy is confirmed.
+  const schemaFaqs = area.faqs.filter((f) => !f.q.toLowerCase().includes('travel fee'))
+
   const structuredData = [
     {
       '@context': 'https://schema.org',
@@ -178,7 +182,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
         url: canonical,
       },
     },
-    faqPageSchema(area.faqs.map((f) => ({ question: f.q, answer: f.a }))),
+    faqPageSchema(schemaFaqs.map((f) => ({ question: f.q, answer: f.a }))),
     breadcrumbSchema(area.name, canonical, 'Private Chef Bali', `${SITE}/`),
   ]
 

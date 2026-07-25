@@ -8,13 +8,13 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceWithAggregateOfferSchema, howToSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, howToSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 
@@ -29,14 +29,14 @@ const ACCENT = '#2C5F7C'
 const FORMATS = [
   {
     title: 'Corporate Day Event',
-    price: <AllInPrice price={1200000} />,
+    price: 'Tailored quote',
     guestRange: '20–100 guests',
     description: 'Breakfast + 2 coffee breaks + lunch + afternoon snack. AV, coordinator, dietary management included.',
     features: ['Full-day food', 'AV setup (projector, screen, sound)', 'Day coordinator', 'Dietary management', 'Name badges + signage', 'Tax invoice'],
   },
   {
     title: 'Multi-Day Retreat',
-    price: <AllInPrice price={2500000} suffix="/person/day" />,
+    price: 'Tailored quote',
     guestRange: '10–50 guests',
     description: '3 meals + 2 snacks daily. Retreat coordinator, team-building activities, dietary management.',
     features: ['3 meals + 2 snacks/day', 'Retreat coordinator', 'Dietary management', 'Team-building activities', 'Daily fresh sourcing', 'Tax invoice'],
@@ -44,7 +44,7 @@ const FORMATS = [
   },
   {
     title: 'Product Launch / Brand Activation',
-    price: 'Quote on request',
+    price: 'Tailored quote',
     guestRange: '50–300 guests',
     description: 'Catering + AV + lighting + decor + brand staging + full coordination. Partner venues available.',
     features: ['Catering + AV + lighting', 'Brand staging + decor', 'Event coordinator', 'Live-streaming option', 'Photography + video', 'Partner venue network'],
@@ -115,10 +115,10 @@ const APPROVAL_CHECKS = [
 ]
 
 const ADDONS = [
-  { icon: Monitor, title: 'LED Wall + Pro Sound', price: '+IDR 25M – 60M' },
-  { icon: Globe, title: 'Simultaneous Translation', price: '+IDR 8M (2 languages)' },
-  { icon: Bus, title: 'Guest Transport', price: '+IDR 3M – 8M (50 guests)' },
-  { icon: Building2, title: 'Team-Building Activity', price: '+IDR 1.5M/pp' },
+  { icon: Monitor, title: 'LED Wall + Pro Sound', price: 'Quoted per event' },
+  { icon: Globe, title: 'Simultaneous Translation', price: 'Quoted per event' },
+  { icon: Bus, title: 'Guest Transport', price: 'Quoted per event' },
+  { icon: Building2, title: 'Team-Building Activity', price: 'Quoted per person' },
 ]
 
 const FAQS = [
@@ -159,14 +159,12 @@ export default function EventsCorporatePage() {
         canonical={`${SITE}/events/corporate-events`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-corporate.webp`}
         jsonLd={[
-          serviceWithAggregateOfferSchema({
-            name: 'Corporate Events Bali',
-            description: 'myCHEF.id delivers corporate event catering in Bali for conferences, offsites, launches, and executive dinners. We coordinate food, staffing, setup, and service so your event runs smoothly from arrival to final cleanup.',
-            url: `${SITE}/events/corporate-events`,
-            lowPrice: '1200000',
-            highPrice: '2500000',
-            unitText: 'per person per day',
-          }),
+          serviceSchema(
+            'Corporate Events Bali',
+            'myCHEF.id delivers corporate event catering in Bali for conferences, offsites, launches, and executive dinners. We coordinate food, staffing, setup, and service so your event runs smoothly from arrival to final cleanup.',
+            `${SITE}/events/corporate-events`,
+            '$$$'
+          ),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           howToSchema({
             name: 'How to Book Corporate Event Catering in Bali',
@@ -214,7 +212,7 @@ export default function EventsCorporatePage() {
             </a>
           </div>
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">
-            From IDR 1.2M++/guest · NPWP invoicing and venue coordination available
+            NPWP invoicing and venue coordination available
           </p>
         </div>
       </section>
@@ -255,10 +253,6 @@ export default function EventsCorporatePage() {
           </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}
-          </div>
-          <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <GroupTotalCalculator pricePerPerson={1200000} minGuests={20} maxGuests={100} defaultGuests={40} accent={ACCENT} />
-            <GroupTotalCalculator pricePerPerson={2500000} minGuests={10} maxGuests={50} defaultGuests={20} accent={ACCENT} />
           </div>
           <div className="mt-10 grid sm:grid-cols-3 gap-4">
             {CAPACITY_OVERVIEW.map((item) => (

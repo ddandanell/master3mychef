@@ -246,7 +246,7 @@ export default function CorporateEventsCateringPage() {
       seoTitle="Corporate Events Catering Bali | Team & Incentive Dining | myCHEF"
       seoDescription="Corporate catering in Bali for team retreats, incentive dinners, and offsite events. HACCP certified, international menus, groups 10–200."
       canonicalUrl={CANONICAL}
-      h1="Corporate Events Catering in Bali — Team Dinners, Retreats & Incentive Meals"
+      h1="Corporate Events Catering in Bali — Team Dinners & Incentive Meals"
       subtitle="HACCP certified. International menus. 10–200 guests. Bali only."
       heroImage="/generated/mychef-catering-bali-hub-catering.webp"
       heroImageAlt="Professional Indonesian chef team preparing a corporate gala dinner at a Bali villa with elegant table settings and synchronized service"

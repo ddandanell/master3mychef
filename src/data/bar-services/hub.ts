@@ -3,7 +3,7 @@ import type { BarServicesHubData } from './types'
 export const BAR_SERVICES_HUB: BarServicesHubData = {
   hero: {
     eyebrow: 'Bar Services for Venues',
-    h1: 'Bar Consultant Bali',
+    h1: 'Bar Consultant Bali — B2B Bar Services',
     description: 'The team behind Bali\'s private dining standard — now building world-class bar programmes for the island\'s venues.',
     heroImage: '/generated/mychef-bar-services-bali-hero-hub.webp',
     heroAlt: 'Bali villa bar setup with professional bartender preparing drinks at golden hour'

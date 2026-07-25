@@ -109,16 +109,29 @@ export default function Footer() {
                     Overview
                   </Link>
                 </li>
-                {pillar.subPages.map((sub) => (
-                  <li key={sub.slug}>
+                {pillar.subPages.map((sub) => {
+                  const isPrivateChefBali = pillar.slug === 'fine-dining' && sub.slug === 'private-chef-bali'
+                  return (
+                    <li key={sub.slug}>
+                      <Link
+                        to={isPrivateChefBali ? '/' : `${pillar.url}/${sub.slug}`}
+                        className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                      >
+                        {sub.label}
+                      </Link>
+                    </li>
+                  )
+                })}
+                {pillar.slug === 'fine-dining' && (
+                  <li>
                     <Link
-                      to={`${pillar.url}/${sub.slug}`}
+                      to="/fine-dining/private-chef-bali"
                       className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
-                      {sub.label}
+                      Michelin Private Chef
                     </Link>
                   </li>
-                ))}
+                )}
               </ul>
             </div>
           ))}
@@ -133,6 +146,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/bali-wedding-catering-packages" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Wedding Packages
+                </Link>
+              </li>
+              <li>
+                <Link to="/events/weddings" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Wedding Catering
                 </Link>
               </li>
@@ -142,12 +160,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/private-tasting-menu-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/fine-dining/tasting-menu" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Private Tasting Menus
                 </Link>
               </li>
               <li>
-                <Link to="/chef-table-experience-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/fine-dining/chefs-table" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Chef Table Experience
                 </Link>
               </li>

@@ -411,14 +411,14 @@ export default function PrivateChefCostBaliPageBlog() {
 
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { area: 'Kuta & Legian', note: 'Airport proximity, great market access — no surcharge', path: '/locations/kuta' },
-              { area: 'Seminyak', note: 'Prime area — no surcharge, premium ingredient access', path: '/locations/seminyak' },
-              { area: 'Canggu', note: 'Core surf zone — no surcharge, fast deployment', path: '/locations/canggu' },
-              { area: 'Jimbaran', note: 'Seafood coast — no surcharge, local fish market access', path: '/locations/jimbaran' },
-              { area: 'Nusa Dua', note: 'Resort zone — no surcharge, resort-standard logistics', path: '/locations/nusa-dua' },
-              { area: 'Sanur', note: 'East coast family area — minimal logistics fee', path: '/locations/sanur' },
-              { area: 'Uluwatu / Bukit', note: 'Clifftop villas — small logistics premium may apply', path: '/locations/bukit' },
-              { area: 'Ubud', note: 'Inland cultural centre — small logistics fee for remote villas', path: '/locations/ubud' },
+              { area: 'Kuta & Legian', note: 'Airport proximity, great market access — no surcharge', path: '/private-chef/kuta' },
+              { area: 'Seminyak', note: 'Prime area — no surcharge, premium ingredient access', path: '/private-chef/seminyak' },
+              { area: 'Canggu', note: 'Core surf zone — no surcharge, fast deployment', path: '/private-chef/canggu' },
+              { area: 'Jimbaran', note: 'Seafood coast — no surcharge, local fish market access', path: '/private-chef/jimbaran' },
+              { area: 'Nusa Dua', note: 'Resort zone — no surcharge, resort-standard logistics', path: '/private-chef/nusa-dua' },
+              { area: 'Sanur', note: 'East coast family area — minimal logistics fee', path: '/private-chef/sanur' },
+              { area: 'Uluwatu / Bukit', note: 'Clifftop villas — small logistics premium may apply', path: '/private-chef/bukit' },
+              { area: 'Ubud', note: 'Inland cultural centre — small logistics fee for remote villas', path: '/private-chef/ubud' },
             ].map((loc) => (
               <Link
                 key={loc.area}
@@ -497,7 +497,7 @@ export default function PrivateChefCostBaliPageBlog() {
 
           <p className="text-[#666] mt-8 leading-relaxed">
             For a full step-by-step guide including what questions to ask and how to vet a chef, read our{' '}
-            <Link to="/blog/how-to-hire-private-chef" className="text-[#C5A028] hover:underline font-medium">
+            <Link to="/blog/how-to-hire-private-chef-bali-complete-guide" className="text-[#C5A028] hover:underline font-medium">
               complete private chef hiring guide
             </Link>.
           </p>
@@ -531,7 +531,7 @@ export default function PrivateChefCostBaliPageBlog() {
               { label: 'Events', path: '/events', desc: 'Weddings, birthdays, and corporate events with full staffing' },
               { label: 'Getting Started', path: '/help/getting-started', desc: 'New to private chef booking? Start here' },
               { label: 'Pricing Guide', path: '/pricing', desc: 'Transparent starting prices for every service type' },
-              { label: 'Private Chef Seminyak', path: '/locations/seminyak', desc: 'Beachfront villa dining in Bali\'s premier area' },
+              { label: 'Private Chef Seminyak', path: '/private-chef/seminyak', desc: 'Beachfront villa dining in Bali\'s premier area' },
             ].map((link) => (
               <Link
                 key={link.path}

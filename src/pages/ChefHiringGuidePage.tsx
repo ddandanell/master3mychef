@@ -8,7 +8,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Hiring Best Practices',
     title: 'Chef Hiring Best Practices: Skills, Credentials & Interview Guide',
-    body: `<p>Hiring a private chef is one of the most important decisions for your villa stay or event. This advanced guide walks you through evaluating chef credentials, conducting effective interviews, assessing experience, and avoiding red flags. Pair it with our <a href="/blog/how-to-hire-private-chef" class="text-[#7E6410] hover:underline font-medium">beginner hiring guide</a> for the full picture.</p>
+    body: `<p>Hiring a private chef is one of the most important decisions for your villa stay or event. This advanced guide walks you through evaluating chef credentials, conducting effective interviews, assessing experience, and avoiding red flags. Pair it with our <a href="/blog/how-to-hire-private-chef-bali-complete-guide" class="text-[#7E6410] hover:underline font-medium">beginner hiring guide</a> for the full picture.</p>
     <p>By the end, you'll have a systematic approach to vetting and selecting chefs who deliver consistent, world-class dining.</p>`,
   },
   {
@@ -138,7 +138,7 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Browse Chefs', href: '/chefs', desc: 'Explore available chefs and their credentials.' },
-  { label: 'How to Hire a Chef', href: '/blog/how-to-hire-private-chef', desc: 'Complete beginner guide to hiring.' },
+  { label: 'How to Hire a Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Complete beginner guide to hiring.' },
   { label: 'Fine Dining Guide', href: '/blog/fine-dining-guide', desc: 'Learn about fine dining experiences.' },
   { label: 'Contact Us', href: '/contact', desc: 'Discuss your needs with our team.' },
 ]

@@ -108,7 +108,7 @@ export default function LocationsHubPage() {
               {"Private Chef & Hospitality Across Bali"}
             </h1>
             <p className="text-lg md:text-xl text-white/[85%] leading-relaxed mb-10 max-w-[600px]">
-              From Seminyak's beachfront estates to Ubud's jungle retreats — myCHEF serves every major Bali region with vetted teams and local operations.
+              From Seminyak's beachfront estates to Ubud's jungle retreats — myCHEF serves every major Bali region with vetted teams and local operations. Read our guide to <Link to="/blog/dining-by-location-bali-neighborhood-guide" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">dining by location in Bali</Link>.
             </p>
             <div className="flex flex-wrap gap-3">
               {['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur'].map((loc) => (

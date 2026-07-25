@@ -294,7 +294,7 @@ export default function StaffingHotelsPage() {
       <section className="py-12 md:py-16 px-6 bg-[#FAFAF8]">
         <div className="max-w-[800px] mx-auto text-center">
           <p className="text-[#4A4745] text-sm">
-            Part of myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link>. Read our <Link to="/blog/hotel-restaurant-chef-staffing" className="text-[#C5A028] hover:underline">guide to hospitality staffing in Bali</Link>, or see <Link to="/staffing/for-villa-managers" className="text-[#C5A028] hover:underline">staffing for villa managers</Link> if you operate villa portfolios.
+            Part of myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link>. Read our <Link to="/blog/hotel-restaurant-chef-staffing" className="text-[#C5A028] hover:underline">guide to hospitality staffing in Bali</Link>, see <Link to="/staffing/for-villa-managers" className="text-[#C5A028] hover:underline">staffing for villa managers</Link> if you operate villa portfolios, or hire a <Link to="/blog/chef-for-photoshoot-bali" className="text-[#C5A028] hover:underline">chef for a photoshoot in Bali</Link>.
           </p>
         </div>
       </section>

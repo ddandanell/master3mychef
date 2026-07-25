@@ -8,7 +8,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Private Chef Seminyak',
     title: 'Private Chef Seminyak: Luxury Villa Dining, Sunset Dinners & Fine Dining',
     body: `<p>Seminyak is Bali\'s original luxury villa address. A private chef in Seminyak is expected to match the standards set by the area\'s best restaurants — precise technique, premium ingredients, beautiful plating, and professional front-of-house service.</p>
-    <p>myCHEF provides private chef services across Seminyak and its adjacent luxury precincts: Oberoi, Petitenget, Kerobokan, and Batu Belig. Our Seminyak-based chefs include culinary-school graduates and former hotel kitchen professionals who bring fine dining standards to villa cooking.</p>
+    <p>myCHEF provides private chef services across Seminyak and its adjacent luxury precincts: Oberoi, Petitenget, Kerobokan, and Batu Belig. Our Seminyak-based chefs include culinary-school graduates and former hotel kitchen professionals who bring fine dining standards to villa cooking. When you want to <a href="/private-chef/seminyak" class="text-[#7E6410] hover:underline font-medium">hire a private chef in Seminyak</a>, myCHEF matches you with a vetted local chef and builds the menu around your occasion.</p>
     <p>The typical Seminyak private chef booking is for a couple, honeymoon, anniversary, or small intimate group (2-8 guests) who want a restaurant-quality dinner without leaving the villa.</p>`,
   },
   {

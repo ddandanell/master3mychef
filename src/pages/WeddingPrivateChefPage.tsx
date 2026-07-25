@@ -131,7 +131,7 @@ const RELATED_PAGES = [
   { label: 'Browse Chefs', href: '/chefs', desc: 'Meet our event-experienced private chefs.' },
   { label: 'Event Planning Guide', href: '/blog/event-planning-bali', desc: 'Full logistics guide for weddings and celebrations.' },
   { label: 'Catering Menus', href: '/blog/bali-catering-menu', desc: 'Explore menu styles and cuisine options.' },
-  { label: 'Corporate Events', href: '/blog/corporate-events-catering-bali', desc: 'Catering for corporate retreats and executive dinners.' },
+  { label: 'Corporate Events', href: '/corporate-case-studies', desc: 'Catering for corporate retreats and executive dinners.' },
   { label: 'Contact Us', href: '/contact', desc: 'Discuss your wedding dates and vision with our team.' },
 ]
 
@@ -144,7 +144,7 @@ export default function WeddingPrivateChefPage() {
       seoTitle="Wedding Private Chef Bali | Villa Catering Planning Guide"
       seoDescription="Plan your Bali villa wedding catering with a private chef. Menus, timelines, service styles, and planning guidance."
       canonicalUrl="https://mychef.id/blog/wedding-private-chef-bali-planning-guide"
-      h1="Wedding Private Chef in Bali"
+      h1="Wedding Private Chef in Bali: Planning & Logistics Guide"
       subtitle="Planning & Catering Guide for Your Villa Wedding"
       heroImage="/generated/mychef-blog-wedding-private-chef.webp"
       heroImageAlt="Private chef elegantly serving a multi-course wedding dinner at a luxury Bali villa"

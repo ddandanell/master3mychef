@@ -12,7 +12,7 @@ const WA = '6289674072020'
 // This is the page each city page links back to ("See the full Bali coverage map").
 export default function BaliHubPage() {
   const canonical = `${SITE}/guide/private-chef-bali`
-  const title = 'Private Chef in Bali — Every Villa Region We Serve'
+  const title = 'Private Chef in Bali — The Complete Guide'
   const description='myCHEF serves the ten most-visited villa regions in Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan, and Bukit.'
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent("Hi myCHEF, I'd like a private chef in Bali.")}`
 

@@ -153,7 +153,7 @@ export default function ChefsTablePage() {
             By Adriano · Maximum 6 Guests · Bali
           </p>
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.0] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            The Chef's Table
+            The Chef's Table — At Your Villa
           </h1>
           <p className="text-xl md:text-2xl text-white/[75%] mb-3 max-w-2xl mx-auto leading-relaxed italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Counter seating. Live narrative. The full technique made visible.

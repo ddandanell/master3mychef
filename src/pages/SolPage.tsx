@@ -40,7 +40,7 @@ const FAQS = [
   { q: 'Will the chef use my kitchen equipment?', a: 'Yes, your kitchen. We bring any specialized tools we need. We have worked in every type of villa kitchen.' },
   { q: 'Can I request specific dishes?', a: 'Of course. Before your stay, your chef will ask about your favorites, allergies, and must-haves. Every menu is customized.' },
   { q: 'What if we want to eat out one night?', a: 'No problem. You only pay for the days and meals you use. Flexibility is the whole point.' },
-  { q: 'How far ahead should we book?', a: 'Three or more days is comfortable for daily service; for peak season (July–August and December), two weeks ahead is recommended. A 50% deposit confirms your dates.' },
+  { q: 'How far ahead should we book?', a: 'Three or more days is comfortable for daily service; for peak season (July–August and December), two weeks ahead is recommended. For holiday periods, read our guide to booking a <a href="/blog/holiday-chef-bali">holiday chef in Bali</a>. A 50% deposit confirms your dates.' },
 ]
 
 const TESTIMONIALS = [

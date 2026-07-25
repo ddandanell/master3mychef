@@ -281,7 +281,7 @@ export default function KutaPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { label: 'Private chef costs in Bali', path: '/blog/private-chef-cost-bali', desc: 'Real 2025 pricing for villa dinners, events, and daily hire' },
-              { label: 'How to hire a private chef', path: '/blog/how-to-hire-private-chef', desc: 'What credentials to check and red flags to avoid' },
+              { label: 'How to hire a private chef', path: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'What credentials to check and red flags to avoid' },
               { label: 'BBQ catering Bali', path: '/catering/bbq-catering', desc: 'Poolside BBQ parties with live grill and fresh seafood' },
               { label: 'Villa birthday parties Bali', path: '/blog/how-to-plan-villa-birthday-party-bali', desc: 'Complete guide to planning a Bali villa birthday celebration' },
             ].map((link) => (

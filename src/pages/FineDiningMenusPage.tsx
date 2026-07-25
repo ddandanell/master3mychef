@@ -250,7 +250,7 @@ export default function FineDiningMenusPage() {
               Adriano starts with what is exceptional that morning: line-caught fish, bright herbs, ripe vegetables, and the ingredients that deserve to be cooked simply and precisely.
             </p>
             <p className="text-lg leading-relaxed text-[#4A4745]">
-              The menus move with the season and the market. No frozen centrepieces, no tired luxury shortcuts, no fixed script when a better ingredient is available that day.
+              The menus move with the season and the market — read our <Link to="/blog/seasonal-ingredients-bali-cooking-guide" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">seasonal ingredients Bali cooking guide</Link>. No frozen centrepieces, no tired luxury shortcuts, no fixed script when a better ingredient is available that day.
             </p>
           </div>
 

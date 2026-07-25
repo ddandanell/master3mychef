@@ -14,7 +14,7 @@ const localBizWithRating = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Bali Wedding Catering with a Private Chef: Complete Timeline & Planning Guide',
+  headline: 'Bali Wedding Catering with a Private Chef: Timeline & Planning Guide',
   description:
     'The complete planning timeline for hiring a private chef for your Bali wedding — from 6 months out to the day itself. Menu design, tastings, staffing, and what to confirm at each stage.',
   datePublished: '2026-06-26',
@@ -233,7 +233,7 @@ export default function BaliWeddingCateringTimelinePage() {
             WEDDING PLANNING GUIDE · CATERING
           </p>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-            Bali Wedding Catering with a Private Chef: Complete Timeline & Planning Guide
+            Bali Wedding Catering with a Private Chef: Timeline & Planning Guide
           </h1>
           <p className="text-lg text-[#CCC] max-w-2xl mb-8">
             From your first inquiry to post-reception cleanup — a step-by-step timeline for planning Bali wedding catering with a private chef. What happens when, what to decide, and what to ask.

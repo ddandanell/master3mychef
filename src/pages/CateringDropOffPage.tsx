@@ -550,6 +550,7 @@ export default function CateringDropOffPage() {
           <SectionHeader
             eyebrow="How It Works"
             title="How Drop-Off Catering Works"
+            subtitle={<>From order to delivery — a simple process. Read the full <Link to="/blog/drop-off-catering-bali" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">drop-off catering Bali guide</Link>.</>}
           />
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
             {HOW_IT_WORKS.map((step) => (

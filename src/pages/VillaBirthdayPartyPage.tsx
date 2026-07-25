@@ -118,7 +118,7 @@ const RELATED_PAGES = [
   { label: 'Browse Chefs', href: '/chefs', desc: 'Meet our event-experienced private chefs.' },
   { label: 'Event Planning Guide', href: '/blog/event-planning-bali', desc: 'Full event logistics guide for Bali.' },
   { label: 'Catering Menus', href: '/blog/bali-catering-menu', desc: 'Explore buffet, plated, and grazing menu options.' },
-  { label: 'Corporate Events', href: '/blog/corporate-events-catering-bali', desc: 'Team celebrations and corporate events in Bali.' },
+  { label: 'Corporate Events', href: '/corporate-case-studies', desc: 'Team celebrations and corporate events in Bali.' },
   { label: 'Contact Us', href: '/contact', desc: 'Discuss your birthday party details with our team.' },
 ]
 
@@ -131,7 +131,7 @@ export default function VillaBirthdayPartyPage() {
       seoTitle="Villa Birthday Party Bali | Private Chef Catering Guide"
       seoDescription="Plan an unforgettable birthday party in your Bali villa. Private chef catering, menu ideas, planning timeline, and full pricing in IDR."
       canonicalUrl="https://mychef.id/blog/how-to-plan-villa-birthday-party-bali"
-      h1="Villa Birthday Party in Bali"
+      h1="How to Plan a Villa Birthday Party in Bali"
       subtitle="Private Chef Catering Guide"
       heroImage="/generated/mychef-blog-villa-birthday-party.webp"
       heroImageAlt="Private chef presenting elegant birthday celebration dinner at a luxury Bali villa pool terrace"

@@ -174,7 +174,7 @@ export default function FineDiningGuidePage() {
       seoTitle="Fine Dining in Bali | Private Chef Tasting Menus & Experiences"
       seoDescription="Explore fine dining in Bali with private chefs. Curated tasting menus, wine pairings, and luxury culinary experiences for villa stays."
       canonicalUrl="https://mychef.id/blog/fine-dining-guide"
-      h1="Fine Dining in Bali"
+      h1="Fine Dining in Bali: The Ultimate Guide"
       subtitle="Ultimate Guide to Private Chef Tasting Menus"
       heroImage="/generated/mychef-misc-bali-hub-fine-dining.webp"
       heroImageAlt="Fine dining tasting menu plating by private chef in Bali villa"

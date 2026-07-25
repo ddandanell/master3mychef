@@ -8,7 +8,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Private Chef Canggu',
     title: 'Private Chef Canggu: Villa Dining, Surf Dinners & Party Catering',
     body: `<p>Canggu is Bali\'s most energetic villa area — a dense mix of boutique surf villas, digital nomad co-living spaces, and luxury private compounds spread across the black-sand coastal strip from Batu Bolong to Seseh. A private chef in Canggu means flexible, casual-cool dining that fits the rhythm of a surf and lifestyle holiday.</p>
-    <p>myCHEF provides private chef services across the full Canggu area. Whether you are hosting a bachelor party dinner at a 10-bedroom villa in Berawa, a casual group breakfast after a morning surf session, or a low-key anniversary dinner for two at your Batu Bolong hideaway, we can build the experience around you.</p>
+    <p>myCHEF provides private chef services across the full Canggu area. Whether you are hosting a bachelor party dinner at a 10-bedroom villa in Berawa, a casual group breakfast after a morning surf session, or a low-key anniversary dinner for two at your Batu Bolong hideaway, we can build the experience around you. To <a href="/private-chef/canggu" class="text-[#7E6410] hover:underline font-medium">hire a private chef in Canggu</a>, myCHEF matches you with a chef who understands the area\'s villa kitchens and relaxed entertaining style.</p>
     <p>Canggu guests tend to want food that is relaxed but high quality — elevated Indonesian street food, live fire cooking, fresh seafood, and sharing plates rather than formal plated service.</p>`,
   },
   {

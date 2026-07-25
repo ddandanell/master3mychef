@@ -209,7 +209,7 @@ const RELATED_PAGES = [
   { label: 'Catering', href: '/catering', desc: 'Full-service villa catering for any occasion.' },
   { label: 'Events', href: '/events', desc: 'Weddings, retreats, and celebrations across Bali.' },
   { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, butlers, bartenders, and sommeliers per shift.' },
-  { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef', desc: 'Step-by-step guide to finding, vetting, and booking a chef.' },
+  { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Step-by-step guide to finding, vetting, and booking a chef.' },
   { label: 'Get a Quote', href: '/quote', desc: 'Receive a detailed proposal within 24 hours.' },
 ]
 

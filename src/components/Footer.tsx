@@ -114,7 +114,7 @@ export default function Footer() {
                   return (
                     <li key={sub.slug}>
                       <Link
-                        to={isPrivateChefBali ? '/' : `${pillar.url}/${sub.slug}`}
+                        to={isPrivateChefBali ? '/fine-dining/private-chef-bali' : `${pillar.url}/${sub.slug}`}
                         className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                       >
                         {sub.label}

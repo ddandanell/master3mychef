@@ -151,7 +151,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
       ) : (
         <section className="px-8 pt-32 pb-16 max-w-[960px] mx-auto">
           <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">Private Chef</p>
-          <h1 className="font-playfair text-4xl md:text-6xl leading-tight mb-6">{title}</h1>
+          <h2 className="font-playfair text-4xl md:text-6xl leading-tight mb-6">{title}</h2>
           <p className="text-lg text-[#4A4745] max-w-[640px] mb-8">
             {locationPage?.intro ?? `Wake up to chef-prepared breakfasts. Host a candlelit dinner under the stars. Plan a wedding for 80 guests. myCHEF brings background-checked chefs to villas across ${entry.name} — for single dinners, recurring stays, and full-service events.`}
           </p>

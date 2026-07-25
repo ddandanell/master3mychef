@@ -464,6 +464,9 @@ export default function TastingMenuPage() {
             </a>
           </div>
         </div>
+        <p className="text-center text-[#4A4745] text-sm mt-6">
+          Prefer an omakase-style sushi progression in your villa? See our <Link to="/experiences/sushi-masterclass" className="text-[#7E6410] hover:underline font-medium">private sushi masterclass and in-villa omakase</Link>.
+        </p>
       </section>
 
       {/* ══════════════════════════════════ TESTIMONIALS ══════════════════════════════════ */}

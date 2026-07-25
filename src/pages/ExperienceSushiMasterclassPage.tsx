@@ -177,9 +177,9 @@ export default function ExperienceSushiMasterclassPage() {
     <PremiumPage
       slug="experiences/sushi-masterclass"
       title="Sushi Masterclass Bali | Private Villa Sushi Class | myCHEF"
-      description="Book a private sushi masterclass at your Bali villa — maki, nigiri & hand rolls with a sushi chef. Fish, tools & ingredients included. WhatsApp myCHEF."
+      description="Book a private sushi masterclass or in-villa omakase-style dinner at your Bali villa — maki, nigiri & hand rolls with a sushi chef. Fish, tools & ingredients included. WhatsApp myCHEF."
       seoTitle="Sushi Masterclass Bali | Private Villa Sushi Class | myCHEF"
-      seoDescription="Book a private sushi masterclass at your Bali villa — maki, nigiri & hand rolls with a sushi chef. Fish, tools & ingredients included. WhatsApp myCHEF."
+      seoDescription="Book a private sushi masterclass or in-villa omakase-style dinner at your Bali villa — maki, nigiri & hand rolls with a sushi chef. Fish, tools & ingredients included. WhatsApp myCHEF."
       canonicalUrl={CANONICAL}
       h1="Private Sushi Masterclass in Bali — Roll, Slice, Eat"
       subtitle="Learn the Art of Sushi with a Private Chef in Your Villa"

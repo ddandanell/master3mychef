@@ -44,8 +44,8 @@ const SECTIONS = [
         ['Fine-dining tasting menu', 'IDR 950K–980K', 'per person'],
         ['BBQ &amp; buffet catering', 'IDR 700K', 'per person, groups 8+'],
         ['Wedding catering', 'IDR 1.5M–3M+', 'per person'],
-        ['Private chef session (to 6 guests)', 'IDR 1,350K', 'per session, 3–4 courses'],
-        ['Weekly meal prep (2 people)', 'IDR 4,500K', 'per week'],
+        ['Private chef half day (cook & serve one meal)', 'IDR 2,500K++', 'per day, chef + assistant'],
+        ['Daily chef, weekly rate', 'From IDR 2,250K++/day', '10% off standard'],
         ['Waiters & sommeliers', 'IDR 250K', 'per hour'],
         ['Bartenders', 'IDR 350K', 'per hour'],
       ])
@@ -201,7 +201,7 @@ const FAQS = [
   {
     question: 'Is there a minimum guest count or spend?',
     answer:
-      `Private chef sessions from IDR 1,350K cover up to 6 guests. Fine dining starts at 6 guests (2 for romantic dinners). Corporate catering carries a minimum spend of ${siteFacts.corporateMinSpend}.`,
+      `Private chef half-day bookings from IDR 2,500K++ per day include one chef and one dedicated assistant (weekly rate from IDR 2,250K++/day). Fine dining starts at 6 guests (2 for romantic dinners). Corporate catering carries a minimum spend of ${siteFacts.corporateMinSpend}.`,
   },
   {
     question: 'Do you charge travel fees?',

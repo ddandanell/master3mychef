@@ -149,7 +149,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       name: 'myCHEF.id',
       url: SITE,
       telephone: '+6289674072020',
-      priceRange: 'IDR 1,350,000 – IDR 10,000,000',
+      priceRange: 'IDR 2,000,000 – IDR 4,200,000',
       image: `${SITE}/og-image.webp`,
       areaServed: { '@type': 'Place', name: `${area.name}, Bali, Indonesia` },
       geo: {
@@ -171,12 +171,12 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       offers: {
         '@type': 'Offer',
         priceCurrency: 'IDR',
-        price: '1350000',
+        price: '2500000',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           priceCurrency: 'IDR',
-          price: '1350000',
-          unitText: 'per session, from',
+          price: '2500000',
+          unitText: 'per half day, from',
         },
         availability: 'https://schema.org/InStock',
         url: canonical,
@@ -560,12 +560,12 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
-              { label: 'Private Chef Session', price: 'From IDR 1,350,000', note: 'Per session · up to 6 guests · 3–4 courses' },
+              { label: 'Private Chef Half Day', price: 'From IDR 2,500,000++', note: 'Per day · chef + assistant included · groceries at cost' },
               { label: 'Villa Catering', price: 'From IDR 700,000 pp', note: 'Per person · 8–30 guests · buffet or plated' },
               { label: 'Fine Dining Tasting Menu', price: 'From IDR 980,000 pp', note: 'Per person · 5–7 courses · wine pairing available' },
               { label: 'BBQ & Seafood Grill', price: 'From IDR 720,000 pp', note: 'Per person · charcoal grill · full service' },
               { label: 'Events & Weddings', price: 'Custom quote', note: 'Group size, menu, staffing level — quoted per event' },
-              { label: 'Weekly Meal Prep', price: 'From IDR 4,500,000', note: 'Per week · 2 people · daily cooking' },
+              { label: 'Weekly Chef Service', price: 'From IDR 2,250,000++ per day', note: 'Weekly rate (10% off standard) · chef + assistant included' },
             ].map((tier) => (
               <div key={tier.label} className="rounded-[20px] border border-white/10 bg-white/5 p-5">
                 <p className="font-playfair text-lg mb-1">{tier.label}</p>

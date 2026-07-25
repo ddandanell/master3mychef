@@ -137,7 +137,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/private-chef/seminyak',
     title: 'Private Chef in Seminyak, Bali | Hire a Chef for Your Villa',
     description:
-      'Hire a private chef in Seminyak, Bali. Villa dinners, fine dining, catering, and events. HACCP chefs, from IDR 1.35M. WhatsApp myCHEF.',
+      'Hire a private chef in Seminyak, Bali. Villa dinners, fine dining, catering, and events. HACCP chefs, from IDR 2.5M++/half day. WhatsApp myCHEF.',
     canonical: `${SITE}/private-chef/seminyak`,
     h1: 'Private Chef in Seminyak, Bali',
   },
@@ -245,7 +245,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/private-chef/kuta',
     title: 'Private Chef in Kuta, Bali | Villa Dinner & Catering',
     description:
-      'Hire a private chef in Kuta, Bali. Villa dinners, group catering, and birthday parties. HACCP chefs, from IDR 1.35M. WhatsApp myCHEF.',
+      'Hire a private chef in Kuta, Bali. Villa dinners, group catering, and birthday parties. HACCP chefs, from IDR 2.5M++/half day. WhatsApp myCHEF.',
     canonical: `${SITE}/private-chef/kuta`,
     h1: 'Private Chef in Kuta, Bali',
   },
@@ -858,7 +858,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/private-chef-cost-bali',
     title: 'How Much Does a Private Chef in Bali Cost? (2026 Guide)',
     description:
-      'Private chef costs in Bali from IDR 600k/day villa dining to IDR 20M+ events. Real 2026 pricing, what is included, and how to book.',
+      'Private chef costs in Bali from IDR 2.5M++/day (chef + assistant) to IDR 20M+ events. Real 2026 pricing, what is included, and how to book.',
     canonical: `${SITE}/blog/private-chef-cost-bali`,
     h1: 'How Much Does a Private Chef in Bali Cost?',
   },
@@ -1988,7 +1988,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/villa-chef',
     title: 'Villa Chef Bali | Daily Chef Service for Your Stay | myCHEF',
     description:
-      'A dedicated villa chef in Bali for breakfast, lunch & dinner every day of your stay. Groceries at cost, from IDR 600K/hour. WhatsApp myCHEF.',
+      'A dedicated villa chef in Bali for breakfast, lunch & dinner every day of your stay. Groceries at cost, from IDR 2.5M++/half day. WhatsApp myCHEF.',
     canonical: `${SITE}/villa-chef`,
     h1: 'Your Private Chef for Everyday Villa Dining',
     ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,

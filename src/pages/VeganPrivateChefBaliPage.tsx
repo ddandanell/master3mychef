@@ -61,7 +61,7 @@ This approach works well for groups of 6--30 where dietary requirements are genu
     id: 'occasions',
     type: 'content',
     title: 'When to Book a Vegan Private Chef in Bali',
-    body: `**Villa Holiday Chef** -- Daily meals for a vegan household or group on a villa holiday. Breakfast, lunch, and dinner cooked fresh every day. No restaurants, no guesswork, no hidden animal products. From IDR 750,000/day for up to 4 guests (all meals).
+    body: `**Villa Holiday Chef** -- Daily meals for a vegan household or group on a villa holiday. Breakfast, lunch, and dinner cooked fresh every day. No restaurants, no guesswork, no hidden animal products. Complete full day (breakfast, lunch and dinner) at IDR 4,200,000++/day; half-day and full-day options from IDR 2,500,000++/day — one chef and one dedicated assistant included, groceries at cost with receipts. Weekly rate 10% off, monthly rate 20% off. Prices are subject to a 10% service charge and 11% tax.
 
 **Yoga and Wellness Retreat Catering** -- Bali is a major yoga retreat destination. We provide plant-based catering for multi-day and week-long retreats -- typically 2--3 meals per day for 8--30 participants, with a focus on nutrition and ingredient quality. Menus are designed in consultation with retreat facilitators.
 

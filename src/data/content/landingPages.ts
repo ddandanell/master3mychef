@@ -544,12 +544,12 @@ export const LANDING_PAGES: ContentEntry[] = [
           "offers": {
             "@type": "Offer",
             "priceCurrency": "IDR",
-            "price": "4500000",
+            "price": "2250000",
             "priceSpecification": {
               "@type": "UnitPriceSpecification",
-              "price": "4500000",
+              "price": "2250000",
               "priceCurrency": "IDR",
-              "unitText": "per week for 2-4 people"
+              "unitText": "per day at the weekly rate"
             },
             "description": "Healthy meal delivery in Bali: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF."
           },
@@ -563,7 +563,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "name": "How much does healthy meal delivery cost in Bali?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Weekly in-villa meal prep starts from IDR 4,500,000 per week for 2-4 people. One-off chef sessions start from IDR 1,350,000 with groceries billed at cost."
+                "text": "Weekly in-villa chef service starts from IDR 2,250,000++ per day at the weekly rate (10% off standard). One-off half-day bookings start from IDR 2,500,000++ with groceries billed at cost. Every booking includes one chef and one dedicated assistant."
               }
             },
             {

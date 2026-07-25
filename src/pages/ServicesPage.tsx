@@ -58,7 +58,7 @@ const SERVICES = [
     slug: 'monthly-long-stay-chef',
     label: 'Monthly & Long-Stay Chef',
     description: 'Recurring chef days and meal-prep plans for long stays and residents.',
-    price: 'From IDR 4.5M/week (2 people); live-in from IDR 8M/month.',
+    price: 'Weekly chef service from IDR 2,250,000++/day (10% off standard); live-in placement quoted individually.',
     url: '/hire-private-chef-bali-monthly',
     cta: 'monthly chef arrangements',
     icon: CalendarCheck,

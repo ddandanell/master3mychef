@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does private dining in Sanur cost?',
-    a: 'Family villa dinners and sunrise breakfasts start from IDR 700K per person; weekly meal plans run from IDR 4.5M per week for 2–4 people — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
+    a: 'Family villa dinners and sunrise breakfasts start from IDR 700K per person; weekly chef service runs from IDR 2.25M++ per day at the weekly rate — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
   },
   {
     q: 'What is the sunrise breakfast service?',
@@ -70,10 +70,10 @@ const SERVICES = [
     detail: 'For celebrations and reunions.',
   },
   {
-    name: 'Weekly meal plans',
-    range: 'From IDR 4.5M / week',
+    name: 'Weekly chef service',
+    range: 'From IDR 2,250,000++ / day',
     for: '2–4 people',
-    detail: 'Breakfasts, lunches and dinners handled across the stay.',
+    detail: 'Breakfasts, lunches and dinners handled across the stay (weekly rate, 10% off standard).',
   },
 ]
 

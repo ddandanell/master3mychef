@@ -15,7 +15,7 @@ const HOW_IT_WORKS = [
 ]
 
 const WHATS_INCLUDED = [
-  'Private villa chef (dedicated to your villa)',
+  'Professional chef + dedicated assistant (every booking)',
   'Full grocery shopping & ingredient sourcing',
   'Breakfast, lunch & dinner preparation',
   'Table service & presentation',
@@ -26,14 +26,14 @@ const WHATS_INCLUDED = [
 ]
 
 const MEAL_PLANS = [
-  { name: 'Breakfast Only', price: 'IDR 600K', period: '/hour', desc: 'Fresh tropical fruits, pastries, eggs any style, Balinese coffee' },
-  { name: 'Half Board', price: 'IDR 2M', period: '/half-day', desc: 'Breakfast + dinner — ideal for families who lunch out' },
-  { name: 'Full Board', price: 'IDR 4M', period: '/full-day', desc: 'Breakfast, lunch and dinner — the complete villa experience' },
+  { name: 'Half Day', price: 'IDR 2,500,000++', period: '/day', desc: 'Cook and serve one meal, plus one additional meal prepared for later (no service for the prepared meal). Weekly rate IDR 2,250,000++/day · monthly rate IDR 2,000,000++/day.' },
+  { name: 'Full Day', price: 'IDR 3,500,000++', period: '/day', desc: 'Cook and serve two meals, plus one additional meal prepared for later. Weekly rate IDR 3,150,000++/day · monthly rate IDR 2,800,000++/day.' },
+  { name: 'Complete Full Day', price: 'IDR 4,200,000++', period: '/day', desc: 'Cook and serve breakfast, lunch and dinner — the complete villa experience. Weekly rate IDR 3,780,000++/day · monthly rate IDR 3,360,000++/day.' },
   { name: 'Custom', price: 'Quoted', period: '', desc: 'Dietary programmes, special occasions, extended stays' },
 ]
 
 const FAQS = [
-  { q: 'What does the meal-plan rate include?', a: 'Chef time, menu planning, cooking, table service and a full kitchen cleanup after every meal. Groceries are billed separately at cost with receipts — no markup.' },
+  { q: 'What does the meal-plan rate include?', a: 'One professional chef and one dedicated assistant, menu planning, cooking, table service and a full kitchen cleanup after every meal. Groceries are charged separately at cost, supported by receipts. Prices are subject to a 10% service charge and 11% tax.' },
   { q: 'How long does the chef stay each day?', a: 'Breakfast service runs about 2 hours and dinner about 3. Half- and full-day plans cover the day\'s cooking from breakfast through dinner.' },
   { q: 'Which areas do you serve?', a: 'Villas across Bali\'s main areas — Seminyak, Canggu, Pererenan, Ubud, Uluwatu, Sanur, Jimbaran and surrounds. Share your villa name and location pin when you enquire.' },
   { q: 'Can the chef handle dietary requirements and kids\' meals?', a: 'Yes — halal, vegan, gluten-free, keto, allergies and children\'s menus are part of the service at no extra charge.' },
@@ -123,10 +123,10 @@ export default function SolPage() {
             name: 'Villa Chef Bali',
             description: getPageMeta('villa-chef').description,
             url: getPageMeta('villa-chef').canonical,
-            lowPrice: '600000',
-            highPrice: '4000000',
+            lowPrice: '2500000',
+            highPrice: '4200000',
             priceCurrency: 'IDR',
-            unitText: 'per service',
+            unitText: 'per day',
           }),
           breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
@@ -243,7 +243,7 @@ export default function SolPage() {
             ))}
           </div>
           <p className="text-center mt-10 text-sm" style={{ color: '#8A7B6B' }}>
-            As a guide: breakfast service runs about 2 hours, dinner about 3 — half- and full-day plans cover the whole day's cooking without watching the clock.
+            Every booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Weekly rate (7+ days): 10% off the standard daily rates · monthly rate (28+ days): 20% off. Prices are subject to a 10% service charge and 11% tax.
           </p>
         </div>
       </section>
@@ -254,7 +254,7 @@ export default function SolPage() {
           <div className="text-center mb-16">
             <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Everything Included</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>What You Get</h2>
-            <p style={{ color: '#8A7B6B' }}>One hourly rate. Everything handled. You just show up hungry.</p>
+            <p style={{ color: '#8A7B6B' }}>One daily rate. Everything handled. You just show up hungry.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {WHATS_INCLUDED.map((item) => (
@@ -359,8 +359,8 @@ export default function SolPage() {
           <div className="space-y-4 mb-8">
             {[
               { label: 'Daily meal plans (this page)', desc: 'Villa chef service across every day of your stay.' },
-              { label: 'Per-session pricing', desc: 'One-off dinners and special evenings, from IDR 1.35M per session — see ', link: { text: 'weekly chef service in Canggu', to: '/private-chef/canggu' }, suffix: ' or ', link2: { text: 'Pererenan', to: '/private-chef/pererenan' }, end: '.' },
-              { label: 'Weekly meal prep', desc: 'From IDR 4.5M per week for two people, for longer stays.' },
+              { label: 'Half-day chef hire', desc: 'Cook and serve one meal, plus one additional meal prepared for later — IDR 2,500,000++ per day. Weekly rate IDR 2,250,000++/day · monthly rate IDR 2,000,000++/day.' },
+              { label: 'Full-day and complete full-day hire', desc: 'Two meals cooked and served plus one prepared for later — IDR 3,500,000++ per day; breakfast, lunch and dinner — IDR 4,200,000++ per day. Weekly −10% · monthly −20%. See ', link: { text: 'daily villa dining rates', to: '/villa-chef' }, end: '.' },
               { label: 'Monthly arrangements', desc: 'For stays of a month or more, see ', link: { text: 'monthly villa chef hire', to: '/hire-private-chef-bali-monthly' }, end: '.' },
             ].map((item) => (
               <div key={item.label} className="p-5 rounded-2xl bg-white border border-[#E5E0D8]">
@@ -368,14 +368,13 @@ export default function SolPage() {
                 <p className="text-sm leading-relaxed" style={{ color: '#8A7B6B' }}>
                   {item.desc}
                   {item.link && <Link to={item.link.to} className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">{item.link.text}</Link>}
-                  {item.suffix}{item.link2 && <Link to={item.link2.to} className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">{item.link2.text}</Link>}
                   {item.end}
                 </p>
               </div>
             ))}
           </div>
           <p className="text-center text-sm mb-4" style={{ color: '#8A7B6B' }}>
-            Your written quote states exactly which model applies, shown ++ (11% government tax + 10% service charge) — a 50% deposit confirms your dates.
+            Your written quote states exactly which model applies. Prices are subject to a 10% service charge and 11% tax — a 50% deposit confirms your dates.
           </p>
         </div>
       </section>
@@ -386,7 +385,7 @@ export default function SolPage() {
           <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Extended Stays</p>
           <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>Staying Longer?</h2>
           <p className="leading-relaxed mb-8" style={{ color: '#8A7B6B' }}>
-            Daily service is where most guests start; a week in, many ask about the rest of the season. Weekly meal-prep packages and monthly chef arrangements carry their own pricing and the same groceries-at-cost promise — tell us your stay length and we will recommend the most economical structure for it.
+            Daily service is where most guests start; a week in, many ask about the rest of the season. Weekly rates take 10% off the daily price and monthly rates take 20% off, with the same groceries-at-cost promise — tell us your stay length and we will recommend the most economical structure for it.
           </p>
           <Link to="/hire-private-chef-bali-monthly" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
             Plan a Monthly Chef
@@ -471,9 +470,9 @@ export default function SolPage() {
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  { label: 'Breakfast Only', price: 'IDR 600K / hour' },
-                  { label: 'Half Board', price: 'IDR 2M / half-day' },
-                  { label: 'Full Board', price: 'IDR 4M / full-day' },
+                  { label: 'Half Day', price: 'IDR 2,500,000++ / day' },
+                  { label: 'Full Day', price: 'IDR 3,500,000++ / day' },
+                  { label: 'Complete Full Day', price: 'IDR 4,200,000++ / day' },
                 ].map((p) => (
                   <div key={p.label} className="flex items-center justify-between py-3 border-b border-[#E5E0D8]">
                     <span style={{ color: '#2C2419' }}>{p.label}</span>
@@ -482,7 +481,7 @@ export default function SolPage() {
                 ))}
               </div>
               <p className="text-xs mb-6" style={{ color: '#8A7B6B' }}>
-                * Groceries billed at cost — no markup. Rates shown ++ (11% government tax + 10% service charge); a 50% deposit confirms your dates.
+                * Every booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Weekly rate 10% off · monthly rate 20% off the daily rates. Prices are subject to a 10% service charge and 11% tax. A 50% deposit confirms your dates.
               </p>
               <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="sol-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <Phone className="w-4 h-4" /> Book My Villa Chef on WhatsApp

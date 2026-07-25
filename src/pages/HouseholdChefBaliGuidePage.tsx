@@ -34,13 +34,13 @@ const SECTIONS: PageSection[] = [
     type: 'content',
     subtitle: 'Pricing',
     title: 'How Much Does a Household Chef Cost in Bali?',
-    body: `<p>Household chef pricing is structured around a monthly service fee:</p>
+    body: `<p>Every household chef booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Our published rates:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>3 days/week arrangement:</strong> From IDR 7,000,000 to 10,000,000 per month (chef fee only, excluding groceries).</li>
-      <li><strong>5 days/week arrangement:</strong> From IDR 11,000,000 to 15,000,000 per month (chef fee only, excluding groceries).</li>
-      <li><strong>Daily rate (ad hoc):</strong> IDR 650,000 to 1,000,000 per service day.</li>
+      <li><strong>Half day:</strong> Cook and serve one meal, plus one additional meal prepared for later (no service for the prepared meal) — IDR 2,500,000++ per day standard · IDR 2,250,000++ per day at the weekly rate (10% off) · IDR 2,000,000++ per day at the monthly rate (20% off).</li>
+      <li><strong>Full day:</strong> Cook and serve two meals, plus one additional meal prepared for later — IDR 3,500,000++ per day standard · IDR 3,150,000++ per day weekly · IDR 2,800,000++ per day monthly.</li>
+      <li><strong>Complete full day:</strong> Cook and serve breakfast, lunch and dinner — IDR 4,200,000++ per day standard · IDR 3,780,000++ per day weekly · IDR 3,360,000++ per day monthly.</li>
     </ul>
-    <p style="margin-top:0.75rem;">Grocery costs add IDR 150,000 to 400,000 per person per day. For a full comparison see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
+    <p style="margin-top:0.75rem;">A 3 days/week or 5 days/week schedule is billed at the monthly daily rate for the plan you choose. Our chefs are specialists across Japanese, Western, Indonesian and Balinese, Italian, French, Mediterranean, Chinese, international and healthy cuisine, with more available on request — most come from head or senior chef roles in five-star hotels and high-end restaurants and speak excellent English, and your chef is assigned to match your preferred cuisine. Prices are subject to a 10% service charge and 11% tax. For a full comparison see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
   },
   {
     id: 'placement',
@@ -96,7 +96,7 @@ export default function HouseholdChefBaliGuidePage() {
       heroImageAlt="Household chef preparing a family meal in a Bali villa kitchen"
       ogImage="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=80"
       keywords={['household chef bali', 'personal chef bali', 'bali household chef hire', 'private chef bali monthly', 'expat chef bali']}
-      highlights={['Monthly Arrangements', 'Groceries at Cost', 'All Bali Areas', 'From IDR 7M/month']}
+      highlights={['Monthly Arrangements', 'Groceries at Cost', 'All Bali Areas', 'From IDR 2,500,000++/day']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[

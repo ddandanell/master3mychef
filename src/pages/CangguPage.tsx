@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does private dining in Canggu cost?',
-    a: 'In-villa dinners start from IDR 700K per person, BBQ catering from IDR 700K–800K, and weekly meal prep from IDR 4.5M per week for two — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
+    a: 'In-villa dinners start from IDR 700K per person, BBQ catering from IDR 700K–800K, and weekly chef service from IDR 2.25M++ per day at the weekly rate — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
   },
   {
     q: 'Is a villa dinner worth it versus eating out in Canggu?',
@@ -70,10 +70,10 @@ const SERVICES = [
     detail: 'High-protein menus for active groups.',
   },
   {
-    name: 'Weekly meal prep',
-    range: 'From IDR 4.5M / week',
+    name: 'Weekly chef service',
+    range: 'From IDR 2,250,000++ / day',
     for: '2 guests',
-    detail: "Daily breakfasts, lunches and dinners planned around your household.",
+    detail: "Daily breakfasts, lunches and dinners planned around your household (weekly rate, 10% off standard).",
   },
 ]
 

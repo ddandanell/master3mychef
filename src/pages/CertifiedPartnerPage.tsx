@@ -113,7 +113,7 @@ export default function CertifiedPartnerPage() {
         <p className="text-xs text-[#8A8785]">
           Certification verified at <span className="text-[#1A1A1A] font-medium">mychef.id/certified/{slug}</span>
           {' · '}
-          <Link to="/partner-platform" className="text-[#2C5F7C] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028]">About the partner programme →</Link>
+          <Link to="/certified-partner" className="text-[#2C5F7C] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028]">About the partner programme →</Link>
         </p>
       </section>
 
@@ -128,7 +128,7 @@ export default function CertifiedPartnerPage() {
               { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing tables.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate events.' },
               { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
-              { label: 'Partner Platform', href: '/partner-platform', desc: 'Become a certified partner villa.' },
+              { label: 'Partner Programme', href: '/certified-partner', desc: 'Become a certified partner villa.' },
               { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">

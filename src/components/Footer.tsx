@@ -125,7 +125,7 @@ export default function Footer() {
                 {pillar.slug === 'fine-dining' && (
                   <li>
                     <Link
-                      to="/fine-dining/private-chef-bali"
+                      to="/"
                       className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                     >
                       Michelin Private Chef

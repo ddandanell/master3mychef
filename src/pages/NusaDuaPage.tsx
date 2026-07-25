@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
 
@@ -27,7 +28,7 @@ const FAQS = [
   },
   {
     q: 'Can you cater a corporate offsite or board dinner?',
-    a: 'Yes — structured breakfasts, working lunches and executive dinners for 10–60 guests, with full-board options for multi-day programmes and precise run sheets. Corporate programmes carry a minimum spend of IDR 50,000,000.',
+    a: `Yes — structured breakfasts, working lunches and executive dinners for 10–60 guests, with full-board options for multi-day programmes and precise run sheets. Corporate programmes carry a minimum spend of ${siteFacts.corporateMinSpend}.`,
   },
   {
     q: 'Which areas do you cover?',
@@ -61,7 +62,7 @@ const SERVICES = [
     name: 'Corporate & executive catering',
     range: 'IDR 700K–800K / person',
     for: '10–60 guests',
-    detail: 'With precise run sheets. Minimum spend IDR 50,000,000 for corporate programmes.',
+    detail: `With precise run sheets. Minimum spend ${siteFacts.corporateMinSpend} for corporate programmes.`,
   },
   {
     name: 'Celebration events',

@@ -20,7 +20,7 @@ export const siteFacts = {
   balanceTiming: 'the day before the event',
 
   /** Minimum spend for corporate events and corporate catering programmes. */
-  corporateMinSpend: 'IDR 50,000,000',
+  corporateMinSpend: 'IDR 15,000,000',
 
   /**
    * Cancellation policy wording, taken verbatim from /cancellation.

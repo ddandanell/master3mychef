@@ -4,13 +4,14 @@ import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 interface Props {
   className?: string
   invert?: boolean
-  /** When true, the first <h1> in the article content is rendered as <h2>.
-   *  Use this on pages that already declare their own hero <h1>, so the
-   *  final HTML contains exactly one top-level heading. */
+  /** When false, preserves any <h1> tags inside the article content.
+   *  Default is true: every <h1> in the article body is rendered as <h2>
+   *  so the page keeps exactly one top-level heading (the hero <h1>).
+   *  Only set to false if this component is the sole source of the page h1. */
   downgradeFirstH1?: boolean
 }
 
-export function ArticleContentSection({ className = '', invert = false, downgradeFirstH1 = false }: Props) {
+export function ArticleContentSection({ className = '', invert = false, downgradeFirstH1 = true }: Props) {
   const { pathname } = useLocation()
   const path = pathname.replace(/\/$/, '') || '/'
   const html = ARTICLE_CONTENT[path] || ARTICLE_CONTENT[`${path}/`]
@@ -18,7 +19,7 @@ export function ArticleContentSection({ className = '', invert = false, downgrad
   if (!html) return null
 
   const renderedHtml = downgradeFirstH1
-    ? html.replace(/<h1([^>]*)>(.*?)<\/h1>/i, '<h2$1>$2</h2>')
+    ? html.replace(/<h1([^>]*)>(.*?)<\/h1>/gi, '<h2$1>$2</h2>')
     : html
 
   const baseClasses = invert

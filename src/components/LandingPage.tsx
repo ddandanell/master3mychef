@@ -306,7 +306,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           ? [
               { question: 'How many guests can you handle?', answer: 'From small private dinners to large villa parties. Share your numbers and venue and we build the right team around it — one chef for an intimate dinner, a full culinary crew for a large celebration.' },
               { question: 'What is the difference between hiring an event chef and booking catering?', answer: 'Chef hire puts a professional chef (and optional staff) inside your event with a menu built for you. Catering lines are structured service formats for scale, and the events team adds full production — same company, different scope.' },
-              { question: 'Do you handle drinks and styling too?', answer: 'Yes — bar service and table styling can be added alongside the food. Bartenders and sommeliers are available from IDR 250K per hour.' },
+              { question: 'Do you handle drinks and styling too?', answer: 'Yes — bar service and table styling can be added alongside the food. Sommeliers are available from IDR 250K per hour and bartenders from IDR 350K per hour.' },
               { question: 'How far ahead should I book?', answer: 'Single dinners: two to three weeks is usually comfortable. Peak-season dates and large events should be booked earlier. Availability is usually confirmed within 2 hours on WhatsApp.' },
               { question: 'Which areas do you cover?', answer: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua and beyond. Any travel fee is confirmed upfront.' },
             ]

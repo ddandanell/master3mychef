@@ -1853,7 +1853,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service',
     title: 'Villa Service Staff Bali | Waiters, Butlers & Bartenders',
     description:
-      'Uniformed, English-speaking villa staff in Bali — waiters, butlers, bartenders & coordinators by the shift, from IDR 250K/hour. WhatsApp myCHEF.',
+      'Uniformed, English-speaking villa staff in Bali — waiters, butlers & coordinators from IDR 250K/hour; bartenders from IDR 350K/hour. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service`,
     h1: 'Professional Villa Service Staff — Hired by the Shift',
     ogImage: `${SITE}/bartender.webp`,

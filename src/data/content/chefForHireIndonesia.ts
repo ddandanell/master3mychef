@@ -85,7 +85,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
     <li><strong>Chef sessions (Bali):</strong> from IDR 1,350,000 per session, groceries at cost</li>
     <li><strong>Weekly meal prep:</strong> from IDR 4,500,000 per week for two people</li>
     <li><strong>Live-in placement:</strong> from IDR 8,000,000 per month</li>
-    <li><strong>Service staff:</strong> waiters, bartenders and sommeliers from IDR 250K per hour</li>
+    <li><strong>Service staff:</strong> waiters and sommeliers from IDR 250K per hour; bartenders from IDR 350K per hour</li>
   </ul>
   <p>Prices are quoted ++ (11% government tax + 10% service charge) as one fixed figure before you commit — a deposit confirms your date. Full detail lives on the <a href="/pricing">current pricing</a>.</p>
 </section>

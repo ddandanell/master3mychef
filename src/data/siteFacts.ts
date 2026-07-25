@@ -58,6 +58,12 @@ export const siteFacts = {
   /** Business email. */
   email: 'bali@mychef.id',
 
+  /** In-villa private bartender rate (owner page /in-villa-service/bartenders). */
+  bartenderRate: 'IDR 350,000',
+
+  /** In-villa private bartender rate with hourly wording. */
+  bartenderRateHourly: 'IDR 350,000/hour',
+
   /** Direct Google Business Profile / Maps URL. */
   googleBusinessProfileUrl:
     'https://www.google.com/maps/place/myCHEF.+-+Private+Chef+and+Catering/data=!4m2!3m1!1s0x0:0x84318764e9490ac2?sa=X',

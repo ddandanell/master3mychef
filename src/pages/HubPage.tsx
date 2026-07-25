@@ -91,7 +91,7 @@ const COMPARISON_ROWS = [
 
 const FAQS = [
   { q: 'How much does a private chef in Bali cost?', a: 'Villa dinners start from IDR 700K per person and tasting menus from IDR 950K per person, ++ (11% government tax + 10% service charge). Your fixed quote depends on menu, guest count and staffing. <a href="/pricing">Full price tables →</a>' },
-  { q: "What's included in the price?", a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters, bartenders and sommeliers can be added from IDR 250K/hour.' },
+  { q: "What's included in the price?", a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters and sommeliers can be added from IDR 250K/hour; bartenders from IDR 350K/hour.' },
   { q: 'How far in advance should I book?', a: 'A few days is ideal for dinners; weddings and large events deserve weeks. Same-day and next-day requests are often possible — message us and we\'ll tell you honestly.' },
   { q: 'Which areas do you serve?', a: 'All of Bali\'s main villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit. Remote-area travel is always quoted upfront.' },
   { q: 'Do you handle dietary requirements?', a: 'Yes — vegan, gluten-free, halal, allergies and kids\' menus at no extra charge. Tell us when you enquire and the menu is built around it.' },

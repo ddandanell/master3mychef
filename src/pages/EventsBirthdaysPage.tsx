@@ -240,7 +240,7 @@ export default function EventsBirthdaysPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
-                  <p className="text-[#4A4745] leading-relaxed"><strong>Bar service</strong> — a staffed open bar in the villa party format, or add a <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">private bartender hire</Link> from IDR 250K/hour to any dinner.</p>
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Bar service</strong> — a staffed open bar in the villa party format, or add a <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">private bartender hire</Link> from IDR 350K/hour to any dinner.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />

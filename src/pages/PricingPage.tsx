@@ -46,7 +46,8 @@ const SECTIONS = [
         ['Wedding catering', 'IDR 1.5M–3M+', 'per person'],
         ['Private chef session (to 6 guests)', 'IDR 1,350K', 'per session, 3–4 courses'],
         ['Weekly meal prep (2 people)', 'IDR 4,500K', 'per week'],
-        ['Waiters, bartenders, sommeliers', 'IDR 250K', 'per hour'],
+        ['Waiters & sommeliers', 'IDR 250K', 'per hour'],
+        ['Bartenders', 'IDR 350K', 'per hour'],
       ])
     )}
     <p class="text-sm text-stone-600 mt-4">All ++ (11% government tax + 10% service charge). A ${siteFacts.depositPercent}% deposit confirms your booking.</p>`,

@@ -118,7 +118,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Can you add waiters or a bartender?',
-        a: 'Yes — waiters, bartenders, butlers and sommeliers from IDR 250K/hour, at a standard ratio of one waiter per 10 guests.',
+        a: 'Yes — waiters, butlers and sommeliers from IDR 250K/hour, with bartenders from IDR 350K/hour, at a standard ratio of one waiter per 10 guests.',
       },
     ],
   },

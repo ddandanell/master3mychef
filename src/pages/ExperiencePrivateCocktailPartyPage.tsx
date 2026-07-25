@@ -223,7 +223,7 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  { question: 'How much does a private cocktail party in Bali cost?', answer: 'A full cocktail party with bartenders, staff, cocktails and canapés typically runs IDR 700K–1.2M per person ++. A standing cocktail reception starts from IDR 650K++ per person (20–80 guests). Bartender-only hire starts from IDR 250K per hour with a four-hour minimum.' },
+  { question: 'How much does a private cocktail party in Bali cost?', answer: 'A full cocktail party with bartenders, staff, cocktails and canapés typically runs IDR 700K–1.2M per person ++. A standing cocktail reception starts from IDR 650K++ per person (20–80 guests). Bartender-only hire starts from IDR 350K per hour with a three-hour minimum.' },
   { question: 'How many guests can you handle?', answer: 'From an intimate 8–12 up to 80+ guests. Bartender and server numbers scale with the headcount.' },
   { question: 'How long does the party run?', answer: 'Most parties book four to six hours of service. Bartender-only hire has a four-hour minimum; extensions are quoted per hour.' },
   { question: 'What\'s included in the full package?', answer: 'Bartenders and service staff, custom cocktail menu, all bar equipment and glassware, fresh juices, syrups and garnishes, chef-made canapés and grazing, setup and full clean-down.' },
@@ -276,7 +276,7 @@ export default function ExperiencePrivateCocktailPartyPage() {
         faqPageSchema(FAQS),
         serviceSchema(
           'Private Cocktail Party Bali',
-          'A private cocktail party at your Bali villa: professional bartenders, custom cocktails, chef-made canapés, full bar setup and clean-down. Full packages from IDR 700K per person ++; bartender-only hire from IDR 250K per hour.',
+          'A private cocktail party at your Bali villa: professional bartenders, custom cocktails, chef-made canapés, full bar setup and clean-down. Full packages from IDR 700K per person ++; bartender-only hire from IDR 350K per hour.',
           CANONICAL
         ),
       ]}

@@ -204,7 +204,7 @@ export default function NusaDuaPage() {
               Our peninsula teams run every booking like a resort operation: security entry documentation coordinated in advance, dining areas fully staged before guests sit down, and service that flows to a timed brief. All chefs are Indonesian, HACCP-certified, and experienced with the expectations that come with this address.
             </p>
             <p className="mb-0 leading-relaxed">
-              All prices quoted ++ (11% government tax plus 10% service charge), fixed upfront. Waiters, bartenders and sommeliers can be added from around IDR 250K per hour. Menus and availability: <Link to="/private-chef/nusa-dua" className="text-[#C5A028] hover:underline font-medium">hire a private chef in Nusa Dua</Link>. Full rates on our <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">transparent per-person pricing</Link> page.
+              All prices quoted ++ (11% government tax plus 10% service charge), fixed upfront. Waiters and sommeliers can be added from around IDR 250K per hour, and bartenders from around IDR 350K per hour. Menus and availability: <Link to="/private-chef/nusa-dua" className="text-[#C5A028] hover:underline font-medium">hire a private chef in Nusa Dua</Link>. Full rates on our <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">transparent per-person pricing</Link> page.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">

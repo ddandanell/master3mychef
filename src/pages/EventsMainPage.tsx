@@ -284,7 +284,7 @@ const POPULAR_EVENT_TYPES: PopularEventType[] = [
 const WHATS_INCLUDED = [
   'A head chef and brigade sized to your event — sous chef added from 20 guests, dedicated kitchen team above 60',
   'Full mobile kitchen — prep stations, cooking equipment, cold storage and servingware brought to your villa, so no villa kitchen is required',
-  'Service staff — professional waiters at a standard 1 per 10 guests, with bartenders and sommeliers from IDR 250K–350K/hour',
+  'Service staff — professional waiters at a standard 1 per 10 guests, sommeliers from IDR 250K/hour and bartenders from IDR 350K/hour',
   'Custom menu design — built around your brief, with halal, vegan, gluten-free, nut-free and kids\' options handled as standard',
   'Setup, service and complete cleanup — we pack up and leave; the villa is handed back the way we found it',
   'One point of contact — your coordinator, Sofia, from first WhatsApp message to final guest departure',

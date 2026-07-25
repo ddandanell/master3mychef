@@ -129,7 +129,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     label: 'In-Villa Service',
     url: '/in-villa-service',
     h1: 'Professional Villa Service Staff — Hired by the Shift',
-    description: 'Uniformed, English-speaking villa staff in Bali — waiters, butlers, bartenders, mixologists, sommeliers and hosts hired by the shift, from IDR 250,000 per hour.',
+    description: 'Uniformed, English-speaking villa staff in Bali — waiters, butlers, mixologists, sommeliers and hosts from IDR 250,000/hour; bartenders from IDR 350,000/hour.',
     title: 'Hire Villa Staff Bali | Professional Waiters & Butlers — myCHEF',
     intro: 'Uniformed, trained service staff for villa events. Waiters, butlers, bartenders, sommeliers, and event coordinators.',
     navLabel: 'In-Villa Service',

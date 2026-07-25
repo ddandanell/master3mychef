@@ -24,7 +24,7 @@ export interface PageMeta {
 const SITE = 'https://mychef.id'
 
 export const PAGE_META: Record<string, PageMeta> = {
-    home: {
+      home: {
     path: '/',
     title: 'Private Chef Bali | Michelin-Trained Villa Dining & Events',
     description:
@@ -34,7 +34,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-home.webp`,
   },
 
-    'locations-seminyak': {
+      'locations-seminyak': {
     path: '/locations/seminyak',
     title: 'Private Dining in Seminyak | Dining Guide & Chef Services',
     description:
@@ -43,7 +43,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Seminyak: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-canggu': {
+      'locations-canggu': {
     path: '/locations/canggu',
     title: 'Private Dining in Canggu | Dining Guide & Chef Services',
     description:
@@ -52,7 +52,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Canggu: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-uluwatu': {
+      'locations-uluwatu': {
     path: '/locations/uluwatu',
     title: 'Private Dining in Uluwatu | Dining Guide & Chef Services',
     description:
@@ -61,7 +61,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Uluwatu: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-ubud': {
+      'locations-ubud': {
     path: '/locations/ubud',
     title: 'Private Dining in Ubud | Dining Guide & Chef Services',
     description:
@@ -70,7 +70,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Ubud: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-nusa-dua': {
+      'locations-nusa-dua': {
     path: '/locations/nusa-dua',
     title: 'Private Dining in Nusa Dua | Dining Guide & Chef Services',
     description:
@@ -79,7 +79,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Nusa Dua: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-jimbaran': {
+      'locations-jimbaran': {
     path: '/locations/jimbaran',
     title: 'Private Dining in Jimbaran | Dining Guide & Chef Services',
     description:
@@ -88,7 +88,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Jimbaran: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-sanur': {
+      'locations-sanur': {
     path: '/locations/sanur',
     title: 'Private Dining in Sanur | Dining Guide & Chef Services',
     description:
@@ -97,7 +97,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Sanur: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-pererenan': {
+      'locations-pererenan': {
     path: '/locations/pererenan',
     title: 'Private Dining in Pererenan | Dining Guide & Chef Services',
     description:
@@ -106,7 +106,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Pererenan: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-bukit': {
+      'locations-bukit': {
     path: '/locations/bukit',
     title: 'Private Dining in Bukit | Dining Guide & Chef Services',
     description:
@@ -115,7 +115,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Bukit: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-kuta': {
+      'locations-kuta': {
     path: '/locations/kuta',
     title: 'Private Dining in Kuta | Dining Guide & Chef Services',
     description:
@@ -124,7 +124,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Kuta: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-denpasar': {
+      'locations-denpasar': {
     path: '/locations/denpasar',
     title: 'Private Dining in Denpasar | Dining Guide & Chef Services',
     description:
@@ -133,7 +133,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Denpasar: Where to Eat & In-Villa Chef Options',
   },
 
-    'locations-jakarta': {
+      'locations-jakarta': {
     path: '/locations/jakarta',
     title: 'Private Chef Jakarta | Residences & Corporate Dining',
     description:
@@ -142,7 +142,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Jakarta',
   },
 
-    'private-chef-seminyak': {
+      'private-chef-seminyak': {
     path: '/private-chef/seminyak',
     title: 'Private Chef in Seminyak, Bali | Hire a Chef for Your Villa',
     description:
@@ -151,7 +151,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Seminyak, Bali',
   },
 
-    'private-chef-canggu': {
+      'private-chef-canggu': {
     path: '/private-chef/canggu',
     title: 'Private Chef in Canggu, Bali | Villa Dining & Meal Prep',
     description:
@@ -160,7 +160,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Canggu, Bali',
   },
 
-    'private-chef-ubud': {
+      'private-chef-ubud': {
     path: '/private-chef/ubud',
     title: 'Private Chef in Ubud, Bali | Villa Dining, Retreat Catering',
     description:
@@ -169,7 +169,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Ubud, Bali',
   },
 
-    'private-chef-uluwatu': {
+      'private-chef-uluwatu': {
     path: '/private-chef/uluwatu',
     title: 'Private Chef in Uluwatu, Bali | Clifftop Villa Dining',
     description:
@@ -178,7 +178,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Uluwatu, Bali',
   },
 
-    'private-chef-jimbaran': {
+      'private-chef-jimbaran': {
     path: '/private-chef/jimbaran',
     title: 'Private Chef in Jimbaran, Bali | Seafood Villa Dining',
     description:
@@ -187,7 +187,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Jimbaran, Bali',
   },
 
-    'private-chef-nusa-dua': {
+      'private-chef-nusa-dua': {
     path: '/private-chef/nusa-dua',
     title: 'Private Chef Nusa Dua, Bali | Corporate, Luxury Villa Dining',
     description:
@@ -196,7 +196,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Nusa Dua, Bali',
   },
 
-    'private-chef-sanur': {
+      'private-chef-sanur': {
     path: '/private-chef/sanur',
     title: 'Private Chef in Sanur, Bali | Family Villa Dining, Meal Prep',
     description:
@@ -205,7 +205,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Sanur, Bali',
   },
 
-    'private-chef-denpasar': {
+      'private-chef-denpasar': {
     path: '/private-chef/denpasar',
     title: 'Private Chef Denpasar, Bali | Executive, Residential Dining',
     description:
@@ -214,7 +214,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Denpasar, Bali',
   },
 
-    'private-chef-berawa': {
+      'private-chef-berawa': {
     path: '/private-chef/berawa',
     title: 'Private Chef Berawa, Bali | Villa Dining, Birthday Catering',
     description:
@@ -223,7 +223,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Berawa, Bali',
   },
 
-    'private-chef-pererenan': {
+      'private-chef-pererenan': {
     path: '/private-chef/pererenan',
     title: 'Private Chef in Pererenan, Bali | Villa Dining, Meal Prep',
     description:
@@ -232,7 +232,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Pererenan, Bali',
   },
 
-    'private-chef-kerobokan': {
+      'private-chef-kerobokan': {
     path: '/private-chef/kerobokan',
     title: 'Private Chef Kerobokan, Bali | Residential Dining, Meal Prep',
     description:
@@ -241,7 +241,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Kerobokan, Bali',
   },
 
-    'private-chef-petitenget': {
+      'private-chef-petitenget': {
     path: '/private-chef/petitenget',
     title: 'Private Chef in Petitenget, Bali | Fine Dining at Your Villa',
     description:
@@ -250,7 +250,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Petitenget, Bali',
   },
 
-    'private-chef-kuta': {
+      'private-chef-kuta': {
     path: '/private-chef/kuta',
     title: 'Private Chef in Kuta, Bali | Villa Dinner & Catering',
     description:
@@ -259,7 +259,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Kuta, Bali',
   },
 
-    'private-chef-legian': {
+      'private-chef-legian': {
     path: '/private-chef/legian',
     title: 'Private Chef in Legian, Bali | Villa Dining & Catering',
     description:
@@ -268,7 +268,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Legian, Bali',
   },
 
-    'private-chef-bukit': {
+      'private-chef-bukit': {
     path: '/private-chef/bukit',
     title: 'Private Chef Bukit Peninsula Bali | Clifftop Villa Dining',
     description:
@@ -277,7 +277,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Bukit Peninsula, Bali',
   },
 
-    'private-chef-umalas': {
+      'private-chef-umalas': {
     path: '/private-chef/umalas',
     title: 'Private Chef in Umalas, Bali | Villa Dining & Catering',
     description:
@@ -286,7 +286,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Umalas, Bali',
   },
 
-    'private-chef-batu-belig': {
+      'private-chef-batu-belig': {
     path: '/private-chef/batu-belig',
     title: 'Private Chef in Batu Belig, Bali | Beachfront Villa Dining',
     description:
@@ -295,7 +295,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Batu Belig, Bali',
   },
 
-    'private-chef-pecatu': {
+      'private-chef-pecatu': {
     path: '/private-chef/pecatu',
     title: 'Private Chef in Pecatu, Bali | Clifftop Villa Dining',
     description:
@@ -304,7 +304,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Pecatu, Bali',
   },
 
-    'private-chef-ungasan': {
+      'private-chef-ungasan': {
     path: '/private-chef/ungasan',
     title: 'Private Chef in Ungasan, Bali | Clifftop Villa Dining',
     description:
@@ -313,7 +313,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Ungasan, Bali',
   },
 
-    'private-chef-tanjung-benoa': {
+      'private-chef-tanjung-benoa': {
     path: '/private-chef/tanjung-benoa',
     title: 'Private Chef in Tanjung Benoa, Bali | Villa Dining, Catering',
     description:
@@ -322,7 +322,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Tanjung Benoa, Bali',
   },
 
-    'private-chef-sayan': {
+      'private-chef-sayan': {
     path: '/private-chef/sayan',
     title: 'Private Chef in Sayan, Bali | Jungle Villa Dining | myCHEF',
     description:
@@ -331,7 +331,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Sayan, Bali',
   },
 
-    'private-chef-tegallalang': {
+      'private-chef-tegallalang': {
     path: '/private-chef/tegallalang',
     title: 'Private Chef Tegallalang Bali | Rice Terrace Villa Dining',
     description:
@@ -340,7 +340,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Tegallalang, Bali',
   },
 
-    'private-chef-renon': {
+      'private-chef-renon': {
     path: '/private-chef/renon',
     title: 'Private Chef Renon, Denpasar Bali | Corporate, Villa Dining',
     description:
@@ -349,7 +349,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Renon, Bali',
   },
 
-    'private-chef-tanah-lot': {
+      'private-chef-tanah-lot': {
     path: '/private-chef/tanah-lot',
     title: 'Private Chef near Tanah Lot, Bali | Sunset Villa Dining',
     description:
@@ -358,7 +358,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Tanah Lot, Bali',
   },
 
-    'private-chef-nusa-lembongan': {
+      'private-chef-nusa-lembongan': {
     path: '/private-chef/nusa-lembongan',
     title: 'Private Chef on Nusa Lembongan | myCHEF Bali',
     description:
@@ -367,7 +367,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Nusa Lembongan, Bali',
   },
 
-    'private-chef-nusa-penida': {
+      'private-chef-nusa-penida': {
     path: '/private-chef/nusa-penida',
     title: 'Private Chef on Nusa Penida | myCHEF Bali',
     description:
@@ -376,7 +376,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Nusa Penida, Bali',
   },
 
-    'private-chef-mas': {
+      'private-chef-mas': {
     path: '/private-chef/mas',
     title: 'Private Chef Mas Bali | Ubud Corridor Villa Dining',
     description:
@@ -385,7 +385,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Mas, Bali',
   },
 
-    'private-chef-penestanan': {
+      'private-chef-penestanan': {
     path: '/private-chef/penestanan',
     title: 'Private Chef in Penestanan, Bali | Rice Terrace Villa Dining',
     description:
@@ -394,7 +394,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Penestanan, Bali',
   },
 
-    'private-chef-nyanyi': {
+      'private-chef-nyanyi': {
     path: '/private-chef/nyanyi',
     title: 'Private Chef in Nyanyi, Bali | Tabanan Beach Villa Dining',
     description:
@@ -403,7 +403,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Nyanyi, Bali',
   },
 
-    'private-chef-cemagi': {
+      'private-chef-cemagi': {
     path: '/private-chef/cemagi',
     title: 'Private Chef Cemagi Bali | Luxury Tabanan Coast Dining',
     description:
@@ -412,7 +412,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Cemagi, Bali',
   },
 
-    'private-chef-seseh': {
+      'private-chef-seseh': {
     path: '/private-chef/seseh',
     title: 'Private Chef Seseh Bali | Cliffside Tabanan Dining | myCHEF',
     description:
@@ -421,7 +421,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Seseh, Bali',
   },
 
-    'private-chef-nusa-ceningan': {
+      'private-chef-nusa-ceningan': {
     path: '/private-chef/nusa-ceningan',
     title: 'Private Chef on Nusa Ceningan | myCHEF Bali',
     description:
@@ -430,7 +430,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Nusa Ceningan, Bali',
   },
 
-    'private-chef-balangan': {
+      'private-chef-balangan': {
     path: '/private-chef/balangan',
     title: 'Private Chef Balangan Bali | Clifftop Villa Dining | myCHEF',
     description:
@@ -439,7 +439,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Balangan, Bali',
   },
 
-    'private-chef-bingin': {
+      'private-chef-bingin': {
     path: '/private-chef/bingin',
     title: 'Private Chef Bingin Bali | Clifftop Villa Dining | myCHEF',
     description:
@@ -448,7 +448,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Bingin, Bali',
   },
 
-    'private-chef-padang-padang': {
+      'private-chef-padang-padang': {
     path: '/private-chef/padang-padang',
     title: 'Private Chef Padang Padang Bali | Villa Dining | myCHEF',
     description:
@@ -457,7 +457,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Padang Padang, Bali',
   },
 
-    'private-chef-sukawati': {
+      'private-chef-sukawati': {
     path: '/private-chef/sukawati',
     title: 'Private Chef Sukawati Bali | Balinese Villa Dining | myCHEF',
     description:
@@ -466,7 +466,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Sukawati, Bali',
   },
 
-    'private-chef-payangan': {
+      'private-chef-payangan': {
     path: '/private-chef/payangan',
     title: 'Private Chef Payangan Bali | Retreat Villa Dining | myCHEF',
     description:
@@ -475,7 +475,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Payangan, Bali',
   },
 
-    'private-chef-keramas': {
+      'private-chef-keramas': {
     path: '/private-chef/keramas',
     title: 'Private Chef Keramas Bali | Black Sand Beach Villa Dining',
     description:
@@ -484,7 +484,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Keramas, Bali',
   },
 
-    'private-chef-bedugul': {
+      'private-chef-bedugul': {
     path: '/private-chef/bedugul',
     title: 'Private Chef Bedugul Bali | Highland Lake Villa Dining',
     description:
@@ -493,7 +493,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Bedugul, Bali',
   },
 
-    'private-chef-jatiluwih': {
+      'private-chef-jatiluwih': {
     path: '/private-chef/jatiluwih',
     title: 'Private Chef Jatiluwih Bali | UNESCO Rice Terrace Dining',
     description:
@@ -502,7 +502,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Jatiluwih, Bali',
   },
 
-    'private-chef-tabanan': {
+      'private-chef-tabanan': {
     path: '/private-chef/tabanan',
     title: 'Private Chef Tabanan Bali | Villa Dining West Bali | myCHEF',
     description:
@@ -511,7 +511,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Tabanan, Bali',
   },
 
-    'private-chef-amed': {
+      'private-chef-amed': {
     path: '/private-chef/amed',
     title: 'Private Chef Amed Bali | Seafood Villa Dining East Bali',
     description:
@@ -520,7 +520,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Amed, Bali',
   },
 
-    'private-chef-sidemen': {
+      'private-chef-sidemen': {
     path: '/private-chef/sidemen',
     title: 'Private Chef Sidemen Bali | Rice Terrace Villa Dining',
     description:
@@ -529,7 +529,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Sidemen, Bali',
   },
 
-    'private-chef-candidasa': {
+      'private-chef-candidasa': {
     path: '/private-chef/candidasa',
     title: 'Private Chef Candidasa Bali | East Bali Villa Dining',
     description:
@@ -538,7 +538,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Candidasa, Bali',
   },
 
-    'private-chef-tulamben': {
+      'private-chef-tulamben': {
     path: '/private-chef/tulamben',
     title: 'Private Chef Tulamben Bali | Dive Resort Catering | myCHEF',
     description:
@@ -547,7 +547,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Tulamben, Bali',
   },
 
-    'private-chef-lovina': {
+      'private-chef-lovina': {
     path: '/private-chef/lovina',
     title: 'Private Chef Lovina Bali | North Bali Villa Dining | myCHEF',
     description:
@@ -556,7 +556,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Lovina, Bali',
   },
 
-    'private-chef-singaraja': {
+      'private-chef-singaraja': {
     path: '/private-chef/singaraja',
     title: 'Private Chef Singaraja Bali | North Bali Event Catering',
     description:
@@ -565,7 +565,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Singaraja, Bali',
   },
 
-    'private-chef-pemuteran': {
+      'private-chef-pemuteran': {
     path: '/private-chef/pemuteran',
     title: 'Private Chef Pemuteran Bali | Eco-Villa Diving Resort Dining',
     description:
@@ -574,7 +574,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Pemuteran, Bali',
   },
 
-    'private-chef-kintamani': {
+      'private-chef-kintamani': {
     path: '/private-chef/kintamani',
     title: 'Private Chef Kintamani Bali | Mount Batur Villa Dining',
     description:
@@ -583,7 +583,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Kintamani, Bali',
   },
 
-    'private-chef-kedewatan': {
+      'private-chef-kedewatan': {
     path: '/private-chef/kedewatan',
     title: 'Private Chef Kedewatan Bali | Ayung Gorge Villa Dining',
     description:
@@ -592,7 +592,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Kedewatan, Bali',
   },
 
-    'private-chef-nyuh-kuning': {
+      'private-chef-nyuh-kuning': {
     path: '/private-chef/nyuh-kuning',
     title: 'Private Chef Nyuh Kuning Bali | Monkey Forest Villa Dining',
     description:
@@ -601,7 +601,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Nyuh Kuning, Bali',
   },
 
-    'private-chef-lodtunduh': {
+      'private-chef-lodtunduh': {
     path: '/private-chef/lodtunduh',
     title: 'Private Chef Lodtunduh Bali | Villa Estate, Retreat Catering',
     description:
@@ -610,7 +610,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Lodtunduh, Bali',
   },
 
-    'private-chef-tirta-gangga': {
+      'private-chef-tirta-gangga': {
     path: '/private-chef/tirta-gangga',
     title: 'Private Chef Tirta Gangga Bali | Royal Palace Villa Dining',
     description:
@@ -619,7 +619,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Tirta Gangga, Bali',
   },
 
-    'private-chef-munduk': {
+      'private-chef-munduk': {
     path: '/private-chef/munduk',
     title: 'Private Chef Munduk Bali | Highland Plantation Villa Dining',
     description:
@@ -628,7 +628,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Munduk, Bali',
   },
 
-    'private-chef-gianyar': {
+      'private-chef-gianyar': {
     path: '/private-chef/gianyar',
     title: 'Private Chef Gianyar Bali | Gianyar Villa, Event Catering',
     description:
@@ -637,7 +637,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Gianyar, Bali',
   },
 
-    'private-chef-padang-bai': {
+      'private-chef-padang-bai': {
     path: '/private-chef/padang-bai',
     title: 'Private Chef Padang Bai Bali | Harbour Seafood Dining',
     description:
@@ -646,7 +646,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Padang Bai, Bali',
   },
 
-    'private-chef-baturiti': {
+      'private-chef-baturiti': {
     path: '/private-chef/baturiti',
     title: 'Private Chef Baturiti Bali | Highland Strawberry Dining',
     description:
@@ -655,7 +655,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Baturiti, Bali',
   },
 
-    'private-chef-mengwi': {
+      'private-chef-mengwi': {
     path: '/private-chef/mengwi',
     title: 'Private Chef Mengwi Bali | Royal Temple Town Villa Dining',
     description:
@@ -664,7 +664,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Mengwi, Bali',
   },
 
-    'private-chef-ketewel': {
+      'private-chef-ketewel': {
     path: '/private-chef/ketewel',
     title: 'Private Chef Ketewel Bali | Beachfront & BBQ Dining',
     description:
@@ -673,7 +673,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Ketewel, Bali',
   },
 
-    'private-chef-abiansemal': {
+      'private-chef-abiansemal': {
     path: '/private-chef/abiansemal',
     title: 'Private Chef Abiansemal Bali | Highland Wine Estate Dining',
     description:
@@ -682,7 +682,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Abiansemal, Bali',
   },
 
-    'private-chef-cepaka': {
+      'private-chef-cepaka': {
     path: '/private-chef/cepaka',
     title: 'Private Chef Cepaka Bali | Tabanan Coast Villa Dining',
     description:
@@ -691,7 +691,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Cepaka, Bali',
   },
 
-    'villa-bbq-catering-bali': {
+      'villa-bbq-catering-bali': {
     path: '/villa-bbq-catering-bali',
     title: 'Villa BBQ Catering Bali | In-Villa BBQ Party Packages',
     description:
@@ -700,7 +700,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Villa BBQ Catering Bali — Private BBQ Parties at Your Villa',
   },
 
-    'bali-wedding-catering-packages': {
+      'bali-wedding-catering-packages': {
     path: '/bali-wedding-catering-packages',
     title: 'Bali Wedding Catering Packages & Prices 2026 | myCHEF',
     description:
@@ -709,7 +709,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Bali Wedding Catering Packages — Transparent Pricing',
   },
 
-    'michelin-private-chef-bali-prices': {
+      'michelin-private-chef-bali-prices': {
     path: '/michelin-private-chef-bali-prices',
     title: 'Michelin Private Chef Bali Prices | 2026 Premium Cost Guide',
     description:
@@ -718,7 +718,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Michelin Private Chef Bali Prices — 2026 Cost Guide',
   },
 
-    'seafood-bbq-catering-bali': {
+      'seafood-bbq-catering-bali': {
     path: '/seafood-bbq-catering-bali',
     title: 'Seafood BBQ Bali | Market-Fresh Grill at Your Villa | myCHEF',
     description:
@@ -727,7 +727,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Seafood BBQ Catering Bali — Direct-from-Market Freshness',
   },
 
-    'group-villa-dinner-packages-bali': {
+      'group-villa-dinner-packages-bali': {
     path: '/group-villa-dinner-packages-bali',
     title: 'Group Villa Dinner Packages Bali | 10-150 Guests | myCHEF',
     description:
@@ -736,7 +736,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Group Villa Dinner Packages Bali',
   },
 
-    'corporate-retreat-catering-bali': {
+      'corporate-retreat-catering-bali': {
     path: '/corporate-retreat-catering-bali',
     title: 'Corporate Retreat Catering Bali | Offsite Meal Programs',
     description:
@@ -745,7 +745,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Corporate Retreat Catering Bali — Professional Event Hospitality',
   },
 
-    'luxury-birthday-party-bali': {
+      'luxury-birthday-party-bali': {
     path: '/luxury-birthday-party-bali',
     title: 'Luxury Birthday Party Bali | Milestone Celebrations | myCHEF',
     description:
@@ -754,7 +754,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Luxury Birthday Parties in Bali — Chef-Led & Fully Styled',
   },
 
-    'hire-private-chef-bali-monthly': {
+      'hire-private-chef-bali-monthly': {
     path: '/hire-private-chef-bali-monthly',
     title: 'Monthly Private Chef Bali | Long-Stay Chef Service | myCHEF',
     description:
@@ -763,7 +763,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Hire a Private Chef in Bali by the Month',
   },
 
-    'butler-service-bali-daily-rate': {
+      'butler-service-bali-daily-rate': {
     path: '/butler-service-bali-daily-rate',
     title: 'Butler Service Bali Cost: Daily Rates & Inclusions | myCHEF',
     description:
@@ -772,7 +772,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Butler Service in Bali — Daily Rates Explained',
   },
 
-    'best-private-chef-indonesia': {
+      'best-private-chef-indonesia': {
     path: '/best-private-chef-indonesia',
     title: 'Best Private Chef Indonesia | Michelin-Standard Team',
     description:
@@ -781,7 +781,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'The Best Private Chef Service in Indonesia',
   },
 
-    'private-chef-for-events': {
+      'private-chef-for-events': {
     path: '/private-chef-for-events',
     title: 'Private Chef for Events Bali | Hire a Chef for Your Event',
     description:
@@ -790,7 +790,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef for Events in Bali',
   },
 
-    'luxury-chef-indonesia': {
+      'luxury-chef-indonesia': {
     path: '/luxury-chef-indonesia',
     title: 'Luxury Private Chef Indonesia | Estates & Residences',
     description:
@@ -799,7 +799,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Luxury Chef Indonesia — Premium Private Dining',
   },
 
-    'wedding-catering-indonesia': {
+      'wedding-catering-indonesia': {
     path: '/wedding-catering-indonesia',
     title: 'Wedding Catering Indonesia | Villa Wedding Specialists',
     description:
@@ -808,7 +808,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Wedding Catering Indonesia — Villa Wedding Specialists',
   },
 
-    'private-dining-indonesia': {
+      'private-dining-indonesia': {
     path: '/private-dining-indonesia',
     title: 'Private Dining Indonesia | At-Home Fine Dining | myCHEF',
     description:
@@ -817,7 +817,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining Indonesia — At-Home Fine Dining',
   },
 
-    'healthy-meal-delivery-indonesia': {
+      'healthy-meal-delivery-indonesia': {
     path: '/healthy-meal-delivery-indonesia',
     title: 'Healthy Meal Delivery Bali | Chef-Prepared Meal Plans',
     description:
@@ -826,7 +826,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Healthy Meal Delivery — Chef-Prepared, Delivered',
   },
 
-    'chef-for-hire-indonesia': {
+      'chef-for-hire-indonesia': {
     path: '/chef-for-hire-indonesia',
     title: 'Chef for Hire Indonesia | Private & Personal Chefs | myCHEF',
     description:
@@ -835,7 +835,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Chef for Hire Indonesia — Private Chef Services',
   },
 
-    'proposal-dinner': {
+      'proposal-dinner': {
     path: '/proposal-dinner',
     title: 'Proposal Dinner Bali | Private Chef Proposal Experience',
     description:
@@ -844,7 +844,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Proposal Dinner Bali — The Yes Starts at Dinner',
   },
 
-    'honeymoon-chef': {
+      'honeymoon-chef': {
     path: '/honeymoon-chef',
     title: 'Honeymoon Private Chef Bali | Villa Dining for Couples',
     description:
@@ -853,7 +853,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Honeymoon Chef Bali — Private Villa Dining for Two',
   },
 
-    'private-chef-menteng': {
+      'private-chef-menteng': {
     path: '/private-chef-menteng',
     title: 'Private Chef Menteng | Diplomatic District Dining | myCHEF',
     description:
@@ -862,7 +862,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Menteng, Jakarta',
   },
 
-    'guide-private-chef-bali': {
+      'guide-private-chef-bali': {
     path: '/guide/private-chef-bali',
     title: 'Private Chef in Bali | Complete Guide | myCHEF',
     description:
@@ -872,7 +872,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/bali-hub-hero.webp`,
   },
 
-    'blog-private-chef-cost-bali': {
+      'blog-private-chef-cost-bali': {
     path: '/blog/private-chef-cost-bali',
     title: 'How Much Does a Private Chef in Bali Cost? (2026 Guide)',
     description:
@@ -881,7 +881,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'How Much Does a Private Chef in Bali Cost?',
   },
 
-    'blog-best-bali-villas-private-chef-kitchen': {
+      'blog-best-bali-villas-private-chef-kitchen': {
     path: '/blog/best-bali-villas-private-chef-kitchen',
     title: 'What Makes a Bali Villa Kitchen Work for a Private Chef',
     description:
@@ -891,7 +891,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/journal-hero.webp`,
   },
 
-    'blog-private-chef-vs-restaurant-bali': {
+      'blog-private-chef-vs-restaurant-bali': {
     path: '/blog/private-chef-vs-restaurant-bali',
     title: 'Private Chef vs Restaurant Bali: Which Is Actually Better',
     description:
@@ -901,7 +901,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/journal-hero.webp`,
   },
 
-    'blog-how-to-plan-villa-birthday-party-bali': {
+      'blog-how-to-plan-villa-birthday-party-bali': {
     path: '/blog/how-to-plan-villa-birthday-party-bali',
     title: 'How to Plan a Villa Birthday Party in Bali: Complete Guide',
     description:
@@ -910,7 +910,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'How to Plan a Villa Birthday Party in Bali',
   },
 
-    'blog-private-chef-romantic-dinners-bali': {
+      'blog-private-chef-romantic-dinners-bali': {
     path: '/blog/private-chef-romantic-dinners-bali',
     title: 'Private Chef Romantic Dinners in Bali: Planning Guide',
     description:
@@ -919,7 +919,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef Romantic Dinners in Bali: How to Plan',
   },
 
-    'blog-how-to-hire-private-chef-bali-complete-guide': {
+      'blog-how-to-hire-private-chef-bali-complete-guide': {
     path: '/blog/how-to-hire-private-chef-bali-complete-guide',
     title: 'How to Hire a Private Chef in Bali: Complete Guide | myCHEF',
     description:
@@ -928,7 +928,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'How to Hire a Private Chef in Bali',
   },
 
-    'blog-chef-qualifications-credentials-bali-hiring': {
+      'blog-chef-qualifications-credentials-bali-hiring': {
     path: '/blog/chef-qualifications-credentials-bali-hiring',
     title: 'Private Chef Qualifications & Credentials: Bali Hiring Guide',
     description:
@@ -937,7 +937,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Chef Qualifications & Credentials: Hiring Guide for Bali',
   },
 
-    'blog-fine-dining-guide': {
+      'blog-fine-dining-guide': {
     path: '/blog/fine-dining-guide',
     title: 'Fine Dining in Bali: Ultimate Guide (Restaurants & In-Villa)',
     description:
@@ -946,7 +946,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Fine Dining in Bali: The Ultimate Guide',
   },
 
-    'blog-private-chef-roles-responsibilities-explained': {
+      'blog-private-chef-roles-responsibilities-explained': {
     path: '/blog/private-chef-roles-responsibilities-explained',
     title: 'Private Chef Roles & Responsibilities Explained | myCHEF',
     description:
@@ -955,7 +955,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef Roles & Responsibilities Explained',
   },
 
-    'blog-wedding-private-chef-bali-planning-guide': {
+      'blog-wedding-private-chef-bali-planning-guide': {
     path: '/blog/wedding-private-chef-bali-planning-guide',
     title: 'Wedding Private Chef in Bali: Planning & Logistics Guide',
     description:
@@ -964,7 +964,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Wedding Private Chef in Bali: Planning & Logistics Guide',
   },
 
-    'blog-corporate-events-catering-bali-team-dining': {
+      'blog-corporate-events-catering-bali-team-dining': {
     path: '/blog/corporate-events-catering-bali-team-dining',
     title: 'Corporate Events & Team Dining in Bali: Private Chef Guide',
     description:
@@ -973,7 +973,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Corporate Events Catering in Bali — Team Dinners & Incentive Meals',
   },
 
-    'blog-dining-by-location-bali-neighborhood-guide': {
+      'blog-dining-by-location-bali-neighborhood-guide': {
     path: '/blog/dining-by-location-bali-neighborhood-guide',
     title: 'Dining by Location in Bali: Private Chef Areas Guide',
     description:
@@ -982,7 +982,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Dining by Location in Bali',
   },
 
-    'blog-fine-dining-trends-bali-2026-innovations': {
+      'blog-fine-dining-trends-bali-2026-innovations': {
     path: '/blog/fine-dining-trends-bali-2026-innovations',
     title: 'Fine Dining Trends in Bali 2026: Modern Innovations',
     description:
@@ -991,7 +991,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Fine Dining Trends Bali 2026 — What\'s Shaping Luxury Villa Dining',
   },
 
-    'blog-seasonal-ingredients-bali-cooking-guide': {
+      'blog-seasonal-ingredients-bali-cooking-guide': {
     path: '/blog/seasonal-ingredients-bali-cooking-guide',
     title: 'Seasonal Ingredients in Bali: Cooking & Sourcing Guide',
     description:
@@ -1000,7 +1000,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Seasonal Ingredients in Bali: Cooking & Sourcing Guide for',
   },
 
-    'blog-private-chef-breakfast-bali-villas': {
+      'blog-private-chef-breakfast-bali-villas': {
     path: '/blog/private-chef-breakfast-bali-villas',
     title: 'Private Chef Breakfast in Bali Villas: Plan Before Day One',
     description:
@@ -1009,7 +1009,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef Breakfast in Bali Villas: Plan Before Day One',
   },
 
-    'blog-birthday-dinner-bali-villa-without-planner': {
+      'blog-birthday-dinner-bali-villa-without-planner': {
     path: '/blog/birthday-dinner-bali-villa-without-planner',
     title: 'Birthday Dinner in a Bali Villa: Plan It Without a Planner',
     description:
@@ -1018,7 +1018,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Birthday Dinner Bali Villa: Plan It Without a Full Planner',
   },
 
-    'blog-seminyak-canggu-ubud-uluwatu-private-chef-night': {
+      'blog-seminyak-canggu-ubud-uluwatu-private-chef-night': {
     path: '/blog/seminyak-canggu-ubud-uluwatu-private-chef-night',
     title: 'Best Bali Area for a Private Chef Night: Seminyak–Uluwatu',
     description:
@@ -1027,7 +1027,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Seminyak, Canggu, Ubud or Uluwatu for a Private Chef Night?',
   },
 
-    'blog-private-chef-bali-preparation-12-guest-villa-dinner': {
+      'blog-private-chef-bali-preparation-12-guest-villa-dinner': {
     path: '/blog/private-chef-bali-preparation-12-guest-villa-dinner',
     title: 'Private Chef Bali: Villa Dinner Preparation for 12 Guests',
     description:
@@ -1036,7 +1036,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef Bali Preparation: Behind a 12-Guest Villa',
   },
 
-    'blog-family-kids-menu-private-chef-bali': {
+      'blog-family-kids-menu-private-chef-bali': {
     path: '/blog/family-kids-menu-private-chef-bali',
     title: 'Family Dining with a Private Chef in Bali: A Parent\'s Guide',
     description:
@@ -1045,7 +1045,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Family Dining with a Private Chef in Bali: A Complete Guide for Parents',
   },
 
-    'blog-corporate-events-catering-bali': {
+      'blog-corporate-events-catering-bali': {
     path: '/blog/corporate-events-catering-bali',
     title: 'Corporate Event Catering in Bali: 4 Real Case Studies',
     description:
@@ -1054,7 +1054,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Corporate Event Catering in Bali: Real Case Studies',
   },
 
-    'blog-food-allergies-dietary-requirements-private-chef-bali': {
+      'blog-food-allergies-dietary-requirements-private-chef-bali': {
     path: '/blog/food-allergies-dietary-requirements-private-chef-bali',
     title: 'Food Allergies & Private Chef Dining in Bali: Safety Guide',
     description:
@@ -1063,7 +1063,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Food Allergies & Dietary Requirements with a Private Chef in Bali: The Complete Safety Guide',
   },
 
-    'blog-event-planning-bali': {
+      'blog-event-planning-bali': {
     path: '/blog/event-planning-bali',
     title: 'Event Planning in Bali: Weddings & Celebrations Guide',
     description:
@@ -1072,7 +1072,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Event Planning in Bali',
   },
 
-    'blog-bali-wedding-catering-private-chef-timeline': {
+      'blog-bali-wedding-catering-private-chef-timeline': {
     path: '/blog/bali-wedding-catering-private-chef-timeline',
     title: 'Bali Wedding Catering Timeline: 6-Month Planning Guide',
     description:
@@ -1081,7 +1081,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Bali Wedding Catering with a Private Chef: Timeline & Planning Guide',
   },
 
-    'blog-bali-catering-menu': {
+      'blog-bali-catering-menu': {
     path: '/blog/bali-catering-menu',
     title: 'Bali Catering Menu Ideas: Traditional & Modern | myCHEF',
     description:
@@ -1090,7 +1090,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Bali Catering Menus',
   },
 
-    'journal-michelin-training-bali': {
+      'journal-michelin-training-bali': {
     path: '/journal/michelin-training-bali',
     title: 'Michelin Training in Bali: Mastering Italian Technique',
     description:
@@ -1099,7 +1099,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Michelin Training in Bali: How Our Chefs Master Italian Technique',
   },
 
-    'journal-sustainable-sourcing': {
+      'journal-sustainable-sourcing': {
     path: '/journal/sustainable-sourcing',
     title: 'Sustainable Sourcing in Bali: Farm-to-Villa | myCHEF',
     description:
@@ -1108,7 +1108,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Sustainable Sourcing: Our Farm-to-Villa Philosophy',
   },
 
-    'journal-private-chef-vs-villa-staff-bali': {
+      'journal-private-chef-vs-villa-staff-bali': {
     path: '/journal/private-chef-vs-villa-staff-bali',
     title: 'Private Chef vs Villa Staff in Bali: The Difference | myCHEF',
     description:
@@ -1117,7 +1117,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef vs. Villa Staff — Understanding the Difference',
   },
 
-    'journal-bali-private-chef-cost-guide-2026': {
+      'journal-bali-private-chef-cost-guide-2026': {
     path: '/journal/bali-private-chef-cost-guide-2026',
     title: 'Bali Private Chef Costs: Groceries, Tax & Tipping Explained',
     description:
@@ -1126,7 +1126,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Bali Private Chef Costs: Groceries, Tax & Tipping Explained',
   },
 
-    'journal-villa-wedding-catering-logistics-bali': {
+      'journal-villa-wedding-catering-logistics-bali': {
     path: '/journal/villa-wedding-catering-logistics-bali',
     title: 'Villa Wedding Catering Logistics Guide for Bali | myCHEF',
     description:
@@ -1135,7 +1135,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Villa Wedding Catering Logistics Guide for Bali',
   },
 
-    'journal-yoga-retreat-meal-planning-bali': {
+      'journal-yoga-retreat-meal-planning-bali': {
     path: '/journal/yoga-retreat-meal-planning-bali',
     title: 'Yoga Retreat Meal Planning Bali | Nutritional Integrity',
     description:
@@ -1144,7 +1144,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Yoga Retreat Meal Planning: Nutritional Integrity for Bali Retreats',
   },
 
-    'journal-private-chef-seminyak-guide': {
+      'journal-private-chef-seminyak-guide': {
     path: '/journal/private-chef-seminyak-guide',
     title: 'Hiring a Private Chef in Seminyak: The 2026 Local\'s Guide',
     description:
@@ -1153,7 +1153,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Hiring a Private Chef in Seminyak: The 2026 Local\'s Guide',
   },
 
-    'journal-private-chef-canggu-guide': {
+      'journal-private-chef-canggu-guide': {
     path: '/journal/private-chef-canggu-guide',
     title: 'Private Chef Canggu Guide: What Makes It Different | myCHEF',
     description:
@@ -1162,7 +1162,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef Services in Canggu: What Makes It Different',
   },
 
-    'journal-private-chef-ubud-villa-dining': {
+      'journal-private-chef-ubud-villa-dining': {
     path: '/journal/private-chef-ubud-villa-dining',
     title: 'Private Chef Ubud Guide: Logistics & Pricing | myCHEF',
     description:
@@ -1171,7 +1171,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef Services in Ubud: Logistics, Pricing & What to Expect',
   },
 
-    'journal-bali-wedding-catering-complete-guide': {
+      'journal-bali-wedding-catering-complete-guide': {
     path: '/journal/bali-wedding-catering-complete-guide',
     title: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
     description:
@@ -1180,7 +1180,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
   },
 
-    'journal-private-chef-jakarta-guide': {
+      'journal-private-chef-jakarta-guide': {
     path: '/journal/private-chef-jakarta-guide',
     title: 'Private Chef Jakarta Guide: What to Expect (2026) | myCHEF',
     description:
@@ -1189,7 +1189,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef Services in Jakarta: What to Expect in 2026',
   },
 
-    'journal-rehearsal-dinner-planning-bali': {
+      'journal-rehearsal-dinner-planning-bali': {
     path: '/journal/rehearsal-dinner-planning-bali',
     title: 'Rehearsal Dinner Bali: The Complete Planning Guide | myCHEF',
     description:
@@ -1198,7 +1198,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Planning Your Bali Rehearsal Dinner: The Complete Guide',
   },
 
-    'journal-live-in-chef-vs-daily-service': {
+      'journal-live-in-chef-vs-daily-service': {
     path: '/journal/live-in-chef-vs-daily-service',
     title: 'Live-In Chef vs Daily Service: Which Fits Your Bali Villa?',
     description:
@@ -1207,7 +1207,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Live-In Chef vs. Daily Service — Which Is Right for You?',
   },
 
-    'journal-bbq-catering-cost-breakdown-bali': {
+      'journal-bbq-catering-cost-breakdown-bali': {
     path: '/journal/bbq-catering-cost-breakdown-bali',
     title: 'BBQ Catering in Bali: The Complete Cost Breakdown | myCHEF',
     description:
@@ -1216,7 +1216,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'BBQ Catering in Bali: The Complete Cost Breakdown',
   },
 
-    'fine-dining-romantic-dinner': {
+      'fine-dining-romantic-dinner': {
     path: '/fine-dining/romantic-dinner',
     title: 'Romantic Dinner Bali | Private Villa Chef for Two | myCHEF',
     description:
@@ -1226,7 +1226,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/section-romantic-dinner.webp`,
   },
 
-    'fine-dining-tasting-menu': {
+      'fine-dining-tasting-menu': {
     path: '/fine-dining/tasting-menu',
     title: 'Private Tasting Menu Bali | 5 & 7 Course Villa Degustation',
     description:
@@ -1236,7 +1236,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/misc-luna-plating-md.webp`,
   },
 
-    'fine-dining-chefs-table': {
+      'fine-dining-chefs-table': {
     path: '/fine-dining/chefs-table',
     title: 'Chef Table Experience Bali | Private Counter Dining | myCHEF',
     description:
@@ -1246,7 +1246,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/chefs-table-hero-luxury.webp`,
   },
 
-    'fine-dining-menus': {
+      'fine-dining-menus': {
     path: '/fine-dining/menus',
     title: 'Private Chef Menus Bali | 24 Fine Dining Set Menus | myCHEF',
     description:
@@ -1256,7 +1256,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/misc-luna-plating-md.webp`,
   },
 
-    'fine-dining-private-chef-bali': {
+      'fine-dining-private-chef-bali': {
     path: '/fine-dining/private-chef-bali',
     title: 'Michelin Private Chef Bali | Fine Dining at Your Villa',
     description:
@@ -1266,7 +1266,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,
   },
 
-    'catering-bbq': {
+      'catering-bbq': {
     path: '/catering/bbq-catering',
     title: 'BBQ Catering Bali | Villa BBQ & Live Chef Grill | myCHEF',
     description:
@@ -1276,7 +1276,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/bbq-poolside.webp`,
   },
 
-    'catering-buffet': {
+      'catering-buffet': {
     path: '/catering/buffet',
     title: 'Buffet Catering Bali | Large Group & Event Buffets | myCHEF',
     description:
@@ -1286,7 +1286,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-catering.webp`,
   },
 
-    'catering-plated': {
+      'catering-plated': {
     path: '/catering/plated-catering',
     title: 'Plated Catering Bali | Formal Villa Dinner Service | myCHEF',
     description:
@@ -1296,7 +1296,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-catering.webp`,
   },
 
-    'catering-drop-off': {
+      'catering-drop-off': {
     path: '/catering/drop-off-catering',
     title: 'Drop-Off Catering Bali | Chef Food Delivered to Your Villa',
     description:
@@ -1306,7 +1306,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-catering.webp`,
   },
 
-    'catering-babi-guling': {
+      'catering-babi-guling': {
     path: '/catering/babi-guling',
     title: 'Babi Guling Catering Bali | Whole-Pig Roast at Your Villa',
     description:
@@ -1316,7 +1316,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-catering.webp`,
   },
 
-    'catering-grazing-tables': {
+      'catering-grazing-tables': {
     path: '/catering/grazing-tables',
     title: 'Grazing Table Bali | Styled Event Platters & Spreads',
     description:
@@ -1326,7 +1326,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-catering.webp`,
   },
 
-    'catering-villa': {
+      'catering-villa': {
     path: '/catering/villa-catering',
     title: 'Villa Catering Bali | Multi-Day Meal Plans for Groups',
     description:
@@ -1336,7 +1336,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-catering.webp`,
   },
 
-    'catering-corporate': {
+      'catering-corporate': {
     path: '/catering/corporate-catering',
     title: 'Corporate Catering Bali | Boardroom to Conference | myCHEF',
     description:
@@ -1346,7 +1346,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/corp-hero.webp`,
   },
 
-    'catering-retreat': {
+      'catering-retreat': {
     path: '/catering/retreat-catering',
     title: 'Retreat Catering Bali | Healthy Group Meal Plans | myCHEF',
     description:
@@ -1356,7 +1356,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-catering-bali-hero-retreat.webp`,
   },
 
-    'catering-floating-breakfast': {
+      'catering-floating-breakfast': {
     path: '/catering/floating-breakfast',
     title: 'Floating Breakfast Bali | Chef-Prepared, Island-Wide',
     description:
@@ -1366,7 +1366,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/breakfast-spread.webp`,
   },
 
-    'events-weddings': {
+      'events-weddings': {
     path: '/events/weddings',
     title: 'Wedding Catering Bali | Villa Wedding Specialists | myCHEF',
     description:
@@ -1376,7 +1376,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/events-event-wedding-xl.webp`,
   },
 
-    'events-birthdays': {
+      'events-birthdays': {
     path: '/events/birthdays',
     title: 'Birthday Catering Bali | Private Villa Celebrations | myCHEF',
     description:
@@ -1386,7 +1386,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-events.webp`,
   },
 
-    'events-anniversaries': {
+      'events-anniversaries': {
     path: '/events/anniversaries',
     title: 'Anniversary Dinner Bali | Private Romantic Catering | myCHEF',
     description:
@@ -1396,7 +1396,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-events.webp`,
   },
 
-    'events-corporate': {
+      'events-corporate': {
     path: '/events/corporate-events',
     title: 'Corporate Event Catering Bali | Full-Service Production',
     description:
@@ -1406,7 +1406,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/corp-hero.webp`,
   },
 
-    'events-retreats': {
+      'events-retreats': {
     path: '/events/retreats',
     title: 'Wellness Retreat Catering Bali | Multi-Day Event Support',
     description:
@@ -1416,7 +1416,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/hero-retreats.jpg`,
   },
 
-    'events-baby-showers': {
+      'events-baby-showers': {
     path: '/events/baby-showers',
     title: 'Baby Shower Catering Bali | Styled Villa Brunches | myCHEF',
     description:
@@ -1426,7 +1426,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-events.webp`,
   },
 
-    'events-villa-parties': {
+      'events-villa-parties': {
     path: '/events/villa-parties',
     title: 'Villa Party Catering Bali | Social Events Done Right',
     description:
@@ -1436,7 +1436,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/bbq-poolside.webp`,
   },
 
-    'in-villa-service-waiters': {
+      'in-villa-service-waiters': {
     path: '/in-villa-service/waiters',
     title: 'Waiter Hire Bali | Professional Villa Servers | myCHEF',
     description:
@@ -1446,7 +1446,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/aura-bartender.webp`,
   },
 
-    'in-villa-service-butlers': {
+      'in-villa-service-butlers': {
     path: '/in-villa-service/butlers',
     title: 'Hire a Butler in Bali | From IDR 1.2M/Day | myCHEF',
     description:
@@ -1456,7 +1456,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/hub-villa.webp`,
   },
 
-    'in-villa-service-bartenders': {
+      'in-villa-service-bartenders': {
     path: '/in-villa-service/bartenders',
     title: 'Private Bartender Bali | Hire for Your Villa Party | myCHEF',
     description:
@@ -1466,7 +1466,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/aura-bartender.webp`,
   },
 
-    'in-villa-service-mixology': {
+      'in-villa-service-mixology': {
     path: '/in-villa-service/mixology',
     title: 'Mixologist Hire Bali | Custom Cocktail Programs | myCHEF',
     description:
@@ -1476,7 +1476,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/bartender.webp`,
   },
 
-    'in-villa-service-sommelier': {
+      'in-villa-service-sommelier': {
     path: '/in-villa-service/sommelier',
     title: 'Private Sommelier Hire Bali | Wine Service at Your Villa',
     description:
@@ -1486,7 +1486,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/luna-wine.webp`,
   },
 
-    'in-villa-service-host-hostess': {
+      'in-villa-service-host-hostess': {
     path: '/in-villa-service/host-hostess',
     title: 'Hostess Hire Bali | Professional Event Reception | myCHEF',
     description:
@@ -1496,7 +1496,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/misc-trust-hosts-lg.webp`,
   },
 
-    'staffing-private-chef-placement': {
+      'staffing-private-chef-placement': {
     path: '/staffing/private-chef-placement',
     title: 'Private Chef Placement Bali | Full-Time Chef Hire | myCHEF',
     description:
@@ -1506,7 +1506,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/staffing-staffing-hero-xl.webp`,
   },
 
-    'staffing-live-in-chef': {
+      'staffing-live-in-chef': {
     path: '/staffing/live-in-chef',
     title: 'Live-In Chef Bali | Full-Board Villa Chef | myCHEF',
     description:
@@ -1516,7 +1516,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/staffing-staffing-kitchen-lg.webp`,
   },
 
-    'staffing-villa-staff': {
+      'staffing-villa-staff': {
     path: '/staffing/villa-staff',
     title: 'Hire Villa Staff Bali | Long-Term Villa Teams | myCHEF',
     description:
@@ -1526,7 +1526,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/hub-villa.webp`,
   },
 
-    'staffing-household-staff': {
+      'staffing-household-staff': {
     path: '/staffing/household-staff',
     title: 'Hire Household Staff Bali | Estate Operations | myCHEF',
     description:
@@ -1536,7 +1536,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/staffing-staffing-table-lg.webp`,
   },
 
-    'staffing-for-villa-managers': {
+      'staffing-for-villa-managers': {
     path: '/staffing/for-villa-managers',
     title: 'Villa Manager Partnership Bali | myCHEF Partner Program',
     description:
@@ -1546,7 +1546,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/corp-villa.webp`,
   },
 
-    'staffing-for-hotels-restaurants': {
+      'staffing-for-hotels-restaurants': {
     path: '/staffing/for-hotels-restaurants',
     title: 'Hotel & Restaurant Staffing Bali | Culinary Teams | myCHEF',
     description:
@@ -1556,7 +1556,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/aura-corporate.webp`,
   },
 
-    'bar-services-hub': {
+      'bar-services-hub': {
     path: '/bar-services/',
     title: 'Bar Consultant Bali | B2B Bar Services & Consulting | MyChef',
     description:
@@ -1566,7 +1566,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-hub.jpg`,
   },
 
-    'bar-services-faq': {
+      'bar-services-faq': {
     path: '/bar-services/faq/',
     title: 'Bar Services FAQ Bali | Pricing, Staffing & Licences',
     description:
@@ -1576,7 +1576,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-faq.jpg`,
   },
 
-    'bar-services-contact': {
+      'bar-services-contact': {
     path: '/bar-services/contact/',
     title: 'Contact MyChef Bar Services | Bar Consultancy Bali',
     description:
@@ -1586,7 +1586,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-contact.jpg`,
   },
 
-    'bar-services-resources': {
+      'bar-services-resources': {
     path: '/bar-services/resources/',
     title: 'Bar Services Resources | Bali Venue Guides | MyChef',
     description:
@@ -1596,7 +1596,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-resources.jpg`,
   },
 
-    experiences: {
+      experiences: {
     path: '/experiences',
     title: 'Private Experiences Bali | Culinary & Celebration | myCHEF',
     description:
@@ -1606,7 +1606,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/private-experiences-bali-hub.webp`,
   },
 
-    'experience-private-cocktail-party': {
+      'experience-private-cocktail-party': {
     path: '/experiences/private-cocktail-party',
     title: 'Private Cocktail Party Bali | Chef & Bartender at Your Villa',
     description:
@@ -1616,7 +1616,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/bartender-hire-bali-cocktail-party.webp`,
   },
 
-    'experience-sushi-masterclass': {
+      'experience-sushi-masterclass': {
     path: '/experiences/sushi-masterclass',
     title: 'Sushi Masterclass Bali | Private Villa Sushi Class | myCHEF',
     description:
@@ -1626,7 +1626,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/sushi-making-class-bali-masterclass.webp`,
   },
 
-    'experience-private-cooking-class': {
+      'experience-private-cooking-class': {
     path: '/experiences/private-cooking-class',
     title: 'Private Cooking Class Bali | Chef Comes to Your Villa',
     description:
@@ -1636,7 +1636,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/private-cooking-class-bali-villa.webp`,
   },
 
-    'experience-kids-birthday-chef-party': {
+      'experience-kids-birthday-chef-party': {
     path: '/experiences/kids-birthday-chef-party',
     title: 'Kids Birthday Party Bali | Chef-Led Cooking Party | myCHEF',
     description:
@@ -1646,7 +1646,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/kids-birthday-party-bali-chef.webp`,
   },
 
-    'experience-champagne-oyster-experience': {
+      'experience-champagne-oyster-experience': {
     path: '/experiences/champagne-oyster-experience',
     title: 'Champagne & Oyster Experience Bali | Villa Oyster Bar',
     description:
@@ -1656,7 +1656,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/oyster-bar-bali-champagne.webp`,
   },
 
-    'experience-romantic-proposal-dinner': {
+      'experience-romantic-proposal-dinner': {
     path: '/experiences/romantic-proposal-dinner',
     title: 'Proposal Package Bali | Full-Service Villa Proposal | myCHEF',
     description:
@@ -1666,7 +1666,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/proposal-package-bali-dinner.webp`,
   },
 
-    'bar-services-bar-staff-training': {
+      'bar-services-bar-staff-training': {
     path: '/bar-services/bar-staff-training/',
     title: 'Bar Staff Training Bali | Venue Mixology Courses | MyChef',
     description:
@@ -1676,7 +1676,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-bar-staff-training.jpg`,
   },
 
-    'bar-services-cocktail-menu-development': {
+      'bar-services-cocktail-menu-development': {
     path: '/bar-services/cocktail-menu-development/',
     title: 'Cocktail Menu Development Bali | Menu Engineering | MyChef',
     description:
@@ -1686,7 +1686,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-cocktail-menu-development.jpg`,
   },
 
-    'bar-services-signature-cocktail-creation': {
+      'bar-services-signature-cocktail-creation': {
     path: '/bar-services/signature-cocktail-creation/',
     title: 'Signature Cocktail Creation Bali | Bespoke Serves | MyChef',
     description:
@@ -1696,7 +1696,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-signature-cocktail-creation.jpg`,
   },
 
-    'bar-services-temporary-bartender-staffing': {
+      'bar-services-temporary-bartender-staffing': {
     path: '/bar-services/temporary-bartender-staffing/',
     title: 'Bartender Hire Bali | Temporary Bar Staffing for Venues',
     description:
@@ -1706,7 +1706,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-temporary-bartender-staffing.jpg`,
   },
 
-    'bar-services-permanent-bar-staff-recruitment': {
+      'bar-services-permanent-bar-staff-recruitment': {
     path: '/bar-services/permanent-bar-staff-recruitment/',
     title: 'Bar Staff Recruitment Bali | Permanent Placement | MyChef',
     description:
@@ -1716,7 +1716,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-permanent-bar-staff-recruitment.jpg`,
   },
 
-    'bar-services-new-bar-setup': {
+      'bar-services-new-bar-setup': {
     path: '/bar-services/new-bar-setup/',
     title: 'New Bar Setup Consultant Bali | Concept to Launch | MyChef',
     description:
@@ -1726,7 +1726,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-new-bar-setup.jpg`,
   },
 
-    'bar-services-bar-audit-improvement': {
+      'bar-services-bar-audit-improvement': {
     path: '/bar-services/bar-audit-improvement/',
     title: 'Bar Audit Bali | Operations & Profit Audit | MyChef',
     description:
@@ -1736,7 +1736,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-bar-audit-improvement.jpg`,
   },
 
-    'bar-services-bar-costing-inventory-control': {
+      'bar-services-bar-costing-inventory-control': {
     path: '/bar-services/bar-costing-inventory-control/',
     title: 'Bar Costing & Inventory Control Bali | MyChef',
     description:
@@ -1746,7 +1746,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-bar-costing-inventory-control.jpg`,
   },
 
-    'bar-services-bar-equipment-supply-rental': {
+      'bar-services-bar-equipment-supply-rental': {
     path: '/bar-services/bar-equipment-supply-rental/',
     title: 'Bar Equipment Supplier & Rental Bali | MyChef',
     description:
@@ -1756,7 +1756,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-bar-equipment-supply-rental.jpg`,
   },
 
-    'bar-services-monthly-bar-management-support': {
+      'bar-services-monthly-bar-management-support': {
     path: '/bar-services/monthly-bar-management-support/',
     title: 'Monthly Bar Management Support Bali | MyChef',
     description:
@@ -1766,7 +1766,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-monthly-bar-management-support.jpg`,
   },
 
-    'bar-services-complete-bar-performance-programme': {
+      'bar-services-complete-bar-performance-programme': {
     path: '/bar-services/complete-bar-performance-programme/',
     title: 'Complete Bar Performance Programme Bali | MyChef',
     description:
@@ -1776,7 +1776,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-complete-bar-performance-programme.jpg`,
   },
 
-    'bar-services-resources-how-much-does-a-bartender-cost-bali': {
+      'bar-services-resources-how-much-does-a-bartender-cost-bali': {
     path: '/bar-services/resources/how-much-does-a-bartender-cost-bali/',
     title: 'How Much Does a Bartender Cost in Bali? (2026) | MyChef',
     description:
@@ -1786,7 +1786,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-how-much-does-a-bartender-cost-bali.jpg`,
   },
 
-    'bar-services-resources-bartender-salary-benchmarks-bali': {
+      'bar-services-resources-bartender-salary-benchmarks-bali': {
     path: '/bar-services/resources/bartender-salary-benchmarks-bali/',
     title: 'Bartender Salary & Staffing Costs in Bali — 2026 | MyChef',
     description:
@@ -1796,7 +1796,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-bartender-salary-benchmarks-bali.jpg`,
   },
 
-    'bar-services-resources-how-many-bartenders-per-guest': {
+      'bar-services-resources-how-many-bartenders-per-guest': {
     path: '/bar-services/resources/how-many-bartenders-per-guest/',
     title: 'How Many Bartenders Per Guest? Bali Event Guide | MyChef',
     description:
@@ -1806,7 +1806,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-how-many-bartenders-per-guest.jpg`,
   },
 
-    'bar-services-resources-beverage-cost-percentage-guide': {
+      'bar-services-resources-beverage-cost-percentage-guide': {
     path: '/bar-services/resources/beverage-cost-percentage-guide/',
     title: 'Beverage Cost Percentage Explained | MyChef',
     description:
@@ -1816,7 +1816,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-beverage-cost-percentage-guide.jpg`,
   },
 
-    'bar-services-resources-how-to-open-a-bar-in-bali': {
+      'bar-services-resources-how-to-open-a-bar-in-bali': {
     path: '/bar-services/resources/how-to-open-a-bar-in-bali/',
     title: 'How to Open a Bar in Bali: Licences & Costs | MyChef',
     description:
@@ -1826,7 +1826,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-how-to-open-a-bar-in-bali.jpg`,
   },
 
-    'bar-services-resources-how-to-create-a-cocktail-menu': {
+      'bar-services-resources-how-to-create-a-cocktail-menu': {
     path: '/bar-services/resources/how-to-create-a-cocktail-menu/',
     title: 'How to Create a Cocktail Menu That Sells | MyChef',
     description:
@@ -1836,7 +1836,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-how-to-create-a-cocktail-menu.jpg`,
   },
 
-    'bar-services-resources-how-to-reduce-bar-shrinkage-bali': {
+      'bar-services-resources-how-to-reduce-bar-shrinkage-bali': {
     path: '/bar-services/resources/how-to-reduce-bar-shrinkage-bali/',
     title: 'How to Reduce Bar Shrinkage in Bali | MyChef',
     description:
@@ -1846,7 +1846,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-how-to-reduce-bar-shrinkage-bali.jpg`,
   },
 
-    'fine-dining': {
+      'fine-dining': {
     path: '/fine-dining',
     title: 'Private Fine Dining Bali | Fine Dining at Home by myCHEF',
     description:
@@ -1856,7 +1856,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-fine-dining.webp`,
   },
 
-    catering: {
+      catering: {
     path: '/catering',
     title: 'Catering Bali | Villa & Event Catering by Private Chefs',
     description:
@@ -1866,7 +1866,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-catering.webp`,
   },
 
-    events: {
+      events: {
     path: '/events',
     title: 'Event Catering Bali | One Team for Your Entire Event',
     description:
@@ -1876,7 +1876,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/hero-events.webp`,
   },
 
-    'in-villa-service': {
+      'in-villa-service': {
     path: '/in-villa-service',
     title: 'Villa Service Staff Bali | Waiters, Butlers & Bartenders',
     description:
@@ -1886,7 +1886,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/bartender.webp`,
   },
 
-    'villa-event-packages': {
+      'villa-event-packages': {
     path: '/villa-event-packages',
     title: 'Bali Villa Event Packages | All-Inclusive Events | myCHEF',
     description:
@@ -1896,7 +1896,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-villa-event-packages-hero.webp`,
   },
 
-    'vip-transport-bali': {
+      'vip-transport-bali': {
     path: '/vip-transport-bali',
     title: 'VIP Transport Bali | Luxury Cars & Yachts | myCHEF',
     description:
@@ -1906,7 +1906,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-vip-transport-bali-hero.webp`,
   },
 
-    'complete-villa-experience': {
+      'complete-villa-experience': {
     path: '/complete-villa-experience',
     title: 'Complete Villa Experience Bali | End-to-End Hospitality',
     description:
@@ -1916,7 +1916,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-catering-bali-catering-hero.webp`,
   },
 
-    services: {
+      services: {
     path: '/services',
     title: 'Private Chef Services Bali | Compare All Services | myCHEF',
     description:
@@ -1926,7 +1926,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/bali-hub-hero.webp`,
   },
 
-    'three-course': {
+      'three-course': {
     path: '/three-course',
     title: 'Three-Course Villa Dining Bali | 8 Menus from IDR 850K',
     description:
@@ -1935,7 +1935,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Three Perfect Courses',
   },
 
-    'kids-menus': {
+      'kids-menus': {
     path: '/kids-menus',
     title: 'Kids\' Party Menus Bali | 6 Fun Options | myCHEF',
     description:
@@ -1944,7 +1944,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Little Guests. Big Flavours.',
   },
 
-    'bbq-grill': {
+      'bbq-grill': {
     path: '/bbq-grill',
     title: 'BBQ Grill Menu Bali | Live Grill Station & Prices | myCHEF',
     description:
@@ -1953,7 +1953,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'The BBQ Grill Menu — Fire. Smoke. Flavour.',
   },
 
-    'dining-styles': {
+      'dining-styles': {
     path: '/dining-styles',
     title: 'Dining Styles | myCHEF Bali',
     description:
@@ -1962,7 +1962,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Find Your Perfect Menu',
   },
 
-    'family-styling': {
+      'family-styling': {
     path: '/family-styling',
     title: 'How myCHEF Styles Dining Experiences | Food Styling',
     description:
@@ -1971,7 +1971,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'How We Style Each Experience',
   },
 
-    faq: {
+      faq: {
     path: '/faq',
     title: 'Private Chef Bali FAQ | Booking, Pricing & Menus | myCHEF',
     description:
@@ -1981,7 +1981,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    'why-mychef': {
+      'why-mychef': {
     path: '/why-mychef',
     title: 'Best Private Chef Service Bali | Why Villas Choose myCHEF',
     description:
@@ -1991,7 +1991,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/misc-hub-bali-lg.webp`,
   },
 
-    reviews: {
+      reviews: {
     path: '/reviews',
     title: 'myCHEF Reviews | 560+ Villas Served in Bali',
     description:
@@ -2001,7 +2001,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/dining-table.webp`,
   },
 
-    help: {
+      help: {
     path: '/help',
     title: 'Help Centre | Private Chef & Catering Bali | myCHEF',
     description:
@@ -2011,7 +2011,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    'villa-chef': {
+      'villa-chef': {
     path: '/villa-chef',
     title: 'Villa Chef Bali | Daily Chef Service for Your Stay | myCHEF',
     description:
@@ -2021,7 +2021,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,
   },
 
-    'recommended-services': {
+      'recommended-services': {
     path: '/recommended-services',
     title: 'Build Your Perfect Villa Experience | myCHEF Bali',
     description:
@@ -2031,7 +2031,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/experience-aura-setup-lg.webp`,
   },
 
-    'help-getting-started': {
+      'help-getting-started': {
     path: '/help/getting-started',
     title: 'How to Book a Private Chef in Bali | Getting Started',
     description:
@@ -2041,7 +2041,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    'help-pricing': {
+      'help-pricing': {
     path: '/help/pricing',
     title: 'myCHEF Pricing Explained: How Your Quote Works',
     description:
@@ -2051,7 +2051,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    'help-menu-guide': {
+      'help-menu-guide': {
     path: '/help/menu-guide',
     title: 'Private Chef Menu Guide Bali',
     description:
@@ -2061,7 +2061,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    'help-wedding-guide': {
+      'help-wedding-guide': {
     path: '/help/wedding-guide',
     title: 'Wedding Catering Guide Bali',
     description:
@@ -2071,7 +2071,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    'help-corporate-guide': {
+      'help-corporate-guide': {
     path: '/help/corporate-guide',
     title: 'Corporate Catering Guide Bali',
     description:
@@ -2081,7 +2081,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    'help-staffing-guide': {
+      'help-staffing-guide': {
     path: '/help/staffing-guide',
     title: 'Villa Staffing Guide Bali',
     description:
@@ -2091,7 +2091,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    'help-managing-booking': {
+      'help-managing-booking': {
     path: '/help/managing-booking',
     title: 'Manage Your Chef Booking | After You Confirm | myCHEF',
     description:
@@ -2101,7 +2101,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    locations: {
+      locations: {
     path: '/locations',
     title: 'Private Chef Locations Bali | All Areas We Serve | myCHEF',
     description:
@@ -2111,7 +2111,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/hub-villa.webp`,
   },
 
-    chefs: {
+      chefs: {
     path: '/chefs',
     title: 'Our Chefs | Michelin-Trained Private Chefs Bali | myCHEF',
     description:
@@ -2121,7 +2121,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/finedining-chefs-hero-xl.webp`,
   },
 
-    'chefs-adriano': {
+      'chefs-adriano': {
     path: '/chefs/adriano',
     title: 'Adriano | Private Chef Bali | Michelin-Trained Founder',
     description:
@@ -2130,7 +2130,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Adriano',
   },
 
-    'chefs-made-surya': {
+      'chefs-made-surya': {
     path: '/chefs/made-surya',
     title: 'I Made Surya | myCHEF Bali',
     description:
@@ -2139,7 +2139,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'I Made Surya',
   },
 
-    'chefs-bayu-pranata': {
+      'chefs-bayu-pranata': {
     path: '/chefs/bayu-pranata',
     title: 'Bayu Pranata | BBQ Grill Chef | Live-Fire Specialist',
     description:
@@ -2148,7 +2148,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Bayu Pranata',
   },
 
-    'chefs-ni-putu-asri': {
+      'chefs-ni-putu-asri': {
     path: '/chefs/ni-putu-asri',
     title: 'Ni Putu Asri | Balinese Chef | Indonesian Feast Specialist',
     description:
@@ -2157,7 +2157,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Ni Putu Asri',
   },
 
-    'chefs-wayan-suarjana': {
+      'chefs-wayan-suarjana': {
     path: '/chefs/wayan-suarjana',
     title: 'Wayan Suarjana — Pastry Chef | Cakes & Desserts | myCHEF',
     description:
@@ -2166,7 +2166,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Wayan Suarjana',
   },
 
-    'chefs-ketut-mahardika': {
+      'chefs-ketut-mahardika': {
     path: '/chefs/ketut-mahardika',
     title: 'Ketut Mahardika — Seafood & Japanese Chef | Sashimi | myCHEF',
     description:
@@ -2175,7 +2175,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Ketut Mahardika',
   },
 
-    'chefs-sari-dewi-kusuma': {
+      'chefs-sari-dewi-kusuma': {
     path: '/chefs/sari-dewi-kusuma',
     title: 'Sari Dewi Kusuma — Wellness Chef | Vegan Retreats | myCHEF',
     description:
@@ -2184,7 +2184,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Sari Dewi Kusuma',
   },
 
-    'chefs-komang-artha': {
+      'chefs-komang-artha': {
     path: '/chefs/komang-artha',
     title: 'Komang Artha — Event Chef | Villa Events & Weddings | myCHEF',
     description:
@@ -2193,7 +2193,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Komang Artha',
   },
 
-    'corporate-case-studies': {
+      'corporate-case-studies': {
     path: '/corporate-case-studies',
     title: 'Corporate Catering Case Studies Bali | Real Events & Costs',
     description:
@@ -2203,7 +2203,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/corp-hero.webp`,
   },
 
-    journal: {
+      journal: {
     path: '/journal',
     title: 'Journal | Bali Private Chef Guides & Hosting Tips | myCHEF',
     description:
@@ -2213,7 +2213,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    pricing: {
+      pricing: {
     path: '/pricing',
     title: 'Private Chef Bali Prices | Catering & Event Pricing | myCHEF',
     description:
@@ -2223,7 +2223,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
   },
 
-    staffing: {
+      staffing: {
     path: '/staffing',
     title: 'Villa Staff Placement Bali | Hospitality Staffing Agency',
     description:
@@ -2233,7 +2233,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/luna-chef-portrait.webp`,
   },
 
-    contact: {
+      contact: {
     path: '/contact',
     title: 'Contact myCHEF | Private Chef & Catering Bali',
     description:
@@ -2243,16 +2243,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/contact-hero.webp`,
   },
 
-    'partner-platform': {
-    path: '/partner-platform',
-    title: 'Partner Platform | myCHEF for Villas & Venues',
-    description:
-      'Join the myCHEF partner platform: preferred private chef partner for Bali villas, venues and hospitality brands.',
-    canonical: `${SITE}/certified-partner`,
-    h1: 'Partner Platform',
-  },
-
-    'certified-partner': {
+      'certified-partner': {
     path: '/certified-partner',
     title: 'Certified Partner Programme Bali | myCHEF for Villas',
     description:
@@ -2261,7 +2252,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'The myCHEF Certified Partner Programme',
   },
 
-    press: {
+      press: {
     path: '/press',
     title: 'Press & Media | myCHEF Bali',
     description:
@@ -2271,7 +2262,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/partner-platform-hero.webp`,
   },
 
-    privacy: {
+      privacy: {
     path: '/privacy',
     title: 'Privacy Policy | myCHEF',
     description:
@@ -2280,7 +2271,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Privacy Policy',
   },
 
-    terms: {
+      terms: {
     path: '/terms',
     title: 'Terms of Service | myCHEF',
     description:
@@ -2289,7 +2280,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Terms of Service',
   },
 
-    cancellation: {
+      cancellation: {
     path: '/cancellation',
     title: 'Cancellation Policy | myCHEF',
     description:
@@ -2299,7 +2290,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-    'blog-drop-off-catering-bali': {
+      'blog-drop-off-catering-bali': {
     path: '/blog/drop-off-catering-bali',
     title: 'Drop-Off Catering in Bali: How Villa Food Delivery Works',
     description:
@@ -2308,7 +2299,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Drop-Off Catering in Bali: What to Know Before You Order',
   },
 
-    'blog-hostess-hire-bali': {
+      'blog-hostess-hire-bali': {
     path: '/blog/hostess-hire-bali',
     title: 'Hiring an Event Hostess in Bali: What to Know',
     description:
@@ -2317,7 +2308,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Event Hostess Hire in Bali — A Practical Guide',
   },
 
-    'blog-private-chef-surabaya-guide': {
+      'blog-private-chef-surabaya-guide': {
     path: '/blog/private-chef-surabaya-guide',
     title: 'Private Chef Surabaya | In-Home & Corporate Catering',
     description:
@@ -2326,7 +2317,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Chef in Surabaya — In-Home Chef Service for East Java',
   },
 
-    'blog-chef-for-photoshoot-bali': {
+      'blog-chef-for-photoshoot-bali': {
     path: '/blog/chef-for-photoshoot-bali',
     title: 'Chef for Food Photoshoot Bali | Content Creation & Video',
     description:
@@ -2335,7 +2326,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Chef for Food Photoshoot and Content Creation in Bali',
   },
 
-    'blog-tasting-menu-bali': {
+      'blog-tasting-menu-bali': {
     path: '/blog/tasting-menu-bali',
     title: 'Private Tasting Menus in Bali: What to Expect',
     description:
@@ -2344,7 +2335,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Tasting Menus in Bali — What to Expect',
   },
 
-    'blog-luxury-dining-bali': {
+      'blog-luxury-dining-bali': {
     path: '/blog/luxury-dining-bali',
     title: 'Luxury Private Dining Bali: Ultra-Premium Villa Experiences',
     description:
@@ -2353,7 +2344,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Luxury Private Dining in Bali',
   },
 
-    'blog-fine-dining-at-home-bali': {
+      'blog-fine-dining-at-home-bali': {
     path: '/blog/fine-dining-at-home-bali',
     title: 'Fine Dining at Home in Bali: How It Works',
     description:
@@ -2362,7 +2353,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Fine Dining at Home in Bali — What to Expect',
   },
 
-    'blog-holiday-chef-bali': {
+      'blog-holiday-chef-bali': {
     path: '/blog/holiday-chef-bali',
     title: 'Holiday Chef Bali | Christmas, New Year & Festive Season',
     description:
@@ -2371,7 +2362,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Holiday Chef Bali -- Christmas, New Year & Festive Season  myCHEF',
   },
 
-    'blog-dietary-specific-chef-bali': {
+      'blog-dietary-specific-chef-bali': {
     path: '/blog/dietary-specific-chef-bali',
     title: 'Dietary-Specific Private Chef Bali | Vegan & GF Menus',
     description:
@@ -2380,7 +2371,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Dietary-Specific Private Chef Bali -- Vegan, Gluten-Free, Halal, Keto, and Allergen-Free',
   },
 
-    'blog-hotel-restaurant-chef-staffing': {
+      'blog-hotel-restaurant-chef-staffing': {
     path: '/blog/hotel-restaurant-chef-staffing',
     title: 'Hotel & Restaurant Chef Staffing in Bali: F&B Hiring Guide',
     description:
@@ -2389,7 +2380,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Hotel & Restaurant Chef Staffing Bali — F&B Hiring Guide',
   },
 
-    'blog-indonesian-street-food-private-chef-bali': {
+      'blog-indonesian-street-food-private-chef-bali': {
     path: '/blog/indonesian-street-food-private-chef-bali',
     title: 'Indonesian Street Food at Your Bali Villa | Private Chef',
     description:

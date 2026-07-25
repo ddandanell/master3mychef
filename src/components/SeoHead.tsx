@@ -63,6 +63,8 @@ export const localBusinessSchema = {
   ],
   priceRange: '$$$$',
   openingHours: 'Mo-Su 07:00-22:00',
+  foundingDate: '2019',
+  currenciesAccepted: 'IDR',
   image: 'https://mychef.id/generated/hub-hero-v3.webp',
   hasCredential: {
     '@type': 'EducationalOccupationalCredential',

@@ -119,14 +119,15 @@ function main() {
     const html = readFileSync(file, 'utf8')
     const rel = relative(DIST, file)
 
-    // Rule A
+    // Rule A (ignore JSON-LD schema blocks — currenciesAccepted and structured data are not page copy)
     const norm = rel.replace(/\/index\.html$/, '').replace(/\\/g, '/')
-    if (ZERO_PRICE_PATHS.includes(norm) && /IDR/.test(html)) {
-      const idx = html.indexOf('IDR')
+    const htmlNoSchema = html.replace(/<script\s+type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
+    if (ZERO_PRICE_PATHS.includes(norm) && /IDR/.test(htmlNoSchema)) {
+      const idx = htmlNoSchema.indexOf('IDR')
       violations.push({
         file: rel,
         rule: 'A',
-        snippet: html.slice(Math.max(0, idx - 60), idx + 40).replace(/\s+/g, ' '),
+        snippet: htmlNoSchema.slice(Math.max(0, idx - 60), idx + 40).replace(/\s+/g, ' '),
       })
       continue
     }

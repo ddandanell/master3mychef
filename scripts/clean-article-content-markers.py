@@ -112,10 +112,10 @@ def clean_html(html: str, route: str = "") -> str:
         html,
         flags=re.IGNORECASE,
     )
-    # Delivery outside Bali/Jakarta — handled case by case
+    # Delivery outside Bali — handled case by case (BALI-ONLY: do not re-add Jakarta)
     html = re.sub(
         r"\[[^\]]*BUSINESS CONFIRMATION REQUIRED[^\]]*outside Bali[^\]]*currently handled case by case[^\]]*\]",
-        "contact us for destinations outside Bali and Jakarta",
+        "contact us for destinations outside Bali",
         html,
         flags=re.IGNORECASE,
     )

@@ -86,7 +86,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Do menu prices include groceries and service?',
-    a: 'Menu prices are per person ++ (10% service + 11% tax added). Groceries for standard menus are covered in the quote model, with premium upgrades itemised.',
+    a: 'Menu prices are per person ++ (11% government tax + 10% service charge added). Groceries for standard menus are covered in the quote model, with premium upgrades itemised.',
   },
 ]
 
@@ -489,7 +489,7 @@ export default function FineDiningMenusPage() {
               How pricing works
             </h2>
             <p className="mb-4 text-base leading-relaxed text-[#4A4745]">
-              Prices are per person and subject to a 10% service charge and 11% government tax. Choose between Kitchen-Service (we use your villa's kitchen and tableware) or Full-Service (we bring everything, including premium plates, glassware, and dedicated service staff).
+              Prices are per person and subject to 11% government tax + 10% service charge. Choose between Kitchen-Service (we use your villa's kitchen and tableware) or Full-Service (we bring everything, including premium plates, glassware, and dedicated service staff).
             </p>
             <p className="text-base leading-relaxed text-[#4A4745]">
               Minimum booking is 6 guests. We quote clearly before confirmation, and there are no hidden fees for standard setup, shopping, or cleanup.
@@ -500,7 +500,7 @@ export default function FineDiningMenusPage() {
             <p className="mb-5 text-sm uppercase tracking-[0.18em] text-[#C5A028]">At a glance</p>
             <div className="space-y-4">
               {[
-                '10% service charge + 11% tax added to listed menu price',
+                '11% government tax + 10% service charge added to listed menu price',
                 '6 guests minimum for fine dining menus',
                 'Kitchen-Service uses your villa tableware',
                 'Full-Service includes premium plates, glassware & linen',

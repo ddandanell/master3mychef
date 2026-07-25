@@ -17,9 +17,9 @@ CONTENT_DIR = SEO / "content"
 ARTICLE_CONTENT_PATH = REPO / "src/data/content/articleContent.ts"
 
 # Mapping from content filename stem to route path
+# BALI-ONLY: do not re-add Jakarta/Menteng entries (e.g. "_locations_jakarta") — the site is Bali-only.
 ROUTE_MAP = {
     "_locations_canggu": "/locations/canggu",
-    "_locations_jakarta": "/locations/jakarta",
     "_locations_jimbaran": "/locations/jimbaran",
     "_locations_nusa-dua": "/locations/nusa-dua",
     "_locations_pererenan": "/locations/pererenan",

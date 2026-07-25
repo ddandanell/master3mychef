@@ -47,7 +47,7 @@ const SECTIONS: PageSection[] = [
       <tbody>
         <tr class="border-b border-stone-800">
           <td class="py-2 pr-4 font-semibold">Bartender Only</td>
-          <td class="py-2 pr-4">IDR 250K per hour (4-hour minimum)</td>
+          <td class="py-2 pr-4">IDR 350K per hour (3-hour minimum)</td>
           <td class="py-2">Professional bartender with tools; you supply the drinks</td>
         </tr>
         <tr class="border-b border-stone-800">

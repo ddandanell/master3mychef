@@ -72,7 +72,7 @@ const FAQS = [
   },
   {
     q: 'Are there cancellation fees?',
-    a: 'Cancellation within 48 hours forfeits the deposit. Cancellation earlier has no fee. Changes within 48 hours may incur ingredient costs.',
+    a: 'Cancellations 14+ days before the event receive a full refund, 7–13 days before a 50% refund, and under 7 days are non-refundable. The deposit follows the same tiers; full terms are on our cancellation policy page.',
   },
   {
     q: 'What if I add more guests last minute?',

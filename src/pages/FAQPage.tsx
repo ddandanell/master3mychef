@@ -134,7 +134,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Do you offer weekly or monthly chef service?',
-        a: 'Yes — weekly meal prep from IDR 4.5M/week for two people, recurring chef days, and monthly arrangements for long stays. <a href="/hire-private-chef-bali-monthly">monthly arrangements</a> · <a href="/staffing/live-in-chef">live-in chef</a>',
+        a: 'Yes — recurring daily chef service from IDR 2,500,000++/day, with 10% off at the weekly rate and 20% off at the monthly rate. Every booking includes a chef and a dedicated assistant; groceries at cost with receipts. <a href="/hire-private-chef-bali-monthly">monthly arrangements</a> · <a href="/staffing/live-in-chef">live-in chef</a>',
       },
       {
         q: "What if my chef can't make it?",

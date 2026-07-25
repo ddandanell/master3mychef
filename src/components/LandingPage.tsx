@@ -371,7 +371,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
               { question: 'Do luxury villas allow parties like this?', answer: 'Most premium villas allow private events with approval. myCHEF confirms event permission, noise expectations and any banjar notification with the villa manager before locking the format.' },
               { question: 'Who provides the decor, flowers, DJ and photography?', answer: 'myCHEF coordinates trusted suppliers on one timeline — one brief, one team managing everything on the day.' },
               { question: 'What if it rains?', answer: 'Every outdoor production has a covered fallback planned in advance — same menu, same styling, moved inside or under cover.' },
-              { question: 'How do deposits, payment and cancellation work?', answer: 'A deposit confirms the date and locks the chef and production team. Cancellation: 7+ days 75% refund; 48 hours or more 50% credit; under 48 hours no refund. Book 3–4 weeks ahead for peak-season milestones.' },
+              { question: 'How do deposits, payment and cancellation work?', answer: 'A 50% deposit confirms the date and locks the chef and production team. Cancellation: 14+ days full refund; 7–13 days 50% refund; under 7 days no refund. Book 3–4 weeks ahead for peak-season milestones.' },
             ]
           : entry.slug === 'corporate-retreat-catering-bali'
             ? [

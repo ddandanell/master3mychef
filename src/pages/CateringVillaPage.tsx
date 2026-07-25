@@ -155,7 +155,7 @@ const serviceSchema = {
   offers: {
     ...(serviceSchemaBase.offers as Record<string, unknown>),
     offerCount: '3',
-    description: 'Per person ++ (10% service charge + 11% government tax); min. 8 guests; multi-day catering by custom quotation',
+    description: 'Per person ++ (11% government tax + 10% service charge); min. 8 guests; multi-day catering by custom quotation',
   },
 }
 
@@ -396,7 +396,7 @@ export default function CateringVillaPage() {
           <SectionHeader
             eyebrow="Chapter 6 — Packages"
             title="Villa Catering Packages"
-            subtitle="Prices are per person, ++ — ++ means 10% service charge and 11% government tax. Chef, service team, setup, and cleanup included. Premium upgrades quoted separately. Minimum booking: 8 guests."
+            subtitle="Prices are per person, ++ — ++ means 11% government tax + 10% service charge. Chef, service team, setup, and cleanup included. Premium upgrades quoted separately. Minimum booking: 8 guests."
           />
           <div className="grid md:grid-cols-3 gap-6 md:gap-8 mt-10">
             {VILLA_PACKAGES.map((pkg) => (

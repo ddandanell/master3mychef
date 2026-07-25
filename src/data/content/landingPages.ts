@@ -105,7 +105,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "name": "How much does a monthly private chef cost in Bali?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Monthly arrangements use discounted daily rates: from IDR 2,000,000++ per day for a half day, IDR 2,800,000++ for a full day, or IDR 3,360,000++ for a complete full day (20% off standard rates). Every booking includes one professional chef and one dedicated assistant; groceries are charged separately at cost, supported by receipts. Prices are subject to a 10% service charge and 11% tax. A full-time live-in chef is a separate employment model, quoted individually by our staffing team."
+                "text": "Monthly arrangements use discounted daily rates: from IDR 2,000,000++ per day for a half day, IDR 2,800,000++ for a full day, or IDR 3,360,000++ for a complete full day (20% off standard rates). Every booking includes one professional chef and one dedicated assistant; groceries are charged separately at cost, supported by receipts. Prices are subject to 11% government tax + 10% service charge. A full-time live-in chef is a separate employment model, quoted individually by our staffing team."
               }
             },
             {

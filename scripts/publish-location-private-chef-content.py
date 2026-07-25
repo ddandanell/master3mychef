@@ -27,9 +27,9 @@ PRIVATE_CHEF_PAGE_PATH = REPO / "src/components/PrivateChefAreaPage.tsx"
 PAGES_DIR = REPO / "src/pages"
 
 # Map content filename to canonical route
+# BALI-ONLY: do not re-add Jakarta/Menteng entries (e.g. "_locations_jakarta.md") — the site is Bali-only.
 ROUTE_FOR_FILE = {
     "_locations_canggu.md": "/locations/canggu",
-    "_locations_jakarta.md": "/locations/jakarta",
     "_locations_jimbaran.md": "/locations/jimbaran",
     "_locations_nusa-dua.md": "/locations/nusa-dua",
     "_locations_pererenan.md": "/locations/pererenan",
@@ -48,9 +48,9 @@ ROUTE_FOR_FILE = {
 }
 
 # Map route to location page component filename
+# BALI-ONLY: do not re-add "/locations/jakarta" / "JakartaPage.tsx" — the site is Bali-only.
 LOCATION_PAGE_FOR_ROUTE = {
     "/locations/canggu": "CangguPage.tsx",
-    "/locations/jakarta": "JakartaPage.tsx",
     "/locations/jimbaran": "JimbaranPage.tsx",
     "/locations/nusa-dua": "NusaDuaPage.tsx",
     "/locations/pererenan": "PererenanPage.tsx",

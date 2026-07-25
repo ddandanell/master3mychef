@@ -238,7 +238,7 @@ function BuffetGroupTotalCalculator({ pricePerPerson, defaultGuests = 50, accent
           </span>
         </div>
         <p className="text-xs text-[#4A4745]/50 mt-1">
-          Final all-in total with 10% service charge + 11% government tax: {formatIDR(totalAllIn)}
+          Final all-in total with 11% government tax + 10% service charge: {formatIDR(totalAllIn)}
         </p>
       </div>
     </div>
@@ -613,7 +613,7 @@ export default function CateringBuffetPage() {
           </div>
 
           <p className="text-xs text-[#4A4745]/80 text-center max-w-3xl mx-auto mt-6">
-            All prices on this page are shown "++" — before 10% service charge and 11% government tax. An "ALL IN" price is simply the same package price with those two already included (× 1.21), not a different or hidden rate. Your WhatsApp quote always confirms the final all-in total before you pay anything.
+            All prices on this page are shown "++" — before 11% government tax + 10% service charge. An "ALL IN" price is simply the same package price with those two already included (× 1.21), not a different or hidden rate. Your WhatsApp quote always confirms the final all-in total before you pay anything.
           </p>
 
           {/* Volume Pricing */}
@@ -707,7 +707,7 @@ export default function CateringBuffetPage() {
           <SectionHeader
             eyebrow="Chapter 12 — Investment"
             title="Group Size Guide"
-            subtitle="Estimated group totals before 10% service charge and 11% government tax. Your final all-in total is simply × 1.21 — confirmed in your quote before deposit."
+            subtitle="Estimated group totals before 11% government tax + 10% service charge. Your final all-in total is simply × 1.21 — confirmed in your quote before deposit."
           />
           <div className="hidden md:block overflow-x-auto mt-10 bg-white rounded-2xl border border-[#E8E6E3] p-6">
             <table className="w-full text-left">

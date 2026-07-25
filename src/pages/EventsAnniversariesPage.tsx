@@ -80,7 +80,7 @@ const FAQS = [
   { q: 'Can the dinner be on a beach instead of at our villa?', a: 'Yes — a partner beach venue is available with a IDR 1.5M surcharge plus the local beach permit, which we arrange. Villa dinners remain the most private option.' },
   { q: 'Can we use your fine-dining menus?', a: 'Yes — the Mediterranean Sea (IDR 2.2M++) and Wagyu (IDR 2.4M++) menus are available for anniversary dinners, or we design a custom menu at no extra planning cost.' },
   { q: 'How far in advance should we book?', a: 'Seven days minimum, fourteen recommended. Vow renewals need 21+ days for officiant and permit coordination. Peak-season dates go earlier.' },
-  { q: 'What is the cancellation policy?', a: 'Full refund up to 7 days before; 50% credit inside 48 hours–7 days; no refund under 48 hours. Terms are written into every quote.' },
+  { q: 'What is the cancellation policy?', a: 'Full refund 14+ days before, 50% refund 7–13 days before, no refund under 7 days. Terms are written into every quote.' },
   { q: 'What deposit is required?', a: '50% confirms your date, with the balance due before the event.' },
 ]
 
@@ -121,7 +121,7 @@ const ANNIVERSARY_SCHEMA = {
         { '@type': 'Question', name: 'Can the dinner be on a beach instead of at our villa?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — a partner beach venue is available with a IDR 1.5M surcharge plus the local beach permit, which is arranged for you.' } },
         { '@type': 'Question', name: 'Can we use your fine-dining menus?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — Mediterranean Sea (IDR 2.2M++) and Wagyu (IDR 2.4M++) menus are available, or a custom menu at no extra planning cost.' } },
         { '@type': 'Question', name: 'How far in advance should we book?', acceptedAnswer: { '@type': 'Answer', text: 'Seven days minimum, fourteen recommended; vow renewals need 21+ days for officiant and permit coordination.' } },
-        { '@type': 'Question', name: 'What is the cancellation policy?', acceptedAnswer: { '@type': 'Answer', text: 'Full refund up to 7 days before; 50% credit inside 48 hours–7 days; no refund under 48 hours.' } },
+        { '@type': 'Question', name: 'What is the cancellation policy?', acceptedAnswer: { '@type': 'Answer', text: 'Full refund 14+ days before, 50% refund 7–13 days before, no refund under 7 days.' } },
         { '@type': 'Question', name: 'What deposit is required?', acceptedAnswer: { '@type': 'Answer', text: '50% confirms the date, with the balance due before the event.' } },
       ],
     },

@@ -19,7 +19,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa staff in Bali', intent: 'availability and pricing' })
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa staff in Bali', intent: 'availability and tailored quote' })
 
 const briefJsonLd = {
   '@context': 'https://schema.org',
@@ -38,13 +38,6 @@ const briefJsonLd = {
       areaServed: 'Bali',
       description:
         'Long-term placement of villa managers, housekeepers, gardeners, pool staff and security for Bali villas and estates. Individual hires or full villa teams, with contracts, payroll guidance and a 30-day replacement guarantee.',
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'IDR',
-        lowPrice: '4500000',
-        highPrice: '25000000',
-        offerCount: '3',
-      },
     },
     {
       '@type': 'FAQPage',
@@ -113,23 +106,23 @@ const briefJsonLd = {
 const PRICING_TIERS = [
   {
     title: 'Villa Manager',
-    price: 'IDR 12,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on villa size & experience',
     features: ['Full villa oversight', 'Staff scheduling', 'Guest relations', 'Vendor management', 'Maintenance coordination', 'Monthly reporting'],
     bestFor: 'Medium to large villas, rental properties, guest-focused estates',
   },
   {
     title: 'Housekeeper',
-    price: 'IDR 4,500,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on schedule & duties',
     features: ['Daily cleaning', 'Laundry & ironing', 'Room preparation', 'Inventory management', 'Supply ordering', 'Deep cleaning schedule'],
     bestFor: 'Villas, apartments, private residences',
     highlight: true,
   },
   {
     title: 'Full Villa Team',
-    price: 'IDR 25,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on team composition',
     features: ['Manager + housekeepers', 'Garden & pool staff', 'Security personnel', 'Full staff management', 'Training & onboarding', 'Replacement coverage'],
     bestFor: 'Large estates, private villas, high-occupancy properties',
   },
@@ -159,11 +152,11 @@ const FAQS = [
   { q: 'What if the staff member is not the right fit?', a: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.' },
   { q: 'Do you handle contracts and payroll for villa staff?', a: 'Yes. We handle the employment-contract paperwork and advise on payroll, BPJS and THR obligations; complex multi-property arrangements are referred to trusted payroll partners.' },
   { q: 'What roles can you fill for my villa?', a: 'Villa managers, housekeepers, hosts, gardeners, pool attendants, security guards, maintenance staff and drivers.' },
-  { q: 'Can you provide a full villa team?', a: 'Yes. Our Full Villa Team package includes a manager, housekeepers, garden and pool staff and security, from IDR 25,000,000 per month.' },
+  { q: 'Can you provide a full villa team?', a: 'Yes. Our Full Villa Team package includes a manager, housekeepers, garden and pool staff and security, tailored to your property size and occupancy.' },
   { q: 'Live-in or live-out staff?', a: 'Both. Live-in arrangements are common for housekeepers and villa managers and are defined in the employment contract; live-out staff are placed from the local area around your property.' },
   { q: 'Do you train villa staff before placement?', a: 'We provide basic hospitality training and can arrange specialised training for guest-facing roles on request.' },
   { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
-  { q: 'What is your placement fee?', a: 'One month of the staff member\'s salary, covering sourcing, interviews, background verification, contract preparation and six months of ongoing support.' },
+  { q: 'What is your placement fee?', a: 'Placement fees are discussed once we understand the role, team size and candidate requirements. We provide a written quote before any commitment.' },
 ]
 
 export default function StaffingVillaStaffPage() {
@@ -213,7 +206,7 @@ export default function StaffingVillaStaffPage() {
             Hire Villa Staff in Bali — Long-Term Placement
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            A well-run villa runs on the people behind it. myCHEF recruits and places long-term villa staff across Bali — villa managers, housekeepers, hosts, gardeners, pool attendants and security — as individual hires or complete teams. Salaries from IDR 4,500,000 per month, profiles within 48 hours, and a 30-day replacement guarantee on every placement.
+            A well-run villa runs on the people behind it. myCHEF recruits and places long-term villa staff across Bali — villa managers, housekeepers, hosts, gardeners, pool attendants and security — as individual hires or complete teams. Salaries and team packages are tailored to your property and requirements; profiles are delivered within 48 hours, and every placement carries a 30-day replacement guarantee.
           </p>
           <p className="text-white/[70%] text-base max-w-[600px] mb-8">
             Need staff for a single event or a guest's stay instead? That is our <Link to="/in-villa-service" className="underline hover:text-white">shift-based in-villa service</Link> — waiters, bartenders and butlers by the hour. This page is for permanent hires.

@@ -19,7 +19,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = buildWhatsAppUrl({ serviceName: 'a live-in chef in Bali', intent: 'availability and pricing' })
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'a live-in chef in Bali', intent: 'availability and tailored quote' })
 
 const BRIEF_JSON_LD = {
   '@context': 'https://schema.org',
@@ -36,14 +36,7 @@ const BRIEF_JSON_LD = {
         telephone: '+62 896-7407-2020',
       },
       areaServed: ['Bali'],
-      description: 'Live-in chefs in Bali who manage all meals, groceries and kitchen logistics for families and guests. From IDR 8,000,000 per month with trial dinners and a 30-day replacement guarantee.',
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'IDR',
-        lowPrice: '8000000',
-        highPrice: '12000000',
-        offerCount: '3',
-      },
+      description: 'Live-in chefs in Bali who manage all meals, groceries and kitchen logistics for families and guests. Tailored salaries based on experience, estate size and scope; trial dinners and a 30-day replacement guarantee included.',
     },
     {
       '@type': 'FAQPage',
@@ -104,23 +97,23 @@ const BRIEF_JSON_LD = {
 const PRICING_TIERS = [
   {
     title: 'Live-In Chef',
-    price: 'IDR 8,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on experience & schedule',
     features: ['6 days per week', 'All meals', 'Grocery management', 'Menu planning', 'Kitchen organization', 'Monthly review'],
     bestFor: 'Villas, families, full-time residents',
   },
   {
     title: 'Estate Chef',
-    price: 'IDR 12,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on estate complexity',
     features: ['Full-time + events', 'Multi-course menus', 'Wine pairing', 'Staff management', 'Vendor relationships', 'Menu consultancy'],
     bestFor: 'Luxury estates, high-net-worth households, complex properties',
     highlight: true,
   },
   {
     title: 'Family Chef',
-    price: 'IDR 10,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on family needs',
     features: ['Family-focused meals', 'Child-friendly menus', 'Nutritional planning', 'School lunch prep', 'Allergen management', 'Family event cooking'],
     bestFor: 'Families with children, health-focused households',
   },
@@ -222,7 +215,7 @@ export default function StaffingLiveInPage() {
             Live-In Chef in Bali
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            A live-in chef is the closest thing to a private restaurant in your villa. Breakfast appears as your family wakes, lunch and dinner are planned around your day, the fridge stays stocked and the kitchen runs itself. myCHEF places pre-vetted live-in chefs into Bali villas and residences from IDR 8,000,000 per month — with trial dinners, contracts and onboarding handled for you.
+            A live-in chef is the closest thing to a private restaurant in your villa. Breakfast appears as your family wakes, lunch and dinner are planned around your day, the fridge stays stocked and the kitchen runs itself. myCHEF places pre-vetted live-in chefs into Bali villas and residences — salaries and packages are tailored to experience, estate size and event coverage, with trial dinners, contracts and onboarding handled for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-live-in-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -299,11 +292,11 @@ export default function StaffingLiveInPage() {
           <ul className="mt-12 space-y-4 max-w-3xl mx-auto text-[#4A4745]">
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
-              <span><strong>Live-in chef (this page):</strong> chef lives on-site; all meals, groceries and kitchen logistics included. From IDR 8M/month. Best for full-time households.</span>
+              <span><strong>Live-in chef (this page):</strong> chef lives on-site; all meals, groceries and kitchen logistics included. Best for full-time households.</span>
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
-              <span><Link to="/staffing/private-chef-placement" className="text-[#C5A028] hover:underline">Permanent chef placement</Link>: a salaried chef who works set days but lives off-site. From IDR 5.5M/month part-time.</span>
+              <span><Link to="/staffing/private-chef-placement" className="text-[#C5A028] hover:underline">Permanent chef placement</Link>: a salaried chef who works set days but lives off-site. Part-time and full-time options available.</span>
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />

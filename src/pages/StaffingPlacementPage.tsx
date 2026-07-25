@@ -19,28 +19,28 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = buildWhatsAppUrl({ serviceName: 'private chef placement in Bali', intent: 'availability and pricing' })
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'private chef placement in Bali', intent: 'availability and tailored quote' })
 
 const PRICING_TIERS = [
   {
     title: 'Part-Time Chef',
-    price: 'IDR 5,500,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on schedule & cuisine',
     features: ['3 days per week', 'Lunch & dinner', 'Grocery shopping', 'Menu planning', 'Kitchen management', 'Monthly review'],
     bestFor: 'Small villas, couples, part-time residents',
   },
   {
     title: 'Full-Time Chef',
-    price: 'IDR 9,500,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on experience & scope',
     features: ['6 days per week', 'All meals', 'Grocery management', 'Guest catering', 'Dietary specialization', 'Recipe development'],
     bestFor: 'Family villas, regular entertaining, food-focused households',
     highlight: true,
   },
   {
     title: 'Executive Chef',
-    price: 'IDR 15,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on household complexity',
     features: ['Full-time + events', 'Multi-course menus', 'Wine pairing', 'Staff training', 'Vendor relationships', 'Menu consultancy'],
     bestFor: 'Luxury villas, high-net-worth households, estate management',
   },
@@ -91,13 +91,6 @@ const briefJsonLd = {
       },
       areaServed: ['Bali'],
       description: 'Permanent and seasonal private chef placement for Bali villas and residences. Vetting, cooking trials, contracts and payroll guidance included; 30-day replacement guarantee.',
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'IDR',
-        lowPrice: '5500000',
-        highPrice: '15000000',
-        offerCount: '3',
-      },
     },
     {
       '@type': 'FAQPage',
@@ -225,8 +218,8 @@ export default function StaffingPlacementPage() {
             A permanent private chef changes how a household eats — and how it lives. myCHEF places
             vetted, background-checked chefs into Bali villas, family homes and private estates,
             handling everything from sourcing and cooking trials to contracts and payroll guidance.
-            Long-term private chef placement starts from IDR 5,500,000 per month, with profiles
-            delivered within 48 hours of your brief.
+            Salaries and placement fees are tailored to the role, experience and household scope;
+            profiles are delivered within 48 hours of your brief.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-placement-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -307,7 +300,7 @@ export default function StaffingPlacementPage() {
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
-              <span className="text-[#4A4745]"><Link to="/staffing/live-in-chef" className="text-[#C5A028] hover:underline">Live-in chef</Link>: the chef lives on-site and runs all meals, groceries and kitchen logistics — from IDR 8,000,000/month.</span>
+              <span className="text-[#4A4745]"><Link to="/staffing/live-in-chef" className="text-[#C5A028] hover:underline">Live-in chef</Link>: the chef lives on-site and runs all meals, groceries and kitchen logistics. Pricing depends on experience, estate size and event coverage.</span>
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />

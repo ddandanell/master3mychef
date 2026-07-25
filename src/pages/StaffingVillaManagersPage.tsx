@@ -18,7 +18,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = buildWhatsAppUrl({ serviceName: 'a villa-staffing partnership in Bali', intent: 'availability and pricing' })
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'a villa-staffing partnership in Bali', intent: 'availability and tailored quote' })
 
 const briefJsonLd = {
   '@context': 'https://schema.org',
@@ -36,14 +36,7 @@ const briefJsonLd = {
       },
       areaServed: 'Bali',
       description:
-        'Outsourced hospitality staffing for Bali villa managers: pre-vetted chefs and front-of-house staff, 48–72 hour fills, retainer pools and tiered partnership rates for portfolios.',
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'IDR',
-        lowPrice: '2000000',
-        highPrice: '8000000',
-        offerCount: '3',
-      },
+        'Outsourced hospitality staffing for Bali villa managers: pre-vetted chefs and front-of-house staff, 48–72 hour fills, retainer pools and tailored partnership plans for portfolios.',
     },
     {
       '@type': 'FAQPage',
@@ -53,7 +46,7 @@ const briefJsonLd = {
           name: 'Do you offer partnership rates for multiple properties?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. Villa managers with three or more properties receive tiered partnership discounts. Contact us for a custom rate sheet based on your portfolio size.',
+            text: 'Yes. Villa managers with three or more properties receive tiered partnership pricing. Contact us for a custom quote based on your portfolio size.',
           },
         },
         {
@@ -111,25 +104,24 @@ const briefJsonLd = {
 
 const PRICING_TIERS = [
   {
-    
     title: 'Chef Placement',
-    price: 'IDR 4,000,000',
-    unit: 'one-time',
+    price: 'Tailored quote',
+    unit: 'per placement',
     features: ['Pre-vetted chef profiles', 'Cooking trial session', 'Background verification', 'Contract preparation', 'Payroll guidance', '30-day replacement guarantee'],
     bestFor: 'Single villa or small property portfolio',
   },
   {
     title: 'Service Staff Pool',
-    price: 'IDR 2,000,000',
-    unit: '/month retainer',
+    price: 'Tailored quote',
+    unit: 'monthly retainer',
     features: ['Access to vetted service staff', 'Front-of-house coverage', 'Housekeeping support', 'On-call replacements', 'Monthly performance reviews', 'Dedicated account manager'],
     bestFor: 'Villa managers with rotating guest schedules',
     highlight: true,
   },
   {
     title: 'Full Hospitality Package',
-    price: 'IDR 8,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'monthly coverage',
     features: ['Chef + service staff bundle', 'Full kitchen & front-of-house', 'Event staffing included', 'Vendor relationship management', 'Weekly reporting', 'Priority placement'],
     bestFor: 'Multi-villa portfolios and private estates',
   },
@@ -155,7 +147,7 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'Do you offer partnership rates for multiple properties?', a: 'Yes. Villa managers with three or more properties receive tiered partnership discounts. Contact us for a custom rate sheet based on your portfolio size.' },
+  { q: 'Do you offer partnership rates for multiple properties?', a: 'Yes. Villa managers with three or more properties receive tiered partnership pricing. Contact us for a custom quote based on your portfolio size.' },
   { q: 'How quickly can you fill a last-minute staffing gap?', a: 'Our pool of pre-vetted candidates allows us to fill most roles within 48–72 hours. Emergency placements are available for retainer clients.' },
   { q: 'What happens if a placed staff member leaves?', a: 'All placements include a replacement guarantee. Retainer clients receive priority re-matching at no additional placement fee.' },
   
@@ -213,7 +205,7 @@ export default function StaffingVillaManagersPage() {
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
             Your guests judge your properties by the people in them. myCHEF acts as the hospitality
             hiring arm for Bali's villa managers — pre-vetted chefs and front-of-house staff, urgent
-            gaps filled in 48–72 hours, and partnership rates that scale with your portfolio. One
+            gaps filled in 48–72 hours, and partnership plans that scale with your portfolio. One
             WhatsApp message replaces weeks of recruiting.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -365,7 +357,7 @@ export default function StaffingVillaManagersPage() {
       <StickyMobileCTA
         pageSource="staffing-villa-managers"
         serviceName="villa manager staffing in Bali"
-        intent="villa manager staffing and pricing"
+        intent="villa manager staffing and tailored quote"
       />
     </div>
   )

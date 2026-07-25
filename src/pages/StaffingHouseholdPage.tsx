@@ -18,7 +18,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = buildWhatsAppUrl({ serviceName: 'household staff in Bali', intent: 'availability and pricing' })
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'household staff in Bali', intent: 'availability and tailored quote' })
 
 const briefJsonLd = {
   '@context': 'https://schema.org',
@@ -36,13 +36,6 @@ const briefJsonLd = {
       },
       areaServed: ['Bali'],
       description: 'Household staff recruitment for private residences in Bali — housekeepers, nannies, drivers and estate managers. Reference-checked candidates, contracts and payroll guidance, 30-day replacement guarantee.',
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'IDR',
-        lowPrice: '4000000',
-        highPrice: '15000000',
-        offerCount: '4',
-      },
     },
     {
       '@type': 'FAQPage',
@@ -92,7 +85,7 @@ const briefJsonLd = {
           name: 'What is your placement fee?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "The fee equals one month of the hired person's salary — a single charge that includes the search, in-person interviews, background verification, contract preparation and six months of support after placement.",
+            text: 'Placement fees are discussed once we understand the role and candidate requirements. We provide a written quote before any commitment.',
           },
         },
       ],
@@ -111,30 +104,30 @@ const briefJsonLd = {
 const PRICING_TIERS = [
   {
     title: 'Housekeeper',
-    price: 'IDR 4,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on schedule & duties',
     features: ['Daily cleaning', 'Laundry & ironing', 'Room tidying', 'Supply management', 'Deep cleaning', 'Organization'],
     bestFor: 'Private residences, apartments, small households',
   },
   {
     title: 'Nanny',
-    price: 'IDR 5,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on experience & hours',
     features: ['Childcare', 'Meal preparation', 'School runs', 'Activity planning', 'Bedtime routine', 'Child development'],
     bestFor: 'Families with children, working parents',
     highlight: true,
   },
   {
     title: 'Driver',
-    price: 'IDR 4,500,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on schedule & vehicle',
     features: ['Daily transport', 'Airport transfers', 'Vehicle maintenance', 'Errand running', 'Schedule management', 'Local knowledge'],
     bestFor: 'Residents, families, busy professionals',
   },
   {
     title: 'Estate Manager',
-    price: 'IDR 15,000,000',
-    unit: '/month',
+    price: 'Tailored quote',
+    unit: 'Based on estate complexity',
     features: ['Full household oversight', 'Staff management', 'Vendor coordination', 'Budget management', 'Property maintenance', 'Guest relations'],
     bestFor: 'Large estates, multiple properties, complex households',
   },
@@ -167,7 +160,7 @@ const FAQS = [
   { q: 'Can you provide a full household team?', a: 'Yes. We recruit and coordinate complete household teams — housekeepers, nannies, drivers and an estate manager — for large residences and estates.' },
   { q: 'Do you verify references for household staff?', a: 'Yes. Every candidate undergoes thorough reference checks, background verification and in-person interviews before placement.' },
   { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
-  { q: 'What is your placement fee?', a: "The fee equals one month of the hired person's salary — a single charge that includes the search, in-person interviews, background verification, contract preparation and six months of support after placement." },
+  { q: 'What is your placement fee?', a: 'Placement fees are discussed once we understand the role and candidate requirements. We provide a written quote before any commitment.' },
 ]
 
 export default function StaffingHouseholdPage() {
@@ -215,7 +208,7 @@ export default function StaffingHouseholdPage() {
             Household Staff in Bali — Estate Operations
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Running a large private residence takes a team you can trust inside your home. myCHEF recruits household staff for private residences and estates across Bali — housekeepers, nannies, drivers, personal assistants and estate managers — with thorough reference checks, proper contracts and a 30-day replacement guarantee. Salaries from IDR 4,000,000 per month.
+            Running a large private residence takes a team you can trust inside your home. myCHEF recruits household staff for private residences and estates across Bali — housekeepers, nannies, drivers, personal assistants and estate managers — with thorough reference checks, proper contracts and a 30-day replacement guarantee. Salaries are tailored to the role, experience and schedule.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-household-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">

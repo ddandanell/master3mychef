@@ -23,23 +23,23 @@ const WA_LINK = buildWhatsAppUrl({ serviceName: 'hotel & restaurant staffing in 
 const PRICING_TIERS = [
   {
     title: 'Kitchen Staff',
-    price: 'IDR 3,500,000',
-    unit: 'one-time',
+    price: 'Tailored quote',
+    unit: 'per placement',
     features: ['Sous chef to line cook', 'Cuisine-specific matching', 'Kitchen trial shift', 'Reference verification', 'Contract preparation', '60-day replacement guarantee'],
     bestFor: 'Boutique restaurants and hotel kitchens',
   },
   {
     title: 'Service Staff',
-    price: 'IDR 2,500,000',
-    unit: 'one-time',
+    price: 'Tailored quote',
+    unit: 'per placement',
     features: ['Waiters, bartenders, hosts', 'Front-of-house trials', 'Language assessment', 'Uniform & grooming check', 'Service standards briefing', '60-day replacement guarantee'],
     bestFor: 'Restaurants, beach clubs, hotel F&B',
     highlight: true,
   },
   {
     title: 'Management',
-    price: 'IDR 6,000,000',
-    unit: 'one-time',
+    price: 'Tailored quote',
+    unit: 'per placement',
     features: ['Restaurant manager, F&B director', 'Leadership assessment', 'P&L experience screening', 'Team management trials', 'Strategic planning review', '90-day replacement guarantee'],
     bestFor: 'Hotels, resorts, multi-outlet venues',
   },
@@ -65,7 +65,7 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'Do you offer volume rates for multiple hires?', a: 'Yes. Our volume package offers custom pricing for ten or more placements. Contact us for a tailored rate card based on your hiring forecast.' },
+  { q: 'Do you offer volume packages for multiple hires?', a: 'Yes. Our volume package offers custom pricing for ten or more placements. Contact us for a tailored quote based on your hiring forecast.' },
   { q: 'What types of hospitality roles do you place?', a: 'Kitchen staff (sous chef, line cook, pastry), service staff (waiter, bartender, host) and management (restaurant manager, F&B director, head chef). For dedicated bar recruitment and training, see our temporary bar staffing and bar staff training services.' },
   { q: 'How does the trial shift process work?', a: 'Candidates complete a paid trial shift at your establishment. You assess their skills, attitude and fit before making a hiring decision.' },
   { q: 'What is your replacement guarantee?', a: 'Kitchen and service placements include a 60-day replacement guarantee; management placements include 90 days. We re-match at no additional fee.' },
@@ -90,24 +90,17 @@ const briefJsonLd = {
         telephone: '+62 896-7407-2020',
       },
       areaServed: 'Bali',
-      description: 'Kitchen, service and management recruitment for Bali hotels, restaurants, beach clubs and resorts. Trial shifts, volume rates and replacement guarantees up to 90 days.',
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'IDR',
-        lowPrice: '2500000',
-        highPrice: '6000000',
-        offerCount: '3',
-      },
+      description: 'Kitchen, service and management recruitment for Bali hotels, restaurants, beach clubs and resorts. Trial shifts, tailored volume packages and replacement guarantees up to 90 days.',
     },
     {
       '@type': 'FAQPage',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Do you offer volume rates for multiple hires?',
+          name: 'Do you offer volume packages for multiple hires?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. Our volume package offers custom pricing for ten or more placements. Contact us for a tailored rate card based on your hiring forecast.',
+            text: 'Yes. Our volume package offers custom pricing for ten or more placements. Contact us for a tailored quote based on your hiring forecast.',
           },
         },
         {
@@ -208,14 +201,14 @@ export default function StaffingHotelsPage() {
             Hotels & Restaurants Staffing
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Hospitality recruitment in Bali for boutique hotels, restaurants, beach clubs and resorts — kitchen brigades, front-of-house teams and F&B management, vetted by people who run kitchens and dining rooms themselves. Trial shifts before you hire, replacement guarantees up to 90 days, and volume rates for multi-hire briefs.
+            Hospitality recruitment in Bali for boutique hotels, restaurants, beach clubs and resorts — kitchen brigades, front-of-house teams and F&B management, vetted by people who run kitchens and dining rooms themselves. Trial shifts before you hire, replacement guarantees up to 90 days, and tailored volume packages for multi-hire briefs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-hotels-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
               <MessageCircle className="w-4 h-4" /> Get Staffing Support
             </a>
             <a href="#book" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
-              <Calendar className="w-4 h-4" /> Request Volume Rates
+              <Calendar className="w-4 h-4" /> Request Volume Quote
             </a>
           </div>
         </div>
@@ -333,7 +326,7 @@ export default function StaffingHotelsPage() {
       <StickyMobileCTA
         pageSource="staffing-hotels"
         serviceName="hotel and restaurant staff in Bali"
-        intent="hospitality staffing and pricing"
+        intent="hospitality staffing and tailored quote"
       />
     </div>
   )

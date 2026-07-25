@@ -45,7 +45,7 @@ const SERVICES = [
     slug: '/staffing/private-chef-placement',
     linkLabel: 'Private chef placement in Bali',
     tag: 'Most Popular',
-    price: 'From IDR 5,500,000/month',
+    price: 'Tailored quote',
     desc: 'Long-term chef placement for villas, residences, and family homes. Full-time, part-time, or seasonal. We source, vet, trial, and place — you get a chef who fits your kitchen and your household.',
     features: [
       'Full-time, part-time, seasonal options',
@@ -60,7 +60,7 @@ const SERVICES = [
     slug: '/staffing/live-in-chef',
     linkLabel: 'Explore our live-in chef service',
     tag: 'Premium',
-    price: 'From IDR 8,000,000/month',
+    price: 'Tailored quote',
     desc: 'Chef lives on-site. Daily market runs, full household board, dietary management, and guest catering — all without lifting a finger. The closest thing to a private restaurant in your villa.',
     features: [
       'On-site accommodation arranged',
@@ -139,7 +139,7 @@ const FAQS = [
   },
   {
     q: 'What does placement cost?',
-    a: 'Monthly salaries start from IDR 4,000,000 for household roles and IDR 5,500,000 for a part-time private chef. Our placement fee is one month\'s salary and covers sourcing, vetting, trials, contract preparation and six months of ongoing support.',
+    a: 'Salaries and placement fees depend on the role, experience and scope. We discuss numbers once we understand your brief and provide a written quote before any commitment.',
   },
   {
     q: 'What if the staff member is not the right fit?',
@@ -172,18 +172,6 @@ const STAFFING_JSON_LD = {
       },
       areaServed: ['Bali'],
       description: 'Long-term placement of private chefs, live-in chefs, villa managers, butlers, housekeepers and hospitality teams for villas, hotels and private households in Bali. 48-hour average placement, 30-day replacement guarantee.',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'IDR',
-        price: '4000000',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          priceCurrency: 'IDR',
-          price: '4000000',
-          unitText: 'MONTH',
-          description: "Monthly salaries from IDR 4,000,000; placement fee equal to one month's salary",
-        },
-      },
     },
     {
       '@type': 'FAQPage',
@@ -209,7 +197,7 @@ const STAFFING_JSON_LD = {
           name: 'What does placement cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Monthly salaries start from IDR 4,000,000 for household roles and IDR 5,500,000 for a part-time private chef. The placement fee is one month\'s salary and covers sourcing, vetting, trials, contract preparation and six months of ongoing support.',
+            text: 'Salaries and placement fees depend on the role, experience and scope. We discuss numbers once we understand your brief and provide a written quote before any commitment.',
           },
         },
         {
@@ -621,7 +609,7 @@ export default function StaffingPage() {
               <Link to="/in-villa-service" className="underline" style={{ color: '#C5A028' }}>
                 in-villa service team
               </Link>{' '}
-              provides waiters, bartenders and butlers by the hour, from IDR 250,000/hour.
+              provides waiters, bartenders and butlers by the hour for events and villa stays.
             </p>
           </div>
           {/* Sub-service links */}

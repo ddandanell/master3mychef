@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, HandHeart } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { howToSchema } from '@/components/SeoHead'
+import SeoHead, { howToSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -20,54 +20,40 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'host & hostess service in Bali', intent: 'availability and pricing' })
 
-const HOST_JSON_LD = {
+const serviceJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      name: 'Host & Hostess Hire Bali',
-      serviceType: 'Event host and hostess hire',
-      provider: {
-        '@type': 'Organization',
-        name: 'myCHEF',
-        url: 'https://mychef.id',
-        telephone: '+62 896-7407-2020',
-        email: 'bali@mychef.id',
-      },
-      areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
-      description: 'Professional event hosts and hostesses in Bali for guest reception, registration, seating coordination and event flow at weddings, corporate functions and villa events — from IDR 300,000 per hour.',
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'IDR',
-        price: '300000',
-        unitText: 'per hour',
-        description: 'Event host/hostess, 3-hour minimum. Subject to 11% tax + 10% service charge.',
-      },
-      url: 'https://mychef.id/in-villa-service/host-hostess',
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'How much does it cost to hire event hosts or hostesses in Bali?', acceptedAnswer: { '@type': 'Answer', text: 'IDR 300,000 per hour per host with a 3-hour minimum, subject to 11% tax + 10% service charge. Scale by adding hosts at the same rate.' } },
-        { '@type': 'Question', name: 'What is the difference between a hostess and a waiter?', acceptedAnswer: { '@type': 'Answer', text: 'Hosts manage guest experience and event flow — arrivals, registration, seating, timing and VIP care. Waiters manage food and beverage service at the table.' } },
-        { '@type': 'Question', name: 'How many hosts do I need?', acceptedAnswer: { '@type': 'Answer', text: 'One per 25 seated guests, one per 40 standing, plus a senior host above 50 guests.' } },
-        { '@type': 'Question', name: 'Can hosts handle registration and check-in?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — guest lists, badges, gift tables and arrival dietary confirmations are standard inclusions.' } },
-        { '@type': 'Question', name: 'What do hosts wear?', acceptedAnswer: { '@type': 'Answer', text: 'Professional attire — black suit or elegant dress depending on formality; custom branded uniforms available for corporate events.' } },
-        { '@type': 'Question', name: 'Do your hosts speak multiple languages?', acceptedAnswer: { '@type': 'Answer', text: 'All hosts speak fluent English; many speak Mandarin, Japanese, French or Arabic.' } },
-        { '@type': 'Question', name: 'Can hosts manage VIP guests?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Senior hosts handle discreet VIP arrivals, dedicated seating, special requests and privacy protection.' } },
-        { '@type': 'Question', name: 'How far in advance should I book, and where do you operate?', acceptedAnswer: { '@type': 'Answer', text: '3–7 days standard; 2–4 weeks for large peak-season events. All of Bali covered — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and beyond.' } },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
-        { '@type': 'ListItem', position: 2, name: 'In-Villa Service', item: 'https://mychef.id/in-villa-service' },
-        { '@type': 'ListItem', position: 3, name: 'Host & Hostess', item: 'https://mychef.id/in-villa-service/host-hostess' },
-      ],
-    },
-  ],
+  '@type': 'Service',
+  name: 'Host & Hostess Hire Bali',
+  serviceType: 'Event host and hostess hire',
+  provider: {
+    '@type': 'Organization',
+    name: 'myCHEF',
+    url: 'https://mychef.id',
+    telephone: '+62 896-7407-2020',
+    email: 'bali@mychef.id',
+  },
+  areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
+  description: 'Professional event hosts and hostesses in Bali for guest reception, registration, seating coordination and event flow at weddings, corporate functions and villa events — from IDR 300,000 per hour.',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'IDR',
+    price: '300000',
+    unitText: 'per hour',
+    description: 'Event host/hostess, 3-hour minimum. Subject to 11% tax + 10% service charge.',
+  },
+  url: 'https://mychef.id/in-villa-service/host-hostess',
 }
+
+const faqJsonLd = faqPageSchema([
+  { question: 'How much does it cost to hire event hosts or hostesses in Bali?', answer: 'IDR 300,000 per hour per host with a 3-hour minimum, subject to 11% tax + 10% service charge. Scale by adding hosts at the same rate.' },
+  { question: 'What is the difference between a hostess and a waiter?', answer: 'Hosts manage guest experience and event flow — arrivals, registration, seating, timing and VIP care. Waiters manage food and beverage service at the table.' },
+  { question: 'How many hosts do I need?', answer: 'One per 25 seated guests, one per 40 standing, plus a senior host above 50 guests.' },
+  { question: 'Can hosts handle registration and check-in?', answer: 'Yes — guest lists, badges, gift tables and arrival dietary confirmations are standard inclusions.' },
+  { question: 'What do hosts wear?', answer: 'Professional attire — black suit or elegant dress depending on formality; custom branded uniforms available for corporate events.' },
+  { question: 'Do your hosts speak multiple languages?', answer: 'All hosts speak fluent English; many speak Mandarin, Japanese, French or Arabic.' },
+  { question: 'Can hosts manage VIP guests?', answer: 'Yes. Senior hosts handle discreet VIP arrivals, dedicated seating, special requests and privacy protection.' },
+  { question: 'How far in advance should I book, and where do you operate?', answer: '3–7 days standard; 2–4 weeks for large peak-season events. All of Bali covered — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and beyond.' },
+])
 
 const PRICING_TIERS = [
   {
@@ -130,7 +116,8 @@ export default function ServiceHostPage() {
         canonical={getPageMeta('in-villa-service-host-hostess').canonical}
         ogImage={getPageMeta('in-villa-service-host-hostess').ogImage}
         jsonLd={[
-          HOST_JSON_LD,
+          serviceJsonLd,
+          faqJsonLd,
           howToSchema({
             name: 'How to Hire a Host or Hostess in Bali',
             description: 'Book professional hosts and hostesses for your Bali villa event in 4 easy steps.',

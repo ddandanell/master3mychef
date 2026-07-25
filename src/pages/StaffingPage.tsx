@@ -140,33 +140,24 @@ const FAQS = [
 ]
 
 // ── 5. JSON-LD ───────────────────────────────────────────────────────────────
-const STAFFING_JSON_LD = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      '@id': 'https://mychef.id/staffing#service',
-      name: 'Villa Staff Placement Bali',
-      serviceType: 'Hospitality staff placement agency',
-      provider: {
-        '@type': 'Organization',
-        name: 'myCHEF',
-        url: 'https://mychef.id',
-        telephone: '+62 896-7407-2020',
-      },
-      areaServed: ['Bali'],
-      description: 'Long-term placement of private chefs, live-in chefs, villa managers, butlers, housekeepers and hospitality teams for villas, hotels and private households in Bali. 48-hour average placement, 30-day replacement guarantee.',
+const STAFFING_JSON_LD = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://mychef.id/staffing#service',
+    name: 'Villa Staff Placement Bali',
+    serviceType: 'Hospitality staff placement agency',
+    provider: {
+      '@type': 'Organization',
+      name: 'myCHEF',
+      url: 'https://mychef.id',
+      telephone: '+62 896-7407-2020',
     },
-    faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
-        { '@type': 'ListItem', position: 2, name: 'Staffing & Placement', item: 'https://mychef.id/staffing' },
-      ],
-    },
-  ],
-}
+    areaServed: ['Bali'],
+    description: 'Long-term placement of private chefs, live-in chefs, villa managers, butlers, housekeepers and hospitality teams for villas, hotels and private households in Bali. 48-hour average placement, 30-day replacement guarantee.',
+  },
+  faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
+]
 
 // ── 6. STATS BAR ─────────────────────────────────────────────────────────────
 const STATS = [

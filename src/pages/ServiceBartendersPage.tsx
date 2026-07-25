@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, Wine } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -20,54 +20,40 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'bartender service in Bali', intent: 'availability and pricing' })
 
-const briefJsonLd = {
+const serviceJsonLd = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "name": "Private Bartender Hire Bali",
-      "serviceType": "Private bartender hire",
-      "provider": {
-        "@type": "Organization",
-        "name": "myCHEF",
-        "url": "https://mychef.id",
-        "telephone": "+62 896-7407-2020",
-        "email": "bali@mychef.id"
-      },
-      "areaServed": ["Seminyak", "Canggu", "Ubud", "Uluwatu", "Nusa Dua", "Jimbaran", "Sanur", "Bali"],
-      "description": "Hire a private bartender for your Bali villa party, wedding or event. Classic and signature cocktails, full bar setup, glassware, ice and garnish prep — from IDR 350,000 per hour, 3-hour minimum.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "IDR",
-        "price": "350000",
-        "unitText": "per hour",
-        "description": "Private bartender, 3-hour minimum. Alcohol separate: BYO from shopping list or full sourcing at +15% service fee. Subject to 11% tax + 10% service charge."
-      },
-      "url": "https://mychef.id/in-villa-service/bartenders"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "How much does a private bartender cost in Bali?", "acceptedAnswer": { "@type": "Answer", "text": "IDR 350,000 per hour with a 3-hour minimum, covering the bartender, full bar kit, glassware, ice and garnishes. Alcohol is separate — BYO from a shopping list or full sourcing at a 15% service fee. Rates are subject to 11% tax + 10% service charge." } },
-        { "@type": "Question", "name": "Is the alcohol included?", "acceptedAnswer": { "@type": "Answer", "text": "No — the hourly rate covers staff, equipment and setup. You buy from a precise shopping list or we source everything for a 15% service fee." } },
-        { "@type": "Question", "name": "Is the alcohol you source genuine?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We purchase only from licensed distributors with excise-stamped stock, and local spirits such as arak come only from licensed Balinese producers." } },
-        { "@type": "Question", "name": "What cocktails can your bartenders make?", "acceptedAnswer": { "@type": "Answer", "text": "All classics (Martini, Old Fashioned, Mojito, Margarita) plus signature cocktails designed for your event; premium bartenders offer molecular and flair techniques." } },
-        { "@type": "Question", "name": "Do you offer non-alcoholic options?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — mocktails, fresh juices, infused waters and zero-proof cocktails are standard." } },
-        { "@type": "Question", "name": "Can you do a themed bar?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Tiki, Prohibition, Tropical, Mediterranean and more, with menu, garnishes and presentation designed to match." } },
-        { "@type": "Question", "name": "What happens if we run low on alcohol?", "acceptedAnswer": { "@type": "Answer", "text": "We monitor stock throughout service and alert you early; for remote villas we recommend a 20% buffer on initial purchases." } },
-        { "@type": "Question", "name": "How far in advance should I book, and which areas do you cover?", "acceptedAnswer": { "@type": "Answer", "text": "3–7 days standard; 2–4 weeks for premium peak-season events; same-day often possible. All Bali covered, with a modest travel fee for remote areas quoted upfront." } }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mychef.id" },
-        { "@type": "ListItem", "position": 2, "name": "In-Villa Service", "item": "https://mychef.id/in-villa-service" },
-        { "@type": "ListItem", "position": 3, "name": "Bartenders", "item": "https://mychef.id/in-villa-service/bartenders" }
-      ]
-    }
-  ]
+  "@type": "Service",
+  "name": "Private Bartender Hire Bali",
+  "serviceType": "Private bartender hire",
+  "provider": {
+    "@type": "Organization",
+    "name": "myCHEF",
+    "url": "https://mychef.id",
+    "telephone": "+62 896-7407-2020",
+    "email": "bali@mychef.id"
+  },
+  "areaServed": ["Seminyak", "Canggu", "Ubud", "Uluwatu", "Nusa Dua", "Jimbaran", "Sanur", "Bali"],
+  "description": "Hire a private bartender for your Bali villa party, wedding or event. Classic and signature cocktails, full bar setup, glassware, ice and garnish prep — from IDR 350,000 per hour, 3-hour minimum.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "IDR",
+    "price": "350000",
+    "unitText": "per hour",
+    "description": "Private bartender, 3-hour minimum. Alcohol separate: BYO from shopping list or full sourcing at +15% service fee. Subject to 11% tax + 10% service charge."
+  },
+  "url": "https://mychef.id/in-villa-service/bartenders"
 }
+
+const faqJsonLd = faqPageSchema([
+  { question: "How much does a private bartender cost in Bali?", answer: "IDR 350,000 per hour with a 3-hour minimum, covering the bartender, full bar kit, glassware, ice and garnishes. Alcohol is separate — BYO from a shopping list or full sourcing at a 15% service fee. Rates are subject to 11% tax + 10% service charge." },
+  { question: "Is the alcohol included?", answer: "No — the hourly rate covers staff, equipment and setup. You buy from a precise shopping list or we source everything for a 15% service fee." },
+  { question: "Is the alcohol you source genuine?", answer: "Yes. We purchase only from licensed distributors with excise-stamped stock, and local spirits such as arak come only from licensed Balinese producers." },
+  { question: "What cocktails can your bartenders make?", answer: "All classics (Martini, Old Fashioned, Mojito, Margarita) plus signature cocktails designed for your event; premium bartenders offer molecular and flair techniques." },
+  { question: "Do you offer non-alcoholic options?", answer: "Yes — mocktails, fresh juices, infused waters and zero-proof cocktails are standard." },
+  { question: "Can you do a themed bar?", answer: "Yes — Tiki, Prohibition, Tropical, Mediterranean and more, with menu, garnishes and presentation designed to match." },
+  { question: "What happens if we run low on alcohol?", answer: "We monitor stock throughout service and alert you early; for remote villas we recommend a 20% buffer on initial purchases." },
+  { question: "How far in advance should I book, and which areas do you cover?", answer: "3–7 days standard; 2–4 weeks for premium peak-season events; same-day often possible. All Bali covered, with a modest travel fee for remote areas quoted upfront." }
+])
 
 const PRICING_TIERS = [
   {
@@ -130,7 +116,7 @@ export default function ServiceBartendersPage() {
         description={pageMeta.description}
         canonical={pageMeta.canonical}
         ogImage={pageMeta.ogImage}
-        jsonLd={briefJsonLd}
+        jsonLd={[serviceJsonLd, faqJsonLd]}
       />
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">

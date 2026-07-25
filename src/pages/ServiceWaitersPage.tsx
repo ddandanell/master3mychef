@@ -4,7 +4,7 @@ import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, Award 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { getPageMeta } from '@/data/page-meta'
-import SeoHead, { howToSchema } from '@/components/SeoHead'
+import SeoHead, { howToSchema, faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -61,54 +61,40 @@ const FAQS = [
   { q: 'What areas do you cover?', a: 'All of Bali: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may incur a modest travel fee, quoted upfront.' },
 ]
 
-const briefJsonLd = {
+const serviceJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      'name': 'Waiter Hire Bali',
-      'serviceType': 'Waiter hire',
-      'provider': {
-        '@type': 'Organization',
-        'name': 'myCHEF',
-        'url': 'https://mychef.id',
-        'telephone': '+62 896-7407-2020',
-        'email': 'bali@mychef.id',
-      },
-      'areaServed': ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bali'],
-      'description': 'Professional, uniformed waiters for villa dinners, weddings and events in Bali. English-speaking, fine-dining trained, from IDR 250,000 per hour with a 3-hour minimum.',
-      'offers': {
-        '@type': 'Offer',
-        'priceCurrency': 'IDR',
-        'price': '250000',
-        'unitText': 'per hour',
-        'description': 'Waiter service, 3-hour minimum, two-waiter minimum per booking. Subject to 11% tax + 10% service charge.',
-      },
-      'url': 'https://mychef.id/in-villa-service/waiters',
-    },
-    {
-      '@type': 'FAQPage',
-      'mainEntity': [
-        { '@type': 'Question', 'name': 'How much does it cost to hire waiters in Bali?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'IDR 250,000 per hour per waiter, with a 3-hour minimum and a two-waiter minimum per booking. Rates are subject to 11% tax + 10% service charge.' } },
-        { '@type': 'Question', 'name': 'How many waiters do I need for my event?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'One waiter per 8–10 guests for plated dinners, one per 15 for buffets, one per 15–20 for canapé service. Add a head waiter above 20 guests.' } },
-        { '@type': 'Question', 'name': 'What do the waiters wear?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Black trousers, white shirt and black apron as standard; white-glove service for formal occasions and custom dress codes on request.' } },
-        { '@type': 'Question', 'name': 'Can waiters handle dietary restrictions and allergies?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Dietary requirements are mapped per guest during briefing and handled discreetly at the table within a HACCP-certified food-safety operation.' } },
-        { '@type': 'Question', 'name': 'Do your waiters provide wine service?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — pouring, timing and temperature management are included. For pairing design, book the sommelier service.' } },
-        { '@type': 'Question', 'name': 'How far in advance should I book?', 'acceptedAnswer': { '@type': 'Answer', 'text': '3–7 days for standard service; 2–4 weeks for premium events in peak season. Same-week and same-day bookings are often possible.' } },
-        { '@type': 'Question', 'name': 'Can I request the same waiters again?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. We keep records of your preferred team and do our best to reassign them for future bookings.' } },
-        { '@type': 'Question', 'name': 'What areas do you cover?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'All of Bali: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may incur a modest travel fee.' } },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://mychef.id' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'In-Villa Service', 'item': 'https://mychef.id/in-villa-service' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Waiters', 'item': 'https://mychef.id/in-villa-service/waiters' },
-      ],
-    },
-  ],
+  '@type': 'Service',
+  'name': 'Waiter Hire Bali',
+  'serviceType': 'Waiter hire',
+  'provider': {
+    '@type': 'Organization',
+    'name': 'myCHEF',
+    'url': 'https://mychef.id',
+    'telephone': '+62 896-7407-2020',
+    'email': 'bali@mychef.id',
+  },
+  'areaServed': ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bali'],
+  'description': 'Professional, uniformed waiters for villa dinners, weddings and events in Bali. English-speaking, fine-dining trained, from IDR 250,000 per hour with a 3-hour minimum.',
+  'offers': {
+    '@type': 'Offer',
+    'priceCurrency': 'IDR',
+    'price': '250000',
+    'unitText': 'per hour',
+    'description': 'Waiter service, 3-hour minimum, two-waiter minimum per booking. Subject to 11% tax + 10% service charge.',
+  },
+  'url': 'https://mychef.id/in-villa-service/waiters',
 }
+
+const faqJsonLd = faqPageSchema([
+  { question: 'How much does it cost to hire waiters in Bali?', answer: 'IDR 250,000 per hour per waiter, with a 3-hour minimum and a two-waiter minimum per booking. Rates are subject to 11% tax + 10% service charge.' },
+  { question: 'How many waiters do I need for my event?', answer: 'One waiter per 8–10 guests for plated dinners, one per 15 for buffets, one per 15–20 for canapé service. Add a head waiter above 20 guests.' },
+  { question: 'What do the waiters wear?', answer: 'Black trousers, white shirt and black apron as standard; white-glove service for formal occasions and custom dress codes on request.' },
+  { question: 'Can waiters handle dietary restrictions and allergies?', answer: 'Yes. Dietary requirements are mapped per guest during briefing and handled discreetly at the table within a HACCP-certified food-safety operation.' },
+  { question: 'Do your waiters provide wine service?', answer: 'Yes — pouring, timing and temperature management are included. For pairing design, book the sommelier service.' },
+  { question: 'How far in advance should I book?', answer: '3–7 days for standard service; 2–4 weeks for premium events in peak season. Same-week and same-day bookings are often possible.' },
+  { question: 'Can I request the same waiters again?', answer: 'Yes. We keep records of your preferred team and do our best to reassign them for future bookings.' },
+  { question: 'What areas do you cover?', answer: 'All of Bali: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may incur a modest travel fee.' },
+])
 
 export default function ServiceWaitersPage() {
   const ref = useRef<HTMLDivElement>(null)
@@ -131,7 +117,8 @@ export default function ServiceWaitersPage() {
         canonical={meta.canonical}
         ogImage={meta.ogImage}
         jsonLd={[
-          briefJsonLd,
+          serviceJsonLd,
+          faqJsonLd,
           howToSchema({
             name: 'How to Hire Villa Waiters in Bali',
             description: 'Book professional waiters for your Bali villa dinner or event in 5 easy steps.',

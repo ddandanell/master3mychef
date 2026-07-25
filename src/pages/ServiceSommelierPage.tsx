@@ -4,7 +4,7 @@ import { MessageCircle, Check, Phone, Calendar, Star, ShieldCheck, Award, Wine }
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { getPageMeta } from '@/data/page-meta'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -20,55 +20,41 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a sommelier in Bali', intent: 'availability and pricing' })
 
-const BRIEF_JSON_LD: Record<string, unknown> = {
+const serviceJsonLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      name: 'Private Sommelier Hire Bali',
-      serviceType: 'Private sommelier and wine pairing service',
-      provider: {
-        '@type': 'Organization',
-        name: 'myCHEF',
-        url: 'https://mychef.id',
-        telephone: '+62 896-7407-2020',
-        email: 'bali@mychef.id',
-      },
-      areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
-      description: 'Hire a private sommelier for your Bali villa dinner — pairing design, wine sourcing, decanting and tableside service from IDR 1,200,000 per dinner. Wine pairing add-on for tasting menus from IDR 850,000 per guest.',
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'IDR',
-        lowPrice: '1200000',
-        highPrice: '3500000',
-        offerCount: '3',
-        description: 'Wine Pairing Dinner IDR 1,200,000; Sommelier Service IDR 2,000,000/event; Wine Experience IDR 3,500,000/session. Wine purchased separately. Subject to 11% tax + 10% service charge.',
-      },
-      url: 'https://mychef.id/in-villa-service/sommelier',
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'How much does a private sommelier cost in Bali?', acceptedAnswer: { '@type': 'Answer', text: 'From IDR 1,200,000 per dinner for a 4-course pairing (up to 8 guests); full event coverage from IDR 2,000,000; guided tastings from IDR 3,500,000. Tasting-menu pairing add-on from IDR 850,000 per guest. Fees are ++ and exclude the wine.' } },
-        { '@type': 'Question', name: 'Do I need to buy the wine separately?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The fee covers planning, sourcing expertise and service. Wine is purchased from the recommended list at your chosen budget, or poured from your own collection.' } },
-        { '@type': 'Question', name: 'Can the sommelier work with wines I already own?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — the sommelier reviews your cellar or brought bottles and designs the pairing sequence from what you have.' } },
-        { '@type': 'Question', name: 'How many wines does a multi-course dinner need?', acceptedAnswer: { '@type': 'Answer', text: 'Typically one per course plus an aperitif: 4–5 wines for a four-course dinner, 6–8 for a tasting menu.' } },
-        { '@type': 'Question', name: 'What styles of wine do you pair?', acceptedAnswer: { '@type': 'Answer', text: 'Old World classics, New World discoveries and emerging regions, plus sake, natural wine and non-alcoholic pairings on request.' } },
-        { '@type': 'Question', name: 'Can non-drinkers join a pairing dinner?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — a parallel zero-proof pairing of juices, teas, shrubs and ferments is designed to match the same courses.' } },
-        { '@type': 'Question', name: 'How far in advance should I book?', acceptedAnswer: { '@type': 'Answer', text: '1–2 weeks for standard dinners; 3–4 weeks when rare or allocated wines are involved, especially in peak season.' } },
-        { '@type': 'Question', name: 'Which areas do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' } },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
-        { '@type': 'ListItem', position: 2, name: 'In-Villa Service', item: 'https://mychef.id/in-villa-service' },
-        { '@type': 'ListItem', position: 3, name: 'Sommelier', item: 'https://mychef.id/in-villa-service/sommelier' },
-      ],
-    },
-  ],
+  '@type': 'Service',
+  name: 'Private Sommelier Hire Bali',
+  serviceType: 'Private sommelier and wine pairing service',
+  provider: {
+    '@type': 'Organization',
+    name: 'myCHEF',
+    url: 'https://mychef.id',
+    telephone: '+62 896-7407-2020',
+    email: 'bali@mychef.id',
+  },
+  areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
+  description: 'Hire a private sommelier for your Bali villa dinner — pairing design, wine sourcing, decanting and tableside service from IDR 1,200,000 per dinner. Wine pairing add-on for tasting menus from IDR 850,000 per guest.',
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'IDR',
+    lowPrice: '1200000',
+    highPrice: '3500000',
+    offerCount: '3',
+    description: 'Wine Pairing Dinner IDR 1,200,000; Sommelier Service IDR 2,000,000/event; Wine Experience IDR 3,500,000/session. Wine purchased separately. Subject to 11% tax + 10% service charge.',
+  },
+  url: 'https://mychef.id/in-villa-service/sommelier',
 }
+
+const faqJsonLd = faqPageSchema([
+  { question: 'How much does a private sommelier cost in Bali?', answer: 'From IDR 1,200,000 per dinner for a 4-course pairing (up to 8 guests); full event coverage from IDR 2,000,000; guided tastings from IDR 3,500,000. Tasting-menu pairing add-on from IDR 850,000 per guest. Fees are ++ and exclude the wine.' },
+  { question: 'Do I need to buy the wine separately?', answer: 'Yes. The fee covers planning, sourcing expertise and service. Wine is purchased from the recommended list at your chosen budget, or poured from your own collection.' },
+  { question: 'Can the sommelier work with wines I already own?', answer: 'Yes — the sommelier reviews your cellar or brought bottles and designs the pairing sequence from what you have.' },
+  { question: 'How many wines does a multi-course dinner need?', answer: 'Typically one per course plus an aperitif: 4–5 wines for a four-course dinner, 6–8 for a tasting menu.' },
+  { question: 'What styles of wine do you pair?', answer: 'Old World classics, New World discoveries and emerging regions, plus sake, natural wine and non-alcoholic pairings on request.' },
+  { question: 'Can non-drinkers join a pairing dinner?', answer: 'Yes — a parallel zero-proof pairing of juices, teas, shrubs and ferments is designed to match the same courses.' },
+  { question: 'How far in advance should I book?', answer: '1–2 weeks for standard dinners; 3–4 weeks when rare or allocated wines are involved, especially in peak season.' },
+  { question: 'Which areas do you cover?', answer: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
+])
 
 const PRICING_TIERS = [
   {
@@ -145,7 +131,7 @@ export default function ServiceSommelierPage() {
         description={getPageMeta('in-villa-service-sommelier').description}
         canonical={getPageMeta('in-villa-service-sommelier').canonical}
         ogImage={getPageMeta('in-villa-service-sommelier').ogImage}
-        jsonLd={BRIEF_JSON_LD}
+        jsonLd={[serviceJsonLd, faqJsonLd]}
       />
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">

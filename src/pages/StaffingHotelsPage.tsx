@@ -69,32 +69,20 @@ const FAQS = [
   { q: 'Can foreign chefs work in Bali (work permit)?', a: 'Foreign nationals need RPTKA and KITAS permits, typically for managerial or specialist roles. Front-line roles are generally reserved for Indonesian nationals.' },
 ]
 
-const briefJsonLd = {
+const serviceJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      '@id': 'https://mychef.id/staffing/for-hotels-restaurants#service',
-      name: 'Hotel & Restaurant Staffing Bali',
-      serviceType: 'Hospitality recruitment for venues',
-      provider: {
-        '@type': 'Organization',
-        name: 'myCHEF',
-        url: 'https://mychef.id',
-        telephone: '+62 896-7407-2020',
-      },
-      areaServed: 'Bali',
-      description: 'Kitchen, service and management recruitment for Bali hotels, restaurants, beach clubs and resorts. Trial shifts, tailored volume packages and replacement guarantees up to 90 days.',
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
-        { '@type': 'ListItem', position: 2, name: 'Staffing', item: 'https://mychef.id/staffing' },
-        { '@type': 'ListItem', position: 3, name: 'For Hotels & Restaurants', item: 'https://mychef.id/staffing/for-hotels-restaurants' },
-      ],
-    },
-  ],
+  '@type': 'Service',
+  '@id': 'https://mychef.id/staffing/for-hotels-restaurants#service',
+  name: 'Hotel & Restaurant Staffing Bali',
+  serviceType: 'Hospitality recruitment for venues',
+  provider: {
+    '@type': 'Organization',
+    name: 'myCHEF',
+    url: 'https://mychef.id',
+    telephone: '+62 896-7407-2020',
+  },
+  areaServed: 'Bali',
+  description: 'Kitchen, service and management recruitment for Bali hotels, restaurants, beach clubs and resorts. Trial shifts, tailored volume packages and replacement guarantees up to 90 days.',
 }
 
 export default function StaffingHotelsPage() {
@@ -117,7 +105,7 @@ export default function StaffingHotelsPage() {
         description={getPageMeta('staffing-for-hotels-restaurants').description}
         canonical={getPageMeta('staffing-for-hotels-restaurants').canonical}
         ogImage={getPageMeta('staffing-for-hotels-restaurants').ogImage}
-        jsonLd={[briefJsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[serviceJsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* Hero */}

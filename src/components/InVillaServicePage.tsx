@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Wine, Users, Shield, Clock, Star, Award } from 'lucide-react'
-import SeoHead from './SeoHead'
+import SeoHead, { faqPageSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
@@ -107,52 +107,39 @@ export default function InVillaServicePage() {
   const canonical = `${SITE}/in-villa-service`
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent('Hi myCHEF, I would like to hire in-villa service staff.')}`
 
-  const briefJsonLd = {
+  const serviceJsonLd = {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Service',
-        name: 'In-Villa Service Staff Bali',
-        serviceType: 'Villa service staff hire',
-        provider: {
-          '@type': 'Organization',
-          name: 'myCHEF',
-          url: 'https://mychef.id',
-          telephone: '+62 896-7407-2020',
-          email: 'bali@mychef.id',
-        },
-        areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bali'],
-        description: 'Uniformed, English-speaking villa service staff in Bali — waiters, butlers, mixologists, sommeliers and hosts from IDR 250,000/hour; bartenders from IDR 350,000/hour.',
-        offers: {
-          '@type': 'AggregateOffer',
-          priceCurrency: 'IDR',
-          lowPrice: '250000',
-          offerCount: '6',
-        },
-        url: canonical,
-      },
-      {
-        '@type': 'FAQPage',
-        mainEntity: [
-          { '@type': 'Question', name: 'How much does it cost to hire villa service staff in Bali?', acceptedAnswer: { '@type': 'Answer', text: 'Waiters from IDR 250,000/hour, hosts from IDR 300,000/hour, bartenders from IDR 350,000/hour (3-hour minimums). Butlers from IDR 1,200,000/day, sommelier from IDR 1,200,000/dinner, mixology from IDR 1,500,000/session. Rates are subject to 11% tax + 10% service charge.' } },
-          { '@type': 'Question', name: 'Is there a minimum booking?', acceptedAnswer: { '@type': 'Answer', text: 'Hourly roles carry a 3-hour minimum; waiter bookings start at two waiters. Butler, sommelier and mixology services are priced per day, dinner or session.' } },
-          { '@type': 'Question', name: 'Can I hire staff without booking catering?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. In-villa service staff can be hired independently for self-catered events or to support another caterer.' } },
-          { '@type': 'Question', name: 'What do staff wear and bring?', acceptedAnswer: { '@type': 'Answer', text: 'Professional uniforms matched to event formality plus all role-specific service tools; specialty glassware, ice and garnishes are arranged at briefing.' } },
-          { '@type': 'Question', name: 'Are your staff vetted and supervised?', acceptedAnswer: { '@type': 'Answer', text: 'All staff are background-checked, employed and supervised by myCHEF, with a replacement-or-refund guarantee if anyone cannot make it on the day.' } },
-          { '@type': 'Question', name: 'What is the cancellation policy?', acceptedAnswer: { '@type': 'Answer', text: 'Cancellations 14 or more days before service receive a full refund, 7-13 days a 50% refund, and less than 7 days is non-refundable; the deposit follows the same tiers.' } },
-          { '@type': 'Question', name: 'Which areas do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may carry a modest travel fee quoted upfront.' } },
-          { '@type': 'Question', name: 'How far ahead should I book?', acceptedAnswer: { '@type': 'Answer', text: '3+ days for small teams, 2+ weeks for 10+ staff or peak season. Last-minute bookings are frequently possible via WhatsApp.' } },
-        ],
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
-          { '@type': 'ListItem', position: 2, name: 'In-Villa Service', item: canonical },
-        ],
-      },
-    ],
+    '@type': 'Service',
+    name: 'In-Villa Service Staff Bali',
+    serviceType: 'Villa service staff hire',
+    provider: {
+      '@type': 'Organization',
+      name: 'myCHEF',
+      url: 'https://mychef.id',
+      telephone: '+62 896-7407-2020',
+      email: 'bali@mychef.id',
+    },
+    areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bali'],
+    description: 'Uniformed, English-speaking villa service staff in Bali — waiters, butlers, mixologists, sommeliers and hosts from IDR 250,000/hour; bartenders from IDR 350,000/hour.',
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'IDR',
+      lowPrice: '250000',
+      offerCount: '6',
+    },
+    url: canonical,
   }
+
+  const faqJsonLd = faqPageSchema([
+    { question: 'How much does it cost to hire villa service staff in Bali?', answer: 'Waiters from IDR 250,000/hour, hosts from IDR 300,000/hour, bartenders from IDR 350,000/hour (3-hour minimums). Butlers from IDR 1,200,000/day, sommelier from IDR 1,200,000/dinner, mixology from IDR 1,500,000/session. Rates are subject to 11% tax + 10% service charge.' },
+    { question: 'Is there a minimum booking?', answer: 'Hourly roles carry a 3-hour minimum; waiter bookings start at two waiters. Butler, sommelier and mixology services are priced per day, dinner or session.' },
+    { question: 'Can I hire staff without booking catering?', answer: 'Yes. In-villa service staff can be hired independently for self-catered events or to support another caterer.' },
+    { question: 'What do staff wear and bring?', answer: 'Professional uniforms matched to event formality plus all role-specific service tools; specialty glassware, ice and garnishes are arranged at briefing.' },
+    { question: 'Are your staff vetted and supervised?', answer: 'All staff are background-checked, employed and supervised by myCHEF, with a replacement-or-refund guarantee if anyone cannot make it on the day.' },
+    { question: 'What is the cancellation policy?', answer: 'Cancellations 14 or more days before service receive a full refund, 7-13 days a 50% refund, and less than 7 days is non-refundable; the deposit follows the same tiers.' },
+    { question: 'Which areas do you cover?', answer: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may carry a modest travel fee quoted upfront.' },
+    { question: 'How far ahead should I book?', answer: '3+ days for small teams, 2+ weeks for 10+ staff or peak season. Last-minute bookings are frequently possible via WhatsApp.' },
+  ])
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
@@ -161,7 +148,7 @@ export default function InVillaServicePage() {
         description={getPageMeta('in-villa-service').description}
         canonical={getPageMeta('in-villa-service').canonical}
         ogImage={getPageMeta('in-villa-service').ogImage}
-        jsonLd={briefJsonLd}
+        jsonLd={[serviceJsonLd, faqJsonLd]}
       />
 
       {/* Hero */}

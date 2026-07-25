@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, Star, ShieldCheck, Gem } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -20,55 +20,41 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'butler service in Bali', intent: 'availability and pricing' })
 
-const briefJsonLd: Record<string, unknown> = {
+const serviceJsonLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      name: 'Private Butler Hire Bali',
-      serviceType: 'Butler hire',
-      provider: {
-        '@type': 'Organization',
-        name: 'myCHEF',
-        url: 'https://mychef.id',
-        telephone: '+62 896-7407-2020',
-        email: 'bali@mychef.id',
-      },
-      areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
-      description: 'Hire a professional private butler in Bali by the day, event or residence stay. Arrival service, household coordination and anticipatory guest care from IDR 1,200,000 per day.',
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'IDR',
-        lowPrice: '1200000',
-        highPrice: '2500000',
-        offerCount: '3',
-        description: 'Day Butler IDR 1,200,000/day; Event Butler IDR 1,800,000/event; Residence Butler IDR 2,500,000/day. Subject to 11% tax + 10% service charge.',
-      },
-      url: 'https://mychef.id/in-villa-service/butlers',
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'How much does it cost to hire a butler in Bali?', acceptedAnswer: { '@type': 'Answer', text: 'From IDR 1,200,000 per day for an 8-hour Day Butler; Event Butler IDR 1,800,000 per event (6 hours); Residence Butler IDR 2,500,000 per day (12 hours). Multi-day discounts apply. Rates are subject to 11% tax + 10% service charge.' } },
-        { '@type': 'Question', name: 'Is the butler live-in?', acceptedAnswer: { '@type': 'Answer', text: 'Day and Event Butlers are per-shift. Residence Butlers can be arranged as live-in for extended stays on request.' } },
-        { '@type': 'Question', name: 'Can the butler manage other villa staff?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Residence Butlers coordinate chefs, housekeepers, drivers and gardeners for seamless villa operations.' } },
-        { '@type': 'Question', name: 'What languages do your butlers speak?', acceptedAnswer: { '@type': 'Answer', text: 'All butlers speak fluent English; many also speak Mandarin, French or Japanese.' } },
-        { '@type': 'Question', name: 'How long should I book a butler for?', acceptedAnswer: { '@type': 'Answer', text: 'A Day Butler suits single events or short stays; for stays of 3+ days a Residence Butler delivers consistent, relationship-based service.' } },
-        { '@type': 'Question', name: 'How far in advance should I book?', acceptedAnswer: { '@type': 'Answer', text: '1–2 weeks for Day Butlers; 3–4 weeks for Residence Butlers in peak season. Shorter notice is often possible via WhatsApp.' } },
-        { '@type': 'Question', name: 'What areas do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' } },
-        { '@type': 'Question', name: 'What is the difference between hiring a butler and booking a villa with butler service?', acceptedAnswer: { '@type': 'Answer', text: 'Villas advertising butler service typically include a shared staff member during fixed hours. A hired myCHEF butler is dedicated to your group alone, briefed to your preferences, and booked for exactly the days and hours you choose.' } },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
-        { '@type': 'ListItem', position: 2, name: 'In-Villa Service', item: 'https://mychef.id/in-villa-service' },
-        { '@type': 'ListItem', position: 3, name: 'Butlers', item: 'https://mychef.id/in-villa-service/butlers' },
-      ],
-    },
-  ],
+  '@type': 'Service',
+  name: 'Private Butler Hire Bali',
+  serviceType: 'Butler hire',
+  provider: {
+    '@type': 'Organization',
+    name: 'myCHEF',
+    url: 'https://mychef.id',
+    telephone: '+62 896-7407-2020',
+    email: 'bali@mychef.id',
+  },
+  areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
+  description: 'Hire a professional private butler in Bali by the day, event or residence stay. Arrival service, household coordination and anticipatory guest care from IDR 1,200,000 per day.',
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'IDR',
+    lowPrice: '1200000',
+    highPrice: '2500000',
+    offerCount: '3',
+    description: 'Day Butler IDR 1,200,000/day; Event Butler IDR 1,800,000/event; Residence Butler IDR 2,500,000/day. Subject to 11% tax + 10% service charge.',
+  },
+  url: 'https://mychef.id/in-villa-service/butlers',
 }
+
+const faqJsonLd = faqPageSchema([
+  { question: 'How much does it cost to hire a butler in Bali?', answer: 'From IDR 1,200,000 per day for an 8-hour Day Butler; Event Butler IDR 1,800,000 per event (6 hours); Residence Butler IDR 2,500,000 per day (12 hours). Multi-day discounts apply. Rates are subject to 11% tax + 10% service charge.' },
+  { question: 'Is the butler live-in?', answer: 'Day and Event Butlers are per-shift. Residence Butlers can be arranged as live-in for extended stays on request.' },
+  { question: 'Can the butler manage other villa staff?', answer: 'Yes. Residence Butlers coordinate chefs, housekeepers, drivers and gardeners for seamless villa operations.' },
+  { question: 'What languages do your butlers speak?', answer: 'All butlers speak fluent English; many also speak Mandarin, French or Japanese.' },
+  { question: 'How long should I book a butler for?', answer: 'A Day Butler suits single events or short stays; for stays of 3+ days a Residence Butler delivers consistent, relationship-based service.' },
+  { question: 'How far in advance should I book?', answer: '1–2 weeks for Day Butlers; 3–4 weeks for Residence Butlers in peak season. Shorter notice is often possible via WhatsApp.' },
+  { question: 'What areas do you cover?', answer: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
+  { question: 'What is the difference between hiring a butler and booking a villa with butler service?', answer: 'Villas advertising butler service typically include a shared staff member during fixed hours. A hired myCHEF butler is dedicated to your group alone, briefed to your preferences, and booked for exactly the days and hours you choose.' },
+])
 
 const PRICING_TIERS = [
   {
@@ -145,7 +131,7 @@ export default function ServiceButlersPage() {
         description={getPageMeta('in-villa-service-butlers').description}
         canonical={getPageMeta('in-villa-service-butlers').canonical}
         ogImage={getPageMeta('in-villa-service-butlers').ogImage}
-        jsonLd={briefJsonLd}
+        jsonLd={[serviceJsonLd, faqJsonLd]}
       />
 {/* Hero */}
 <section className="relative min-h-[85vh] flex items-center overflow-hidden">

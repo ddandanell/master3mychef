@@ -202,103 +202,85 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "Why myCHEF is rated the best private chef service in Indonesia: Michelin-trained leadership, 560+ villas, world-class standards. WhatsApp us.",
     "date": "2026-05-17",
     "h1": "The Best Private Chef Service in Indonesia",
-    "jsonLd": [{
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Service",
-          "serviceType": "Private chef service in Indonesia",
-          "provider": {
-            "@id": "https://mychef.id/#business"
-          },
-          "areaServed": [
-            "Bali"
-          ],
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "bestRating": "5"
-          },
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "IDR",
-            "lowPrice": "700000",
-            "highPrice": "980000",
-            "description": "Why myCHEF is rated the best private chef service in Indonesia: Michelin-trained leadership, 560+ villas, world-class standards. WhatsApp us."
-          }
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Private chef service in Indonesia",
+        "provider": {
+          "@id": "https://mychef.id/#business"
         },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Who is the best private chef in Indonesia?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Judge by verifiable criteria: named culinary leadership, track record, independent reviews, professional standards and transparent pricing. myCHEF offers Michelin-trained leadership, 560+ villas served, 12,000+ guests, a 4.9/5 guest rating and upfront per-person pricing."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How much does a top private chef cost in Indonesia?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Private chef dinners start from IDR 700K per person; fine-dining tasting menus from IDR 950–980K per person, quoted ++ (11% government tax + 10% service charge) as one fixed figure."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Which areas of Bali do you serve?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We serve villas and residences across Bali's main areas including Seminyak, Canggu, Pererenan, Sanur, Ubud and Uluwatu, to the same standard in each location."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can the chef handle dietary requirements?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Halal, vegan, vegetarian, gluten-free, allergies and children's menus are built into every menu plan at no extra charge."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What happens if our chef can't make it?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A verified replacement of equivalent calibre is dispatched within 2 hours, or you receive a 100% refund. Your event does not get cancelled."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How far ahead should we book?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A few days' notice is usually enough for an intimate dinner; larger events and peak season deserve one to two weeks. WhatsApp replies arrive within about two hours."
-              }
-            }
-          ]
+        "areaServed": [
+          "Bali"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
         },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://mychef.id/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Best Private Chef Indonesia",
-              "item": "https://mychef.id/best-private-chef-indonesia"
-            }
-          ]
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "IDR",
+          "lowPrice": "700000",
+          "highPrice": "980000",
+          "description": "Why myCHEF is rated the best private chef service in Indonesia: Michelin-trained leadership, 560+ villas, world-class standards. WhatsApp us."
         }
-      ]
-    }]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is the best private chef in Indonesia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Judge by verifiable criteria: named culinary leadership, track record, independent reviews, professional standards and transparent pricing. myCHEF offers Michelin-trained leadership, 560+ villas served, 12,000+ guests, a 4.9/5 guest rating and upfront per-person pricing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does a top private chef cost in Indonesia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Private chef dinners start from IDR 700K per person; fine-dining tasting menus from IDR 950–980K per person, quoted ++ (11% government tax + 10% service charge) as one fixed figure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which areas of Bali do you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We serve villas and residences across Bali's main areas including Seminyak, Canggu, Pererenan, Sanur, Ubud and Uluwatu, to the same standard in each location."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can the chef handle dietary requirements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Halal, vegan, vegetarian, gluten-free, allergies and children's menus are built into every menu plan at no extra charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if our chef can't make it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A verified replacement of equivalent calibre is dispatched within 2 hours, or you receive a 100% refund. Your event does not get cancelled."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How far ahead should we book?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A few days' notice is usually enough for an intimate dinner; larger events and peak season deserve one to two weeks. WhatsApp replies arrive within about two hours."
+            }
+          }
+        ]
+      }
+    ]
   },
 {
     "slug": "private-chef-for-events",
@@ -411,98 +393,80 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "At-home fine dining across Indonesia: Michelin-trained chefs, premium ingredients and professional service in your home or villa. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Private Dining Indonesia — At-Home Fine Dining",
-    "jsonLd": [{
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Service",
-          "serviceType": "At-home private dining and fine dining service in Indonesia",
-          "provider": {
-            "@id": "https://mychef.id/#business"
-          },
-          "areaServed": [
-            "Bali"
-          ],
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "IDR",
-            "lowPrice": "700000",
-            "highPrice": "980000",
-            "description": "At-home fine dining across Indonesia: Michelin-trained chefs, premium ingredients and professional service in your home or villa. WhatsApp myCHEF."
-          }
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "At-home private dining and fine dining service in Indonesia",
+        "provider": {
+          "@id": "https://mychef.id/#business"
         },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is at-home private dining?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A professional chef and service team deliver a complete restaurant-grade evening in your home or villa — menu design, fresh shopping, on-site cooking, plated service and full cleanup."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is the kitchen really left clean?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Always. Full cleanup and kitchen reset are part of every private dining booking."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you serve private dining across all of Bali?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. We serve private dining throughout Bali's main villa areas and can arrange service at more remote estates and residences across the island."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can you handle dietary requirements?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes — halal, vegan, vegetarian, gluten-free, allergies and children's menus are built into the menu design at no extra charge."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How far ahead should we book private dining?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A few days' notice usually works for an intimate dinner; larger celebrations and peak dates deserve one to two weeks. WhatsApp replies arrive within about two hours."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How many guests can you serve?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From an intimate dinner for two upwards — larger celebrations add chefs and service staff to the same standard."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://mychef.id/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Private Dining Indonesia",
-              "item": "https://mychef.id/private-dining-indonesia"
-            }
-          ]
+        "areaServed": [
+          "Bali"
+        ],
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "IDR",
+          "lowPrice": "700000",
+          "highPrice": "980000",
+          "description": "At-home fine dining across Indonesia: Michelin-trained chefs, premium ingredients and professional service in your home or villa. WhatsApp myCHEF."
         }
-      ]
-    }]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is at-home private dining?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A professional chef and service team deliver a complete restaurant-grade evening in your home or villa — menu design, fresh shopping, on-site cooking, plated service and full cleanup."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the kitchen really left clean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Always. Full cleanup and kitchen reset are part of every private dining booking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you serve private dining across all of Bali?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We serve private dining throughout Bali's main villa areas and can arrange service at more remote estates and residences across the island."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you handle dietary requirements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — halal, vegan, vegetarian, gluten-free, allergies and children's menus are built into the menu design at no extra charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How far ahead should we book private dining?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A few days' notice usually works for an intimate dinner; larger celebrations and peak dates deserve one to two weeks. WhatsApp replies arrive within about two hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many guests can you serve?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "From an intimate dinner for two upwards — larger celebrations add chefs and service staff to the same standard."
+            }
+          }
+        ]
+      }
+    ]
   },
   {
     "slug": "healthy-meal-delivery-indonesia",
@@ -631,98 +595,80 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Chef for Hire Indonesia — Private Chef Services",
-    "jsonLd": [{
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Service",
-          "serviceType": "Private chef hire in Indonesia — one-off dinners, daily villa service, recurring personal chef, full-time placement",
-          "provider": {
-            "@id": "https://mychef.id/#business"
-          },
-          "areaServed": [
-            "Bali"
-          ],
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "IDR",
-            "lowPrice": "700000",
-            "highPrice": "8000000",
-            "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali. WhatsApp myCHEF."
-          }
+    "jsonLd": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Private chef hire in Indonesia — one-off dinners, daily villa service, recurring personal chef, full-time placement",
+        "provider": {
+          "@id": "https://mychef.id/#business"
         },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Can I hire a chef for just one dinner in Indonesia?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes — one-off dinners, BBQs, birthdays and tasting menus are the most common booking. Send the date, location, guest count and preferred style."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can you travel between islands or to remote villas?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Within Bali, travel is routine. Remote and inter-island assignments are confirmed individually with transport, accommodation and ingredient planning built into the quote."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are groceries included in the price?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Fine-dining and event menus include ingredients. Time-based services bill groceries at cost with receipts and no markup. The written quote states which model applies."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How far in advance should I book a chef?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Earlier is better for holidays, large groups and multi-day service, but same-week and sometimes same-day bookings are often possible. WhatsApp replies arrive within 2 hours."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can the chef handle halal, vegan, allergies and kids' meals?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes — share requirements before menu approval, including allergy severity and cross-contact concerns, and the menu is built around them at no extra charge."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What if the chef can't make it on the day?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A verified replacement of equivalent calibre is dispatched within 2 hours, or you receive a 100% refund. Your event does not get cancelled."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://mychef.id/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Chef for Hire Indonesia",
-              "item": "https://mychef.id/chef-for-hire-indonesia"
-            }
-          ]
+        "areaServed": [
+          "Bali"
+        ],
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "IDR",
+          "lowPrice": "700000",
+          "highPrice": "8000000",
+          "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali. WhatsApp myCHEF."
         }
-      ]
-    }]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I hire a chef for just one dinner in Indonesia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — one-off dinners, BBQs, birthdays and tasting menus are the most common booking. Send the date, location, guest count and preferred style."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you travel between islands or to remote villas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Within Bali, travel is routine. Remote and inter-island assignments are confirmed individually with transport, accommodation and ingredient planning built into the quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are groceries included in the price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fine-dining and event menus include ingredients. Time-based services bill groceries at cost with receipts and no markup. The written quote states which model applies."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How far in advance should I book a chef?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Earlier is better for holidays, large groups and multi-day service, but same-week and sometimes same-day bookings are often possible. WhatsApp replies arrive within 2 hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can the chef handle halal, vegan, allergies and kids' meals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — share requirements before menu approval, including allergy severity and cross-contact concerns, and the menu is built around them at no extra charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if the chef can't make it on the day?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A verified replacement of equivalent calibre is dispatched within 2 hours, or you receive a 100% refund. Your event does not get cancelled."
+            }
+          }
+        ]
+      }
+    ]
   },
 {
     "slug": "proposal-dinner",

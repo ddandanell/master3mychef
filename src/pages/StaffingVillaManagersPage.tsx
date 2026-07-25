@@ -20,33 +20,21 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a villa-staffing partnership in Bali', intent: 'availability and tailored quote' })
 
-const briefJsonLd = {
+const serviceJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      '@id': 'https://mychef.id/staffing/for-villa-managers#service',
-      name: 'Staffing for Villa Managers Bali',
-      serviceType: 'B2B hospitality staffing for villa management companies',
-      provider: {
-        '@type': 'Organization',
-        name: 'myCHEF',
-        url: 'https://mychef.id',
-        telephone: '+62 896-7407-2020',
-      },
-      areaServed: 'Bali',
-      description:
-        'Outsourced hospitality staffing for Bali villa managers: pre-vetted chefs and front-of-house staff, 48–72 hour fills, retainer pools and tailored partnership plans for portfolios.',
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
-        { '@type': 'ListItem', position: 2, name: 'Staffing', item: 'https://mychef.id/staffing' },
-        { '@type': 'ListItem', position: 3, name: 'For Villa Managers', item: 'https://mychef.id/staffing/for-villa-managers' },
-      ],
-    },
-  ],
+  '@type': 'Service',
+  '@id': 'https://mychef.id/staffing/for-villa-managers#service',
+  name: 'Staffing for Villa Managers Bali',
+  serviceType: 'B2B hospitality staffing for villa management companies',
+  provider: {
+    '@type': 'Organization',
+    name: 'myCHEF',
+    url: 'https://mychef.id',
+    telephone: '+62 896-7407-2020',
+  },
+  areaServed: 'Bali',
+  description:
+    'Outsourced hospitality staffing for Bali villa managers: pre-vetted chefs and front-of-house staff, 48–72 hour fills, retainer pools and tailored partnership plans for portfolios.',
 }
 
 const PRICING_TIERS = [
@@ -117,7 +105,7 @@ export default function StaffingVillaManagersPage() {
         description={getPageMeta('staffing-for-villa-managers').description}
         canonical={getPageMeta('staffing-for-villa-managers').canonical}
         ogImage={getPageMeta('staffing-for-villa-managers').ogImage}
-        jsonLd={[briefJsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
+        jsonLd={[serviceJsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* Hero */}

@@ -4,7 +4,7 @@ import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, ChefH
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -21,87 +21,31 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'villa staff in Bali', intent: 'availability and tailored quote' })
 
-const briefJsonLd = {
+const serviceJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      '@id': 'https://mychef.id/staffing/villa-staff#service',
-      name: 'Hire Villa Staff Bali',
-      serviceType: 'Long-term villa staff placement',
-      provider: {
-        '@type': 'Organization',
-        name: 'myCHEF',
-        url: 'https://mychef.id',
-        telephone: '+62 896-7407-2020',
-      },
-      areaServed: 'Bali',
-      description:
-        'Long-term placement of villa managers, housekeepers, gardeners, pool staff and security for Bali villas and estates. Individual hires or full villa teams, with contracts, payroll guidance and a 30-day replacement guarantee.',
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How long does villa staff recruitment take?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Typically one to two weeks from brief to placement. Interviews are scheduled within three to five days of shortlist approval.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What if the staff member is not the right fit?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What roles can you fill for my villa?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Villa managers, housekeepers, hosts, gardeners, pool attendants, security guards, maintenance staff and drivers — as individual hires or a full villa team.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do you handle contracts and payroll for villa staff?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. We handle the employment-contract paperwork and advise on payroll, BPJS and THR obligations; complex multi-property arrangements are referred to trusted payroll partners.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Live-in or live-out staff?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Both. Live-in arrangements are common for housekeepers and villa managers and are defined in the employment contract; live-out staff are placed from the local area around your property.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is your placement fee?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'One month of the staff member\'s salary, covering sourcing, interviews, background verification, contract preparation and six months of ongoing support.',
-          },
-        },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
-        { '@type': 'ListItem', position: 2, name: 'Staffing', item: 'https://mychef.id/staffing' },
-        { '@type': 'ListItem', position: 3, name: 'Villa Staff', item: 'https://mychef.id/staffing/villa-staff' },
-      ],
-    },
-  ],
+  '@type': 'Service',
+  '@id': 'https://mychef.id/staffing/villa-staff#service',
+  name: 'Hire Villa Staff Bali',
+  serviceType: 'Long-term villa staff placement',
+  provider: {
+    '@type': 'Organization',
+    name: 'myCHEF',
+    url: 'https://mychef.id',
+    telephone: '+62 896-7407-2020',
+  },
+  areaServed: 'Bali',
+  description:
+    'Long-term placement of villa managers, housekeepers, gardeners, pool staff and security for Bali villas and estates. Individual hires or full villa teams, with contracts, payroll guidance and a 30-day replacement guarantee.',
 }
+
+const faqJsonLd = faqPageSchema([
+  { question: 'How long does villa staff recruitment take?', answer: 'Typically one to two weeks from brief to placement. Interviews are scheduled within three to five days of shortlist approval.' },
+  { question: 'What if the staff member is not the right fit?', answer: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.' },
+  { question: 'What roles can you fill for my villa?', answer: 'Villa managers, housekeepers, hosts, gardeners, pool attendants, security guards, maintenance staff and drivers — as individual hires or a full villa team.' },
+  { question: 'Do you handle contracts and payroll for villa staff?', answer: 'Yes. We handle the employment-contract paperwork and advise on payroll, BPJS and THR obligations; complex multi-property arrangements are referred to trusted payroll partners.' },
+  { question: 'Live-in or live-out staff?', answer: 'Both. Live-in arrangements are common for housekeepers and villa managers and are defined in the employment contract; live-out staff are placed from the local area around your property.' },
+  { question: 'What is your placement fee?', answer: 'One month of the staff member\'s salary, covering sourcing, interviews, background verification, contract preparation and six months of ongoing support.' },
+])
 
 const PRICING_TIERS = [
   {
@@ -187,7 +131,7 @@ export default function StaffingVillaStaffPage() {
         description={getPageMeta('staffing-villa-staff').description}
         canonical={getPageMeta('staffing-villa-staff').canonical}
         ogImage={getPageMeta('staffing-villa-staff').ogImage}
-        jsonLd={briefJsonLd}
+        jsonLd={[serviceJsonLd, faqJsonLd]}
       />
 
       <Breadcrumb items={[

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, X, Phone, Calendar, Star, ShieldCheck, Award, FlaskConical } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -20,55 +20,41 @@ gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'a mixology / cocktail experience in Bali', intent: 'availability and pricing' })
 
-const briefJsonLd = {
+const serviceJsonLd = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Service',
-      name: 'Mixologist Hire Bali',
-      serviceType: 'Mixology and custom cocktail programs',
-      provider: {
-        '@type': 'Organization',
-        name: 'myCHEF',
-        url: 'https://mychef.id',
-        telephone: '+62 896-7407-2020',
-        email: 'bali@mychef.id',
-      },
-      areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
-      description: 'Hire a professional mixologist in Bali for signature cocktail creation, interactive masterclasses and custom bar programs at your villa, from IDR 1,500,000 per session.',
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'IDR',
-        lowPrice: '1500000',
-        highPrice: '4000000',
-        offerCount: '3',
-        description: 'Cocktail Experience IDR 1,500,000/session; Mixology Masterclass IDR 2,500,000/session; Signature Program IDR 4,000,000/day. Spirits excluded. Subject to 11% tax + 10% service charge.',
-      },
-      url: 'https://mychef.id/in-villa-service/mixology',
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'How much does it cost to hire a mixologist in Bali?', acceptedAnswer: { '@type': 'Answer', text: 'From IDR 1,500,000 for a 2-hour Cocktail Experience (up to 8 guests); IDR 2,500,000 for a 3-hour Masterclass (up to 12); IDR 4,000,000 for a full-day Signature Program. Spirits excluded; prices subject to 11% tax + 10% service charge.' } },
-        { '@type': 'Question', name: 'Is the alcohol included?', acceptedAnswer: { '@type': 'Answer', text: 'No. The package covers the mixologist, menu design, mixers, juices, syrups, garnishes, ice, tools and glassware. Spirits are bought separately via recommendations, a shopping list, or at-cost sourcing.' } },
-        { '@type': 'Question', name: 'Can guests participate in making the cocktails?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — the Masterclass tier is hands-on: guests learn techniques, build their own drinks and take home recipe cards.' } },
-        { '@type': 'Question', name: 'Do you use local Balinese ingredients?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — arak from licensed producers, tropical fruits, Balinese spices and botanicals feature throughout our menus.' } },
-        { '@type': 'Question', name: 'Can you create a non-alcoholic experience?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Zero-proof programs with complex, layered mocktails are available and increasingly popular.' } },
-        { '@type': 'Question', name: 'What is the difference between this and hiring a bartender?', acceptedAnswer: { '@type': 'Answer', text: 'Mixology is a designed experience — custom menus, storytelling and technique. Bartender service is high-quality, high-volume drink service. Many events book both.' } },
-        { '@type': 'Question', name: 'How far in advance should I book?', acceptedAnswer: { '@type': 'Answer', text: '1–2 weeks for standard sessions; 3–4 weeks for Signature Programs in peak season.' } },
-        { '@type': 'Question', name: 'Which areas do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'Travel included across South Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur; other areas quoted by location.' } },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id' },
-        { '@type': 'ListItem', position: 2, name: 'In-Villa Service', item: 'https://mychef.id/in-villa-service' },
-        { '@type': 'ListItem', position: 3, name: 'Mixology', item: 'https://mychef.id/in-villa-service/mixology' },
-      ],
-    },
-  ],
+  '@type': 'Service',
+  name: 'Mixologist Hire Bali',
+  serviceType: 'Mixology and custom cocktail programs',
+  provider: {
+    '@type': 'Organization',
+    name: 'myCHEF',
+    url: 'https://mychef.id',
+    telephone: '+62 896-7407-2020',
+    email: 'bali@mychef.id',
+  },
+  areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
+  description: 'Hire a professional mixologist in Bali for signature cocktail creation, interactive masterclasses and custom bar programs at your villa, from IDR 1,500,000 per session.',
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'IDR',
+    lowPrice: '1500000',
+    highPrice: '4000000',
+    offerCount: '3',
+    description: 'Cocktail Experience IDR 1,500,000/session; Mixology Masterclass IDR 2,500,000/session; Signature Program IDR 4,000,000/day. Spirits excluded. Subject to 11% tax + 10% service charge.',
+  },
+  url: 'https://mychef.id/in-villa-service/mixology',
 }
+
+const faqJsonLd = faqPageSchema([
+  { question: 'How much does it cost to hire a mixologist in Bali?', answer: 'From IDR 1,500,000 for a 2-hour Cocktail Experience (up to 8 guests); IDR 2,500,000 for a 3-hour Masterclass (up to 12); IDR 4,000,000 for a full-day Signature Program. Spirits excluded; prices subject to 11% tax + 10% service charge.' },
+  { question: 'Is the alcohol included?', answer: 'No. The package covers the mixologist, menu design, mixers, juices, syrups, garnishes, ice, tools and glassware. Spirits are bought separately via recommendations, a shopping list, or at-cost sourcing.' },
+  { question: 'Can guests participate in making the cocktails?', answer: 'Yes — the Masterclass tier is hands-on: guests learn techniques, build their own drinks and take home recipe cards.' },
+  { question: 'Do you use local Balinese ingredients?', answer: 'Yes — arak from licensed producers, tropical fruits, Balinese spices and botanicals feature throughout our menus.' },
+  { question: 'Can you create a non-alcoholic experience?', answer: 'Yes. Zero-proof programs with complex, layered mocktails are available and increasingly popular.' },
+  { question: 'What is the difference between this and hiring a bartender?', answer: 'Mixology is a designed experience — custom menus, storytelling and technique. Bartender service is high-quality, high-volume drink service. Many events book both.' },
+  { question: 'How far in advance should I book?', answer: '1–2 weeks for standard sessions; 3–4 weeks for Signature Programs in peak season.' },
+  { question: 'Which areas do you cover?', answer: 'Travel included across South Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur; other areas quoted by location.' },
+])
 
 const PRICING_TIERS = [
   {
@@ -194,7 +180,7 @@ export default function ServiceMixologyPage() {
         description={getPageMeta('in-villa-service-mixology').description}
         canonical={getPageMeta('in-villa-service-mixology').canonical}
         ogImage={getPageMeta('in-villa-service-mixology').ogImage}
-        jsonLd={briefJsonLd}
+        jsonLd={[serviceJsonLd, faqJsonLd]}
       />
 
       {/* Hero */}

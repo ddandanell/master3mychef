@@ -133,15 +133,6 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Private Dining in Denpasar: Where to Eat & In-Villa Chef Options',
   },
 
-      'locations-jakarta': {
-    path: '/locations/jakarta',
-    title: 'Private Chef Jakarta | Residences & Corporate Dining',
-    description:
-      'Premium private chef and corporate catering in Jakarta — Menteng, SCBD, Kemang & Pondok Indah. Michelin-trained standards. WhatsApp myCHEF.',
-    canonical: `${SITE}/locations/jakarta`,
-    h1: 'Private Chef in Jakarta',
-  },
-
       'private-chef-seminyak': {
     path: '/private-chef/seminyak',
     title: 'Private Chef in Seminyak, Bali | Hire a Chef for Your Villa',
@@ -803,7 +794,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/wedding-catering-indonesia',
     title: 'Wedding Catering Indonesia | Villa Wedding Specialists',
     description:
-      'Premium wedding catering across Indonesia — Bali, Jakarta & beyond. Custom menus, full service teams and event coordination. WhatsApp myCHEF.',
+      'Premium wedding catering across Indonesia — Bali and beyond. Custom menus, full service teams and event coordination. WhatsApp myCHEF.',
     canonical: `${SITE}/wedding-catering-indonesia`,
     h1: 'Wedding Catering Indonesia — Villa Wedding Specialists',
   },
@@ -821,7 +812,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/healthy-meal-delivery-indonesia',
     title: 'Healthy Meal Delivery Bali | Chef-Prepared Meal Plans',
     description:
-      'Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.',
+      'Healthy meal delivery in Bali: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.',
     canonical: `${SITE}/healthy-meal-delivery-indonesia`,
     h1: 'Healthy Meal Delivery — Chef-Prepared, Delivered',
   },
@@ -830,7 +821,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/chef-for-hire-indonesia',
     title: 'Chef for Hire Indonesia | Private & Personal Chefs | myCHEF',
     description:
-      'Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali & Jakarta. WhatsApp myCHEF.',
+      'Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali. WhatsApp myCHEF.',
     canonical: `${SITE}/chef-for-hire-indonesia`,
     h1: 'Chef for Hire Indonesia — Private Chef Services',
   },
@@ -851,15 +842,6 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Private chef experiences for honeymooners in Bali: romantic breakfasts, sunset dinners and intimate in-villa hosting. WhatsApp myCHEF.',
     canonical: `${SITE}/honeymoon-chef`,
     h1: 'Honeymoon Chef Bali — Private Villa Dining for Two',
-  },
-
-      'private-chef-menteng': {
-    path: '/private-chef-menteng',
-    title: 'Private Chef Menteng | Diplomatic District Dining | myCHEF',
-    description:
-      'Discreet private chef services for Jakarta’s Menteng district — elite residential hospitality by Michelin-trained chefs. WhatsApp myCHEF.',
-    canonical: `${SITE}/private-chef-menteng`,
-    h1: 'Private Chef in Menteng, Jakarta',
   },
 
       'guide-private-chef-bali': {
@@ -1178,15 +1160,6 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Everything about catering a destination wedding in Bali — menu design, budgets and cultural considerations.',
     canonical: `${SITE}/journal/bali-wedding-catering-complete-guide`,
     h1: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
-  },
-
-      'journal-private-chef-jakarta-guide': {
-    path: '/journal/private-chef-jakarta-guide',
-    title: 'Private Chef Jakarta Guide: What to Expect (2026) | myCHEF',
-    description:
-      'The complete guide to hiring a private chef in Jakarta — from Menteng estates to SCBD boardrooms, pricing and logistics.',
-    canonical: `${SITE}/journal/private-chef-jakarta-guide`,
-    h1: 'Private Chef Services in Jakarta: What to Expect in 2026',
   },
 
       'journal-rehearsal-dinner-planning-bali': {
@@ -2105,9 +2078,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations',
     title: 'Private Chef Locations Bali | All Areas We Serve | myCHEF',
     description:
-      'Private chef coverage across Bali & Jakarta — Seminyak, Canggu, Ubud, Uluwatu and 60+ areas. Find your location. WhatsApp myCHEF.',
+      'Private chef coverage across Bali — Seminyak, Canggu, Ubud, Uluwatu and 60+ areas. Find your location. WhatsApp myCHEF.',
     canonical: `${SITE}/locations`,
-    h1: 'Private Chef & Hospitality Across Bali & Jakarta',
+    h1: 'Private Chef & Hospitality Across Bali',
     ogImage: `${SITE}/generated/hub-villa.webp`,
   },
 
@@ -2227,7 +2200,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/staffing',
     title: 'Villa Staff Placement Bali | Hospitality Staffing Agency',
     description:
-      'Villa staff placement in Bali & Jakarta: long-term private chefs, villa managers, butlers & hospitality teams. Vetted, guaranteed. WhatsApp myCHEF.',
+      'Villa staff placement in Bali: long-term private chefs, villa managers, butlers & hospitality teams. Vetted, guaranteed. WhatsApp myCHEF.',
     canonical: `${SITE}/staffing`,
     h1: 'Hire Vetted Hospitality Staff for Your Villa, Hotel or Home',
     ogImage: `${SITE}/generated/luna-chef-portrait.webp`,
@@ -2315,15 +2288,6 @@ export const PAGE_META: Record<string, PageMeta> = {
       'What professional event hostesses do, when you need one, and how hiring works for Bali villa parties and corporate events.',
     canonical: `${SITE}/blog/hostess-hire-bali`,
     h1: 'Event Hostess Hire in Bali — A Practical Guide',
-  },
-
-      'blog-private-chef-surabaya-guide': {
-    path: '/blog/private-chef-surabaya-guide',
-    title: 'Private Chef Surabaya | In-Home & Corporate Catering',
-    description:
-      'Hire a private chef in Surabaya for in-home dinners, weekly household service or corporate entertaining. Halal available. WhatsApp myCHEF.',
-    canonical: `${SITE}/blog/private-chef-surabaya-guide`,
-    h1: 'Private Chef in Surabaya — In-Home Chef Service for East Java',
   },
 
       'blog-chef-for-photoshoot-bali': {

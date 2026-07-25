@@ -105,7 +105,7 @@ export default function LocationsHubPage() {
             <Breadcrumb items={[{ label: 'Locations' }]} theme="dark" className="px-0 pt-0 pb-8" />
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF Coverage</p>
             <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">
-              {"Private Chef & Hospitality Across Bali & Jakarta"}
+              {"Private Chef & Hospitality Across Bali"}
             </h1>
             <p className="text-lg md:text-xl text-white/[85%] leading-relaxed mb-10 max-w-[600px]">
               From Seminyak's beachfront estates to Ubud's jungle retreats — myCHEF serves every major Bali region with vetted teams and local operations.

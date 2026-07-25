@@ -242,7 +242,7 @@ export default function HubPage() {
       postalCode: '80226',
       addressCountry: 'ID',
     },
-    areaServed: ['Seminyak','Canggu','Ubud','Uluwatu','Sanur','Nusa Dua','Jimbaran','Berawa','Pererenan','Bukit','Jakarta'],
+    areaServed: ['Seminyak','Canggu','Ubud','Uluwatu','Sanur','Nusa Dua','Jimbaran','Berawa','Pererenan','Bukit'],
     priceRange: 'IDR 700,000 - IDR 3,000,000+ per person',
     founder: { '@type': 'Person', 'name': 'Adriano' },
     servesCuisine: ['Italian', 'Mediterranean', 'Indonesian', 'International'],
@@ -1201,8 +1201,7 @@ export default function HubPage() {
                 {idx < arr.length - 1 ? ' · ' : ''}
               </span>
             ))}
-            {' '}plus Jakarta for residences and corporate dining.
-          </p>
+                      </p>
           <div className="text-center mt-6">
             <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               View All Locations <ArrowRight className="w-4 h-4" />

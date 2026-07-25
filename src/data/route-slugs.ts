@@ -23,7 +23,6 @@ export const LANDING_PAGE_SLUGS: string[] = [
   'private-dining-indonesia',
   'healthy-meal-delivery-indonesia',
   'private-chef-booking-indonesia',
-  'private-chef-menteng',
   'chef-for-hire-indonesia',
   'proposal-dinner',
   'honeymoon-chef',

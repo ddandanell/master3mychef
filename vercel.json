@@ -985,6 +985,11 @@
       "permanent": true
     },
     {
+      "source": "/private-chef-menteng",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/journal/private-chef-jakarta-guide",
       "destination": "/",
       "permanent": true

@@ -78,7 +78,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Which areas do you serve?',
-        a: "All of Bali's main villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit — plus Jakarta. Remote areas may add a small travel allowance, always quoted upfront.",
+        a: "All of Bali's main villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit. Remote areas may add a small travel allowance, always quoted upfront.",
       },
     ],
   },

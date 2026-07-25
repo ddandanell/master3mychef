@@ -286,6 +286,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/journal/wedding-catering-bali-cost', to: '/bali-wedding-catering-packages', reason: 'Dead journal link → live wedding catering packages page.' },
 
   // --- 2026-07-25: Jakarta focus removed; old city guides → homepage ---
+  { from: '/private-chef-menteng', to: '/', reason: 'Jakarta focus removed; redirect to homepage.' },
   { from: '/journal/private-chef-jakarta-guide', to: '/', reason: 'Jakarta no longer a focus; redirect to homepage.' },
   { from: '/blog/private-chef-surabaya-guide', to: '/', reason: 'Surabaya/Jakarta no longer a focus; redirect to homepage.' },
   { from: '/locations/jakarta', to: '/', reason: 'Jakarta location focus removed; redirect to homepage.' },

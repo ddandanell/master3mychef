@@ -401,7 +401,7 @@ export const LANDING_PAGES: ContentEntry[] = [
 {
     "slug": "wedding-catering-indonesia",
     "title": "Wedding Catering Indonesia | Villa Wedding Specialists",
-    "description": "Premium wedding catering across Indonesia — Bali, Jakarta & beyond. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
+    "description": "Premium wedding catering across Indonesia — Bali and beyond. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Wedding Catering Indonesia — Villa Wedding Specialists",
 },
@@ -507,7 +507,7 @@ export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "healthy-meal-delivery-indonesia",
     "title": "Healthy Meal Delivery Bali | Chef-Prepared Meal Plans",
-    "description": "Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
+    "description": "Healthy meal delivery in Bali: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Healthy Meal Delivery — Chef-Prepared, Delivered",
     "jsonLd": [{
@@ -529,7 +529,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "name": "Bali"
             }
           ],
-          "description": "Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
+          "description": "Healthy meal delivery in Bali: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF.",
           "offers": {
             "@type": "Offer",
             "priceCurrency": "IDR",
@@ -540,7 +540,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "priceCurrency": "IDR",
               "unitText": "per week for 2-4 people"
             },
-            "description": "Healthy meal delivery in Bali & Jakarta: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF."
+            "description": "Healthy meal delivery in Bali: chef-prepared, organic, nutrient-dense menus for villas and residences. WhatsApp myCHEF."
           },
           "url": "https://mychef.id/healthy-meal-delivery-indonesia"
         },
@@ -628,7 +628,7 @@ export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "chef-for-hire-indonesia",
     "title": "Chef for Hire Indonesia | Private & Personal Chefs | myCHEF",
-    "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali & Jakarta. WhatsApp myCHEF.",
+    "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Chef for Hire Indonesia — Private Chef Services",
     "jsonLd": [{
@@ -648,7 +648,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "priceCurrency": "IDR",
             "lowPrice": "700000",
             "highPrice": "8000000",
-            "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali & Jakarta. WhatsApp myCHEF."
+            "description": "Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali. WhatsApp myCHEF."
           }
         },
         {
@@ -744,11 +744,4 @@ export const LANDING_PAGES: ContentEntry[] = [
     "description": "Wake up to a chef-prepared breakfast in your Bali villa. Floating trays, fresh juices, and international spreads.",
     "date": "2026-05-17"
   },
-{
-    "slug": "private-chef-menteng",
-    "title": "Private Chef Menteng | Diplomatic District Dining | myCHEF",
-    "description": "Discreet private chef services for Jakarta’s Menteng district — elite residential hospitality by Michelin-trained chefs. WhatsApp myCHEF.",
-    "date": "2026-05-17",
-    "h1": "Private Chef in Menteng, Jakarta"
-}
 ]

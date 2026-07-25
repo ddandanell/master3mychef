@@ -422,7 +422,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,350,000 per session',
     pricingNote:
-      'Executive fine dining from IDR 1,200,000 per person. Corporate full-board quoted per person per day; minimum spend IDR 15,000,000 for corporate programmes. A 50% deposit secures your date.',
+      `Executive fine dining from IDR 1,200,000 per person. Corporate full-board quoted per person per day; minimum spend ${siteFacts.corporateMinSpend} for corporate programmes. A 50% deposit secures your date.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {

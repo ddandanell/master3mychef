@@ -1194,11 +1194,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mychef.id/quote</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://mychef.id/faq</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>

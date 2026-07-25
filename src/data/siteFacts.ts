@@ -19,6 +19,9 @@ export const siteFacts = {
   /** When the remaining balance is due. */
   balanceTiming: 'the day before the event',
 
+  /** Minimum spend for corporate events and corporate catering programmes. */
+  corporateMinSpend: 'IDR 50,000,000',
+
   /**
    * Cancellation policy wording, taken verbatim from /cancellation.
    * Cancellations made 14 or more days before the event receive a full refund.

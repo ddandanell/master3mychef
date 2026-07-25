@@ -114,7 +114,7 @@ const SECTIONS = [
       thead(['Format', 'Price from']) +
       tbody([
         ['Wedding catering', 'IDR 1.5M–3M+ per person'],
-        ['Corporate events', 'IDR 15M total (min. spend)'],
+        ['Corporate events', `${siteFacts.corporateMinSpend} total (min. spend)`],
         ['Birthday celebrations', 'IDR 8M total'],
         ['Retreat catering (full board)', 'Contact us for a custom proposal'],
       ])
@@ -200,7 +200,7 @@ const FAQS = [
   {
     question: 'Is there a minimum guest count or spend?',
     answer:
-      'Private chef sessions from IDR 1,350K cover up to 6 guests. Fine dining starts at 6 guests (2 for romantic dinners). Corporate catering carries a minimum spend of IDR 15M.',
+      `Private chef sessions from IDR 1,350K cover up to 6 guests. Fine dining starts at 6 guests (2 for romantic dinners). Corporate catering carries a minimum spend of ${siteFacts.corporateMinSpend}.`,
   },
 ]
 

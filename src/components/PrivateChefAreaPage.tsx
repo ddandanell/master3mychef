@@ -179,7 +179,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       },
     },
     faqPageSchema(area.faqs.map((f) => ({ question: f.q, answer: f.a }))),
-    breadcrumbSchema(area.name, canonical, 'Private Chef Bali', `${SITE}/private-chef-bali`),
+    breadcrumbSchema(area.name, canonical, 'Private Chef Bali', `${SITE}/`),
   ]
 
   const availableServices = SERVICE_CARDS.filter((s) => area.services.includes(s.id))
@@ -662,7 +662,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               { label: 'Villa Catering', href: '/catering', icon: Utensils },
               { label: 'Events & Weddings', href: '/events', icon: Sparkles },
               { label: 'Staffing', href: '/staffing', icon: Users },
-              { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', icon: ChefHat },
+              { label: 'Private Chef Bali', href: '/', icon: ChefHat },
               { label: 'Pricing Guide', href: '/pricing', icon: Check },
               { label: 'Book myCHEF', href: '/book', icon: CalendarCheck },
               { label: 'Get a Quote', href: '/quote', icon: MessageCircle },

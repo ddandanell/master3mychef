@@ -72,7 +72,8 @@
 /private-chef-cost-bali  /pricing  301
 /retreats  /events/retreats  301
 /corporate-events  /events/corporate-events  301
-/villa-partners  /partner-platform  301
+/villa-partners  /certified-partner  301
+/partner-platform  /certified-partner  301
 /catering/buffet-catering  /catering/buffet  301
 /services/private-chef  /in-villa-service  301
 /services/private-dining  /fine-dining  301

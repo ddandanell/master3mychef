@@ -371,7 +371,12 @@
     },
     {
       "source": "/villa-partners",
-      "destination": "/partner-platform",
+      "destination": "/certified-partner",
+      "permanent": true
+    },
+    {
+      "source": "/partner-platform",
+      "destination": "/certified-partner",
       "permanent": true
     },
     {

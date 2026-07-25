@@ -96,7 +96,7 @@ const CATERING_DISCOVERY_CONTENT: Record<
         eyebrow: 'Related service',
         title: 'Private chef fine dining for special nights',
         description: 'Pair your broader villa meal plan with one standout fine-dining dinner during the stay.',
-        href: '/fine-dining/private-chef-bali',
+        href: '/fine-dining',
       },
       {
         eyebrow: 'Booking',
@@ -126,7 +126,7 @@ const CATERING_DISCOVERY_CONTENT: Record<
         eyebrow: 'Related service',
         title: 'Private chef dinners for executives',
         description: 'Compare larger corporate catering with chef-led board dinners and smaller hosted evenings.',
-        href: '/fine-dining/private-chef-bali',
+        href: '/fine-dining',
       },
       {
         eyebrow: 'Contact',
@@ -186,7 +186,7 @@ const CATERING_DISCOVERY_CONTENT: Record<
         eyebrow: 'Related service',
         title: 'Private chef fine dining in Bali',
         description: 'Compare plated catering with a more intimate chef-led tasting menu when guest counts are smaller.',
-        href: '/fine-dining/private-chef-bali',
+        href: '/fine-dining',
       },
       {
         eyebrow: 'Contact',

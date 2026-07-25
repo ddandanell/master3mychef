@@ -231,7 +231,7 @@ const FAQS = [
   { question: 'Can non-drinkers and kids be catered for?', answer: 'Yes — a dedicated zero-proof cocktail list is part of every menu, at no compromise on presentation.' },
   { question: 'What does our villa need to provide?', answer: 'A workable space for the bar and kitchen access. We bring all bar equipment; power and layout needs are confirmed during planning.' },
   { question: 'How far in advance should we book?', answer: 'Two to three weeks is comfortable; four to six for July–August and December. Last-minute requests are often possible — ask.' },
-  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your date and team; the balance is due before the event.' },
+  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your date and team; the balance is due the day before the event.' },
 ]
 
 const RELATED_PAGES = [

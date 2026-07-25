@@ -63,7 +63,7 @@ const FAQS = [
   },
   {
     q: 'How do I secure my date?',
-    a: 'A 50% deposit secures your date, chef and menu; the balance is due before the event. Message us your date, guest count and villa — we confirm availability within the hour.',
+    a: 'A 50% deposit secures your date, chef and menu; the balance is due the day before the event. Message us your date, guest count and villa — we confirm availability within the hour.',
   },
 ]
 
@@ -75,7 +75,7 @@ const RELATED_COLLECTIONS = [
     note: '24 menus, from IDR 1.25M per guest',
   },
   {
-    to: '/fine-dining/private-chef-bali',
+    to: '/',
     label: 'Private Chef Service',
     title: 'Private chef service in Bali',
     note: 'For a more formal evening',
@@ -262,7 +262,7 @@ export default function ThreeCoursePage() {
             <li>Table setup and plated or shared service, course by course</li>
             <li>Full cleanup — we pack up and leave the kitchen spotless</li>
             <li>Service staff at 1 waiter per 10 guests</li>
-            <li>A 50% deposit secures your date; the balance is due before the event</li>
+            <li>A 50% deposit secures your date; the balance is due the day before the event</li>
           </ul>
           <p className="mt-6 text-white/60 text-center">
             Want a waiter, bartender or sommelier for a longer evening? Service staff can be added from IDR 250,000 per hour.

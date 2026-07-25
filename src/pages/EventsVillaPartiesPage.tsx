@@ -114,7 +114,7 @@ const FAQS = [
   { q: 'Can you handle dietary requirements?', a: 'Yes — vegetarian, vegan, gluten-free and allergy-aware options are planned into every menu at briefing, across canapés, BBQ and sharing formats.' },
   { q: 'Can we have a pool party?', a: 'Absolutely — many of our villa parties are poolside. We provide pool floats and waterproof decor, and time food service around swimming.' },
   { q: 'What happens if it rains?', a: 'Every outdoor format has a covered fallback planned in advance: grill stations move to sheltered areas, the bar relocates under cover, and the timeline flexes around the weather.' },
-  { q: 'How do deposits, timing and cancellation work?', a: 'Sundowners start at 5:30pm for sunset; cocktail receptions from 4pm; mixers from 7pm. A 50% deposit confirms your date (aligned to live page figure; sitewide unification pending business decision). Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { q: 'How do deposits, timing and cancellation work?', a: 'Sundowners start at 5:30pm for sunset; cocktail receptions from 4pm; mixers from 7pm. A 50% deposit confirms your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
 ]
 
 const VILLA_RULES_POINTS = [

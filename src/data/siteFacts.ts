@@ -17,7 +17,7 @@ export const siteFacts = {
   depositPercent: 50,
 
   /** When the remaining balance is due. */
-  balanceTiming: 'when the chef arrives at your villa, before service begins',
+  balanceTiming: 'the day before the event',
 
   /**
    * Cancellation policy wording, taken verbatim from /cancellation.

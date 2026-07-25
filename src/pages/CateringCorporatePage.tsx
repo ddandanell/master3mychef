@@ -116,7 +116,7 @@ const FAQS = [
   { q: 'What does "++" mean on your quotes?', a: 'It means 11% government tax and 10% service charge are added on top of the quoted price. Your formal proposal shows the all-in total before you commit.' },
   { q: 'Can you invoice our company properly?', a: 'Yes. We are NPWP-registered and issue full tax invoices with itemised breakdowns. Net-14 terms are available for regular corporate clients.' },
   { q: 'How do you handle halal, vegan, gluten-free and allergy requirements across a large group?', a: 'Through a pre-event dietary intake form, a kitchen briefing against the actual guest list, labelled dishes, and separate prep zones for allergens. Dietary guests are integrated into the main service, not singled out.' },
-  { q: 'What deposit is required?', a: 'A 50% deposit confirms your date and team; the balance is due 7 days before the event.' },
+  { q: 'What deposit is required?', a: 'A 50% deposit confirms your date and team; the balance is due the day before the event.' },
   { q: 'How far in advance should we book?', a: 'Two to four weeks is ideal for most corporate catering. For conferences of 100+ guests, one to two months secures the best team and logistics.' },
   { q: 'Do you cater at offices and venues, or only villas?', a: 'All three — offices, villas, co-working spaces, hotels and conference venues, Bali-wide. For recurring office lunches, also see our <a href="/catering/drop-off-catering">drop-off catering for office lunches</a>.' },
 ]

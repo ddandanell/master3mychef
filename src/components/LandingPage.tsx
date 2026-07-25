@@ -336,7 +336,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           { question: 'Are these prices really all-in?', answer: 'Prices are quoted ++ (11% government tax + 10% service charge) with the all-in equivalent shown. Proposals state one final total with groceries at cost and no markups.' },
           { question: 'Do packages include staff, equipment and cleanup?', answer: 'Yes — chefs, waiters, setup crew, coordinator, mobile kitchen equipment, service ware and full cleanup are included. Rentals and bar stock are itemised separately.' },
           { question: 'Can we split the weekend into different packages?', answer: 'Yes — welcome dinner, reception and recovery brunch are quoted as separate lines in one proposal.' },
-          { question: 'When do we pay?', answer: 'A deposit confirms the date (a 50% deposit); the balance is due before the event, with tiered written cancellation terms.' },
+          { question: 'When do we pay?', answer: 'A deposit confirms the date (a 50% deposit); the remaining 50% is due the day before the event, with tiered written cancellation terms.' },
           { question: 'Do you cater dietary and halal weddings?', answer: 'Yes — halal-friendly, vegan, vegetarian, gluten-free and allergy protocols are standard, with separate prep lines where required.' },
           { question: 'Do packages change for peak season?', answer: 'Package prices do not change by season, but peak dates (July–September, December–January) book 3–10 months ahead.' },
           { question: 'What if it rains on an outdoor reception?', answer: 'Every outdoor package includes a wet-weather plan: marquee coordination and an agreed indoor relocation layout.' },
@@ -381,7 +381,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                   { question: 'How are dietary needs handled across a large group?', answer: 'Requirements are collected in advance; vegetarian, vegan, halal-sensitive, gluten-free and allergy-managed guests are covered in the main menu with every dish labelled.' },
                   { question: 'Is a villa kitchen big enough for 20+ guests?', answer: 'Almost always. Kitchen capacity, power and serving space are assessed before the date and missing equipment is brought in.' },
                   { question: 'Do villas charge extra for large gatherings?', answer: 'Some villas charge function fees and some neighbourhoods require a banjar permit for events beyond sleeping capacity. myCHEF flags this early and coordinates with the villa manager.' },
-                  { question: 'What deposit is required?', answer: 'A 50% deposit confirms the date and team; the balance is due before the event.' },
+                  { question: 'What deposit is required?', answer: 'A 50% deposit confirms the date and team; the remaining 50% is due the day before the event.' },
                   { question: 'How far ahead should a group dinner be booked?', answer: 'A few days to a week is usually enough; earlier in peak season. Travel fees may apply for remote areas and are quoted upfront.' },
                 ]
               : [

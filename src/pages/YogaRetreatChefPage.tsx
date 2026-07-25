@@ -60,20 +60,8 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Investment',
     title: 'Retreat Catering Costs in Bali',
-    body: `<p><strong>Per-Person Daily Rates (3 meals + snacks):</strong></p>
-    <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li>Budget (local ingredients, simple plant-based): IDR 300K–500K/person/day</li>
-      <li>Standard (organic where possible, variety, snacks): IDR 500K–800K/person/day</li>
-      <li>Premium (certified organic, specialty items, smoothie bars): IDR 800K–1.5M/person/day</li>
-    </ul>
-    <p>See our full <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">private chef pricing guide</a> for a complete breakdown of chef fees and service rates.</p>
-    <p><strong>Chef Service Fee (separate from ingredients):</strong></p>
-    <ul style="margin: 1rem 0; padding-left: 2rem;">
-      <li>1 chef for 8–15 guests: IDR 1.5M–2.5M/day</li>
-      <li>Chef team for 15–30 guests: IDR 3M–5M/day</li>
-      <li>Full team for 30–60 guests: IDR 5M–9M/day</li>
-    </ul>
-    <p><strong>Example: 20-Guest 7-Day Retreat:</strong> Ingredients (IDR 600K × 20 × 7) = IDR 84M. Chef service (IDR 3.5M × 7) = IDR 24.5M. Total: ~IDR 108M for the full week (~IDR 770K/person/day all-in). This is significantly below equivalent retreat catering costs in Western markets.</p>`,
+    body: `<p>Every retreat is different, so we quote each programme individually. Cost depends on guest count, length of stay, dietary approach, organic sourcing level, and how much front-of-house service you need. We deliver a fixed, itemised quote before you commit — no hidden fees.</p>
+    <p>Share your retreat dates, guest count and dietary approach and we will match you with a chef experienced in retreat nutrition and send a tailored proposal.</p>`,
   },
   {
     id: 'cta',
@@ -122,9 +110,9 @@ export default function YogaRetreatChefPage() {
     <PremiumPage
       slug="blog/yoga-retreat-chef-bali-meal-planning"
       title="Yoga Retreat Chef in Bali: Meal Planning & Retreat Nutrition Guide"
-      description="Plan nutrient-dense, plant-forward menus for your Bali yoga retreat. Private chef catering for wellness retreats with full IDR pricing."
+      description="Plan nutrient-dense, plant-forward menus for your Bali yoga retreat. Private chef catering for wellness retreats. Contact us for a tailored proposal."
       seoTitle="Yoga Retreat Chef Bali | Retreat Meal Planning & Nutrition"
-      seoDescription="Plan nutrient-dense, plant-forward menus for your Bali yoga retreat. Private chef catering for wellness retreats with full IDR pricing."
+      seoDescription="Plan nutrient-dense, plant-forward menus for your Bali yoga retreat. Private chef catering for wellness retreats. Contact us for a tailored proposal."
       canonicalUrl="https://mychef.id/blog/yoga-retreat-chef-bali-meal-planning"
       h1="Yoga Retreat Chef in Bali"
       subtitle="Meal Planning & Retreat Nutrition Guide"
@@ -143,7 +131,7 @@ export default function YogaRetreatChefPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Yoga Retreat Chef in Bali: Meal Planning & Retreat Nutrition Guide',
-          description: 'Plan nutrient-dense, plant-forward menus for your Bali yoga retreat. Private chef catering for wellness retreats with full IDR pricing.',
+          description: 'Plan nutrient-dense, plant-forward menus for your Bali yoga retreat. Private chef catering for wellness retreats. Contact us for a tailored proposal.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
           datePublished: '2025-06-01',

@@ -195,7 +195,7 @@ const FAQS = [
   { question: 'Can you feed the adults too?', answer: 'Yes — a separate adult menu, grazing table, BBQ or cocktail service can run alongside the kids\' party.' },
   { question: 'What does our villa need?', answer: 'A shaded area or open kitchen for the station — we bring all cooking equipment. Villa suitability is confirmed when you book.' },
   { question: 'How far in advance should we book?', answer: 'At least 14 days — earlier for school holidays, themed décor or custom cakes. Last-minute is sometimes possible; ask.' },
-  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your date and team; the balance is due before the party.' },
+  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your date and team; the remaining 50% is due the day before the party.' },
 ]
 
 const RELATED_PAGES = [

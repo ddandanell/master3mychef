@@ -219,7 +219,7 @@ const HOW_IT_WORKS = [
   { step: '02', title: 'Send details', desc: 'Share date, area, guest count, and any dietary needs.', icon: Calendar },
   { step: '03', title: 'Add extras', desc: 'Bartender, Wagyu upgrade, gluten-free, plated service.', icon: Sparkles },
   { step: '04', title: 'Confirm price', desc: 'We send final quote including travel fees and add-ons.', icon: CreditCard },
-  { step: '05', title: 'Pay deposit', desc: '50% deposit to lock your date. Balance due on the day.', icon: ShieldCheck },
+  { step: '05', title: 'Pay deposit', desc: '50% deposit to lock your date. Balance due the day before the event.', icon: ShieldCheck },
   { step: '06', title: 'We handle everything', desc: 'Chef arrives, cooks, serves, and cleans up. You relax.', icon: ChefHat },
 ]
 
@@ -1804,7 +1804,7 @@ export default function CateringMainPage() {
             {[
               { step: '1', text: 'Send your details' },
               { step: '2', text: 'Get a quote in 2 hours' },
-              { step: '3', text: 'Pay 25% to lock it' },
+              { step: '3', text: 'Pay 50% to lock it' },
               { step: '4', text: 'Show up and eat' },
             ].map((item) => (
               <div key={item.step} className="text-center">

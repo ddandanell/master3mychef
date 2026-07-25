@@ -83,7 +83,7 @@ Overtime (beyond the booked duration) is billed at IDR 80,000/hour/waiter.
 
 For full catering packages (chef + waiters + bar), the team is quoted together and bundled pricing applies. Minimum booking: 1 waiter for 3 hours.
 
-A 25% deposit confirms your booking. Balance is due 48 hours before the event.`,
+A 50% deposit confirms your booking. Balance is due the day before the event.`,
   },
   {
     id: 'cta',
@@ -125,7 +125,7 @@ const relatedPages = [
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Full event crew hire including setup and breakdown' },
   { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Bar staff and mobile bar packages' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa party catering' },
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
   { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
   { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests' },
 ]

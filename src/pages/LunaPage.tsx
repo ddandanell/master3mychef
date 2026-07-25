@@ -71,7 +71,7 @@ const FAQS = [
   { question: 'What happens if I need to cancel?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date.' },
   { question: 'Is this a real Michelin-trained chef?', answer: 'Yes. Adriano, our executive chef, trained in Modena and Tokyo. He personally trains every chef on our team for 6+ months before they lead an evening.' },
   { question: 'What if I do not like the food?', answer: 'We have served 500+ villa dinners with zero complaints requiring refund. If something is not right, we fix it on the spot. Your satisfaction is the standard we cook to.' },
-  { question: 'How do I pay?', answer: 'We accept bank transfer (IDR or USD), Wise, and credit card via secure link. A 50% deposit locks your date. Balance due 3 days before the evening.' },
+  { question: 'How do I pay?', answer: 'We accept bank transfer (IDR or USD), Wise, and credit card via secure link. A 50% deposit locks your date. Balance due the day before the event.' },
   { question: 'Is my villa suitable?', answer: 'We have worked in pool villas, cliffside estates, and jungle retreats. As long as there is a kitchen and a dining area, we can make it work. We bring tableware, linens, and any equipment we need.' },
   { question: 'What about children?', answer: 'Children are welcome. We can prepare a simplified menu for younger guests at a reduced rate. Let us know ages and preferences when booking.' },
 ]
@@ -407,7 +407,7 @@ export default function LunaPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {[
-              { href: '/fine-dining/private-chef-bali', label: 'Private Chef in Bali', sub: 'From IDR 1,250,000++', icon: '🍽' },
+              { href: '/', label: 'Private Chef in Bali', sub: 'From IDR 1,250,000++', icon: '🍽' },
               { href: '/fine-dining/tasting-menu', label: 'Tasting Menu', sub: '5 or 7 courses', icon: '🌿' },
               { href: '/fine-dining/romantic-dinner', label: 'Romantic Dinner', sub: 'Couples & anniversaries', icon: '🕯' },
               { href: '/fine-dining/chefs-table', label: "Chef's Table", sub: 'IDR 3,500,000++ · 6 seats', icon: '👨‍🍳' },

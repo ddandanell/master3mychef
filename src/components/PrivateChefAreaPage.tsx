@@ -42,7 +42,7 @@ const SERVICE_CARDS = [
     icon: ChefHat,
     color: '#C5A028',
     desc: 'Chef cooks at your villa — market shop, cooking, full table service, and clean-up.',
-    href: '/fine-dining/private-chef-bali',
+    href: '/',
   },
   {
     id: 'fine-dining' as const,

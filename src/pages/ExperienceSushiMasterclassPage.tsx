@@ -162,7 +162,7 @@ const FAQS = [
   { question: 'Can vegetarians, pescatarians or gluten-free guests join?', answer: 'Yes. The menu adapts — vegetable rolls, tamari instead of soy, and allergy-aware prep — when you tell us at booking.' },
   { question: 'What does our villa need?', answer: 'A kitchen counter or island to work at. We bring everything else.' },
   { question: 'How far in advance should I book?', answer: 'At least a week is recommended, more in July–August and December. Last-minute requests are sometimes possible — ask.' },
-  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your chef and date; the balance is due before the class.' },
+  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your chef and date; the remaining 50% is due the day before the class.' },
 ]
 
 const RELATED_PAGES = [

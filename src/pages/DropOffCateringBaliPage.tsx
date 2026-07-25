@@ -118,7 +118,7 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Full Chef Service Bali', href: '/fine-dining/private-chef-bali', desc: 'On-site private chef with full service' },
+  { label: 'Full Chef Service Bali', href: '/', desc: 'On-site private chef with full service' },
   { label: 'Villa Catering Bali', href: '/catering', desc: 'Complete catering formats for Bali villas' },
   { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Sharing platters and grazing boards' },
   { label: 'Brunch Catering Bali', href: '/catering', desc: 'Private chef brunch for villa stays' },

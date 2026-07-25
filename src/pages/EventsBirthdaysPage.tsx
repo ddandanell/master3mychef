@@ -78,7 +78,7 @@ const FAQS = [
   { q: 'Do we need the villa\'s permission for a birthday party?', a: 'For anything beyond a quiet dinner, yes — most villas require event approval, and some neighbourhoods have noise expectations or banjar notification requirements. We coordinate with your villa manager before confirming the format, DJ and bar plan.' },
   { q: 'Do you provide the cake and decorations?', a: 'A standard cake (chocolate or vanilla, single tier, name in icing) is included in both formats. Custom tiered cakes (+IDR 2–4M), themed decor (+IDR 3.5–7.5M) and entertainment are add-ons — we coordinate trusted suppliers so everything arrives on one timeline.' },
   { q: 'What happens if it rains?', a: 'We plan a covered or indoor fallback for every outdoor setup — same menu, same styling, moved inside the villa or under cover. BBQ service shifts to a sheltered area; the party continues.' },
-  { q: 'How do deposits and cancellation work?', a: 'A 50% deposit confirms your date and locks your chef team (aligned to live page figure; sitewide unification pending business decision). Cancellation: 7+ days before the event, 75% refund; 48 hours or more, 50% credit; under 48 hours, no refund. Booking lead times: 7 days for dinners, 10–14 days for villa parties.' },
+  { q: 'How do deposits and cancellation work?', a: 'A 50% deposit confirms your date and locks your chef team. Cancellation: 7+ days before the event, 75% refund; 48 hours or more, 50% credit; under 48 hours, no refund. Booking lead times: 7 days for dinners, 10–14 days for villa parties.' },
 ]
 
 const STAFFING_POINTS = [

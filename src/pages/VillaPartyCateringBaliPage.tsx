@@ -82,7 +82,7 @@ These are starting points. Event format, service style, and villa layout all aff
 - **Sit-down dinner (3-course)**: from IDR 700,000–850,000/person
 - **Full event packages (food + staff + equipment)**: from IDR 7,500,000 for 20 guests, scaling with group size
 
-Ingredient costs are billed at market rate. Staff fees are charged separately unless included in an all-in package. myCHEF requires a 25% deposit to hold your date, with the balance due 48 hours before the event.
+Ingredient costs are billed at market rate. Staff fees are charged separately unless included in an all-in package. myCHEF requires a 50% deposit to hold your date; the balance is due the day before the event.
 
 Surcharges apply for events in Ubud, Amed, and outer islands.`,
   },
@@ -123,7 +123,7 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
   { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Professional bar staff for your party' },
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and event crew hire' },
   { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Styled grazing boards for events' },

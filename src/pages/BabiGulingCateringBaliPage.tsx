@@ -66,7 +66,7 @@ Multiple pigs with dedicated roasting team on-site. Price on enquiry. Requires 2
 
 All packages include spice preparation, wood-fire roasting, transportation to your villa, carving service, and presentation of all accompaniments. Serving staff are included in larger packages; add service staff for smaller bookings at standard event staff rates.
 
-A 25% deposit holds your booking. Balance due 48 hours before the event.`,
+A 50% deposit holds your booking. Balance due the day before the event.`,
   },
   {
     id: 'logistics',
@@ -125,7 +125,7 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full catering for villa celebrations' },
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
   { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering solutions for 30+ guests' },
   { label: 'Indonesian Street Food', href: '/blog/indonesian-street-food-private-chef-bali', desc: 'Authentic Indonesian cuisine at your villa' },
   { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Outdoor grill and BBQ packages' },

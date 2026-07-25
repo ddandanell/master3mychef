@@ -9,7 +9,7 @@ export const FINE_DINING_RELATED: RelatedService[] = [
   {
     title: 'Private Chef Bali',
     description: 'Hire a dedicated private chef for your villa stay. Daily meals, personalized menus, and premium service.',
-    path: '/fine-dining/private-chef-bali',
+    path: '/',
     category: 'Fine Dining'
   },
   {

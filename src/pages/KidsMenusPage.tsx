@@ -40,7 +40,7 @@ const FAQS = [
   },
   {
     q: 'What deposit is required?',
-    a: 'A 50% deposit confirms your booking; the balance is due before the event.',
+    a: 'A 50% deposit confirms your booking; the balance is due the day before the event.',
   },
 ]
 

@@ -209,7 +209,7 @@ export default function ServiceWaitersPage() {
             ))}
           </div>
           <p className="text-sm text-[#4A4745] text-center mt-8 max-w-2xl mx-auto">
-            All rates are subject to 11% government tax + 10% service charge. A 50% deposit confirms your date; the balance is due before the event. Cancellations follow our standard tiers — see our <Link to="/cancellation">cancellation policy</Link>.
+            All rates are subject to 11% government tax + 10% service charge. A 50% deposit confirms your date; the balance is due the day before the event. Cancellations follow our standard tiers — see our <Link to="/cancellation">cancellation policy</Link>.
           </p>
         </div>
       </section>

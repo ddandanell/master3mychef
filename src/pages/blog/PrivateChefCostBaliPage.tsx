@@ -260,7 +260,7 @@ export default function PrivateChefCostBaliPageBlog() {
         <section className="mb-16">
           <h2 className="text-3xl font-light mb-4">What is Included in the Price?</h2>
           <p className="text-[#666] mb-8">
-            Understanding what is included — and what is not — is the most important step when comparing private chef quotes in Bali. Here is the standard breakdown for a <Link to="/fine-dining/private-chef-bali" className="text-[#C5A028] hover:underline font-medium">myCHEF villa dinner or catering booking</Link>.
+            Understanding what is included — and what is not — is the most important step when comparing private chef quotes in Bali. Here is the standard breakdown for a <Link to="/" className="text-[#C5A028] hover:underline font-medium">myCHEF villa dinner or catering booking</Link>.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">

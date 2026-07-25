@@ -14,7 +14,7 @@ const STEPS = [
   {
     icon: Wallet,
     title: 'Confirm menu & 50% deposit',
-    desc: 'Once the menu, guest count, and event details are agreed, a 50% deposit locks your date. The balance is due before the event.',
+    desc: 'Once the menu, guest count, and event details are agreed, a 50% deposit locks your date. The remaining 50% is due the day before the event.',
   },
   {
     icon: UtensilsCrossed,

@@ -164,7 +164,7 @@ const FAQS = [
   { question: 'Can you handle dietary requirements?', answer: 'Yes — vegetarian, vegan (try the Plant-Based Bali class), gluten-free, halal and allergy requirements are planned into the menu in advance.' },
   { question: 'Can children join?', answer: 'Yes — every class has a family-friendly version. Children from around six participate in age-appropriate, supervised tasks.' },
   { question: 'How far in advance should we book?', answer: 'A few days is usually enough; a week or more for bespoke menus and peak season (July–August, December).' },
-  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your chef and date; the balance is due before the class.' },
+  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your chef and date; the remaining 50% is due the day before the class.' },
 ]
 
 const RELATED_PAGES = [

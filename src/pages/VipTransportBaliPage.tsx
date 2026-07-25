@@ -23,7 +23,7 @@ const FAQS = [
   { q: 'Which areas do you cover?', a: 'Airport transfers and private drivers across Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and the Bukit Peninsula. Other routes on request.' },
   { q: 'What group sizes can you handle?', a: 'From couples to groups of 40+, with multiple vehicles and a dedicated coordinator for weddings and events.' },
   { q: 'Do you provide child seats?', a: 'Yes — child and infant seats at no extra charge. Tell us ages and weights at booking so the correct seat is installed before arrival.' },
-  { q: 'How far ahead should I book, and what if plans change?', a: '48–72 hours is usually enough; allow 2–3 weeks for weddings and large events. A 50% deposit confirms your vehicle and driver (aligned to live page figure; sitewide unification pending business decision). Cancellation: full refund more than 48 hours before service; 50% charge within 24–48 hours; same-day cancellations charged in full.' },
+  { q: 'How far ahead should I book, and what if plans change?', a: '48–72 hours is usually enough; allow 2–3 weeks for weddings and large events. A 50% deposit confirms your vehicle and driver. Cancellation: full refund more than 48 hours before service; 50% charge within 24–48 hours; same-day cancellations charged in full.' },
 ]
 
 export default function VipTransportBaliPage() {

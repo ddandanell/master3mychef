@@ -120,7 +120,7 @@ const FAQS = [
   },
   {
     q: 'How is payment handled?',
-    a: 'We take a 50% deposit to confirm your booking and lock the chef and team. The balance is settled before or on the day of service. We accept bank transfer and most major payment methods.',
+    a: 'We take a 50% deposit to confirm your booking and lock the chef and team. The remaining 50% is due the day before the event. We accept bank transfer and most major payment methods.',
   },
   {
     q: 'What if I\'m not sure exactly when I need the service?',

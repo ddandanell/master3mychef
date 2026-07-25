@@ -162,7 +162,7 @@ const FAQS = [
 const RELATED_PAGES = [
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private chef romantic dinner experiences for couples in Bali villas.' },
   { label: 'Tasting Menu', href: '/fine-dining/tasting-menu', desc: 'Bespoke tasting menus designed by our Michelin-trained team.' },
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full overview of private chef services across Bali.' },
+  { label: 'Private Chef Bali', href: '/', desc: 'Full overview of private chef services across Bali.' },
   { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and event types.' },
   { label: 'Uluwatu Private Chef', href: '/private-chef/uluwatu', desc: 'Private chef services for Uluwatu clifftop villas.' },
   { label: 'Seminyak Private Chef', href: '/private-chef/seminyak', desc: 'Private chef services for Seminyak villas and estates.' },

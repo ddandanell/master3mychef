@@ -10,7 +10,7 @@ interface CityDeepDiveProps {
 }
 
 const SERVICES: { name: string; href: string; img: string; desc: (c: string) => string }[] = [
-  { name: 'Private Chef', href: '/fine-dining/private-chef-bali', img: '/generated/mychef-experience-bali-aura-tablescape.webp', desc: (c) => `A dedicated chef cooking fresh in your ${c} villa — one dinner or your whole stay.` },
+  { name: 'Private Chef', href: '/', img: '/generated/mychef-experience-bali-aura-tablescape.webp', desc: (c) => `A dedicated chef cooking fresh in your ${c} villa — one dinner or your whole stay.` },
   { name: 'Fine Dining', href: '/fine-dining', img: '/generated/mychef-finedining-bali-luna-plating.webp', desc: () => `Multi-course tasting menus and wine pairings, plated to restaurant standard.` },
   { name: 'Catering', href: '/catering', img: '/generated/mychef-catering-bali-hero-buffet-catering.webp', desc: () => `Villa, buffet, plated, grazing, drop-off, babi guling and floating breakfast.` },
   { name: 'BBQ', href: '/catering/bbq-catering', img: '/generated/mychef-catering-bali-bbq-grill-satay.webp', desc: () => `Live grill stations — seafood, premium meats and Balinese favourites, poolside.` },

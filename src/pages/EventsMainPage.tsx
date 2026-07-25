@@ -152,7 +152,7 @@ const HOW_WE_RUN: HowStep[] = [
   {
     step: '03',
     title: 'Host',
-    body: 'The team arrives hours early, builds the setup, runs service, and clears down. A 50% deposit confirms your date; the balance is due before the event.',
+    body: 'The team arrives hours early, builds the setup, runs service, and clears down. A 50% deposit confirms your date; the balance is due the day before the event.',
     icon: Calendar,
   },
 ]

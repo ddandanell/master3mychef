@@ -50,7 +50,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'What deposit do you require?',
-        a: 'A 50% deposit confirms your booking and locks your chef and date. The balance is settled before or on the day of service, by bank transfer or credit card.',
+        a: 'A 50% deposit confirms your booking and locks your chef and date. The remaining 50% is due the day before the event, by bank transfer or credit card.',
       },
       {
         q: 'What is the cancellation policy?',

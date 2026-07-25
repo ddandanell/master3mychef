@@ -146,7 +146,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full private chef service for villa stays, events, and special occasions.' },
+  { label: 'Private Chef Bali', href: '/', desc: 'Full private chef service for villa stays, events, and special occasions.' },
   { label: 'Catering Villa Bali', href: '/catering/villa-catering', desc: 'Complete villa catering for groups and events of all sizes.' },
   { label: 'Buffet vs Plated Service', href: '/catering', desc: 'Compare service formats to find the right fit for your dinner party.' },
   { label: 'Anniversary Dinner Bali', href: '/events/anniversaries', desc: 'Private chef anniversary dinner guide: menus, timing, and romantic setup.' },

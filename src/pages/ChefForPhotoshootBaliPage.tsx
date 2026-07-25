@@ -106,7 +106,7 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
   { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Private chef-led cooking classes' },
   { label: 'Fine Dining Bali', href: '/fine-dining', desc: 'Luxury private dining experiences' },
   { label: 'Tasting Menu Bali', href: '/blog/tasting-menu-bali', desc: 'Multi-course private tasting menus' },

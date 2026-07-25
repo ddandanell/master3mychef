@@ -137,7 +137,7 @@ const FAQS = [
   },
   {
     q: 'What deposit is required?',
-    a: 'A 50% deposit secures your date, chef and grill station; the balance is due on the day of service.',
+    a: 'A 50% deposit secures your date, chef and grill station; the remaining 50% is due the day before the event.',
   },
   {
     q: 'We want full-service BBQ with staff, buffet styling and a bar — is that different?',

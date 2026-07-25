@@ -177,14 +177,14 @@ const FAQS = [
   { q: 'What is included in the event price?', a: 'All packages include catering, bar service, staffing, basic décor, and on-site coordination. AV, specialty floral, and entertainment are quoted separately based on your needs.' },
   { q: 'Can you work at any villa in Bali?', a: 'Yes. We have produced events at over 200 villas across Seminyak, Canggu, Ubud, Uluwatu, and Nusa Dua. We know the spaces, the vendors, and the logistics.' },
   { q: 'Do you handle décor and floral?', a: 'Yes. Our Villa Celebration and Grand packages include floral and décor. For Intimate events, we can add it as an upgrade. We work with Bali\'s best floral designers.' },
-  { q: 'Can we taste the menu before the event?', a: 'Yes. For events over IDR 50M, the tasting is complimentary. For smaller events, we offer a paid tasting at IDR 450K++ per person — credited toward your final booking.' },
+  { q: 'Can we taste the menu before the event?', a: 'Yes. For events over IDR 15M, the tasting is complimentary. For smaller events, we offer a paid tasting at IDR 450K++ per person — credited toward your final booking.' },
   { q: 'What about dietary restrictions for large groups?', a: 'We handle it seamlessly. Vegetarian, halal, gluten-free, nut allergies — we label everything and ensure every guest is cared for.' },
   { q: 'Do you provide alcohol and bar service?', a: 'Yes. Full bar service with professional bartenders. We can source premium spirits, wines, and craft cocktails. You can also provide your own alcohol and we handle service.' },
   { q: 'What happens if it rains?', a: 'We always have a backup plan. Bali villas have covered areas, and we bring tenting for outdoor events. Olivia will walk you through contingencies in your proposal.' },
   { q: 'Can we see photos from past events?', a: 'Yes. Olivia shares a private portfolio of past events matched to your type — weddings, corporate, birthdays — so you can see the quality before booking.' },
   { q: 'What if our villa has restrictions?', a: 'We work with villa managers before every event. Noise curfews, guest limits, kitchen access — we plan around every restriction so nothing surprises you on the day.' },
   { q: 'Is there a commitment to get a proposal?', a: 'No. The first consultation and proposal are free. You only commit when you approve the plan and pay the deposit.' },
-  { q: 'How does payment work?', a: '50% deposit to lock the date. Remaining 50% due on the day of the event, before service begins. Invoiced and documented for corporate clients.' },
+  { q: 'How does payment work?', a: '50% deposit to lock the date. Remaining 50% due the day before the event, before service begins. Invoiced and documented for corporate clients.' },
   { q: 'What if I need to cancel or reschedule?', a: 'Full refund if cancelled 30+ days ahead. 50% refund 14–30 days. Within 14 days, we apply the deposit to a rescheduled date within 6 months.' },
   { q: 'Are there hidden fees?', a: 'No. Every proposal is itemised — catering, bar, staffing, décor, AV, add-ons. You see every line item before you commit. No surprises on the day.' },
   { q: 'How do I know the food will be good?', a: 'Our executive chef Adriano trained in Modena and Tokyo. Every event menu is designed by him and executed by his team. See past event photos, read testimonials, or book a tasting.' },
@@ -273,7 +273,7 @@ export default function AuraPage() {
     <div ref={ref} data-universe="aura" className="min-h-screen" style={{ background: '#FFFFFF', color: '#1A1A1A' }}>
       <SeoHead
         title="Bali Event Catering — Villas, Weddings & Corporate | myCHEF"
-        description="Bali event catering by myCHEF — villa parties, weddings, corporate dinners, retreats. Catering, bar, décor, staffing end-to-end. From IDR 50M."
+        description="Bali event catering by myCHEF — villa parties, weddings, corporate dinners, retreats. Catering, bar, décor, staffing end-to-end. From IDR 15M."
         canonical="https://mychef.id/events"
         ogImage="https://mychef.id/generated/mychef-experience-bali-aura-hero-v2.webp"
         jsonLd={[...eventSchemas, breadcrumbSchema('Events', 'https://mychef.id/events'), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
@@ -304,7 +304,7 @@ export default function AuraPage() {
             Bali Event Catering —<br /><span className="italic">Villas, Weddings & Corporate</span>
           </h1>
           <p className="aura-hero-sub text-lg md:text-xl text-white/[85%] mb-10 max-w-2xl mx-auto">
-            From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 50M total event minimum. Olivia replies within 24 hours.
+            From intimate vow exchanges to 200-guest galas. We handle catering, bar, décor, staffing, and every detail. From IDR 15M total event minimum. Olivia replies within 24 hours.
           </p>
           <div className="aura-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="aura-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -678,7 +678,7 @@ export default function AuraPage() {
               </p>
               <div className="space-y-4 mb-8">
                 {[
-                  { label: 'Intimate (10–30)', price: 'From IDR 50M' },
+                  { label: 'Intimate (10–30)', price: 'From IDR 15M' },
                   { label: 'Villa Celebration (30–80)', price: 'From IDR 35M' },
                   { label: 'Grand (80–200)', price: 'From IDR 75M' },
                 ].map((p) => (

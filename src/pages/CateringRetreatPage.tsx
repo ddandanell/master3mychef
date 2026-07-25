@@ -203,7 +203,7 @@ const MENU_DIRECTIONS = [
     category: 'Evening',
     items: [
       { name: 'BBQ Evening', desc: 'Live-fire grilling with seafood, meats, vegetables, and vibrant sides.', href: '/catering/bbq-catering' },
-      { name: 'Fine Dining Evening', desc: 'A multi-course plated dinner for a standout celebration night.', href: '/fine-dining/private-chef-bali' },
+      { name: 'Fine Dining Evening', desc: 'A multi-course plated dinner for a standout celebration night.', href: '/' },
       { name: 'Balinese Night', desc: 'Traditional Balinese feast with lawar, sate, urap, and ceremonial presentation.' },
       { name: 'Seafood Night', desc: 'Fresh catch from Jimbaran market, grilled and dressed simply.', href: '/catering/bbq-catering' },
       { name: 'Italian Night', desc: 'Handmade pasta, antipasti, and Mediterranean grills.', href: '/fine-dining/menus' },
@@ -370,7 +370,7 @@ const OPTIONAL_SERVICES = [
   { icon: Leaf, title: 'Smoothie Bar', desc: 'Made-to-order smoothies with protein, greens, fruit, and superfood add-ons.' },
   { icon: Wine, title: 'Bartenders & Cocktail Evening', desc: 'Professional bartenders for a celebration night or poolside service.', href: '/in-villa-service/bartenders' },
   { icon: Flame, title: 'BBQ Night', desc: 'Live-fire BBQ dinner with grilled seafood, meats, and vegetable skewers.', href: '/catering/bbq-catering' },
-  { icon: UtensilsCrossed, title: 'Fine Dining Finale', desc: 'A multi-course plated dinner to mark the closing night of the retreat.', href: '/fine-dining/private-chef-bali' },
+  { icon: UtensilsCrossed, title: 'Fine Dining Finale', desc: 'A multi-course plated dinner to mark the closing night of the retreat.', href: '/' },
   { icon: Camera, title: 'Food Photography', desc: 'Styled food and table photography to support your retreat marketing.' },
   { icon: Flower2, title: 'Flowers & Table Styling', desc: 'Tropical flowers, candles, linens, and natural tablescapes for special meals.' },
   { icon: Users, title: 'Waiters', desc: 'Uniformed waiters for plated service, buffet support, and drink refills.', href: '/in-villa-service/waiters' },
@@ -460,7 +460,7 @@ const FAQS = [
   { q: 'Can you do fully vegan, sattvic or detox retreat menus?', a: 'Yes. Fully vegan service is one of our most requested formats, and we design sattvic, juice-cleanse and partial-detox programmes with the same care — full protein profiles and menus that feel abundant, not restrictive.' },
   { q: 'Can you cater five to seven days continuously?', a: 'Yes — multi-day continuity is the core of this service. Shopping cycles, menu rotation and staff scheduling are planned so quality on day seven matches day one.' },
   { q: 'What if our villa kitchen is small?', a: 'We assess stove capacity, fridge space and equipment before arrival and bring whatever is missing. Most Bali villa kitchens are fully workable with minor preparation.' },
-  { q: 'What deposit is required?', a: 'A 50% deposit confirms your chef and dates; the balance is due before the retreat begins.' },
+  { q: 'What deposit is required?', a: 'A 50% deposit confirms your chef and dates; the remaining 50% is due the day before the retreat begins.' },
   { q: 'How far ahead should we book?', a: 'Two to four weeks is ideal; for peak season (June–September), earlier is better so we can reserve the right chef for your full dates.' },
   { q: 'Can guests have alcohol at a wellness retreat?', a: 'That is your call as the organiser — we serve to your programme rules, from fully dry retreats to a single wine-paired closing dinner.' },
 ]

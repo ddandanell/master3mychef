@@ -60,7 +60,7 @@ const SECTIONS: PageSection[] = [
     <p><strong>1. Submit your enquiry.</strong> Tell us your dates, villa address, number of guests, and any cuisine preferences or dietary requirements. You can do this via WhatsApp, the contact form, or directly through your villa concierge if they have a myCHEF partnership.</p>
     <p><strong>2. Receive chef recommendations.</strong> We match you with available chefs who specialise in your preferred cuisine style and have experience with Nusa Dua properties. <a href="/chefs" class="text-[#7E6410] hover:underline font-medium">Browse chef profiles</a> to get a sense of who is available.</p>
     <p><strong>3. Confirm the menu.</strong> Your chef will consult with you on the menu — either following a proposed plan or co-designing it from scratch. Dietary restrictions, allergies, and preferences are locked in at this stage.</p>
-    <p><strong>4. Confirm booking and pay deposit.</strong> A deposit secures your booking. The balance is due on the day of service or per agreed terms.</p>
+    <p><strong>4. Confirm booking and pay deposit.</strong> A deposit secures your booking. The remaining 50% is due the day before the event or per agreed terms.</p>
     <p><strong>5. Sit back and enjoy.</strong> Your chef arrives at the agreed time — typically 1.5–2 hours before your dinner — handles all preparation, cooking, and cleanup, and leaves your kitchen as they found it.</p>
     <p style="margin-top:0.75rem;">We recommend booking at least 3–5 days in advance for standard requests, and 1–2 weeks ahead for fine dining, large groups, or special occasions. <a href="/contact" class="text-[#7E6410] hover:underline font-medium">Contact our team</a> to check availability for your dates.</p>`,
   },

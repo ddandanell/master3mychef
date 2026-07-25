@@ -164,7 +164,7 @@ const FAQS = [
   { q: 'What happens if it rains on the day?', a: 'An indoor villa table setup with the same styling and menu is offered, or a free reschedule to the next available morning slot.' },
   { q: 'Is the floating tray included?', a: 'Yes, a custom bamboo floating tray is included in every package and collected 1.5–2 hours after delivery.' },
   { q: 'How far in advance should I book a floating breakfast?', a: 'Two to three days minimum; one to two weeks in peak season (June–August, December–January).' },
-  { q: 'What deposit is required?', a: 'A 50% deposit confirms the booking; the balance is due before the service.' },
+  { q: 'What deposit is required?', a: 'A 50% deposit confirms the booking; the remaining 50% is due the day before the service.' },
 ]
 
 export default function CateringFloatingBreakfastPage() {
@@ -581,7 +581,7 @@ export default function CateringFloatingBreakfastPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Private Chef', href: '/fine-dining/private-chef-bali', desc: 'Live chef cooking at your villa.' },
+              { label: 'Private Chef', href: '/', desc: 'Live chef cooking at your villa.' },
               { label: 'villa catering for the rest of your stay', href: '/catering/villa-catering', desc: 'Daily villa breakfast service.' },
               { label: 'villa catering for the rest of your stay', href: '/catering/villa-catering', desc: 'Group meals for multi-day stays.' },
               { label: 'romantic private dinner', href: '/fine-dining/romantic-dinner', desc: 'Candlelit private chef dinners.' },

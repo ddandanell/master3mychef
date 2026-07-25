@@ -77,7 +77,7 @@ For couples who want to give their guests an authentically Balinese experience b
 
 All pricing includes chef, ingredients, service staff, and cleanup. Alcohol is supplied by the client. Bar staff and sommelier are available as add-ons.
 
-A 25% deposit confirms the booking. Balance is due 48 hours before the event.`,
+A 50% deposit confirms the booking. Balance is due the day before the event.`,
   },
   {
     id: 'cta',
@@ -117,7 +117,7 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Bali Wedding Catering', href: '/bali-wedding-catering-packages', desc: 'Full guide to wedding catering costs' },
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
   { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa event catering' },
   { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing for events' },

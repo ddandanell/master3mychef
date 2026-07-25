@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: 'Can you cater a corporate offsite or board dinner?',
-    a: 'Yes — structured breakfasts, working lunches and executive dinners for 10–60 guests, with full-board options for multi-day programmes and precise run sheets. Corporate programmes carry a minimum spend of IDR 50,000,000.',
+    a: 'Yes — structured breakfasts, working lunches and executive dinners for 10–60 guests, with full-board options for multi-day programmes and precise run sheets. Corporate programmes carry a minimum spend of IDR 15,000,000.',
   },
   {
     q: 'Which areas do you cover?',
@@ -61,7 +61,7 @@ const SERVICES = [
     name: 'Corporate & executive catering',
     range: 'IDR 700K–800K / person',
     for: '10–60 guests',
-    detail: 'With precise run sheets. Minimum spend IDR 50,000,000 for corporate programmes.',
+    detail: 'With precise run sheets. Minimum spend IDR 15,000,000 for corporate programmes.',
   },
   {
     name: 'Celebration events',

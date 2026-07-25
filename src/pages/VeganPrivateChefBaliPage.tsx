@@ -108,7 +108,7 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Full in-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/', desc: 'Full in-villa private chef service' },
   { label: 'Daily Chef Service', href: '/hire-private-chef-bali-monthly', desc: 'All-day chef hire for villa stays' },
   { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Hands-on cooking with a private chef' },
   { label: 'Wellness Retreat Catering', href: '/catering/retreat-catering', desc: 'Plant-based retreat catering' },

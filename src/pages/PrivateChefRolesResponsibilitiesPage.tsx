@@ -65,7 +65,7 @@ const SECTIONS: PageSection[] = [
     <ol style="list-style:decimal;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
       <li><strong>Contact us with your details:</strong> Villa location, number of guests, date and time, type of occasion, and any dietary requirements. WhatsApp is the fastest channel.</li>
       <li><strong>Menu consultation:</strong> Our team discusses your preferences with you and connects you with the chef. For longer stays or complex occasions, this may include a more detailed conversation about the menu over several days.</li>
-      <li><strong>Confirm and deposit:</strong> A 25% deposit confirms the booking. Full payment is settled before or on the day of service, including groceries at cost.</li>
+      <li><strong>Confirm and deposit:</strong> A 50% deposit confirms the booking. The remaining 50% is due the day before the event.</li>
       <li><strong>Chef arrival:</strong> The chef arrives at the villa at the agreed time with all ingredients sourced and ready to begin mise en place.</li>
       <li><strong>Service and cleanup:</strong> Full service through to kitchen cleanup. The chef leaves the kitchen as they found it.</li>
     </ol>

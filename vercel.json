@@ -26,7 +26,7 @@
     },
     {
       "source": "/story",
-      "destination": "/fine-dining/our-chefs",
+      "destination": "/chefs",
       "permanent": true
     },
     {
@@ -396,12 +396,27 @@
     },
     {
       "source": "/about",
-      "destination": "/fine-dining/our-chefs",
+      "destination": "/chefs",
       "permanent": true
     },
     {
       "source": "/menu",
       "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
+      "source": "/private-tasting-menu-bali",
+      "destination": "/fine-dining/tasting-menu",
+      "permanent": true
+    },
+    {
+      "source": "/chef-table-experience-bali",
+      "destination": "/fine-dining/chefs-table",
+      "permanent": true
+    },
+    {
+      "source": "/fine-dining/our-chefs",
+      "destination": "/chefs",
       "permanent": true
     },
     {
@@ -971,12 +986,17 @@
     },
     {
       "source": "/journal/private-chef-jakarta-guide",
-      "destination": "/locations/jakarta",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/blog/private-chef-surabaya-guide",
-      "destination": "/locations/jakarta",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/locations/jakarta",
+      "destination": "/",
       "permanent": true
     }
   ],

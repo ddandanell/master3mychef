@@ -29,7 +29,7 @@ export const REDIRECTS: Redirect[] = [
 
   // --- Systems-plan canonical redirects ---
   { from: '/experience', to: '/fine-dining', reason: 'Systems plan: /experience → /fine-dining/' },
-  { from: '/story', to: '/fine-dining/our-chefs', reason: 'Systems plan: /story → /fine-dining/our-chefs/' },
+  { from: '/story', to: '/chefs', reason: 'Systems plan: /story → /chefs (chef roster canonical).' },
   { from: '/service', to: '/in-villa-service', reason: 'Systems plan: /service → /in-villa-service/' },
   { from: '/join', to: '/staffing', reason: 'Systems plan: /join → /staffing/' },
   { from: '/partners', to: '/staffing/for-villa-managers', reason: 'Systems plan: /partners → /staffing/for-villa-managers/' },
@@ -125,7 +125,8 @@ export const REDIRECTS: Redirect[] = [
   // --- Legacy utility pages ---
   { from: '/retreats', to: '/events/retreats', reason: 'Consolidate retreat traffic into the dedicated retreats event page.' },
   { from: '/corporate-events', to: '/events/corporate-events', reason: 'Consolidate duplicate corporate events content into the canonical events pillar page.' },
-  { from: '/villa-partners', to: '/partner-platform', reason: 'Old partners page → new partner platform.' },
+  { from: '/villa-partners', to: '/certified-partner', reason: 'Old partners page → certified partner programme (avoid chain).' },
+  { from: '/partner-platform', to: '/certified-partner', reason: 'Consolidate old partner platform → certified partner programme.' },
   { from: '/catering/buffet-catering', to: '/catering/buffet', reason: 'Old slug renamed: buffet-catering → buffet to match route.' },
 
   // --- 2026-06-13: 404s discovered by Mustafa audit ---
@@ -133,8 +134,13 @@ export const REDIRECTS: Redirect[] = [
   // ranking keywords "private chef Bali" (#27), "Bali private chef hire", "private dining Bali".
   { from: '/services/private-chef', to: '/in-villa-service', reason: 'Keyword target for "private chef Bali" (#27) and "Bali private chef hire" — page never built. Redirect to main service page.' },
   { from: '/services/private-dining', to: '/fine-dining', reason: 'Keyword target for "private dining Bali" (1.4K/mo) — page never built. Redirect to fine-dining pillar.' },
-  { from: '/about', to: '/fine-dining/our-chefs', reason: '404 from nav. Redirect to chef profiles as closest "about us" content.' },
+  { from: '/about', to: '/chefs', reason: '404 from nav. Redirect to chef roster as closest "about us" content.' },
   { from: '/menu', to: '/fine-dining/menus', reason: '404 from nav/marketing. Redirect to fine-dining menus pillar.' },
+
+  // --- Update 2: thin consolidation pages & duplicate chef roster ---
+  { from: '/private-tasting-menu-bali', to: '/fine-dining/tasting-menu', reason: 'Thin duplicate → canonical tasting menu page.' },
+  { from: '/chef-table-experience-bali', to: '/fine-dining/chefs-table', reason: 'Thin duplicate → canonical chef\'s table page.' },
+  { from: '/fine-dining/our-chefs', to: '/chefs', reason: 'Duplicate chef roster → canonical /chefs roster.' },
 
   // GA4 (25 May–21 Jun 2026): live URLs hitting the 404 page. Map each to its real equivalent.
   { from: '/romantic-dinner', to: '/fine-dining/romantic-dinner', reason: 'GA4 404 (8 views). Bare URL → real romantic dinner page.' },
@@ -279,9 +285,10 @@ export const REDIRECTS: Redirect[] = [
   { from: '/journal/floating-breakfast-bali', to: '/catering/floating-breakfast', reason: 'Dead journal link → live floating breakfast page.' },
   { from: '/journal/wedding-catering-bali-cost', to: '/bali-wedding-catering-packages', reason: 'Dead journal link → live wedding catering packages page.' },
 
-  // --- 2026-07-25: pages in metadata map with no content/route → redirect to nearest live page ---
-  { from: '/journal/private-chef-jakarta-guide', to: '/locations/jakarta', reason: 'No dedicated journal content; Jakarta guide consolidated to location page.' },
-  { from: '/blog/private-chef-surabaya-guide', to: '/locations/jakarta', reason: 'No Surabaya content; nearest served city is Jakarta.' },
+  // --- 2026-07-25: Jakarta focus removed; old city guides → homepage ---
+  { from: '/journal/private-chef-jakarta-guide', to: '/', reason: 'Jakarta no longer a focus; redirect to homepage.' },
+  { from: '/blog/private-chef-surabaya-guide', to: '/', reason: 'Surabaya/Jakarta no longer a focus; redirect to homepage.' },
+  { from: '/locations/jakarta', to: '/', reason: 'Jakarta location focus removed; redirect to homepage.' },
 ]
 
 /** Lookup map for the React Router fallback. */

@@ -3,7 +3,7 @@
 
 /families  /dining-styles  301
 /experience  /fine-dining  301
-/story  /fine-dining/our-chefs  301
+/story  /chefs  301
 /service  /in-villa-service  301
 /join  /staffing  301
 /partners  /staffing/for-villa-managers  301
@@ -77,8 +77,11 @@
 /catering/buffet-catering  /catering/buffet  301
 /services/private-chef  /in-villa-service  301
 /services/private-dining  /fine-dining  301
-/about  /fine-dining/our-chefs  301
+/about  /chefs  301
 /menu  /fine-dining/menus  301
+/private-tasting-menu-bali  /fine-dining/tasting-menu  301
+/chef-table-experience-bali  /fine-dining/chefs-table  301
+/fine-dining/our-chefs  /chefs  301
 /romantic-dinner  /fine-dining/romantic-dinner  301
 /corporate-events-catering-bali  /blog/corporate-events-catering-bali  301
 /events/weddings-bali  /events/weddings  301
@@ -192,5 +195,6 @@
 /journal/bali-villa-dinner-party-guide  /private-dining-indonesia  301
 /journal/floating-breakfast-bali  /catering/floating-breakfast  301
 /journal/wedding-catering-bali-cost  /bali-wedding-catering-packages  301
-/journal/private-chef-jakarta-guide  /locations/jakarta  301
-/blog/private-chef-surabaya-guide  /locations/jakarta  301
+/journal/private-chef-jakarta-guide  /  301
+/blog/private-chef-surabaya-guide  /  301
+/locations/jakarta  /  301

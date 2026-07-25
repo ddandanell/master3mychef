@@ -75,7 +75,7 @@ export default function GroupTotalCalculator({
         </div>
         {showPlusPlus && (
           <p className="text-xs text-[#4A4745]/50 mt-1">
-            Includes 10% government tax + 11% service charge
+            Includes 11% government tax + 10% service charge
           </p>
         )}
       </div>

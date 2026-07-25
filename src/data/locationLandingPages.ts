@@ -462,7 +462,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     serviceAvailability: [
       {
         title: 'Private chef home dining',
-        href: '/fine-dining/private-chef-bali',
+        href: '/',
         summary: 'Chef-led lunches and dinners for residences, compound hosting, and refined home entertaining across Denpasar.',
         availability: 'Excellent for weekday and repeat bookings.',
       },

@@ -72,7 +72,7 @@ Staff are trained in European plated service: left-hand delivery, simultaneous u
 Tell us your guest count, event date, preferred cuisine style, and any dietary restrictions. We assign a senior chef and send a menu proposal within 24 hours. You review, adjust, and approve.
 
 **Step 2 -- Confirmation and deposit**
-A 25% deposit confirms your booking. For events over 40 guests, we request a briefing call to coordinate timing, table layout, and service sequence.
+A 50% deposit confirms your booking. The balance is due the day before the event. For events over 40 guests, we request a briefing call to coordinate timing, table layout, and service sequence.
 
 **Step 3 -- Shopping and prep (event day)**
 Your chef sources all ingredients fresh on the day of the event. The kitchen team arrives 3--4 hours before service to begin prep. Service staff arrive 2 hours before to set the table.
@@ -120,7 +120,7 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
   { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing for events' },
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate private dinners for couples' },
   { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Private proposal dinner planning' },

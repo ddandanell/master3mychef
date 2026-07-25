@@ -151,7 +151,7 @@ const RELATED_PAGES = [
   { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Full proposal coordination with private chef dinner.' },
   { label: 'Anniversary Dinner', href: '/events/anniversaries', desc: 'Private chef anniversary dinner at your Bali villa.' },
   { label: 'Honeymoon Chef Bali', href: '/honeymoon-chef', desc: 'Private chef service for honeymooners in Bali.' },
-  { label: 'Fine Dining Bali', href: '/fine-dining/private-chef-bali', desc: 'myCHEF fine dining private chef experience in Bali.' },
+  { label: 'Fine Dining Bali', href: '/', desc: 'myCHEF fine dining private chef experience in Bali.' },
   { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'The iconic Bali floating breakfast at your villa pool.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF packages and services.' },
 ]

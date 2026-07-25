@@ -1611,11 +1611,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'experience-kids-birthday-chef-party': {
     path: '/experiences/kids-birthday-chef-party',
-    title: 'Kids Birthday Party Bali | Chef-Led Cooking Party | myCHEF',
+    title: 'Kids Birthday Party Bali | Catering, Entertainment & Villa Parties',
     description:
-      'Kids cooking birthday parties at your Bali villa: pizza making, cupcakes, mocktails, chef hats, entertainment & cleanup. WhatsApp myCHEF.',
+      'Complete kids birthday party planning in Bali: villa catering, interactive chef parties, entertainment, foam parties, decorations & adult bar service.',
     canonical: `${SITE}/experiences/kids-birthday-chef-party`,
-    h1: 'Kids Birthday Chef Party Bali',
+    h1: 'Kids Birthday Party Bali',
     ogImage: `${SITE}/generated/kids-birthday-party-bali-chef.webp`,
   },
 

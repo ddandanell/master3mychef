@@ -12,8 +12,9 @@
  *   content, H1, and crawlable internal links.
  *
  * Output path matches what Vercel serves: dist/<route>/index.html.
- * Runs in CI (GitHub Actions) where full Chromium is available; the prebuilt
- * dist is then deployed to Vercel via `vercel deploy --prebuilt`.
+ * Runs locally, in CI (GitHub Actions), and on Vercel's own build machines —
+ * where stock Playwright Chromium can't launch (missing OS shared libraries),
+ * launchBrowser() falls back to @sparticuz/chromium's bundled-libs build.
  *
  * Env:
  *   PRERENDER_LIMIT=<n>   only render the first n routes (local verification)
@@ -520,6 +521,36 @@ async function runPool(browser: Browser, routes: Route[]): Promise<{ success: nu
   return { success, failures }
 }
 
+/**
+ * Launch a usable Chromium for the current environment.
+ *
+ * Locally (macOS) and on GitHub Actions (ubuntu + `playwright install --with-deps`)
+ * the stock Playwright Chromium works, so it is tried first everywhere.
+ *
+ * Vercel's git/CLI-triggered build image (Amazon Linux 2023) is missing the OS-level
+ * shared libraries Chromium needs (`error while loading shared libraries: libnspr4.so`),
+ * and `playwright install-deps` only supports apt/Debian — so on Linux we fall back to
+ * @sparticuz/chromium, which bundles Chromium together with its shared libraries
+ * (including an AL2023 variant) and extracts them under /tmp.
+ */
+async function launchBrowser(): Promise<Browser> {
+  try {
+    return await chromium.launch({ headless: true })
+  } catch (stockError) {
+    if (process.platform !== 'linux') throw stockError
+    console.warn(
+      `  ⚠️  Stock Playwright Chromium failed to launch (${(stockError as Error).message.split('\n')[0]})\n` +
+        '  🧊 Falling back to @sparticuz/chromium (bundled system libraries)'
+    )
+    const { default: sparticuz } = await import('@sparticuz/chromium')
+    return chromium.launch({
+      args: sparticuz.args,
+      executablePath: await sparticuz.executablePath(),
+      headless: true,
+    })
+  }
+}
+
 async function main(): Promise<void> {
   if (process.env.SKIP_PRERENDER === '1') {
     console.log('⏭  Prerender skipped — SKIP_PRERENDER=1')
@@ -543,11 +574,12 @@ async function main(): Promise<void> {
     if (health !== 200) throw new Error(`Preview server not serving (GET / → ${health})`)
 
     try {
-      browser = await chromium.launch({ headless: true })
+      browser = await launchBrowser()
     } catch (e) {
-      // No Chromium available (e.g. a build env without browser support) — skip
-      // rather than hard-fail the whole build. CI installs Chromium, so it runs there;
-      // the workflow's verify step still guards against shipping an unprerendered build.
+      // No Chromium available at all (neither stock Playwright Chromium nor the
+      // @sparticuz/chromium fallback) — skip rather than hard-fail here. The
+      // validate-prerender step right after this still fails the build if routes
+      // were left unprerendered, so an empty-#root build can never ship silently.
       console.log(`  ⏭  Chromium unavailable — skipping prerender (${(e as Error).message})`)
       return
     }

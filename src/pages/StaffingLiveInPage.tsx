@@ -353,7 +353,7 @@ export default function StaffingLiveInPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="staffing-live-in"

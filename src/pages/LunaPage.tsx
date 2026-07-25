@@ -1372,7 +1372,7 @@ export default function LunaPage() {
         serviceName="fine dining in Bali"
         intent="menu and pricing"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

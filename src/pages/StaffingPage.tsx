@@ -654,7 +654,7 @@ export default function StaffingPage() {
         serviceName="villa staff in Bali"
         intent="availability and pricing"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

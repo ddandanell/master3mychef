@@ -323,7 +323,7 @@ export default function StaffingHouseholdPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="staffing-household"

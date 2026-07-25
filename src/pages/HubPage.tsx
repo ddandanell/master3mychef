@@ -1463,7 +1463,7 @@ export default function HubPage() {
         serviceName="private chef in Bali"
         intent="quote and availability"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

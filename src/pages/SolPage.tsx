@@ -524,7 +524,7 @@ export default function SolPage() {
           </div>
         </div>
       </section>
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

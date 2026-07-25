@@ -321,7 +321,7 @@ export default function StaffingHotelsPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="staffing-hotels"

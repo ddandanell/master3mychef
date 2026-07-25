@@ -276,7 +276,7 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

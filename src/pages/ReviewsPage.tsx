@@ -383,7 +383,7 @@ export default function ReviewsPage() {
           </div>
         </div>
       </section>
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

@@ -1285,7 +1285,7 @@ export default function EventsMainPage() {
         serviceName="an event in Bali"
         intent="help with catering, staff, and setup"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

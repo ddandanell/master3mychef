@@ -401,9 +401,9 @@ export const LANDING_PAGES: ContentEntry[] = [
 {
     "slug": "wedding-catering-indonesia",
     "title": "Wedding Catering Indonesia | Villa Wedding Specialists",
-    "description": "Premium wedding catering across Indonesia — Bali and beyond. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
+    "description": "Premium wedding catering in Bali — villa weddings & destination celebrations. Custom menus, full service teams and event coordination. WhatsApp myCHEF.",
     "date": "2026-05-17",
-    "h1": "Wedding Catering Indonesia — Villa Wedding Specialists",
+    "h1": "Wedding Catering Indonesia — Bali Wedding Specialists",
 },
   {
     "slug": "private-dining-indonesia",

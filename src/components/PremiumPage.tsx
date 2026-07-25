@@ -45,6 +45,7 @@ import FAQAccordion from './catering/FAQAccordion'
 import { Button } from '@/components/ui/button'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import PriceDisclaimer from './PriceDisclaimer'
+import { downgradeArticleH1 } from '@/lib/utils'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -337,7 +338,7 @@ export default function PremiumPage({
                     {section.body && (
                       <div
                         className="text-[#4A4745] leading-relaxed space-y-4"
-                        dangerouslySetInnerHTML={{ __html: section.body }}
+                        dangerouslySetInnerHTML={{ __html: downgradeArticleH1(section.body) }}
                       />
                     )}
                   </div>
@@ -368,7 +369,7 @@ export default function PremiumPage({
                   {section.body && (
                     <div
                       className="text-[#4A4745] leading-relaxed space-y-4"
-                      dangerouslySetInnerHTML={{ __html: section.body }}
+                      dangerouslySetInnerHTML={{ __html: downgradeArticleH1(section.body) }}
                     />
                   )}
                 </div>

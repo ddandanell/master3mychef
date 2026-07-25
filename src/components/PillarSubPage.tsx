@@ -5,10 +5,7 @@ import FAQAccordion from './catering/FAQAccordion'
 import { getSubPage, getPillarBySlug, type Pillar, type SubPage } from '@/data/siteArchitecture'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import { getPageMetaByPath } from '@/data/page-meta'
-
-function stripFirstH1(html: string): string {
-  return html.replace(/<h1[\s\S]*?<\/h1>/i, '').trim()
-}
+import { downgradeArticleH1 } from '@/lib/utils'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -151,7 +148,7 @@ export default function PillarSubPage() {
         <section className="px-6 py-16 border-t border-[#E8E6E3]">
           <div
             className="max-w-[900px] mx-auto prose prose-stone"
-            dangerouslySetInnerHTML={{ __html: stripFirstH1(articleHtml) }}
+            dangerouslySetInnerHTML={{ __html: downgradeArticleH1(articleHtml) }}
           />
         </section>
       )}

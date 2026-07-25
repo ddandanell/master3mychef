@@ -4,6 +4,7 @@ import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '.
 import { JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
 import { JOURNAL_POSTS } from '@/data/content/journalPosts'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
+import { downgradeArticleH1 } from '@/lib/utils'
 import { getPageMetaByPath } from '@/data/page-meta'
 import { SITEMAP } from '@/data/sitemap'
 
@@ -264,7 +265,7 @@ export function JournalPostPage() {
 
         <div
           className="prose prose-lg max-w-none text-[#4A4745] prose-p:leading-relaxed prose-p:text-[#4A4745] prose-p:mb-6"
-          dangerouslySetInnerHTML={{ __html: postContent }}
+          dangerouslySetInnerHTML={{ __html: downgradeArticleH1(postContent) }}
         />
 
         {/* Prev/Next Navigation */}

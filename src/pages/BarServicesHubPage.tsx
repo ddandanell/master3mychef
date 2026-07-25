@@ -23,6 +23,7 @@ import { BarServiceSubNav } from '@/components/bar-services'
 import { getPageMeta } from '@/data/page-meta'
 import { BAR_SERVICES_HUB, BAR_RESOURCES, getBarServiceBySlug } from '@/data/bar-services'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
+import { downgradeArticleH1 } from '@/lib/utils'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 const SITE = 'https://mychef.id'
@@ -283,7 +284,7 @@ export default function BarServicesHubPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <div
               className="prose prose-invert prose-stone max-w-none text-[#F5F2EB]/80 prose-headings:font-playfair prose-headings:text-[#F5F2EB] prose-h2:mb-6 prose-h2:mt-16 prose-h2:text-3xl prose-h3:mt-10 prose-h3:text-2xl prose-p:mb-6 prose-p:text-lg prose-p:leading-relaxed prose-li:text-lg prose-li:leading-relaxed prose-strong:text-[#F5F2EB] prose-a:font-medium prose-a:text-[#C5A028] prose-a:no-underline hover:prose-a:underline prose-blockquote:rounded-r-2xl prose-blockquote:border-l-[#C5A028] prose-blockquote:bg-[#1A1A1A]/60 prose-blockquote:p-6 [&_h2]:scroll-mt-28 [&_h3]:scroll-mt-28"
-              dangerouslySetInnerHTML={{ __html: articleHtml }}
+              dangerouslySetInnerHTML={{ __html: downgradeArticleH1(articleHtml) }}
             />
           </div>
         </section>

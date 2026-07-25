@@ -1510,7 +1510,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/staffing/live-in-chef',
     title: 'Live-In Chef Bali | Full-Board Villa Chef | myCHEF',
     description:
-      'Live-in chefs in Bali who manage all meals, groceries and kitchen logistics for your family or guests. From IDR 8M/month. WhatsApp myCHEF.',
+      'Live-in chefs in Bali who manage all meals, groceries and kitchen logistics for your family or guests. Tailored quotes. WhatsApp myCHEF.',
     canonical: `${SITE}/staffing/live-in-chef`,
     h1: 'Live-In Chef in Bali',
     ogImage: `${SITE}/generated/staffing-staffing-kitchen-lg.webp`,

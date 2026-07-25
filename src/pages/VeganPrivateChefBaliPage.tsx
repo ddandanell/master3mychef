@@ -123,7 +123,7 @@ export default function VeganPrivateChefBaliPage() {
       title="Vegan Private Chef in Bali -- Plant-Based Chef Service for Villa Stays & Events"
       seoTitle="Vegan Private Chef Bali -- Plant-Based Villa Service | myCHEF"
       description="Specialist vegan and plant-based private chef service in Bali. Daily villa meals, yoga retreat catering, occasion dinners, and mixed-group accommodation."
-      seoDescription="Vegan private chef in Bali for villa stays, retreats and events. Whole food, Indonesian, fine dining or raw menus. From IDR 750K/day (all meals)."
+      seoDescription="Vegan private chef in Bali for villa stays, retreats and events. Whole food, Indonesian, fine dining or raw menus. Contact us for a tailored quote."
       h1="Vegan Private Chef in Bali -- Plant-Based Chef Service for Villa Stays and Events"
       subtitle="Bali is one of the finest places in the world to eat plant-based food. A specialist vegan chef makes the most of it."
       heroImage="/images/blog/vegan-private-chef-bali.jpg"
@@ -142,7 +142,7 @@ export default function VeganPrivateChefBaliPage() {
         'dietary specific chef bali',
         'vegan cooking bali',
       ]}
-      highlights={['Specialist Vegan Chefs', 'Mixed Group Capable', 'Retreat Catering', 'From IDR 750K/day']}
+      highlights={['Specialist Vegan Chefs', 'Mixed Group Capable', 'Retreat Catering', 'Tailored Quotes']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

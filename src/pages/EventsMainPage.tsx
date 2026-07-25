@@ -225,7 +225,7 @@ const PRICING_TABLE: PricingRow[] = [
   { type: 'Birthdays', from: <AllInPrice price={850000} />, minGuests: '15+', goodFor: 'Milestone dinners & villa parties' },
   { type: 'Anniversaries', from: <AllInPrice price={1200000} />, minGuests: '2+', goodFor: 'Couples, vow renewals' },
   { type: 'Corporate events', from: <AllInPrice price={1200000} />, minGuests: '10+', goodFor: 'Offsites, launches, exec dinners' },
-  { type: 'Wellness retreats', from: <AllInPrice price={1500000} suffix="/person/day" />, minGuests: '8+', goodFor: 'Multi-day, dietary-led programmes' },
+  { type: 'Wellness retreats', from: <span className="text-[#1A1A1A] font-semibold">Custom quote</span>, minGuests: '8+', goodFor: 'Multi-day, dietary-led programmes' },
   { type: 'Villa parties', from: <AllInPrice price={650000} />, minGuests: '20+', goodFor: 'Sundowners, hens, cocktail nights' },
   { type: 'Baby showers', from: <AllInPrice price={750000} />, minGuests: '10+', goodFor: 'Brunches, high teas, reveals' },
 ]

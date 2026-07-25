@@ -489,8 +489,7 @@ export default function CateringRetreatPage() {
           serviceSchema(
             'Retreat Catering Bali',
             'Per-day retreat meal plans in Bali: plant-forward, vegan, gluten-free and detox menus for multi-day retreats, with dietary intake, daily fresh shopping and a dedicated retreat chef.',
-            `${SITE}/catering/retreat-catering`,
-            '$$$$'
+            `${SITE}/catering/retreat-catering`
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
           cateringBreadcrumbSchema('Retreat Catering Bali', `${SITE}/catering/retreat-catering`),

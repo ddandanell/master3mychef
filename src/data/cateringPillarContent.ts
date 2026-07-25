@@ -152,12 +152,12 @@ export const CATERING_STYLES: CateringStyle[] = [
   {
     image: '/generated/mychef-catering-style-retreat.webp',
     title: 'Retreat Catering',
-    price: 'From IDR 700,000/person/day',
+    price: 'Custom quote',
     description:
       'Retreat catering Bali is built for yoga retreats, wellness centers, corporate wellness trips, and multi-day group stays where nutrition, consistency, and dietary inclusivity matter. We design plant-forward menus with abundant vegetables, whole grains, lean proteins, fermented foods, and low-sugar options, while still offering indulgent treats for guests who want them. Pricing is typically per person per day and covers breakfast, lunch, dinner, snacks, and drinks across the full retreat. Our team understands retreat rhythms: early breakfasts, light lunches, nourishing dinners, and flexibility for fasting or ayurvedic preferences. We also provide buffet, family-style, or plated service depending on your schedule and group size.',
     href: '/catering/retreat-catering',
     accent: '#6B8E5A',
-    details: `Retreat Catering Bali is built for multi-day wellness, yoga, and corporate wellness programs where nutrition, consistency, and dietary inclusivity are priorities. Group sizes range from 8 to 80 guests, often staying for three to seven nights. The dining style is nourishing and flexible: plant-forward buffets, family-style shared plates, or individual bowls, with options for vegan, gluten-free, ayurvedic, and low-sugar diets. What makes retreat catering different from event catering is the rhythm — early breakfasts, light lunches, nourishing dinners, and snacks between sessions. Pricing is usually per person per day and covers all meals and drinks. Our chefs understand retreat schedules and can adapt menus around fasting or silent mornings. For yoga retreats and wellness groups anywhere in Bali, <a href="/catering/retreat-catering">retreat catering</a> keeps guests energised.`,
+    details: `Retreat Catering Bali is built for multi-day wellness, yoga, and corporate wellness programs where nutrition, consistency, and dietary inclusivity are priorities. Group sizes range from 8 to 80 guests, often staying for three to seven nights. The dining style is nourishing and flexible: plant-forward buffets, family-style shared plates, or individual bowls, with options for vegan, gluten-free, ayurvedic, and low-sugar diets. What makes retreat catering different from event catering is the rhythm — early breakfasts, light lunches, nourishing dinners, and snacks between sessions. Every retreat is quoted individually based on group size, length and menu. Our chefs understand retreat schedules and can adapt menus around fasting or silent mornings. For yoga retreats and wellness groups anywhere in Bali, <a href="/catering/retreat-catering">retreat catering</a> keeps guests energised.`,
   },
   {
     image: '/generated/mychef-catering-style-floating.webp',
@@ -224,7 +224,7 @@ export const CATERING_BY_EVENT_TYPES: CateringByEventType[] = [
     style: 'Plant-forward buffet or family-style',
     menu: 'Healthy breakfast, light lunch, nourishing dinner, snacks, smoothies',
     staffing: 'Retreat chef, service team, dietary specialist',
-    experience: `Retreat catering Bali is designed for multi-day wellness programs where food supports the schedule. Menus are plant-forward, low-sugar, and rich in fresh vegetables, with flexibility for vegan, gluten-free, and ayurvedic preferences. Pricing is typically per person per day, covering all meals and hydration stations. Our chefs understand retreat rhythms and can adapt menus around fasting or silent mornings, making us a trusted partner for yoga and wellness retreats.`,
+    experience: `Retreat catering Bali is designed for multi-day wellness programs where food supports the schedule. Menus are plant-forward, low-sugar, and rich in fresh vegetables, with flexibility for vegan, gluten-free, and ayurvedic preferences. Every retreat is quoted individually based on group size, length and menu. Our chefs understand retreat rhythms and can adapt menus around fasting or silent mornings, making us a trusted partner for yoga and wellness retreats.`,
     href: '/catering/retreat-catering',
   },
   {

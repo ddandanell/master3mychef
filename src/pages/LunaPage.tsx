@@ -1081,7 +1081,7 @@ export default function LunaPage() {
                 <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Guarantees</p>
                 <div className="space-y-2 text-sm text-[#1A1A1A]/70">
                   <p><strong className="text-[#1A1A1A]/80">Satisfaction guarantee:</strong> Not satisfied? We refund 50% — no questions asked</p>
-                  <p><strong className="text-[#1A1A1A]/80">48-hour cancellation policy:</strong> Full refund if you cancel 48+ hours before</p>
+                  <p><strong className="text-[#1A1A1A]/80">Booking terms:</strong> 50% deposit secures your date; balance due the day before the event</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-[#1A1A1A]/60 text-sm">

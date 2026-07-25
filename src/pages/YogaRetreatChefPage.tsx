@@ -85,7 +85,7 @@ const FAQS = [
   },
   {
     question: 'Do retreat chefs also handle kitchen cleanup and dishwashing?',
-    answer: 'Chef responsibilities cover kitchen prep and cooking cleanup. Dishwashing for large groups is typically handled by a kitchen assistant (IDR 200K–300K/day). For retreats of 20+ guests, budget for 1–2 kitchen helpers beyond the chef team.',
+    answer: 'Chef responsibilities cover kitchen prep and cooking cleanup. Dishwashing for large groups is typically handled by a kitchen assistant arranged as part of your staffing plan. For retreats of 20+ guests, budget for 1–2 kitchen helpers beyond the chef team.'
   },
   {
     question: 'Can the chef create raw or living food menus for a raw food retreat?',

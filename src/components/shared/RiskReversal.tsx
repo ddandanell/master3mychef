@@ -55,7 +55,7 @@ export function FineDiningRiskReversal({ dark = true, className = '' }: { dark?:
       className={className}
       items={[
         { icon: RefreshCw, label: 'Satisfaction guarantee', desc: 'Not satisfied? We refund 50% — no questions asked' },
-        { icon: Clock, label: '48-hour cancellation policy', desc: 'Full refund if you cancel 48+ hours before' },
+        { icon: Clock, label: '50% deposit secures your date', desc: 'Balance due the day before your event' },
       ]}
     />
   )

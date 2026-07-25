@@ -33,13 +33,13 @@ const MEAL_PLANS = [
 ]
 
 const FAQS = [
-  { q: 'How much does a daily villa chef cost in Bali?', a: 'Daily villa chef hire runs roughly IDR 600K–1.5M per day depending on meals and household size. Weekly meal prep starts from IDR 4.5M per week for two to four people.' },
-  { q: 'How does a daily villa chef service work?', a: 'The chef shops fresh, cooks in your villa kitchen, serves, and leaves the kitchen tidy. Book per dinner, per day, or as recurring chef days.' },
-  { q: 'Should I book a chef for every meal of my stay?', a: 'Most guests mix two to three chef dinners with restaurant nights. Daily service, weekly meal prep, and full-board retreat packages are also available.' },
-  { q: 'Do we pay for groceries separately?', a: 'Yes. Groceries are billed at cost with receipts, so you pay real market prices. The chef service itself is one fixed quote confirmed before booking.' },
-  { q: 'How long does the chef stay each day?', a: 'For dinner service the team typically arrives two to three hours before to prep and leaves after clean-up. Daily-service schedules are agreed per booking.' },
-  { q: 'Can the chef cook every meal of our stay?', a: 'Yes. Daily chef service, recurring chef days, weekly meal prep, and full-board packages cover breakfast, lunch, and dinner across your whole stay.' },
-  { q: 'Live-in chef vs daily chef service - which do I need?', a: 'Daily service means the chef visits for agreed meals. Live-in means the chef resides in your villa on a monthly arrangement. Daily is more flexible; live-in suits households needing full coverage.' },
+  { q: 'What does the meal-plan rate include?', a: 'Chef time, menu planning, cooking, table service and a full kitchen cleanup after every meal. Groceries are billed separately at cost with receipts — no markup.' },
+  { q: 'How long does the chef stay each day?', a: 'Breakfast service runs about 2 hours and dinner about 3. Half- and full-day plans cover the day\'s cooking from breakfast through dinner.' },
+  { q: 'Which areas do you serve?', a: 'Villas across Bali\'s main areas — Seminyak, Canggu, Pererenan, Ubud, Uluwatu, Sanur, Jimbaran and surrounds. Share your villa name and location pin when you enquire.' },
+  { q: 'Can the chef handle dietary requirements and kids\' meals?', a: 'Yes — halal, vegan, gluten-free, keto, allergies and children\'s menus are part of the service at no extra charge.' },
+  { q: 'Do we need to buy groceries or equipment?', a: 'No. Your chef shops for everything and works in your villa kitchen, bringing any specialist tools the menu needs.' },
+  { q: 'How far ahead should we book?', a: 'Three or more days is comfortable for daily service; for peak season (July–August and December), two weeks ahead is recommended. A 50% deposit confirms your dates.' },
+  { q: 'Is this the right service for a party or wedding?', a: 'No — daily villa dining is designed for everyday meals for up to about 10 guests. For celebrations, BBQs and events, our events & catering team is the right fit.' },
 ]
 
 const TESTIMONIALS = [
@@ -124,9 +124,9 @@ export default function SolPage() {
             description: getPageMeta('villa-chef').description,
             url: getPageMeta('villa-chef').canonical,
             lowPrice: '600000',
-            highPrice: '1500000',
+            highPrice: '4000000',
             priceCurrency: 'IDR',
-            unitText: 'per hour',
+            unitText: 'per service',
           }),
           breadcrumbSchema('Villa Chef', getPageMeta('villa-chef').canonical),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
@@ -151,7 +151,7 @@ export default function SolPage() {
             {"Your Private Chef for Everyday Villa Dining"}
           </h1>
           <p className="sol-hero-sub text-lg md:text-xl text-white/[80%] mb-8 max-w-3xl mx-auto">
-            The best part of a Bali villa stay should not be the daily logistics of eating. A villa chef changes that: breakfast appears after your swim, lunch when the kids are hungry, dinner when the light turns golden — all cooked fresh in your kitchen, every day of your stay, with the shopping, cooking and cleaning completely handled. (Hosting a party or event for 10+ guests? That's our <Link to="/events" className="underline hover:text-[#C5A028]">events &amp; catering</Link> team.)
+            The best part of a Bali villa stay should not be the daily logistics of eating. A villa chef changes that: breakfast appears after your swim, lunch when the kids are hungry, dinner when the light turns golden — all cooked fresh in your kitchen, every day of your stay, with the shopping, cooking and cleaning completely handled. This service is built for couples, families and groups of friends on multi-day stays: everyday dining, done beautifully. (Hosting a party or event for 10+ guests? That's our <Link to="/events" className="underline hover:text-[#C5A028]">events &amp; catering</Link> team.)
           </p>
           <div className="sol-hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="sol-hero" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
@@ -209,7 +209,7 @@ export default function SolPage() {
           <div className="text-center mb-16">
             <p className="text-[#6B8E5A] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Pricing</p>
             <h2 className="text-4xl md:text-5xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Meal Plans and Prices</h2>
-            <p style={{ color: '#8A7B6B' }}>One hourly rate per chef. Groceries billed at cost — no markup, receipts provided.</p>
+            <p style={{ color: '#8A7B6B' }}>One clear rate per plan. Groceries billed at cost — no markup, receipts provided.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {MEAL_PLANS.map((plan, i) => (
@@ -243,7 +243,7 @@ export default function SolPage() {
             ))}
           </div>
           <p className="text-center mt-10 text-sm" style={{ color: '#8A7B6B' }}>
-            Minimum booking 4 hours. As a guide: breakfast service runs about 2 hours, dinner about 3; most full-board families book 6–8 hours per day.
+            As a guide: breakfast service runs about 2 hours, dinner about 3 — half- and full-day plans cover the whole day's cooking without watching the clock.
           </p>
         </div>
       </section>
@@ -358,7 +358,7 @@ export default function SolPage() {
           </div>
           <div className="space-y-4 mb-8">
             {[
-              { label: 'Hourly meal plans (this page)', desc: 'Daily villa chef service during your stay.' },
+              { label: 'Daily meal plans (this page)', desc: 'Villa chef service across every day of your stay.' },
               { label: 'Per-session pricing', desc: 'One-off dinners and special evenings, from IDR 1.35M per session — see ', link: { text: 'weekly chef service in Canggu', to: '/private-chef/canggu' }, suffix: ' or ', link2: { text: 'Pererenan', to: '/private-chef/pererenan' }, end: '.' },
               { label: 'Weekly meal prep', desc: 'From IDR 4.5M per week for two people, for longer stays.' },
               { label: 'Monthly arrangements', desc: 'For stays of a month or more, see ', link: { text: 'monthly villa chef hire', to: '/hire-private-chef-bali-monthly' }, end: '.' },
@@ -472,8 +472,8 @@ export default function SolPage() {
               <div className="space-y-4 mb-8">
                 {[
                   { label: 'Breakfast Only', price: 'IDR 600K / hour' },
-                  { label: 'Half Board', price: 'IDR 1.1M / hour' },
-                  { label: 'Full Board', price: 'IDR 1.5M / hour' },
+                  { label: 'Half Board', price: 'IDR 2M / half-day' },
+                  { label: 'Full Board', price: 'IDR 4M / full-day' },
                 ].map((p) => (
                   <div key={p.label} className="flex items-center justify-between py-3 border-b border-[#E5E0D8]">
                     <span style={{ color: '#2C2419' }}>{p.label}</span>
@@ -482,7 +482,7 @@ export default function SolPage() {
                 ))}
               </div>
               <p className="text-xs mb-6" style={{ color: '#8A7B6B' }}>
-                * Groceries billed at cost — no markup. Minimum 4-hour booking. Service charge included.
+                * Groceries billed at cost — no markup. Rates shown ++ (11% government tax + 10% service charge); a 50% deposit confirms your dates.
               </p>
               <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="sol-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">
                 <Phone className="w-4 h-4" /> Book My Villa Chef on WhatsApp

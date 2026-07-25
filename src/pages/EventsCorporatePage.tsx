@@ -122,8 +122,9 @@ const ADDONS = [
 ]
 
 const FAQS = [
+  { q: 'What does corporate event catering in Bali cost?', a: 'Every corporate event is quoted individually based on format, guest count, venue logistics and production requirements. Contact us for a fixed, itemised proposal.' },
   { q: 'Can you issue a tax invoice (faktur pajak)?', a: 'Yes — we are NPWP-registered. Tax invoice issued upon 50% deposit. Standard rate 11% PPN.' },
-  { q: 'What are your B2B payment terms?', a: '30% deposit at booking. 50% before event. 20% at delivery. Net-30 invoicing available with credit check for repeat corporate buyers.' },
+  { q: 'What are your B2B payment terms?', a: '50% deposit at booking. Balance before event. Net-30 invoicing available with credit check for repeat corporate buyers.' },
   { q: 'Do you have liability insurance?', a: 'Yes — public liability + product liability covered. Insurance certificate provided on request.' },
   { q: 'Can you handle Bahasa + English speakers?', a: 'Yes — all coordinators bilingual. Mandarin available on request.' },
   { q: 'How do you manage dietary restrictions for large groups?', a: 'Pre-event dietary form sent 14 days before. We label every dish at the buffet / plate. Halal / vegan / GF / nut allergy / shellfish allergy all handled.' },

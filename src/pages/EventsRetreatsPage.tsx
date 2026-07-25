@@ -103,7 +103,7 @@ const ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'How much does wellness retreat catering cost?', a: 'Wellness retreat catering is quoted individually based on group size, menu style, length of stay and experience add-ons. Contact us for a custom per-person-per-day package.' },
+  { q: 'How much does wellness retreat catering cost?', a: 'Wellness retreat catering is quoted individually based on group size, menu style, length of stay and experience add-ons. Contact us for a fixed, itemised proposal.' },
   { q: 'Can catering work around retreat schedules and excursions?', a: 'Yes. Meals are energy-timed around sessions and excursions, and menus are co-designed with facilitators.' },
   { q: 'Do you cater retreats in Sidemen / Amed / East Bali?', a: 'Yes. East Bali retreats are served with distance logistics quoted upfront. We have experience in Sidemen and other remote retreat locations.' },
   { q: 'Can your team work with a retreat venue\'s kitchen?', a: 'Yes. We assess the kitchen before the programme, bring missing equipment, and plan service around the venue layout and schedule.' },

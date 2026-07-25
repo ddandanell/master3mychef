@@ -203,6 +203,21 @@ const FAQS = [
     answer:
       `Private chef sessions from IDR 1,350K cover up to 6 guests. Fine dining starts at 6 guests (2 for romantic dinners). Corporate catering carries a minimum spend of ${siteFacts.corporateMinSpend}.`,
   },
+  {
+    question: 'Do you charge travel fees?',
+    answer:
+      'Major villa areas (Seminyak, Canggu, Ubud central, Sanur, Nusa Dua, Jimbaran) carry no surcharge. Remote areas may add a small travel allowance — always quoted upfront.',
+  },
+  {
+    question: 'Can I get a quote before committing?',
+    answer:
+      'Yes — send your date, area, guest count and service on WhatsApp. Itemised proposals within 24 hours, no obligation.',
+  },
+  {
+    question: 'Is tipping expected?',
+    answer:
+      'Not mandatory and never included. If the team exceeded expectations, a direct tip goes entirely to the people who served you.',
+  },
 ]
 
 const RELATED_PAGES = [

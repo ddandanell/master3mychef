@@ -84,7 +84,7 @@ const HOW_IT_WORKS = [
 const COMPARISON_ROWS = [
   { feature: 'Vetted, background-checked team', freelance: 'Varies', marketplace: 'Varies', mychef: 'Always' },
   { feature: 'Backup if your chef falls ill', freelance: 'None', marketplace: 'Rebooking', mychef: 'Replacement within 2 hours or 100% refund' },
-  { feature: 'Full staffing (waiters, bar, sommelier)', freelance: 'Rarely', marketplace: 'No', mychef: 'From IDR 250K/hour' },
+  { feature: 'Full staffing (waiters, bar, sommelier)', freelance: 'Rarely', marketplace: 'No', mychef: 'From IDR 250K/hour; bartenders 350K/hour' },
   { feature: 'Itemised fixed quote before you pay', freelance: 'Sometimes', marketplace: 'Platform estimate', mychef: 'Always, within 24 hours' },
   { feature: 'Kitchen left spotless', freelance: 'Hopefully', marketplace: '—', mychef: 'Guaranteed' },
 ]
@@ -497,9 +497,13 @@ export default function HubPage() {
                   <td className="px-5 py-3">Wedding catering</td>
                   <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 1.5M / person</td>
                 </tr>
-                <tr>
-                  <td className="px-5 py-3">Waiters, bartenders &amp; sommeliers</td>
+                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
+                  <td className="px-5 py-3">Waiters &amp; sommeliers</td>
                   <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 250K / hour</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-3">Bartenders</td>
+                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 350K / hour (3h min)</td>
                 </tr>
               </tbody>
             </table>

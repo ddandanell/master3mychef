@@ -454,12 +454,15 @@ const TIMELINE = [
 ]
 
 const FAQS = [
-  { q: 'How much does retreat catering cost?', a: 'Retreat catering is quoted individually based on group size, menu intensity, dietary complexity and length of programme. Minimum booking applies, and applicable service charge and government tax are shown clearly in your quotation. Contact us for a custom per-person-per-day package.' },
-  { q: 'Do you cater one-day workshops?', a: 'Yes. We provide full one-day catering for workshops, trainings and retreats — welcome coffee, break stations, working lunch, afternoon refreshments, and a closing dinner where required, all timed to your agenda.' },
-  { q: 'How do you handle dietary restrictions at retreats?', a: 'We use a structured pre-retreat dietary intake, per-guest meal mapping, and rotating menus so restricted guests are never served the same limited dish twice.' },
+  { q: 'What does retreat catering in Bali cost?', a: 'Every retreat meal plan is quoted individually based on group size, menu intensity, dietary complexity and length of programme. Contact us for a fixed, itemised proposal.' },
+  { q: 'How many guests do you cater for, and is there a minimum?', a: 'We regularly cater retreats from 10 to 60 guests, and up to 100 for larger programmes. For 30 guests we typically assign a head chef plus two assistants, scaled to your villa kitchen.' },
+  { q: 'Can you do fully vegan, sattvic or detox retreat menus?', a: 'Yes. Fully vegan service is one of our most requested formats, and we design sattvic, juice-cleanse and partial-detox programmes with the same care — full protein profiles and menus that feel abundant, not restrictive.' },
+  { q: 'Can you cater five to seven days continuously?', a: 'Yes — multi-day continuity is the core of this service. Shopping cycles, menu rotation and staff scheduling are planned so quality on day seven matches day one.' },
+  { q: 'What if our villa kitchen is small?', a: 'We assess stove capacity, fridge space and equipment before arrival and bring whatever is missing. Most Bali villa kitchens are fully workable with minor preparation.' },
+  { q: 'What deposit is required?', a: 'A 50% deposit confirms your chef and dates; the balance is due before the retreat begins.' },
+  { q: 'How far ahead should we book?', a: 'Two to four weeks is ideal; for peak season (June–September), earlier is better so we can reserve the right chef for your full dates.' },
+  { q: 'Can guests have alcohol at a wellness retreat?', a: 'That is your call as the organiser — we serve to your programme rules, from fully dry retreats to a single wine-paired closing dinner.' },
   { q: 'Can you guarantee an allergen-free environment?', a: 'No. We take reasonable precautions — intake forms, dish labelling and separation procedures — but we cannot guarantee an entirely allergen-free environment, particularly in third-party villa or venue kitchens. Guests with serious allergies should provide complete written requirements before the event.' },
-  { q: 'Can you cater a retreat of 20 / 30 / 50 people?', a: 'Yes. Staffing scales with headcount — for example, a 30-guest retreat typically runs with one chef and two support staff. Larger retreats are handled through our event team.' },
-  { q: 'Do retreat menus rotate over multi-day stays?', a: 'Yes. Menus rotate across the programme with energy-timed meals around sessions and excursions. Sample rotations are available on request.' },
 ]
 
 export default function CateringRetreatPage() {
@@ -753,7 +756,7 @@ export default function CateringRetreatPage() {
               <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Wellness & Detox Retreat Plan</h3>
               <p className="text-sm text-[#C5A028] font-semibold mb-4">Tailored quote</p>
               <p className="text-sm text-[#4A4745] leading-relaxed mb-4">
-                Balanced-macro menus with organic produce where possible, cold-pressed juices and superfood options for groups of 10–60. Supports full juice-cleanse days or partial detox windows inside a broader menu. Best for detox retreats, spa programmes and fitness groups.
+                Balanced-macro, anti-inflammatory menus with organic produce where possible, cold-pressed juices and superfood options for groups of 10–60. Supports full juice-cleanse days or partial detox windows inside a broader menu. Best for detox retreats, spa programmes and fitness groups.
               </p>
               <ul className="space-y-2 text-sm text-[#4A4745]">
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" /> Balanced-macro focus</li>
@@ -937,7 +940,7 @@ export default function CateringRetreatPage() {
             ))}
           </div>
           <p className="text-sm text-[#4A4745] mt-8 text-center">
-            For guests who want chef-prepared nourishment outside the retreat schedule, we also offer <Link to="/healthy-meal-delivery-indonesia" className="text-[#C5A028] hover:underline">chef-prepared healthy meal delivery</Link> across Indonesia.
+            For guests who want chef-prepared nourishment outside the retreat schedule, we also offer <Link to="/healthy-meal-delivery-indonesia" className="text-[#C5A028] hover:underline">chef-prepared healthy meal delivery</Link> across Bali.
           </p>
           <p className="text-xs text-[#4A4745]/70 mt-4 text-center max-w-2xl mx-auto">
             We take reasonable precautions with allergies and dietary restrictions, but we cannot guarantee an entirely allergen-free environment, particularly in third-party villa or venue kitchens. Guests with serious allergies or medically prescribed diets should provide complete written requirements before the event.

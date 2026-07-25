@@ -368,7 +368,7 @@ export default function ThreeCoursePage() {
         serviceName="three-course villa dining in Bali"
         intent="menus and pricing"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

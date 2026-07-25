@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, Briefcase, ClipboardList } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -37,59 +37,6 @@ const briefJsonLd = {
       areaServed: 'Bali',
       description:
         'Outsourced hospitality staffing for Bali villa managers: pre-vetted chefs and front-of-house staff, 48–72 hour fills, retainer pools and tailored partnership plans for portfolios.',
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Do you offer partnership rates for multiple properties?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Villa managers with three or more properties receive tiered partnership pricing. Contact us for a custom quote based on your portfolio size.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How quickly can you fill a last-minute staffing gap?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Our pool of pre-vetted candidates allows us to fill most roles within 48–72 hours. Emergency placements are available for retainer clients.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What happens if a placed staff member leaves?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'All placements include a replacement guarantee. Retainer clients receive priority re-matching at no additional placement fee.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can you staff for events and high-season surges?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. The Full Hospitality Package includes event staffing, and retainer clients can request additional staff for peak periods.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is your vetting process?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Every candidate passes identity verification, reference checks, a skills assessment and a trial session before joining our pool.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What areas of Bali do you cover?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'All major areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.',
-          },
-        },
-      ],
     },
     {
       '@type': 'BreadcrumbList',
@@ -147,15 +94,7 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'Do you offer partnership rates for multiple properties?', a: 'Yes. Villa managers with three or more properties receive tiered partnership pricing. Contact us for a custom quote based on your portfolio size.' },
-  { q: 'How quickly can you fill a last-minute staffing gap?', a: 'Our pool of pre-vetted candidates allows us to fill most roles within 48–72 hours. Emergency placements are available for retainer clients.' },
-  { q: 'What happens if a placed staff member leaves?', a: 'All placements include a replacement guarantee. Retainer clients receive priority re-matching at no additional placement fee.' },
-  
-  { q: 'Do you handle payroll and contracts for our team?', a: 'Every portfolio placement includes a standard Indonesian employment contract plus payroll guidance covering BPJS and THR. For larger portfolios, we can recommend integrated payroll partners.' },
-  { q: 'Can you staff for events and high-season surges?', a: 'Yes. The Full Hospitality Package includes event staffing, and retainer clients can request additional staff for peak periods. For one-off guest events, our shift-based in-villa staff are available by the hour.' },
-  { q: 'Do you place staff for short-term rentals?', a: 'Yes. We work with villa management companies handling short-term rentals, providing flexible staffing that scales with occupancy.' },
-  { q: 'What is your vetting process?', a: 'Every candidate passes identity verification, reference checks, a skills assessment and a trial session before joining our pool.' },
-  { q: 'What areas of Bali do you cover?', a: 'All major areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
+  { q: 'Can we get staff cover for villa check-in days / peak season?', a: 'Yes. Short-term cover teams are available through in-villa service while permanent roles are recruited.' },
 ]
 
 export default function StaffingVillaManagersPage() {
@@ -178,7 +117,7 @@ export default function StaffingVillaManagersPage() {
         description={getPageMeta('staffing-for-villa-managers').description}
         canonical={getPageMeta('staffing-for-villa-managers').canonical}
         ogImage={getPageMeta('staffing-for-villa-managers').ogImage}
-        jsonLd={briefJsonLd}
+        jsonLd={[briefJsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* Hero */}

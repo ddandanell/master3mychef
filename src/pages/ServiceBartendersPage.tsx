@@ -423,7 +423,7 @@ export default function ServiceBartendersPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="in-villa-bartenders"

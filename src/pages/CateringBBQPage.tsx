@@ -657,7 +657,7 @@ export default function CateringBBQPage() {
         </div>
       </section>
 
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
 
       <StickyMobileCTA

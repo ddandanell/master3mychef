@@ -33,14 +33,13 @@ const MEAL_PLANS = [
 ]
 
 const FAQS = [
-  { q: 'What does the villa chef rate include?', a: 'Chef time, menu planning, cooking, table service and a full kitchen cleanup after every meal. Groceries are billed separately at cost with receipts — no markup.' },
-  { q: 'How many hours per day should we book?', a: 'Breakfast runs about 2 hours and dinner about 3. Most full-board families book 6–8 hours per day; the minimum booking is 4 hours.' },
-  { q: 'Can the chef handle dietary requirements and kids\' meals?', a: 'Yes — halal, vegan, gluten-free, keto, allergies and children\'s menus are part of the service at no extra charge.' },
-  { q: 'Do we need to buy groceries or equipment?', a: 'No. Your chef shops for everything and works in your villa kitchen, bringing any specialist tools the menu needs.' },
-  { q: 'Will the chef use my kitchen equipment?', a: 'Yes, your kitchen. We bring any specialized tools we need. We have worked in every type of villa kitchen.' },
-  { q: 'Can I request specific dishes?', a: 'Of course. Before your stay, your chef will ask about your favorites, allergies, and must-haves. Every menu is customized.' },
-  { q: 'What if we want to eat out one night?', a: 'No problem. You only pay for the days and meals you use. Flexibility is the whole point.' },
-  { q: 'How far ahead should we book?', a: 'Three or more days is comfortable for daily service; for peak season (July–August and December), two weeks ahead is recommended. For holiday periods, read our guide to booking a <a href="/blog/holiday-chef-bali">holiday chef in Bali</a>. A 50% deposit confirms your dates.' },
+  { q: 'How much does a daily villa chef cost in Bali?', a: 'Daily villa chef hire runs roughly IDR 600K–1.5M per day depending on meals and household size. Weekly meal prep starts from IDR 4.5M per week for two to four people.' },
+  { q: 'How does a daily villa chef service work?', a: 'The chef shops fresh, cooks in your villa kitchen, serves, and leaves the kitchen tidy. Book per dinner, per day, or as recurring chef days.' },
+  { q: 'Should I book a chef for every meal of my stay?', a: 'Most guests mix two to three chef dinners with restaurant nights. Daily service, weekly meal prep, and full-board retreat packages are also available.' },
+  { q: 'Do we pay for groceries separately?', a: 'Yes. Groceries are billed at cost with receipts, so you pay real market prices. The chef service itself is one fixed quote confirmed before booking.' },
+  { q: 'How long does the chef stay each day?', a: 'For dinner service the team typically arrives two to three hours before to prep and leaves after clean-up. Daily-service schedules are agreed per booking.' },
+  { q: 'Can the chef cook every meal of our stay?', a: 'Yes. Daily chef service, recurring chef days, weekly meal prep, and full-board packages cover breakfast, lunch, and dinner across your whole stay.' },
+  { q: 'Live-in chef vs daily chef service - which do I need?', a: 'Daily service means the chef visits for agreed meals. Live-in means the chef resides in your villa on a monthly arrangement. Daily is more flexible; live-in suits households needing full coverage.' },
 ]
 
 const TESTIMONIALS = [

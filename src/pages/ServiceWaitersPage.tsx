@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { getPageMeta } from '@/data/page-meta'
 import SeoHead, {
   howToSchema,
+  faqPageSchema,
 } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -424,7 +425,7 @@ export default function ServiceWaitersPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="in-villa-waiters"

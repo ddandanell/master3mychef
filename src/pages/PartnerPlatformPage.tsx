@@ -569,7 +569,7 @@ export default function PartnerPlatformPage() {
           </p>
         </div>
       </section>
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

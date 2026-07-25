@@ -545,7 +545,7 @@ export default function EventsBabyShowersPage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="events-baby-showers"

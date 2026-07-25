@@ -571,7 +571,7 @@ export default function EventsCorporatePage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="events-corporate"

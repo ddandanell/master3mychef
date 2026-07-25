@@ -707,7 +707,7 @@ export default function CateringFloatingBreakfastPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="catering-floating-breakfast"

@@ -588,7 +588,7 @@ export default function EventsVillaPartiesPage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="events-villa-parties"

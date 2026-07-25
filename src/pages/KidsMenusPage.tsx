@@ -261,7 +261,7 @@ export default function KidsMenusPage() {
         serviceName="kids' party menu in Bali"
         intent="menu and pricing"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

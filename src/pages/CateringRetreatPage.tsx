@@ -455,14 +455,10 @@ const TIMELINE = [
 ]
 
 const FAQS = [
-  { q: 'What does retreat catering in Bali cost?', a: 'Retreat programmes are priced per group, length and menu. Contact us for a tailored proposal with a fixed quote.' },
-  { q: 'How many guests do you cater for, and is there a minimum?', a: 'We regularly cater retreats from 10 to 60 guests, and up to 100 for larger programmes. For 30 guests we typically assign a head chef plus two assistants, scaled to your villa kitchen.' },
-  { q: 'Can you do fully vegan, sattvic or detox retreat menus?', a: 'Yes. Fully vegan service is one of our most requested formats, and we design sattvic, juice-cleanse and partial-detox programmes with the same care — full protein profiles and menus that feel abundant, not restrictive.' },
-  { q: 'Can you cater five to seven days continuously?', a: 'Yes — multi-day continuity is the core of this service. Shopping cycles, menu rotation and staff scheduling are planned so quality on day seven matches day one.' },
-  { q: 'What if our villa kitchen is small?', a: 'We assess stove capacity, fridge space and equipment before arrival and bring whatever is missing. Most Bali villa kitchens are fully workable with minor preparation.' },
-  { q: 'What deposit is required?', a: 'A 50% deposit confirms your chef and dates; the remaining 50% is due the day before the retreat begins.' },
-  { q: 'How far ahead should we book?', a: 'Two to four weeks is ideal; for peak season (June–September), earlier is better so we can reserve the right chef for your full dates.' },
-  { q: 'Can guests have alcohol at a wellness retreat?', a: 'That is your call as the organiser — we serve to your programme rules, from fully dry retreats to a single wine-paired closing dinner.' },
+  { q: 'How much does retreat catering cost per person per day in Bali?', a: 'Full-board retreat catering starts from IDR 700K per person per day, with menus designed around your programme. Pricing is quoted per head per day so the total scales transparently.' },
+  { q: 'How do you handle dietary restrictions at retreats?', a: 'We use a structured pre-retreat dietary intake, per-guest meal mapping, and rotating menus so restricted guests are never served the same limited dish twice.' },
+  { q: 'Can you cater a retreat of 20 / 30 / 50 people?', a: 'Yes. Staffing scales with headcount — for example, a 30-guest retreat typically runs with one chef and two support staff. Larger retreats are handled through our event team.' },
+  { q: 'Do retreat menus rotate over multi-day stays?', a: 'Yes. Menus rotate across the programme with energy-timed meals around sessions and excursions. Sample rotations are available on request.' },
 ]
 
 export default function CateringRetreatPage() {
@@ -1020,7 +1016,7 @@ export default function CateringRetreatPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="catering-retreat"

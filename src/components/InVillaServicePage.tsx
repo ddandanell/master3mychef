@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Check, ArrowRight, Wine, Users, Shield, Clock, Star, Award } from 'lucide-react'
-import SeoHead from './SeoHead'
+import SeoHead, { faqPageSchema } from './SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
@@ -507,7 +507,7 @@ export default function InVillaServicePage() {
         serviceName="in-villa service staff in Bali"
         intent="availability and pricing"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

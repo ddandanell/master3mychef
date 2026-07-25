@@ -566,7 +566,7 @@ export default function RomanticDinnerPage() {
           ))}
         </div>
       </section>
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="romantic-dinner"

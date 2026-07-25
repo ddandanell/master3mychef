@@ -7,6 +7,7 @@ import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import { getPageMetaByPath } from '@/data/page-meta'
 import { CHEF_FOR_HIRE_INDONESIA_CONTENT } from '@/data/content/chefForHireIndonesia'
 import Breadcrumb from './shared/Breadcrumb'
+import FAQAccordion from './catering/FAQAccordion'
 import { type EnrichedPost, enrichPost, formatBlogDate, getRelatedPosts, injectContentEnhancements, sortPostsByDate } from '@/lib/blog'
 
 const SITE = 'https://mychef.id'
@@ -93,6 +94,17 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       : null
 
   const isGroupVillaDinner = kind === 'landing' && entry.slug === 'group-villa-dinner-packages-bali'
+  const showLandingFaq =
+    kind === 'landing' &&
+    [
+      'best-private-chef-indonesia',
+      'butler-service-bali-daily-rate',
+      'chef-for-hire-indonesia',
+      'corporate-retreat-catering-bali',
+      'group-villa-dinner-packages-bali',
+      'honeymoon-chef',
+      'private-dining-indonesia',
+    ].includes(entry.slug)
   const landingServiceSchema = (() => {
     if (kind !== 'landing') return null
     if (entry.slug === 'group-villa-dinner-packages-bali') {
@@ -273,14 +285,31 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const breadcrumbJsonLd = isArticle ? breadcrumbSchema(pageTitle, canonical, hubLabel, `${SITE}${hubPath}`) : breadcrumbSchema(pageTitle, canonical)
   const faqItems = isChefForHireIndonesia
     ? [
-        { question: 'Can I hire a chef in Indonesia for only one dinner?', answer: 'Yes. myCHEF arranges one-off private dinners, villa BBQs, family meals, birthdays, proposals, and tasting menus. Send the date, exact location, guest count, and preferred service style.' },
-        { question: 'Can I hire a chef for several days or an entire villa stay?', answer: 'Yes. A villa chef can cover selected meals or daily service. The schedule, number of meals, groceries, service hours, days off, and any supporting staff are agreed before confirmation.' },
-        { question: 'Are groceries included when I hire a private chef?', answer: 'It depends on the service. Fine-dining and event packages may include ingredients. Time-based villa chef services normally bill groceries at cost with receipts and no markup. The written quote confirms the exact model.' },
-        { question: 'Can a private chef handle allergies and special diets?', answer: 'Yes, when requirements are shared before menu approval. Tell myCHEF about allergies, cross-contact risks, religious requirements, children, pregnancy, and other dietary needs.' },
-        { question: 'Can myCHEF find a full-time or live-in chef?', answer: 'Yes. Permanent roles use a placement process with a household brief, matched profiles, interviews, cooking trials, contract support, and ongoing follow-up.' },
-        { question: 'Where in Indonesia can I hire a myCHEF chef?', answer: 'Regular service is available across Bali. Assignments in Lombok, on yachts, at remote estates, and in other Indonesian locations are assessed individually based on schedule and logistics.' },
+        { question: 'How do I hire a chef in Indonesia?', answer: 'Message myCHEF on WhatsApp with your date, city, guest count, and dietary needs. We reply within two hours and send an itemised menu proposal within 24 hours. Confirm with a deposit to lock the date.' },
+        { question: 'How much does a personal chef cost in Indonesia?', answer: 'myCHEF pricing is consistent nationally. Dinners start from IDR 700K per person, corporate catering from IDR 700K per person, and wedding catering from IDR 1.5M–3M+ per person. Full price tables are on the pricing page.' },
+        { question: 'Where to find a private chef in Indonesia?', answer: 'Choose between a managed culinary team (vetted, insured, replacement guarantee), a freelancer marketplace, or an independent freelancer. Managed teams cover Bali, Jakarta, and other Indonesian cities with one accountable quote.' },
       ]
-    : entry.slug === 'proposal-dinner'
+    : entry.slug === 'best-private-chef-indonesia'
+      ? [
+          { question: 'Who is the best private chef in Bali?', answer: 'The best private chef for your villa is a vetted professional with food-safety certification, a replacement guarantee, and a track record in villa kitchens. myCHEF is a managed team that has served 560+ villas and 12,000+ guests over eight years, with review depth across fine dining, BBQ, and event menus.' },
+          { question: 'How to choose a private chef in Bali?', answer: 'Look for vetting, insurance, a replacement plan, a written quote, and references. Ask how the chef handles your villa kitchen, dietary needs, and event size. A managed team gives you one accountable point of contact rather than a single freelancer.' },
+          { question: 'Are private chef marketplaces reliable?', answer: 'Marketplaces list freelancers with variable vetting and no replacement guarantee. A managed culinary team provides vetted chefs, a two-hour replacement guarantee, and one accountable quote for your event.' },
+          { question: 'Are your chefs vetted and background-checked?', answer: 'Yes. myCHEF is a managed, vetted and background-checked team of Indonesian professional chefs, led by a Michelin-trained founder. We are not a freelancer marketplace.' },
+          { question: 'What happens if my chef cancels or falls ill?', answer: 'Your evening is protected. We dispatch a verified replacement of equivalent calibre within two hours with the same menu brief and same standard, or we refund 100%.' },
+        ]
+      : entry.slug === 'butler-service-bali-daily-rate'
+        ? [
+            { question: 'Is a butler worth it for a villa holiday?', answer: 'A butler is worth it for families with children, multi-generation groups, and celebration stays. The daily rate makes it easy to test for one day, then extend if the service fits your group.' },
+            { question: 'Does the butler daily rate include tax and service?', answer: 'Rates are quoted ++ (11% tax + 10% service) or nett per the quote, always stated upfront. Your proposal shows the all-in total before you confirm.' },
+          ]
+        : entry.slug === 'private-dining-indonesia'
+          ? [
+              { question: 'What is at-home private dining?', answer: 'At-home private dining is when a professional chef and service team recreate the restaurant experience in your home or villa — menu design, shopping, cooking, service, and cleanup included.' },
+              { question: 'Do you serve outside Bali?', answer: 'Yes. myCHEF serves Jakarta — including Menteng, Kemang, SCBD, and Pondok Indah — with the same pricing structure, and other Indonesian cities on request.' },
+              { question: 'How many guests can a private dining team serve?', answer: 'From intimate two-guest dinners to events of 200 guests. Weddings serve 20–200, corporate events 10–200. Tasting menus cap at 24; larger groups move to catering formats.' },
+              { question: 'How much does a private dining experience cost in Jakarta?', answer: 'Jakarta follows the same structure as Bali: dinners from IDR 700K per person and fine dining from IDR 950K per person. Full detail is on the Jakarta location page.' },
+            ]
+          : entry.slug === 'proposal-dinner'
       ? [
           { question: 'How much does a proposal dinner in Bali cost?', answer: 'From IDR 2.8M++ per couple for a private chef dinner, or from IDR 3.5M++ per couple for full service with styling and waitstaff. Add-ons are itemised.' },
           { question: 'Can you keep it a complete surprise?', answer: 'Yes — coordination happens only with the planning partner, setup is staged while the couple is out, and the service team works to an agreed cue.' },
@@ -293,14 +322,10 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         ]
       : entry.slug === 'honeymoon-chef'
         ? [
-            { question: 'How much does a honeymoon private chef in Bali cost?', answer: 'Dinners from IDR 700K++ per person; full-service romantic evenings from IDR 3.5M++ per couple; daily chef service from IDR 600K/hour plus groceries at cost; weekly arrangements from IDR 4.5M++ for two. ++ adds 11% government tax and 10% service charge.' },
-            { question: 'Can we book the chef for our whole stay?', answer: 'Yes — a single dinner, selected days, or full daily hosting, quoted as one package around your itinerary.' },
-            { question: 'What\'s included in the price?', answer: 'Menu design, shopping, cooking, serving and cleanup. Full-service evenings add table setting, candles and waitstaff. Groceries are billed at cost on daily formats.' },
-            { question: 'Can you handle dietary preferences?', answer: 'Yes — vegan, gluten-free, halal-friendly and allergy requirements are planned into every meal.' },
-            { question: 'Is the floating breakfast included?', answer: 'It\'s an add-on from IDR 950K++ per couple, served at your pool at your chosen time.' },
-            { question: 'How far ahead should we book?', answer: 'As soon as flights and villa are confirmed — peak-season chef days book out early.' },
-            { question: 'Can family book this as a wedding gift?', answer: 'Yes — honeymoon dining plans can be arranged and paid for by family or friends, coordinated as a surprise.' },
-            { question: 'What deposit is required?', answer: 'A deposit confirms the dates (a 50% deposit), with the balance due before service and written cancellation terms.' },
+            { question: 'How much does a honeymoon private chef cost in Bali (couple)?', answer: 'Couple dinners start from around IDR 1.4M++ per dinner (two guests at IDR 700K per person). Multi-experience honeymoon packages combine chef nights, floating breakfast, and cooking classes.' },
+            { question: 'How many private chef nights should we book on our honeymoon?', answer: 'Most couples book one to three chef nights: an arrival-night dinner, one signature fine-dining night, and one relaxed BBQ or brunch, mixed with restaurant outings.' },
+            { question: 'Private chef vs restaurants on a honeymoon in Bali?', answer: 'A mix works best: a private chef for arrival night and one signature evening, and restaurants for exploring. Per-couple costs are often comparable once transfers and drinks markups are included.' },
+            { question: 'Can honeymoon menus be vegan / halal / dietary?', answer: 'Yes. All dietary formats are handled at no extra charge and collected at booking.' },
           ]
         : entry.slug === 'private-chef-for-events'
           ? [
@@ -364,25 +389,17 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             ]
           : entry.slug === 'corporate-retreat-catering-bali'
             ? [
-                { question: 'What does corporate retreat catering in Bali cost per day?', answer: 'Every retreat is priced individually based on group size, duration, menu complexity and location. Contact us for a tailored proposal with an itemised all-in total.' },
-                { question: 'Can myCHEF invoice companies with proper tax documentation?', answer: 'Yes. myCHEF is NPWP-registered and issues full tax invoices (faktur pajak on request) with itemised per-head breakdowns.' },
-                { question: 'How are dietary requirements handled across large groups for several days?', answer: 'A pre-retreat dietary intake form, kitchen briefing against the attendee list, labelled dishes and separate prep for allergy-critical guests. Halal, vegan, gluten-free and medical diets are integrated into the main service.' },
-                { question: 'Can myCHEF cater a retreat across multiple villas?', answer: 'Yes. Groups split across villa compounds and neighbouring properties are regularly served, with logistics coordinated directly with villa and venue management.' },
-                { question: 'What is the alcohol policy for corporate retreats?', answer: 'The company sets the policy; service ranges from fully dry programmes to beer-and-wine dinners or a cocktail reception, with bartenders as an add-on.' },
-                { question: 'Can a retreat include one special elevated dinner?', answer: 'Yes. A plated fine-dining evening mid-retreat is the most common upgrade, quoted as a per-person add-on.' },
-                { question: 'How far in advance should a corporate retreat be booked?', answer: 'Two to four weeks for most retreats; one to three months for peak season or groups above 50.' },
-                { question: 'What deposit is required?', answer: 'A 50% deposit confirms your retreat dates; the balance is due before the programme begins.' },
+                { question: 'How much does corporate retreat catering cost per person per day?', answer: 'Corporate retreat catering is quoted per person per day. Full-board packages are available, with pricing anchored from IDR 700K per person per day. Day-rate math is shown transparently in every proposal.' },
+                { question: 'How far in advance should I book corporate retreat catering?', answer: 'Two to four weeks is typical, and two to three months for peak season. Menu proposals are sent within 24 hours of receiving your brief.' },
+                { question: 'How do you manage dietary needs on a corporate retreat (vegan, halal)?', answer: 'We collect dietary needs before the retreat, label dishes, and customise at no extra charge. The same structured process is used for wellness retreats.' },
+                { question: 'How much is retreat catering for 10 / 20 / 30 / 50 people?', answer: 'Pricing is built from the per-person-per-day model, with a group-size table and staffing notes for each headcount in your proposal.' },
+                { question: 'Can you invoice our company for retreat catering (NPWP)?', answer: 'Yes. We are NPWP-registered and issue tax invoices, support purchase orders, and offer Net-14 terms for regular clients.' },
               ]
             : isGroupVillaDinner
               ? [
-                  { question: 'How much does a group villa dinner in Bali cost?', answer: 'Packages start from IDR 700,000++ per person for groups of 10-60 (larger events custom quoted), plus 11% government tax + 10% service charge, including menu, chefs, service staff, setup and cleanup.' },
-                  { question: 'What group sizes can myCHEF handle for villa dinners?', answer: 'From 10 to 150 guests. Above 60 guests, temporary prep stations and a full brigade are set up; above 30, a second chef is added.' },
-                  { question: 'Can kids be catered within a group dinner?', answer: "Yes — dedicated kids' menus from IDR 250,000 per child, served early and separately if preferred." },
-                  { question: 'How are dietary needs handled across a large group?', answer: 'Requirements are collected in advance; vegetarian, vegan, halal-sensitive, gluten-free and allergy-managed guests are covered in the main menu with every dish labelled.' },
-                  { question: 'Is a villa kitchen big enough for 20+ guests?', answer: 'Almost always. Kitchen capacity, power and serving space are assessed before the date and missing equipment is brought in.' },
-                  { question: 'Do villas charge extra for large gatherings?', answer: 'Some villas charge function fees and some neighbourhoods require a banjar permit for events beyond sleeping capacity. myCHEF flags this early and coordinates with the villa manager.' },
-                  { question: 'What deposit is required?', answer: 'A 50% deposit confirms the date and team; the remaining 50% is due the day before the event.' },
-                  { question: 'How far ahead should a group dinner be booked?', answer: 'A few days to a week is usually enough; earlier in peak season. Travel fees may apply for remote areas and are quoted upfront.' },
+                  { question: 'How much is a group villa dinner per person in Bali?', answer: 'Group villa dinners use tiered per-person pricing by group size from the IDR 700K per person model, with package totals shown for 6, 8, 12, and 20 guests.' },
+                  { question: 'How much is a private chef for 8 people in Bali?', answer: 'Eight guests typically start from around IDR 5.6M++ (~IDR 6.8M all-in) for a three to four course dinner. Alternatively, a chef session starts from IDR 1.35M plus groceries at cost.' },
+                  { question: 'Can you handle dietary restrictions in a group dinner?', answer: 'Yes. Mixed menus per guest — vegan, gluten-free, halal, allergies — are handled within one event at no extra charge. Requirements are collected at booking.' },
                 ]
               : [
                   { question: 'How do I book a private chef in Bali with myCHEF?', answer: 'Contact us via WhatsApp at +62 896-7407-2020 with your date, villa location, and guest count. We reply within the hour and send a full proposal within 24 hours.' },

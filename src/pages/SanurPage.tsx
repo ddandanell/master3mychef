@@ -317,7 +317,7 @@ export default function SanurPage() {
       </section>
 
       <CityDeepDive slug="sanur" cityName="Sanur" />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

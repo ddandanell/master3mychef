@@ -556,7 +556,7 @@ export default function FineDiningChefsPage() {
           ))}
         </div>
       </section>
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="fine-dining-chefs"

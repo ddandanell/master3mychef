@@ -447,7 +447,7 @@ export default function PrivateChefBaliPage() {
           ))}
         </div>
       </section>
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="private-chef-bali"

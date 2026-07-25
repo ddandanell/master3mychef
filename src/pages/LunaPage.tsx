@@ -58,22 +58,10 @@ const WHATS_INCLUDED = [
 ]
 
 const FAQS = [
-  { question: 'What is the minimum number of guests?', answer: 'Six guests minimum. We can accommodate up to 24 for the full fine dining experience. For intimate two-guest romantic evenings, message Sofia to arrange.' },
-  { question: 'Can I mix different menus for my group?', answer: 'Absolutely. Half your table can dine from one family, half from another — seafood for some, single-meat for others. Just let Sofia know when booking.' },
-  { question: 'What does "++" mean in the price?', answer: '"++" means service charge (typically 10%) and government tax (11%) are added to the menu price. Set menus range from IDR 1,250,000 to IDR 3,600,000 per guest before tax and service. Wine pairing is additional at IDR 850K per guest.' },
-  { question: 'How far in advance should I book?', answer: '7+ days is ideal. Peak season (July–August, December) books 2+ weeks ahead. We can sometimes accommodate 48-hour requests — message us and we will try.' },
-  { question: 'Do you provide wine, or do I need to buy it?', answer: 'We bring the wine. The pairing is IDR 850K per guest and includes 4–5 glasses matched to each course.' },
-  { question: 'What if someone has allergies or dietary restrictions?', answer: 'We adjust every course. Gluten-free, shellfish allergy, pregnancy-friendly, halal, vegan — just tell us. No extra charge.' },
-  { question: 'Where do you cook? Do I need a big kitchen?', answer: 'We cook in your villa kitchen. We bring any specialized equipment. We have worked in everything from pool villas to estates.' },
-  { question: 'What time do you arrive?', answer: 'Typically 3 hours before service for setup and prep. The tasting experience itself lasts 2.5–3 hours.' },
-  { question: 'Why villa fine dining instead of a restaurant?', answer: 'Privacy, pacing, and control. No other tables. No noise. No rush. The chef cooks for you alone, and the evening moves at your speed. For groups of 6–24, the per-person cost is often comparable to a high-end restaurant once you factor in transport and wine markup.' },
-  { question: 'Can I see the menu before booking?', answer: 'Yes. We send full menu details, wine pairings, and pricing before you commit. Sofia will walk you through each course.' },
-  { question: 'What happens if I need to cancel?', answer: 'Full refund if cancelled 14+ days ahead. 50% refund 7–14 days. Within 7 days, we apply the deposit to a rescheduled date.' },
-  { question: 'Is this a real Michelin-trained chef?', answer: 'Yes. Adriano, our executive chef, trained in Modena and Tokyo. He personally trains every chef on our team for 6+ months before they lead an evening.' },
-  { question: 'What if I do not like the food?', answer: 'We have served 500+ villa dinners with zero complaints requiring refund. If something is not right, we fix it on the spot. Your satisfaction is the standard we cook to.' },
-  { question: 'How do I pay?', answer: 'We accept bank transfer (IDR or USD), Wise, and credit card via secure link. A 50% deposit locks your date. Balance due the day before the event.' },
-  { question: 'Is my villa suitable?', answer: 'We have worked in pool villas, cliffside estates, and jungle retreats. As long as there is a kitchen and a dining area, we can make it work. We bring tableware, linens, and any equipment we need.' },
-  { question: 'What about children?', answer: 'Children are welcome. We can prepare a simplified menu for younger guests at a reduced rate. Let us know ages and preferences when booking.' },
+  { question: 'How much is a fine dining private chef in Bali?', answer: 'Fine-dining and tasting menus start from IDR 950K per person, with premium tiers up to IDR 2.2M++. Full details are on the Michelin private chef pricing and fine-dining menus pages.' },
+  { question: 'What is included in a fine dining experience at my villa?', answer: 'A multi-course tasting menu cooked fresh on site, menu design, shopping at cost, plated service, and cleanup. Choose Kitchen-Service for a chef-only format or Full-Service with tableware and staff.' },
+  { question: 'Can you do wine pairing in a villa?', answer: 'Yes. Wine pairing adds IDR 850K per person to tasting menus, and a private sommelier can join from IDR 1.2M per dinner.' },
+  { question: 'Can you do fine dining for large groups (24+ guests)?', answer: 'Tasting menus are calibrated for up to 24 guests. Beyond that we move to plated catering or group formats to maintain quality and timing.' },
 ]
 
 const TESTIMONIALS = [

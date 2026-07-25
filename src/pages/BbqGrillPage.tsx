@@ -483,7 +483,7 @@ export default function BbqGrillPage() {
         serviceName="a BBQ grill experience at our villa"
         intent="a quote for a live grill night"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

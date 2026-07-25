@@ -316,36 +316,16 @@ const EVENTS_TESTIMONIALS = [
 
 const FAQS = [
   {
-    q: 'How much does event catering in Bali cost per guest?',
-    a: 'Most myCHEF events run from IDR 650K–1.5M++ per person depending on format; full wedding receptions typically range IDR 1.5M–3M++ per person. "++" means 11% government tax and 10% service charge are added — we always quote the all-in total upfront.',
+    q: 'How much does event catering cost in Bali?',
+    a: 'Per-format pricing starts from IDR 700K per person for dinners, IDR 700K–1.2M for corporate tiers, and IDR 1.5M–3M+ for weddings. Exact pricing depends on guest count, menu, and service style.',
   },
   {
-    q: 'What is the minimum guest count?',
-    a: 'Intimate dinners start from 2 guests. Buffet formats typically require 30+, BBQ packages 10+, and grazing tables serve 10–15. Tell us your headcount and we will recommend the right format.',
+    q: 'Can you cater events for 100+ guests in Bali?',
+    a: 'Yes. We cater weddings for 20–200 guests, corporate events for 10–200 guests, and villa events for up to 150 guests, with full kitchen and service teams scaled to the size.',
   },
   {
-    q: 'Do we need a villa with a big kitchen?',
-    a: 'No. We are a mobile hospitality team — we bring prep equipment, cold storage, glassware and a generator where needed. A small kitchen, or none at all, is not a problem.',
-  },
-  {
-    q: 'Can you handle dietary requirements at scale?',
-    a: 'Yes — halal-friendly, vegan, gluten-free, raw, nut-free, shellfish allergies and kids\' portions, with labelled dishes and separate prep lines for allergies.',
-  },
-  {
-    q: 'How far in advance should we book?',
-    a: 'Weddings and large retreats: 3–6 months for peak season (July–September, December–January). Smaller events: 3–6 weeks is comfortable. We have also run 30-guest dinners on 72 hours\' notice — ask us what is still open.',
-  },
-  {
-    q: 'What deposit is required, and what is the cancellation policy?',
-    a: 'A 50% deposit confirms your date, with the balance due before the event. Cancellation terms are written into every proposal, with force-majeure clauses as standard.',
-  },
-  {
-    q: 'Are there extra fees for villa events — banjar fees, permits?',
-    a: 'Many Bali villages (banjar) charge a function fee for events — across Bali this commonly runs around USD 300, and some villas add their own event fee or require outside-vendor permission. We flag every known fee in your proposal so nothing surprises you.',
-  },
-  {
-    q: 'What happens if it rains?',
-    a: 'Every outdoor event carries a wet-weather plan — marquee rental and indoor relocation are arranged in advance for events in the wet season (roughly November–March).',
+    q: 'Can you cater a last-minute event in Bali?',
+    a: 'Often yes for smaller events — same-day or next-day bookings are frequently possible, and drop-off catering can be arranged in 24–48 hours. Large productions need one to two weeks or more.',
   },
 ]
 

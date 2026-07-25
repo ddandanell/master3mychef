@@ -317,7 +317,7 @@ export default function PererenanPage() {
       </section>
 
       <CityDeepDive slug="pererenan" cityName="Pererenan" />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

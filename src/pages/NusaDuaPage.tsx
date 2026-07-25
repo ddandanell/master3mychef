@@ -316,7 +316,7 @@ export default function NusaDuaPage() {
       </section>
 
       <CityDeepDive slug="nusa-dua" cityName="Nusa Dua" />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

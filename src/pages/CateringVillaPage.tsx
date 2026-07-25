@@ -123,23 +123,11 @@ const FAMILY_COVERAGE_OPTIONS = [
 ]
 
 const FAQS = [
-  { q: 'How much does villa catering in Bali cost?', a: 'From IDR 450,000++ per person for lunches, IDR 650,000++ for dinners, and IDR 550,000++ per person for multi-day meal plans. ++ adds 11% government tax and 10% service charge; your quote shows the all-in total.' },
-  { q: 'What\'s the minimum group size?', a: 'Eight guests for most packages. Smaller groups are usually better served by a private chef dinner — ask us and we\'ll point you to the right option.' },
-  { q: 'Are groceries included?', a: 'Normal groceries are included in your package; premium upgrades (lobster, Wagyu, oysters, extra live stations) are quoted separately with your approval. On private-chef-style arrangements, groceries can also be billed at cost with receipts.' },
-  { q: 'What does our villa kitchen need?', a: 'A working stove, fridge, and sink — most villas qualify. We bring specialised equipment, and if anything is missing, we arrange it. We need access 2–3 hours before meal time.' },
-  { q: 'Can you cater different dietary needs across a multi-day stay?', a: 'Yes — dietary requirements are mapped per guest at booking and applied across every meal of the plan, with separate prep where allergies require it.' },
-  { q: 'Do you travel to our area?', a: 'We cater across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, and beyond. Travel outside the Seminyak–Canggu core carries a quoted allowance — confirmed upfront.' },
-  { q: 'What\'s the deposit and cancellation policy?', a: 'A 50% deposit confirms your dates. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
-  { q: 'Want privacy for a night instead?', a: 'Drop-off dinners deliver chef-prepared food with no staff in the villa — many groups mix both across a stay.' },
-]
-
-const SCHEMA_FAQS = [
-  { question: 'How much does villa catering in Bali cost?', answer: 'From IDR 450,000++ per person for lunches, IDR 650,000++ for dinners, and IDR 550,000++ per person for multi-day meal plans. ++ adds 11% government tax and 10% service charge; quotes show the all-in total.' },
-  { question: 'What is the minimum group size for villa catering?', answer: 'Eight guests for most packages. Smaller groups are usually better served by a private chef dinner.' },
-  { question: 'Are groceries included in villa catering?', answer: 'Normal groceries are included in the package. Premium upgrades such as lobster, Wagyu or oysters are quoted separately with your approval.' },
-  { question: 'What does our villa kitchen need?', answer: 'A working stove, fridge and sink. We bring specialised equipment and arrange anything missing. Access is needed 2–3 hours before meal time.' },
-  { question: 'Can you handle dietary needs across a multi-day stay?', answer: 'Yes. Dietary requirements are mapped per guest at booking and applied across every meal of the plan, with separate prep where allergies require it.' },
-  { question: 'What is the deposit and cancellation policy?', answer: 'A 50% deposit confirms your dates. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { q: 'Can a caterer cook in my villa in Bali?', a: 'Yes. Cooking happens in your villa kitchen after a quick kitchen assessment. Missing equipment is brought by the team, and Full-Service bookings add tableware and staff.' },
+  { q: 'What kitchen requirements are needed for villa catering?', a: 'A working hob or oven and counter space suffice for most menus. For large groups or live-fire formats we bring mobile equipment and confirm power, water, and operating logistics in advance.' },
+  { q: 'How much is villa catering per day in Bali?', a: 'Multi-day villa catering is quoted per person per day. For group stays, villa catering starts from IDR 700K per person.' },
+  { q: 'Do caterers clean up after a villa event?', a: 'Yes. Full cleanup is included: the team packs equipment, clears service ware, and leaves the kitchen and event space tidy before departure.' },
+  { q: 'Is grocery shopping included in villa catering?', a: 'The chef or team does all shopping with fresh market sourcing each service day. Groceries are billed at cost and receipts are provided.' },
 ]
 
 const serviceSchemaBase = serviceWithAggregateOfferSchema({
@@ -188,7 +176,7 @@ export default function CateringVillaPage() {
         jsonLd={[
           serviceSchema,
           cateringBreadcrumbSchema('Villa Catering Bali', `${SITE}/catering/villa-catering`),
-          faqPageSchema(SCHEMA_FAQS),
+          faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
         ]}
       />
 
@@ -609,7 +597,7 @@ export default function CateringVillaPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="catering-villa"

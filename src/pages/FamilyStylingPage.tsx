@@ -286,7 +286,7 @@ export default function FamilyStylingPage() {
           </div>
         </div>
       </section>
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

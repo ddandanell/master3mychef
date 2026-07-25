@@ -317,7 +317,7 @@ export default function JimbaranPage() {
       </section>
 
       <CityDeepDive slug="jimbaran" cityName="Jimbaran" />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

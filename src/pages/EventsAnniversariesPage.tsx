@@ -510,7 +510,7 @@ export default function EventsAnniversariesPage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="events-anniversaries"

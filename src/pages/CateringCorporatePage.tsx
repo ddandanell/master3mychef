@@ -112,13 +112,10 @@ const CORP_ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'What does corporate catering in Bali cost?', a: 'Every corporate catering package is quoted individually based on group size, menu style, service length and venue logistics. Contact us for a fixed, itemised proposal.' },
-  { q: 'What does "++" mean on your quotes?', a: 'It means 11% government tax and 10% service charge are added on top of the quoted price. Your formal proposal shows the all-in total before you commit.' },
-  { q: 'Can you invoice our company properly?', a: 'Yes. We are NPWP-registered and issue full tax invoices with itemised breakdowns. Net-14 terms are available for regular corporate clients.' },
-  { q: 'How do you handle halal, vegan, gluten-free and allergy requirements across a large group?', a: 'Through a pre-event dietary intake form, a kitchen briefing against the actual guest list, labelled dishes, and separate prep zones for allergens. Dietary guests are integrated into the main service, not singled out.' },
-  { q: 'What deposit is required?', a: 'A 50% deposit confirms your date and team; the balance is due the day before the event.' },
-  { q: 'How far in advance should we book?', a: 'Two to four weeks is ideal for most corporate catering. For conferences of 100+ guests, one to two months secures the best team and logistics.' },
-  { q: 'Do you cater at offices and venues, or only villas?', a: 'All three — offices, villas, co-working spaces, hotels and conference venues, Bali-wide. For recurring office lunches, also see our <a href="/catering/drop-off-catering">drop-off catering for office lunches</a>.' },
+  { q: 'How much does corporate catering cost per person in Bali?', a: 'Corporate catering is priced in three tiers: Standard IDR 700K, Premium IDR 750K, and Luxury IDR 1.2M per person, all ++. Minimum spend is IDR 7.5M, and full tax invoices are included.' },
+  { q: 'Do you provide invoices / NPWP for corporate catering?', a: 'Yes. We are NPWP-registered and issue full tax invoices with itemised breakdowns. We support purchase-order processes and offer Net-14 terms for regular corporate clients.' },
+  { q: 'How do you handle dietary requirements for large corporate groups?', a: 'Dietary requirements are collected with RSVPs through a structured intake process, dishes are labelled on the day, and customisation carries no extra charge. Allergen-critical guests receive separate prep where needed.' },
+  { q: 'Can you do last-minute corporate catering?', a: 'Small-group corporate orders are often possible within 24–48 hours. Larger productions need a few days to a week, with a dedicated event manager assigned.' },
 ]
 
 export default function CateringCorporatePage() {
@@ -604,7 +601,7 @@ export default function CateringCorporatePage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="catering-corporate"

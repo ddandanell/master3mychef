@@ -351,7 +351,7 @@ export default function UbudPage() {
       </section>
 
       <CityDeepDive slug="ubud" cityName="Ubud" />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

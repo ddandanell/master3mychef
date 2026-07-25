@@ -103,16 +103,10 @@ const ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'Are you a plant-based operator?', a: 'We are not 100% vegan but we have a dedicated plant-forward menu line. All yoga retreat tiers are fully vegan by default.' },
-  { q: 'Do you handle multiple dietary types simultaneously?', a: 'Yes — common at corporate retreats. We pre-intake dietary needs 14 days before, design parallel menus, label every dish.' },
-  { q: 'Can you cook on-site at the retreat villa?', a: 'Yes — daily on-site chef. We work in your villa kitchen or bring a satellite kitchen if needed.' },
-  { q: 'What about food safety for multi-day events?', a: 'Hygiene-certified team. Daily fresh sourcing (no leftover day-2). HACCP-compliant cold chain.' },
-  { q: 'Can I see a sample retreat menu before I book?', a: 'Yes. Once we understand your retreat rhythm, guest profile, and dietary direction, we can show a sample day structure so you can see how breakfast, lunch, snacks, and dinner would be paced.' },
-  { q: 'What happens if participant numbers shift during the week?', a: 'We confirm a working headcount before the retreat starts, then adjust daily service counts with the host when attendance changes. That keeps portions realistic and helps control waste.' },
-  { q: 'Can the chef join the retreat ceremony?', a: 'Yes — our chefs are often part of the experience. Many retreat hosts include the chef in the welcome ceremony.' },
-  { q: 'Can you cater off-island?', a: 'Currently not — refer to specialist outer-island operators. Bali island-wide only.' },
-  { q: 'Pricing for kids / accompanying family?', a: 'Kids 3–12 are charged at a reduced rate. Contact us for details. Under 3 free.' },
-  { q: 'Cancellation for multi-day events?', a: '30+ days before: 50% refund. 14–30 days: 25%. Under 14 days: no refund but credit toward future retreat.' },
+  { q: 'How much does wellness retreat catering cost per day?', a: 'Full-board retreat catering starts from IDR 700K per person per day. Multi-day productions are quoted per programme.' },
+  { q: 'Can catering work around retreat schedules and excursions?', a: 'Yes. Meals are energy-timed around sessions and excursions, and menus are co-designed with facilitators.' },
+  { q: 'Do you cater retreats in Sidemen / Amed / East Bali?', a: 'Yes. East Bali retreats are served with distance logistics quoted upfront. We have experience in Sidemen and other remote retreat locations.' },
+  { q: 'Can your team work with a retreat venue\'s kitchen?', a: 'Yes. We assess the kitchen before the programme, bring missing equipment, and plan service around the venue layout and schedule.' },
 ]
 
 const RETREAT_GALLERY = [
@@ -563,7 +557,7 @@ export default function EventsRetreatsPage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="events-retreats"

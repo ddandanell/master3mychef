@@ -524,7 +524,7 @@ export default function CompleteVillaExperiencePage() {
         serviceName="Complete Villa Experience Bali"
         intent="a tailored quotation"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

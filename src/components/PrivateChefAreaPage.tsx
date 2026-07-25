@@ -751,7 +751,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
           </p>
         </div>
       </section>
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

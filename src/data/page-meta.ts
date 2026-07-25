@@ -1535,7 +1535,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     description:
       'Bali’s B2B bar consultancy: staff training, cocktail menus, staffing, audits & bar management for hotels, villas and beach clubs. Request a proposal.',
     canonical: `${SITE}/bar-services/`,
-    h1: 'Bar Consultant Bali — B2B Bar Services for Venues',
+    h1: 'Bar Consultant Bali — B2B Bar Services',
     ogImage: `${SITE}/generated/mychef-bar-services-bali-og-hub.jpg`,
   },
 

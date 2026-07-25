@@ -1859,7 +1859,7 @@ export default function CateringMainPage() {
         serviceName="catering in Bali"
         intent="menu options and pricing"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

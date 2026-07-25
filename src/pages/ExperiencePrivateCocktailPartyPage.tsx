@@ -223,15 +223,10 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  { question: 'How much does a private cocktail party in Bali cost?', answer: 'A full cocktail party with bartenders, staff, cocktails and canapés typically runs IDR 700K–1.2M per person ++. A standing cocktail reception starts from IDR 650K++ per person (20–80 guests). Bartender-only hire starts from IDR 350K per hour with a three-hour minimum.' },
-  { question: 'How many guests can you handle?', answer: 'From an intimate 8–12 up to 80+ guests. Bartender and server numbers scale with the headcount.' },
-  { question: 'How long does the party run?', answer: 'Most parties book four to six hours of service. Bartender-only hire has a four-hour minimum; extensions are quoted per hour.' },
-  { question: 'What\'s included in the full package?', answer: 'Bartenders and service staff, custom cocktail menu, all bar equipment and glassware, fresh juices, syrups and garnishes, chef-made canapés and grazing, setup and full clean-down.' },
-  { question: 'Do you supply the alcohol, or do we?', answer: 'Either. Fully supplied packages are quoted with bottle-level transparency; BYO duty-free is welcome — we bring everything else.' },
-  { question: 'Can non-drinkers and kids be catered for?', answer: 'Yes — a dedicated zero-proof cocktail list is part of every menu, at no compromise on presentation.' },
-  { question: 'What does our villa need to provide?', answer: 'A workable space for the bar and kitchen access. We bring all bar equipment; power and layout needs are confirmed during planning.' },
-  { question: 'How far in advance should we book?', answer: 'Two to three weeks is comfortable; four to six for July–August and December. Last-minute requests are often possible — ask.' },
-  { question: 'What deposit is required?', answer: 'A 50% deposit confirms your date and team; the balance is due the day before the event.' },
+  { question: 'How much does a cocktail party package cost in Bali?', answer: 'Cocktail party packages run from IDR 700K–1.2M per person depending on staffing and menu. Free-flow and BYOB bar models are quoted separately.' },
+  { question: 'How many cocktails per person should I plan for a party?', answer: 'Plan two to three drinks per guest for the first two hours, then one drink per hour after that. Full bar-planning tables are in our bartender-ratio guide.' },
+  { question: 'How much is a cocktail party for 15 / 25 / 40 guests?', answer: 'Group-size pricing is built from the per-person band, with free-flow and dry-hire bar variants shown in your proposal.' },
+  { question: 'What canapés pair with cocktails?', answer: 'We design canapé and finger-food menus to match the drinks list, balancing salty, fresh, and bite-sized options that work standing up.' },
 ]
 
 const RELATED_PAGES = [

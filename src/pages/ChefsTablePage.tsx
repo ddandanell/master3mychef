@@ -446,7 +446,7 @@ export default function ChefsTablePage() {
           ))}
         </div>
       </section>
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="chefs-table"

@@ -16,7 +16,7 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { Breadcrumb } from '@/components/shared'
@@ -127,31 +127,15 @@ const STEPS = [
   },
 ]
 
-// ── 4. FAQ (6 questions) ────────────────────────────────────────────────────
+// ── 4. FAQ (2 questions) ────────────────────────────────────────────────────
 const FAQS = [
   {
-    q: 'What types of staff do you place?',
-    a: 'Private chefs, live-in chefs, villa managers, butlers, housekeepers, nannies, drivers, estate managers, waiters and event staff. For hotels and restaurants we build full-team briefs across kitchen, service and management roles.',
+    q: 'What is the difference between live-in and live-out villa staff?',
+    a: 'Live-in staff reside on the property with accommodation and meals provided; live-out staff commute and work set shifts. The choice depends on coverage needs, privacy, roster, and cost.',
   },
   {
-    q: 'How quickly can you fill a position?',
-    a: 'Most private chef placements are confirmed within 48 hours of receiving a brief. Live-in arrangements and management roles take 3–5 days of profiling plus a trial session — allow 1–2 weeks end to end. Retainer clients with urgent gaps are typically filled in 48–72 hours.',
-  },
-  {
-    q: 'What does placement cost?',
-    a: 'Salaries and placement fees depend on the role, experience and scope. We discuss numbers once we understand your brief and provide a written quote before any commitment.',
-  },
-  {
-    q: 'What if the staff member is not the right fit?',
-    a: 'Every placement includes a 30-day replacement guarantee. If the match is not working, we restart the search at no additional cost — no questions, no delays.',
-  },
-  {
-    q: 'Do you handle contracts, payroll and BPJS?',
-    a: 'We prepare standard Indonesian employment contracts and provide payroll guidance as part of the placement fee, and we explain employer obligations including BPJS and THR. For complex structures we recommend trusted local payroll partners. ',
-  },
-  {
-    q: 'Which areas do you cover?',
-    a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.',
+    q: 'Household staff vs villa staff - what is the difference?',
+    a: 'Household staff serve a private residence, often with long-term, family-focused roles. Villa staff run hospitality property operations with different profiles, rosters, and guest-service expectations.',
   },
 ]
 
@@ -173,59 +157,7 @@ const STAFFING_JSON_LD = {
       areaServed: ['Bali'],
       description: 'Long-term placement of private chefs, live-in chefs, villa managers, butlers, housekeepers and hospitality teams for villas, hotels and private households in Bali. 48-hour average placement, 30-day replacement guarantee.',
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What types of staff do you place?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Private chefs, live-in chefs, villa managers, butlers, housekeepers, nannies, drivers, estate managers, waiters and event staff. For hotels and restaurants we build full-team briefs across kitchen, service and management roles.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How quickly can you fill a position?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Most private chef placements are confirmed within 48 hours of brief. Live-in and management roles take 3–5 days of profiling plus a trial, or 1–2 weeks end to end. Retainer clients with urgent gaps are typically filled in 48–72 hours.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What does placement cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Salaries and placement fees depend on the role, experience and scope. We discuss numbers once we understand your brief and provide a written quote before any commitment.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What if the staff member is not the right fit?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Every placement includes a 30-day replacement guarantee. If the match is not working, we restart the search at no additional cost.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do you handle contracts, payroll and BPJS?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We prepare standard Indonesian employment contracts and provide payroll guidance as part of the placement fee, and explain employer obligations including BPJS and THR. For complex structures we recommend trusted local payroll partners.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which areas do you cover?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.',
-          },
-        },
-      ],
-    },
+    faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
     {
       '@type': 'BreadcrumbList',
       itemListElement: [

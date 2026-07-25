@@ -432,7 +432,7 @@ export default function CorporateCaseStudiesPage() {
           </div>
         </div>
       </section>
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

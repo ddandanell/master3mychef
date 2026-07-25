@@ -1,6 +1,6 @@
 import { ChefHat, Flame, Fish, Sparkles } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema, personSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, faqPageSchema, personSchema } from '@/components/SeoHead'
 import { siteFacts } from '@/data/siteFacts'
 
 const SITE = 'https://mychef.id'
@@ -292,24 +292,12 @@ const SECTIONS = [
 
 const FAQS = [
   {
-    question: 'Can I request Adriano specifically?',
-    answer: 'Yes — especially for tasting menus, VIP dinners, and milestone occasions. We will confirm his availability and, if he is booked, recommend the closest-fit lead chef from the same service style.',
+    question: 'Who will cook at my villa?',
+    answer: 'A named chef from our 50+ person Indonesian team, matched to your cuisine and event. Chef profiles are public on the myCHEF chefs page, and your brief is confirmed before the date.',
   },
   {
-    question: 'Do you only have Italian chefs?',
-    answer: 'No. Adriano leads the standards, but myCHEF is built around Indonesian culinary talent. Our team includes specialists in Mediterranean, Balinese, Asian fusion, BBQ, pastry, and family-style villa dining.',
-  },
-  {
-    question: 'How do you make sure quality stays high across different chefs?',
-    answer: 'Recipes, plating standards, service checklists, and post-event reviews are standardized. Every chef is trained to the same myCHEF playbook before they run a service on their own.',
-  },
-  {
-    question: 'Can chefs handle allergies, kids, halal, or vegetarian menus?',
-    answer: 'Yes. We customize every booking around dietary restrictions, cultural needs, and age ranges so the menu feels considered rather than improvised.',
-  },
-  {
-    question: 'What areas of Bali do your chefs cover?',
-    answer: 'Our chefs regularly serve Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, and surrounding villa areas.',
+    question: 'Are your chefs Indonesian?',
+    answer: 'Yes. All myCHEF chefs are Indonesian professionals, led by Michelin-trained leadership. This is a genuine differentiator versus expat-chef competitors.',
   },
 ]
 
@@ -341,7 +329,7 @@ export default function ChefsPage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
-      extraJsonLd={[...CHEF_PERSON_SCHEMAS, breadcrumbSchema('Our Chefs', 'https://mychef.id/chefs')]}
+      extraJsonLd={[...CHEF_PERSON_SCHEMAS, breadcrumbSchema('Our Chefs', 'https://mychef.id/chefs'), faqPageSchema(FAQS)]}
       ctaText="Book a Chef"
       ctaSubtext="Message us on WhatsApp and we will recommend the best chef for your villa, menu, and dates."
     />

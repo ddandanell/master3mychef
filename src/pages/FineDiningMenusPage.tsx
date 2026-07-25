@@ -81,28 +81,12 @@ const TESTIMONIALS: Testimonial[] = [
 
 const FAQS: FAQItem[] = [
   {
-    q: 'Which menu should I choose?',
-    a: 'Choose Seafood for the morning catch and lighter evenings. Choose Single-Meat when one protein deserves the spotlight. Choose Mixed Meats for variety across the table, or Vegetarian for a garden-led menu. Choose Bespoke if you have a specific vision, dietary requirements, or a theme in mind.',
+    q: 'Can I customize the menu?',
+    a: 'Yes. Every menu is designed around your tastes, dietary needs, and occasion. The 24 set menus are starting points, and dietary customisation is included.',
   },
   {
-    q: 'Can you accommodate dietary restrictions?',
-    a: 'Yes. We regularly adapt menus for vegetarian, vegan, halal, gluten-free, shellfish allergy, nut allergy, pregnancy-safe, and child-friendly requirements. Tell us before confirmation and we will design accordingly.',
-  },
-  {
-    q: 'What is the minimum booking?',
-    a: 'The minimum booking is 6 guests for our fine dining menus. The Romantic Dinner for 2 is available by special arrangement — contact us to discuss.',
-  },
-  {
-    q: 'Is wine pairing included?',
-    a: 'Wine pairing is optional at IDR 850,000 per guest across all menus. We can also recommend bottles if you prefer to supply your own wine.',
-  },
-  {
-    q: 'How fresh are the ingredients?',
-    a: 'Adriano and the team buy around the market that same morning whenever the menu calls for it. We do not build fine-dining dinners around frozen shortcuts. The menu follows what is beautiful and available that day.',
-  },
-  {
-    q: 'How far in advance should I book?',
-    a: 'Three to seven days is ideal, especially for premium seafood and wine pairing requests. Custom menus require 7 days for ingredient sourcing. During peak season we recommend booking earlier, but we can often accommodate short-notice villa dinners if the date is open.',
+    q: 'Do menu prices include groceries and service?',
+    a: 'Menu prices are per person ++ (10% service + 11% tax added). Groceries for standard menus are covered in the quote model, with premium upgrades itemised.',
   },
 ]
 
@@ -610,7 +594,7 @@ export default function FineDiningMenusPage() {
           </a>
         </div>
       </section>
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="fine-dining-menus"

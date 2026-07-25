@@ -435,7 +435,7 @@ export default function VillaEventPackagesPage() {
         serviceName="an all-inclusive villa event package in Bali"
         intent="a tailored quotation"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

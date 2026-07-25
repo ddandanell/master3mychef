@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Check, Phone, Calendar, Users, ShieldCheck, Award, Briefcase, ClipboardList } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -65,14 +65,8 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'Do you offer volume packages for multiple hires?', a: 'Yes. Our volume package offers custom pricing for ten or more placements. Contact us for a tailored quote based on your hiring forecast.' },
-  { q: 'What types of hospitality roles do you place?', a: 'Kitchen staff (sous chef, line cook, pastry), service staff (waiter, bartender, host) and management (restaurant manager, F&B director, head chef). For dedicated bar recruitment and training, see our temporary bar staffing and bar staff training services.' },
-  { q: 'How does the trial shift process work?', a: 'Candidates complete a paid trial shift at your establishment. You assess their skills, attitude and fit before making a hiring decision.' },
-  { q: 'What is your replacement guarantee?', a: 'Kitchen and service placements include a 60-day replacement guarantee; management placements include 90 days. We re-match at no additional fee.' },
-  { q: 'Can you handle seasonal or high-season staffing?', a: 'Yes. We maintain a pool of pre-vetted seasonal staff, and volume clients receive priority access for peak periods and event coverage.' },
-  { q: 'Do you place staff for new restaurant openings?', a: 'Yes. We provide full team build-outs for new openings, including recruitment timeline planning and batch hiring coordination.' },
-  { q: 'What areas of Bali do you cover?', a: 'All major hospitality zones — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding areas.' },
-  { q: 'How do you ensure candidate quality?', a: 'Every candidate passes a skills assessment, reference checks, background verification and a trial shift before placement at your establishment.' },
+  { q: 'Is restaurant staff outsourcing legal in Bali?', a: 'Yes, when properly contracted. Foreign staff need correct permits. We follow Indonesian employment law for all placements.' },
+  { q: 'Can foreign chefs work in Bali (work permit)?', a: 'Foreign nationals need RPTKA and KITAS permits, typically for managerial or specialist roles. Front-line roles are generally reserved for Indonesian nationals.' },
 ]
 
 const briefJsonLd = {
@@ -91,59 +85,6 @@ const briefJsonLd = {
       },
       areaServed: 'Bali',
       description: 'Kitchen, service and management recruitment for Bali hotels, restaurants, beach clubs and resorts. Trial shifts, tailored volume packages and replacement guarantees up to 90 days.',
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Do you offer volume packages for multiple hires?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Our volume package offers custom pricing for ten or more placements. Contact us for a tailored quote based on your hiring forecast.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What types of hospitality roles do you place?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kitchen staff (sous chef, line cook, pastry), service staff (waiter, bartender, host) and management (restaurant manager, F&B director, head chef).',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How does the trial shift process work?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Candidates complete a paid trial shift at your establishment. You assess their skills, attitude and fit before making a hiring decision.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is your replacement guarantee?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kitchen and service placements include a 60-day replacement guarantee; management placements include 90 days. We re-match at no additional fee.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can you handle seasonal or high-season staffing?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. We maintain a pool of pre-vetted seasonal staff, and volume clients receive priority access for peak periods and event coverage.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do you place staff for new restaurant openings?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. We provide full team build-outs for new openings, including recruitment timeline planning and batch hiring coordination.',
-          },
-        },
-      ],
     },
     {
       '@type': 'BreadcrumbList',
@@ -176,7 +117,7 @@ export default function StaffingHotelsPage() {
         description={getPageMeta('staffing-for-hotels-restaurants').description}
         canonical={getPageMeta('staffing-for-hotels-restaurants').canonical}
         ogImage={getPageMeta('staffing-for-hotels-restaurants').ogImage}
-        jsonLd={briefJsonLd}
+        jsonLd={[briefJsonLd, faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
       />
 
       {/* Hero */}

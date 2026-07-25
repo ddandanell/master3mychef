@@ -611,7 +611,7 @@ export default function EventsWeddingsPage() {
         </div>
       </section>
 
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
 
       <StickyMobileCTA

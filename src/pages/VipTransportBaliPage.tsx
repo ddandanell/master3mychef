@@ -311,7 +311,7 @@ export default function VipTransportBaliPage() {
         serviceName="VIP transport in Bali"
         intent="a tailored quotation"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

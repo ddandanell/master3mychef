@@ -131,14 +131,11 @@ const TESTIMONIALS = [
 ]
 
 const FAQS = [
-  { q: 'What is the minimum number of guests?', a: 'Four guests minimum for the full tasting experience. For intimate two-person romantic evenings, message Sofia — we can arrange the experience for two.' },
-  { q: 'Can I mix the two menus at the same table?', a: 'Yes. Half your table can have Mediterranean Sea, the other half Wagyu. Just let us know when booking.' },
-  { q: 'What does "++" mean in the price?', a: '"++ " means service charge (10%) and government tax (11%) are added. The all-in total is approximately IDR 2.6M (Mediterranean) and IDR 2.85M (Wagyu). Wine pairing is IDR 850K additional per guest.' },
-  { q: 'How long does the evening last?', a: 'From first course to last digestif: approximately 2.5–3 hours. The full experience including arrival is 4–4.5 hours.' },
-  { q: 'Is the wine pairing required?', a: 'No — it is optional at IDR 850,000 per guest. If you prefer to provide your own wine, we open and serve it. We can also recommend specific bottles to source.' },
-  { q: 'How far ahead should I book?', a: '7+ days is ideal. Peak season (July–August, December) books 2+ weeks ahead. We occasionally accommodate 48-hour requests — message us and we will try.' },
-  { q: 'Can you accommodate allergies or dietary restrictions?', a: 'Yes — every course is adaptable. Gluten-free, shellfish allergy, vegan, halal, pregnancy-friendly. No extra charge. Tell us when booking.' },
-  { q: 'Do I need a large villa kitchen?', a: 'We have worked in everything from compact pool villas to estate kitchens. We bring specialized equipment when needed. As long as there is a kitchen and a dining area, we can make it work.' },
+  { q: 'How many courses are in a tasting menu?', a: 'Typically four to seven courses progressing from snacks to dessert. myCHEF\'s signature format is five courses, including Wagyu and Mediterranean menus.' },
+  { q: 'How long does a tasting menu take?', a: 'Plan the full evening, roughly 17:30 to 22:00 act by act: arrival, aperitif, courses with pauses, and dessert. Timing is set around sunset and your schedule.' },
+  { q: 'What is the minimum number of guests for a tasting menu?', a: 'Tasting menus run for four to 24 guests. Smaller parties can book the standard private dinner format; larger groups move to plated catering.' },
+  { q: 'Can tasting menus be adapted for dietary needs?', a: 'Yes. Vegetarian, vegan, gluten-free, and allergy adaptations are designed into the menu at no extra charge. Requirements are collected at booking.' },
+  { q: 'Can I add wine pairing to a tasting menu?', a: 'Yes. Pairing adds IDR 850K per person. A sommelier-led zero-proof pairing is also available.' },
 ]
 
 export default function TastingMenuPage() {
@@ -548,7 +545,7 @@ export default function TastingMenuPage() {
           ))}
         </div>
       </section>
-      <ArticleContentSection />
+      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="tasting-menu"

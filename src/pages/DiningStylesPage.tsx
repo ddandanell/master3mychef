@@ -329,7 +329,7 @@ export default function DiningStylesPage() {
         serviceName="a private chef menu in Bali"
         intent="a menu recommendation for my event"
       />
-    <ArticleContentSection />
+    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

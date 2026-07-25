@@ -18,7 +18,7 @@ const SECTIONS = [
     title: 'Types of Events in Bali',
     features: [
       { icon: Calendar, title: 'Weddings', desc: 'Small (10–40), Medium (50–100), Large (100–200+). Timeline: 3–12 months planning. Budget: IDR 45M–3B+.' },
-      { icon: Users, title: 'Corporate Retreats', desc: 'Team-building (3–5 days), Executive Conferences (1–3 days), Wellness (5–7 days). Budget: IDR 2.25M–7.5M per person per day.' },
+      { icon: Users, title: 'Corporate Retreats', desc: 'Team-building (3–5 days), Executive Conferences (1–3 days), Wellness (5–7 days). Budget: custom quote — priced per person per day based on group size, length and format.' },
       { icon: Calendar, title: 'Private Celebrations', desc: 'Birthdays, anniversaries, family reunions (15–50 guests). Budget: IDR 7.5M–225M depending on scale.' },
     ],
   },

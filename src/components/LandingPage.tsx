@@ -249,13 +249,11 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       return schema
     }
     if (entry.slug === 'corporate-retreat-catering-bali') {
-      const schema = serviceWithOfferSchema({
-        name: 'Corporate Retreat Catering Bali',
-        description: 'Multi-day corporate retreat catering in Bali: full-board meal programs for offsites and company retreats with dietary management at scale and NPWP-registered invoicing.',
-        url: canonical,
-        price: '500000',
-        unitText: 'per person per day, before 11% government tax + 10% service charge',
-      })
+      const schema = serviceSchema(
+        'Corporate Retreat Catering Bali',
+        'Multi-day corporate retreat catering in Bali: full-board meal programs for offsites and company retreats with dietary management at scale and NPWP-registered invoicing.',
+        canonical,
+      ) as Record<string, unknown>
       schema.provider = {
         '@type': 'Organization',
         name: 'myCHEF.id',
@@ -275,7 +273,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
     ? [
         { question: 'How do I hire a chef in Indonesia?', answer: 'Message myCHEF on WhatsApp with your date, city, guest count, and dietary needs. We reply within two hours and send an itemised menu proposal within 24 hours. Confirm with a deposit to lock the date.' },
         { question: 'How much does a personal chef cost in Indonesia?', answer: 'myCHEF pricing is consistent nationally. Dinners start from IDR 700K per person, corporate catering from IDR 700K per person, and wedding catering from IDR 1.5M–3M+ per person. Full price tables are on the pricing page.' },
-        { question: 'Where to find a private chef in Indonesia?', answer: 'Choose between a managed culinary team (vetted, insured, replacement guarantee), a freelancer marketplace, or an independent freelancer. Managed teams cover Bali, Jakarta, and other Indonesian cities with one accountable quote.' },
+        { question: 'Where to find a private chef in Indonesia?', answer: 'Choose between a managed culinary team (vetted, insured, replacement guarantee), a freelancer marketplace, or an independent freelancer. Managed teams cover Bali with one accountable quote.' },
       ]
     : entry.slug === 'best-private-chef-indonesia'
       ? [
@@ -293,9 +291,8 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         : entry.slug === 'private-dining-indonesia'
           ? [
               { question: 'What is at-home private dining?', answer: 'At-home private dining is when a professional chef and service team recreate the restaurant experience in your home or villa — menu design, shopping, cooking, service, and cleanup included.' },
-              { question: 'Do you serve outside Bali?', answer: 'Yes. myCHEF serves Jakarta — including Menteng, Kemang, SCBD, and Pondok Indah — with the same pricing structure, and other Indonesian cities on request.' },
+              { question: 'Do you serve outside Bali?', answer: 'No. myCHEF is Bali-only — we do not serve Jakarta or other Indonesian cities.' },
               { question: 'How many guests can a private dining team serve?', answer: 'From intimate two-guest dinners to events of 200 guests. Weddings serve 20–200, corporate events 10–200. Tasting menus cap at 24; larger groups move to catering formats.' },
-              { question: 'How much does a private dining experience cost in Jakarta?', answer: 'Jakarta follows the same structure as Bali: dinners from IDR 700K per person and fine dining from IDR 950K per person. Full detail is on the Jakarta location page.' },
             ]
           : entry.slug === 'proposal-dinner'
       ? [
@@ -377,10 +374,10 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
             ]
           : entry.slug === 'corporate-retreat-catering-bali'
             ? [
-                { question: 'How much does corporate retreat catering cost per person per day?', answer: 'Corporate retreat catering is quoted per person per day. Full-board packages are available, with pricing anchored from IDR 700K per person per day. Day-rate math is shown transparently in every proposal.' },
+                { question: 'How much does corporate retreat catering cost?', answer: 'Corporate retreat catering is quoted individually based on group size, agenda, venue logistics and length of stay. Every proposal is built as a custom per-person-per-day package with no published price list.' },
                 { question: 'How far in advance should I book corporate retreat catering?', answer: 'Two to four weeks is typical, and two to three months for peak season. Menu proposals are sent within 24 hours of receiving your brief.' },
                 { question: 'How do you manage dietary needs on a corporate retreat (vegan, halal)?', answer: 'We collect dietary needs before the retreat, label dishes, and customise at no extra charge. The same structured process is used for wellness retreats.' },
-                { question: 'How much is retreat catering for 10 / 20 / 30 / 50 people?', answer: 'Pricing is built from the per-person-per-day model, with a group-size table and staffing notes for each headcount in your proposal.' },
+                { question: 'How much is retreat catering for 10 / 20 / 30 / 50 people?', answer: 'Pricing is built from a custom per-person-per-day model, with a group-size table and staffing notes for each headcount in your proposal.' },
                 { question: 'Can you invoice our company for retreat catering (NPWP)?', answer: 'Yes. We are NPWP-registered and issue tax invoices, support purchase orders, and offer Net-14 terms for regular clients.' },
               ]
             : isGroupVillaDinner

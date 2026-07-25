@@ -455,7 +455,7 @@ const TIMELINE = [
 ]
 
 const FAQS = [
-  { q: 'How much does retreat catering cost per person per day in Bali?', a: 'Full-board retreat catering starts from IDR 700K per person per day, with menus designed around your programme. Pricing is quoted per head per day so the total scales transparently.' },
+  { q: 'How much does retreat catering cost?', a: 'Retreat catering is quoted individually based on group size, menu intensity, dietary complexity and length of programme. Contact us for a custom per-person-per-day package.' },
   { q: 'How do you handle dietary restrictions at retreats?', a: 'We use a structured pre-retreat dietary intake, per-guest meal mapping, and rotating menus so restricted guests are never served the same limited dish twice.' },
   { q: 'Can you cater a retreat of 20 / 30 / 50 people?', a: 'Yes. Staffing scales with headcount — for example, a 30-guest retreat typically runs with one chef and two support staff. Larger retreats are handled through our event team.' },
   { q: 'Do retreat menus rotate over multi-day stays?', a: 'Yes. Menus rotate across the programme with energy-timed meals around sessions and excursions. Sample rotations are available on request.' },
@@ -997,7 +997,7 @@ export default function CateringRetreatPage() {
             Request a Retreat Meal Plan
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Send your retreat dates, length, guest count, villa location and dietary split. We reply on WhatsApp within the hour with chef availability and send a sample meal plan with a fixed per-day quote within 24 hours.
+            Send your retreat dates, length, guest count, villa location and dietary split. We reply on WhatsApp within the hour with chef availability and send a sample meal plan with a custom per-day quote within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-retreat-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">

@@ -140,7 +140,7 @@ export function serviceSchema(
   description: string,
   url: string,
   priceRange?: string
-) {
+): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',

@@ -112,7 +112,7 @@ const CORP_ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'How much does corporate catering cost per person in Bali?', a: 'Corporate catering is priced in three tiers: Standard IDR 700K, Premium IDR 750K, and Luxury IDR 1.2M per person, all ++. Minimum spend is IDR 7.5M, and full tax invoices are included.' },
+  { q: 'How much does corporate catering cost per person in Bali?', a: 'Corporate catering is priced in three tiers: Standard IDR 700K, Premium IDR 750K, and Luxury IDR 1.2M per person, all ++. Minimum spend is IDR 15,000,000, and full tax invoices are included.' },
   { q: 'Do you provide invoices / NPWP for corporate catering?', a: 'Yes. We are NPWP-registered and issue full tax invoices with itemised breakdowns. We support purchase-order processes and offer Net-14 terms for regular corporate clients.' },
   { q: 'How do you handle dietary requirements for large corporate groups?', a: 'Dietary requirements are collected with RSVPs through a structured intake process, dishes are labelled on the day, and customisation carries no extra charge. Allergen-critical guests receive separate prep where needed.' },
   { q: 'Can you do last-minute corporate catering?', a: 'Small-group corporate orders are often possible within 24–48 hours. Larger productions need a few days to a week, with a dedicated event manager assigned.' },

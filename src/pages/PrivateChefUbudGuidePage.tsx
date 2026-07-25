@@ -56,7 +56,7 @@ const SECTIONS: PageSection[] = [
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
       <li><strong>Standard dinner (3 courses, 2-6 guests):</strong> From IDR 700,000 – 750,000 per person.</li>
       <li><strong>Premium/tasting menu (5-7 courses, 2-8 guests):</strong> IDR 850,000 – 1,200,000 per person.</li>
-      <li><strong>Wellness/retreat menus (plant-based, organic):</strong> IDR 700,000 – 1,000,000 per person per day.</li>
+      <li><strong>Wellness/retreat menus (plant-based, organic):</strong> Custom quote — priced per person per day based on group size, length and menu style.</li>
       <li><strong>Cooking class experience:</strong> IDR 800,000 – 1,200,000 per person including market tour.</li>
     </ul>
     <p style="margin-top:0.75rem;">For a detailed cost breakdown, see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,

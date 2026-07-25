@@ -140,7 +140,10 @@ export const REDIRECTS: Redirect[] = [
   // --- Update 2: thin consolidation pages & duplicate chef roster ---
   { from: '/private-tasting-menu-bali', to: '/fine-dining/tasting-menu', reason: 'Thin duplicate → canonical tasting menu page.' },
   { from: '/chef-table-experience-bali', to: '/fine-dining/chefs-table', reason: 'Thin duplicate → canonical chef\'s table page.' },
-  { from: '/fine-dining/our-chefs', to: '/chefs', reason: 'Duplicate chef roster → canonical /chefs roster.' },
+  // NOTE: /fine-dining/our-chefs is a LIVE page again (nav links to it). A previous
+  // 301 to /chefs shadowed it — sitemap.ts drops redirect sources from SITEMAP, so the
+  // page was never prerendered and the URL served an empty shell. Do not re-add.
+  { from: '/fine-dining/chefs', to: '/fine-dining/our-chefs', reason: 'Bare /fine-dining/chefs 404s (no such route) — alias to the real Our Chefs page.' },
   { from: '/villa-staff-bali-agency', to: '/staffing/villa-staff', reason: 'Duplicate villa-staff page → canonical staffing owner.' },
 
   // GA4 (25 May–21 Jun 2026): live URLs hitting the 404 page. Map each to its real equivalent.

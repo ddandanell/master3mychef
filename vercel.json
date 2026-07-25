@@ -415,8 +415,8 @@
       "permanent": true
     },
     {
-      "source": "/fine-dining/our-chefs",
-      "destination": "/chefs",
+      "source": "/fine-dining/chefs",
+      "destination": "/fine-dining/our-chefs",
       "permanent": true
     },
     {

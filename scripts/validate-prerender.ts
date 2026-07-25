@@ -36,6 +36,7 @@ const CRITICAL_ROUTES = new Set([
   'bar-services/resources/index.html',
   'catering/index.html',
   'fine-dining/index.html',
+  'fine-dining/our-chefs/index.html',
   'events/index.html',
   'contact/index.html',
   'locations/seminyak/index.html',

@@ -78,7 +78,8 @@ def parse_metadata_map(path: Path) -> dict[str, dict]:
 
 
 def extract_replacement_content(text: str) -> str:
-    """Return the publishable markdown after the FULL REPLACEMENT CONTENT marker."""
+    """Return the publishable markdown after the FULL REPLACEMENT CONTENT marker,
+    stopping at the first '---' separator (e.g. before JSON-LD sections)."""
     markers = [
         r"##\s+FULL REPLACEMENT CONTENT",
         r"#\s+FULL REPLACEMENT CONTENT",
@@ -87,7 +88,12 @@ def extract_replacement_content(text: str) -> str:
     for marker in markers:
         m = re.search(marker, text, re.IGNORECASE)
         if m:
-            return text[m.end():].strip()
+            content = text[m.end():]
+            # Stop at the first horizontal-rule separator that follows the marker
+            content = re.split(r"\n---\s*\n", content, maxsplit=1)[0]
+            content = re.sub(r"\*\*Title tag:\*\*.*?\n", "", content)
+            content = re.sub(r"\*\*Meta description:\*\*.*?\n", "", content)
+            return content.strip()
     parts = re.split(r"\n---\s*\n", text, maxsplit=2)
     if len(parts) >= 2:
         return parts[-1].strip()

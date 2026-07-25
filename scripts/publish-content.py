@@ -110,16 +110,19 @@ def patch_field(block: str, field: str, value: str | None) -> str:
 
 
 def extract_replacement_content(text: str) -> str:
-    """Return the publishable markdown after the FULL REPLACEMENT CONTENT marker."""
+    """Return the publishable markdown after the FULL REPLACEMENT CONTENT marker,
+    stopping at the first '---' separator (e.g. before JSON-LD sections)."""
     markers = [
+        r"##\s+FULL REPLACEMENT CONTENT",
         r"#\s+FULL REPLACEMENT CONTENT",
         r"##\s+2\.\s*FULL REPLACEMENT CONTENT",
-        r"##\s+FULL REPLACEMENT CONTENT",
     ]
     for marker in markers:
         m = re.search(marker, text, re.IGNORECASE)
         if m:
-            content = text[m.end() :]
+            content = text[m.end():]
+            # Stop at the first horizontal-rule separator that follows the marker
+            content = re.split(r"\n---\s*\n", content, maxsplit=1)[0]
             content = re.sub(r"\*\*Title tag:\*\*.*?\n", "", content)
             content = re.sub(r"\*\*Meta description:\*\*.*?\n", "", content)
             return content.strip()

@@ -442,7 +442,7 @@ export default function LunaPage() {
                 When you hire a private chef in Bali, you are not ordering dinner. You are commissioning an evening. Our executive chef Adriano — trained in Modena and Tokyo — leads a team of four Indonesian chefs he has personally trained for 6 to 12 months each. They arrive at your villa three hours before service, transform your kitchen into a fine dining station, and serve a multi-course tasting menu at your table.
               </p>
               <p className="text-white/[70%] mb-6 leading-relaxed">
-                Every ingredient is sourced that morning. The pasta is rolled in your kitchen. The Wagyu is flame-grilled in front of your guests. The wine is paired course by course. And when the evening ends, the team leaves your villa spotless — as if they were never there.
+                Every ingredient is sourced that morning. The pasta is rolled in your kitchen. The Wagyu is flame-grilled in front of your guests. The wine is paired course by course. And when the evening ends, the team leaves your villa spotless — as if they were never there. Read our <Link to="/blog/seasonal-ingredients-bali-cooking-guide" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">seasonal ingredients Bali cooking guide</Link> to understand what drives those morning market choices.
               </p>
               <p className="text-white/[50%] text-sm leading-relaxed">
                 This is not a catering service. This is a private restaurant built inside your villa for one night only. Available across Bali: Seminyak, Canggu, Uluwatu, Ubud, Sanur, and Nusa Dua.

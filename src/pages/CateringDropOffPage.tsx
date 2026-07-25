@@ -312,6 +312,9 @@ export default function CateringDropOffPage() {
                 title="Cheaper, Faster, Simpler Than Full-Service Catering"
                 subtitle="Drop-off catering in Bali is built for villa guests who want proper food delivered without chefs, waiters, or service staff staying inside the villa."
               />
+              <p className="mt-4 text-sm text-[#4A4745] max-w-2xl">
+                Not sure whether drop-off is right for your villa night? Our <Link to="/blog/drop-off-catering-bali" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">drop-off catering guide</Link> explains the formats, timing and when to choose delivery over full service.
+              </p>
               <div className="space-y-3">
                 {['No staff in your villa — total privacy', 'Lower cost than full-service catering', 'Next-day delivery available', 'Ready to reheat or serve on arrival', 'Ideal for casual and low-effort hosting'].map((item) => (
                   <div key={item} className="flex items-center gap-3">

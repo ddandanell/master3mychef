@@ -112,6 +112,10 @@ const JOURNAL_LINKS = [
     title: 'The Bali Floating Breakfast: History, Recipes & How to Order One',
     path: '/catering/floating-breakfast',
   },
+  {
+    title: 'Holiday Chef Bali: Christmas, New Year & Festive Season Dining',
+    path: '/blog/holiday-chef-bali',
+  },
 ]
 
 const REVIEWS = [

@@ -156,6 +156,7 @@ const RELATED_PAGES = [
   { label: 'Floating Breakfast', href: '/catering/floating-breakfast', desc: 'The iconic Bali floating breakfast experience at your villa pool.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF services and feast formats.' },
   { label: 'Private Chef Ubud', href: '/private-chef/ubud', desc: 'Private chef services in Ubud — jungle villas and rice terrace estates.' },
+  { label: 'Chef for Photoshoot Bali', href: '/blog/chef-for-photoshoot-bali', desc: 'Specialist chef hire for food photography and brand content in Bali.' },
 ]
 
 export default function IndonesianStreetFoodBaliPage() {

@@ -1218,6 +1218,9 @@ export default function CateringMainPage() {
             title="Drop-Off Catering Without Staff Inside Your Villa"
             subtitle="For families and villa guests who want proper food without staff staying in the villa, drop-off catering is the cleanest option."
           />
+          <p className="text-center text-sm text-[#4A4745] max-w-2xl mx-auto mb-8">
+            Read our <Link to="/blog/drop-off-catering-bali" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">drop-off catering guide</Link> for a full breakdown of formats, timing and when delivery makes more sense than full service.
+          </p>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {DROPOFF_PACKAGES.map((pkg) => (
               <div key={pkg.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 hover:shadow-lg transition-all">

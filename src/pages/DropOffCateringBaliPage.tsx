@@ -79,7 +79,7 @@ For most villa stays, the ideal approach is a combination: drop-off for weekday 
   {
     id: 'cta',
     type: 'content',
-    title: 'Order Drop-Off Catering for Your Villa',
+    title: 'Plan Your Drop-Off Catering',
     body: `Tell us your villa location, the date and time you need delivery, your guest count, and any dietary requirements. We will send a menu proposal and price within a few hours. Minimum order applies; delivery charges vary by area.`,
   },
 ]
@@ -135,7 +135,7 @@ export default function DropOffCateringBaliPage() {
       description="Drop-off catering for Bali villas. Professional kitchen preparation, delivered to your villa ready to serve. Indonesian feasts, Western comfort, grazing."
       seoDescription="Drop-off catering in Bali for villa stays. Fresh food prepared and delivered ready to serve. From IDR 700K/person. All areas: Canggu, Seminyak, Ubud, Uluwatu."
       h1="Drop-Off Catering in Bali: What to Know Before You Order"
-      subtitle="Professional food prepared fresh and delivered to your villa. No chef on-site required."
+      subtitle="A practical guide to chef-prepared food delivered to your Bali villa — formats, timing, and how to decide if drop-off is right for your stay."
       heroImage="/images/blog/drop-off-catering-bali.jpg"
       heroImageAlt="Fresh Indonesian catering spread delivered to a Bali villa ready to serve by the pool"
       ogImage="/images/blog/drop-off-catering-bali.jpg"
@@ -156,7 +156,7 @@ export default function DropOffCateringBaliPage() {
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}
-      ctaText="Order Drop-Off Catering"
+      ctaText="Plan Your Drop-Off Menu"
       ctaSubtext="Send us your villa, date, guest count, and dietary needs -- we will send a menu proposal within a few hours."
       extraJsonLd={[
         breadcrumbSchema('Drop-Off Catering Bali', 'https://mychef.id/blog/drop-off-catering-bali', 'Blog', 'https://mychef.id/journal'),

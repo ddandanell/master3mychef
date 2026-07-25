@@ -154,7 +154,7 @@ export default function CangguPage() {
               Canggu is not one strip but a sprawl. Batu Bolong, Echo Beach and Berawa each have their own centre of gravity, connected by scooter-clogged shortcuts that make a ten-minute drive feel like an expedition at dinner hour. The food culture skews fresh and functional — smoothie bowls and specialty coffee by day, charcoal grills and natural wine by night — with more plant-based, gluten-free and high-protein options than anywhere else in Bali.
             </p>
             <p className="mb-0 leading-relaxed">
-              The other defining fact: people stay. A week in Canggu is common; a month is normal. That changes the dining question from "where do we eat tonight?" to "how do we eat well all month?" — and it's why in-villa dining and weekly chef services matter more here than in any other Bali neighbourhood. The airport is roughly 45–60 minutes away, and sunsets over Echo Beach set the evening's timetable.
+              The other defining fact: people stay. A week in Canggu is common; a month is normal. That changes the dining question from "where do we eat tonight?" to "how do we eat well all month?" — and it's why in-villa dining and weekly chef services matter more here than in any other Bali neighbourhood. The airport is roughly 45–60 minutes away, and sunsets over Echo Beach set the evening's timetable. See how Canggu compares to Seminyak, Ubud and Uluwatu in our <Link to="/blog/dining-by-location-bali-neighborhood-guide" className="text-[#C5A028] hover:underline font-medium">Bali neighborhood dining guide</Link>.
             </p>
           </div>
 

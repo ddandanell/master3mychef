@@ -167,7 +167,7 @@ export default function SeminyakPage() {
               Three things set Seminyak apart. First, <strong>density</strong>: Petitenget, Oberoi and the lanes between them hold hundreds of restaurants, cafés and bars within a walkable grid — no other Balinese neighbourhood comes close. Second, <strong>the crowd</strong>: villa groups, design-conscious couples and long-term expats, which keeps standards high and reservations competitive. Third, <strong>the villas themselves</strong>: elegant compounds with pools, dining pavilions and proper kitchens — meaning "eating in" here is not a compromise but a genuinely different format.
             </p>
             <p className="mb-0 leading-relaxed">
-              Seminyak sits roughly 30–40 minutes from the airport, and its beach faces due west: sunset is the area's daily main event.
+              Seminyak sits roughly 30–40 minutes from the airport, and its beach faces due west: sunset is the area's daily main event. For a full comparison of dining across Bali's villa districts, see our <Link to="/blog/dining-by-location-bali-neighborhood-guide" className="text-[#C5A028] hover:underline font-medium">Bali neighborhood dining guide</Link>.
             </p>
           </div>
 

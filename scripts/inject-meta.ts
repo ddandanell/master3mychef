@@ -363,11 +363,17 @@ function injectMeta(html: string, path: string, title: string, description: stri
   }
 
   // Robots — noindex for thin-content pages and 404
-  const noindexPaths = ['/404', '/book', '/calculator', '/join-our-team']
-  if (noindexPaths.includes(path)) {
+  const noindexNoFollowPaths = ['/404', '/book', '/calculator', '/join-our-team']
+  const noindexFollowPaths = ['/quote']
+  if (noindexNoFollowPaths.includes(path)) {
     html = html.replace(
       /<meta name="robots" content=".*?"\s*\/?>/,
       `<meta name="robots" content="noindex,nofollow" />`
+    )
+  } else if (noindexFollowPaths.includes(path)) {
+    html = html.replace(
+      /<meta name="robots" content=".*?"\s*\/?>/,
+      `<meta name="robots" content="noindex,follow" />`
     )
   } else {
     html = html.replace(
@@ -444,6 +450,7 @@ for (const entry of SITEMAP) {
 // (they're in noindexPaths), and they're excluded from sitemap.xml (see generate-sitemap).
 const EXTRA_NOINDEX_PAGES = [
   { path: '/book', title: 'Book myCHEF | Private Chef & Catering Bali', description: 'Book your private chef, villa catering, or event in Bali. Send your date, villa, and guest count for a fast quote.' },
+  { path: '/quote', title: 'Get a Custom Quote — Private Chef in Bali | myCHEF', description: 'Get a fast, itemised quote for private chef, villa catering or event staffing in Bali. Tell us your occasion, guests and location — we reply in 24 hours.' },
 ]
 for (const p of EXTRA_NOINDEX_PAGES) {
   try {

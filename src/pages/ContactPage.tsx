@@ -24,12 +24,12 @@ interface Concierge {
 
 const FAQS = [
   { q: 'How do I contact myCHEF?', a: 'The fastest way is WhatsApp at +62 896-7407-2020. You can also email bali@mychef.id or call the same number. We usually reply within minutes on WhatsApp.' },
-  { q: 'Who is Dede and what does she handle?', a: 'Dede is a Coordinator at myCHEF. She handles tasting-menu reservations, dietary preferences, wine pairings, and fine-dining experiences at your villa.' },
+  { q: 'Who is Dede and what does she handle?', a: 'Dede is a Project Coordinator at myCHEF. She handles tasting-menu reservations, dietary preferences, wine pairings, and fine-dining experiences at your villa.' },
   { q: 'How quickly will myCHEF respond?', a: 'We typically reply within minutes on WhatsApp. For email enquiries, expect a response within a few hours during business hours.' },
   { q: 'Can I call instead of using WhatsApp?', a: 'Yes. You can call +62 896-7407-2020 directly. Our lines are open daily from 08:00 to 22:00 WITA.' },
   { q: 'What information should I include in my first message?', a: 'Let us know your name, the service you are interested in, your villa or location in Bali, group size, and preferred date. The more detail, the faster we can help.' },
   { q: 'Do you have an office I can visit in Bali?', a: 'Yes. Our office is at Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali. We serve all of Bali including Seminyak, Canggu, Ubud, Uluwatu, and Sanur.' },
-  { q: 'Can I email myCHEF instead?', a: 'Absolutely. Send detailed proposals or longer enquiries to bali@mychef.id and we will route them to the right concierge.' },
+  { q: 'Can I email myCHEF instead?', a: 'Absolutely. Send detailed proposals or longer enquiries to bali@mychef.id and we will route them to the right coordinator.' },
   { q: 'What are your business hours?', a: 'We are open daily from 08:00 to 22:00 WITA (Bali time). WhatsApp messages outside these hours are answered first thing the next morning.' },
 ]
 
@@ -186,16 +186,16 @@ export default function ContactPage() {
             className="text-[#C5A028] text-xs md:text-sm tracking-[0.35em] uppercase mb-6"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
           >
-            Contact
+            Project Coordinators
           </p>
           <h1
             className="text-[2.5rem] md:text-7xl lg:text-8xl leading-[1.05] mb-7 max-w-[900px]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            {"Contact Us"}
+            {"Meet your myCHEF project coordinators"}
           </h1>
           <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[640px] leading-relaxed">
-            Choose the right concierge below or send one quick WhatsApp message and we will route your booking request instantly.
+            These are the people you talk to when you call us. Our coordinators handle events, staff and every moving part — matching the right chef, waiter, bartender or host to your villa and making sure everyone is exactly where they need to be.
           </p>
           <div className="flex items-center gap-3 text-[#C5A028] text-sm">
             <span className="inline-block w-2 h-2 rounded-full bg-[#C5A028] animate-pulse" />
@@ -212,12 +212,15 @@ export default function ContactPage() {
         <div className="max-w-[1280px] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-end mb-12">
             <div>
-              <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">Coordinators</p>
-              <h2 className="font-playfair text-4xl md:text-5xl leading-tight">Your myCHEF coordinators</h2>
+              <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">Project Coordinators</p>
+              <h2 className="font-playfair text-4xl md:text-5xl leading-tight">Meet your myCHEF project coordinators</h2>
             </div>
             <p className="text-[#4A4745] text-lg">
-              Every service area has a dedicated coordinator. You speak to a real person —
-              one who knows the villa scene, the kitchens, and the people behind every booking.
+              These are the people you talk to when you call us. Our project coordinators handle
+              events, staff and every detail in between — matching the right chef, waiter, bartender
+              or host to your villa and making sure everyone is exactly where they need to be.
+              Whether it is an intimate dinner or a 200-guest celebration, they are your single
+              point of contact from first message to final cleanup.
             </p>
           </div>
 
@@ -281,11 +284,11 @@ export default function ContactPage() {
       {/* ── GENERAL FORM ─────────────────────────────────────────────── */}
       <section className="px-6 md:px-12 py-20 md:py-28 bg-white">
         <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-          {/* Left — concierge portrait */}
+          {/* Left — coordinator portrait */}
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-[#0A0A0A] order-2 md:order-1">
             <img
               src="/generated/mychef-misc-bali-contact-concierge.webp"
-              alt="myCHEF concierge replying to a guest enquiry from the Bali office"
+              alt="myCHEF project coordinator replying to a guest enquiry from the Bali office"
               width={800}
               height={1000}
               className="absolute inset-0 w-full h-full object-cover"
@@ -297,7 +300,7 @@ export default function ContactPage() {
               style={{ background: 'linear-gradient(to bottom, rgba(10,10,10,0) 0%, rgba(10,10,10,0.55) 100%)' }}
             />
             <div className="absolute bottom-6 left-6 right-6 text-white">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Concierge Desk</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028] mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Coordinator Desk</p>
               <p className="text-sm text-white/[85%]">Bali, 08:00 – 22:00 WITA</p>
             </div>
           </div>

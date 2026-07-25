@@ -1221,11 +1221,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'experience-champagne-oyster-experience': {
     path: '/experiences/champagne-oyster-experience',
-    title: 'Oyster Bar Bali | Champagne & Oyster Experience | myCHEF',
+    title: 'Oyster Bar Bali | Champagne Brunch, Villa Parties & Events',
     description:
-      'Book a private oyster bar in Bali with champagne service at your villa. Fresh oysters, live shucking, premium glassware and tailored menus. Enquire now.',
+      'Private oyster bar & champagne service in Bali: live shucking, Sunday brunch, villa parties, weddings & corporate receptions. Custom proposals.',
     canonical: `${SITE}/experiences/champagne-oyster-experience`,
-    h1: 'Oyster Bar Bali — Champagne & Oyster Experience at Your Villa',
+    h1: 'Oyster Bar Bali',
     ogImage: `${SITE}/generated/oyster-bar-bali-champagne.webp`,
   },
 

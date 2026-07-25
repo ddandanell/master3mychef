@@ -22,6 +22,25 @@ import SeoHead, {
   serviceSchema,
   faqPageSchema,
 } from './SeoHead'
+
+function extractSchemaTypes(schema: unknown): string[] {
+  const types: string[] = []
+  if (!schema || typeof schema !== 'object') return types
+  if (Array.isArray(schema)) {
+    schema.forEach((item) => types.push(...extractSchemaTypes(item)))
+    return types
+  }
+  const record = schema as Record<string, unknown>
+  const graph = record['@graph']
+  if (Array.isArray(graph)) {
+    graph.forEach((item) => types.push(...extractSchemaTypes(item)))
+    return types
+  }
+  const t = record['@type']
+  if (typeof t === 'string') types.push(t)
+  else if (Array.isArray(t)) t.forEach((x) => { if (typeof x === 'string') types.push(x) })
+  return types
+}
 import FAQAccordion from './catering/FAQAccordion'
 import { Button } from '@/components/ui/button'
 import Breadcrumb from '@/components/shared/Breadcrumb'
@@ -118,11 +137,20 @@ export default function PremiumPage({
     `Hi myCHEF, I'm interested in ${title}. Can you help me?`
   )}`
 
+  // Avoid duplicate Service / FAQPage schemas when the page supplies richer
+  // versions through extraJsonLd. We keep the custom ones and skip the defaults.
+  const extraTypes = new Set<string>()
+  if (extraJsonLd) {
+    extraJsonLd.forEach((s) => extractSchemaTypes(s).forEach((t) => extraTypes.add(t)))
+  }
+
   const schemas: Record<string, unknown>[] = [
     breadcrumbSchema(title, canonical),
-    serviceSchema(title, metaDescription, canonical),
   ]
-  if (faqs && faqs.length > 0) {
+  if (!extraTypes.has('Service')) {
+    schemas.push(serviceSchema(title, metaDescription, canonical))
+  }
+  if (faqs && faqs.length > 0 && !extraTypes.has('FAQPage')) {
     schemas.push(faqPageSchema(faqs))
   }
   if (extraJsonLd && extraJsonLd.length > 0) {

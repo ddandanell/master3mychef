@@ -371,6 +371,57 @@ function isValidPrerender(routePath: string, rootHtml: string | null | undefined
   return /<h1[\s>]/i.test(rootHtml)
 }
 
+type CaptureResult = { rootHtml: string | null; jsonLdScripts: string[] }
+
+function extractSchemaTypes(schema: unknown): string[] {
+  const types: string[] = []
+  if (!schema || typeof schema !== 'object') return types
+  if (Array.isArray(schema)) {
+    schema.forEach((item) => types.push(...extractSchemaTypes(item)))
+  } else if ('@graph' in schema && Array.isArray((schema as Record<string, unknown>)['@graph'])) {
+    ;(schema as Record<string, unknown>)['@graph'].forEach((item) => types.push(...extractSchemaTypes(item)))
+  } else if ('@type' in schema) {
+    const t = (schema as Record<string, unknown>)['@type']
+    if (typeof t === 'string') types.push(t)
+    else if (Array.isArray(t)) t.forEach((x) => { if (typeof x === 'string') types.push(x) })
+  }
+  return types
+}
+
+function mergeRenderedJsonLd(shell: string, renderedScripts: string[]): string {
+  if (!renderedScripts.length) return shell
+
+  // Collect schema types already present in the shell's inject-meta JSON-LD
+  // (with or without the data-seohead marker) and from earlier merges.
+  const shellTypes = new Set<string>()
+  const shellScriptMatches = shell.matchAll(/<script type="application\/ld\+json"(?: data-seohead="jsonld")?>([\s\S]*?)<\/script>/g)
+  for (const m of shellScriptMatches) {
+    try {
+      extractSchemaTypes(JSON.parse(m[1])).forEach((t) => shellTypes.add(t))
+    } catch {
+      // ignore unparseable shell JSON-LD
+    }
+  }
+
+  const scriptsToAdd: string[] = []
+  for (const scriptText of renderedScripts) {
+    try {
+      const types = extractSchemaTypes(JSON.parse(scriptText))
+      // Skip scripts whose schema types are already present in the shell.
+      // This prevents duplicates while allowing React-emitted Service, FAQPage,
+      // Event, HowTo, Menu, etc. that inject-meta.ts did not already write.
+      if (types.some((t) => shellTypes.has(t))) continue
+      scriptsToAdd.push(`<script type="application/ld+json" data-seohead="jsonld">${scriptText}</script>`)
+      types.forEach((t) => shellTypes.add(t))
+    } catch {
+      // skip unparseable rendered JSON-LD
+    }
+  }
+
+  if (!scriptsToAdd.length) return shell
+  return shell.replace('</head>', `${scriptsToAdd.join('\n  ')}\n  </head>`)
+}
+
 async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolean; reason?: string }> {
   const distFile = distFileForRoute(route.path)
   if (!existsSync(distFile)) {
@@ -382,13 +433,17 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
     viewport: { width: 1280, height: 1024 },
   })
 
-  async function captureRoot(timeoutMs: number): Promise<string | null> {
+  async function captureRoot(timeoutMs: number): Promise<CaptureResult> {
     await page.goto(`${BASE_URL}${route.path}`, { waitUntil: 'domcontentloaded', timeout: 20000 })
     // Wait for the React app to actually render content into #root.
     await page.waitForSelector('#root > *', { timeout: 10000 })
     // Settle for headings / above-the-fold content (no networkidle — GSAP never idles).
     await page.waitForTimeout(timeoutMs)
-    return page.$eval('#root', (el) => el.innerHTML).catch(() => null)
+    const rootHtml = await page.$eval('#root', (el) => el.innerHTML).catch(() => null)
+    const jsonLdScripts = await page.$$eval('script[type="application/ld+json"][data-seohead="jsonld"]', (els) =>
+      els.map((el) => el.textContent || '').filter(Boolean)
+    )
+    return { rootHtml, jsonLdScripts }
   }
 
   try {
@@ -403,17 +458,17 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
       return r.continue()
     })
 
-    let rootHtml = await captureRoot(400)
-    if (!isValidPrerender(route.path, rootHtml)) {
+    let captured = await captureRoot(400)
+    if (!isValidPrerender(route.path, captured.rootHtml)) {
       // Retry once with a longer settle window; some routes mount their main content after
       // secondary data/layout effects resolve.
-      rootHtml = await captureRoot(1500)
+      captured = await captureRoot(1500)
     }
-    if (!isValidPrerender(route.path, rootHtml)) {
-      return { ok: false, reason: `rendered #root too small or missing H1 (${rootHtml?.length ?? 0} bytes)` }
+    if (!isValidPrerender(route.path, captured.rootHtml)) {
+      return { ok: false, reason: `rendered #root too small or missing H1 (${captured.rootHtml?.length ?? 0} bytes)` }
     }
 
-    const shell = readFileSync(distFile, 'utf-8')
+    let shell = readFileSync(distFile, 'utf-8')
     if (!shell.includes(ROOT_EMPTY)) {
       // Already filled (re-run without a fresh inject-meta). Validate existing content and
       // overwrite if it is only a shell render from a previous flaky run.
@@ -423,15 +478,17 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
           return { ok: true }
         }
         // Overwrite with the newly captured content.
-        const merged = shell.replace(/<div\b[^>]*\bid=["']root["'][^>]*>[\s\S]*<\/div>/, `<div id="root">${rootHtml}</div>`)
-        writeFileSync(distFile, merged, 'utf-8')
+        shell = shell.replace(/<div\b[^>]*\bid=["']root["'][^>]*>[\s\S]*<\/div>/, `<div id="root">${captured.rootHtml}</div>`)
+        shell = mergeRenderedJsonLd(shell, captured.jsonLdScripts)
+        writeFileSync(distFile, shell, 'utf-8')
         return { ok: true }
       }
       return { ok: false, reason: 'no root div in shell' }
     }
     // Splice rendered body into the controlled inject-meta <head> shell.
-    const merged = shell.replace(ROOT_EMPTY, `<div id="root">${rootHtml}</div>`)
-    writeFileSync(distFile, merged, 'utf-8')
+    shell = shell.replace(ROOT_EMPTY, `<div id="root">${captured.rootHtml}</div>`)
+    shell = mergeRenderedJsonLd(shell, captured.jsonLdScripts)
+    writeFileSync(distFile, shell, 'utf-8')
     return { ok: true }
   } catch (err) {
     return { ok: false, reason: (err as Error).message }

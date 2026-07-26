@@ -29,18 +29,15 @@ export function calculateAllIn(price: number): number {
 }
 
 export default function AllInPrice({ price, suffix = '/person', showPlusPlus = true, className = '' }: AllInPriceProps) {
-  const allIn = calculateAllIn(price)
-
+  // Owner decree: never display a computed all-in (tax-inclusive) total.
+  // Render only the base ++ price. Component API is unchanged for importers.
   return (
     <span className={`inline-flex items-baseline gap-1.5 flex-wrap ${className}`}>
       {showPlusPlus && (
-        <span className="text-[#4A4745]/80 line-through text-sm">
+        <span className="text-[#1A1A1A] font-semibold">
           {formatIDR(price)}++{suffix}
         </span>
       )}
-      <span className="text-[#1A1A1A] font-semibold">
-        {formatIDR(allIn)} all-in{suffix}
-      </span>
     </span>
   )
 }

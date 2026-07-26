@@ -16,7 +16,8 @@ export interface BarService {
   proofAlt?: string
   valueProp: string
   whatsappMessage: string
-  fromPrice: {
+  /** Optional published "from" anchor. Omitted when rates are quote-only (e.g. bartender staffing). */
+  fromPrice?: {
     value: number
     label: string
   }

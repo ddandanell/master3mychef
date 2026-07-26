@@ -61,8 +61,8 @@ export default function BarServicePage() {
             meta.description,
             canonical,
             service.eyebrow,
-            service.fromPrice.value,
-            service.fromPrice.label,
+            service.fromPrice?.value,
+            service.fromPrice?.label,
           ),
           faqPageSchema(service.faqs),
         ]}

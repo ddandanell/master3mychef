@@ -14,7 +14,7 @@ const SECTIONS = [
 
     <p>In Bali, live-in chef placements are most common among four groups. <strong>Long-stay expats and remote workers</strong> who lease villas for 6–12 months and want a structured, healthy meal routine without the overhead of daily catering bookings. <strong>Luxury villa homeowners</strong> who host rotating guests throughout the year and need consistent kitchen management. <strong>Corporate housing</strong> — executives on extended assignment who expect the same quality of service they receive at five-star hotels. And <strong>high-net-worth families</strong> with children, dietary complexity, or both, who require a professional who can manage all of it quietly and competently.</p>
 
-    <p>Bali's advantage is real: the island has a deep talent pool of professionally trained chefs who have worked in international hotel kitchens, Michelin-affiliated restaurants, and high-end villa hospitality — at a cost that is a fraction of what an equivalent chef commands in Europe, Australia, or North America. A trained live-in chef with 8–10 years of experience costs IDR 10M–14M per month in Bali. The same profile in London would cost £4,000–£6,000 per month. That gap is the reason live-in chef placements in Bali have grown substantially over the past three years.</p>`,
+    <p>Bali's advantage is real: the island has a deep talent pool of professionally trained chefs who have worked in international hotel kitchens, Michelin-affiliated restaurants, and high-end villa hospitality — at a cost that is a fraction of what an equivalent chef commands in Europe, Australia, or North America. A trained live-in chef with years of international hotel experience in Bali typically costs a small fraction of what the same profile would command in London or other Western capitals. That gap is the reason live-in chef placements in Bali have grown substantially over the past three years.</p>`,
   },
   {
     id: 'duties',
@@ -34,25 +34,25 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'Pricing & Budget',
     title: 'Live-In Chef Costs in Bali 2026',
-    body: `<p>Live-in chef salaries in Bali span a wide range depending on experience, training, cuisine specialisation, and language ability. Here is a practical breakdown for 2026:</p>
+    body: `<p>Live-in chef salaries in Bali span a wide range depending on experience, training, cuisine specialisation, and language ability. Here is a practical breakdown of the three tiers for 2026 — request a quote for current market guidance on specific salary ranges:</p>
 
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;margin-bottom:1rem;">
-      <li><strong>Basic household cook:</strong> IDR 5M–8M/month. Solid Indonesian and Asian cuisine, reliable daily cooking, limited English. Well suited to households with straightforward dietary needs and Indonesian cuisine preferences.</li>
-      <li><strong>Trained private chef:</strong> IDR 8M–12M/month. Formal culinary training, multi-cuisine capability (Asian, Mediterranean, Western), conversational English, able to handle dietary complexity. This is the most common placement tier for expat households and villa owners.</li>
-      <li><strong>Executive / internationally trained chef:</strong> IDR 15M–25M/month. Michelin-adjacent training, extensive fine-dining background, fluent English, multi-lingual capability, ability to execute elaborate tasting menus and manage a kitchen team if needed. Appropriate for ultra-premium households and corporate executive housing.</li>
+      <li><strong>Basic household cook:</strong> the entry-level tier. Solid Indonesian and Asian cuisine, reliable daily cooking, limited English. Well suited to households with straightforward dietary needs and Indonesian cuisine preferences.</li>
+      <li><strong>Trained private chef:</strong> the mid-range tier. Formal culinary training, multi-cuisine capability (Asian, Mediterranean, Western), conversational English, able to handle dietary complexity. This is the most common placement tier for expat households and villa owners.</li>
+      <li><strong>Executive / internationally trained chef:</strong> the premium tier. Michelin-adjacent training, extensive fine-dining background, fluent English, multi-lingual capability, ability to execute elaborate tasting menus and manage a kitchen team if needed. Appropriate for ultra-premium households and corporate executive housing.</li>
     </ul>
 
     <p><strong>Additional cost factors to budget for:</strong></p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;margin-bottom:1rem;">
-      <li><strong>Accommodation:</strong> If the chef lives on-site at your property and you provide a room and meals, this is included in the arrangement. If you are placing a chef who commutes from nearby accommodation, a housing allowance of IDR 1M–2M/month is standard.</li>
-      <li><strong>Transport allowance:</strong> IDR 300K–600K/month for fuel or motorbike costs, depending on distance and how frequently the chef drives to market.</li>
+      <li><strong>Accommodation:</strong> If the chef lives on-site at your property and you provide a room and meals, this is included in the arrangement. If you are placing a chef who commutes from nearby accommodation, a modest monthly housing allowance is standard practice.</li>
+      <li><strong>Transport allowance:</strong> A small monthly allowance covering fuel or motorbike costs, depending on distance and how frequently the chef drives to market.</li>
       <li><strong>THR bonus:</strong> Indonesian law requires a religious holiday bonus (Tunjangan Hari Raya) equivalent to one full month's salary, paid before Eid or as agreed. This applies to all full-time employees, including live-in chefs.</li>
       <li><strong>myCHEF placement fee:</strong> Equivalent to one month's salary, paid once at placement. Includes vetting, testing, reference verification, and a 90-day replacement guarantee.</li>
     </ul>
 
     <p>What drives price variation beyond the tiers above: <strong>cuisine expertise</strong> (a chef trained in French fine dining costs more than a generalist), <strong>English proficiency</strong> (fluent English commands a premium in expat-facing roles), and <strong>track record</strong> in comparable placements. Candidates with demonstrable household chef experience, strong references, and HACCP certification command the upper end of their tier.</p>
 
-    <p>For context: a trained private chef at IDR 10M/month with a THR bonus and transport allowance costs approximately IDR 11.5M/month on average across the year — roughly USD 710/month at current rates. For a household of 4–6 people eating three meals a day, seven days a week, the per-meal cost is under USD 3. That is the Bali advantage.</p>`,
+    <p>For context: even once the THR bonus and standard allowances are included, the total annual cost of a trained private chef in Bali remains remarkably affordable by international standards. For a household of 4–6 people eating three meals a day, seven days a week, the per-meal cost works out to less than a casual café meal — and far below what an equivalent arrangement would cost in Europe, Australia, or North America. That is the Bali advantage. Request a quote for current market guidance on total monthly costs.</p>`,
   },
   {
     id: 'vetting',
@@ -173,9 +173,9 @@ export default function LiveInChefBaliHiringGuidePage() {
     <PremiumPage
       slug="blog/live-in-chef-bali-hiring-guide"
       title="Live-In Chef Bali: The Complete Hiring Guide"
-      description="Considering a live-in chef for your Bali villa or home? Learn about costs (IDR 8M–18M/month), contracts, vetting, duties and myCHEF's placement service."
+      description="Considering a live-in chef for your Bali villa or home? Learn about costs, contracts, vetting, duties and myCHEF's placement service."
       seoTitle="Live-In Chef Bali: Hiring Guide, Costs & What to Expect | myCHEF"
-      seoDescription="Considering a live-in chef for your Bali villa or home? Learn about costs (IDR 8M–18M/month), contracts, vetting, duties and myCHEF's placement service."
+      seoDescription="Considering a live-in chef for your Bali villa or home? Learn about costs, contracts, vetting, duties and myCHEF's placement service."
       canonicalUrl="https://mychef.id/blog/live-in-chef-bali-hiring-guide"
       h1="Live-In Chef Bali: The Complete Hiring Guide"
       subtitle="Everything You Need to Know Before Hiring a Live-In Private Chef in Bali"
@@ -219,7 +219,7 @@ export default function LiveInChefBaliHiringGuidePage() {
             {
               '@type': 'HowToStep',
               name: 'Set your budget',
-              text: 'Establish a monthly salary range based on the chef tier you need — basic cook (IDR 5M–8M), trained private chef (IDR 8M–12M), or executive chef (IDR 15M–25M) — plus allowances and annual THR bonus.',
+              text: 'Establish a monthly budget based on the chef tier you need — basic cook, trained private chef, or executive chef — plus allowances and the annual THR bonus. Request a quote for current market guidance on salary ranges.',
             },
             {
               '@type': 'HowToStep',

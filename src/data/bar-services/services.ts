@@ -407,7 +407,6 @@ export const BAR_SERVICES: BarService[] = [
     processAlt: 'Temporary bartender pouring cocktails at a high-volume Bali reception',
     valueProp: 'Vetted, insured bartenders and barbacks for events, weddings and venue cover — employed by us, zero employment-law risk to you.',
     whatsappMessage: "Hi MyChef — I'd like to discuss Temporary Bartender Staffing for my venue in Bali.",
-    fromPrice: { value: 250000, label: 'From IDR 250,000 per hour per bartender (4-hour minimum)' },
     problem: {
       title: 'Freelance staffing is a gamble with no recourse',
       paragraphs: [
@@ -465,7 +464,7 @@ export const BAR_SERVICES: BarService[] = [
           "Bali's event and hospitality calendar is intensely seasonal, with peaks in July-August, December-New Year and wedding season that can triple demand overnight. At the same time, the permanent bartender labour pool is small and churn is structural, which means the Friday-afternoon no-show is a recurring operational risk rather than a rare emergency.",
           'Freelance staffing is the default response, but it is a gamble with no recourse. A bartender who looks capable on social media may pour slowly under pressure, and a casual hire can accidentally make you their employer under Indonesian outsourcing law, triggering PKWT, BPJS and wage-floor obligations you never budgeted for.',
           'MyChef solves this by employing every bartender, barback and server we deploy. You receive trade-tested, briefed professionals and a single clean invoice, while we carry the contracts, wages and compliance risk. That structure is especially valuable for weddings, corporate events and multi-week venue cover where reliability is non-negotiable.',
-          'Staff are matched within four business hours from a vetted pool, briefed 24 hours before the shift with menu specs, SOPs, floor plan and dress standard, and supervised on deployments of four or more. Event bartenders start from Rp250,000 per hour with a four-hour minimum, and a standby pool backs every confirmed booking so a no-show is replaced within 90 minutes or the shift fee is waived.',
+          'Staff are matched within four business hours from a vetted pool, briefed 24 hours before the shift with menu specs, SOPs, floor plan and dress standard, and supervised on deployments of four or more. A standby pool backs every confirmed booking so a no-show is replaced within 90 minutes or the shift fee is waived.',
           'Every pool member is re-verified every six months and rated by clients after each shift, so quality is continuously refreshed rather than assumed. Ratings below expectations trigger review, re-training or removal, and the pool is replenished with graduates of MyChef Bar Staff Training programmes.'
         ]
       },
@@ -1083,7 +1082,7 @@ export const BAR_SERVICES: BarService[] = [
     },
     faqs: [
       { question: 'What is the difference between dry hire and wet hire for bar equipment?', answer: 'Dry hire means equipment and tools only; you stock alcohol yourself, keeping SIUP-MB compliance clean. Wet hire means supplied beverages. Our compliant model is dry-hire / BYOB with supplier guidance.' },
-      { question: 'Can we rent a cocktail kit for a villa party?', answer: 'Yes. Bar tool kits and mobile bar equipment are available for events, and you can pair them with a bartender from IDR 250K per hour.' }
+      { question: 'Can we rent a cocktail kit for a villa party?', answer: 'Yes. Bar tool kits and mobile bar equipment are available for events, and you can pair them with a professional bartender — rates on request.' }
     ],
     relatedServices: ['temporary-bartender-staffing', 'new-bar-setup', 'signature-cocktail-creation'],
     relatedResources: ['how-to-open-a-bar-in-bali', 'how-many-bartenders-per-guest'],

@@ -161,8 +161,8 @@ export function barServiceSchema(
   description: string,
   url: string,
   serviceType: string,
-  price: number,
-  priceLabel: string,
+  price?: number,
+  priceLabel?: string,
 ) {
   return {
     '@context': 'https://schema.org',
@@ -180,19 +180,23 @@ export function barServiceSchema(
       '@type': 'BusinessAudience',
       audienceType: 'Hotels, villas, beach clubs, restaurants, event and wedding organisers in Bali',
     },
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'IDR',
-      price: String(price),
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        priceCurrency: 'IDR',
-        price: String(price),
-        unitText: priceLabel,
-      },
-      availability: 'https://schema.org/InStock',
-      url,
-    },
+    ...(price !== undefined && priceLabel !== undefined
+      ? {
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'IDR',
+            price: String(price),
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              priceCurrency: 'IDR',
+              price: String(price),
+              unitText: priceLabel,
+            },
+            availability: 'https://schema.org/InStock',
+            url,
+          },
+        }
+      : {}),
   }
 }
 

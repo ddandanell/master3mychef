@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Users } from 'lucide-react'
-import { formatIDR, calculateAllIn } from './AllInPrice'
+import { formatIDR } from './AllInPrice'
 
 interface GroupTotalCalculatorProps {
   pricePerPerson: number
@@ -26,7 +26,6 @@ export default function GroupTotalCalculator({
   const [guests, setGuests] = useState(defaultGuests)
 
   const totalPlusPlus = pricePerPerson * guests
-  const totalAllIn = calculateAllIn(totalPlusPlus)
 
   return (
     <div className={`bg-white rounded-xl border border-[#E8E6E3] p-5 ${className}`}>
@@ -61,21 +60,15 @@ export default function GroupTotalCalculator({
       </div>
 
       <div className="border-t border-[#E8E6E3] pt-4">
-        {showPlusPlus && (
-          <div className="flex justify-between items-center mb-1">
-            <span className="text-sm text-[#4A4745]/80">Subtotal (++)</span>
-            <span className="text-sm text-[#4A4745]/80 line-through">{formatIDR(totalPlusPlus)}</span>
-          </div>
-        )}
         <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-[#1A1A1A]">Total all-in</span>
+          <span className="text-sm font-medium text-[#1A1A1A]">Group total (++)</span>
           <span className="text-xl font-semibold" style={{ color: accent, fontFamily: "'Playfair Display', serif" }}>
-            {formatIDR(totalAllIn)}
+            {formatIDR(totalPlusPlus)}
           </span>
         </div>
         {showPlusPlus && (
           <p className="text-xs text-[#4A4745]/50 mt-1">
-            Includes 11% government tax + 10% service charge
+            Excludes 11% government tax + 10% service charge
           </p>
         )}
       </div>

@@ -31,7 +31,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = buildWhatsAppUrl({ serviceName: 'a floating breakfast in Bali', intent: 'floating breakfast packages and pricing' })
+const WA_LINK = buildWhatsAppUrl({ serviceName: 'a floating breakfast add-on in Bali', intent: 'adding a floating breakfast to a chef or catering booking' })
 const SITE = 'https://mychef.id'
 
 const FLOATING_OPTIONS = [
@@ -207,6 +207,7 @@ const FLOATING_GALLERY = [
 ]
 
 const FAQS = [
+  { q: 'Can I book a floating breakfast on its own?', a: 'No — a floating breakfast in Bali is an add-on experience, booked together with a main myCHEF service: a private chef breakfast or brunch, a villa BBQ, or a villa or event catering booking. Tell us your main service and we will plan the tray around it.' },
   { q: 'How much does a floating breakfast in Bali cost?', a: 'IDR 950,000 per couple for the classic tray, IDR 1,400,000 for the champagne brunch, or IDR 750,000 per person for groups of 4–10 — all ++ (11% government tax + 10% service charge). Tray, flowers and drinks are included.' },
   { q: 'Do you deliver to Ubud, Uluwatu or Nusa Dua?', a: 'Yes — unlike the mass-market tray brands, we serve Ubud, Uluwatu, Nusa Dua and Sanur as well as Seminyak, Canggu and the rest of the island. A small travel fee may apply outside Seminyak and Canggu, quoted upfront.' },
   { q: 'Is there a minimum order?', a: 'Couple packages start at two guests; the group brunch has a minimum of four guests.' },
@@ -215,7 +216,7 @@ const FAQS = [
   { q: 'Is the tray included?', a: 'Yes — a custom bamboo floating tray sized to your group is part of every package, and we collect it 1.5–2 hours after delivery.' },
   { q: 'What if our villa pool is not suitable for a tray?', a: 'We style a poolside or indoor breakfast table with the same menu and presentation instead. Pool suitability — access, calm water, and space for safe placement — is confirmed before your slot.' },
   { q: 'How far in advance should I book?', a: 'Two to three days minimum. For peak season (June–August and December–January), one to two weeks secures your preferred date and slot.' },
-  { q: 'What deposit is required?', a: 'A 50% deposit confirms your booking; the balance is due the day before your booking.' },
+  { q: 'What deposit is required?', a: 'A 50% deposit confirms your booking; the balance is due the day before the event.' },
 ]
 
 export default function CateringFloatingBreakfastPage() {
@@ -241,7 +242,7 @@ export default function CateringFloatingBreakfastPage() {
         jsonLd={[
           serviceSchema(
             'Floating Breakfast Bali',
-            'Chef-prepared floating breakfast delivered and styled in your Bali villa pool, island-wide including Ubud, Uluwatu, Nusa Dua and Sanur. Fixed packages from IDR 950,000 per couple — tray, flowers and drinks included.',
+            'Chef-prepared floating breakfast styled in your Bali villa pool, available exclusively as an add-on to a myCHEF private chef, villa catering or event booking — island-wide including Ubud, Uluwatu, Nusa Dua and Sanur. From IDR 950,000 per couple — tray, flowers and drinks included.',
             `${SITE}/catering/floating-breakfast`
           ),
           faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a }))),
@@ -311,7 +312,7 @@ export default function CateringFloatingBreakfastPage() {
               </p>
 
               <p className="text-white/85 text-base md:text-lg leading-[1.55] mb-6 max-w-[540px]">
-                A styled bamboo tray of chef-prepared breakfast, floating in your own pool at sunrise. We prepare everything fresh, deliver it to your villa, place the tray in the water — and collect it when you are done.
+                A styled bamboo tray of chef-prepared breakfast, floating in your own pool at sunrise. We prepare everything fresh, deliver it to your villa, place the tray in the water — and collect it when you are done. Booked together with your main service — a private chef breakfast or brunch, a villa BBQ, or a catering booking — never on its own.
               </p>
 
               <p className="text-white/70 text-sm mb-8 max-w-[540px]">
@@ -324,7 +325,7 @@ export default function CateringFloatingBreakfastPage() {
                   data-source="floating-breakfast-hero-primary-cta"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-xs font-bold uppercase tracking-[0.14em] rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded"
                 >
-                  <Calendar className="w-4 h-4" /> Reserve My Tray
+                  <Calendar className="w-4 h-4" /> Add to My Booking
                 </a>
                 <a
                   href="#menu-styles"
@@ -360,7 +361,7 @@ export default function CateringFloatingBreakfastPage() {
                 Most <strong>floating breakfasts in Bali</strong> are pre-packed baskets delivered by courier. Ours is prepared by professional chefs — the same team behind our private dining and <Link to="/catering/villa-catering" className="text-[#C5A028] hover:underline">villa catering</Link> work — so the eggs are cooked properly, the pastries are fresh, and dietary requests are handled the way a kitchen handles them, not a packing line.
               </p>
               <p className="text-[#4A4745] text-sm leading-relaxed mt-4">
-                Every tray arrives styled and photo-ready: tropical fruit, fresh pastries, eggs, juice, coffee and flowers arranged around your pool and villa backdrop. It works beautifully for honeymoon mornings, birthday surprises, anniversaries, girls' trips, or simply a slow villa morning worth remembering.
+                Every tray arrives styled and photo-ready: tropical fruit, fresh pastries, eggs, juice, coffee and flowers arranged around your pool and villa backdrop. It works beautifully for honeymoon mornings, birthday surprises, anniversaries, girls' trips, or simply a slow villa morning worth remembering. The floating breakfast is an add-on, booked together with your main service — a private chef breakfast or brunch, a villa BBQ, or catering — as the standout morning of the booking.
               </p>
               <div className="grid grid-cols-2 gap-3 mt-6">
                 {['Chef-prepared dishes', 'Custom bamboo tray', 'Tropical fruit & flowers', 'Fresh coffee & juice', 'Photo-ready styling', 'Equipment handled by our team', 'Timing around your service', 'Dietary options'].map((item) => (
@@ -390,8 +391,8 @@ export default function CateringFloatingBreakfastPage() {
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Combine It"
-            title="Services You Can Pair With Floating Breakfast"
-            subtitle="Pair your pool morning with the rest of your stay — these are the combinations guests love most."
+            title="Add a Floating Breakfast to These Services"
+            subtitle="Floating breakfast is an add-on, booked together with a main myCHEF service — these are the combinations guests love most."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
             {PAIRING_SERVICES.map((item) => (
@@ -416,7 +417,7 @@ export default function CateringFloatingBreakfastPage() {
           <SectionHeader
             eyebrow="Packages"
             title="Floating Breakfast Packages and Prices"
-            subtitle="Fixed prices, no hidden fees. Prices are subject to 11% government tax + 10% service charge."
+            subtitle="Add-on packages, booked together with your main service. Fixed prices, no hidden fees — subject to 11% government tax + 10% service charge."
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
             {FLOATING_OPTIONS.map((pkg) => (
@@ -424,6 +425,9 @@ export default function CateringFloatingBreakfastPage() {
             ))}
           </div>
           <div className="mt-6 text-center space-y-2">
+            <p className="text-sm text-[#4A4745] font-semibold">
+              Floating breakfast is available exclusively as an add-on to a myCHEF private chef, villa BBQ or catering booking — it is not sold on its own.
+            </p>
             <p className="text-sm text-[#4A4745] font-semibold">
               Tray, flowers and drinks are included in every package.
             </p>
@@ -720,13 +724,14 @@ export default function CateringFloatingBreakfastPage() {
         <div className="max-w-[800px] mx-auto">
           <SectionHeader
             eyebrow="Reserve"
-            title="Reserve Your Tray"
-            subtitle="Send your date, villa, guest count and preferred time slot. We confirm the tray setup, timing and delivery window on WhatsApp within the hour — no payment required to enquire."
+            title="Add a Floating Breakfast to Your Booking"
+            subtitle="Floating breakfast is booked together with a main service — a private chef breakfast or brunch, a villa BBQ, or catering. Send your main service, date, villa, guest count and preferred time slot. We confirm the tray setup, timing and delivery window on WhatsApp within the hour — no payment required to enquire."
           />
           <BookingFormCatering
-            title="Reserve My Floating Breakfast"
+            title="Add a Floating Breakfast to My Booking"
             subtitle="We confirm the tray setup, timing and delivery window on WhatsApp within the hour."
             fields={[
+              { name: 'mainService', label: 'Main Service', type: 'select', options: ['Private chef breakfast / brunch', 'Villa BBQ', 'Villa catering', 'Event catering', 'Not sure yet — advise me'], required: true },
               { name: 'date', label: 'Date', type: 'date', icon: Calendar, required: true },
               { name: 'villa', label: 'Villa Name', type: 'text', required: true },
               { name: 'area', label: 'Location', type: 'text', icon: MapPin, placeholder: 'Ubud, Uluwatu, Nusa Dua, Sanur, Seminyak, Canggu...', required: true },
@@ -740,8 +745,8 @@ export default function CateringFloatingBreakfastPage() {
               { name: 'name', label: 'Your Name', type: 'text', required: true },
               { name: 'whatsapp', label: 'WhatsApp', type: 'text', required: true },
             ]}
-            submitLabel="Reserve My Floating Breakfast"
-            messageIntro="Hi myCHEF, I'd like to book a floating breakfast."
+            submitLabel="Add Floating Breakfast to My Booking"
+            messageIntro="Hi myCHEF, I'd like to add a floating breakfast to my booking."
             accent="#C5A028"
           />
         </div>
@@ -773,17 +778,17 @@ export default function CateringFloatingBreakfastPage() {
         </div>
         <div className="relative z-10 text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Reserve Your Tray
+            Add a Floating Breakfast to Your Booking
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Send your date, villa, guest count and preferred time slot. We confirm the tray setup, timing and delivery window on WhatsApp within the hour — no payment required to enquire. Prefer email? bali@mychef.id · Or call +62 896-7407-2020.
+            Tell us your main service — a private chef breakfast or brunch, a villa BBQ, or catering — plus your date, villa, guest count and preferred time slot. We confirm the tray setup, timing and delivery window on WhatsApp within the hour — no payment required to enquire. Prefer email? bali@mychef.id · Or call +62 896-7407-2020.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-floating-breakfast-cta"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
-              <Phone className="w-4 h-4" /> Reserve My Tray on WhatsApp
+              <Phone className="w-4 h-4" /> Add to My Booking on WhatsApp
             </a>
             <a
               href="#order"
@@ -800,9 +805,9 @@ export default function CateringFloatingBreakfastPage() {
 
       <StickyMobileCTA
         pageSource="catering-floating-breakfast"
-        serviceName="a floating breakfast in Bali"
-        intent="floating breakfast packages and pricing"
-        label="Reserve My Tray"
+        serviceName="a floating breakfast add-on in Bali"
+        intent="adding a floating breakfast to a chef or catering booking"
+        label="Add to My Booking"
       />
     </div>
   )

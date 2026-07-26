@@ -23,7 +23,7 @@ const FAQS = [
   { q: 'Which areas do you cover?', a: 'Airport transfers and private drivers across Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and the Bukit Peninsula. Other routes on request.' },
   { q: 'What group sizes can you handle?', a: 'From couples to groups of 40+, with multiple vehicles and a dedicated coordinator for weddings and events.' },
   { q: 'Do you provide child seats?', a: 'Yes — child and infant seats at no extra charge. Tell us ages and weights at booking so the correct seat is installed before arrival.' },
-  { q: 'How far ahead should I book, and what if plans change?', a: '48–72 hours is usually enough; allow 2–3 weeks for weddings and large events. A 50% deposit confirms your vehicle and driver. Cancellation: full refund more than 48 hours before service; 50% charge within 24–48 hours; same-day cancellations charged in full.' },
+  { q: 'How far ahead should I book, and what if plans change?', a: '48–72 hours is usually enough; allow 2–3 weeks for weddings and large events. A 50% deposit confirms your vehicle and driver. Cancellations 14+ days before the transfer receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
 ]
 
 export default function VipTransportBaliPage() {
@@ -81,7 +81,7 @@ export default function VipTransportBaliPage() {
                   {'@type': 'Question', 'name': 'Which areas do you cover?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'Airport transfers and private drivers across Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and the Bukit Peninsula. Other routes on request.'}},
                   {'@type': 'Question', 'name': 'What group sizes can you handle?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'From couples to groups of 40+, with multiple vehicles and a dedicated coordinator for weddings and events.'}},
                   {'@type': 'Question', 'name': 'Do you provide child seats?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'Yes — child and infant seats at no extra charge; ages and weights are taken at booking so the correct seat is installed.'}},
-                  {'@type': 'Question', 'name': 'How far ahead should I book, and what if plans change?', 'acceptedAnswer': {'@type': 'Answer', 'text': '48–72 hours is usually enough; 2–3 weeks for weddings and large events. A 50% deposit confirms the vehicle and driver. Cancellation: full refund more than 48 hours before service; 50% charge within 24–48 hours; same-day charged in full.'}}
+                  {'@type': 'Question', 'name': 'How far ahead should I book, and what if plans change?', 'acceptedAnswer': {'@type': 'Answer', 'text': '48–72 hours is usually enough; 2–3 weeks for weddings and large events. A 50% deposit confirms the vehicle and driver. Cancellations 14+ days before the transfer receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).'}}
                 ]
               }
             ]

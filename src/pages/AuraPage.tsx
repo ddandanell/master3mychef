@@ -173,7 +173,7 @@ const GLOBAL_ADDONS = [
 
 const FAQS = [
   { q: 'How far in advance should I book an event?', a: '4+ weeks is ideal. For weddings during peak season (June–September, December), 3+ months is recommended. But message us anyway — we have pulled off miracles in less time.' },
-  { q: 'What does "++" mean in the price?', a: '"++" means service charge (typically 10%) and government tax (11%) are added to the per-guest price. The total event cost depends on guest count, menu, and add-ons. Olivia provides a fully itemised proposal with no hidden fees.' },
+  { q: 'What does "++" mean in the price?', a: '"++" means 11% government tax + 10% service charge are added to the per-guest price. The total event cost depends on guest count, menu, and add-ons. Olivia provides a fully itemised proposal with no hidden fees.' },
   { q: 'What is included in the event price?', a: 'All packages include catering, bar service, staffing, basic décor, and on-site coordination. AV, specialty floral, and entertainment are quoted separately based on your needs.' },
   { q: 'Can you work at any villa in Bali?', a: 'Yes. We have produced events at over 200 villas across Seminyak, Canggu, Ubud, Uluwatu, and Nusa Dua. We know the spaces, the vendors, and the logistics.' },
   { q: 'Do you handle décor and floral?', a: 'Yes. Our Villa Celebration and Grand packages include floral and décor. For Intimate events, we can add it as an upgrade. We work with Bali\'s best floral designers.' },
@@ -185,7 +185,7 @@ const FAQS = [
   { q: 'What if our villa has restrictions?', a: 'We work with villa managers before every event. Noise curfews, guest limits, kitchen access — we plan around every restriction so nothing surprises you on the day.' },
   { q: 'Is there a commitment to get a proposal?', a: 'No. The first consultation and proposal are free. You only commit when you approve the plan and pay the deposit.' },
   { q: 'How does payment work?', a: '50% deposit to lock the date. Remaining 50% due the day before the event, before service begins. Invoiced and documented for corporate clients.' },
-  { q: 'What if I need to cancel or reschedule?', a: 'Full refund if cancelled 30+ days ahead. 50% refund 14–30 days. Within 14 days, we apply the deposit to a rescheduled date within 6 months.' },
+  { q: 'What if I need to cancel or reschedule?', a: 'A 50% deposit confirms your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy). Need to reschedule? We apply your deposit to a new date within 6 months.' },
   { q: 'Are there hidden fees?', a: 'No. Every proposal is itemised — catering, bar, staffing, décor, AV, add-ons. You see every line item before you commit. No surprises on the day.' },
   { q: 'How do I know the food will be good?', a: 'Our executive chef Adriano trained in Modena and Tokyo. Every event menu is designed by him and executed by his team. See past event photos, read testimonials, or book a tasting.' },
 

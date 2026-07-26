@@ -83,7 +83,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     faqs: [
       {
         q: 'How much does a private chef cost in Seminyak?',
-        a: `A half-day booking starts from IDR 2,500,000++ (one chef and one dedicated assistant) plus groceries at cost with receipts. Group catering runs from IDR 700,000 per person and tasting menus from IDR 980,000 per person. Prices are subject to 11% tax + 10% service. Your itemised quote is fixed before you commit.`,
+        a: `A half-day booking starts from IDR 2,500,000++ (one chef and one dedicated assistant) plus groceries at cost with receipts. Group catering runs from IDR 700,000 per person and tasting menus from IDR 980,000 per person. Prices are subject to a 10% service charge and 11% tax. Your itemised quote is fixed before you commit.`,
       },
       {
         q: 'Is there a travel fee for Seminyak villas?',

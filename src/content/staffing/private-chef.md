@@ -20,8 +20,8 @@ WhatsApp us directly: **+62 896-7407-2020**
 
 Every chef placement includes a documented verification protocol, a structured trial period, and a 30-day replacement guarantee. We employ, manage, and back your chef up.
 
-**[Discuss Your Chef Needs on WhatsApp]**
-[Request a Confidential Consultation]
+**[Discuss Your Chef Needs on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)**
+[Request a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)
 
 ---
 
@@ -35,7 +35,7 @@ myCHEF acts as your culinary director and employer of record. We understand your
 
 If you are exploring broader staffing for your property, our [villa staffing overview](/staffing) explains how a chef fits into a complete household team.
 
-**[Tell Us About Your Villa's Culinary Needs]**
+**[Tell Us About Your Villa's Culinary Needs](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)**
 
 ---
 
@@ -72,7 +72,7 @@ After placement, your chef is employed by myCHEF.id. We manage payroll, BPJS, TH
 
 Read our full [recruitment process](/staffing/recruitment) page to see how this applies across every role we place.
 
-**[Ready to Find Your Chef? Start on WhatsApp]**
+**[Ready to Find Your Chef? Start on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)**
 
 ---
 
@@ -100,7 +100,7 @@ For peak season, holiday rentals, or coverage during your permanent chef's leave
 
 Many owners pair a chef with a [villa manager](/staffing/villa-manager) to handle scheduling, vendor coordination, and guest relations.
 
-**[Not Sure Which Type You Need? We'll Guide You]**
+**[Not Sure Which Type You Need? We'll Guide You](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)**
 
 ---
 
@@ -126,7 +126,7 @@ Chefs receive quarterly skills refreshers and menu development support. We inves
 **English Communication**
 We verify English proficiency for guest-facing roles. When additional language support is needed, your dedicated operations manager provides bilingual coordination.
 
-**[See What a Professional Chef Can Do for Your Villa]**
+**[See What a Professional Chef Can Do for Your Villa](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)**
 
 ---
 
@@ -151,7 +151,7 @@ We know which Bali markets have the freshest seafood on which days, which suppli
 
 If you are building a complete team rather than hiring a single chef, our [full villa staffing](/staffing/villa-staff) service covers housekeepers, butlers, drivers, and more.
 
-**[Join the 560+ Villas That Trust myCHEF]**
+**[Join the 560+ Villas That Trust myCHEF](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)**
 
 ---
 
@@ -177,7 +177,7 @@ When you self-manage, you still pay the chef's salary plus recruitment, vetting,
 
 For a breakdown of the full client journey, visit [how it works](/staffing/how-it-works).
 
-**[Request a Confidential Quote for Your Villa]**
+**[Request a Confidential Quote for Your Villa](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)**
 
 ---
 
@@ -201,7 +201,7 @@ Yes. Your chef is employed by myCHEF.id as the legal employer of record. We hand
 **Can I interview the chef before hiring?**
 Absolutely. We provide a curated shortlist of two to three matched candidates, each with a full profile. You can interview, request a tasting menu, or proceed directly to a structured trial period.
 
-**[WhatsApp Us for a Confidential Consultation]**
+**[WhatsApp Us for a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)**
 
 ---
 
@@ -247,8 +247,8 @@ We conduct quarterly performance reviews and maintain open feedback channels wit
 
 **560+ villas served · 12,000+ happy guests · 500+ events · 5-star rated**
 
-**[WhatsApp Us for a Confidential Consultation]**
-[Request a Consultation via Contact Form]
+**[WhatsApp Us for a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20a%20private%20chef.%20)**
+[Request a Consultation via Contact Form](/contact)
 
 ---
 

@@ -76,7 +76,7 @@ const FAQS = [
   { q: 'Can I request a different chef?', a: 'No. The Chef\'s Table is only available with Adriano. If he is unavailable on your date, we will offer to rebook — not replace him.' },
   { q: 'What does the menu look like?', a: 'The menu is built the morning of your dinner around what Adriano finds at the market. The framework is 7 courses: 2 cold opens, pasta, protein, pre-dessert, dessert, and petit fours. No two evenings are identical. This is by design.' },
   { q: 'Is my villa kitchen suitable?', a: 'We assess every villa before confirming. You need counter space for 6 guests, or an island we can arrange stools around. Kitchen size is less important than seating configuration. Send us photos and we\'ll tell you within an hour.' },
-  { q: 'What does "++" mean in IDR 3,500,000++?', a: '"++" adds 11% government tax + 10% service charge. All-in total is approximately IDR 4,235,000 per person.' },
+  { q: 'What does "++" mean in IDR 3,500,000++?', a: '"++" adds 11% government tax + 10% service charge. Your quote states the full total including tax and service before you confirm.' },
   { q: 'Can we photograph or film the evening?', a: 'Yes — personal photography is welcome throughout. We ask that any commercial use or publication be discussed in advance.' },
   { q: 'How far in advance do I need to book?', a: 'We take 2 Chef\'s Table bookings per weekend. Peak season (July–August, December) books 3+ weeks ahead. Message Sofia as early as possible — availability is genuinely limited.' },
   { q: 'Is wine pairing included?', a: 'Wine pairing is optional at +IDR 1,100,000 per guest (extended pours, 6–7 glasses, matched by course). The Franciacorta aperitif is always included.' },
@@ -339,7 +339,7 @@ export default function ChefsTablePage() {
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-[#8A6F15] mb-1">Chef's Table</p>
                 <p className="text-4xl font-light" style={{ fontFamily: "'Playfair Display', serif" }}>IDR 3,500,000++</p>
-                <p className="text-[#4A4745] text-sm mt-1">per guest · ~IDR 4.165M all-in</p>
+                <p className="text-[#4A4745] text-sm mt-1">per guest · ++ before tax and service</p>
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-[#8A6F15] mb-1">Wine Pairing</p>

@@ -20,7 +20,7 @@ Every team member we place is identity-verified, reference-checked, and backed b
 
 WhatsApp us directly: **+62 896-7407-2020**
 
-[WhatsApp us for a confidential consultation]  
+[WhatsApp us for a confidential consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20staffing%20for%20my%20villa.%20)  
 [Explore our vetting process →](/staffing/recruitment)
 
 ---
@@ -54,7 +54,7 @@ Supports families with children through structured care and light household coor
 
 Not sure what your villa needs? We assess your bedroom count, occupancy patterns, and service expectations, then recommend the right team structure. Tell us about your villa and we will recommend the right team.
 
-[WhatsApp us for a confidential consultation]
+[WhatsApp us for a confidential consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -77,7 +77,7 @@ Here is how professional placement through myCHEF.id differs from doing it yours
 
 For owners managing from Europe, Australia, or Singapore, this layer is the difference between hoping things work and knowing they are managed.
 
-[Request staffing support for your villa]
+[Request staffing support for your villa](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -97,7 +97,7 @@ Letting someone into your private villa — around your family, your guests, and
 
 We do not claim "full national background checks" — Indonesia does not have a centralised national criminal database. We do not claim "100% verified." We claim that every candidate completes our documented verification protocol before entering your home.
 
-[Speak with our team about vetting]
+[Speak with our team about vetting](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -119,7 +119,7 @@ A recruiter places a candidate and moves on. A staffing partner stays. myCHEF.id
 
 Because your villa staff are employed by myCHEF.id, we also manage payroll, contracts (PKWTT or PKWT as appropriate), BPJS, THR, and UMK compliance. You receive the benefit of a professional team without the liability of direct employment.
 
-[WhatsApp us for a confidential consultation]
+[WhatsApp us for a confidential consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -141,7 +141,7 @@ Staff accommodation, food allowances, and role-specific equipment such as unifor
 
 Staffing costs depend on the role, schedule, experience level, and degree of management you require. Contact us for a confidential consultation and a transparent fee breakdown tailored to your villa.
 
-[Request a custom staffing quote]
+[Request a custom staffing quote](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -168,7 +168,7 @@ Family-oriented villas favour stability and traditional Balinese hospitality. We
 
 Whether your villa sits among rice terraces, above a surf break, or on a limestone cliff, we source people who fit the pace and culture of your location.
 
-[Tell us where your villa is and what you need]
+[Tell us where your villa is and what you need](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -239,7 +239,7 @@ A12: We place and manage villa staff across Seminyak, Canggu, Ubud, Uluwatu, San
 
 Whether you are opening a new villa, replacing a departing team member, or moving away from the stress of self-management, myCHEF.id provides the recruitment, vetting, legal employment, and ongoing coordination that turns individual staff into a seamless villa team.
 
-[WhatsApp us for a confidential consultation]
+[WhatsApp us for a confidential consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20staffing%20for%20my%20villa.%20)
 
 ---
 

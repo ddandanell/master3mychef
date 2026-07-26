@@ -22,7 +22,7 @@ We do not simply introduce you to candidates. We consult, recruit, verify, contr
 
 WhatsApp us directly: **+62 896-7407-2020**
 
-[CTA: Book a confidential WhatsApp consultation]
+[Book a confidential WhatsApp consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 
@@ -75,7 +75,7 @@ This is where myCHEF.id differs from a basic recruitment agency. After placement
 
 **What this means for you:** Your villa team is managed, not left to chance. Someone is always accountable.
 
-[CTA: See how this works for your villa — request staffing support]
+[See how this works for your villa — request staffing support](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 
@@ -98,7 +98,7 @@ When you work with myCHEF.id, you receive:
 
 Our ecosystem advantage matters here. Because we also operate a private chef service, catering division, and event staffing team across Bali, we see how candidates perform in real villa environments before we ever recommend them. That kind of performance data is something no job board can replicate.
 
-[CTA: Skip the trial and error — speak with our team]
+[Skip the trial and error — speak with our team](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 
@@ -144,7 +144,7 @@ To make the value concrete, here is what is included when you place staff throug
 - No hidden charges, no salary markups, no surprise overtime bills
 - Written quote provided before any placement begins
 
-[CTA: Request a custom staffing quote]
+[Request a custom staffing quote](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 
@@ -173,7 +173,7 @@ A common question we hear is: "How long until someone is actually working in my 
 
 Factors that can affect timing include role specificity, villa location, your availability for interviews, and any visa or work permit considerations.
 
-[CTA: Need staff urgently? WhatsApp us for a confidential consultation]
+[Need staff urgently? WhatsApp us for a confidential consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 
@@ -191,7 +191,7 @@ We serve our clients best when the fit is right. You are likely a strong match i
 
 We may not be the right choice if you are looking for the lowest possible price regardless of compliance or quality, or if you prefer to manage every legal and payroll detail yourself.
 
-[CTA: Tell us what role you need]
+[Tell us what role you need](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 
@@ -211,7 +211,7 @@ Unexpected departures happen. When they do, we manage the transition respectfull
 **What if I am not satisfied with ongoing management?**
 Your dedicated operations manager is your direct point of contact. If standards slip or communication feels inadequate, we conduct a structured review within 48 hours and implement a corrective action plan.
 
-[CTA: Talk to us about your concerns — we answer honestly]
+[Talk to us about your concerns — we answer honestly](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 
@@ -270,9 +270,9 @@ Not ready to talk yet? Download our free guide, *The Villa Owner's Complete Guid
 
 No spam, no pressure. We are here when you are ready.
 
-[CTA: Book a confidential WhatsApp consultation]
-[CTA: Schedule a call]
-[CTA: Download the free guide]
+[Book a confidential WhatsApp consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
+[Schedule a Call](/book)
+[Request the Free Guide on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20please%20send%20me%20the%20free%20villa%20staffing%20guide.%20)
 
 ---
 

@@ -421,7 +421,7 @@ export default function FamilyKidsMenuPage() {
               </thead>
               <tbody>
                 {[
-                  ['Food (adults)', 'IDR 300K–700K/person + 21% tax', 'from IDR 700K/person, all-in'],
+                  ['Food (adults)', 'IDR 300K–700K/person + 21% tax', 'from IDR 700K/person++'],
                   ['Food (children)', 'Half-portion pricing, limited menu', 'Built into the adult booking, free or small fee'],
                   ['Transfers (2 trips)', 'IDR 300K–600K for a family', 'Zero — chef comes to you'],
                   ['Drinks', '3–5× retail markup', 'Your own drinks at retail price'],

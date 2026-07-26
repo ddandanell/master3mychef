@@ -151,23 +151,23 @@ const FLOATING_PACKAGES = [
 const DAILY_CHEF_PACKAGES = [
   {
     title: 'Breakfast Only',
-    price: 'IDR 600,000',
-    period: '/hour',
-    desc: 'Fresh tropical fruits, pastries, eggs any style, Balinese coffee. ~2 hours/day.',
+    price: 'IDR 2,500,000++',
+    period: '/day',
+    desc: 'Fresh tropical fruits, pastries, eggs any style, Balinese coffee. Half-day chef hire (up to 4 hours), chef + assistant included.',
     bestFor: 'Couples, light mornings, villa guests who lunch out',
   },
   {
     title: 'Half Board',
-    price: 'IDR 1,100,000',
-    period: '/hour',
-    desc: 'Breakfast + dinner. Perfect for families who lunch out. ~4–5 hours/day.',
+    price: 'IDR 3,500,000++',
+    period: '/day',
+    desc: 'Breakfast + dinner. Perfect for families who lunch out. Full-day chef hire (up to 8 hours), chef + assistant included.',
     bestFor: 'Families, groups who explore Bali during the day',
   },
   {
     title: 'Full Board',
-    price: 'IDR 1,500,000',
-    period: '/hour',
-    desc: 'Breakfast, lunch, and dinner. The complete villa experience. ~6–8 hours/day.',
+    price: 'IDR 4,200,000++',
+    period: '/day',
+    desc: 'Breakfast, lunch, and dinner. The complete villa experience. Complete full-day chef hire (up to 12 hours), chef + assistant included.',
     bestFor: 'Extended stays, retreats, families who want full coverage',
   },
   {
@@ -669,7 +669,7 @@ export default function CateringMainPage() {
                 <p className="text-[#4A4745] mb-2">
                   Your chef shops, cooks, and cleans — breakfast, lunch, and dinner. You see every grocery receipt. No meal planning. No dishes. Just great food every day.
                 </p>
-                <p className="text-[#C5A028] font-semibold">IDR 600K/hour · Groceries at cost</p>
+                <p className="text-[#C5A028] font-semibold">From IDR 2,500,000++/day · Chef + assistant included · Groceries at cost</p>
               </div>
 
               {/* Daily packages */}

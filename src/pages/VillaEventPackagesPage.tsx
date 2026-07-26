@@ -216,7 +216,7 @@ export default function VillaEventPackagesPage() {
             ))}
           </div>
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mt-10">
-            All prices "++" — 11% government tax + 10% service charge. Your proposal shows the all-in total before you commit.
+            All prices "++" — 11% government tax + 10% service charge. Your proposal states the full total including tax and service before you commit.
           </p>
         </div>
       </section>
@@ -268,7 +268,7 @@ export default function VillaEventPackagesPage() {
                 ))}
               </div>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                <strong>Total: ~IDR 54M++ (~IDR 65.3M all-in)</strong> — one proposal, one team, one point of contact across all three services. Guest <Link to="/vip-transport-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">arrival transfers, arranged</Link> as an add-on through our partner network.
+                <strong>Total: ~IDR 54M++</strong> — one proposal, one team, one point of contact across all three services. Guest <Link to="/vip-transport-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">arrival transfers, arranged</Link> as an add-on through our partner network.
               </p>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-event-packages-sample-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
                 <MessageCircle className="w-4 h-4" /> Request Your Package Quote

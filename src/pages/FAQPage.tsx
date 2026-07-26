@@ -42,7 +42,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'What does "++" mean?',
-        a: 'It means 11% government tax and 10% service charge are added to the listed price — so IDR 700,000++ comes to roughly IDR 847,000 all-in. We always state which format applies to your quote.',
+        a: 'It means 11% government tax and 10% service charge are added to the listed price. We always state which format applies to your quote.',
       },
       {
         q: 'Are groceries included?',

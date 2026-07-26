@@ -152,7 +152,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     faqs: [
       {
         q: 'How much does a private chef cost in Canggu?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, weekly chef service from IDR 2,250,000++ per day at the weekly rate. All subject to 11% tax + 10% service, quoted as one fixed figure.`,
+        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, weekly chef service from IDR 2,250,000++ per day at the weekly rate. Prices are subject to a 10% service charge and 11% tax, quoted as one fixed figure.`,
       },
       {
         q: 'Are there travel fees for Canggu?',
@@ -221,7 +221,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     faqs: [
       {
         q: 'How much does a private chef cost in Ubud?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost — remote-villa logistics may add a premium, always quoted upfront. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, retreat full-board quoted per person per day. All subject to 11% tax + 10% service.`,
+        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost — remote-villa logistics may add a premium, always quoted upfront. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, retreat full-board quoted per person per day. Prices are subject to a 10% service charge and 11% tax.`,
       },
       {
         q: 'Is there a travel fee for Sayan, Penestanan or Tegallalang?',
@@ -289,7 +289,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     faqs: [
       {
         q: 'How much does a private chef cost in Uluwatu?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Sunset tasting menus from IDR 1,100,000 per person, villa catering from IDR 700,000 per person. All subject to 11% tax + 10% service, quoted as one fixed figure including travel.`,
+        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Sunset tasting menus from IDR 1,100,000 per person, villa catering from IDR 700,000 per person. Prices are subject to a 10% service charge and 11% tax, quoted as one fixed figure including travel.`,
       },
       {
         q: 'Is there a travel fee from Seminyak to Uluwatu?',
@@ -358,7 +358,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     faqs: [
       {
         q: 'How much does a private chef cost in Jimbaran?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Seafood BBQ packages from IDR 720,000 per person including catch, charcoal grill and full service; tasting menus from IDR 980,000. All subject to 11% tax + 10% service.`,
+        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Seafood BBQ packages from IDR 720,000 per person including catch, charcoal grill and full service; tasting menus from IDR 980,000. Prices are subject to a 10% service charge and 11% tax.`,
       },
       {
         q: 'Can I really get fresh seafood cooked at my villa?',
@@ -427,7 +427,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     faqs: [
       {
         q: 'How much does a private chef cost in Nusa Dua?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Executive fine dining from IDR 1,200,000 per person, villa catering from IDR 700,000 per person, corporate full-board quoted per person per day. All subject to 11% tax + 10% service, fixed in one upfront quote.`,
+        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Executive fine dining from IDR 1,200,000 per person, villa catering from IDR 700,000 per person, corporate full-board quoted per person per day. Prices are subject to a 10% service charge and 11% tax, fixed in one upfront quote.`,
       },
       {
         q: 'Do you cater corporate retreats and incentive travel?',
@@ -496,7 +496,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     faqs: [
       {
         q: 'How much does a private chef cost in Sanur?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost — no travel surcharge anywhere in Sanur. Family catering from IDR 700,000 per person, weekly chef service from IDR 2,250,000++ per day at the weekly rate. All subject to 11% tax + 10% service.`,
+        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost — no travel surcharge anywhere in Sanur. Family catering from IDR 700,000 per person, weekly chef service from IDR 2,250,000++ per day at the weekly rate. Prices are subject to a 10% service charge and 11% tax.`,
       },
       {
         q: 'Is there any travel fee for Sanur villas?',
@@ -679,7 +679,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much does a private chef cost in Pererenan?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Group dinners from IDR 700,000 per person, tasting menus from IDR 980,000, weekly chef service from IDR 2,250,000++ per day at the weekly rate. All subject to 11% tax + 10% service.`,
+        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Group dinners from IDR 700,000 per person, tasting menus from IDR 980,000, weekly chef service from IDR 2,250,000++ per day at the weekly rate. Prices are subject to a 10% service charge and 11% tax.`,
       },
       {
         q: 'How is Pererenan different from Canggu for a chef booking?',

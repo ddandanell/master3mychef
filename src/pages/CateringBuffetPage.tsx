@@ -18,7 +18,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import StaffingInfo from '@/components/catering/StaffingInfo'
 import BookingProcess from '@/components/catering/BookingProcess'
-import { ArticleContentSection, Breadcrumb, PressStrip, CateringDiscoverySection, formatIDR, calculateAllIn } from '@/components/shared'
+import { ArticleContentSection, Breadcrumb, PressStrip, CateringDiscoverySection, formatIDR } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -151,7 +151,7 @@ const BUFFET_VS_PLATED = [
 ]
 
 const FAQS = [
-  { q: 'How much does buffet catering in Bali cost?', a: 'From IDR 475,000++ per person (Indonesian tier, 30–49 guests), with volume discounts from 50 guests and custom quotes at 100+. "++" adds 11% government tax and 10% service charge — your quote shows all-in totals.' },
+  { q: 'How much does buffet catering in Bali cost?', a: 'From IDR 475,000++ per person (Indonesian tier, 30–49 guests), with volume discounts from 50 guests and custom quotes at 100+. "++" adds 11% government tax and 10% service charge — every quote states the full total including tax and service before you confirm.' },
   { q: 'What\'s the minimum number of guests?', a: 'Thirty for standard pricing. Groups of 20–29 can be catered at slightly higher per-person rates; below 20, a family-style or plated format usually works better.' },
   { q: 'Can you handle vegan, halal, and gluten-free guests at scale?', a: 'Yes — dietary dishes are built into the menu plan, prepared separately where required, and clearly labelled on the line. Halal-friendly and pork-free menus are standard options.' },
   { q: 'What\'s included in the price?', a: 'Chef and kitchen team, service staff (1 per 12 guests), tables, linens, chafing dishes, cutlery, normal groceries, setup, 2.5 hours of service, and full cleanup.' },
@@ -196,7 +196,6 @@ function BuffetGroupTotalCalculator({ pricePerPerson, defaultGuests = 50, accent
   const maxGuests = 200
   const [guests, setGuests] = useState(defaultGuests)
   const totalPlusPlus = pricePerPerson * guests
-  const totalAllIn = calculateAllIn(totalPlusPlus)
 
   return (
     <div className="bg-white rounded-xl border border-[#E8E6E3] p-5">
@@ -238,7 +237,7 @@ function BuffetGroupTotalCalculator({ pricePerPerson, defaultGuests = 50, accent
           </span>
         </div>
         <p className="text-xs text-[#4A4745]/50 mt-1">
-          Final all-in total with 11% government tax + 10% service charge: {formatIDR(totalAllIn)}
+          Before 11% government tax + 10% service charge. The final total including tax and service is confirmed in your quote.
         </p>
       </div>
     </div>
@@ -275,7 +274,7 @@ export default function CateringBuffetPage() {
             steps: [
               { name: 'Choose your buffet package', text: 'Select Indonesian Buffet, International Buffet, or Premium Live-Station Buffet based on guest count and style.' },
               { name: 'Share event details', text: 'Send your event date, villa or venue, guest count, and menu preferences via WhatsApp.' },
-              { name: 'Receive custom quote', text: 'We confirm setup, staffing, and all-in pricing within the hour. Free tasting included for 40+ guests.' },
+              { name: 'Receive custom quote', text: 'We confirm setup, staffing, and full pricing including tax and service within the hour. Free tasting included for 40+ guests.' },
               { name: 'Confirm and enjoy', text: '50% deposit secures your date. We arrive 2–3 hours early with tables, chafing dishes, and service staff.' },
             ],
           }),
@@ -613,7 +612,7 @@ export default function CateringBuffetPage() {
           </div>
 
           <p className="text-xs text-[#4A4745]/80 text-center max-w-3xl mx-auto mt-6">
-            All prices on this page are shown "++" — before 11% government tax + 10% service charge. An "ALL IN" price is simply the same package price with those two already included (× 1.21), not a different or hidden rate. Your WhatsApp quote always confirms the final all-in total before you pay anything.
+            All prices on this page are shown "++" — before 11% government tax + 10% service charge, with no different or hidden rate behind them. Your WhatsApp quote always confirms the final total including tax and service before you pay anything.
           </p>
 
           {/* Volume Pricing */}
@@ -707,7 +706,7 @@ export default function CateringBuffetPage() {
           <SectionHeader
             eyebrow="Chapter 12 — Investment"
             title="Group Size Guide"
-            subtitle="Estimated group totals before 11% government tax + 10% service charge. Your final all-in total is simply × 1.21 — confirmed in your quote before deposit."
+            subtitle="Estimated group totals before 11% government tax + 10% service charge. Your final total including tax and service is confirmed in your quote before deposit."
           />
           <div className="hidden md:block overflow-x-auto mt-10 bg-white rounded-2xl border border-[#E8E6E3] p-6">
             <table className="w-full text-left">

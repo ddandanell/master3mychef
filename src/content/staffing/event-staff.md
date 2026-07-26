@@ -25,8 +25,8 @@ WhatsApp us directly: **+62 896-7407-2020**
 - **Backup coverage by default.** We confirm every booking 48 hours and 24 hours before service and maintain a standby pool for every role.
 - **English-speaking and guest-ready.** Uniformed, groomed to standard, and able to communicate naturally with international guests.
 
-[Primary CTA: Get Your Event Staff Quote on WhatsApp]
-[Secondary CTA: Discuss Your Event Needs]
+[Get Your Event Staff Quote on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20an%20event%20staff%20quote.%20Event%20date%3A%20Guests%3A%20Venue%3A%20)
+[Discuss Your Event Needs](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20an%20event%20staff%20quote.%20Event%20date%3A%20Guests%3A%20Venue%3A%20)
 
 ---
 
@@ -40,7 +40,7 @@ The root cause is structural. Freelance event staff in Bali often work without c
 
 myCHEF.id operates differently. We are a hospitality staffing partner, not a labor broker. Our event staff are recruited through the same [documented placement protocol](/staffing/recruitment) we use for villa managers, private chefs, and housekeeping teams. They are employed, trained, briefed, and managed by us. When you book event staff with myCHEF.id, you are booking a managed team with a named coordinator, a confirmed plan, and a coverage protocol.
 
-[Tell us about your event — we'll recommend the right team.]
+[Tell us about your event — we'll recommend the right team](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20an%20event%20staff%20quote.%20Event%20date%3A%20Guests%3A%20Venue%3A%20)
 
 ---
 
@@ -62,7 +62,7 @@ For larger events, we provide setup and breakdown crew, kitchen assistants, food
 
 Each staff member is assigned based on event type and experience. A wedding calls for different strengths than a brand activation or a wellness dinner. We do not send whoever is available. We send the right people for your specific event.
 
-[Not sure how many staff you need? Tell us your guest count and event style — we'll build the right team.]
+[Not sure how many staff you need? Tell us your guest count and event style — we'll build the right team](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20an%20event%20staff%20quote.%20Event%20date%3A%20Guests%3A%20Venue%3A%20)
 
 ---
 
@@ -99,7 +99,7 @@ Staffing ratios depend on event format, venue layout, and service style. The fol
 
 Villa events often require more staff than hotel events because the venue lacks built-in infrastructure. There are no commercial kitchens, no service lifts, and no dedicated back-of-house paths. Staff must navigate stairs, garden paths, pool decks, and sand. This is why villa-specific experience matters, and why we plan logistics before the event day.
 
-[Share your event details — we'll recommend the exact staffing plan.]
+[Share your event details — we'll recommend the exact staffing plan](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20an%20event%20staff%20quote.%20Event%20date%3A%20Guests%3A%20Venue%3A%20)
 
 ---
 
@@ -139,7 +139,7 @@ We manage greeting, pouring, tray-passing, clearing, and timing. We coordinate w
 
 We complete breakdown efficiently and discreetly, restoring the venue before staff depart.
 
-[Let's plan your event together. WhatsApp us your event details.]
+[Let's plan your event together. WhatsApp us your event details](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20an%20event%20staff%20quote.%20Event%20date%3A%20Guests%3A%20Venue%3A%20)
 
 Behind every booking is our ongoing coverage layer: proactive attendance monitoring, a trained backup roster for every role, and 30-day replacement coverage if the fit is not right.
 
@@ -159,7 +159,7 @@ Every myCHEF.id event staff member completes our documented verification protoco
 
 All staff are provided with event-appropriate attire: clean black trousers, white or black service shirts, and non-slip footwear suitable for villa surfaces. For formal weddings, we can adjust attire to match the event dress code. For brand activations, we can incorporate your brand colors or provide branded elements.
 
-[Ask us about our vetting process — we're happy to share details.]
+[Ask us about our vetting process — we're happy to share details](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20an%20event%20staff%20quote.%20Event%20date%3A%20Guests%3A%20Venue%3A%20)
 
 ---
 
@@ -186,7 +186,7 @@ Healthy menu service, non-alcoholic beverage specialists, and unobtrusive servic
 
 We provide event staff in Seminyak, Petitenget, Canggu, Berawa, Ubud, Uluwatu, Bukit, Sanur, Nusa Dua, and beyond. For island events in Nusa Lembongan, Nusa Penida, or the Gili Islands, we coordinate ferry schedules, overnight accommodation for staff, and extended travel time. Travel and logistics are included in our planning and quote.
 
-[Planning an event anywhere in Bali? Let's talk about logistics.]
+[Planning an event anywhere in Bali? Let's talk about logistics](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20an%20event%20staff%20quote.%20Event%20date%3A%20Guests%3A%20Venue%3A%20)
 
 ---
 
@@ -196,8 +196,8 @@ Your event deserves a team as prepared as the rest of your planning. myCHEF.id p
 
 **560+ villas served · 12,000+ happy guests · 500+ events · 5-star rated**
 
-[Primary CTA: Get Your Event Staff Quote on WhatsApp]
-[Secondary CTA: Or schedule a brief call to discuss your event needs]
+[Get Your Event Staff Quote on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20an%20event%20staff%20quote.%20Event%20date%3A%20Guests%3A%20Venue%3A%20)
+[Schedule a brief call to discuss your event needs](/book)
 
 ---
 

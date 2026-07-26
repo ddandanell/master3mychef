@@ -23,12 +23,12 @@ function PricingCalculator() {
   const [wine, setWine] = useState(false)
   const [days, setDays] = useState(1)
 
-  const basePrice = menu === 'mediterranean' ? 2200000 : menu === 'wagyu' ? 2400000 : 600000
+  const basePrice = menu === 'mediterranean' ? 2200000 : menu === 'wagyu' ? 2400000 : 2500000
   const winePrice = wine ? 850000 : 0
   const serviceCharge = 0.10
   const tax = 0.11
 
-  const subtotal = (basePrice + winePrice) * guests * (menu === 'villa-chef' ? days : 1)
+  const subtotal = menu === 'villa-chef' ? basePrice * days : (basePrice + winePrice) * guests
   const total = Math.round(subtotal * (1 + serviceCharge + tax))
 
   return (
@@ -42,7 +42,7 @@ function PricingCalculator() {
             {[
               { key: 'mediterranean', label: 'Mediterranean', price: 'IDR 2.2M++' },
               { key: 'wagyu', label: 'Wagyu', price: 'IDR 2.4M++' },
-              { key: 'villa-chef', label: 'Villa Chef', price: 'IDR 600K/hr' },
+              { key: 'villa-chef', label: 'Villa Chef', price: 'IDR 2.5M++/day' },
             ].map((opt) => (
               <button
                 key={opt.key}
@@ -110,13 +110,15 @@ function PricingCalculator() {
             <span>Subtotal</span>
             <span>IDR {subtotal.toLocaleString()}</span>
           </div>
-          <div className="flex justify-between text-sm mb-2 text-[#4A4745]">
-            <span>Service Charge (10%) + Tax (11%)</span>
-            <span>IDR {Math.round(subtotal * 0.21).toLocaleString()}</span>
-          </div>
+          {menu !== 'villa-chef' && (
+            <div className="flex justify-between text-sm mb-2 text-[#4A4745]">
+              <span>Service Charge (10%) + Tax (11%)</span>
+              <span>IDR {Math.round(subtotal * 0.21).toLocaleString()}</span>
+            </div>
+          )}
           <div className="flex justify-between text-xl font-semibold mt-4 pt-4 border-t border-black/10">
-            <span>Estimated Total</span>
-            <span className="text-[#C5A028]">IDR {total.toLocaleString()}</span>
+            <span>{menu === 'villa-chef' ? 'Estimated Total (++ excl. 10% service & 11% tax)' : 'Estimated Total'}</span>
+            <span className="text-[#C5A028]">IDR {(menu === 'villa-chef' ? subtotal : total).toLocaleString()}{menu === 'villa-chef' ? '++' : ''}</span>
           </div>
           <p className="text-xs text-[#4A4745] mt-2">
             * This is an estimate. Final pricing depends on menu customization,

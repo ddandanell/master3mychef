@@ -74,7 +74,7 @@ const ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'How much does an anniversary dinner in Bali cost?', a: 'From IDR 1.2M–1.5M++ per person for dinners (minimum 2 guests) and IDR 2.5M++ per person for vow renewals with reception. ++ adds 11% government tax and 10% service charge; quotes always show the all-in total.' },
+  { q: 'How much does an anniversary dinner in Bali cost?', a: 'From IDR 1.2M–1.5M++ per person for dinners (minimum 2 guests) and IDR 2.5M++ per person for vow renewals with reception. ++ adds 11% government tax and 10% service charge; quotes always state the full total including tax and service before you confirm.' },
   { q: "What's the difference between an anniversary dinner and a regular private chef dinner?", a: 'The occasion layer: styled table and candle landscape, petal pathway, personalised signage and toast, a photographer to capture it, and surprise coordination — bundled into the package rather than improvised.' },
   { q: 'Can you arrange the whole thing as a surprise?', a: 'Yes — it is our specialty on this page. We coordinate with one person only, stage everything while your partner is out, and time the reveal with you in advance.' },
   { q: 'Can the dinner be on a beach instead of at our villa?', a: 'Yes — a partner beach venue is available with a IDR 1.5M surcharge plus the local beach permit, which we arrange. Villa dinners remain the most private option.' },
@@ -115,7 +115,7 @@ const ANNIVERSARY_SCHEMA = {
     {
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'How much does an anniversary dinner in Bali cost?', acceptedAnswer: { '@type': 'Answer', text: 'From IDR 1.2M–1.5M++ per person for dinners (minimum 2 guests) and IDR 2.5M++ per person for vow renewals. ++ adds 11% government tax and 10% service charge; quotes show the all-in total.' } },
+        { '@type': 'Question', name: 'How much does an anniversary dinner in Bali cost?', acceptedAnswer: { '@type': 'Answer', text: 'From IDR 1.2M–1.5M++ per person for dinners (minimum 2 guests) and IDR 2.5M++ per person for vow renewals. ++ adds 11% government tax and 10% service charge; quotes state the full total including tax and service before you confirm.' } },
         { '@type': 'Question', name: "What's different from a regular private chef dinner?", acceptedAnswer: { '@type': 'Answer', text: 'The occasion layer: styled table, candle landscape, petal pathway, personalised signage and toast, photographer, and surprise coordination — bundled into the package.' } },
         { '@type': 'Question', name: 'Can you arrange the whole thing as a surprise?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — one contact person only, staging while your partner is out, and a reveal timed with you in advance.' } },
         { '@type': 'Question', name: 'Can the dinner be on a beach instead of at our villa?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — a partner beach venue is available with a IDR 1.5M surcharge plus the local beach permit, which is arranged for you.' } },
@@ -229,7 +229,7 @@ export default function EventsAnniversariesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader eyebrow="Packages" title="Anniversary Packages & Prices" subtitle="Three tiers built around privacy, pacing, and how visible you want the celebration to feel." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            All prices ++ (11% government tax + 10% service charge). Your quote shows the all-in total before you commit. Premium ingredient upgrades — lobster, imported beef, oysters — quoted separately at cost.
+            All prices ++ (11% government tax + 10% service charge). Your quote states the full total including tax and service before you commit. Premium ingredient upgrades — lobster, imported beef, oysters — quoted separately at cost.
           </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {FORMATS.map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}

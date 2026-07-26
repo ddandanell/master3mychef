@@ -20,7 +20,7 @@ This is not a budget maid service or a job-board referral. It is a structured st
 
 WhatsApp us directly: **+62 896-7407-2020**
 
-[Get a Confidential Consultation on WhatsApp] — or read on to see how we protect your villa and your peace of mind.
+[Get a Confidential Consultation on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20housekeeping%20staffing%20for%20my%20villa.%20) — or read on to see how we protect your villa and your peace of mind.
 
 ---
 
@@ -43,7 +43,7 @@ Our difference is simple but decisive:
 
 A villa owner in Canggu came to us after their third informal housekeeper left without notice. Within ten days we placed a managed daily housekeeper; eighteen months later, zero unplanned absences.
 
-[Tell us what your villa needs — request staffing support on WhatsApp.]
+[Tell us what your villa needs — request staffing support on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20housekeeping%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -123,7 +123,7 @@ Our housekeepers coordinate with villa managers, chefs, and maintenance staff. I
 
 Every housekeeping placement is protected by our trust layer: proactive attendance monitoring, a trained backup roster, a 30-day replacement guarantee, and full employer of record compliance.
 
-[Speak with our team about ongoing housekeeping management.]
+[Speak with our team about ongoing housekeeping management](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20housekeeping%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -169,7 +169,7 @@ In the unlikely event of an incident, you are not alone. As the legal employer, 
 **Replacement without drama**
 If trust is broken or the fit is not right, we manage the transition professionally. You do not confront staff or scramble for alternatives.
 
-[Get a confidential consultation on WhatsApp.]
+[Get a confidential consultation on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20housekeeping%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -191,7 +191,7 @@ Professional placement with myCHEF is all-inclusive and transparent:
 
 Costs depend on the role, schedule, experience level, and management required. A daily housekeeper for a 4-bedroom Canggu villa has different needs than a live-in housekeeper for an 8-bedroom Uluwatu estate. We provide a clear, itemized fee breakdown before you commit — no hidden charges, no surprise markups, no administrative burden on you.
 
-[Request a custom staffing quote on WhatsApp.]
+[Request a custom staffing quote on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20housekeeping%20staffing%20for%20my%20villa.%20)
 
 ---
 
@@ -251,7 +251,7 @@ Yes. We provide specialized turnover cleaning for Airbnb, Booking.com, and priva
 
 Your villa deserves housekeeping staff who understand hospitality standards, respect your privacy, and stay supported long after day one. myCHEF has served 560+ villas across Bali with managed staffing that removes the operational burden from owners.
 
-**[Get a Confidential Consultation on WhatsApp]**
+**[Get a Confidential Consultation on WhatsApp](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20housekeeping%20staffing%20for%20my%20villa.%20)**
 
 Or explore more of our staffing services: [villa staff](/staffing/villa-staff), [villa manager placement](/staffing/villa-manager), [private chef staffing](/staffing/private-chef), [event staff](/staffing/villa-staff), and [our complete recruitment process](/staffing/recruitment).
 

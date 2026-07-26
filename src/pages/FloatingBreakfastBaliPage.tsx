@@ -12,7 +12,7 @@ const SECTIONS = [
 
     <p>Bali has become the global home of this experience for good reason. The combination of year-round warmth, world-class private villa culture (most Bali villas include a private pool as standard), and an Indonesian hospitality tradition that treats breakfast as a ceremony rather than a refuelling stop — all of this makes the island the natural setting for floating breakfasts. What you get at a resort, however, is rarely the full experience: a fixed tray, generic fruit, and a photo taken for Instagram then cleared away. myCHEF does something different.</p>
 
-    <p>When you book a floating breakfast through myCHEF, a private Balinese chef arrives at your villa two hours before you're needed anywhere near the pool. The chef handles everything: the tray setup, the flower petals, the props, the Instax details. More importantly, the chef <em>cooks</em>. Your eggs are made to order — soft scrambled, poached, or a nasi goreng if you want it. Your smoothie bowl is blended fresh. Your Balinese coffee is brewed properly. This is a private chef experience, not a room-service drop-off.</p>
+    <p>When you add a floating breakfast to a myCHEF private chef booking, a private Balinese chef arrives at your villa two hours before you're needed anywhere near the pool. The chef handles everything: the tray setup, the flower petals, the props, the Instax details. More importantly, the chef <em>cooks</em>. Your eggs are made to order — soft scrambled, poached, or a nasi goreng if you want it. Your smoothie bowl is blended fresh. Your Balinese coffee is brewed properly. This is a private chef experience, not a room-service drop-off.</p>
 
     <p>The result is a breakfast that takes 20 minutes of your time to arrange (one WhatsApp message) and creates memories that outlast the trip. Guests who book the myCHEF floating breakfast consistently describe it as the single most special morning of their Bali stay — whether that's a honeymoon couple on their first morning, a family marking a birthday at sunrise, or solo travellers who decided they deserved something extraordinary.</p>
 
@@ -113,11 +113,11 @@ const SECTIONS = [
     id: 'cta',
     type: 'cta' as const,
     subtitle: 'Ready to Book?',
-    title: 'Reserve Your Floating Breakfast in Bali',
-    body: 'Tell us your villa location and preferred date — we\'ll confirm availability and send the setup details within the hour.',
+    title: 'Add a Floating Breakfast to Your Chef Booking',
+    body: 'Floating breakfast is booked as an add-on to a myCHEF private chef or catering service. Tell us your main service, villa location and preferred date — we\'ll confirm availability and send the setup details within the hour.',
     primaryAction: {
-      label: 'Book on WhatsApp',
-      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20floating%20breakfast%20in%20Bali.',
+      label: 'Add to My Booking on WhatsApp',
+      href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20add%20a%20floating%20breakfast%20to%20my%20chef%20booking.',
       external: true,
     },
     secondaryAction: { label: 'View Pricing', href: '/pricing' },
@@ -202,8 +202,8 @@ export default function FloatingBreakfastBaliPage() {
           keywords: 'floating breakfast bali, bali floating breakfast, private chef floating breakfast',
         },
       ]}
-      ctaText="Book Your Floating Breakfast"
-      ctaSubtext="Tell us your villa location and preferred date — we'll confirm availability and send the setup details within the hour."
+      ctaText="Add a Floating Breakfast to Your Booking"
+      ctaSubtext="Floating breakfast is an add-on to a myCHEF private chef or catering booking — tell us your main service, villa and preferred date, and we'll confirm within the hour."
     />
   )
 }

@@ -11,7 +11,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import LocationChips from '@/components/LocationChips'
-import { Breadcrumb, PressStrip, AllInPrice, formatIDR, formatIDRShort, calculateAllIn } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, formatIDRShort } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
@@ -37,12 +37,7 @@ interface EventType {
 
 function CardPrice({ price, suffix = '/pp' }: { price: number; suffix?: string }) {
   return (
-    <>
-      <span className="text-[#C5A028] font-semibold">From {formatIDRShort(price)}++{suffix}</span>
-      <span className="block text-[11px] font-normal text-[#4A4745]/80 mt-0.5">
-        ≈ {formatIDR(calculateAllIn(price))} all-in{suffix}
-      </span>
-    </>
+    <span className="text-[#C5A028] font-semibold">From {formatIDRShort(price)}++{suffix}</span>
   )
 }
 
@@ -146,7 +141,7 @@ const HOW_WE_RUN: HowStep[] = [
   {
     step: '02',
     title: 'Approve one proposal',
-    body: 'One document covers food, drinks, staff, styling, timing and the all-in cost. We adjust it until you sign off.',
+    body: 'One document covers food, drinks, staff, styling, timing and the full cost including tax and service. We adjust it until you sign off.',
     icon: ClipboardCheck,
   },
   {
@@ -172,7 +167,7 @@ const WHY: WhyItem[] = [
   {
     icon: Globe2,
     title: 'Price honesty in a "contact us" market',
-    body: 'Most Bali caterers hide pricing behind enquiry forms. We publish from-prices and show the all-in number in every proposal — groceries at cost, no markups, no surprise add-ons.',
+    body: 'Most Bali caterers hide pricing behind enquiry forms. We publish from-prices and state the full total including tax and service in every proposal — groceries at cost, no markups, no surprise add-ons.',
   },
   {
     icon: Sparkles,
@@ -865,7 +860,7 @@ export default function EventsMainPage() {
           <SectionHeader
             eyebrow="Chapter 7 — Pricing"
             title="Event Catering Bali — Transparent Per-Guest Pricing"
-            subtitle="Every price below is per guest, before tax and service. The proposal Sofia sends includes the all-in total — no surprises."
+            subtitle="Every price below is per guest, before tax and service. The proposal Sofia sends states the full total including tax and service — no surprises."
           />
           <div className="overflow-hidden rounded-2xl border border-[#E8E6E3] bg-white shadow-sm">
             <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-4 bg-[#0F0F0F] text-white text-xs tracking-[0.25em] uppercase">
@@ -901,7 +896,7 @@ export default function EventsMainPage() {
             ))}
           </div>
           <p className="mt-6 text-center text-xs text-[#4A4745]/80">
-            All prices ++ (11% government tax + 10% service charge). Your proposal always shows the all-in total.
+            All prices ++ (11% government tax + 10% service charge). Your proposal always states the full total including tax and service.
           </p>
         </div>
       </section>
@@ -1119,7 +1114,7 @@ export default function EventsMainPage() {
           <SectionHeader
             eyebrow="Chapter 11 — Inquire"
             title="Plan Your Event"
-            subtitle="Tell Sofia your date, villa and guest count, and receive an itemised, all-in proposal — typically within 24 hours once details are clear."
+            subtitle="Tell Sofia your date, villa and guest count, and receive an itemised proposal stating the full total including tax and service — typically within 24 hours once details are clear."
           />
           <BookingFormCatering
             title="Event Inquiry"
@@ -1190,7 +1185,7 @@ export default function EventsMainPage() {
             Plan Your Event
           </h2>
           <p className="max-w-xl mx-auto text-base md:text-lg text-white/[75%] mb-10">
-            Tell Sofia your date, villa and guest count, and receive an itemised, all-in proposal — typically within 24
+            Tell Sofia your date, villa and guest count, and receive an itemised proposal stating the full total including tax and service — typically within 24
             hours once details are clear.
           </p>
           <div className="flex flex-wrap justify-center gap-3">

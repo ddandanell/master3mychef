@@ -107,7 +107,7 @@ const PARTY_TESTIMONIALS = [
 ]
 
 const FAQS = [
-  { q: 'How much does villa party catering cost in Bali?', a: 'From IDR 650K++/person for a cocktail reception (20–80 guests), IDR 850K++ for a sundowner (15–50) and IDR 950K++ for a casual mixer (10–30). "++" adds 11% government tax + 10% service charge. Example: 30-guest reception ~IDR 23.6M all-in.' },
+  { q: 'How much does villa party catering cost in Bali?', a: 'From IDR 650K++/person for a cocktail reception (20–80 guests), IDR 850K++ for a sundowner (15–50) and IDR 950K++ for a casual mixer (10–30). "++" adds 11% government tax + 10% service charge. Example: a 30-guest reception runs IDR 19.5M++.' },
   { q: "What's the minimum guest count?", a: '20 for cocktail receptions, 15 for sundowners, 10 for mixers. Smaller groups can be quoted with adjusted pricing — just ask.' },
   { q: "Do we need the villa's permission — and what about noise rules?", a: "Yes, for parties beyond a quiet dinner. We coordinate with your villa manager on event approval, noise expectations and curfew times before confirming, and design the sound plan around the property. Some neighbourhoods also expect banjar (community) notification for larger events — we advise on what's customary for your location." },
   { q: 'Can we bring our own alcohol?', a: "Yes. All formats include a standard bar, but you're welcome to supplement with your own bottles. Corkage may apply depending on the package — we'll confirm in your quote." },
@@ -243,7 +243,7 @@ export default function EventsVillaPartiesPage() {
                 The best villa parties feel loose to the guests and tightly run underneath. Someone has to manage the flow from sunset drinks into food service, the bar load after the first hour, what happens when guests move from pool to lounge, and how cleanup starts without flattening the mood. That's myCHEF's job.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                All prices "++" — 11% government tax + 10% service charge added. Every quote shows the all-in total upfront.
+                All prices "++" — 11% government tax + 10% service charge added. Every quote states the full total including tax and service upfront.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -265,7 +265,7 @@ export default function EventsVillaPartiesPage() {
             <GroupTotalCalculator pricePerPerson={950000} minGuests={10} maxGuests={30} defaultGuests={18} accent={ACCENT} />
           </div>
           <p className="text-[#4A4745] leading-relaxed mt-8">
-            <strong>Group totals:</strong> 30 guests at a cocktail reception runs IDR 19.5M++ (~IDR 23.6M all-in). 25 guests at a sundowner runs IDR 21.3M++ (~IDR 25.7M all-in). 18 guests at a mixer runs IDR 17.1M++ (~IDR 20.7M all-in). Smaller groups than the listed minimums can be quoted with adjusted pricing.
+            <strong>Group totals:</strong> 30 guests at a cocktail reception runs IDR 19.5M++. 25 guests at a sundowner runs IDR 21.3M++. 18 guests at a mixer runs IDR 17.1M++. Smaller groups than the listed minimums can be quoted with adjusted pricing.
           </p>
         </div>
       </section>

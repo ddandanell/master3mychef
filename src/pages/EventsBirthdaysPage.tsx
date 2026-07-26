@@ -72,7 +72,7 @@ const ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'How much does birthday catering in Bali cost?', a: 'Two published formats: the Intimate Birthday Dinner at IDR 1.5M++/person (4–12 guests) and the Birthday Villa Party at IDR 850K++/person (15–40 guests). "++" adds 11% government tax + 10% service charge. Group totals: 8 guests ~IDR 14.5M all-in; 24 guests ~IDR 24.7M all-in. Villa catering for groups across Bali starts from IDR 700K/person for simpler menus.' },
+  { q: 'How much does birthday catering in Bali cost?', a: 'Two published formats: the Intimate Birthday Dinner at IDR 1.5M++/person (4–12 guests) and the Birthday Villa Party at IDR 850K++/person (15–40 guests). "++" adds 11% government tax + 10% service charge. Group totals: 8 guests IDR 12M++; 24 guests IDR 20.4M++. Villa catering for groups across Bali starts from IDR 700K/person for simpler menus.' },
   { q: 'What\'s the minimum guest count?', a: 'Four guests for the intimate dinner, fifteen for the villa party. Smaller dinners for 2–6 can be arranged as a private chef booking.' },
   { q: 'Can you handle dietary requirements?', a: 'Yes. Vegetarian, vegan, gluten-free, halal-friendly and allergy-aware menus are planned at the briefing stage, and kids\' menus run alongside adult food at family events. Tell us the dietary list when you enquire.' },
   { q: 'Do we need the villa\'s permission for a birthday party?', a: 'For anything beyond a quiet dinner, yes — most villas require event approval, and some neighbourhoods have noise expectations or banjar notification requirements. We coordinate with your villa manager before confirming the format, DJ and bar plan.' },
@@ -203,7 +203,7 @@ export default function EventsBirthdaysPage() {
 
       <section className="py-20 md:py-28 bg-[#FAFAF8] birthday-content birthday-reveal">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeader eyebrow="Chapter 2 — Formats" title="Birthday Formats & Prices" subtitle="Two published formats plus combined family celebrations. Every quote shows the all-in total upfront." />
+          <SectionHeader eyebrow="Chapter 2 — Formats" title="Birthday Formats & Prices" subtitle="Two published formats plus combined family celebrations. Every quote states the full total including tax and service before you confirm." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
             These formats are designed around how birthdays are actually hosted in Bali villas. The intimate dinner gives you restaurant-style pacing and a quieter atmosphere. The villa party is built for movement, drinks, BBQ, and entertainment. Family birthdays keep food and coordination multi-generational, with separate attention for younger guests so adults can relax. For a BBQ-led version in more depth, see our <Link to="/villa-bbq-catering-bali" className="text-[#2C5F7C] hover:underline">villa BBQ catering</Link> page; for cocktail-forward formats, see <Link to="/events/villa-parties" className="text-[#2C5F7C] hover:underline">villa party formats</Link>.
           </p>
@@ -211,7 +211,7 @@ export default function EventsBirthdaysPage() {
             {FORMATS.map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}
           </div>
           <p className="text-[#4A4745] text-center max-w-3xl mx-auto leading-relaxed mt-10">
-            <strong>What group totals look like:</strong> 8 guests at the intimate dinner runs IDR 12M++ (~IDR 14.5M all-in). 24 guests at the villa party runs IDR 20.4M++ (~IDR 24.7M all-in). Your quote is fixed before you commit.
+            <strong>What group totals look like:</strong> 8 guests at the intimate dinner runs IDR 12M++. 24 guests at the villa party runs IDR 20.4M++. Your quote is fixed before you commit.
           </p>
           <div className="mt-12 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <GroupTotalCalculator pricePerPerson={1500000} minGuests={4} maxGuests={12} defaultGuests={8} accent={ACCENT} />

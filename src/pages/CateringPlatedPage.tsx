@@ -92,9 +92,9 @@ const INCLUDED = [
 ]
 
 const GROUP_TOTALS = [
-  { guests: 10, course3: 'IDR 9.68M', course4: 'IDR 12.1M', course5: 'IDR 15.73M' },
-  { guests: 20, course3: 'IDR 19.36M', course4: 'IDR 24.2M', course5: 'IDR 31.46M' },
-  { guests: 30, course3: 'IDR 29.04M', course4: 'IDR 36.3M', course5: 'IDR 47.19M' },
+  { guests: 10, course3: 'IDR 8M++', course4: 'IDR 10M++', course5: 'IDR 13M++' },
+  { guests: 20, course3: 'IDR 16M++', course4: 'IDR 20M++', course5: 'IDR 26M++' },
+  { guests: 30, course3: 'IDR 24M++', course4: 'IDR 30M++', course5: 'IDR 39M++' },
 ]
 
 const PLATED_GALLERY = [
@@ -152,7 +152,7 @@ const WINE_PAIRINGS = [
 ]
 
 const FAQS = [
-  { q: 'How much does a plated dinner in Bali cost?', a: 'From IDR 800,000++ per person for three courses, up to IDR 1,300,000++ for the five-course premium, with a minimum event spend of IDR 5,000,000. All-in totals (including 11% tax and 10% service) are shown in every quote.' },
+  { q: 'How much does a plated dinner in Bali cost?', a: 'From IDR 800,000++ per person for three courses, up to IDR 1,300,000++ for the five-course premium, with a minimum event spend of IDR 5,000,000. Every quote states the full total including tax and service before you confirm.' },
   { q: 'Is there a minimum number of guests?', a: 'No fixed guest minimum — the IDR 5M minimum spend covers the team, so even a six-person dinner works. The format suits up to about 60 guests.' },
   { q: 'How many staff will be at our villa?', a: 'A chef, a service manager, and one waiter per ten guests as standard. Additional waiters are available from IDR 250,000/hour.' },
   { q: 'Can every guest have a different dietary menu?', a: 'Yes — that\'s the strength of plated service. Vegan, gluten-free, halal, and allergy-specific courses are designed per guest and plated separately.' },
@@ -550,7 +550,7 @@ export default function CateringPlatedPage() {
           </div>
           <div className="mt-6 text-center">
             <p className="text-sm text-[#4A4745]/80">
-              All-in prices include 21% service charge and tax:{' '}
+              Prices shown ++ (11% government tax + 10% service charge added):{' '}
               <AllInPrice price={800000} className="inline" /> ·{' '}
               <AllInPrice price={1000000} className="inline" /> ·{' '}
               <AllInPrice price={1300000} className="inline" />
@@ -591,7 +591,7 @@ export default function CateringPlatedPage() {
           <SectionHeader
             eyebrow="Investment"
             title="Group Size Guide & Minimum Spend"
-            subtitle="All-in prices include service charge and tax (×1.21). Final quote confirmed before deposit."
+            subtitle="Prices shown ++ before 11% government tax + 10% service charge. Final quote confirmed before deposit."
           />
           <div className="max-w-3xl mx-auto mb-10">
             <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
@@ -600,20 +600,20 @@ export default function CateringPlatedPage() {
                 <h3 className="font-medium text-[#1A1A1A]">Minimum spend: IDR 5,000,000 per event</h3>
               </div>
               <p className="text-sm text-[#4A4745] mb-4">
-                The IDR 5M minimum covers chef travel, prep time, equipment, and base staffing. Even for smaller groups, the all-in total will meet or exceed this threshold. Here are examples:
+                The IDR 5M minimum covers chef travel, prep time, equipment, and base staffing. Even for smaller groups, the final total including tax and service will meet or exceed this threshold. Here are examples (subtotals before tax and service):
               </p>
               <div className="grid sm:grid-cols-3 gap-3 text-sm">
                 <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">
                   <p className="text-[#4A4745] mb-1">6 guests × 3-Course</p>
-                  <p className="font-semibold" style={{ color: ACCENT }}>IDR 5.81M</p>
+                  <p className="font-semibold" style={{ color: ACCENT }}>IDR 4.8M++</p>
                 </div>
                 <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">
                   <p className="text-[#4A4745] mb-1">5 guests × 4-Course</p>
-                  <p className="font-semibold" style={{ color: ACCENT }}>IDR 6.05M</p>
+                  <p className="font-semibold" style={{ color: ACCENT }}>IDR 5M++</p>
                 </div>
                 <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">
                   <p className="text-[#4A4745] mb-1">4 guests × 5-Course</p>
-                  <p className="font-semibold" style={{ color: ACCENT }}>IDR 6.29M</p>
+                  <p className="font-semibold" style={{ color: ACCENT }}>IDR 5.2M++</p>
                 </div>
               </div>
             </div>

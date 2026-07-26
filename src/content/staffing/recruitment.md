@@ -20,7 +20,7 @@ myCHEF.id is the alternative. We are not a job board, and we are not a labor bro
 
 WhatsApp us directly: **+62 896-7407-2020**
 
-[Request a Confidential Consultation] | [WhatsApp Us — We Respond Within 4 Hours]
+[Request a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20recruitment.%20) | [WhatsApp Us — We Respond Within 4 Hours](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20recruitment.%20)
 
 ---
 
@@ -49,7 +49,7 @@ The selected candidate begins a 30-day trial placement with enhanced oversight. 
 **Step 7 — Ongoing Management & Performance Review**
 After the trial, we transition to ongoing management: quarterly performance reviews, attendance monitoring, skills refreshers, and proactive replacement when needed. We do not place and disappear.
 
-[Request a Confidential Consultation]
+[Request a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20recruitment.%20)
 
 ---
 
@@ -85,7 +85,7 @@ Even with rigorous vetting, fit is personal. A chef who excels in a modernist Sa
 
 We do not promise "zero turnover" or "100% satisfaction" — no honest staffing partner can. We promise that when things change, we handle it professionally, promptly, and without adding to your burden.
 
-[Request a Confidential Consultation]
+[Request a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20recruitment.%20)
 
 ---
 
@@ -122,7 +122,7 @@ myCHEF.id employs your staff directly. We are the legal employer of record. We h
 
 Cash-in-hand and informal arrangements may feel simpler, but they expose owners to fines, disputes, and reputational damage. With myCHEF, your staffing is fully compliant, fully documented, and fully protected.
 
-[Request a Confidential Consultation]
+[Request a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20recruitment.%20)
 
 ---
 
@@ -175,7 +175,7 @@ Doing it yourself is possible. But the real cost rarely shows up in the job ad.
 
 DIY hiring may save the agency fee, but it costs time, stress, legal risk, and often more money long term. One bad hire during peak season can erase any perceived savings. myCHEF is not an expense — it is protection for your villa's reputation and your peace of mind.
 
-[Request a Confidential Consultation]
+[Request a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20recruitment.%20)
 
 ---
 
@@ -225,8 +225,8 @@ You have seen the process. You know what we check. You understand the guarantee.
 
 Whether you need one chef for a private villa in Canggu or a full team for a new estate in Uluwatu, we have the network, the process, and the local expertise to get it right.
 
-**[Request a Confidential Consultation]**
-**[WhatsApp Us — We Respond Within 4 Hours]**
+**[Request a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20recruitment.%20)**
+**[WhatsApp Us — We Respond Within 4 Hours](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20consultation%20about%20recruitment.%20)**
 
 No obligation. No pressure. Just a professional conversation about what your villa needs.
 

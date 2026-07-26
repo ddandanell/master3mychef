@@ -113,7 +113,7 @@ const FAQS = [
   },
   {
     question: 'What is the typical cost range for a private dinner across Bali neighborhoods?',
-    answer: 'Budget IDR 700K–3.2M/person depending on location and menu style. Ubud and Sanur are most affordable (IDR 700K–1.2M). Seminyak and Canggu mid-range (IDR 700K–2.4M). Uluwatu commands a premium (IDR 1.9M–3.2M+) due to logistics and guest expectations. All-in pricing includes chef service and ingredients.',
+    answer: 'Budget IDR 700K–3.2M/person depending on location and menu style. Ubud and Sanur are most affordable (IDR 700K–1.2M). Seminyak and Canggu mid-range (IDR 700K–2.4M). Uluwatu commands a premium (IDR 1.9M–3.2M+) due to logistics and guest expectations. Pricing includes chef service and ingredients.',
   },
 ]
 

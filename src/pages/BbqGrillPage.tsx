@@ -349,7 +349,7 @@ export default function BbqGrillPage() {
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Group Math</p>
           <h2 className="font-playfair text-3xl md:text-4xl mb-6 text-white">What a BBQ Night Costs</h2>
           <p className="text-white/[65%] leading-relaxed mb-6">
-            Multiply the menu price by your headcount, then add 11% government tax + 10% service charge. For example: 12 guests on the Jimbaran-Style Seafood Grill = 12 × IDR 1,150,000 = IDR 13,800,000++, roughly IDR 16.7M all-in. Twenty guests on the Sunset Pool Party BBQ = IDR 19,000,000++, roughly IDR 23M all-in.
+            Multiply the menu price by your headcount, then add 11% government tax + 10% service charge. For example: 12 guests on the Jimbaran-Style Seafood Grill = 12 × IDR 1,150,000 = IDR 13,800,000++ before tax and service. Twenty guests on the Sunset Pool Party BBQ = IDR 19,000,000++ before tax and service.
           </p>
           <p className="text-white/[65%] leading-relaxed">
             Your quote is fixed before you commit — see <Link to="/journal/bbq-catering-cost-breakdown-bali" className="text-[#C5A028] hover:underline">what a villa BBQ costs</Link> for the full breakdown.

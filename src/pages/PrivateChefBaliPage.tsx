@@ -104,7 +104,7 @@ const FAQS = [
   { q: 'What kitchen equipment do you need?', a: 'Any villa kitchen works. We bring specialized equipment when needed — induction burners, sous vide, plating tools. We assess every villa before confirming.' },
   { q: 'Can you cook for guests with dietary restrictions?', a: 'Every course is adaptable. Gluten-free, vegan, halal, shellfish allergy, pregnancy-safe, nut-free — no extra charge. Tell us when booking.' },
   { q: 'Does the price include wine?', a: 'No — wine is optional. Add our sommelier wine pairing at IDR 850,000 per person, or bring your own bottles and we will open and serve them.' },
-  { q: 'What is "++" in the pricing?', a: '"++" means 11% government tax and 10% service charge are added. So IDR 2,200,000++ equals approximately IDR 2,640,000 per person all-in.' },
+  { q: 'What is "++" in the pricing?', a: '"++" means 11% government tax and 10% service charge are added. Your quote states the full total including tax and service before you confirm.' },
 ]
 
 export default function PrivateChefBaliPage() {

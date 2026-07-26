@@ -94,7 +94,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "priceCurrency": "IDR",
             "lowPrice": "2000000",
             "highPrice": "3360000",
-            "description": "Monthly & long-term private chef service for Bali villas and residences — recurring daily chef service at monthly rates, per day. WhatsApp myCHEF."
+            "description": "Monthly & long-term private chef service for Bali villas and residences — recurring meal plans by vetted chefs. WhatsApp myCHEF."
           }
         },
         {

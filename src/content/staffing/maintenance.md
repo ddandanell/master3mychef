@@ -20,7 +20,7 @@ WhatsApp us directly: **+62 896-7407-2020**
 
 Whether you own a four-bedroom rental in Berawa, a cliff-front estate in Uluwatu, or a multi-villa portfolio across Ubud and Sanur, we build a maintenance structure that prevents problems before they become crises.
 
-[CTA: **Discuss your maintenance needs — WhatsApp us**]
+**[Discuss your maintenance needs — WhatsApp us](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20maintenance%20support%20for%20my%20property.%20)**
 
 ---
 
@@ -42,7 +42,7 @@ A generic handyman found through a Facebook group might fix a leaking tap, but B
 
 Research shows self-managing villa owners spend 35–50% more overall on reactive repairs than owners who invest in preventive maintenance staff. The apparent savings of not hiring a permanent worker are usually erased by one emergency call-out during high season.
 
-[CTA: **Request a villa maintenance assessment**]
+**[Request a villa maintenance assessment](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20maintenance%20support%20for%20my%20property.%20)**
 
 ---
 
@@ -64,7 +64,7 @@ For smaller villas, we place a combined professional who handles pool, garden, a
 
 Not sure which role your property needs? Our team recommends the right maintenance structure based on villa size, guest turnover, equipment complexity, and location.
 
-[CTA: **Tell us about your property — get a custom recommendation**]
+**[Tell us about your property — get a custom recommendation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20maintenance%20support%20for%20my%20property.%20)**
 
 ---
 
@@ -82,7 +82,7 @@ Trusting someone with keys, tools, and access to your property requires more tha
 
 Beyond vetting, our ongoing management layer is what distinguishes myCHEF from a basic recruiter. Maintenance staff check in daily, follow documented SOPs and checklists, submit photo reports, receive periodic quality audits, and participate in skills refreshers. The result is consistent standards, not guesswork.
 
-[CTA: **Ask us about our maintenance vetting process**]
+**[Ask us about our maintenance vetting process](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20maintenance%20support%20for%20my%20property.%20)**
 
 ---
 
@@ -102,7 +102,7 @@ Our maintenance staff integrate into your villa team through structured coordina
 
 This integration is part of our broader [villa staffing services](/staffing), which include villa managers, housekeepers, private chefs, and event staff who work as one coordinated team.
 
-[CTA: **See how our integrated villa teams work — request a consultation**]
+**[See how our integrated villa teams work — request a consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20maintenance%20support%20for%20my%20property.%20)**
 
 ---
 
@@ -118,7 +118,7 @@ The financial case for managed maintenance staffing becomes clear when you compa
 
 The broader math is simple: reactive maintenance means emergency premiums, contractor markups, guest refunds, accelerated deterioration, and your own time. Managed preventive maintenance means a fixed monthly fee covering salary, benefits, management, and replacement coverage — predictable, professional, and protective.
 
-[CTA: **Calculate the right maintenance structure for your property**]
+**[Calculate the right maintenance structure for your property](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20maintenance%20support%20for%20my%20property.%20)**
 
 ---
 
@@ -134,7 +134,7 @@ The two most common concerns villa owners have about staff are reliability and s
 
 This coverage is built on proactive attendance monitoring, a trained backup roster, a 30-day replacement guarantee, and full employer of record compliance — myCHEF.id remains the legal employer for contracts, BPJS, THR, and UMK.
 
-[CTA: **Sleep well knowing your property is covered — contact us**]
+**[Sleep well knowing your property is covered — contact us](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20maintenance%20support%20for%20my%20property.%20)**
 
 ---
 
@@ -151,8 +151,8 @@ Starting with myCHEF maintenance staffing is straightforward and consultative:
 
 To prepare for the consultation, have ready your property location, size, number of bedrooms, current maintenance arrangement, and any specific concerns — for example, AC that keeps failing, a pool that is hard to keep clear, or a need to staff up before high season.
 
-[CTA: **WhatsApp us for a maintenance consultation**]
-[CTA: **Request a property assessment**]
+**[WhatsApp us for a maintenance consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20maintenance%20support%20for%20my%20property.%20)**
+**[Request a property assessment](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20discuss%20maintenance%20support%20for%20my%20property.%20)**
 
 ---
 

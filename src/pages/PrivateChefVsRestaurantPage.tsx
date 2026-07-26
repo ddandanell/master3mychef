@@ -9,7 +9,7 @@ const CANONICAL = `${SITE}/blog/private-chef-vs-restaurant-bali`
 const COMPARISON_ROWS = [
   {
     factor: 'Cost (8+ guests)',
-    privateChef: 'from IDR 700K/person all-in',
+    privateChef: 'from IDR 700K/person++',
     restaurant: 'IDR 300K–700K + 21% tax + transfers + drinks',
     winner: 'chef' as const,
   },

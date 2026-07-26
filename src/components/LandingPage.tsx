@@ -287,7 +287,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       : entry.slug === 'butler-service-bali-daily-rate'
         ? [
             { question: 'Is a butler worth it for a villa holiday?', answer: 'A butler is worth it for families with children, multi-generation groups, and celebration stays. The daily rate makes it easy to test for one day, then extend if the service fits your group.' },
-            { question: 'Does the butler daily rate include tax and service?', answer: 'Rates are quoted ++ (11% tax + 10% service) or nett per the quote, always stated upfront. Your proposal shows the all-in total before you confirm.' },
+            { question: 'Does the butler daily rate include tax and service?', answer: 'Rates are quoted ++ (11% tax + 10% service) or nett per the quote, always stated upfront. Your proposal states the full total including tax and service before you confirm.' },
           ]
         : entry.slug === 'private-dining-indonesia'
           ? [
@@ -344,7 +344,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       : entry.slug === 'bali-wedding-catering-packages'
       ? [
           { question: 'What is the minimum spend or guest count?', answer: 'Intimate packages start from 10 guests; buffet and live-station formats from 30. Below 20 guests a private chef dinner format is often better value.' },
-          { question: 'Are these prices really all-in?', answer: 'Prices are quoted ++ (11% government tax + 10% service charge) with the all-in equivalent shown. Proposals state one final total with groceries at cost and no markups.' },
+          { question: 'Are these the final prices?', answer: 'Prices are quoted ++ (11% government tax + 10% service charge). Proposals state one final total including tax and service, with groceries at cost and no markups.' },
           { question: 'Do packages include staff, equipment and cleanup?', answer: 'Yes — chefs, waiters, setup crew, coordinator, mobile kitchen equipment, service ware and full cleanup are included. Rentals and bar stock are itemised separately.' },
           { question: 'Can we split the weekend into different packages?', answer: 'Yes — welcome dinner, reception and recovery brunch are quoted as separate lines in one proposal.' },
           { question: 'When do we pay?', answer: 'A deposit confirms the date (a 50% deposit); the remaining 50% is due the day before the event, with tiered written cancellation terms.' },
@@ -389,7 +389,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
               ? [
                   { question: 'Is a Michelin-trained chef always the most expensive option?', answer: 'Not always. A premium tasting menu for 8 guests (from IDR 950K++ per person) can cost less per head than a fully staffed standard dinner with bar service. The tiers overlap — the difference is where the money goes: ingredients and craft, versus staffing scale.' },
                   { question: 'Are groceries included in the price?', answer: 'Yes for fine-dining menus — the per-person price includes all ingredients. For daily or weekly chef service, groceries are billed separately at cost with receipts, never marked up.' },
-                  { question: 'What does the Chef’s Table cost?', answer: 'IDR 3,500K++ per person — approximately IDR 4.24M all-in — for 6 guests, always Full-Service, cooked counter-side by the chef.' },
+                  { question: 'What does the Chef’s Table cost?', answer: 'IDR 3,500K++ per person for 6 guests, always Full-Service, cooked counter-side by the chef.' },
                   { question: 'Can two people book a Michelin-tier dinner?', answer: 'Yes — the Romantic Dinner for Two is IDR 3,500K per couple Full-Service (IDR 2,800K Kitchen-Service), with a customised menu, candles and full setup.' },
                   { question: 'How far ahead should I book a premium dinner?', answer: 'A few days is often enough for tasting menus; custom menus need about 7 days. Peak dates fill earlier — a 50% deposit locks your chef.' },
                 ]

@@ -20,7 +20,7 @@ WhatsApp us directly: **+62 896-7407-2020**
 
 Whether your property sits above the cliffs of Uluwatu, beside the rice terraces of Ubud, or in the heart of Seminyak, our Bali-based operations team acts as your on-the-ground staffing partner. We are the legal employer. We handle compliance, payroll, and replacement coverage. You receive a single point of contact and a team you can trust.
 
-[CTA: WhatsApp Us for a Confidential Consultation]
+[WhatsApp Us for a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 
@@ -152,7 +152,7 @@ If a team member needs to be replaced, we manage the difficult conversations, do
 **Cultural Bridge & Communication**
 Our management team understands both international hospitality standards and Balinese work culture. We translate your expectations into locally appropriate guidance and handle scheduling around ceremonial obligations.
 
-[CTA: Request a Staffing Quote]
+[Request a Staffing Quote](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 
@@ -192,8 +192,8 @@ Staffing costs depend on the role, schedule, experience level, and level of mana
 
 Instead, we start with a 15-minute consultation to understand your property and needs. Within 24 hours, we provide a detailed proposal with recommended roles, candidate profiles, and a transparent fee breakdown. No pressure. No obligation.
 
-[CTA: WhatsApp Us for a Confidential Consultation]
-[CTA: Request a Detailed Quote]
+[WhatsApp Us for a Confidential Consultation](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
+[Request a Detailed Quote](https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20confidential%20staffing%20consultation.%20)
 
 ---
 

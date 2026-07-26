@@ -119,7 +119,7 @@ const ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'How much does a baby shower in Bali cost?', a: 'From IDR 350K++/person for large receptions (50+ guests) to IDR 750K++/person for intimate brunches (10–15) and IDR 1.1M++/person for the full styled shower (16–30). "++" adds 11% government tax + 10% service charge. Example: 20 guests, fully styled, ~IDR 26.6M all-in.' },
+  { q: 'How much does a baby shower in Bali cost?', a: 'From IDR 350K++/person for large receptions (50+ guests) to IDR 750K++/person for intimate brunches (10–15) and IDR 1.1M++/person for the full styled shower (16–30). "++" adds 11% government tax + 10% service charge. Example: 20 guests, fully styled, runs IDR 22M++.' },
   { q: 'What\'s the minimum and typical group size?', a: 'Minimum 10 guests for the brunch format; most showers we cater are 15–22 guests; the Grand format scales to 50+.' },
   { q: 'Is the food really pregnancy-safe?', a: 'Yes — it\'s the default, not an option. Freshly cooked proteins, pasteurised dairy, no raw fish or unpasteurised cheese, managed buffet times, and a menu briefed around the mother-to-be\'s specific needs.' },
   { q: 'Can guests who drink alcohol be served too?', a: 'Yes. The mocktail bar is alcohol-free by default; a separate alcohol bar for other guests can be added at +IDR 350K per person, positioned away from the main station.' },
@@ -222,7 +222,7 @@ export default function EventsBabyShowersPage() {
                 From a ten-person brunch for close friends to a 50+ guest garden reception, you get published per-person pricing, one point of contact, and a host who actually gets to enjoy the day.
               </p>
               <p className="text-[#4A4745] leading-relaxed mb-4">
-                All prices "++" — 11% government tax + 10% service charge added. Quotes show the all-in total upfront.
+                All prices "++" — 11% government tax + 10% service charge added. Quotes state the full total including tax and service upfront.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="text-[#2C5F7C] underline hover:text-[#C5A028]">Plan a Baby Shower — WhatsApp +62 896-7407-2020</a>. Send your date, guest count and any pregnancy-safe menu notes — we reply within the hour.
@@ -239,7 +239,7 @@ export default function EventsBabyShowersPage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader eyebrow="Chapter 2 — Formats" title="Baby Shower Formats & Prices" subtitle="Smaller brunches, styled mid-size showers, and larger family gatherings — each with the right food and staffing level." />
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mb-10">
-            <strong>Group totals:</strong> 12 guests runs IDR 9M++ (~IDR 10.9M all-in). 20 guests at the Larger format runs IDR 22M++ (~IDR 26.6M all-in). 60 guests at the Grand format runs IDR 21M++ (~IDR 25.4M all-in). Most showers we cater are 15–22 guests — and an evening shower with a cocktail-style menu works at the same price band if brunch doesn't suit.
+            <strong>Group totals:</strong> 12 guests runs IDR 9M++. 20 guests at the Larger format runs IDR 22M++. 60 guests at the Grand format runs IDR 21M++. Most showers we cater are 15–22 guests — and an evening shower with a cocktail-style menu works at the same price band if brunch doesn't suit.
           </p>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[...FORMATS, GRAND_SHOWER].map((format) => <EventFormatCard key={format.title} {...format} accent={ACCENT} />)}

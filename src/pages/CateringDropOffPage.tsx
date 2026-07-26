@@ -33,7 +33,7 @@ const ACCENT = '#C5A028'
 
 /* ───────── Packages ─────────
  * All packages are listed at the brief's stated IDR 700,000/person base;
- * final all-in totals (11% tax + 10% service) are confirmed in the guest quote.
+ * final totals including 11% government tax + 10% service charge are confirmed in the guest quote.
  */
 const DROPOFF_PACKAGES = [
   {
@@ -835,7 +835,7 @@ export default function CateringDropOffPage() {
           <SectionHeader
             eyebrow="Packages"
             title="Choose Your Drop-Off Package"
-            subtitle={<>All packages are per person and include freshly prepared dishes, recyclable packaging, printed reheating and plating instructions, and delivery. Final all-in totals are confirmed in your quote. See full <Link to="/pricing" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">pricing</Link>.</>}
+            subtitle={<>All packages are per person and include freshly prepared dishes, recyclable packaging, printed reheating and plating instructions, and delivery. Final totals including tax and service are confirmed in your quote. See full <Link to="/pricing" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">pricing</Link>.</>}
           />
           <div className="grid md:grid-cols-3 gap-6">
             {DROPOFF_PACKAGES.map((pkg) => (

@@ -68,7 +68,7 @@ const SECTIONS: PageSection[] = [
       </tbody>
     </table>
 
-    <p>All prices ++ (11% government tax + 10% service charge); your quote shows the all-in figure. Staffing scales at roughly one server per ten guests.</p>
+    <p>All prices ++ (11% government tax + 10% service charge); your quote states the full total including tax and service. Staffing scales at roughly one server per ten guests.</p>
 
     <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Get My Per-Guest Quote — WhatsApp +62 896-7407-2020</a>. See our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">full pricing guide</a> for all cocktail party packages.</p>`,
   },
@@ -137,7 +137,7 @@ const SECTIONS: PageSection[] = [
 
     <p><strong>2. We design the plan</strong> — cocktail menu, food pairing, bar location, staffing ratio, timing; supplied vs BYO alcohol decided here.</p>
 
-    <p><strong>3. Confirm with a deposit</strong> A 50% deposit confirms your date — written confirmation of menu, team and all-in investment.</p>
+    <p><strong>3. Confirm with a deposit</strong> A 50% deposit confirms your date — written confirmation of menu, team and the full investment including tax and service.</p>
 
     <p><strong>4. We arrive early</strong> — bar built, kitchen prepped, welcome cocktails ready before the first guest.</p>
 
@@ -202,7 +202,7 @@ const SECTIONS: PageSection[] = [
     type: 'cta' as const,
     subtitle: 'Plan Your Party',
     title: 'Ready to Host Your Bali Cocktail Party?',
-    body: `Tell us your date, villa and guest count — we will reply within the hour with a tailored cocktail party plan and an itemised, all-in quote. Just need a bartender? <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">hire a private bartender only</a>. Planning something bigger? See <a href="/events/villa-parties" class="text-[#7E6410] hover:underline font-medium">full villa party catering</a>. Want cocktail skills? Ask about <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">custom cocktail menu design</a>. Add an afternoon activity with <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">add a cooking class to the afternoon</a>. Venues can see <a href="/bar-services" class="text-[#7E6410] hover:underline font-medium">bar consulting for venues — B2B</a>.`,
+    body: `Tell us your date, villa and guest count — we will reply within the hour with a tailored cocktail party plan and an itemised quote stating the full total including tax and service. Just need a bartender? <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">hire a private bartender only</a>. Planning something bigger? See <a href="/events/villa-parties" class="text-[#7E6410] hover:underline font-medium">full villa party catering</a>. Want cocktail skills? Ask about <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">custom cocktail menu design</a>. Add an afternoon activity with <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">add a cooking class to the afternoon</a>. Venues can see <a href="/bar-services" class="text-[#7E6410] hover:underline font-medium">bar consulting for venues — B2B</a>.`,
     primaryAction: {
       label: 'Plan My Cocktail Party',
       href: WA_LINK,

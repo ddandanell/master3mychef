@@ -201,7 +201,7 @@ const PROPOSAL_CHECKLIST = [
 ]
 
 const FAQS = [
-  { q: 'How much does corporate catering cost in Bali?', a: 'Corporate catering is quoted per event based on guest count, menu format, service periods, staffing, and venue logistics. A minimum corporate booking of IDR 7,500,000 applies, subject to event scope and location. Every quotation shows the applicable service charge and government tax clearly.' },
+  { q: 'How much does corporate catering cost in Bali?', a: 'Corporate catering is quoted per event based on guest count, menu format, service periods, staffing, and venue logistics. A minimum corporate booking of IDR 15,000,000 applies, subject to event scope and location. Every quotation shows the applicable service charge and government tax clearly.' },
   { q: 'What does "++" mean on your quotes?', a: 'It means 11% government tax and 10% service charge are added on top of the quoted price. Your formal proposal states the full total including tax and service clearly before you commit.' },
   { q: 'Do you provide invoices / NPWP for corporate catering?', a: 'Yes. We are NPWP-registered and issue formal tax invoices with itemised breakdowns. A deposit is required to confirm the booking, with the balance normally due before the event. Approved recurring corporate accounts may qualify for alternative payment terms subject to written agreement.' },
   { q: 'How do you handle dietary requirements for large corporate groups?', a: 'Dietary requirements are collected with RSVPs through a structured intake process, dishes are labelled on the day, and we follow reasonable separation procedures during preparation. We cannot guarantee a completely allergen-free environment, so guests with serious allergies should provide full written requirements in advance.' },
@@ -576,7 +576,7 @@ export default function CateringCorporatePage() {
             All packages include menu planning, fresh ingredient shopping, cooking, professional service staff, setup and full cleanup. Every package is quoted individually based on group size, menu style and venue logistics.
           </p>
           <p className="text-[#1A1A1A] font-semibold text-center max-w-2xl mx-auto mb-8">
-            Minimum corporate booking: IDR 7,500,000, subject to event scope and location.
+            Minimum corporate booking: IDR 15,000,000, subject to event scope and location.
           </p>
           <div className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 max-w-3xl mx-auto mb-10">
             <h3 className="font-semibold mb-4 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>What Determines the Quotation?</h3>

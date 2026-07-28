@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import {
   MessageCircle, Check, Phone, Calendar, Users,
   ChefHat, ShieldCheck, Sparkles,
@@ -28,7 +29,10 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20a%20retreat%20meal%20plan.%20Dates%3A%20%20Guests%3A%20%20Dietary%20split%3A%20'
+const WA_LINK = buildWhatsAppUrl({
+  serviceName: 'retreat catering in Bali',
+  intent: 'a multi-day retreat meal plan and pricing',
+})
 const SITE = 'https://mychef.id'
 
 /* ── DATA ── */

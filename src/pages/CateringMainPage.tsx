@@ -432,12 +432,15 @@ export default function CateringMainPage() {
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
               {"Catering in Bali — Built for Groups, Parties & Hosted Dinners"}
             </h1>
+            <p className="text-white/[75%] text-sm md:text-base mb-6">
+              From IDR 700,000++ per person · Minimum 5 guests · Chef, staff, ingredients &amp; cleanup included · Bali-wide
+            </p>
             <div className="text-base md:text-lg text-white/[85%] max-w-3xl mx-auto space-y-4">
               <p>
                 Premium catering across Bali for private villas, luxury holidays, weddings, corporate events, retreats and celebrations. From intimate private chef experiences for two guests to events with hundreds of guests, myCHEF delivers complete hospitality tailored to every occasion. Our chef-led team brings the kitchen, service staff, ingredients, and equipment to your villa or venue, then handles menu design, on-site cooking, table service, and full cleanup so you can host without stress.
               </p>
               <p>
-                What makes our catering Bali service different is that we own the full stack. We employ and train our own chefs, service staff, and logistics crew — no middlemen, no outsourced teams, and no last-minute surprises. Every dish is cooked fresh at your location, every allergy is logged, and every quote is confirmed in writing before you pay a deposit. Whether you need luxury catering Bali for a high-end villa holiday, wedding catering Bali for your reception, corporate catering Bali for an offsite, or private catering Bali for a family celebration, we match the format and staffing to your guest count and venue.
+                What makes our service different is that we own the full stack. We employ and train our own chefs, service staff, and logistics crew — no middlemen, no outsourced teams, and no last-minute surprises. Every dish is cooked fresh at your location, every allergy is logged, and every quote is confirmed in writing before you pay a deposit. Whether it is a high-end villa holiday, a wedding reception, a corporate offsite, or a family celebration, we match the format and staffing to your guest count and venue.
               </p>
               <p>
                 We operate across Seminyak, Canggu, Berawa, Pererenan, Ubud, Sanur, Nusa Dua, Jimbaran, Uluwatu, Ungasan, Kerobokan, Sidemen, Munduk, and North Bali. Travel fees are disclosed upfront, menus are customised to your group, and our team has delivered over five hundred villa events since we started. Browse our catering styles below, use the decision guide to choose the right format, or message us on WhatsApp for a same-day quote.

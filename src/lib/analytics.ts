@@ -1,8 +1,9 @@
-// Replace with real GA4 measurement ID when ready
-const GA_ID = import.meta.env.VITE_GA_ID ?? ''
-
-// Prevent unused variable error while keeping ID accessible
-void GA_ID
+// GA4 is loaded by the gtag snippet in index.html (measurement ID is set there),
+// which is what populates window.gtag. There is deliberately no measurement ID
+// read here — an earlier VITE_GA_ID constant was dead code (immediately discarded
+// with `void`) and read as though GA4 were unconfigured when it is in fact live.
+// If GA4 ever needs to be initialised from the app instead of index.html, do it
+// explicitly here rather than reintroducing an unused constant.
 
 type AnalyticsParams = Record<string, unknown>
 

@@ -1331,9 +1331,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'catering-floating-breakfast': {
     path: '/catering/floating-breakfast',
-    title: 'Floating Breakfast Bali | Chef-Prepared, Island-Wide',
+    title: 'Floating Breakfast Bali | Add-On to Your Chef Booking',
     description:
-      'Floating breakfast in your Bali villa pool — chef-prepared and styled, delivered island-wide incl. Ubud, Uluwatu & Nusa Dua. WhatsApp myCHEF.',
+      'Floating breakfast styled in your Bali villa pool — available as an add-on to a myCHEF private chef or catering booking, not sold on its own. WhatsApp myCHEF.',
     canonical: `${SITE}/catering/floating-breakfast`,
     h1: 'Floating Breakfast — In Your Bali Villa Pool',
     ogImage: `${SITE}/breakfast-spread.webp`,

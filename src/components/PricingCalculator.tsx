@@ -355,8 +355,9 @@ export default function PricingCalculator({
         </div>
 
         <div className="rounded-[28px] bg-[#1A1A1A] p-6 text-white">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Estimated total</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-[#C5A028]">Estimated subtotal</p>
           <p className="mt-4 text-3xl font-playfair leading-tight md:text-4xl">From {formatEstimateIDR(estimatedTotal)}</p>
+          <p className="mt-2 text-xs uppercase tracking-[0.18em] text-[#C5A028]/90">Before tax &amp; service</p>
           <p className="mt-4 text-sm leading-relaxed text-white/[75%]">
             Based on {selectedService.label.toLowerCase()}, {selectedGuests.label} guests and {selectedDuration.label.toLowerCase()} service.
           </p>
@@ -375,7 +376,12 @@ export default function PricingCalculator({
               <span>{formatEstimateIDR(addOnsTotal)}</span>
             </div>
           </div>
-          <p className="mt-6 text-sm text-white/[75%]">Final pricing confirmed on WhatsApp. No hidden fees.</p>
+          <div className="mt-6 rounded-2xl border border-[#C5A028]/25 bg-[#C5A028]/[8%] p-4">
+            <p className="text-sm leading-relaxed text-white/[85%]">
+              <span className="font-medium text-white">This is a menu subtotal.</span> 11% government tax and 10% service charge are added on your final quote, as is standard for catering in Bali.
+            </p>
+          </div>
+          <p className="mt-4 text-sm text-white/[75%]">Final pricing confirmed on WhatsApp — everything that affects the price is listed above.</p>
           <p className="mt-3 text-xs uppercase tracking-[0.18em] text-white/[50%]">“From” uses the lowest guest count in your selected range.</p>
           <Button asChild variant="whatsapp" size="brand" className="mt-6 w-full justify-center">
             <a href={`https://wa.me/6289674072020?text=${whatsappText}`} target="_blank" rel="noopener noreferrer" data-source="pricing-calculator-cta">

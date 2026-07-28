@@ -152,7 +152,7 @@ const WINE_PAIRINGS = [
 ]
 
 const FAQS = [
-  { q: 'How much does a plated dinner in Bali cost?', a: 'From IDR 800,000++ per person for three courses, up to IDR 1,300,000++ for the five-course premium, with a minimum event spend of IDR 5,000,000. Every quote states the full total including tax and service before you confirm.' },
+  { q: 'How much does a plated dinner in Bali cost?', a: 'From IDR 800,000++ per person for three courses, up to IDR 1,300,000++ for the five-course premium, with a minimum of 5 guests. Every quote states the full total including tax and service before you confirm.' },
   { q: 'Is there a minimum number of guests?', a: 'No fixed guest minimum — the IDR 5M minimum spend covers the team, so even a six-person dinner works. The format suits up to about 60 guests.' },
   { q: 'How many staff will be at our villa?', a: 'A chef, a service manager, and one waiter per ten guests as standard. Additional waiters are available from IDR 250,000/hour.' },
   { q: 'Can every guest have a different dietary menu?', a: 'Yes — that\'s the strength of plated service. Vegan, gluten-free, halal, and allergy-specific courses are designed per guest and plated separately.' },
@@ -182,7 +182,7 @@ const PLATED_SERVICE_SCHEMA = {
   offers: {
     ...(BASE_PLATED_SERVICE_SCHEMA.offers as Record<string, unknown>),
     offerCount: '3',
-    description: 'Per person ++ (11% government tax + 10% service charge); minimum event spend IDR 5,000,000',
+    description: 'Per person ++ (11% government tax + 10% service charge); minimum 5 guests',
   },
 }
 
@@ -597,10 +597,10 @@ export default function CateringPlatedPage() {
             <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
               <div className="flex items-center gap-3 mb-4">
                 <MessageSquare className="w-5 h-5 flex-shrink-0" style={{ color: ACCENT }} />
-                <h3 className="font-medium text-[#1A1A1A]">Minimum spend: IDR 5,000,000 per event</h3>
+                <h3 className="font-medium text-[#1A1A1A]">Minimum booking: 5 guests</h3>
               </div>
               <p className="text-sm text-[#4A4745] mb-4">
-                The IDR 5M minimum covers chef travel, prep time, equipment, and base staffing. Even for smaller groups, the final total including tax and service will meet or exceed this threshold. Here are examples (subtotals before tax and service):
+                Plated service starts at five guests — there is no minimum spend. Your price is simply the per-person menu rate multiplied by your group size, which covers chef travel, prep time, equipment and base staffing. Here are worked examples (subtotals before tax and service):
               </p>
               <div className="grid sm:grid-cols-3 gap-3 text-sm">
                 <div className="bg-white rounded-xl border border-[#E8E6E3] p-4 text-center">

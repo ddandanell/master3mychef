@@ -15,7 +15,7 @@ interface GroupTotalCalculatorProps {
 
 export default function GroupTotalCalculator({
   pricePerPerson,
-  minGuests = 6,
+  minGuests = 5,
   maxGuests = 100,
   defaultGuests = 10,
   showPlusPlus = true,
@@ -25,7 +25,10 @@ export default function GroupTotalCalculator({
 }: GroupTotalCalculatorProps) {
   const [guests, setGuests] = useState(defaultGuests)
 
-  const totalPlusPlus = pricePerPerson * guests
+  // Owner decree: never display a computed all-in (tax-inclusive) total.
+  // This is the menu subtotal only — government tax and service charge are
+  // stated separately below and are deliberately NOT added into this figure.
+  const subtotalBeforeTax = pricePerPerson * guests
 
   return (
     <div className={`bg-white rounded-xl border border-[#E8E6E3] p-5 ${className}`}>
@@ -61,14 +64,18 @@ export default function GroupTotalCalculator({
 
       <div className="border-t border-[#E8E6E3] pt-4">
         <div className="flex justify-between items-center">
-          <span className="text-sm font-medium text-[#1A1A1A]">Group total (++)</span>
+          <span className="text-sm font-medium text-[#1A1A1A]">Menu subtotal</span>
           <span className="text-xl font-semibold" style={{ color: accent, fontFamily: "'Playfair Display', serif" }}>
-            {formatIDR(totalPlusPlus)}
+            {formatIDR(subtotalBeforeTax)}
           </span>
         </div>
+        <p className="text-xs text-[#4A4745]/70 mt-1">
+          {formatIDR(pricePerPerson)} × {guests}{label}
+        </p>
         {showPlusPlus && (
-          <p className="text-xs text-[#4A4745]/50 mt-1">
-            Excludes 11% government tax + 10% service charge
+          <p className="text-xs text-[#4A4745]/70 mt-2 leading-relaxed">
+            <span className="font-medium text-[#1A1A1A]">Before tax and service.</span>{' '}
+            11% government tax and 10% service charge are added to this subtotal on your final quote.
           </p>
         )}
       </div>

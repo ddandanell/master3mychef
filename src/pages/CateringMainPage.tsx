@@ -1199,7 +1199,7 @@ export default function CateringMainPage() {
               {[
                 'English-speaking chef', 'Service manager', '1 waiter per 10 guests',
                 'Tables, linens, cutlery, porcelain, glassware', 'Kitchen tent if required',
-                'Free tasting at 40+ guests', 'Minimum spend IDR 5,000,000',
+                'Free tasting at 40+ guests', 'Minimum 5 guests',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-sm text-[#4A4745]">
                   <Check className="w-4 h-4 text-[#6B8E5A]" /> {item}

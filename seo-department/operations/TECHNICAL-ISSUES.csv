@@ -1,0 +1,7 @@
+issue_id,date_found,severity,category,affected_urls,description,evidence,recommended_fix,effort,owner,status,validated_date
+T-001,2026-07-28,CRITICAL,Rendering,ALL,Vite/React SPA — server-render parity for crawlers and AI bots unverified,Stack confirmed via vite.config.ts + vercel.json; live render not yet tested,Verify raw HTML vs rendered DOM on 10 priority commercial URLs; confirm prerender coverage,M,06,OPEN,
+T-002,2026-07-28,HIGH,Measurement,ALL,WhatsApp conversion tracking status unverified — primary conversion may be unmeasured,No tracking config found in repo review,Audit GTM/GA4 for WhatsApp click events; implement if absent,M,18,OPEN,
+T-003,2026-07-28,HIGH,Cannibalisation,/private-chef/*;/locations/*;/journal/*,Three page families able to target one query,248-URL sitemap analysis; 61 area pages + 12 location guides + area journals,Pull GSC query-per-URL; consolidate only on evidence,L,05,OPEN,
+T-004,2026-07-28,MEDIUM,Content accuracy,/private-chef/* (remote areas),61 of 62 areas published incl. locations 2-4h from service base,src/data/privateChefAreas.ts published flags,Management to confirm true service coverage; unpublish or qualify unserved areas,S,01,OPEN,
+T-005,2026-07-28,MEDIUM,Images,VARIOUS,Broken image path report present in repo — resolution status unknown,src/broken-image-paths-report.md,Verify all referenced paths resolve on live site,S,17,OPEN,
+T-006,2026-07-28,LOW,Config,ALL,vercel.json is 27KB of routing/redirect rules — change risk is high,vercel.json,Document redirect rules; require rollback plan for any edit,S,06,OPEN,

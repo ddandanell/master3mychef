@@ -9,7 +9,7 @@ Decisions from user for the mychef.id SEO rebuild package (`mychef-seo/`).
 | **C1 — Founding year** | **2019** |
 | **A1 — Villa-chef billing unit** | Half-day = **IDR 2,000,000**; full-day = **IDR 4,000,000** |
 | **A2 — Retreat price ladder** | **Do not show prices** on retreat pages. |
-| **A3 — Corporate minimum spend** | **IDR 50,000,000** (50M) if the page touches corporate minimums. |
+| **A3 — Corporate minimum spend** | **IDR 15,000,000** (15M). Superseded 2026-07-28 by owner confirmation; the earlier 50M figure is void. Live site and `siteFacts.ts` both use 15M. |
 | **D1 — Placement fee model** | **Do not show cost**. Sell the service; users contact for prices. |
 
 ## Standing rule

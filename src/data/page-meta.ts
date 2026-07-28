@@ -684,11 +684,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'villa-bbq-catering-bali': {
     path: '/villa-bbq-catering-bali',
-    title: 'Villa BBQ Catering Bali | In-Villa BBQ Party Packages',
+    title: 'Villa BBQ Party Bali | Poolside Grill Nights & Packages',
     description:
       'In-villa BBQ party packages in Bali: chef, grill, setup & cleanup at your villa poolside. Packages for 6-80 guests with per-pax pricing. WhatsApp myCHEF.',
     canonical: `${SITE}/villa-bbq-catering-bali`,
-    h1: 'Villa BBQ Catering Bali — Private BBQ Parties at Your Villa',
+    h1: 'Villa BBQ Parties in Bali — Poolside Grill Nights',
   },
 
       'bali-wedding-catering-packages': {

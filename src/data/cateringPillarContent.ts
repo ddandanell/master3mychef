@@ -811,7 +811,7 @@ export const CATERING_FAQS: CateringFAQ[] = [
   },
   {
     q: 'Is the 21% tax included in your published prices?',
-    a: `Yes. Published prices include tax and service charge. The quote you receive before paying is the final price unless you add guests or upgrades after booking.`,
+    a: `No — published prices are shown "++", meaning 11% government tax and 10% service charge are added on top. Your written quote states the full amount payable before you commit, and nothing is added after that unless you add guests or upgrades.`,
   },
   {
     q: 'Can I get a quote without committing?',

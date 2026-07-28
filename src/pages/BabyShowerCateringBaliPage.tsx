@@ -123,8 +123,8 @@ const SECTIONS = [
 
 const FAQS = [
   {
-    question: 'Can you guarantee pregnancy-safe food?',
-    answer: 'Yes. We brief chefs specifically on pregnancy dietary guidelines and mark all dishes clearly. Raw fish, unpasteurised cheeses, raw eggs, and high-mercury fish are excluded entirely. Every dish on the table is reviewed before the brief is finalised.',
+    question: 'How do you handle pregnancy dietary guidelines?',
+    answer: 'We brief chefs specifically on pregnancy dietary guidelines and mark all dishes clearly. Raw fish, unpasteurised cheeses, raw eggs and high-mercury fish are excluded from the menu, and every dish is reviewed before the brief is finalised. Our kitchens handle nuts, shellfish, dairy, gluten and eggs, so we cannot guarantee a fully allergen-free preparation — tell us your requirements in writing before the event and we will build the menu around them.',
   },
   {
     question: 'Do you provide a non-alcoholic drinks station?',

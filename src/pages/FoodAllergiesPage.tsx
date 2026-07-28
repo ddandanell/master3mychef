@@ -269,10 +269,10 @@ export default function FoodAllergiesPage() {
               "Cross-contamination" means an allergen from one food transfers to another — through shared equipment, shared surfaces, or airborne particles from frying. For guests with anaphylactic-level allergies, any trace exposure can trigger a reaction. Restaurant kitchens struggle with this because multiple dishes are prepared simultaneously on shared equipment.
             </p>
             <p>
-              A private chef at your villa cooks only your food. There are no other orders running in parallel. When an allergen is declared, the chef brings dedicated clean equipment and does not introduce the allergen into the kitchen at all. The allergen is not "avoided" — it is absent.
+              A private chef at your villa cooks only your food. There are no other orders running in parallel. When an allergen is declared, the chef brings dedicated clean equipment and keeps that allergen off the shopping list, so it is not introduced into your kitchen. That is a far tighter setup than a restaurant line — though no kitchen can promise a zero-risk environment, and we will never claim otherwise.
             </p>
             <p>
-              For example: a guest with a peanut allergy at a restaurant in Bali faces satay sauce being made on the same grill, peanut oil possibly used in the wok, and staff who may not verify ingredients on every dish. At your villa, the chef's shopping list has no peanuts. No peanuts enter the kitchen. No peanut risk exists in preparation, service, or storage.
+              For example: a guest with a peanut allergy at a restaurant in Bali faces satay sauce being made on the same grill, peanut oil possibly used in the wok, and staff who may not verify ingredients on every dish. At your villa, the chef's shopping list has no peanuts and none are brought into the kitchen — which removes the parallel-order and shared-equipment risks a restaurant cannot. Guests with severe allergies should still tell us in writing before the event, and should carry their usual medication.
             </p>
             <p>
               For gluten/coeliac, soy sauce (which contains wheat) is one of the most common hidden sources in Indonesian cooking. The chef replaces it with tamari or coconut aminos throughout, and checks every sauce and marinade label before purchase. This is not possible at a restaurant where sauces are pre-made in bulk.

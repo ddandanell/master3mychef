@@ -135,10 +135,10 @@ export default function UbudPage() {
               <MessageCircle className="w-4 h-4" /> Plan an Ubud Dinner
             </a>
             <Link
-              to="/pricing"
+              to="/private-chef/ubud"
               className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all"
             >
-              View Pricing Guide
+              Private Chef in Ubud
             </Link>
           </div>
         </div>

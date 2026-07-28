@@ -127,8 +127,11 @@ export default function NusaDuaPage() {
               className="inline-flex items-center gap-2 bg-[#C5A028] text-black font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all">
               <MessageCircle className="w-4 h-4" /> Plan a Nusa Dua Dinner
             </a>
-            <Link to="/pricing" className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all">
-              View Pricing Guide
+            <Link
+              to="/private-chef/nusa-dua"
+              className="inline-flex items-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-white/10 transition-all"
+            >
+              Private Chef in Nusa Dua
             </Link>
           </div>
         </div>

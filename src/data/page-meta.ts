@@ -846,7 +846,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'guide-private-chef-bali': {
     path: '/guide/private-chef-bali',
-    title: 'Private Chef in Bali | Complete Guide | myCHEF',
+    title: 'How to Hire a Private Chef in Bali | Step-by-Step Guide',
     description:
       'Everything you need to know about hiring a private chef in Bali — costs, what to expect, areas covered and how booking works.',
     canonical: `${SITE}/guide/private-chef-bali`,
@@ -1891,7 +1891,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       services: {
     path: '/services',
-    title: 'Private Chef Services Bali | Compare All Services | myCHEF',
+    title: 'All Services | Chefs, Catering, Events & Staffing in Bali',
     description:
       'Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit.',
     canonical: `${SITE}/services`,

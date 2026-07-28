@@ -25,11 +25,11 @@ function PricingCalculator() {
 
   const basePrice = menu === 'mediterranean' ? 2200000 : menu === 'wagyu' ? 2400000 : 2500000
   const winePrice = wine ? 850000 : 0
-  const serviceCharge = 0.10
-  const tax = 0.11
 
+  // Owner decree: never display a computed all-in (tax-inclusive) total.
+  // This calculator shows the menu subtotal only; 11% government tax and 10%
+  // service charge are disclosed in prose beneath it and applied on the quote.
   const subtotal = menu === 'villa-chef' ? basePrice * days : (basePrice + winePrice) * guests
-  const total = Math.round(subtotal * (1 + serviceCharge + tax))
 
   return (
     <div className="bg-white rounded-2xl p-8 shadow-sm border border-black/5 max-w-[600px] mx-auto">
@@ -106,20 +106,14 @@ function PricingCalculator() {
         )}
 
         <div className="border-t border-black/10 pt-6">
-          <div className="flex justify-between text-sm mb-2">
-            <span>Subtotal</span>
-            <span>IDR {subtotal.toLocaleString()}</span>
+          <div className="flex justify-between text-xl font-semibold">
+            <span>Menu subtotal</span>
+            <span className="text-[#C5A028]">IDR {subtotal.toLocaleString()}++</span>
           </div>
-          {menu !== 'villa-chef' && (
-            <div className="flex justify-between text-sm mb-2 text-[#4A4745]">
-              <span>Service Charge (10%) + Tax (11%)</span>
-              <span>IDR {Math.round(subtotal * 0.21).toLocaleString()}</span>
-            </div>
-          )}
-          <div className="flex justify-between text-xl font-semibold mt-4 pt-4 border-t border-black/10">
-            <span>{menu === 'villa-chef' ? 'Estimated Total (++ excl. 10% service & 11% tax)' : 'Estimated Total'}</span>
-            <span className="text-[#C5A028]">IDR {(menu === 'villa-chef' ? subtotal : total).toLocaleString()}{menu === 'villa-chef' ? '++' : ''}</span>
-          </div>
+          <p className="text-xs text-[#4A4745] mt-2 leading-relaxed">
+            <span className="font-medium text-[#1A1A1A]">Before tax and service.</span>{' '}
+            11% government tax and 10% service charge are added to this subtotal on your final quote.
+          </p>
           <p className="text-xs text-[#4A4745] mt-2">
             * This is an estimate. Final pricing depends on menu customization,
             location, and specific requirements. Contact us for a precise quote.
@@ -131,7 +125,7 @@ function PricingCalculator() {
 
         <a
           href={`https://wa.me/6289674072020?text=${encodeURIComponent(
-            `Hi myCHEF, I used your calculator and got an estimate of IDR ${total.toLocaleString()} for ${guests} guests (${menu}). Can you confirm?`
+            `Hi myCHEF, I used your calculator and got a menu subtotal of IDR ${subtotal.toLocaleString()}++ for ${guests} guests (${menu}). Can you confirm the final quote?`
           )}`}
           target="_blank"
           rel="noopener noreferrer" data-source="calculator-cta" className="flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors w-full focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"

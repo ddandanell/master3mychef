@@ -695,7 +695,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bali-wedding-catering-packages',
     title: 'Bali Wedding Catering Packages & Prices 2026 | myCHEF',
     description:
-      'Transparent Bali wedding catering packages: plated, buffet & cocktail reception pricing by guest count for private villa weddings. WhatsApp myCHEF.',
+      'What Bali wedding catering actually costs: per-guest prices by package and headcount, what each includes, and what changes the total. Updated 2026.',
     canonical: `${SITE}/bali-wedding-catering-packages`,
     h1: 'Bali Wedding Catering Packages — Transparent Pricing',
   },
@@ -1343,7 +1343,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/events/weddings',
     title: 'Wedding Catering Bali | Villa Wedding Specialists | myCHEF',
     description:
-      'Wedding catering for Bali villa weddings: plated dinners, buffets & cocktail receptions with full team, tastings & transparent packages. WhatsApp myCHEF.',
+      'Wedding catering in Bali for 20–250 guests. Chefs, waiters, bar and coordination from one team — tasting before you commit. WhatsApp myCHEF for a quote.',
     canonical: `${SITE}/events/weddings`,
     h1: 'Wedding Catering in Bali — Villa Weddings, Run by One Team',
     ogImage: `${SITE}/events-event-wedding-xl.webp`,

@@ -2026,7 +2026,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'help-menu-guide': {
     path: '/help/menu-guide',
-    title: 'Private Chef Menu Guide Bali',
+    title: 'Choosing Your Menu | Courses, Dietaries & Tastings',
     description:
       'Choose the right private chef menu for your Bali villa — cuisines, dietary needs, course styles & shaping a meal for your group.',
     canonical: `${SITE}/help/menu-guide`,
@@ -2036,7 +2036,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'help-wedding-guide': {
     path: '/help/wedding-guide',
-    title: 'Wedding Catering Guide Bali',
+    title: 'Planning Wedding Catering | What to Decide & When',
     description:
       'Plan Bali wedding catering step by step: guest counts, service styles, tastings, staffing & multi-day villa celebrations.',
     canonical: `${SITE}/help/wedding-guide`,
@@ -2046,7 +2046,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'help-corporate-guide': {
     path: '/help/corporate-guide',
-    title: 'Corporate Catering Guide Bali',
+    title: 'Planning Corporate Catering | Invoicing, Timing & Headcount',
     description:
       'Plan corporate catering in Bali: menu options, staffing, timing & multi-day meal flow for teams and offsites.',
     canonical: `${SITE}/help/corporate-guide`,
@@ -2056,7 +2056,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'help-staffing-guide': {
     path: '/help/staffing-guide',
-    title: 'Villa Staffing Guide Bali',
+    title: 'Planning Villa Staffing | Roles, Ratios & Scheduling',
     description:
       'Find the right villa staff in Bali for dinners, parties & extended stays — waiters, bartenders, butlers & household staff explained.',
     canonical: `${SITE}/help/staffing-guide`,

@@ -294,6 +294,13 @@ export const REDIRECTS: Redirect[] = [
   { from: '/journal/private-chef-jakarta-guide', to: '/', reason: 'Jakarta no longer a focus; redirect to homepage.' },
   { from: '/blog/private-chef-surabaya-guide', to: '/', reason: 'Surabaya/Jakarta no longer a focus; redirect to homepage.' },
   { from: '/locations/jakarta', to: '/', reason: 'Jakarta location focus removed; redirect to homepage.' },
+  // --- 2026-07-28: remaining Jakarta URLs still earning clicks into 404s (GSC 28d) ---
+  { from: '/private-chef-senayan', to: '/', reason: 'Jakarta focus removed; still earned 47 clicks/28d into a 404.' },
+  { from: '/jakarta', to: '/', reason: 'Jakarta focus removed; still earned 16 clicks/28d into a 404.' },
+  { from: '/private-chef-kelapa-gading', to: '/', reason: 'Jakarta focus removed; 6 clicks/28d into a 404.' },
+  { from: '/private-chef-kemang', to: '/', reason: 'Jakarta focus removed; 4 clicks/28d into a 404.' },
+  { from: '/private-chef-scbd', to: '/', reason: 'Jakarta focus removed; 1 click/28d into a 404.' },
+  { from: '/kemang', to: '/', reason: 'Jakarta focus removed; residual indexed URL.' },
 ]
 
 /** Lookup map for the React Router fallback. */

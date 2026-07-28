@@ -410,7 +410,9 @@ export default function CateringDropOffPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a
-              href="/book"
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:brightness-110 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: ACCENT }}
             >
@@ -1039,7 +1041,9 @@ export default function CateringDropOffPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/book"
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:brightness-110 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
               style={{ background: ACCENT }}
             >

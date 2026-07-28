@@ -427,7 +427,7 @@ export default function LunaPage() {
               <h2 className="text-4xl md:text-5xl mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>A Michelin-Trained Chef in Your Villa</h2>
               <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
               <p className="text-white/[70%] mb-6 leading-relaxed">
-                When you hire a private chef in Bali, you are not ordering dinner. You are commissioning an evening. Our executive chef Adriano — trained in Modena and Tokyo — leads a team of four Indonesian chefs he has personally trained for 6 to 12 months each. They arrive at your villa three hours before service, transform your kitchen into a fine dining station, and serve a multi-course tasting menu at your table.
+                When you hire a private chef in Bali, you are not ordering dinner. You are commissioning an evening. Our executive chef Adriano — trained in Milan and Tokyo — leads a team of four Indonesian chefs he has personally trained for 6 to 12 months each. They arrive at your villa three hours before service, transform your kitchen into a fine dining station, and serve a multi-course tasting menu at your table.
               </p>
               <p className="text-white/[70%] mb-6 leading-relaxed">
                 Every ingredient is sourced that morning. The pasta is rolled in your kitchen. The Wagyu is flame-grilled in front of your guests. The wine is paired course by course. And when the evening ends, the team leaves your villa spotless — as if they were never there. Read our <Link to="/blog/seasonal-ingredients-bali-cooking-guide" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">seasonal ingredients Bali cooking guide</Link> to understand what drives those morning market choices.
@@ -932,7 +932,7 @@ export default function LunaPage() {
               Adriano did not build a team. He built a lineage.
             </p>
             <p className="text-white/[50%] leading-relaxed mb-6">
-              He arrived in Bali in 2019 with the standards of Modena and Tokyo in his hands. He chose not to import a kitchen from Europe. He chose instead to find local talent and teach them everything he knew.
+              He arrived in Bali in 2019 with the standards of Milan and Tokyo in his hands. He chose not to import a kitchen from Europe. He chose instead to find local talent and teach them everything he knew.
             </p>
             <p className="text-white/[50%] leading-relaxed mb-6">
               Four chefs, over five years. Each found in Indonesia. Each chosen on his terms. Each trained by him personally — six months beside him before they cook a single plate for a paying guest, another year beside him before they lead an evening alone. Every sauce, every pour, every minute of pacing tested and corrected until it is right.

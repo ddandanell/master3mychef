@@ -301,7 +301,7 @@ export default function PrivateChefBaliPage() {
               He left Italy with a knife, a notebook, and a decade in Michelin kitchens.
             </h2>
             <p className="text-white/[70%] text-base leading-relaxed mb-4">
-              Adriano, myCHEF's founder and executive chef, trained under a Michelin-starred chef in Milan and spent over a decade in fine-dining kitchens across Italy and Japan — including Modena and a formative stage in Tokyo — before moving to Bali.
+              Adriano, myCHEF's founder and executive chef, trained under a Michelin-starred chef in Milan and spent over a decade in fine-dining kitchens across Italy and Japan — including a formative stage in Tokyo — before moving to Bali.
             </p>
             <p className="text-white/[70%] text-base leading-relaxed mb-8">
               He still leads every tasting menu, every Chef's Table, and every training session for the team of 50+ Indonesian hospitality professionals he has built.

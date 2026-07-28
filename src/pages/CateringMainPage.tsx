@@ -1840,7 +1840,7 @@ export default function CateringMainPage() {
             No booking fee · Free consultation · Exact quote within 2 hours
           </p>
           <TrustRow
-            items={['Guest-loved service', '500+ villa events served', '8 years in Bali', 'Same-day quotes when possible']}
+            items={['Guest-loved service', '500+ villa events served', 'Serving Bali since 2019', 'Same-day quotes when possible']}
             dark
           />
         </div>

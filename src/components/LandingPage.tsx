@@ -278,7 +278,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       ]
     : entry.slug === 'best-private-chef-indonesia'
       ? [
-          { question: 'Who is the best private chef in Bali?', answer: 'The best private chef for your villa is a vetted professional with food-safety certification, a replacement guarantee, and a track record in villa kitchens. myCHEF is a managed team that has served 560+ villas and 12,000+ guests over eight years, with review depth across fine dining, BBQ, and event menus.' },
+          { question: 'Who is the best private chef in Bali?', answer: 'The best private chef for your villa is a vetted professional with food-safety certification, a replacement guarantee, and a track record in villa kitchens. myCHEF is a managed team that has served 560+ villas and 12,000+ guests since 2019, with review depth across fine dining, BBQ, and event menus.' },
           { question: 'How to choose a private chef in Bali?', answer: 'Look for vetting, insurance, a replacement plan, a written quote, and references. Ask how the chef handles your villa kitchen, dietary needs, and event size. A managed team gives you one accountable point of contact rather than a single freelancer.' },
           { question: 'Are private chef marketplaces reliable?', answer: 'Marketplaces list freelancers with variable vetting and no replacement guarantee. A managed culinary team provides vetted chefs, a two-hour replacement guarantee, and one accountable quote for your event.' },
           { question: 'Are your chefs vetted and background-checked?', answer: 'Yes. myCHEF is a managed, vetted and background-checked team of Indonesian professional chefs, led by a Michelin-trained founder. We are not a freelancer marketplace.' },

@@ -187,7 +187,7 @@ const FAQS = [
   { q: 'How does payment work?', a: '50% deposit to lock the date. Remaining 50% due the day before the event, before service begins. Invoiced and documented for corporate clients.' },
   { q: 'What if I need to cancel or reschedule?', a: 'A 50% deposit confirms your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy). Need to reschedule? We apply your deposit to a new date within 6 months.' },
   { q: 'Are there hidden fees?', a: 'No. Every proposal is itemised — catering, bar, staffing, décor, AV, add-ons. You see every line item before you commit. No surprises on the day.' },
-  { q: 'How do I know the food will be good?', a: 'Our executive chef Adriano trained in Modena and Tokyo. Every event menu is designed by him and executed by his team. See past event photos, read testimonials, or book a tasting.' },
+  { q: 'How do I know the food will be good?', a: 'Our executive chef Adriano trained in Milan and Tokyo. Every event menu is designed by him and executed by his team. See past event photos, read testimonials, or book a tasting.' },
 
 ]
 

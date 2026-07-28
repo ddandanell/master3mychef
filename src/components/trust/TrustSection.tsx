@@ -224,8 +224,8 @@ function StatsGrid() {
     },
     {
       icon: MapPin,
-      number: '8+',
-      label: 'Years in Bali',
+      number: 'Since 2019',
+      label: 'Serving Bali',
     },
   ]
 

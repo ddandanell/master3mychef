@@ -259,7 +259,7 @@ export default function TastingMenuPage() {
             "A tasting menu is not a meal.<br />
             <span className="italic">It is a story told in courses</span> — cold to warm, delicate to bold, and back again. Every plate is a decision, not just an ingredient."
           </blockquote>
-          <p className="text-white/[40%] text-sm mt-8 tracking-wide uppercase">— Adriano · Executive Chef · Michelin-trained, Modena</p>
+          <p className="text-white/[40%] text-sm mt-8 tracking-wide uppercase">— Adriano · Executive Chef · Michelin-trained, Milan</p>
         </div>
       </section>
 

@@ -177,7 +177,7 @@ export default function EventsBirthdaysPage() {
             A great birthday in a Bali villa needs more than a menu. Someone has to time the food around the pool, land the cake moment after the speeches, keep the bar moving, and hand the villa back spotless when the last guest leaves. That&apos;s what myCHEF&apos;s birthday catering does: food, drinks, service staff, styling coordination and cleanup, run as one operation — so the host gets to be a guest at their own party.
           </p>
           <p className="text-base md:text-lg text-white/[85%] mb-8 max-w-xl">
-            We&apos;ve cooked celebrations in 560+ villas across Bali over 8+ years, from six-person plated dinners to 40-guest BBQ and bar nights. Two formats, published prices, one WhatsApp message to start.
+            We&apos;ve cooked celebrations in 560+ villas across Bali since 2019, from six-person plated dinners to 40-guest BBQ and bar nights. Two formats, published prices, one WhatsApp message to start.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">

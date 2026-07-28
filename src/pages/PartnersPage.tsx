@@ -31,7 +31,7 @@ const heroStats = ['50+ staff', '560+ villas', '12,000+ guests']
 const pressStats = [
   'Served 12,000+ guests',
   'Built for Bali villa and lifestyle media',
-  '8 years in Bali',
+  'Serving Bali since 2019',
 ]
 
 const pressResources = [

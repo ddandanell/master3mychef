@@ -14,7 +14,7 @@ const CHEFS = [
     badge: `Fine-dining-trained in ${siteFacts.founderTrainingCity} · Founder since ${siteFacts.foundingYear}`,
     image: '/generated/chef-adriano-portrait.webp',
     bio: 'Adriano built myCHEF after years in Michelin-level kitchens in northern Italy and a formative stretch in Tokyo. He still leads menu development, chef training, and every signature tasting experience we serve in Bali villas.',
-    achievements: ['Michelin-trained in Modena', 'Leads chef training for every new hire', 'Trusted for proposals, anniversaries, and VIP dinners'],
+    achievements: [`Michelin-trained in ${siteFacts.founderTrainingCity}`, 'Leads chef training for every new hire', 'Trusted for proposals, anniversaries, and VIP dinners'],
     signatureDishes: ['Hand-rolled tagliatelle al tartufo', 'Grilled branzino with salsa verde', 'Tiramisu with espresso-soaked ladyfingers'],
     guestQuote: 'Adriano cooked for our anniversary and it was genuinely the best meal we had in Bali — better than any restaurant. The pasta alone was worth flying here for.',
     guestName: 'Sophie R., Sydney',
@@ -123,7 +123,7 @@ const CHEF_PERSON_SCHEMAS = [
     worksFor: { '@id': 'https://mychef.id/#business' },
     knowsAbout: [
       'Mediterranean Fine Dining',
-      'Michelin-trained in Modena',
+      `Michelin-trained in ${siteFacts.founderTrainingCity}`,
       'Leads chef training for every new hire',
       'Trusted for proposals, anniversaries, and VIP dinners',
     ],

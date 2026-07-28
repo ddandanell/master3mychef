@@ -2098,7 +2098,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/chefs/adriano',
     title: 'Adriano | Private Chef Bali | Michelin-Trained Founder',
     description:
-      'Book Adriano, Executive Chef & Founder of myCHEF Bali. Michelin-trained in Modena. Italian tasting menus, romantic dinners and VIP villa experiences.',
+      'Book Adriano, Executive Chef & Founder of myCHEF Bali. Michelin-trained in Milan. Italian tasting menus, romantic dinners and VIP villa experiences.',
     canonical: `${SITE}/chefs/adriano`,
     h1: 'Adriano',
   },

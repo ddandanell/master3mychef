@@ -36,7 +36,7 @@ const BBQ_PACKAGES = [
     price: 'IDR 700,000/person',
     description: 'Sate lilit, sate ayam, ikan bakar, jagung bakar, sambal matah, nasi kuning, sayur urap, gado-gado, fresh fruit dessert. The authentic Balinese grill — our most requested menu.',
     includes: ['Chef', '1 service assistant', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
-    minGuests: 'Min. 6 guests',
+    minGuests: 'Min. 10 guests',
     image: '/generated/mychef-catering-bali-bbq-package-indonesian.webp',
   },
   {
@@ -44,7 +44,7 @@ const BBQ_PACKAGES = [
     price: 'IDR 850,000/person',
     description: 'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, fresh fruit. Familiar crowd-pleasers for mixed international groups.',
     includes: ['Chef', '1 service assistant', 'All cooking equipment', 'Ingredients', 'Setup', '2-3h service', 'Pack-up & cleanup'],
-    minGuests: 'Min. 6 guests',
+    minGuests: 'Min. 10 guests',
     image: '/generated/mychef-catering-bali-bbq-package-international.webp',
   },
   {
@@ -52,7 +52,7 @@ const BBQ_PACKAGES = [
     price: 'IDR 950,000/person',
     description: 'Wagyu steak, whole lobster tail, king prawns, salmon, Mahi-mahi, premium sides, signature sauces, chocolate dessert station, plated service. The celebration-tier grill.',
     includes: ['Chef', '1 service assistant', 'All equipment', 'Ingredients', 'Setup', '2-3h service', 'Plated service', 'Pack-up & cleanup'],
-    minGuests: 'Min. 6 guests',
+    minGuests: 'Min. 10 guests',
     image: '/generated/mychef-catering-bali-bbq-package-surfturf.webp',
   },
 ]
@@ -113,7 +113,7 @@ const BBQ_VS_OTHERS = [
 
 const FAQS = [
   { q: 'How much does BBQ catering in Bali cost?', a: 'From IDR 700,000 per person for Indonesian BBQ, IDR 850,000 for International BBQ, and IDR 950,000 for Premium Surf & Turf — chef, service assistant, equipment, ingredients, and cleanup included. Prices are ++ (11% government tax + 10% service charge).' },
-  { q: "What's the minimum number of guests?", a: 'Six guests — the same minimum in every area we serve, from Seminyak to Uluwatu. The only difference by location is a travel fee for farther areas, always quoted per booking and itemised upfront.' },
+  { q: "What's the minimum number of guests?", a: 'Ten guests — the same minimum in every area we serve, from Seminyak to Uluwatu. The only difference by location is a travel fee for farther areas, always quoted per booking and itemised upfront.' },
   { q: 'Do you bring the grill and equipment?', a: 'Yes — grills, fuel, tools, chafing dishes, platters, prep stations, and cleanup supplies. You do not need to own anything.' },
   { q: 'Can you do a seafood-focused or vegetarian BBQ?', a: 'Absolutely. Any package can go seafood-heavy, and we run full vegetarian and vegan grills with plant-based proteins, grilled vegetables, salads, and sides. For a dedicated market-fresh seafood menu, see our seafood BBQ page.' },
   { q: 'Are drinks included?', a: 'Not in the base package. Add a bartender with a 3-hour open bar for IDR 4,000,000 flat, or wine and soft-drink packages as line items in your quote.' },
@@ -202,7 +202,7 @@ export default function CateringBBQPage() {
                 <Flame className="w-3.5 h-3.5" /> From IDR 700,000/person
               </span>
               <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs sm:text-sm tracking-wide">
-                <Users className="w-3.5 h-3.5 text-[#C5A028]" /> Min. 6 guests
+                <Users className="w-3.5 h-3.5 text-[#C5A028]" /> Min. 10 guests
               </span>
               <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/90 text-xs sm:text-sm tracking-wide">
                 <ChefHat className="w-3.5 h-3.5 text-[#C5A028]" /> Chef + 1 assistant
@@ -530,7 +530,7 @@ export default function CateringBBQPage() {
             subtitle="BBQ catering across all major Bali villa areas. The minimum is the same everywhere — farther areas simply add a travel fee, quoted per booking."
           />
           <p className="text-sm text-[#1A1A1A] font-semibold text-center mt-10 mb-6">
-            Minimum 6 guests in every area — the same island-wide. Only the travel fee changes with distance.
+            Minimum 10 guests in every area — the same island-wide. Only the travel fee changes with distance.
           </p>
           <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left">

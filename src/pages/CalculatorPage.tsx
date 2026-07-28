@@ -155,7 +155,7 @@ const BBQ_PACKAGES: BbqPackage[] = [
   {
     id: 'international-bbq',
     label: 'International BBQ',
-    price: 700000,
+    price: 850000,
     description:
       'Australian beef tenderloin, lamb chops, grilled prawns, salmon fillet, chicken thigh, gourmet salads, baked potato, garlic bread, and fresh fruit.',
     inclusions: BBQ_STANDARD_INCLUSIONS,
@@ -163,7 +163,7 @@ const BBQ_PACKAGES: BbqPackage[] = [
   {
     id: 'premium-surf-turf',
     label: 'Premium Surf & Turf',
-    price: 850000,
+    price: 950000,
     description:
       'Wagyu steak, whole lobster tail, king prawns, salmon, mahi-mahi, premium sides, signature sauces, and a chocolate dessert station.',
     inclusions: [...BBQ_STANDARD_INCLUSIONS, 'Plated service'],

@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { MessageCircle } from 'lucide-react'
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
-import PriceDisclaimer from '@/components/PriceDisclaimer'
 
 const SOFTWARE_APPLICATION_SCHEMA = {
   '@context': 'https://schema.org',
@@ -17,121 +16,368 @@ const SOFTWARE_APPLICATION_SCHEMA = {
   },
 }
 
+interface MenuOption {
+  id: string
+  label: string
+  price: number
+}
+
+interface FineDiningCategory {
+  id: string
+  label: string
+  menus: MenuOption[]
+}
+
+type ServiceType = 'family' | 'fine' | 'rent'
+
+const SERVICE_OPTIONS: { id: ServiceType; label: string; description: string }[] = [
+  {
+    id: 'family',
+    label: 'Family Style',
+    description:
+      'A relaxed and social dining experience. The food is presented beautifully on shared platters in the centre of the table, allowing guests to serve themselves and enjoy the meal together.',
+  },
+  {
+    id: 'fine',
+    label: 'Fine Dining',
+    description:
+      'A formal private dining experience with additional service staff, professional table presentation, individually presented dishes, and several courses served in sequence.',
+  },
+  {
+    id: 'rent',
+    label: 'Rent a Chef',
+    description:
+      'Hire a private chef to prepare your daily meals in your villa. Choose breakfast, two meals, or complete daily meal service.',
+  },
+]
+
+const FAMILY_STYLE_MENUS: MenuOption[] = [
+  { id: 'indonesian-3course', label: 'Indonesian Three-Course', price: 850000 },
+  { id: 'mediterranean-3course', label: 'Mediterranean Three-Course', price: 895000 },
+  { id: 'seafood-3course', label: 'Seafood Three-Course', price: 1250000 },
+  { id: 'italian-3course', label: 'Italian Three-Course', price: 1300000 },
+  { id: 'western-3course', label: 'Western Three-Course', price: 1350000 },
+  { id: 'bbq-3course', label: 'BBQ Three-Course', price: 1600000 },
+  { id: 'french-3course', label: 'French Three-Course', price: 1650000 },
+  { id: 'japanese-3course', label: 'Japanese Three-Course', price: 1750000 },
+]
+
+const FINE_DINING_CATEGORIES: FineDiningCategory[] = [
+  {
+    id: 'vegetarian',
+    label: 'Vegetarian',
+    menus: [
+      { id: 'indonesian-vegetarian', label: 'Indonesian Vegetarian', price: 1250000 },
+      { id: 'mediterranean-vegetarian', label: 'Mediterranean Vegetarian', price: 1350000 },
+      { id: 'italian-vegetarian', label: 'Italian Vegetarian', price: 2100000 },
+      { id: 'french-vegetarian', label: 'French Vegetarian', price: 2250000 },
+      { id: 'healthy-breakfasts-vegetarian', label: 'Healthy Breakfasts Vegetarian', price: 2950000 },
+      { id: 'japanese-fusion-vegetarian', label: 'Japanese Fusion Vegetarian', price: 3400000 },
+    ],
+  },
+  {
+    id: 'seafood',
+    label: 'Seafood',
+    menus: [
+      { id: 'mediterranean-seafood', label: 'Mediterranean Seafood', price: 1350000 },
+      { id: 'indonesian-seafood', label: 'Indonesian Seafood', price: 1350000 },
+      { id: 'italian-seafood', label: 'Italian Seafood', price: 2300000 },
+      { id: 'french-seafood', label: 'French Seafood', price: 2300000 },
+      { id: 'japanese-fusion-seafood', label: 'Japanese Fusion Seafood', price: 3200000 },
+      { id: 'surf-turf-seafood', label: 'Surf & Turf Seafood', price: 3600000 },
+    ],
+  },
+  {
+    id: 'mixed-meats',
+    label: 'Mixed Meats',
+    menus: [
+      { id: 'bbq-evenings-mixed-meats', label: 'BBQ Evenings Mixed Meats', price: 1250000 },
+      { id: 'mediterranean-mixed-meats', label: 'Mediterranean Mixed Meats', price: 1350000 },
+      { id: 'indonesian-mixed-meats', label: 'Indonesian Mixed Meats', price: 1950000 },
+      { id: 'western-classics-mixed-meats', label: 'Western Classics Mixed Meats', price: 2050000 },
+      { id: 'italian-mixed-meats', label: 'Italian Mixed Meats', price: 3000000 },
+      { id: 'surf-turf-mixed-meats', label: 'Surf & Turf Mixed Meats', price: 3100000 },
+    ],
+  },
+  {
+    id: 'single-meat',
+    label: 'Single Meat',
+    menus: [
+      { id: 'healthy-breakfasts-chicken', label: 'Healthy Breakfasts Chicken', price: 1400000 },
+      { id: 'french-duck', label: 'French Duck', price: 1450000 },
+      { id: 'western-classics-pork', label: 'Western Classics Pork', price: 1950000 },
+      { id: 'japanese-fusion-beef', label: 'Japanese Fusion Beef', price: 2100000 },
+      { id: 'bbq-evenings-lamb', label: 'BBQ Evenings Lamb', price: 3000000 },
+      { id: 'indonesian-wagyu-beef', label: 'Indonesian Wagyu Beef', price: 3200000 },
+    ],
+  },
+]
+
+const RENT_A_CHEF_MENUS: MenuOption[] = [
+  { id: 'breakfast', label: 'Breakfast', price: 1000000 },
+  { id: 'breakfast-dinner', label: 'Breakfast and Dinner', price: 1800000 },
+  { id: 'breakfast-lunch-dinner', label: 'Breakfast, Lunch and Dinner', price: 2700000 },
+]
+
+const MIN_GUESTS = 5
+
+const formatIDR = (value: number) => `IDR ${Math.round(value).toLocaleString('en-US')}`
+
+const selectClasses =
+  'w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-[#C5A028] focus:border-[#C5A028]'
+
 function PricingCalculator() {
-  const [guests, setGuests] = useState(8)
-  const [menu, setMenu] = useState<'mediterranean' | 'wagyu' | 'villa-chef'>('mediterranean')
-  const [wine, setWine] = useState(false)
-  const [days, setDays] = useState(1)
+  const [service, setService] = useState<ServiceType>('family')
+  const [guests, setGuests] = useState<number>(MIN_GUESTS)
+  const [familyMenuId, setFamilyMenuId] = useState<string>(FAMILY_STYLE_MENUS[0].id)
+  const [fineCategoryId, setFineCategoryId] = useState<string>(FINE_DINING_CATEGORIES[0].id)
+  const [fineMenuId, setFineMenuId] = useState<string>(FINE_DINING_CATEGORIES[0].menus[0].id)
+  const [rentMenuId, setRentMenuId] = useState<string>(RENT_A_CHEF_MENUS[0].id)
 
-  const basePrice = menu === 'mediterranean' ? 2200000 : menu === 'wagyu' ? 2400000 : 2500000
-  const winePrice = wine ? 850000 : 0
+  const fineCategory =
+    FINE_DINING_CATEGORIES.find((category) => category.id === fineCategoryId) ?? FINE_DINING_CATEGORIES[0]
 
-  // Owner decree: never display a computed all-in (tax-inclusive) total.
-  // This calculator shows the menu subtotal only; 11% government tax and 10%
-  // service charge are disclosed in prose beneath it and applied on the quote.
-  const subtotal = menu === 'villa-chef' ? basePrice * days : (basePrice + winePrice) * guests
+  const handleFineCategoryChange = (categoryId: string) => {
+    setFineCategoryId(categoryId)
+    const category = FINE_DINING_CATEGORIES.find((c) => c.id === categoryId)
+    if (category) setFineMenuId(category.menus[0].id)
+  }
+
+  const handleGuestsChange = (rawValue: string) => {
+    const parsed = Number.parseInt(rawValue, 10)
+    if (Number.isNaN(parsed)) {
+      setGuests(MIN_GUESTS)
+      return
+    }
+    setGuests(Math.max(MIN_GUESTS, parsed))
+  }
+
+  const selectedMenu: MenuOption | undefined =
+    service === 'family'
+      ? FAMILY_STYLE_MENUS.find((m) => m.id === familyMenuId)
+      : service === 'fine'
+        ? fineCategory.menus.find((m) => m.id === fineMenuId)
+        : RENT_A_CHEF_MENUS.find((m) => m.id === rentMenuId)
+
+  const pricePerUnit = selectedMenu?.price ?? 0
+  const subtotal = service === 'rent' ? pricePerUnit : pricePerUnit * guests
+  // Owner decision: show ++ prices only. Do not compute or display a
+  // tax-inclusive total — the ++ suffix and the note below the total tell
+  // the guest that 10% service and 11% government tax are added on the quote.
+
+  const serviceLabel = SERVICE_OPTIONS.find((s) => s.id === service)?.label ?? ''
+
+  const buildWhatsAppMessage = () => {
+    const lines = [
+      'Hello myCHEF, I would like to request availability for:',
+      `Service: ${serviceLabel}`,
+      `Menu: ${selectedMenu?.label ?? ''}`,
+    ]
+    if (service !== 'rent') {
+      lines.push(`Guests: ${guests}`)
+      lines.push(`Price per person: ${formatIDR(pricePerUnit)}++`)
+    }
+    lines.push(`Subtotal: ${formatIDR(subtotal)}++`)
+    lines.push('Date:')
+    lines.push('Villa area:')
+    lines.push('Please confirm availability and the final quotation.')
+    return lines.join('\n')
+  }
+
+  const whatsappHref = `https://wa.me/6289674072020?text=${encodeURIComponent(buildWhatsAppMessage())}`
 
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-sm border border-black/5 max-w-[600px] mx-auto">
+    <div className="bg-white rounded-2xl p-8 shadow-sm border border-black/5 max-w-[640px] mx-auto">
       <h3 className="font-playfair text-2xl mb-6">Estimate Your Experience</h3>
-      
+
       <div className="space-y-6">
         <div>
-          <label className="block text-sm font-medium mb-2">Experience Type</label>
-          <div className="grid grid-cols-3 gap-3">
-            {[
-              { key: 'mediterranean', label: 'Mediterranean', price: 'IDR 2.2M++' },
-              { key: 'wagyu', label: 'Wagyu', price: 'IDR 2.4M++' },
-              { key: 'villa-chef', label: 'Villa Chef', price: 'IDR 2.5M++/day' },
-            ].map((opt) => (
+          <label className="block text-sm font-medium mb-2">1. Choose a Service</label>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {SERVICE_OPTIONS.map((opt) => (
               <button
-                key={opt.key}
-                onClick={() => setMenu(opt.key as 'mediterranean' | 'wagyu' | 'villa-chef')}
-                className={`p-3 rounded-xl border text-left transition-colors ${
-                  menu === opt.key
+                key={opt.id}
+                type="button"
+                onClick={() => setService(opt.id)}
+                className={`h-full p-4 rounded-xl border text-left transition-colors ${
+                  service === opt.id
                     ? 'border-[#C5A028] bg-[#C5A028]/10'
                     : 'border-black/10 hover:border-black/20'
                 }`}
               >
-                <div className="font-medium text-sm">{opt.label}</div>
-                <div className="text-xs text-[#4A4745]">{opt.price}</div>
+                <div className="font-playfair text-base mb-1">{opt.label}</div>
+                <p className="text-xs text-[#4A4745] leading-relaxed">{opt.description}</p>
               </button>
             ))}
           </div>
         </div>
 
-        <div>
-          <label className="block text-sm font-medium mb-2">
-            Number of Guests: <span className="text-[#C5A028]">{guests}</span>
-          </label>
-          <input
-            type="range"
-            min={menu === 'villa-chef' ? 2 : 4}
-            max={menu === 'villa-chef' ? 20 : 24}
-            value={guests}
-            onChange={(e) => setGuests(Number(e.target.value))}
-            className="w-full accent-[#C5A028]"
-          />
-        </div>
-
-        {menu === 'villa-chef' && (
-          <div>
-            <label className="block text-sm font-medium mb-2">
-              Number of Days: <span className="text-[#C5A028]">{days}</span>
-            </label>
-            <input
-              type="range"
-              min={1}
-              max={14}
-              value={days}
-              onChange={(e) => setDays(Number(e.target.value))}
-              className="w-full accent-[#C5A028]"
-            />
+        {service === 'family' && (
+          <div className="space-y-4">
+            <div>
+              <label htmlFor="family-menu" className="block text-sm font-medium mb-2">
+                Menu
+              </label>
+              <select
+                id="family-menu"
+                value={familyMenuId}
+                onChange={(e) => setFamilyMenuId(e.target.value)}
+                className={selectClasses}
+              >
+                {FAMILY_STYLE_MENUS.map((menu) => (
+                  <option key={menu.id} value={menu.id}>
+                    {menu.label} — {formatIDR(menu.price)} per person
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label htmlFor="family-guests" className="block text-sm font-medium mb-2">
+                Guests <span className="text-[#4A4745] font-normal">(minimum {MIN_GUESTS})</span>
+              </label>
+              <input
+                id="family-guests"
+                type="number"
+                inputMode="numeric"
+                min={MIN_GUESTS}
+                value={guests}
+                onChange={(e) => handleGuestsChange(e.target.value)}
+                className={selectClasses}
+              />
+            </div>
           </div>
         )}
 
-        {(menu === 'mediterranean' || menu === 'wagyu') && (
-          <div className="flex items-center gap-3">
-            <input
-              type="checkbox"
-              id="wine"
-              checked={wine}
-              onChange={(e) => setWine(e.target.checked)}
-              className="w-5 h-5 accent-[#C5A028]"
-            />
-            <label htmlFor="wine" className="text-sm">
-              Add Wine Pairing (+IDR 850,000 per guest)
-            </label>
+        {service === 'fine' && (
+          <div className="space-y-4">
+            <div>
+              <label htmlFor="fine-category" className="block text-sm font-medium mb-2">
+                Menu Family
+              </label>
+              <select
+                id="fine-category"
+                value={fineCategoryId}
+                onChange={(e) => handleFineCategoryChange(e.target.value)}
+                className={selectClasses}
+              >
+                {FINE_DINING_CATEGORIES.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label htmlFor="fine-menu" className="block text-sm font-medium mb-2">
+                Menu
+              </label>
+              <select
+                id="fine-menu"
+                value={fineMenuId}
+                onChange={(e) => setFineMenuId(e.target.value)}
+                className={selectClasses}
+              >
+                {fineCategory.menus.map((menu) => (
+                  <option key={menu.id} value={menu.id}>
+                    {menu.label} — {formatIDR(menu.price)} per person
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label htmlFor="fine-guests" className="block text-sm font-medium mb-2">
+                Guests <span className="text-[#4A4745] font-normal">(minimum {MIN_GUESTS})</span>
+              </label>
+              <input
+                id="fine-guests"
+                type="number"
+                inputMode="numeric"
+                min={MIN_GUESTS}
+                value={guests}
+                onChange={(e) => handleGuestsChange(e.target.value)}
+                className={selectClasses}
+              />
+            </div>
+          </div>
+        )}
+
+        {service === 'rent' && (
+          <div className="space-y-4">
+            <div>
+              <label htmlFor="rent-menu" className="block text-sm font-medium mb-2">
+                Daily Package
+              </label>
+              <select
+                id="rent-menu"
+                value={rentMenuId}
+                onChange={(e) => setRentMenuId(e.target.value)}
+                className={selectClasses}
+              >
+                {RENT_A_CHEF_MENUS.map((menu) => (
+                  <option key={menu.id} value={menu.id}>
+                    {menu.label} — {formatIDR(menu.price)} per day
+                  </option>
+                ))}
+              </select>
+            </div>
+            <p className="text-xs text-[#4A4745] leading-relaxed">
+              Groceries are not included. Ingredients are purchased at cost, and receipts are provided.
+            </p>
           </div>
         )}
 
         <div className="border-t border-black/10 pt-6">
-          <div className="flex justify-between text-xl font-semibold">
-            <span>Menu subtotal</span>
-            <span className="text-[#C5A028]">IDR {subtotal.toLocaleString()}++</span>
+          <h4 className="font-playfair text-lg mb-3">Estimated price</h4>
+          <div className="space-y-1.5 text-sm">
+            <div className="flex justify-between">
+              <span className="text-[#4A4745]">Service</span>
+              <span className="font-medium">{serviceLabel}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-[#4A4745]">Menu</span>
+              <span className="font-medium text-right">{selectedMenu?.label ?? '—'}</span>
+            </div>
+            {service !== 'rent' && (
+              <div className="flex justify-between">
+                <span className="text-[#4A4745]">Guests</span>
+                <span className="font-medium">{guests}</span>
+              </div>
+            )}
+            {service !== 'rent' && (
+              <div className="flex justify-between">
+                <span className="text-[#4A4745]">Price per person</span>
+                <span className="font-medium">{formatIDR(pricePerUnit)}++</span>
+              </div>
+            )}
           </div>
+
+          <div className="flex justify-between items-baseline text-xl font-semibold mt-4 pt-4 border-t border-black/10">
+            <span>Estimated price</span>
+            <span className="text-[#C5A028]">{formatIDR(subtotal)}++</span>
+          </div>
+
           <p className="text-xs text-[#4A4745] mt-2 leading-relaxed">
-            <span className="font-medium text-[#1A1A1A]">Before tax and service.</span>{' '}
-            11% government tax and 10% service charge are added to this subtotal on your final quote.
+            ++ means 10% service charge and 11% government tax are added.
           </p>
-          <p className="text-xs text-[#4A4745] mt-2">
-            * This is an estimate. Final pricing depends on menu customization,
-            location, and specific requirements. Contact us for a precise quote.
+          <p className="text-xs text-[#4A4745] mt-1 leading-relaxed">
+            {service === 'rent'
+              ? 'Rent a Chef is priced as a fixed daily rate — groceries are billed separately at cost.'
+              : `Minimum booking: ${MIN_GUESTS} guests.`}
           </p>
-          <div className="mt-4">
-            <PriceDisclaimer />
-          </div>
+          <p className="text-xs text-[#4A4745] mt-2 italic leading-relaxed">
+            This is an estimated price, not a confirmed quotation. Final pricing is confirmed by our team.
+          </p>
         </div>
 
         <a
-          href={`https://wa.me/6289674072020?text=${encodeURIComponent(
-            `Hi myCHEF, I used your calculator and got a menu subtotal of IDR ${subtotal.toLocaleString()}++ for ${guests} guests (${menu}). Can you confirm the final quote?`
-          )}`}
+          href={whatsappHref}
           target="_blank"
-          rel="noopener noreferrer" data-source="calculator-cta" className="flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors w-full focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
+          rel="noopener noreferrer"
+          data-source="calculator-cta"
+          className="flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors w-full focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
         >
           <MessageCircle className="w-4 h-4" />
-          Confirm via WhatsApp
+          Request via WhatsApp
         </a>
       </div>
     </div>

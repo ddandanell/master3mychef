@@ -106,7 +106,7 @@ export function ContactRiskReversal({ dark = false, className = '' }: { dark?: b
       dark={dark}
       className={className}
       items={[
-        { icon: Wallet, label: 'No hidden fees', desc: 'The price you see is the price you pay' },
+        { icon: Wallet, label: 'No hidden fees', desc: 'Tax and service stated upfront — nothing added after you book' },
         { icon: MessageCircle, label: 'WhatsApp response within 1 hour', desc: 'During business hours' },
       ]}
     />

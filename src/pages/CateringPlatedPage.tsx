@@ -276,7 +276,7 @@ export default function CateringPlatedPage() {
               <Utensils className="w-4 h-4" /> View Sample Menus
             </a>
           </div>
-          <p className="text-white/[60%] text-sm">From IDR 800,000++/person · Minimum 5 guests · Best for 10–60</p>
+          <p className="text-white/[60%] text-sm">From IDR 800,000++/person · Min. spend IDR 5,000,000 · 10–60 guests</p>
         </div>
       </section>
 

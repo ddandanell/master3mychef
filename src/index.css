@@ -356,3 +356,107 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* ------------------------------------------------------------------
+   Article content typography
+   ------------------------------------------------------------------
+   ArticleContentSection injects raw HTML (from data/content/articleContent.ts)
+   and previously styled it with Tailwind `prose-*` classes. Those classes are
+   inert because @tailwindcss/typography is not installed in this project, so
+   the content rendered with browser defaults — unstyled walls of text across
+   ~70 pages. These rules replace the plugin with explicit styling that matches
+   the site's own tokens, with no extra build dependency.
+------------------------------------------------------------------- */
+.article-prose {
+  color: #4A4745;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.article-prose > * + * { margin-top: 1.25em; }
+
+.article-prose h1,
+.article-prose h2,
+.article-prose h3,
+.article-prose h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #1A1A1A;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 7rem;
+}
+.article-prose h2 {
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  margin-top: 2.75em;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #E8E6E3;
+}
+.article-prose h3 {
+  font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem);
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.article-prose h4 { font-size: 1.125rem; margin-top: 1.75em; margin-bottom: 0.4em; }
+.article-prose h2:first-child,
+.article-prose h3:first-child { margin-top: 0; }
+
+.article-prose p { margin-bottom: 1.25em; }
+.article-prose strong { color: #1A1A1A; font-weight: 600; }
+
+.article-prose a {
+  color: #7E6410;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(126, 100, 16, 0.35);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.article-prose a:hover { color: #C5A028; border-bottom-color: #C5A028; }
+
+.article-prose ul,
+.article-prose ol { padding-left: 1.35em; margin-bottom: 1.25em; }
+.article-prose ul { list-style: disc; }
+.article-prose ol { list-style: decimal; }
+.article-prose li { margin-bottom: 0.55em; padding-left: 0.25em; }
+.article-prose li::marker { color: #C5A028; }
+
+.article-prose blockquote {
+  margin: 2em 0;
+  padding: 1.25rem 1.5rem;
+  background: #FAFAF8;
+  border-left: 3px solid #C5A028;
+  border-radius: 0 1rem 1rem 0;
+  font-style: normal;
+  color: #4A4745;
+}
+.article-prose blockquote p:last-child { margin-bottom: 0; }
+
+.article-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 0.95rem;
+  display: block;
+  overflow-x: auto;
+}
+.article-prose th,
+.article-prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #E8E6E3; text-align: left; }
+.article-prose th { background: #FAFAF8; color: #1A1A1A; font-weight: 600; white-space: nowrap; }
+
+.article-prose img { border-radius: 1rem; margin: 2em 0; }
+.article-prose hr { margin: 3em 0; border: 0; border-top: 1px solid #E8E6E3; }
+
+/* Inverted variant, for the dark sections */
+.article-prose-invert { color: rgba(245, 242, 235, 0.82); }
+.article-prose-invert h1,
+.article-prose-invert h2,
+.article-prose-invert h3,
+.article-prose-invert h4 { color: #F5F2EB; }
+.article-prose-invert h2 { border-bottom-color: rgba(245, 242, 235, 0.16); }
+.article-prose-invert strong { color: #F5F2EB; }
+.article-prose-invert a { color: #C5A028; border-bottom-color: rgba(197, 160, 40, 0.4); }
+.article-prose-invert a:hover { color: #E0C060; border-bottom-color: #E0C060; }
+.article-prose-invert blockquote { background: rgba(26, 26, 26, 0.6); color: rgba(245, 242, 235, 0.82); }
+.article-prose-invert th { background: rgba(245, 242, 235, 0.06); color: #F5F2EB; }
+.article-prose-invert th,
+.article-prose-invert td { border-bottom-color: rgba(245, 242, 235, 0.14); }
+.article-prose-invert hr { border-top-color: rgba(245, 242, 235, 0.14); }

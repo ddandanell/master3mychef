@@ -2190,9 +2190,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/pricing',
     title: 'Private Chef Bali Prices | Catering & Event Pricing | myCHEF',
     description:
-      'Transparent myCHEF pricing: private chef rates, menu prices, catering & event packages in Bali. No hidden fees. Get a quote in 1 hour.',
+      'myCHEF price list for Bali: private chef rates, catering per-person pricing and event packages. Every figure listed, tax and service stated. Quote in 1 hour.',
     canonical: `${SITE}/pricing`,
-    h1: 'Transparent Pricing for Every Experience',
+    h1: 'Private Chef & Catering Prices in Bali',
     ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,
   },
 

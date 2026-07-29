@@ -8,7 +8,7 @@ export const VEGETARIAN_MENUS: Menu[] = [
     theme: 'Mediterranean',
     tier: 'A',
     priceIdr: 1350000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'A sun-drenched Mediterranean feast of olive oil, herbs and flame-kissed vegetables — colourful sharing platters straight from a Greek island taverna.',
@@ -98,7 +98,7 @@ export const VEGETARIAN_MENUS: Menu[] = [
     theme: 'Indonesian',
     tier: 'A',
     priceIdr: 1250000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       "A vibrant celebration of Indonesia's meat-free classics — fragrant rendang, sizzling sambals and golden fritters from the spice islands.",
@@ -187,7 +187,7 @@ export const VEGETARIAN_MENUS: Menu[] = [
     theme: 'Italian',
     tier: 'B',
     priceIdr: 2100000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'A rustic Italian feast of handmade pasta, aged cheeses and slow-simmered sauces, served on oversized platters in the spirit of a Sunday lunch.',
@@ -278,7 +278,7 @@ export const VEGETARIAN_MENUS: Menu[] = [
     theme: 'French',
     tier: 'B',
     priceIdr: 2250000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'An elegant French farmhouse feast of golden gratins, herb-laden tarts and a dramatic cheese course — rustic yet refined provincial cooking.',
@@ -368,7 +368,7 @@ export const VEGETARIAN_MENUS: Menu[] = [
     theme: 'Japanese Fusion',
     tier: 'C',
     priceIdr: 3400000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Japanese precision meets Balinese ingredients — handmade gyoza, yuzu kosho and truffle-miso king oyster mushroom with clean, architectural presentation.',
@@ -459,7 +459,7 @@ export const VEGETARIAN_MENUS: Menu[] = [
     theme: 'Healthy Breakfasts',
     tier: 'C',
     priceIdr: 2950000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'A luxurious poolside brunch for health-conscious guests — vibrant breakfast boards, cloud-like ricotta hotcakes and golden turmeric nasi goreng.',

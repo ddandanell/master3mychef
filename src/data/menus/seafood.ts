@@ -14,7 +14,7 @@ export const SEAFOOD_MENUS: Menu[] = [
     theme: 'Mediterranean',
     tier: 'A',
     priceIdr: 1350000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Charcoal-grilled whole snapper with lemon, capers and herbs, plump prawn skewers and honey baklava — the Mediterranean on a shared platter.',
@@ -102,7 +102,7 @@ export const SEAFOOD_MENUS: Menu[] = [
     theme: 'Indonesian',
     tier: 'A',
     priceIdr: 1350000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Jimbaran-market seafood grilled Balinese style — sate lilit, a hero snapper and king prawn platter with sambal matah, and pisang goreng to finish.',
@@ -191,7 +191,7 @@ export const SEAFOOD_MENUS: Menu[] = [
     theme: 'Italian',
     tier: 'B',
     priceIdr: 2300000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Lobster grilled with garlic butter, silky risotto ai frutti di mare and tiramisu al limoncello — la dolce vita, served family-style.',
@@ -278,7 +278,7 @@ export const SEAFOOD_MENUS: Menu[] = [
     theme: 'French',
     tier: 'B',
     priceIdr: 2300000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'A fruits de mer tower, saffron bouillabaisse and lobster Thermidor with truffle butter, finished with classic vanilla crème brûlée.',
@@ -365,7 +365,7 @@ export const SEAFOOD_MENUS: Menu[] = [
     theme: 'Japanese Fusion',
     tier: 'C',
     priceIdr: 3200000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Sashimi sliced to order, miso-glazed black cod and a teppanyaki tower of lobster, prawns and scallops, with matcha lava cake to finish.',
@@ -453,7 +453,7 @@ export const SEAFOOD_MENUS: Menu[] = [
     theme: 'Surf & Turf (Seafood Focus)',
     tier: 'C',
     priceIdr: 3600000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'A grand seafood tower, caviar-topped scallops and charcoal lobster with wagyu striploin — the ultimate surf and turf centrepiece.',

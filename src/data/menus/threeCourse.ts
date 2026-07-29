@@ -12,7 +12,7 @@ export const THREE_COURSE_MENUS: Menu[] = [
     theme: 'Indonesian',
     tier: 'A',
     priceIdr: 850000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       "Bali's favourite gado-gado, charcoal-grilled chicken satay with nasi goreng and coconut palm-sugar crepes.",
@@ -64,7 +64,7 @@ export const THREE_COURSE_MENUS: Menu[] = [
     theme: 'Mediterranean',
     tier: 'A',
     priceIdr: 895000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Charred halloumi salad, herb-crusted free-range chicken and a zesty lemon tart — a sun-drenched Mediterranean trio.',
@@ -116,7 +116,7 @@ export const THREE_COURSE_MENUS: Menu[] = [
     theme: 'Seafood',
     tier: 'B',
     priceIdr: 1250000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Chilled snapper ceviche, whole chargrilled Jimbaran snapper with sambal matah and silky coconut panna cotta.',
@@ -168,7 +168,7 @@ export const THREE_COURSE_MENUS: Menu[] = [
     theme: 'Italian',
     tier: 'B',
     priceIdr: 1300000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Creamy burrata caprese, slow-braised Angus short rib in red wine and a classic espresso tiramisu — la dolce vita, villa-style.',
@@ -220,7 +220,7 @@ export const THREE_COURSE_MENUS: Menu[] = [
     theme: 'Western',
     tier: 'B',
     priceIdr: 1350000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Crisp Caesar salad, grain-fed Angus sirloin grilled to order and a warm chocolate fondant with vanilla ice cream.',
@@ -272,7 +272,7 @@ export const THREE_COURSE_MENUS: Menu[] = [
     theme: 'BBQ',
     tier: 'C',
     priceIdr: 1600000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Smoky BBQ prawn skewers, low-and-slow smoked pork ribs and caramelised grilled pineapple with vanilla ice cream.',
@@ -324,7 +324,7 @@ export const THREE_COURSE_MENUS: Menu[] = [
     theme: 'French',
     tier: 'C',
     priceIdr: 1650000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Caramelised French onion soup with melted gruyere, crispy duck leg confit and vanilla bean creme brulee — classic comfort.',
@@ -376,7 +376,7 @@ export const THREE_COURSE_MENUS: Menu[] = [
     theme: 'Japanese',
     tier: 'C',
     priceIdr: 1750000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Dashi miso soup and edamame, caramelised teriyaki salmon and a light matcha cheesecake — elegant simplicity throughout.',

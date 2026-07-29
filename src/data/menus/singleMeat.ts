@@ -14,7 +14,7 @@ export const SINGLE_MEAT_MENUS: Menu[] = [
     theme: 'French',
     tier: 'A',
     priceIdr: 1450000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'A love letter to French bistro cooking: duck rillettes, crystal consommé and golden confit leg with cherry gastrique, finished with crème brûlée.',
@@ -103,7 +103,7 @@ export const SINGLE_MEAT_MENUS: Menu[] = [
     theme: 'Healthy Breakfasts',
     tier: 'A',
     priceIdr: 1400000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'A lighter, brighter table: smoked chicken and avocado salad, herb-roasted free-range chicken carved at the table, and Greek yoghurt panna cotta.',
@@ -192,7 +192,7 @@ export const SINGLE_MEAT_MENUS: Menu[] = [
     theme: 'Japanese Fusion',
     tier: 'B',
     priceIdr: 2100000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Beef tataki, miso soup with gyoza and 24-hour miso-marinated Angus sirloin from the grill — Japanese finesse, finished with matcha crème brûlée.',
@@ -282,7 +282,7 @@ export const SINGLE_MEAT_MENUS: Menu[] = [
     theme: 'Western Classics',
     tier: 'B',
     priceIdr: 1950000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Pure indulgence: crispy pork belly bites, prosciutto-wrapped tenderloin with truffle jus, and a warm chocolate fondant to finish.',
@@ -371,7 +371,7 @@ export const SINGLE_MEAT_MENUS: Menu[] = [
     theme: 'BBQ Evenings',
     tier: 'C',
     priceIdr: 3000000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Herb-crusted Australian lamb rack carved tableside, black garlic and truffle throughout, ending with a dark chocolate sphere melted before your eyes.',
@@ -460,7 +460,7 @@ export const SINGLE_MEAT_MENUS: Menu[] = [
     theme: 'Indonesian',
     tier: 'C',
     priceIdr: 3200000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'Wagyu satay with sambal matah, rendang spring rolls and bumbu Bali ribeye on banana leaf — Indonesian flavours at their most luxurious.',

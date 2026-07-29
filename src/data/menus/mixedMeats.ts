@@ -16,7 +16,7 @@ export const MIXED_MEATS_MENUS: Menu[] = [
     theme: 'Mediterranean',
     tier: 'A',
     priceIdr: 1350000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'A sun-drenched sharing feast — chargrilled chicken, lamb kofta and garlic prawns with bright herbs, citrus and warm flatbread.',
@@ -116,7 +116,7 @@ export const MIXED_MEATS_MENUS: Menu[] = [
     theme: 'BBQ Evenings',
     tier: 'A',
     priceIdr: 1250000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       "The ultimate Bali sunset BBQ — sticky pork ribs, charred wings and smoky beans by the pool, with a s'mores skillet to finish.",
@@ -214,7 +214,7 @@ export const MIXED_MEATS_MENUS: Menu[] = [
     theme: 'Western Classics',
     tier: 'B',
     priceIdr: 2050000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'A refined mixed grill — Angus sirloin, herb-crusted lamb cutlets and truffle mash. London steakhouse meets Bali sunset.',
@@ -315,7 +315,7 @@ export const MIXED_MEATS_MENUS: Menu[] = [
     theme: 'Indonesian',
     tier: 'B',
     priceIdr: 1950000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       "A love letter to Indonesia's greatest meat dishes — babi guling-style pork belly, beef rendang and sate lilit with sambal matah.",
@@ -416,7 +416,7 @@ export const MIXED_MEATS_MENUS: Menu[] = [
     theme: 'Italian',
     tier: 'C',
     priceIdr: 3000000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'La grande grigliata — Wagyu bistecca, porchetta and herb-crusted lamb rack, fire-kissed with truffle and rosemary.',
@@ -515,7 +515,7 @@ export const MIXED_MEATS_MENUS: Menu[] = [
     theme: 'Surf & Turf',
     tier: 'C',
     priceIdr: 3100000,
-    minGuests: 6,
+    minGuests: 5,
     guestNoun: 'guest',
     description:
       'The pinnacle of surf and turf — Wagyu, whole grilled lobster and lamb cutlets, with truffle fries and a molten chocolate fondant.',

@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Calendar, Check, ChevronLeft, ChevronRight, Clock3, MessageCircle, Utensils } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema, serviceSchema, serviceWithAggregateOfferSchema, serviceWithOfferSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema, providerRef, serviceSchema, serviceWithAggregateOfferSchema, serviceWithOfferSchema } from './SeoHead'
 import { siteFacts } from '@/data/siteFacts'
 import { BLOG_POSTS, GUIDES, LANDING_PAGES } from '@/data/sitemap'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
@@ -162,12 +162,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         lowPrice: '700000',
         highPrice: '3000000',
       })
-      schema.provider = {
-        '@type': 'LocalBusiness',
-        name: 'myCHEF',
-        url: SITE,
-        telephone: '+62 896-7407-2020',
-      }
+      schema.provider = providerRef
       schema.areaServed = [
         { '@type': 'Place', name: 'Bali, Indonesia' },
       ]
@@ -182,13 +177,10 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         highPrice: '7000000',
         unitText: 'per couple ++ (11% government tax + 10% service charge); add-ons itemised',
       })
-      schema.provider = {
-        '@type': 'LocalBusiness',
-        name: 'myCHEF',
-        url: SITE,
-        telephone: '+62 896-7407-2020',
-        areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-      }
+      schema.provider = providerRef
+      schema.areaServed = [
+        { '@type': 'Place', name: 'Bali, Indonesia' },
+      ]
       return schema
     }
     if (entry.slug === 'honeymoon-chef') {

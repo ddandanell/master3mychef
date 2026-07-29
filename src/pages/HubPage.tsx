@@ -118,6 +118,25 @@ const JOURNAL_LINKS = [
     title: 'Holiday Chef Bali: Christmas, New Year & Festive Season Dining',
     path: '/blog/holiday-chef-bali',
   },
+  // The four below were each sitting on a single inbound internal link (flagged by
+  // Semrush as "pages with only one internal link"). Linking them from the homepage —
+  // the highest-authority page on the site — gives them a real second entry point.
+  {
+    title: 'Wedding Private Chef in Bali: Planning & Logistics Guide',
+    path: '/blog/wedding-private-chef-bali-planning-guide',
+  },
+  {
+    title: 'Corporate Events & Team Dining in Bali: Private Chef',
+    path: '/blog/corporate-events-catering-bali-team-dining',
+  },
+  {
+    title: 'Fine Dining Trends in Bali 2026: Modern Innovations',
+    path: '/blog/fine-dining-trends-bali-2026-innovations',
+  },
+  {
+    title: 'Chef Qualifications & Credentials: Hiring Guide for Bali',
+    path: '/blog/chef-qualifications-credentials-bali-hiring',
+  },
 ]
 
 const REVIEWS = [
@@ -403,7 +422,12 @@ export default function HubPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {PORTALS.map((portal, idx) => (
               <div key={portal.id} className="portal-card group relative w-full overflow-hidden rounded-2xl min-h-[420px] sm:min-h-[480px]" style={{ aspectRatio: '3/4' }}>
-                <Link to={portal.path} className="absolute inset-0 z-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" aria-label={portal.title} />
+                {/* Anchor text lives in an sr-only span rather than aria-label: it gives
+                    crawlers real anchor text (Semrush flagged these 3 as "links with no
+                    anchor text") while still naming the link for screen readers. */}
+                <Link to={portal.path} className="absolute inset-0 z-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
+                  <span className="sr-only">{portal.title} in Bali</span>
+                </Link>
                 <img
                   src={portal.image}
                   alt={portal.imageAlt}
@@ -1322,7 +1346,7 @@ export default function HubPage() {
               Visit the Journal <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {JOURNAL_LINKS.map((article) => (
               <Link
                 key={article.path}

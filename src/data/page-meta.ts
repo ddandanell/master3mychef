@@ -939,7 +939,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'blog-wedding-private-chef-bali-planning-guide': {
     path: '/blog/wedding-private-chef-bali-planning-guide',
-    title: 'Wedding Private Chef in Bali: Planning & Logistics Guide',
+    // Title and h1 are deliberately different — they were byte-identical, which
+    // Semrush flags as "duplicate content in h1 and title" and wastes the title tag.
+    // Kept byte-identical to seoTitle in WeddingPrivateChefPage.tsx so the prerendered
+    // title and the client-hydrated title agree.
+    title: 'Wedding Private Chef Bali | Villa Catering Planning Guide',
     description:
       'How to plan catering for a Bali villa wedding with a private chef — menu planning, logistics and cost expectations.',
     canonical: `${SITE}/blog/wedding-private-chef-bali-planning-guide`,

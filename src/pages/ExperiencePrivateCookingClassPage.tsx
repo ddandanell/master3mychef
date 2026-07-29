@@ -1,5 +1,5 @@
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, faqPageSchema, providerRef } from '@/components/SeoHead'
 import { GraduationCap, Home, Users, UtensilsCrossed, ChefHat, ShoppingBasket } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
@@ -200,13 +200,8 @@ export default function ExperiencePrivateCookingClassPage() {
           '@type': 'Service',
           name: 'Private Cooking Class Bali',
           description: 'A private cooking class at your Bali villa: five hands-on class formats from Balinese heritage to plant-based, led by a professional chef in your kitchen. From IDR 700K per person ++, 2–12 guests, ingredients, meal and recipes included. Optional sunrise market trip IDR 250K per person.',
-          provider: {
-            '@type': 'LocalBusiness',
-            name: 'myCHEF',
-            url: 'https://mychef.id',
-            telephone: '+62 896-7407-2020',
-            areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-          },
+          provider: providerRef,
+          areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
           serviceType: 'Private in-villa cooking class',
           image: 'https://mychef.id/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp',
           offers: {

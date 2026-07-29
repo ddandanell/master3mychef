@@ -1,5 +1,5 @@
 import PremiumPage from '@/components/PremiumPage'
-import { breadcrumbSchema } from '@/components/SeoHead'
+import { breadcrumbSchema, providerRef } from '@/components/SeoHead'
 import { ChefHat, Sparkles, PartyPopper, Music, Waves, Baby, Star } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
@@ -308,13 +308,8 @@ export default function ExperienceKidsBirthdayChefPartyPage() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'Kids Birthday Party Planning Bali',
-          provider: {
-            '@type': 'LocalBusiness',
-            name: 'myCHEF',
-            url: 'https://mychef.id',
-            telephone: '+62 896-7407-2020',
-            areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-          },
+          provider: providerRef,
+          areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
           serviceType: 'Kids birthday party planning, catering and entertainment',
           description: 'Complete kids birthday parties in Bali: villa catering, interactive chef parties, themed decoration, entertainment, foam parties, bouncy castles, adult menus, champagne and cocktail service, full event coordination and cleanup.',
           url: CANONICAL,

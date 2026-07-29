@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, Calendar, Wine, Camera, Music, CandlestickChart, Flower2, Signpost } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { providerRef } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -87,13 +87,8 @@ const ANNIVERSARY_SCHEMA = {
     {
       '@type': 'Service',
       name: 'Anniversary Dinner Bali',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'myCHEF',
-        url: SITE,
-        telephone: '+62 896-7407-2020',
-        areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-      },
+      provider: providerRef,
+      areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
       serviceType: 'Anniversary dinner catering',
       description: 'Private chef anniversary dinners and vow renewals at Bali villas: styled tables, custom menus, photography and surprise coordination, from IDR 1.2M++/person.',
       offers: {

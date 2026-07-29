@@ -363,7 +363,10 @@ function injectMeta(html: string, path: string, title: string, description: stri
   }
 
   // Robots — noindex for thin-content pages and 404
-  const noindexNoFollowPaths = ['/404', '/book', '/calculator', '/join-our-team']
+  // NOTE: /join-our-team was removed from this list — it is a real careers landing
+  // page, it ships in sitemap.xml, and noindex,nofollow both hid it from search and
+  // dumped the link equity of its 104 outgoing internal links.
+  const noindexNoFollowPaths = ['/404', '/book', '/calculator']
   const noindexFollowPaths = ['/quote']
   if (noindexNoFollowPaths.includes(path)) {
     html = html.replace(
@@ -405,10 +408,12 @@ function injectMeta(html: string, path: string, title: string, description: stri
     `<meta property="og:site_name" content="myCHEF" />`
   )
 
-  // Hreflang for international SEO
+  // Hreflang for international SEO.
+  // NOTE: do not add 'id' here. The site is English-only (<html lang="en">), so an
+  // `id` alternate pointing at the same English URL is a language mismatch —
+  // it was failing on 94/94 pages in Semrush. Only re-add when a real /id/ locale ships.
   const hrefLangTags = [
     `<link rel="alternate" hreflang="en" href="${canonical}" />`,
-    `<link rel="alternate" hreflang="id" href="${canonical}" />`,
     `<link rel="alternate" hreflang="x-default" href="${canonical}" />`,
   ].join('\n  ')
   html = html.replace('</head>', `${hrefLangTags}\n  </head>`)

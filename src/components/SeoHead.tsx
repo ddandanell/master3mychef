@@ -662,9 +662,12 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
       setMeta(`meta[property="og:url"]`, 'property', 'og:url', canonical)
       setMeta(`meta[name="twitter:url"]`, 'name', 'twitter:url', canonical)
 
-      // Inject per-page hreflang tags (x-default + en + id)
+      // Inject per-page hreflang tags (en + x-default).
+      // NOTE: do not add 'id' here. The site is English-only; an `id` alternate
+      // pointing at the same English URL is a language mismatch and was failing
+      // on 94/94 pages in Semrush. Only re-add when a real /id/ locale ships.
       document.head.querySelectorAll('link[data-seohead="hreflang"]').forEach((el) => el.remove())
-      for (const lang of ['en', 'id', 'x-default']) {
+      for (const lang of ['en', 'x-default']) {
         const hreflangLink = document.createElement('link')
         hreflangLink.setAttribute('rel', 'alternate')
         hreflangLink.setAttribute('hreflang', lang)

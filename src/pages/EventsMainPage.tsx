@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { MessageCircle, Calendar, Users, MapPin, ChevronRight, Heart, Cake, Wine, Briefcase, Leaf, Baby, Sparkles, Music, Globe2, ClipboardCheck, ArrowRight, Check } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, providerRef } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -374,13 +374,8 @@ export default function EventsMainPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             name: 'Event Catering Bali',
-            provider: {
-              '@type': 'LocalBusiness',
-              name: 'myCHEF',
-              url: 'https://mychef.id',
-              telephone: '+62 896-7407-2020',
-              areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-            },
+            provider: providerRef,
+            areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
             serviceType: 'Event catering',
             description:
               'Full-service event catering for Bali villa weddings, birthdays, anniversaries, corporate retreats and villa parties — chefs, service staff, bar and coordination from one team.',

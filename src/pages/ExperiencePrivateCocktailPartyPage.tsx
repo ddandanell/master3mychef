@@ -202,7 +202,7 @@ const SECTIONS: PageSection[] = [
     type: 'cta' as const,
     subtitle: 'Plan Your Party',
     title: 'Ready to Host Your Bali Cocktail Party?',
-    body: `Tell us your date, villa and guest count — we will reply within the hour with a tailored cocktail party plan and an itemised quote stating the full total including tax and service. Just need a bartender? <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">hire a private bartender only</a>. Planning something bigger? See <a href="/events/villa-parties" class="text-[#7E6410] hover:underline font-medium">full villa party catering</a>. Want cocktail skills? Ask about <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">custom cocktail menu design</a>. Add an afternoon activity with <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">add a cooking class to the afternoon</a>. Venues can see <a href="/bar-services" class="text-[#7E6410] hover:underline font-medium">bar consulting for venues — B2B</a>.`,
+    body: `Tell us your date, villa and guest count — we will reply within the hour with a tailored cocktail party plan and an itemised quote stating the full total including tax and service. Just need a bartender? <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">hire a private bartender only</a>. Planning something bigger? See <a href="/events/villa-parties" class="text-[#7E6410] hover:underline font-medium">full villa party catering</a>. Want cocktail skills? Ask about <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">custom cocktail menu design</a>. Add an afternoon activity with <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">add a cooking class to the afternoon</a>. Venues can see <a href="/bar-services/" class="text-[#7E6410] hover:underline font-medium">bar consulting for venues — B2B</a>.`,
     primaryAction: {
       label: 'Plan My Cocktail Party',
       href: WA_LINK,
@@ -226,7 +226,7 @@ const RELATED_PAGES = [
   { label: 'Private Bartender Hire', href: '/in-villa-service/bartenders', desc: 'Hire a private bartender only for your villa event.' },
   { label: 'Custom Cocktail Menu Design', href: '/in-villa-service/mixology', desc: 'Tailored cocktail menus for villa parties and events.' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full villa party catering for celebrations of any size.' },
-  { label: 'Bar Services', href: '/bar-services', desc: 'Bar consulting and management for venues.' },
+  { label: 'Bar Services', href: '/bar-services/', desc: 'Bar consulting and management for venues.' },
 ]
 
 export default function ExperiencePrivateCocktailPartyPage() {

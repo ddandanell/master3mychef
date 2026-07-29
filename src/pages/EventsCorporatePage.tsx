@@ -502,7 +502,7 @@ export default function EventsCorporatePage() {
             <Link to="/corporate-retreat-catering-bali" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">multi-day corporate retreat catering</Link>,{' '}
             <Link to="/corporate-case-studies" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">corporate event case studies</Link>,{' '}
             <Link to="/in-villa-service" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">event staff, waiters and bartenders</Link>, and{' '}
-            <Link to="/bar-services" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">bar programs for corporate events</Link>.
+            <Link to="/bar-services/" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">bar programs for corporate events</Link>.
           </p>
         </div>
       </section>

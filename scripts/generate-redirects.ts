@@ -75,9 +75,18 @@ const vercelConfig = {
       ],
     },
     {
+      // noindex,FOLLOW — not nofollow. /calculator carries the normal site nav, so nofollow
+      // blocked PageRank flow for no benefit; fe16f93d ("close /calculator robots conflict")
+      // moved it to noindex,follow, matching /quote above and the reasoning applied to
+      // /join-our-team. Only /404 deliberately keeps nofollow.
+      //
+      // That commit edited the generated vercel.json by hand and left this line untouched, so
+      // every `prebuild` regenerated vercel.json and reverted the fix — the same failure mode as
+      // D-020. Keep this value in step with `noindexFollowPaths` in scripts/inject-meta.ts and
+      // src/components/SeoHead.tsx. Edit here, never in vercel.json.
       source: '/calculator',
       headers: [
-        { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+        { key: 'X-Robots-Tag', value: 'noindex,follow' },
       ],
     },
   ],

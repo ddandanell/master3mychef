@@ -62,7 +62,7 @@ The folder flagged NAP unification as its one blocking local-SEO item. It is sti
 
 **Business name — 4 variants across ~240 schema blocks:** `myCHEF.id` ×136 · `myCHEF` ×53 · `myCHEF Bali` ×51 · `myCHEF Indonesia` (legal entity, `PrivacyPage.tsx:10`). `siteArchitecture.ts:24` says `myCHEF`; `SeoHead` says `myCHEF.id`.
 
-**Phone — number is 100% correct** (all 415 occurrences resolve to +62 896 740 72020, 363 `wa.me` links, zero variants). Two cosmetic issues only: `PrivateChefAreaPage.tsx:151` emits schema `telephone: '+6289674072020'` where every other block uses `'+62 896-7407-2020'`; and `siteArchitecture.ts:19` defines an unused third format.
+**Phone — number is 100% correct** (all 415 occurrences resolve to +62 896-7407-2020, 363 `wa.me` links, zero variants). Two cosmetic issues only: `PrivateChefAreaPage.tsx:151` emits schema `telephone: '+6289674072020'` where every other block uses `'+62 896-7407-2020'`; and `siteArchitecture.ts:19` defines an unused third format.
 
 **Email — clean.** `bali@mychef.id` everywhere.
 

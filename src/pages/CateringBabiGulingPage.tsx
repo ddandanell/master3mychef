@@ -106,7 +106,6 @@ const AREA_CLUSTERS = [
 const AREA_VARIABLES = [
   { title: 'Can the pig be roasted on site?', desc: 'Depends on whether your villa permits open flame and whether there is a garden, terrace or open area for the setup. Where it is not permitted, we roast at our facility and finish and carve at your event.' },
   { title: 'Travel cost', desc: 'Delivery and setup are included across the coverage areas above. Out-of-area events are quoted individually, with travel running IDR 250,000–700,000 depending on distance, timing and event size — always quoted upfront.' },
-  { title: 'Banjar function fee', desc: 'Some villages levy a function fee on private events. It is not ours and we do not mark it up, but we flag it upfront so it never appears as a surprise on the day.' },
   { title: 'Access and unloading', desc: 'A whole roast, serving equipment and staff all have to reach the property. We check vehicle access and the unloading point when we quote, not when we arrive.' },
 ]
 
@@ -127,7 +126,7 @@ const FAQS = [
   { q: "How much is babi guling for 50 guests?", a: "Fifty guests fall in the 31–50 tier at IDR 550,000 per person — approximately IDR 27,500,000 before ++. At this size we typically staff one chef and five assistants, and a carving station works better than a single whole-pig display." },
   { q: "What is the minimum group size for babi guling?", a: "Six guests, with a minimum total of IDR 3,900,000. The format is at its best between 15 and 50 guests, but a smaller feast is absolutely possible — the per-person rate is simply higher." },
   { q: "What is the largest group you can cater babi guling for?", a: "We quote babi guling for groups well beyond 100 guests, including multi-pig setups for large celebrations. Above 100 guests pricing moves to a custom quote with a dedicated brigade plan, because roasting time, carving stations and service staffing all have to be scaled together." },
-  { q: "Is travel or delivery included in the price?", a: "Delivery and serving setup are included across our standard coverage area in South Bali and Ubud. Out-of-area travel runs IDR 250,000–700,000 depending on the area, timing and event size, and is always quoted upfront rather than added later. If your villa's banjar charges a function fee, we flag that upfront too." },
+  { q: "Is travel or delivery included in the price?", a: "Delivery and serving setup are included across our standard coverage area in South Bali and Ubud. Out-of-area travel runs IDR 250,000–700,000 depending on the area, timing and event size, and is always quoted upfront rather than added later." },
   { q: "Do you provide serving staff?", a: "Yes. Staffing scales with the group — roughly one chef per 50 guests and one assistant per 10 guests. Staff handle carving, the buffet or serving station, and cleanup. You can also add a bartender with a 3-hour open bar at IDR 4,000,000 flat." },
 
   // ── What it is ──
@@ -369,7 +368,7 @@ export default function CateringBabiGulingPage() {
               { title: '6–15 guests · IDR 650,000 per person', desc: 'A small feast, and the tier where per-person cost is highest. Usually a whole-pig display and a relaxed family-style spread. Minimum booking is 6 guests / IDR 3,900,000 total.' },
               { title: '16–30 guests · IDR 600,000 per person', desc: 'The most common villa-party size. A carving station starts to make sense here, and one chef with two to three assistants keeps service moving.' },
               { title: '31–50 guests · IDR 550,000 per person', desc: 'Big-celebration territory. A staffed carving station and a buffet line run in parallel so guests are not queuing at a single point.' },
-              { title: '51–100 guests · IDR 525,000 per person', desc: 'The lowest per-person rate. Roasting, carving and serving all need to be scaled together, so we plan the brigade around your timings.' },
+              { title: '51–100 guests · IDR 525,000 per person', desc: 'The lowest per-person rate. Roasting, carving and serving all need to be scaled together, so we plan the brigade around your timings. At this size — or for anything with amplified music — some villages levy a function fee on private events. It is not ours and we never mark it up; we simply tell you if it applies.' },
               { title: '100+ guests · Custom quote', desc: 'Multi-pig setups with a dedicated brigade plan. We quote these individually because roast timing, carving stations and staffing all move together at this scale.' },
             ].map((tier) => (
               <div key={tier.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5">
@@ -609,7 +608,7 @@ export default function CateringBabiGulingPage() {
               { title: 'Space', desc: 'A garden, terrace, or open villa area for the roasting setup; we assess your layout when quoting.' },
               { title: 'Fire rules', desc: 'Roasting uses charcoal; where villas restrict open fire, we roast off-site and finish/carve at your event.' },
               { title: 'Lead time', desc: 'Whole-pig sourcing and prep need notice — book at least 5–7 days ahead (more in peak season).' },
-              { title: 'Villa coordination', desc: 'We handle access, timing, and house rules with your villa manager, and flag any banjar function fee upfront.' },
+              { title: 'Villa coordination', desc: 'We handle access, timing, and house rules with your villa manager.' },
               { title: 'Travel', desc: 'We serve all of South Bali and Ubud; out-of-area travel runs IDR 250K–700K, quoted upfront.' },
               { title: 'Leftovers', desc: "They're yours. We pack everything with storage and reheating notes — babi guling fried rice the next morning is a Bali tradition of its own." },
             ].map((item) => (

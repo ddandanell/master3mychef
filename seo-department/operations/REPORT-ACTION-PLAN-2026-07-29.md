@@ -95,6 +95,14 @@ Bonus (quota permitting): re-crawl requested for the two pages retitled today �
 
 **Verify:** GSC query report, 28-day window: position trend on "private chef bali" + CTR at position.
 
+### Executed 2026-07-29 (commit b86f39eb, deployed + live-verified)
+
+- 2.1 ✅ The area template had **zero** in-content homepage links. New always-rendered "Also see" block gives all 61 `/private-chef/{area}` pages a "private chef Bali" anchor to `/` (verified live on canggu + jimbaran). Curated per-area links preserved.
+- 2.2 ✅ Homepage meta description rewritten: "560+ villas served" (unverified, R-003) replaced with verifiable claims — prices from IDR 700K/guest, WhatsApp reply within the hour. 158 chars, live.
+- 2.3 Standing rule — enforced in Step 0 (residual `/fine-dining/private-chef-bali` title fixed same day).
+- 2.4 → Step 6 (authority). Open.
+- **Measure from:** ~2026-08-12 export (CTR at stable position needs 2–3 weeks).
+
 ---
 
 ## Step 3 — Capture the two biggest untapped query pools (THIS WEEK, on-page only)

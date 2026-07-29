@@ -452,7 +452,7 @@ const TIMELINE = [
 
 const FAQS = [
   { q: 'What does retreat catering in Bali cost?', a: 'Every retreat meal plan is quoted individually based on group size, menu intensity, dietary complexity and length of programme. Contact us for a fixed, itemised proposal.' },
-  { q: 'How many guests do you cater for, and is there a minimum?', a: 'We regularly cater retreats from 10 to 60 guests, and up to 100 for larger programmes. For 30 guests we typically assign a head chef plus two assistants, scaled to your villa kitchen.' },
+  { q: 'How many guests do you cater for, and is there a minimum?', a: 'The minimum is five guests. We regularly cater retreats from 10 to 60 guests, and up to 100 for larger programmes. For 30 guests we typically assign a head chef plus two assistants, scaled to your villa kitchen.' },
   { q: 'Can you do fully vegan, sattvic or detox retreat menus?', a: 'Yes. Fully vegan service is one of our most requested formats, and we design sattvic, juice-cleanse and partial-detox programmes with the same care — full protein profiles and menus that feel abundant, not restrictive.' },
   { q: 'Can you cater five to seven days continuously?', a: 'Yes — multi-day continuity is the core of this service. Shopping cycles, menu rotation and staff scheduling are planned so quality on day seven matches day one.' },
   { q: 'What if our villa kitchen is small?', a: 'We assess stove capacity, fridge space and equipment before arrival and bring whatever is missing. Most Bali villa kitchens are fully workable with minor preparation.' },
@@ -766,7 +766,7 @@ export default function CateringRetreatPage() {
             Normal groceries are included in every plan. Premium upgrades — imported superfoods, oyster or seafood nights, an elevated closing dinner — are quoted separately in advance.
           </p>
           <p className="text-xs text-[#4A4745]/70 mt-4 text-center">
-            Retreat programmes are priced per group, length and menu. Minimum booking applies. One-day and multi-day retreat packages are available. Applicable service charge and government tax are shown clearly in your quotation. Contact us for a fixed quote.
+            Retreat programmes are priced per group, length and menu, with a five-guest minimum. One-day and multi-day retreat packages are available. Applicable service charge and government tax are shown clearly in your quotation. Contact us for a fixed quote.
           </p>
         </div>
       </section>

@@ -320,3 +320,98 @@ this environment**: no `screamingfrog`-named tools are registered, and the bash 
 separate Linux VM that cannot reach `localhost` on the owner's Mac. Starting the server is only
 step one — it must also be registered as a connector in Claude's settings. Until then, use
 Screaming Frog's CSV exports, or Semrush/Ahrefs which are already connected.
+
+---
+
+## Run 2026-07-29 22:20–22:45 UTC (owner follow-up: "do all these things")
+
+Owner instructed that the five open items from run 2's report be actioned. Three were
+actionable, two are blocked outside this environment. **The data gate is still failed** — the
+Semrush snapshot is unchanged (`6a6a62ee3bfffa0de6a416a4`) — so no metadata or ranking-driven
+copy was rewritten. The one content change below is a **factual correction resolving a logged
+open question**, decided by existing owner rulings, not by ranking data.
+
+### 1. Q7 closed — retreat-catering minimum (D-018)
+
+`/catering/retreat-catering` was the one catering entry point with no number. It turned out the
+number was never actually unknown:
+
+- **D-008** set a 5-guest minimum for dining formats and named **retreat** explicitly.
+- `WellnessRetreatCateringPage.tsx:148` already publishes "5 guests minimum for a dedicated
+  retreat catering program".
+- The old wording "Minimum booking applies" implied a **spend** minimum, which **D-015** ruled
+  does not exist outside corporate (IDR 15,000,000).
+- The FAQ at `:455` literally asked "is there a minimum?" and never answered it.
+
+Changed, in `src/pages/CateringRetreatPage.tsx`:
+
+| Line | Before | After |
+|---|---|---|
+| 769 | "priced per group, length and menu. **Minimum booking applies.**" | "priced per group, length and menu, **with a five-guest minimum.**" |
+| 455 | "We regularly cater retreats from 10 to 60 guests…" | "**The minimum is five guests.** We regularly cater retreats from 10 to 60 guests…" |
+
+`FAQS` is a single array feeding both `faqPageSchema` (`:491`) and `FAQAccordion` (`:1168`), so
+schema and on-page copy cannot drift. No new fact was invented. `CONTRADICTION-REGISTER.md`
+Q7 row updated from "undefined — still open" to the cited 5-guest figure.
+
+**If the owner's real retreat minimum is not 5, correct D-008 first** — this page now follows it.
+
+### 2. Cadence changed: hourly → daily
+
+`mychef-seo-autopilot` cron moved from `0 * * * *` to `0 7 * * *` (07:06 local, daily).
+Reason: Semrush recrawls roughly daily, so ~23 of every 24 hourly runs could only ever hit the
+data gate. Runs 1 and 2 an hour apart saw a byte-identical snapshot, which is the proof.
+
+### 3. Semrush position tracking — CANNOT be created from here
+
+Confirmed with the API, not assumed:
+
+- `get_project(30621470)` → project `mychef.id`, tools `siteaudit`, **`tracking`**, `seoideas`.
+  The tracking tool **is** enabled on the project.
+- `campaigns(project_id=30621470)` → `{"targets": null, "limits": {"targets": 1}}`.
+  Tracking is enabled but **no target/keyword set has ever been configured**, and the plan
+  allows exactly 1 target.
+- The Semrush MCP exposes **reports only** — `projects`, `position_tracking` and every other
+  toolkit are read-only. There is no create/configure endpoint.
+
+**Owner action required in the Semrush dashboard** (one-time, ~5 min): Projects → mychef.id →
+Position Tracking → set up campaign. Suggested config: target `mychef.id`, device **mobile**,
+location **Bali, Indonesia** (or Denpasar), Google. Seed keywords should come from
+`KEYWORD-URL-MAP.csv` — prioritise the families with logged decisions so runs can measure them:
+`private chef bali`, `private chef canggu/seminyak/ubud` (D-010), `private chef villa menu`
+(D-011), `babi guling catering bali` + `pork free catering bali` (D-012/D-014),
+`bali wedding catering`. Until this exists, no run can see rank movement.
+
+### 4. Vercel deploy-on-push — behaviour contradicts config, flag not fixed
+
+Established by API, not inference:
+
+- Project `master3mychef` **is** git-linked: `type: github`, `ddandanell/master3mychef`,
+  `productionBranch: main`, `deployHooks: []`, `commandForIgnoringBuildStep: null`.
+- Yet `vercel.json` has carried `"git": { "deploymentEnabled": false }` since **2026-07-15**
+  (`241acc05`).
+
+Observed today, which contradicts that flag: **code** commits deploy and reach READY
+(`f7d9cbb7`, `1244f607`, `1b1d5967`, `d2f6a9b9`, `8eaf32fa`, `50c6de85`, `650ba745`), while
+**docs-only** commits either deploy-and-CANCEL (`642510e2`, `9f24bb9d`, `88c6ef5d`, `c8ccd802`,
+`e501482d` — all `chore(status): hourly probe report`) or produce no deployment at all
+(run 2's `e5942a9f`, which touched only `seo-department/**`).
+
+**Deliberately not changed.** Flipping production deploy behaviour on evidence that contradicts
+the stated config is exactly the kind of speculative change this task forbids. Needs an owner
+ruling: either delete the `git` block, or make it explicit as `"deploymentEnabled": {"main": true}`.
+
+**Consequence for future runs:** a docs-only run will produce **no deployment**, and that is
+correct, not a failure. Do not chase a READY state for a commit that touches only
+`seo-department/**`. Only require READY when `src/`, `scripts/`, `public/` or `vercel.json`
+changed.
+
+### 5. Ahrefs / GSC connectors — blocked, unattended
+
+Both remain unauthenticated. OAuth cannot be completed in a scheduled run — no one is present
+to approve the flow. Owner must authorise them in claude.ai connector settings. Until then
+every run is Semrush-only, and Semrush is currently site-audit-only (see item 3), which means
+**no run can see rankings or query data at all**. That is the single biggest gap in this setup.
+
+- **URLs touched:** `/catering/retreat-catering` (copy + FAQ; first touch, cooldown starts now).
+- **`npx tsc -b`:** exit 0.

@@ -76,7 +76,9 @@ Verified state of every catering entry point, read from source 2026-07-30:
 | `/catering/drop-off-catering` | 4 (family) / 8 (dinner party, grazing) | guest count |
 | `/catering/grazing-tables` | 5 guests, individually quoted | guest count — *register previously said 6* |
 | `/catering/corporate-catering` | IDR 15,000,000 (`siteFacts.corporateMinSpend`) | **spend — the only one on the site** |
-| `/catering/retreat-catering` | "Minimum booking applies" | **undefined — still open, see Q7** |
+| `/catering/retreat-catering` | 5 guests (`CateringRetreatPage.tsx:455`, `:769`) | guest count — **Q7 CLOSED 2026-07-30 (D-018)** |
+
+**Q7 closed (2026-07-30, D-018):** `/catering/retreat-catering` previously said only "Minimum booking applies" — the one catering entry point with no number, and a phrase that implied a *spend* minimum that D-015 established does not exist. The minimum was not actually unknown: D-008 set a 5-guest minimum for dining formats and explicitly named retreat as one, and the sibling page `WellnessRetreatCateringPage.tsx:148` already stated "5 guests minimum for a dedicated retreat catering program". The page now states the five-guest minimum in both the pricing note (`:769`) and the FAQ that asked for it (`:455`). No new fact was introduced — the number was already owner-ruled and already published elsewhere on the site.
 
 **Management ruling (2026-07-30):** the babi guling IDR 3,900,000 figure is correct; the supposed 5,000,000 hub minimum was not a real rule. No page change was required — the cluster already prices on per-service guest-count minimums, with corporate the single spend-based exception.
 

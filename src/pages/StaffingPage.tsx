@@ -1,19 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  MessageCircle,
-  Check,
-  ChefHat,
-  Home,
-  Users,
-  ShieldCheck,
-  Clock,
-  Star,
-  ArrowRight,
-  Phone,
-  RefreshCw,
-  FileText,
-} from 'lucide-react'
+import { MessageCircle, Check, ChefHat, Home, Users, ShieldCheck, Clock, Star, ArrowRight, RefreshCw, FileText } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { faqPageSchema } from '@/components/SeoHead'
@@ -513,10 +500,10 @@ export default function StaffingPage() {
                 <MessageCircle className="w-4 h-4" /> Request Staff Now — Reply in 1 Hour
               </a>
               <a
-                href={`tel:+${WA_NUMBER}`}
+                href={`https://wa.me/${WA_NUMBER}`}
                 className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full border border-white/25 text-white/[80%] transition-all hover:border-white/60 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5"
               >
-                <Phone className="w-4 h-4" /> Call the Team
+                <MessageCircle className="w-4 h-4" /> WhatsApp the Team
               </a>
             </div>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-[#6B6B67] mt-4">

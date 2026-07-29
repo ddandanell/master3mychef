@@ -1,9 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  MessageCircle, Calendar, Baby, Heart, Flower2,
-  Camera, Music, Sparkles, GlassWater, Check,
-} from 'lucide-react'
+import { MessageCircle, Calendar, Baby, Heart, Flower2, Camera, Music, Sparkles, GlassWater, Check } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema } from '@/components/SeoHead'

@@ -1,9 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  MessageCircle, Calendar, Check, Plane, ChefHat, PartyPopper, Wine, Users, Sparkles, ShieldCheck,
-  Phone, Mail, Instagram, MapPin, Heart,
-} from 'lucide-react'
+import { MessageCircle, Calendar, Check, Plane, ChefHat, PartyPopper, Wine, Users, Sparkles, ShieldCheck, Phone, Mail, Instagram, MapPin, Heart } from 'lucide-react'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -494,7 +491,7 @@ export default function CompleteVillaExperiencePage() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Phone className="w-5 h-5 text-[#C5A028] mb-3" />
               <p className="text-white text-sm font-semibold mb-1">Telephone</p>
-              <a href={`tel:${siteFacts.phoneHref}`} className="text-white/[65%] text-sm hover:text-white transition-colors">{siteFacts.phoneDisplay}</a>
+              <a href={`https://wa.me/${siteFacts.whatsappNumber}`} className="text-white/[65%] text-sm hover:text-white transition-colors">{siteFacts.phoneDisplay}</a>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Mail className="w-5 h-5 text-[#C5A028] mb-3" />

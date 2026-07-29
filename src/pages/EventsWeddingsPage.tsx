@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  MessageCircle, Calendar, Check, Clock, Heart, Newspaper, Flower2, Waves, Mountain,
-} from 'lucide-react'
+import { MessageCircle, Calendar, Check, Clock, Heart, Newspaper, Flower2, Waves, Mountain } from 'lucide-react'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

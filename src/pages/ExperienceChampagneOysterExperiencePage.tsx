@@ -1,19 +1,6 @@
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, serviceSchema } from '@/components/SeoHead'
-import {
-  Wine,
-  Shell,
-  Users,
-  Sparkles,
-  GlassWater,
-  PartyPopper,
-  Sun,
-  Waves,
-  Heart,
-  Cake,
-  Briefcase,
-  Shield,
-} from 'lucide-react'
+import { Wine, Shell, Users, Sparkles, GlassWater, PartyPopper, Sun, Waves, Heart, Cake, Briefcase, Shield } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20request%20a%20champagne%20and%20oyster%20proposal%20for%20my%20event%20in%20Bali.%20Please%20send%20details.'

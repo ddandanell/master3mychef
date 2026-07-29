@@ -1,16 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import {
-  MessageCircle,
-  Mail,
-  MapPin,
-  Phone,
-  Clock,
-  CheckCircle2,
-  ClipboardList,
-  HelpCircle,
-  ArrowRight,
-  Send,
-} from 'lucide-react'
+import { MessageCircle, Mail, MapPin, Clock, CheckCircle2, ClipboardList, HelpCircle, ArrowRight, Send } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { siteFacts } from '@/data/siteFacts'
 import { Breadcrumb } from '@/components/shared'
@@ -41,13 +30,9 @@ const CONTACT_DETAILS = [
     href: 'mailto:bali@mychef.id',
     hint: 'For detailed proposals',
   },
-  {
-    icon: Phone,
-    label: 'Phone',
-    value: '+62 896-7407-2020',
-    href: 'tel:+6289674072020',
-    hint: '08:00 – 22:00 WITA, daily',
-  },
+  // A separate "Phone" row was removed: it carried the same number as the
+  // WhatsApp row above and pointed at the same WhatsApp link. The number is a
+  // WhatsApp number — one row, one channel.
   {
     icon: MapPin,
     label: 'Office',

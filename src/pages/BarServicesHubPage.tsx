@@ -1,18 +1,4 @@
-import {
-  ArrowRight,
-  HelpCircle,
-  MessageCircle,
-  BookOpen,
-  Building2,
-  Home,
-  Waves,
-  UtensilsCrossed,
-  PartyPopper,
-  ChevronDown,
-  Star,
-  ShieldCheck,
-  TrendingUp,
-} from 'lucide-react'
+import { ArrowRight, HelpCircle, MessageCircle, BookOpen, Building2, Home, Waves, UtensilsCrossed, PartyPopper, ChevronDown, Star, ShieldCheck, TrendingUp } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, serviceWithOfferSchema, faqPageSchema, professionalServiceSchema } from '@/components/SeoHead'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'

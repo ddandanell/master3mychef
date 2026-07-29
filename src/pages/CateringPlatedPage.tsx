@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
-import {
-  Check, Phone, Calendar, Users, MapPin,
-  Utensils, Sparkles, ChefHat, Wine,
-  MessageSquare, Clock, Heart, Briefcase, Gem,
-  Flower2, GlassWater, Star,
-} from 'lucide-react'
+import { Check, Calendar, Users, MapPin, Utensils, Sparkles, ChefHat, Wine, MessageSquare, Clock, Heart, Briefcase, Gem, Flower2, GlassWater, Star, MessageCircle } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
@@ -764,7 +759,7 @@ export default function CateringPlatedPage() {
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-plated-cta"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
-              <Phone className="w-4 h-4" /> WhatsApp myCHEF
+              <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
           </div>
         </div>

@@ -1,10 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  MessageCircle, Check, Phone, Calendar, Users,
-  Flame, Wine, Beef, WheatOff, Map, Heart,
-  ArrowRight, Droplets, Sun, ChefHat, UserPlus,
-} from 'lucide-react'
+import { MessageCircle, Check, Calendar, Users, Flame, Wine, Beef, WheatOff, Map, Heart, ArrowRight, Droplets, Sun, ChefHat, UserPlus } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
@@ -629,8 +625,8 @@ export default function CateringBBQPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-bbq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-black text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
               <MessageCircle className="w-4 h-4" /> Build My BBQ Menu
             </a>
-            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Phone className="w-4 h-4" /> Call +62 896-7407-2020
+            <a href="https://wa.me/6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <MessageCircle className="w-4 h-4" /> WhatsApp +62 896-7407-2020
             </a>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">

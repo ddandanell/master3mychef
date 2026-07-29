@@ -1,12 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
-import {
-  MessageCircle, Check, Phone, Calendar, Users, MapPin,
-  Utensils, Package, CreditCard, ChefHat, Truck, Clock, ShieldCheck,
-  X, Home, Baby, Umbrella, Cake, Sparkles, Plane,
-  Thermometer, ClipboardList, Box, Wine, Coffee, Leaf,
-  Dumbbell, Waves, Repeat, Sunrise, Building2, HeartPulse,
-} from 'lucide-react'
+import { MessageCircle, Check, Calendar, Users, MapPin, Utensils, Package, CreditCard, ChefHat, Truck, Clock, ShieldCheck, X, Home, Baby, Umbrella, Cake, Sparkles, Plane, Thermometer, ClipboardList, Box, Wine, Coffee, Leaf, Dumbbell, Waves, Repeat, Sunrise, Building2, HeartPulse } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {
@@ -1053,7 +1047,7 @@ export default function CateringDropOffPage() {
               href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-drop-off-cta"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded"
             >
-              <Phone className="w-4 h-4" /> WhatsApp myCHEF
+              <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
           </div>
         </div>

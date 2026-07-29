@@ -676,7 +676,7 @@ export default function PremiumPage({
             <PriceDisclaimer className="text-white/[60%]" />
           </div>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/[40%]">
-            <a href={`tel:${WA}`} className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
+            <a href={`https://wa.me/${WA}`} className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> +62 896-7407-2020
             </a>
             <a href="mailto:bali@mychef.id" className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">

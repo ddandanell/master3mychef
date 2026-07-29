@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MessageCircle, Mail, MapPin, Phone, ArrowRight } from 'lucide-react'
+import { MessageCircle, Mail, MapPin, ArrowRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -274,10 +274,10 @@ export default function ContactPage() {
 
       {/* ── DIRECT CONTACT STRIP ──────────────────────────────────────── */}
       <section className="bg-white px-6 md:px-12 py-16 md:py-20 border-y border-[#E5E3E0]">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 896-7407-2020" href={`https://wa.me/${WA}`} hint="Fastest — typically within minutes" dataSource="contact-info-whatsapp" />
           <ContactItem icon={Mail} label="Email" value="bali@mychef.id" href="mailto:bali@mychef.id" hint="For detailed proposals" />
-          <ContactItem icon={Phone} label="Phone" value="+62 896-7407-2020" href="tel:+6289674072020" hint="08:00 – 22:00 WITA, daily" />
+          {/* The "Phone" row was removed — same number as WhatsApp above, same link. One channel, one row. */}
           <ContactItem icon={MapPin} label="Office" value={siteFacts.addressDisplay} href={siteFacts.googleBusinessProfileUrl} hint="View on Google Business — serving all of Bali" />
         </div>
       </section>

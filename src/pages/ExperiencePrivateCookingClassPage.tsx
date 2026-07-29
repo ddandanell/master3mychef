@@ -1,13 +1,6 @@
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
-import {
-  GraduationCap,
-  Home,
-  Users,
-  UtensilsCrossed,
-  ChefHat,
-  ShoppingBasket,
-} from 'lucide-react'
+import { GraduationCap, Home, Users, UtensilsCrossed, ChefHat, ShoppingBasket } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20cooking%20class%20in%20my%20Bali%20villa.%20Please%20send%20class%20options%20and%20pricing.'

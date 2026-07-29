@@ -190,7 +190,6 @@ export default function QuoteFunnel() {
           <div class="mt-6 text-sm text-[#4A4745] space-y-1">
             <p>WhatsApp: <a href="https://wa.me/${WA}" class="text-[#C5A028] hover:underline">+62 896-7407-2020</a></p>
             <p>Email: <a href="mailto:bali@mychef.id" class="text-[#C5A028] hover:underline">bali@mychef.id</a></p>
-            <p>Phone: <a href="tel:+6289674072020" class="text-[#C5A028] hover:underline">+62 896-7407-2020</a></p>
           </div>
         </div>`,
         }}

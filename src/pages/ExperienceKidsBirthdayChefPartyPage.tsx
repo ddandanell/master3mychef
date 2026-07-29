@@ -1,14 +1,6 @@
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
-import {
-  ChefHat,
-  Sparkles,
-  PartyPopper,
-  Music,
-  Waves,
-  Baby,
-  Star,
-} from 'lucide-react'
+import { ChefHat, Sparkles, PartyPopper, Music, Waves, Baby, Star } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20planning%20a%20kids%20birthday%20party%20in%20Bali.%20Please%20send%20a%20complete%20party%20proposal%20with%20catering%2C%20entertainment%20and%20setup%20options.'

@@ -6,22 +6,7 @@
  * genuinely unique without per-page copywriting.
  */
 import { Link, Navigate } from 'react-router-dom'
-import {
-  MessageCircle,
-  Check,
-  ChefHat,
-  UtensilsCrossed,
-  Flame,
-  Users,
-  Sparkles,
-  MapPin,
-  Star,
-  Clock,
-  ShieldCheck,
-  ArrowRight,
-  CalendarCheck,
-  Utensils,
-} from 'lucide-react'
+import { MessageCircle, Check, ChefHat, UtensilsCrossed, Flame, Users, Sparkles, MapPin, Star, Clock, ShieldCheck, ArrowRight, CalendarCheck, Utensils } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema } from '@/components/SeoHead'
 import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import { hasLocationPage } from '@/data/siteArchitecture'

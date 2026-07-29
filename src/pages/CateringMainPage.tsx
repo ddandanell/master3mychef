@@ -1,10 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import {
-  MessageCircle, Check, ArrowRight, Phone, Calendar, Users, MapPin,
-  Utensils, CreditCard, ChefHat, Sparkles, ShieldCheck, HelpCircle,
-  Home, PartyPopper, Flame, Wine, Flower2, CakeSlice,
-} from 'lucide-react'
+import { MessageCircle, Check, ArrowRight, Calendar, Users, MapPin, Utensils, CreditCard, ChefHat, Sparkles, ShieldCheck, HelpCircle, Home, PartyPopper, Flame, Wine, Flower2, CakeSlice } from 'lucide-react'
 import SeoHead, {
   breadcrumbSchema,
   serviceWithAggregateOfferSchema,
@@ -1830,10 +1826,10 @@ export default function CateringMainPage() {
               <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
             </a>
             <a
-              href="tel:+6289674072020"
+              href="https://wa.me/6289674072020"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
-              <Phone className="w-4 h-4" /> Call +62 896-7407-2020
+              <MessageCircle className="w-4 h-4" /> WhatsApp +62 896-7407-2020
             </a>
           </div>
           <p className="text-sm text-white/[60%] mb-8">

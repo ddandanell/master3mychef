@@ -1,10 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
-import {
-  MessageCircle, Calendar, Check, Cake, PartyPopper, Gift,
-  Music, Camera, Sparkles,
-} from 'lucide-react'
+import { MessageCircle, Calendar, Check, Cake, PartyPopper, Gift, Music, Camera, Sparkles } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'

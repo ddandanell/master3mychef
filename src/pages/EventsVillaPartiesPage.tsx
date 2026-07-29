@@ -1,9 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  MessageCircle, Calendar, Users, MapPin,
-  Wine, Sun, Music, Palette, Sparkles, Heart, Check,
-} from 'lucide-react'
+import { MessageCircle, Calendar, Users, MapPin, Wine, Sun, Music, Palette, Sparkles, Heart, Check } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema } from '@/components/SeoHead'

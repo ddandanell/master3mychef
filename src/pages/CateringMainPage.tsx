@@ -121,7 +121,7 @@ const PLATED_PACKAGES = [
 ]
 
 const DROPOFF_PACKAGES = [
-  { title: 'Family Dinner Drop-Off', price: 'IDR 700,000/person', description: '4 to 8 people. Hot main, 2 sides, dessert, bread.' },
+  { title: 'Family Dinner Drop-Off', price: 'IDR 700,000/person', description: '5 to 8 people. Hot main, 2 sides, dessert, bread.' },
   { title: 'Dinner Party Drop-Off', price: 'IDR 700,000/person', description: '8 to 16 people. Starter, main, 3 sides, dessert.' },
   { title: 'Grazing Dinner Drop-Off', price: 'IDR 700,000/person', description: '8+ people. Charcuterie, cheese board, 2 hot mains, sides, dessert.' },
 ]
@@ -205,7 +205,7 @@ const PRICING_TABLE = [
   { name: '3-Course Plated', price: 'IDR 800,000/person', min: '10 guests', bestFor: 'Seated dinners' },
   { name: '4-Course Plated', price: 'IDR 1,000,000/person', min: '10 guests', bestFor: 'Milestone dinners' },
   { name: '5-Course Dinner', price: 'IDR 1,300,000/person', min: '10 guests', bestFor: 'Fine dining' },
-  { name: 'Family Drop-Off', price: 'IDR 700,000/person', min: '4 guests', bestFor: 'Private meals' },
+  { name: 'Family Drop-Off', price: 'IDR 700,000/person', min: '5 guests', bestFor: 'Private meals' },
   { name: 'Dinner Party Drop-Off', price: 'IDR 700,000/person', min: '8 guests', bestFor: 'Small parties' },
   { name: 'Babi Guling Small', price: 'IDR 3,700,000 total', min: '10 guests', bestFor: 'Traditional events' },
 ]

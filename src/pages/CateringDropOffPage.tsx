@@ -34,7 +34,7 @@ const DROPOFF_PACKAGES = [
     title: 'Family Dinner Drop-Off',
     price: 'IDR 700,000/person',
     priceNum: 700000,
-    people: '4 to 8 people',
+    people: '5 to 8 people',
     format: ['Hot main', '2 sides', 'Bread', 'Dessert'],
     bestFor: 'Families, relaxed nights in, kid-friendly dinners',
   },
@@ -158,7 +158,7 @@ const SAFETY_ITEMS = [
 
 /* ───────── Guest Count & Portions ───────── */
 const GUEST_COUNTS = [
-  { range: 'Small group', count: '4–8 guests', tip: 'Order per-person packages with one shared starter.' },
+  { range: 'Small group', count: '5–8 guests', tip: 'Order per-person packages with one shared starter.' },
   { range: 'Medium group', count: '8–16 guests', tip: 'Mix packages and add a grazing board for variety.' },
   { range: 'Large delivery', count: '16–40 guests', tip: 'Combine multiple packages and add-on trays to avoid under-ordering.' },
 ]
@@ -294,7 +294,7 @@ const CORPORATE_TEAMS = [
 
 /* ───────── FAQ ───────── */
 const FAQS = [
-  { q: "What's the minimum order?", a: 'Four people for the family dinner package; eight for dinner party and grazing packages. The minimum is the same in every delivery area — remote locations simply carry a quoted travel fee. Custom sizes on request.' },
+  { q: "What's the minimum order?", a: 'Five people for the family dinner package; eight for dinner party and grazing packages. The minimum is the same in every delivery area — remote locations simply carry a quoted travel fee. Custom sizes on request.' },
   { q: 'Is any staff included?', a: 'No — that\'s the product. No chef, no waiters, no setup crew, no cleanup team. You serve yourself, privately. If you\'d like staff for one night, see <a href="/catering">full-service catering</a>.' },
   { q: 'How much notice do you need?', a: 'Order by 4pm for next-day delivery. We recommend 24–48 hours, especially for groups over 12 or peak season. Same-day is sometimes possible before 10am.' },
   { q: 'Which areas do you deliver to?', a: 'All major Bali villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Jimbaran, Nusa Dua, and more. Remote deliveries may carry a quoted travel fee.' },
@@ -313,7 +313,7 @@ const FAQS = [
 
 /* ───────── Schema FAQ (matches visible FAQ content) ───────── */
 const SCHEMA_FAQS = [
-  { question: 'What is the minimum order for drop-off catering?', answer: 'Four people for the family dinner package; eight for dinner party and grazing packages. The minimum is the same in every delivery area — remote locations simply carry a quoted travel fee. Custom sizes on request.' },
+  { question: 'What is the minimum order for drop-off catering?', answer: 'Five people for the family dinner package; eight for dinner party and grazing packages. The minimum is the same in every delivery area — remote locations simply carry a quoted travel fee. Custom sizes on request.' },
   { question: 'Is any staff included with drop-off catering?', answer: 'No. Drop-off includes no chef, waiters, setup or cleanup staff — food is delivered ready to serve and you serve yourself privately.' },
   { question: 'How much notice do you need?', answer: 'Order by 4pm for next-day delivery. 24–48 hours is recommended, especially for groups over 12 or peak season. Same-day is sometimes possible before 10am.' },
   { question: 'Which areas do you deliver to?', answer: 'All major Bali villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Jimbaran, Nusa Dua and more. Remote deliveries may carry a quoted travel fee.' },
@@ -419,7 +419,7 @@ export default function CateringDropOffPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp availability
             </a>
           </div>
-          <p className="text-white/[60%] text-sm">From IDR 700,000/person · Min. 4 guests · Order by 4pm for next-day delivery</p>
+          <p className="text-white/[60%] text-sm">From IDR 700,000/person · Min. 5 guests · Order by 4pm for next-day delivery</p>
         </div>
       </section>
 

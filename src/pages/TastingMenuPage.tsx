@@ -133,7 +133,7 @@ const TESTIMONIALS = [
 const FAQS = [
   { q: 'How many courses are in a tasting menu?', a: 'Typically four to seven courses progressing from snacks to dessert. myCHEF\'s signature format is five courses, including Wagyu and Mediterranean menus.' },
   { q: 'How long does a tasting menu take?', a: 'Plan the full evening, roughly 17:30 to 22:00 act by act: arrival, aperitif, courses with pauses, and dessert. Timing is set around sunset and your schedule.' },
-  { q: 'What is the minimum number of guests for a tasting menu?', a: 'Tasting menus run for four to 24 guests. Smaller parties can book the standard private dinner format; larger groups move to plated catering.' },
+  { q: 'What is the minimum number of guests for a tasting menu?', a: 'Tasting menus run for five to 24 guests. Smaller parties can book the standard private dinner format; larger groups move to plated catering.' },
   { q: 'Can tasting menus be adapted for dietary needs?', a: 'Yes. Vegetarian, vegan, gluten-free, and allergy adaptations are designed into the menu at no extra charge. Requirements are collected at booking.' },
   { q: 'Can I add wine pairing to a tasting menu?', a: 'Yes. Pairing adds IDR 850K per person. A sommelier-led zero-proof pairing is also available.' },
 ]
@@ -221,7 +221,7 @@ export default function TastingMenuPage() {
             Five courses. A Michelin-trained team. Handmade pasta rolled in your kitchen the afternoon of your dinner.
           </p>
           <p className="text-white/[55%] text-sm mb-10 tracking-wide">
-            From IDR 2,200,000++ per person · Wine pairing +IDR 850,000 · 4 guests minimum
+            From IDR 2,200,000++ per person · Wine pairing +IDR 850,000 · 5 guests minimum
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
@@ -446,7 +446,7 @@ export default function TastingMenuPage() {
                 'Sommelier wine service (if pairing added)',
                 'Kitchen cleanup and restoration',
                 'Dietary customization — no extra charge',
-                'Min. 4 guests · Max. 24 guests',
+                'Min. 5 guests · Max. 24 guests',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-[#1A1A1A]">
                   <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" />

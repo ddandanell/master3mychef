@@ -419,13 +419,20 @@ export default function QuoteFunnel() {
               </p>
             </div>
 
+            {/*
+              Submit fires quote_submitted (a key event) INSTEAD of generate_lead.
+              data-skip-lead-track stops the global listener in Layout.tsx from also firing
+              generate_lead on this click, so a completed quote funnel is one conversion,
+              counted once, as the deeper quote_submitted rather than a bare WhatsApp click.
+            */}
             <a
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
               data-source="quote-funnel-submit"
+              data-skip-lead-track="true"
               className="inline-flex items-center justify-center gap-2 w-full bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
-              onClick={() => trackEvent('quote_submitted', { service_type: form.serviceType, source: 'quote_funnel' })}
+              onClick={() => trackEvent('quote_submitted', { service_type: form.serviceType, cta_source: 'quote-funnel-submit' })}
             >
               <MessageCircle className="w-4 h-4" /> Send Request via WhatsApp
             </a>

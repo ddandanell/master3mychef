@@ -39,10 +39,9 @@ export function trackEvent(event: string, params?: AnalyticsParams) {
  */
 export function trackWhatsAppClick(source: string) {
   trackEvent('generate_lead', {
-    source,
+    cta_source: source,
     method: 'WhatsApp',
     event_category: 'conversion',
-    transport_type: 'beacon'
   })
 }
 
@@ -55,11 +54,10 @@ export function trackWhatsAppConversion(source: string) {
  * Uses standard GA4 'generate_lead' event.
  */
 export function trackPhoneClick(source: string) {
-  trackEvent('generate_lead', { 
-    source, 
+  trackEvent('generate_lead', {
+    cta_source: source,
     method: 'Phone',
     event_category: 'conversion',
-    transport_type: 'beacon' 
   })
 }
 

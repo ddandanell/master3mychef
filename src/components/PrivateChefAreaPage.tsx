@@ -26,7 +26,6 @@ import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import { hasLocationPage } from '@/data/siteArchitecture'
 import { getPageMetaByPath } from '@/data/page-meta'
-import { trackWhatsAppClick } from '@/lib/analytics'
 import { siteFacts } from '@/data/siteFacts'
 import { ArticleContentSection } from '@/components/shared'
 
@@ -251,7 +250,6 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source={`area-${area.slug}-hero-wa`}
-                onClick={() => trackWhatsAppClick(`area-${area.slug}-hero`)}
                 className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
               >
                 <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
@@ -335,7 +333,6 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
                       target="_blank"
                       rel="noopener noreferrer"
                       data-source={`area-${area.slug}-service-${svc.id}`}
-                      onClick={() => trackWhatsAppClick(`area-${area.slug}-service-${svc.id}`)}
                       className="inline-flex items-center gap-2 text-xs uppercase tracking-[2px] font-semibold text-[#1A1A1A] hover:text-[#C5A028] transition-colors"
                     >
                       <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
@@ -582,7 +579,6 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               target="_blank"
               rel="noopener noreferrer"
               data-source={`area-${area.slug}-pricing-wa`}
-              onClick={() => trackWhatsAppClick(`area-${area.slug}-pricing`)}
               className="inline-flex items-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
             >
               <MessageCircle className="w-4 h-4" /> Get a free itemised quote
@@ -743,7 +739,6 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               target="_blank"
               rel="noopener noreferrer"
               data-source={`area-${area.slug}-final-cta`}
-              onClick={() => trackWhatsAppClick(`area-${area.slug}-final`)}
               className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-10 py-5 rounded-full hover:bg-[#D4B43A] transition-all text-base"
             >
               <MessageCircle className="w-5 h-5" /> Chat on WhatsApp

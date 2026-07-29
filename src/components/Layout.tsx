@@ -40,8 +40,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   // here and must keep their explicit trackWhatsAppClick call.
   //
   // The GTM container (GTM-KCBNZBL9) previously duplicated this via a Link Click
-  // trigger -> whatsapp_click/phone_click tags, which a GA4 event-modification rule
-  // renamed to generate_lead. Both were removed on 2026-07-29 to stop 2x counting.
+  // trigger -> whatsapp_click/phone_click tags, which two GA4 event-modification
+  // rules then renamed to generate_lead. On 2026-07-29, to stop 2x counting:
+  //   - the two GTM tags were PAUSED (they still exist in the container, from
+  //     Version 4 onwards — un-pausing them reintroduces the double count)
+  //   - the two GA4 event-modification rules were DELETED
   // See reports/GA4-WHATSAPP-TRACKING-AUDIT-2026-07-29.md
   useEffect(() => {
     const handleConversionClick = (e: MouseEvent) => {

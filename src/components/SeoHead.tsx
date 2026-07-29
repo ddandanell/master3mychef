@@ -666,14 +666,23 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
       // NOTE: do not add 'id' here. The site is English-only; an `id` alternate
       // pointing at the same English URL is a language mismatch and was failing
       // on 94/94 pages in Semrush. Only re-add when a real /id/ locale ships.
+      //
+      // NOTE: noindex pages emit NO hreflang at all. Every URL in an hreflang set
+      // must be indexable — a noindex page that annotates itself makes the whole
+      // relationship liable to be ignored by search engines. Screaming Frog reports
+      // this as "Hreflang: Noindex Return Links" (High). The tags are always removed
+      // first, so a client-side route change from an indexable page to a noindex one
+      // clears the previous page's tags rather than leaving them behind.
       document.head.querySelectorAll('link[data-seohead="hreflang"]').forEach((el) => el.remove())
-      for (const lang of ['en', 'x-default']) {
-        const hreflangLink = document.createElement('link')
-        hreflangLink.setAttribute('rel', 'alternate')
-        hreflangLink.setAttribute('hreflang', lang)
-        hreflangLink.setAttribute('href', canonical)
-        hreflangLink.setAttribute('data-seohead', 'hreflang')
-        document.head.appendChild(hreflangLink)
+      if (!noindex) {
+        for (const lang of ['en', 'x-default']) {
+          const hreflangLink = document.createElement('link')
+          hreflangLink.setAttribute('rel', 'alternate')
+          hreflangLink.setAttribute('hreflang', lang)
+          hreflangLink.setAttribute('href', canonical)
+          hreflangLink.setAttribute('data-seohead', 'hreflang')
+          document.head.appendChild(hreflangLink)
+        }
       }
     }
 

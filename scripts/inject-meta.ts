@@ -366,8 +366,14 @@ function injectMeta(html: string, path: string, title: string, description: stri
   // NOTE: /join-our-team was removed from this list — it is a real careers landing
   // page, it ships in sitemap.xml, and noindex,nofollow both hid it from search and
   // dumped the link equity of its 104 outgoing internal links.
-  const noindexNoFollowPaths = ['/404', '/book', '/calculator']
-  const noindexFollowPaths = ['/quote']
+  // /book and /calculator moved from noindex,nofollow to noindex,follow to match
+  // /quote. All three are utility pages we don't want indexed, but they carry the
+  // normal site nav, and 'nofollow' stops PageRank flowing through those links for
+  // no stated benefit — the same reasoning already applied to /join-our-team.
+  // Screaming Frog flagged this as "Directives: Nofollow" (High, 2 URLs).
+  // /404 keeps nofollow: it should neither be indexed nor pass equity onwards.
+  const noindexNoFollowPaths = ['/404']
+  const noindexFollowPaths = ['/quote', '/book', '/calculator']
   if (noindexNoFollowPaths.includes(path)) {
     html = html.replace(
       /<meta name="robots" content=".*?"\s*\/?>/,
@@ -412,11 +418,19 @@ function injectMeta(html: string, path: string, title: string, description: stri
   // NOTE: do not add 'id' here. The site is English-only (<html lang="en">), so an
   // `id` alternate pointing at the same English URL is a language mismatch —
   // it was failing on 94/94 pages in Semrush. Only re-add when a real /id/ locale ships.
-  const hrefLangTags = [
-    `<link rel="alternate" hreflang="en" href="${canonical}" />`,
-    `<link rel="alternate" hreflang="x-default" href="${canonical}" />`,
-  ].join('\n  ')
-  html = html.replace('</head>', `${hrefLangTags}\n  </head>`)
+  //
+  // NOTE: noindex pages emit NO hreflang at all. Every URL in an hreflang set must be
+  // indexable, so a noindex page annotating itself makes the whole relationship liable
+  // to be ignored. Screaming Frog reported this as "Hreflang: Noindex Return Links"
+  // (High, 3 URLs) — exactly the three crawlable noindex paths below.
+  // Mirrored in src/components/SeoHead.tsx for the client-rendered path.
+  if (!noindexNoFollowPaths.includes(path) && !noindexFollowPaths.includes(path)) {
+    const hrefLangTags = [
+      `<link rel="alternate" hreflang="en" href="${canonical}" />`,
+      `<link rel="alternate" hreflang="x-default" href="${canonical}" />`,
+    ].join('\n  ')
+    html = html.replace('</head>', `${hrefLangTags}\n  </head>`)
+  }
 
   return html
 }

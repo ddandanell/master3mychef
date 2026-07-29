@@ -103,7 +103,6 @@ const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
     { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
   ],
   seminyak: [
-    { to: '/', label: 'private chef Bali' },
     { to: '/fine-dining/menus', label: 'private chef villa menus' },
     { to: '/journal/private-chef-seminyak-guide', label: 'Seminyak local' },
   ],
@@ -704,22 +703,26 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             >
               {area.name} dining guide <ArrowRight className="w-4 h-4" />
             </Link>
-            {AREA_RELATED_LINKS[area.slug] && (
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm text-[#4A4745]">
-                <span>Also see:</span>
-                {AREA_RELATED_LINKS[area.slug].map((link, i, arr) => (
-                  <span key={link.to}>
-                    <Link to={link.to} className="text-[#C5A028] hover:underline font-medium">
-                      {link.label}
-                    </Link>
-                    {i < arr.length - 1 ? <span className="text-[#8A8785]"> · </span> : null}
-                  </span>
-                ))}
-              </div>
-            )}
           </div>
         </section>
       )}
+
+      {/* ── 10c. RELATED SERVICES (all areas) ─────────────────────────────── */}
+      <section className="px-6 py-10 md:px-10">
+        <div className="max-w-[1160px] mx-auto text-center">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm text-[#4A4745]">
+            <span>Also see:</span>
+            {[{ to: '/', label: 'private chef Bali' }, ...(AREA_RELATED_LINKS[area.slug] ?? [])].map((link, i, arr) => (
+              <span key={link.to}>
+                <Link to={link.to} className="text-[#C5A028] hover:underline font-medium">
+                  {link.label}
+                </Link>
+                {i < arr.length - 1 ? <span className="text-[#8A8785]"> · </span> : null}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── 11. FINAL CTA ────────────────────────────────────────────────────── */}
       <section className="px-6 py-24 md:px-10 bg-[#1A1A1A] text-white text-center">

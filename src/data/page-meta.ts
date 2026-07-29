@@ -28,7 +28,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/',
     title: 'Private Chef Bali | Michelin-Trained Villa Dining & Events',
     description:
-      'Hire a private chef in Bali for villa dining, BBQs, weddings & events. Michelin-trained team, 560+ villas served, transparent pricing. WhatsApp myCHEF.',
+      'Hire a private chef in Bali for villa dining, BBQs, weddings & events. Michelin-trained team, clear prices from IDR 700K/guest, WhatsApp reply within the hour.',
     canonical: `${SITE}/`,
     h1: 'Private Chef in Bali — Your Villa. Our Kitchen.',
     ogImage: `${SITE}/hero-home.webp`,

@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, ChevronLeft, MessageCircle, Minus, Plus } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from './SeoHead'
-import { trackEvent, ESTIMATED_LEAD_VALUE_IDR } from '@/lib/analytics'
+import { trackEvent, trackFormStart, ESTIMATED_LEAD_VALUE_IDR } from '@/lib/analytics'
 import { siteFacts } from '@/data/siteFacts'
 
 // 9-step quote funnel ported from production mychef.id/quote.
@@ -165,6 +165,48 @@ export default function QuoteFunnel() {
   useEffect(() => {
     headingRef.current?.focus({ preventScroll: true })
   }, [step])
+
+  // ── Step-level funnel instrumentation ──────────────────────────────────────
+  //
+  // Until this existed, the 9-step funnel emitted exactly ONE event
+  // (quote_submitted, on the final step). Every visitor who started the funnel
+  // and gave up was indistinguishable from a visitor who never opened it, so
+  // the single most valuable question about this page — which of the nine
+  // steps loses people — had no answer in any of the four analytics sinks.
+  //
+  // One event per step viewed is enough to derive everything else: PostHog
+  // builds the 9-stage drop-off funnel from these, and pairing a step with
+  // $rageclick / $dead_click on the same step shows whether the loss is
+  // "didn't want to answer" or "couldn't work out how to answer".
+  //
+  // Fires on step CHANGE, not on every render, and is not deduplicated: a
+  // visitor who goes back and forth genuinely did view the step twice, and
+  // that repetition is itself a confusion signal worth keeping.
+  //
+  // Deliberately NOT forwarded to Vercel — toVercelEvent() returns null for
+  // unrecognised event names, so these cost nothing there. GA4 and PostHog
+  // both take them for free.
+  useEffect(() => {
+    trackEvent('quote_step_viewed', {
+      step_number: step + 1,
+      step_index: step,
+      step_title: STEP_TITLES[step],
+      service_type: form.serviceType ?? '',
+      page_source: '/quote',
+    })
+    // form.serviceType is read but intentionally not a dependency: the event
+    // marks arrival at a step, and re-firing it when an answer changes would
+    // inflate the funnel.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step])
+
+  // Marks the funnel as genuinely started (step 1 -> 2), which is the point a
+  // visitor has committed an answer rather than merely landed on /quote.
+  // trackFormStart deduplicates per session internally.
+  useEffect(() => {
+    if (step > 0) trackFormStart('quote_funnel', '/quote', form.serviceType)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step > 0])
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">

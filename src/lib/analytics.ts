@@ -1,4 +1,5 @@
 import { track } from '@vercel/analytics'
+import { capturePostHog } from './posthog'
 
 // GA4 is loaded by the gtag snippet in index.html (measurement ID is set there),
 // which is what populates window.gtag. There is deliberately no measurement ID
@@ -208,7 +209,20 @@ export function toVercelEvent(
 
 /**
  * Core event tracking function.
- * Sends data to GA4 (via gtag), GTM (via dataLayer) and Vercel Web Analytics.
+ * Sends data to GA4 (via gtag), GTM (via dataLayer), Vercel Web Analytics and
+ * PostHog.
+ *
+ * Note the asymmetry between the last two sinks, which is deliberate:
+ *
+ *   Vercel  — heavily filtered. toVercelEvent() drops high-frequency
+ *             engagement events and trims to 2 properties, because both are
+ *             billed and the plan ceiling silently discards the rest.
+ *   PostHog — receives EVERYTHING, with the full untrimmed param object.
+ *             There is no property ceiling, and scroll_depth / time_on_page
+ *             are exactly the signals that distinguish "read the page and
+ *             left" from "could not find the price and left". Filtering them
+ *             out here would remove the confusion analysis this was installed
+ *             for.
  */
 export function trackEvent(event: string, params?: AnalyticsParams) {
   if (typeof window === 'undefined') return
@@ -231,6 +245,11 @@ export function trackEvent(event: string, params?: AnalyticsParams) {
   } catch {
     /* Analytics must never break the page. */
   }
+
+  // PostHog — full property set, no filtering. PII is scrubbed inside
+  // capturePostHog's before_send hook rather than here, so it applies to
+  // autocaptured events too.
+  capturePostHog(event, params)
 }
 
 /**

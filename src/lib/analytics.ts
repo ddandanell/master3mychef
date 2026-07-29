@@ -26,6 +26,87 @@
  */
 export const ESTIMATED_LEAD_VALUE_IDR = 1_500_000
 
+/**
+ * Maps a URL path to the service area of the site it belongs to.
+ *
+ * Why this exists: trackWhatsAppClick/trackPhoneClick fire on CTAs all over the
+ * site, and those CTAs do not declare which service the visitor wants. Without
+ * this, the GA4 "Service Type" dimension would read (not set) for nearly every
+ * conversion, because only the quote funnel collects an explicit service.
+ *
+ * Read the result as "which part of the catalogue the lead came from", i.e. an
+ * inferred interest, NOT a service the visitor explicitly chose. The quote
+ * funnel still sends its own declared service_type, which is stronger data.
+ *
+ * Keyed on the first path segment only, against an explicit allow-list.
+ * Anything unrecognised returns 'other' rather than a guess.
+ */
+export function serviceAreaFromPath(pathname: string): string {
+  const segment = pathname.replace(/^\/+/, '').split('/')[0].toLowerCase()
+
+  if (segment === '') return 'homepage'
+
+  const MAP: Record<string, string> = {
+    // Catering
+    catering: 'catering',
+    // Seated / plated dining
+    'fine-dining': 'private-dining',
+    'three-course': 'private-dining',
+    'family-styling': 'private-dining',
+    'dining-styles': 'private-dining',
+    'kids-menus': 'private-dining',
+    'bbq-grill': 'private-dining',
+    menus: 'private-dining',
+    // Events
+    events: 'events',
+    'corporate-events': 'events',
+    'corporate-case-studies': 'events',
+    'villa-event-packages': 'events',
+    retreats: 'events',
+    // Experiences
+    experiences: 'experiences',
+    // Staff supplied into the villa
+    'in-villa-service': 'in-villa-staff',
+    'bar-services': 'in-villa-staff',
+    'complete-villa-experience': 'in-villa-staff',
+    'vip-transport-bali': 'in-villa-staff',
+    // Chef hire / placement
+    staffing: 'private-chef',
+    'villa-chef': 'private-chef',
+    'private-chef-bali': 'private-chef',
+    // Area / location landing pages — service intent is not knowable here
+    locations: 'location',
+    canggu: 'location',
+    seminyak: 'location',
+    ubud: 'location',
+    uluwatu: 'location',
+    sanur: 'location',
+    jimbaran: 'location',
+    kuta: 'location',
+    denpasar: 'location',
+    'nusa-dua': 'location',
+    pererenan: 'location',
+    bukit: 'location',
+    // Enquiry / conversion surfaces
+    quote: 'enquiry',
+    book: 'enquiry',
+    contact: 'enquiry',
+    calculator: 'enquiry',
+    'pricing-calculator': 'enquiry',
+    pricing: 'enquiry',
+    // Editorial
+    blog: 'content',
+    journal: 'content',
+    guide: 'content',
+    help: 'content',
+    faq: 'content',
+    chefs: 'content',
+    reviews: 'content',
+  }
+
+  return MAP[segment] ?? 'other'
+}
+
 type AnalyticsParams = Record<string, unknown>
 
 declare global {
@@ -58,11 +139,14 @@ export function trackEvent(event: string, params?: AnalyticsParams) {
  * Tracks a high-value lead conversion (WhatsApp).
  * Uses standard GA4 'generate_lead' event.
  */
-export function trackWhatsAppClick(source: string) {
+export function trackWhatsAppClick(source: string, serviceType?: string) {
   trackEvent('generate_lead', {
     cta_source: source,
     method: 'WhatsApp',
     event_category: 'conversion',
+    service_type:
+      serviceType ??
+      (typeof window !== 'undefined' ? serviceAreaFromPath(window.location.pathname) : ''),
     value: ESTIMATED_LEAD_VALUE_IDR,
     currency: 'IDR',
   })
@@ -76,11 +160,14 @@ export function trackWhatsAppConversion(source: string) {
  * Tracks a high-value lead conversion (Phone Call).
  * Uses standard GA4 'generate_lead' event.
  */
-export function trackPhoneClick(source: string) {
+export function trackPhoneClick(source: string, serviceType?: string) {
   trackEvent('generate_lead', {
     cta_source: source,
     method: 'Phone',
     event_category: 'conversion',
+    service_type:
+      serviceType ??
+      (typeof window !== 'undefined' ? serviceAreaFromPath(window.location.pathname) : ''),
     value: ESTIMATED_LEAD_VALUE_IDR,
     currency: 'IDR',
   })

@@ -254,7 +254,7 @@ Cards below: Top traffic acquisition (source + key events), Key events by Event 
 
 - **CTA Source** — which button/page produced the lead
 - **Contact Method** — WhatsApp vs Phone
-- **Service Type** — private chef, catering, events…
+- **Service Type** — catering, private-dining, events, experiences, in-villa-staff, private-chef, location, enquiry, content (see caveat 3)
 - **Session source/medium** — organic, direct, referral
 
 ### Two things to know about this dashboard
@@ -275,4 +275,32 @@ estimated lead value    IDR 1,500,000   ESTIMATED_LEAD_VALUE_IDR
 
 This is **not booked revenue**. It exists so pages, CTAs and channels can be ranked against each other. Change `ESTIMATED_LEAD_VALUE_IDR` in `src/lib/analytics.ts` when the real numbers are known — one constant, one place.
 
-Verified live after deploy: a WhatsApp click sends `epn.value=1500000`, `cu=IDR`, `ep.cta_source=homepage-hero`, `ep.method=WhatsApp` — and still exactly **one** `generate_lead` per click.
+Verified live after deploy by clicking the homepage hero CTA: that click sent `epn.value=1500000`, `cu=IDR`, `ep.cta_source=homepage-hero`, `ep.method=WhatsApp`, and produced exactly **one** `generate_lead`. The payload is specific to that CTA — other WhatsApp CTAs send their own `cta_source`, and the quote funnel sends `quote_submitted` instead of `generate_lead` (see §9).
+
+---
+
+## 13. Caveat 3 — Service Type is inferred, not declared
+
+Only the quote funnel asks the visitor which service they want. Every other WhatsApp/phone CTA is just a button — the visitor never states a service. Left alone, the **Service Type** breakdown would have read `(not set)` for nearly every conversion, making one of the four requested breakdowns useless.
+
+Fix: `serviceAreaFromPath()` in `src/lib/analytics.ts` maps the page the CTA was clicked on to a service area, and `trackWhatsAppClick` / `trackPhoneClick` attach it as `service_type`.
+
+| Path | `service_type` |
+|---|---|
+| `/catering/*` | `catering` |
+| `/fine-dining/*`, `/three-course`, `/menus`, `/dining-styles`, `/family-styling`, `/kids-menus`, `/bbq-grill` | `private-dining` |
+| `/events/*`, `/corporate-events`, `/villa-event-packages`, `/retreats` | `events` |
+| `/experiences/*` | `experiences` |
+| `/in-villa-service/*`, `/bar-services/*`, `/complete-villa-experience`, `/vip-transport-bali` | `in-villa-staff` |
+| `/staffing/*`, `/villa-chef`, `/private-chef-bali` | `private-chef` |
+| `/locations/*` and area pages (`/canggu`, `/ubud`, `/seminyak`…) | `location` |
+| `/quote`, `/book`, `/contact`, `/calculator`, `/pricing*` | `enquiry` |
+| `/blog/*`, `/journal/*`, `/guide/*`, `/help/*`, `/faq`, `/chefs`, `/reviews` | `content` |
+| `/` | `homepage` |
+| anything else | `other` |
+
+**Read this as inferred interest, not a stated choice.** Someone on `/catering/villa-catering` who taps WhatsApp is very likely asking about catering, but they have not said so. `location` exists precisely because an area page tells you *where* but not *what* — it is deliberately not guessed at.
+
+The quote funnel keeps sending its own **declared** `service_type` from the form, which is stronger data than the inferred value. Both functions also accept an optional explicit `serviceType` argument that overrides the inference wherever a component does know the real service.
+
+Verified against 14 paths including nested routes, unknown routes and mixed case. Raised by CodeRabbit review on #42.

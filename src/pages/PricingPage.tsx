@@ -103,7 +103,7 @@ const SECTIONS = [
         ['Wine pairing (4–5 glasses)', '+IDR 850K per guest', '+IDR 850K per guest'],
       ])
     )}
-    <p class="mt-4">Fine dining from 5 guests (2 for romantic dinners by arrangement). The romantic dinner is a per-couple package; the same evening is also priced per person from the signature menus on the <a href="/fine-dining/romantic-dinner" class="font-semibold hover:underline">romantic dinner page</a> — your quote states which model applies. <a href="/fine-dining/tasting-menu" class="font-semibold hover:underline">See the full tasting menus →</a> · <a href="/michelin-private-chef-bali-prices" class="font-semibold hover:underline">Michelin-tier pricing explained →</a></p>`,
+    <p class="mt-4">Fine dining from 5 guests (2 for romantic dinners by arrangement). The romantic dinner is a per-couple package; the same evening is also priced per person from the signature menus on the <a href="/fine-dining/romantic-dinner" class="font-semibold hover:underline">romantic dinner page</a> — your quote states which model applies. <a href="/fine-dining/tasting-menu" class="font-semibold hover:underline">See the full tasting menus →</a> · <a href="/michelin-private-chef-bali-prices" class="font-semibold hover:underline">Michelin-tier pricing explained →</a> · <a href="/private-dining-indonesia" class="font-semibold hover:underline">Private dining across Indonesia →</a></p>`,
   },
   {
     id: 'events-weddings',

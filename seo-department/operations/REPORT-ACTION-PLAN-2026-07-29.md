@@ -118,6 +118,13 @@ Bonus (quota permitting): re-crawl requested for the two pages retitled today �
 
 **Verify:** impressions/CTR for both queries in the next monthly export.
 
+### Executed 2026-07-29 (commit 53572f58, deployed + live-verified)
+
+- 3a ✅ "private dining" anchors to `/private-dining-indonesia` added: `/fine-dining` prose paragraph, `/pricing` fine-dining block, homepage FAQ. Article body now links up to `/` with a "private chef Bali" anchor (upstream md edited, republished through the hardened publish pipeline — 161/161 entries, only the intended route changed).
+- 3b ✅ Homepage FAQ entry "Do you offer a home chef service in Bali?" — home-chef snippet target, joins the FAQPage schema.
+- All four changes confirmed live on mychef.id.
+- **Measure from:** next monthly export — impressions/CTR for "private dining" and "home chef".
+
 ---
 
 ## Step 4 — Page-2 push list: one internal-linking pass (THIS WEEK, ~1 session)

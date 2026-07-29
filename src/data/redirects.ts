@@ -39,24 +39,36 @@ export const REDIRECTS: Redirect[] = [
   { from: '/privacy-policy', to: '/privacy', reason: 'Legacy alias → canonical /privacy (was hard 404 on direct access)' },
   { from: '/payment-terms', to: '/cancellation', reason: 'Legacy alias → canonical /cancellation (same CancellationPage component; was hard 404)' },
 
-  // --- Areas consolidation & canonicalization → /locations/[area] ---
-  { from: '/seminyak', to: '/locations/seminyak', reason: 'Canonicalize to /locations/' },
-  { from: '/canggu', to: '/locations/canggu', reason: 'Canonicalize to /locations/' },
-  { from: '/uluwatu', to: '/locations/uluwatu', reason: 'Canonicalize to /locations/' },
-  { from: '/ubud', to: '/locations/ubud', reason: 'Canonicalize to /locations/' },
-  { from: '/sanur', to: '/locations/sanur', reason: 'Canonicalize to /locations/' },
-  { from: '/nusa-dua', to: '/locations/nusa-dua', reason: 'Canonicalize to /locations/' },
+  // --- Areas consolidation & canonicalization ---
+  // D-010 (2026-07-29, owner-approved) re-pointed TEN of these legacy short URLs from
+  // /locations/[area] (dining guides) to /private-chef/[area] (service-intent landing pages),
+  // because GSC showed the guides were absorbing the "private chef {area}" service intent.
+  //
+  // That decision was applied to vercel.json by hand in edaeb854 but NOT to this file — the
+  // designated generator source. Since `prebuild` runs scripts/generate-redirects.ts on every
+  // CI build, vercel.json was regenerated from these stale values and D-010 was silently
+  // reverted on each deploy. Corrected here so the source of truth carries the ruling.
+  //
+  // Scope is exactly the ten URLs edaeb854 touched. The remaining /locations/ redirects below
+  // (jimbaran, pererenan, bukit, legian, kerobokan, petitenget, tanah-lot, denpasar, gianyar)
+  // were deliberately NOT part of D-010 and stay pointed at their dining guides.
+  { from: '/seminyak', to: '/private-chef/seminyak', reason: 'D-010: legacy short URL → service-intent area page.' },
+  { from: '/canggu', to: '/private-chef/canggu', reason: 'D-010: legacy short URL → service-intent area page.' },
+  { from: '/uluwatu', to: '/private-chef/uluwatu', reason: 'D-010: legacy short URL → service-intent area page.' },
+  { from: '/ubud', to: '/private-chef/ubud', reason: 'D-010: legacy short URL → service-intent area page.' },
+  { from: '/sanur', to: '/private-chef/sanur', reason: 'D-010: legacy short URL → service-intent area page.' },
+  { from: '/nusa-dua', to: '/private-chef/nusa-dua', reason: 'D-010: legacy short URL → service-intent area page.' },
   { from: '/jimbaran', to: '/locations/jimbaran', reason: 'Canonicalize to /locations/' },
   { from: '/pererenan', to: '/locations/pererenan', reason: 'Canonicalize to /locations/' },
   { from: '/bukit', to: '/locations/bukit', reason: 'Canonicalize to /locations/' },
-  { from: '/berawa', to: '/locations/canggu', reason: 'Berawa is part of Canggu; /locations/berawa has no page — go straight to the real Canggu page (no chain).' },
+  { from: '/berawa', to: '/private-chef/berawa', reason: 'D-010: Berawa has its own /private-chef/ area page — send the legacy URL straight there.' },
 
-  { from: '/kuta', to: '/locations/seminyak', reason: 'Lower-end tourist hub adjacent to Seminyak.' },
+  { from: '/kuta', to: '/private-chef/kuta', reason: 'D-010: Kuta has its own /private-chef/ area page.' },
   { from: '/legian', to: '/locations/seminyak', reason: 'Adjacent to Seminyak.' },
   { from: '/kerobokan', to: '/locations/seminyak', reason: 'Sub-neighborhood of Seminyak.' },
   { from: '/petitenget', to: '/locations/seminyak', reason: 'Sub-neighborhood of Seminyak.' },
   { from: '/tanah-lot', to: '/locations/canggu', reason: 'West coast cluster with Canggu.' },
-  { from: '/tabanan', to: '/locations/canggu', reason: 'West coast — Canggu chefs travel there.' },
+  { from: '/tabanan', to: '/private-chef/canggu', reason: 'D-010: west coast — Canggu chefs travel there; service-intent page.' },
   { from: '/denpasar', to: '/locations/denpasar', reason: 'Dedicated DenpasarPage exists at /locations/denpasar — canonicalize there.' },
   { from: '/gianyar', to: '/locations/ubud', reason: 'Gianyar regency — Ubud is the chef base.' },
   { from: '/tegallalang', to: '/locations/ubud', reason: 'Ubud regency.' },
@@ -80,7 +92,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/padang-padang-private-chef', to: '/locations/uluwatu', reason: 'Padang Padang is on Bukit.' },
   { from: '/sayan-private-chef', to: '/locations/ubud', reason: 'Sayan is in Ubud.' },
   { from: '/penestanan-private-chef', to: '/locations/ubud', reason: 'Penestanan is in Ubud.' },
-  { from: '/sanur-beach-private-chef', to: '/locations/sanur', reason: 'Sanur private chef page.' },
+  { from: '/sanur-beach-private-chef', to: '/private-chef/sanur', reason: 'D-010: Sanur private chef intent → service-intent area page.' },
 
   // --- Services / menus we don't lead with ---
   { from: '/services/romantic-dinners', to: '/fine-dining/romantic-dinner', reason: 'Romantic dinners now under fine-dining pillar.' },
@@ -148,7 +160,13 @@ export const REDIRECTS: Redirect[] = [
 
   // GA4 (25 May–21 Jun 2026): live URLs hitting the 404 page. Map each to its real equivalent.
   { from: '/romantic-dinner', to: '/fine-dining/romantic-dinner', reason: 'GA4 404 (8 views). Bare URL → real romantic dinner page.' },
-  { from: '/corporate-events-catering-bali', to: '/blog/corporate-events-catering-bali', reason: 'GA4 404 (4 views). Page lives under /blog/.' },
+  // Collapsed 2026-07-29 (autopilot): this pointed at /blog/corporate-events-catering-bali,
+  // which is itself a redirect source (see the 2026-07-24 consolidation block below), so the
+  // rule produced a two-hop edge chain: /corporate-events-catering-bali → /blog/… →
+  // /corporate-case-studies. Both hops are real 301s in vercel.json, and the intermediate URL
+  // matches no route, no route-slug and no sitemap entry — it exists only as a redirect source.
+  // Point straight at the final destination. Do not re-introduce the /blog/ hop.
+  { from: '/corporate-events-catering-bali', to: '/corporate-case-studies', reason: 'GA4 404 (4 views). Was chained via /blog/corporate-events-catering-bali, which itself 301s to /corporate-case-studies — collapsed to a single hop.' },
   { from: '/events/weddings-bali', to: '/events/weddings', reason: 'GA4 404 (2 views). Old slug → canonical weddings page.' },
   { from: '/chef-placement-bali', to: '/staffing/private-chef-placement', reason: 'GA4 404 (2 views). Old slug → placement page.' },
   { from: '/live-in-chef-bali', to: '/staffing/live-in-chef', reason: 'GA4 404 (2 views). Old slug → live-in chef page.' },

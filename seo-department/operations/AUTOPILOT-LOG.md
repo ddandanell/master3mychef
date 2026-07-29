@@ -467,3 +467,157 @@ and whether `HEAD` is still moving.
 The two sessions did not touch the same files, so nothing was clobbered. The move to a daily
 cadence should reduce overlap; if concurrent runs continue, the hourly `chore(status)` automation
 and this task should be checked for duplication.
+
+---
+
+## Run 2026-07-29 23:05–23:35 UTC (scheduled, run 5)
+
+**Data gate: FAILED — and it will fail on every future run until the owner acts.**
+
+| Semrush site audit (campaign 30621470) | This run | Last run | Delta |
+|---|---|---|---|
+| Latest snapshot_id | `6a6a62ee3bfffa0de6a416a4` | `6a6a62ee3bfffa0de6a416a4` | **unchanged** |
+| Snapshot finish time | 2026-07-29 20:38 UTC | same | — |
+| Errors / Warnings / Notices | 3 / 67 / 104 | 3 / 67 / 104 | 0 / 0 / 0 |
+| `haveIssues` | 94 | 94 | `haveIssuesDelta: 0` |
+| Pages crawled | 100 of limit 100 | — | — |
+| **`next_audit`** | **`-1`** | — | — |
+
+Two things this proves, both worth acting on:
+
+1. **`next_audit: -1` means no recrawl is scheduled at all.** The snapshot is not merely
+   "not refreshed yet" — nothing will refresh it. Every subsequent run will see identical data and
+   correctly refuse to rewrite metadata. **Owner action: open Semrush → Projects → mychef.id →
+   Site Audit and either press *Rerun* or set a daily schedule.** Until then the data gate is a
+   permanent stop and these runs can only do repo-verifiable work.
+2. **`pages_crawled: 100, pages_limit: 100` against 248 sitemap URLs.** The audit sees 40% of the
+   site. Any Semrush metric that depends on link *counts* — issue 213 "pages with only one
+   internal link", crawl depth, orphan detection — is measured inside a 100-page keyhole and is
+   **not trustworthy at face value**. Issue 213's four blog URLs were checked by hand against the
+   repo and every one of them has 2–4 genuine inbound internal links
+   (`InVillaServicePage.tsx:392`, `EventsMainPage.tsx:1043`/`:1058`, `HubPage.tsx:1385`,
+   `PrivateChefDenpasarGuidePage.tsx:19`/`:112`). **Not a real defect. Do not "fix" it.**
+
+### Stale findings — already fixed in the repo, awaiting a recrawl to clear
+
+Verified against source, not assumed. Do not re-fix these:
+
+| Issue | Count | Status |
+|---|---|---|
+| 45 — structured data markup errors (**all 3 "errors"**) | 3 | Fixed in `650ba745`, deployed 20:51. Snapshot finished 20:38 — predates the fix. |
+| 204 — hreflang language mismatch | 94 | Fixed. `SeoHead.tsx:665-686` and `inject-meta.ts:418-432` no longer emit an `id` alternate. `page_info` confirms the defect payload was `{hreflang: "id", detectedLang: "en"}`, discovered 19:47 UTC. |
+| 216 — links with no anchor text | 3 | Fixed. `HubPage.tsx:425-430` already carries the `sr-only` anchor-text span for the three portal cards (`/fine-dining`, `/catering`, `/events`). |
+
+Remaining live items are advisory, not defects: 112 low text/HTML ratio (66 — inherent to a
+prerendered SPA shell, ratio 0.07), 105 duplicate H1/title (1), 223 content-not-optimized (1),
+4 blocked-from-crawling (2 — the intentional noindex paths).
+
+### Shipped this run
+
+Because the gate failed, **no metadata, title, description or ranking-driven copy was touched.**
+Both changes below are technical defects proven from the repo and from `vercel.json`, independent
+of any Semrush snapshot.
+
+**1. Collapsed a two-hop 301 chain (`src/data/redirects.ts:151`).**
+
+`/corporate-events-catering-bali` → `/blog/corporate-events-catering-bali` → `/corporate-case-studies`.
+Both hops are real edge 301s in `vercel.json` (lines 433-434 and 878). The intermediate URL
+matches **no** route in `App.tsx`, **no** entry in `route-slugs.ts` and **no** `<loc>` in
+`sitemap.xml` — it exists only as a redirect *source* (`redirects.ts:265`, the 2026-07-24
+consolidation). Now points straight at `/corporate-case-studies`. A full transitive scan of all
+205 rules confirms this was the **only** chain and there are no loops.
+
+**2. Restored owner ruling D-010 in the generator source — this was silently reverting on every deploy.**
+
+The serious one. `edaeb854` ("seo: consolidate area intent to /private-chef/") implemented D-010 by
+hand-editing **`vercel.json` only**. `git show --stat edaeb854` lists five files and
+`src/data/redirects.ts` is not among them.
+
+But `scripts/generate-redirects.ts:85` **overwrites `vercel.json` from `redirects.ts`**, and
+`package.json` wires it into `prebuild`, which `vercel build` runs on every CI deploy
+(`.github/workflows/deploy.yml:64`). So each deploy regenerated `vercel.json` from the stale
+`/locations/[area]` values and **undid D-010**. The divergence was invisible because nobody
+diffed the source against its own generated artifact.
+
+Evidence of the divergence, before the fix: `redirects.ts` and `public/_redirects` both said
+`/locations/*` for exactly the ten URLs `edaeb854` changed, while `vercel.json` said
+`/private-chef/*`. Ten mismatches, no others.
+
+Corrected in `redirects.ts` to the owner-approved targets, and `public/_redirects` regenerated to
+match: `/seminyak`, `/canggu`, `/uluwatu`, `/ubud`, `/sanur`, `/nusa-dua` → `/private-chef/{same}`;
+`/berawa` → `/private-chef/berawa`; `/kuta` → `/private-chef/kuta`; `/tabanan` →
+`/private-chef/canggu`; `/sanur-beach-private-chef` → `/private-chef/sanur`.
+
+**Scope held to exactly the ten URLs D-010 covered.** `/jimbaran`, `/pererenan`, `/bukit`,
+`/legian`, `/kerobokan`, `/petitenget`, `/tanah-lot`, `/denpasar`, `/gianyar` still point at their
+`/locations/` dining guides — extending the ruling to them would be inventing scope. All ten new
+targets were verified to be live routes (`App.tsx:393` generates `/private-chef/[slug]`; each
+appears in `sitemap.xml`).
+
+Post-change verification, all three artifacts: 205 rules each, **zero** source↔`vercel.json`
+mismatches, **zero** source↔`_redirects` mismatches, **zero** chains or loops, and no redirect
+source present in `sitemap.xml`.
+
+**`npx tsc -b`: exit 0** — see the caveat below on how that was established.
+
+### CORRECTION — `git push` DOES deploy. The previous entry's advice was wrong and harmful.
+
+The entry above this one concluded that `vercel.json`'s `"git": {"deploymentEnabled": false}`
+means "git pushes never trigger a build" and instructed future runs to `POST /v13/deployments`
+with a `gitSource`. **Do not do that.** It is the wrong mechanism and it degrades production.
+
+What actually happens, from `.github/workflows/deploy.yml`:
+
+- Deploys run through **GitHub Actions**, triggered `on: push: branches: [main]`. The Actions job
+  builds *and prerenders* locally, then ships the result with `vercel deploy --prebuilt`.
+- `deploymentEnabled: false` is deliberate and correct. Its own comment explains why: Vercel's
+  build container **cannot run headless Chromium**, so if Vercel builds the project itself the
+  Playwright prerender is skipped and the site ships "a meta-only shell with an empty
+  `<div id="root">` (no body, no crawlable links)".
+- A `POST /v13/deployments` with a `gitSource` is exactly the path that makes **Vercel** build it —
+  the failure mode the flag exists to prevent.
+
+The API evidence confirms it happened. Commit `9105b5d9` has **two** production deployments at
+22:39: one with `"source": "cli"` (the correct prebuilt Actions deploy) and one with
+`"source": null` — the previous run's API POST. For a period, production served a
+non-prerendered build.
+
+**Production is currently healthy.** The newest production deployment is `cb70ec26` at 22:47 with
+`"source": "cli"`, i.e. a properly prerendered Actions deploy, and it supersedes the bad one.
+(A live HTML fetch of the page was attempted as a third check but the fetch tool refused the URL
+on a provenance restriction — noted rather than worked around.)
+
+Also corrected: the previous entry's "docs-only commits produce no deployment" is right but for a
+different reason than given — `deploy.yml` sets `paths-ignore: ['**.md', ...]`, so a commit
+touching only `seo-department/**` legitimately skips the workflow. Run 2's `e5942a9f` was never
+deployed, and that was correct.
+
+**Rule for future runs: push to `main` and let GitHub Actions deploy. Never create a deployment
+via the Vercel API.** Poll `GET /v6/deployments?projectId=…` and require `"source": "cli"` on the
+deployment you are attributing to your commit; the build takes roughly 5 minutes. Note
+`concurrency.cancel-in-progress: true` — a later push cancels an in-flight build, which is the
+real reason `9105b5d9` appeared not to deploy.
+
+### Concurrency — stood off another session's files
+
+`git status --short` at start showed a second session mid-change on a PostHog integration:
+`.env.example`, `package.json`, `src/components/QuoteFunnel.tsx`, `src/lib/analytics.ts`,
+`src/main.tsx` modified, plus untracked `src/lib/posthog.ts`. **None of those were edited or
+staged.** No `.git/index.lock` was present at any point.
+
+This is why the typecheck needed care: `npx tsc -b` in the live tree **fails** with two errors,
+both in the other session's untracked `src/lib/posthog.ts` (`TS2307: Cannot find module
+'posthog-js'` — the dependency is added to `package.json` but not installed here, plus one
+implicit `any`). Neither error is attributable to this run, and fixing their file was not this
+run's business.
+
+To satisfy the gate honestly, HEAD was exported with `git archive` into a scratch directory, the
+three changed files copied in, `node_modules` symlinked, and `npx tsc -b` run there: **exit 0, no
+output.** The live-tree failure is entirely the other session's in-flight work.
+`scripts/generate-redirects.ts` could not be run either (`npx tsx` dies with `TransformError` —
+the bundled esbuild binary is macOS-ARM, the same class of problem as the known `vite build`
+failure), so `public/_redirects` and `vercel.json` were patched to byte-match what the generator
+emits, and cross-checked rule-for-rule against `redirects.ts` afterwards.
+
+- **URLs touched:** none. No page copy, title or description changed. Redirect *targets* only.
+- **Cooldowns:** unaffected — no metadata was rewritten, so no 14-day timer starts.

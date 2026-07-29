@@ -64,6 +64,14 @@ Note the scaffolding was also **internally stale**: the Downloads JSON-LD for `f
 
 ---
 
+## Update 2026-07-30 (later) — the drop-off item below was resolved, and the sweep had a gap
+
+The owner ruled drop-off catering **in scope** for D-008; it is now 5 across site copy, FAQ schema and upstream (D-014).
+
+A later pass then found a miss this sweep had not caught: `catering.md:142` phrased the minimum **by format** — *"It depends on the format: 4 for drop-off, 6 for babi guling…"* — so it matched none of the `Min. 4 guests` / `4 guests minimum` / `minimum of four guests` patterns searched for. Fixed under D-015.
+
+**Lesson for the next sweep:** grep for the *number next to the format name*, not just the number next to the word "guests". A minimum can be stated without the word "minimum" anywhere near it.
+
 ## Open item for owner review — not changed
 
 `content/catering_drop-off-catering.md:41` reads **`Min. 4 guests`**.

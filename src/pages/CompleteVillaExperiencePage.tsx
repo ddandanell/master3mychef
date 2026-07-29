@@ -484,7 +484,7 @@ export default function CompleteVillaExperiencePage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="complete-villa-experience-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> WhatsApp +62 896 7407 2020
+              <MessageCircle className="w-4 h-4" /> WhatsApp {siteFacts.phoneDisplay}
             </a>
             <a href="mailto:bali@mychef.id" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Mail className="w-4 h-4" /> bali@mychef.id
@@ -494,7 +494,7 @@ export default function CompleteVillaExperiencePage() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Phone className="w-5 h-5 text-[#C5A028] mb-3" />
               <p className="text-white text-sm font-semibold mb-1">Telephone</p>
-              <a href="tel:+6289674072020" className="text-white/[65%] text-sm hover:text-white transition-colors">+62 896 7407 2020</a>
+              <a href={`tel:${siteFacts.phoneHref}`} className="text-white/[65%] text-sm hover:text-white transition-colors">{siteFacts.phoneDisplay}</a>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Mail className="w-5 h-5 text-[#C5A028] mb-3" />

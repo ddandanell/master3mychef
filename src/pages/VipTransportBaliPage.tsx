@@ -291,7 +291,7 @@ export default function VipTransportBaliPage() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Phone className="w-5 h-5 text-[#C5A028] mb-3" />
               <p className="text-white text-sm font-semibold mb-1">Phone</p>
-              <a href="tel:+6289674072020" className="text-white/[65%] text-sm hover:text-white transition-colors">+62 896 7407 2020</a>
+              <a href={`tel:${siteFacts.phoneHref}`} className="text-white/[65%] text-sm hover:text-white transition-colors">{siteFacts.phoneDisplay}</a>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Clock className="w-5 h-5 text-[#C5A028] mb-3" />

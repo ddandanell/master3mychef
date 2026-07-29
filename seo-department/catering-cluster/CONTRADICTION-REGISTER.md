@@ -54,22 +54,33 @@ The `++` suffix (11% government tax + 10% service charge = **+21%**) is applied 
 
 *Note: the brief asked whether floating breakfast has contradictory standalone rules. **On-page, it does not** — the add-on rule is stated consistently, and the "2 guests / 4 guests" figures are not a conflict (couple package vs group brunch). The contradiction is metadata vs page, not within the page.*
 
-### H-02 — Minimum-spend logic conflicts with specialist minimums
-The hub states **"Minimum spend IDR 5,000,000"**. Several specialist pages define entry points below it:
+### H-02 — Minimum-spend logic conflicts with specialist minimums — **RESOLVED 2026-07-30**
 
-| Page | Stated minimum | Implied floor | vs hub 5,000,000 |
-|---|---|---|---|
-| `/catering/babi-guling` | 6 guests, "minimum total IDR 3,900,000" | 3,900,000 | **below** |
-| `/catering/bbq-catering` | 6 guests @ IDR 700,000 | 4,200,000 | **below** |
-| `/catering/plated-catering` | "Minimum spend: IDR 5,000,000 per event" | 5,000,000 | matches |
-| `/catering/villa-catering` | 8 guests | not stated | unclear |
-| `/catering/buffet` | 30 guests | not stated | unclear |
-| `/catering/drop-off-catering` | 4 people (family) / 8 (dinner party) | not stated | unclear |
-| `/catering/grazing-tables` | 6 guests, individually quoted | not stated | unclear |
-| `/catering/corporate-catering` | IDR 15,000,000 | 15,000,000 | far above |
-| `/catering/retreat-catering` | "Minimum booking applies" | **undefined** | unquantified |
+**The premise of this entry was wrong.** It was written against a misread figure, and re-verification against the codebase on 2026-07-30 found no universal minimum-spend rule anywhere in the site.
 
-**Question for management:** is IDR 5,000,000 a universal floor, a plated-only floor, or a hub-level simplification? As written, a guest can be quoted a babi guling feast at 3.9m on one page and told the minimum is 5m on another.
+Two specific corrections to what this entry previously claimed:
+
+- **The hub does not state "Minimum spend IDR 5,000,000".** `src/pages/CateringMainPage.tsx` contains no minimum-spend claim. Its only "minimum" is *"Minimum 5 guests"* (line 432, repeated line 1201) — a guest count. The `IDR 5,000,000` on that page is line 131, a **package tier price** ("Medium — 25 to 30 guests. Extended sides and larger portions."). A tier price was read as a floor.
+- **`/catering/plated-catering` does not carry a 5,000,000 spend minimum.** `CateringPlatedPage.tsx:598` states the opposite, explicitly: *"Plated service starts at five guests — there is no minimum spend."*
+
+Verified state of every catering entry point, read from source 2026-07-30:
+
+| Page | Actual minimum (verified) | Type |
+|---|---|---|
+| `/catering` (hub) | 5 guests | guest count |
+| `/catering/babi-guling` | 6 guests, min total IDR 3,900,000 | guest count + total |
+| `/catering/bbq-catering` | 10 guests | guest count — *register previously said 6* |
+| `/catering/plated-catering` | 5 guests, **no** minimum spend | guest count |
+| `/catering/villa-catering` | 8 guests | guest count |
+| `/catering/buffet` | 30 standard; 20–29 at higher per-person rates | guest count |
+| `/catering/drop-off-catering` | 4 (family) / 8 (dinner party, grazing) | guest count |
+| `/catering/grazing-tables` | 5 guests, individually quoted | guest count — *register previously said 6* |
+| `/catering/corporate-catering` | IDR 15,000,000 (`siteFacts.corporateMinSpend`) | **spend — the only one on the site** |
+| `/catering/retreat-catering` | "Minimum booking applies" | **undefined — still open, see Q7** |
+
+**Management ruling (2026-07-30):** the babi guling IDR 3,900,000 figure is correct; the supposed 5,000,000 hub minimum was not a real rule. No page change was required — the cluster already prices on per-service guest-count minimums, with corporate the single spend-based exception.
+
+**Standing correction for this register:** entries here must cite file and line. Three of this entry's nine rows were wrong because it was written from recollection rather than from source.
 
 ### H-03 — "Michelin" appears on four catering pages without evidence on file
 Present on `/catering`, `/catering/bbq-catering`, `/catering/plated-catering`, `/catering/drop-off-catering`. Ties to standing risk **R-003**. Michelin-related credentials are specific and externally checkable; they need a documented basis (which chef, which restaurant, which years) or softer wording.
@@ -138,11 +149,11 @@ Recorded so these are not re-raised, and to keep the register honest:
 | # | Question | Blocks |
 |---|---|---|
 | 1 | Are displayed catering prices **net or `++`**? One rule, applied everywhere. | C-01 — blocks all rewriting |
-| 2 | Is IDR 5,000,000 a **universal** minimum spend, or plated-only? | H-02 |
+| 2 | ~~Is IDR 5,000,000 a **universal** minimum spend, or plated-only?~~ **ANSWERED 2026-07-30: neither — it is a 25–30 guest package tier price on the hub, not a minimum. No universal spend floor exists. See H-02.** | H-02 — closed |
 | 3 | Is floating breakfast **add-on only**? (On-page says yes; metadata implies standalone.) | H-01a |
 | 4 | What is the documented basis for **"Michelin"**? | H-03 |
 | 5 | Please supply the **NPWP number** for the file. | H-04 |
 | 6 | Which suppliers substantiate **organic** and **halal-certified**? | M-02 |
-| 7 | What is the retreat minimum, in numbers? | H-02 |
+| 7 | What is the retreat minimum, in numbers? `/catering/retreat-catering` says only "Minimum booking applies" — the one catering entry point with no number attached. | **Still open** (was filed under H-02; H-02 is now closed, this question is not) |
 
-**Questions 1–3 block the rewrite entirely.** Rewriting price-bearing pages before the pricing rule is fixed would replicate the contradiction into new copy.
+**Questions 1 and 3 block the rewrite entirely.** Rewriting price-bearing pages before the pricing rule is fixed would replicate the contradiction into new copy. (Question 2 was answered on 2026-07-30 and no longer blocks anything.)

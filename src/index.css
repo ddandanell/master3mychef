@@ -460,3 +460,19 @@
 .article-prose-invert th,
 .article-prose-invert td { border-bottom-color: rgba(245, 242, 235, 0.14); }
 .article-prose-invert hr { border-top-color: rgba(245, 242, 235, 0.14); }
+
+/* ── Concierge launcher / sticky mobile CTA collision ──────────────────────────
+   54 pages render <StickyMobileCTA> (the yellow WhatsApp bar, md:hidden). On those
+   pages the concierge launcher stacked on top of it on phones - two competing CTAs
+   in the same corner. Below the md breakpoint, suppress the launcher wherever the
+   bar is present, and leave it visible everywhere else (blog, journal, location
+   guides) so no page loses its mobile WhatsApp route.
+
+   Done in CSS rather than JS on purpose: a useEffect + querySelector would render
+   the button first and yank it away a frame later. :has() is evaluated at style
+   time, so the launcher simply never paints on those pages. */
+@media (max-width: 767.98px) {
+  body:has([data-sticky-mobile-cta]) .concierge-launcher {
+    display: none;
+  }
+}

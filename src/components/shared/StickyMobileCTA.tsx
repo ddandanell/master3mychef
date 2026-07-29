@@ -35,7 +35,7 @@ export default function StickyMobileCTA({
     : `https://wa.me/${PHONE.digits}?text=${encodeURIComponent(message)}`
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+    <div data-sticky-mobile-cta className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
       <a
         href={waUrl}
         target="_blank"

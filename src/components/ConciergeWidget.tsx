@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { ChefHat, X, UtensilsCrossed, Users, Cake, Briefcase, MessageCircle, Sparkles, Bot, User } from 'lucide-react'
+import { ChefHat, X, UtensilsCrossed, Users, Cake, Briefcase, MessageCircle, Sparkles } from 'lucide-react'
 import { trackWhatsAppConversion } from '@/lib/analytics'
 
 const WHATSAPP_NUMBER = '6289674072020'
@@ -117,12 +117,14 @@ function getContextData(pathname: string) {
 
 export default function ConciergeWidget() {
   const [isOpen, setIsOpen] = useState(false)
-  const [showNotification, setShowNotification] = useState(false)
   const [persona, setPersona] = useState<'ai' | 'adriano'>('ai')
   const location = useLocation()
   const popupRef = useRef<HTMLDivElement>(null)
 
-  const { prefix, triggerMsg } = getContextData(location.pathname)
+  // `triggerMsg` in the context data is intentionally left unused: it was the copy for
+  // the removed auto-nudge bubble. Kept in the data so the nudge can be revived as an
+  // opt-in behaviour without rewriting every context entry.
+  const { prefix } = getContextData(location.pathname)
 
   // Switch personas every 10 seconds or when page changes
   useEffect(() => {
@@ -132,16 +134,10 @@ export default function ConciergeWidget() {
     return () => clearInterval(timer)
   }, [])
 
-  // Auto-trigger notification bubble after 5 seconds on new page
-  /* eslint-disable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
-  useEffect(() => {
-    setShowNotification(false)
-    const timer = setTimeout(() => {
-      if (!isOpen) setShowNotification(true)
-    }, 5000)
-    return () => clearTimeout(timer)
-  }, [location.pathname])
-  /* eslint-enable react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
+  // NOTE: the widget no longer nudges on its own. It previously auto-opened a
+  // notification bubble 5s after every page load, keyed to location.pathname, so a
+  // visitor browsing four pages was interrupted four times. It now only ever appears
+  // on tap. Do not reintroduce a timer here.
 
   const handleServiceClick = (option: ServiceOption) => {
     const fullMessage = prefix + option.baseMessage
@@ -168,53 +164,18 @@ export default function ConciergeWidget() {
 
   return (
     <>
-      {/* Auto-trigger Notification Bubble */}
-      {showNotification && !isOpen && (
-        <div 
-          className="fixed bottom-20 right-5 md:bottom-24 md:right-8 z-50 max-w-[240px] animate-in fade-in slide-in-from-bottom-4 duration-500"
-          onClick={() => { setIsOpen(true); setShowNotification(false) }}
-        >
-          <div className="bg-[#0A0908] border border-[#C5A028]/30 rounded-2xl p-4 shadow-2xl cursor-pointer hover:border-[#C5A028] transition-all group">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#C5A028]/10">
-                {persona === 'ai' ? (
-                  <Bot className="h-3 w-3 text-[#C5A028]" />
-                ) : (
-                  <User className="h-3 w-3 text-[#C5A028]" />
-                )}
-              </div>
-              <span className="text-[10px] font-bold text-[#C5A028] uppercase tracking-wider">
-                {persona === 'ai' ? 'myCHEF AI' : 'Adriano (Founder)'}
-              </span>
-              <button
-                className="ml-auto p-0.5 text-white/55 hover:text-white focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
-                onClick={(e) => { e.stopPropagation(); setShowNotification(false) }}
-              >
-                <X className="h-3 w-3" />
-              </button>
-            </div>
-            <p className="text-xs text-white/90 leading-relaxed font-medium">
-              {triggerMsg}
-            </p>
-          </div>
-        </div>
-      )}
-
-      {/* Floating button */}
+      {/* Floating button.
+          `concierge-launcher` is the hook for the mobile suppression rule in index.css:
+          on viewports below md, this is hidden on any page that already renders
+          StickyMobileCTA, so the yellow bar and this button never stack up. */}
       <button
-        onClick={() => { setIsOpen(!isOpen); setShowNotification(false) }}
+        onClick={() => setIsOpen(!isOpen)}
         aria-label="Open myCHEF Concierge"
         aria-expanded={isOpen}
-        className="fixed bottom-6 right-5 z-50 md:bottom-8 md:right-8 flex items-center gap-2 h-12 px-4 rounded-full bg-[#0D0C0A] border border-[#C5A028]/60 transition-all duration-200 hover:border-[#C5A028] hover:shadow-[0_0_20px_rgba(197,160,40,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A028]"
+        className="concierge-launcher fixed bottom-6 right-5 z-50 md:bottom-8 md:right-8 flex items-center gap-2 h-12 px-4 rounded-full bg-[#0D0C0A] border border-[#C5A028]/60 transition-all duration-200 hover:border-[#C5A028] hover:shadow-[0_0_20px_rgba(197,160,40,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A028]"
       >
         <div className="relative">
           <ChefHat className="h-5 w-5 text-[#C5A028] flex-shrink-0" strokeWidth={1.5} />
-          {showNotification && (
-            <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5A028] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#C5A028]"></span>
-            </span>
-          )}
         </div>
         <span className="hidden sm:inline text-sm font-medium text-white tracking-wide">Ask myCHEF</span>
       </button>

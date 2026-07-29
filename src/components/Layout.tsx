@@ -28,7 +28,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   // Page views are tracked by GA4 (via GTM-KCBNZBL9) + GA4 Enhanced Measurement
   // history events. The manual trackPageView call was removed to prevent duplicate page views.
 
-  // Universal Conversion Tracking — catches every WA and Phone click sitewide
+  // Universal Conversion Tracking — catches every WA and Phone click sitewide.
+  //
+  // SINGLE SOURCE OF TRUTH for generate_lead. Do NOT add inline onClick handlers
+  // calling trackWhatsAppClick/trackPhoneClick to <a href="wa.me"> or <a href="tel:">
+  // anchors — this delegated listener already covers them, and doing both fires the
+  // conversion twice. Set data-source on the anchor instead; it is read below.
+  //
+  // Button flows that use window.open() instead of an anchor (ContactPage,
+  // PartnersPage, BookingForm, BookingFormCatering, ConciergeWidget) are NOT caught
+  // here and must keep their explicit trackWhatsAppClick call.
+  //
+  // The GTM container (GTM-KCBNZBL9) previously duplicated this via a Link Click
+  // trigger -> whatsapp_click/phone_click tags, which two GA4 event-modification
+  // rules then renamed to generate_lead. On 2026-07-29, to stop 2x counting:
+  //   - the two GTM tags were PAUSED (they still exist in the container, from
+  //     Version 4 onwards — un-pausing them reintroduces the double count)
+  //   - the two GA4 event-modification rules were DELETED
+  // See reports/GA4-WHATSAPP-TRACKING-AUDIT-2026-07-29.md
   useEffect(() => {
     const handleConversionClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement
@@ -36,6 +53,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       // WhatsApp Tracking
       const waAnchor = target.closest<HTMLAnchorElement>('a[href*="wa.me"]')
       if (waAnchor) {
+        // Opt-out: anchors that fire their own, more specific key event (e.g. the quote
+        // funnel's quote_submitted) set data-skip-lead-track so one action = one conversion.
+        if (waAnchor.dataset.skipLeadTrack === 'true') return
         const source = waAnchor.dataset.source || location.pathname.replace(/^\/+|\/+$/g, '').replace(/\//g, '_') || 'home'
         trackWhatsAppClick(source)
         return

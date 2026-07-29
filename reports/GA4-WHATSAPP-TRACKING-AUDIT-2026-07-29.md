@@ -203,6 +203,32 @@ The same `data-skip-lead-track` pattern can be applied to the other four form fl
 
 ---
 
-## 10. Important caveat on historical data
+## 10. Post-deploy verification — PASSED
+
+Shipped as PR #39 → `main` commit `14ac5299`. All CI checks green, including the full `build-and-verify`. Vercel production deployment `dpl_2yJw1YSJE42MFmrixkpE3bWPhawH` — **READY**.
+
+Re-tested on live mychef.id by capturing `/g/collect` payloads:
+
+**Test 1 — one click, one conversion**
+3 WhatsApp CTA clicks → exactly **3** `en=generate_lead` hits (`_s=2`, `_s=3`, `_s=4`), each with its own source:
+
+```text
+en=generate_lead ... ep.cta_source=homepage-hero&ep.method=WhatsApp&ep.event_category=conversion
+en=generate_lead ... ep.cta_source=homepage-pricing-strip&ep.method=WhatsApp&ep.event_category=conversion
+en=generate_lead ... ep.cta_source=homepage-mid-cta&ep.method=WhatsApp&ep.event_category=conversion
+```
+
+Before the fix the same 3 clicks produced 6. **Ratio is now 1:1.**
+
+**Test 2 — the quote-funnel opt-out works**
+A `wa.me` anchor carrying `data-skip-lead-track="true"` was clicked on the live site: **0** `/g/collect` hits. The global listener correctly stands down, so a quote submission will fire `quote_submitted` alone.
+
+**Also confirmed live:** the parameter is now `ep.cta_source` (was `ep.source`), and `transport_type` no longer appears in the payload.
+
+Note: each conversion is still accompanied by one `google.com/measurement/conversion` ping. That is the Google Ads / Google signals ping, not a GA4 event, and it does not affect key-event counts.
+
+---
+
+## 11. Important caveat on historical data
 
 Deleting the duplicate does **not** correct history. All `generate_lead` figures prior to the fix remain roughly 2× inflated (3× on area pages, 1× on form flows). Treat pre-fix conversion counts as unreliable for absolute reporting, and annotate the fix date in GA4 (Admin → Data display → Annotations) so trend charts don't read the correction as a performance drop.

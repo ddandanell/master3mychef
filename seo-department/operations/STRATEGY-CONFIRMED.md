@@ -1,5 +1,7 @@
 # Confirmed Strategy — owner decision 2026-07-28
 
+> **⚠ CORRECTION (2026-07-28):** the indexing conclusions in this document were built on a stale GSC Page Indexing report and are partly wrong. Read `CORRECTION-indexing-report-is-stale.md` first.
+
 **This supersedes the open head-term question in `04-SERP-RESEARCH-FINDINGS.md`.**
 
 ---

@@ -1,5 +1,7 @@
 # Growth Decision — how to win both categories
 
+> **⚠ CORRECTION (2026-07-28):** the indexing conclusions in this document were built on a stale GSC Page Indexing report and are partly wrong. Read `CORRECTION-indexing-report-is-stale.md` first.
+
 **Decided:** 2026-07-28 · **Decided by:** SEO Director, on owner delegation
 **Basis:** GSC export (762 queries, 162 pages, 28 days), Ahrefs DR 23, live SERP research
 

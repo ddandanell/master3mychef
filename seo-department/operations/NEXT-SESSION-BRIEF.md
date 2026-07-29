@@ -1,5 +1,7 @@
 # Next Session Brief — start here
 
+> **⚠ CORRECTION (2026-07-28):** the indexing conclusions in this document were built on a stale GSC Page Indexing report and are partly wrong. Read `CORRECTION-indexing-report-is-stale.md` first.
+
 **Written:** 2026-07-28 · **Priority order is deliberate. Work top-down.**
 
 ---

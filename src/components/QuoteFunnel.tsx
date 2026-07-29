@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, ChevronLeft, MessageCircle, Minus, Plus } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from './SeoHead'
-import { trackEvent } from '@/lib/analytics'
+import { trackEvent, ESTIMATED_LEAD_VALUE_IDR } from '@/lib/analytics'
 import { siteFacts } from '@/data/siteFacts'
 
 // 9-step quote funnel ported from production mychef.id/quote.
@@ -431,7 +431,15 @@ export default function QuoteFunnel() {
               data-source="quote-funnel-submit"
               data-skip-lead-track="true"
               className="inline-flex items-center justify-center gap-2 w-full bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-all"
-              onClick={() => trackEvent('quote_submitted', { service_type: form.serviceType, cta_source: 'quote-funnel-submit' })}
+              onClick={() =>
+                trackEvent('quote_submitted', {
+                  service_type: form.serviceType,
+                  cta_source: 'quote-funnel-submit',
+                  method: 'WhatsApp',
+                  value: ESTIMATED_LEAD_VALUE_IDR,
+                  currency: 'IDR',
+                })
+              }
             >
               <MessageCircle className="w-4 h-4" /> Send Request via WhatsApp
             </a>

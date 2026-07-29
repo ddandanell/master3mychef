@@ -5,6 +5,27 @@
 // If GA4 ever needs to be initialised from the app instead of index.html, do it
 // explicitly here rather than reintroducing an unused constant.
 
+/**
+ * ESTIMATED value of one inbound lead, in IDR. This is NOT booked revenue.
+ *
+ * myCHEF closes on WhatsApp, off-site, so GA4 never sees a real transaction.
+ * Attaching an estimate to each lead is what makes GA4's revenue/"Total value"
+ * columns usable for comparing pages, channels and campaigns against each other.
+ *
+ *   average booking value  IDR 7,500,000   (owner estimate, 2026-07-29)
+ *   lead -> booking rate   20%             (owner estimate, 2026-07-29)
+ *   estimated lead value   IDR 1,500,000
+ *
+ * Treat the absolute figure as directional only — its job is to rank sources,
+ * not to report earnings. Update both inputs here when the real numbers are
+ * known, and re-check the assumption whenever pricing or close rate shifts.
+ *
+ * Both generate_lead and quote_submitted currently carry the same value. A
+ * completed quote funnel is probably worth more than a bare WhatsApp click, but
+ * there is no data yet to justify a specific multiplier — split them once there is.
+ */
+export const ESTIMATED_LEAD_VALUE_IDR = 1_500_000
+
 type AnalyticsParams = Record<string, unknown>
 
 declare global {
@@ -42,6 +63,8 @@ export function trackWhatsAppClick(source: string) {
     cta_source: source,
     method: 'WhatsApp',
     event_category: 'conversion',
+    value: ESTIMATED_LEAD_VALUE_IDR,
+    currency: 'IDR',
   })
 }
 
@@ -58,6 +81,8 @@ export function trackPhoneClick(source: string) {
     cta_source: source,
     method: 'Phone',
     event_category: 'conversion',
+    value: ESTIMATED_LEAD_VALUE_IDR,
+    currency: 'IDR',
   })
 }
 

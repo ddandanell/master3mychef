@@ -420,6 +420,11 @@
       "permanent": true
     },
     {
+      "source": "/pricing-calculator",
+      "destination": "/calculator",
+      "permanent": true
+    },
+    {
       "source": "/villa-staff-bali-agency",
       "destination": "/staffing/villa-staff",
       "permanent": true

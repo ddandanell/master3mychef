@@ -102,7 +102,6 @@ const LandingPage = lazy(() => import('./components/LandingPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const ChefsPage = lazy(() => import('./pages/ChefsPage'))
 const PricingPage = lazy(() => import('./pages/PricingPage'))
-const PricingCalculatorPage = lazy(() => import('./pages/PricingCalculatorPage'))
 const FAQPage = lazy(() => import('./pages/FAQPage'))
 const ReviewsPage = lazy(() => import('./pages/ReviewsPage'))
 const WhyMychefPage = lazy(() => import('./pages/WhyMychefPage'))
@@ -513,7 +512,9 @@ export default function App() {
           <Route path="/why-mychef" element={<WhyMychefPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/pricing-calculator" element={<PricingCalculatorPage />} />
+          {/* /pricing-calculator 301s to /calculator in vercel.json. The old
+              component stated a 2-guest minimum and "ingredients included",
+              both of which contradict current pricing. Route retired. */}
           <Route path="/retreats" element={<Navigate to="/events/retreats" replace />} />
           <Route path="/recommended-services" element={<RecommendedServicesPage />} />
           <Route path="/join-our-team" element={<JoinTeamPage />} />

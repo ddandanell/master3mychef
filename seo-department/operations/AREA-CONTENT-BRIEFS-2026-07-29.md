@@ -64,10 +64,25 @@ Competitors treat this as a headline selling point — several advertise "no ext
 **Why it matters:** the source research documents this as an established local demand pattern in the Canggu–Pererenan corridor (neighbouring long-stay families splitting one chef). It is a booking model we apparently offer nothing for, and it is specific enough that nobody writes about it.
 **Brief:** one FAQ + a short block on `/private-chef/canggu`. Needs an owner answer first: *do we accept a shared booking across two villas, and how is it priced and staffed?* Do not write it until that is answered.
 
-### 2. Long-stay monthly retainer, invisible on area pages
-**Evidence:** 0 matches for `retainer` in `privateChefAreas.ts`, despite `/hire-private-chef-bali-monthly` existing as a page.
-**Why it matters:** Canggu and Pererenan carry the densest long-stay expat demand. The monthly product exists but the area pages that catch that audience never mention it.
-**Brief:** one FAQ + contextual link from the Canggu / Pererenan / Berawa area pages to `/hire-private-chef-bali-monthly`. **No owner input needed** — this is an internal link plus a pointer to an existing page. Safe to action.
+### 2. Long-stay monthly retainer — ~~gap~~ **WITHDRAWN 2026-07-29: already handled correctly**
+
+This was written off a keyword search for `retainer` in `privateChefAreas.ts`, which returns 0. That was a bad test — the linking lives in `AREA_RELATED_LINKS` in `PrivateChefAreaPage.tsx`, not in the area data file.
+
+Checked properly:
+
+| Area | Links to `/hire-private-chef-bali-monthly`? |
+|---|---|
+| Canggu | **yes** |
+| Pererenan | **yes** |
+| Sanur | **yes** |
+| Seminyak | no |
+| Ubud | no |
+
+That split is not an oversight — it is the correct call. Canggu, Pererenan and Sanur are the long-stay expat areas; Seminyak and Ubud skew short-stay and tourist. Whoever configured this matched the link to the demand.
+
+**No action.** Adding monthly-hire links to Seminyak and Ubud would second-guess a sound decision and dilute those pages' intent.
+
+*Lesson for future briefs: grep the data file AND the component that renders it before calling something a gap.*
 
 ### 3. Ubud — villa kitchen constraints and weather contingency
 **Evidence:** 0 matches for kitchen-equipment or gas-supply constraints.

@@ -28,7 +28,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/',
     title: 'Private Chef Bali | Michelin-Trained Villa Dining & Events',
     description:
-      'Hire a private chef in Bali for villa dining, BBQs, weddings & events. Michelin-trained team, clear prices from IDR 700K/guest, WhatsApp reply within the hour.',
+      'Hire a private chef in Bali for villa dining, BBQs, weddings & events. Michelin-trained team, clear prices from IDR 700K/guest. WhatsApp reply in 1 hour.',
     canonical: `${SITE}/`,
     h1: 'Private Chef in Bali — Your Villa. Our Kitchen.',
     ogImage: `${SITE}/hero-home.webp`,
@@ -1337,7 +1337,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering/floating-breakfast',
     title: 'Floating Breakfast Bali | Add-On to Your Chef Booking',
     description:
-      'Floating breakfast styled in your Bali villa pool — available as an add-on to a myCHEF private chef or catering booking, not sold on its own. WhatsApp myCHEF.',
+      'Floating breakfast styled in your Bali villa pool — an add-on to a myCHEF private chef or catering booking, not sold on its own. WhatsApp to book.',
     canonical: `${SITE}/catering/floating-breakfast`,
     h1: 'Floating Breakfast — In Your Bali Villa Pool',
     ogImage: `${SITE}/breakfast-spread.webp`,
@@ -2194,7 +2194,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/pricing',
     title: 'Private Chef Bali Prices | Catering & Event Pricing | myCHEF',
     description:
-      'myCHEF price list for Bali: private chef rates, catering per-person pricing and event packages. Every figure listed, tax and service stated. Quote in 1 hour.',
+      'myCHEF price list for Bali: private chef rates, catering per-person pricing and event packages. Tax and service stated. Quote within 1 hour.',
     canonical: `${SITE}/pricing`,
     h1: 'Private Chef & Catering Prices in Bali',
     ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,

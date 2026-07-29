@@ -1,13 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  MessageCircle, Calendar, Check, Plane, ChefHat, PartyPopper, Wine, Users, Sparkles, ShieldCheck,
-  Phone, Mail, Instagram, MapPin, Heart,
-} from 'lucide-react'
+import { MessageCircle, Calendar, Check, Plane, ChefHat, PartyPopper, Wine, Users, Sparkles, ShieldCheck, Phone, Mail, Instagram, MapPin, Heart } from 'lucide-react'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -483,7 +481,7 @@ export default function CompleteVillaExperiencePage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="complete-villa-experience-final-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <MessageCircle className="w-4 h-4" /> WhatsApp +62 896 7407 2020
+              <MessageCircle className="w-4 h-4" /> WhatsApp {siteFacts.phoneDisplay}
             </a>
             <a href="mailto:bali@mychef.id" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Mail className="w-4 h-4" /> bali@mychef.id
@@ -493,7 +491,7 @@ export default function CompleteVillaExperiencePage() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Phone className="w-5 h-5 text-[#C5A028] mb-3" />
               <p className="text-white text-sm font-semibold mb-1">Telephone</p>
-              <a href="tel:+6289674072020" className="text-white/[65%] text-sm hover:text-white transition-colors">+62 896 7407 2020</a>
+              <a href={`https://wa.me/${siteFacts.whatsappNumber}`} className="text-white/[65%] text-sm hover:text-white transition-colors">{siteFacts.phoneDisplay}</a>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <Mail className="w-5 h-5 text-[#C5A028] mb-3" />
@@ -508,7 +506,7 @@ export default function CompleteVillaExperiencePage() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <MapPin className="w-5 h-5 text-[#C5A028] mb-3" />
               <p className="text-white text-sm font-semibold mb-1">Address</p>
-              <p className="text-white/[65%] text-sm leading-relaxed">Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Bali 80226</p>
+              <p className="text-white/[65%] text-sm leading-relaxed">{siteFacts.addressDisplay}</p>
             </div>
           </div>
           <p className="text-white/40 text-xs tracking-wide uppercase">

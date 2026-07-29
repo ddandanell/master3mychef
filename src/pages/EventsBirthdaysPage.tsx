@@ -1,14 +1,12 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
-import {
-  MessageCircle, Calendar, Check, Cake, PartyPopper, Gift,
-  Music, Camera, Sparkles,
-} from 'lucide-react'
+import { MessageCircle, Calendar, Check, Cake, PartyPopper, Gift, Music, Camera, Sparkles } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useReducedMotion } from '@/hooks/use-reduced-motion'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -95,17 +93,10 @@ const birthdayServiceSchema = {
   serviceType: 'Birthday party catering and private chef dinners',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'myCHEF.id',
+    name: siteFacts.businessName,
     url: 'https://mychef.id/',
-    telephone: '+62 896-7407-2020',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
-      addressLocality: 'Denpasar',
-      addressRegion: 'Bali',
-      postalCode: '80226',
-      addressCountry: 'ID',
-    },
+    telephone: siteFacts.phoneDisplay,
+    address: postalAddressSchema,
   },
   areaServed: 'Bali, Indonesia',
   description: 'Birthday catering for Bali villas: intimate chef dinners (4–12 guests) and full villa birthday parties (15–40 guests) with BBQ, bar service, cake, styling and cleanup.',

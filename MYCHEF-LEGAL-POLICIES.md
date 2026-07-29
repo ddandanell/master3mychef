@@ -5,7 +5,7 @@
 > **Entity:** MyChef ("myCHEF.id", "we", "us")
 > **NPWP:** 1000000005064323
 > **Registered address:** Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Kota Denpasar, Bali 80226, Indonesia
-> **Contact:** bali@mychef.id · WhatsApp +6289674072020
+> **Contact:** bali@mychef.id · WhatsApp +62 896-7407-2020
 > **Governing law:** Republic of Indonesia
 > **Effective date:** _[set on publish]_ · **Last updated:** _[set on publish]_
 >
@@ -90,7 +90,7 @@ These Terms are governed by the laws of the Republic of Indonesia. We encourage 
 We may update these Terms for legal, regulatory, or operational reasons. The Terms in effect at the time of your booking apply to that booking.
 
 ## 15. Contact
-MyChef · Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Bali 80226, Indonesia · bali@mychef.id · WhatsApp +6289674072020
+MyChef · Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Bali 80226, Indonesia · bali@mychef.id · WhatsApp +62 896-7407-2020
 
 ---
 
@@ -119,7 +119,7 @@ We share only what is necessary: booking details with your assigned chef and ser
 Payment information is handled through secure, PCI-compliant gateways and is **not stored on our servers.** We apply appropriate technical and organisational measures to protect personal data.
 
 ## 8. Your Rights
-You may request access to, correction of, or deletion of your personal information, and may withdraw consent for marketing at any time, by contacting bali@mychef.id or WhatsApp +6289674072020. We process requests subject to legal retention requirements.
+You may request access to, correction of, or deletion of your personal information, and may withdraw consent for marketing at any time, by contacting bali@mychef.id or WhatsApp +62 896-7407-2020. We process requests subject to legal retention requirements.
 
 ## 9. Cookies and Tracking
 We use cookies and similar technologies (including Google Analytics via Google Tag Manager) to remember preferences, understand site usage, and improve the service. You can control cookies through your browser settings.
@@ -137,7 +137,7 @@ Our services are directed to adults. We do not knowingly collect personal inform
 We may update this Policy from time to time. The current version is always posted on this page with its "Last updated" date.
 
 ## 14. Contact Us
-Privacy questions: bali@mychef.id · WhatsApp +6289674072020.
+Privacy questions: bali@mychef.id · WhatsApp +62 896-7407-2020.
 
 ---
 
@@ -182,4 +182,4 @@ Once a cancellation is confirmed and approved, refunds are typically processed w
 If the final payment is not received by the deadline, the booking may be treated as a client cancellation under the tiers above.
 
 ## Contact
-MyChef · bali@mychef.id · WhatsApp +6289674072020
+MyChef · bali@mychef.id · WhatsApp +62 896-7407-2020

@@ -52,11 +52,64 @@ export const siteFacts = {
   /** WhatsApp contact number (E.164 without +). */
   whatsappNumber: '6289674072020',
 
-  /** Display phone number. */
+  /** Display phone number. Use this in every schema `telephone` field. */
   phoneDisplay: '+62 896-7407-2020',
+
+  /** tel: href value (E.164 with +). */
+  phoneHref: '+6289674072020',
 
   /** Business email. */
   email: 'bali@mychef.id',
+
+  /**
+   * Canonical business name for schema `name` fields.
+   * Verified 2026-07-29 against the live Google Business Profile — an exact
+   * match is what lets Google tie this site to that listing.
+   * If the GBP name is ever changed, change this in the same session.
+   */
+  businessName: 'myCHEF. - Private Chef and Catering',
+
+  /** Brand name used in visible UI copy and marketing. */
+  brandName: 'myCHEF.id',
+
+  /** Registered entity name used in legal documents (privacy policy, terms). */
+  legalName: 'myCHEF Indonesia',
+
+  /**
+   * Name variants used across the site and third-party profiles.
+   * Declared as schema `alternateName` so Google resolves them to one entity.
+   */
+  alternateNames: ['myCHEF.id', 'myCHEF', 'myCHEF Bali'],
+
+  /**
+   * Canonical postal address — the single source of truth for NAP.
+   *
+   * Indonesian address hierarchy: Panjer (kelurahan) sits inside
+   * Denpasar Selatan (kecamatan) inside Kota Denpasar (city).
+   * schema.org `addressLocality` takes the CITY, so sub-district detail
+   * belongs in `streetAddress`.
+   *
+   * Any change here must be mirrored on the Google Business Profile.
+   */
+  address: {
+    streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
+    addressLocality: 'Denpasar',
+    addressRegion: 'Bali',
+    postalCode: '80226',
+    addressCountry: 'ID',
+  },
+
+  /** One-line address for visible on-page text. */
+  addressDisplay:
+    'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Bali 80226',
+
+  /**
+   * Business coordinates, taken from the Google Business Profile pin
+   * (verified 2026-07-29). The previous values (-8.6905, 115.2126) sat about
+   * 1.2 km from the listing, which is a conflicting local signal.
+   * GBP plus code: 868M+P2 Panjer, Denpasar City, Bali.
+   */
+  geo: { latitude: -8.6832483, longitude: 115.2325315 },
 
   /** In-villa private bartender rate (owner page /in-villa-service/bartenders). */
   bartenderRate: 'IDR 350,000',

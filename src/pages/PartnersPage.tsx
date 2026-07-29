@@ -4,18 +4,7 @@ import { trackWhatsAppClick } from '@/lib/analytics'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import {
-  ArrowRight,
-  Award,
-  Building2,
-  Camera,
-  FileText,
-  Mail,
-  MessageCircle,
-  Send,
-  ShieldCheck,
-  Star,
-} from 'lucide-react'
+import { ArrowRight, Award, Building2, Camera, FileText, Mail, MessageCircle, Send, ShieldCheck, Star } from 'lucide-react'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'

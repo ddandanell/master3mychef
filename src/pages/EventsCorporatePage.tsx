@@ -1,11 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import EmailCaptureBar from '@/components/EmailCaptureBar'
-import {
-  MessageCircle, Calendar, Monitor,
-  Bus, Building2, Globe, FileText, Shield,
-  Users,
-} from 'lucide-react'
+import { MessageCircle, Calendar, Monitor, Bus, Building2, Globe, FileText, Shield, Users } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, howToSchema } from '@/components/SeoHead'

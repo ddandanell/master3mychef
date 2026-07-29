@@ -48,7 +48,9 @@ function variants(digits) {
     const cc   = raw.slice(0, 2)
     const rest = raw.slice(2)
     display = `+${cc} ${rest.slice(0,3)}-${rest.slice(3,7)}-${rest.slice(7)}`
-    schema  = `+${cc}-${rest.slice(0,3)}-${rest.slice(3,7)}-${rest.slice(7)}`
+    // schema MUST equal display — a differently-formatted telephone reads as a
+    // separate NAP signal to Google. (Was hyphenated; unified 2026-07-29.)
+    schema  = display
   } else {
     // Fallback: just add + for display / schema
     display = `+${raw}`

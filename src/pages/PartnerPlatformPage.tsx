@@ -1,19 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { getPageMeta } from '@/data/page-meta'
-import {
-  Check,
-  X,
-  MessageCircle,
-  Award,
-  Gauge,
-  FileText,
-  Wallet,
-  Sparkles,
-  Building2,
-  Shield,
-  Star,
-  TrendingUp,
-} from 'lucide-react'
+import { Check, X, MessageCircle, Award, Gauge, FileText, Wallet, Sparkles, Building2, Shield, Star, TrendingUp } from 'lucide-react'
 import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import BestPartnerBadge from '@/components/BestPartnerBadge'
 import FAQAccordion from '@/components/catering/FAQAccordion'

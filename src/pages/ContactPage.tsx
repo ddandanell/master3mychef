@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MessageCircle, Mail, MapPin, Phone, ArrowRight } from 'lucide-react'
+import { MessageCircle, Mail, MapPin, ArrowRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
@@ -28,7 +28,7 @@ const FAQS = [
   { q: 'How quickly will myCHEF respond?', a: 'We typically reply within minutes on WhatsApp. For email enquiries, expect a response within a few hours during business hours.' },
   { q: 'Can I call instead of using WhatsApp?', a: 'Yes. You can call +62 896-7407-2020 directly. Our lines are open daily from 08:00 to 22:00 WITA.' },
   { q: 'What information should I include in my first message?', a: 'Let us know your name, the service you are interested in, your villa or location in Bali, group size, and preferred date. The more detail, the faster we can help.' },
-  { q: 'Do you have an office I can visit in Bali?', a: 'Yes. Our office is at Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali. We serve all of Bali including Seminyak, Canggu, Ubud, Uluwatu, and Sanur.' },
+  { q: 'Do you have an office I can visit in Bali?', a: `Yes. Our office is at ${siteFacts.addressDisplay}. We serve all of Bali including Seminyak, Canggu, Ubud, Uluwatu, and Sanur.` },
   { q: 'Can I email myCHEF instead?', a: 'Absolutely. Send detailed proposals or longer enquiries to bali@mychef.id and we will route them to the right coordinator.' },
   { q: 'What are your business hours?', a: 'We are open daily from 08:00 to 22:00 WITA (Bali time). WhatsApp messages outside these hours are answered first thing the next morning.' },
 ]
@@ -274,11 +274,11 @@ export default function ContactPage() {
 
       {/* ── DIRECT CONTACT STRIP ──────────────────────────────────────── */}
       <section className="bg-white px-6 md:px-12 py-16 md:py-20 border-y border-[#E5E3E0]">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <ContactItem icon={MessageCircle} label="WhatsApp" value="+62 896-7407-2020" href={`https://wa.me/${WA}`} hint="Fastest — typically within minutes" dataSource="contact-info-whatsapp" />
           <ContactItem icon={Mail} label="Email" value="bali@mychef.id" href="mailto:bali@mychef.id" hint="For detailed proposals" />
-          <ContactItem icon={Phone} label="Phone" value="+62 896-7407-2020" href="tel:+6289674072020" hint="08:00 – 22:00 WITA, daily" />
-          <ContactItem icon={MapPin} label="Office" value="Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali" href={siteFacts.googleBusinessProfileUrl} hint="View on Google Business — serving all of Bali" />
+          {/* The "Phone" row was removed — same number as WhatsApp above, same link. One channel, one row. */}
+          <ContactItem icon={MapPin} label="Office" value={siteFacts.addressDisplay} href={siteFacts.googleBusinessProfileUrl} hint="View on Google Business — serving all of Bali" />
         </div>
       </section>
 

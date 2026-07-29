@@ -1,14 +1,5 @@
 import { Link } from 'react-router-dom'
-import {
-  MessageCircle,
-  ChevronRight,
-  Flame,
-  FlameKindling,
-  Box,
-  UtensilsCrossed,
-  Thermometer,
-  TreePine,
-} from 'lucide-react'
+import { MessageCircle, ChevronRight, Flame, FlameKindling, Box, UtensilsCrossed, Thermometer, TreePine } from 'lucide-react'
 import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import TrustStrip from '@/components/shared/TrustStrip'

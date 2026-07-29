@@ -1,12 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  Check, Phone, Calendar, Users, MapPin,
-  Utensils, Sun, Sunrise, Clock, Droplets,
-  Heart, Camera, Sparkles, Wine, CakeSlice, Flower2,
-  ChefHat, ShieldCheck, Package,
-  Leaf, Gift, Star, Coffee, Cloud, Sunset,
-} from 'lucide-react'
+import { Check, Phone, Calendar, Users, MapPin, Utensils, Sun, Sunrise, Clock, Droplets, Heart, Camera, Sparkles, Wine, CakeSlice, Flower2, ChefHat, ShieldCheck, Package, Leaf, Gift, Star, Coffee, Cloud, Sunset } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, {

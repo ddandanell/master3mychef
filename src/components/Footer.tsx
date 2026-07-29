@@ -215,7 +215,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/villa-staff-bali-agency" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                {/* /villa-staff-bali-agency 301s to this URL (vercel.json) — link direct to avoid a sitewide redirect hop. */}
+                <Link to="/staffing/villa-staff" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Villa Staff Agency
                 </Link>
               </li>

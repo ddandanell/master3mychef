@@ -1,5 +1,32 @@
 import { useState } from 'react'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+
+/**
+ * Single source for the "What's included" block — rendered visibly below and
+ * emitted as FAQPage JSON-LD. Keep the two in sync by only editing this array.
+ */
+const FAQS = [
+  {
+    q: 'What does the base price include?',
+    a: 'All base prices include a professional Indonesian chef, all ingredients sourced to your preferences, cooking equipment, plating, and service. The chef arrives 2–3 hours before your meal to prepare everything in your villa kitchen.',
+  },
+  {
+    q: 'Are ingredients included?',
+    a: 'Yes. myCHEF sources all fresh ingredients from trusted Bali suppliers. If you have specific dietary requirements, allergies, or want premium ingredients (e.g. imported Wagyu, live seafood), this may affect the final quote.',
+  },
+  {
+    q: 'Is cleanup included?',
+    a: 'Yes. Our chefs leave your kitchen cleaner than they found it. Full kitchen cleanup is standard with every booking.',
+  },
+  {
+    q: 'How accurate is this estimate?',
+    a: 'The calculator gives you a realistic range based on typical engagements. Your final quote from myCHEF may vary based on your villa location, specific menu, date, and any premium ingredient requests. Share your estimate on WhatsApp and we\'ll send a precise quote within a few hours.',
+  },
+  {
+    q: 'Is there a minimum spend?',
+    a: 'Our minimum booking is for 2 guests. For groups under 6, a small-party rate applies (as shown in the calculator). There is no minimum per-event spend for standard bookings.',
+  },
+]
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -210,6 +237,10 @@ export default function PricingCalculatorPage() {
         title="Private Chef Pricing Calculator Bali | Instant Cost Estimate | myCHEF"
         description="Get an instant private chef cost estimate for your Bali villa. Select service type, guest count and menu level — see your price in seconds."
         canonical="https://mychef.id/pricing-calculator"
+        jsonLd={[
+          breadcrumbSchema('Pricing Calculator', 'https://mychef.id/pricing-calculator'),
+          faqPageSchema(FAQS.map(({ q, a }) => ({ question: q, answer: a }))),
+        ]}
       />
 
       {/* Hero */}
@@ -481,28 +512,7 @@ export default function PricingCalculatorPage() {
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-bold text-stone-900 mb-8 text-center">What's included in the price?</h2>
           <div className="space-y-6">
-            {[
-              {
-                q: 'What does the base price include?',
-                a: 'All base prices include a professional Indonesian chef, all ingredients sourced to your preferences, cooking equipment, plating, and service. The chef arrives 2–3 hours before your meal to prepare everything in your villa kitchen.',
-              },
-              {
-                q: 'Are ingredients included?',
-                a: 'Yes. myCHEF sources all fresh ingredients from trusted Bali suppliers. If you have specific dietary requirements, allergies, or want premium ingredients (e.g. imported Wagyu, live seafood), this may affect the final quote.',
-              },
-              {
-                q: 'Is cleanup included?',
-                a: 'Yes. Our chefs leave your kitchen cleaner than they found it. Full kitchen cleanup is standard with every booking.',
-              },
-              {
-                q: 'How accurate is this estimate?',
-                a: 'The calculator gives you a realistic range based on typical engagements. Your final quote from myCHEF may vary based on your villa location, specific menu, date, and any premium ingredient requests. Share your estimate on WhatsApp and we\'ll send a precise quote within a few hours.',
-              },
-              {
-                q: 'Is there a minimum spend?',
-                a: 'Our minimum booking is for 2 guests. For groups under 6, a small-party rate applies (as shown in the calculator). There is no minimum per-event spend for standard bookings.',
-              },
-            ].map(({ q, a }) => (
+            {FAQS.map(({ q, a }) => (
               <div key={q} className="border-b border-stone-100 pb-6">
                 <h3 className="font-semibold text-stone-900 mb-2">{q}</h3>
                 <p className="text-stone-600 leading-relaxed">{a}</p>

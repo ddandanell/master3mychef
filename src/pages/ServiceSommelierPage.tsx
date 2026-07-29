@@ -366,7 +366,7 @@ export default function ServiceSommelierPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-sommelier-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
-            <a href="tel:+6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <a href="https://wa.me/6289674072020" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Call Sofia
             </a>
           </div>

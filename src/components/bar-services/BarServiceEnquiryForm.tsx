@@ -115,7 +115,9 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
                 required
                 type="tel"
                 className="w-full bg-[#1A1A1A] border border-[#F5F2EB]/10 rounded-lg px-4 py-3 text-[#F5F2EB] placeholder:text-[#F5F2EB]/30 focus:border-[#C5A028]/50 focus:ring-1 focus:ring-[#C5A028]/30 outline-none transition-colors"
-                placeholder="+62 812 3456 7890"
+                // Format hint only — must never look like a real number, or it
+                // reads as a second business phone in the rendered HTML.
+                placeholder="+62 8xx xxxx xxxx"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               />

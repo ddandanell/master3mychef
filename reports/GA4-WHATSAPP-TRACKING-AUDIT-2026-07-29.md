@@ -92,11 +92,13 @@ This is why you can see *how many* conversions but not *which button, which page
 
 ## 6. Other observations
 
-- **Nine key events are starred but dead.** `ads_conversion_Contact_1`, `ads_conversion_Outbound_click_Page_loa_1`, `ads_conversion_Request_quote_Page_load_1`, `ads_conversion_SUBMIT_LEAD_FORM_1`, `ads_conversion_SUBMIT_LEAD_FORM_2`, `close_convert_lead`, `conversion_event_book_appointment`, `qualify_lead` — all "No stream data detected" for 28 days. Legacy Google Ads imports; they clutter the key-event list.
-- **`quote_submitted` is NOT a key event.** Form submissions are being collected but not counted as conversions.
+> **Note:** §§1–7 describe the state **as found**, before any changes. §§8–10 record what was changed and the state now. Where a finding here has since been fixed, it is marked inline.
+
+- **Eight key events are starred but dead.** *(Fixed — all 8 un-starred, see §8.)* `ads_conversion_Contact_1`, `ads_conversion_Outbound_click_Page_loa_1`, `ads_conversion_Request_quote_Page_load_1`, `ads_conversion_SUBMIT_LEAD_FORM_1`, `ads_conversion_SUBMIT_LEAD_FORM_2`, `close_convert_lead`, `conversion_event_book_appointment`, `qualify_lead` — all "No stream data detected" for 28 days. Legacy Google Ads imports; they clutter the key-event list.
+- **`quote_submitted` is NOT a key event.** Form submissions are being collected but not counted as conversions. *(Fixed — see §8 and §9.)*
 - **`form_complete` never appears** in the last 28 days despite `trackFormComplete()` existing in `src/lib/analytics.ts` — it is either unwired or superseded by `quote_submitted`. Worth confirming.
-- **Parameter named `source` is a poor choice.** It collides conceptually with GA4's built-in traffic-source dimensions and will be confusing once registered as a custom dimension. Recommend renaming to `cta_source`.
-- **`transport_type: 'beacon'`** in `analytics.ts` is a Universal Analytics parameter. GA4 ignores it and it is being stored as a junk event parameter. Remove.
+- **Parameter named `source` is a poor choice.** *(Fixed — renamed to `cta_source`, see §8.)* It collides conceptually with GA4's built-in traffic-source dimensions and will be confusing once registered as a custom dimension. Recommend renaming to `cta_source`.
+- **`transport_type: 'beacon'` in `analytics.ts` is a Universal Analytics parameter.** *(Fixed — removed, see §8.)* GA4 ignores it and it is being stored as a junk event parameter.
 - **Two parallel GA4 loaders** (GTM `__googtag` tag ID 3 + hardcoded `gtag('config')` in `index.html`). This currently works but is fragile — a future GTM edit re-enabling a GA4 config could duplicate `page_view` as well.
 
 ---
@@ -136,8 +138,8 @@ Note: custom dimensions are **not retroactive**. Data before registration stays 
 ### Priority 4 — Housekeeping
 - Remove `transport_type: 'beacon'` from `src/lib/analytics.ts`.
 - Confirm whether `trackFormComplete()` is wired to anything.
-- **Do NOT mark `quote_submitted` as a key event** — see §9, correction 1.
-- **Do NOT un-star the 8 legacy key events without checking Google Ads first** — see §9, correction 2.
+- Mark `quote_submitted` as a key event **only after** making it mutually exclusive with `generate_lead` — see §9. (Done: both the code change and the key-event flag shipped on 2026-07-29.)
+- Un-star the 8 dead legacy key events **only after** confirming nothing feeds them — see §8. (Done: no Google Ads campaigns running and 0 GA4 data-import sources, so all 8 were un-starred on 2026-07-29.)
 
 ---
 

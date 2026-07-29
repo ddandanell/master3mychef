@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageSquare, AlertCircle, CheckCircle, Phone, FileText } from 'lucide-react'
-import SeoHead, { breadcrumbSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 
 const SITE = 'https://mychef.id'
 
@@ -132,6 +132,7 @@ export default function ManagingBookingPage() {
         ogImage="/og-image.webp"
         jsonLd={[
           breadcrumbSchema('Managing Your Booking', canonical, 'Help', `${SITE}/help`),
+          faqPageSchema(FAQS.map(({ q, a }) => ({ question: q, answer: a }))),
         ]}
       />
 

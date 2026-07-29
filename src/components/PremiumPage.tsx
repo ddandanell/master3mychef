@@ -145,9 +145,12 @@ export default function PremiumPage({
     extraJsonLd.forEach((s) => extractSchemaTypes(s).forEach((t) => extraTypes.add(t)))
   }
 
-  const schemas: Record<string, unknown>[] = [
-    breadcrumbSchema(title, canonical),
-  ]
+  const schemas: Record<string, unknown>[] = []
+  // Pages that supply their own BreadcrumbList (usually with a parent level)
+  // win — emitting both produced two BreadcrumbList nodes on 85 pages.
+  if (!extraTypes.has('BreadcrumbList')) {
+    schemas.push(breadcrumbSchema(title, canonical))
+  }
   if (!extraTypes.has('Service')) {
     schemas.push(serviceSchema(title, metaDescription, canonical))
   }

@@ -415,3 +415,55 @@ every run is Semrush-only, and Semrush is currently site-audit-only (see item 3)
 
 - **URLs touched:** `/catering/retreat-catering` (copy + FAQ; first touch, cooldown starts now).
 - **`npx tsc -b`:** exit 0.
+
+### CORRECTION to item 4 above — `git push` does NOT deploy. Read this.
+
+The conclusion recorded earlier in this entry ("code commits deploy, docs-only commits cancel or
+no-op") was **wrong**, and it was wrong in a way that would mislead every future run. Corrected
+by direct test:
+
+- Commit `9105b5d9` (a **code** change to `src/pages/CateringRetreatPage.tsx`) was pushed to
+  `main` at 22:28 UTC. **Seven minutes later Vercel had still created no deployment.**
+- In the same window, `fe16f93d` — another session's code commit — deployed within ~1 minute.
+
+So the correlation was never "code vs docs". It was **who pushed**. `vercel.json`'s
+`"git": { "deploymentEnabled": false }` does exactly what it says: **git pushes never trigger a
+build.** The deployments visible in the API were each created *explicitly* by whoever pushed
+them, not by GitHub.
+
+**Every future run must trigger its own deployment after pushing.** Working call:
+
+```
+curl -s -X POST -H "Authorization: Bearer $VERCEL_TOKEN" -H "Content-Type: application/json" \
+  "https://api.vercel.com/v13/deployments?forceNew=1" \
+  -d '{"name":"master3mychef","project":"master3mychef","target":"production",
+       "gitSource":{"type":"github","org":"ddandanell","repo":"master3mychef","ref":"main"}}'
+```
+
+Then poll `GET /v13/deployments/<id>` for `readyState: READY`. Build takes **~5 minutes** — it
+runs `playwright install chromium`, `tsc -b`, `vite build`, a ~100-page prerender and validators.
+Poll patiently; do not assume failure at 2 minutes.
+
+This also means **run 2's commit `e5942a9f` was never deployed**. Harmless — it touched only
+`seo-department/**`, which is not part of the build — but the state file should not have implied
+otherwise.
+
+**Verified this run:** deployment `dpl_8Mct8YQKBDigFxEXCWCrapZ3CNXr` (commit `9105b5d9`) reached
+**READY**, alias assigned. Live check of `/catering/retreat-catering` confirms "five-guest
+minimum" and "The minimum is five guests" are being served and "Minimum booking applies" is gone.
+
+### Concurrency — a second autopilot was running at the same time
+
+While this run worked, another session committed `e23ea16f` ("autopilot run 3 - Screaming Frog
+export findings"), `47888f1e`, and `fe16f93d` to `main`. Two autopilot processes were live in the
+same repo simultaneously.
+
+Consequences handled: a zero-byte `.git/index.lock` blocked the commit for ~14 minutes. It could
+not be removed with `rm` from the sandbox ("Operation not permitted") until file deletion was
+granted for the folder. Note the sandbox **cannot see the other session's processes**, so the
+"is a git process live?" test in the task file is not decidable here — judge by lock size, age
+and whether `HEAD` is still moving.
+
+The two sessions did not touch the same files, so nothing was clobbered. The move to a daily
+cadence should reduce overlap; if concurrent runs continue, the hourly `chore(status)` automation
+and this task should be checked for duplication.

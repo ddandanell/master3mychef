@@ -195,7 +195,7 @@ export default function FineDiningMenusPage() {
             className="mb-6 text-5xl text-white sm:text-6xl lg:text-7xl"
             style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1.02 }}
           >
-            Our Menus
+            Private Chef Villa Menus
           </h1>
           <p
             className="mx-auto mb-10 max-w-3xl text-2xl italic text-white/[80%] md:text-3xl"

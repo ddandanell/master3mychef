@@ -61,32 +61,32 @@
     },
     {
       "source": "/seminyak",
-      "destination": "/locations/seminyak",
+      "destination": "/private-chef/seminyak",
       "permanent": true
     },
     {
       "source": "/canggu",
-      "destination": "/locations/canggu",
+      "destination": "/private-chef/canggu",
       "permanent": true
     },
     {
       "source": "/uluwatu",
-      "destination": "/locations/uluwatu",
+      "destination": "/private-chef/uluwatu",
       "permanent": true
     },
     {
       "source": "/ubud",
-      "destination": "/locations/ubud",
+      "destination": "/private-chef/ubud",
       "permanent": true
     },
     {
       "source": "/sanur",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/sanur",
       "permanent": true
     },
     {
       "source": "/nusa-dua",
-      "destination": "/locations/nusa-dua",
+      "destination": "/private-chef/nusa-dua",
       "permanent": true
     },
     {
@@ -106,12 +106,12 @@
     },
     {
       "source": "/berawa",
-      "destination": "/locations/canggu",
+      "destination": "/private-chef/berawa",
       "permanent": true
     },
     {
       "source": "/kuta",
-      "destination": "/locations/seminyak",
+      "destination": "/private-chef/kuta",
       "permanent": true
     },
     {
@@ -136,7 +136,7 @@
     },
     {
       "source": "/tabanan",
-      "destination": "/locations/canggu",
+      "destination": "/private-chef/canggu",
       "permanent": true
     },
     {
@@ -246,7 +246,7 @@
     },
     {
       "source": "/sanur-beach-private-chef",
-      "destination": "/locations/sanur",
+      "destination": "/private-chef/sanur",
       "permanent": true
     },
     {

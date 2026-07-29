@@ -1221,11 +1221,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'fine-dining-menus': {
     path: '/fine-dining/menus',
-    title: 'Private Chef Menus Bali | 24 Fine Dining Set Menus | myCHEF',
+    title: 'Private Chef Villa Menus Bali | 24 Fine Dining Set Menus',
     description:
-      'Browse 24 set menus for private villa dining in Bali — vegetarian, seafood, mixed meats & single-meat. From IDR 1.25M per guest.',
+      'Browse 24 private chef villa menus for Bali — vegetarian, seafood, mixed meats & single-meat set menus, cooked in your villa. From IDR 1.25M per guest.',
     canonical: `${SITE}/fine-dining/menus`,
-    h1: 'Our Menus',
+    h1: 'Private Chef Villa Menus',
     ogImage: `${SITE}/generated/misc-luna-plating-md.webp`,
   },
 

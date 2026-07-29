@@ -91,6 +91,7 @@ const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
   canggu: [
     { to: '/villa-chef', label: 'daily villa chef service' },
     { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
     { to: '/journal/private-chef-canggu-guide', label: 'Canggu local' },
   ],
   pererenan: [
@@ -103,11 +104,12 @@ const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
   ],
   seminyak: [
     { to: '/', label: 'private chef Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
     { to: '/journal/private-chef-seminyak-guide', label: 'Seminyak local' },
   ],
   ubud: [
     { to: '/catering/retreat-catering', label: 'retreat catering programme' },
-    { to: '/fine-dining/menus', label: 'menus (incl. vegetarian)' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus (incl. vegetarian)' },
     { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
   ],
 }

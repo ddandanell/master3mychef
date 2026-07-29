@@ -232,3 +232,75 @@ Note: each conversion is still accompanied by one `google.com/measurement/conver
 ## 11. Important caveat on historical data
 
 Deleting the duplicate does **not** correct history. All `generate_lead` figures prior to the fix remain roughly 2× inflated (3× on area pages, 1× on form flows). Treat pre-fix conversion counts as unreliable for absolute reporting, and annotate the fix date in GA4 (Admin → Data display → Annotations) so trend charts don't read the correction as a performance drop.
+
+A GA4 annotation dated **29 Jul 2026** was created for exactly this: *"Conversion double-count fixed (~2x drop expected)"*.
+
+---
+
+## 12. The dashboard — what the front page now shows
+
+**Reports snapshot** (first thing under Reports) — four headline metrics, conversions first:
+
+| Position | Metric | What it answers |
+|---|---|---|
+| 1 | **Key events** | How many conversions |
+| 2 | **Event value** | Estimated value of those leads |
+| 3 | **Active users** | How many visitors |
+| 4 | **Average engagement time per active user** | How long they stay |
+
+Cards below: Top traffic acquisition (source + key events), Key events by Event name, Active users by first source/medium, Event count by Event name (this is the "clicks" view — `click`, `cta_click`, `scroll`, etc.).
+
+**Custom report — "Conversions: where leads come from"**, added to the left nav under *Generate leads*. Metrics: Key events, Event value, Total users, Event count, Avg engagement time. Four switchable dimensions via the blue dropdown under the chart:
+
+- **CTA Source** — which button/page produced the lead
+- **Contact Method** — WhatsApp vs Phone
+- **Service Type** — catering, private-dining, events, experiences, in-villa-staff, private-chef, location, enquiry, content (see caveat 3)
+- **Session source/medium** — organic, direct, referral
+
+### Two things to know about this dashboard
+
+**1. "Event value" is not "Total revenue" — and that distinction matters.**
+GA4's *Total revenue* metric only counts `purchase`, `subscription` and ad revenue. It would have sat at Rp0 forever, because myCHEF has no e-commerce transactions. The metric that actually sums our `value` parameter is **Event value**, which is what both the snapshot and the custom report now use. This was corrected after initially selecting Total revenue.
+
+**2. The breakdowns start from 29 Jul 2026, not before.**
+Custom dimensions are not retroactive, and `cta_source` did not exist before today (the parameter was called `source` and was never registered). Historical rows show `(not set)`. The CTA / method / service breakdowns fill in from today forward.
+
+### Estimated value — the assumption on record
+
+```text
+average booking value   IDR 7,500,000   (owner estimate, 2026-07-29)
+lead -> booking rate    20%             (owner estimate, 2026-07-29)
+estimated lead value    IDR 1,500,000   ESTIMATED_LEAD_VALUE_IDR
+```
+
+This is **not booked revenue**. It exists so pages, CTAs and channels can be ranked against each other. Change `ESTIMATED_LEAD_VALUE_IDR` in `src/lib/analytics.ts` when the real numbers are known — one constant, one place.
+
+Verified live after deploy by clicking the homepage hero CTA: that click sent `epn.value=1500000`, `cu=IDR`, `ep.cta_source=homepage-hero`, `ep.method=WhatsApp`, and produced exactly **one** `generate_lead`. The payload is specific to that CTA — other WhatsApp CTAs send their own `cta_source`, and the quote funnel sends `quote_submitted` instead of `generate_lead` (see §9).
+
+---
+
+## 13. Caveat 3 — Service Type is inferred, not declared
+
+Only the quote funnel asks the visitor which service they want. Every other WhatsApp/phone CTA is just a button — the visitor never states a service. Left alone, the **Service Type** breakdown would have read `(not set)` for nearly every conversion, making one of the four requested breakdowns useless.
+
+Fix: `serviceAreaFromPath()` in `src/lib/analytics.ts` maps the page the CTA was clicked on to a service area, and `trackWhatsAppClick` / `trackPhoneClick` attach it as `service_type`.
+
+| Path | `service_type` |
+|---|---|
+| `/catering/*` | `catering` |
+| `/fine-dining/*`, `/three-course`, `/menus`, `/dining-styles`, `/family-styling`, `/kids-menus`, `/bbq-grill` | `private-dining` |
+| `/events/*`, `/corporate-events`, `/villa-event-packages`, `/retreats` | `events` |
+| `/experiences/*` | `experiences` |
+| `/in-villa-service/*`, `/bar-services/*`, `/complete-villa-experience`, `/vip-transport-bali` | `in-villa-staff` |
+| `/staffing/*`, `/villa-chef`, `/private-chef-bali` | `private-chef` |
+| `/locations/*` and area pages (`/canggu`, `/ubud`, `/seminyak`…) | `location` |
+| `/quote`, `/book`, `/contact`, `/calculator`, `/pricing*` | `enquiry` |
+| `/blog/*`, `/journal/*`, `/guide/*`, `/help/*`, `/faq`, `/chefs`, `/reviews` | `content` |
+| `/` | `homepage` |
+| anything else | `other` |
+
+**Read this as inferred interest, not a stated choice.** Someone on `/catering/villa-catering` who taps WhatsApp is very likely asking about catering, but they have not said so. `location` exists precisely because an area page tells you *where* but not *what* — it is deliberately not guessed at.
+
+The quote funnel keeps sending its own **declared** `service_type` from the form, which is stronger data than the inferred value. Both functions also accept an optional explicit `serviceType` argument that overrides the inference wherever a component does know the real service.
+
+Verified against 14 paths including nested routes, unknown routes and mixed case. Raised by CodeRabbit review on #42.

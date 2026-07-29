@@ -63,18 +63,23 @@ export const siteFacts = {
 
   /**
    * Canonical business name for schema `name` fields.
-   * Must match the Google Business Profile to strengthen entity matching.
+   * Verified 2026-07-29 against the live Google Business Profile — an exact
+   * match is what lets Google tie this site to that listing.
+   * If the GBP name is ever changed, change this in the same session.
    */
-  businessName: 'myCHEF.id',
+  businessName: 'myCHEF. - Private Chef and Catering',
+
+  /** Brand name used in visible UI copy and marketing. */
+  brandName: 'myCHEF.id',
 
   /** Registered entity name used in legal documents (privacy policy, terms). */
   legalName: 'myCHEF Indonesia',
 
   /**
-   * Name variants used elsewhere on the site and on third-party profiles.
-   * Declared as schema `alternateName` so Google can resolve them to one entity.
+   * Name variants used across the site and third-party profiles.
+   * Declared as schema `alternateName` so Google resolves them to one entity.
    */
-  alternateNames: ['myCHEF', 'myCHEF Bali', 'myCHEF. - Private Chef and Catering'],
+  alternateNames: ['myCHEF.id', 'myCHEF', 'myCHEF Bali'],
 
   /**
    * Canonical postal address — the single source of truth for NAP.
@@ -98,8 +103,13 @@ export const siteFacts = {
   addressDisplay:
     'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Bali 80226',
 
-  /** Business coordinates (used in LocalBusiness geo). */
-  geo: { latitude: -8.6905, longitude: 115.2126 },
+  /**
+   * Business coordinates, taken from the Google Business Profile pin
+   * (verified 2026-07-29). The previous values (-8.6905, 115.2126) sat about
+   * 1.2 km from the listing, which is a conflicting local signal.
+   * GBP plus code: 868M+P2 Panjer, Denpasar City, Bali.
+   */
+  geo: { latitude: -8.6832483, longitude: 115.2325315 },
 
   /** In-villa private bartender rate (owner page /in-villa-service/bartenders). */
   bartenderRate: 'IDR 350,000',

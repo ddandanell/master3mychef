@@ -20,9 +20,21 @@ Only four genuine gaps survive verification. They are below.
 
 ---
 
-## BLOCKED ON OWNER — the highest-value item, and it needs one answer
+## OWNER DECISIONS — recorded 2026-07-29
 
-### Travel-fee policy → unlocks FAQ schema on 6 area pages
+| Question | Decision | Effect |
+|---|---|---|
+| Travel-fee policy | **Quoted per booking** — keep the current hedge | The schema filter in `PrivateChefAreaPage.tsx:140-142` **stays in place**. Travel-fee FAQs remain visible but excluded from FAQPage markup, because a "depends" answer is not a useful rich result. Item closed, not deferred. |
+| Canggu shared chef / co-hire | **Never been asked — would consider** | Logged as an open opportunity. **No content written, no FAQ published.** Revisit only if enquiries appear. |
+| Google Business Profile | **Match the site to the GBP** | Actioned — see `RESEARCH-HARVEST` §GBP. Name, coordinates and phone now match the live listing. |
+
+> **Note on the travel-fee decision.** This is a defensible choice, but it is a competitive concession worth revisiting. Competitors answer this question plainly in their area FAQs — several advertise "no extra travel fee", one publishes a zone table. A visitor comparing two Uluwatu chefs sees one clear answer and one "contact us". If travel is genuinely included within South Bali, saying so for that zone alone would be a cheap win without committing to the far-flung areas.
+
+---
+
+## PREVIOUSLY BLOCKED — now resolved
+
+### Travel-fee policy → decision made, schema stays disabled
 
 Travel-fee FAQs are written and visible, but `PrivateChefAreaPage.tsx:141-143` deliberately **strips them out of the FAQPage schema**:
 
@@ -47,7 +59,7 @@ Competitors treat this as a headline selling point — several advertise "no ext
 
 ## GENUINE CONTENT GAPS — verified absent
 
-### 1. Canggu — shared-chef / co-hire between neighbouring villas
+### 1. Canggu — shared-chef / co-hire between neighbouring villas — **PARKED (owner: never been asked, would consider)**
 **Evidence:** 0 matches for `co-hire`, `shared chef`, `share a chef` anywhere in `privateChefAreas.ts`.
 **Why it matters:** the source research documents this as an established local demand pattern in the Canggu–Pererenan corridor (neighbouring long-stay families splitting one chef). It is a booking model we apparently offer nothing for, and it is specific enough that nobody writes about it.
 **Brief:** one FAQ + a short block on `/private-chef/canggu`. Needs an owner answer first: *do we accept a shared booking across two villas, and how is it priced and staffed?* Do not write it until that is answered.
@@ -79,12 +91,12 @@ Competitors treat this as a headline selling point — several advertise "no ext
 
 ---
 
-## Recommended sequence
+## Recommended sequence (updated after the 2026-07-29 decisions)
 
-1. **Answer the travel-fee question.** One decision, unlocks schema on 6 commercial pages. Highest value per unit of effort in this document.
-2. **Ship gap #2** (monthly retainer links) — needs nothing from the owner.
-3. Answer the co-hire and Ubud kitchen questions, then ship #1 and #3.
-4. Leave #4 qualitative unless banjar figures are confirmed.
+1. **Ship gap #2** (monthly-retainer links from the Canggu / Pererenan / Berawa area pages to `/hire-private-chef-bali-monthly`) — needs nothing from the owner. Only remaining actionable content item.
+2. Answer the Ubud kitchen-constraint question (ops), then ship #3.
+3. Leave #4 qualitative unless banjar figures are confirmed.
+4. #1 parked. Travel fee closed.
 
 ---
 

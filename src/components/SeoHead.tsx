@@ -86,7 +86,7 @@ export const localBusinessSchema = {
 
 const cateringProviderSchema = {
   '@type': 'FoodEstablishment',
-  name: siteFacts.businessName,
+  name: siteFacts.brandName,
   url: 'https://mychef.id',
   telephone: siteFacts.phoneDisplay,
   address: postalAddressSchema,
@@ -315,7 +315,7 @@ export function professionalServiceSchema(
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${url}#localbusiness`,
-    name: `${siteFacts.businessName} Bar Services`,
+    name: `${siteFacts.brandName} Bar Services`,
     parentOrganization: providerRef,
     image,
     url,
@@ -463,8 +463,10 @@ export function organizationSchema(
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': 'https://mychef.id/#organization',
-    name: siteFacts.businessName,
-    alternateName: siteFacts.alternateNames,
+    // Organization carries the brand name; the LocalBusiness node carries the
+    // exact Google Business Profile name. alternateName cross-links the two.
+    name: siteFacts.brandName,
+    alternateName: [siteFacts.businessName, 'myCHEF', 'myCHEF Bali'],
     legalName: siteFacts.legalName,
     url: 'https://mychef.id',
     telephone: siteFacts.phoneDisplay,

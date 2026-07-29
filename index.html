@@ -99,6 +99,8 @@
         "@type": "Organization",
         "@id": "https://mychef.id/#organization",
         "name": "myCHEF.id",
+        "alternateName": ["myCHEF", "myCHEF Bali", "myCHEF. - Private Chef and Catering"],
+        "legalName": "myCHEF Indonesia",
         "url": "https://mychef.id",
         "logo": {
           "@type": "ImageObject",
@@ -113,16 +115,24 @@
       }
     </script>
 
-    <!-- Structured data: LocalBusiness -->
+    <!--
+      Structured data: LocalBusiness
+      WARNING: this static node shares its @id with the runtime node built in
+      src/components/SeoHead.tsx (localBusinessSchema). Both appear in the same
+      document on most pages, so name / telephone / address MUST stay byte-identical
+      to src/data/siteFacts.ts. Divergence splits the entity in Google's graph.
+    -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": "https://mychef.id/#business",
         "name": "myCHEF.id",
+        "alternateName": ["myCHEF", "myCHEF Bali", "myCHEF. - Private Chef and Catering"],
+        "legalName": "myCHEF Indonesia",
         "description": "Private chef, catering, events, and staffing services in Bali",
         "url": "https://mychef.id",
-        "telephone": "+62-896-7407-2020",
+        "telephone": "+62 896-7407-2020",
         "email": "bali@mychef.id",
         "image": "https://mychef.id/generated/hub-hero-v3.webp",
         "priceRange": "$$$$",
@@ -130,8 +140,8 @@
         "currenciesAccepted": "IDR",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Jl. Tukad Barito Timur III No.16, Panjer",
-          "addressLocality": "Denpasar Selatan",
+          "streetAddress": "Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan",
+          "addressLocality": "Denpasar",
           "addressRegion": "Bali",
           "postalCode": "80226",
           "addressCountry": "ID"

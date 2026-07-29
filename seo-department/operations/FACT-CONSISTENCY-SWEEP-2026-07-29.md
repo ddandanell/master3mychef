@@ -53,13 +53,23 @@ That distinction is stated consistently on `/pricing`, `/faq`, `PillarSubPage`, 
 
 ---
 
-## FLAGGED — not changed, needs an owner answer
+## RESOLVED — owner-confirmed 2026-07-30. Do not re-flag.
 
-**`/journal/private-chef-ubud-villa-dining` says "We've been operating in Ubud since 2020."**
+**`/journal/private-chef-ubud-villa-dining` says "We've been operating in Ubud since 2020." This is correct and must not be changed.**
 
-The Update-2 audit listed this as a founding-year contradiction (company founded 2019). **I do not think it necessarily is** — founding the company in 2019 and beginning Ubud operations in 2020 are perfectly compatible.
+The Update-2 audit listed this as a founding-year contradiction (company founded 2019). It is not one. Founding the company in 2019 and beginning Ubud operations in 2020 are compatible facts, and the owner has confirmed 2020 is the true Ubud start date.
 
-I did not change it, because changing 2020 → 2019 would be inventing a fact I cannot verify. **Question for you: when did myCHEF actually start operating in Ubud?** If 2019, I will align it. If 2020, the wording is already correct and the audit item can be closed as a false positive.
+**Ruling:** the audit item is closed as a false positive. `src/data/content/articleContent.ts` is left unchanged.
+
+**Standing rule for future audits and agents:** a year that differs from 2019 is not automatically a contradiction. myCHEF's timeline is deliberately staggered by area:
+
+| Claim | Year | Status |
+| --- | --- | --- |
+| Company founded / serving Bali | 2019 | Correct — 19 references sitewide |
+| Operating in Seminyak | 2019 | Correct |
+| Operating in Ubud | **2020** | **Correct — owner-verified, do not "align" to 2019** |
+
+Any future sweep that proposes changing the Ubud 2020 date must be rejected unless the owner reverses this ruling in writing.
 
 ---
 

@@ -86,3 +86,56 @@ Two agent sessions were active in this repo simultaneously (`gracious-trusting-f
 
 - **`/catering/retreat-catering` minimum.** The page says only "Minimum booking applies" — the
   one catering entry point with no number. Logged as Q7 in `CONTRADICTION-REGISTER.md`.
+
+---
+
+## Run 2026-07-29 20:56 UTC (manual "run now", second run)
+
+**Outcome: NO CHANGES MADE. This is the correct result, not a failed run.**
+
+**Data gate: CLOSED for site audit.** `snapshots` returned the same two IDs as run 1
+(`6a6a62ee3bfffa0de6a416a4`, `6a6a56a4a35d0760f593c5cf`) — no recrawl in the interval, as
+expected. Semrush audits recrawl roughly daily. Per the gate rule, nothing the audit flagged was
+touched. Notably id 204 (hreflang, 94 pages) was **not** re-fixed: the fix shipped in run 1 and
+its snapshot predates the deploy.
+
+**New data examined instead:** `organic_research/resource_organic`, database `id`, positions 4–20
+(striking distance), sorted by volume. Eight keywords returned:
+
+| Keyword | Pos | Vol | Ranking URL | KD |
+|---|---|---|---|---|
+| private chef | 13 | 320 | `/jakarta` | 30 |
+| chef private | 13 | 320 | `/jakarta` | 30 |
+| private chef bali | 11 | 170 | `/canggu` | 28 |
+| chef recommendation | 19 | 140 | `/` | 13 |
+| corporate buffet | 16 | 40 | `/catering` | 11 |
+| private chef jakarta | 7 | 30 | `/locations/jakarta` | 17 |
+| chef's table bali | 15 | 30 | `/fine-dining/chefs-table` | 18 |
+| baby bar catering | 5 | 30 | `/events/baby-showers` | 17 |
+
+### Investigated and dismissed — do not re-open
+
+**The Jakarta URLs are stale Semrush attribution, not a live problem.** Jakarta was deliberately
+and completely exited. Verified in `src/data/redirects.ts`:
+
+- line 296 — `/locations/jakarta` → `/` ("Jakarta location focus removed")
+- line 299 — `/jakarta` → `/` ("Jakarta focus removed; still earned 16 clicks/28d into a 404")
+- line 294 — `/journal/private-chef-jakarta-guide` → `/`
+
+There is no `page-meta.ts` entry, no route in `App.tsx`, and no `sitemap.xml` entry for either
+Jakarta URL. Semrush's index still attributes those keywords to URLs that now 301. **Do not
+"fix" this by restoring a Jakarta page — that would reverse a deliberate business decision.**
+
+**`/canggu` for "private chef bali" (170/mo, pos 11)** — `/canggu` → `/locations/canggu`
+(`redirects.ts:44`), which is correct and consistent. This also sits inside the **D-010
+consolidation experiment opened 2026-07-29 with a stated 4–6 week observation window**. Touching
+`private chef {area}` routing now would destroy the experiment's signal. Leave it until roughly
+2026-09-09 unless the owner rules otherwise.
+
+### Genuine opportunity, needs an owner decision (not an autopilot call)
+
+`private chef` and `chef private` are 320/mo each — the highest-volume terms the site touches —
+and currently resolve to the homepage via a redirect from a decommissioned URL, at position 13,
+KD 30. Deciding which URL should own a generic, city-less "private chef" query is a positioning
+question with cannibalisation risk against `/private-chef/*` and `/locations/*`. Flagged for the
+owner; autopilot should not unilaterally pick a target for it.

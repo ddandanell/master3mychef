@@ -1,3 +1,5 @@
+import { track } from '@vercel/analytics'
+
 // GA4 is loaded by the gtag snippet in index.html (measurement ID is set there),
 // which is what populates window.gtag. There is deliberately no measurement ID
 // read here — an earlier VITE_GA_ID constant was dead code (immediately discarded
@@ -116,23 +118,119 @@ declare global {
   }
 }
 
+// ── Vercel Web Analytics: custom events ──────────────────────────────────────
+//
+// Vercel is a THIRD sink alongside GA4 and GTM, wired inside trackEvent() so
+// every existing call site reports to Vercel without being touched.
+//
+// Hard plan constraints, from Vercel's docs (read 2026-07-30). Breaking these
+// does not throw — it silently drops data or costs money:
+//
+//   1. PROPERTY CEILING. The Pro plan allows exactly 2 properties per custom
+//      event (8 with the Web Analytics Plus add-on, +$10/month/team). Extra
+//      properties are discarded without warning. VERCEL_MAX_PROPERTIES enforces
+//      the ceiling here so the loss is deliberate and visible in code.
+//   2. VALUE TYPES. Only string | number | boolean | null. No nested objects.
+//      Event name, property keys and values are each capped at 255 characters.
+//   3. COST. Every custom event is billed ($0.03 per 1,000 on Pro) and page
+//      views count toward the same total, so high-frequency engagement events
+//      are deliberately NOT forwarded — see the default case below.
+//   4. UTM parameters are a Plus-only feature, so none are sent from here.
+//
+// Because two properties is such a tight budget, the delivery CHANNEL is encoded
+// in the event NAME rather than spending a property slot on it — event names are
+// unlimited and free, properties are neither. That keeps both slots for the two
+// dimensions actually used to segment: service line and on-page source.
+//
+// ESTIMATED_LEAD_VALUE_IDR is deliberately NOT sent: it is a constant, so it
+// carries no per-event information and would waste half the property budget.
+//
+// Privacy: @vercel/analytics registers beforeSend globally via
+// window.va('beforeSend', ...), so the filter in analytics-privacy.ts covers
+// these custom events too. A browser opted out with ?va-disable=1, and any
+// automated browser, sends no custom events either. Nothing extra is needed.
+const VERCEL_MAX_PROPERTIES = 2
+
+/** Coerce to a non-empty string within Vercel's 255-character limit. */
+function vercelValue(value: unknown): string | undefined {
+  if (value === undefined || value === null) return undefined
+  const text = String(value).trim()
+  return text ? text.slice(0, 255) : undefined
+}
+
+/** Drop empty values and hard-stop at the plan's property ceiling. */
+function vercelProps(candidates: Record<string, string | undefined>): Record<string, string> {
+  const props: Record<string, string> = {}
+  for (const [key, value] of Object.entries(candidates)) {
+    if (value === undefined) continue
+    if (Object.keys(props).length >= VERCEL_MAX_PROPERTIES) break
+    props[key] = value
+  }
+  return props
+}
+
+/**
+ * Maps a GA4 event onto a Vercel custom event, or returns null to not forward it.
+ * Names are human-readable because they are what appears in the Vercel dashboard's
+ * Events panel.
+ */
+export function toVercelEvent(
+  event: string,
+  params: AnalyticsParams = {}
+): { name: string; props: Record<string, string> } | null {
+  const source = vercelValue(params.cta_source) ?? vercelValue(params.page_source)
+  const service = vercelValue(params.service_type)
+
+  switch (event) {
+    case 'generate_lead': {
+      // WhatsApp vs Phone goes in the name, freeing both property slots.
+      const method = vercelValue(params.method) ?? 'Unknown'
+      return { name: `Lead — ${method}`, props: vercelProps({ service, source }) }
+    }
+    case 'cta_click':
+      return { name: 'CTA Click', props: vercelProps({ cta: vercelValue(params.cta_text), source }) }
+    case 'form_start':
+      return { name: 'Form Start', props: vercelProps({ form: vercelValue(params.form_id), source }) }
+    case 'form_complete':
+      return { name: 'Form Complete', props: vercelProps({ form: vercelValue(params.form_id), source }) }
+    default:
+      // Not forwarded, on purpose:
+      //   page_view    — <Analytics /> records page views natively. Forwarding a
+      //                  custom copy would double-count in the dashboard AND
+      //                  double the billed events for the same visit.
+      //   scroll_depth — fires up to four times per page (25/50/75/90).
+      //   time_on_page — fires at four milestones per page.
+      // Those two are engagement telemetry GA4 already models better, and each
+      // one would be a separately billed Vercel event.
+      return null
+  }
+}
+
 /**
  * Core event tracking function.
- * Sends data to both GA4 (via gtag) and GTM (via dataLayer).
+ * Sends data to GA4 (via gtag), GTM (via dataLayer) and Vercel Web Analytics.
  */
 export function trackEvent(event: string, params?: AnalyticsParams) {
   if (typeof window === 'undefined') return
-  
+
   // Fire to GA4 via gtag (works when VITE_GA_ID is set in .env)
   window.gtag?.('event', event, params)
-  
+
   // GTM dataLayer fallback — always fires, even without GA_ID
   if (!window.dataLayer) window.dataLayer = []
-  window.dataLayer.push({ 
+  window.dataLayer.push({
     event,
     ...params,
     timestamp: new Date().toISOString()
   })
+
+  // Vercel Web Analytics custom event — see the constraints block above.
+  try {
+    const vercelEvent = toVercelEvent(event, params)
+    if (vercelEvent) track(vercelEvent.name, vercelEvent.props)
+  } catch {
+    /* Analytics must never break the page. */
+  }
 }
 
 /**

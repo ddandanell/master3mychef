@@ -6,7 +6,8 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -33,17 +34,10 @@ const BABY_SHOWER_SERVICE_SCHEMA = {
   serviceType: 'Baby shower catering and styled villa brunches',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'myCHEF.id',
+    name: siteFacts.businessName,
     url: 'https://mychef.id/',
-    telephone: '+62 896-7407-2020',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
-      addressLocality: 'Denpasar',
-      addressRegion: 'Bali',
-      postalCode: '80226',
-      addressCountry: 'ID',
-    },
+    telephone: siteFacts.phoneDisplay,
+    address: postalAddressSchema,
   },
   areaServed: 'Bali, Indonesia',
   description: 'Baby shower catering in Bali villas: pregnancy-safe brunches, grazing tables, alcohol-free mocktail bars, themed decor, photography and full cleanup.',

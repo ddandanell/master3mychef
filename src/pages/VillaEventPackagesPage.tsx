@@ -7,7 +7,8 @@ import {
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { Breadcrumb, PressStrip } from '@/components/shared'
@@ -81,10 +82,10 @@ const serviceSchema = {
   serviceType: 'All-inclusive single-event villa packages',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'myCHEF.id',
+    name: siteFacts.businessName,
     url: 'https://mychef.id/',
-    telephone: '+62 896-7407-2020',
-    address: { '@type': 'PostalAddress', streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan', addressLocality: 'Denpasar', addressRegion: 'Bali', postalCode: '80226', addressCountry: 'ID' },
+    telephone: siteFacts.phoneDisplay,
+    address: postalAddressSchema,
   },
   areaServed: 'Bali, Indonesia',
   description: 'All-inclusive Bali villa event packages for a single occasion: private chef, bar service, staffing, decor and entertainment coordination, setup, cleanup and villa handback under one fixed quote.',
@@ -419,7 +420,7 @@ export default function VillaEventPackagesPage() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <MapPin className="w-5 h-5 text-[#C5A028] mb-3" />
               <p className="text-white text-sm font-semibold mb-1">Address</p>
-              <p className="text-white/[65%] text-sm leading-relaxed">Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Bali 80226</p>
+              <p className="text-white/[65%] text-sm leading-relaxed">{siteFacts.addressDisplay}</p>
             </div>
           </div>
           <p className="text-white/40 text-xs tracking-wide uppercase">

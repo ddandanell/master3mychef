@@ -12,6 +12,7 @@ import {
   Send,
 } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import { Breadcrumb } from '@/components/shared'
 import OptimizedImage from '@/components/OptimizedImage'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -50,7 +51,7 @@ const CONTACT_DETAILS = [
   {
     icon: MapPin,
     label: 'Office',
-    value: 'Jl. Tukad Barito Timur III No.16, Denpasar Selatan, Bali',
+    value: siteFacts.addressDisplay,
     href: undefined,
     hint: 'Serving all of Bali',
   },

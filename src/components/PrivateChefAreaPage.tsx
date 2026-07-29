@@ -22,7 +22,7 @@ import {
   CalendarCheck,
   Utensils,
 } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema } from '@/components/SeoHead'
 import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import { hasLocationPage } from '@/data/siteArchitecture'
 import { getPageMetaByPath } from '@/data/page-meta'
@@ -146,9 +146,12 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
       '@id': `${SITE}/#business`,
-      name: 'myCHEF.id',
+      name: siteFacts.businessName,
       url: SITE,
-      telephone: '+6289674072020',
+      // Must match the canonical LocalBusiness node in SeoHead.tsx — this block
+      // shares its @id, so any divergence splits the entity in Google's graph.
+      telephone: siteFacts.phoneDisplay,
+      address: postalAddressSchema,
       priceRange: 'IDR 2,000,000 – IDR 4,200,000',
       image: `${SITE}/og-image.webp`,
       areaServed: { '@type': 'Place', name: `${area.name}, Bali, Indonesia` },

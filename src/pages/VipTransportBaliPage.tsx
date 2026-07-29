@@ -6,7 +6,8 @@ import {
 import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead from '@/components/SeoHead'
+import SeoHead, { postalAddressSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -67,10 +68,10 @@ export default function VipTransportBaliPage() {
                 'serviceType': 'Private transfer arrangement (concierge add-on)',
                 'provider': {
                   '@type': 'LocalBusiness',
-                  'name': 'myCHEF.id',
+                  'name': siteFacts.businessName,
                   'url': 'https://mychef.id/',
-                  'telephone': '+62 896-7407-2020',
-                  'address': {'@type': 'PostalAddress', 'streetAddress': 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan', 'addressLocality': 'Denpasar', 'addressRegion': 'Bali', 'postalCode': '80226', 'addressCountry': 'ID'}
+                  'telephone': siteFacts.phoneDisplay,
+                  'address': postalAddressSchema
                 },
                 'areaServed': 'Bali, Indonesia',
                 'description': 'Airport pickups, group shuttles and event transport arranged through a vetted partner driver network as an add-on to myCHEF chef, event and villa-stay bookings.'

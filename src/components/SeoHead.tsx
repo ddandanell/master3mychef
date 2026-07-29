@@ -23,29 +23,39 @@ interface SeoHeadProps {
   twitterImageAlt?: string
 }
 
+/**
+ * Canonical PostalAddress node, derived from siteFacts.
+ * Every schema block that states an address must use this — never a literal.
+ */
+export const postalAddressSchema = {
+  '@type': 'PostalAddress',
+  ...siteFacts.address,
+} as const
+
+/**
+ * Canonical provider reference. Points at the LocalBusiness node by @id so
+ * Google resolves one entity instead of many duplicate provider objects.
+ */
+export const providerRef = { '@id': 'https://mychef.id/#business' } as const
+
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': 'https://mychef.id/#business',
-  name: 'myCHEF.id',
+  name: siteFacts.businessName,
+  alternateName: siteFacts.alternateNames,
+  legalName: siteFacts.legalName,
   description: 'Private chef, catering, events, and staffing services in Bali',
   url: 'https://mychef.id',
-  telephone: '+62 896-7407-2020',
-  email: 'bali@mychef.id',
+  telephone: siteFacts.phoneDisplay,
+  email: siteFacts.email,
   sameAs: [siteFacts.googleBusinessProfileUrl],
   hasMap: siteFacts.googleBusinessProfileUrl,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
-    addressLocality: 'Denpasar Selatan',
-    addressRegion: 'Bali',
-    postalCode: '80226',
-    addressCountry: 'ID',
-  },
+  address: postalAddressSchema,
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: -8.6905,
-    longitude: 115.2126,
+    latitude: siteFacts.geo.latitude,
+    longitude: siteFacts.geo.longitude,
   },
   areaServed: [
     { '@type': 'Place', name: 'Seminyak, Bali', geo: { '@type': 'GeoCoordinates', latitude: -8.6916, longitude: 115.1626 } },
@@ -76,14 +86,10 @@ export const localBusinessSchema = {
 
 const cateringProviderSchema = {
   '@type': 'FoodEstablishment',
-  name: 'myCHEF.id',
+  name: siteFacts.businessName,
   url: 'https://mychef.id',
-  telephone: '+62 896-7407-2020',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Bali',
-    addressCountry: 'ID',
-  },
+  telephone: siteFacts.phoneDisplay,
+  address: postalAddressSchema,
 }
 
 export function cateringServiceSchema(
@@ -210,12 +216,7 @@ export function detailedServiceSchema(
     '@type': 'Service',
     name,
     description,
-    provider: {
-      '@type': 'Organization',
-      name: 'myCHEF.id',
-      url: 'https://mychef.id',
-      telephone: '+62 896-7407-2020',
-    },
+    provider: providerRef,
     areaServed: {
       '@type': 'Place',
       name: 'Bali, Indonesia',
@@ -256,11 +257,7 @@ export function serviceWithOfferSchema(params: {
     '@type': 'Service',
     name,
     description,
-    provider: {
-      '@type': 'Organization',
-      name: 'myCHEF.id',
-      url: 'https://mychef.id',
-    },
+    provider: providerRef,
     areaServed: 'Bali, Indonesia',
     offers: {
       '@type': 'Offer',
@@ -294,11 +291,7 @@ export function serviceWithAggregateOfferSchema(params: {
     '@type': 'Service',
     name,
     description,
-    provider: {
-      '@type': 'Organization',
-      name: 'myCHEF.id',
-      url: 'https://mychef.id',
-    },
+    provider: providerRef,
     areaServed: 'Bali, Indonesia',
     offers: {
       '@type': 'AggregateOffer',
@@ -322,17 +315,13 @@ export function professionalServiceSchema(
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${url}#localbusiness`,
-    name: 'myCHEF.id Bar Services',
+    name: `${siteFacts.businessName} Bar Services`,
+    parentOrganization: providerRef,
     image,
     url,
-    telephone: '+62 896-7407-2020',
+    telephone: siteFacts.phoneDisplay,
     priceRange: 'IDR 2,500,000 - IDR 132,000,000',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Denpasar Selatan',
-      addressRegion: 'Bali',
-      addressCountry: 'ID',
-    },
+    address: postalAddressSchema,
     areaServed: [
       { '@type': 'State', name: 'Bali' },
       { '@type': 'Country', name: 'Indonesia' },
@@ -474,8 +463,13 @@ export function organizationSchema(
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': 'https://mychef.id/#organization',
-    name: 'myCHEF.id',
+    name: siteFacts.businessName,
+    alternateName: siteFacts.alternateNames,
+    legalName: siteFacts.legalName,
     url: 'https://mychef.id',
+    telephone: siteFacts.phoneDisplay,
+    email: siteFacts.email,
+    address: postalAddressSchema,
     logo: {
       '@type': 'ImageObject',
       url: logoUrl,

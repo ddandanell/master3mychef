@@ -16,8 +16,12 @@ export const PHONE = {
   digits:   '6289674072020',
   /** Display format with spaces                        e.g. +62 896-7407-2020 */
   display:  '+62 896-7407-2020',
-  /** Hyphenated — used in schema.org telephone field   e.g. +62-896-7407-2020 */
-  schema:   '+62-896-7407-2020',
+  /**
+   * schema.org telephone field. Must be IDENTICAL to `display` — Google treats
+   * a differently-formatted telephone as a separate NAP signal.
+   * (Was '+62-896-7407-2020'; unified 2026-07-29.)
+   */
+  schema:   '+62 896-7407-2020',
 }
 
 export const SITE = {

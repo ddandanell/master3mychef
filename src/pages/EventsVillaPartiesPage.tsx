@@ -6,7 +6,8 @@ import {
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
@@ -163,17 +164,10 @@ export default function EventsVillaPartiesPage() {
             serviceType: 'Villa party catering, bar service and event staffing',
             provider: {
               '@type': 'LocalBusiness',
-              name: 'myCHEF.id',
+              name: siteFacts.businessName,
               url: `${SITE}/`,
-              telephone: '+62 896-7407-2020',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
-                addressLocality: 'Denpasar',
-                addressRegion: 'Bali',
-                postalCode: '80226',
-                addressCountry: 'ID',
-              },
+              telephone: siteFacts.phoneDisplay,
+              address: postalAddressSchema,
             },
             areaServed: 'Bali, Indonesia',
             description: 'Villa party catering in Bali: cocktail receptions, sundowner BBQ parties and casual mixers with food, open bar, service staff, entertainment coordination and full cleanup.',

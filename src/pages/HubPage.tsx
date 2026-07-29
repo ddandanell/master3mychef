@@ -7,6 +7,7 @@ import SeoHead, {
   faqPageSchema,
   organizationSchema,
   localBusinessSchema,
+  postalAddressSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import { siteFacts } from '@/data/siteFacts'
@@ -234,19 +235,12 @@ export default function HubPage() {
     ...localBusinessSchema,
     '@type': ['LocalBusiness', 'FoodEstablishment'],
     '@id': 'https://mychef.id/#business',
-    name: 'myCHEF.id',
+    name: siteFacts.businessName,
     description: 'Private chef company in Bali delivering Michelin-trained villa dining, catering and event hospitality.',
     url: 'https://mychef.id/',
-    telephone: '+62 896-7407-2020',
-    email: 'bali@mychef.id',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
-      addressLocality: 'Denpasar',
-      addressRegion: 'Bali',
-      postalCode: '80226',
-      addressCountry: 'ID',
-    },
+    telephone: siteFacts.phoneDisplay,
+    email: siteFacts.email,
+    address: postalAddressSchema,
     areaServed: ['Seminyak','Canggu','Ubud','Uluwatu','Sanur','Nusa Dua','Jimbaran','Berawa','Pererenan','Bukit'],
     priceRange: 'IDR 700,000 - IDR 3,000,000+ per person',
     founder: { '@type': 'Person', 'name': 'Adriano' },

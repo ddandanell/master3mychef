@@ -8,6 +8,7 @@ import EmailCaptureBar from '@/components/EmailCaptureBar'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import SeoHead, { breadcrumbSchema, detailedServiceSchema, faqPageSchema } from '@/components/SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -508,7 +509,7 @@ export default function CompleteVillaExperiencePage() {
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <MapPin className="w-5 h-5 text-[#C5A028] mb-3" />
               <p className="text-white text-sm font-semibold mb-1">Address</p>
-              <p className="text-white/[65%] text-sm leading-relaxed">Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan, Bali 80226</p>
+              <p className="text-white/[65%] text-sm leading-relaxed">{siteFacts.addressDisplay}</p>
             </div>
           </div>
           <p className="text-white/40 text-xs tracking-wide uppercase">

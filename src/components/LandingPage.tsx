@@ -1,7 +1,8 @@
 import { useMemo } from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Calendar, Check, ChevronLeft, ChevronRight, Clock3, MessageCircle, Utensils } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, faqPageSchema, serviceSchema, serviceWithAggregateOfferSchema, serviceWithOfferSchema } from './SeoHead'
+import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema, serviceSchema, serviceWithAggregateOfferSchema, serviceWithOfferSchema } from './SeoHead'
+import { siteFacts } from '@/data/siteFacts'
 import { BLOG_POSTS, GUIDES, LANDING_PAGES } from '@/data/sitemap'
 import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import { downgradeArticleH1 } from '@/lib/utils'
@@ -229,17 +230,10 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
       schema.serviceType = 'Luxury milestone birthday party production'
       schema.provider = {
         '@type': 'LocalBusiness',
-        name: 'myCHEF.id',
+        name: siteFacts.businessName,
         url: `${SITE}/`,
-        telephone: '+62 896-7407-2020',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan',
-          addressLocality: 'Denpasar',
-          addressRegion: 'Bali',
-          postalCode: '80226',
-          addressCountry: 'ID',
-        },
+        telephone: siteFacts.phoneDisplay,
+        address: postalAddressSchema,
       }
       schema.areaServed = 'Bali, Indonesia'
       schema.offers = [

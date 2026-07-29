@@ -62,6 +62,25 @@ Remaining Step 0 work is the **GSC layer only** (query-level shifts) — needs t
 
 **Verify:** re-inspect in 7 days; all 8 indexed.
 
+### Executed 2026-07-29 (live URL Inspection, all 8 URLs)
+
+| URL | Live status | Action |
+|---|---|---|
+| /private-chef/canggu | ✅ Indexed | none |
+| /private-chef/ubud | ✅ Indexed | none |
+| /private-chef/seminyak | ✅ Indexed | none |
+| /private-chef/uluwatu | ✅ Indexed | none |
+| /private-chef/sanur | ✅ Indexed | none |
+| /private-chef/nusa-dua | ✅ Indexed | none |
+| /private-chef/berawa | ✅ Indexed | none |
+| /private-chef/kuta | ❌ "URL is unknown to Google" (never crawled; GSC claimed no referring sitemap although it is in sitemap.xml — stale crawl record) | **Indexing requested** — priority crawl queue |
+
+Bonus (quota permitting): re-crawl requested for the two pages retitled today — `/fine-dining/menus` and `/fine-dining/private-chef-bali` — so the new titles land faster. Quota used: 3 of ~10–15.
+
+**Note:** 7 of 8 already indexed — further confirmation that the Page Indexing report's "193 not indexed" is unreliable. The correction-doc rule (live-verify before acting) held again.
+
+**Re-check:** ~2026-08-05, re-inspect /private-chef/kuta.
+
 ---
 
 ## Step 2 — Move `private chef bali` from page 2 to page 1 (THIS WEEK)

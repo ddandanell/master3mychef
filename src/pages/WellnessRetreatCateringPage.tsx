@@ -145,7 +145,7 @@ const FAQS = [
   },
   {
     question: 'What is the minimum group size for retreat catering?',
-    answer: '6 guests minimum for a dedicated retreat catering program. Smaller groups can be accommodated but may incur a minimum daily fee rather than a per-person rate.',
+    answer: '5 guests minimum for a dedicated retreat catering program. Smaller groups can be accommodated but may incur a minimum daily fee rather than a per-person rate.',
   },
   {
     question: 'Can you accommodate multiple dietary restrictions simultaneously?',

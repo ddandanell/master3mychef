@@ -12,7 +12,7 @@ const SERVICES = [
   {
     slug: 'fine-dining',
     label: 'Fine Dining',
-    description: 'Multi-course tasting menus — Italian, French, Mediterranean, Wagyu — plated in your villa by a Michelin-trained team. From 6 guests (2 for romantic dinners).',
+    description: 'Multi-course tasting menus — Italian, French, Mediterranean, Wagyu — plated in your villa by a Michelin-trained team. From 5 guests (2 for romantic dinners).',
     price: 'From IDR 950K++ per person.',
     url: '/fine-dining',
     cta: 'Explore fine dining',

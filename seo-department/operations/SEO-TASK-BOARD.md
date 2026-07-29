@@ -1,6 +1,6 @@
 # SEO Task Board — myCHEF.id
 
-**Owner:** Project Manager (02) · **Updated:** 2026-07-28
+**Owner:** Project Manager (02) · **Updated:** 2026-07-29
 
 Every task carries all mandatory fields. A task without acceptance criteria is rejected.
 
@@ -67,3 +67,13 @@ GBP audit and NAP verification (12) · competitor set and SERP landscape (03) ·
 
 ### P3 — Backlog
 Indonesian language business case (22) · partner surface audit (16) · internal link build-out (14) · schema audit (13)
+
+---
+
+### Done
+
+**TASK-009 · Sync upstream markdown + harden publish pipeline (correction doc #5) — DONE 2026-07-29**
+- Found and fixed a silent-data-loss defect in `publish-content.py` (would have dropped 140 of 161 article bodies); backported 13 upstream md files; dry-run divergence now zero. Decisions D-006, D-007.
+
+**TASK-010 · 6-guest minimum sweep (correction doc #4) — DONE 2026-07-29**
+- Owner confirmed scope: dining formats → 5 guests; events and kids parties excluded; babi guling 6 / buffet 30 retained; capacity wording untouched. 39 replacements across 22 files (pages, articleContent, upstream md); stale IDR 5M plated minimum-spend FAQ also cleared. Decisions D-008, D-009. **Not yet deployed.**

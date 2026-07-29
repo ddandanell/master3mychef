@@ -153,7 +153,7 @@ const WINE_PAIRINGS = [
 
 const FAQS = [
   { q: 'How much does a plated dinner in Bali cost?', a: 'From IDR 800,000++ per person for three courses, up to IDR 1,300,000++ for the five-course premium, with a minimum of 5 guests. Every quote states the full total including tax and service before you confirm.' },
-  { q: 'Is there a minimum number of guests?', a: 'No fixed guest minimum — the IDR 5M minimum spend covers the team, so even a six-person dinner works. The format suits up to about 60 guests.' },
+  { q: 'Is there a minimum number of guests?', a: 'Plated service starts at 5 guests, with no minimum spend. The format suits up to about 60 guests.' },
   { q: 'How many staff will be at our villa?', a: 'A chef, a service manager, and one waiter per ten guests as standard. Additional waiters are available from IDR 250,000/hour.' },
   { q: 'Can every guest have a different dietary menu?', a: 'Yes — that\'s the strength of plated service. Vegan, gluten-free, halal, and allergy-specific courses are designed per guest and plated separately.' },
   { q: 'Do you bring tableware and styling?', a: 'Everything: tables if needed, linens, chargers, porcelain, glassware, candles, and printed menus. A kitchen tent can be arranged if your villa kitchen is compact.' },

@@ -1,7 +1,7 @@
 import type { Menu } from './types';
 
 /**
- * Seafood — Classic Set (6 menus, min 6 guests, family-style sharing).
+ * Seafood — Classic Set (6 menus, min 5 guests, family-style sharing).
  * All seafood sourced fresh morning-of from Jimbaran fish market.
  * Prices are the approved premium price list (July 2026) — do not
  * "correct" them against the older research prices.

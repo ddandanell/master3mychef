@@ -139,13 +139,29 @@ def md_to_html(text: str) -> str:
 
 def read_article_content(path: Path) -> dict[str, str]:
     text = path.read_text(encoding="utf-8")
-    m = re.search(r"export const ARTICLE_CONTENT: Record<string, string> = (\{.*\})\n", text, re.DOTALL)
+    # Tolerate both "}" and "};" terminators — the file has been saved both ways.
+    m = re.search(
+        r"export const ARTICLE_CONTENT: Record<string, string> = (\{.*\})\s*;?\s*\Z",
+        text,
+        re.DOTALL,
+    )
     if not m:
-        return {}
+        raise SystemExit(
+            f"FATAL: could not parse existing entries in {path}. "
+            "Refusing to continue — a run now would silently drop every "
+            "article not published in this pass."
+        )
     data: dict[str, str] = {}
-    for km in re.finditer(r'"([^"]+)"\s*:\s*"((?:[^"\\]|\\.)*)"', m.group(1)):
+    for km in re.finditer(r'^  "(/[^"]*)"\s*:\s*"((?:[^"\\]|\\.)*)"', m.group(1), re.MULTILINE):
         # Parse the captured JSON string literal properly so UTF-8 content is preserved.
         data[km.group(1)] = json.loads('"' + km.group(2) + '"')
+    # Sanity guard: an articleContent.ts of real size must yield real entries.
+    if len(text) > 10_000 and len(data) < 50:
+        raise SystemExit(
+            f"FATAL: parsed only {len(data)} entries from {path} "
+            f"({len(text)} chars). Parser is out of sync with the file format. "
+            "Refusing to continue rather than drop articles."
+        )
     return data
 
 
@@ -159,7 +175,7 @@ def serialize_article_content(data: dict[str, str]) -> str:
     for i, (key, value) in enumerate(sorted(data.items())):
         comma = "," if i < len(data) - 1 else ""
         lines.append(f'  "{key}": {json.dumps(value, ensure_ascii=False)}{comma}')
-    lines.append("}\n")
+    lines.append("};\n")
     return "\n".join(lines)
 
 
@@ -207,6 +223,13 @@ def main():
         updated += 1
         print(f"PUBLISHED: {slug} ({len(html)} chars HTML)")
 
+    # Final guard: never write fewer article entries than the file already holds.
+    existing_count = len(read_article_content(ARTICLE_CONTENT_PATH))
+    if len(article_content) < existing_count:
+        raise SystemExit(
+            f"FATAL: would write {len(article_content)} entries but the file "
+            f"holds {existing_count}. Refusing to drop articles."
+        )
     LANDING_PAGES_PATH.write_text(lp_text, encoding="utf-8")
     ARTICLE_CONTENT_PATH.write_text(serialize_article_content(article_content), encoding="utf-8")
 

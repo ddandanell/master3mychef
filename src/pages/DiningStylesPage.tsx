@@ -43,7 +43,7 @@ const FAMILIES: FamilyCard[] = [
     name: 'Three-Course',
     menuCount: THREE_COURSE_MENUS.length,
     price: 'From IDR 850K',
-    line: 'Lighter three-course dining for relaxed villa evenings and casual lunches. Minimum 6 guests.',
+    line: 'Lighter three-course dining for relaxed villa evenings and casual lunches. Minimum 5 guests.',
     href: '/three-course',
     image: '/generated/mychef-families-bali-three-course.webp',
     imageWidth: 960,

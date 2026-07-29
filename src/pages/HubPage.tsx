@@ -22,7 +22,7 @@ const PORTALS = [
   {
     id: 'fine-dining',
     title: 'Fine Dining',
-    subtitle: 'Multi-course tasting menus — Italian, French, Mediterranean, Wagyu — plated in your villa, from 6 guests.',
+    subtitle: 'Multi-course tasting menus — Italian, French, Mediterranean, Wagyu — plated in your villa, from 5 guests.',
     path: '/fine-dining',
     image: '/generated/mychef-misc-bali-hub-fine-dining.webp',
     imageAlt: 'Private fine dining table set for an intimate dinner in a Bali villa by myCHEF',
@@ -694,7 +694,7 @@ export default function HubPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {[
-              { title: 'Fine dining', desc: 'Multi-course tasting menus (Italian, French, Mediterranean, Wagyu) plated in your villa, from 6 guests.', href: '/fine-dining', cta: 'Explore fine dining →' },
+              { title: 'Fine dining', desc: 'Multi-course tasting menus (Italian, French, Mediterranean, Wagyu) plated in your villa, from 5 guests.', href: '/fine-dining', cta: 'Explore fine dining →' },
               { title: 'Catering & BBQ', desc: 'Buffets, live-fire grills, grazing tables and babi guling for groups of 10 to 150.', href: '/catering', cta: 'Explore catering →' },
               { title: 'Events & weddings', desc: 'Full-service hospitality: chef, staff, setup and cleanup for celebrations up to 200 guests.', href: '/events', cta: 'Explore events →' },
               { title: 'Daily & weekly villa chef', desc: 'Breakfast, lunch and dinner across your whole stay, groceries at cost.', href: '/villa-chef', cta: 'Explore the daily villa chef service →' },

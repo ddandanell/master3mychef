@@ -103,7 +103,7 @@ const SECTIONS = [
         ['Wine pairing (4–5 glasses)', '+IDR 850K per guest', '+IDR 850K per guest'],
       ])
     )}
-    <p class="mt-4">Fine dining from 6 guests (2 for romantic dinners by arrangement). The romantic dinner is a per-couple package; the same evening is also priced per person from the signature menus on the <a href="/fine-dining/romantic-dinner" class="font-semibold hover:underline">romantic dinner page</a> — your quote states which model applies. <a href="/fine-dining/tasting-menu" class="font-semibold hover:underline">See the full tasting menus →</a> · <a href="/michelin-private-chef-bali-prices" class="font-semibold hover:underline">Michelin-tier pricing explained →</a></p>`,
+    <p class="mt-4">Fine dining from 5 guests (2 for romantic dinners by arrangement). The romantic dinner is a per-couple package; the same evening is also priced per person from the signature menus on the <a href="/fine-dining/romantic-dinner" class="font-semibold hover:underline">romantic dinner page</a> — your quote states which model applies. <a href="/fine-dining/tasting-menu" class="font-semibold hover:underline">See the full tasting menus →</a> · <a href="/michelin-private-chef-bali-prices" class="font-semibold hover:underline">Michelin-tier pricing explained →</a></p>`,
   },
   {
     id: 'events-weddings',
@@ -201,7 +201,7 @@ const FAQS = [
   {
     question: 'Is there a minimum guest count or spend?',
     answer:
-      `Private chef half-day bookings from IDR 2,500K++ per day include one chef and one dedicated assistant (weekly rate from IDR 2,250K++/day). Fine dining starts at 6 guests (2 for romantic dinners). Corporate catering carries a minimum spend of ${siteFacts.corporateMinSpend}.`,
+      `Private chef half-day bookings from IDR 2,500K++ per day include one chef and one dedicated assistant (weekly rate from IDR 2,250K++/day). Fine dining starts at 5 guests (2 for romantic dinners). Corporate catering carries a minimum spend of ${siteFacts.corporateMinSpend}.`,
   },
   {
     question: 'Do you charge travel fees?',

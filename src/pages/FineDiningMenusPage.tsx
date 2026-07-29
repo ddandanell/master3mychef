@@ -492,7 +492,7 @@ export default function FineDiningMenusPage() {
               Prices are per person and subject to 11% government tax + 10% service charge. Choose between Kitchen-Service (we use your villa's kitchen and tableware) or Full-Service (we bring everything, including premium plates, glassware, and dedicated service staff).
             </p>
             <p className="text-base leading-relaxed text-[#4A4745]">
-              Minimum booking is 6 guests. We quote clearly before confirmation, and there are no hidden fees for standard setup, shopping, or cleanup.
+              Minimum booking is 5 guests. We quote clearly before confirmation, and there are no hidden fees for standard setup, shopping, or cleanup.
             </p>
           </div>
 
@@ -501,7 +501,7 @@ export default function FineDiningMenusPage() {
             <div className="space-y-4">
               {[
                 '11% government tax + 10% service charge added to listed menu price',
-                '6 guests minimum for fine dining menus',
+                '5 guests minimum for fine dining menus',
                 'Kitchen-Service uses your villa tableware',
                 'Full-Service includes premium plates, glassware & linen',
                 'No hidden fees on standard menu execution',

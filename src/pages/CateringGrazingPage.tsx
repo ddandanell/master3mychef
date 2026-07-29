@@ -35,14 +35,14 @@ const GOLD = '#C5A028'
    Per the page brief, grazing tables move to a custom-quotation model:
    no fixed prices are published. Every table is quoted around guest
    count, menu selection, styling, location, and service requirements.
-   Minimum booking: six guests.
+   Minimum booking: five guests.
    ═══════════════════════════════════════════════════════════════ */
 const CUSTOM_QUOTE_LINE = 'Custom quotation based on guest count, location, menu, and styling requirements.'
 
 const PACKAGES = [
   {
     title: 'Intimate Villa Grazing Table',
-    guests: 'Available from 6 guests',
+    guests: 'Available from 5 guests',
     includes: ['Selection of cheeses', 'Cured meats or vegetarian alternatives', 'Fresh tropical fruit', 'Breads and crackers', 'Dips and spreads', 'Olives and vegetables', 'Nuts and sweet elements', 'Styled board presentation'],
     bestFor: 'Smaller villa gatherings, welcome drinks, birthdays, wine evenings, bridal events, and poolside celebrations',
   },
@@ -178,20 +178,20 @@ const BOOKING_FLOW = [
 const TRUST_ITEMS = [
   { icon: MessageCircle, label: 'Same-day WhatsApp', desc: 'Confirmation within the hour' },
   { icon: Wallet, label: 'Custom quotation', desc: 'Tailored to your event' },
-  { icon: Users, label: 'Minimum six guests', desc: 'Same minimum Bali-wide' },
+  { icon: Users, label: 'Minimum five guests', desc: 'Same minimum Bali-wide' },
   { icon: Truck, label: 'Bali-wide delivery', desc: 'Styled setup at your venue' },
 ]
 
 /* ═══════════════════════════════════════════════════════════════
-   FAQ — custom-quotation model, minimum six guests
+   FAQ — custom-quotation model, minimum five guests
    ═══════════════════════════════════════════════════════════════ */
 const FAQS = [
-  { q: 'How much does a grazing table in Bali cost?', a: 'Every grazing table is quoted individually. Pricing depends on the number of guests, ingredient selection, table size, styling, location, dietary requirements, and whether staff are required. Our minimum booking is for six guests. Send us your event details for a tailored quotation.' },
-  { q: 'What is the minimum order for a grazing table?', a: 'Our grazing tables are available for a minimum of six guests — the same minimum in every area we serve. For larger events, we adjust the table size, food quantities, styling, and service according to your guest count and event format.' },
+  { q: 'How much does a grazing table in Bali cost?', a: 'Every grazing table is quoted individually. Pricing depends on the number of guests, ingredient selection, table size, styling, location, dietary requirements, and whether staff are required. Our minimum booking is for five guests. Send us your event details for a tailored quotation.' },
+  { q: 'What is the minimum order for a grazing table?', a: 'Our grazing tables are available for a minimum of five guests — the same minimum in every area we serve. For larger events, we adjust the table size, food quantities, styling, and service according to your guest count and event format.' },
   { q: 'How do I size a grazing table for my guest count?', a: 'As a pre-dinner spread, plan one tier below your headcount — guests are grazing, not dining. As the main food, size at full headcount and tell us; we\'ll adjust quantities honestly.' },
   { q: 'Is the grazing table intended as a full meal?', a: 'It can be designed either as light welcome food, cocktail-hour grazing, or a more substantial meal. Tell us how the table will be used so we can recommend the correct quantity.' },
   { q: 'Can you do vegan, gluten-free, or pork-free tables?', a: 'Yes — fully vegan tables, gluten-free crackers, pork-free charcuterie, and nut-free zones are all standard, with clear labelling.' },
-  { q: 'Do you deliver and set up at villas?', a: 'Yes — delivery, full styling, and setup across Bali, from Seminyak and Canggu to Ubud, Uluwatu, and Nusa Dua. The minimum booking is six guests everywhere; remote areas may simply carry a quoted travel fee.' },
+  { q: 'Do you deliver and set up at villas?', a: 'Yes — delivery, full styling, and setup across Bali, from Seminyak and Canggu to Ubud, Uluwatu, and Nusa Dua. The minimum booking is five guests everywhere; remote areas may simply carry a quoted travel fee.' },
   { q: 'Are setup and cleanup included?', a: 'Setup requirements are included in your quotation. Depending on the event, we can provide setup only or remain on site to replenish, supervise, and complete the final breakdown. The exact service level will be confirmed before booking.' },
   { q: 'Is a grazing table enough for a wedding?', a: 'For cocktail hour, absolutely. As the only food for a full reception, we\'d honestly recommend pairing it with a dinner format — we\'ll build the stack in one quote.' },
   { q: 'How far ahead should I book?', a: 'Three to seven days for most tables; two weeks or more for wedding-season dates. A 50% deposit confirms. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
@@ -227,7 +227,7 @@ export default function CateringGrazingPage() {
 
   const grazingServiceSchema = serviceSchema(
     'Grazing Tables Bali',
-    'Styled grazing tables in Bali: artisan cheese, charcuterie, tropical fruit and dips for weddings, welcome drinks, villa events and corporate receptions. Minimum booking six guests; every table is individually quoted.',
+    'Styled grazing tables in Bali: artisan cheese, charcuterie, tropical fruit and dips for weddings, welcome drinks, villa events and corporate receptions. Minimum booking five guests; every table is individually quoted.',
     PAGE_URL,
   )
 
@@ -301,7 +301,7 @@ export default function CateringGrazingPage() {
               <MessageCircle className="w-4 h-4" /> WhatsApp myCHEF
             </a>
           </div>
-          <p className="text-white/[60%] text-sm">Minimum six guests · Custom menus · Vegan and dietary options · Bali-wide delivery &amp; setup</p>
+          <p className="text-white/[60%] text-sm">Minimum five guests · Custom menus · Vegan and dietary options · Bali-wide delivery &amp; setup</p>
         </div>
       </section>
 
@@ -476,7 +476,7 @@ export default function CateringGrazingPage() {
           <SectionHeader
             eyebrow="Grazing Table Sizes"
             title="Choose the Right Size for Your Event"
-            subtitle="Every grazing table is individually quoted around your guest count, menu selection, styling, location, and service requirements. Minimum booking: six guests."
+            subtitle="Every grazing table is individually quoted around your guest count, menu selection, styling, location, and service requirements. Minimum booking: five guests."
           />
           <div className="grid sm:grid-cols-2 gap-6">
             {PACKAGES.map((pkg) => (
@@ -647,11 +647,11 @@ export default function CateringGrazingPage() {
           <SectionHeader
             eyebrow="Request a Quote"
             title="Design My Grazing Table"
-            subtitle="Tell us your guest count, location, preferred style, dietary restrictions, and event timing. Minimum booking: six guests. We will reply with a tailored quote within the hour."
+            subtitle="Tell us your guest count, location, preferred style, dietary restrictions, and event timing. Minimum booking: five guests. We will reply with a tailored quote within the hour."
           />
           <BookingFormCatering
             title="Request Grazing Table Quote"
-            subtitle="Minimum booking: six guests. We will confirm availability, styling options, and your custom quotation within the hour."
+            subtitle="Minimum booking: five guests. We will confirm availability, styling options, and your custom quotation within the hour."
             fields={[
               { name: 'tableType', label: 'Type of Grazing Table', type: 'select', icon: Package, required: true, options: [
                 'Villa gathering',
@@ -667,7 +667,7 @@ export default function CateringGrazingPage() {
               { name: 'time', label: 'Event Time', type: 'text', icon: Clock, placeholder: 'e.g. 5:00 PM' },
               { name: 'area', label: 'Location / Area', type: 'text', icon: MapPin, placeholder: 'Seminyak, Canggu, Ubud...', required: true },
               { name: 'villa', label: 'Villa or Venue Name', type: 'text', required: true },
-              { name: 'guests', label: 'Guest Count (minimum 6 guests)', type: 'number', icon: Users, placeholder: 'Minimum booking: 6 guests', required: true },
+              { name: 'guests', label: 'Guest Count (minimum 5 guests)', type: 'number', icon: Users, placeholder: 'Minimum booking: 5 guests', required: true },
               { name: 'mealRole', label: 'Main Food or Before Another Meal?', type: 'select', options: [
                 'Main food for the event',
                 'Light grazing before another meal',
@@ -750,7 +750,7 @@ export default function CateringGrazingPage() {
             Order a Grazing Table for Your Bali Event
           </h2>
           <p className="text-white/[80%] text-lg mb-8">
-            Send your date, area, guest count, and preferred grazing style. Minimum booking: six guests — every table is individually quoted based on guest count, ingredients, styling, location, and service requirements. We will confirm availability and your custom quotation by WhatsApp.
+            Send your date, area, guest count, and preferred grazing style. Minimum booking: five guests — every table is individually quoted based on guest count, ingredients, styling, location, and service requirements. We will confirm availability and your custom quotation by WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

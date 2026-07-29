@@ -331,7 +331,7 @@ export default function LunaPage() {
             Private Fine Dining in Your Bali Villa
           </h1>
           <p className="luna-hero-sub mb-4 max-w-[640px] text-base leading-relaxed text-white/[85%] md:text-xl font-medium">
-            24 classic set menus across four families — vegetarian, seafood, mixed meats, and single-meat — prepared by a Michelin-trained team. Served privately in your villa. Minimum 6 guests.
+            24 classic set menus across four families — vegetarian, seafood, mixed meats, and single-meat — prepared by a Michelin-trained team. Served privately in your villa. Minimum 5 guests.
           </p>
           <p className="mb-12 max-w-[640px] text-base leading-relaxed text-[#C5A028] md:text-xl font-medium">
             From IDR 1,250,000++ per guest
@@ -567,7 +567,7 @@ export default function LunaPage() {
                   { label: 'Price', value: 'IDR 3,500,000++ per person' },
                   { label: 'Includes', value: 'All courses, ingredients, tableware, service, cleanup' },
                   { label: 'Wine pairing', value: '+IDR 850,000 per guest' },
-                  { label: 'Minimum', value: 'Exactly 6 guests' },
+                  { label: 'Minimum', value: 'Exactly 5 guests' },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-3 text-sm">
                     <span className="text-[#C5A028] text-xs tracking-[0.15em] uppercase w-28 flex-shrink-0" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{item.label}</span>
@@ -627,7 +627,7 @@ export default function LunaPage() {
           </div>
           <div className="text-center space-y-2">
             <p className="text-white/[50%] text-sm">Wine pairing: <span className="text-[#C5A028]">+IDR 850,000 per guest</span></p>
-            <p className="text-white/[50%] text-sm">Minimum: <span className="text-white/[70%]">6 guests</span></p>
+            <p className="text-white/[50%] text-sm">Minimum: <span className="text-white/[70%]">5 guests</span></p>
           </div>
         </div>
       </section>
@@ -647,7 +647,7 @@ export default function LunaPage() {
                 Your chef arrives with fresh ingredients, prepares a multi-course tasting menu in your kitchen, serves each course at your table, and leaves your kitchen spotless. The only people in the room are your guests. The only schedule is your own.
               </p>
               <p className="text-white/[50%] text-sm leading-relaxed">
-                Available across Bali: Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua, and beyond. Minimum 6 guests. Romantic dinner for 2 available by special arrangement.
+                Available across Bali: Seminyak, Canggu, Uluwatu, Ubud, Sanur, Nusa Dua, and beyond. Minimum 5 guests. Romantic dinner for 2 available by special arrangement.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -1037,7 +1037,7 @@ export default function LunaPage() {
               </p>
               <div className="rounded-2xl border border-[#C5A028]/25 bg-[#C5A028]/5 p-5 mb-6">
                 <p className="text-sm text-[#1A1A1A]/70 leading-relaxed">
-                  <strong>Important:</strong> Our standard fine dining menus require a minimum of 6 guests. The Romantic Dinner is available as a special arrangement for couples who prefer an intimate two-person experience.
+                  <strong>Important:</strong> Our standard fine dining menus require a minimum of 5 guests. The Romantic Dinner is available as a special arrangement for couples who prefer an intimate two-person experience.
                 </p>
               </div>
               <div className="mb-6">
@@ -1274,7 +1274,7 @@ export default function LunaPage() {
               </div>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Wine pairing available — IDR 850K per guest</span></div>
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Minimum 6 guests</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">Minimum 5 guests</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-[#C5A028]" /><span className="text-sm text-white/[80%]">++ adds service charge + government tax (see FAQ)</span></div>
               </div>
               <Button asChild variant="whatsapp" size="brand">

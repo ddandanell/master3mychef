@@ -154,7 +154,7 @@ export default function PlatedDinnerCateringBaliPage() {
         'formal catering bali',
         'table service bali',
       ]}
-      highlights={['3--7 Course Menus', 'Formal Table Service', 'From 6 Guests', 'From IDR 700K/person']}
+      highlights={['3--7 Course Menus', 'Formal Table Service', 'From 5 Guests', 'From IDR 700K/person']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

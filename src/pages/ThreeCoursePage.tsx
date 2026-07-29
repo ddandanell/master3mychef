@@ -207,7 +207,7 @@ export default function ThreeCoursePage() {
             Starter. Main. Dessert. No fuss, all flavour — cooked fresh in your villa kitchen by a myCHEF chef, served at your table, and cleaned up completely afterwards.
           </p>
           <p className="text-base md:text-xl text-[#C5A028] font-medium mb-10">
-            From IDR 850,000 per guest &middot; Minimum 6 guests &middot; All prices ++ (11% government tax + 10% service charge)
+            From IDR 850,000 per guest &middot; Minimum 5 guests &middot; All prices ++ (11% government tax + 10% service charge)
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4">
             <a
@@ -339,7 +339,7 @@ export default function ThreeCoursePage() {
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Three Courses. Zero Washing Up.</p>
           <h2 className="font-playfair text-3xl md:text-5xl text-white mb-5">Three Courses. Zero Washing Up.</h2>
           <p className="text-white/[70%] mb-2 leading-relaxed">
-            From IDR 850,000 per guest &middot; Minimum 6 guests
+            From IDR 850,000 per guest &middot; Minimum 5 guests
           </p>
           <p className="text-white/[55%] text-sm mb-10 leading-relaxed max-w-xl mx-auto">
             Tell us your date, villa and guest count — we reply on WhatsApp within the hour with availability and a clear quote.

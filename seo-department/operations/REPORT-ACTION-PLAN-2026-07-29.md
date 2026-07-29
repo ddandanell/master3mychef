@@ -33,6 +33,22 @@ The report flags these; they were fixed 28–29 Jul after the report window clos
 
 **Verify (mid-August):** pull a fresh GSC export; confirm Jakarta URLs are gone from Pages, the wedding/BBQ queries each resolve to one URL, and `/fine-dining/menus` starts appearing for "private chef villa menu".
 
+### Live verification run 2026-07-29 (technical layer — all PASS, one residual found & fixed)
+
+| Check | Result |
+|---|---|
+| 8 Jakarta URLs → 308 to `/` | ✅ all eight |
+| Wedding titles split (service / packages / Indonesia) | ✅ three distinct titles |
+| BBQ titles split (cluster owner / party / seafood / grill) | ✅ four distinct titles |
+| Chefs-table duplicate 308 → `/fine-dining/chefs-table` | ✅ |
+| `/services` + `/guide` off the head term | ✅ |
+| 10 legacy area URLs → 308 to `/private-chef/{area}` | ✅ all ten |
+| `/locations/{area}` guides still 200 | ✅ |
+| `/fine-dining/menus` retarget live (title + H1) | ✅ |
+| **Residual found:** `/fine-dining/private-chef-bali` title still carried verbatim "Private Chef Bali" (105 imp at pos 72–86 in report) | ❌ → **fixed 2026-07-29**: retitled "Michelin-Trained Chefs Bali \| Fine Dining at Your Villa" |
+
+Remaining Step 0 work is the **GSC layer only** (query-level shifts) — needs the fresh export in ~2 weeks; nothing to do before then.
+
 ---
 
 ## Step 1 — Request indexing for the /private-chef/ pages the redirects now feed (NEXT SESSION, ~30 min)

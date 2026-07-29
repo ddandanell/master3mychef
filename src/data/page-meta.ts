@@ -1231,7 +1231,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'fine-dining-private-chef-bali': {
     path: '/fine-dining/private-chef-bali',
-    title: 'Michelin Private Chef Bali | Fine Dining at Your Villa',
+    title: 'Michelin-Trained Chefs Bali | Fine Dining at Your Villa',
     description:
       'Book a Michelin-trained private chef for your Bali villa. Tasting menus, wine pairing, 5-act dining experiences. Transparent pricing. WhatsApp myCHEF.',
     canonical: `${SITE}/fine-dining/private-chef-bali`,

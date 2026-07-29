@@ -6,6 +6,27 @@
 
 ---
 
+## STATUS DASHBOARD (updated 2026-07-29, end of day)
+
+| Step | What | Status |
+|---|---|---|
+| 0 | Verify already-shipped fixes | ✅ Technical layer verified live; residual head-term title found & fixed · ⏳ GSC layer awaits fresh data (scheduled 12 Aug) |
+| 1 | Live-inspect 8 /private-chef/ URLs, request indexing | ✅ Done — 7/8 already indexed; kuta requested (re-check ~5 Aug) · bonus re-crawls for 2 retitled pages |
+| 2 | `private chef bali` page-2→1 push | ✅ 2.1 61-page home anchor · ✅ 2.2 homepage meta rewrite (R-003 claim removed) · ✅ 2.3 head-term exclusivity enforced · ⏳ 2.4 = authority (Step 6) |
+| 3 | Untapped pools: private dining + home chef | ✅ Done — 4 contextual anchors + homepage FAQ snippet target, all live |
+| 4 | Page-2 internal-linking pass (5 queries) | ✅ Done — anchors added/verified for all five, live |
+| 5 | Area consolidation checkpoint | ⏳ WAITING by design — measure weeks 3–6 (first read: 12 Aug scheduled task). No action before data. |
+| 6 | **Link building — the binding constraint** | 🟡 **IN PROGRESS.** ✅ 6.1 prospect list — `LINK-PROSPECTS.csv`, 50 verified orgs across 6 categories · ✅ 6.2 asset drafted — `link-building/ASSET-DRAFT-bali-villa-dining-costs-2026.md`, **awaiting owner approval** (publish decision + citation sign-off) · 🔴 6.3 outreach — blocked on owner approval, templates ready in `templates/OUTREACH-TEMPLATE.md` · 🟡 6.4 citations — 7 directory/association targets in the prospect list · ✅ 6.5 ledger scaffold — `LINK-LEDGER.csv` |
+| 7 | Measurement gaps | 🔴 7.1 WhatsApp conversion tracking — **blocked on GA4/GTM access** (R-006, the most important unmeasured thing) · 🔴 7.2 localised volumes — blocked on tool budget · ✅ 7.3 monthly export cadence — scheduled task set for 12 Aug; user supplies fresh analysis-export monthly |
+
+**Deployed commits (all live on mychef.id):** `74d21212` (minimums+pipeline), `4bf1c2a9` (menu minGuests), `edaeb854` (redirects+menu retarget), `8bbb3aa5` (Step 0 residual), `b86f39eb` (Step 2), `53572f58` (Step 3), `2b7ae9e7` (Step 4).
+
+**Scheduled check-ups (both confirmed enabled, auto-run one-time):** 5 Aug 09:00 — kuta indexing re-check · 12 Aug 09:00 — full GSC re-verification of all shipped fixes. Monthly: user supplies a fresh analysis-export (same format as analysis_961) and it gets checked against this plan's verify-checkpoints.
+
+**Owner decisions now blocking Step 6:** (1) publish the cost asset as a new URL or extend `/pricing`; (2) approve the price figures for external citation; (3) sign off outreach sending. Everything else on this plan is either done or waiting on data.
+
+---
+
 ## How to read this plan
 
 Work top-down. Each step has: the evidence, the exact action, where it happens, how to verify it worked, and its status. Steps marked **DONE** shipped on 2026-07-29 (commits `74d21212`, `4bf1c2a9`, `edaeb854`) — they are listed so you can verify them, not redo them.

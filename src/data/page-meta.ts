@@ -1283,10 +1283,10 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering/babi-guling',
     title: 'Babi Guling Catering Bali | Whole-Pig Roast at Your Villa',
     description:
-      'Babi guling catering for Bali villas: traditional whole-pig roast for 10-50 guests, with halal alternatives. Celebration feasts. WhatsApp myCHEF.',
+      'Babi guling catering Bali: traditional whole-pig roast cooked & carved at your villa. 6–100+ guests, IDR 525K–650K per person ++. Pork-free options too.',
     canonical: `${SITE}/catering/babi-guling`,
-    h1: 'Babi Guling Catering Bali — A Proper Balinese Feast',
-    ogImage: `${SITE}/hero-catering.webp`,
+    h1: "Babi Guling Catering Bali — The Island's Celebration Roast, at Your Villa",
+    ogImage: `${SITE}/generated/mychef-catering-bali-hero-babiguling-new.webp`,
   },
 
       'catering-grazing-tables': {

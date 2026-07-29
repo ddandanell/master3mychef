@@ -88,6 +88,10 @@ const FAQS: FAQItem[] = [
     q: 'Do menu prices include groceries and service?',
     a: 'Menu prices are per person ++ (11% government tax + 10% service charge added). Groceries for standard menus are covered in the quote model, with premium upgrades itemised.',
   },
+  {
+    q: "Can we book a chef's table experience?",
+    a: 'Yes — the <a href="/fine-dining/chefs-table">chef\'s table in Bali</a> seats up to six guests counter-side, with course-by-course commentary from the chef. It is arranged separately from the standard set menus.',
+  },
 ]
 
 const buildWhatsAppLink = (menuName: string) =>

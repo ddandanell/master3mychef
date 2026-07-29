@@ -107,7 +107,7 @@ const PARTY_TESTIMONIALS = [
 ]
 
 const FAQS = [
-  { q: 'How much does villa party catering cost in Bali?', a: 'From IDR 650K++/person for a cocktail reception (20–80 guests), IDR 850K++ for a sundowner (15–50) and IDR 950K++ for a casual mixer (10–30). "++" adds 11% government tax + 10% service charge. Example: a 30-guest reception runs IDR 19.5M++.' },
+  { q: 'How much does villa party catering cost in Bali?', a: 'From IDR 650K++/person for a cocktail reception (20–80 guests), IDR 850K++ for a sundowner (15–50) and IDR 950K++ for a casual mixer (10–30). "++" adds 11% government tax + 10% service charge. Example: a 30-guest reception runs IDR 19.5M++. For full-menu dining rather than party formats, see <a href="/catering/villa-catering">villa catering in Bali</a>.' },
   { q: "What's the minimum guest count?", a: '20 for cocktail receptions, 15 for sundowners, 10 for mixers. Smaller groups can be quoted with adjusted pricing — just ask.' },
   { q: "Do we need the villa's permission — and what about noise rules?", a: "Yes, for parties beyond a quiet dinner. We coordinate with your villa manager on event approval, noise expectations and curfew times before confirming, and design the sound plan around the property. Some neighbourhoods also expect banjar (community) notification for larger events — we advise on what's customary for your location." },
   { q: 'Can we bring our own alcohol?', a: "Yes. All formats include a standard bar, but you're welcome to supplement with your own bottles. Corkage may apply depending on the package — we'll confirm in your quote." },

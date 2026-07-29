@@ -1037,7 +1037,7 @@ export default function LunaPage() {
               </p>
               <div className="rounded-2xl border border-[#C5A028]/25 bg-[#C5A028]/5 p-5 mb-6">
                 <p className="text-sm text-[#1A1A1A]/70 leading-relaxed">
-                  <strong>Important:</strong> Our standard fine dining menus require a minimum of 5 guests. The Romantic Dinner is available as a special arrangement for couples who prefer an intimate two-person experience.
+                  <strong>Important:</strong> Our standard fine dining menus require a minimum of 5 guests. The Romantic Dinner is available as a special arrangement for couples who prefer an intimate two-person experience. For an interactive counter-seat evening, book the <Link to="/fine-dining/chefs-table" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">chef&apos;s table in Bali</Link> — it seats six.
                 </p>
               </div>
               <div className="mb-6">

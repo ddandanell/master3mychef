@@ -241,3 +241,82 @@ changes and were left alone.
 
 - **Commit shipped:** documentation only — this log entry and D-017. No `src/` changes.
 - **URLs touched:** none.
+
+---
+
+## Run 2026-07-29 22:10 UTC (third run — driven by a Screaming Frog export, not Semrush)
+
+**Input:** owner-supplied `issues_overview_report.csv` from Screaming Frog, exported
+2026-07-29 22:04 UTC — **73 minutes after the `650ba745` hreflang deploy at 20:51**, so its
+findings are post-fix, not stale. ~174 HTML pages (derived: 165 pages = 94.83% of total).
+
+**Caveat on this input:** it is an *overview* export — issue names, types, priorities and URL
+counts only. It contains **no URLs**. Attribution below is inference from counts matching code,
+not from a per-URL list. For precise work, request `Bulk Export > Issues` instead.
+
+### Shipped: `47888f1e`
+
+| SF issue | Type | Count | Action |
+|---|---|---|---|
+| Hreflang: Noindex Return Links | Issue, **High** | 3 | **Fixed** |
+| Directives: Nofollow | Warning, **High** | 2 | **Fixed** |
+
+**Hreflang on noindex pages.** Both generators appended hreflang unconditionally with no noindex
+check, so every crawlable noindex path annotated itself. Counts corroborate exactly: `noindex`
+directives = 3, noindex return links = 3, and the code has exactly three crawlable noindex paths
+(`/book`, `/calculator`, `/quote` — `/404` is not counted as a crawled URL). Every URL in an
+hreflang set must be indexable, so a noindex page annotating itself makes the relationship liable
+to be ignored. Fixed in `scripts/inject-meta.ts` (prerender) and `src/components/SeoHead.tsx`
+(client), because this site emits meta twice — fixing one path only would have left half the
+problem live, which is the failure mode the `id`-alternate bug had.
+
+**Nofollow.** `/book` and `/calculator` were `noindex,nofollow` while `/quote` was
+`noindex,follow`, with no reason for the split. All carry the normal site nav; nofollow blocked
+PageRank flow for no benefit. Moved to `noindex,follow`, matching the reasoning already applied to
+`/join-our-team`. `/404` deliberately keeps nofollow.
+
+### Found but NOT actioned — needs one word from the owner
+
+**`public/generated/test/` — 12 MB of unreferenced PNGs shipping to production.**
+
+| File | Size |
+|---|---|
+| `vip-transport-hero.png` | 2.87 MB |
+| `cocktail-party-hero.png` | 2.56 MB |
+| `proposal-dinner-hero.png` | 2.54 MB |
+| `sushi-ingredients.png` | 1.92 MB |
+| `kids-pizza-closeup.png` | 1.58 MB |
+
+Referenced only by `public/test-images.html` ("myCHEF.id — AI Image Test Gallery", 3.3 kB) and by
+the `scripts/image-audit/` inventory JSON. The gallery is already `noindex, nofollow`, is not in
+`sitemap.xml` or `robots.txt`, and is not linked from `src/` — so **there is no ranking impact**
+and this is hygiene, not an SEO defect. But `public/` is copied wholesale by Vite, so all 12 MB
+ships in every deployment and the URLs are publicly reachable.
+
+Not deleted unilaterally: it is the owner's work artifact, PNG-only in an otherwise WebP codebase,
+and removal is a judgment call rather than a fix. Everything is git-tracked, so removal is fully
+recoverable. Awaiting a yes.
+
+### Assessed and deliberately not actioned
+
+- **Images: Over 100 kB (97 URLs, Medium)** — the repo holds 291 images over 100 kB totalling
+  54 MB (268 WebP, 18 JPG, 5 PNG); SF counted 97 because it only sees linked ones. Excluding the
+  12 MB of test PNGs, the rest are legitimate hero images already in WebP at 250–400 kB.
+  Recompressing further trades visual quality on a luxury brand site for modest byte savings —
+  an owner call, not an autopilot one.
+- **H2: Multiple (165 pages, 94.83%)** — Low, and explicitly "not an issue" in SF's own
+  description; HTML permits multiple `<h2>`s in a logical hierarchy. No action.
+- **Links: Pages With High External Outlinks (76, 43.68%)** — Low. Expected on a site that links
+  out to villas and venues. No action.
+- **Content: Readability Difficult (4)** — Low, and a brand-voice question, not a technical one.
+- **Canonicals: Canonicalised (3, High)** / **Pages Without Internal Outlinks (2, High)** /
+  title-length and H1/H2-length items — **cannot be actioned without the per-URL export.** The
+  overview gives counts only. These are the strongest reason to get `Bulk Export > Issues`.
+
+### Note on Screaming Frog MCP
+
+The owner started an MCP server inside the Screaming Frog desktop app. It is **not reachable from
+this environment**: no `screamingfrog`-named tools are registered, and the bash sandbox is a
+separate Linux VM that cannot reach `localhost` on the owner's Mac. Starting the server is only
+step one — it must also be registered as a connector in Claude's settings. Until then, use
+Screaming Frog's CSV exports, or Semrush/Ahrefs which are already connected.

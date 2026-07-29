@@ -34,7 +34,7 @@ No installation problem. The problem is duplication and missing report configura
 
 ## 3. Root cause — three independent systems fire on the same click
 
-```
+```text
 User clicks a WhatsApp link
 │
 ├─ [1] React app — src/components/Layout.tsx
@@ -55,7 +55,7 @@ User clicks a WhatsApp link
 
 Captured payloads from a single click (both `en=generate_lead`, sequence `_s=2` and `_s=3`):
 
-```
+```text
 en=generate_lead ... ep.link_url=https%3A%2F%2Fwa.me%2F6289674072020...&ep.link_text=GET YOUR QUOTE WITHIN 2 HOURS →   ← GTM
 en=generate_lead ... ep.source=homepage-hero&ep.method=WhatsApp&ep.event_category=conversion                          ← app code
 ```

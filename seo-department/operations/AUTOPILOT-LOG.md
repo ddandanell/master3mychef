@@ -139,3 +139,105 @@ and currently resolve to the homepage via a redirect from a decommissioned URL, 
 KD 30. Deciding which URL should own a generic, city-less "private chef" query is a positioning
 question with cannibalisation risk against `/private-chef/*` and `/locations/*`. Flagged for the
 owner; autopilot should not unilaterally pick a target for it.
+
+---
+
+## Run 2026-07-29 21:56–22:10 UTC (scheduled, run 2)
+
+**Data gate: FAILED — no refresh. No content, metadata or code changes made.**
+
+The Semrush snapshot list is byte-identical to run 1. No recrawl has occurred in the ~1h 15m
+since the previous run finished:
+
+| Snapshot | Finished (UTC) | Same as run 1? |
+|---|---|---|
+| `6a6a62ee3bfffa0de6a416a4` (current) | 2026-07-29 20:38:05 | **Yes — identical** |
+| `6a6a56a4a35d0760f593c5cf` (previous) | 2026-07-29 19:47:51 | Yes |
+
+**Site health: 97, delta +2 — unchanged.** 100 pages crawled. Every non-zero issue count is
+identical to run 1, and every `delta` field in the snapshot is `0`:
+
+| ID | Issue | Count | Delta |
+|---|---|---|---|
+| 204 | Hreflang language mismatch | 94 | 0 |
+| 112 | Low text-to-HTML ratio | 66 | 0 |
+| 45 | Structured data markup errors | 3 | 0 |
+| 213 | Pages with only one internal link | 4 | 0 |
+| 216 | Links with no anchor text | 3 | 0 |
+| 4 | Blocked from crawling | 2 | 0 |
+| 105 | Duplicate content in h1 and title | 1 | 0 |
+| 223 | Content not optimized | 1 | 0 |
+
+Because this snapshot finished at 20:38 and run 1's fix deployed at 20:51, these counts still
+describe the **pre-fix** code. They are stale by design. Rewriting anything against them would
+have been churn against data that cannot yet reflect the change.
+
+### Work done instead: independent verification of run 1's deploy
+
+Rather than wait on Semrush, run 1's fixes were verified directly against the production HTML
+(`curl` of the prerendered output). This confirms the fixes without a recrawl.
+
+| Run-1 fix | Verified live? | Evidence |
+|---|---|---|
+| hreflang `id` alternate removed | **Yes** | `/`, `/catering/babi-guling`, `/join-our-team`, `/catering/plated-catering`, `/blog/wedding-...-guide` each emit exactly two alternates, `en` + `x-default`, both self-referencing that page's own canonical |
+| `provider` → `providerRef` `@id` | **Yes** | All 3 Semrush-flagged URLs (`/wedding-catering-indonesia`, `/proposal-dinner`, `/experiences/kids-birthday-chef-party`) now serve `"provider":{"@id":"https://mychef.id/#business"}` |
+| `/join-our-team` indexable | **Yes** | serves `index,follow,max-image-preview:large` |
+| 4 thin-inbound blog posts linked from homepage | **Yes** | all four slugs present in homepage HTML, 1 occurrence each |
+| Anchor text moved to `sr-only` | **Yes** | 3 `sr-only` spans present on homepage |
+
+Deployment `dpl_BJ4p9BNFDuDjJWMDQLSWgUtJ34up` (commit `650ba745`) is **READY**, `aliasAssigned`
+true, and holds the `mychef.id` / `www.mychef.id` aliases. Run 1's push did reach production.
+
+**Expect on the next recrawl:** 204 → 0, 45 → 0, 213 → 0, 105 → 0, and 4 → 1. Do not re-fix
+any of these in the meantime.
+
+### Candidate issue investigated and rejected — read this before "fixing" it
+
+`/catering/plated-catering` serves an **inline** `"provider":{"@type":"Organization",...}` with
+no `address`, unlike the sitewide `providerRef` pattern. This looks like one that run 1 missed.
+It is **not a defect, and must not be changed.**
+
+The defect run 1 fixed was specifically `provider: { '@type': 'LocalBusiness' }` **without**
+`address` (see the diff of `650ba745`). `LocalBusiness` requires `address`; `Organization` does
+not. That is why Semrush flagged exactly 3 pages and not this one.
+
+Repo-wide check of the four remaining inline `LocalBusiness` providers — `EventsBirthdaysPage`
+:94, `EventsVillaPartiesPage`:162, `EventsBabyShowersPage`:32, `VillaEventPackagesPage`:80 —
+confirms **all four already carry `address: postalAddressSchema`**. No instance of the defect
+remains anywhere in `src/`. Logged as D-017.
+
+### Other flagged items re-checked, no action
+
+- **id 4 (2 pages):** `/join-our-team` (fixed, live) and `/quote` (intentionally `noindex,follow`
+  — settled). After the recrawl this should read 1, which is correct, not an issue.
+- **id 216 (3):** the homepage portal cards were fixed. The 2 empty anchors still in the HTML are
+  the Instagram and WhatsApp **icon** links, both external and both carrying `aria-label`
+  (`"Instagram"`, `"WhatsApp"`). External icon links pass no internal equity and are already
+  accessible. Adding visible or `sr-only` text to a floating CTA would be a UI change with no
+  SEO gain. No action.
+- **id 112 (66), id 223 (1):** unchanged assessment — structural to a React SPA / advisory.
+
+### Connector status
+
+- Semrush site audit: **authenticated**, working.
+- Semrush **position tracking: not configured.** `tracking_campaign_dates` for campaign
+  `30621470` returns `campaign not found` — that ID is the site-audit campaign only. No rank
+  tracking campaign exists for this project, so no ranking data is available to any run. Owner
+  decision needed (see report).
+- Vercel REST API via `VERCEL_TOKEN`: working (deployment state confirmed).
+- Ahrefs / GSC MCP connectors: **unauthenticated in this environment** — OAuth cannot be
+  completed in an unattended run.
+
+### Concurrency
+
+`git status --short` was clean at start and at end. No `.git/index.lock`. `credential.helper`
+was again pointing at another session's path
+(`/sessions/gracious-trusting-feynman/...`) and was repointed to this session before any git
+operation — expect to repeat this every run.
+
+Note: another automation is pushing `chore(status): hourly probe report` commits; its
+deployments show as CANCELED (`642510e2` at 21:17, `9f24bb9d` at 20:19). These are not SEO
+changes and were left alone.
+
+- **Commit shipped:** documentation only — this log entry and D-017. No `src/` changes.
+- **URLs touched:** none.

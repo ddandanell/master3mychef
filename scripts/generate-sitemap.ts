@@ -42,9 +42,17 @@ const URLS: { path: string; priority: number; changefreq: string; lastmod?: stri
 // They are still served (inject-meta) with a noindex tag; they just don't belong here.
 const NOINDEX_PATHS = new Set(['/404', '/book', '/calculator', '/join-our-team']);
 
+// Bar-services is an unproven test line with no clients (owner, 2026-07-28). All 21 of
+// its URLs sat in GSC "Discovered - currently not indexed", consuming crawl budget the
+// /private-chef/{area} pages need — 57 of those 61 are unindexed on a DR-23 domain.
+// Excluded from sitemap.xml ONLY. The pages stay in SITEMAP so inject-meta and prerender
+// still generate their static HTML — removing them there made every bar URL 404.
+// Reverse by deleting this filter.
+const isBarServices = (path: string) => path === '/bar-services/' || path.startsWith('/bar-services/');
+
 // Fjern redirects fra sitemap
 const REDIRECT_PATHS = new Set(REDIRECTS.map(r => r.from));
-const FILTERED_URLS = URLS.filter(url => !REDIRECT_PATHS.has(url.path) && !NOINDEX_PATHS.has(url.path));
+const FILTERED_URLS = URLS.filter(url => !REDIRECT_PATHS.has(url.path) && !NOINDEX_PATHS.has(url.path) && !isBarServices(url.path));
 
 // Deduplicate by path (sitemap already includes journal posts, but this ensures no duplicates)
 const seen = new Set<string>();

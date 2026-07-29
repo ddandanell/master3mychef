@@ -7,6 +7,7 @@ import { LANDING_PAGES } from './content/landingPages'
 import { GUIDES } from './content/guides'
 import { BLOG_POSTS } from './content/blogPosts'
 import { JOURNAL_POSTS } from './content/journalPosts'
+import { BAR_SERVICES, BAR_RESOURCES } from './bar-services'
 import { PAGE_META, PAGE_META_BY_PATH } from './page-meta'
 import { REDIRECT_MAP } from './redirects'
 
@@ -157,11 +158,41 @@ export function buildSitemap(): SitemapEntry[] {
     }))
   )
 
-  // Experience pages
-  // (Bar-services detail + resource pages were removed from this array on
-  //  2026-07-28 - all 21 sat in GSC 'Discovered - currently not indexed'.
-  //  Pages remain live and linked; only sitemap submission is withdrawn.)
-  const experiencePages: SitemapEntry[] = [
+  // Bar Services pages
+  const barServicesPages: SitemapEntry[] = [
+    {
+      path: '/bar-services/',
+      type: 'info',
+      title: PAGE_META['bar-services-hub'].title,
+      description: PAGE_META['bar-services-hub'].description,
+      priority: 0.9,
+      changefreq: 'weekly',
+    },
+    {
+      path: '/bar-services/faq/',
+      type: 'info',
+      title: PAGE_META['bar-services-faq'].title,
+      description: PAGE_META['bar-services-faq'].description,
+      priority: 0.7,
+      changefreq: 'monthly',
+    },
+    {
+      path: '/bar-services/contact/',
+      type: 'info',
+      title: PAGE_META['bar-services-contact'].title,
+      description: PAGE_META['bar-services-contact'].description,
+      priority: 0.6,
+      changefreq: 'monthly',
+    },
+    {
+      path: '/bar-services/resources/',
+      type: 'info',
+      title: PAGE_META['bar-services-resources'].title,
+      description: PAGE_META['bar-services-resources'].description,
+      priority: 0.8,
+      changefreq: 'weekly',
+    },
+    // Experience pages
     {
       path: PAGE_META.experiences.path,
       type: 'info',
@@ -218,11 +249,24 @@ export function buildSitemap(): SitemapEntry[] {
       priority: 0.8,
       changefreq: 'monthly',
     },
-    // Bar-services detail + resource pages are deliberately excluded from the
-    // sitemap (2026-07-28). All 21 sat in GSC "Discovered - currently not
-    // indexed": Google found them and declined to crawl. They consumed crawl
-    // budget the /private-chef/{area} pages need. The pages remain live and
-    // linked - only the sitemap submission is withdrawn.
+    ...BAR_SERVICES.map((s) => ({
+      path: s.route,
+      type: 'service' as const,
+      title: PAGE_META[s.metaKey].title,
+      description: PAGE_META[s.metaKey].description,
+      priority: 0.8,
+      changefreq: 'monthly' as const,
+      slug: s.slug,
+    })),
+    ...BAR_RESOURCES.map((r) => ({
+      path: r.route,
+      type: 'guide' as const,
+      title: PAGE_META[r.metaKey].title,
+      description: PAGE_META[r.metaKey].description,
+      priority: 0.8,
+      changefreq: 'monthly' as const,
+      slug: r.slug,
+    })),
   ]
 
   // Supporting info pages
@@ -319,7 +363,7 @@ export function buildSitemap(): SitemapEntry[] {
     ...blogPosts,
     ...journalPosts,
     ...pillarSubPages,
-    ...experiencePages,
+    ...barServicesPages,
     ...infoPages,
   ]
 

@@ -144,6 +144,19 @@ Queries sitting at positions 11–25 with real impressions — each is a title-p
 
 **Verify:** position deltas on these six queries, next export.
 
+### Executed 2026-07-29 (commit 2b7ae9e7, deployed + live-verified)
+
+| Query | Links added / verified |
+|---|---|
+| `bali villa catering` | Hub anchor sharpened → "Villa Catering in Bali"; `/events/villa-parties` FAQ links "villa catering in Bali" |
+| `bali buffet catering` | "Buffet Catering in Bali" added to hub's dedicated-pages sentence |
+| `bbq catering bali` | Verified: villa-bbq (4×) and seafood-bbq (2×) article bodies already link up to the cluster owner — nothing added |
+| `chefs table bali` | Prose anchor "chef's table in Bali" on `/fine-dining`; new FAQ with same anchor on `/fine-dining/menus` |
+| `bali wedding catering` | Journal complete-guide now links "Bali wedding catering packages & prices" (previously linked only the service page); `/events/weddings` anchor verified descriptive |
+| `private dining` | Covered in Step 3a |
+
+All five verified live. **Measure:** position deltas on these queries, next export (~12 Aug).
+
 ---
 
 ## Step 5 — Watch the area consolidation; then decide the /locations/ question (2–6 WEEKS)

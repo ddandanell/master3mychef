@@ -201,13 +201,8 @@ Worth being precise, because it changes what you should expect:
    still have no call sites in `BookingForm`, `BookingFormCatering`,
    `BarServiceEnquiryForm` or `ContactPage`. Wiring them gives those forms the
    same abandonment visibility the quote funnel now has. Cheap, high value.
-4. **Consider a reverse proxy.** Ad blockers block `us.i.posthog.com` by
-   default, and affluent Western travellers are a high-ad-blocker audience — you
-   may be losing a material fraction of sessions. A Vercel rewrite
-   (`/ingest/*` → PostHog) recovers them. Deliberately **not** done yet: a
-   misconfigured proxy is the most common way a PostHog install fails silently,
-   and it should be added only once you have a known-good direct baseline to
-   compare against.
+4. ~~Consider a reverse proxy.~~ **Done — and it turned out to be mandatory,
+   not optional.** See §9.
 5. **Exclude your own traffic.** Visit `https://mychef.id/?va-disable=1` once
    per browser you use. This already excludes you from Vercel Analytics; it now
    excludes you from PostHog too, including replay.
@@ -227,3 +222,76 @@ redirect-chain collapse for `/corporate-events-catering-bali`, annotated
 
 They look coherent, but review them on their own merits. **Do not `git add -A`**
 and ship them unreviewed alongside this.
+
+---
+
+## 9. Deploy day (30 Jul 2026) — three bugs found only by verifying
+
+The first deploy shipped correctly and recorded **nothing**. Three separate
+faults, each of which looked fine from every angle except the one that mattered.
+Recorded because all three are easy to reintroduce.
+
+### 9.1 Both PostHog domains were unreachable → the /ingest proxy
+
+Measured in a real browser against the live site:
+
+```
+us-assets.i.posthog.com   Failed to fetch   (network log showed a synthesised 503)
+us.i.posthog.com          Failed to fetch
+mychef.id (control)       200
+```
+
+Not a partial loss. posthog-js pulls remote config from `us-assets` during
+`init`; when that fails the SDK never finishes bootstrapping, sends no events
+and starts no recorder. **One blocked domain costs the entire visitor,
+silently.**
+
+Fixed by routing through `mychef.id/ingest/*` (first-party, so domain filters
+can't see it). Rewrites live in `scripts/generate-redirects.ts`; `api_host` is
+`/ingest` in `src/lib/posthog.ts`. The two must stay in step.
+
+### 9.2 `:path*` silently broke both POST endpoints
+
+The first proxy used Vercel's segment matcher. Result:
+
+```
+GET  /ingest/static/…   200   ← everything looked healthy
+POST /ingest/e/         404   ← events
+POST /ingest/s/         404   ← session recordings
+```
+
+`:path*` matches path *segments* and drops the trailing slash, so `/ingest/e/`
+became `/e`. PostHog's ingestion endpoints require the slash. Use the regex
+form `/ingest/(.*)` → `$1`, which passes the remainder through byte-for-byte.
+
+**This is the dangerous one.** In the broken state every asset returned 200, the
+SDK booted, remote config arrived, `posthog-recorder.js` loaded, `$sesid` was
+set and `$session_recording_remote_config` reported `enabled: true` — while
+nothing was stored at all.
+
+> When verifying a PostHog proxy, assert on **POSTs to `/ingest/e/` and
+> `/ingest/s/` returning 200** and on **rows appearing in the `events` table**.
+> Never stop at "the scripts load".
+
+### 9.3 The opt-out was a one-way door
+
+`opt_out_capturing()` writes its own persistent flag,
+`__ph_opt_in_out_<project key>`, independent of the `va-disable` key that
+`analytics-privacy.ts` manages. `initPostHog()` opted out when excluded but
+never opted back **in**, so `?va-disable=0` cleared our flag while PostHog
+stayed opted out forever. Any browser that was ever excluded could never be
+re-included. Fixed by calling `opt_in_capturing()` when not excluded.
+
+### 9.4 Still open: `$pageview` has not appeared
+
+Confirmed ingesting after the fixes: `$pageleave`, `time_on_page`,
+`quote_step_viewed`. **`$pageview` and `$autocapture` have not been observed.**
+
+`$pageleave` firing without `$pageview` is not explained yet, and it matters:
+the "Lead conversion rate by landing page" insight uses `$pageview` as its first
+funnel step, so it will read zero until this is resolved. Suspects, in order:
+`capture_pageview: 'history_change'` not emitting the initial load as expected;
+`before_send` / `scrubProperties()` interfering; or plain ingestion lag on a
+near-empty project. Check the live events feed with real traffic before
+assuming a bug. The scheduled task `enable-posthog-scout-mychef` (13 Aug 2026)
+explicitly re-tests this.

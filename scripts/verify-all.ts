@@ -114,9 +114,20 @@ function main() {
   checkGitStatus();
   checkPackageJson();
 
-  // NOTE: Lint is intentionally skipped here. The project currently has
-  // extensive pre-existing lint debt; the critical check is the TypeScript
-  // build below. Lint can be re-enabled once the debt is cleared.
+  // Lint. Re-enabled 2026-07-30 — the precondition the previous note set out
+  // ("can be re-enabled once the debt is cleared") is now met: src/ is at zero
+  // eslint errors, cleared in 916e55ac and e047ab23.
+  //
+  // Gating here rather than in .github/workflows/ is deliberate. This script is
+  // already invoked by the build-and-verify job, so a check added here is a real
+  // CI gate — and unlike a workflow file it can be updated with a normal push.
+  // GitHub refuses Personal Access Token writes to .github/workflows/ without
+  // `workflow` scope, which is what stopped the equivalent workflow-level step
+  // from shipping.
+  //
+  // Runs BEFORE the build so it fails in seconds rather than after a full
+  // Chromium prerender.
+  runNpmScript("lint");
 
   // Run build (this is the critical check)
   runNpmScript("build");

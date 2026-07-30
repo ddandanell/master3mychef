@@ -13,6 +13,25 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
+    <!-- Analytics opt-out — MUST run before GTM and gtag.js below.
+         Reads the same `va-disable` localStorage key that src/lib/analytics-privacy.ts
+         manages (set by visiting /?va-disable=1, cleared by /?va-disable=0), and sets
+         Google's official kill switch window['ga-disable-<MEASUREMENT_ID>'], which gtag
+         checks before every hit.
+         This has to be inline in the head rather than in the bundle: gtag.js loads and
+         sends its automatic page_view before the bundle executes, so an opt-out applied
+         from React would arrive too late to suppress the first pageview.
+         Without this, /?va-disable=1 silenced PostHog and Vercel but GA4 kept
+         collecting — which would make the opt-out described in §7 of the privacy
+         policy untrue. Keep the measurement ID in step with the gtag config below. -->
+    <script>
+      try {
+        if (localStorage.getItem('va-disable') !== null) {
+          window['ga-disable-G-W0PQH8ZKTF'] = true;
+        }
+      } catch (e) { /* Safari private mode throws on localStorage; fail open, never break the page */ }
+    </script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

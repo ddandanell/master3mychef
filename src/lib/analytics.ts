@@ -1,5 +1,6 @@
 import { track } from '@vercel/analytics'
 import { capturePostHog } from './posthog'
+import { shouldExcludeFromAnalytics } from './analytics-privacy'
 
 // GA4 is loaded by the gtag snippet in index.html (measurement ID is set there),
 // which is what populates window.gtag. There is deliberately no measurement ID
@@ -226,6 +227,19 @@ export function toVercelEvent(
  */
 export function trackEvent(event: string, params?: AnalyticsParams) {
   if (typeof window === 'undefined') return
+
+  // Opted-out browsers and automated ones send nothing, to ANY sink.
+  //
+  // Previously this guard existed only on the Vercel and PostHog branches, so a
+  // visitor who opted out via ?va-disable=1 still had every custom event pushed
+  // to GA4 and the GTM dataLayer. §7 of the privacy policy states that opting
+  // out excludes the browser from all analytics, so that gap made the published
+  // policy inaccurate rather than merely incomplete.
+  //
+  // GA4's automatic page_view is suppressed separately, by the inline
+  // ga-disable-<ID> snippet in index.html — it has to run before gtag.js loads,
+  // which is earlier than this module executes.
+  if (shouldExcludeFromAnalytics()) return
 
   // Fire to GA4 via gtag (works when VITE_GA_ID is set in .env)
   window.gtag?.('event', event, params)

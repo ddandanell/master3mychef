@@ -62,7 +62,7 @@ function sanitizeFilename(id: string): string {
   return id.replace(/\+/g, '-').replace(/[^a-z0-9-]/gi, '')
 }
 
-async function callOpenAI(spec: ImageSpec, attempt: number): Promise<{ b64_json?: string; url?: string; revised_prompt?: string }> {
+async function callOpenAI(spec: ImageSpec, _attempt: number): Promise<{ b64_json?: string; url?: string; revised_prompt?: string }> {
   const { width, height } = parseSize(spec.size)
   const response = await fetch('https://api.openai.com/v1/images/generations', {
     method: 'POST',

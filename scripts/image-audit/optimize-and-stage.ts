@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs'
-import { join, extname, basename } from 'node:path'
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
+import { join } from 'node:path'
 import sharp from 'sharp'
 
 const GENERATED_DIR = join(import.meta.dirname, 'generated-images')
@@ -65,7 +65,7 @@ async function main() {
     const outputFilename = meta?.filename ?? entry.filename.replace('.png', '.webp')
     const outputPath = join(PUBLIC_DIR, outputFilename)
 
-    const originalStat = await sharp(sourcePath).metadata()
+    const _originalStat = await sharp(sourcePath).metadata()
     const originalBuffer = readFileSync(sourcePath)
 
     await sharp(sourcePath)

@@ -253,12 +253,12 @@ function patchPremium(filePath: string, route: string, html: string | undefined)
   }
 
   if (insertIndex !== -1) {
-    const normalizedBlock = sectionBlock.replace(/^  /gm, indent)
+    const normalizedBlock = sectionBlock.replace(/^ {2}/gm, indent)
     text = text.slice(0, insertIndex) + normalizedBlock + text.slice(insertIndex)
   } else {
     const ctaMatch = text.match(/( *)\{\n *id: '[^']+',\n *type: 'cta'(?: as const)?/)
     if (ctaMatch) {
-      const normalizedBlock = sectionBlock.replace(/^  /gm, ctaMatch[1])
+      const normalizedBlock = sectionBlock.replace(/^ {2}/gm, ctaMatch[1])
       text = text.slice(0, ctaMatch.index!) + normalizedBlock + text.slice(ctaMatch.index!)
     } else {
       return 'no-anchor'

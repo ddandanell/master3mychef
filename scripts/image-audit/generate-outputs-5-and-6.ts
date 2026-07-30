@@ -54,7 +54,7 @@ interface PagePlan {
 
 const inventory: { images: InventoryImage[] } = JSON.parse(fs.readFileSync(INVENTORY_PATH, 'utf8'));
 const pagePlans: { pages: PagePlan[] } = JSON.parse(fs.readFileSync(PAGE_PLANS_PATH, 'utf8'));
-const profile = JSON.parse(fs.readFileSync(PROFILE_PATH, 'utf8'));
+const _profile = JSON.parse(fs.readFileSync(PROFILE_PATH, 'utf8'));
 
 // Group replace/consolidate inventory rows by proposed filename
 const groups: Record<string, InventoryImage[]> = {};
@@ -229,7 +229,7 @@ interface ImageSpec {
   purpose: string;
 }
 
-const PAGE_KEYWORDS: Record<string, string> = {
+const _PAGE_KEYWORDS: Record<string, string> = {
   '/experiences': 'private experiences Bali',
   '/experiences/private-cocktail-party': 'bartender hire Bali',
   '/experiences/sushi-masterclass': 'sushi making class Bali',
@@ -1313,7 +1313,7 @@ function buildDetailedPrompt(spec: ImageSpec): string {
   ].join(' ');
 }
 
-function buildNegativeConstraints(spec: ImageSpec, plan: PagePlan | undefined, planSection: any): string[] {
+function buildNegativeConstraints(spec: ImageSpec, plan: PagePlan | undefined, planSection: unknown): string[] {
   const raw = [
     'No text, headings, logos, watermarks, or prices inside the photograph',
     'No invented awards, certifications, or partnerships',
@@ -1388,8 +1388,8 @@ function buildAltText(spec: ImageSpec, filename: string): string {
   return candidates[filename] || spec.subject;
 }
 
-const promptLibrary: any[] = [];
-const seoMetadata: any[] = [];
+const promptLibrary: Record<string, unknown>[] = [];
+const seoMetadata: Record<string, unknown>[] = [];
 let totalCost = 0;
 
 for (const [filename, items] of Object.entries(groups)) {
@@ -1416,7 +1416,7 @@ for (const [filename, items] of Object.entries(groups)) {
   const pagePaths = Array.from(new Set(items.map(i => i.pagePath)));
   const pageNames = pagePaths.map(p => {
     const pp = getPagePlan(p);
-    return pp ? (pp as any).pageTitle || p : p;
+    return pp ? (pp as { pageTitle?: string }).pageTitle || p : p;
   });
 
   const detailedPrompt = buildDetailedPrompt(spec);

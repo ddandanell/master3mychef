@@ -174,7 +174,7 @@ async function main() {
     let decision: ImageInventoryRecord["decision"] = "replace";
     let rationale = "AI-generated or stock-looking image should be replaced with a realistic, brand-consistent photograph.";
     let communicates = "Visual support for the surrounding service description.";
-    let notes = "";
+    const notes = "";
     let recommendedFilename = "";
 
     // Specific image-level decisions

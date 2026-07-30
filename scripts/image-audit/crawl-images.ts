@@ -118,7 +118,7 @@ function parseHtmlForImages(html: string, pagePath: string): ImageRecord[] {
   while ((match = imgRegex.exec(html)) !== null) {
     const tag = match[0];
     const src = extractAttribute(tag, "src");
-    const currentSrc = extractAttribute(tag, "src"); // currentSrc only exists in DOM, use src for static
+    const _currentSrc = extractAttribute(tag, "src"); // currentSrc only exists in DOM, use src for static
     const imagePath = src;
     const imageUrl = resolveUrl(src);
     if (!imageUrl || seen.has(imageUrl)) continue;

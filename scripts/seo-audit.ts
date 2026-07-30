@@ -1,5 +1,5 @@
-import { readdirSync, readFileSync, statSync, mkdirSync, writeFileSync } from 'node:fs'
-import { join, relative, extname } from 'node:path'
+import { readdirSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs'
+import { join, relative } from 'node:path'
 
 const DIST = './dist'
 const SITEMAP = './public/sitemap.xml'
@@ -271,7 +271,7 @@ function main() {
   for (const [title, routes] of Object.entries(titles)) {
     if (routes.length > 1) add(`Duplicate title: "${title}"`, routes.join(', '))
   }
-  for (const [desc, routes] of Object.entries(descriptions)) {
+  for (const [_desc, routes] of Object.entries(descriptions)) {
     if (routes.length > 1) add(`Duplicate meta description`, routes.join(', '))
   }
 

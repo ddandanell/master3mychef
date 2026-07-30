@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-const PAGES_DIR = join(import.meta.dirname, '..', '..', 'src', 'pages')
+const _PAGES_DIR = join(import.meta.dirname, '..', '..', 'src', 'pages')
 
 // Mapping: old image path -> new image path for the image overhaul.
 // This map covers the 10 scoped pages and preserves every URL/route.

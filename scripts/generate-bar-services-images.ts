@@ -506,7 +506,7 @@ async function generateRaw(job: ImageJob, seed: number): Promise<{ buffer: Buffe
   throw new Error(`All providers failed. Last Pollinations error: ${lastPollErr instanceof Error ? lastPollErr.message : String(lastPollErr)}`)
 }
 
-function limitConcurrency<T>(tasks: (() => Promise<T>)[], limit: number): Promise<T[]> {
+function _limitConcurrency<T>(tasks: (() => Promise<T>)[], limit: number): Promise<T[]> {
   return new Promise((resolve, reject) => {
     const results = new Array<T>(tasks.length)
     let running = 0

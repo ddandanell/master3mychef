@@ -6,7 +6,12 @@ import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  // .worktrees holds full checkouts of other branches (7 of them, ~2,435 .ts/.tsx
+  // files as of 2026-07-30). It is gitignored, so CI never sees it — but locally
+  // `eslint .` was linting the whole codebase eight times over, taking minutes and
+  // reporting errors from other branches as though they were current. That made
+  // `pnpm lint` unusable as a pre-commit habit and hid the real result.
+  globalIgnores(['dist', '.worktrees']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [

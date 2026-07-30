@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useRef } from 'react'
+import { useState, useMemo, useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { Check, ChevronLeft, MessageCircle, Minus, Plus } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from './SeoHead'
@@ -111,8 +111,15 @@ export default function QuoteFunnel() {
     }
   }, [step, form])
 
-  const next = () => canAdvance && setStep((s) => Math.min(s + 1, 8))
-  const back = () => setStep((s) => Math.max(s - 1, 0))
+  // Wrapped in useCallback because the keyboard-navigation effect below depends
+  // on them. As plain arrow functions they were new objects on every render, so
+  // that effect tore down and re-registered its keydown listener after every
+  // single state change — including each keystroke in the address fields.
+  // `back` has no dependencies at all; `next` only needs canAdvance.
+  const next = useCallback(() => {
+    if (canAdvance) setStep((s) => Math.min(s + 1, 8))
+  }, [canAdvance])
+  const back = useCallback(() => setStep((s) => Math.max(s - 1, 0)), [])
 
   const summary = useMemo(() => {
     const dateLabel = form.datesFlexible ? 'flexible' : form.dates.join(', ')

@@ -282,16 +282,77 @@ never opted back **in**, so `?va-disable=0` cleared our flag while PostHog
 stayed opted out forever. Any browser that was ever excluded could never be
 re-included. Fixed by calling `opt_in_capturing()` when not excluded.
 
-### 9.4 Still open: `$pageview` has not appeared
+### 9.4 `$pageview` — RESOLVED, it was ingestion lag
 
-Confirmed ingesting after the fixes: `$pageleave`, `time_on_page`,
-`quote_step_viewed`. **`$pageview` and `$autocapture` have not been observed.**
+Recorded because the intermediate state was alarming and will recur on any new
+PostHog project.
 
-`$pageleave` firing without `$pageview` is not explained yet, and it matters:
-the "Lead conversion rate by landing page" insight uses `$pageview` as its first
-funnel step, so it will read zero until this is resolved. Suspects, in order:
-`capture_pageview: 'history_change'` not emitting the initial load as expected;
-`before_send` / `scrubProperties()` interfering; or plain ingestion lag on a
-near-empty project. Check the live events feed with real traffic before
-assuming a bug. The scheduled task `enable-posthog-scout-mychef` (13 Aug 2026)
-explicitly re-tests this.
+For roughly half an hour after the fixes, `$pageleave` and `quote_step_viewed`
+were arriving while **`$pageview` and `$autocapture` were not** — which looks
+exactly like a `before_send` bug or `capture_pageview: 'history_change'` failing
+to emit the initial load. It was neither. Both appeared shortly afterwards
+without any code change.
+
+The lesson: a near-empty PostHog project surfaces event types in an order that
+looks like selective loss. Give it a few minutes and some real navigation before
+diagnosing. Everything now flows: `$pageview`, `$autocapture`, `$web_vitals`,
+`$dead_click`, `$dead_swipe`, `scroll_depth`, `time_on_page`, `$pageleave`,
+`exit_intent_shown`, `quote_step_viewed`, plus `$session_summary_ready` — the
+last of which means PostHog is generating AI session summaries, so the automated
+review capability is live and not merely configured.
+
+---
+
+## 10. Lint (30 Jul 2026)
+
+**`src/` is at zero eslint errors, and `pnpm lint` is now a blocking CI step.**
+
+It never ran in CI before, so 98 error-level violations had accumulated where
+nothing would show them — including a `react-hooks/set-state-in-effect` bug in
+`BookingFormCatering` that had been sitting in the tree. Composition and
+resolution are recorded in the comment on the lint step in
+`.github/workflows/comprehensive-verify.yml`; the short version is 61 redundant
+escapes removed, 28 `react-refresh` downgraded to a warning (all four affected
+files use idiomatic patterns and the rule only affects dev Fast Refresh), and
+about nine real fixes.
+
+One caveat: the workflow change could not be pushed from the Cowork session —
+GitHub refuses Personal Access Token updates to `.github/workflows/` without
+`workflow` scope. Until that commit lands, lint runs nowhere, so run
+`pnpm lint` locally before committing.
+
+---
+
+## 11. Privacy — one item genuinely needs a decision
+
+§7 of `src/pages/PrivacyPage.tsx` now discloses PostHog, Google Analytics and
+Vercel by name, explains what session recording captures, states plainly that
+form input is masked in the browser and never reaches the provider, and gives
+the 30-day retention period. It previously described analytics only generically
+and did not mention session recording at all. **That wording is factual rather
+than lawyerly — have it reviewed before relying on it.**
+
+The remaining item is not a documentation gap, it is a contradiction:
+
+> §3 of the policy states the legal basis includes *"with your consent
+> (marketing and **non-essential cookies**)"*.
+
+There is no consent mechanism on the site. `grep` finds no consent or cookie
+banner component — only `PrivacyPage` and `TermsPage`. So the published policy
+asserts a consent step that is never actually collected, while session replay
+runs for every visitor including EU ones.
+
+Three coherent ways out, in rough order of cost:
+
+1. Add a consent banner and gate `initPostHog()` behind it. Most defensible,
+   and the reason it has not simply been done: it will cost some conversion
+   rate, which is a business decision rather than a technical one.
+2. Narrow the claimed legal basis in §3 from consent to legitimate interest for
+   analytics, keeping consent for marketing only. Cheaper, and needs legal input
+   on whether it holds for session replay in your markets.
+3. Restrict recording to non-EU visitors via `session_recording_url_blocklist`
+   or a geo-gated `disable_session_recording`, so the consent question does not
+   arise for the visitors it applies to.
+
+Deliberately not chosen here — all three trade legal exposure against
+conversion rate, and that is the owner's call.

@@ -30,8 +30,8 @@ const SECTIONS = [
     content: `You have the right to:\n\n• Access and receive a copy of your personal information\n• Correct inaccurate or incomplete information\n• Request deletion of your personal information (subject to legal requirements)\n• Object to or restrict certain processing of your information\n• Withdraw consent for marketing communications at any time\n• Lodge a complaint with relevant data protection authorities\n\nTo exercise these rights, please contact us at bali@mychef.id or via WhatsApp at +62 896-7407-2020.`,
   },
   {
-    title: '7. Cookies and Tracking Technologies',
-    content: `We use cookies and similar tracking technologies to enhance your experience on our website. Cookies help us understand how you use our site, remember your preferences, and improve our services.\n\nYou can control cookie settings through your browser preferences. However, disabling cookies may affect the functionality of our website.`,
+    title: '7. Cookies, Analytics and Session Recording',
+    content: `We use cookies and similar tracking technologies to enhance your experience on our website. Cookies help us understand how you use our site, remember your preferences, and improve our services.\n\nWe use the following analytics providers:\n\n• PostHog — product analytics, error reporting and session recording\n• Google Analytics and Google Tag Manager — website traffic measurement\n• Vercel Analytics and Speed Insights — traffic and page performance measurement\n\nSession recording: PostHog reconstructs a visual replay of your visit, including the pages you viewed, where you moved and clicked, how far you scrolled, and any errors the site produced. We use this to find parts of the site that are confusing or broken.\n\nWhat session recording does NOT capture:\n\n• The contents of anything you type into a form field. Text you enter — your name, email address, phone number, villa address and any notes — is masked in your browser before the recording is sent to us, so it never reaches our analytics provider.\n• Passwords, which are never recorded under any circumstances.\n\nWe do not attach your name or email address to your analytics or recording data; it is held against a randomly generated identifier. Recordings are retained for 30 days and then deleted automatically.\n\nYou can control cookie settings through your browser preferences. However, disabling cookies may affect the functionality of our website. If you would like us to delete analytics or session recording data associated with your visit, contact us at bali@mychef.id.`,
   },
   {
     title: '8. International Data Transfers',
@@ -78,7 +78,7 @@ const FAQS = [
   },
   {
     q: 'Does myCHEF use cookies?',
-    a: 'Yes, we use cookies and similar tracking technologies to enhance your experience, understand site usage, remember preferences, and improve our services. You can control cookies through your browser settings.',
+    a: 'Yes, we use cookies and similar tracking technologies to enhance your experience, understand site usage, remember preferences, and improve our services. We also record anonymised replays of site visits to find pages that are confusing or broken — anything you type into a form is masked in your browser and never reaches us. See section 7 for detail. You can control cookies through your browser settings.',
   },
 ]
 

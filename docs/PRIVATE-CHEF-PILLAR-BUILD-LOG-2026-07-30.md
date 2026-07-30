@@ -161,7 +161,52 @@ prices page", and their price cards were rebuilt around the meal-count ladder.
 
 ---
 
-## 6. Still outstanding
+## 6. Deployed — and the trap that cost an extra deploy
+
+Live on `mychef.id` as of 30 July 2026. Three commits:
+
+| Commit | What |
+|---|---|
+| `9f40bfa` | The pricing model, pillar page, nav rebuild, consolidation (57 files) |
+| `d320541` | **The fix that actually made the route reachable** — see below |
+| `207ab2f` | Playfair headings + a typo caught by looking at the live page |
+
+### The trap: `vercel.json` is read *before* it is regenerated
+
+`prebuild` runs `scripts/generate-redirects.ts`, which rewrites `vercel.json`. But
+`vercel build` parses `vercel.json` at the **start** of the run to produce
+`.vercel/output/config.json`. So the copy regenerated *during* a build never affects the
+deploy it is part of — it only lands on the next one.
+
+Result: the first deploy shipped the pillar page, but `/private-chef-bali` still 301'd to
+`/fine-dining/private-chef-bali`, because the *committed* `vercel.json` still carried the old
+entry even though it was already gone from `redirects.ts`.
+
+**The committed `vercel.json` is authoritative.** It was regenerated from `redirects.ts`
+(206 → 207 entries) and committed. `git.deploymentEnabled`, the PostHog `/ingest` rewrites
+and all headers were preserved.
+
+> Note for future work: the standing rule "never edit `vercel.json` by hand" assumes prebuild
+> wins. It does not. If you change `redirects.ts`, the regenerated `vercel.json` must be
+> committed in the same change or the redirect silently does nothing for a full deploy cycle.
+
+### Browser check — what was actually wrong on the live page
+
+Loaded the deployed page at desktop (1440) and mobile (414):
+
+- ✅ Nav: Private Chef first, active state correct, dropdown shows all 7 items including Groceries & Sourcing
+- ✅ Three price cards, "Most booked" badge on two-meals, all-in figures under every `++` figure
+- ✅ 9-cell length-of-stay table; scrolls horizontally on mobile as designed
+- ✅ Groceries section with the market-produce photo — reads as a service, not a caveat
+- ✅ Chef cards render with portraits; gallery images load
+- ✅ Sticky mobile CTA "Get Private Chef Prices"
+- ✅ `/villa-chef` 301s to the pillar
+- ❌ **Every heading rendered in Inter.** Brand headings are Playfair Display. Fixed — 16 headings.
+- ❌ **Typo:** "You just pay what it cost." Fixed to "You only pay what it cost us."
+
+---
+
+## 7. Still outstanding
 
 1. **`/fine-dining/private-chef-bali` retitle** — still carries "Private Chef Bali" in its
    title tag and competes with the pillar. Retitling to lead on "Michelin Tasting Menu" is a

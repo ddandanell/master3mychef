@@ -56,7 +56,7 @@ At IDR 118,000/day you spend ~Rp 7.2jt over 60 days — clears Offer A around da
 
 ### 2b. Import the build
 
-1. `01-keywords.csv` — 56 keywords, 26 exact + 30 phrase, **zero broad**
+1. `01-keywords.csv` — **168 keywords**, 80 exact + 88 phrase, **zero broad**, covering all 61 `/private-chef/{area}` pages
 2. `02-responsive-search-ads.csv` — 7 RSAs, all headlines ≤30 chars, descriptions ≤90, validated
 3. `03-negative-keywords.csv` — 117 campaign-level phrase negatives
 

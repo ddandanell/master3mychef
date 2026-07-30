@@ -1,57 +1,63 @@
 Campaign,Campaign Type,Campaign Daily Budget,Bid Strategy Type,Maximum CPC bid limit,Networks,Languages,Location,Ad Group,Keyword,Criterion Type,Final URL,Status
-MYCHEF | Search | Source Markets,Search,118000,Maximize clicks,25000,Google search,English,Australia; New Zealand; Singapore; Malaysia; United Arab Emirates; United Kingdom; Netherlands,Private Chef - Core,private chef bali,Exact,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Core,bali private chef,Exact,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Core,hire private chef bali,Exact,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Core,private chef in bali,Exact,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Core,hire a chef in bali,Exact,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Core,private chef bali,Phrase,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Core,hire a private chef bali,Phrase,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Core,bali private chef service,Phrase,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Core,book private chef bali,Phrase,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Core,private chef for bali villa,Phrase,https://mychef.id/guide/private-chef-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Cost,private chef bali cost,Exact,https://mychef.id/calculator,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Cost,private chef bali price,Exact,https://mychef.id/calculator,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Cost,bali private chef cost,Exact,https://mychef.id/calculator,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Cost,private chef bali prices,Phrase,https://mychef.id/calculator,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Cost,how much is a private chef in bali,Phrase,https://mychef.id/calculator,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Cost,cost of private chef bali,Phrase,https://mychef.id/calculator,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Private Chef - Cost,private chef bali per person,Phrase,https://mychef.id/calculator,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Villa Chef - Multi Day,villa chef bali,Exact,https://mychef.id/villa-chef,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Villa Chef - Multi Day,bali villa chef,Exact,https://mychef.id/villa-chef,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Villa Chef - Multi Day,private chef for villa bali,Exact,https://mychef.id/villa-chef,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Villa Chef - Multi Day,villa chef bali,Phrase,https://mychef.id/villa-chef,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Villa Chef - Multi Day,daily chef bali villa,Phrase,https://mychef.id/villa-chef,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Villa Chef - Multi Day,live in chef bali,Phrase,https://mychef.id/villa-chef,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Villa Chef - Multi Day,chef for our villa bali,Phrase,https://mychef.id/villa-chef,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Villa Chef - Multi Day,bali villa with private chef,Phrase,https://mychef.id/villa-chef,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Party Catering,bali party catering,Exact,https://mychef.id/luxury-birthday-party-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Party Catering,party catering bali,Exact,https://mychef.id/luxury-birthday-party-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Party Catering,birthday party catering bali,Exact,https://mychef.id/luxury-birthday-party-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Party Catering,villa party catering bali,Phrase,https://mychef.id/luxury-birthday-party-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Party Catering,birthday chef bali,Phrase,https://mychef.id/luxury-birthday-party-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Party Catering,catering for villa party bali,Phrase,https://mychef.id/luxury-birthday-party-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Party Catering,bali birthday dinner catering,Phrase,https://mychef.id/luxury-birthday-party-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Party Catering,private party catering bali,Phrase,https://mychef.id/luxury-birthday-party-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,BBQ Catering,bbq catering bali,Exact,https://mychef.id/seafood-bbq-catering-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,BBQ Catering,seafood bbq bali,Exact,https://mychef.id/seafood-bbq-catering-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,BBQ Catering,villa bbq bali,Exact,https://mychef.id/seafood-bbq-catering-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,BBQ Catering,bbq catering bali,Phrase,https://mychef.id/seafood-bbq-catering-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,BBQ Catering,seafood bbq catering bali,Phrase,https://mychef.id/seafood-bbq-catering-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,BBQ Catering,bbq chef bali villa,Phrase,https://mychef.id/seafood-bbq-catering-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,BBQ Catering,poolside bbq bali,Phrase,https://mychef.id/seafood-bbq-catering-bali,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Events & Groups,event catering bali,Exact,https://mychef.id/private-chef-for-events,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Events & Groups,private chef for events bali,Exact,https://mychef.id/private-chef-for-events,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Events & Groups,bali event chef,Phrase,https://mychef.id/private-chef-for-events,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Events & Groups,catering for bali event,Phrase,https://mychef.id/private-chef-for-events,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Events & Groups,group dinner catering bali,Phrase,https://mychef.id/private-chef-for-events,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Events & Groups,bali villa catering,Phrase,https://mychef.id/private-chef-for-events,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef canggu,Exact,https://mychef.id/private-chef/canggu,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef seminyak,Exact,https://mychef.id/private-chef/seminyak,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef ubud,Exact,https://mychef.id/private-chef/ubud,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef uluwatu,Exact,https://mychef.id/private-chef/uluwatu,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef jimbaran,Exact,https://mychef.id/private-chef/jimbaran,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef nusa dua,Exact,https://mychef.id/private-chef/nusa-dua,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef sanur,Exact,https://mychef.id/private-chef/sanur,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef canggu,Phrase,https://mychef.id/private-chef/canggu,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef seminyak,Phrase,https://mychef.id/private-chef/seminyak,Enabled
-MYCHEF | Search | Source Markets,,,,,,,,Areas,private chef ubud,Phrase,https://mychef.id/private-chef/ubud,Enabled
+MYCHEF | Search | Private Chef Bali,Search,118000,Maximize clicks,25000,Google search,English,Australia; New Zealand; Singapore; Malaysia; United Arab Emirates; United Kingdom; Netherlands,Private Chef - Core,private chef bali,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,bali private chef,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,hire private chef bali,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,private chef in bali,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,hire a chef in bali,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,private chef bali villa,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,private chef bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,hire a private chef bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,bali private chef service,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,book private chef bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,private chef for bali villa,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Core,get a private chef in bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,private chef bali cost,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,private chef bali price,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,bali private chef cost,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,private chef bali prices,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,how much is a private chef in bali,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,private chef bali cost,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,cost of private chef bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,private chef bali per day,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,private chef bali rates,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Cost,how much does a private chef cost in bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,villa chef bali,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,bali villa chef,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,private chef for villa bali,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,daily private chef bali,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,live in chef bali,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,villa chef bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,chef for our villa bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,bali villa with private chef,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,private chef for a week bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Villa & Daily,full board private chef bali,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef canggu,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef canggu,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef seminyak,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef seminyak,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef ubud,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef ubud,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef uluwatu,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef uluwatu,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef jimbaran,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef jimbaran,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef nusa dua,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef nusa dua,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef sanur,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef sanur,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef berawa,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef berawa,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef pererenan,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef pererenan,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef umalas,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef umalas,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef kerobokan,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef kerobokan,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef denpasar,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef denpasar,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef bukit,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef bukit,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef legian,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef legian,Phrase,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef kuta,Exact,https://mychef.id/private-chef-bali,Enabled
+MYCHEF | Search | Private Chef Bali,,,,,,,,Private Chef - Areas,private chef kuta,Phrase,https://mychef.id/private-chef-bali,Enabled

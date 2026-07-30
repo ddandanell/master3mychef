@@ -243,26 +243,26 @@ const GALLERY = [
   {
     src: '/generated/mychef-catering-bali-floating-breakfast.webp',
     alt: 'Floating breakfast prepared by a private chef at a Bali villa pool',
-    w: 1440,
-    h: 800,
+    w: 1200,
+    h: 1500,
   },
   {
     src: '/generated/mychef-finedining-bali-sol-bbq.webp',
     alt: 'Private chef grilling seafood and meat poolside at a villa in Bali',
-    w: 1024,
-    h: 576,
+    w: 1200,
+    h: 1500,
   },
   {
     src: '/generated/mychef-experience-bali-luna-gallery-3.webp',
     alt: 'Plated dinner course served by a private chef inside a Bali villa',
-    w: 1402,
-    h: 1122,
+    w: 1200,
+    h: 1500,
   },
   {
     src: '/generated/mychef-experience-bali-luna-table.webp',
     alt: 'Villa dining table set for a group before private chef dinner service in Bali',
-    w: 1024,
-    h: 576,
+    w: 1200,
+    h: 1500,
   },
 ] as const
 
@@ -364,8 +364,8 @@ export default function PrivateChefPillarPage() {
           src="/generated/mychef-experience-bali-home-hero-ivory-villa.webp"
           alt="Private chef cooking and serving dinner in a Bali villa for a group of guests"
           className="absolute inset-0 w-full h-full object-cover opacity-55"
-          width={1920}
-          height={1080}
+          width={1600}
+          height={1067}
           loading="eager"
           fetchPriority="high"
         />
@@ -641,8 +641,8 @@ export default function PrivateChefPillarPage() {
                 src="/generated/mychef-finedining-bali-sol-produce.webp"
                 alt="Fresh Balinese market produce sourced that morning by a myCHEF private chef"
                 className="w-full aspect-square object-cover"
-                width={1024}
-                height={1024}
+                width={900}
+                height={900}
               />
               <figcaption className="text-[#1A1A1A]/50 text-xs mt-3 leading-relaxed">
                 A normal morning shop. Sourced to the menu, not to a shopping list you had to
@@ -688,8 +688,8 @@ export default function PrivateChefPillarPage() {
                   src={c.image}
                   alt={`${c.chef}, ${c.role} at myCHEF Bali`}
                   className="w-full h-56 object-cover"
-                  width={600}
-                  height={600}
+                  width={900}
+                  height={900}
                 />
                 <div className="p-6 flex flex-col flex-1">
                   <p className="text-[#C5A028] text-[11px] tracking-[0.18em] uppercase">

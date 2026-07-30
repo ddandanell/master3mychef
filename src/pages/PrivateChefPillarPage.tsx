@@ -871,7 +871,13 @@ export default function PrivateChefPillarPage() {
             the all-in total.
           </p>
 
-          <div className="mt-12">
+          {/*
+            BookingForm styles itself for a light surface — its labels are #6B5F52 and
+            its input text is #2C2419 on a transparent background. Dropped straight onto
+            this section's #0E0E0E it rendered black on black and was unreadable.
+            AuraPage already solved this by hosting the form in a white card; same here.
+          */}
+          <div className="mt-12 rounded-2xl border border-[#E5E3E0] bg-white p-6 sm:p-8">
             <BookingForm universe="sol" />
           </div>
 

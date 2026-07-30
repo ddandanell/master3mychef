@@ -202,8 +202,21 @@ export function initPostHog(): void {
     // all. before_send already drops the events, but opt_out_capturing also
     // stops the replay recorder from running, which saves the visitor
     // bandwidth and saves replay quota.
+    //
+    // The opt_in branch is NOT redundant, and omitting it was a real bug caught
+    // on 2026-07-30: opt_out_capturing() writes its own persistent flag
+    // (__ph_opt_in_out_<key> in localStorage), which survives independently of
+    // the `va-disable` key that analytics-privacy.ts manages. So once a browser
+    // had opted out, visiting ?va-disable=0 cleared OUR flag while PostHog
+    // stayed opted out forever — the re-enable path silently did nothing.
+    //
+    // Calling opt_in_capturing() whenever the visitor is not excluded keeps the
+    // two flags in agreement in both directions. It is safe to call on every
+    // init for an already-opted-in browser.
     if (shouldExcludeFromAnalytics()) {
       posthog.opt_out_capturing()
+    } else if (posthog.has_opted_out_capturing()) {
+      posthog.opt_in_capturing()
     }
   } catch {
     /* Analytics must never break the page. */

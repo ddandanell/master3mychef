@@ -29,6 +29,31 @@ const vercelConfig = {
   // Chromium (which Vercel's build container lacks). CLI `--prebuilt` deploys are
   // unaffected. See .github/workflows/deploy.yml.
   git: { deploymentEnabled: false },
+
+  // PostHog reverse proxy — REQUIRED, not an optimisation.
+  //
+  // Verified in a real browser on 2026-07-30, immediately after PostHog went live:
+  // both us.i.posthog.com and us-assets.i.posthog.com were unreachable ("Failed to
+  // fetch"), while a control request to mychef.id returned 200. The network log showed
+  // us-assets/.../config.js and exception-autocapture.js returning a synthesised 503,
+  // and ZERO requests ever reaching the ingestion host.
+  //
+  // That is fatal, not partial: posthog-js fetches its remote config from us-assets
+  // during init. When that fetch fails the SDK never finishes bootstrapping, so it
+  // sends no events and never starts the session recorder ($sesid absent). One blocked
+  // host silently costs you the entire visitor — pageviews, funnel steps and replay.
+  //
+  // Routing through mychef.id makes the traffic first-party, so domain-based blocking
+  // (extensions, DNS filters, ISP-level blocks — all three plausible for an audience of
+  // Western travellers on Indonesian networks) cannot see it.
+  //
+  // Order matters: the /static/ rule MUST precede the catch-all, or asset requests get
+  // sent to the ingestion host and 404. Keep in step with api_host in src/lib/posthog.ts.
+  rewrites: [
+    { source: '/ingest/static/:path*', destination: 'https://us-assets.i.posthog.com/static/:path*' },
+    { source: '/ingest/:path*', destination: 'https://us.i.posthog.com/:path*' },
+  ],
+
   redirects: [
     // Force www → apex as a permanent 308 (was 307 temporary — §2.3.3 canonicalization).
     { source: '/(.*)', has: [{ type: 'host', value: 'www.mychef.id' }], destination: 'https://mychef.id/$1', permanent: true },

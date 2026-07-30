@@ -76,8 +76,24 @@ import { shouldExcludeFromAnalytics } from './analytics-privacy'
 const POSTHOG_KEY =
   import.meta.env.VITE_POSTHOG_KEY ?? 'phc_BoYL6PtkTDoKW444FLE5ZvERG3jzwxYLXpekyX3Dp7rh'
 
-/** US cloud. Region is fixed by where the project lives; do not guess. */
-const POSTHOG_HOST = import.meta.env.VITE_POSTHOG_HOST ?? 'https://us.i.posthog.com'
+/**
+ * Ingestion host — a FIRST-PARTY path, not PostHog's domain.
+ *
+ * `/ingest` is rewritten to PostHog by the `rewrites` block in vercel.json (generated
+ * from scripts/generate-redirects.ts — edit it there, never in vercel.json).
+ *
+ * This is not a nicety. Verified in a real browser on 2026-07-30, minutes after the
+ * first deploy: both us.i.posthog.com and us-assets.i.posthog.com failed outright
+ * while mychef.id itself returned 200. posthog-js pulls its remote config from
+ * us-assets during init, so when that host is blocked the SDK never finishes
+ * bootstrapping — no events, no session recording, nothing. A single blocked domain
+ * costs the whole visitor, silently.
+ *
+ * ui_host must stay set so links PostHog renders in the app still point at the real
+ * dashboard rather than at mychef.id/ingest.
+ */
+const POSTHOG_HOST = import.meta.env.VITE_POSTHOG_HOST ?? '/ingest'
+const POSTHOG_UI_HOST = 'https://us.posthog.com'
 
 let initialised = false
 
@@ -127,6 +143,7 @@ export function initPostHog(): void {
   try {
     posthog.init(POSTHOG_KEY, {
       api_host: POSTHOG_HOST,
+      ui_host: POSTHOG_UI_HOST,
 
       // SPA mode. react-router-dom navigates via the history API and fires no
       // page load, so the default (page-load only) would record exactly one

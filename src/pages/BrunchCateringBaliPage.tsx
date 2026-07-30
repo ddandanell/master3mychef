@@ -112,7 +112,7 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/', desc: 'Full daily private chef service' },
-  { label: 'Daily Chef Service', href: '/hire-private-chef-bali-monthly', desc: 'All-day chef hire for villa stays' },
+  { label: 'Daily Chef Service', href: '/private-chef-bali', desc: 'All-day chef hire for villa stays' },
   { label: 'Private Dining Bali', href: '/private-dining-indonesia', desc: 'In-villa dining for all occasions' },
   { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'Pool floating breakfast service' },
   { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Sharing boards and grazing setups' },

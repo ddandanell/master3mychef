@@ -304,7 +304,7 @@ export default function StaffingPlacementPage() {
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
-              <span className="text-[#4A4745]"><Link to="/hire-private-chef-bali-monthly" className="text-[#C5A028] hover:underline">Monthly chef hire</Link>: a recurring chef service without an employment contract — ideal for long-stay guests and seasonal residents.</span>
+              <span className="text-[#4A4745]"><Link to="/private-chef-bali" className="text-[#C5A028] hover:underline">Monthly chef hire</Link>: a recurring chef service without an employment contract — ideal for long-stay guests and seasonal residents.</span>
             </li>
           </ul>
         </div>

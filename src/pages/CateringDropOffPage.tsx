@@ -1066,7 +1066,7 @@ export default function CateringDropOffPage() {
           </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Private Chef Villa', href: '/villa-chef', desc: 'Daily chef service for your stay.' },
+              { label: 'Private Chef Villa', href: '/private-chef-bali', desc: 'Daily chef service for your stay.' },
               { label: 'BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
               { label: 'grazing boxes & tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
               { label: 'Buffet Catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },

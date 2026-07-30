@@ -76,14 +76,14 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Kerobokan & Umalas fringe',
       'Legian border',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Villa catering from IDR 700,000 per person. Tasting menus from IDR 980,000 per person. A 50% deposit secures your date; the remaining 50% is due the day before the event.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Seminyak?',
-        a: `A half-day booking starts from IDR 2,500,000++ (one chef and one dedicated assistant) plus groceries at cost with receipts. Group catering runs from IDR 700,000 per person and tasting menus from IDR 980,000 per person. Prices are subject to a 10% service charge and 11% tax. Your itemised quote is fixed before you commit.`,
+        a: `One meal a day starts from IDR 1,000,000++ (one chef and one dedicated assistant) plus groceries at cost with receipts. Group catering runs from IDR 700,000 per person and tasting menus from IDR 980,000 per person. Prices are subject to a 10% service charge and 11% tax. Your itemised quote is fixed before you commit.`,
       },
       {
         q: 'Is there a travel fee for Seminyak villas?',
@@ -145,14 +145,14 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Pererenan border',
       'Tibubeneng & the Tanah Lot road corridor',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      `Weekly chef service from IDR 2,250,000++ per day at the weekly rate (10% off standard). No travel surcharge within the Canggu–Berawa–Batu Bolong corridor.`,
+      `Weekly chef service from IDR 900,000++ per day at the weekly rate (10% off standard). No travel surcharge within the Canggu–Berawa–Batu Bolong corridor.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Canggu?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, weekly chef service from IDR 2,250,000++ per day at the weekly rate. Prices are subject to a 10% service charge and 11% tax, quoted as one fixed figure.`,
+        a: `One meal a day starts from IDR 1,000,000++ plus groceries at cost. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, weekly chef service from IDR 900,000++ per day at the weekly rate. Prices are subject to a 10% service charge and 11% tax, quoted as one fixed figure.`,
       },
       {
         q: 'Are there travel fees for Canggu?',
@@ -214,14 +214,14 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Tegallalang',
       'Ubud central / Pasar Ubud',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'A small travel allowance applies for villas beyond Ubud central — always quoted upfront. Retreat full-board quoted per person per day. A 50% deposit confirms your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Ubud?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost — remote-villa logistics may add a premium, always quoted upfront. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, retreat full-board quoted per person per day. Prices are subject to a 10% service charge and 11% tax.`,
+        a: `One meal a day starts from IDR 1,000,000++ plus groceries at cost — remote-villa logistics may add a premium, always quoted upfront. Group catering from IDR 700,000 per person, tasting menus from IDR 980,000, retreat full-board quoted per person per day. Prices are subject to a 10% service charge and 11% tax.`,
       },
       {
         q: 'Is there a travel fee for Sayan, Penestanan or Tegallalang?',
@@ -282,14 +282,14 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Dreamland',
       'Pecatu & Ungasan',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'A travel allowance of IDR 150,000–250,000 is included in every quote. Sunset tasting menus from IDR 1,100,000 per person. A 50% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Uluwatu?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Sunset tasting menus from IDR 1,100,000 per person, villa catering from IDR 700,000 per person. Prices are subject to a 10% service charge and 11% tax, quoted as one fixed figure including travel.`,
+        a: `One meal a day starts from IDR 1,000,000++ plus groceries at cost. Sunset tasting menus from IDR 1,100,000 per person, villa catering from IDR 700,000 per person. Prices are subject to a 10% service charge and 11% tax, quoted as one fixed figure including travel.`,
       },
       {
         q: 'Is there a travel fee from Seminyak to Uluwatu?',
@@ -351,14 +351,14 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Jl. Uluwatu clifftop',
       'Four Seasons, Intercontinental & Karma Kandara villas',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Seafood BBQ from IDR 720,000 per person including fresh catch, charcoal grill and full service. A 50% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Jimbaran?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Seafood BBQ packages from IDR 720,000 per person including catch, charcoal grill and full service; tasting menus from IDR 980,000. Prices are subject to a 10% service charge and 11% tax.`,
+        a: `One meal a day starts from IDR 1,000,000++ plus groceries at cost. Seafood BBQ packages from IDR 720,000 per person including catch, charcoal grill and full service; tasting menus from IDR 980,000. Prices are subject to a 10% service charge and 11% tax.`,
       },
       {
         q: 'Can I really get fresh seafood cooked at my villa?',
@@ -420,14 +420,14 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Tanjung Benoa',
       'Benoa & the Bukit edge',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       `Executive fine dining from IDR 1,200,000 per person. Corporate full-board quoted per person per day; minimum spend ${siteFacts.corporateMinSpend} for corporate programmes. A 50% deposit secures your date.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Nusa Dua?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Executive fine dining from IDR 1,200,000 per person, villa catering from IDR 700,000 per person, corporate full-board quoted per person per day. Prices are subject to a 10% service charge and 11% tax, fixed in one upfront quote.`,
+        a: `One meal a day starts from IDR 1,000,000++ plus groceries at cost. Executive fine dining from IDR 1,200,000 per person, villa catering from IDR 700,000 per person, corporate full-board quoted per person per day. Prices are subject to a 10% service charge and 11% tax, fixed in one upfront quote.`,
       },
       {
         q: 'Do you cater corporate retreats and incentive travel?',
@@ -489,14 +489,14 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Mertasari & the south end',
       'Bypass Ngurah Rai villas',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      `Weekly chef service from IDR 2,250,000++ per day at the weekly rate (10% off standard). No travel surcharge anywhere in Sanur.`,
+      `Weekly chef service from IDR 900,000++ per day at the weekly rate (10% off standard). No travel surcharge anywhere in Sanur.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Sanur?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost — no travel surcharge anywhere in Sanur. Family catering from IDR 700,000 per person, weekly chef service from IDR 2,250,000++ per day at the weekly rate. Prices are subject to a 10% service charge and 11% tax.`,
+        a: `One meal a day starts from IDR 1,000,000++ plus groceries at cost — no travel surcharge anywhere in Sanur. Family catering from IDR 700,000 per person, weekly chef service from IDR 900,000++ per day at the weekly rate. Prices are subject to a 10% service charge and 11% tax.`,
       },
       {
         q: 'Is there any travel fee for Sanur villas?',
@@ -532,7 +532,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Sanur, Bali | Family Villa Dining, Meal Prep',
     metaDescription:
-      'Hire a private chef in Sanur, Bali. Family dinners from IDR 700K/person, weekly chef service from IDR 2.25M++/day, no travel surcharge in Sanur. WhatsApp myCHEF.',
+      'Hire a private chef in Sanur, Bali. Family dinners from IDR 700K/person, weekly chef service from IDR 900K++/day, no travel surcharge in Sanur. WhatsApp myCHEF.',
     coordinates: { lat: -8.7042, lng: 115.2607 },
     bookingNote:
       'Book 1–2 days ahead for dinners; weekly meal plans start Mondays, confirmed by the Friday before.',
@@ -559,9 +559,9 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Pasar Badung',
       'Ngurah Rai International Airport corridor',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Executive dinner catering from IDR 750,000 per person. Corporate event catering quoted per head. Household weekly chef service from IDR 2,250,000++ per day at the weekly rate.',
+      'Executive dinner catering from IDR 750,000 per person. Corporate event catering quoted per head. Household weekly chef service from IDR 900,000++ per day at the weekly rate.',
     services: ['private-chef', 'catering', 'events', 'staffing'],
     faqs: [
       {
@@ -570,7 +570,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much does a private chef cost in Denpasar?',
-        a: 'Private chef half-day bookings in Denpasar start from IDR 2,500,000++. Executive dinner catering from IDR 750,000 per person. Corporate event catering is quoted per head based on menu and guest count.',
+        a: 'Private chef service in Denpasar starts from IDR 1,000,000++ per day for one meal. Executive dinner catering from IDR 750,000 per person. Corporate event catering is quoted per head based on menu and guest count.',
       },
       {
         q: 'Do you cater corporate events in Denpasar?',
@@ -617,14 +617,14 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Berawa rice fields',
       'Jl. Subak Canggu',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'No travel surcharge within Berawa. Weekly chef service from IDR 2,250,000++ per day at the weekly rate (10% off standard). Group catering from IDR 700,000 per person.',
+      'No travel surcharge within Berawa. Weekly chef service from IDR 900,000++ per day at the weekly rate (10% off standard). Group catering from IDR 700,000 per person.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
         q: 'How much does a private chef cost in Berawa?',
-        a: 'Private chef half-day bookings in Berawa start from IDR 2,500,000++ with no travel surcharge. Group catering from IDR 700,000 per person. Free quote via WhatsApp.',
+        a: 'Private chef service in Berawa starts from IDR 1,000,000++ per day for one meal with no travel surcharge. Group catering from IDR 700,000 per person. Free quote via WhatsApp.',
       },
       {
         q: 'Is Berawa the same as Canggu?',
@@ -668,7 +668,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Seseh village',
       'Yeh Gangga',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'A small travel allowance applies for addresses beyond the main Jl. Pererenan — always itemised before you confirm. A 50% deposit secures your date.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -679,7 +679,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much does a private chef cost in Pererenan?',
-        a: `Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Group dinners from IDR 700,000 per person, tasting menus from IDR 980,000, weekly chef service from IDR 2,250,000++ per day at the weekly rate. Prices are subject to a 10% service charge and 11% tax.`,
+        a: `One meal a day starts from IDR 1,000,000++ plus groceries at cost. Group dinners from IDR 700,000 per person, tasting menus from IDR 980,000, weekly chef service from IDR 900,000++ per day at the weekly rate. Prices are subject to a 10% service charge and 11% tax.`,
       },
       {
         q: 'How is Pererenan different from Canggu for a chef booking?',
@@ -736,7 +736,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Jl. Umalas',
       'Bali Zoo vicinity',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'No travel surcharge within Kerobokan. Same pricing as central Seminyak.',
     services: ['private-chef', 'catering', 'events', 'staffing'],
@@ -784,7 +784,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'La Plancha',
       'Petitenget beach',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote: 'No travel surcharge. Petitenget is within our core Seminyak service area.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
@@ -827,7 +827,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Discovery Shopping Mall',
       'Bemo Corner',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'No travel surcharge within Kuta. Great value for central Bali villa groups.',
     services: ['private-chef', 'catering', 'bbq', 'events'],
@@ -838,7 +838,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'Is a private chef in Kuta the same price as Seminyak?',
-        a: 'Yes — private chef pricing is the same across Seminyak, Kuta, Legian, and Kerobokan. Starting from IDR 2,500,000++ per half day with no travel surcharge.',
+        a: 'Yes — private chef pricing is the same across Seminyak, Kuta, Legian, and Kerobokan. Starting from IDR 1,000,000++ per day for one meal with no travel surcharge.',
       },
     ],
     nearbyAreas: [
@@ -849,7 +849,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Kuta, Bali | Villa Dinner & Catering | myCHEF',
     metaDescription:
-      'Hire a private chef in Kuta, Bali. Villa dinners, group catering, and birthday parties. HACCP chefs, from IDR 2.5M++/half day. WhatsApp myCHEF.',
+      'Hire a private chef in Kuta, Bali. Villa dinners, group catering, and birthday parties. HACCP chefs, from IDR 1M++/day. WhatsApp myCHEF.',
     coordinates: { lat: -8.7175, lng: 115.1686 },
     bookingNote: 'Book 1–2 days ahead. Airport transfers can be arranged for arriving guests.',
     published: true,
@@ -874,13 +874,13 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Hard Rock Café area',
       'Legian night market',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote: 'No travel surcharge. Legian pricing is the same as Seminyak.',
     services: ['private-chef', 'catering', 'events'],
     faqs: [
       {
         q: 'Do you serve private chefs in Legian?',
-        a: 'Yes. Legian is within our core South Bali service area. No travel surcharge — same pricing as Seminyak from IDR 2,500,000++ per half day.',
+        a: 'Yes. Legian is within our core South Bali service area. No travel surcharge — same pricing as Seminyak from IDR 1,000,000++ per day for one meal.',
       },
     ],
     nearbyAreas: [
@@ -916,7 +916,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Thomas Beach',
       'Jl. Labuan Sait',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Travel allowance applies from our Seminyak base. Clifftop fine dining from IDR 1,100,000 per person. Always quoted upfront.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -966,7 +966,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Nearby Echo Beach',
       'Pererenan rice fields',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Umalas is within our standard service zone — no travel surcharge. Villa catering from IDR 700,000 per person.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
@@ -1014,7 +1014,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Nearby Petitenget Beach',
       'Jl. Pantai Batu Belig',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Batu Belig is in our core service area — no travel surcharge. Fine dining at the beach from IDR 980,000 per person.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -1063,7 +1063,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'GWK Cultural Park',
       'Jl. Pecatu Indah',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'A travel allowance from Seminyak is included in all Pecatu quotes. Clifftop fine dining from IDR 1,100,000 per person.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -1112,7 +1112,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Jl. Goa Lempeh',
       'Ungasan village',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Travel allowance from Seminyak included in all quotes. Ungasan is at the furthest point of the Bukit — always quoted clearly before booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -1160,7 +1160,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Nusa Dua water park',
       'Nearby BTDC resort area',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Tanjung Benoa is adjacent to Nusa Dua — no travel surcharge. Villa catering from IDR 700,000 per person, family menus available.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
@@ -1209,7 +1209,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Campuhan ridge walk',
       'Sayan rice terraces',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Sayan is in the greater Ubud service area — standard pricing applies. Jungle fine dining from IDR 980,000 per person.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -1256,7 +1256,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Campuhan ridge (nearby)',
       'Kopi Desa coffee estates',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Tegallalang is within our greater Ubud service zone. Travel time from Ubud town is 15–20 minutes — quoted per booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -1305,7 +1305,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Sanur corridor (nearby)',
       'Denpasar city centre',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Renon is within our core Denpasar–Sanur service zone. Corporate and long-stay resident packages available on request.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
@@ -1354,7 +1354,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Jl. Raya Tanah Lot',
       'Tabanan rice fields',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Tanah Lot is ~35–40 minutes from our Seminyak base. Travel allowance quoted upfront and always transparent.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -1496,7 +1496,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity: 'medium-high',
     guestProfile: 'Boutique villa guests, art collectors, retreat participants, wellness travellers',
     landmarks: ['Taman Rahasia', 'Mas artisan village', 'Ubud corridor road', 'Traditional woodcarving galleries'],
-    priceFrom: 'IDR 2,500,000++ per half day',
+    priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Mas sits in the greater Ubud service area — standard Ubud pricing applies. Grocery cost at market rate from Pasar Ubud.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -1507,7 +1507,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much does a private chef cost in Mas?',
-        a: 'Private chef half-day bookings in Mas start from IDR 2,500,000++ plus groceries at cost. Fine dining tasting menus start from IDR 980,000 per person. Contact us for a personalised quote.',
+        a: 'Private chef service in Mas starts from IDR 1,000,000++ per day for one meal plus groceries at cost. Fine dining tasting menus start from IDR 980,000 per person. Contact us for a personalised quote.',
       },
       {
         q: 'Is Mas far from central Ubud for a private chef?',
@@ -1540,7 +1540,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity: 'medium',
     guestProfile: 'Long-stay villa guests, creative professionals, wellness retreat participants, honeymooners',
     landmarks: ['Campuhan Ridge Walk', 'Penestanan rice terraces', 'Sari Organic', 'Arma Museum (nearby)', 'Tjampuhan Hotel ridge'],
-    priceFrom: 'IDR 2,500,000++ per half day',
+    priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Penestanan is in the Ubud service area — standard pricing applies. Fine dining tasting menus from IDR 980,000 per person.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -1551,7 +1551,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much does a private chef dinner cost in Penestanan?',
-        a: 'Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Fine dining tasting menus start from IDR 980,000 per person for two or more guests.',
+        a: 'One meal a day starts from IDR 1,000,000++ plus groceries at cost. Fine dining tasting menus start from IDR 980,000 per person for two or more guests.',
       },
       {
         q: 'How far is Penestanan from central Ubud?',
@@ -1584,7 +1584,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity: 'medium',
     guestProfile: 'Surfers, remote workers, families on private villa stays, guests seeking uncrowded coastline',
     landmarks: ['Nyanyi Beach', 'Tabanan black-sand coast', 'Echo Beach (nearby)', 'Seseh–Nyanyi surf break'],
-    priceFrom: 'IDR 2,500,000++ per half day',
+    priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Nyanyi is in the Canggu–Tabanan service zone — standard pricing applies. Travel is factored into the session rate.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -1595,7 +1595,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much is a private chef in Nyanyi, Bali?',
-        a: 'Half-day bookings in Nyanyi start from IDR 2,500,000++ plus groceries at cost. Seafood-focused menus and BBQ packages are available. Contact us for a quote.',
+        a: 'Half-day bookings in Nyanyi start from IDR 1,000,000++ plus groceries at cost. Seafood-focused menus and BBQ packages are available. Contact us for a quote.',
       },
       {
         q: 'Is Nyanyi near Canggu for a private chef?',
@@ -1628,7 +1628,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity: 'medium',
     guestProfile: 'Luxury villa guests on extended stays, wedding parties, retreat groups, families seeking seclusion',
     landmarks: ['Cemagi beach', 'Tabanan rice fields', 'Tanah Lot (15 min)', 'Canggu surf coast (nearby)'],
-    priceFrom: 'IDR 2,500,000++ per half day',
+    priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Cemagi is within the Canggu–Tabanan service zone. Standard pricing applies. Multi-day packages available.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -1639,7 +1639,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much does private chef catering cost in Cemagi?',
-        a: 'Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Multi-day packages and full-board arrangements are available for longer villa stays. Contact us for a tailored quote.',
+        a: 'Half-day bookings start from IDR 1,000,000++ plus groceries at cost. Multi-day packages and full-board arrangements are available for longer villa stays. Contact us for a tailored quote.',
       },
       {
         q: 'Do you do events and weddings at villas in Cemagi?',
@@ -1672,7 +1672,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity: 'low-medium',
     guestProfile: 'High-end travellers seeking privacy, honeymoon couples, family villa groups, architecture enthusiasts',
     landmarks: ['Seseh Beach', 'Tabanan cliffside', 'Canggu surf coast (30 min)', 'Tanah Lot (20 min)'],
-    priceFrom: 'IDR 2,500,000++ per half day',
+    priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Seseh is in the Tabanan coastal service area. Standard pricing applies with no travel surcharge. Groceries billed at Tabanan market rates.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -1683,7 +1683,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'What does a private chef cost in Seseh, Bali?',
-        a: 'Half-day bookings start from IDR 2,500,000++ plus groceries at cost. Fine dining tasting menus start from IDR 980,000 per person. Contact us for a personalised quote.',
+        a: 'One meal a day starts from IDR 1,000,000++ plus groceries at cost. Fine dining tasting menus start from IDR 980,000 per person. Contact us for a personalised quote.',
       },
       {
         q: 'Is Seseh far from Canggu for grocery sourcing?',
@@ -1771,7 +1771,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Bukit Peninsula west coast',
       'Dreamland Beach (nearby)',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       `Same pricing structure as South Bali. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -1823,7 +1823,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Dreamland Beach (nearby)',
       'Impossibles break (nearby)',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       `All ingredients, equipment, and cliff access included. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -1875,7 +1875,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Labuan Sait (nearby)',
       'Uluwatu Temple (10 min)',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       `Standard Bukit Peninsula pricing applies. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -1928,7 +1928,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Blahbatuh Temple (nearby)',
       'Pasar Seni Sukawati',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       `Same pricing as Ubud and Gianyar zone. 50% deposit confirms booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -1980,7 +1980,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Buahan village',
       'Ayung River rafting (nearby)',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'No additional travel surcharge within the Gianyar zone. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -2032,7 +2032,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'East Gianyar coast road',
       'Pasar Gianyar market (nearby)',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       `East Gianyar coast. 50% deposit confirms booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -2086,7 +2086,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Jl. Raya Bedugul',
       'Buyan and Tamblingan Lakes',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Highland sourcing from Candi Kuning market. 50% deposit confirms booking. Book 72 hours ahead.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -2138,7 +2138,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Pura Luhur Batukaru (nearby)',
       'Tabanan highlands',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Remote highland location — small distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -2149,7 +2149,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'Is there a surcharge for Jatiluwih due to its remote location?',
-        a: 'The standard rate is IDR 2,500,000++ per half day; Jatiluwih carries a small distance premium, quoted upfront. Contact us with your villa details and group size for a full quote.',
+        a: 'The standard rate is IDR 1,000,000++ per day for one meal; Jatiluwih carries a small distance premium, quoted upfront. Contact us with your villa details and group size for a full quote.',
       },
       {
         q: 'What kind of menus suit a Jatiluwih stay?',
@@ -2190,7 +2190,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Tabanan regency cultural sites',
       'Subak Museum',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       `West Bali zone. 50% deposit confirms booking. ${siteFacts.groceryPolicy}.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -2244,7 +2244,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Lipah fishing village',
       'East Bali coast road',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Distance premium from South Bali base included. 50% deposit confirms booking. Book 72 hours ahead.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -2259,7 +2259,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'Is there a travel surcharge for Amed?',
-        a: 'Amed is approximately 2 hours from South Bali. The standard rate is IDR 2,500,000++ per half day; a distance premium applies and is quoted upfront. Contact us for a full quote.',
+        a: 'Amed is approximately 2 hours from South Bali. The standard rate is IDR 1,000,000++ per day for one meal; a distance premium applies and is quoted upfront. Contact us for a full quote.',
       },
     ],
     nearbyAreas: [
@@ -2296,7 +2296,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Rendang village (nearby)',
       'Pura Besakih (45 min)',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Remote highland — distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -2348,7 +2348,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Amlapura royal palace (nearby)',
       'East Bali coast road',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'East Bali distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -2400,7 +2400,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Drop-off dive site',
       'Northeast Bali coast',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Remote northeast Bali — distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'catering', 'bbq', 'events'],
@@ -2453,7 +2453,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Gitgit Waterfall (nearby)',
       'Jl. Raya Lovina',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'North Bali distance premium included. 50% deposit confirms booking. Book 72 hours ahead.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -2468,7 +2468,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'Is there a surcharge for Lovina?',
-        a: 'Lovina is a long way from our South Bali base. The standard rate is IDR 2,500,000++ per half day; a distance component applies and is quoted upfront.',
+        a: 'Lovina is a long way from our South Bali base. The standard rate is IDR 1,000,000++ per day for one meal; a distance component applies and is quoted upfront.',
       },
     ],
     nearbyAreas: [
@@ -2505,7 +2505,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Dutch colonial waterfront',
       'Chinese quarter temples',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'North Bali base. 50% deposit confirms booking. Event catering available.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
@@ -2557,7 +2557,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'West Bali National Park gate',
       'Taman Sari resort area',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Remote northwest Bali — distance premium included. 50% deposit confirms booking.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
@@ -2610,7 +2610,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Toya Bungkah hot springs (below)',
       'Batur Global Geopark',
     ],
-    priceFrom: 'From IDR 2,500,000++ per half day',
+    priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
       'Highland distance premium included. 50% deposit confirms booking. Sunrise and sunset sessions available.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
@@ -2664,7 +2664,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Pura Gunung Lebah temple",
       "Kedewatan organic market garden",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Kedewatan commands a 10% distance premium above our South Bali base. Market sourcing, gorge-side setup, and Michelin-standard expectations are reflected in the rate.",
     services: ["private-chef", "fine-dining", "catering", "events"],
@@ -2716,7 +2716,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Museum Puri Lukisan (nearby)",
       "Ubud market (10 min walk north)",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Standard South Bali rate applies — Nyuh Kuning is within the Ubud radius. No distance surcharge.",
     services: ["private-chef", "fine-dining", "catering", "bbq"],
@@ -2764,7 +2764,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Ubud central market (5 km north)",
       "Campuhan Ridge Walk (7 km)",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Standard Ubud-zone rate. Group catering packages available for large villas hosting 10+ guests.",
     services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
@@ -2812,7 +2812,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Tenganan traditional village (40 km)",
       "Candidasa beach (20 km south)",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "East Bali remote premium applies. 2.5–3 hour drive from South Bali — advance planning and 72-hour booking notice required.",
     services: ["private-chef", "fine-dining", "catering", "events"],
@@ -2860,7 +2860,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Munduk spice and coffee plantation tours",
       "Bali Handara Golf Course (20 km)",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Highland North Bali premium applies. 2.5 hours from South Bali base. Warming mountain menus — slow-cooked dishes, local spice-based sauces, and hearty breakfasts — are our speciality here.",
     services: ["private-chef", "fine-dining", "catering", "bbq"],
@@ -2908,7 +2908,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Blahbatuh gandrung dance village",
       "Sidan Pura Dalem temple",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Standard Ubud-zone rate. Gianyar is 10 km from our Ubud operations base, within the standard service radius.",
     services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
@@ -2956,7 +2956,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Padang Bai dive sites",
       "Gili Islands ferry departure",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "East Bali remote premium applies. 1.5–2 hours from South Bali base — advance booking required.",
     services: ["private-chef", "catering", "bbq", "events"],
@@ -3004,7 +3004,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Danau Tamblingan (15 km north)",
       "Bali Handara Golf Resort",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Highland Tabanan premium applies. 1.5 hours from South Bali base — same zone as Bedugul.",
     services: ["private-chef", "catering", "bbq", "events"],
@@ -3052,7 +3052,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Kapal Pura Sada temple",
       "Bali Safari & Marine Park (25 km east)",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Standard Badung rate. Mengwi is 25 minutes from our South Bali base — within the standard service zone.",
     services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
@@ -3100,7 +3100,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Gianyar night market (15 km north)",
       "Bali Collection Nusa Dua (30 km)",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Standard Gianyar coast rate. Ketewel sits between Sanur and Keramas — both within our standard service zone.",
     services: ["private-chef", "catering", "bbq", "events"],
@@ -3148,7 +3148,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Ubud market (25 km north-east)",
       "Seminyak beach (35 km south)",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Standard Badung rate. Abiansemal is 30 minutes from our south Bali base and can be served by both our Ubud and Seminyak teams.",
     services: ["private-chef", "fine-dining", "catering", "events"],
@@ -3196,7 +3196,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       "Seminyak beach (18 km south-east)",
       "Bali Zoo (25 km north)",
     ],
-    priceFrom: "From IDR 2,500,000++ per half day",
+    priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
       "Standard Canggu-zone rate. Cepaka is served by our Canggu/Pererenan team — no distance surcharge.",
     services: ["private-chef", "fine-dining", "catering", "bbq", "events"],

@@ -679,7 +679,7 @@ export default function CateringBBQPage() {
               { label: 'plated dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
               { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
               { label: 'catering pricing', href: '/pricing', desc: 'Transparent catering and service pricing.' },
-              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
+              { label: 'Villa Chef', href: '/private-chef-bali', desc: 'Daily chef for your villa stay.' },
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">

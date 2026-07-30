@@ -5,7 +5,7 @@ export const BLOG_POSTS: ContentEntry[] = [
   {
     "slug": "blog/private-chef-cost-bali",
     "title": "How Much Does a Private Chef in Bali Cost? [2026 Guide]",
-    "description": "Private chef costs in Bali range from IDR 2.5M++/day for villa chef hire (chef + assistant) to IDR 20M+ for large events. Real 2026 pricing, what is included, and how to book.",
+    "description": "Private chef costs in Bali range from IDR 1M++/day for villa chef hire (chef + assistant) to IDR 20M+ for large events. Real 2026 pricing, what is included, and how to book.",
     "date": "2025-01-15"
   },
   {

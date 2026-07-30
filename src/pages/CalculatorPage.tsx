@@ -882,7 +882,7 @@ const RELATED_PAGES = [
   { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus.' },
   { label: 'Catering', href: '/catering', desc: 'Villa chef and catering options.' },
   { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate events.' },
-  { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
+  { label: 'Villa Chef', href: '/private-chef-bali', desc: 'Daily chef for your villa stay.' },
   { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },
 ]
 

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, HelpCircle, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, type LucideIcon } from 'lucide-react'
+import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, type LucideIcon } from 'lucide-react'
 import { PILLARS, LOCATIONS, hasLocationPage } from '@/data/siteArchitecture'
 
 
@@ -37,7 +37,12 @@ interface NavItem {
   accent: string
 }
 
+// Private Chef leads the navigation: it is the highest-intent term we compete on
+// and the pillar page at /private-chef-bali is where that demand should land.
+// Contact and Help are merged into a single item to make room without losing
+// either page — both remain live and are reachable from the merged dropdown.
 const NAV_ITEMS: NavItem[] = [
+  { label: 'Private Chef', href: '/private-chef-bali', icon: ChefHat, accent: '#C5A028' },
   { label: 'Catering', href: '/catering', icon: Users, accent: '#C5A028' },
   { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
   { label: 'Locations', href: '/locations', icon: MapPin, accent: '#C5A028' },
@@ -47,7 +52,6 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
   { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
-  { label: 'Help', href: '/help', icon: HelpCircle, accent: '#C5A028' },
 ]
 
 interface NavSubpage {
@@ -69,10 +73,31 @@ const NAV_SUBPAGES: Record<string, NavSubpage[]> = Object.values(PILLARS).reduce
   {},
 )
 
-// SEO rebuild 2026-07-24: consolidate "Private Chef Bali" anchor equity onto homepage.
+// SEO rebuild 2026-07-30: supersedes the 2026-07-24 decision to point "Private Chef
+// Bali" at the homepage. The pillar now lives at /private-chef-bali and owns the term,
+// so the Fine Dining dropdown entry points there instead of at "/".
 NAV_SUBPAGES['/fine-dining'] = (NAV_SUBPAGES['/fine-dining'] ?? []).map((page) =>
-  page.href === '/fine-dining/private-chef-bali' ? { ...page, href: '/' } : page
+  page.href === '/fine-dining/private-chef-bali' ? { ...page, href: '/private-chef-bali' } : page
 )
+
+// Private Chef dropdown — the pillar plus the paths people actually ask for.
+NAV_SUBPAGES['/private-chef-bali'] = [
+  { label: 'Private Chef Bali', href: '/private-chef-bali', icon: 'ChefHat' },
+  { label: 'Prices & Meal Plans', href: '/private-chef-bali#prices', icon: 'Crown' },
+  { label: 'Our Head Chefs', href: '/chefs', icon: 'User' },
+  { label: 'Cuisines We Cook', href: '/private-chef-bali#cuisines', icon: 'Utensils' },
+  { label: 'Groceries & Sourcing', href: '/private-chef-bali#groceries', icon: 'Leaf' },
+  { label: 'Areas We Cover', href: '/private-chef-bali#areas', icon: 'Mountain' },
+  { label: 'Full Price List', href: '/pricing', icon: 'BookOpen' },
+]
+
+// Contact dropdown — Contact and Help merged into one nav slot. Both pages stay live.
+NAV_SUBPAGES['/contact'] = [
+  { label: 'Contact Us', href: '/contact', icon: 'User' },
+  { label: 'Help Centre', href: '/help', icon: 'BookOpen' },
+  { label: 'Pricing Guide', href: '/help/pricing', icon: 'Crown' },
+  { label: 'FAQ', href: '/faq', icon: 'Utensils' },
+]
 
 // Dining styles dropdown — hand-written (menu collections are not a PILLARS pillar)
 NAV_SUBPAGES['/dining-styles'] = [
@@ -109,6 +134,7 @@ NAV_SUBPAGES['/locations'] = [
 
 // Preview images shown beside desktop dropdown links; the picture swaps as subpages are hovered
 const PILLAR_PREVIEW_IMAGES: Record<string, string> = {
+  '/private-chef-bali': '/generated/mychef-experience-bali-home-hero-ivory-villa.webp',
   '/catering': '/generated/mychef-families-bali-catering-events.webp',
   '/fine-dining': '/generated/mychef-families-bali-fine-dining-experience.webp',
   '/dining-styles': '/generated/mychef-families-bali-classic-set-menus.webp',

@@ -11,7 +11,6 @@ export const LANDING_PAGE_SLUGS: string[] = [
   'group-villa-dinner-packages-bali',
   'corporate-retreat-catering-bali',
   'luxury-birthday-party-bali',
-  'hire-private-chef-bali-monthly',
   'villa-staff-bali-agency',
   'butler-service-bali-daily-rate',
   'best-private-chef-indonesia',

@@ -58,10 +58,10 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
   <p>The meal itself is the occasion. You choose the date, location, guest count, cuisine and service style — from a relaxed family-style dinner to plated fine dining, an Indonesian feast or a villa BBQ. The booking covers menu planning, shopping, cooking, service and a clean kitchen; waiters, bartenders and full table settings can be added.</p>
 
   <h3>Daily chef for a villa stay</h3>
-  <p>Fresh meals every day without restaurant logistics. The chef covers the meal periods you choose, shops that morning, cooks in your kitchen and cleans down after every service. Ideal for families, groups sharing a villa, wellness stays and guests with strict dietary needs. See our <a href="/villa-chef">daily villa chef service</a>.</p>
+  <p>Fresh meals every day without restaurant logistics. The chef covers the meal periods you choose, shops that morning, cooks in your kitchen and cleans down after every service. Ideal for families, groups sharing a villa, wellness stays and guests with strict dietary needs. See our <a href="/private-chef-bali">daily villa chef service</a>.</p>
 
   <h3>Recurring personal or family chef</h3>
-  <p>A chef on selected days each week for fresh meals, batch cooking and family routines — consistency first: predictable nutrition, menu variety, and a clear feedback rhythm. For stays of a month or more, see <a href="/hire-private-chef-bali-monthly">monthly arrangements</a>.</p>
+  <p>A chef on selected days each week for fresh meals, batch cooking and family routines — consistency first: predictable nutrition, menu variety, and a clear feedback rhythm. For stays of a month or more, see <a href="/private-chef-bali">monthly arrangements</a>.</p>
 
   <h3>Full-time and live-in placement</h3>
   <p>A permanent household chef must fit the food and the family. Our <a href="/staffing/private-chef-placement">placement service</a> is built around matching — vetted profiles, background verification, trial cooking and performance follow-up — and our <a href="/staffing/live-in-chef">live-in chef service</a> covers roles where accommodation is part of the position, with a tailored quote from our staffing team.</p>
@@ -82,8 +82,8 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
   <p>There is no single national price because the formats differ — so here are the real anchors per format:</p>
   <ul>
     <li><strong>Private dinners:</strong> from IDR 700K per person; tasting menus from IDR 950–980K per person</li>
-    <li><strong>Chef days (Bali):</strong> from IDR 2,500,000++ per half day, with one professional chef and one dedicated assistant included; groceries at cost with receipts</li>
-    <li><strong>Weekly chef service:</strong> from IDR 2,250,000++ per day at the weekly rate (10% off standard); monthly rate from IDR 2,000,000++ per day (20% off)</li>
+    <li><strong>Chef days (Bali):</strong> from IDR 1,000,000++ per day for one meal, with one professional chef and one dedicated assistant included; groceries at cost with receipts</li>
+    <li><strong>Weekly chef service:</strong> from IDR 900,000++ per day at the weekly rate (10% off standard); monthly rate from IDR 800,000++ per day (20% off)</li>
     <li><strong>Live-in placement:</strong> tailored quote from our staffing team, based on the household brief</li>
     <li><strong>Service staff:</strong> waiters and sommeliers from IDR 250K per hour; bartenders from IDR 350K per hour</li>
   </ul>

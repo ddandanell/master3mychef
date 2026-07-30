@@ -253,7 +253,7 @@ export default function CompleteVillaExperiencePage() {
                 Villa Preparation & Daily Private Chef Service
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-5">
-                Imagine arriving to a villa that already feels like home — beds dressed, fridges stocked, flowers arranged, and your first refreshments waiting. Then, each morning, a <Link to="/villa-chef" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">private villa chef service</Link> arrives to prepare breakfast while the housekeeping team quietly resets the space.
+                Imagine arriving to a villa that already feels like home — beds dressed, fridges stocked, flowers arranged, and your first refreshments waiting. Then, each morning, a <Link to="/private-chef-bali" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">private villa chef service</Link> arrives to prepare breakfast while the housekeeping team quietly resets the space.
               </p>
               <div className="space-y-3">
                 {CHEF_POINTS.map((item) => (

@@ -95,7 +95,7 @@ const RELATED_SERVICES = [
   {
     title: 'Daily Villa Chef',
     desc: 'Breakfast, lunch, and dinner menus designed around your villa rhythm.',
-    href: '/villa-chef',
+    href: '/private-chef-bali',
   },
   {
     title: 'Event Catering',

@@ -73,18 +73,15 @@ const SERVICE_CARDS = [
 // Route-specific internal links that aren't covered by the service grid or nearby-areas mesh.
 const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
   canggu: [
-    { to: '/villa-chef', label: 'daily villa chef service' },
-    { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
     { to: '/fine-dining/menus', label: 'private chef villa menus' },
     { to: '/journal/private-chef-canggu-guide', label: 'Canggu local' },
   ],
   pererenan: [
-    { to: '/villa-chef', label: 'daily villa chef service' },
-    { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
   ],
   sanur: [
-    { to: '/villa-chef', label: 'daily villa chef service' },
-    { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
   ],
   seminyak: [
     { to: '/fine-dining/menus', label: 'private chef villa menus' },
@@ -164,7 +161,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
           '@type': 'UnitPriceSpecification',
           priceCurrency: 'IDR',
           price: '2500000',
-          unitText: 'per half day, from',
+          unitText: 'per day for one meal, from',
         },
         availability: 'https://schema.org/InStock',
         url: canonical,
@@ -546,12 +543,12 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
-              { label: 'Private Chef Half Day', price: 'From IDR 2,500,000++', note: 'Per day · chef + assistant included · groceries at cost' },
+              { label: 'One Meal a Day', price: 'From IDR 1,000,000++', note: 'Per day · breakfast, lunch or dinner · chef + assistant' },
+              { label: 'Two Meals a Day', price: 'From IDR 1,800,000++', note: 'Per day · any two meals · chef + assistant' },
+              { label: 'Three Meals a Day', price: 'From IDR 2,700,000++', note: 'Per day · breakfast, lunch and dinner · chef + assistant' },
               { label: 'Villa Catering', price: 'From IDR 700,000 pp', note: 'Per person · 8–30 guests · buffet or plated' },
               { label: 'Fine Dining Tasting Menu', price: 'From IDR 980,000 pp', note: 'Per person · 5–7 courses · wine pairing available' },
-              { label: 'BBQ & Seafood Grill', price: 'From IDR 720,000 pp', note: 'Per person · charcoal grill · full service' },
               { label: 'Events & Weddings', price: 'Custom quote', note: 'Group size, menu, staffing level — quoted per event' },
-              { label: 'Weekly Chef Service', price: 'From IDR 2,250,000++ per day', note: 'Weekly rate (10% off standard) · chef + assistant included' },
             ].map((tier) => (
               <div key={tier.label} className="rounded-[20px] border border-white/10 bg-white/5 p-5">
                 <p className="font-playfair text-lg mb-1">{tier.label}</p>
@@ -560,6 +557,23 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               </div>
             ))}
           </div>
+
+          {/*
+            Every area page is a child of the Private Chef pillar. This is the one
+            contextual, keyword-anchored link up to it — 61 pages pointing at
+            /private-chef-bali with consistent intent is the whole point of the cluster.
+          */}
+          <p className="text-center text-white/70 text-sm mb-10">
+            These are the same rates everywhere we operate. Full meal plans, weekly and
+            monthly discounts and what is included are on the{' '}
+            <Link
+              to="/private-chef-bali#prices"
+              className="text-[#C5A028] font-medium hover:underline"
+            >
+              private chef Bali prices page
+            </Link>
+            .
+          </p>
 
           <div className="text-center">
             <a

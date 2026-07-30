@@ -176,10 +176,10 @@ export const REDIRECTS: Redirect[] = [
   // --- SEO audit 2026-06-28: 404 service aliases discovered by crawl ---
   { from: '/events/corporate', to: '/events/corporate-events', reason: 'Crawl 404: /events/corporate → canonical events corporate page.' },
   { from: '/events/proposals', to: '/events', reason: 'Crawl 404: no dedicated proposals page; redirect to events hub.' },
-  { from: '/in-villa-service/villa-chef', to: '/villa-chef', reason: 'Crawl 404: alias for villa chef service.' },
+  { from: '/in-villa-service/villa-chef', to: '/private-chef-bali', reason: 'Crawl 404: alias for villa chef service.' },
   { from: '/in-villa-service/breakfast-service', to: '/catering/floating-breakfast', reason: 'Crawl 404: breakfast service → floating breakfast page.' },
   { from: '/in-villa-service/cooking-class', to: '/contact', reason: 'Crawl 404: cooking classes not offered; redirect to contact.' },
-  { from: '/in-villa-service/meal-prep', to: '/villa-chef', reason: 'Crawl 404: meal prep → villa chef service.' },
+  { from: '/in-villa-service/meal-prep', to: '/private-chef-bali', reason: 'Crawl 404: meal prep → villa chef service.' },
   { from: '/staffing/chef-recruitment', to: '/staffing/private-chef-placement', reason: 'Crawl 404: chef recruitment → canonical placement page.' },
   { from: '/staffing/event-staff', to: '/staffing/villa-staff', reason: 'Crawl 404: event staff → villa staff page.' },
 
@@ -208,7 +208,18 @@ export const REDIRECTS: Redirect[] = [
   // --- /private-chef-bali/* + Bali keyword-location aliases → canonical pages (added 2026-06-23).
   //     Were soft-404 duplicates of the LocationPages / PrivateChefBaliPage; not internally linked,
   //     not in sitemap. Redirect each to the page it self-canonicals to (no chains). ---
-  { from: '/private-chef-bali', to: '/fine-dining/private-chef-bali', reason: 'Duplicate of PrivateChefBaliPage (canonical = /fine-dining/private-chef-bali). Safe-default redirect; not promoted.' },
+  // REMOVED 2026-07-30: /private-chef-bali is now a real page (the Private Chef pillar,
+  // src/pages/PrivateChefPillarPage.tsx). It must NOT be a redirect source or the route
+  // is shadowed — REDIRECTS.map renders before the page routes in src/App.tsx.
+  //
+  // --- Private Chef consolidation 2026-07-30 ---
+  // Eight Bali-wide pages competed for "private chef bali" while publishing six different
+  // price floors. These three carried no measurable traffic and are folded into the pillar.
+  // Deliberately NOT redirected: /pricing (223 visitors/30d, cross-service index),
+  // /blog/private-chef-cost-bali (39 visitors/30d, informational intent, ranking),
+  // /fine-dining/private-chef-bali (retitled to lead on tasting menus instead).
+  { from: '/villa-chef', to: '/private-chef-bali', reason: 'Private Chef consolidation 2026-07-30: SolPage day rates now live on the pillar at /private-chef-bali.' },
+  { from: '/hire-private-chef-bali-monthly', to: '/private-chef-bali', reason: 'Private Chef consolidation 2026-07-30: landing page had jsonLd but no visible content; monthly rate is a column on the pillar table.' },
   // TASK-030 (2026-06-27): /private-chef-bali/[slug] → /private-chef/[slug]
   // New canonical URL pattern per Bali Domination Blueprint.
   // Main areas — redirect to richer /private-chef/[slug] pages
@@ -248,8 +259,8 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/private-chef-pererenan-guide', to: '/private-chef/pererenan', reason: 'Duplicate of live Pererenan private-chef page.' },
   { from: '/blog/private-chef-denpasar-guide', to: '/private-chef/denpasar', reason: 'Duplicate of live Denpasar private-chef page.' },
   { from: '/blog/private-chef-nusa-dua-guide', to: '/private-chef/nusa-dua', reason: 'Duplicate of live Nusa Dua private-chef page.' },
-  { from: '/blog/private-chef-bali-expats', to: '/hire-private-chef-bali-monthly', reason: 'Expat long-stay recurring chef = monthly hire page.' },
-  { from: '/blog/daily-chef-service-bali', to: '/hire-private-chef-bali-monthly', reason: 'Regular/recurring home cooking = monthly chef intent.' },
+  { from: '/blog/private-chef-bali-expats', to: '/private-chef-bali', reason: 'Expat long-stay recurring chef = monthly hire page.' },
+  { from: '/blog/daily-chef-service-bali', to: '/private-chef-bali', reason: 'Regular/recurring home cooking = monthly chef intent.' },
   { from: '/blog/household-chef-bali-hiring-guide', to: '/staffing/household-staff', reason: 'Duplicate of live household-staff staffing page.' },
   { from: '/blog/villa-staff-bali-hiring-guide', to: '/staffing/villa-staff', reason: 'Duplicate of live villa-staff staffing page.' },
   { from: '/blog/chef-placement-agency-bali', to: '/staffing/private-chef-placement', reason: 'Duplicate of live chef-placement staffing page.' },

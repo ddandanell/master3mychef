@@ -146,24 +146,24 @@ const FLOATING_PACKAGES = [
 
 const DAILY_CHEF_PACKAGES = [
   {
-    title: 'Breakfast Only',
-    price: 'IDR 2,500,000++',
+    title: 'One Meal a Day',
+    price: 'IDR 1,000,000++',
     period: '/day',
-    desc: 'Fresh tropical fruits, pastries, eggs any style, Balinese coffee. Half-day chef hire (up to 4 hours), chef + assistant included.',
+    desc: 'One meal cooked and served each day — breakfast, lunch or dinner, your choice. Chef + dedicated assistant included.',
     bestFor: 'Couples, light mornings, villa guests who lunch out',
   },
   {
-    title: 'Half Board',
-    price: 'IDR 3,500,000++',
+    title: 'Two Meals a Day',
+    price: 'IDR 1,800,000++',
     period: '/day',
-    desc: 'Breakfast + dinner. Perfect for families who lunch out. Full-day chef hire (up to 8 hours), chef + assistant included.',
+    desc: 'Any two meals a day — most families take breakfast and dinner and lunch out. Chef + dedicated assistant included.',
     bestFor: 'Families, groups who explore Bali during the day',
   },
   {
-    title: 'Full Board',
-    price: 'IDR 4,200,000++',
+    title: 'Three Meals a Day',
+    price: 'IDR 2,700,000++',
     period: '/day',
-    desc: 'Breakfast, lunch, and dinner. The complete villa experience. Complete full-day chef hire (up to 12 hours), chef + assistant included.',
+    desc: 'Breakfast, lunch and dinner. Every meal of your stay handled. Chef + dedicated assistant included.',
     bestFor: 'Extended stays, retreats, families who want full coverage',
   },
   {
@@ -281,7 +281,7 @@ const EVENT_TYPES = [
 function getCateringRecommendation(guests: string, event: string): { title: string; description: string; href: string } {
   const map: Record<string, Record<string, { title: string; description: string; href: string }>> = {
     '2-4': {
-      default: { title: 'Private Chef or Fine Dining', description: 'An intimate multi-course meal prepared in your villa. Perfect for couples, honeymoons, and small celebrations.', href: '/villa-chef' },
+      default: { title: 'Private Chef or Fine Dining', description: 'An intimate multi-course meal prepared in your villa. Perfect for couples, honeymoons, and small celebrations.', href: '/private-chef-bali' },
       birthday: { title: 'Private Chef Dinner or Grazing Table', description: 'A chef-prepared meal or styled grazing platter for a relaxed birthday in your villa.', href: '/catering/grazing-tables' },
       wedding: { title: 'Private Chef Tasting Menu', description: 'An elegant tasting menu for a tiny wedding party or elopement dinner.', href: '/catering/plated-catering' },
       anniversary: { title: 'Romantic Private Dining', description: 'A candlelit multi-course dinner with your own chef and waiter.', href: '/blog/romantic-dinner-bali-private-chef' },
@@ -289,7 +289,7 @@ function getCateringRecommendation(guests: string, event: string): { title: stri
     '5-10': {
       default: { title: 'BBQ or Plated Dinner', description: 'Live grilling or a seated set menu for a small group. Great energy and easy logistics.', href: '/catering/bbq-catering' },
       birthday: { title: 'BBQ Catering', description: 'Casual, social, and ideal for a villa birthday party with friends.', href: '/catering/bbq-catering' },
-      'villa-holiday': { title: 'Daily Villa Chef', description: 'Have a chef handle breakfast, lunch, and dinner across your stay.', href: '/villa-chef' },
+      'villa-holiday': { title: 'Daily Villa Chef', description: 'Have a chef handle breakfast, lunch, and dinner across your stay.', href: '/private-chef-bali' },
       family: { title: 'Family-Style Villa Catering', description: 'Shared dishes served to the table for a relaxed family meal.', href: '/catering/villa-catering' },
       breakfast: { title: 'Floating Breakfast', description: 'Photo-ready breakfast served in your private pool.', href: '/catering/floating-breakfast' },
     },
@@ -474,7 +474,7 @@ export default function CateringMainPage() {
                 <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
               </a>
               <Link
-                to="/villa-chef"
+                to="/private-chef-bali"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <ArrowRight className="w-4 h-4" /> Need a Private Villa Chef?
@@ -488,7 +488,7 @@ export default function CateringMainPage() {
                 Choose Events & Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-white">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
               </p>
               <Link
-                to="/villa-chef"
+                to="/private-chef-bali"
                 className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
               >
                 <ArrowRight className="w-4 h-4" /> View Private Villa Dining
@@ -687,7 +687,7 @@ export default function CateringMainPage() {
                 <p className="text-[#4A4745] mb-2">
                   Your chef shops, cooks, and cleans — breakfast, lunch, and dinner. You see every grocery receipt. No meal planning. No dishes. Just great food every day.
                 </p>
-                <p className="text-[#C5A028] font-semibold">From IDR 2,500,000++/day · Chef + assistant included · Groceries at cost</p>
+                <p className="text-[#C5A028] font-semibold">From IDR 1,000,000++/day · Chef + assistant included · Groceries at cost</p>
               </div>
 
               {/* Daily packages */}

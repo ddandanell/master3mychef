@@ -179,8 +179,8 @@ export const WHAT_IS_CATERING_SECTIONS: WhatIsCateringSection[] = [
   },
   {
     title: 'Private Chef vs Catering',
-    body: `A private chef and a catering team both cook in your villa, but the scope and rhythm are different. A private chef is usually assigned to one villa for multiple meals over several days, becoming familiar with your preferences, kitchen, and household routine. Catering, by contrast, is generally event-based: a larger team arrives for a single occasion such as a wedding reception, birthday BBQ, or corporate dinner, then leaves once service is complete. Private chef service is ideal when you want every meal handled during a holiday or extended stay; catering is ideal when you want a polished one-off experience for a larger group. The menus can overlap — both can produce fine-dining tasting menus or casual family meals — but the staffing model changes. Catering brings a dedicated service manager, extra waiters, and event logistics; a private chef is more embedded in the villa. Learn more about <a href="/villa-chef">private chef service in Bali</a>.`,
-    link: { text: 'Private chef service', href: '/villa-chef' },
+    body: `A private chef and a catering team both cook in your villa, but the scope and rhythm are different. A private chef is usually assigned to one villa for multiple meals over several days, becoming familiar with your preferences, kitchen, and household routine. Catering, by contrast, is generally event-based: a larger team arrives for a single occasion such as a wedding reception, birthday BBQ, or corporate dinner, then leaves once service is complete. Private chef service is ideal when you want every meal handled during a holiday or extended stay; catering is ideal when you want a polished one-off experience for a larger group. The menus can overlap — both can produce fine-dining tasting menus or casual family meals — but the staffing model changes. Catering brings a dedicated service manager, extra waiters, and event logistics; a private chef is more embedded in the villa. Learn more about <a href="/private-chef-bali">private chef service in Bali</a>.`,
+    link: { text: 'Private chef service', href: '/private-chef-bali' },
   },
   {
     title: 'Buffet vs Plated Service',
@@ -639,8 +639,8 @@ export const MENU_STYLES: MenuStyle[] = [
 export const OPTIONAL_SERVICES: OptionalService[] = [
   {
     title: 'Private Chefs',
-    desc: `Hire a <a href="/villa-chef">private chef in Bali</a> for the full duration of your stay. They handle grocery shopping, every meal, and kitchen cleanup.`,
-    href: '/villa-chef',
+    desc: `Hire a <a href="/private-chef-bali">private chef in Bali</a> for the full duration of your stay. They handle grocery shopping, every meal, and kitchen cleanup.`,
+    href: '/private-chef-bali',
   },
   {
     title: 'Bartenders',
@@ -799,7 +799,7 @@ export const CATERING_FAQS: CateringFAQ[] = [
   },
   {
     q: 'What is the difference between one-time catering and daily chef service?',
-    a: `One-time catering is for a single event such as a BBQ or wedding buffet. <a href="/villa-chef">Daily chef service</a> provides the same chef every day during your stay for all meals.`,
+    a: `One-time catering is for a single event such as a BBQ or wedding buffet. <a href="/private-chef-bali">Daily chef service</a> provides the same chef every day during your stay for all meals.`,
   },
   {
     q: 'Which service is right for me?',

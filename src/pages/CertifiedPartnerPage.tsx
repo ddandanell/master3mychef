@@ -127,7 +127,7 @@ export default function CertifiedPartnerPage() {
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
               { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing tables.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate events.' },
-              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
+              { label: 'Villa Chef', href: '/private-chef-bali', desc: 'Daily chef for your villa stay.' },
               { label: 'Partner Programme', href: '/certified-partner', desc: 'Become a certified partner villa.' },
               { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },
             ].map((item) => (

@@ -116,7 +116,7 @@ export default function BaliHubPage() {
           <h2 className="text-center font-playfair text-3xl md:text-4xl mb-12">Three services. Every villa. Every region.</h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <Link to="/villa-chef" className="bg-white border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#6B8E5A] transition-all">
+            <Link to="/private-chef-bali" className="bg-white border border-[#E5E3E0] rounded-2xl p-6 hover:border-[#6B8E5A] transition-all">
               <Utensils className="w-6 h-6 text-[#6B8E5A] mb-3" />
               <h3 className="font-playfair text-2xl mb-3">Private Villa Dining</h3>
               <p className="text-sm text-[#4A4745]">Private villa chef for breakfast, lunch, dinner. Weekly meal prep. Groceries billed at cost — no markup.</p>

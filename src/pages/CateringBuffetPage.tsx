@@ -955,7 +955,7 @@ export default function CateringBuffetPage() {
               { label: 'plated dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
               { label: 'Grazing Tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
               { label: 'Drop-Off Catering', href: '/catering/drop-off-catering', desc: 'Fresh food delivered to your villa.' },
-              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
+              { label: 'Villa Chef', href: '/private-chef-bali', desc: 'Daily chef for your villa stay.' },
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">

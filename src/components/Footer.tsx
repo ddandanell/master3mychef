@@ -210,8 +210,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/hire-private-chef-bali-monthly" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
-                  Monthly Private Chef
+                <Link to="/private-chef-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Private Chef Bali
                 </Link>
               </li>
               <li>

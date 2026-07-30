@@ -134,7 +134,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Do you offer weekly or monthly chef service?',
-        a: 'Yes — recurring daily chef service from IDR 2,500,000++/day, with 10% off at the weekly rate and 20% off at the monthly rate. Every booking includes a chef and a dedicated assistant; groceries at cost with receipts. <a href="/hire-private-chef-bali-monthly">monthly arrangements</a> · <a href="/staffing/live-in-chef">live-in chef</a>',
+        a: 'Yes — recurring daily chef service from IDR 1,000,000++/day, with 10% off at the weekly rate and 20% off at the monthly rate. Every booking includes a chef and a dedicated assistant; groceries at cost with receipts. <a href="/private-chef-bali">monthly arrangements</a> · <a href="/staffing/live-in-chef">live-in chef</a>',
       },
       {
         q: "What if my chef can't make it?",
@@ -265,7 +265,7 @@ export default function FAQPage() {
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
               { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate.' },
-              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
+              { label: 'Villa Chef', href: '/private-chef-bali', desc: 'Daily chef for your villa stay.' },
               { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">

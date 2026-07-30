@@ -213,7 +213,7 @@ export default function MenuGuidePage() {
             {[
               { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
               { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing tables.' },
-              { label: 'Villa Chef', href: '/villa-chef', desc: 'Daily chef for your villa stay.' },
+              { label: 'Villa Chef', href: '/private-chef-bali', desc: 'Daily chef for your villa stay.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate events.' },
               { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
               { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },

@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does private dining in Sanur cost?',
-    a: 'Family villa dinners and sunrise breakfasts start from IDR 700K per person; weekly chef service runs from IDR 2.25M++ per day at the weekly rate — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
+    a: 'Family villa dinners and sunrise breakfasts start from IDR 700K per person; weekly chef service runs from IDR 900K++ per day at the weekly rate — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
   },
   {
     q: 'What is the sunrise breakfast service?',
@@ -71,7 +71,7 @@ const SERVICES = [
   },
   {
     name: 'Weekly chef service',
-    range: 'From IDR 2,250,000++ / day',
+    range: 'From IDR 900,000++ / day',
     for: '2–4 people',
     detail: 'Breakfasts, lunches and dinners handled across the stay (weekly rate, 10% off standard).',
   },
@@ -234,7 +234,7 @@ export default function SanurPage() {
           <h2 className="font-playfair text-3xl md:text-4xl mb-6">Dining Around a Family's Rhythm</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-0 leading-relaxed">
-              The consistent feedback from Sanur families: the villa table outperforms the restaurant not on glamour but on fit. A gluten-free grandparent, a vegan parent and three children who eat beige food can all be served properly, in one sitting, without negotiation. Early suppers happen at five-thirty, not "when a table frees up." And for stays measured in weeks, a <Link to="/villa-chef" className="text-[#C5A028] hover:underline font-medium">daily villa chef service</Link> or <Link to="/hire-private-chef-bali-monthly" className="text-[#C5A028] hover:underline font-medium">monthly chef arrangements</Link> turn eating well into the default rather than the effort.
+              The consistent feedback from Sanur families: the villa table outperforms the restaurant not on glamour but on fit. A gluten-free grandparent, a vegan parent and three children who eat beige food can all be served properly, in one sitting, without negotiation. Early suppers happen at five-thirty, not "when a table frees up." And for stays measured in weeks, a <Link to="/private-chef-bali" className="text-[#C5A028] hover:underline font-medium">daily villa chef service</Link> or <Link to="/private-chef-bali" className="text-[#C5A028] hover:underline font-medium">monthly chef arrangements</Link> turn eating well into the default rather than the effort.
             </p>
           </div>
         </div>

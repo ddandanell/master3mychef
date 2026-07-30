@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { Calculator, ChevronDown, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+import { Link } from 'react-router-dom'
+import { MEAL_PLANS, STAY_DISCOUNTS, formatIDR } from '@/data/siteFacts'
 
 type ServiceType = 'private-chef-dinner' | 'catering-event' | 'fine-dining-experience' | 'staffing'
 type GuestRange = '2-4' | '5-10' | '11-20' | '20+'
@@ -99,8 +101,11 @@ export default function PricingCalculator({
     const multiplier = selectedDuration.multiplier
 
     switch (serviceType) {
+      // Per-person villa dinner floor, matching /pricing and the homepage price strip.
+      // The old formula added an unexplained flat 500,000 on top, which made this
+      // calculator disagree with every published figure on the site.
       case 'private-chef-dinner':
-        return (guestCount * 700_000 + 500_000) * multiplier
+        return guestCount * 700_000 * multiplier
       case 'catering-event':
         return (guestCount * 700_000 + 1_500_000) * multiplier
       case 'fine-dining-experience':
@@ -365,6 +370,34 @@ export default function PricingCalculator({
             <p className="mt-3 text-sm leading-relaxed text-white/[75%]">
               Staffing estimates include a starter crew of {baseWaiters} waiter{baseWaiters > 1 ? 's' : ''} for this guest range.
             </p>
+          )}
+          {serviceType === 'private-chef-dinner' && (
+            /*
+              This estimate is for a one-off event, priced per guest. Renting a chef for
+              a stay is a per-day product — publish those real rates here rather than
+              letting someone assume the per-guest figure applies to a week.
+            */
+            <div className="mt-4 rounded-2xl border border-[#C5A028]/30 bg-[#C5A028]/10 p-4">
+              <p className="text-sm font-semibold text-[#C5A028]">Renting a chef for several days?</p>
+              <p className="mt-1 text-sm leading-relaxed text-white/[75%]">
+                Priced per day, not per guest:{' '}
+                {MEAL_PLANS.map((plan, i) => (
+                  <span key={plan.key}>
+                    {i > 0 ? ' · ' : ''}
+                    {plan.meals} {plan.meals === 1 ? 'meal' : 'meals'}{' '}
+                    <strong className="text-white">{formatIDR(plan.daily)}++</strong>
+                  </span>
+                ))}
+                . Weekly −{STAY_DISCOUNTS.weekly.off * 100}%, monthly −
+                {STAY_DISCOUNTS.monthly.off * 100}%.
+              </p>
+              <Link
+                to="/private-chef-bali#prices"
+                className="mt-2 inline-block text-sm font-semibold text-[#C5A028] underline underline-offset-2"
+              >
+                See the full day rates →
+              </Link>
+            </div>
           )}
           <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/[80%]">
             <div className="flex items-center justify-between gap-4">

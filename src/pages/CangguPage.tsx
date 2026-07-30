@@ -19,7 +19,7 @@ const FAQS = [
   },
   {
     q: 'How much does private dining in Canggu cost?',
-    a: 'In-villa dinners start from IDR 700K per person, BBQ catering from IDR 700K–800K, and weekly chef service from IDR 2.25M++ per day at the weekly rate — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
+    a: 'In-villa dinners start from IDR 700K per person, BBQ catering from IDR 700K–800K, and weekly chef service from IDR 900K++ per day at the weekly rate — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
   },
   {
     q: 'Is a villa dinner worth it versus eating out in Canggu?',
@@ -71,7 +71,7 @@ const SERVICES = [
   },
   {
     name: 'Weekly chef service',
-    range: 'From IDR 2,250,000++ / day',
+    range: 'From IDR 900,000++ / day',
     for: '2 guests',
     detail: "Daily breakfasts, lunches and dinners planned around your household (weekly rate, 10% off standard).",
   },
@@ -251,7 +251,7 @@ export default function CangguPage() {
           <h2 className="font-playfair text-3xl md:text-4xl mb-6">Eating Well on a Long Canggu Stay</h2>
           <div className="prose prose-lg text-[#4A4745] max-w-none">
             <p className="mb-0 leading-relaxed">
-              If you're here for weeks, eating out twice a day gets old — and expensive — fast. The pattern that works for most long-stay households: cafés and warungs for spontaneous lunches, and a <Link to="/villa-chef" className="text-[#C5A028] hover:underline font-medium">daily villa chef service</Link> for the meals that matter. A consistent chef learns your household's preferences, manages the shopping and fridge, and builds menus that evolve across the stay. For the quieter end of the neighbourhood, see <Link to="/locations/pererenan" className="text-[#C5A028] hover:underline font-medium">the quieter Pererenan dining guide</Link>.
+              If you're here for weeks, eating out twice a day gets old — and expensive — fast. The pattern that works for most long-stay households: cafés and warungs for spontaneous lunches, and a <Link to="/private-chef-bali" className="text-[#C5A028] hover:underline font-medium">daily villa chef service</Link> for the meals that matter. A consistent chef learns your household's preferences, manages the shopping and fridge, and builds menus that evolve across the stay. For the quieter end of the neighbourhood, see <Link to="/locations/pererenan" className="text-[#C5A028] hover:underline font-medium">the quieter Pererenan dining guide</Link>.
             </p>
           </div>
         </div>

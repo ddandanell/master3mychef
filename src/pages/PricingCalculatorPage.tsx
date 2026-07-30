@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import { MEAL_PLANS, formatIDR as formatIDRFull, planDailyRate } from '@/data/siteFacts'
+import { Link } from 'react-router-dom'
 
 /**
  * Single source for the "What's included" block — rendered visibly below and
@@ -61,7 +63,7 @@ interface AddOn {
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 const SERVICES: ServiceOption[] = [
-  { id: 'private-chef-dinner', label: 'Private Chef Dinner', description: 'In-villa dinner experience with a dedicated chef', basePricePerPerson: 350000 },
+  { id: 'private-chef-dinner', label: 'Private Chef Dinner', description: 'One-off in-villa dinner, priced per guest. Hiring a chef for several days? See the day rates below.', basePricePerPerson: 700000 },
   { id: 'villa-catering', label: 'Villa Catering', description: 'Full catering service delivered to your villa', basePricePerPerson: 400000 },
   { id: 'wedding-catering', label: 'Wedding Catering', description: 'Elegant catering for your Bali wedding celebration', basePricePerPerson: 550000 },
   { id: 'corporate-event', label: 'Corporate Event', description: 'Professional catering for business events and retreats', basePricePerPerson: 480000 },
@@ -295,6 +297,47 @@ export default function PricingCalculatorPage() {
                       </div>
                     </button>
                   ))}
+                </div>
+
+                {/*
+                  This calculator prices one-off events per guest. Hiring a chef for a
+                  stay is a different product with a different unit (per day, not per
+                  person), so rather than fake it we publish the real rental rates here
+                  and hand off to the pillar. Figures come from MEAL_PLANS — never
+                  hardcode them.
+                */}
+                <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50/60 p-5">
+                  <p className="text-sm font-semibold text-amber-900">
+                    Renting a chef for your whole stay?
+                  </p>
+                  <p className="mt-1 text-sm text-stone-600">
+                    That is priced per day, not per guest — one chef plus a dedicated
+                    assistant, however many people you are.
+                  </p>
+                  <dl className="mt-4 grid gap-2 sm:grid-cols-3">
+                    {MEAL_PLANS.map((plan) => (
+                      <div key={plan.key} className="rounded-xl bg-white px-4 py-3">
+                        <dt className="text-xs text-stone-500">
+                          {plan.meals} {plan.meals === 1 ? 'meal' : 'meals'} a day
+                        </dt>
+                        <dd className="text-sm font-semibold text-stone-800">
+                          {formatIDRFull(plan.daily)}++
+                          <span className="font-normal text-stone-400"> /day</span>
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <p className="mt-3 text-xs text-stone-500">
+                    Weekly rate from {formatIDRFull(planDailyRate(MEAL_PLANS[0], 'weekly'))}++/day ·
+                    monthly from {formatIDRFull(planDailyRate(MEAL_PLANS[0], 'monthly'))}++/day ·
+                    groceries sourced by us and billed at cost.
+                  </p>
+                  <Link
+                    to="/private-chef-bali#prices"
+                    className="mt-3 inline-block text-sm font-semibold text-amber-800 underline underline-offset-2 hover:text-amber-900"
+                  >
+                    See the full private chef day rates →
+                  </Link>
                 </div>
               </div>
             )}

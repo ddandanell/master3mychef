@@ -12,7 +12,7 @@ const UniverseContext = createContext<UniverseContextType>({ universe: 'hub' })
 const PATH_TO_UNIVERSE: Record<string, Universe> = {
   '/': 'hub',
   '/fine-dining': 'luna',
-  '/villa-chef': 'sol',
+  '/private-chef-bali': 'sol',
   '/events': 'aura',
 }
 

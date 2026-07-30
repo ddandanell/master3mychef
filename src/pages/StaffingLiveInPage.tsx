@@ -300,7 +300,7 @@ export default function StaffingLiveInPage() {
             </li>
             <li className="flex items-start gap-3">
               <Check className="w-5 h-5 text-[#6B8E5A] mt-0.5 flex-shrink-0" />
-              <span><Link to="/hire-private-chef-bali-monthly" className="text-[#C5A028] hover:underline">Monthly chef hire</Link>: recurring chef service without an employment contract — suits long-stay guests and seasonal residents.</span>
+              <span><Link to="/private-chef-bali" className="text-[#C5A028] hover:underline">Monthly chef hire</Link>: recurring chef service without an employment contract — suits long-stay guests and seasonal residents.</span>
             </li>
           </ul>
           <p className="mt-8 text-center text-[#4A4745] max-w-2xl mx-auto">

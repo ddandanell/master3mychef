@@ -5,7 +5,7 @@ import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { ContactRiskReversal } from '@/components/shared'
-import { trackWhatsAppClick } from '@/lib/analytics'
+import { trackWhatsAppClick, trackFormStart, trackFormComplete } from '@/lib/analytics'
 import { siteFacts } from '@/data/siteFacts'
 
 const WA = 6289674072020
@@ -102,6 +102,12 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
   const [emailStatus, setEmailStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [form, setForm] = useState(INITIAL_FORM)
+  const [startTime] = useState(() => Date.now())
+
+  const handleFormChange = (field: keyof typeof INITIAL_FORM, value: string) => {
+    setForm((f) => ({ ...f, [field]: value }))
+    trackFormStart('contact-form', '/contact')
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -152,6 +158,8 @@ export default function ContactPage() {
     }
 
     const text = encodeURIComponent(`Hi myCHEF,\n\nI need help with a booking inquiry.\n\n${lines.join('\n')}`)
+    const timeToComplete = Math.round((Date.now() - startTime) / 1000)
+    trackFormComplete('contact-form', '/contact', form.service || 'other', timeToComplete)
     trackWhatsAppClick('contact-form')
     window.open(`https://wa.me/${WA}?text=${text}`, '_blank', 'noopener,noreferrer')
     setSubmitted(true)
@@ -358,28 +366,28 @@ export default function ContactPage() {
                   <Field
                     label="Service Needed"
                     value={form.service}
-                    onChange={(v) => setForm((f) => ({ ...f, service: v }))}
+                    onChange={(v) => handleFormChange('service', v)}
                     type="select"
                     options={SERVICE_OPTIONS}
                     required
                   />
-                  <Field label="Name" value={form.name} onChange={(v) => setForm((f) => ({ ...f, name: v }))} required />
-                  <Field label="WhatsApp" value={form.whatsapp} onChange={(v) => setForm((f) => ({ ...f, whatsapp: v }))} required />
-                  <Field label="Email" value={form.email} onChange={(v) => setForm((f) => ({ ...f, email: v }))} type="email" />
-                  <Field label="Company / Planner" value={form.company} onChange={(v) => setForm((f) => ({ ...f, company: v }))} />
-                  <Field label="Preferred Date(s)" value={form.dates} onChange={(v) => setForm((f) => ({ ...f, dates: v }))} />
-                  <Field label="Villa / Venue" value={form.location} onChange={(v) => setForm((f) => ({ ...f, location: v }))} />
-                  <Field label="Group Size" value={form.guests} onChange={(v) => setForm((f) => ({ ...f, guests: v }))} />
+                  <Field label="Name" value={form.name} onChange={(v) => handleFormChange('name', v)} required />
+                  <Field label="WhatsApp" value={form.whatsapp} onChange={(v) => handleFormChange('whatsapp', v)} required />
+                  <Field label="Email" value={form.email} onChange={(v) => handleFormChange('email', v)} type="email" />
+                  <Field label="Company / Planner" value={form.company} onChange={(v) => handleFormChange('company', v)} />
+                  <Field label="Preferred Date(s)" value={form.dates} onChange={(v) => handleFormChange('dates', v)} />
+                  <Field label="Villa / Venue" value={form.location} onChange={(v) => handleFormChange('location', v)} />
+                  <Field label="Group Size" value={form.guests} onChange={(v) => handleFormChange('guests', v)} />
                   <Field
                     label="Stay Length / Event Duration"
                     value={form.duration}
-                    onChange={(v) => setForm((f) => ({ ...f, duration: v }))}
+                    onChange={(v) => handleFormChange('duration', v)}
                   />
                   <div className="md:col-span-2">
                     <Field
                       label="Dietary / Cuisine Notes"
                       value={form.dietary}
-                      onChange={(v) => setForm((f) => ({ ...f, dietary: v }))}
+                      onChange={(v) => handleFormChange('dietary', v)}
                       multiline
                       rows={3}
                     />
@@ -388,7 +396,7 @@ export default function ContactPage() {
                     <Field
                       label="Planning Notes"
                       value={form.message}
-                      onChange={(v) => setForm((f) => ({ ...f, message: v }))}
+                      onChange={(v) => handleFormChange('message', v)}
                       multiline
                       rows={5}
                       required

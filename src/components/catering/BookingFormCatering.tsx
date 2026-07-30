@@ -1,7 +1,7 @@
 import { useEffect, useId, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Calendar, MessageSquare, Check, Phone } from 'lucide-react'
-import { trackWhatsAppClick } from '@/lib/analytics'
+import { trackWhatsAppClick, trackFormStart, trackFormComplete } from '@/lib/analytics'
 
 interface Field {
   name: string
@@ -62,6 +62,7 @@ export default function BookingFormCatering({
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState<Record<string, string>>({})
   const [errors, setErrors] = useState<Record<string, string>>({})
+  const [startTime] = useState(() => Date.now())
 
   const selectedPackage = useMemo(() => {
     const value = new URLSearchParams(location.search).get('package')?.trim()
@@ -88,6 +89,8 @@ export default function BookingFormCatering({
 
   const handleChange = (name: string, value: string) => {
     setFormData((prev) => ({ ...prev, [name]: value }))
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    trackFormStart(`catering-form-${slug}`, location.pathname, 'catering')
 
     const field = fieldsByName[name]
     if (!field) return
@@ -126,6 +129,8 @@ export default function BookingFormCatering({
     const intro = messageIntro ?? `Hi ${whatsappName}, I'd like help with ${title.toLowerCase()}.`
     const msg = [intro, lines.join('\n')].filter(Boolean).join('\n\n')
     const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    const timeToComplete = Math.round((Date.now() - startTime) / 1000)
+    trackFormComplete(`catering-form-${slug}`, location.pathname, 'catering', timeToComplete)
     trackWhatsAppClick(`catering-form-${slug}`)
     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer')
     setSubmitted(true)

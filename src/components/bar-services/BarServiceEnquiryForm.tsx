@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { Send, MessageCircle, Mail, CheckCircle, AlertCircle } from 'lucide-react'
 import { BAR_SERVICES } from '@/data/bar-services'
+import { trackFormStart, trackFormComplete } from '@/lib/analytics'
 
 const VENUE_TYPES = ['Hotel', 'Restaurant', 'Villa', 'Beach club', 'Café', 'Event company', 'Other']
 
@@ -17,6 +18,12 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
     preferredChannel: 'WhatsApp',
   })
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [startTime] = useState(() => Date.now())
+
+  const handleFieldChange = (update: Partial<typeof formData>) => {
+    setFormData((prev) => ({ ...prev, ...update }))
+    trackFormStart('bar-services-enquiry', '/bar-services', 'bar-services')
+  }
 
   const handleServiceToggle = (slug: string) => {
     setFormData((prev) => ({
@@ -25,6 +32,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
         ? prev.services.filter((s) => s !== slug)
         : [...prev.services, slug],
     }))
+    trackFormStart('bar-services-enquiry', '/bar-services', 'bar-services')
   }
 
   const handleSubmit = async (e: FormEvent) => {
@@ -52,6 +60,8 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
       })
 
       if (!response.ok) throw new Error('Email request failed')
+      const timeToComplete = Math.round((Date.now() - startTime) / 1000)
+      trackFormComplete('bar-services-enquiry', '/bar-services', 'bar-services', timeToComplete)
       setStatus('sent')
     } catch {
       setStatus('error')
@@ -88,7 +98,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
                 className="w-full bg-[#1A1A1A] border border-[#F5F2EB]/10 rounded-lg px-4 py-3 text-[#F5F2EB] placeholder:text-[#F5F2EB]/30 focus:border-[#C5A028]/50 focus:ring-1 focus:ring-[#C5A028]/30 outline-none transition-colors"
                 placeholder="Your full name"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) => handleFieldChange({ name: e.target.value })}
               />
             </div>
             <div>
@@ -101,7 +111,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
                 className="w-full bg-[#1A1A1A] border border-[#F5F2EB]/10 rounded-lg px-4 py-3 text-[#F5F2EB] placeholder:text-[#F5F2EB]/30 focus:border-[#C5A028]/50 focus:ring-1 focus:ring-[#C5A028]/30 outline-none transition-colors"
                 placeholder="e.g. The Lawn Beach Club"
                 value={formData.venue}
-                onChange={(e) => setFormData({ ...formData, venue: e.target.value })}
+                onChange={(e) => handleFieldChange({ venue: e.target.value })}
               />
             </div>
           </div>
@@ -119,7 +129,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
                 // reads as a second business phone in the rendered HTML.
                 placeholder="+62 8xx xxxx xxxx"
                 value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                onChange={(e) => handleFieldChange({ phone: e.target.value })}
               />
             </div>
             <div>
@@ -132,7 +142,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
                 className="w-full bg-[#1A1A1A] border border-[#F5F2EB]/10 rounded-lg px-4 py-3 text-[#F5F2EB] placeholder:text-[#F5F2EB]/30 focus:border-[#C5A028]/50 focus:ring-1 focus:ring-[#C5A028]/30 outline-none transition-colors"
                 placeholder="you@venue.com"
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) => handleFieldChange({ email: e.target.value })}
               />
             </div>
           </div>
@@ -146,7 +156,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
                 required
                 className="w-full bg-[#1A1A1A] border border-[#F5F2EB]/10 rounded-lg px-4 py-3 text-[#F5F2EB] focus:border-[#C5A028]/50 focus:ring-1 focus:ring-[#C5A028]/30 outline-none transition-colors appearance-none"
                 value={formData.venueType}
-                onChange={(e) => setFormData({ ...formData, venueType: e.target.value })}
+                onChange={(e) => handleFieldChange({ venueType: e.target.value })}
               >
                 <option value="">Select venue type</option>
                 {VENUE_TYPES.map((t) => (
@@ -163,7 +173,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
               <div className="flex gap-3">
                 <button
                   type="button"
-                  onClick={() => setFormData({ ...formData, preferredChannel: 'WhatsApp' })}
+                  onClick={() => handleFieldChange({ preferredChannel: 'WhatsApp' })}
                   className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg border transition-all ${
                     formData.preferredChannel === 'WhatsApp'
                       ? 'bg-[#C5A028]/10 border-[#C5A028]/40 text-[#C5A028]'
@@ -174,7 +184,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
                 </button>
                 <button
                   type="button"
-                  onClick={() => setFormData({ ...formData, preferredChannel: 'Email' })}
+                  onClick={() => handleFieldChange({ preferredChannel: 'Email' })}
                   className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg border transition-all ${
                     formData.preferredChannel === 'Email'
                       ? 'bg-[#C5A028]/10 border-[#C5A028]/40 text-[#C5A028]'
@@ -216,7 +226,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
               className="w-full bg-[#1A1A1A] border border-[#F5F2EB]/10 rounded-lg px-4 py-3 text-[#F5F2EB] placeholder:text-[#F5F2EB]/30 focus:border-[#C5A028]/50 focus:ring-1 focus:ring-[#C5A028]/30 outline-none transition-colors resize-none"
               placeholder="Tell us about your timeline, team size or biggest challenge..."
               value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              onChange={(e) => handleFieldChange({ message: e.target.value })}
             />
           </div>
 

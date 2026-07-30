@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useState } from 'react'
+import { useId, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Calendar, MessageSquare, Check, Phone } from 'lucide-react'
 import { trackWhatsAppClick, trackFormStart, trackFormComplete } from '@/lib/analytics'
@@ -75,17 +75,28 @@ export default function BookingFormCatering({
     [fields],
   )
 
-  useEffect(() => {
-    if (!selectedPackage) return
-
-    setFormData((prev) => (prev.package === selectedPackage ? prev : { ...prev, package: selectedPackage }))
-    setErrors((prev) => {
-      if (!prev.package) return prev
-      const next = { ...prev }
-      delete next.package
-      return next
-    })
-  }, [selectedPackage])
+  /**
+   * The effective field values: what the visitor has typed, with `?package=` from
+   * the URL filled in for the package field until they choose something else.
+   *
+   * Derived during render rather than synced into state by an effect. The previous
+   * version ran setFormData/setErrors inside a useEffect keyed on selectedPackage,
+   * which tripped react-hooks/set-state-in-effect — writing state in an effect body
+   * forces a second render pass on every arrival at a ?package= URL, and React's
+   * guidance is to compute values like this during render instead.
+   *
+   * Precedence is deliberate. `'package' in formData` — not a truthiness check —
+   * decides who wins, so a visitor who deliberately clears the select back to ''
+   * keeps their empty choice instead of having the URL value silently reappear.
+   *
+   * Read from `values` everywhere the form inspects what the visitor entered
+   * (validation, the WhatsApp message, the rendered inputs, the submit label).
+   * `formData` stays the raw record of typed input and is what handleChange writes.
+   */
+  const values = useMemo<Record<string, string>>(() => {
+    if (!selectedPackage || 'package' in formData) return formData
+    return { ...formData, package: selectedPackage }
+  }, [formData, selectedPackage])
 
   const handleChange = (name: string, value: string) => {
     setFormData((prev) => ({ ...prev, [name]: value }))
@@ -110,7 +121,7 @@ export default function BookingFormCatering({
 
     const nextErrors = Object.fromEntries(
       fields
-        .map((field) => [field.name, validateField(field, formData[field.name] || '')] as const)
+        .map((field) => [field.name, validateField(field, values[field.name] || '')] as const)
         .filter(([, error]) => Boolean(error)),
     )
 
@@ -121,7 +132,7 @@ export default function BookingFormCatering({
 
     const lines = fields
       .map((field) => {
-        const value = formData[field.name]?.trim()
+        const value = values[field.name]?.trim()
         if (!value) return null
         return `${field.waLabel ?? field.label}: ${value}`
       })
@@ -164,11 +175,11 @@ export default function BookingFormCatering({
     )
   }
 
-  const resolvedSubmitLabel = submitLabelBuilder ? submitLabelBuilder(formData) : submitLabel ?? 'Send via WhatsApp'
+  const resolvedSubmitLabel = submitLabelBuilder ? submitLabelBuilder(values) : submitLabel ?? 'Send via WhatsApp'
 
   const renderField = (field: Field) => {
     const Icon = field.icon
-    const value = formData[field.name] || ''
+    const value = values[field.name] || ''
     const fieldError = errors[field.name]
     const fieldId = `${formId}-${field.name}`
     const hintId = `${fieldId}-hint`

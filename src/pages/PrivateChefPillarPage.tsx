@@ -677,6 +677,14 @@ export default function PrivateChefPillarPage() {
             who has cooked it for years — so if you want Japanese on Tuesday and Balinese on
             Wednesday, you get the person who actually specialises in each one.
           </p>
+          <p className="text-white/65 mt-4 max-w-2xl leading-relaxed">
+            The six below are our <strong className="text-white">head chefs</strong>. Each one runs
+            their own brigade, and behind them sits a team of{' '}
+            <strong className="text-white">50+ professional chefs</strong> — sous chefs, commis,
+            pastry and kitchen staff trained to the same standard. Whoever cooks in your villa is
+            working to a head chef&rsquo;s recipes and a head chef&rsquo;s standard, not improvising
+            on their own.
+          </p>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-12">
             {CUISINE_CHEFS.map((c) => (
@@ -707,6 +715,21 @@ export default function PrivateChefPillarPage() {
                   </Link>
                 </div>
               </article>
+            ))}
+          </div>
+
+          {/* Owner ruling 2026-07-30: make the depth of the team explicit — the six
+              cards are head chefs only, each fronting a brigade, 50+ chefs in total. */}
+          <div className="mt-12 grid gap-5 sm:grid-cols-3 border-t border-white/10 pt-10">
+            {[
+              { n: '50+', l: 'Professional chefs on the team' },
+              { n: '6', l: 'Head chefs, each leading their own brigade' },
+              { n: '1–2', l: 'Support chefs on every booking, minimum' },
+            ].map(({ n, l }) => (
+              <div key={l}>
+                <p className="text-4xl font-playfair text-[#C5A028]">{n}</p>
+                <p className="text-white/60 text-sm mt-1.5 leading-relaxed">{l}</p>
+              </div>
             ))}
           </div>
 

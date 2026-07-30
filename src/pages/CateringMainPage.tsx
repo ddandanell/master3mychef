@@ -331,7 +331,14 @@ function getCateringRecommendation(guests: string, event: string): { title: stri
 export default function CateringMainPage() {
   const ref = useRef<HTMLDivElement>(null)
   const location = useLocation()
-  const [activeTab, setActiveTab] = useState<'one-time' | 'daily'>('one-time')
+  // Seeded from the hash during initialisation rather than corrected afterwards
+  // by an effect. Previously this started on 'one-time' and a useLayoutEffect
+  // switched it to 'daily', so arriving on /catering#daily-chef rendered the
+  // wrong tab first and then re-rendered — a visible flash of the one-time tab
+  // on the exact link that was supposed to open the daily one.
+  const [activeTab, setActiveTab] = useState<'one-time' | 'daily'>(() =>
+    typeof window !== 'undefined' && window.location.hash === '#daily-chef' ? 'daily' : 'one-time',
+  )
   const [decisionAnswers, setDecisionAnswers] = useState<(string | null)[]>([null, null, null])
   const [decisionResult, setDecisionResult] = useState<'one-time' | 'daily' | null>(null)
 
@@ -340,9 +347,21 @@ export default function CateringMainPage() {
   const [styleEvent, setStyleEvent] = useState<string>('')
   const styleRecommendation = styleGuests && styleEvent ? getCateringRecommendation(styleGuests, styleEvent) : null
 
-  /* Scroll to #daily-chef on mount if hash present */
+  /*
+   * Scroll to #daily-chef, and switch to the daily tab when the hash arrives
+   * AFTER mount (an in-page link to /catering#daily-chef while already on this
+   * page changes the hash without remounting, so initial state alone would miss
+   * it). The mount case is handled by the useState initialiser above.
+   *
+   * activeTab cannot be derived purely from the hash, because the tab buttons
+   * are also user-controllable — so this setState genuinely is a response to an
+   * external system changing, which is what effects are for. The rule cannot
+   * distinguish that from an accidental state mirror, hence the targeted
+   * disable rather than a refactor that would break tab clicks.
+   */
   useLayoutEffect(() => {
     if (location.hash === '#daily-chef') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveTab('daily')
       const timer = setTimeout(() => {
         const el = document.getElementById('daily-chef')

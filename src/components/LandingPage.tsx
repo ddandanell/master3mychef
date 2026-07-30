@@ -43,7 +43,10 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const mappedMeta = getPageMetaByPath(`/${entry.slug}`)
   const pageTitle = mappedMeta?.title ?? entry.title
   const pageDescription = mappedMeta?.description ?? entry.description
-  const pageH1 = mappedMeta?.h1 ?? (entry as any).h1 ?? entry.title
+  // `h1` is present on some entry shapes but not declared on the union, so it is
+  // read through a narrow cast rather than `as any` — this keeps the rest of
+  // `entry` type-checked instead of silently opting the whole object out.
+  const pageH1 = mappedMeta?.h1 ?? (entry as { h1?: string }).h1 ?? entry.title
   const heroImage = kind === 'landing' ? '/generated/hero-how-it-works.webp' : '/generated/luna-hero-v3.webp'
   const hubPath = kind === 'blog' ? '/journal' : kind === 'guide' ? '/help' : '/'
   const hubLabel = kind === 'blog' ? 'Journal' : kind === 'guide' ? 'Help' : 'Home'

@@ -19,5 +19,40 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      // Honour the leading-underscore convention the codebase already uses for
+      // intentionally-unused values. Without this, deliberately-kept signatures
+      // are reported as errors — e.g. aggregateRatingSchema(_ratingValue,
+      // _reviewCount) in SeoHead.tsx, whose args are kept on purpose (see the
+      // note above it about self-serving AggregateRating being rejected by
+      // Search Console), and _serviceType in StickyMobileCTA.tsx.
+      '@typescript-eslint/no-unused-vars': ['error', {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      }],
+
+      // Downgraded from error to warning on 2026-07-30.
+      //
+      // This rule only affects Vite's dev-time Fast Refresh: when a module
+      // exports something other than a component, editing it triggers a full
+      // page reload instead of a hot update. It has no effect on the production
+      // bundle whatsoever.
+      //
+      // All 28 violations were in 4 files, and every one is an idiomatic pattern
+      // rather than a mistake:
+      //   SeoHead.tsx (23)      component plus the JSON-LD schema builders it
+      //                         belongs with; splitting them would touch every
+      //                         import site to buy nothing at runtime
+      //   AllInPrice.tsx (3)    component plus its price helpers
+      //   ui/button.tsx (1)     shadcn/ui's canonical `buttonVariants` export
+      //   UniverseContext (1)   provider plus its hook — the standard React
+      //                         context shape
+      //
+      // Left as a warning rather than switched off, so genuinely careless cases
+      // still surface. Errors nobody intends to fix only teach people to ignore
+      // the linter.
+      'react-refresh/only-export-components': 'warn',
+    },
   },
 ])

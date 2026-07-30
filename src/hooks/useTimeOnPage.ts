@@ -9,7 +9,11 @@ const MILESTONES = [30, 60, 120, 180]
  */
 export function useTimeOnPage(pageSource: string): void {
   const firedRef = useRef<Set<number>>(new Set())
-  const startRef = useRef<number>(Date.now())
+  // Initialised to 0, not Date.now(). Calling Date.now() here would run on every
+  // render and be discarded after the first (react-hooks/purity), and the value
+  // was never used anyway — the effect below assigns the real start time before
+  // the interval can read it.
+  const startRef = useRef<number>(0)
 
   useEffect(() => {
     firedRef.current = new Set()

@@ -451,8 +451,8 @@ export function serviceEventSchema(params: {
 // NOTE: Self-serving AggregateRating on LocalBusiness/Organization is ineligible for Google
 // review-snippet rich results and is flagged "invalid" in Search Console, so the rating was
 // removed. This now returns the LocalBusiness entity only. Args kept for call-site compatibility.
-export function aggregateRatingSchema(_ratingValue: number, _reviewCount: number) {
-  return null as any
+export function aggregateRatingSchema(_ratingValue: number, _reviewCount: number): null {
+  return null
 }
 
 export function organizationSchema(

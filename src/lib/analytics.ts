@@ -1,6 +1,7 @@
 import { track } from '@vercel/analytics'
 import { capturePostHog } from './posthog'
 import { shouldExcludeFromAnalytics } from './analytics-privacy'
+import { attributionParams } from './attribution'
 
 // GA4 is loaded by the gtag snippet in index.html (measurement ID is set there),
 // which is what populates window.gtag. There is deliberately no measurement ID
@@ -241,14 +242,28 @@ export function trackEvent(event: string, params?: AnalyticsParams) {
   // which is earlier than this module executes.
   if (shouldExcludeFromAnalytics()) return
 
+  // Campaign attribution is merged in HERE rather than at each call site, so
+  // every conversion — including any added later — carries it automatically.
+  //
+  // Restricted to the conversion events on purpose. lead_ref on a scroll_depth
+  // event would be noise, and PostHog receives the full param object unfiltered,
+  // so widening this would inflate every payload for no analytical gain.
+  //
+  // Vercel is unaffected: toVercelEvent() selects named keys, so these extra
+  // params cannot push a billed event over the 2-property ceiling.
+  const CONVERSION_EVENTS = new Set(['generate_lead', 'form_complete', 'quote_submitted'])
+  const enriched = CONVERSION_EVENTS.has(event)
+    ? { ...params, ...attributionParams() }
+    : params
+
   // Fire to GA4 via gtag (works when VITE_GA_ID is set in .env)
-  window.gtag?.('event', event, params)
+  window.gtag?.('event', event, enriched)
 
   // GTM dataLayer fallback — always fires, even without GA_ID
   if (!window.dataLayer) window.dataLayer = []
   window.dataLayer.push({
     event,
-    ...params,
+    ...enriched,
     timestamp: new Date().toISOString()
   })
 
@@ -263,7 +278,7 @@ export function trackEvent(event: string, params?: AnalyticsParams) {
   // PostHog — full property set, no filtering. PII is scrubbed inside
   // capturePostHog's before_send hook rather than here, so it applies to
   // autocaptured events too.
-  capturePostHog(event, params)
+  capturePostHog(event, enriched)
 }
 
 /**

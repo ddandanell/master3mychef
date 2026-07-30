@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { appendLeadRef } from '@/lib/whatsapp'
 import { Link } from 'react-router-dom'
 import { trackWhatsAppClick } from '@/lib/analytics'
 import { useGSAP } from '@gsap/react'
@@ -133,7 +134,7 @@ export default function PartnersPage() {
     )
 
     trackWhatsAppClick('partners-form')
-    window.open(`https://wa.me/${WA}?text=${text}`, '_blank', 'noopener,noreferrer')
+    window.open(appendLeadRef(`https://wa.me/${WA}?text=${text}`), '_blank', 'noopener,noreferrer')
   }
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import { useId, useState } from 'react'
+import { appendLeadRef } from '@/lib/whatsapp'
 import { Calendar, Users, MapPin, Utensils, Check } from 'lucide-react'
 import { trackWhatsAppClick, trackFormStart, trackFormComplete } from '@/lib/analytics'
 
@@ -76,7 +77,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
     const timeToComplete = Math.round((Date.now() - startTime) / 1000)
     trackFormComplete(`booking-form-${universe}`, `booking-form`, universe, timeToComplete)
     trackWhatsAppClick(`booking-form-${universe}`)
-    window.open(`https://wa.me/${config.whatsappNumber}?text=${encodeURIComponent(fullMsg)}`, '_blank')
+    window.open(appendLeadRef(`https://wa.me/${config.whatsappNumber}?text=${encodeURIComponent(fullMsg)}`), '_blank')
     setSubmitted(true)
   }
 

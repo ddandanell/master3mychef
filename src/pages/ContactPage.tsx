@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { appendLeadRef } from '@/lib/whatsapp'
 import { MessageCircle, Mail, MapPin, ArrowRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
@@ -161,7 +162,7 @@ export default function ContactPage() {
     const timeToComplete = Math.round((Date.now() - startTime) / 1000)
     trackFormComplete('contact-form', '/contact', form.service || 'other', timeToComplete)
     trackWhatsAppClick('contact-form')
-    window.open(`https://wa.me/${WA}?text=${text}`, '_blank', 'noopener,noreferrer')
+    window.open(appendLeadRef(`https://wa.me/${WA}?text=${text}`), '_blank', 'noopener,noreferrer')
     setSubmitted(true)
   }
 

@@ -1,4 +1,5 @@
 import { useId, useMemo, useState } from 'react'
+import { appendLeadRef } from '@/lib/whatsapp'
 import { useLocation } from 'react-router-dom'
 import { Calendar, MessageSquare, Check, Phone } from 'lucide-react'
 import { trackWhatsAppClick, trackFormStart, trackFormComplete } from '@/lib/analytics'
@@ -143,7 +144,7 @@ export default function BookingFormCatering({
     const timeToComplete = Math.round((Date.now() - startTime) / 1000)
     trackFormComplete(`catering-form-${slug}`, location.pathname, 'catering', timeToComplete)
     trackWhatsAppClick(`catering-form-${slug}`)
-    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer')
+    window.open(appendLeadRef(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`), '_blank', 'noopener,noreferrer')
     setSubmitted(true)
   }
 

@@ -1227,11 +1227,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'fine-dining-private-chef-bali': {
     path: '/fine-dining/private-chef-bali',
-    title: 'Michelin-Trained Chefs Bali | Fine Dining at Your Villa',
+    title: 'Michelin Tasting Menu Bali | Fine Dining in Your Villa | myCHEF',
     description:
-      'Book a Michelin-trained private chef for your Bali villa. Tasting menus, wine pairing, 5-act dining experiences. Transparent pricing. WhatsApp myCHEF.',
+      'A five-course Michelin-trained tasting menu served in your Bali villa. Mediterranean or Wagyu, wine pairing, full chef brigade. From IDR 2.2M++ per person.',
     canonical: `${SITE}/fine-dining/private-chef-bali`,
-    h1: 'A Michelin-Trained Private Chef. At Your Space.',
+    h1: 'A Michelin-Trained Tasting Menu. In Your Villa.',
     ogImage: `${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`,
   },
 

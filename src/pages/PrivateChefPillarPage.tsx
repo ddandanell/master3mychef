@@ -30,6 +30,8 @@ import BookingForm from '@/components/BookingForm'
 import SeoHead, {
   breadcrumbSchema,
   faqPageSchema,
+  howToSchema,
+  personSchema,
   serviceWithAggregateOfferSchema,
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -37,6 +39,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import { ArticleContentSection, Breadcrumb, TrustStrip } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
+import { PUBLISHED_AREA_SLUGS } from '@/data/privateChefAreas'
 import {
   MEAL_PLANS,
   STAY_DISCOUNTS,
@@ -215,24 +218,9 @@ const HOW_IT_WORKS = [
   },
 ] as const
 
-const AREAS = [
-  'seminyak',
-  'canggu',
-  'ubud',
-  'uluwatu',
-  'jimbaran',
-  'nusa-dua',
-  'sanur',
-  'denpasar',
-  'pererenan',
-  'berawa',
-  'umalas',
-  'kerobokan',
-  'bukit',
-  'kuta',
-  'legian',
-  'tegallalang',
-] as const
+// Every published area page, pulled from the source of truth rather than a
+// hardcoded subset — the pillar is the parent of all 61, so it should link to all 61.
+const AREAS = PUBLISHED_AREA_SLUGS
 
 /**
  * Gallery. Four different moments of one chef day, so it reads as a service
@@ -341,6 +329,45 @@ export default function PrivateChefPillarPage() {
       priceCurrency: 'IDR',
       unitText: 'per day',
     }),
+    // Each meal plan as its own Offer, so the three rates are individually
+    // machine-readable rather than collapsing into a single price range.
+    {
+      '@context': 'https://schema.org',
+      '@type': 'OfferCatalog',
+      name: 'Private chef meal plans in Bali',
+      url: `${CANONICAL}#prices`,
+      itemListElement: MEAL_PLANS.map((plan, i) => ({
+        '@type': 'Offer',
+        position: i + 1,
+        name: plan.name,
+        description: plan.summary,
+        price: String(plan.daily),
+        priceCurrency: 'IDR',
+        url: `${CANONICAL}#prices`,
+        availability: 'https://schema.org/InStock',
+        eligibleQuantity: { '@type': 'QuantitativeValue', unitText: 'per day' },
+      })),
+    },
+    howToSchema({
+      name: 'How to hire a private chef in Bali',
+      description:
+        'Four steps to book a private chef for your Bali villa, from first message to the chef arriving.',
+      totalTime: 'PT2H',
+      steps: HOW_IT_WORKS.map(({ title, desc }) => ({ name: title, text: desc })),
+    }),
+    // Named head chefs carry the expertise claims on this page, so declare them
+    // as people rather than leaving them as decorative cards.
+    ...CUISINE_CHEFS.map((c) =>
+      personSchema({
+        name: c.chef,
+        jobTitle: c.role,
+        description: c.detail,
+        url: `${SITE}/chefs/${c.slug}`,
+        image: `${SITE}${c.image}`,
+        knowsAbout: [c.cuisine, ...c.dishes],
+        worksFor: { '@type': 'Organization', name: siteFacts.businessName, url: SITE },
+      }),
+    ),
     faqPageSchema(FAQS.map(({ q, a }) => ({ question: q, answer: a }))),
     breadcrumbSchema('Private Chef Bali', CANONICAL),
   ]

@@ -125,8 +125,8 @@ export default function PrivateChefBaliPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Michelin Private Chef Bali | Fine Dining at Your Villa"
-        description="Book a Michelin-trained private chef for your Bali villa. Tasting menus, wine pairing & full chef team. Transparent pricing. WhatsApp myCHEF."
+        title="Michelin Tasting Menu Bali | Fine Dining in Your Villa | myCHEF"
+        description="A five-course Michelin-trained tasting menu served in your Bali villa. Mediterranean or Wagyu, wine pairing, full chef brigade. From IDR 2.2M++ per person."
         canonical={`${SITE}/fine-dining/private-chef-bali`}
         ogImage={`${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`}
         jsonLd={[
@@ -138,7 +138,7 @@ export default function PrivateChefBaliPage() {
           offerSchema('Mediterranean Sea (5 courses)', 2200000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
           offerSchema('Wagyu Experience (5 courses)', 2400000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('Michelin Private Chef Bali', `${SITE}/fine-dining/private-chef-bali`, 'Fine Dining', `${SITE}/fine-dining`),
+          breadcrumbSchema('Michelin Tasting Menu', `${SITE}/fine-dining/private-chef-bali`, 'Fine Dining', `${SITE}/fine-dining`),
         ]}
       />
 
@@ -168,8 +168,8 @@ export default function PrivateChefBaliPage() {
             myCHEF.id · Private Chef Service · Bali
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            A Michelin-Trained Private Chef.<br />
-            <span className="italic">At Your Villa.</span>
+            A Michelin-Trained Tasting Menu.<br />
+            <span className="italic">In Your Villa.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-3 max-w-2xl mx-auto leading-relaxed">
             We arrive at your villa 3 hours early. We cook, serve every course, and leave your kitchen spotless.

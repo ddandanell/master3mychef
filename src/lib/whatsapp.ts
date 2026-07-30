@@ -74,6 +74,9 @@ import { getAttribution, getLeadRef } from './attribution'
  */
 const SHOW_REF_FOR_ORGANIC = true
 
+/** Opener used when a wa.me link carries no prefilled text of its own. */
+const DEFAULT_ENQUIRY_MESSAGE = "Hi myCHEF, I'd like to enquire about your services in Bali."
+
 /**
  * Appends the visitor's reference code to a wa.me URL's prefilled text.
  *
@@ -97,7 +100,15 @@ export function appendLeadRef(url: string): string {
     const ref = getLeadRef()
     if (!ref) return url
 
-    parsed.searchParams.set('text', `${existing}${existing ? ' ' : ''}(Ref: ${ref})`)
+    // Several CTAs are bare wa.me links with no prefilled text (PremiumPage,
+    // StaffingPage, ContactPage's contact row, BookingFormCatering's fallback).
+    // Appending the ref to an empty message would send a WhatsApp message whose
+    // entire body is "(Ref: MC-XXXXXX)" — which reads as spam to whoever opens it
+    // and tells the team nothing about what the person wants. Give those links a
+    // neutral opener so the ref is always attached to an actual sentence.
+    const body = existing || DEFAULT_ENQUIRY_MESSAGE
+
+    parsed.searchParams.set('text', `${body} (Ref: ${ref})`)
     return parsed.toString()
   } catch {
     return url

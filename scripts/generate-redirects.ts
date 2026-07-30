@@ -49,9 +49,25 @@ const vercelConfig = {
   //
   // Order matters: the /static/ rule MUST precede the catch-all, or asset requests get
   // sent to the ingestion host and 404. Keep in step with api_host in src/lib/posthog.ts.
+  //
+  // Use the regex form `(.*)` + `$1`, NOT the segment form `:path*`. Verified in a real
+  // browser on 2026-07-30: with `:path*` the asset GETs proxied fine (200) but the two
+  // POSTs that actually carry data both 404'd —
+  //
+  //   POST /ingest/e/  -> 404   (events)
+  //   POST /ingest/s/  -> 404   (session recording snapshots)
+  //
+  // because `:path*` matches path SEGMENTS and drops the trailing slash, so `/ingest/e/`
+  // was rewritten to `/e` rather than `/e/`. PostHog's ingestion endpoints require the
+  // trailing slash. The regex form passes the remainder through byte-for-byte.
+  //
+  // This failure mode is silent and easy to declare done too early: every asset returns
+  // 200, the SDK boots, remote config arrives and session recording reports itself as
+  // enabled — while nothing is actually stored. Check for POSTs to /ingest/e/ and
+  // /ingest/s/ returning 200, not just that the scripts load.
   rewrites: [
-    { source: '/ingest/static/:path*', destination: 'https://us-assets.i.posthog.com/static/:path*' },
-    { source: '/ingest/:path*', destination: 'https://us.i.posthog.com/:path*' },
+    { source: '/ingest/static/(.*)', destination: 'https://us-assets.i.posthog.com/static/$1' },
+    { source: '/ingest/(.*)', destination: 'https://us.i.posthog.com/$1' },
   ],
 
   redirects: [

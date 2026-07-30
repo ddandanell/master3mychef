@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ChefHat, X, UtensilsCrossed, Users, Cake, Briefcase, MessageCircle, Sparkles } from 'lucide-react'
-import { trackWhatsAppConversion } from '@/lib/analytics'
+import { trackWhatsAppConversion, trackEvent } from '@/lib/analytics'
 
 const WHATSAPP_NUMBER = '6289674072020'
 
@@ -169,7 +169,11 @@ export default function ConciergeWidget() {
           on viewports below md, this is hidden on any page that already renders
           StickyMobileCTA, so the yellow bar and this button never stack up. */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          const next = !isOpen
+          setIsOpen(next)
+          if (next) trackEvent('concierge_opened', { page_source: location.pathname })
+        }}
         aria-label="Open myCHEF Concierge"
         aria-expanded={isOpen}
         className="concierge-launcher fixed bottom-6 right-5 z-50 md:bottom-8 md:right-8 flex items-center gap-2 h-12 px-4 rounded-full bg-[#0D0C0A] border border-[#C5A028]/60 transition-all duration-200 hover:border-[#C5A028] hover:shadow-[0_0_20px_rgba(197,160,40,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A028]"

@@ -1,6 +1,6 @@
 import { useId, useState } from 'react'
 import { Calendar, Users, MapPin, Utensils, Check } from 'lucide-react'
-import { trackWhatsAppClick } from '@/lib/analytics'
+import { trackWhatsAppClick, trackFormStart, trackFormComplete } from '@/lib/analytics'
 
 interface BookingFormProps {
   universe: 'luna' | 'sol' | 'aura'
@@ -56,12 +56,14 @@ const IconMap = {
 
 export default function BookingForm({ universe, compact }: BookingFormProps) {
   const config = CONFIG[universe]
-  const formId = useId()
+  const reactFormId = useId()
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState<Record<string, string>>({})
+  const [startTime] = useState(() => Date.now())
 
   const handleChange = (name: string, value: string) => {
     setFormData((prev) => ({ ...prev, [name]: value }))
+    trackFormStart(`booking-form-${universe}`, `booking-form`, universe)
   }
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -71,6 +73,8 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
       .map(([k, v]) => `${k}: ${v}`)
       .join('\n')
     const fullMsg = `Hi ${config.whatsappName}, I'm interested in booking.\n\n${msg}`
+    const timeToComplete = Math.round((Date.now() - startTime) / 1000)
+    trackFormComplete(`booking-form-${universe}`, `booking-form`, universe, timeToComplete)
     trackWhatsAppClick(`booking-form-${universe}`)
     window.open(`https://wa.me/${config.whatsappNumber}?text=${encodeURIComponent(fullMsg)}`, '_blank')
     setSubmitted(true)
@@ -111,7 +115,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
 
       <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-5">
         {config.fields.map((field) => {
-          const fieldId = `${formId}-${field.name}`
+          const fieldId = `${reactFormId}-${field.name}`
           const IconComponent = IconMap[field.icon as keyof typeof IconMap]
 
           return (
@@ -153,13 +157,13 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
         })}
 
         <div>
-          <label htmlFor={`${formId}-notes`} className="block text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
+          <label htmlFor={`${reactFormId}-notes`} className="block text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-text-muted)', fontFamily: "'Cormorant Garamond', serif" }}>
             Special Requests
           </label>
           <div className="relative">
             <Calendar className="absolute left-4 top-4 w-4 h-4 opacity-0" />
             <textarea
-              id={`${formId}-notes`}
+              id={`${reactFormId}-notes`}
               rows={3}
               placeholder="Dietary restrictions, allergies, special occasions..."
               className="w-full pl-11 pr-4 py-3.5 rounded-xl border bg-transparent focus:ring-2 focus:ring-[var(--u-accent)] transition-all resize-none"

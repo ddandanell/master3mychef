@@ -231,7 +231,7 @@ The first deploy shipped correctly and recorded **nothing**. Three separate
 faults, each of which looked fine from every angle except the one that mattered.
 Recorded because all three are easy to reintroduce.
 
-### 9.1 Both PostHog domains were unreachable → the /ingest proxy
+### 9.1 The site's own CSP blocked PostHog → the /ingest proxy
 
 Measured in a real browser against the live site:
 
@@ -241,14 +241,34 @@ us.i.posthog.com          Failed to fetch
 mychef.id (control)       200
 ```
 
-Not a partial loss. posthog-js pulls remote config from `us-assets` during
-`init`; when that fails the SDK never finishes bootstrapping, sends no events
-and starts no recorder. **One blocked domain costs the entire visitor,
+**Cause: the Content-Security-Policy in `scripts/generate-redirects.ts`.** Its
+`connect-src` and `script-src` allow `'self'`, Google Tag Manager, Google
+Analytics and Vercel — and nothing from PostHog. So the browser refused every
+request to `us.i.posthog.com` and `us-assets.i.posthog.com`. "Failed to fetch"
+with no useful status is exactly what a CSP violation looks like from `fetch()`.
+
+This was originally misdiagnosed as an ad blocker or an Indonesian ISP block,
+on the strength of the symptom alone. It was neither, and the distinction
+matters: an ad blocker would have affected some fraction of visitors, whereas
+the CSP blocked **every single one**. That is why `ingested_event` stayed false
+even after PostHog was correctly installed and deployed — nobody could send
+anything.
+
+Not a partial loss either. posthog-js pulls remote config from `us-assets`
+during `init`; when that fails the SDK never finishes bootstrapping, sends no
+events and starts no recorder. **One blocked domain costs the entire visitor,
 silently.**
 
-Fixed by routing through `mychef.id/ingest/*` (first-party, so domain filters
-can't see it). Rewrites live in `scripts/generate-redirects.ts`; `api_host` is
-`/ingest` in `src/lib/posthog.ts`. The two must stay in step.
+Fixed by routing through `mychef.id/ingest/*`, which is same-origin and
+therefore already covered by `'self'`. Rewrites live in
+`scripts/generate-redirects.ts`; `api_host` is `/ingest` in
+`src/lib/posthog.ts`. The two must stay in step.
+
+> **If anyone ever removes the proxy and points `api_host` back at
+> `https://us.i.posthog.com`, they must also add `https://us.i.posthog.com` to
+> `connect-src` and `https://us-assets.i.posthog.com` to `script-src` in the CSP
+> — otherwise analytics silently dies again.** Keeping the proxy is the better
+> option: it needs no CSP widening at all.
 
 ### 9.2 `:path*` silently broke both POST endpoints
 

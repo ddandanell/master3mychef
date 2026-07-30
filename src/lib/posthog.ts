@@ -82,12 +82,18 @@ const POSTHOG_KEY =
  * `/ingest` is rewritten to PostHog by the `rewrites` block in vercel.json (generated
  * from scripts/generate-redirects.ts — edit it there, never in vercel.json).
  *
- * This is not a nicety. Verified in a real browser on 2026-07-30, minutes after the
- * first deploy: both us.i.posthog.com and us-assets.i.posthog.com failed outright
- * while mychef.id itself returned 200. posthog-js pulls its remote config from
- * us-assets during init, so when that host is blocked the SDK never finishes
- * bootstrapping — no events, no session recording, nothing. A single blocked domain
- * costs the whole visitor, silently.
+ * This is not a nicety — it is what the site's own Content-Security-Policy
+ * requires. The CSP in scripts/generate-redirects.ts allows 'self', Google and
+ * Vercel in connect-src/script-src and nothing from PostHog, so pointing api_host
+ * at https://us.i.posthog.com means the browser refuses every request. Verified on
+ * 2026-07-30, minutes after the first deploy: both us.i.posthog.com and
+ * us-assets.i.posthog.com failed outright while mychef.id itself returned 200.
+ *
+ * posthog-js pulls its remote config from us-assets during init, so when that host
+ * is blocked the SDK never finishes bootstrapping — no events, no session
+ * recording, nothing. A single blocked domain costs the whole visitor, silently.
+ *
+ * Do not "simplify" this back to the direct host without also widening the CSP.
  *
  * ui_host must stay set so links PostHog renders in the app still point at the real
  * dashboard rather than at mychef.id/ingest.

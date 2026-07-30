@@ -30,22 +30,32 @@ const vercelConfig = {
   // unaffected. See .github/workflows/deploy.yml.
   git: { deploymentEnabled: false },
 
-  // PostHog reverse proxy — REQUIRED, not an optimisation.
+  // PostHog reverse proxy — REQUIRED, and required by the CSP below.
   //
-  // Verified in a real browser on 2026-07-30, immediately after PostHog went live:
-  // both us.i.posthog.com and us-assets.i.posthog.com were unreachable ("Failed to
-  // fetch"), while a control request to mychef.id returned 200. The network log showed
-  // us-assets/.../config.js and exception-autocapture.js returning a synthesised 503,
-  // and ZERO requests ever reaching the ingestion host.
+  // The Content-Security-Policy further down this file allows 'self', Google Tag
+  // Manager, Google Analytics and Vercel in connect-src/script-src — and nothing
+  // from PostHog. So on 2026-07-30, with PostHog correctly installed and deployed,
+  // a real browser refused every request to us.i.posthog.com and
+  // us-assets.i.posthog.com ("Failed to fetch"; the network log showed a
+  // synthesised 503), while a control request to mychef.id returned 200. Zero
+  // requests ever reached the ingestion host and ingested_event stayed false.
+  //
+  // (Initially misread as an ad blocker. It was not — a blocker would hit some
+  // visitors, the CSP hit all of them.)
   //
   // That is fatal, not partial: posthog-js fetches its remote config from us-assets
   // during init. When that fetch fails the SDK never finishes bootstrapping, so it
   // sends no events and never starts the session recorder ($sesid absent). One blocked
   // host silently costs you the entire visitor — pageviews, funnel steps and replay.
   //
-  // Routing through mychef.id makes the traffic first-party, so domain-based blocking
-  // (extensions, DNS filters, ISP-level blocks — all three plausible for an audience of
-  // Western travellers on Indonesian networks) cannot see it.
+  // Routing through mychef.id/ingest makes the traffic same-origin, so it is already
+  // covered by 'self' and needs no CSP widening. It also happens to defeat
+  // domain-based ad/DNS blocking, which is a real secondary benefit for an audience
+  // of Western travellers — but the CSP is the reason this is mandatory.
+  //
+  // If you ever remove this proxy and point api_host back at us.i.posthog.com, you
+  // MUST add https://us.i.posthog.com to connect-src and
+  // https://us-assets.i.posthog.com to script-src, or analytics dies silently again.
   //
   // Order matters: the /static/ rule MUST precede the catch-all, or asset requests get
   // sent to the ingestion host and 404. Keep in step with api_host in src/lib/posthog.ts.

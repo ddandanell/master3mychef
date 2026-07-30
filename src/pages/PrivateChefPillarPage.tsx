@@ -363,13 +363,13 @@ export default function PrivateChefPillarPage() {
         <OptimizedImage
           src="/generated/mychef-experience-bali-home-hero-ivory-villa.webp"
           alt="Private chef cooking and serving dinner in a Bali villa for a group of guests"
-          className="absolute inset-0 w-full h-full object-cover opacity-55"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.72]"
           width={1600}
           height={1067}
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] via-[#0E0E0E]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] via-[#0E0E0E]/55 to-[#0E0E0E]/10" />
 
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pb-16 pt-32 w-full">
           <Breadcrumb items={[{ label: 'Private Chef Bali' }]} theme="dark" />
@@ -687,7 +687,7 @@ export default function PrivateChefPillarPage() {
                 <OptimizedImage
                   src={c.image}
                   alt={`${c.chef}, ${c.role} at myCHEF Bali`}
-                  className="w-full h-56 object-cover"
+                  className="w-full aspect-[4/5] object-cover object-top"
                   width={900}
                   height={900}
                 />

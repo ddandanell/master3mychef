@@ -378,7 +378,7 @@ export default function PrivateChefPillarPage() {
             Private Chef Hire · Villas Across All of Bali
           </p>
 
-          <h1 className="text-white font-light leading-[1.05] text-[2.4rem] sm:text-6xl lg:text-7xl max-w-4xl">
+          <h1 className="text-white font-playfair font-normal leading-[1.05] text-[2.4rem] sm:text-6xl lg:text-7xl max-w-4xl">
             Private Chef in Bali
             <span className="block italic text-[#C5A028] mt-2">
               From {formatIDR(MEAL_PLANS[0].daily)} a day.
@@ -421,7 +421,7 @@ export default function PrivateChefPillarPage() {
       <section id="prices" className="bg-[#FAF8F4] py-20 sm:py-28 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">Prices</p>
-          <h2 className="text-3xl sm:text-5xl font-light text-[#1A1A1A] leading-tight max-w-3xl">
+          <h2 className="text-3xl sm:text-5xl font-playfair text-[#1A1A1A] leading-tight max-w-3xl">
             How much does a private chef in Bali cost?
           </h2>
           <p className="text-[#1A1A1A]/65 mt-5 max-w-2xl leading-relaxed">
@@ -451,9 +451,9 @@ export default function PrivateChefPillarPage() {
                 <p className="text-[#C5A028] text-[11px] tracking-[0.2em] uppercase">
                   {plan.meals} {plan.meals === 1 ? 'meal' : 'meals'} a day
                 </p>
-                <h3 className="text-2xl font-light text-[#1A1A1A] mt-2">{plan.name}</h3>
+                <h3 className="text-2xl font-playfair text-[#1A1A1A] mt-2">{plan.name}</h3>
 
-                <p className="text-4xl font-light text-[#1A1A1A] mt-6 tabular-nums">
+                <p className="text-4xl font-playfair text-[#1A1A1A] mt-6 tabular-nums">
                   {formatIDR(plan.daily)}
                   <span className="text-base text-[#1A1A1A]/45 font-normal">++</span>
                 </p>
@@ -499,7 +499,7 @@ export default function PrivateChefPillarPage() {
           </div>
 
           {/* Length-of-stay table */}
-          <h3 className="text-2xl font-light text-[#1A1A1A] mt-20 mb-3">
+          <h3 className="text-2xl font-playfair text-[#1A1A1A] mt-20 mb-3">
             Staying longer? The day rate drops.
           </h3>
           <p className="text-[#1A1A1A]/60 max-w-2xl text-sm leading-relaxed mb-7">
@@ -576,7 +576,7 @@ export default function PrivateChefPillarPage() {
       <section className="bg-white py-20 sm:py-24">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 grid gap-14 lg:grid-cols-2">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-light text-[#1A1A1A] leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
               What your daily rate covers
             </h2>
             <ul className="mt-8 space-y-3.5">
@@ -590,7 +590,7 @@ export default function PrivateChefPillarPage() {
           </div>
 
           <div>
-            <h2 className="text-3xl sm:text-4xl font-light text-[#1A1A1A] leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
               What is billed separately
             </h2>
             <p className="text-[#1A1A1A]/60 text-sm mt-3">
@@ -615,8 +615,8 @@ export default function PrivateChefPillarPage() {
           <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">
             Ingredients &amp; sourcing
           </p>
-          <h2 className="text-3xl sm:text-5xl font-light text-[#1A1A1A] leading-tight max-w-3xl">
-            We do the shopping. You just pay what it cost.
+          <h2 className="text-3xl sm:text-5xl font-playfair text-[#1A1A1A] leading-tight max-w-3xl">
+            We do the shopping. You only pay what it cost us.
           </h2>
           <p className="text-[#1A1A1A]/65 mt-5 max-w-2xl leading-relaxed">
             This is the part people misunderstand, so here it is plainly. Sourcing your food is a
@@ -669,7 +669,7 @@ export default function PrivateChefPillarPage() {
       <section id="cuisines" className="bg-[#0E0E0E] py-20 sm:py-28 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">Our chefs</p>
-          <h2 className="text-3xl sm:text-5xl font-light text-white leading-tight max-w-3xl">
+          <h2 className="text-3xl sm:text-5xl font-playfair text-white leading-tight max-w-3xl">
             A specialist head chef for every cuisine.
           </h2>
           <p className="text-white/65 mt-5 max-w-2xl leading-relaxed">
@@ -695,7 +695,7 @@ export default function PrivateChefPillarPage() {
                   <p className="text-[#C5A028] text-[11px] tracking-[0.18em] uppercase">
                     {c.cuisine}
                   </p>
-                  <h3 className="text-xl font-light text-white mt-2">{c.chef}</h3>
+                  <h3 className="text-xl font-playfair text-white mt-2">{c.chef}</h3>
                   <p className="text-white/45 text-xs mt-1">{c.role}</p>
                   <p className="text-white/70 text-sm mt-4 leading-relaxed flex-1">{c.detail}</p>
                   <p className="text-white/40 text-xs mt-4 italic">{c.dishes.join(' · ')}</p>
@@ -724,7 +724,7 @@ export default function PrivateChefPillarPage() {
       {/* --------------------------------------------------- HOW IT WORKS */}
       <section className="bg-[#FAF8F4] py-20 sm:py-24">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-[#1A1A1A] leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
             How to hire a private chef in Bali
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-12">
@@ -743,7 +743,7 @@ export default function PrivateChefPillarPage() {
       {/* -------------------------------------------------------- VALUE */}
       <section className="bg-white py-20 sm:py-24">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-[#1A1A1A] leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
             Is hiring a private chef in Bali worth it?
           </h2>
           <div className="prose prose-lg mt-7 text-[#1A1A1A]/75 max-w-none space-y-5 leading-relaxed">
@@ -797,7 +797,7 @@ export default function PrivateChefPillarPage() {
           <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">
             We come to you
           </p>
-          <h2 className="text-3xl sm:text-4xl font-light text-[#1A1A1A] leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
             Private chef service for villas across all of Bali
           </h2>
           <p className="text-[#1A1A1A]/65 mt-5 max-w-2xl leading-relaxed">
@@ -829,7 +829,7 @@ export default function PrivateChefPillarPage() {
       {/* ------------------------------------------------------- GALLERY */}
       <section className="bg-white pb-20 sm:pb-24">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-[#1A1A1A] leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
             What a private chef day in a Bali villa looks like
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-10">
@@ -850,7 +850,7 @@ export default function PrivateChefPillarPage() {
       {/* ----------------------------------------------------------- FAQ */}
       <section className="bg-white py-20 sm:py-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl font-light text-[#1A1A1A] leading-tight mb-10">
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight mb-10">
             Private chef Bali — frequently asked questions
           </h2>
           <FAQAccordion items={FAQS.map(({ q, a }) => ({ q, a }))} defaultOpenCount={2} />
@@ -863,7 +863,7 @@ export default function PrivateChefPillarPage() {
           <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4 text-center">
             Book your chef
           </p>
-          <h2 className="text-3xl sm:text-5xl font-light text-white leading-tight text-center">
+          <h2 className="text-3xl sm:text-5xl font-playfair text-white leading-tight text-center">
             Tell us your dates.
           </h2>
           <p className="text-white/60 text-center mt-5 max-w-xl mx-auto leading-relaxed">

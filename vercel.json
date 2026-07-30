@@ -481,7 +481,7 @@
     },
     {
       "source": "/in-villa-service/villa-chef",
-      "destination": "/villa-chef",
+      "destination": "/private-chef-bali",
       "permanent": true
     },
     {
@@ -496,7 +496,7 @@
     },
     {
       "source": "/in-villa-service/meal-prep",
-      "destination": "/villa-chef",
+      "destination": "/private-chef-bali",
       "permanent": true
     },
     {
@@ -585,8 +585,13 @@
       "permanent": true
     },
     {
-      "source": "/private-chef-bali",
-      "destination": "/fine-dining/private-chef-bali",
+      "source": "/villa-chef",
+      "destination": "/private-chef-bali",
+      "permanent": true
+    },
+    {
+      "source": "/hire-private-chef-bali-monthly",
+      "destination": "/private-chef-bali",
       "permanent": true
     },
     {
@@ -736,12 +741,12 @@
     },
     {
       "source": "/blog/private-chef-bali-expats",
-      "destination": "/hire-private-chef-bali-monthly",
+      "destination": "/private-chef-bali",
       "permanent": true
     },
     {
       "source": "/blog/daily-chef-service-bali",
-      "destination": "/hire-private-chef-bali-monthly",
+      "destination": "/private-chef-bali",
       "permanent": true
     },
     {

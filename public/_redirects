@@ -92,10 +92,10 @@
 /getting-started  /help/getting-started  301
 /events/corporate  /events/corporate-events  301
 /events/proposals  /events  301
-/in-villa-service/villa-chef  /villa-chef  301
+/in-villa-service/villa-chef  /private-chef-bali  301
 /in-villa-service/breakfast-service  /catering/floating-breakfast  301
 /in-villa-service/cooking-class  /contact  301
-/in-villa-service/meal-prep  /villa-chef  301
+/in-villa-service/meal-prep  /private-chef-bali  301
 /staffing/chef-recruitment  /staffing/private-chef-placement  301
 /staffing/event-staff  /staffing/villa-staff  301
 /blog/chef-hiring-guide  /blog/chef-qualifications-credentials-bali-hiring  301
@@ -113,7 +113,8 @@
 /locations/amed  /locations/sanur  301
 /locations/candidasa  /locations/sanur  301
 /locations/lovina  /locations/sanur  301
-/private-chef-bali  /fine-dining/private-chef-bali  301
+/villa-chef  /private-chef-bali  301
+/hire-private-chef-bali-monthly  /private-chef-bali  301
 /private-chef-bali/seminyak  /private-chef/seminyak  301
 /private-chef-bali/canggu  /private-chef/canggu  301
 /private-chef-bali/uluwatu  /private-chef/uluwatu  301
@@ -143,8 +144,8 @@
 /blog/private-chef-pererenan-guide  /private-chef/pererenan  301
 /blog/private-chef-denpasar-guide  /private-chef/denpasar  301
 /blog/private-chef-nusa-dua-guide  /private-chef/nusa-dua  301
-/blog/private-chef-bali-expats  /hire-private-chef-bali-monthly  301
-/blog/daily-chef-service-bali  /hire-private-chef-bali-monthly  301
+/blog/private-chef-bali-expats  /private-chef-bali  301
+/blog/daily-chef-service-bali  /private-chef-bali  301
 /blog/household-chef-bali-hiring-guide  /staffing/household-staff  301
 /blog/villa-staff-bali-hiring-guide  /staffing/villa-staff  301
 /blog/chef-placement-agency-bali  /staffing/private-chef-placement  301

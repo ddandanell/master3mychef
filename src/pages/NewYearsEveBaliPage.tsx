@@ -226,8 +226,8 @@ export default function NewYearsEveBaliPage() {
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
-          headline: "New Year\'s Eve Bali: Private Chef Villa Dinner",
-          description: "Book a private chef for New Year\'s Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30.",
+          headline: "New Year's Eve Bali: Private Chef Villa Dinner",
+          description: "Book a private chef for New Year's Eve at your Bali villa. Tasting menus, midnight champagne, bespoke celebrations. Groups 2–30.",
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
           datePublished: '2026-06-29',

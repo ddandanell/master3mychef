@@ -194,7 +194,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Dietary Options',
     title: 'Vegetarian, Cooked and Gluten-Sensitive Menus',
-    body: `<p>Vegetarian, vegan, cooked-seafood and pescatarian menus can be arranged, and gluten-sensitive guests can be offered tamari and suitable ingredients. Raw-fish-free, shellfish-free, pork-free and children\'s menus are all possible — tell us at booking.</p>
+    body: `<p>Vegetarian, vegan, cooked-seafood and pescatarian menus can be arranged, and gluten-sensitive guests can be offered tamari and suitable ingredients. Raw-fish-free, shellfish-free, pork-free and children's menus are all possible — tell us at booking.</p>
 
     <p>Guests with serious allergies must provide complete written information before booking. Because classes take place in third-party villa kitchens, a completely allergen-free environment cannot be guaranteed.</p>`,
   },

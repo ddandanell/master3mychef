@@ -7,7 +7,7 @@ const SECTIONS: PageSection[] = [
     type: 'content',
     subtitle: 'Nusa Dua Private Chef',
     title: 'Why Nusa Dua Is Bali\'s Premier Destination for Private Chef Dining',
-    body: `<p>Nusa Dua is unlike anywhere else in Bali. A purpose-built luxury enclave on the southern Bukit Peninsula, it hosts the island\'s highest concentration of five-star resort hotels, gated villa compounds, and world-class beach clubs. Guests here arrive expecting the finest — and a <a href="/services" class="text-[#7E6410] hover:underline font-medium">private chef</a> delivers exactly that, bringing restaurant-calibre cuisine directly into your villa or resort suite.</p>
+    body: `<p>Nusa Dua is unlike anywhere else in Bali. A purpose-built luxury enclave on the southern Bukit Peninsula, it hosts the island's highest concentration of five-star resort hotels, gated villa compounds, and world-class beach clubs. Guests here arrive expecting the finest — and a <a href="/services" class="text-[#7E6410] hover:underline font-medium">private chef</a> delivers exactly that, bringing restaurant-calibre cuisine directly into your villa or resort suite.</p>
     <p>The area is defined by its exclusivity. Wide boulevards, manicured grounds, and international hotel brands sit alongside private residential villas that regularly host honeymooners, corporate retreats, and multi-generational family holidays. A private chef experience fits this environment perfectly — it matches the standard of service guests already expect, while adding a level of personalisation no hotel restaurant can match.</p>
     <p>Whether you are staying in a beachfront villa, a resort-managed bungalow, or a private compound within the BTDC zone, myCHEF chefs are fully briefed on working within Nusa Dua properties and coordinating with villa managers and resort concierge teams to deliver a seamless service.</p>`,
   },
@@ -16,8 +16,8 @@ const SECTIONS: PageSection[] = [
     type: 'content',
     subtitle: 'Menu & Cuisine',
     title: 'Fresh Seafood, Indonesian Classics, and International Fine Dining',
-    body: `<p>Nusa Dua\'s proximity to the sea means the freshest catch is always available. Grilled jimbaran-style seafood, whole fish in aromatic Balinese spice, and chilled prawns with sambal matah are perennial guest favourites that showcase local produce at its best.</p>
-    <p>Guests also frequently request Indonesian tasting menus — a curated progression through the archipelago\'s most celebrated dishes. From fragrant Javanese <em>opor ayam</em> to slow-braised Balinese <em>babi guling</em>-inspired pork and layered Sumatran rendang, a private chef can bring the full breadth of Indonesian cuisine to your dining table without the need to leave the villa.</p>
+    body: `<p>Nusa Dua's proximity to the sea means the freshest catch is always available. Grilled jimbaran-style seafood, whole fish in aromatic Balinese spice, and chilled prawns with sambal matah are perennial guest favourites that showcase local produce at its best.</p>
+    <p>Guests also frequently request Indonesian tasting menus — a curated progression through the archipelago's most celebrated dishes. From fragrant Javanese <em>opor ayam</em> to slow-braised Balinese <em>babi guling</em>-inspired pork and layered Sumatran rendang, a private chef can bring the full breadth of Indonesian cuisine to your dining table without the need to leave the villa.</p>
     <p>For guests who prefer international fine dining, myCHEF chefs are trained in European, Japanese, and fusion cuisines. A seven-course Western tasting menu with wine pairings, a Japanese omakase, or a Mediterranean mezze spread — your chef will design a menu around your preferences and dietary requirements.</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
       <li><strong>Fresh Seafood:</strong> Daily market catches — grilled, steamed, or cured — with Balinese spice rubs and sambal accompaniments.</li>
@@ -48,7 +48,7 @@ const SECTIONS: PageSection[] = [
       <li><strong>Premium dining (4–5 courses):</strong> IDR 850,000 – 1,200,000 per person. Restaurant-quality plated service, broader menu selection, suitable for couples and celebrations.</li>
       <li><strong>Fine dining / tasting menus (6–8 courses):</strong> IDR 1,200,000 – 1,500,000 per person. Michelin-calibre technique, premium ingredients including local seafood and imported produce, paired with wine recommendations.</li>
     </ul>
-    <p style="margin-top:0.75rem;">Pricing per person decreases as group size increases — the fixed cost of the chef\'s time is spread across more guests. Additional costs include ingredient upgrades (truffle, wagyu, fresh lobster), wine and cocktail service, and optional staffing such as a dedicated waiter or sommelier.</p>
+    <p style="margin-top:0.75rem;">Pricing per person decreases as group size increases — the fixed cost of the chef's time is spread across more guests. Additional costs include ingredient upgrades (truffle, wagyu, fresh lobster), wine and cocktail service, and optional staffing such as a dedicated waiter or sommelier.</p>
     <p>For a detailed breakdown, visit our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing guide</a> or use the <a href="/calculator" class="text-[#7E6410] hover:underline font-medium">cost calculator</a> to estimate your specific booking.</p>`,
   },
   {
@@ -121,7 +121,7 @@ export default function PrivateChefNusaDuaGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Nusa Dua Location Page', href: '/locations/nusa-dua', desc: "Overview of myCHEF\'s private chef services in Nusa Dua." },
+        { label: 'Nusa Dua Location Page', href: '/locations/nusa-dua', desc: "Overview of myCHEF's private chef services in Nusa Dua." },
         { label: 'Browse Our Chefs', href: '/chefs', desc: 'Meet the myCHEF team and find the right chef for your stay.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef costs in Bali.' },
         { label: 'Fine Dining Guide', href: '/blog/fine-dining-guide', desc: 'Everything you need to know about private chef tasting menus.' },

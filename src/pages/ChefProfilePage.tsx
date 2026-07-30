@@ -126,23 +126,23 @@ const CHEFS_DATA: Record<string, ChefData> = {
     name: 'I Made Surya',
     role: 'Head Chef — Mediterranean',
     origin: 'Ubud, Bali',
-    badge: "Ubud-born · Trained through myCHEF\'s in-house program under Adriano",
+    badge: "Ubud-born · Trained through myCHEF's in-house program under Adriano",
     portrait: '/generated/chef-made-surya-portrait.webp',
     portraitAlt: 'I Made Surya — Head Chef Mediterranean at myCHEF Bali',
     specialty: 'Handmade Pasta & Seafood',
     cuisine: ['Handmade pasta', 'Mediterranean seafood', 'Set menus', 'Clean Italian technique'],
     shortBio:
-      "Surya is the calm hand behind many of our Mediterranean set menus. He combines Adriano\'s technique with deep Balinese market knowledge, turning just-caught seafood, handmade pasta, and clean sauces into elegant villa dinners.",
+      "Surya is the calm hand behind many of our Mediterranean set menus. He combines Adriano's technique with deep Balinese market knowledge, turning just-caught seafood, handmade pasta, and clean sauces into elegant villa dinners.",
     fullBio: [
       'I Made Surya was born in Ubud and grew up close to the wet markets and rice fields that define Balinese food culture from the ground up. He learned to cook traditional Balinese dishes before he ever picked up a professional knife — which means his understanding of fresh produce, spice balance, and seasonal ingredients is instinctive rather than textbook.',
-      "He joined myCHEF through the company\'s in-house training program and was mentored directly by Adriano over a 12-month period. That immersion covered Italian pasta-making technique, Mediterranean plating, sauce construction, and the timing and pacing required to run a fine-dining service inside an unfamiliar villa kitchen.",
+      "He joined myCHEF through the company's in-house training program and was mentored directly by Adriano over a 12-month period. That immersion covered Italian pasta-making technique, Mediterranean plating, sauce construction, and the timing and pacing required to run a fine-dining service inside an unfamiliar villa kitchen.",
       'Today Surya leads Mediterranean villa menus and is the chef guests ask back by name. His handmade pasta is consistently one of the most requested dishes across the entire myCHEF catalogue — particularly his tagliolini with fresh seafood from the Jimbaran market, finished with local citrus and olive oil.',
       'What makes Surya exceptional is the combination: Adriano\'s European technique applied through a palate shaped by Bali. He selects his ingredients at market before dawn, adapts to what\'s freshest rather than forcing a fixed menu, and delivers food that feels considered rather than executed. For guests who want the experience of a Michelin-trained kitchen without the formality, Surya is the answer.',
     ],
     achievements: [
       'Leads Mediterranean villa menus across Bali',
       'Known for fresh handmade pasta and seafood timing',
-      "Completed myCHEF\'s 12-month in-house training under Adriano",
+      "Completed myCHEF's 12-month in-house training under Adriano",
       'Guest favourite for intimate 6–12 person villa dinners',
       'Selects produce personally from Jimbaran and Ubud markets',
     ],
@@ -160,7 +160,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
       },
       {
         title: 'Fresh Pasta Experience',
-        desc: "Surya\'s signature: handmade pasta rolled that morning, served in 2–3 courses with seasonal sauces and fresh Bali seafood. Great for guests who want something specific and memorable.",
+        desc: "Surya's signature: handmade pasta rolled that morning, served in 2–3 courses with seasonal sauces and fresh Bali seafood. Great for guests who want something specific and memorable.",
       },
       {
         title: 'Seafood Feast',
@@ -168,7 +168,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
       },
       {
         title: 'Group Dinner (6–15 guests)',
-        desc: "Surya\'s most natural format. He manages large villa tables with ease — food lands hot, wines pour on rhythm, and every guest gets the same quality regardless of where they\'re seated.",
+        desc: "Surya's most natural format. He manages large villa tables with ease — food lands hot, wines pour on rhythm, and every guest gets the same quality regardless of where they're seated.",
       },
     ],
     perfectFor: [
@@ -187,12 +187,12 @@ const CHEFS_DATA: Record<string, ChefData> = {
       {
         question: 'What pasta dishes does Surya specialise in?',
         answer:
-          "Surya\'s signature is tagliolini with fresh seafood, but he also makes cacio e pepe, carbonara, and seasonal filled pasta (tortellini, ravioli) depending on the menu. All pasta is handmade from scratch on the day of your dinner.",
+          "Surya's signature is tagliolini with fresh seafood, but he also makes cacio e pepe, carbonara, and seasonal filled pasta (tortellini, ravioli) depending on the menu. All pasta is handmade from scratch on the day of your dinner.",
       },
       {
         question: 'Is Surya\'s food strictly Italian?',
         answer:
-          "No — Surya uses Italian and Mediterranean technique but stays connected to Bali\'s ingredients. You\'ll find Jimbaran seafood, local citrus, and Balinese spice notes blended into what is otherwise a clean European style of cooking.",
+          "No — Surya uses Italian and Mediterranean technique but stays connected to Bali's ingredients. You'll find Jimbaran seafood, local citrus, and Balinese spice notes blended into what is otherwise a clean European style of cooking.",
       },
       {
         question: 'How many guests can Surya cook for?',
@@ -224,10 +224,10 @@ const CHEFS_DATA: Record<string, ChefData> = {
     shortBio:
       'Bayu runs our BBQ and grill experiences with the confidence of someone who grew up cooking over live fire. From wagyu and lobster to whole fish and satay, he keeps the energy relaxed while every protein lands perfectly cooked.',
     fullBio: [
-      "Bayu Pranata was born and raised in Jimbaran — the fishing village on Bali\'s southwest coast that built its entire identity around seafood grilled over coconut charcoal. Before he ever worked in a professional kitchen, Bayu spent his formative years around the beachside warungs that made Jimbaran famous, absorbing the rhythms of live-fire cooking from people who had been doing it for generations.",
+      "Bayu Pranata was born and raised in Jimbaran — the fishing village on Bali's southwest coast that built its entire identity around seafood grilled over coconut charcoal. Before he ever worked in a professional kitchen, Bayu spent his formative years around the beachside warungs that made Jimbaran famous, absorbing the rhythms of live-fire cooking from people who had been doing it for generations.",
       "That foundation gave Bayu something formal culinary training rarely produces: an instinct for heat. He reads fire the way most chefs read a timer — by sight, sound, and smell. A wagyu rump needs three minutes per side over indirect heat. A whole snapper needs to come off before the skin splits. A lobster tail wants a basting brush every 45 seconds. Bayu manages all of this simultaneously, across multiple grill stations, without written notes or printed checklists.",
       'He joined myCHEF to bring that skill set into villa settings — specifically the large-group poolside BBQs that became one of the most booked experience types in Bali as villa rentals grew. Bayu now leads grill events from Seminyak to Nusa Dua and regularly serves groups of 30, 50, even 80 guests for celebrations that run poolside from sunset into the night.',
-      "His menus blend international grill technique with Indonesian tradition. A Bayu Pranata event might open with satay, move through wagyu striploin and grilled lobster, and land on a whole pig or babi guling as the centrepiece. It\'s the kind of cooking that works for every table — from food-obsessed guests who want the perfect char on their steak, to families who just want something generous, fragrant, and unforgettable.",
+      "His menus blend international grill technique with Indonesian tradition. A Bayu Pranata event might open with satay, move through wagyu striploin and grilled lobster, and land on a whole pig or babi guling as the centrepiece. It's the kind of cooking that works for every table — from food-obsessed guests who want the perfect char on their steak, to families who just want something generous, fragrant, and unforgettable.",
     ],
     achievements: [
       'Leads poolside BBQ and grill events across Bali',
@@ -246,7 +246,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     menuStyles: [
       {
         title: 'Poolside BBQ Dinner',
-        desc: "Bayu\'s signature setup: grill station by the pool, wagyu and seafood, satay and sides, sunset timing. Built for 10–80 guests who want the full Bali villa experience.",
+        desc: "Bayu's signature setup: grill station by the pool, wagyu and seafood, satay and sides, sunset timing. Built for 10–80 guests who want the full Bali villa experience.",
       },
       {
         title: 'Wagyu & Lobster Night',
@@ -272,7 +272,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
       {
         question: 'Can I book Bayu for a birthday poolside BBQ?',
         answer:
-          "Yes — birthday BBQs are Bayu\'s most common booking. He handles everything from setup to cleanup, brings the grill equipment, and can customise the menu around your guest count, budget, and dietary mix.",
+          "Yes — birthday BBQs are Bayu's most common booking. He handles everything from setup to cleanup, brings the grill equipment, and can customise the menu around your guest count, budget, and dietary mix.",
       },
       {
         question: 'What proteins does Bayu specialise in?',
@@ -282,17 +282,17 @@ const CHEFS_DATA: Record<string, ChefData> = {
       {
         question: 'How large a group can Bayu handle?',
         answer:
-          "Bayu regularly serves 30–80 guests at villa events. He\'s done groups above 100 with additional kitchen support. For groups over 30, we recommend messaging early to confirm staffing and equipment logistics.",
+          "Bayu regularly serves 30–80 guests at villa events. He's done groups above 100 with additional kitchen support. For groups over 30, we recommend messaging early to confirm staffing and equipment logistics.",
       },
       {
         question: 'Does Bayu do BBQ in Ubud or inland villas?',
         answer:
-          "Yes — Bayu travels across Bali including Ubud, Canggu, Seminyak, Uluwatu, and Nusa Dua. He brings his own equipment when needed, so villa kitchen access isn\'t a limitation.",
+          "Yes — Bayu travels across Bali including Ubud, Canggu, Seminyak, Uluwatu, and Nusa Dua. He brings his own equipment when needed, so villa kitchen access isn't a limitation.",
       },
       {
         question: 'Can Bayu accommodate vegetarian or halal guests in a BBQ setting?',
         answer:
-          "Yes. Bayu runs separate grill stations for vegetarian items and uses halal-certified meat suppliers when requested. A mixed group\'s dietary needs are planned into the menu from the start.",
+          "Yes. Bayu runs separate grill stations for vegetarian items and uses halal-certified meat suppliers when requested. A mixed group's dietary needs are planned into the menu from the start.",
       },
     ],
     seoTitle: "Bayu Pranata — BBQ Chef Bali | Live-Fire Grill Specialist | myCHEF",
@@ -314,11 +314,11 @@ const CHEFS_DATA: Record<string, ChefData> = {
     shortBio:
       'Asri protects the local soul of the myCHEF menu. She leads Indonesian feasts, ceremonial dishes, and Asian fusion menus with a balance of authenticity, polish, and warmth that villa guests immediately feel.',
     fullBio: [
-      "Ni Putu Asri grew up in Gianyar — the cultural heartland of Bali — in a family where cooking was inseparable from ceremony. By the time she was a teenager, she had already participated in dozens of communal feasts for temple ceremonies, cremation rituals, and harvest celebrations. She learned that Balinese cooking is never just about feeding people: it\'s about creating a sensory experience that marks a moment in time.",
+      "Ni Putu Asri grew up in Gianyar — the cultural heartland of Bali — in a family where cooking was inseparable from ceremony. By the time she was a teenager, she had already participated in dozens of communal feasts for temple ceremonies, cremation rituals, and harvest celebrations. She learned that Balinese cooking is never just about feeding people: it's about creating a sensory experience that marks a moment in time.",
       'That foundation gave Asri something rare: the ability to make traditional Indonesian food feel both genuinely authentic and completely appropriate for a villa setting with international guests. She is not presenting food as a performance of culture — she is cooking the way she was raised to cook, then adapting the presentation and pacing for guests who may be encountering these flavours for the first time.',
-      "Her Indonesian feast menus typically open with a selection of sambals and crackers, move through dishes like ayam betutu (slow-cooked spiced chicken), jukut urap (coconut vegetable salad), and lawar, and land on a rice centrepiece surrounded by 6–8 accompaniments. For guests who want a single memorable Balinese dinner in their villa, Asri\'s feast is the most requested experience after Adriano\'s tasting menu.",
+      "Her Indonesian feast menus typically open with a selection of sambals and crackers, move through dishes like ayam betutu (slow-cooked spiced chicken), jukut urap (coconut vegetable salad), and lawar, and land on a rice centrepiece surrounded by 6–8 accompaniments. For guests who want a single memorable Balinese dinner in their villa, Asri's feast is the most requested experience after Adriano's tasting menu.",
       "Beyond traditional cooking, Asri has also developed a sharp instinct for Asian fusion — dishes that draw on Indonesian, Thai, and Japanese techniques to create menus that feel fresh and contemporary without losing their regional identity. Her miso-glazed tempeh and her tamarind prawn curry are two examples of how she navigates the space between tradition and innovation.",
-      "For villa guests, booking Asri means booking someone who genuinely loves the food she\'s cooking and brings the kind of warmth to a kitchen that guests feel even before the first plate arrives.",
+      "For villa guests, booking Asri means booking someone who genuinely loves the food she's cooking and brings the kind of warmth to a kitchen that guests feel even before the first plate arrives.",
     ],
     achievements: [
       'Leads Indonesian feast and ceremonial menus across Bali',
@@ -337,7 +337,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     menuStyles: [
       {
         title: 'Indonesian Feast (Rijsttafel)',
-        desc: "Asri\'s signature: 6–8 dishes around a central rice, from ayam betutu and lawar to sambal and urap. Generous, communal, and unforgettable for guests discovering Balinese cuisine.",
+        desc: "Asri's signature: 6–8 dishes around a central rice, from ayam betutu and lawar to sambal and urap. Generous, communal, and unforgettable for guests discovering Balinese cuisine.",
       },
       {
         title: 'Balinese Tasting Set',
@@ -345,7 +345,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
       },
       {
         title: 'Asian Fusion Villa Dinner',
-        desc: "A contemporary menu drawing on Indonesian, Thai, and Japanese technique. Asri\'s miso glazed tempeh, tamarind prawn curry, and green papaya salad work especially well for health-conscious villas.",
+        desc: "A contemporary menu drawing on Indonesian, Thai, and Japanese technique. Asri's miso glazed tempeh, tamarind prawn curry, and green papaya salad work especially well for health-conscious villas.",
       },
       {
         title: 'Cultural Celebration Feast',
@@ -363,12 +363,12 @@ const CHEFS_DATA: Record<string, ChefData> = {
       {
         question: 'Can I book Asri for an authentic Balinese dinner?',
         answer:
-          "Yes — Asri\'s Indonesian feast is one of our most requested experiences and she is available for bookings across Bali. Message us on WhatsApp with your villa location and guest count and we will confirm her availability.",
+          "Yes — Asri's Indonesian feast is one of our most requested experiences and she is available for bookings across Bali. Message us on WhatsApp with your villa location and guest count and we will confirm her availability.",
       },
       {
         question: 'What is an Indonesian feast (rijsttafel)?',
         answer:
-          "A rijsttafel is a communal-style meal where rice is served at the centre of the table surrounded by many smaller dishes — sambals, cooked vegetables, meat or fish, and condiments. Asri\'s version uses traditional Balinese recipes and typically includes 6–8 dishes for 4–12 guests.",
+          "A rijsttafel is a communal-style meal where rice is served at the centre of the table surrounded by many smaller dishes — sambals, cooked vegetables, meat or fish, and condiments. Asri's version uses traditional Balinese recipes and typically includes 6–8 dishes for 4–12 guests.",
       },
       {
         question: 'Is Asri\'s food suitable for vegetarians?',
@@ -822,7 +822,7 @@ export default function ChefProfilePage() {
     ...localBusinessSchema,
   }
 
-  const waMessage = `Hi, I\'d like to book ${chef.name} (${chef.specialty}) for a villa dinner in Bali.`
+  const waMessage = `Hi, I'd like to book ${chef.name} (${chef.specialty}) for a villa dinner in Bali.`
 
   return (
     <>

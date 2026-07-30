@@ -7,7 +7,7 @@ const SECTIONS: PageSection[] = [
     type: 'content',
     subtitle: 'Villa Manager Partnerships',
     title: 'Partner With myCHEF — Elevate Your Guest Experience and Earn Commission',
-    body: `<p>If you manage a villa, villa complex, or accommodation portfolio in Bali, partnering with myCHEF gives your guests access to the island\'s premium private chef and in-villa staffing service — while generating a consistent commission revenue stream for your business.</p>
+    body: `<p>If you manage a villa, villa complex, or accommodation portfolio in Bali, partnering with myCHEF gives your guests access to the island's premium private chef and in-villa staffing service — while generating a consistent commission revenue stream for your business.</p>
     <p>Our partnership programme is designed for villa managers who care about guest experience as much as we do. We are not a marketplace platform — we are an operations-focused service company with trained chefs, rigorous quality standards, and a team that coordinates directly with your property.</p>`,
   },
   {
@@ -29,9 +29,9 @@ const SECTIONS: PageSection[] = [
     type: 'content',
     subtitle: 'Services Available',
     title: 'What myCHEF Offers Your Villa Guests',
-    body: `<p>As a partner villa, your guests have access to myCHEF\'s full service portfolio:</p>
+    body: `<p>As a partner villa, your guests have access to myCHEF's full service portfolio:</p>
     <p><strong>Private chef dining:</strong> From casual family meals to eight-course fine dining tasting menus. <a href="/services" class="text-[#7E6410] hover:underline font-medium">View our service packages</a>.</p>
-    <p><strong>Floating breakfast:</strong> One of Bali\'s most-requested villa experiences. See our <a href="/catering/floating-breakfast" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>
+    <p><strong>Floating breakfast:</strong> One of Bali's most-requested villa experiences. See our <a href="/catering/floating-breakfast" class="text-[#7E6410] hover:underline font-medium">floating breakfast guide</a>.</p>
     <p><strong>In-villa staffing:</strong> Professional waiters, bartenders, mixologists, sommeliers, and butlers for events and extended villa stays.</p>
     <p><strong>Cooking classes:</strong> Interactive culinary experiences led by a myCHEF chef.</p>
     <p><strong>Staffing placements:</strong> Monthly chef arrangements, live-in chef placements. See our <a href="/staffing" class="text-[#7E6410] hover:underline font-medium">staffing services</a>.</p>`,

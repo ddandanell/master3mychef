@@ -7,7 +7,7 @@ const SECTIONS: PageSection[] = [
     type: 'content',
     subtitle: 'Private Chef Seminyak',
     title: 'Private Chef Seminyak: Luxury Villa Dining, Sunset Dinners & Fine Dining',
-    body: `<p>Seminyak is Bali\'s original luxury villa address. A private chef in Seminyak is expected to match the standards set by the area\'s best restaurants — precise technique, premium ingredients, beautiful plating, and professional front-of-house service.</p>
+    body: `<p>Seminyak is Bali's original luxury villa address. A private chef in Seminyak is expected to match the standards set by the area's best restaurants — precise technique, premium ingredients, beautiful plating, and professional front-of-house service.</p>
     <p>myCHEF provides private chef services across Seminyak and its adjacent luxury precincts: Oberoi, Petitenget, Kerobokan, and Batu Belig. Our Seminyak-based chefs include culinary-school graduates and former hotel kitchen professionals who bring fine dining standards to villa cooking. When you want to <a href="/private-chef/seminyak" class="text-[#7E6410] hover:underline font-medium">hire a private chef in Seminyak</a>, myCHEF matches you with a vetted local chef and builds the menu around your occasion.</p>
     <p>The typical Seminyak private chef booking is for a couple, honeymoon, anniversary, or small intimate group (2-8 guests) who want a restaurant-quality dinner without leaving the villa.</p>`,
   },
@@ -28,9 +28,9 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Coverage Area',
     title: 'Seminyak, Oberoi, Petitenget, Kerobokan & Batu Belig — Full Coverage',
     body: `<p>myCHEF covers the full Seminyak luxury corridor:</p>
-    <p><strong>Seminyak core (Jl. Laksmana / Oberoi area):</strong> The original luxury hotel and villa strip. Many of Bali\'s most beautiful private villas are in this zone.</p>
+    <p><strong>Seminyak core (Jl. Laksmana / Oberoi area):</strong> The original luxury hotel and villa strip. Many of Bali's most beautiful private villas are in this zone.</p>
     <p><strong>Petitenget:</strong> The extension of Seminyak north along the beach, anchored by Potato Head Beach Club.</p>
-    <p><strong>Kerobokan:</strong> Immediately north of Seminyak, home to some of Bali\'s best fine dining restaurants and many prominent long-term expat residents.</p>
+    <p><strong>Kerobokan:</strong> Immediately north of Seminyak, home to some of Bali's best fine dining restaurants and many prominent long-term expat residents.</p>
     <p><strong>Batu Belig:</strong> A quieter beach area connecting Seminyak to Canggu, popular for honeymoons and anniversary trips.</p>`,
   },
   {
@@ -38,10 +38,10 @@ const SECTIONS: PageSection[] = [
     type: 'content',
     subtitle: 'Occasions',
     title: 'Private Chef for Seminyak Occasions: Honeymoons, Proposals & Anniversaries',
-    body: `<p>Seminyak\'s romantic reputation makes it the island\'s premier destination for milestone occasion dining:</p>
+    body: `<p>Seminyak's romantic reputation makes it the island's premier destination for milestone occasion dining:</p>
     <p><strong>Honeymoon dinners:</strong> A private chef dinner for two — candles, fresh flowers, bespoke menu, champagne. See our <a href="/honeymoon-chef" class="text-[#7E6410] hover:underline font-medium">honeymoon private chef guide</a>.</p>
     <p><strong>Proposals:</strong> A controlled private setting — no restaurant crowds, no risk of interruptions. See our <a href="/proposal-dinner" class="text-[#7E6410] hover:underline font-medium">proposal dinner guide</a>.</p>
-    <p><strong>Anniversary dinners:</strong> A dinner built around the couple\'s specific preferences. See our <a href="/events/anniversaries" class="text-[#7E6410] hover:underline font-medium">anniversary dinner guide</a>.</p>
+    <p><strong>Anniversary dinners:</strong> A dinner built around the couple's specific preferences. See our <a href="/events/anniversaries" class="text-[#7E6410] hover:underline font-medium">anniversary dinner guide</a>.</p>
     <p><strong>Corporate dinners:</strong> A private villa dinner for 8-12 executives with a sommelier and professional waitstaff. See our <a href="/blog/corporate-events-catering-bali-team-dining" class="text-[#7E6410] hover:underline font-medium">corporate dining guide</a>.</p>`,
   },
   {

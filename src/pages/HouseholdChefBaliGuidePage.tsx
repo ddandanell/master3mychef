@@ -8,7 +8,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Household Chef Bali',
     title: 'Household Chef Bali: How to Hire a Personal Chef for Your Villa or Home',
     body: `<p>A household chef is a private culinary professional engaged on an ongoing basis — cooking for a household, villa, or residence on a recurring schedule. In Bali, this arrangement has become increasingly common among long-term residents, villa owners, expatriate families, and extended-stay guests who want the convenience of freshly prepared meals without the complexity of employing a full-time staff member.</p>
-    <p>Unlike a <a href="/staffing" class="text-[#7E6410] hover:underline font-medium">live-in chef</a>, a household chef typically visits on a service schedule — a set number of days per week — rather than residing at the property. myCHEF\'s household chef service is designed for exactly this market. We place experienced, background-checked, English-speaking chefs with households across Bali\'s expat and villa communities on monthly rolling arrangements.</p>`,
+    <p>Unlike a <a href="/staffing" class="text-[#7E6410] hover:underline font-medium">live-in chef</a>, a household chef typically visits on a service schedule — a set number of days per week — rather than residing at the property. myCHEF's household chef service is designed for exactly this market. We place experienced, background-checked, English-speaking chefs with households across Bali's expat and villa communities on monthly rolling arrangements.</p>`,
   },
   {
     id: 'who-needs',
@@ -16,7 +16,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'Who Is This For',
     title: 'Who Hires a Household Chef in Bali?',
     body: `<p><strong>Long-term villa residents:</strong> After the first week or two of eating out daily, residents typically want a more sustainable, healthier, and more cost-effective solution. A household chef provides home-cooked quality at a fraction of the cost of daily restaurant meals.</p>
-    <p><strong>Expatriate families:</strong> Bali\'s growing expatriate community — particularly around Canggu, Seminyak, and Ubud — includes many families who prioritise wholesome, consistent home cooking. A household chef on a 3 to 5 day weekly schedule handles breakfast prep, school lunch boxes, family dinners, and batch-cooking.</p>
+    <p><strong>Expatriate families:</strong> Bali's growing expatriate community — particularly around Canggu, Seminyak, and Ubud — includes many families who prioritise wholesome, consistent home cooking. A household chef on a 3 to 5 day weekly schedule handles breakfast prep, school lunch boxes, family dinners, and batch-cooking.</p>
     <p><strong>Remote workers and digital nomads:</strong> Professionals working remotely from Bali for 1 to 6 months find that a household chef is one of the most impactful quality-of-life additions to their stay.</p>
     <p>Read more about Bali long-term private chef options in our <a href="/hire-private-chef-bali-monthly" class="text-[#7E6410] hover:underline font-medium">guide for expats</a>.</p>`,
   },
@@ -26,7 +26,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'How It Works',
     title: 'How a Household Chef Arrangement Works in Practice',
     body: `<p><strong>Scheduling:</strong> You select a service schedule — commonly 3 to 5 days per week. Most clients choose morning and early afternoon service (7am to 2pm) covering breakfast, lunch preparation, and advance prep for dinner.</p>
-    <p><strong>Menu planning:</strong> At the start of each week, your chef shares a proposed menu based on your preferences, seasonal availability, and the household\'s schedule. You approve, adjust, or redirect as desired. The chef then handles all shopping, prep, cooking, and kitchen cleanup.</p>
+    <p><strong>Menu planning:</strong> At the start of each week, your chef shares a proposed menu based on your preferences, seasonal availability, and the household's schedule. You approve, adjust, or redirect as desired. The chef then handles all shopping, prep, cooking, and kitchen cleanup.</p>
     <p><strong>Grocery sourcing:</strong> Your chef sources ingredients from local markets and trusted suppliers. Groceries are charged at cost — myCHEF does not mark up ingredient prices. You receive a weekly grocery spend report.</p>`,
   },
   {

@@ -57,8 +57,6 @@ export default function HomeHeroVideo() {
   const [phaseId, setPhaseId] = useState<string>(PHASES[0].id)
   const [reduceMotion, setReduceMotion] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
-  const [videoReady, setVideoReady] = useState(false)
-
   useEffect(() => {
     const mqMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
     const mqMobile = window.matchMedia('(max-width: 768px)')
@@ -111,22 +109,18 @@ export default function HomeHeroVideo() {
       video.muted = true
       try {
         await video.play()
-        if (!cancelled) setVideoReady(true)
       } catch {
         // Retry once after a short delay (iOS / slow network)
         window.setTimeout(() => {
           if (cancelled || !video) return
           video.muted = true
-          void video.play().then(() => {
-            if (!cancelled) setVideoReady(true)
-          }).catch(() => {
-            /* poster remains visible */
+          void video.play().catch(() => {
+            /* poster remains under the video */
           })
         }, 400)
       }
     }
 
-    const onPlaying = () => setVideoReady(true)
     const onTimeUpdate = () => {
       if (!video.paused) {
         const next = activePhase(video.currentTime).id
@@ -134,7 +128,6 @@ export default function HomeHeroVideo() {
       }
     }
 
-    video.addEventListener('playing', onPlaying)
     video.addEventListener('timeupdate', onTimeUpdate)
     video.addEventListener('loadeddata', tryPlay)
     video.addEventListener('canplay', tryPlay)
@@ -155,7 +148,6 @@ export default function HomeHeroVideo() {
     return () => {
       cancelled = true
       cancelAnimationFrame(raf)
-      video.removeEventListener('playing', onPlaying)
       video.removeEventListener('timeupdate', onTimeUpdate)
       video.removeEventListener('loadeddata', tryPlay)
       video.removeEventListener('canplay', tryPlay)
@@ -169,25 +161,22 @@ export default function HomeHeroVideo() {
   return (
     <div className="relative min-h-[100svh] min-h-screen overflow-hidden bg-black">
       {/* Poster under video for LCP + fallback while video buffers */}
+      {/* Poster under video for LCP while the first frames buffer */}
       <img
         src={POSTER}
         alt="Private chef plating a luxury dinner at a Bali villa — myCHEF"
         width={1280}
         height={720}
-        className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-700 ${
-          videoReady && !reduceMotion ? 'opacity-0' : 'opacity-100'
-        }`}
+        className="absolute inset-0 z-0 h-full w-full object-cover"
         fetchPriority="high"
         loading="eager"
         decoding="async"
       />
 
-      {/* Always mount video so autoplay can start; paused when reduced-motion */}
+      {/* Always visible video layer (never opacity-0 — prerender froze that and hid motion) */}
       <video
         ref={videoRef}
-        className={`absolute inset-0 z-[1] h-full w-full object-cover transition-opacity duration-700 ${
-          videoReady && !reduceMotion ? 'opacity-100' : 'opacity-0'
-        }`}
+        className="absolute inset-0 z-[1] h-full w-full object-cover"
         autoPlay
         muted
         loop

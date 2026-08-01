@@ -419,8 +419,8 @@ export default function CateringMainPage() {
 
       <Breadcrumb items={[{ label: 'Catering' }]} />
 
-      {/* ═══════ SECTION 1: HERO ═══════ */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* ═══════ SECTION 1: HERO (conversion-first) ═══════ */}
+      <section className="relative min-h-[78vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-catering-hero.webp"
@@ -433,114 +433,52 @@ export default function CateringMainPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.40) 50%, rgba(0,0,0,0.65) 100%)',
             }}
           />
-          <div className="absolute inset-0 bg-black/25 md:hidden" />
+          <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <div className="bg-black/60 rounded-3xl px-8 md:px-12 py-12 md:py-16 backdrop-blur-sm">
-            <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" decorative />
-            <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-              myCHEF Events & Catering
-            </p>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              {"Catering in Bali — Built for Groups, Parties & Hosted Dinners"}
-            </h1>
-            <p className="text-white/[75%] text-sm md:text-base mb-6">
-              From IDR 700,000++ per person · Minimum 5 guests · Chef, staff, ingredients &amp; cleanup included · Bali-wide
-            </p>
-            <div className="text-base md:text-lg text-white/[85%] max-w-3xl mx-auto space-y-4">
-              <p>
-                Premium catering across Bali for private villas, luxury holidays, weddings, corporate events, retreats and celebrations. From intimate private chef experiences for two guests to events with hundreds of guests, myCHEF delivers complete hospitality tailored to every occasion. Our chef-led team brings the kitchen, service staff, ingredients, and equipment to your villa or venue, then handles menu design, on-site cooking, table service, and full cleanup so you can host without stress.
-              </p>
-              <p>
-                What makes our service different is that we own the full stack. We employ and train our own chefs, service staff, and logistics crew — no middlemen, no outsourced teams, and no last-minute surprises. Every dish is cooked fresh at your location, every allergy is logged, and every quote is confirmed in writing before you pay a deposit. Whether it is a high-end villa holiday, a wedding reception, a corporate offsite, or a family celebration, we match the format and staffing to your guest count and venue.
-              </p>
-              <p>
-                We operate across Seminyak, Canggu, Berawa, Pererenan, Ubud, Sanur, Nusa Dua, Jimbaran, Uluwatu, Ungasan, Kerobokan, Sidemen, Munduk, and North Bali. Travel fees are disclosed upfront, menus are customised to your group, and our team has delivered over five hundred villa events since we started. Browse our catering styles below, use the decision guide to choose the right format, or message us on WhatsApp for a same-day quote.
-              </p>
-            </div>
+        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto pt-24 pb-16">
+          <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-6" decorative />
+          <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+            Villa Catering · Bali-wide
+          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.08] text-white mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Catering in Bali for Groups, Parties &amp; Hosted Dinners
+          </h1>
+          <p className="text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-3 leading-relaxed">
+            BBQ, buffet, plated dinners &amp; more — cooked at your villa. Chef, staff, ingredients and cleanup included.
+          </p>
+          <p className="text-[#C5A028] text-sm md:text-base font-semibold tracking-wide mb-8">
+            From IDR 700,000++ per person · Min. 5 guests · Quote in 1 hour
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              data-source="catering-hero"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white shadow-lg"
+            >
+              <MessageCircle className="w-4 h-4" /> Get a Quote on WhatsApp
+            </a>
+            <a
+              href="#service-tabs"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 border border-white/40 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              View Packages <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
-          <div className="mt-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <a
-                href={WA_LINK}
-                target="_blank"
-                data-source="catering-hero"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
-              >
-                <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
-              </a>
-              <Link
-                to="/private-chef-bali"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
-              >
-                <ArrowRight className="w-4 h-4" /> Need a Private Villa Chef?
-              </Link>
-            </div>
-            <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-white/15 bg-black/25 p-5 md:p-6 text-left backdrop-blur-sm">
-              <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Not sure which service?
-              </p>
-              <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
-                Choose Events & Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-white">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
-              </p>
-              <Link
-                to="/private-chef-bali"
-                className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
-              >
-                <ArrowRight className="w-4 h-4" /> View Private Villa Dining
-              </Link>
-            </div>
-            <TrustRow
-              items={['560+ events served', 'Guest-loved service', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
-              dark
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ CROSS-PROMOTION: FINE DINING ═══════ */}
-      <section className="py-12 md:py-16 px-6 bg-white">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="bg-[#FAFAF8] rounded-3xl border border-[#E8E6E3] overflow-hidden">
-            <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-                <p
-                  className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3"
-                  style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}
-                >
-                  Elevated Experience
-                </p>
-                <h2
-                  className="text-2xl md:text-3xl mb-4"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  Looking for a Multi-Course Tasting Menu?
-                </h2>
-                <p className="text-[#4A4745] text-sm md:text-base leading-relaxed mb-6">
-                  For groups of 6 or more, our Private Fine Dining experience offers Italian, French, Mediterranean, and Wagyu tasting menus prepared by a Michelin-trained chef in your villa.
-                </p>
-                <Link
-                  to="/fine-dining"
-                  data-source="catering-cross-promotion"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#C5A028] uppercase tracking-wider hover:text-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
-                >
-                  Explore Fine Dining <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-              <div className="relative min-h-[240px] md:min-h-full">
-                <OptimizedImage
-                  src="/generated/mychef-misc-bali-hub-fine-dining.webp"
-                  alt="Elegant plated fine dining course served at a Bali villa by myCHEF"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
+          <p className="text-white/70 text-sm mb-8">
+            Need a chef for everyday villa meals instead?{' '}
+            <Link to="/private-chef-bali" className="text-white underline underline-offset-4 hover:text-[#C5A028] transition-colors">
+              Private villa chef →
+            </Link>
+          </p>
+          <TrustRow
+            items={['500+ villa events', 'All-inclusive quotes', 'Chef + staff included', 'Bali-wide']}
+            dark
+          />
         </div>
       </section>
 
@@ -788,67 +726,80 @@ export default function CateringMainPage() {
       </section>
 
       {/* MID-PAGE CTA: After service tabs */}
-      <section className="py-16 md:py-20 px-6 bg-[#FAFAF8]">
+      <section className="py-12 md:py-16 px-6 bg-[#FAFAF8]">
         <div className="max-w-[800px] mx-auto text-center">
-          <p className="text-[#6B8E5A] text-xs tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Not Sure What You Need?</p>
-          <h3 className="text-2xl md:text-3xl mb-4 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>We Will Match the Right Service to Your Stay</h3>
-          <p className="text-[#4A4745] max-w-xl mx-auto mb-6">
-            One-time BBQ for a birthday, or a daily chef for your whole holiday? Tell us your dates and guest count and we will recommend the right option — with a clear quote within the hour.
+          <p className="text-[#6B8E5A] text-xs tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Ready to book?</p>
+          <h2 className="text-2xl md:text-3xl mb-3 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>Get a Clear Quote in 1 Hour</h2>
+          <p className="text-[#4A4745] max-w-xl mx-auto mb-6 text-sm md:text-base">
+            Send your date, guest count and area. We reply on WhatsApp with the right format and an itemised price — no forms, no chase.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-service-tabs-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
-              <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
+              <MessageCircle className="w-4 h-4" /> WhatsApp for a Quote
             </a>
-            <Link to="/quote" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
-              Get a Structured Quote
-            </Link>
+            <a href="#book" className="inline-flex items-center gap-2 px-8 py-4 border border-[#E8E6E3] text-[#1A1A1A] text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white transition-all">
+              See Price Table
+            </a>
           </div>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#4A4745]">
-            <Link to="/recommended-services" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
-              Not sure? Let us recommend →
+            <Link to="/fine-dining" data-source="catering-cross-promotion" className="underline-offset-4 hover:text-[#C5A028] hover:underline">
+              Prefer a multi-course tasting menu? Fine dining →
             </Link>
-            <Link to="/villa-event-packages" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
-              Want it all handled? See villa event packages →
+            <Link to="/private-chef-bali" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline">
+              Daily villa chef →
             </Link>
-            <Link to="/contact" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">
-              View contact options
+            <Link to="/villa-event-packages" className="underline-offset-4 hover:text-[#6B8E5A] hover:underline">
+              Full villa event packages →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ═══════ SECTION: WHAT IS CATERING? ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="THE BASICS"
-            title="What Is Catering?"
-            subtitle="Catering means bringing prepared food, service staff, equipment, and the full dining experience to a location of your choice. In Bali, that usually means your villa, event space, retreat venue, or beach club."
-          />
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {WHAT_IS_CATERING_SECTIONS.map((section) => (
-              <div key={section.title} className="space-y-4 text-[#4A4745]">
-                <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{section.title}</h3>
-                <div
-                  className="text-sm leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
-                  dangerouslySetInnerHTML={{ __html: section.body }}
-                />
-                {section.link && (
-                  <Link
-                    to={section.link.href}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1"
-                  >
-                    {section.link.text} <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                )}
+      {/* ═══════ SECTION: WHAT IS CATERING? (collapsed for UX, open for SEO) ═══════ */}
+      <section className="py-10 md:py-14 px-6 bg-white">
+        <div className="max-w-[900px] mx-auto">
+          <details className="group rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
+            <summary className="cursor-pointer list-none px-6 md:px-8 py-5 md:py-6 flex items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <div>
+                <p className="text-[#6B8E5A] text-xs tracking-[0.25em] uppercase mb-1 font-semibold">Guide</p>
+                <h2 className="text-xl md:text-2xl text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  What Is Catering in Bali?
+                </h2>
+                <p className="text-sm text-[#4A4745] mt-1">
+                  Short answer: restaurant-quality food + staff brought to your villa. Tap to read more.
+                </p>
               </div>
-            ))}
-          </div>
-          <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 max-w-4xl mx-auto">
-            <p className="text-sm text-[#4A4745] leading-relaxed">
-              In short, <strong>catering Bali</strong> is the simplest way to host a memorable meal without leaving your villa. It combines restaurant-quality food, professional hospitality, and complete flexibility. Whether you want a casual <Link to="/catering/bbq-catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">BBQ Catering</Link> night, an elegant <Link to="/catering/plated-catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Plated Catering</Link> dinner, or a large <Link to="/catering/buffet" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Buffet Catering</Link> spread, the format is built around your event, not the other way around.
-            </p>
-          </div>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 group-open:hidden">Read</span>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 hidden group-open:inline">Close</span>
+            </summary>
+            <div className="px-6 md:px-8 pb-8 space-y-8 border-t border-[#E8E6E3] pt-6">
+              <p className="text-sm text-[#4A4745] leading-relaxed">
+                Catering means bringing prepared food, service staff, equipment, and the full dining experience to a location of your choice. In Bali, that usually means your villa, event space, retreat venue, or beach club.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                {WHAT_IS_CATERING_SECTIONS.map((section) => (
+                  <div key={section.title} className="space-y-3 text-[#4A4745]">
+                    <h3 className="text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{section.title}</h3>
+                    <div
+                      className="text-sm leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline"
+                      dangerouslySetInnerHTML={{ __html: section.body }}
+                    />
+                    {section.link && (
+                      <Link
+                        to={section.link.href}
+                        className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] hover:underline"
+                      >
+                        {section.link.text} <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-[#4A4745] leading-relaxed bg-white rounded-xl border border-[#E8E6E3] p-5">
+                In short, <strong>catering Bali</strong> is the simplest way to host a memorable meal without leaving your villa — whether that is a casual <Link to="/catering/bbq-catering" className="text-[#6B8E5A] hover:underline">BBQ</Link>, an elegant <Link to="/catering/plated-catering" className="text-[#6B8E5A] hover:underline">plated dinner</Link>, or a large <Link to="/catering/buffet" className="text-[#6B8E5A] hover:underline">buffet</Link>.
+              </p>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -1017,97 +968,78 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION: CATERING BY EVENT TYPE ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="EVENTS"
-            title="Catering by Event Type"
-            subtitle="Every event has its own rhythm. Here is how we match catering style, menu, and staffing to the occasion."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CATERING_BY_EVENT_TYPES.map((event) => (
-              <div key={event.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
-                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{event.title}</h3>
-                <div className="space-y-3 text-sm text-[#4A4745]">
-                  <p><span className="font-semibold text-[#1A1A1A]">Recommended style:</span> {event.style}</p>
-                  <p><span className="font-semibold text-[#1A1A1A]">Typical menu:</span> {event.menu}</p>
-                  <p><span className="font-semibold text-[#1A1A1A]">Staffing:</span> {event.staffing}</p>
-                  <div
-                    className="leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
-                    dangerouslySetInnerHTML={{ __html: event.experience }}
-                  />
-                </div>
-                {event.href && (
-                  <Link
-                    to={event.href}
-                    className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1"
-                  >
-                    Learn more <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                )}
+      {/* ═══════ SEO: Event type + guest numbers (collapsed) ═══════ */}
+      <section className="py-10 md:py-14 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[900px] mx-auto space-y-4">
+          <details className="group rounded-2xl border border-[#E8E6E3] bg-white overflow-hidden">
+            <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <div>
+                <p className="text-[#6B8E5A] text-xs tracking-[0.25em] uppercase mb-1 font-semibold">By occasion</p>
+                <h2 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>Catering by Event Type</h2>
               </div>
-            ))}
-          </div>
-          <div className="mt-10 bg-white rounded-2xl border border-[#E8E6E3] p-6 md:p-8 max-w-4xl mx-auto">
-            <p className="text-sm text-[#4A4745] leading-relaxed">
-              Explore dedicated pages for <Link to="/events/weddings" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Wedding Catering</Link>, <Link to="/catering/corporate-catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Corporate Catering</Link>, <Link to="/catering/retreat-catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Retreat Catering</Link>, <Link to="/catering/buffet" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Buffet Catering in Bali</Link>, and <Link to="/catering/villa-catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Villa Catering in Bali</Link> for more detail on each format.
-            </p>
-          </div>
-        </div>
-      </section>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 group-open:hidden">Read</span>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 hidden group-open:inline">Close</span>
+            </summary>
+            <div className="px-6 md:px-8 pb-8 border-t border-[#E8E6E3] pt-6">
+              <p className="text-sm text-[#4A4745] mb-6">Every event has its own rhythm. Here is how we match style, menu, and staffing.</p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {CATERING_BY_EVENT_TYPES.map((event) => (
+                  <div key={event.title} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5">
+                    <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{event.title}</h3>
+                    <div className="space-y-2 text-sm text-[#4A4745]">
+                      <p><span className="font-semibold text-[#1A1A1A]">Style:</span> {event.style}</p>
+                      <p><span className="font-semibold text-[#1A1A1A]">Menu:</span> {event.menu}</p>
+                      <p><span className="font-semibold text-[#1A1A1A]">Staffing:</span> {event.staffing}</p>
+                      <div className="leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline" dangerouslySetInnerHTML={{ __html: event.experience }} />
+                    </div>
+                    {event.href && (
+                      <Link to={event.href} className="inline-flex items-center gap-1 mt-3 text-sm font-semibold text-[#6B8E5A] hover:underline">
+                        Learn more <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-sm text-[#4A4745]">
+                Also see <Link to="/events/weddings" className="text-[#6B8E5A] hover:underline">weddings</Link>, <Link to="/catering/corporate-catering" className="text-[#6B8E5A] hover:underline">corporate</Link>, <Link to="/catering/retreat-catering" className="text-[#6B8E5A] hover:underline">retreats</Link>, and <Link to="/catering/villa-catering" className="text-[#6B8E5A] hover:underline">villa catering</Link>.
+              </p>
+            </div>
+          </details>
 
-      {/* ═══════ SECTION: CATERING BY GUEST NUMBERS ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="GROUP SIZE"
-            title="Catering by Guest Numbers"
-            subtitle="The right format depends on how many people you are feeding. Here is how we scale service, kitchen, and staffing."
-          />
-          <div className="space-y-6">
-            {CATERING_BY_GUEST_NUMBERS.map((row) => (
-              <div key={row.range} className="grid md:grid-cols-12 gap-4 bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8">
-                <div className="md:col-span-2">
-                  <h3 className="text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{row.range}</h3>
-                </div>
-                <div className="md:col-span-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-[#4A4745]">
-                  <div>
-                    <p className="font-semibold text-[#1A1A1A] mb-1">Service style</p>
-                    <p>{row.style}</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#1A1A1A] mb-1">Kitchen needs</p>
-                    <p>{row.kitchen}</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#1A1A1A] mb-1">Staffing</p>
-                    <p>{row.staffing}</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#1A1A1A] mb-1">Recommended menus</p>
-                    <p>{row.menus}</p>
-                  </div>
-                </div>
-                {row.notes && (
-                  <div className="md:col-span-12">
-                    <div
-                      className="text-sm text-[#4A4745] leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
-                      dangerouslySetInnerHTML={{ __html: row.notes }}
-                    />
-                  </div>
-                )}
+          <details className="group rounded-2xl border border-[#E8E6E3] bg-white overflow-hidden">
+            <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <div>
+                <p className="text-[#6B8E5A] text-xs tracking-[0.25em] uppercase mb-1 font-semibold">By group size</p>
+                <h2 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>Catering by Guest Numbers</h2>
               </div>
-            ))}
-          </div>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 group-open:hidden">Read</span>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 hidden group-open:inline">Close</span>
+            </summary>
+            <div className="px-6 md:px-8 pb-8 border-t border-[#E8E6E3] pt-6 space-y-4">
+              {CATERING_BY_GUEST_NUMBERS.map((row) => (
+                <div key={row.range} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5">
+                  <h3 className="text-lg mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{row.range}</h3>
+                  <div className="grid sm:grid-cols-2 gap-3 text-sm text-[#4A4745]">
+                    <p><span className="font-semibold text-[#1A1A1A]">Service:</span> {row.style}</p>
+                    <p><span className="font-semibold text-[#1A1A1A]">Kitchen:</span> {row.kitchen}</p>
+                    <p><span className="font-semibold text-[#1A1A1A]">Staffing:</span> {row.staffing}</p>
+                    <p><span className="font-semibold text-[#1A1A1A]">Menus:</span> {row.menus}</p>
+                  </div>
+                  {row.notes && (
+                    <div className="mt-3 text-sm text-[#4A4745] leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline" dangerouslySetInnerHTML={{ __html: row.notes }} />
+                  )}
+                </div>
+              ))}
+            </div>
+          </details>
         </div>
       </section>
 
       {/* ═══════ SECTION 4: WHO THIS IS FOR ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-14 md:py-20 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 1 — THE INQUIRY"
+            eyebrow="Who it's for"
             title="Who Villa Catering Is For"
             subtitle="If you are staying in a villa in Canggu, Seminyak, Uluwatu or Ubud — this is designed for you."
           />
@@ -1130,10 +1062,10 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 5: VILLA VS RESTAURANT ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+      <section className="py-14 md:py-20 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 3 — THE COMPARISON"
+            eyebrow="Why villa catering"
             title="Skip the Restaurant. Eat at Your Villa."
             subtitle="A restaurant dinner for 10 in Seminyak costs IDR 8–12M with drinks and transport. Our Indonesian BBQ for 10: IDR 7M. At your villa. With a chef."
           />
@@ -1176,7 +1108,7 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 6: ADD-ONS ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-14 md:py-16 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Extras"
@@ -1192,12 +1124,12 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 7: PLATED PREVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+      <section className="py-14 md:py-16 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 6 — THE PLATED"
+            eyebrow="Plated"
             title="Plated Set Menus for Seated Events"
-            subtitle="For milestone dinners, birthdays, villa owner events, and intimate weddings, plated menus create a more controlled dining experience with table service and stronger presentation."
+            subtitle="Milestone dinners, birthdays, and intimate weddings — controlled service and stronger presentation."
           />
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             {PLATED_PACKAGES.map((pkg) => (
@@ -1229,12 +1161,12 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 8: DROP-OFF PREVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-14 md:py-16 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 7 — THE DROP-OFF"
+            eyebrow="Drop-off"
             title="Drop-Off Catering Without Staff Inside Your Villa"
-            subtitle="For families and villa guests who want proper food without staff staying in the villa, drop-off catering is the cleanest option."
+            subtitle="Proper food delivered — no staff staying in the villa."
           />
           <p className="text-center text-sm text-[#4A4745] max-w-2xl mx-auto mb-8">
             Read our <Link to="/blog/drop-off-catering-bali" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">drop-off catering guide</Link> for a full breakdown of formats, timing and when delivery makes more sense than full service.
@@ -1265,12 +1197,12 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 9: BABI GULING ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+      <section className="py-14 md:py-16 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 8 — THE TRADITION"
+            eyebrow="Balinese classic"
             title="Babi Guling Whole-Pig Catering"
-            subtitle="A traditional Balinese whole-pig experience for villa parties, birthdays, and larger group meals."
+            subtitle="Traditional whole-pig feast for villa parties and larger groups."
           />
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {BABIGULING_PACKAGES.map((pkg) => (
@@ -1294,12 +1226,12 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 10: GRAZING TABLES ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-14 md:py-16 px-6 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
             eyebrow="Visual"
             title="Grazing Tables & Charcuterie"
-            subtitle="For weddings, welcome drinks, villa parties, poolside events, and easy entertaining, grazing tables create a strong visual food setup with minimal service friction."
+            subtitle="Welcome drinks, villa parties, and easy entertaining — strong visual setup, minimal friction."
           />
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {GRAZING_PACKAGES.map((pkg) => (
@@ -1324,12 +1256,12 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 11: FLOATING BREAKFAST ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
+      <section className="py-14 md:py-16 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="Instagram-Ready"
+            eyebrow="Instagram-ready"
             title="Floating Breakfast & Brunch"
-            subtitle="Photo-ready floating breakfast and brunch setups for villa pools, couples, birthdays, honeymoon mornings, and small groups."
+            subtitle="Photo-ready pool breakfasts for couples, honeymoons, and small groups."
           />
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {FLOATING_PACKAGES.map((pkg) => (
@@ -1353,29 +1285,19 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 12: PRICING TRANSPARENCY ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[800px] mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Why We Publish Our Prices</h2>
-          <p className="text-[#4A4745] mb-6">
-            Most Bali caterers hide pricing behind contact forms and phone calls. We do not. Publishing our prices saves you time, sets clear expectations, and lets you compare formats before reaching out. Every price you see includes chef, staff, ingredients, equipment, setup, service, and cleanup — so there are no surprises on the day. If your group size or location changes the math, we tell you upfront.
-          </p>
-          <div className="flex flex-wrap gap-2 justify-center">
+      {/* ═══════ SECTION 13: PRICING SUMMARY ═══════ */}
+      <section id="book" className="scroll-mt-24 py-14 md:py-20 px-6 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Transparent pricing"
+            title="Catering Prices in Bali"
+            subtitle="All-inclusive quotes. Final price before deposit. No hidden fees."
+          />
+          <div className="flex flex-wrap gap-2 justify-center mb-10">
             {['No hidden fees', 'All-inclusive quotes', '21% tax included', 'Travel fee disclosed upfront', 'Final price before deposit'].map((d) => (
               <span key={d} className="px-3 py-1.5 rounded-full bg-[#FAFAF8] border border-[#E8E6E3] text-sm text-[#4A4745]">{d}</span>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ═══════ SECTION 13: PRICING SUMMARY ═══════ */}
-      <section id="book" className="scroll-mt-24 py-20 md:py-28 px-6 bg-[#FAFAF8]">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="Compare"
-            title="Catering Prices in Bali"
-            subtitle="Final price confirmed before you pay. No hidden fees. No surprises."
-          />
           {/* Desktop table */}
           <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left">
@@ -1422,10 +1344,10 @@ export default function CateringMainPage() {
       </section>
 
       {/* ═══════ SECTION 14: HOW BOOKING WORKS ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
+      <section className="py-14 md:py-20 px-6 bg-[#FAFAF8]">
         <div className="max-w-[1280px] mx-auto">
           <SectionHeader
-            eyebrow="CHAPTER 9 — THE PROCESS"
+            eyebrow="Simple process"
             title="How Booking Works"
             subtitle="From first message to finished dinner — six steps, zero stress."
           />
@@ -1458,34 +1380,41 @@ export default function CateringMainPage() {
         </div>
       </section>
 
-      {/* ═══════ SECTION: COMPLETE BOOKING PROCESS ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="FROM ENQUIRY TO EVENT"
-            title="The Complete 12-Step Booking Process"
-            subtitle="We keep the process transparent so you always know what happens next."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {COMPLETE_BOOKING_PROCESS.map((item) => (
-              <div key={item.step} className="bg-white rounded-2xl border border-[#E8E6E3] p-6">
-                <span className="text-[#6B8E5A] text-xs font-bold tracking-widest">STEP {item.step}</span>
-                <h3 className="text-lg mt-1 mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
+      {/* ═══════ 12-step process (collapsed — 6-step version above is primary) ═══════ */}
+      <section className="py-8 md:py-10 px-6 bg-[#FAFAF8]">
+        <div className="max-w-[900px] mx-auto">
+          <details className="group rounded-2xl border border-[#E8E6E3] bg-white overflow-hidden">
+            <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <div>
+                <p className="text-[#6B8E5A] text-xs tracking-[0.25em] uppercase mb-1 font-semibold">Full process</p>
+                <h2 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>The Complete 12-Step Booking Process</h2>
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a
-              href={WA_LINK}
-              target="_blank"
-              data-source="catering-process-cta"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              <MessageCircle className="w-4 h-4" /> Start Your Booking Now
-            </a>
-          </div>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 group-open:hidden">Read</span>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 hidden group-open:inline">Close</span>
+            </summary>
+            <div className="px-6 md:px-8 pb-8 border-t border-[#E8E6E3] pt-6">
+              <div className="grid sm:grid-cols-2 gap-4">
+                {COMPLETE_BOOKING_PROCESS.map((item) => (
+                  <div key={item.step} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-4">
+                    <span className="text-[#6B8E5A] text-xs font-bold tracking-widest">STEP {item.step}</span>
+                    <h3 className="text-base mt-1 mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                    <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  data-source="catering-process-cta"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all"
+                >
+                  <MessageCircle className="w-4 h-4" /> Start Your Booking Now
+                </a>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -1535,31 +1464,7 @@ export default function CateringMainPage() {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {BALI_LOCATIONS.map((loc) => (
-              <div key={loc.area} className="bg-white rounded-2xl border border-[#E8E6E3] p-6">
-                <h3 className="text-xl mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  {loc.href ? (
-                    <Link to={loc.href} className="hover:text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-0.5">
-                      {loc.area}
-                    </Link>
-                  ) : (
-                    loc.area
-                  )}
-                </h3>
-                <div className="space-y-2 text-sm text-[#4A4745]">
-                  <p><span className="font-semibold text-[#1A1A1A]">Popular events:</span> {loc.events}</p>
-                  <p><span className="font-semibold text-[#1A1A1A]">Villa styles:</span> {loc.villas}</p>
-                  <div
-                    className="[&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
-                    dangerouslySetInnerHTML={{ __html: `<span class="font-semibold text-[#1A1A1A]">Catering notes:</span> ${loc.notes}` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center mb-8">
             {AREAS.map((area) => (
               <span
                 key={area}
@@ -1569,145 +1474,151 @@ export default function CateringMainPage() {
               </span>
             ))}
           </div>
+
+          <details className="group max-w-[900px] mx-auto rounded-2xl border border-[#E8E6E3] bg-white overflow-hidden">
+            <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <h3 className="text-lg md:text-xl" style={{ fontFamily: "'Playfair Display', serif" }}>Area-by-area catering notes</h3>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 group-open:hidden">Read</span>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 hidden group-open:inline">Close</span>
+            </summary>
+            <div className="px-6 md:px-8 pb-8 border-t border-[#E8E6E3] pt-6 grid sm:grid-cols-2 gap-4">
+              {BALI_LOCATIONS.map((loc) => (
+                <div key={loc.area} className="bg-[#FAFAF8] rounded-xl border border-[#E8E6E3] p-5">
+                  <h4 className="text-base mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {loc.href ? (
+                      <Link to={loc.href} className="hover:text-[#6B8E5A] hover:underline">
+                        {loc.area}
+                      </Link>
+                    ) : (
+                      loc.area
+                    )}
+                  </h4>
+                  <div className="space-y-1.5 text-sm text-[#4A4745]">
+                    <p><span className="font-semibold text-[#1A1A1A]">Events:</span> {loc.events}</p>
+                    <p><span className="font-semibold text-[#1A1A1A]">Villas:</span> {loc.villas}</p>
+                    <div
+                      className="[&_a]:text-[#6B8E5A] [&_a]:hover:underline"
+                      dangerouslySetInnerHTML={{ __html: `<span class="font-semibold text-[#1A1A1A]">Notes:</span> ${loc.notes}` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
         </div>
       </section>
 
-      {/* ═══════ SECTION: FOOD PHILOSOPHY ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="INGREDIENTS & STANDARDS"
-            title="Our Food Philosophy"
-            subtitle="Great catering starts with great ingredients, handled by people who care about every plate."
-          />
-          <div className="grid md:grid-cols-2 gap-8 mb-10">
-            {FOOD_PHILOSOPHY_CARDS.map((card) => (
-              <div key={card.title} className="space-y-4 text-[#4A4745]">
-                <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
-                <div
-                  className="text-sm leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
-                  dangerouslySetInnerHTML={{ __html: card.body }}
-                />
-              </div>
-            ))}
-          </div>
-          <div className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 max-w-4xl mx-auto">
-            <p className="text-sm text-[#4A4745] leading-relaxed">
-              Our philosophy is simple: cook fresh, serve beautifully, and treat every dietary requirement seriously. Whether you choose <Link to="/catering/bbq-catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">BBQ Catering</Link>, <Link to="/catering/buffet" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Buffet Catering</Link>, or a <Link to="/catering/plated-catering" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Plated Dinner</Link>, the same standards apply.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* ═══════ SEO deep-dives (collapsed): philosophy, menus, optional services, trust ═══════ */}
+      <section className="py-10 md:py-14 px-6 bg-white">
+        <div className="max-w-[900px] mx-auto space-y-4">
+          <p className="text-center text-xs tracking-[0.25em] uppercase text-[#4A4745] font-semibold mb-2">More detail if you need it</p>
 
-      {/* ═══════ SECTION: MENU STYLE OVERVIEW ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="CUISINES"
-            title="Menu Style Overview"
-            subtitle="Mix and match cuisines, courses, and service styles to create a menu that fits your event and your guests."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {MENU_STYLES.map((style) => (
-              <div key={style.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6">
-                <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{style.title}</h3>
-                <div
-                  className="text-sm text-[#4A4745] leading-relaxed mb-3 [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
-                  dangerouslySetInnerHTML={{ __html: style.desc }}
-                />
-                {style.href && (
-                  <Link to={style.href} className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
-                    Learn more <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                )}
+          <details className="group rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
+            <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <h2 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>Our Food Philosophy</h2>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 group-open:hidden">Read</span>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 hidden group-open:inline">Close</span>
+            </summary>
+            <div className="px-6 md:px-8 pb-8 border-t border-[#E8E6E3] pt-6 space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                {FOOD_PHILOSOPHY_CARDS.map((card) => (
+                  <div key={card.title} className="space-y-2 text-[#4A4745]">
+                    <h3 className="text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
+                    <div className="text-sm leading-relaxed [&_a]:text-[#6B8E5A] [&_a]:hover:underline" dangerouslySetInnerHTML={{ __html: card.body }} />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <p className="text-sm text-[#4A4745] mb-4 max-w-2xl mx-auto">
-              Not sure which cuisine suits your group? Many clients combine Indonesian starters with Western mains, or add a Japanese sashimi course to a Mediterranean buffet. We can build a mixed menu around your preferences.
-            </p>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-source="catering-menu-overview-cta"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1"
-            >
-              <MessageCircle className="w-4 h-4" /> Discuss menu ideas
-            </a>
-          </div>
-        </div>
-      </section>
+              <p className="text-sm text-[#4A4745] leading-relaxed bg-white rounded-xl border border-[#E8E6E3] p-5">
+                Cook fresh, serve beautifully, treat every dietary requirement seriously — for <Link to="/catering/bbq-catering" className="text-[#6B8E5A] hover:underline">BBQ</Link>, <Link to="/catering/buffet" className="text-[#6B8E5A] hover:underline">buffet</Link>, or <Link to="/catering/plated-catering" className="text-[#6B8E5A] hover:underline">plated</Link> service.
+              </p>
+            </div>
+          </details>
 
-      {/* ═══════ SECTION: OPTIONAL SERVICES ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-white">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="ADD-ONS"
-            title="Optional Services"
-            subtitle="Build a complete event experience by adding service staff, drinks, styling, and entertainment."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {OPTIONAL_SERVICES.map((service) => (
-              <div key={service.title} className="bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6">
-                <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{service.title}</h3>
-                <div
-                  className="text-sm text-[#4A4745] leading-relaxed mb-3 [&_a]:text-[#6B8E5A] [&_a]:hover:underline [&_a]:focus:outline-none [&_a]:focus:ring-2 [&_a]:focus:ring-[#6B8E5A] [&_a]:rounded [&_a]:px-0.5"
-                  dangerouslySetInnerHTML={{ __html: service.desc }}
-                />
-                {service.href && (
-                  <Link to={service.href} className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded px-1">
-                    Learn more <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                )}
+          <details className="group rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
+            <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <h2 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>Menu Style Overview</h2>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 group-open:hidden">Read</span>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 hidden group-open:inline">Close</span>
+            </summary>
+            <div className="px-6 md:px-8 pb-8 border-t border-[#E8E6E3] pt-6">
+              <div className="grid sm:grid-cols-2 gap-4">
+                {MENU_STYLES.map((style) => (
+                  <div key={style.title} className="bg-white rounded-xl border border-[#E8E6E3] p-5">
+                    <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{style.title}</h3>
+                    <div className="text-sm text-[#4A4745] leading-relaxed mb-2 [&_a]:text-[#6B8E5A] [&_a]:hover:underline" dangerouslySetInnerHTML={{ __html: style.desc }} />
+                    {style.href && (
+                      <Link to={style.href} className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] hover:underline">
+                        Learn more <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    )}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="mt-10 bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-6 md:p-8 max-w-4xl mx-auto">
-            <p className="text-sm text-[#4A4745] leading-relaxed">
-              Optional services can be added to any catering package. Tell us your vision and we will recommend the right staffing and styling to match. For event service teams, see our <Link to="/staffing/villa-staff" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Event Staffing</Link> page. For full villa staffing and long-term placements, see our <Link to="/staffing" className="text-[#6B8E5A] hover:underline focus:outline-none focus:ring-2 focus:ring-[#6B8E5A] rounded">Staffing</Link> page.
-            </p>
-          </div>
-        </div>
-      </section>
+              <div className="text-center mt-6">
+                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-menu-overview-cta" className="inline-flex items-center gap-2 text-sm font-semibold text-[#6B8E5A] hover:underline">
+                  <MessageCircle className="w-4 h-4" /> Discuss menu ideas
+                </a>
+              </div>
+            </div>
+          </details>
 
-      {/* ═══════ SECTION: TRUST / E-E-A-T ═══════ */}
-      <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
-        <div className="max-w-[1280px] mx-auto">
-          <SectionHeader
-            eyebrow="WHY MYCHEF"
-            title="Experience, Expertise & Trust"
-            subtitle="We combine culinary skill, event planning discipline, and hospitality standards to deliver catering you can rely on."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {[
-              { title: 'Professional Culinary Experience', desc: 'Our chefs come from hotel, restaurant, private villa, and Michelin-trained backgrounds. They understand Western palates, Indonesian flavours, and high-volume service.' },
-              { title: 'Event Planning Expertise', desc: 'We have catered over five hundred villa events in Bali. That means we know how to read a venue, manage timelines, and adapt when the weather or guest count changes.' },
-              { title: 'Hospitality Standards', desc: 'Uniformed staff, polite service, clear communication, and attention to guest comfort are non-negotiable parts of every booking.' },
-              { title: 'Food Safety Processes', desc: 'Allergen separation, temperature logs, certified food handlers, and hygiene checks are built into every event. We take safety as seriously as taste.' },
-              { title: 'Ingredient Sourcing', desc: 'We buy fresh, verify suppliers, and keep receipts visible for daily chef services. Quality ingredients are the foundation of every menu.' },
-              { title: 'Operational Planning', desc: 'From kitchen tent placement to power supply and parking, we plan logistics before we arrive so setup is smooth and service is on time.' },
-              { title: 'Large-Event Capability', desc: 'We have the team, equipment, and supplier network to handle events for 250+ guests, including multi-station buffets and plated service.' },
-              { title: 'Transparent Booking Process', desc: 'Every quote is itemised, every menu is confirmed in writing, and every deposit is acknowledged with a booking summary. No ambiguity.' },
-            ].map((item) => (
-              <div key={item.title} className="bg-white rounded-2xl border border-[#E8E6E3] p-6">
-                <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
+          <details className="group rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
+            <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <h2 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>Optional Services</h2>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 group-open:hidden">Read</span>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 hidden group-open:inline">Close</span>
+            </summary>
+            <div className="px-6 md:px-8 pb-8 border-t border-[#E8E6E3] pt-6">
+              <div className="grid sm:grid-cols-2 gap-4">
+                {OPTIONAL_SERVICES.map((service) => (
+                  <div key={service.title} className="bg-white rounded-xl border border-[#E8E6E3] p-5">
+                    <h3 className="text-lg mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{service.title}</h3>
+                    <div className="text-sm text-[#4A4745] leading-relaxed mb-2 [&_a]:text-[#6B8E5A] [&_a]:hover:underline" dangerouslySetInnerHTML={{ __html: service.desc }} />
+                    {service.href && (
+                      <Link to={service.href} className="inline-flex items-center gap-1 text-sm font-semibold text-[#6B8E5A] hover:underline">
+                        Learn more <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    )}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="text-center">
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-source="catering-trust-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              <MessageCircle className="w-4 h-4" /> Speak with the Catering Team
-            </a>
-          </div>
+              <p className="mt-6 text-sm text-[#4A4745]">
+                For teams, see <Link to="/staffing/villa-staff" className="text-[#6B8E5A] hover:underline">event staffing</Link> and <Link to="/staffing" className="text-[#6B8E5A] hover:underline">staffing</Link>.
+              </p>
+            </div>
+          </details>
+
+          <details className="group rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] overflow-hidden">
+            <summary className="cursor-pointer list-none px-6 md:px-8 py-5 flex items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <h2 className="text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>Experience, Expertise &amp; Trust</h2>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 group-open:hidden">Read</span>
+              <span className="text-[#6B8E5A] text-sm font-semibold shrink-0 hidden group-open:inline">Close</span>
+            </summary>
+            <div className="px-6 md:px-8 pb-8 border-t border-[#E8E6E3] pt-6">
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                {[
+                  { title: 'Professional Culinary Experience', desc: 'Our chefs come from hotel, restaurant, private villa, and Michelin-trained backgrounds. They understand Western palates, Indonesian flavours, and high-volume service.' },
+                  { title: 'Event Planning Expertise', desc: 'We have catered over five hundred villa events in Bali. That means we know how to read a venue, manage timelines, and adapt when the weather or guest count changes.' },
+                  { title: 'Hospitality Standards', desc: 'Uniformed staff, polite service, clear communication, and attention to guest comfort are non-negotiable parts of every booking.' },
+                  { title: 'Food Safety Processes', desc: 'Allergen separation, temperature logs, certified food handlers, and hygiene checks are built into every event. We take safety as seriously as taste.' },
+                  { title: 'Ingredient Sourcing', desc: 'We buy fresh, verify suppliers, and keep receipts visible for daily chef services. Quality ingredients are the foundation of every menu.' },
+                  { title: 'Operational Planning', desc: 'From kitchen tent placement to power supply and parking, we plan logistics before we arrive so setup is smooth and service is on time.' },
+                  { title: 'Large-Event Capability', desc: 'We have the team, equipment, and supplier network to handle events for 250+ guests, including multi-station buffets and plated service.' },
+                  { title: 'Transparent Booking Process', desc: 'Every quote is itemised, every menu is confirmed in writing, and every deposit is acknowledged with a booking summary. No ambiguity.' },
+                ].map((item) => (
+                  <div key={item.title} className="bg-white rounded-xl border border-[#E8E6E3] p-5">
+                    <h3 className="text-base mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                    <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="text-center">
+                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="catering-trust-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E5A] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#5a7a4d] transition-all">
+                  <MessageCircle className="w-4 h-4" /> Speak with the Catering Team
+                </a>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
 

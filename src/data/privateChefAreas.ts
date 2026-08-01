@@ -1049,7 +1049,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Umalas, Bali | Villa Dining & Catering | myCHEF',
     metaDescription:
-      'Book a private chef in Umalas, Bali. Intimate villa dinners, catering and fine dining for retreats and groups. No travel surcharge — WhatsApp myCHEF.',
+      'Book a private chef in Umalas, Bali. Intimate villa dinners, catering and fine dining for retreats and groups. No travel surcharge. WhatsApp myCHEF today.',
     coordinates: { lat: -8.6580, lng: 115.1460 },
     bookingNote: 'Book 24–48 hours ahead for Umalas. Same-day requests are reviewed on chef availability with no travel surcharge.',
     published: true,
@@ -1740,7 +1740,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     landmarks: ['Nyanyi Beach', 'Tabanan black-sand coast', 'Echo Beach (nearby)', 'Seseh–Nyanyi surf break', 'Pererenan rice fields (nearby)', 'Canggu surf belt north edge'],
     priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Nyanyi is in the Canggu–Tabanan service zone — standard pricing applies. Travel is factored into the session rate.',
+      'Nyanyi is in the Canggu–Tabanan service zone — standard pricing applies with travel factored into the session rate. Multi-day coast packages available.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2966,7 +2966,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
-      "Standard South Bali rate applies — Nyuh Kuning is within the Ubud radius. No distance surcharge.",
+      "Standard South Bali rate applies — Nyuh Kuning is within the Ubud radius with no distance surcharge. Intimate villa dinners for 2–8 guests are typical.",
     services: ["private-chef", "fine-dining", "catering", "bbq"],
     faqs: [
       {
@@ -3022,7 +3022,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
-      "Standard Ubud-zone rate. Group catering packages available for large villas hosting 10+ guests.",
+      "Standard Ubud-zone rate. Group catering packages are available for large Lodtunduh villas hosting 10+ guests. 50% deposit confirms the date.",
     services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
     faqs: [
       {
@@ -3190,7 +3190,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
-      "Standard Ubud-zone rate. Gianyar is 10 km from our Ubud operations base, within the standard service radius.",
+      "Standard Ubud-zone rate. Gianyar is 10 km from our Ubud operations base, within the standard service radius. Balinese feast menus available on request.",
     services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
     faqs: [
       {
@@ -3246,7 +3246,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
-      "East Bali remote premium applies. 1.5–2 hours from South Bali base — advance booking required.",
+      "East Bali remote premium applies (1.5–2 hours from South Bali base) and is quoted upfront. Advance booking of 48 hours is required for Padang Bai.",
     services: ["private-chef", "catering", "bbq", "events"],
     faqs: [
       {
@@ -3358,7 +3358,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
-      "Standard Badung rate. Mengwi is 25 minutes from our South Bali base — within the standard service zone.",
+      "Standard Badung rate. Mengwi is 25 minutes from our South Bali base — within the standard service zone. Family villa dinners and temple-area events welcome.",
     services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
     faqs: [
       {
@@ -3414,7 +3414,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
-      "Standard Gianyar coast rate. Ketewel sits between Sanur and Keramas — both within our standard service zone.",
+      "Standard Gianyar coast rate. Ketewel sits between Sanur and Keramas — both within our standard service zone. Beachfront BBQ packages available on request.",
     services: ["private-chef", "catering", "bbq", "events"],
     faqs: [
       {
@@ -3526,7 +3526,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
-      "Standard Canggu-zone rate. Cepaka is served by our Canggu/Pererenan team — no distance surcharge.",
+      "Standard Canggu-zone rate. Cepaka is served by our Canggu/Pererenan team with no distance surcharge. Sunset BBQ and multi-day stays available on request.",
     services: ["private-chef", "fine-dining", "catering", "bbq", "events"],
     faqs: [
       {

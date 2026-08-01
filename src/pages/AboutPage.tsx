@@ -34,7 +34,7 @@ const SECTIONS = [
     title: 'A Track Record Built One Villa at a Time',
     features: [
       { icon: Users, title: '50+ Staff', desc: 'Chefs, service professionals, coordinators, and support staff trained for private hospitality in Bali villas.' },
-      { icon: House, title: '560+ Villas', desc: 'Trusted by guests, villa managers, and hosts across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, and beyond.' },
+      { icon: House, title: '560+ Events', desc: 'Trusted by guests, villa managers, and hosts across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, and beyond.' },
       { icon: UtensilsCrossed, title: '12,000+ Guests', desc: 'Served through intimate dinners, family stays, birthdays, weddings, retreats, and premium catered events.' },
       { icon: Award, title: `Since ${siteFacts.foundingYear}`, desc: `Operating in Bali since ${siteFacts.foundingYear} with systems refined around reliability, presentation, and guest comfort.` },
     ],

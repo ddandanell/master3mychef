@@ -234,7 +234,7 @@ export default function WhyMychefPage() {
       heroImageAlt="Luxury myCHEF dinner setup inside a Bali villa"
       ogImage="https://mychef.id/generated/mychef-location-bali-hub-bali.webp"
       keywords={['best private chef service bali', 'why mychef', 'trusted private chef bali', 'top rated private chef bali', 'mychef vs other chefs']}
-      highlights={['560+ Villas Served', '12,000+ Guests Hosted', '4.9/5 Guest Rating', '98% Repeat or Referred']}
+      highlights={['560+ Events Served', '12,000+ Guests Hosted', '500+ Villa Bookings', '98% Repeat or Referred']}
       sections={sections}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}

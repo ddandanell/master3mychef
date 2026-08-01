@@ -18,7 +18,6 @@ import TrustSection from '@/components/trust/TrustSection'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { ArticleContentSection } from '@/components/shared'
-import HomeHeroVideo from '@/components/home/HomeHeroVideo'
 
 const PORTALS = [
   {
@@ -220,7 +219,11 @@ export default function HubPage() {
 
       gsap.registerPlugin(ScrollTrigger)
       const ctx = gsap.context(() => {
-        // Hero intro is handled by HomeHeroVideo timed copy (no GSAP on hero).
+        const tl = gsap.timeline({ delay: 0.3 })
+        tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
+        tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
+        tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+        tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
 
         gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {
           y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
@@ -332,26 +335,64 @@ export default function HubPage() {
         ogImage={getPageMeta('home').ogImage}
         jsonLd={homeSchemas}
       />
-      {/* HERO — full-bleed video with timed elegant copy */}
-      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-16 md:pb-24" style={{ background: 'var(--u-bg)' }}>
+      {/* HERO — premium brand identity with Michelin-trained founder story front and centre */}
+      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 md:pb-32" style={{ background: 'var(--u-bg)' }}>
         <div className="mb-10 md:mb-14">
-          <HomeHeroVideo />
+          <div className="relative min-h-screen overflow-hidden">
+            <img
+              src="/generated/mychef-location-bali-hub-hero.webp"
+              alt="Elegant private dining table set at sunset in a luxury Bali villa by myCHEF"
+              width={1536}
+              height={1024}
+              className="absolute inset-0 h-full w-full object-cover object-[center_52%]"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+              onError={(e) => {
+                const img = e.target as HTMLImageElement
+                img.style.opacity = '0.3'
+              }} />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)' }} />
+            <div className="absolute inset-0 bg-black/20 md:hidden" />
+            <div className="relative z-10 mx-auto flex min-h-screen max-w-[1280px] items-center px-5 pb-10 pt-20 sm:px-6 md:pb-14 md:pt-24">
+              <div className="max-w-2xl md:max-w-[46%]">
+                <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.34em] text-[#C5A028] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  Private Chef in Bali
+                </p>
+                <h1 className="hub-hero-title mb-4 text-[2rem] leading-[1.08] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  Private Chef in Bali — Your Villa. Our Kitchen.
+                </h1>
+                <div className="gold-arc mb-6" />
+                <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
+                  Restaurant-level dining, cooked fresh in your villa by a Michelin-trained team. We shop, we cook, we serve, we clean — you just enjoy. From intimate dinners for two to weddings for 200, across Seminyak, Canggu, Ubud, Uluwatu and beyond.
+                </p>
+                <div className="hub-hero-cta mb-4 flex flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
+                  <a href="https://wa.me/6289674072020?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
+                    <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours <span aria-hidden="true">→</span>
+                  </a>
+                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
+                    see transparent pricing <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+                <p className="text-sm uppercase tracking-[0.18em] text-white/60" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  560+ villas served · 12,000+ happy guests · Same-day confirmation
+                </p>
+                <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70">
+                  <Link to="/services" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">explore all private chef services in Bali</Link>,{' '}
+                  <Link to="/fine-dining" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">fine dining tasting menus</Link>,{' '}
+                  <Link to="/private-chef-bali" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">daily villa chef service</Link>,{' '}
+                  <Link to="/private-chef-bali" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">monthly private chef arrangements</Link>,{' '}
+                  <Link to="/chefs" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">meet our chefs</Link>,{' '}
+                  <Link to="/reviews" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">read guest reviews</Link>,{' '}
+                  <Link to="/why-mychef" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">why 560+ villas choose myCHEF</Link>, or{' '}
+                  <Link to="/faq" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">booking questions answered</Link>.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mx-auto max-w-[1280px] px-5 sm:px-6">
-          <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px]" style={{ color: 'var(--u-text-muted)' }}>
-            <Link to="/services" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Private chef services in Bali</Link>
-            {' · '}
-            <Link to="/fine-dining" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Fine dining</Link>
-            {' · '}
-            <Link to="/private-chef-bali" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Daily villa chef</Link>
-            {' · '}
-            <Link to="/catering" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Catering &amp; BBQ</Link>
-            {' · '}
-            <Link to="/chefs" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Meet the chefs</Link>
-            {' · '}
-            <Link to="/reviews" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Guest reviews</Link>
-          </p>
           <div className="mb-8 md:mb-12">
             <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
               Founded by Adriano — trained under a Michelin-starred chef in {siteFacts.founderTrainingCity} — myCHEF.id delivers restaurant-level dining to Bali&apos;s finest villas. From intimate fine dining for 6 to catering for 200, our 50+ person hospitality team handles every detail.

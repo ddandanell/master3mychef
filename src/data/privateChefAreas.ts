@@ -634,6 +634,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Do you cater villa birthday parties in Berawa?',
         a: 'Yes — villa birthday parties for 20–60 guests are a popular booking in Berawa. We bring the full setup: chef, sous chef, waiters, bartender, decorations-friendly service, and complete cleanup.',
       },
+      {
+        q: 'Do you offer weekly meal prep in Berawa?',
+        a: 'Yes — weekly meal prep for long-stay and design-villa guests is a regular Berawa booking. We plan menus around your schedule, shop with receipts, and leave the kitchen ready for the next day.',
+      },
     ],
     nearbyAreas: [
       { slug: 'canggu', name: 'Canggu' },
@@ -753,7 +757,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How much does a private chef cost in Kerobokan?',
         a: 'Private chef service in Kerobokan starts from IDR 1,000,000++ per day for one meal, plus groceries at cost. Weekly meal prep packages are available for resident expats — WhatsApp for a fixed quote.',
       },
-],
+      {
+        q: 'Can you cater a villa dinner party in Kerobokan?',
+        a: 'Yes — family dinner parties and small villa events for 8–40 guests are common in Kerobokan. We bring chef and service staff, shop with receipts, and leave the kitchen spotless.',
+      },
+    ],
     nearbyAreas: [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'canggu', name: 'Canggu' },
@@ -803,6 +811,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'Can you arrange a romantic or proposal dinner in Petitenget?',
         a: 'Yes — Petitenget is one of our most requested areas for anniversary and proposal dinners. We handle menu design, timing to sunset, and discreet service so the evening stays private.',
+      },
+      {
+        q: 'Is there a travel fee for Petitenget villas?',
+        a: 'No — Petitenget is inside our core Seminyak service zone, so standard rates apply with no travel surcharge. Your quote is itemised before you confirm.',
       },
     ],
     nearbyAreas: [
@@ -856,7 +868,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Can you cater a birthday party at a Kuta villa?',
         a: 'Yes — Kuta is popular for group birthday catering and poolside BBQs. We handle food, staffing and cleanup for villa parties from small dinners to larger group feasts. Book a week ahead for weekends.',
       },
-],
+      {
+        q: 'Can you cook a first-night dinner after our airport arrival in Kuta?',
+        a: 'Yes — welcome dinners for guests landing at Ngurah Rai are a frequent Kuta request. Tell us your landing time and guest count; we schedule the chef around your arrival when possible.',
+      },
+    ],
     nearbyAreas: [
       { slug: 'legian', name: 'Legian' },
       { slug: 'seminyak', name: 'Seminyak' },
@@ -905,6 +921,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How far in advance should I book a private chef in Legian?',
         a: 'Book 1–2 days ahead for standard dinners. Birthday parties and larger groups are best confirmed a week ahead so we can lock staffing and menus.',
+      },
+      {
+        q: 'Is there a travel surcharge for Legian villas?',
+        a: 'No — Legian is inside our core South Bali zone with the same rates as Seminyak and Kuta. Travel is included; groceries are billed at cost with receipts.',
       },
     ],
     nearbyAreas: [
@@ -1011,7 +1031,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How much does a private chef cost in Umalas?',
         a: 'Umalas pricing matches the Seminyak–Canggu belt: from IDR 1,000,000++ per day for one meal, groceries at cost, no travel surcharge. Multi-day and retreat packages available on request.',
       },
-],
+      {
+        q: 'Can you cater a wellness or yoga retreat in Umalas?',
+        a: 'Yes — multi-day retreat catering with plant-forward menus is a regular Umalas booking. Send your schedule and dietary requirements for a fixed full-board quote.',
+      },
+    ],
     nearbyAreas: [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'canggu', name: 'Canggu' },

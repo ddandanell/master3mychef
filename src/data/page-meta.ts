@@ -700,7 +700,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bali-wedding-catering-packages',
     title: 'Bali Wedding Catering Packages & Prices 2026 | myCHEF',
     description:
-      'What Bali wedding catering actually costs: per-guest prices by package and headcount, what each includes, and what changes the total. Updated 2026.',
+      'Bali wedding catering packages with per-guest prices by headcount — plated, buffet and grazing. See inclusions, staffing and what changes the total. Updated 2026.',
     canonical: `${SITE}/bali-wedding-catering-packages`,
     h1: 'Bali Wedding Catering Packages — Transparent Pricing',
   },
@@ -745,7 +745,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/luxury-birthday-party-bali',
     title: 'Luxury Birthday Party Bali | Milestone Celebrations | myCHEF',
     description:
-      'Luxury milestone birthday parties in Bali: private chef, premium menus, drinks and styling for 30th, 40th and 50th celebrations. WhatsApp myCHEF.',
+      'Luxury milestone birthday parties in Bali: private chef, premium menus, drinks and styling for 30th, 40th and 50th villa celebrations. Transparent packages — WhatsApp myCHEF.',
     canonical: `${SITE}/luxury-birthday-party-bali`,
     h1: 'Luxury Birthday Parties in Bali — Chef-Led & Fully Styled',
   },
@@ -1294,7 +1294,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering/grazing-tables',
     title: 'Grazing Table Bali | Styled Event Platters & Spreads',
     description:
-      'Grazing tables in Bali: artisan cheese, charcuterie & fresh fruit spreads styled for welcome drinks, weddings & poolside events. WhatsApp myCHEF.',
+      'Grazing tables in Bali: artisan cheese, charcuterie and fresh fruit spreads styled for welcome drinks, weddings and poolside villa events. WhatsApp myCHEF.',
     canonical: `${SITE}/catering/grazing-tables`,
     h1: 'Grazing Tables Bali for Events, Villas & Parties',
     ogImage: `${SITE}/hero-catering.webp`,
@@ -1324,7 +1324,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering/retreat-catering',
     title: 'Retreat Catering Bali | Healthy Group Meal Plans | myCHEF',
     description:
-      'Retreat catering in Bali: plant-forward, nutrient-dense meal plans for multi-day retreats. Vegan, raw & gluten-free specialists. WhatsApp myCHEF.',
+      'Retreat catering in Bali: plant-forward, nutrient-dense meal plans for multi-day yoga and wellness retreats. Vegan, raw and gluten-free options. WhatsApp myCHEF.',
     canonical: `${SITE}/catering/retreat-catering`,
     h1: 'Retreat Catering Bali for Wellness, Yoga & Group Stays',
     ogImage: `${SITE}/generated/mychef-catering-bali-hero-retreat.webp`,
@@ -1344,7 +1344,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/events/weddings',
     title: 'Wedding Catering Bali | Villa Wedding Specialists | myCHEF',
     description:
-      'Wedding catering in Bali for 20–250 guests. Chefs, waiters, bar and coordination from one team — tasting before you commit. WhatsApp myCHEF for a quote.',
+      'Bali wedding catering for 20–250 guests at private villas. Chefs, waiters, bar and coordination from one team — tasting before you commit. WhatsApp myCHEF.',
     canonical: `${SITE}/events/weddings`,
     h1: 'Wedding Catering in Bali — Villa Weddings, Run by One Team',
     ogImage: `${SITE}/events-event-wedding-xl.webp`,
@@ -1394,7 +1394,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/events/baby-showers',
     title: 'Baby Shower Catering Bali | Styled Villa Brunches | myCHEF',
     description:
-      'Baby shower catering in Bali: light brunches, high tea and themed villa setups. Photo-ready tables, soft menus and calm service. WhatsApp myCHEF.',
+      'Baby shower catering in Bali: light brunches, high tea and themed villa setups. Photo-ready tables, soft menus and calm service for intimate gatherings. WhatsApp myCHEF.',
     canonical: `${SITE}/events/baby-showers`,
     h1: 'Baby Shower Catering in Bali — Brunch, Grazing & Garden Parties',
     ogImage: `${SITE}/hero-events.webp`,
@@ -2081,7 +2081,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations',
     title: 'Private Chef Locations Bali | All Areas We Serve | myCHEF',
     description:
-      'Private chef coverage across Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua and 60+ villa areas. Find your location and WhatsApp myCHEF.',
+      'Private chef coverage across Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua and 60+ villa areas. Find your location, compare areas and WhatsApp myCHEF for a quote.',
     canonical: `${SITE}/locations`,
     h1: 'Private Chef & Hospitality Across Bali',
     ogImage: `${SITE}/generated/hub-villa.webp`,
@@ -2324,7 +2324,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/holiday-chef-bali',
     title: 'Holiday Chef Bali | Christmas, New Year & Festive Season',
     description:
-      'Holiday chef service in Bali for Christmas, New Year, and the festive season. Roast, seafood, Balinese spread, or bespoke menus. All villa areas.',
+      'Holiday chef service in Bali for Christmas, New Year and the festive season. Roast, seafood, Balinese spreads or bespoke villa menus across all service areas. WhatsApp myCHEF.',
     canonical: `${SITE}/blog/holiday-chef-bali`,
     h1: 'Holiday Chef Bali -- Christmas, New Year & Festive Season  myCHEF',
   },

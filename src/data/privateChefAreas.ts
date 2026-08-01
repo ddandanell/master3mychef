@@ -645,7 +645,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Berawa, Bali. Villa birthday parties, weekly meal prep, and fine dining. HACCP-certified chefs, transparent pricing. WhatsApp myCHEF.',
     coordinates: { lat: -8.6437, lng: 115.1261 },
-    bookingNote: 'Book 1–2 days ahead for dinners, 1–2 weeks for villa birthday parties.',
+    bookingNote: 'Book 1–2 days ahead for Berawa dinners; 1–2 weeks for villa birthday parties of 20–60. Same-day quotes via WhatsApp.',
     published: true,
   },
   {
@@ -764,7 +764,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Kerobokan, Bali. Regular household meal prep, dinner parties, and villa events. Transparent pricing, HACCP-certified. WhatsApp myCHEF.',
     coordinates: { lat: -8.6631, lng: 115.1542 },
-    bookingNote: 'Book 1–2 days ahead for dinners. Weekly meal prep confirmed on Fridays for the following week.',
+    bookingNote: 'Book 1–2 days ahead for Kerobokan dinners. Weekly meal prep is confirmed on Fridays for the following week — ideal for long villa stays.',
     published: true,
   },
   {
@@ -815,7 +815,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Petitenget, Bali. Fine dining tasting menus and romantic villa dinners. HACCP-certified chefs, transparent pricing. WhatsApp myCHEF.',
     coordinates: { lat: -8.6772, lng: 115.1600 },
-    bookingNote: 'Book 1–3 days ahead for Petitenget fine dining. Same availability and core pricing as Seminyak.',
+    bookingNote: 'Book 1–3 days ahead for Petitenget fine dining or beachfront dinners. Same availability and core pricing as the Seminyak service zone.',
     published: true,
   },
   {
@@ -867,7 +867,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Hire a private chef in Kuta, Bali. Villa dinners, group catering and birthday parties. HACCP chefs from IDR 1M++/day. Transparent quotes via WhatsApp myCHEF.',
     coordinates: { lat: -8.7175, lng: 115.1686 },
-    bookingNote: 'Book 1–2 days ahead. Airport transfers can be arranged for arriving guests.',
+    bookingNote: 'Book 1–2 days ahead for Kuta villa dinners. Airport-arrival chef service and first-night menus can be arranged for arriving guests.',
     published: true,
   },
   {
@@ -1075,7 +1075,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef at Batu Belig beach villas, Bali. Sunset dinners, fine dining, and catering at the quietest stretch of beach between Seminyak and Canggu.',
     coordinates: { lat: -8.6710, lng: 115.1500 },
-    bookingNote: 'Book 24–48 hours ahead. Beachfront set-up details confirmed on booking.',
+    bookingNote: 'Book 24–48 hours ahead for Batu Belig beachfront villas. Sunset timing, table set-up and access notes are confirmed when you book.',
     published: true,
   },
   {
@@ -1128,7 +1128,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Pecatu, Bali. Clifftop villa dinners, honeymoon fine dining and events on the Bukit Peninsula. Transparent rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.8350, lng: 115.0880 },
-    bookingNote: 'Book 2–3 days ahead. Travel allowance from Seminyak quoted per address.',
+    bookingNote: 'Book 2–3 days ahead for Pecatu cliff villas. Any travel allowance from the Seminyak base is quoted per address before you confirm.',
     published: true,
   },
   {
@@ -1180,7 +1180,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Ungasan, Bali. Luxury villa dinners and elopement fine dining at the southernmost tip of the Bukit Peninsula. Clear rates via WhatsApp myCHEF.',
     coordinates: { lat: -8.8450, lng: 115.1100 },
-    bookingNote: 'Book 2–3 days ahead. Clifftop access and travel allowance confirmed on booking.',
+    bookingNote: 'Book 2–3 days ahead for Ungasan clifftop estates. Access notes and any travel allowance are confirmed on booking — no surprise fees.',
     published: true,
   },
   {
@@ -1232,7 +1232,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Tanjung Benoa, Bali. Family villa dinners, catering and fine dining near Nusa Dua. No travel surcharge. WhatsApp myCHEF.',
     coordinates: { lat: -8.7580, lng: 115.2280 },
-    bookingNote: 'Book 24–48 hours ahead for Tanjung Benoa. Same-day availability on request when a south-Bali chef is free.',
+    bookingNote: 'Book 24–48 hours ahead for Tanjung Benoa water-sport villas. Same-day availability on request when a south-Bali chef is free — WhatsApp for a check.',
     published: true,
   },
 
@@ -1285,7 +1285,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Sayan, Bali. Jungle fine dining above the Ayung River gorge — intimate, spectacular and managed end to end. WhatsApp myCHEF.',
     coordinates: { lat: -8.5020, lng: 115.2470 },
-    bookingNote: 'Book 48 hours ahead for Sayan. Steep villa access is confirmed per address so the team arrives ready.',
+    bookingNote: 'Book 48 hours ahead for Sayan gorge villas. Steep driveways and villa access are confirmed per address so the team arrives ready and fully equipped.',
     published: true,
   },
   {
@@ -1336,7 +1336,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Tegallalang, Bali. Private dinners overlooking the famous rice terraces — Balinese cuisine, fine dining, and catering for retreats.',
     coordinates: { lat: -8.4320, lng: 115.2790 },
-    bookingNote: 'Book 48 hours ahead. Travel allowance is quoted per villa address so the total is clear before deposit.',
+    bookingNote: 'Book 48 hours ahead for Tegallalang terrace villas. Any travel allowance is quoted per address so the total is clear before you pay the deposit.',
     published: true,
   },
 
@@ -1389,7 +1389,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Renon, Denpasar. Corporate dinners, expat villa dining and catering in Bali\'s diplomatic quarter. Transparent rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.6720, lng: 115.2230 },
-    bookingNote: 'Book 24–48 hours ahead. Corporate catering advance booking recommended.',
+    bookingNote: 'Book 24–48 hours ahead for Renon villa dinners. Corporate catering and multi-course diplomatic hosting need 1–2 weeks’ notice.',
     published: true,
   },
 
@@ -1442,7 +1442,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef near Tanah Lot, Bali. Sunset dinners, honeymoon fine dining and retreat catering in Tabanan\'s iconic coastal area. WhatsApp myCHEF.',
     coordinates: { lat: -8.6210, lng: 115.0870 },
-    bookingNote: 'Book 48–72 hours ahead for Tanah Lot. Travel allowance is quoted per villa address before you confirm.',
+    bookingNote: 'Book 48–72 hours ahead for Tanah Lot sunset villas. Travel allowance is quoted per address before you confirm — popular for honeymoon and temple-view dinners.',
     published: true,
   },
 
@@ -1598,7 +1598,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Mas, Bali. myCHEF cooks at your boutique villa — fine dining, Balinese feasts, and catering for retreat groups. Gianyar artisan village.',
     coordinates: { lat: -8.5570, lng: 115.2610 },
-    bookingNote: 'Book 48 hours ahead for Mas. Grocery sourcing from Pasar Ubud is included in the chef workflow.',
+    bookingNote: 'Book 48 hours ahead for Mas artisan-village villas. Grocery sourcing from Pasar Ubud is included in the chef workflow and itemised with receipts.',
     published: true,
   },
 
@@ -1644,7 +1644,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Hire a private chef in Penestanan, Bali. myCHEF cooks at your ridge villa above the Campuhan — fine dining, tasting menus and retreat catering. WhatsApp myCHEF.',
     coordinates: { lat: -8.5070, lng: 115.2530 },
-    bookingNote: 'Book 48 hours ahead. All ingredients sourced from Ubud market. No travel surcharge from Ubud.',
+    bookingNote: 'Book 48 hours ahead for Penestanan ridge villas. Ingredients sourced from Ubud market; no travel surcharge from the Ubud service zone.',
     published: true,
   },
 
@@ -1690,7 +1690,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Hire a private chef in Nyanyi, Tabanan. myCHEF cooks at your coast villa — fresh seafood, sunset fine dining, and catering for surf retreats and families.',
     coordinates: { lat: -8.5960, lng: 115.1070 },
-    bookingNote: 'Book 48 hours ahead. Fresh seafood sourced locally. Same-day response guaranteed.',
+    bookingNote: 'Book 48 hours ahead for Nyanyi coast villas. Fresh local seafood is preferred when available; same-day WhatsApp response guaranteed.',
     published: true,
   },
 
@@ -1736,7 +1736,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       "Hire a private chef in Cemagi, Tabanan. myCHEF serves luxury villas, weddings and retreats on Bali's quiet west coast. Multi-day packages available. WhatsApp myCHEF.",
     coordinates: { lat: -8.6070, lng: 115.1000 },
-    bookingNote: 'Book 48 hours ahead. Multi-day and full-board packages available on request.',
+    bookingNote: 'Book 48 hours ahead for Cemagi ocean-view villas. Multi-day and full-board chef packages for week-long stays are available on request.',
     published: true,
   },
 
@@ -1782,7 +1782,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       "Hire a private chef in Seseh, Tabanan. myCHEF serves private coastal villas — fine dining, intimate dinners, and catering on the black-sand west coast.",
     coordinates: { lat: -8.5900, lng: 115.1020 },
-    bookingNote: 'Book 48 hours ahead. Full ingredient logistics handled. Same-day response guaranteed.',
+    bookingNote: 'Book 48 hours ahead for Seseh black-sand villas. Full ingredient logistics handled; same-day WhatsApp response for date availability.',
     published: true,
   },
 
@@ -1828,7 +1828,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       "Book a private chef on Nusa Ceningan, Bali. myCHEF travels to the sister islands — clifftop fine dining, seafood feasts, and island catering at your villa.",
     coordinates: { lat: -8.6980, lng: 115.4520 },
-    bookingNote: 'Book 5–7 days ahead. Fast boat, on-island transport, and full ingredient logistics confirmed on booking.',
+    bookingNote: 'Book 5–7 days ahead for Nusa Ceningan. Fast boat from Sanur, on-island transfer and full ingredient logistics are confirmed on booking with a fixed quote.',
     published: true,
   },
 
@@ -1883,7 +1883,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Balangan, Bali. myCHEF serves clifftop villas on the Bukit Peninsula — seafood dinners, Balinese menus, and surf-trip catering.',
     coordinates: { lat: -8.8255, lng: 115.0847 },
-    bookingNote: 'Book 48 hours ahead for standard sessions, 72 hours for groups or bespoke menus.',
+    bookingNote: 'Book 48 hours ahead for Balangan cliff dinners; 72 hours for groups or bespoke menus. Bukit access and gear are handled by our team.',
     published: true,
   },
 
@@ -1935,7 +1935,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Private chef in Bingin, Bali. myCHEF cooks in cliff villas above the break — sunset dinners, seafood feasts, and surf-trip catering on the Bukit Peninsula.',
     coordinates: { lat: -8.8192, lng: 115.0906 },
-    bookingNote: 'Book 48 hours ahead. Cliff path access — our team arrives fully equipped with no fuss.',
+    bookingNote: 'Book 48 hours ahead for Bingin cliff villas. Our team knows the cliff paths and arrives fully equipped — steep access is not a problem.',
     published: true,
   },
 
@@ -1987,7 +1987,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef near Padang Padang, Bali. myCHEF serves Bukit Peninsula villas — sunset dinners, surf-trip catering, and Balinese menus by the clifftop.',
     coordinates: { lat: -8.8118, lng: 115.0879 },
-    bookingNote: 'Book 48–72 hours ahead. Logistics confirmed on booking; we handle access and sourcing.',
+    bookingNote: 'Book 48–72 hours ahead for Padang Padang villas. Logistics, cliff access and market sourcing are confirmed on booking with a fixed quote.',
     published: true,
   },
 
@@ -2040,7 +2040,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Hire a private chef in Sukawati. myCHEF serves Gianyar villas with authentic Balinese menus, traditional cooking, and private dining in rice-field settings.',
     coordinates: { lat: -8.6295, lng: 115.2869 },
-    bookingNote: 'Book 48 hours ahead for Sukawati. Same logistics and rate band as the Ubud and Gianyar zone.',
+    bookingNote: 'Book 48 hours ahead for Sukawati and Gianyar hinterland villas. Same logistics and rate band as the Ubud service zone apply.',
     published: true,
   },
 
@@ -2092,7 +2092,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Payangan, Bali. myCHEF serves highland retreats and eco-villas north of Ubud — organic menus, wellness catering, and Balinese cooking.',
     coordinates: { lat: -8.4050, lng: 115.2680 },
-    bookingNote: 'Book 48 hours ahead. Multi-day retreat catering welcome — contact us with full schedule.',
+    bookingNote: 'Book 48 hours ahead for Payangan highland villas. Multi-day retreat catering is welcome — send the full schedule for a fixed package quote.',
     published: true,
   },
 
@@ -2144,7 +2144,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Keramas, Bali. myCHEF serves east Gianyar coast villas — surf-trip catering, Balinese menus, and private dining near the break.',
     coordinates: { lat: -8.5726, lng: 115.3370 },
-    bookingNote: 'Book 48 hours ahead. East coast location — our team covers the full Gianyar coast.',
+    bookingNote: 'Book 48 hours ahead for Keramas black-sand villas. Our team covers the full Gianyar east coast with surf-trip and multi-day packages.',
     published: true,
   },
 
@@ -2198,7 +2198,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Bedugul, Bali. myCHEF serves highland villas near Lake Beratan — mountain menus with fresh local produce, retreats, and private dining.',
     coordinates: { lat: -8.2755, lng: 115.1667 },
-    bookingNote: 'Book 72 hours ahead to allow highland market sourcing and travel logistics.',
+    bookingNote: 'Book 72 hours ahead for Bedugul highland villas so we can source from Candi Kuning market and plan cooler-kitchen logistics.',
     published: true,
   },
 
@@ -2250,7 +2250,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Hire a private chef in Jatiluwih. myCHEF serves highland villas near the UNESCO rice terraces — Balinese menus, local produce, and private dining in Tabanan.',
     coordinates: { lat: -8.3600, lng: 115.1340 },
-    bookingNote: 'Book 72 hours ahead. Remote highland — logistics confirmed on booking.',
+    bookingNote: 'Book 72 hours ahead for Jatiluwih rice-terrace villas. Remote highland logistics and travel are confirmed on booking with a fixed quote.',
     published: true,
   },
 
@@ -2302,7 +2302,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Tabanan, Bali. myCHEF serves Tabanan regency villas — fresh local produce, Balinese menus and private dining in West Bali. WhatsApp myCHEF.',
     coordinates: { lat: -8.5350, lng: 115.1185 },
-    bookingNote: 'Book 48 hours ahead for Tabanan. Full West Bali regency coverage with travel included in your quote.',
+    bookingNote: 'Book 48 hours ahead for Tabanan regency villas. Full West Bali coverage with travel included in your quote; multi-day chef packages available on request.',
     published: true,
   },
 
@@ -2356,7 +2356,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Amed, Bali. myCHEF serves east coast villas and dive resorts — fresh local seafood, Balinese menus, and private dining in Karangasem.',
     coordinates: { lat: -8.3465, lng: 115.6520 },
-    bookingNote: 'Book 72 hours ahead. Remote northeast Bali — advance logistics essential.',
+    bookingNote: 'Book 72 hours ahead for Amed dive-coast villas. Remote northeast logistics are planned in advance; menus lean on morning boat catch.',
     published: true,
   },
 
@@ -2408,7 +2408,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Sidemen, Bali. myCHEF serves the Sidemen valley — Balinese menus, highland produce, and private dining below Mount Agung in Karangasem.',
     coordinates: { lat: -8.4741, lng: 115.4706 },
-    bookingNote: 'Book 72 hours ahead. Remote highland valley — advance logistics planning required.',
+    bookingNote: 'Book 72 hours ahead for Sidemen valley villas. Remote highland logistics are planned in advance; Balinese menus suit the Mount Agung setting.',
     published: true,
   },
 
@@ -2460,7 +2460,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Hire a private chef in Candidasa. myCHEF serves East Bali villas and guesthouses — fresh seafood menus, Balinese cooking, and private dining in Karangasem.',
     coordinates: { lat: -8.5085, lng: 115.5610 },
-    bookingNote: 'Book 72 hours ahead. East Bali location — logistics confirmed on booking.',
+    bookingNote: 'Book 72 hours ahead for Candidasa east-coast stays. Travel logistics are confirmed on booking; multi-day packages suit dive and culture trips.',
     published: true,
   },
 
@@ -2512,7 +2512,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Tulamben, Bali. myCHEF serves dive resorts and villas near the USAT Liberty wreck — seafood menus, group catering, and private dining.',
     coordinates: { lat: -8.2936, lng: 115.5976 },
-    bookingNote: 'Book 72–96 hours ahead. Remote northeast Bali — advance planning essential.',
+    bookingNote: 'Book 72–96 hours ahead for Tulamben dive resorts. Remote northeast logistics need advance planning; dive-day meal plans available on request.',
     published: true,
   },
 
@@ -2565,7 +2565,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Lovina, Bali. myCHEF serves North Bali villas and resorts — fresh local fish, Balinese menus, and private dining on the black sand coast.',
     coordinates: { lat: -8.1585, lng: 115.0267 },
-    bookingNote: 'Book 72 hours ahead. North Bali location — advance logistics planning required.',
+    bookingNote: 'Book 72 hours ahead for Lovina black-sand villas. North Bali logistics are planned in advance; early breakfasts for dolphin trips are popular.',
     published: true,
   },
 
@@ -2617,7 +2617,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Book a private chef in Singaraja, Bali. myCHEF serves Buleleng regency — North Balinese cuisine, villa dining, and event catering in the historic port city.',
     coordinates: { lat: -8.1120, lng: 115.0885 },
-    bookingNote: 'Book 72 hours ahead for Singaraja. Full North Bali event catering available with travel quoted upfront.',
+    bookingNote: 'Book 72 hours ahead for Singaraja. Full North Bali villa dinners and event catering available; travel is always quoted upfront before you confirm.',
     published: true,
   },
 
@@ -2668,7 +2668,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Hire a private chef in Pemuteran. myCHEF serves Menjangan Island villas — fresh seafood, organic menus and private dining in northwest Bali. WhatsApp myCHEF.',
     coordinates: { lat: -8.1255, lng: 114.6488 },
-    bookingNote: 'Book 96 hours ahead. Northwest Bali — our most remote service location.',
+    bookingNote: 'Book 96 hours ahead for Pemuteran eco-dive resorts — our most remote service location. Northwest logistics and Menjangan day trips need notice.',
     published: true,
   },
 
@@ -2722,7 +2722,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     metaDescription:
       'Hire a private chef in Kintamani. myCHEF serves highland villas on the Mount Batur caldera rim — warming mountain menus, sunrise breakfasts, and private dining.',
     coordinates: { lat: -8.2403, lng: 115.3693 },
-    bookingNote: 'Book 72 hours ahead. Caldera rim at 1,500m — cool temperatures year-round.',
+    bookingNote: 'Book 72 hours ahead for Kintamani caldera-rim villas at 1,500m. Cooler kitchens year-round; sunrise and sunset sessions available on request.',
     published: true,
   },
 

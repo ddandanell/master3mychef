@@ -18,8 +18,19 @@ import TrustSection from '@/components/trust/TrustSection'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { ArticleContentSection } from '@/components/shared'
+import HomeHeroVideo from '@/components/home/HomeHeroVideo'
 
 const PORTALS = [
+  {
+    id: 'private-chef',
+    title: 'Private Chef',
+    subtitle:
+      'A chef and assistant at your villa for one, two or three meals a day. From IDR 1,000,000++ per day.',
+    path: '/private-chef-bali',
+    image: '/generated/mychef-experience-bali-luna-hero-v2.webp',
+    imageAlt: 'Private chef cooking and serving a meal at a Bali villa for myCHEF guests',
+    accent: '#C5A028',
+  },
   {
     id: 'fine-dining',
     title: 'Fine Dining',
@@ -49,7 +60,7 @@ const PORTALS = [
   },
 ]
 
-// Six editorial trust cards rendered under the three service portals.
+// Six editorial trust cards rendered under the four service portals.
 // Each one earns the premium price tag with one concrete promise.
 const HOW_IT_WORKS = [
   {
@@ -93,7 +104,7 @@ const COMPARISON_ROWS = [
 const FAQS = [
   { q: 'How much does a private chef in Bali cost?', a: 'Villa dinners start from IDR 700K per person and tasting menus from IDR 950K per person, ++ (11% government tax + 10% service charge). Your fixed quote depends on menu, guest count and staffing. <a href="/pricing">Full price tables →</a>' },
   { q: "What's included in the price?", a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters and sommeliers can be added from IDR 250K/hour; bartenders from IDR 350K/hour.' },
-  { q: 'Do you offer a home chef service in Bali?', a: 'Yes — our private chefs work as your home chef for a single evening or on a daily or weekly basis: menu planning, market shopping, cooking and full clean-up at your villa or residence. See the <a href="/villa-chef">daily villa chef service</a>, or explore <a href="/private-dining-indonesia">private dining</a> for at-home fine dining.' },
+  { q: 'Do you offer a home chef service in Bali?', a: 'Yes — our private chefs work as your home chef for a single evening or on a daily or weekly basis: menu planning, market shopping, cooking and full clean-up at your villa or residence. See the <a href="/private-chef-bali">daily villa chef service</a>, or explore <a href="/private-dining-indonesia">private dining</a> for at-home fine dining.' },
   { q: 'How far in advance should I book?', a: 'A few days is ideal for dinners; weddings and large events deserve weeks. Same-day and next-day requests are often possible — message us and we\'ll tell you honestly.' },
   { q: 'Which areas do you serve?', a: 'All of Bali\'s main villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit. Remote-area travel is always quoted upfront.' },
   { q: 'Do you handle dietary requirements?', a: 'Yes — vegan, gluten-free, halal, allergies and kids\' menus at no extra charge. Tell us when you enquire and the menu is built around it.' },
@@ -209,11 +220,7 @@ export default function HubPage() {
 
       gsap.registerPlugin(ScrollTrigger)
       const ctx = gsap.context(() => {
-        const tl = gsap.timeline({ delay: 0.3 })
-        tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
-        tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
-        tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-        tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+        // Hero intro is handled by HomeHeroVideo timed copy (no GSAP on hero).
 
         gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {
           y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
@@ -325,64 +332,26 @@ export default function HubPage() {
         ogImage={getPageMeta('home').ogImage}
         jsonLd={homeSchemas}
       />
-      {/* HERO — premium brand identity with Michelin-trained founder story front and centre */}
-      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 md:pb-32" style={{ background: 'var(--u-bg)' }}>
+      {/* HERO — full-bleed video with timed elegant copy */}
+      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-16 md:pb-24" style={{ background: 'var(--u-bg)' }}>
         <div className="mb-10 md:mb-14">
-          <div className="relative min-h-screen overflow-hidden">
-            <img
-              src="/generated/mychef-location-bali-hub-hero.webp"
-              alt="Elegant private dining table set at sunset in a luxury Bali villa by myCHEF"
-              width={1536}
-              height={1024}
-              className="absolute inset-0 h-full w-full object-cover object-[center_52%]"
-              fetchPriority="high"
-              loading="eager"
-              decoding="async"
-              onError={(e) => {
-                const img = e.target as HTMLImageElement
-                img.style.opacity = '0.3'
-              }} />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)' }} />
-            <div className="absolute inset-0 bg-black/20 md:hidden" />
-            <div className="relative z-10 mx-auto flex min-h-screen max-w-[1280px] items-center px-5 pb-10 pt-20 sm:px-6 md:pb-14 md:pt-24">
-              <div className="max-w-2xl md:max-w-[46%]">
-                <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.34em] text-[#C5A028] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  Private Chef in Bali
-                </p>
-                <h1 className="hub-hero-title mb-4 text-[2rem] leading-[1.08] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Private Chef in Bali — Your Villa. Our Kitchen.
-                </h1>
-                <div className="gold-arc mb-6" />
-                <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
-                  Restaurant-level dining, cooked fresh in your villa by a Michelin-trained team. We shop, we cook, we serve, we clean — you just enjoy. From intimate dinners for two to weddings for 200, across Seminyak, Canggu, Ubud, Uluwatu and beyond.
-                </p>
-                <div className="hub-hero-cta mb-4 flex flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
-                  <a href="https://wa.me/6289674072020?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
-                    <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours <span aria-hidden="true">→</span>
-                  </a>
-                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
-                    see transparent pricing <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-                <p className="text-sm uppercase tracking-[0.18em] text-white/60" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  560+ villas served · 12,000+ happy guests · Same-day confirmation
-                </p>
-                <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70">
-                  <Link to="/services" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">explore all private chef services in Bali</Link>,{' '}
-                  <Link to="/fine-dining" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">fine dining tasting menus</Link>,{' '}
-                  <Link to="/villa-chef" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">daily villa chef service</Link>,{' '}
-                  <Link to="/hire-private-chef-bali-monthly" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">monthly private chef arrangements</Link>,{' '}
-                  <Link to="/chefs" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">meet our chefs</Link>,{' '}
-                  <Link to="/reviews" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">read guest reviews</Link>,{' '}
-                  <Link to="/why-mychef" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">why 560+ villas choose myCHEF</Link>, or{' '}
-                  <Link to="/faq" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">booking questions answered</Link>.
-                </p>
-              </div>
-            </div>
-          </div>
+          <HomeHeroVideo />
         </div>
 
         <div className="mx-auto max-w-[1280px] px-5 sm:px-6">
+          <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px]" style={{ color: 'var(--u-text-muted)' }}>
+            <Link to="/services" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Private chef services in Bali</Link>
+            {' · '}
+            <Link to="/fine-dining" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Fine dining</Link>
+            {' · '}
+            <Link to="/private-chef-bali" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Daily villa chef</Link>
+            {' · '}
+            <Link to="/catering" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Catering &amp; BBQ</Link>
+            {' · '}
+            <Link to="/chefs" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Meet the chefs</Link>
+            {' · '}
+            <Link to="/reviews" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Guest reviews</Link>
+          </p>
           <div className="mb-8 md:mb-12">
             <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
               Founded by Adriano — trained under a Michelin-starred chef in {siteFacts.founderTrainingCity} — myCHEF.id delivers restaurant-level dining to Bali&apos;s finest villas. From intimate fine dining for 6 to catering for 200, our 50+ person hospitality team handles every detail.
@@ -419,7 +388,7 @@ export default function HubPage() {
               </a>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {PORTALS.map((portal, idx) => (
               <div key={portal.id} className="portal-card group relative w-full overflow-hidden rounded-2xl min-h-[420px] sm:min-h-[480px]" style={{ aspectRatio: '3/4' }}>
                 {/* Anchor text lives in an sr-only span rather than aria-label: it gives
@@ -716,8 +685,8 @@ export default function HubPage() {
               { title: 'Fine dining', desc: 'Multi-course tasting menus (Italian, French, Mediterranean, Wagyu) plated in your villa, from 5 guests.', href: '/fine-dining', cta: 'Explore fine dining →' },
               { title: 'Catering & BBQ', desc: 'Buffets, live-fire grills, grazing tables and babi guling for groups of 10 to 150.', href: '/catering', cta: 'Explore catering →' },
               { title: 'Events & weddings', desc: 'Full-service hospitality: chef, staff, setup and cleanup for celebrations up to 200 guests.', href: '/events', cta: 'Explore events →' },
-              { title: 'Daily & weekly villa chef', desc: 'Breakfast, lunch and dinner across your whole stay, groceries at cost.', href: '/villa-chef', cta: 'Explore the daily villa chef service →' },
-              { title: 'Monthly & long-stay chefs', desc: 'Recurring arrangements for long-stay guests and residents.', href: '/hire-private-chef-bali-monthly', cta: 'Explore monthly hire →' },
+              { title: 'Daily & weekly villa chef', desc: 'Breakfast, lunch and dinner across your whole stay, groceries at cost.', href: '/private-chef-bali', cta: 'Explore the daily villa chef service →' },
+              { title: 'Monthly & long-stay chefs', desc: 'Recurring arrangements for long-stay guests and residents.', href: '/private-chef-bali', cta: 'Explore monthly hire →' },
               { title: 'In-villa staff', desc: 'Waiters, bartenders, butlers and sommeliers by the shift.', href: '/in-villa-service', cta: 'Explore in-villa service →' },
             ].map((service) => (
               <div key={service.href} className="p-8 rounded-2xl border transition-all hover:shadow-lg" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
@@ -744,7 +713,7 @@ export default function HubPage() {
           <h2 className="u-heading text-4xl md:text-5xl mb-6">Private Chef or Personal Chef?</h2>
           <p className="leading-relaxed mb-8" style={{ color: 'var(--u-text-muted)' }}>
             A <strong style={{ color: 'var(--u-text)' }}>private chef</strong> cooks for one occasion or group at a time — a dinner, a BBQ, a wedding. A <strong style={{ color: 'var(--u-text)' }}>personal chef</strong> is the same craft on a recurring rhythm: daily meals, weekly prep, or a monthly arrangement for your household. We do both. Most guests start with a single dinner; many long-stay guests move to a{' '}
-            <Link to="/hire-private-chef-bali-monthly" className="font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>
+            <Link to="/private-chef-bali" className="font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>
               weekly or monthly arrangement
             </Link>.
           </p>

@@ -108,7 +108,7 @@ const INITIAL: QuoteForm = {
   name: '',
   whatsapp: '',
   date: '',
-  guests: 8,
+  guests: 6,
   guestsFlexible: false,
   villaName: '',
   area: '',
@@ -118,6 +118,12 @@ const INITIAL: QuoteForm = {
   cateringTypes: [],
   eventServices: [],
   addOns: [],
+}
+
+const DEFAULT_GUESTS: Record<ServiceId, number> = {
+  'private-chef': 6,
+  catering: 20,
+  events: 40,
 }
 
 const SERVICES: {
@@ -258,16 +264,24 @@ const CATERING_ADDONS = [
 function chefAddOns(form: QuoteForm): string[] {
   const set = new Set<string>()
   if (form.meals.includes('dinner')) {
-    ;['Table Decorations', 'Bartender', 'Photographer', 'Live Music', 'Flowers', 'Cake'].forEach((x) => set.add(x))
+    ;['Table Decorations', 'Bartender', 'Photographer', 'Live Music', 'Flowers', 'Cake'].forEach((x) =>
+      set.add(x),
+    )
   }
   if (form.meals.includes('breakfast')) {
     ;['Floating Breakfast', 'Fresh Juice Station', 'Coffee Bar'].forEach((x) => set.add(x))
+  }
+  if (form.meals.includes('lunch')) {
+    ;['Waiter', 'Fresh Juice Station'].forEach((x) => set.add(x))
   }
   if (form.experiences.includes('bbq')) {
     ;['Seafood Upgrade', 'Premium Steak', 'Bartender', 'Dessert Table'].forEach((x) => set.add(x))
   }
   if (form.experiences.includes('family-style')) {
-    ;['Waiter', 'Kids Menu', 'Decorations'].forEach((x) => set.add(x))
+    ;['Waiter', 'Kids Menu', 'Table Decorations'].forEach((x) => set.add(x))
+  }
+  if (form.experiences.includes('fine-dining')) {
+    ;['Sommelier', 'Photographer', 'Table Decorations'].forEach((x) => set.add(x))
   }
   // Sensible defaults if nothing specific selected yet
   if (set.size === 0) {
@@ -363,28 +377,41 @@ export default function QuoteFunnel() {
     setForm((f) => ({ ...f, [key]: value }))
 
   const selectService = (id: ServiceId) => {
-    setForm((f) => ({
-      ...INITIAL,
-      // keep contact fields if user already typed them after going back
-      name: f.name,
-      whatsapp: f.whatsapp,
-      date: f.date,
-      guests: f.guests,
-      guestsFlexible: f.guestsFlexible,
-      villaName: f.villaName,
-      area: f.area,
-      service: id,
-    }))
+    setForm((f) => {
+      // Keep contact fields if the user already typed them after going back.
+      // Reset guests to a service-sensible default unless they already adjusted.
+      const guestsUntouched = f.guests === INITIAL.guests || f.guests === DEFAULT_GUESTS[f.service ?? id]
+      return {
+        ...INITIAL,
+        name: f.name,
+        whatsapp: f.whatsapp,
+        date: f.date,
+        guests: guestsUntouched ? DEFAULT_GUESTS[id] : f.guests,
+        guestsFlexible: f.guestsFlexible,
+        villaName: f.villaName,
+        area: f.area,
+        service: id,
+      }
+    })
     // Jump straight into details — one fewer click on the first screen
     setStep(1)
   }
+
+  const isOptionalStep = useMemo(() => {
+    if (!form.service) return false
+    if (form.service === 'private-chef') return step === 4 || step === 5 // dietary + add-ons
+    if (form.service === 'catering') return step === 4 // add-ons
+    if (form.service === 'events') return step === 5 // add-ons
+    return false
+  }, [form.service, step])
 
   const canAdvance = useMemo(() => {
     // Step 0: service
     if (step === 0) return !!form.service
     // Step 1: basics
     if (step === 1) {
-      const hasContact = form.name.trim().length >= 2 && form.whatsapp.trim().length >= 8
+      const phoneDigits = form.whatsapp.replace(/\D/g, '')
+      const hasContact = form.name.trim().length >= 2 && phoneDigits.length >= 8
       const hasDate = form.date.length > 0
       const hasGuests = form.guestsFlexible || form.guests > 0
       const hasPlace = form.villaName.trim().length > 0 || form.area.length > 0
@@ -508,6 +535,10 @@ export default function QuoteFunnel() {
 
   useEffect(() => {
     headingRef.current?.focus({ preventScroll: true })
+    // Keep the active question in view on mobile after each step change
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
   }, [step, submitted])
 
   useEffect(() => {
@@ -600,13 +631,20 @@ export default function QuoteFunnel() {
                 <ChevronLeft className="w-4 h-4" /> Back
               </button>
               <span aria-live="polite" aria-atomic="true">
-                Step {step + 1} of {totalSteps}
+                {step === 0
+                  ? 'Start here'
+                  : `Step ${step + 1} of ${totalSteps} · ${SERVICES.find((s) => s.id === form.service)?.title ?? ''}`}
               </span>
             </div>
             <div className="h-1 bg-[#E5E3E0] rounded-full mb-8 overflow-hidden" aria-hidden>
               <div
                 className="h-full bg-[#C5A028] transition-all duration-300"
-                style={{ width: `${((step + 1) / totalSteps) * 100}%` }}
+                style={{
+                  width:
+                    step === 0
+                      ? '8%'
+                      : `${Math.max(12, ((step + 1) / totalSteps) * 100)}%`,
+                }}
               />
             </div>
           </>
@@ -803,7 +841,7 @@ export default function QuoteFunnel() {
                 options={DIETARY}
                 selected={form.dietary}
                 onToggle={(id) => update('dietary', toggleInList(form.dietary, id as DietaryId))}
-                hint="Optional — skip if none"
+                hint="Optional — select any that apply, or continue"
                 allowEmpty
               />
             )}
@@ -953,18 +991,35 @@ export default function QuoteFunnel() {
               </div>
             )}
 
-            {/* Continue — not on last step */}
-            {!isLast && (
-              <div className="mt-10 flex justify-center">
+            {/* Continue — hidden on service pick (cards auto-advance) and final review */}
+            {!isLast && step > 0 && (
+              <div className="mt-10 flex flex-col items-center gap-3">
                 <button
                   type="button"
                   onClick={next}
                   disabled={!canAdvance}
-                  className="bg-[#C5A028] disabled:bg-[#C5A028]/40 disabled:cursor-not-allowed text-black font-semibold text-sm uppercase tracking-[2px] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C5A028]"
+                  className="w-full sm:w-auto bg-[#C5A028] disabled:bg-[#C5A028]/40 disabled:cursor-not-allowed text-black font-semibold text-sm uppercase tracking-[2px] px-10 py-4 rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C5A028]"
                 >
-                  Continue
+                  {isOptionalStep ? 'Continue' : 'Continue'}
                 </button>
+                {isOptionalStep && (
+                  <button
+                    type="button"
+                    onClick={next}
+                    className="text-sm text-[#8A8785] hover:text-[#1A1A1A] underline-offset-2 hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-2 py-1"
+                  >
+                    Skip — none of these
+                  </button>
+                )}
+                {!canAdvance && step === 1 && (
+                  <p className="text-xs text-[#8A8785] text-center max-w-sm">
+                    Add your name, WhatsApp, date, guests, and villa or area to continue.
+                  </p>
+                )}
               </div>
+            )}
+            {step === 0 && (
+              <p className="mt-8 text-center text-sm text-[#8A8785]">Tap a card to begin</p>
             )}
 
             <p className="text-xs text-[#8A8785] text-center mt-8 max-w-[480px] mx-auto">
@@ -1121,7 +1176,14 @@ function AddOnGrid({
   }
   return (
     <div>
-      <p className="text-sm text-[#8A8785] mb-4">Optional — select anything you’d like us to include.</p>
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <p className="text-sm text-[#8A8785]">Optional — select anything you’d like us to include.</p>
+        {selected.length > 0 && (
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#7E6410]">
+            {selected.length} selected
+          </p>
+        )}
+      </div>
       <div className="grid sm:grid-cols-2 gap-3">
         {options.map((label) => {
           const active = selected.includes(label)
@@ -1132,7 +1194,9 @@ function AddOnGrid({
               onClick={() => onToggle(label)}
               aria-pressed={active}
               className={`text-left bg-white border-2 rounded-xl p-4 transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
-                active ? 'border-[#C5A028]' : 'border-[#E5E3E0] hover:border-[#C5A028]/50'
+                active
+                  ? 'border-[#C5A028] bg-[#C5A028]/5 shadow-sm'
+                  : 'border-[#E5E3E0] hover:border-[#C5A028]/50'
               }`}
             >
               <span className="inline-flex items-center gap-2 text-sm font-medium">

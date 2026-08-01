@@ -180,6 +180,12 @@ export default function PrivateChefCostBaliPageBlog() {
             >
               Full Pricing Guide
             </Link>
+            <Link
+              to="/private-chef-bali"
+              className="inline-flex items-center gap-2 border border-white/20 text-white px-6 py-3 rounded hover:border-[#C5A028] hover:text-[#C5A028] transition-colors text-sm uppercase tracking-wider"
+            >
+              Hire a Private Chef
+            </Link>
           </div>
         </div>
       </section>

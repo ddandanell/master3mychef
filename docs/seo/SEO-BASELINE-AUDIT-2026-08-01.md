@@ -109,6 +109,7 @@ Note: “560+ villas” appears in many ranking titles/H1s. **Do not bulk-rewrit
 |---|---|---|
 | 2026-08-01 | Baseline audit document created | Evidence-based report correction |
 | 2026-08-01 | Expanded 20+ thin meta descriptions; aligned catering trust strips to 560+ events | Ranking-safe, titles/H1s untouched |
+| 2026-08-01 | Keyword ownership map + de-cannibalize guide/michelin/honeymoon; internal cost→hire link | Pushed toward main |
 | (ongoing) | See git log on this branch | |
 
 ---

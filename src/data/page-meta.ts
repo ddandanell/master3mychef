@@ -4,6 +4,11 @@
  * Centralised, unique title / description / H1 for every primary route.
  * Prevents duplicate title tag catastrophes and keeps SEO data in one
  * typed source of truth.
+ *
+ * KEYWORD OWNERSHIP: before changing title/h1/description, read
+ * docs/seo/KEYWORD-OWNERSHIP-MAP.md. One primary page owns each commercial
+ * keyword; supporting pages must lead with a modifier (area/occasion/format).
+ *
  */
 
 export interface PageMeta {

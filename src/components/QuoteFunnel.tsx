@@ -339,7 +339,7 @@ function getStepTitles(service?: ServiceId): string[] {
       'Which meals would you like?',
       'What type of experience?',
       'Any dietary requirements?',
-      'Enhance your experience',
+      'Recommended extras',
       'Review & send',
     ]
   }

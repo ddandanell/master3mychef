@@ -78,7 +78,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
       { slug: 'chefs-table', label: 'Chef’s Table', h1: "The Chef's Table — At Your Villa", title: 'Chef Table Experience Bali | Private Counter Dining | myCHEF', description: 'A private chef table at your Bali villa: counter-side seating, course-by-course commentary from Michelin-trained chefs. WhatsApp myCHEF.' },
       { slug: 'menus', label: 'Our Menus', h1: 'Our Menus', title: 'Private Chef Menus Bali | 24 Fine Dining Set Menus | myCHEF', description: 'Browse 24 set menus for private villa dining in Bali — vegetarian, seafood, mixed meats & single-meat. From IDR 1.25M per guest.' },
       { slug: 'our-chefs', label: 'Our Chefs', h1: 'Our Chefs', title: 'Our Chefs | Fine Dining Culinary Team | myCHEF', description: 'Meet the myCHEF fine dining brigade: Michelin-trained chefs crafting private villa dinners and tasting menus across Bali. Meet the team.' },
-      { slug: 'private-chef-bali', label: 'Private Chef Bali', h1: 'A Michelin-Trained Private Chef. At Your Space.', title: 'Michelin Private Chef Bali | Fine Dining at Your Villa', description: 'Book a Michelin-trained private chef for your Bali villa. Tasting menus, wine pairing, 5-act dining experiences. Transparent pricing. WhatsApp myCHEF.' },
+      { slug: 'private-chef-bali', label: 'Tasting Menu at Your Villa', h1: 'A Michelin-Trained Tasting Menu. In Your Villa.', title: 'Michelin Tasting Menu Bali | Fine Dining in Your Villa | myCHEF', description: 'A five-course Michelin-trained tasting menu served in your Bali villa. Mediterranean or Wagyu, wine pairing, full chef brigade. From IDR 2.2M++ per person.' },
     ],
   },
   catering: {

@@ -12,20 +12,24 @@ const WA = '6289674072020'
 // This is the page each city page links back to ("See the full Bali coverage map").
 export default function BaliHubPage() {
   const canonical = `${SITE}/guide/private-chef-bali`
-  const title = 'Private Chef in Bali — The Complete Guide'
-  const description='myCHEF serves the ten most-visited villa regions in Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan, and Bukit.'
+  // Keyword ownership: this page owns "private chef Bali areas / coverage map".
+  // Do NOT use head-term H1 "Private Chef in Bali" — that belongs to /private-chef-bali.
+  // Do NOT use "How to Hire" — that belongs to /blog/how-to-hire-private-chef-bali-complete-guide.
+  const title = 'Private Chef Coverage Across Bali'
+  const description =
+    'myCHEF private chef coverage across Bali’s top villa regions — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and Bukit. Pick your area and book.'
   const waLink = `https://wa.me/${WA}?text=${encodeURIComponent("Hi myCHEF, I'd like a private chef in Bali.")}`
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title={`${title} | myCHEF`}
+        title="Private Chef Bali Areas | Coverage Map by Villa Region | myCHEF"
         description={description}
         canonical={canonical}
         ogType="article"
         ogImage={`${SITE}/generated/mychef-location-bali-hub-hero.webp`}
         jsonLd={[
-          breadcrumbSchema('Bali Guide', canonical),
+          breadcrumbSchema('Bali Coverage', canonical),
           faqPageSchema([
             { question: 'How much does a private chef in Bali cost?', answer: 'Private chef services in Bali start from IDR 700,000 per person for set-menu dining. myCHEF.id offers transparent all-inclusive pricing covering ingredients, preparation, service, and cleanup.' },
             { question: 'What areas in Bali does myCHEF.id serve?', answer: 'myCHEF.id serves all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, and surrounding regions — covering 560+ villas across the island.' },

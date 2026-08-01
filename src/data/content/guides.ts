@@ -10,8 +10,8 @@ export const GUIDES: ContentEntry[] = [
   },
   {
     "slug": "guide/private-chef-bali",
-    "title": "Private Chef in Bali — Complete Guide",
-    "description": "Everything you need to know about hiring a private chef in Bali — costs and expectations.",
+    "title": "Private Chef Bali Areas | Coverage Map by Villa Region",
+    "description": "myCHEF private chef coverage across Bali’s top villa regions — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran and more.",
     "date": "2025-02-01"
   }
 ]

@@ -18,10 +18,10 @@ export const LANDING_PAGES: ContentEntry[] = [
 },
 {
     "slug": "michelin-private-chef-bali-prices",
-    "title": "Michelin Private Chef Bali Prices | 2026 Premium Cost Guide",
-    "description": "What a Michelin-standard private chef costs in Bali: tasting menu pricing, groceries and service breakdowns. Transparent 2026 guide.",
+    "title": "Michelin-Standard Chef Prices in Bali | 2026 Premium Guide",
+    "description": "Premium Michelin-standard chef pricing in Bali: tasting menus, groceries and service breakdowns for villa fine dining. Transparent 2026 figures — not the standard day-rate table.",
     "date": "2026-05-17",
-    "h1": "Michelin Private Chef Bali Prices — 2026 Cost Guide",
+    "h1": "Michelin-Standard Chef Prices in Bali — 2026 Guide",
 },
 {
     "slug": "private-tasting-menu-bali",
@@ -752,7 +752,7 @@ export const LANDING_PAGES: ContentEntry[] = [
 },
 {
     "slug": "honeymoon-chef",
-    "title": "Honeymoon Private Chef Bali | Villa Dining for Couples",
+    "title": "Honeymoon Chef Bali | Romantic Villa Dining for Couples",
     "description": "Private chef experiences for honeymooners in Bali: romantic breakfasts, sunset dinners and intimate in-villa hosting. WhatsApp myCHEF.",
     "date": "2026-05-17",
     "h1": "Honeymoon Chef Bali — Private Villa Dining for Two",

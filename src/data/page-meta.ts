@@ -702,11 +702,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'michelin-private-chef-bali-prices': {
     path: '/michelin-private-chef-bali-prices',
-    title: 'Michelin Private Chef Bali Prices | 2026 Premium Cost Guide',
+    title: 'Michelin-Standard Chef Prices in Bali | 2026 Premium Guide',
     description:
-      'What a Michelin-standard private chef costs in Bali: tasting menu pricing, groceries and service breakdowns. Transparent 2026 guide.',
+      'Premium Michelin-standard chef pricing in Bali: tasting menus, groceries and service breakdowns for villa fine dining. Transparent 2026 figures — not the standard day-rate table.',
     canonical: `${SITE}/michelin-private-chef-bali-prices`,
-    h1: 'Michelin Private Chef Bali Prices — 2026 Cost Guide',
+    h1: 'Michelin-Standard Chef Prices in Bali — 2026 Guide',
   },
 
       'seafood-bbq-catering-bali': {
@@ -829,7 +829,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'honeymoon-chef': {
     path: '/honeymoon-chef',
-    title: 'Honeymoon Private Chef Bali | Villa Dining for Couples',
+    title: 'Honeymoon Chef Bali | Romantic Villa Dining for Couples',
     description:
       'Private chef experiences for honeymooners in Bali: romantic breakfasts, sunset dinners and intimate in-villa hosting. WhatsApp myCHEF.',
     canonical: `${SITE}/honeymoon-chef`,
@@ -838,11 +838,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'guide-private-chef-bali': {
     path: '/guide/private-chef-bali',
-    title: 'How to Hire a Private Chef in Bali | Step-by-Step Guide',
+    title: 'Private Chef Bali Areas | Coverage Map by Villa Region | myCHEF',
     description:
-      'Everything you need to know about hiring a private chef in Bali — costs, what to expect, areas covered and how booking works.',
+      'myCHEF private chef coverage across Bali’s top villa regions — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and Bukit. Pick your area and book.',
     canonical: `${SITE}/guide/private-chef-bali`,
-    h1: 'Private Chef in Bali — The Complete Guide',
+    h1: 'Private Chef Coverage Across Bali',
     ogImage: `${SITE}/generated/bali-hub-hero.webp`,
   },
 

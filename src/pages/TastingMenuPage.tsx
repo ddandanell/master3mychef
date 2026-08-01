@@ -534,7 +534,7 @@ export default function TastingMenuPage() {
         <div className="max-w-[960px] mx-auto flex flex-wrap justify-center gap-x-8 gap-y-3">
           {[
             { label: 'Fine Dining Overview', href: '/fine-dining' },
-            { label: 'Private Chef Bali', href: '/' },
+            { label: 'Private Chef Bali', href: '/private-chef-bali' },
             { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner' },
             { label: "Chef's Table", href: '/fine-dining/chefs-table' },
             { label: 'Our Menus', href: '/fine-dining/menus' },

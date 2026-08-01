@@ -113,3 +113,5 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | Date | Change |
 |---|---|
 | 2026-08-01 | Map created; first differentiation pass applied on guide + cost/premium titles |
+| 2026-08-01 | Retargeted 22 supporting pages' “Private Chef Bali” related links from `/` to `/private-chef-bali` |
+

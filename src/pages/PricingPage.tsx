@@ -225,6 +225,7 @@ const RELATED_PAGES = [
   { label: 'Catering', href: '/catering', desc: 'Full-service villa catering for any occasion.' },
   { label: 'Events', href: '/events', desc: 'Weddings, retreats, and celebrations across Bali.' },
   { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, butlers, bartenders, and sommeliers per shift.' },
+  { label: 'Private Chef Bali Day Rates', href: '/private-chef-bali', desc: 'Daily chef hire: one meal, two meals or full-day plans with chef + assistant.' },
   { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Step-by-step guide to finding, vetting, and booking a chef.' },
   { label: 'Get a Quote', href: '/quote', desc: 'Receive a detailed proposal within 24 hours.' },
 ]

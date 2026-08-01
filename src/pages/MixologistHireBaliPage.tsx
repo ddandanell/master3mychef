@@ -129,7 +129,7 @@ const relatedPages = [
   { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing expertise' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full catering for villa celebrations' },
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and event crew hire' },
-  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'In-villa private chef service' },
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef for bachelor parties' },
 ]
 

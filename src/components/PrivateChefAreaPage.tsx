@@ -665,7 +665,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               { label: 'Villa Catering', href: '/catering', icon: Utensils },
               { label: 'Events & Weddings', href: '/events', icon: Sparkles },
               { label: 'Staffing', href: '/staffing', icon: Users },
-              { label: 'Private Chef Bali', href: '/', icon: ChefHat },
+              { label: 'Private Chef Bali', href: '/private-chef-bali', icon: ChefHat },
               { label: 'Pricing Guide', href: '/pricing', icon: Check },
               { label: 'Book myCHEF', href: '/book', icon: CalendarCheck },
               { label: 'Get a Quote', href: '/quote', icon: MessageCircle },

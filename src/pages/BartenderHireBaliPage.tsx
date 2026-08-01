@@ -122,7 +122,7 @@ const faqs = [
 const relatedPages = [
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters, kitchen crew and full event teams' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Food and drinks for villa celebrations' },
-  { label: 'Private Chef Bali', href: '/', desc: 'In-villa chef for dinner and events' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'In-villa chef for dinner and events' },
   { label: 'Grazing Tables Bali', href: '/catering/grazing-tables', desc: 'Grazing boards and charcuterie for events' },
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Full-service catering for buck\'s parties' },
   { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering solutions for 30+ guests' },

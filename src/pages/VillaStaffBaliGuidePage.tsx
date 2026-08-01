@@ -168,7 +168,7 @@ const RELATED_PAGES = [
   { label: 'Live-In Chef Guide', href: '/staffing', desc: 'How to hire, vet, and manage a live-in private chef for your Bali villa.' },
   { label: 'Staffing Placement', href: '/staffing/placement', desc: 'myCHEF permanent and temporary staffing placement service.' },
   { label: 'Staffing: Villa Staff', href: '/staffing/villa-staff', desc: 'Full villa team staffing — chefs, butlers, housekeepers, drivers.' },
-  { label: 'Private Chef Bali', href: '/', desc: 'Private chef service for Bali villa guests and residents.' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Private chef service for Bali villa guests and residents.' },
   { label: 'Pricing Guide', href: '/pricing', desc: 'Full pricing for all myCHEF services and staffing.' },
   { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Step-by-step guide to hiring a private chef in Bali.' },
 ]

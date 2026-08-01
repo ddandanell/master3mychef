@@ -113,7 +113,7 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Dining Bali', href: '/private-dining-indonesia', desc: 'Full in-villa private dining guide' },
-  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'In-villa private chef service' },
   { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
   { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine pairing for fine dining events' },
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate couples dining experiences' },

@@ -117,7 +117,7 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Bali Wedding Catering', href: '/bali-wedding-catering-packages', desc: 'Full guide to wedding catering costs' },
-  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'In-villa private chef service' },
   { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa event catering' },
   { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing for events' },

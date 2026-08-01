@@ -119,7 +119,7 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Private Chef Bali', href: '/', desc: 'Full in-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Full in-villa private chef service' },
   { label: "Chef's Table Bali", href: '/fine-dining/chefs-table', desc: 'Interactive chef dinner experience' },
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate dinners for couples' },
   { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course table service' },

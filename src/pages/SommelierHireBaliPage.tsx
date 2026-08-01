@@ -124,7 +124,7 @@ const faqs = [
 const relatedPages = [
   { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },
   { label: 'Mixologist Hire Bali', href: '/in-villa-service/mixology', desc: 'Craft cocktail bar for villa events' },
-  { label: 'Private Chef Bali', href: '/', desc: 'In-villa fine dining experience' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'In-villa fine dining experience' },
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate private dinners for couples' },
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Professional event crew hire' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa event catering' },

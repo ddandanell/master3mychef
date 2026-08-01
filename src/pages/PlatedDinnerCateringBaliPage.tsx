@@ -120,7 +120,7 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Private Chef Bali', href: '/', desc: 'In-villa private chef service' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'In-villa private chef service' },
   { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing for events' },
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Intimate private dinners for couples' },
   { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Private proposal dinner planning' },

@@ -210,7 +210,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Private Chef Bali', href: '/', desc: 'Full overview of private chef and dining experiences across Bali.' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Day rates, meal plans and how private chef hire works across Bali.' },
   { label: 'Villa Catering', href: '/catering/villa-catering', desc: 'Full-service catering for villa celebrations and group dining.' },
   { label: 'Event Catering', href: '/events', desc: 'Weddings, birthdays, corporate events and villa parties handled end-to-end.' },
   { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and event types.' },

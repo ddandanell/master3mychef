@@ -179,7 +179,7 @@ const SECTIONS = [
     title: 'More Resources',
     links: [
       { label: 'Private Chef Cost in Bali (Full Guide)', href: '/blog/private-chef-cost-bali', desc: 'Detailed breakdown of what every tier actually costs, with real examples.' },
-      { label: 'Private Chef Bali — Overview', href: '/', desc: 'How myCHEF works: meet the team, see the menus, browse chef profiles.' },
+      { label: 'Private Chef Bali — Overview', href: '/private-chef-bali', desc: 'Day rates, meal plans, groceries at cost — hire a private chef for your villa stay.' },
       { label: 'Complete Bali Private Chef Guide', href: '/guide/private-chef-bali', desc: 'Everything you need to plan a private chef experience in Bali from start to finish.' },
       { label: 'Our Pricing', href: '/pricing', desc: 'Up-to-date service fees and package options across all tiers.' },
       { label: 'Meet Our Chefs', href: '/chefs', desc: 'Browse individual chef profiles, specialties, and past event galleries.' },

@@ -519,6 +519,10 @@ export interface JournalPost {
   excerpt: string
   content?: string
   readTime?: number
+  /** Cover image path under /public, e.g. /generated/mychef-journal-….webp */
+  image?: string
+  /** SEO keyword focus for the article card/alt text */
+  focusKeyword?: string
 }
 
 export interface JournalCategory {

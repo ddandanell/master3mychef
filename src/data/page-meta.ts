@@ -1070,119 +1070,132 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'journal-michelin-training-bali': {
     path: '/journal/michelin-training-bali',
-    title: 'Michelin Training in Bali: Mastering Italian Technique',
+    title: 'Michelin Training Bali | Italian Technique for Villa Chefs',
     description:
-      'Discover how Michelin-trained techniques translate to intimate villa dining in Bali.',
+      'How Michelin-trained Italian technique shapes private chef dining in Bali — sauces, plating, and five-star villa service. Read the myCHEF journal.',
     canonical: `${SITE}/journal/michelin-training-bali`,
     h1: 'Michelin Training in Bali: How Our Chefs Master Italian Technique',
+    ogImage: `${SITE}/generated/mychef-journal-michelin-training-bali.webp`,
   },
 
       'journal-sustainable-sourcing': {
     path: '/journal/sustainable-sourcing',
-    title: 'Sustainable Sourcing in Bali: Farm-to-Villa | myCHEF',
+    title: 'Farm-to-Villa Sourcing Bali | Sustainable Private Chef Food',
     description:
-      'Learn about our commitment to local, organic ingredients and the Bali producers we work with directly.',
+      'Farm-to-villa sourcing for private chef Bali: local produce, seafood, transparent groceries, and the producers behind every plate. myCHEF journal.',
     canonical: `${SITE}/journal/sustainable-sourcing`,
     h1: 'Sustainable Sourcing: Our Farm-to-Villa Philosophy',
+    ogImage: `${SITE}/generated/mychef-journal-sustainable-sourcing.webp`,
   },
 
       'journal-private-chef-vs-villa-staff-bali': {
     path: '/journal/private-chef-vs-villa-staff-bali',
-    title: 'Private Chef vs Villa Staff in Bali: The Difference | myCHEF',
+    title: 'Private Chef vs Villa Staff Bali | Who Does What',
     description:
-      'Why hiring a specialized private chef beats relying on general villa staff for your milestone dinner in Bali.',
+      'Private chef vs villa staff in Bali explained — roles, skills, and when you need a dedicated chef for villa dinners and events. myCHEF guide.',
     canonical: `${SITE}/journal/private-chef-vs-villa-staff-bali`,
     h1: 'Private Chef vs. Villa Staff — Understanding the Difference',
+    ogImage: `${SITE}/generated/mychef-journal-private-chef-vs-villa-staff.webp`,
   },
 
       'journal-bali-private-chef-cost-guide-2026': {
     path: '/journal/bali-private-chef-cost-guide-2026',
-    title: 'Bali Private Chef Costs: Groceries, Tax & Tipping Explained',
+    title: 'Private Chef Cost Bali 2026 | Menus, Groceries & Tax',
     description:
-      'The hidden line items of a Bali private chef booking — groceries at cost, the ++ (tax & service), and tipping norms explained.',
+      '2026 private chef cost Bali guide: daily hire, per-person dinners, groceries at cost, ++ tax & service, and tipping. Transparent myCHEF pricing.',
     canonical: `${SITE}/journal/bali-private-chef-cost-guide-2026`,
     h1: 'Bali Private Chef Costs: Groceries, Tax & Tipping Explained',
+    ogImage: `${SITE}/generated/mychef-journal-private-chef-cost-guide.webp`,
   },
 
       'journal-villa-wedding-catering-logistics-bali': {
     path: '/journal/villa-wedding-catering-logistics-bali',
-    title: 'Villa Wedding Catering Logistics Guide for Bali | myCHEF',
+    title: 'Villa Wedding Catering Logistics Bali | Kitchen & Service',
     description:
-      'From kitchen requirements to service flow — what you need to know about catering a villa wedding in Bali.',
+      'Villa wedding catering logistics in Bali: kitchen access, power, staffing ratios, service flow, and timelines for a smooth wedding meal. myCHEF guide.',
     canonical: `${SITE}/journal/villa-wedding-catering-logistics-bali`,
     h1: 'Villa Wedding Catering Logistics Guide for Bali',
+    ogImage: `${SITE}/generated/mychef-journal-villa-wedding-catering.webp`,
   },
 
       'journal-yoga-retreat-meal-planning-bali': {
     path: '/journal/yoga-retreat-meal-planning-bali',
-    title: 'Yoga Retreat Meal Planning Bali | Nutritional Integrity',
+    title: 'Yoga Retreat Meal Planning Bali | Menus That Fuel Practice',
     description:
-      'How we design retreat menus that balance detoxification with culinary satisfaction.',
+      'Yoga retreat meal planning in Bali: plant-forward menus, energy timing, allergens, and multi-day catering for wellness groups. myCHEF guide.',
     canonical: `${SITE}/journal/yoga-retreat-meal-planning-bali`,
     h1: 'Yoga Retreat Meal Planning: Nutritional Integrity for Bali Retreats',
+    ogImage: `${SITE}/generated/mychef-journal-yoga-retreat-meals.webp`,
   },
 
       'journal-private-chef-seminyak-guide': {
     path: '/journal/private-chef-seminyak-guide',
-    title: 'Hiring a Private Chef in Seminyak: The 2026 Local\'s Guide',
+    title: 'Private Chef Seminyak Bali 2026 | Prices & Logistics',
     description:
-      'Everything you need to know about booking a private chef for your Seminyak villa stay—from pricing to logistics.',
+      'Hire a private chef in Seminyak Bali: 2026 pricing, villa kitchen logistics, travel, and the dining formats that work best near the beach. myCHEF guide.',
     canonical: `${SITE}/journal/private-chef-seminyak-guide`,
     h1: 'Hiring a Private Chef in Seminyak: The 2026 Local\'s Guide',
+    ogImage: `${SITE}/generated/mychef-journal-private-chef-seminyak.webp`,
   },
 
       'journal-private-chef-canggu-guide': {
     path: '/journal/private-chef-canggu-guide',
-    title: 'Private Chef Canggu Guide: What Makes It Different | myCHEF',
+    title: 'Private Chef Canggu Bali | Villa Dining That Fits Surf Life',
     description:
-      'Why Canggu\'s laid-back surf culture creates unique opportunities for villa dining experiences.',
+      'Private chef Canggu guide: flexible villa dining, BBQ nights, family-style service, and logistics for Canggu and Berawa stays. myCHEF.',
     canonical: `${SITE}/journal/private-chef-canggu-guide`,
     h1: 'Private Chef Services in Canggu: What Makes It Different',
+    ogImage: `${SITE}/generated/mychef-journal-private-chef-canggu.webp`,
   },
 
       'journal-private-chef-ubud-villa-dining': {
     path: '/journal/private-chef-ubud-villa-dining',
-    title: 'Private Chef Ubud Guide: Logistics & Pricing | myCHEF',
+    title: 'Private Chef Ubud Bali | Villa Dining Logistics & Pricing',
     description:
-      'The complete guide to hiring a private chef for your Ubud villa—from jungle logistics to cultural dining experiences.',
+      'Private chef Ubud villa dining: jungle logistics, travel fees, cultural menus, and what to plan before you book. Full myCHEF Ubud guide.',
     canonical: `${SITE}/journal/private-chef-ubud-villa-dining`,
     h1: 'Private Chef Services in Ubud: Logistics, Pricing & What to Expect',
+    ogImage: `${SITE}/generated/mychef-journal-private-chef-ubud.webp`,
   },
 
       'journal-bali-wedding-catering-complete-guide': {
     path: '/journal/bali-wedding-catering-complete-guide',
-    title: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
+    title: 'Bali Wedding Catering Guide | Budgets, Menus & Vendors',
     description:
-      'Everything about catering a destination wedding in Bali — menu design, budgets and cultural considerations.',
+      'Bali wedding catering guide: realistic budgets, menu styles, vendor coordination, and cultural considerations for destination weddings. myCHEF.',
     canonical: `${SITE}/journal/bali-wedding-catering-complete-guide`,
     h1: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
+    ogImage: `${SITE}/generated/mychef-journal-bali-wedding-catering.webp`,
   },
 
       'journal-rehearsal-dinner-planning-bali': {
     path: '/journal/rehearsal-dinner-planning-bali',
-    title: 'Rehearsal Dinner Bali: The Complete Planning Guide | myCHEF',
+    title: 'Bali Rehearsal Dinner Guide | Villa Menus & Planning Tips',
     description:
-      'Plan an unforgettable rehearsal or welcome dinner in Bali — villa selection, menu design and private chef options. WhatsApp myCHEF.',
+      'Plan a Bali rehearsal dinner or welcome night: villa setup, guest flow, private chef menus, and timing that keeps the party relaxed. myCHEF guide.',
     canonical: `${SITE}/journal/rehearsal-dinner-planning-bali`,
     h1: 'Planning Your Bali Rehearsal Dinner: The Complete Guide',
+    ogImage: `${SITE}/generated/mychef-journal-rehearsal-dinner-bali.webp`,
   },
 
       'journal-live-in-chef-vs-daily-service': {
     path: '/journal/live-in-chef-vs-daily-service',
-    title: 'Live-In Chef vs Daily Service: Which Fits Your Bali Villa?',
+    title: 'Live-In Chef vs Daily Service Bali | Which Fits Your Stay?',
     description:
-      'A transparent comparison of live-in chef services vs on-demand daily bookings for long-stay Bali villa guests.',
+      'Live-in chef vs daily private chef service in Bali: cost, privacy, meal coverage, and which model fits long villa stays. Compare with myCHEF.',
     canonical: `${SITE}/journal/live-in-chef-vs-daily-service`,
     h1: 'Live-In Chef vs. Daily Service — Which Is Right for You?',
+    ogImage: `${SITE}/generated/mychef-journal-live-in-vs-daily-chef.webp`,
   },
 
       'journal-bbq-catering-cost-breakdown-bali': {
     path: '/journal/bbq-catering-cost-breakdown-bali',
-    title: 'BBQ Catering in Bali: The Complete Cost Breakdown | myCHEF',
+    title: 'BBQ Catering Cost Bali | Per-Person Prices & Packages',
     description:
-      'Transparent pricing for villa BBQ catering in Bali — from budget feasts to premium Wagyu experiences. Per-pax tables and what drives cost.',
+      'BBQ catering cost in Bali: Indonesian, International, and Surf & Turf packages with per-person pricing, staffing, and what drives the quote. myCHEF.',
     canonical: `${SITE}/journal/bbq-catering-cost-breakdown-bali`,
     h1: 'BBQ Catering in Bali: The Complete Cost Breakdown',
+    ogImage: `${SITE}/generated/mychef-journal-bbq-catering-cost.webp`,
   },
 
       'fine-dining-romantic-dinner': {
@@ -2176,12 +2189,12 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       journal: {
     path: '/journal',
-    title: 'Journal | Bali Private Chef Guides & Hosting Tips | myCHEF',
+    title: 'Bali Private Chef Journal | Cost Guides, Menus & Hosting Tips',
     description:
-      'Expert guides, cost breakdowns and insider tips for hosting private chefs, villa dinners, weddings and events in Bali.',
+      'SEO-ready guides for hosting in Bali: private chef cost 2026, Seminyak Canggu Ubud dining, villa wedding catering, BBQ prices, and retreat menus. myCHEF journal.',
     canonical: `${SITE}/journal`,
-    h1: 'Journal',
-    ogImage: `${SITE}/og-image.webp`,
+    h1: 'Bali Private Chef Guides & Hosting Tips',
+    ogImage: `${SITE}/generated/mychef-journal-private-chef-cost-guide.webp`,
   },
 
       pricing: {

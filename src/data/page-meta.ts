@@ -937,7 +937,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     // title and the client-hydrated title agree.
     title: 'Wedding Private Chef Bali | Villa Catering Planning Guide',
     description:
-      'How to plan catering for a Bali villa wedding with a private chef — menu planning, logistics, guest flow and cost ranges for intimate and larger celebrations.t expectations.',
+      'How to plan catering for a Bali villa wedding with a private chef — menu planning, logistics, guest flow and cost ranges for intimate and larger celebrations.',
     canonical: `${SITE}/blog/wedding-private-chef-bali-planning-guide`,
     h1: 'Wedding Private Chef in Bali: Planning & Logistics Guide',
   },

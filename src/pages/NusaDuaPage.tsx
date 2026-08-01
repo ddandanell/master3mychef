@@ -93,8 +93,8 @@ export default function NusaDuaPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Dining in Nusa Dua | Dining Guide & Chef Services"
-        description="Where to eat in Nusa Dua: the area dining guide — restaurants, private dining and in-villa chef services for your Nusa Dua stay. By myCHEF."
+        title="Private Dining Nusa Dua Bali | Villa & Corporate Hosting"
+        description="Private dining Nusa Dua for resort villas and corporate dinners. In-villa chef service, company events and polished hosting with myCHEF."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-nusa-dua.webp"
         jsonLd={[
@@ -117,9 +117,9 @@ export default function NusaDuaPage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Nusa Dua Dining Guide</p>
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Dining in Nusa Dua: Where to Eat & In-Villa Chef Options</h1>
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Dining in Nusa Dua — Villa Chef & Corporate Options</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Nusa Dua runs to a different standard from the rest of Bali — and dining here follows suit. The peninsula is a purpose-built enclave of five-star resorts, gated residential estates and manicured beachfront, twenty minutes from the airport and a world away from the island's usual happy chaos. This guide maps where to eat out in the enclave, what private dining looks like behind those gates, and when an in-villa chef dinner outclasses even the resort restaurants.
+            Private dining Nusa Dua suits resort villas and corporate dinners that need hotel polish without the hotel dining room. Nusa Dua runs to a different standard from the rest of Bali — and dining here follows suit. The peninsula is a purpose-built enclave of five-star resorts, gated residential estates and manicured beachfront, twenty minutes from the airport and a world away from the island's usual happy chaos. This guide maps where to eat out in the enclave, what private dining looks like behind those gates, and when an in-villa chef dinner outclasses even the resort restaurants.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
@@ -275,6 +275,18 @@ export default function NusaDuaPage() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
+          
+      {/* Keyword ownership: related services */}
+      <section className="max-w-4xl mx-auto px-6 py-12">
+        <h2 className="font-playfair text-2xl md:text-3xl mb-4">Related myCHEF Services in Nusa Dua</h2>
+        <ul className="space-y-2 text-[#4A4745]">
+          <li><Link to="/private-chef/nusa-dua" className="text-[#C5A028] hover:underline font-medium">Private chef nusa dua</Link> — hire a chef for villa dinners and multi-day cooking.</li>
+          <li><Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Catering Bali</Link> — BBQ, buffet and group menus for larger villa parties.</li>
+          <li><Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">Fine dining at your villa</Link> — tasting menus and chef’s table formats.</li>
+          <li><Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline font-medium">Private dining Bali</Link> — how at-home fine dining works island-wide.</li>
+        </ul>
+      </section>
+
           <h2 className="font-playfair text-3xl mb-10">Nusa Dua Dining FAQ</h2>
           <div className="space-y-4">
             {FAQS.map((faq, i) => (

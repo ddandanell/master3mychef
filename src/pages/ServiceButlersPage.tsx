@@ -152,10 +152,10 @@ export default function ServiceButlersPage() {
     ]} theme="dark" className="px-0 pt-0 pb-8" />
     <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Hire a Private Butler in Bali
+            Butler Service Bali — Hire a Private Villa Butler
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Discreet, professional butlers for your villa stay, celebration or event — hired by the day, not bundled into a hotel room. Arrival service, household coordination and anticipatory guest care, from IDR 1,200,000 per day.
+            Butler service Bali for villa stays, celebrations and events — hired by the day, not bundled into a hotel room. Discreet arrival service, household coordination and anticipatory guest care, from IDR 1,200,000 per day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-butlers-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -369,12 +369,12 @@ export default function ServiceButlersPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Bartenders', href: '/in-villa-service/bartenders', desc: 'Cocktail and bar service.' },
-              { label: 'Butlers', href: '/in-villa-service/butlers', desc: 'Discreet villa hosting.' },
+              { label: 'Bartender hire Bali', href: '/in-villa-service/bartenders', desc: 'Cocktail and bar service.' },
+              { label: 'Fine dining Bali villa', href: '/fine-dining', desc: 'In-villa tasting menus.' },
               { label: 'Sommelier', href: '/in-villa-service/sommelier', desc: 'Wine pairing and service.' },
               { label: 'Mixology', href: '/in-villa-service/mixology', desc: 'Signature cocktail programs.' },
-              { label: 'Events', href: '/events', desc: 'Full-service event production.' },
-              { label: 'Catering', href: '/catering', desc: 'Full-service catering for any event.' },
+              { label: 'Private dining', href: '/private-dining-indonesia', desc: 'At-home fine dining island-wide.' },
+              { label: 'Catering Bali', href: '/catering', desc: 'Full-service catering for any event.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>

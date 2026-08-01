@@ -92,8 +92,8 @@ export default function SanurPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Dining in Sanur | Dining Guide & Chef Services"
-        description="Where to eat in Sanur: the area dining guide — restaurants, private dining and in-villa chef services for your Sanur stay. By myCHEF."
+        title="Private Dining Sanur Bali | Villa Chef & Local Guide"
+        description="Private dining Sanur for beach villas: in-villa chef service, family dinners and relaxed hosting. myCHEF covers Sanur & east Bali."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-sanur.webp"
         jsonLd={[
@@ -116,9 +116,9 @@ export default function SanurPage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Sanur Dining Guide</p>
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Dining in Sanur: Where to Eat & In-Villa Chef Options</h1>
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Dining in Sanur — Villa Chef Options & Local Guide</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Sanur is where Bali exhales. The island's original beach resort town runs on a gentler clock: calm protected water, a flat beachfront path that stretches for kilometres, and sunrise over the Lombok Strait instead of sunset crowds. This guide maps where to eat out in Sanur, explains the private dining options for villa guests, and shows why so many families end up taking their best meals at their own table.
+            Private dining Sanur is the easy family format — early kids’ meals, later adult courses, chef in your beach villa. Sanur is where Bali exhales. The island's original beach resort town runs on a gentler clock: calm protected water, a flat beachfront path that stretches for kilometres, and sunrise over the Lombok Strait instead of sunset crowds. This guide maps where to eat out in Sanur, explains the private dining options for villa guests, and shows why so many families end up taking their best meals at their own table.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
@@ -276,6 +276,18 @@ export default function SanurPage() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
+          
+      {/* Keyword ownership: related services */}
+      <section className="max-w-4xl mx-auto px-6 py-12">
+        <h2 className="font-playfair text-2xl md:text-3xl mb-4">Related myCHEF Services in Sanur</h2>
+        <ul className="space-y-2 text-[#4A4745]">
+          <li><Link to="/private-chef/sanur" className="text-[#C5A028] hover:underline font-medium">Private chef sanur</Link> — hire a chef for villa dinners and multi-day cooking.</li>
+          <li><Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Catering Bali</Link> — BBQ, buffet and group menus for larger villa parties.</li>
+          <li><Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">Fine dining at your villa</Link> — tasting menus and chef’s table formats.</li>
+          <li><Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline font-medium">Private dining Bali</Link> — how at-home fine dining works island-wide.</li>
+        </ul>
+      </section>
+
           <h2 className="font-playfair text-3xl mb-10">Sanur Dining FAQ</h2>
           <div className="space-y-4">
             {FAQS.map((faq, i) => (

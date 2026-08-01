@@ -137,10 +137,10 @@ export default function ServiceBartendersPage() {
     ]} theme="dark" className="px-0 pt-0 pb-8" />
     <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Private Bartender Hire for Villas &amp; Events in Bali
+            Bartender Hire Bali for Villas &amp; Events
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            A professional bartender at your villa — classic cocktails, signature serves, full bar setup and complete breakdown. From IDR 350,000 per hour, 3-hour minimum, for villa parties, weddings, sundowners and dinners across Bali.
+            Bartender hire Bali for villa parties, weddings, sundowners and dinners — classic cocktails, signature serves, full bar setup and complete breakdown. From IDR 350,000 per hour, 3-hour minimum, across Bali.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-bartenders-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -393,11 +393,11 @@ export default function ServiceBartendersPage() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { label: 'Waiters', href: '/in-villa-service/waiters', desc: 'Professional table service.' },
-              { label: 'Butlers', href: '/in-villa-service/butlers', desc: 'Discreet villa hosting.' },
+              { label: 'Butler service Bali', href: '/in-villa-service/butlers', desc: 'Discreet villa hosting.' },
               { label: 'Sommelier', href: '/in-villa-service/sommelier', desc: 'Wine pairing and service.' },
-              { label: 'Mixology', href: '/in-villa-service/mixology', desc: 'Signature cocktail programs.' },
-              { label: 'Events', href: '/events', desc: 'Full-service event production.' },
-              { label: 'Catering', href: '/catering', desc: 'Full-service catering for any event.' },
+              { label: 'Fine dining Bali villa', href: '/fine-dining', desc: 'In-villa tasting menus.' },
+              { label: 'Catering Bali', href: '/catering', desc: 'Full-service catering for any event.' },
+              { label: 'BBQ catering Bali', href: '/catering/bbq-catering', desc: 'Live grill nights at the villa.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>

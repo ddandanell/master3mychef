@@ -92,8 +92,8 @@ export default function UbudPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Dining in Ubud | Dining Guide & Chef Services"
-        description="Where to eat in Ubud: the area dining guide — restaurants, private dining and in-villa chef services for your Ubud stay. By myCHEF."
+        title="Private Dining Ubud Bali | Villa Chef & Jungle Guide"
+        description="Private dining Ubud for jungle villas: farm-to-table chef menus, wellness stays and chef’s table nights. Book myCHEF in Ubud."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-ubud.webp"
         jsonLd={[
@@ -120,10 +120,10 @@ export default function UbudPage() {
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Ubud Dining Guide</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Dining in Ubud: Where to Eat & In-Villa Chef Options
+            Private Dining in Ubud — Villa Chef Options & Local Guide
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Ubud is the one place in Bali where dinner can be a cultural event, a wellness practice and a world-class meal in the same week. This guide covers where to eat out in Ubud, how private dining works in a town of spread-out jungle properties, and when a chef cooking in your villa is the right answer.
+            Private dining Ubud is built for jungle villas and wellness stays — farm-to-table menus without the drive home. Ubud is the one place in Bali where dinner can be a cultural event, a wellness practice and a world-class meal in the same week. This guide covers where to eat out in Ubud, how private dining works in a town of spread-out jungle properties, and when a chef cooking in your villa is the right answer.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -299,6 +299,18 @@ export default function UbudPage() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
+          
+      {/* Keyword ownership: related services */}
+      <section className="max-w-4xl mx-auto px-6 py-12">
+        <h2 className="font-playfair text-2xl md:text-3xl mb-4">Related myCHEF Services in Ubud</h2>
+        <ul className="space-y-2 text-[#4A4745]">
+          <li><Link to="/private-chef/ubud" className="text-[#C5A028] hover:underline font-medium">Private chef ubud</Link> — hire a chef for villa dinners and multi-day cooking.</li>
+          <li><Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Catering Bali</Link> — BBQ, buffet and group menus for larger villa parties.</li>
+          <li><Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">Fine dining at your villa</Link> — tasting menus and chef’s table formats.</li>
+          <li><Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline font-medium">Private dining Bali</Link> — how at-home fine dining works island-wide.</li>
+        </ul>
+      </section>
+
           <h2 className="font-playfair text-3xl mb-10">Ubud Dining FAQ</h2>
           <div className="space-y-4">
             {FAQS.map((faq, i) => (

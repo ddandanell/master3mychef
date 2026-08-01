@@ -92,8 +92,8 @@ export default function UluwatuPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Dining in Uluwatu | Dining Guide & Chef Services"
-        description="Where to eat in Uluwatu: the area dining guide — restaurants, private dining and in-villa chef services for your Uluwatu stay. By myCHEF."
+        title="Private Dining Uluwatu Bali | Cliff Villa Chef Guide"
+        description="Private dining Uluwatu: sunset villa chef dinners, seafood BBQ and clifftop hosting tips. myCHEF cooks in Uluwatu & Bukit villas."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-uluwatu.webp"
         jsonLd={[
@@ -120,10 +120,10 @@ export default function UluwatuPage() {
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Uluwatu Dining Guide</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Dining in Uluwatu: Where to Eat & In-Villa Chef Options
+            Private Dining in Uluwatu — Villa Chef Options & Local Guide
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Uluwatu does drama better than anywhere else in Bali. The Bukit Peninsula's southern edge is all sheer limestone cliffs, world-famous surf breaks and estates perched above the Indian Ocean. Below: where to eat out across the cliffs, what private dining means in an area with this much sky, and why the best sunset table in Uluwatu might be the one on your own terrace.
+            Private dining Uluwatu is cliff-terrace dining timed to sunset — seafood BBQ or tasting menus on your own headland. Uluwatu does drama better than anywhere else in Bali. The Bukit Peninsula's southern edge is all sheer limestone cliffs, world-famous surf breaks and estates perched above the Indian Ocean. Below: where to eat out across the cliffs, what private dining means in an area with this much sky, and why the best sunset table in Uluwatu might be the one on your own terrace.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -296,6 +296,18 @@ export default function UluwatuPage() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
+          
+      {/* Keyword ownership: related services */}
+      <section className="max-w-4xl mx-auto px-6 py-12">
+        <h2 className="font-playfair text-2xl md:text-3xl mb-4">Related myCHEF Services in Uluwatu</h2>
+        <ul className="space-y-2 text-[#4A4745]">
+          <li><Link to="/private-chef/uluwatu" className="text-[#C5A028] hover:underline font-medium">Private chef uluwatu</Link> — hire a chef for villa dinners and multi-day cooking.</li>
+          <li><Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Catering Bali</Link> — BBQ, buffet and group menus for larger villa parties.</li>
+          <li><Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">Fine dining at your villa</Link> — tasting menus and chef’s table formats.</li>
+          <li><Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline font-medium">Private dining Bali</Link> — how at-home fine dining works island-wide.</li>
+        </ul>
+      </section>
+
           <h2 className="font-playfair text-3xl mb-10">Uluwatu Dining FAQ</h2>
           <div className="space-y-4">
             {FAQS.map((faq, i) => (

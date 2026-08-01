@@ -168,11 +168,11 @@ export default function PrivateChefBaliPage() {
             myCHEF.id · Private Chef Service · Bali
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            A Michelin-Trained Tasting Menu.<br />
-            <span className="italic">In Your Villa.</span>
+            Hire a Private Chef in Bali<br />
+            <span className="italic">Michelin-Trained. In Your Villa.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-3 max-w-2xl mx-auto leading-relaxed">
-            We arrive at your villa 3 hours early. We cook, serve every course, and leave your kitchen spotless.
+            Hire private chef Bali service for tasting menus at your villa — we arrive 3 hours early, cook and serve every course, and leave your kitchen spotless. Daily rates and multi-day options are quoted on WhatsApp.
           </p>
           <p className="text-white/[55%] text-sm mb-10 tracking-wide">
             From IDR 2,200,000 per person · All ingredients included · Bali-wide service

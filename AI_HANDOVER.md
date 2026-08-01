@@ -10,6 +10,10 @@
 - **Live domain:** https://mychef.id
 - **Repo:** `ddandanell/master3mychef` on GitHub
 - **Vercel team/project:** `daviddandanell-9392s-projects` / `master3mychef`
+- **Vercel Project ID (LOCKED):** `prj_VkMbGIUciFBk2VE0EUy2SikfWOgK`
+- **Production domain:** https://mychef.id
+- **Deploy lock doc:** `docs/VERCEL-PRODUCTION-LOCK.md` — agents MUST read before any `vercel deploy`
+- **Safe deploy script:** `./scripts/deploy-prod.sh` (refuses wrong project)
 - **Working directory:** `/Users/openclaw/Movies/LIve website/MYCHEF Live webste/`
 - **Stack:** React 19 + Vite 7 + TypeScript + Tailwind CSS + react-router-dom v7 + pnpm
 - **Current active branch:** `seo-safe-upgrade-mychef-2026-07-01`

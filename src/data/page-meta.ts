@@ -30,8 +30,8 @@ export const PAGE_META: Record<string, PageMeta> = {
     description:
       'Hire a private chef in Bali for villa dining, BBQs, weddings & events. Michelin-trained team, clear prices from IDR 700K/guest. WhatsApp reply in 1 hour.',
     canonical: `${SITE}/`,
-    h1: 'Private Chef in Bali — Your Villa. Our Kitchen.',
-    ogImage: `${SITE}/hero-home.webp`,
+    h1: 'Private Chef Bali — Your Villa. Our Kitchen.',
+    ogImage: `${SITE}/generated/mychef-home-hero-video-poster.webp`,
   },
 
       'locations-seminyak': {

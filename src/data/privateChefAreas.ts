@@ -188,7 +188,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Canggu, Bali | Villa Dining & Meal Prep',
     metaDescription:
-      'Hire a private chef in Canggu, Bali. Weekly meal prep, villa dinners, catering, and birthday parties. HACCP chefs. WhatsApp myCHEF.',
+      'Hire a private chef in Canggu, Bali. Weekly meal prep, villa dinners, catering and birthday parties. HACCP chefs, transparent rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.6522, lng: 115.1279 },
     bookingNote:
       'Book 1–2 days ahead for single dinners. Weekly meal prep packages need 3–5 days lead time. Events need 2–4 weeks.',
@@ -463,7 +463,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef Nusa Dua, Bali | Corporate, Luxury Villa Dining',
     metaDescription:
-      'Hire a private chef in Nusa Dua, Bali. Corporate retreat catering, executive fine dining, and villa events. Five-star service. WhatsApp myCHEF.',
+      'Hire a private chef in Nusa Dua, Bali. Corporate retreat catering, executive fine dining and villa events. Five-star service, clear packages. WhatsApp myCHEF.',
     coordinates: { lat: -8.8007, lng: 115.2302 },
     bookingNote:
       'Book 2–3 days ahead for estate dinners and 1–2 weeks for corporate programmes. ITDC villa access requires advance coordination — confirm property details on booking.',
@@ -589,7 +589,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef Denpasar, Bali | Executive, Residential Dining | myCHEF',
     metaDescription:
-      'Hire a private chef in Denpasar, Bali. Executive dinner parties, corporate catering, and household meal prep. HACCP-certified. WhatsApp myCHEF.',
+      'Hire a private chef in Denpasar, Bali. Executive dinner parties, corporate catering and household meal prep. HACCP-certified chefs. WhatsApp myCHEF.',
     coordinates: { lat: -8.6705, lng: 115.2126 },
     bookingNote:
       'Book 1–3 days ahead. Corporate events need 1–2 weeks minimum. Airport transfers can be coordinated on request.',
@@ -849,7 +849,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Kuta, Bali | Villa Dinner & Catering | myCHEF',
     metaDescription:
-      'Hire a private chef in Kuta, Bali. Villa dinners, group catering, and birthday parties. HACCP chefs, from IDR 1M++/day. WhatsApp myCHEF.',
+      'Hire a private chef in Kuta, Bali. Villa dinners, group catering and birthday parties. HACCP chefs from IDR 1M++/day. Transparent quotes via WhatsApp.',
     coordinates: { lat: -8.7175, lng: 115.1686 },
     bookingNote: 'Book 1–2 days ahead. Airport transfers can be arranged for arriving guests.',
     published: true,
@@ -1086,7 +1086,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Pecatu, Bali | Clifftop Villa Dining | myCHEF',
     metaDescription:
-      'Book a private chef in Pecatu, Bali. Clifftop villa dinners, honeymooner fine dining, and events on the Bukit Peninsula. WhatsApp myCHEF.',
+      'Book a private chef in Pecatu, Bali. Clifftop villa dinners, honeymoon fine dining and events on the Bukit Peninsula. Transparent rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.8350, lng: 115.0880 },
     bookingNote: 'Book 2–3 days ahead. Travel allowance from Seminyak quoted per address.',
     published: true,

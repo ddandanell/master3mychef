@@ -42,27 +42,29 @@ const PHASES = [
 ] as const
 
 function activePhase(t: number) {
-  // Loop-safe: video is ~19.8s
-  const time = t % 20
+  const time = ((t % 20) + 20) % 20
   return PHASES.find((p) => time >= p.start && time < p.end) ?? PHASES[0]
 }
 
 /**
- * Homepage full-bleed hero: optimized background video + timed elegant copy.
- * Reduced-motion users get the poster + static stack (no timed cycling).
+ * Homepage full-bleed hero: autoplaying muted video + timed elegant copy.
+ *
+ * React historically drops the HTML `muted` attribute which blocks autoplay —
+ * we force muted on the DOM node before every play() attempt.
  */
 export default function HomeHeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [phaseId, setPhaseId] = useState<string>(PHASES[0].id)
   const [reduceMotion, setReduceMotion] = useState(false)
-  const [useMobileSrc, setUseMobileSrc] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const [videoReady, setVideoReady] = useState(false)
 
   useEffect(() => {
     const mqMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
     const mqMobile = window.matchMedia('(max-width: 768px)')
     const apply = () => {
       setReduceMotion(mqMotion.matches)
-      setUseMobileSrc(mqMobile.matches)
+      setIsMobile(mqMobile.matches)
     }
     apply()
     mqMotion.addEventListener('change', apply)
@@ -75,84 +77,147 @@ export default function HomeHeroVideo() {
 
   useEffect(() => {
     const video = videoRef.current
-    if (!video || reduceMotion) return
+    if (!video) return
+
+    // Critical for autoplay policies (Chrome/Safari/iOS)
+    video.defaultMuted = true
+    video.muted = true
+    video.playsInline = true
+    video.setAttribute('muted', '')
+    video.setAttribute('playsinline', '')
+    video.setAttribute('webkit-playsinline', '')
+
+    if (reduceMotion) {
+      video.pause()
+      video.removeAttribute('autoplay')
+      return
+    }
 
     let raf = 0
-    const tick = () => {
-      if (video && !video.paused) {
+    let cancelled = false
+
+    const syncPhase = () => {
+      if (cancelled || !video) return
+      if (!video.paused && Number.isFinite(video.currentTime)) {
         const next = activePhase(video.currentTime).id
         setPhaseId((prev) => (prev === next ? prev : next))
       }
-      raf = requestAnimationFrame(tick)
+      raf = requestAnimationFrame(syncPhase)
     }
-    raf = requestAnimationFrame(tick)
 
-    const tryPlay = () => {
-      void video.play().catch(() => {
-        /* autoplay blocked — poster remains */
-      })
+    const tryPlay = async () => {
+      if (cancelled || !video) return
+      video.defaultMuted = true
+      video.muted = true
+      try {
+        await video.play()
+        if (!cancelled) setVideoReady(true)
+      } catch {
+        // Retry once after a short delay (iOS / slow network)
+        window.setTimeout(() => {
+          if (cancelled || !video) return
+          video.muted = true
+          void video.play().then(() => {
+            if (!cancelled) setVideoReady(true)
+          }).catch(() => {
+            /* poster remains visible */
+          })
+        }, 400)
+      }
     }
-    tryPlay()
+
+    const onPlaying = () => setVideoReady(true)
+    const onTimeUpdate = () => {
+      if (!video.paused) {
+        const next = activePhase(video.currentTime).id
+        setPhaseId((prev) => (prev === next ? prev : next))
+      }
+    }
+
+    video.addEventListener('playing', onPlaying)
+    video.addEventListener('timeupdate', onTimeUpdate)
     video.addEventListener('loadeddata', tryPlay)
+    video.addEventListener('canplay', tryPlay)
+
+    // Kick load + play
+    video.load()
+    void tryPlay()
+    raf = requestAnimationFrame(syncPhase)
+
+    // Resume if tab becomes visible again
+    const onVisibility = () => {
+      if (document.visibilityState === 'visible' && video.paused && !reduceMotion) {
+        void tryPlay()
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibility)
 
     return () => {
+      cancelled = true
       cancelAnimationFrame(raf)
+      video.removeEventListener('playing', onPlaying)
+      video.removeEventListener('timeupdate', onTimeUpdate)
       video.removeEventListener('loadeddata', tryPlay)
+      video.removeEventListener('canplay', tryPlay)
+      document.removeEventListener('visibilitychange', onVisibility)
     }
-  }, [reduceMotion, useMobileSrc])
+  }, [reduceMotion, isMobile])
 
   const phase = PHASES.find((p) => p.id === phaseId) ?? PHASES[0]
+  const videoSrc = isMobile ? VIDEO_MOBILE : VIDEO_DESKTOP
 
   return (
     <div className="relative min-h-[100svh] min-h-screen overflow-hidden bg-black">
-      {/* Poster always present for LCP / fallback */}
+      {/* Poster under video for LCP + fallback while video buffers */}
       <img
         src={POSTER}
         alt="Private chef plating a luxury dinner at a Bali villa — myCHEF"
         width={1280}
         height={720}
-        className="absolute inset-0 h-full w-full object-cover"
+        className={`absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-700 ${
+          videoReady && !reduceMotion ? 'opacity-0' : 'opacity-100'
+        }`}
         fetchPriority="high"
         loading="eager"
         decoding="async"
       />
 
-      {!reduceMotion && (
-        <video
-          key={useMobileSrc ? 'mobile' : 'desktop'}
-          ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={POSTER}
-          aria-hidden="true"
-        >
-          <source src={useMobileSrc ? VIDEO_MOBILE : VIDEO_DESKTOP} type="video/mp4" />
-        </video>
-      )}
+      {/* Always mount video so autoplay can start; paused when reduced-motion */}
+      <video
+        ref={videoRef}
+        className={`absolute inset-0 z-[1] h-full w-full object-cover transition-opacity duration-700 ${
+          videoReady && !reduceMotion ? 'opacity-100' : 'opacity-0'
+        }`}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster={POSTER}
+        aria-hidden="true"
+        disablePictureInPicture
+      >
+        <source src={videoSrc} type="video/mp4" />
+      </video>
 
-      {/* Readability overlays — stronger bottom & sides */}
+      {/* Readability overlays */}
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 z-[2]"
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.72) 100%)',
+            'radial-gradient(ellipse at center, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.40) 55%, rgba(0,0,0,0.68) 100%)',
         }}
       />
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 z-[2]"
         style={{
           background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 35%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.78) 100%)',
+            'linear-gradient(to bottom, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.22) 35%, rgba(0,0,0,0.50) 70%, rgba(0,0,0,0.72) 100%)',
         }}
       />
 
       {/* Centered timed copy */}
       <div className="relative z-10 mx-auto flex min-h-[100svh] min-h-screen max-w-[960px] flex-col items-center justify-center px-5 pb-28 pt-24 text-center sm:px-8">
-        {/* SEO h1 always in DOM */}
         <h1 className="sr-only">Private Chef Bali — Your Villa. Our Kitchen.</h1>
 
         {reduceMotion ? (
@@ -222,7 +287,6 @@ export default function HomeHeroVideo() {
           </div>
         )}
 
-        {/* Soft CTA — present throughout */}
         <div className="mt-10 flex w-full max-w-md flex-col items-center gap-3 sm:mt-12 sm:max-w-none sm:flex-row sm:justify-center">
           <a
             href={WA_HERO}

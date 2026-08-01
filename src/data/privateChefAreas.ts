@@ -738,7 +738,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'No travel surcharge within Kerobokan. Same pricing as central Seminyak.',
+      'No travel surcharge within Kerobokan. Same pricing as central Seminyak — from IDR 1,000,000++ per day for one meal. Weekly meal prep packages available.',
     services: ['private-chef', 'catering', 'events', 'staffing'],
     faqs: [
       {
@@ -749,7 +749,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is Kerobokan good for recurring private chef service?',
         a: 'Yes — Kerobokan\'s expat resident community is one of our most consistent recurring booking areas. We set up weekly or bi-weekly schedules and adapt menus based on what\'s fresh at the Seminyak market that morning.',
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Kerobokan?',
+        a: 'Private chef service in Kerobokan starts from IDR 1,000,000++ per day for one meal, plus groceries at cost. Weekly meal prep packages are available for resident expats — WhatsApp for a fixed quote.',
+      },
+],
     nearbyAreas: [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'canggu', name: 'Canggu' },
@@ -785,7 +789,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Petitenget beach',
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
-    pricingNote: 'No travel surcharge. Petitenget is within our core Seminyak service area.',
+    pricingNote: 'No travel surcharge. Petitenget is within our core Seminyak service area — from IDR 1,000,000++ per day for one meal, tasting menus from IDR 980,000 per person.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
@@ -837,7 +841,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'No travel surcharge within Kuta. Great value for central Bali villa groups.',
+      'No travel surcharge within Kuta. Same day-rate band as Seminyak — great value for central Bali villa groups, birthday parties and welcome dinners.',
     services: ['private-chef', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -848,7 +852,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is a private chef in Kuta the same price as Seminyak?',
         a: 'Yes — private chef pricing is the same across Seminyak, Kuta, Legian, and Kerobokan. Starting from IDR 1,000,000++ per day for one meal with no travel surcharge.',
       },
-    ],
+      {
+        q: 'Can you cater a birthday party at a Kuta villa?',
+        a: 'Yes — Kuta is popular for group birthday catering and poolside BBQs. We handle food, staffing and cleanup for villa parties from small dinners to larger group feasts. Book a week ahead for weekends.',
+      },
+],
     nearbyAreas: [
       { slug: 'legian', name: 'Legian' },
       { slug: 'seminyak', name: 'Seminyak' },
@@ -883,7 +891,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       'Legian night market',
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
-    pricingNote: 'No travel surcharge. Legian pricing is the same as Seminyak.',
+    pricingNote: 'No travel surcharge. Legian pricing matches Seminyak — from IDR 1,000,000++ per day for one meal, groceries at cost. Ideal for short-stay villa groups.',
     services: ['private-chef', 'catering', 'events'],
     faqs: [
       {
@@ -945,7 +953,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'What is the difference between Bukit Peninsula and Uluwatu for private chef bookings?',
         a: 'Uluwatu refers specifically to the area around Pura Luhur temple. The Bukit Peninsula covers the whole southern plateau including Bingin, Padang Padang, Dreamland, and Ungasan. myCHEF serves the entire Bukit area.',
       },
-    ],
+      {
+        q: 'How much does a private chef cost on the Bukit Peninsula?',
+        a: 'Bukit Peninsula bookings start from IDR 1,000,000++ per day for one meal, plus groceries at cost. A transparent travel allowance from south Bali is included in every quote — no surprise fees on the day.',
+      },
+],
     nearbyAreas: [
       { slug: 'uluwatu', name: 'Uluwatu' },
       { slug: 'jimbaran', name: 'Jimbaran' },
@@ -995,7 +1007,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How far is Umalas from Seminyak for a private chef booking?',
         a: 'Umalas is roughly 5–10 minutes from central Seminyak, fully within our standard service area. We regularly cook at villas along Jl. Umalas Kauh and surrounding lanes.',
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Umalas?',
+        a: 'Umalas pricing matches the Seminyak–Canggu belt: from IDR 1,000,000++ per day for one meal, groceries at cost, no travel surcharge. Multi-day and retreat packages available on request.',
+      },
+],
     nearbyAreas: [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'canggu', name: 'Canggu' },
@@ -1043,7 +1059,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is Batu Belig in the same service area as Seminyak?',
         a: 'Yes. Batu Belig is directly between Seminyak and Canggu on the coast road. myCHEF covers it within the standard Seminyak–Canggu service zone at no extra charge.',
       },
-    ],
+      {
+        q: 'How much does a private chef cost at Batu Belig?',
+        a: 'Batu Belig is in our Seminyak–Canggu service zone with no travel surcharge. Half-day chef service starts from IDR 1,000,000++ plus groceries at cost. Sunset dinners are our most requested format here.',
+      },
+],
     nearbyAreas: [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'petitenget', name: 'Petitenget' },
@@ -1092,7 +1112,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'What is the difference between Pecatu and Uluwatu?',
         a: 'Pecatu is the broader residential and resort area on the western side of the Bukit plateau. Uluwatu refers to the famous temple headland. myCHEF serves both areas.',
       },
-    ],
+      {
+        q: 'How far in advance should I book a private chef in Pecatu?',
+        a: 'Book 48–72 hours ahead for standard Pecatu dinners so we can plan Bukit logistics and market runs. Elopements and wedding catering need longer lead times — share your date on WhatsApp for availability.',
+      },
+],
     nearbyAreas: [
       { slug: 'uluwatu', name: 'Uluwatu' },
       { slug: 'ungasan', name: 'Ungasan' },
@@ -1141,7 +1165,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How far is Ungasan from Uluwatu?',
         a: 'Ungasan and Uluwatu are directly adjacent on the southern Bukit Peninsula. myCHEF covers both as part of the same service area.',
       },
-    ],
+      {
+        q: 'Can you arrange an elopement or anniversary dinner in Ungasan?',
+        a: 'Yes — Ungasan is one of our top addresses for elopements and anniversary tasting menus. We time service to the clifftop sunset, handle staffing, and leave the villa kitchen spotless after service.',
+      },
+],
     nearbyAreas: [
       { slug: 'uluwatu', name: 'Uluwatu' },
       { slug: 'pecatu', name: 'Pecatu' },
@@ -1189,7 +1217,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Do you offer family-friendly menus in Tanjung Benoa?',
         a: 'Absolutely. Family menus with kids options are available on request. All dietary requirements are accommodated at no extra charge.',
       },
-    ],
+      {
+        q: 'Is there a travel surcharge for Tanjung Benoa?',
+        a: 'No — Tanjung Benoa sits next to Nusa Dua in our standard south Bali coverage with no travel surcharge. Family villa dinners and resort-adjacent catering are common here.',
+      },
+],
     nearbyAreas: [
       { slug: 'nusa-dua', name: 'Nusa Dua' },
       { slug: 'jimbaran', name: 'Jimbaran' },
@@ -1238,7 +1270,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How far is Sayan from Ubud?',
         a: 'Sayan is about 2 km west of central Ubud, a 5–10 minute drive. It sits within our standard Ubud service area at no extra charge.',
       },
-    ],
+      {
+        q: 'What menus work best for Sayan gorge villas?',
+        a: 'Sayan suits intimate tasting menus and jungle-view fine dining. We design courses around Ayung valley produce and quieter service pacing so the setting stays the focus. Multi-day chef stays are common here.',
+      },
+],
     nearbyAreas: [
       { slug: 'ubud', name: 'Ubud' },
       { slug: 'tegallalang', name: 'Tegallalang' },
@@ -1285,7 +1321,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is Tegallalang far from Ubud for a myCHEF booking?',
         a: 'Tegallalang is about 10–15 km north of central Ubud, roughly 20–25 minutes by road. A small travel allowance applies for the extra distance and is quoted upfront.',
       },
-    ],
+      {
+        q: 'Can myCHEF cater a small wedding or retreat dinner in Tegallalang?',
+        a: 'Yes — Tegallalang rice-terrace villas host intimate weddings and retreat dinners regularly. We coordinate menus, staffing and terrace service flow; share guest count and date for a tailored quote.',
+      },
+],
     nearbyAreas: [
       { slug: 'ubud', name: 'Ubud' },
       { slug: 'sayan', name: 'Sayan' },
@@ -1334,7 +1374,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Can you cater a business dinner in Renon?',
         a: 'Yes. We provide full corporate catering including plated service, wait staff, and sommelier service for business dinners, product launches, and team events.',
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Renon, Denpasar?',
+        a: 'Renon follows standard Denpasar pricing: from IDR 1,000,000++ per day for one meal, groceries at cost. Corporate dinners and household meal prep packages are available with same-day quote response.',
+      },
+],
     nearbyAreas: [
       { slug: 'denpasar', name: 'Denpasar' },
       { slug: 'sanur', name: 'Sanur' },
@@ -1383,7 +1427,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'What is the best private dining experience near Tanah Lot?',
         a: 'A sunset fine dining menu on a rice-field villa terrace, timed to catch the golden hour that Tanah Lot is famous for. We can design the full experience including décor, menu, and service style.',
       },
-    ],
+      {
+        q: 'How far in advance should I book near Tanah Lot?',
+        a: 'Book 48–72 hours ahead for Tanah Lot area dinners so we can plan west-coast logistics and sunset timing. Retreat multi-day catering should be confirmed earlier — WhatsApp us your dates for availability.',
+      },
+],
     nearbyAreas: [
       { slug: 'canggu', name: 'Canggu' },
       { slug: 'pererenan', name: 'Pererenan' },
@@ -1433,7 +1481,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'What kind of menus do you offer on Nusa Lembongan?',
         a: 'We specialise in fresh Balinese seafood and Indonesian cuisine on the island. BBQ grill feasts, tasting menus, and family-style dinners are all available.',
       },
-    ],
+      {
+        q: 'How do logistics work for a private chef on Nusa Lembongan?',
+        a: 'We travel by fast boat from Sanur with full kitchen equipment and pre-planned market runs. Island logistics are quoted transparently upfront. Book 72 hours ahead so ferry and sourcing can be locked.',
+      },
+],
     nearbyAreas: [
       { slug: 'sanur', name: 'Sanur' },
       { slug: 'nusa-dua', name: 'Nusa Dua' },
@@ -1482,7 +1534,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'What makes a myCHEF dinner on Nusa Penida special?',
         a: 'The combination of truly remote clifftop or beachfront villa settings, fresh local seafood, and a fully managed myCHEF experience creates something very few guests anywhere in the world get to experience.',
       },
-    ],
+      {
+        q: 'How far in advance should I book a private chef on Nusa Penida?',
+        a: 'Nusa Penida needs more lead time than mainland Bali — ideally 4–5 days — so we can arrange inter-island logistics, equipment and fresh sourcing. Share your villa location and dates on WhatsApp.',
+      },
+],
     nearbyAreas: [
       { slug: 'nusa-lembongan', name: 'Nusa Lembongan' },
       { slug: 'sanur', name: 'Sanur' },
@@ -2010,7 +2066,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'No additional travel surcharge within the Gianyar zone. 50% deposit confirms booking.',
+      'No additional travel surcharge within the Gianyar zone. 50% deposit confirms booking. Wellness and multi-day retreat packages available on request.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2062,7 +2118,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      `East Gianyar coast. 50% deposit confirms booking. ${siteFacts.groceryPolicy}.`,
+      `East Gianyar coast coverage with travel included in the quote. 50% deposit confirms booking. ${siteFacts.groceryPolicy}. Surf-trip packages available.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2168,7 +2224,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Remote highland location — small distance premium included. 50% deposit confirms booking.',
+      'Remote highland location — small distance premium included and quoted upfront. 50% deposit confirms booking. UNESCO-terrace dinner packages available.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2220,7 +2276,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      `West Bali zone. 50% deposit confirms booking. ${siteFacts.groceryPolicy}.`,
+      `West Bali zone pricing with travel included in the quote. 50% deposit confirms booking. ${siteFacts.groceryPolicy}. Multi-day packages available.`,
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2326,7 +2382,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Remote highland — distance premium included. 50% deposit confirms booking.',
+      'Remote highland distance premium included and shown before you confirm. 50% deposit locks the date. Groceries at cost with receipts.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2378,7 +2434,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'East Bali distance premium included. 50% deposit confirms booking.',
+      'East Bali distance premium included and quoted upfront. 50% deposit confirms booking; groceries charged at cost with receipts.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2430,7 +2486,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Remote northeast Bali — distance premium included. 50% deposit confirms booking.',
+      'Remote northeast Bali distance premium included and quoted upfront. 50% deposit confirms booking. Dive-day menus available on request.',
     services: ['private-chef', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2483,7 +2539,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'North Bali distance premium included. 50% deposit confirms booking. Book 72 hours ahead.',
+      'North Bali distance premium included and shown in your quote. 50% deposit confirms booking. Book 72 hours ahead for Lovina villa dinners.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -2535,7 +2591,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'North Bali base. 50% deposit confirms booking. Event catering available.',
+      'North Bali base rate with transparent travel noted in your quote. 50% deposit confirms booking. Event and multi-day catering available.',
     services: ['private-chef', 'fine-dining', 'catering', 'events', 'staffing'],
     faqs: [
       {
@@ -2587,7 +2643,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Remote northwest Bali — distance premium included. 50% deposit confirms booking.',
+      'Remote northwest Bali distance premium included and quoted upfront. 50% deposit confirms booking. Dive-resort multi-day catering available.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -3034,7 +3090,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: "From IDR 1,000,000++ per day for one meal",
     pricingNote:
-      "Highland Tabanan premium applies. 1.5 hours from South Bali base — same zone as Bedugul.",
+      "Highland Tabanan premium applies (same zone as Bedugul, ~1.5 hours from South Bali). Quoted upfront; 50% deposit confirms. Farm-fresh menus available.",
     services: ["private-chef", "catering", "bbq", "events"],
     faqs: [
       {

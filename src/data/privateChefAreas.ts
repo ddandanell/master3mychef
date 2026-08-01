@@ -117,9 +117,9 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'legian', name: 'Legian' },
       { slug: 'kuta', name: 'Kuta' },
     ],
-    metaTitle: 'Private Chef in Seminyak, Bali | Hire a Chef for Your Villa',
+    metaTitle: 'Private Chef Seminyak Bali | Hire for Your Villa | myCHEF',
     metaDescription:
-      'Hire a private chef in Seminyak, Bali. Villa dinners, tasting menus and events from IDR 700K/person. HACCP chefs, fixed quotes. WhatsApp myCHEF.',
+      'Hire a private chef in Seminyak Bali for villa dinners, parties and tasting menus. Clear daily rates, groceries at cost. WhatsApp myCHEF.',
     coordinates: { lat: -8.6748, lng: 115.1612 },
     bookingNote:
       'Book 1–3 days ahead for private dinners, 2–4 weeks for events. Peak season (July–August, December) fills fast — same-day bookings are often possible.',
@@ -186,9 +186,9 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'kerobokan', name: 'Kerobokan' },
       { slug: 'ubud', name: 'Ubud' },
     ],
-    metaTitle: 'Private Chef in Canggu, Bali | Villa Dining & Meal Prep',
+    metaTitle: 'Private Chef Canggu Bali | Villa Hire & BBQ | myCHEF',
     metaDescription:
-      'Hire a private chef in Canggu, Bali. Weekly meal prep, villa dinners, catering, and birthday parties. HACCP chefs. WhatsApp myCHEF.',
+      'Hire a private chef in Canggu Bali for villa dining, BBQ nights and group stays. Berawa covered. Clear rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.6522, lng: 115.1279 },
     bookingNote:
       'Book 1–2 days ahead for single dinners. Weekly meal prep packages need 3–5 days lead time. Events need 2–4 weeks.',
@@ -254,9 +254,9 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'nusa-dua', name: 'Nusa Dua' },
     ],
-    metaTitle: 'Private Chef in Ubud, Bali | Villa Dining, Retreat Catering',
+    metaTitle: 'Private Chef Ubud Bali | Jungle Villa Dining | myCHEF',
     metaDescription:
-      'Hire a private chef in Ubud, Bali. Balinese rijsttafel, plant-based retreat catering and jungle villa dinners from IDR 700K/person. WhatsApp myCHEF.',
+      'Hire a private chef in Ubud Bali for jungle villas, wellness stays and farm-to-table dinners. Clear rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.5069, lng: 115.2625 },
     bookingNote:
       'Book 2–3 days ahead for single dinners. Retreat programmes need 1–2 weeks notice. Remote jungle villa access confirmed on booking.',
@@ -323,9 +323,9 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'pecatu', name: 'Pecatu' },
       { slug: 'ungasan', name: 'Ungasan' },
     ],
-    metaTitle: 'Private Chef in Uluwatu, Bali | Clifftop Villa Dining',
+    metaTitle: 'Private Chef Uluwatu Bali | Cliff Villa Dining | myCHEF',
     metaDescription:
-      'Book a private chef in Uluwatu, Bali. Sunset-timed clifftop dinners, elopements and wedding catering. Travel fees quoted upfront. WhatsApp myCHEF.',
+      'Hire a private chef in Uluwatu Bali for sunset villa dinners and seafood BBQ. Bukit covered. Clear rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.8293, lng: 115.0849 },
     bookingNote:
       'Book 2–3 days ahead for single dinners. Weddings and large events need 3–6 weeks. Travel time from Seminyak is 45–60 min — confirm your villa address on booking.',
@@ -392,9 +392,9 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'kuta', name: 'Kuta' },
     ],
-    metaTitle: 'Private Chef in Jimbaran, Bali | Seafood Villa Dining',
+    metaTitle: 'Private Chef Jimbaran Bali | Seafood Villa Dining | myCHEF',
     metaDescription:
-      'Book a private chef in Jimbaran, Bali. Fresh seafood BBQ, fine dining, and villa events. Boat-to-villa seafood sourcing. Transparent pricing. WhatsApp.',
+      'Hire a private chef in Jimbaran Bali for seafood BBQ and villa dinners. Clear rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.7897, lng: 115.1683 },
     bookingNote:
       'Book 1–2 days ahead for private dinners and seafood BBQs; earlier for weekends and holiday sunsets. Seafood availability confirmed the day before.',
@@ -461,9 +461,9 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'kuta', name: 'Kuta' },
     ],
-    metaTitle: 'Private Chef Nusa Dua, Bali | Corporate, Luxury Villa Dining',
+    metaTitle: 'Private Chef Nusa Dua Bali | Resort Villa Hire | myCHEF',
     metaDescription:
-      'Hire a private chef in Nusa Dua, Bali. Corporate retreat catering, executive fine dining, and villa events. Five-star service. WhatsApp myCHEF.',
+      'Hire a private chef in Nusa Dua Bali for resort villas and corporate dinners. Clear daily rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.8007, lng: 115.2302 },
     bookingNote:
       'Book 2–3 days ahead for estate dinners and 1–2 weeks for corporate programmes. ITDC villa access requires advance coordination — confirm property details on booking.',
@@ -530,9 +530,9 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'canggu', name: 'Canggu' },
     ],
-    metaTitle: 'Private Chef in Sanur, Bali | Family Villa Dining, Meal Prep',
+    metaTitle: 'Private Chef Sanur Bali | Beach Villa Hire | myCHEF',
     metaDescription:
-      'Hire a private chef in Sanur, Bali. Family dinners from IDR 700K/person, weekly chef service from IDR 900K++/day, no travel surcharge in Sanur. WhatsApp myCHEF.',
+      'Hire a private chef in Sanur Bali for beach villas and family stays. Clear daily rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.7042, lng: 115.2607 },
     bookingNote:
       'Book 1–2 days ahead for dinners; weekly meal plans start Mondays, confirmed by the Friday before.',
@@ -708,9 +708,9 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       { slug: 'seminyak', name: 'Seminyak' },
       { slug: 'ubud', name: 'Ubud' },
     ],
-    metaTitle: 'Private Chef in Pererenan, Bali | Villa Dining, Meal Prep',
+    metaTitle: 'Private Chef Pererenan Bali | Long-Stay Villa Hire | myCHEF',
     metaDescription:
-      'Book a private chef in Pererenan, Bali. Private villa dinners, meal prep, and small-group fine dining. HACCP-certified, transparent pricing. WhatsApp.',
+      'Hire a private chef in Pererenan Bali for long villa stays and daily cooking. Clear rates. WhatsApp myCHEF.',
     coordinates: { lat: -8.6338, lng: 115.1140 },
     bookingNote:
       'Book 1–2 days ahead. Confirm your exact villa address when you enquire so travel time and any allowance are quoted accurately.',

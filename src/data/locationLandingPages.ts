@@ -58,7 +58,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     areaDescription: [
       'Seminyak is the original Bali villa scene — Petitenget and Oberoi-area villas, walk-to-beach addresses, and a dense restaurant culture. Guests here usually want one private evening that beats every restaurant on the strip.',
       'myCHEF plans Seminyak service around beachfront access, sunset timing, and menus that match the high-end energy of the area. We regularly build seafood-led dinners, Italian tasting menus, and private catering for birthdays in the landmark estates near Kudeta and Potato Head.',
-      'Because Seminyak is a core part of our west-coast flow, we offer fast deployment and lower travel fees, with chefs who know the exact layouts of the primary villa complexes in the neighborhood.',
+      'Because Seminyak is a core part of our west-coast flow, we offer fast deployment and lower travel fees, with chefs who know the exact layouts of the primary villa complexes from Oberoi to Petitenget and Batu Belig.',
     ],
     serviceAvailability: [
       {
@@ -114,8 +114,8 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     intro: 'In the heart of Bali’s creative and surf culture, our Canggu service focuses on vibrant, healthy menus and relaxed social dining that fits the neighborhood’s lifestyle.',
     areaDescription: [
       'Canggu villas are larger, often family-run, with great kitchens and open-plan living. The area spans from the busy Batu Bolong strip to the quieter rice-field lanes of Babakan and the surf villas of Echo Beach.',
-      'myCHEF uses Canggu best for weekly meal prep, casual poolside BBQs, and family-style sharing dinners. We focus on high-protein, nutrient-dense menus that support the active lifestyle Canggu guests come for.',
-      'We know every villa kitchen layout from Nelayan to Pererenan border. Because we are based here, we offer the fastest confirmation times and most flexible scheduling for Canggu-based groups.',
+      'myCHEF uses Canggu best for weekly meal prep, casual poolside BBQs, and family-style sharing dinners. We focus on high-protein, nutrient-dense menus that support the active lifestyle Canggu guests come for — Berawa to Pererenan covered.',
+      'We know villa kitchen layouts from Nelayan to the Pererenan border. Because Canggu is a core base for myCHEF, we offer fast confirmation times and flexible scheduling for surf groups, families and long stays.',
     ],
     serviceAvailability: [
       {
@@ -170,9 +170,9 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     heroAlt: 'Jungle valley villa in Ubud, Bali set for a traditional Balinese private chef dinner',
     intro: 'From Sayan to the rice terraces of Tegalalang, our Ubud service embraces the island’s spiritual heart with organic, locally sourced menus.',
     areaDescription: [
-      'Ubud villas are spread through deep jungle valleys, quiet village lanes, and expansive rice terraces. Guests here usually prioritize privacy, wellness, and a deeper connection to Balinese culture and produce.',
+      'Ubud villas are spread through deep jungle valleys, quiet village lanes, and expansive rice terraces. Guests here usually prioritize privacy, wellness, and a deeper connection to Balinese culture, markets and plant-forward produce.',
       'myCHEF plans Ubud service around organic sourcing, plant-forward nutrition, and the quiet, professional hosting that fits a retreat setting. We specialize in multi-day retreat catering, traditional Balinese "megibung" feasts, and healthy breakfast service.',
-      'Because Ubud covers a large geographic area with complex village roads, we coordinate transport and staging carefully to ensure service starts on time despite the jungle logistics.',
+      'Because Ubud covers a large geographic area with complex village roads, we coordinate transport and staging carefully so service starts on time — from central Ubud to Sayan, Penestanan and Tegallalang.',
     ],
     serviceAvailability: [
       {
@@ -229,7 +229,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     areaDescription: [
       'Uluwatu is Bali’s southern clifftop belt, known for world-class surf, iconic temples, and some of the island’s most expensive private estates. Most villas here are built for the view, with expansive terraces and open-air dining rooms.',
       'myCHEF works Uluwatu with a focus on clifftop seafood BBQs, elegant wedding rehearsal dinners, and high-end private hosting. We plan around wind, sun exposure, and the unique logistics of cliff-access properties.',
-      'We leverage the local Bingin and Padang‑Padang fish landings to bring the island’s best catch directly to the villa, often within hours of it being caught.',
+      'We leverage local Bingin and Padang Padang fish landings to bring the island’s best catch directly to the villa, often within hours of it being caught — ideal for clifftop sunset menus and seafood feasts.',
     ],
     serviceAvailability: [
       {

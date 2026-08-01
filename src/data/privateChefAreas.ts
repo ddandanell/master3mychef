@@ -2813,7 +2813,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "Are villas in Nyuh Kuning suitable for larger group dinners?",
         a: "Most properties here are intimate (2–8 guests). For larger events we can set up in the garden or partner with a nearby villa. Let us know your group size and we'll advise.",
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Nyuh Kuning?',
+        a: 'Nyuh Kuning is within the Ubud radius at standard rates from IDR 1,000,000++ per day for one meal, groceries at cost, no distance surcharge. Intimate villa dinners for 2–8 guests are the most common format.',
+      },
+],
     nearbyAreas: [
       { slug: "ubud", name: "Ubud" },
       { slug: "mas", name: "Mas" },
@@ -2861,7 +2865,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "Are there good local markets near Lodtunduh for fresh sourcing?",
         a: "Yes — Mas market and the Ubud central market are both within 5 km. Our chefs source daily for maximum freshness.",
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Lodtunduh?',
+        a: 'Lodtunduh sits in the greater Ubud service area with standard Ubud-zone rates from IDR 1,000,000++ per day for one meal. Multi-day retreat catering is quoted as a package — WhatsApp guest count and dates.',
+      },
+],
     nearbyAreas: [
       { slug: "ubud", name: "Ubud" },
       { slug: "mas", name: "Mas" },
@@ -2909,7 +2917,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "What local ingredients can be sourced near Tirta Gangga?",
         a: "The region is known for organic vegetables, fresh coconut, local tubers, and the Amed coast provides excellent fresh fish. Our chefs plan menus around East Bali's unique produce.",
       },
-    ],
+      {
+        q: 'How much does a private chef cost near Tirta Gangga?',
+        a: 'Tirta Gangga bookings include East Bali logistics quoted before you confirm. Day rates start from IDR 1,000,000++ plus groceries at cost and travel. Intimate dinners and multi-day cultural stays are both available.',
+      },
+],
     nearbyAreas: [
       { slug: "candidasa", name: "Candidasa" },
       { slug: "amed", name: "Amed" },
@@ -2957,7 +2969,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "Can myCHEF source local Munduk produce?",
         a: "Munduk is famous for cloves, coffee, cacao, vanilla, and fresh highland vegetables. Our chefs plan menus around local ingredients wherever possible.",
       },
-    ],
+      {
+        q: 'How far in advance should I book a private chef in Munduk?',
+        a: 'Munduk needs 72 hours lead time for highland logistics and cooler-climate market runs. Multi-day stays should be booked earlier. We confirm travel and menu scope on WhatsApp before deposit.',
+      },
+],
     nearbyAreas: [
       { slug: "lovina", name: "Lovina" },
       { slug: "singaraja", name: "Singaraja" },
@@ -3005,7 +3021,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "Can myCHEF cater events at Puri Gianyar or traditional venues?",
         a: "We have experience catering at ceremonial and heritage venues. Please share your venue details and we'll confirm logistics and any requirements.",
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Gianyar?',
+        a: 'Gianyar is in our Ubud service zone with standard day rates from IDR 1,000,000++ for one meal, groceries at cost. Babi guling feasts and multi-day catering packages are quoted per guest count.',
+      },
+],
     nearbyAreas: [
       { slug: "ubud", name: "Ubud" },
       { slug: "sukawati", name: "Sukawati" },
@@ -3053,7 +3073,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "How do we book a chef if we're only stopping one night?",
         a: "We can arrange short-notice sessions (18 hours) in Padang Bai when a chef is already on the east coast. WhatsApp us your date and we'll confirm availability.",
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Padang Bai?',
+        a: 'Padang Bai includes an East Bali distance component quoted upfront. Half-day sessions start from our standard day rate plus transparent travel; short-notice one-night stays are possible when a chef is already eastbound.',
+      },
+],
     nearbyAreas: [
       { slug: "candidasa", name: "Candidasa" },
       { slug: "amed", name: "Amed" },
@@ -3101,7 +3125,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "What's a good menu for a cold Baturiti evening?",
         a: "Warming dishes work beautifully here — cream soups, slow-braised meats, homemade pasta with mushroom sauces, and a cheese board. We'll design a menu perfectly suited to the mountain chill.",
       },
-    ],
+      {
+        q: 'How far in advance should I book a private chef in Baturiti?',
+        a: 'Book 72 hours ahead for Baturiti so we can plan highland market sourcing and travel from south Bali. Multi-day retreat catering should be confirmed earlier — share dates and guest count for availability.',
+      },
+],
     nearbyAreas: [
       { slug: "bedugul", name: "Bedugul" },
       { slug: "tabanan", name: "Tabanan" },
@@ -3149,7 +3177,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "Can myCHEF cater for a function near Pura Taman Ayun?",
         a: "We can cater for events in the Mengwi area. Please share details of your venue and we'll confirm whether the location is suitable and advise on any permits needed.",
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Mengwi?',
+        a: 'Mengwi uses our central Badung rate band from IDR 1,000,000++ per day for one meal, groceries at cost. Family villa dinners and temple-area event catering are common — share your date for a fixed quote.',
+      },
+],
     nearbyAreas: [
       { slug: "tanah-lot", name: "Tanah Lot" },
       { slug: "canggu", name: "Canggu" },
@@ -3197,7 +3229,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "Is Ketewel close enough to Sanur for the same chef availability?",
         a: "Yes — chefs based in the Sanur zone can serve Ketewel with no additional distance premium. Same-day bookings are often possible.",
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Ketewel?',
+        a: 'Ketewel follows south–east Bali pricing from IDR 1,000,000++ per day for one meal, groceries at cost. Beachside BBQs and sunset dinners are popular here — no surprise travel fees when quoted upfront.',
+      },
+],
     nearbyAreas: [
       { slug: "sanur", name: "Sanur" },
       { slug: "keramas", name: "Keramas" },
@@ -3245,7 +3281,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "How rural is Abiansemal — will grocery sourcing be a problem?",
         a: "Not at all. Our chefs source from Ubud market and Badung central market before arrival. We bring everything you need.",
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Abiansemal?',
+        a: 'Abiansemal follows our central Badung rate band: from IDR 1,000,000++ per day for one meal, groceries at cost. Travel is usually included in the standard zone — confirm your villa pin on WhatsApp for a fixed quote.',
+      },
+],
     nearbyAreas: [
       { slug: "mengwi", name: "Mengwi" },
       { slug: "ubud", name: "Ubud" },
@@ -3293,7 +3333,11 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "Can we get a sunset BBQ on the Cepaka beachfront?",
         a: "Yes — the uncrowded Cepaka coastline is perfect for a private sunset BBQ. We set up full equipment and source fresh seafood from Jimbaran or Tabanan fish markets.",
       },
-    ],
+      {
+        q: 'How much does a private chef cost in Cepaka?',
+        a: 'Cepaka is in the Canggu–Tabanan service zone. Half-day chef service starts from IDR 1,000,000++ plus groceries at cost. Sunset BBQ packages and multi-day villa stays are available — WhatsApp for a fixed quote.',
+      },
+],
     nearbyAreas: [
       { slug: "canggu", name: "Canggu" },
       { slug: "pererenan", name: "Pererenan" },

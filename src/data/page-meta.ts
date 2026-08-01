@@ -1108,7 +1108,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/villa-wedding-catering-logistics-bali',
     title: 'Villa Wedding Catering Logistics Guide for Bali | myCHEF',
     description:
-      'Villa wedding catering logistics in Bali: kitchen requirements, service flow, guest counts, timing and how a private chef team runs a seamless villa reception.Bali.',
+      'Villa wedding catering logistics in Bali: kitchen requirements, service flow, guest counts, timing and how a private chef team runs a seamless villa reception.',
     canonical: `${SITE}/journal/villa-wedding-catering-logistics-bali`,
     h1: 'Villa Wedding Catering Logistics Guide for Bali',
   },
@@ -1153,7 +1153,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/bali-wedding-catering-complete-guide',
     title: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
     description:
-      'Everything about catering a destination wedding in Bali — menu design, budgets, cultural considerations and villa logistics for a calm celebration with myCHEF.ations.',
+      'Everything about catering a destination wedding in Bali — menu design, budgets, cultural considerations and villa logistics for a calm celebration with myCHEF.',
     canonical: `${SITE}/journal/bali-wedding-catering-complete-guide`,
     h1: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
   },

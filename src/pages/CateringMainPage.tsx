@@ -215,10 +215,10 @@ export default function CateringMainPage() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.08] text-white mb-5"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Catering in Bali for Groups, Parties &amp; Hosted Dinners
+            Catering Bali for Groups, Parties &amp; Hosted Dinners
           </h1>
           <p className="text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-3 leading-relaxed">
-            BBQ, buffet, plated dinners, drop-off and more — cooked at your villa. Chef, staff, ingredients and cleanup included.
+            Catering Bali means BBQ, buffet, plated dinners, drop-off and more — cooked at your villa. Chef, staff, ingredients and cleanup included.
           </p>
           <p className="text-[#C5A028] text-sm md:text-base font-semibold tracking-wide mb-8">
             From IDR 700,000++ per person · Min. 5–10 guests by format · Quote in 1 hour
@@ -651,11 +651,11 @@ export default function CateringMainPage() {
             </h3>
             <p>
               <Link to="/catering/bbq-catering" className="text-[#6B8E5A] font-semibold hover:underline">
-                BBQ catering
+                BBQ catering Bali
               </Link>{' '}
               suits social villa nights of roughly 10–60 guests — live grill, flexible pacing, high energy.{' '}
               <Link to="/catering/buffet" className="text-[#6B8E5A] font-semibold hover:underline">
-                Buffet catering
+                Buffet catering Bali
               </Link>{' '}
               is the reliable choice for 30–250 guests when you need variety and structured flow (weddings, corporate
               dinners, large birthdays).{' '}
@@ -683,7 +683,7 @@ export default function CateringMainPage() {
               </Link>{' '}
               for pool mornings, and dedicated{' '}
               <Link to="/catering/corporate-catering" className="text-[#6B8E5A] font-semibold hover:underline">
-                corporate
+                corporate event catering Bali
               </Link>{' '}
               and{' '}
               <Link to="/catering/retreat-catering" className="text-[#6B8E5A] font-semibold hover:underline">
@@ -691,9 +691,13 @@ export default function CateringMainPage() {
               </Link>{' '}
               programmes. Full{' '}
               <Link to="/catering/villa-catering" className="text-[#6B8E5A] font-semibold hover:underline">
-                villa catering
+                Bali villa catering
               </Link>{' '}
-              is the umbrella for chef-led service inside your property.
+              is the umbrella for chef-led service inside your property. Planning a celebration? See{' '}
+              <Link to="/events/weddings" className="text-[#6B8E5A] font-semibold hover:underline">
+                wedding catering Bali
+              </Link>
+              .
             </p>
 
             <h3 className="text-xl text-[#1A1A1A] pt-4" style={{ fontFamily: "'Playfair Display', serif" }}>

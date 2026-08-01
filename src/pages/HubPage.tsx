@@ -379,12 +379,13 @@ export default function HubPage() {
                 </p>
                 <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70">
                   <Link to="/services" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">explore all private chef services in Bali</Link>,{' '}
-                  <Link to="/fine-dining" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">fine dining tasting menus</Link>,{' '}
-                  <Link to="/private-chef-bali" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">daily villa chef service</Link>,{' '}
-                  <Link to="/private-chef-bali" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">monthly private chef arrangements</Link>,{' '}
-                  <Link to="/chefs" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">meet our chefs</Link>,{' '}
-                  <Link to="/reviews" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">read guest reviews</Link>,{' '}
-                  <Link to="/why-mychef" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">why 560+ villas choose myCHEF</Link>, or{' '}
+                  <Link to="/fine-dining" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">fine dining Bali villa menus</Link>,{' '}
+                  <Link to="/private-chef-bali" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">hire private chef Bali rates</Link>,{' '}
+                  <Link to="/private-dining-indonesia" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">private dining</Link>,{' '}
+                  <Link to="/catering" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">catering Bali</Link>,{' '}
+                  <Link to="/fine-dining/chefs-table" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">chefs table Bali</Link>,{' '}
+                  <Link to="/in-villa-service/butlers" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">butler service Bali</Link>,{' '}
+                  <Link to="/in-villa-service/bartenders" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">bartender hire Bali</Link>, or{' '}
                   <Link to="/faq" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">booking questions answered</Link>.
                 </p>
               </div>
@@ -723,12 +724,12 @@ export default function HubPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {[
-              { title: 'Fine dining', desc: 'Multi-course tasting menus (Italian, French, Mediterranean, Wagyu) plated in your villa, from 5 guests.', href: '/fine-dining', cta: 'Explore fine dining →' },
-              { title: 'Catering & BBQ', desc: 'Buffets, live-fire grills, grazing tables and babi guling for groups of 10 to 150.', href: '/catering', cta: 'Explore catering →' },
-              { title: 'Events & weddings', desc: 'Full-service hospitality: chef, staff, setup and cleanup for celebrations up to 200 guests.', href: '/events', cta: 'Explore events →' },
-              { title: 'Daily & weekly villa chef', desc: 'Breakfast, lunch and dinner across your whole stay, groceries at cost.', href: '/private-chef-bali', cta: 'Explore the daily villa chef service →' },
-              { title: 'Monthly & long-stay chefs', desc: 'Recurring arrangements for long-stay guests and residents.', href: '/private-chef-bali', cta: 'Explore monthly hire →' },
-              { title: 'In-villa staff', desc: 'Waiters, bartenders, butlers and sommeliers by the shift.', href: '/in-villa-service', cta: 'Explore in-villa service →' },
+              { title: 'Fine dining Bali villa', desc: 'Multi-course tasting menus (Italian, French, Mediterranean, Wagyu) plated in your villa, from 5 guests.', href: '/fine-dining', cta: 'Explore fine dining Bali villa →' },
+              { title: 'Catering Bali', desc: 'Buffets, live-fire grills, grazing tables and babi guling for groups of 10 to 150.', href: '/catering', cta: 'Explore catering Bali →' },
+              { title: 'Private dining', desc: 'At-home fine dining across Indonesia — chef, service team and cleanup at your table.', href: '/private-dining-indonesia', cta: 'Explore private dining →' },
+              { title: 'Hire private chef Bali', desc: 'Breakfast, lunch and dinner across your whole stay, groceries at cost. Daily and monthly rates published.', href: '/private-chef-bali', cta: 'Hire a private chef in Bali →' },
+              { title: "Chef's table Bali", desc: 'Counter seating with Adriano — 7-course market menu, max 6 guests, Friday & Saturday only.', href: '/fine-dining/chefs-table', cta: "Book chefs table Bali →" },
+              { title: 'Butler service & bartender hire', desc: 'Waiters, bartenders, butlers and sommeliers by the shift for villa stays and events.', href: '/in-villa-service', cta: 'Explore butler service & bartender hire →' },
             ].map((service) => (
               <div key={service.href} className="p-8 rounded-2xl border transition-all hover:shadow-lg" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{service.title}</h3>

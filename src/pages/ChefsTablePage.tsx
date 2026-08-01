@@ -153,10 +153,10 @@ export default function ChefsTablePage() {
             By Adriano · Maximum 6 Guests · Bali
           </p>
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.0] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            The Chef's Table — At Your Villa
+            Chef&apos;s Table Bali — At Your Villa
           </h1>
           <p className="text-xl md:text-2xl text-white/[75%] mb-3 max-w-2xl mx-auto leading-relaxed italic" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            Counter seating. Live narrative. The full technique made visible.
+            Chefs table Bali with Adriano: counter seating, live narrative, the full technique made visible.
           </p>
           <p className="text-white/[50%] text-sm mb-10 tracking-wide">
             IDR 3,500,000++ per person · Friday & Saturday only · 6 seats maximum
@@ -433,10 +433,11 @@ export default function ChefsTablePage() {
       <section className="py-10 px-6 bg-[#141414]">
         <div className="max-w-[960px] mx-auto flex flex-wrap justify-center gap-x-8 gap-y-3">
           {[
-            { label: 'Fine Dining Overview', href: '/fine-dining' },
-            { label: 'Tasting Menu', href: '/fine-dining/tasting-menu' },
+            { label: 'Fine dining Bali villa', href: '/fine-dining' },
+            { label: 'Tasting menu Bali', href: '/fine-dining/tasting-menu' },
+            { label: 'Romantic dinner Bali', href: '/fine-dining/romantic-dinner' },
+            { label: 'Private dining', href: '/private-dining-indonesia' },
             { label: 'Our Menus', href: '/fine-dining/menus' },
-            { label: 'Our Chefs', href: '/fine-dining/our-chefs' },
             { label: 'Meet Adriano', href: '/chefs/adriano' },
             { label: 'Pricing', href: '/pricing' },
           ].map((l) => (

@@ -146,14 +146,15 @@ export default function RomanticDinnerPage() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24">
           <p className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            For Two · Bali Private Dining
+            For Two · Romantic Dinner Bali
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            A Private Dinner<br />
+            Romantic Dinner Bali<br />
             <span className="italic">Built for Two</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto leading-relaxed">
-            No other table. No other guests. A candlelit setting in your own villa, five Michelin-trained courses, and a team that becomes invisible the moment you sit down.
+            Romantic dinner Bali means no other table, no other guests — a candlelit setting in your own villa, five Michelin-trained courses, and a team that becomes invisible the moment you sit down. For larger at-home evenings see{' '}
+            <Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline">private dining</Link>.
           </p>
           <p className="text-white/[60%] text-sm mb-10 tracking-wide">
             From IDR 2,200,000 per person · Table setting included · Flowers on request · Bali-wide — <a href="/pricing" className="text-[#C5A028] hover:underline">see full pricing</a>

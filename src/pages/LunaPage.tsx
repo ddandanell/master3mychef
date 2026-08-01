@@ -93,19 +93,34 @@ const TESTIMONIALS = [
 
 const RELATED_SERVICES = [
   {
-    title: 'Daily Villa Chef',
-    desc: 'Breakfast, lunch, and dinner menus designed around your villa rhythm.',
-    href: '/villa-chef',
+    title: "Chef's table Bali",
+    desc: 'Counter seating with Adriano — 7 courses, max 6 guests, Friday & Saturday only.',
+    href: '/fine-dining/chefs-table',
   },
   {
-    title: 'Event Catering',
-    desc: 'Weddings, parties, and retreats with full staffing and service flow.',
-    href: '/events',
+    title: 'Hire private chef Bali',
+    desc: 'Daily and multi-day villa chef rates published — breakfast through dinner.',
+    href: '/private-chef-bali',
   },
   {
-    title: 'Villa Hospitality Services',
-    desc: 'Butlers, bartenders, and service teams beyond the kitchen.',
-    href: '/services',
+    title: 'Private dining',
+    desc: 'At-home fine dining across Bali and Indonesia — full service team at your table.',
+    href: '/private-dining-indonesia',
+  },
+  {
+    title: 'Romantic dinner Bali',
+    desc: 'Candlelit dinner for two in your villa — courses, setting and privacy included.',
+    href: '/fine-dining/romantic-dinner',
+  },
+  {
+    title: 'Butler service Bali',
+    desc: 'Day, event and residence butlers for villa stays and celebrations.',
+    href: '/in-villa-service/butlers',
+  },
+  {
+    title: 'Catering Bali',
+    desc: 'BBQ, buffet and villa catering for larger groups and hosted dinners.',
+    href: '/catering',
   },
 ]
 
@@ -328,10 +343,10 @@ export default function LunaPage() {
             className="luna-hero-title mb-8 max-w-[920px] text-[2.55rem] leading-[1.04] text-white sm:text-[3.25rem] md:text-7xl lg:text-8xl"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Private Fine Dining in Your Bali Villa
+            Fine Dining Bali Villa — Private Tasting Menus
           </h1>
           <p className="luna-hero-sub mb-4 max-w-[640px] text-base leading-relaxed text-white/[85%] md:text-xl font-medium">
-            24 classic set menus across four families — vegetarian, seafood, mixed meats, and single-meat — prepared by a Michelin-trained team. Served privately in your villa. Minimum 5 guests.
+            Fine dining Bali villa service with 24 classic set menus across four families — vegetarian, seafood, mixed meats, and single-meat — prepared by a Michelin-trained team. Served privately in your villa. Minimum 5 guests.
           </p>
           <p className="mb-12 max-w-[640px] text-base leading-relaxed text-[#C5A028] md:text-xl font-medium">
             From IDR 1,250,000++ per guest

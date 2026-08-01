@@ -73,13 +73,18 @@ Full machine-readable map: **`src/data/keywordOwnership.ts`**.
 
 ---
 
-## Still recommended (next pass)
+## Body copy + internal links (shipped)
 
-1. **Body copy** on location pages: open with “Private dining in {Area}…” + link to matching `/private-chef/{area}`.  
-2. **Internal links** from home & catering hub using exact primary phrases once each.  
-3. **GSC**: after deploy, Request indexing on top 15 updated URLs only.  
-4. **Ignore** ranking for long nonsense queries like “how to ensure food safety…” across many URLs — improve E-E-A-T FAQ on hub, don’t keyword-stuff.  
-5. **Monitor** cannibalization monthly via GSC query×page export.
+1. **Location guides** (`/locations/*`): open with “Private dining {Area}…”, Related Services block linking to `/private-chef/{area}`, catering, fine dining, and `/private-dining-indonesia`.  
+2. **Home** (`/`): hero + services cards use primary ownership anchors (catering Bali, private dining, chefs table Bali, hire private chef Bali, butler/bartender).  
+3. **Hubs**: catering Bali H1 + format links with primary anchors; fine dining Bali villa H1 + related services; chefs table Bali H1; butler service Bali / bartender hire Bali H1s; romantic dinner Bali H1 (links out to private dining owner, does not claim it).  
+4. **Private dining owner**: location guide + hire/fine-dining/chefs-table links in article body.
+
+## Still recommended
+
+1. **GSC**: after deploy, Request indexing on top 15 updated URLs only.  
+2. **Ignore** ranking for long nonsense queries like “how to ensure food safety…” across many URLs — improve E-E-A-T FAQ on hub, don’t keyword-stuff.  
+3. **Monitor** cannibalization monthly via GSC query×page export.
 
 ---
 

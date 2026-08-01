@@ -322,7 +322,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/private-chef/sayan',
     title: 'Private Chef in Sayan, Bali | Jungle Villa Dining | myCHEF',
     description:
-      'Book a private chef in Sayan, Bali. Jungle fine dining above the Ayung River gorge — intimate, spectacular and managed end to end. WhatsApp myCHEF.',
+      'Book a private chef in Sayan, Bali. Jungle fine dining above the Ayung River gorge — intimate tasting menus, retreat meals and end-to-end villa service. WhatsApp myCHEF.',
     canonical: `${SITE}/private-chef/sayan`,
     h1: 'Private Chef in Sayan, Bali',
   },
@@ -1204,7 +1204,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/fine-dining/tasting-menu',
     title: 'Private Tasting Menu Bali | 5 & 7 Course Villa Degustation',
     description:
-      'Signature 5 & 7 course private tasting menus in your Bali villa — Italian technique, Balinese ingredients, optional wine pairing. WhatsApp myCHEF.',
+      'Signature 5- and 7-course private tasting menus in your Bali villa — Italian technique, Balinese ingredients, optional wine pairing. Transparent rates. WhatsApp myCHEF.',
     canonical: `${SITE}/fine-dining/tasting-menu`,
     h1: 'A Private Tasting Menu in Your Bali Villa',
     ogImage: `${SITE}/generated/misc-luna-plating-md.webp`,
@@ -1264,7 +1264,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering/plated-catering',
     title: 'Plated Catering Bali | Formal Villa Dinner Service | myCHEF',
     description:
-      'Plated catering in Bali: formal 3–5 course table service for villas, weddings and corporate dinners. Tailored menus and staffing. WhatsApp myCHEF.',
+      'Plated catering in Bali: formal 3–5 course table service for villas, weddings and corporate dinners. Tailored menus, full staffing and transparent rates. WhatsApp myCHEF.',
     canonical: `${SITE}/catering/plated-catering`,
     h1: 'Plated Dinner Bali for Private Villa Fine Dining',
     ogImage: `${SITE}/hero-catering.webp`,
@@ -1334,7 +1334,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering/floating-breakfast',
     title: 'Floating Breakfast Bali | Add-On to Your Chef Booking',
     description:
-      'Floating breakfast styled in your Bali villa pool — an add-on to a myCHEF private chef or catering booking, not sold on its own. WhatsApp to book.',
+      'Floating breakfast styled in your Bali villa pool — an add-on to a myCHEF private chef or catering booking, not sold alone. Instagram-ready setup. WhatsApp to book.',
     canonical: `${SITE}/catering/floating-breakfast`,
     h1: 'Floating Breakfast — In Your Bali Villa Pool',
     ogImage: `${SITE}/breakfast-spread.webp`,
@@ -1364,7 +1364,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/events/anniversaries',
     title: 'Anniversary Dinner Bali | Private Romantic Catering | myCHEF',
     description:
-      'Celebrate your anniversary with an intimate styled dinner under the stars — custom menus and sommelier pairing at your Bali villa. WhatsApp myCHEF.',
+      'Celebrate your anniversary with an intimate styled dinner under the stars — custom menus, florals and optional sommelier pairing at your Bali villa. WhatsApp myCHEF.',
     canonical: `${SITE}/events/anniversaries`,
     h1: 'Anniversary Celebrations in Bali — Private Chef Dinners',
     ogImage: `${SITE}/hero-events.webp`,
@@ -1444,7 +1444,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service/mixology',
     title: 'Mixologist Hire Bali | Custom Cocktail Programs | myCHEF',
     description:
-      'Hire a mixologist in Bali: signature cocktail creation and custom bar programs for villa events & weddings. Premium ingredients. WhatsApp myCHEF.',
+      'Hire a mixologist in Bali: signature cocktail creation and custom bar programs for villa events and weddings. Premium ingredients and full setup. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service/mixology`,
     h1: 'Mixology in Bali — Custom Cocktail Programs',
     ogImage: `${SITE}/bartender.webp`,
@@ -1634,7 +1634,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/experiences/romantic-proposal-dinner',
     title: 'Proposal Package Bali | Full-Service Villa Proposal | myCHEF',
     description:
-      'Complete Bali proposal packages: private chef dinner, flowers, candles, styling, photographer & musician — fully coordinated. Confidential quote.',
+      'Complete Bali proposal packages: private chef dinner, flowers, candles, styling, photographer and musician — fully coordinated and confidential. WhatsApp myCHEF.',
     canonical: `${SITE}/experiences/romantic-proposal-dinner`,
     h1: 'Romantic Proposal Dinner Bali — Everything Arranged',
     ogImage: `${SITE}/generated/proposal-package-bali-dinner.webp`,
@@ -1864,7 +1864,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/villa-event-packages',
     title: 'Bali Villa Event Packages | All-Inclusive Events | myCHEF',
     description:
-      'All-inclusive Bali villa event packages: private chef, bar service, staffing, transport & cleanup in one bundle. Tailored quotes. WhatsApp myCHEF.',
+      'All-inclusive Bali villa event packages: private chef, bar service, staffing, transport and cleanup in one bundle. Transparent tailored quotes. WhatsApp myCHEF.',
     canonical: `${SITE}/villa-event-packages`,
     h1: 'Bali Villa Event Packages — Everything, Arranged',
     ogImage: `${SITE}/generated/mychef-villa-event-packages-hero.webp`,

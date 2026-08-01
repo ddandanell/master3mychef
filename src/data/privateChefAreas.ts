@@ -206,7 +206,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       `Ubud holds 300+ boutique villas across rice terraces and jungle ravines — most built for exactly this kind of outdoor dining.`,
     guestProfile:
-      `Wellness and retreat guests, couples, cultural travellers and creatives on longer stays.`,
+      `Wellness and retreat guests on multi-day programmes, couples in jungle villas, cultural travellers, plant-based diners, and creatives on longer Ubud stays who want consistent in-villa cooking.`,
     landmarks: [
       'Sayan',
       'Penestanan',
@@ -274,7 +274,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       `The Uluwatu–Bingin–Padang Padang belt holds 150+ high-end villas built into the limestone, most with outdoor dining areas engineered for the view.`,
     guestProfile:
-      `Luxury villa guests, honeymooners and eloping couples, surf groups and wedding parties.`,
+      `Luxury clifftop villa guests, honeymooners and eloping couples, surf groups splitting premium houses, and wedding parties who want dinner timed to the Uluwatu sunset.`,
     landmarks: [
       'Uluwatu & Suluban',
       'Bingin',
@@ -343,7 +343,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       `Jimbaran has a mix of beach-access properties along the bay and clifftop resort villas on Jl. Uluwatu. Many are large family estates built for multi-generational groups.`,
     guestProfile:
-      `Seafood-loving families, couples celebrating over a bay sunset, resort-villa guests and celebration groups.`,
+      `Seafood-loving families, couples celebrating over a Jimbaran bay sunset, resort-villa guests, and celebration groups hosting beachside BBQ or fine dining nights.`,
     landmarks: [
       'Jimbaran Bay beachside',
       'Kedonganan',
@@ -412,7 +412,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       `Nusa Dua's ITDC resort zone has some of Bali's largest villa estates — 5+ bedroom properties with full kitchens, pools and event spaces.`,
     guestProfile:
-      `Corporate retreat groups, high-net-worth families, luxury honeymooners and resort guests.`,
+      `Corporate retreat and incentive groups, high-net-worth multi-generational families, luxury honeymooners, and resort-adjacent guests who want five-star service at a private estate table.`,
     landmarks: [
       'ITDC resort zone',
       'Beachfront estates',
@@ -660,7 +660,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       `Pererenan's villa stock is newer and more spacious than central Canggu's, often with rice-field or ocean views and open-air dining areas made for evenings in.`,
     guestProfile:
-      `Couples on longer stays, digital nomads wanting quiet, and small groups sharing architect-designed villas.`,
+      `Couples on longer stays, digital nomads wanting quiet, and small groups sharing architect-designed villas north of Canggu who prefer privacy over beach-club noise.`,
     landmarks: [
       'Pererenan Beach & Jl. Pererenan',
       'Echo Beach (northern end)',
@@ -1416,7 +1416,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Tanah Lot is ~35–40 minutes from our Seminyak base. Travel allowance quoted upfront and always transparent.',
+      'Tanah Lot is ~35–40 minutes from our Seminyak base. Travel allowance is quoted upfront and always transparent. Sunset dinners and multi-day retreat catering available.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -1857,7 +1857,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      `Same pricing structure as South Bali. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}.`,
+      `Same pricing structure as South Bali Bukit coverage. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}. Sunset and surf-trip packages quoted on request.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2014,7 +2014,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      `Same pricing as Ubud and Gianyar zone. 50% deposit confirms booking. ${siteFacts.groceryPolicy}.`,
+      `Same pricing as the Ubud and Gianyar zone. 50% deposit confirms booking. ${siteFacts.groceryPolicy}. Balinese feast menus available on request.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2172,7 +2172,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Highland sourcing from Candi Kuning market. 50% deposit confirms booking. Book 72 hours ahead.',
+      'Highland produce sourced from Candi Kuning market. 50% deposit confirms booking. Book 72 hours ahead for cooler-kitchen logistics and market timing.',
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2330,7 +2330,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Distance premium from South Bali base included. 50% deposit confirms booking. Book 72 hours ahead.',
+      'Distance premium from the South Bali base is included and quoted upfront. 50% deposit confirms booking. Book 72 hours ahead for Amed dive-coast logistics.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {

@@ -79,18 +79,53 @@ const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
   ],
   pererenan: [
     { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
   ],
   sanur: [
     { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/catering', label: 'villa catering options' },
   ],
   seminyak: [
     { to: '/fine-dining/menus', label: 'private chef villa menus' },
     { to: '/journal/private-chef-seminyak-guide', label: 'Seminyak local' },
+    { to: '/events/weddings', label: 'wedding catering Bali' },
   ],
   ubud: [
     { to: '/catering/retreat-catering', label: 'retreat catering programme' },
     { to: '/fine-dining/menus', label: 'private chef villa menus (incl. vegetarian)' },
     { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
+  ],
+  uluwatu: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'clifftop tasting menus' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+  ],
+  jimbaran: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  'nusa-dua': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/corporate-events', label: 'corporate event catering' },
+    { to: '/group-villa-dinner-packages-bali', label: 'group villa dinner packages' },
+  ],
+  denpasar: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/corporate-events', label: 'corporate catering Bali' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  berawa: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/birthdays', label: 'villa birthday catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  petitenget: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/romantic-dinner', label: 'romantic villa dinner' },
+    { to: '/journal/private-chef-seminyak-guide', label: 'Seminyak area guide' },
   ],
 }
 

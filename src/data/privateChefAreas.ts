@@ -1964,6 +1964,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How far in advance should I book?',
         a: 'We recommend 48 hours ahead for standard sessions, 72 hours for larger groups or bespoke menus. Contact us via WhatsApp for faster turnaround.',
       },
+      {
+        q: 'Is there a travel fee for Balangan cliff villas?',
+        a: 'Balangan is on the Bukit Peninsula within our South Bali coverage. Any travel allowance is quoted per address before you confirm — never added after booking.',
+      },
     ],
     nearbyAreas: [
       { slug: 'uluwatu', name: 'Uluwatu' },
@@ -2016,6 +2020,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is there a minimum guest number for Bingin bookings?',
         a: 'No minimum. We cook for couples, families, and surf groups alike. Pricing is based on menu and guest count. Contact us for a quote.',
       },
+      {
+        q: 'How far in advance should I book a private chef in Bingin?',
+        a: 'Book 48 hours ahead for standard cliff dinners; 72 hours for larger surf groups or bespoke menus. WhatsApp for last-minute availability checks.',
+      },
     ],
     nearbyAreas: [
       { slug: 'uluwatu', name: 'Uluwatu' },
@@ -2067,6 +2075,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'Can you cater for a group surf trip near Padang Padang?',
         a: 'Absolutely. Group catering is one of our specialties — big shared meals, BBQ sessions, and day-long packages for active groups. Contact us with group size and days for a quote.',
+      },
+      {
+        q: 'How much does a private chef cost near Padang Padang?',
+        a: 'Padang Padang follows Bukit Peninsula pricing: from IDR 1,000,000++ per day for one meal, groceries at cost. Group surf packages are quoted per guest count.',
       },
     ],
     nearbyAreas: [
@@ -2121,6 +2133,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'What styles of cuisine does myCHEF offer in Sukawati?',
         a: 'We offer traditional Balinese, modern Indonesian, Asian fusion, and international menus. Most guests here prefer a Balinese-focused experience, but we adapt to any dietary preference.',
       },
+      {
+        q: 'How much does a private chef cost in Sukawati?',
+        a: 'Sukawati matches the Ubud–Gianyar rate band: from IDR 1,000,000++ per day for one meal, groceries at cost with receipts. Balinese feast menus available on request.',
+      },
     ],
     nearbyAreas: [
       { slug: 'ubud', name: 'Ubud' },
@@ -2173,6 +2189,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is Payangan covered by the same team as Ubud?',
         a: 'Yes — Payangan is within our Gianyar service zone. No additional travel surcharge; the same experienced team covers both areas.',
       },
+      {
+        q: 'How far in advance should I book for Payangan highland villas?',
+        a: 'Book 48 hours ahead for standard dinners. Multi-day retreat catering needs your full meal schedule so we can quote a fixed package and source highland produce.',
+      },
     ],
     nearbyAreas: [
       { slug: 'ubud', name: 'Ubud' },
@@ -2224,6 +2244,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How remote is Keramas from your base?',
         a: 'Keramas is about 45 minutes from our main Gianyar operations — within our service zone and no extra travel charge.',
+      },
+      {
+        q: 'Can you cater multi-day surf trips at Keramas?',
+        a: 'Yes — multi-day chef packages for surf groups are popular on the east Gianyar coast. Share days, guest count and preferred meal times for a fixed quote.',
       },
     ],
     nearbyAreas: [
@@ -2279,6 +2303,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How far in advance should I book for Bedugul?',
         a: 'We recommend 72 hours for Bedugul due to highland market sourcing logistics. Contact us via WhatsApp and we will confirm quickly.',
       },
+      {
+        q: 'How much does a private chef cost in Bedugul?',
+        a: 'Bedugul uses the highland rate structure with produce often sourced from Candi Kuning market. From IDR 1,000,000++ per day for one meal; travel is quoted upfront.',
+      },
     ],
     nearbyAreas: [
       { slug: 'jatiluwih', name: 'Jatiluwih' },
@@ -2331,6 +2359,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'What kind of menus suit a Jatiluwih stay?',
         a: 'Traditional Balinese and Indonesian cooking suits the setting — rice-based feasts, slow-cooked dishes, local vegetables, and highland fruit. We also design full feast menus for groups celebrating something special here.',
       },
+      {
+        q: 'How far in advance should I book a chef near Jatiluwih?',
+        a: 'Book 72 hours ahead for Jatiluwih rice-terrace villas. Remote highland logistics and travel are confirmed on booking with a fixed, itemised quote.',
+      },
     ],
     nearbyAreas: [
       { slug: 'bedugul', name: 'Bedugul' },
@@ -2382,6 +2414,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How far is Tabanan from the main tourist areas?',
         a: 'Tabanan town is about 30–45 minutes from the main Bali tourist corridors. Our team serves the full regency and adjusts logistics around your location.',
+      },
+      {
+        q: 'Can you cater multi-day stays across Tabanan regency?',
+        a: 'Yes — full West Bali regency coverage with multi-day chef packages for coast and highland villas. Travel is included in your quote; grocery receipts provided.',
       },
     ],
     nearbyAreas: [
@@ -2437,6 +2473,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is there a travel surcharge for Amed?',
         a: 'Amed is approximately 2 hours from South Bali. The standard rate is IDR 1,000,000++ per day for one meal; a distance premium applies and is quoted upfront. Contact us for a full quote.',
       },
+      {
+        q: 'How far in advance should I book a private chef in Amed?',
+        a: 'Book 72 hours ahead for Amed dive-coast villas so northeast logistics and morning seafood sourcing can be planned. Dive-day meal timing is flexible.',
+      },
     ],
     nearbyAreas: [
       { slug: 'candidasa', name: 'Candidasa' },
@@ -2488,6 +2528,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How far in advance should I book for Sidemen?',
         a: 'We recommend 72 hours for Sidemen. Contact us early in your trip and we will plan logistics accordingly.',
+      },
+      {
+        q: 'How much does a private chef cost in Sidemen?',
+        a: 'Sidemen follows the remote highland structure: from IDR 1,000,000++ per day for one meal, with distance premium shown before you confirm. Groceries at cost with receipts.',
       },
     ],
     nearbyAreas: [
@@ -2541,6 +2585,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is Candidasa far from your main service area?',
         a: 'Candidasa is approximately 90 minutes from our Ubud base. A small distance component is included in the starting price.',
       },
+      {
+        q: 'Can you support multi-day dive or culture stays in Candidasa?',
+        a: 'Yes — multi-day packages with flexible breakfasts and seafood dinners suit dive and cultural itineraries. Book 72 hours ahead so East Bali logistics are locked.',
+      },
     ],
     nearbyAreas: [
       { slug: 'amed', name: 'Amed' },
@@ -2568,7 +2616,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       "Tulamben's accommodation is almost entirely dive-oriented — small dive resorts, bungalow operations, and a handful of private villas. The community is tight-knit and the pace is entirely structured around tides and dive schedules.",
     guestProfile:
-      'Serious scuba divers, dive course students, underwater photographers, and anyone making a dedicated trip to the Liberty wreck.',
+      "Serious scuba divers, dive course students, underwater photographers, and guests making a dedicated trip to the USAT Liberty wreck on Bali's northeast coast.",
     landmarks: [
       'USAT Liberty wreck dive site',
       'Tulamben Bay',
@@ -2592,6 +2640,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How remote is Tulamben and does that affect the price?',
         a: 'Tulamben is approximately 2.5 hours from South Bali. The distance premium is reflected in the starting price. Contact us for a full quote.',
+      },
+      {
+        q: 'How far in advance should I book for Tulamben dive resorts?',
+        a: 'Book 72–96 hours ahead. Remote northeast logistics need advance planning; full dive-day meal plans (pre-dive breakfast through evening dinner) are available on request.',
       },
     ],
     nearbyAreas: [
@@ -2646,6 +2698,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is there a surcharge for Lovina?',
         a: 'Lovina is a long way from our South Bali base. The standard rate is IDR 1,000,000++ per day for one meal; a distance component applies and is quoted upfront.',
       },
+      {
+        q: 'Can you prepare early breakfasts before dolphin trips in Lovina?',
+        a: 'Yes — early breakfasts timed for dawn dolphin boats are a popular Lovina request. Book 72 hours ahead so North Bali logistics and market sourcing are confirmed.',
+      },
     ],
     nearbyAreas: [
       { slug: 'pemuteran', name: 'Pemuteran' },
@@ -2697,6 +2753,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'Can myCHEF support events or group catering in Singaraja?',
         a: 'Yes — we handle events including corporate retreats, villa parties, and cultural celebrations in the Singaraja area. Contact us with event details for a quote.',
+      },
+      {
+        q: 'How far in advance should I book a private chef in Singaraja?',
+        a: 'Book 72 hours ahead for Singaraja dinners and longer for events. Full North Bali villa dinners and group catering are available with travel quoted upfront.',
       },
     ],
     nearbyAreas: [
@@ -2750,6 +2810,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How far ahead should I book for Pemuteran?',
         a: 'At least 96 hours ahead. Pemuteran is among the most remote areas we serve — advance planning is essential.',
       },
+      {
+        q: 'Is there a distance premium for Pemuteran?',
+        a: 'Yes — Pemuteran is our most remote northwest service location. The distance premium is included and quoted upfront; book 96 hours ahead for dive-resort logistics.',
+      },
     ],
     nearbyAreas: [
       { slug: 'lovina', name: 'Lovina' },
@@ -2802,6 +2866,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'Can myCHEF cater for a sunrise breakfast or dinner with caldera views?',
         a: "Absolutely — a sunrise breakfast above the caldera or a sunset dinner watching Batur glow are among our most spectacular offerings. Tell us what you're imagining and we'll design around it.",
+      },
+      {
+        q: 'How far in advance should I book a Kintamani caldera dinner?',
+        a: 'Book 72 hours ahead for Kintamani rim villas at 1,500m. Cooler kitchens year-round; sunrise and sunset sessions are available when the villa aspect allows.',
       },
     ],
     nearbyAreas: [
@@ -2857,6 +2925,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: "What notice do you need for a Kedewatan booking?",
         a: "For Michelin-level tasting menus we prefer 72 hours. Standard private-chef sessions can often be arranged within 24 hours, subject to chef availability.",
       },
+      {
+        q: "How much does a private chef cost in Kedewatan?",
+        a: "Kedewatan matches the Ubud premium corridor: from IDR 1,000,000++ per day for one meal, groceries at cost. Gorge access notes are confirmed per villa address before booking.",
+      },
     ],
     nearbyAreas: [
       { slug: "ubud", name: "Ubud" },
@@ -2908,6 +2980,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How much does a private chef cost in Nyuh Kuning?',
         a: 'Nyuh Kuning is within the Ubud radius at standard rates from IDR 1,000,000++ per day for one meal, groceries at cost, no distance surcharge. Intimate villa dinners for 2–8 guests are the most common format.',
+      },
+      {
+        q: "How far in advance should I book a private chef in Nyuh Kuning?",
+        a: "Book 48 hours ahead for standard dinners near the Monkey Forest. Quiet boutique villas often need discreet service timing — share access notes when you enquire.",
       },
 ],
     nearbyAreas: [
@@ -2961,6 +3037,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How much does a private chef cost in Lodtunduh?',
         a: 'Lodtunduh sits in the greater Ubud service area with standard Ubud-zone rates from IDR 1,000,000++ per day for one meal. Multi-day retreat catering is quoted as a package — WhatsApp guest count and dates.',
       },
+      {
+        q: "How far in advance should I book multi-day catering in Lodtunduh?",
+        a: "Book 48–72 hours ahead for multi-day retreat schedules so menus, produce and staffing can be planned across the full stay.",
+      },
 ],
     nearbyAreas: [
       { slug: "ubud", name: "Ubud" },
@@ -3012,6 +3092,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How much does a private chef cost near Tirta Gangga?',
         a: 'Tirta Gangga bookings include East Bali logistics quoted before you confirm. Day rates start from IDR 1,000,000++ plus groceries at cost and travel. Intimate dinners and multi-day cultural stays are both available.',
+      },
+      {
+        q: "How far in advance should I book near Tirta Gangga?",
+        a: "Book 72 hours ahead for East Bali water-palace villas. Remote logistics and travel are quoted upfront so your total is fixed before deposit.",
       },
 ],
     nearbyAreas: [
@@ -3065,6 +3149,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How far in advance should I book a private chef in Munduk?',
         a: 'Munduk needs 72 hours lead time for highland logistics and cooler-climate market runs. Multi-day stays should be booked earlier. We confirm travel and menu scope on WhatsApp before deposit.',
       },
+      {
+        q: "How much does a private chef cost in Munduk?",
+        a: "Munduk highland pricing starts from IDR 1,000,000++ per day for one meal with distance logistics quoted upfront. Cooler mountain menus suit the elevation.",
+      },
 ],
     nearbyAreas: [
       { slug: "lovina", name: "Lovina" },
@@ -3116,6 +3204,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How much does a private chef cost in Gianyar?',
         a: 'Gianyar is in our Ubud service zone with standard day rates from IDR 1,000,000++ for one meal, groceries at cost. Babi guling feasts and multi-day catering packages are quoted per guest count.',
+      },
+      {
+        q: "How far in advance should I book a private chef in Gianyar?",
+        a: "Book 48 hours ahead for standard villa dinners; longer for events near cultural venues. Balinese feast and babi guling-style menus are available on request.",
       },
 ],
     nearbyAreas: [
@@ -3169,6 +3261,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How much does a private chef cost in Padang Bai?',
         a: 'Padang Bai includes an East Bali distance component quoted upfront. Half-day sessions start from our standard day rate plus transparent travel; short-notice one-night stays are possible when a chef is already eastbound.',
       },
+      {
+        q: "How far in advance should I book a chef for a one-night Padang Bai stop?",
+        a: "Even for one-night ferry stopovers, book 48 hours ahead when possible so seafood sourcing and east-coast travel can be confirmed the same day you arrive.",
+      },
 ],
     nearbyAreas: [
       { slug: "candidasa", name: "Candidasa" },
@@ -3220,6 +3316,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How far in advance should I book a private chef in Baturiti?',
         a: 'Book 72 hours ahead for Baturiti so we can plan highland market sourcing and travel from south Bali. Multi-day retreat catering should be confirmed earlier — share dates and guest count for availability.',
+      },
+      {
+        q: "How much does a private chef cost in Baturiti?",
+        a: "Baturiti highland service starts from IDR 1,000,000++ per day for one meal. Fresh local produce and warming menus are planned for cooler evenings.",
       },
 ],
     nearbyAreas: [
@@ -3273,6 +3373,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How much does a private chef cost in Mengwi?',
         a: 'Mengwi uses our central Badung rate band from IDR 1,000,000++ per day for one meal, groceries at cost. Family villa dinners and temple-area event catering are common — share your date for a fixed quote.',
       },
+      {
+        q: "How far in advance should I book a private chef in Mengwi?",
+        a: "Book 48 hours ahead for family villa dinners near Taman Ayun. Mengwi sits in central Badung with reliable access from the south-Bali chef network.",
+      },
 ],
     nearbyAreas: [
       { slug: "tanah-lot", name: "Tanah Lot" },
@@ -3324,6 +3428,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How much does a private chef cost in Ketewel?',
         a: 'Ketewel follows south–east Bali pricing from IDR 1,000,000++ per day for one meal, groceries at cost. Beachside BBQs and sunset dinners are popular here — no surprise travel fees when quoted upfront.',
+      },
+      {
+        q: "How far in advance should I book a private chef in Ketewel?",
+        a: "Book 48 hours ahead for beachfront dinners between Sanur and Keramas. Seafood BBQs and sunset menus are popular on this Gianyar stretch.",
       },
 ],
     nearbyAreas: [
@@ -3377,6 +3485,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How much does a private chef cost in Abiansemal?',
         a: 'Abiansemal follows our central Badung rate band: from IDR 1,000,000++ per day for one meal, groceries at cost. Travel is usually included in the standard zone — confirm your villa pin on WhatsApp for a fixed quote.',
       },
+      {
+        q: "How far in advance should I book a wine-pairing dinner in Abiansemal?",
+        a: "Book 48–72 hours ahead for farm-to-table or wine-pairing dinners so produce and pairing notes can be confirmed with your villa kitchen layout.",
+      },
 ],
     nearbyAreas: [
       { slug: "mengwi", name: "Mengwi" },
@@ -3428,6 +3540,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How much does a private chef cost in Cepaka?',
         a: 'Cepaka is in the Canggu–Tabanan service zone. Half-day chef service starts from IDR 1,000,000++ plus groceries at cost. Sunset BBQ packages and multi-day villa stays are available — WhatsApp for a fixed quote.',
+      },
+      {
+        q: "How far in advance should I book a private chef in Cepaka?",
+        a: "Book 48 hours ahead for Tabanan coast villas. Sunset BBQs and multi-day stays are available; travel from the Canggu corridor is quoted clearly upfront.",
       },
 ],
     nearbyAreas: [

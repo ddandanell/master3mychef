@@ -375,7 +375,7 @@ export default function InVillaServicePage() {
                 View Dining Options
               </Link>
             </div>
-            <p className="text-white/55 text-sm">560+ villas served · 12,000+ guests · Guest-loved service</p>
+            <p className="text-white/55 text-sm">560+ events served · 12,000+ guests · 500+ villa bookings</p>
           </div>
         </div>
       </section>

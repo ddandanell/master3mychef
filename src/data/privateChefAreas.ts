@@ -996,7 +996,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Umalas is within our standard service zone — no travel surcharge. Villa catering from IDR 700,000 per person.',
+      'Umalas is within our standard service zone — no travel surcharge. Villa catering from IDR 700,000 per person. Weekly chef rates available for longer stays.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events', 'staffing'],
     faqs: [
       {
@@ -1710,7 +1710,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     landmarks: ['Cemagi beach', 'Tabanan rice fields', 'Tanah Lot (15 min)', 'Canggu surf coast (nearby)', 'Seseh black-sand stretch', 'West coast temple road'],
     priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Cemagi is within the Canggu–Tabanan service zone. Standard pricing applies. Multi-day packages available.',
+      'Cemagi is within the Canggu–Tabanan service zone. Standard pricing applies with no surprise travel fees. Multi-day and full-board packages available on request.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {
@@ -1961,7 +1961,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      `Standard Bukit Peninsula pricing applies. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}.`,
+      `Standard Bukit Peninsula pricing applies. 50% deposit confirms the booking. ${siteFacts.groceryPolicy}. Surf-trip and sunset packages quoted on request.`,
     services: ['private-chef', 'fine-dining', 'catering', 'events'],
     faqs: [
       {
@@ -2696,7 +2696,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     priceFrom: 'From IDR 1,000,000++ per day for one meal',
     pricingNote:
-      'Highland distance premium included. 50% deposit confirms booking. Sunrise and sunset sessions available.',
+      'Highland distance premium included and quoted upfront. 50% deposit confirms booking. Sunrise and sunset caldera sessions available on request.',
     services: ['private-chef', 'fine-dining', 'catering', 'bbq', 'events'],
     faqs: [
       {

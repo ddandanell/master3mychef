@@ -604,7 +604,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-berawa.webp',
     heroAlt: 'Private chef setting up a poolside dinner at a modern Berawa villa with rice field horizon',
     intro:
-      'Berawa is Canggu\'s quieter, more design-led neighbour — newer villas, better kitchens, and a guest profile that leans health-conscious and long-stay. myCHEF cooks villa birthday parties for 20–60 guests, weekly meal prep for surf families, and Saturday dinner experiences that feel worlds away from the beach club scene.',
+      'Berawa is Canggu\'s quieter, more design-led neighbour — newer villas, better kitchens, and a guest profile that leans health-conscious and long-stay. myCHEF cooks villa birthday parties for 20–60 guests, weekly meal prep for surf families, and Saturday dinner experiences that feel worlds away from the beach club scene. myCHEF handles Berawa birthday parties, weekly meal prep, and design-villa fine dining with Canggu-side logistics.',
     villaDensity:
       'Berawa has seen rapid villa development in the last 5 years — architect-designed properties with full cook-and-entertain layouts. Many feature open-plan kitchens that chefs love to work in.',
     guestProfile:
@@ -724,7 +724,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-seminyak.webp',
     heroAlt: 'Private chef preparing a dinner at a Kerobokan villa with garden terrace',
     intro:
-      'Kerobokan sits between Seminyak and Canggu — an easy-to-reach area with a dense mix of residential villas, long-stay rentals, and a resident expat community. myCHEF cooks here for recurring household meal prep, family dinner parties, and villa events in one of Bali\'s most lived-in neighbourhoods.',
+      'Kerobokan sits between Seminyak and Canggu — an easy-to-reach area with a dense mix of residential villas, long-stay rentals, and a resident expat community. myCHEF cooks here for recurring household meal prep, family dinner parties, and villa events in one of Bali\'s most lived-in neighbourhoods. myCHEF cooks recurring household meal prep, family dinner parties, and villa events here with no south-Bali travel drama.',
     villaDensity:
       'Kerobokan is heavily residential — a blend of Balinese compound homes, expat rental villas, and newer boutique properties along the rice field edges. Excellent kitchens are common.',
     guestProfile:
@@ -771,7 +771,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-seminyak.webp',
     heroAlt: 'Private chef serving fine dining at a Petitenget villa beachfront',
     intro:
-      'Petitenget is Seminyak\'s most prestigious corridor — the Oberoi strip, beachfront temple, and the road that birthed Bali\'s fine dining scene. myCHEF cooks intimate tasting menus and romantic dinners for couples staying in the high-end villas along Jl. Petitenget, where privacy and quality are the non-negotiables.',
+      'Petitenget is Seminyak\'s most prestigious corridor — the Oberoi strip, beachfront temple, and the road that birthed Bali\'s fine dining scene. myCHEF cooks intimate tasting menus and romantic dinners for couples staying in the high-end villas along Jl. Petitenget, where privacy and quality are the non-negotiables. myCHEF delivers intimate tasting menus and romantic villa dinners along Jl. Petitenget for guests who expect Seminyak-level polish.',
     villaDensity:
       'The Petitenget strip is the densest concentration of premium villas in Bali — 5-star private estates, high-thread-count linens, and kitchens designed to host fine dining.',
     guestProfile:
@@ -814,7 +814,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-kuta.webp',
     heroAlt: 'Private chef preparing a casual villa dinner in Kuta, Bali',
     intro:
-      'Kuta is Bali\'s original tourist hub — fast-paced, high-volume, and home to a growing base of private villa rentals away from the main strip. myCHEF serves Kuta for villa group dinners, birthday party catering, and travellers who want the convenience of central Bali without the Seminyak price tag.',
+      'Kuta is Bali\'s original tourist hub — fast-paced, high-volume, and home to a growing base of private villa rentals away from the main strip. myCHEF serves Kuta for villa group dinners, birthday party catering, and travellers who want the convenience of central Bali without the Seminyak price tag. myCHEF serves Kuta villa groups, birthday catering, and welcome dinners for travellers who want central convenience without restaurant queues.',
     villaDensity:
       'Kuta has a dense mix of tourist accommodation and increasingly private villa rentals. Villas are typically more affordable and well-located for airport convenience.',
     guestProfile:
@@ -1099,7 +1099,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-bukit.webp',
     heroAlt: 'Private chef plating a course at a clifftop villa in Ungasan',
     intro:
-      'Ungasan is the high plateau village at the southernmost tip of the Bukit Peninsula — famous for the Six Senses Uluwatu and a cluster of ultra-luxury private villas that overlook the Indian Ocean. myCHEF cooks here for elopements, anniversary dinners, and exclusive villa events at some of Bali\'s most dramatic addresses.',
+      'Ungasan is the high plateau village at the southernmost tip of the Bukit Peninsula — famous for the Six Senses Uluwatu and a cluster of ultra-luxury private villas that overlook the Indian Ocean. myCHEF cooks here for elopements, anniversary dinners, and exclusive villa events at some of Bali\'s most dramatic addresses. myCHEF cooks elopements, anniversary dinners, and exclusive villa events at Ungasan\'s dramatic clifftop addresses.',
     villaDensity:
       'Ungasan has a growing collection of clifftop luxury estates, many built into the limestone escarpment with infinity pools over the ocean. Villa density is lower here but average booking value is very high.',
     guestProfile:
@@ -1916,7 +1916,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-ubud.webp',
     heroAlt: 'Private chef preparing a traditional Balinese feast at a rice-field villa in Sukawati',
     intro:
-      'Sukawati is a traditional Balinese town in Gianyar regency — known for its art markets, dance performances, and deeply rooted Hindu culture. Villas here are immersed in authentic Bali, and the food should match. myCHEF brings genuine Balinese cooking to Sukawati stays.',
+      'Sukawati is a traditional Balinese town in Gianyar regency — known for its art markets, dance performances, and deeply rooted Hindu culture. Villas here are immersed in authentic Bali, and the food should match. myCHEF brings genuine Balinese cooking to Sukawati stays — market-led rijsttafel, ceremonial-inspired feasts, and private dinners that fit village villa compounds.',
     villaDensity:
       'Sukawati and the surrounding Gianyar south have a modest but growing villa inventory — mostly mid-range family villas and cultural guesthouses in traditional compounds. Less built up than Ubud, more genuinely village-embedded.',
     guestProfile:
@@ -1968,7 +1968,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-city-ubud.webp',
     heroAlt: 'Private chef serving a healthy retreat dinner at an eco-villa in the Payangan jungle valley',
     intro:
-      'Payangan is a highland retreat north of Ubud in Gianyar regency — jungle river valleys, eco-resorts, and some of the most secluded private villas in Bali. myCHEF serves retreat properties and private villa guests here with sessions designed for the highland setting.',
+      'Payangan is a highland retreat north of Ubud in Gianyar regency — jungle river valleys, eco-resorts, and some of the most secluded private villas in Bali. myCHEF serves retreat properties and private villa guests here with sessions designed for the highland setting — organic produce, wellness-friendly menus, and multi-day catering for quiet jungle compounds.',
     villaDensity:
       'Payangan has a curated inventory of eco-lodges, jungle retreat villas, and organic farm stays. Properties are deliberately spaced out — this is not a dense villa corridor but a series of carefully placed sanctuaries in the valley above Ubud.',
     guestProfile:
@@ -2073,7 +2073,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
     heroAlt: 'Private chef preparing a highland dinner at a lake-view villa in Bedugul',
     intro:
-      "Bedugul is a highland lake district in Tabanan regency — cooler temperatures, mist-shrouded volcanic crater lakes, and the iconic Pura Ulun Danu Beratan temple on the water. myCHEF serves retreat villas and highland properties with menus suited to the mountain setting.",
+      "Bedugul is a highland lake district in Tabanan regency — cooler temperatures, mist-shrouded volcanic crater lakes, and the iconic Pura Ulun Danu Beratan temple on the water. myCHEF serves retreat villas and highland properties with menus suited to the mountain setting — farm vegetables from local markets, warming dinners, and logistics planned for cooler highland kitchens.",
     villaDensity:
       'Bedugul has a modest collection of highland retreat properties, eco-lodges, and lake-view villas at around 1,200 metres. The accommodation is unpretentious and oriented toward the landscape — far from the luxury villa belt of South Bali.',
     guestProfile:
@@ -2126,7 +2126,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
     heroAlt: 'Private chef serving a Balinese feast at a villa overlooking the Jatiluwih UNESCO rice terraces',
     intro:
-      "Jatiluwih means 'truly marvellous' in Balinese — and the landscape earns it. The UNESCO-listed rice terraces cascade down the Tabanan highlands in an extraordinary scene. myCHEF serves private stays and eco-retreats here with menus that honour the setting.",
+      "Jatiluwih means \'truly marvellous\' in Balinese — and the landscape earns it. The UNESCO-listed rice terraces cascade down the Tabanan highlands in an extraordinary scene. myCHEF serves private stays and eco-retreats here with menus that honour the setting — highland vegetables, Balinese rice-based dishes, and terrace dinners timed to cooler mountain evenings.",
     villaDensity:
       'Jatiluwih has a very small villa inventory — a handful of eco-lodges and private retreat properties embedded in the terrace landscape. This is not a destination for villa holidaymakers looking for a full-service experience, but for those who found it and planned around it.',
     guestProfile:
@@ -2231,7 +2231,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-water-sunset.webp',
     heroAlt: 'Private chef preparing fresh seafood at an Amed villa overlooking the black sand coast',
     intro:
-      "Amed is a string of fishing villages on Bali's northeast coast in Karangasem regency — black sand beaches, world-class snorkelling and diving, and a relaxed pace that attracts long-stay visitors. myCHEF brings private chef sessions to Amed villas and dive resorts.",
+      "Amed is a string of fishing villages on Bali\'s northeast coast in Karangasem regency — black sand beaches, world-class snorkelling and diving, and a relaxed pace that attracts long-stay visitors. myCHEF brings private chef sessions to Amed villas and dive resorts with boat-fresh fish, simple Balinese feasts, and flexible timing around dive schedules.",
     villaDensity:
       "Amed stretches through several villages — Jemeluk, Bunutan, Lipah, Selang — each with its own small cluster of guesthouses and villas oriented toward the water. Properties are modest by South Bali standards but extraordinarily located.",
     guestProfile:
@@ -2284,7 +2284,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
     heroAlt: 'Private chef serving a Balinese feast at a Sidemen valley villa with Mount Agung views',
     intro:
-      "Sidemen is one of Bali's most breathtaking valleys — a lush corridor of rice terraces running toward Mount Agung in Karangasem regency. The boutique guesthouses and private villas here have extraordinary views. myCHEF serves Sidemen with private chef sessions designed for this highland setting.",
+      "Sidemen is one of Bali\'s most breathtaking valleys — a lush corridor of rice terraces running toward Mount Agung in Karangasem regency. The boutique guesthouses and private villas here have extraordinary views. myCHEF serves Sidemen with private chef sessions designed for this highland setting. myCHEF brings Balinese menus and highland produce to Sidemen valley terraces — private dining with Mount Agung on the horizon.",
     villaDensity:
       'Sidemen has a small, carefully curated collection of boutique guesthouses and private villas — none more than a few buildings. The valley floor and hillsides are almost entirely agricultural, with only a handful of accommodation options embedded in the landscape.',
     guestProfile:
@@ -2336,7 +2336,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-water-sunset.webp',
     heroAlt: 'Private chef serving a fresh seafood dinner at a Candidasa beachfront villa in East Bali',
     intro:
-      "Candidasa is a quiet beach town on Bali's east coast in Karangasem — the gateway to East Bali's diving, snorkelling, and cultural attractions. myCHEF serves Candidasa villas and guesthouses with private chef sessions focused on East Bali's excellent seafood and produce.",
+      "Candidasa is a quiet beach town on Bali\'s east coast in Karangasem — the gateway to East Bali\'s diving, snorkelling, and cultural attractions. myCHEF serves Candidasa villas and guesthouses with private chef sessions focused on East Bali\'s excellent seafood and produce, plus multi-day chef packages for longer cultural and dive stays.",
     villaDensity:
       'Candidasa has a low-key collection of beachfront guesthouses and a small number of private villas. It is unpretentious and genuinely local — ideal for guests who value quiet over convenience.',
     guestProfile:
@@ -2388,7 +2388,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-water-sunset.webp',
     heroAlt: 'Private chef preparing a post-dive meal at a Tulamben dive resort on the northeast Bali coast',
     intro:
-      "Tulamben is a small diving village on Bali's northeast coast — home of the USAT Liberty shipwreck, one of the most accessible wreck dives in the world. myCHEF caters to both resort groups and private villa guests here with menus designed for the dive-centred lifestyle.",
+      "Tulamben is a small diving village on Bali\'s northeast coast — home of the USAT Liberty shipwreck, one of the most accessible wreck dives in the world. myCHEF caters to both resort groups and private villa guests here with menus designed for the dive-centred lifestyle — early fuel breakfasts, light lunches, and seafood dinners after afternoon dives.",
     villaDensity:
       "Tulamben's accommodation is almost entirely dive-oriented — small dive resorts, bungalow operations, and a handful of private villas. The community is tight-knit and the pace is entirely structured around tides and dive schedules.",
     guestProfile:
@@ -2441,7 +2441,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-water-sunset.webp',
     heroAlt: 'Private chef serving a relaxed seafood dinner at a Lovina beachfront villa in North Bali',
     intro:
-      "Lovina is North Bali's main beach resort — a calm stretch of black sand, famous for dolphin watching at dawn and a pace far slower than the south. myCHEF serves Lovina villas and guesthouses with private chef sessions tailored to the relaxed North Bali character.",
+      "Lovina is North Bali\'s main beach resort — a calm stretch of black sand, famous for dolphin watching at dawn and a pace far slower than the south. myCHEF serves Lovina villas and guesthouses with private chef sessions tailored to the relaxed North Bali character — early breakfasts before boat trips, seafood dinners, and multi-day chef packages for longer northern stays.",
     villaDensity:
       "Lovina's accommodation ranges from basic guesthouses to mid-range villas along the black sand beach. Villa density is low and properties are unpretentious — the draw is the calm, the dolphins, and the distance from the tourist circuit.",
     guestProfile:
@@ -2493,7 +2493,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-water-sunset.webp',
     heroAlt: 'Private chef at a Singaraja villa event with North Bali sea views',
     intro:
-      "Singaraja is the capital of Buleleng regency and the historical port city of North Bali — a layered urban landscape of Dutch colonial architecture, Chinese quarter streets, and Balinese royal heritage. myCHEF serves private stays and event catering in the Singaraja area.",
+      "Singaraja is the capital of Buleleng regency and the historical port city of North Bali — a layered urban landscape of Dutch colonial architecture, Chinese quarter streets, and Balinese royal heritage. myCHEF serves private stays and event catering in the Singaraja area — family villa dinners, corporate hosting, and logistics for guests based in North Bali.",
     villaDensity:
       "Singaraja is primarily an urban base rather than a villa destination — it functions as the logistics hub for North Bali tourism. Private stays tend to be guesthouses, family homes, or the occasional boutique property in the surrounding hills.",
     guestProfile:
@@ -2545,7 +2545,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-water-sunset.webp',
     heroAlt: 'Private chef preparing an eco-conscious dinner at a Pemuteran dive resort villa in northwest Bali',
     intro:
-      "Pemuteran is a small eco-dive village in northwest Bali — gateway to Menjangan Island and the West Bali National Park. myCHEF serves Pemuteran's dive resorts and eco-lodges with private chef sessions designed for the conservation-minded community here.",
+      "Pemuteran is a small eco-dive village in northwest Bali — gateway to Menjangan Island and the West Bali National Park. myCHEF serves Pemuteran\'s dive resorts and eco-lodges with private chef sessions designed for the conservation-minded community here — fresh seafood, plant-forward recovery meals after dive days, and low-waste kitchen practice that fits the area\'s eco ethos.",
     villaDensity:
       "Pemuteran has a tight cluster of dive resorts, eco-lodges, and bungalow operations around the bay. Properties are low-impact and conservation-conscious — no high-rise, no crowds, very few private villas.",
     guestProfile:
@@ -2597,7 +2597,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
     heroAlt: 'Private chef serving a highland caldera dinner at a Kintamani villa above Lake Batur',
     intro:
-      "Kintamani sits on the rim of the ancient Batur caldera in Bangli regency — at 1,500 metres, with views across the volcanic lake and Mount Batur. myCHEF serves private villas and boutique properties on the caldera rim for high-altitude dining experiences unlike anywhere else in Bali.",
+      "Kintamani sits on the rim of the ancient Batur caldera in Bangli regency — at 1,500 metres, with views across the volcanic lake and Mount Batur. myCHEF serves private villas and boutique properties on the caldera rim for high-altitude dining experiences unlike anywhere else in Bali. myCHEF cooks mountain dinners with volcanic views in mind — warming menus, highland produce, and logistics for cooler caldera villas.",
     villaDensity:
       'Kintamani has a sparse but growing collection of rim-view villas, boutique guesthouses, and caldera-edge restaurants. The most sought-after properties face west across the lake to the volcano — spectacular at sunrise and dramatically lit at sunset.',
     guestProfile:
@@ -2847,7 +2847,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: "/generated/mychef-location-bali-locations-sunset.webp",
     heroAlt: "Private chef serving a warming highland dinner at a clove plantation villa in Munduk",
     intro:
-      "Munduk is a cool highland village at 800 m elevation in the Buleleng foothills, surrounded by clove, coffee, and cacao plantations. Waterfalls cascade through the jungle below the village, and the air is mountain-fresh year-round — a total contrast to the coastal heat of South Bali.",
+      "Munduk is a cool highland village at 800 m elevation in the Buleleng foothills, surrounded by clove, coffee, and cacao plantations. Waterfalls cascade through the jungle below the village, and the air is mountain-fresh year-round — a total contrast to the coastal heat of South Bali. myCHEF plans highland menus around clove-coffee country produce, cooler evenings, and waterfall-view villa terraces.",
     villaDensity:
       "Boutique plantation lodges and eco-luxury villas occupy converted or newly-built estate buildings above terraced valleys. Properties are intimate (2–8 guests) with fireplaces, panoramic jungle views, and private gardens.",
     guestProfile:
@@ -3039,7 +3039,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: "/generated/mychef-location-bali-locations-sunset.webp",
     heroAlt: "Private chef at a villa in Mengwi with views toward the royal water temple Pura Taman Ayun",
     intro:
-      "Mengwi is the former royal capital of the Mengwi kingdom, 18 km north of Kuta. The area is anchored by Pura Taman Ayun — one of Bali's most photographed royal temples — and surrounded by rice fields, craft villages, and a quiet villa corridor that appeals to culturally-motivated visitors.",
+      "Mengwi is the former royal capital of the Mengwi kingdom, 18 km north of Kuta. The area is anchored by Pura Taman Ayun — one of Bali\'s most photographed royal temples — and surrounded by rice fields, craft villages, and a quiet villa corridor that appeals to culturally-motivated visitors. myCHEF covers Mengwi for family villa dinners, Balinese feast menus near Pura Taman Ayun, and central-Badung event catering.",
     villaDensity:
       "Villas in Mengwi are spread across the rice-field lanes north of the main road. Properties are mid-range to luxury, often chosen by guests who want a central Bali location equidistant from Ubud, Canggu, and the Tanah Lot coast.",
     guestProfile:
@@ -3087,7 +3087,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     heroImage: "/generated/mychef-location-bali-water-sunset.webp",
     heroAlt: "Private chef serving a beachside dinner at a villa in Ketewel on the black-sand Gianyar coast",
     intro:
-      "Ketewel is a coastal village in Gianyar regency, straddling the beach road between Sanur and Keramas. The black-sand beach here is largely uncrowded, the fishing boats go out at dawn, and a growing number of luxury villas have been built to capture the ocean views without Seminyak's price tag.",
+      "Ketewel is a coastal village in Gianyar regency, straddling the beach road between Sanur and Keramas. The black-sand beach here is largely uncrowded, the fishing boats go out at dawn, and a growing number of luxury villas have been built to capture the ocean views without Seminyak\'s price tag. myCHEF serves Ketewel beachfront compounds with seafood BBQs, sunset dinners, and easy access between Sanur and Keramas.",
     villaDensity:
       "A corridor of beachfront and beach-access villas runs along the coast road. Properties range from affordable four-bedroom compounds to boutique luxury villas, all with easy beach access and ocean breezes.",
     guestProfile:

@@ -864,7 +864,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/best-bali-villas-private-chef-kitchen',
     title: 'What Makes a Bali Villa Kitchen Work for a Private Chef',
     description:
-      'What private chefs need in a Bali villa kitchen — prep space, equipment, ventilation and cold storage — and how to check before you book myCHEF.',
+      'What private chefs need in a Bali villa kitchen — prep space, equipment, ventilation and cold storage — and how to check before you book. Guide by myCHEF.',
     canonical: `${SITE}/blog/best-bali-villas-private-chef-kitchen`,
     h1: 'What Makes a Bali Villa Kitchen Work for a Private Chef',
     ogImage: `${SITE}/generated/journal-hero.webp`,
@@ -920,7 +920,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/fine-dining-guide',
     title: 'Fine Dining in Bali: Ultimate Guide (Restaurants & In-Villa)',
     description:
-      'Discover fine dining in Bali — curated tasting menus, wine pairings and luxury culinary experiences, from restaurants to your villa with myCHEF.',
+      'Discover fine dining in Bali — curated tasting menus, wine pairings and luxury culinary experiences, from restaurants to your villa. Insights from myCHEF.',
     canonical: `${SITE}/blog/fine-dining-guide`,
     h1: 'Fine Dining in Bali: The Ultimate Guide',
   },
@@ -929,7 +929,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/private-chef-roles-responsibilities-explained',
     title: 'Private Chef Roles & Responsibilities Explained | myCHEF',
     description:
-      'What private chefs actually do in Bali, how they differ from other culinary professionals, and what to expect when you hire one for a villa.',
+      'What private chefs actually do in Bali, how they differ from other culinary professionals, and what to expect when you hire one for a villa stay with myCHEF.',
     canonical: `${SITE}/blog/private-chef-roles-responsibilities-explained`,
     h1: 'Private Chef Roles & Responsibilities Explained',
   },
@@ -969,7 +969,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/fine-dining-trends-bali-2026-innovations',
     title: 'Fine Dining Trends in Bali 2026: Modern Innovations',
     description:
-      'Emerging culinary trends in Bali for 2026: sustainability, technique innovation, and what sophisticated diners expect from villa fine dining.',
+      'Emerging culinary trends in Bali for 2026: sustainability, technique innovation, and what sophisticated diners expect from villa fine dining with myCHEF.',
     canonical: `${SITE}/blog/fine-dining-trends-bali-2026-innovations`,
     h1: 'Fine Dining Trends Bali 2026 — What\'s Shaping Luxury Villa Dining',
   },
@@ -978,7 +978,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/seasonal-ingredients-bali-cooking-guide',
     title: 'Seasonal Ingredients in Bali: Cooking & Sourcing Guide',
     description:
-      'Complete guide to Bali seasonal ingredients: what is available when, market tips, and how private chefs plan villa menus around the seasons.',
+      'Complete guide to Bali seasonal ingredients: what is available when, market tips, and how private chefs plan villa menus around the seasons. By myCHEF.',
     canonical: `${SITE}/blog/seasonal-ingredients-bali-cooking-guide`,
     h1: 'Seasonal Ingredients in Bali: Cooking & Sourcing Guide for',
   },
@@ -987,7 +987,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/private-chef-breakfast-bali-villas',
     title: 'Private Chef Breakfast in Bali Villas: Plan Before Day One',
     description:
-      'Plan a private chef breakfast in Bali before you land, with menu ideas, kitchen checks, staffing tips, and realistic timing for villa stays.',
+      'Plan a private chef breakfast in Bali before you land — menu ideas, kitchen checks, staffing tips and realistic timing for villa stays. Tips from myCHEF.',
     canonical: `${SITE}/blog/private-chef-breakfast-bali-villas`,
     h1: 'Private Chef Breakfast in Bali Villas: Plan Before Day One',
   },
@@ -996,7 +996,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/birthday-dinner-bali-villa-without-planner',
     title: 'Birthday Dinner in a Bali Villa: Plan It Without a Planner',
     description:
-      'Plan a birthday dinner in a Bali villa without a full planner — food formats, staffing math, timing and a simple host run sheet from myCHEF.',
+      'Plan a birthday dinner in a Bali villa without a full planner — food formats, staffing math, timing and a simple host run sheet. Practical myCHEF guide.',
     canonical: `${SITE}/blog/birthday-dinner-bali-villa-without-planner`,
     h1: 'Birthday Dinner Bali Villa: Plan It Without a Full Planner',
   },
@@ -1023,7 +1023,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/family-kids-menu-private-chef-bali',
     title: 'Family Dining with a Private Chef in Bali: A Parent\'s Guide',
     description:
-      'Planning villa dining for a family in Bali? Our chefs build kids\' menus around ages and preferences. No restaurant stress. Book in 24 hours.',
+      'Planning villa dining for a family in Bali? Our chefs build kids\' menus around ages and preferences. No restaurant stress. Book within 24 hours via WhatsApp.',
     canonical: `${SITE}/blog/family-kids-menu-private-chef-bali`,
     h1: 'Family Dining with a Private Chef in Bali: A Complete Guide for Parents',
   },
@@ -1059,7 +1059,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/bali-wedding-catering-private-chef-timeline',
     title: 'Bali Wedding Catering Timeline: 6-Month Planning Guide',
     description:
-      'The complete Bali wedding catering timeline — what to book, when to confirm, and how chefs coordinate with venues, planners and your schedule.',
+      'The complete Bali wedding catering timeline — what to book, when to confirm, and how chefs coordinate with venues, planners and your schedule. myCHEF guide.',
     canonical: `${SITE}/blog/bali-wedding-catering-private-chef-timeline`,
     h1: 'Bali Wedding Catering with a Private Chef: Timeline & Planning Guide',
   },
@@ -1414,7 +1414,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service/waiters',
     title: 'Waiter Hire Bali | Professional Villa Servers | myCHEF',
     description:
-      'Hire waiters in Bali for villa dinners and events — uniformed, English-speaking, fine-dining trained staff. From IDR 250K/hour. WhatsApp myCHEF.',
+      'Hire waiters in Bali for villa dinners and events — uniformed, English-speaking, fine-dining trained staff. From IDR 250K/hour. Transparent rates via WhatsApp.',
     canonical: `${SITE}/in-villa-service/waiters`,
     h1: 'Waiter Hire in Bali',
     ogImage: `${SITE}/generated/aura-bartender.webp`,
@@ -1824,7 +1824,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/fine-dining',
     title: 'Private Fine Dining Bali | Fine Dining at Home by myCHEF',
     description:
-      'Fine dining at home in Bali: 24 premium set menus, tasting experiences and wine pairing in your villa from IDR 1.25M per guest. WhatsApp myCHEF.',
+      'Fine dining at home in Bali: 24 premium set menus, tasting experiences and wine pairing in your villa from IDR 1.25M per guest. Clear packages. WhatsApp myCHEF.',
     canonical: `${SITE}/fine-dining`,
     h1: 'Private Fine Dining in Your Bali Villa',
     ogImage: `${SITE}/hero-fine-dining.webp`,
@@ -2270,7 +2270,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/drop-off-catering-bali',
     title: 'Drop-Off Catering in Bali: How Villa Food Delivery Works',
     description:
-      'How drop-off catering works in Bali — what is delivered, areas covered, pricing ranges, and when to choose it over a full private chef service.',
+      'How drop-off catering works in Bali — what is delivered, areas covered, pricing ranges, and when to choose it over a full private chef service. myCHEF explains.',
     canonical: `${SITE}/blog/drop-off-catering-bali`,
     h1: 'Drop-Off Catering in Bali: What to Know Before You Order',
   },
@@ -2279,7 +2279,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/hostess-hire-bali',
     title: 'Hiring an Event Hostess in Bali: What to Know',
     description:
-      'What professional event hostesses do, when you need one, and how hiring works for Bali villa parties, weddings and corporate events with myCHEF.',
+      'What professional event hostesses do, when you need one, and how hiring works for Bali villa parties, weddings and corporate events. Explained by myCHEF.',
     canonical: `${SITE}/blog/hostess-hire-bali`,
     h1: 'Event Hostess Hire in Bali — A Practical Guide',
   },
@@ -2306,7 +2306,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/luxury-dining-bali',
     title: 'Luxury Private Dining Bali: Ultra-Premium Villa Experiences',
     description:
-      'Luxury private dining in Bali by executive chefs with Michelin credentials — bespoke menus, premium ingredients, full front-of-house service.',
+      'Luxury private dining in Bali by executive chefs with Michelin credentials — bespoke menus, premium ingredients and full front-of-house service. WhatsApp myCHEF.',
     canonical: `${SITE}/blog/luxury-dining-bali`,
     h1: 'Luxury Private Dining in Bali',
   },

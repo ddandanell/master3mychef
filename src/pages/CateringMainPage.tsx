@@ -419,8 +419,8 @@ export default function CateringMainPage() {
 
       <Breadcrumb items={[{ label: 'Catering' }]} />
 
-      {/* ═══════ SECTION 1: HERO ═══════ */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* ═══════ SECTION 1: HERO (conversion-first) ═══════ */}
+      <section className="relative min-h-[78vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-catering-bali-catering-hero.webp"
@@ -433,71 +433,79 @@ export default function CateringMainPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.72) 100%)',
             }}
           />
-          <div className="absolute inset-0 bg-black/25 md:hidden" />
         </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-          <div className="bg-black/60 rounded-3xl px-8 md:px-12 py-12 md:py-16 backdrop-blur-sm">
-            <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-8" decorative />
-            <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-              myCHEF Events & Catering
-            </p>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-[1.1] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              {"Catering in Bali — Built for Groups, Parties & Hosted Dinners"}
-            </h1>
-            <p className="text-white/[75%] text-sm md:text-base mb-6">
-              From IDR 700,000++ per person · Minimum 5 guests · Chef, staff, ingredients &amp; cleanup included · Bali-wide
-            </p>
-            <div className="text-base md:text-lg text-white/[85%] max-w-3xl mx-auto space-y-4">
-              <p>
-                Premium catering across Bali for private villas, luxury holidays, weddings, corporate events, retreats and celebrations. From intimate private chef experiences for two guests to events with hundreds of guests, myCHEF delivers complete hospitality tailored to every occasion. Our chef-led team brings the kitchen, service staff, ingredients, and equipment to your villa or venue, then handles menu design, on-site cooking, table service, and full cleanup so you can host without stress.
-              </p>
-              <p>
-                What makes our service different is that we own the full stack. We employ and train our own chefs, service staff, and logistics crew — no middlemen, no outsourced teams, and no last-minute surprises. Every dish is cooked fresh at your location, every allergy is logged, and every quote is confirmed in writing before you pay a deposit. Whether it is a high-end villa holiday, a wedding reception, a corporate offsite, or a family celebration, we match the format and staffing to your guest count and venue.
-              </p>
-              <p>
-                We operate across Seminyak, Canggu, Berawa, Pererenan, Ubud, Sanur, Nusa Dua, Jimbaran, Uluwatu, Ungasan, Kerobokan, Sidemen, Munduk, and North Bali. Travel fees are disclosed upfront, menus are customised to your group, and our team has delivered over five hundred villa events since we started. Browse our catering styles below, use the decision guide to choose the right format, or message us on WhatsApp for a same-day quote.
-              </p>
-            </div>
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24 pb-14 md:pt-28 md:pb-20">
+          <Breadcrumb items={[{ label: 'Catering' }]} theme="dark" className="justify-center mb-6" decorative />
+          <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+            Villa &amp; event catering · Bali-wide
+          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.08] text-white mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Catering in Bali — Built for Groups, Parties &amp; Hosted Dinners
+          </h1>
+          <p className="text-base md:text-lg text-white/85 max-w-2xl mx-auto mb-3 leading-relaxed">
+            Chef, staff, ingredients and cleanup at your villa. BBQ, buffet, plated or live stations — quoted in writing before you pay.
+          </p>
+          <p className="text-sm md:text-base text-white/70 mb-8">
+            From <span className="text-white font-semibold">IDR 700,000++</span> / person · Min. 5 guests · Same-day quotes
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              data-source="catering-hero"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white shadow-[0_8px_30px_rgba(197,160,40,0.35)]"
+            >
+              <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
+            </a>
+            <a
+              href="#service-tabs"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-white/35 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              View Packages
+            </a>
           </div>
-          <div className="mt-8">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <a
-                href={WA_LINK}
-                target="_blank"
-                data-source="catering-hero"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white"
-              >
-                <MessageCircle className="w-4 h-4" /> Get Your Catering Quote in 1 Hour
-              </a>
-              <Link
-                to="/private-chef-bali"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
-              >
-                <ArrowRight className="w-4 h-4" /> Need a Private Villa Chef?
-              </Link>
-            </div>
-            <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-white/15 bg-black/25 p-5 md:p-6 text-left backdrop-blur-sm">
-              <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-                Not sure which service?
-              </p>
-              <p className="text-sm md:text-base text-white/[85%] leading-relaxed mb-4">
-                Choose Events & Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-white">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
-              </p>
-              <Link
-                to="/private-chef-bali"
-                className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-white hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-1"
-              >
-                <ArrowRight className="w-4 h-4" /> View Private Villa Dining
-              </Link>
-            </div>
-            <TrustRow
-              items={['560+ events served', 'Guest-loved service', 'Chef + staff included', 'Same-day quotes', 'Bali-wide service']}
-              dark
-            />
+          <p className="text-xs sm:text-sm text-white/55 mb-8">
+            Need a daily villa chef for 1–4 guests instead?{' '}
+            <Link to="/private-chef-bali" className="text-white/85 underline underline-offset-4 hover:text-[#C5A028]">
+              Private chef day rates
+            </Link>
+          </p>
+          <TrustRow
+            items={['560+ events served', 'Chef + staff included', 'Itemised quotes', 'Bali-wide']}
+            dark
+          />
+        </div>
+      </section>
+
+      {/* ═══════ RANKING INTRO (preserve hero body SEO after conversion-first hero) ═══════ */}
+      <section className="py-12 md:py-16 px-6 bg-white" aria-label="About myCHEF catering in Bali">
+        <div className="max-w-3xl mx-auto space-y-4 text-base md:text-lg text-[#4A4745] leading-relaxed">
+          <p>
+            Premium catering across Bali for private villas, luxury holidays, weddings, corporate events, retreats and celebrations. From intimate private chef experiences for two guests to events with hundreds of guests, myCHEF delivers complete hospitality tailored to every occasion. Our chef-led team brings the kitchen, service staff, ingredients, and equipment to your villa or venue, then handles menu design, on-site cooking, table service, and full cleanup so you can host without stress.
+          </p>
+          <p>
+            What makes our service different is that we own the full stack. We employ and train our own chefs, service staff, and logistics crew — no middlemen, no outsourced teams, and no last-minute surprises. Every dish is cooked fresh at your location, every allergy is logged, and every quote is confirmed in writing before you pay a deposit. Whether it is a high-end villa holiday, a wedding reception, a corporate offsite, or a family celebration, we match the format and staffing to your guest count and venue.
+          </p>
+          <p>
+            We operate across Seminyak, Canggu, Berawa, Pererenan, Ubud, Sanur, Nusa Dua, Jimbaran, Uluwatu, Ungasan, Kerobokan, Sidemen, Munduk, and North Bali. Travel fees are disclosed upfront, menus are customised to your group, and our team has delivered over five hundred villa events since we started. Browse our catering styles below, use the decision guide to choose the right format, or message us on WhatsApp for a same-day quote.
+          </p>
+          <div className="mt-6 rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-5 md:p-6">
+            <p className="text-[#C5A028] text-xs md:text-sm tracking-[0.3em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
+              Not sure which service?
+            </p>
+            <p className="text-sm md:text-base text-[#4A4745] leading-relaxed mb-4">
+              Choose Events &amp; Catering for BBQs, buffet service, plated group dinners, weddings, and formal villa setups. Choose <span className="font-semibold text-[#1A1A1A]">Private Villa Dining</span> for 1–4 guests, family stays, and everyday breakfast, lunch, or dinner with a chef in your villa.
+            </p>
+            <Link
+              to="/private-chef-bali"
+              className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-[#1A1A1A] hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+            >
+              <ArrowRight className="w-4 h-4" /> View Private Villa Dining
+            </Link>
           </div>
         </div>
       </section>

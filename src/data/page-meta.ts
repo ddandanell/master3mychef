@@ -897,7 +897,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/how-to-hire-private-chef-bali-complete-guide',
     title: 'How to Hire a Private Chef in Bali: Complete Guide | myCHEF',
     description:
-      'Step-by-step guide to hiring a private chef in Bali — qualifications, vetting, costs and the full booking process.',
+      'Step-by-step guide to hiring a private chef in Bali — qualifications, vetting, costs, deposits and the full booking process with transparent myCHEF pricing.oking process.',
     canonical: `${SITE}/blog/how-to-hire-private-chef-bali-complete-guide`,
     h1: 'How to Hire a Private Chef in Bali',
   },
@@ -906,7 +906,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/chef-qualifications-credentials-bali-hiring',
     title: 'Private Chef Qualifications & Credentials: Bali Hiring Guide',
     description:
-      'Essential qualifications, certifications and experience markers to check when hiring a private chef in Bali.',
+      'Essential qualifications, certifications and experience markers to check when hiring a private chef in Bali — a practical vetting checklist before you book.in Bali.',
     canonical: `${SITE}/blog/chef-qualifications-credentials-bali-hiring`,
     h1: 'Chef Qualifications & Credentials: Hiring Guide for Bali',
   },
@@ -937,7 +937,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     // title and the client-hydrated title agree.
     title: 'Wedding Private Chef Bali | Villa Catering Planning Guide',
     description:
-      'How to plan catering for a Bali villa wedding with a private chef — menu planning, logistics and cost expectations.',
+      'How to plan catering for a Bali villa wedding with a private chef — menu planning, logistics, guest flow and cost ranges for intimate and larger celebrations.t expectations.',
     canonical: `${SITE}/blog/wedding-private-chef-bali-planning-guide`,
     h1: 'Wedding Private Chef in Bali: Planning & Logistics Guide',
   },
@@ -946,7 +946,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/corporate-events-catering-bali-team-dining',
     title: 'Corporate Events & Team Dining in Bali: Private Chef Guide',
     description:
-      'How to plan corporate events, team meals and executive dinners in Bali with private chef catering.',
+      'How to plan corporate events, team meals and executive dinners in Bali with private chef catering — formats, logistics, staffing and transparent pricing guidance from myCHEF.',
     canonical: `${SITE}/blog/corporate-events-catering-bali-team-dining`,
     h1: 'Corporate Events Catering in Bali — Team Dinners & Incentive Meals',
   },
@@ -955,7 +955,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/dining-by-location-bali-neighborhood-guide',
     title: 'Dining by Location in Bali: Private Chef Areas Guide',
     description:
-      'Region-specific dining guide for Bali, including neighborhood profiles and how private chefs adapt to each area.',
+      'Region-specific dining guide for Bali: neighborhood profiles for Seminyak, Canggu, Ubud, Uluwatu and beyond, and how private chefs adapt menus to each area.o each area.',
     canonical: `${SITE}/blog/dining-by-location-bali-neighborhood-guide`,
     h1: 'Dining by Location in Bali',
   },
@@ -1072,7 +1072,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/michelin-training-bali',
     title: 'Michelin Training in Bali: Mastering Italian Technique',
     description:
-      'Discover how Michelin-trained techniques translate to intimate villa dining in Bali.',
+      'How Michelin-trained technique translates to intimate Bali villa dining: pacing, plating, sourcing and service standards guests feel at a private table — not a hotel dining room.',
     canonical: `${SITE}/journal/michelin-training-bali`,
     h1: 'Michelin Training in Bali: How Our Chefs Master Italian Technique',
   },
@@ -1081,7 +1081,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/sustainable-sourcing',
     title: 'Sustainable Sourcing in Bali: Farm-to-Villa | myCHEF',
     description:
-      'Learn about our commitment to local, organic ingredients and the Bali producers we work with directly.',
+      'Learn how myCHEF sources local and organic ingredients across Bali — markets, producers and freshness practices behind villa dining and catering menus.y.',
     canonical: `${SITE}/journal/sustainable-sourcing`,
     h1: 'Sustainable Sourcing: Our Farm-to-Villa Philosophy',
   },
@@ -1090,7 +1090,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/private-chef-vs-villa-staff-bali',
     title: 'Private Chef vs Villa Staff in Bali: The Difference | myCHEF',
     description:
-      'Why hiring a specialized private chef beats relying on general villa staff for your milestone dinner in Bali.',
+      'Why hiring a specialized private chef beats relying on general villa staff for milestone dinners in Bali — quality, pacing, risk and guest experience compared. in Bali.',
     canonical: `${SITE}/journal/private-chef-vs-villa-staff-bali`,
     h1: 'Private Chef vs. Villa Staff — Understanding the Difference',
   },
@@ -1108,7 +1108,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/villa-wedding-catering-logistics-bali',
     title: 'Villa Wedding Catering Logistics Guide for Bali | myCHEF',
     description:
-      'From kitchen requirements to service flow — what you need to know about catering a villa wedding in Bali.',
+      'Villa wedding catering logistics in Bali: kitchen requirements, service flow, guest counts, timing and how a private chef team runs a seamless villa reception.Bali.',
     canonical: `${SITE}/journal/villa-wedding-catering-logistics-bali`,
     h1: 'Villa Wedding Catering Logistics Guide for Bali',
   },
@@ -1117,7 +1117,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/yoga-retreat-meal-planning-bali',
     title: 'Yoga Retreat Meal Planning Bali | Nutritional Integrity',
     description:
-      'How we design retreat menus that balance detoxification with culinary satisfaction.',
+      'How myCHEF designs yoga retreat menus in Bali: plant-forward nutrition, multi-day meal flow, dietary notes and culinary satisfaction without heaviness. For hosts and facilitators.',
     canonical: `${SITE}/journal/yoga-retreat-meal-planning-bali`,
     h1: 'Yoga Retreat Meal Planning: Nutritional Integrity for Bali Retreats',
   },
@@ -1135,7 +1135,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/private-chef-canggu-guide',
     title: 'Private Chef Canggu Guide: What Makes It Different | myCHEF',
     description:
-      'Why Canggu\'s laid-back surf culture creates unique opportunities for villa dining experiences.',
+      'Why Canggu villa dining is different: surf-lifestyle schedules, poolside BBQ culture, and private chef formats that fit Berawa to Pererenan stays. Practical booking tips.',
     canonical: `${SITE}/journal/private-chef-canggu-guide`,
     h1: 'Private Chef Services in Canggu: What Makes It Different',
   },
@@ -1153,7 +1153,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/bali-wedding-catering-complete-guide',
     title: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
     description:
-      'Everything about catering a destination wedding in Bali — menu design, budgets and cultural considerations.',
+      'Everything about catering a destination wedding in Bali — menu design, budgets, cultural considerations and villa logistics for a calm celebration with myCHEF.ations.',
     canonical: `${SITE}/journal/bali-wedding-catering-complete-guide`,
     h1: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
   },
@@ -1171,7 +1171,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/journal/live-in-chef-vs-daily-service',
     title: 'Live-In Chef vs Daily Service: Which Fits Your Bali Villa?',
     description:
-      'A transparent comparison of live-in chef services vs on-demand daily bookings for long-stay Bali villa guests.',
+      'Live-in chef vs daily private chef service in Bali: costs, lifestyle fit, grocery handling and when each model works best for long-stay villas and residences.la guests.',
     canonical: `${SITE}/journal/live-in-chef-vs-daily-service`,
     h1: 'Live-In Chef vs. Daily Service — Which Is Right for You?',
   },
@@ -1926,7 +1926,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/dining-styles',
     title: 'Dining Styles | myCHEF Bali',
     description:
-      'Browse myCHEF menus by dining style — 50 menus across 6 collections. Find your perfect dining experience.',
+      'Browse myCHEF Bali menus by dining style — fine dining, BBQ, family, kids, tasting menus and more across six collections. Find the right format for your villa evening.',
     canonical: `${SITE}/dining-styles`,
     h1: 'Find Your Perfect Menu',
   },
@@ -1996,7 +1996,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/recommended-services',
     title: 'Build Your Perfect Villa Experience | myCHEF Bali',
     description:
-      'Tell myCHEF what you are hosting and get matched to the right service — guest count, mood and budget.',
+      'Tell myCHEF what you are hosting — guest count, mood and budget — and get matched to the right private chef, catering or event service in Bali. WhatsApp quote fast.',
     canonical: `${SITE}/recommended-services`,
     h1: 'Not Sure What You Need? We’ll Help.',
     ogImage: `${SITE}/generated/experience-aura-setup-lg.webp`,
@@ -2046,7 +2046,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/help/corporate-guide',
     title: 'Planning Corporate Catering | Invoicing, Timing & Headcount',
     description:
-      'Plan corporate catering in Bali: menu options, staffing, timing & multi-day meal flow for teams and offsites.',
+      'Plan corporate catering in Bali: menu options, staffing ratios, timing and multi-day meal flow for leadership offsites, retreats and team dining. Clear quotes via WhatsApp.',
     canonical: `${SITE}/help/corporate-guide`,
     h1: 'Corporate & Retreat Catering',
     ogImage: `${SITE}/og-image.webp`,
@@ -2337,7 +2337,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/hotel-restaurant-chef-staffing',
     title: 'Hotel & Restaurant Chef Staffing in Bali: F&B Hiring Guide',
     description:
-      'How chef staffing works for Bali hotels, resorts & restaurants — roles, contracts, salaries and placement options.',
+      'How chef staffing works for Bali hotels, resorts and restaurants — roles, contracts, salaries and placement process through myCHEF staffing partners.ement options.',
     canonical: `${SITE}/blog/hotel-restaurant-chef-staffing`,
     h1: 'Hotel & Restaurant Chef Staffing Bali — F&B Hiring Guide',
   },

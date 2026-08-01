@@ -332,6 +332,21 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-catering-bali-plated-3course-table.webp": { width: 1440, height: 810 },
   "/generated/mychef-catering-bali-plated-4course-table.webp": { width: 1440, height: 810 },
   "/generated/mychef-catering-bali-plated-5course-premium-table.webp": { width: 1440, height: 810 },
+
+  /* Journal cover images — 1280×720 cards + OG */
+  "/generated/mychef-journal-bali-wedding-catering.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-bbq-catering-cost.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-live-in-vs-daily-chef.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-michelin-training-bali.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-private-chef-canggu.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-private-chef-cost-guide.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-private-chef-seminyak.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-private-chef-ubud.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-private-chef-vs-villa-staff.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-rehearsal-dinner-bali.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-sustainable-sourcing.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-villa-wedding-catering.webp": { width: 1280, height: 720 },
+  "/generated/mychef-journal-yoga-retreat-meals.webp": { width: 1280, height: 720 },
 } as const
 
 export type KnownImagePath = keyof typeof IMAGE_DIMENSIONS

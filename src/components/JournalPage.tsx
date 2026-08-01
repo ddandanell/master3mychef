@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { ArrowRight, Calendar, Tag } from 'lucide-react'
+import { ArrowRight, Calendar, Clock, Tag } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from './SeoHead'
 import { JOURNAL_CATEGORIES, type JournalPost } from '@/data/siteArchitecture'
 import { JOURNAL_POSTS } from '@/data/content/journalPosts'
@@ -7,6 +7,7 @@ import { ARTICLE_CONTENT } from '@/data/content/articleContent'
 import { downgradeArticleH1 } from '@/lib/utils'
 import { getPageMetaByPath } from '@/data/page-meta'
 import { SITEMAP } from '@/data/sitemap'
+import OptimizedImage from '@/components/OptimizedImage'
 
 // Every article route (data-driven BLOG_POSTS + standalone /journal & /guide page
 // components) so none get orphaned — sourced from the sitemap, sorted by title.
@@ -36,9 +37,9 @@ export function JournalIndexPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Bali Private Chef Journal | Tips, Menus & Guides — myCHEF"
-        description="Guides, cost breakdowns, and culinary insights for hosting in Bali — private chef cost, villa kitchens, retreats, and rehearsal dinners."
-        ogImage="/mychef-misc-bali-og-image.webp"
+        title="Bali Private Chef Journal | Cost Guides, Menus & Hosting Tips"
+        description="SEO-ready guides for hosting in Bali: private chef cost 2026, Seminyak Canggu Ubud dining, villa wedding catering, BBQ prices, and retreat menus. myCHEF journal."
+        ogImage={`${SITE}/generated/mychef-journal-private-chef-cost-guide.webp`}
         canonical={canonical}
         jsonLd={[
           breadcrumbSchema('Journal', canonical),
@@ -48,32 +49,43 @@ export function JournalIndexPage() {
           ]),
           {
             '@context': 'https://schema.org',
-            '@type': 'ItemList',
+            '@type': 'CollectionPage',
             name: 'myCHEF Journal',
+            description: 'Bali private chef and villa catering guides from myCHEF.',
+            url: canonical,
+            isPartOf: { '@type': 'WebSite', name: 'myCHEF', url: SITE },
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'myCHEF Journal Articles',
             url: canonical,
             numberOfItems: allPosts.length,
-            itemListElement: allPosts.slice(0, 10).map((p: JournalPost, i: number) => ({
+            itemListElement: allPosts.map((p: JournalPost, i: number) => ({
               '@type': 'ListItem',
               position: i + 1,
               url: `${SITE}/journal/${p.slug}`,
               name: p.title,
+              ...(p.image ? { image: `${SITE}${p.image}` } : {}),
             })),
           },
         ]}
       />
 
-      <section className="px-6 pt-32 pb-16 max-w-[1000px] mx-auto">
-        <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
-        <h1 className="font-playfair text-4xl md:text-5xl leading-tight mb-6">Journal</h1>
-        <p className="text-lg text-[#4A4745] max-w-[640px] mb-12">
-          Practical guides for hosting in Bali — from hiring a private chef to planning villa events.
+      <section className="px-6 pt-28 md:pt-32 pb-16 max-w-[1200px] mx-auto">
+        <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[4px] mb-4">myCHEF Journal</p>
+        <h1 className="font-playfair text-4xl md:text-5xl leading-tight mb-4">
+          Bali Private Chef Guides &amp; Hosting Tips
+        </h1>
+        <p className="text-lg text-[#4A4745] max-w-[720px] mb-10">
+          Practical, keyword-focused guides for villa hosting in Bali — private chef costs, area logistics, wedding catering, BBQ pricing, and retreat menus.
         </p>
 
         {/* Category Filter */}
         <div className="flex flex-wrap gap-2 mb-10">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded ${
+            className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
               activeCategory === null
                 ? 'bg-[#C5A028] border-[#C5A028] text-[#1A1A1A] shadow-md'
                 : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'
@@ -85,7 +97,7 @@ export function JournalIndexPage() {
             <button
               key={cat.slug}
               onClick={() => setActiveCategory(cat.slug)}
-              className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded ${
+              className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[2px] transition-all border focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                 activeCategory === cat.slug
                   ? 'bg-[#C5A028] border-[#C5A028] text-[#1A1A1A] shadow-md'
                   : 'bg-white border-[#E8E6E3] text-[#4A4745] hover:border-[#C5A028]'
@@ -97,31 +109,49 @@ export function JournalIndexPage() {
         </div>
 
         {filteredPosts.length > 0 ? (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
             {filteredPosts.map((post) => {
               const category = JOURNAL_CATEGORIES.find((c) => c.slug === post.category)
+              const cover = post.image || '/generated/mychef-location-bali-hub-hero.webp'
               return (
                 <Link
                   key={post.slug}
                   to={`/journal/${post.slug}`}
-                  className="group flex flex-col rounded-2xl border border-[#E8E6E3] bg-white p-6 hover:border-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-[#E8E6E3] bg-white shadow-sm hover:border-[#C5A028] hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                 >
-                  <div className="flex items-center gap-2 text-xs text-[#4A4745] mb-3">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[#F0EEEA]">
+                    <OptimizedImage
+                      src={cover}
+                      alt={post.focusKeyword ? `${post.focusKeyword} — myCHEF journal` : post.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                      loading="lazy"
+                    />
                     {category && (
-                      <>
-                        <span>·</span>
-                        <span className="text-[#7E6410] font-medium">{category.label}</span>
-                      </>
+                      <span className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#7E6410]">
+                        {category.label}
+                      </span>
                     )}
                   </div>
-                  <h3 className="font-playfair text-xl mb-3 group-hover:text-[#7E6410] transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-[#4A4745] leading-relaxed flex-1">{post.excerpt}</p>
-                  <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-[#7E6410]">
-                    Read <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <div className="flex flex-1 flex-col p-5 md:p-6">
+                    <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[#4A4745]">
+                      <span className="inline-flex items-center gap-1">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                      </span>
+                      {post.readTime != null && (
+                        <span className="inline-flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5" />
+                          {post.readTime} min read
+                        </span>
+                      )}
+                    </div>
+                    <h2 className="font-playfair text-xl md:text-[1.35rem] leading-snug mb-3 group-hover:text-[#7E6410] transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm text-[#4A4745] leading-relaxed flex-1 line-clamp-3">{post.excerpt}</p>
+                    <div className="mt-5 flex items-center gap-1 text-sm font-semibold text-[#7E6410]">
+                      Read guide <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </div>
                   </div>
                 </Link>
               )
@@ -180,7 +210,13 @@ export function JournalPostPage() {
   }
 
   // Body moved to the lazy content store — hydrate once for schema + render.
-  const postContent = post.content ?? ARTICLE_CONTENT[`/journal/${post.slug}`] ?? ''
+  const rawContent = post.content ?? ARTICLE_CONTENT[`/journal/${post.slug}`] ?? ''
+  // When a dedicated cover exists, drop the leading body <img> so the page
+  // does not render two stacked heroes (cover + first content image).
+  const postContent =
+    post.image && rawContent
+      ? rawContent.replace(/^\s*<img\b[^>]*>\s*/i, '')
+      : rawContent
   const canonical = `${SITE}/journal/${post.slug}`
   const mappedMeta = getPageMetaByPath(`/journal/${post.slug}`)
   const pageTitle = mappedMeta?.title ?? post.title
@@ -188,10 +224,9 @@ export function JournalPostPage() {
   const pageH1 = mappedMeta?.h1 ?? post.title
   const category = JOURNAL_CATEGORIES.find((c) => c.slug === post.category)
 
-  // Article schema: image (Google-recommended field). Use the first image in the
-  // post body if present (made absolute), else the site OG fallback.
-  const firstImgMatch = postContent.match(/<img[^>]+src="([^"]+)"/)
-  const rawImg = firstImgMatch?.[1] ?? '/mychef-misc-bali-og-image.webp'
+  // Prefer dedicated cover image, then first body image, then site fallback.
+  const firstImgMatch = rawContent.match(/<img[^>]+src="([^"]+)"/)
+  const rawImg = post.image ?? firstImgMatch?.[1] ?? '/mychef-misc-bali-og-image.webp'
   const articleImage = rawImg.startsWith('http') ? rawImg : `${SITE}${rawImg}`
 
   // Article schema: author. Real chef authors are People (E-E-A-T) and link to
@@ -225,20 +260,21 @@ export function JournalPostPage() {
         title={pageTitle}
         description={pageDescription}
         canonical={canonical}
-        ogImage="/mychef-misc-bali-og-image.webp"
+        ogImage={articleImage}
         ogType="article"
         jsonLd={[
           localBusinessSchema,
-          breadcrumbSchema(pageTitle, canonical),
+          breadcrumbSchema(pageH1, canonical, 'Journal', `${SITE}/journal`),
           {
             '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: pageTitle,
+            '@type': 'BlogPosting',
+            headline: pageH1,
             description: pageDescription,
             url: canonical,
             datePublished: post.date,
             dateModified: post.date,
-            image: articleImage,
+            image: [articleImage],
+            keywords: post.focusKeyword ?? pageH1,
             author: articleAuthor,
             publisher: {
               '@type': 'Organization',
@@ -249,22 +285,52 @@ export function JournalPostPage() {
             mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
             wordCount: postContent.replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length,
             articleSection: category?.label ?? 'Private Chef Bali',
+            inLanguage: 'en',
           },
         ]}
       />
 
-      <article className="px-6 pt-32 pb-16 max-w-[720px] mx-auto">
-        <div className="flex items-center gap-2 text-xs text-[#4A4745] mb-4">
-          <Calendar className="w-3.5 h-3.5" />
-          <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-          <span>· {post.readTime}</span>
-          {category && <span className="text-[#7E6410]">· {category.label}</span>}
+      <article className="px-6 pt-28 md:pt-32 pb-16 max-w-[760px] mx-auto">
+        <nav className="mb-6 text-xs text-[#4A4745]" aria-label="Breadcrumb">
+          <Link to="/" className="hover:text-[#7E6410]">Home</Link>
+          <span className="mx-2">/</span>
+          <Link to="/journal" className="hover:text-[#7E6410]">Journal</Link>
+          <span className="mx-2">/</span>
+          <span className="text-[#1A1A1A]">{category?.label ?? 'Article'}</span>
+        </nav>
+
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[#4A4745] mb-4">
+          <span className="inline-flex items-center gap-1">
+            <Calendar className="w-3.5 h-3.5" />
+            {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+          </span>
+          {post.readTime != null && (
+            <span className="inline-flex items-center gap-1">
+              <Clock className="w-3.5 h-3.5" />
+              {post.readTime} min read
+            </span>
+          )}
+          {category && <span className="text-[#7E6410] font-medium">· {category.label}</span>}
+          {post.author && (
+            <span className="text-[#4A4745]">· By {post.author}</span>
+          )}
         </div>
-        <h1 className="font-playfair text-3xl md:text-4xl leading-tight mb-6">{pageH1}</h1>
-        <p className="text-lg text-[#4A4745] mb-10">{pageDescription}</p>
+        <h1 className="font-playfair text-3xl md:text-4xl leading-tight mb-4">{pageH1}</h1>
+        <p className="text-lg text-[#4A4745] mb-8">{pageDescription}</p>
+
+        {post.image && (
+          <div className="mb-10 overflow-hidden rounded-2xl border border-[#E8E6E3]">
+            <OptimizedImage
+              src={post.image}
+              alt={post.focusKeyword ? `${post.focusKeyword} — myCHEF Bali journal` : pageH1}
+              className="w-full aspect-[16/9] object-cover"
+              loading="eager"
+            />
+          </div>
+        )}
 
         <div
-          className="prose prose-lg max-w-none text-[#4A4745] prose-p:leading-relaxed prose-p:text-[#4A4745] prose-p:mb-6"
+          className="prose prose-lg max-w-none text-[#4A4745] prose-p:leading-relaxed prose-p:text-[#4A4745] prose-p:mb-6 prose-headings:font-playfair prose-headings:text-[#1A1A1A] prose-a:text-[#7E6410]"
           dangerouslySetInnerHTML={{ __html: downgradeArticleH1(postContent) }}
         />
 
@@ -317,11 +383,23 @@ export function JournalPostPage() {
               <Link
                 key={relatedPost.slug}
                 to={`/journal/${relatedPost.slug}`}
-                className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-5 transition-colors hover:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                className="overflow-hidden rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] transition-colors hover:border-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
               >
-                <p className="text-xs uppercase tracking-[2px] text-[#7E6410] mb-2">{relatedPost.readTime}</p>
-                <h3 className="font-playfair text-xl mb-2">{relatedPost.title}</h3>
-                <p className="text-sm text-[#4A4745] leading-relaxed">{relatedPost.excerpt}</p>
+                {relatedPost.image && (
+                  <OptimizedImage
+                    src={relatedPost.image}
+                    alt={relatedPost.title}
+                    className="aspect-[16/10] w-full object-cover"
+                    loading="lazy"
+                  />
+                )}
+                <div className="p-5">
+                  <p className="text-xs uppercase tracking-[2px] text-[#7E6410] mb-2">
+                    {relatedPost.readTime != null ? `${relatedPost.readTime} min` : 'Guide'}
+                  </p>
+                  <h3 className="font-playfair text-lg mb-2 leading-snug">{relatedPost.title}</h3>
+                  <p className="text-sm text-[#4A4745] leading-relaxed line-clamp-3">{relatedPost.excerpt}</p>
+                </div>
               </Link>
             ))}
           </div>

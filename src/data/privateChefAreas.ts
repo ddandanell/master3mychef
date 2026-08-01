@@ -977,6 +977,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How much does a private chef cost on the Bukit Peninsula?',
         a: 'Bukit Peninsula bookings start from IDR 1,000,000++ per day for one meal, plus groceries at cost. A transparent travel allowance from south Bali is included in every quote — no surprise fees on the day.',
       },
+      {
+        q: 'Can you time dinner to the Bukit sunset?',
+        a: 'Yes — clifftop Bukit villas face west over the Indian Ocean. We pace multi-course menus so the main course lands near sunset when the villa aspect allows.',
+      },
 ],
     nearbyAreas: [
       { slug: 'uluwatu', name: 'Uluwatu' },
@@ -1087,6 +1091,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How much does a private chef cost at Batu Belig?',
         a: 'Batu Belig is in our Seminyak–Canggu service zone with no travel surcharge. Half-day chef service starts from IDR 1,000,000++ plus groceries at cost. Sunset dinners are our most requested format here.',
       },
+      {
+        q: 'Can you cater a small villa party at Batu Belig?',
+        a: 'Yes — beachfront birthday dinners and small villa parties for 8–40 guests are common at Batu Belig. We bring staffing, setup and full cleanup.',
+      },
 ],
     nearbyAreas: [
       { slug: 'seminyak', name: 'Seminyak' },
@@ -1139,6 +1147,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How far in advance should I book a private chef in Pecatu?',
         a: 'Book 48–72 hours ahead for standard Pecatu dinners so we can plan Bukit logistics and market runs. Elopements and wedding catering need longer lead times — share your date on WhatsApp for availability.',
+      },
+      {
+        q: 'Is there a travel fee for Pecatu villas?',
+        a: 'Pecatu sits on the Bukit Peninsula south of Seminyak. A travel allowance is quoted per address before you confirm — never added as a surprise fee after booking.',
       },
 ],
     nearbyAreas: [
@@ -1193,6 +1205,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Can you arrange an elopement or anniversary dinner in Ungasan?',
         a: 'Yes — Ungasan is one of our top addresses for elopements and anniversary tasting menus. We time service to the clifftop sunset, handle staffing, and leave the villa kitchen spotless after service.',
       },
+      {
+        q: 'How much does a private chef cost in Ungasan?',
+        a: 'Ungasan follows South Bali pricing: from IDR 1,000,000++ per day for one meal, plus groceries at cost. Clifftop travel allowance is itemised in your quote.',
+      },
 ],
     nearbyAreas: [
       { slug: 'uluwatu', name: 'Uluwatu' },
@@ -1245,6 +1261,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is there a travel surcharge for Tanjung Benoa?',
         a: 'No — Tanjung Benoa sits next to Nusa Dua in our standard south Bali coverage with no travel surcharge. Family villa dinners and resort-adjacent catering are common here.',
       },
+      {
+        q: 'Can you cook a welcome dinner after we arrive near Nusa Dua?',
+        a: 'Yes — first-night dinners for families arriving into the Nusa Dua–Tanjung Benoa corridor are a frequent request. Share your landing time and guest count for scheduling.',
+      },
 ],
     nearbyAreas: [
       { slug: 'nusa-dua', name: 'Nusa Dua' },
@@ -1254,7 +1274,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Tanjung Benoa, Bali | Villa Dining, Catering | myCHEF',
     metaDescription:
-      'Book a private chef in Tanjung Benoa, Bali. Family villa dinners, catering and fine dining near Nusa Dua. No travel surcharge. WhatsApp myCHEF.',
+      'Book a private chef in Tanjung Benoa, Bali. Family villa dinners, catering and fine dining near Nusa Dua. No travel surcharge. Clear rates via WhatsApp.',
     coordinates: { lat: -8.7580, lng: 115.2280 },
     bookingNote: 'Book 24–48 hours ahead for Tanjung Benoa water-sport villas. Same-day availability on request when a south-Bali chef is free — WhatsApp for a check.',
     published: true,
@@ -1297,6 +1317,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'What menus work best for Sayan gorge villas?',
         a: 'Sayan suits intimate tasting menus and jungle-view fine dining. We design courses around Ayung valley produce and quieter service pacing so the setting stays the focus. Multi-day chef stays are common here.',
+      },
+      {
+        q: 'Is there a travel surcharge for Sayan gorge villas?',
+        a: 'Sayan is close to Ubud central. A small travel or access note may apply for steep driveways — always quoted per address before you confirm, never after.',
       },
 ],
     nearbyAreas: [
@@ -1348,6 +1372,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'Can myCHEF cater a small wedding or retreat dinner in Tegallalang?',
         a: 'Yes — Tegallalang rice-terrace villas host intimate weddings and retreat dinners regularly. We coordinate menus, staffing and terrace service flow; share guest count and date for a tailored quote.',
+      },
+      {
+        q: 'How much does a private chef cost in Tegallalang?',
+        a: 'Tegallalang matches the Ubud rate band: from IDR 1,000,000++ per day for one meal, groceries at cost. Any travel allowance is quoted per villa address upfront.',
       },
 ],
     nearbyAreas: [
@@ -1402,6 +1430,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How much does a private chef cost in Renon, Denpasar?',
         a: 'Renon follows standard Denpasar pricing: from IDR 1,000,000++ per day for one meal, groceries at cost. Corporate dinners and household meal prep packages are available with same-day quote response.',
       },
+      {
+        q: 'Can you issue tax invoices for corporate catering in Renon?',
+        a: 'Yes — corporate and diplomatic hosting in Renon can include NPWP-ready invoices and itemised proposals. Share guest count, venue and dietary requirements for a fixed quote.',
+      },
 ],
     nearbyAreas: [
       { slug: 'denpasar', name: 'Denpasar' },
@@ -1454,6 +1486,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How far in advance should I book near Tanah Lot?',
         a: 'Book 48–72 hours ahead for Tanah Lot area dinners so we can plan west-coast logistics and sunset timing. Retreat multi-day catering should be confirmed earlier — WhatsApp us your dates for availability.',
+      },
+      {
+        q: 'Do you cook at resort-adjacent villas near Tanah Lot temple?',
+        a: 'Yes — we cover resort-adjacent villas and boutique retreats in the Tanah Lot corridor for sunset dinners, honeymoons and multi-day retreat catering.',
       },
 ],
     nearbyAreas: [
@@ -1509,6 +1545,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How do logistics work for a private chef on Nusa Lembongan?',
         a: 'We travel by fast boat from Sanur with full kitchen equipment and pre-planned market runs. Island logistics are quoted transparently upfront. Book 72 hours ahead so ferry and sourcing can be locked.',
       },
+      {
+        q: 'How far ahead should I book a private chef on Nusa Lembongan?',
+        a: 'Book 3–5 days ahead so we can confirm fast-boat logistics, ingredient transport and on-island timing. Multi-day island stays can be packaged as one quote.',
+      },
 ],
     nearbyAreas: [
       { slug: 'sanur', name: 'Sanur' },
@@ -1562,6 +1602,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'How far in advance should I book a private chef on Nusa Penida?',
         a: 'Nusa Penida needs more lead time than mainland Bali — ideally 4–5 days — so we can arrange inter-island logistics, equipment and fresh sourcing. Share your villa location and dates on WhatsApp.',
       },
+      {
+        q: 'What logistics should we expect for Nusa Penida chef service?',
+        a: 'We travel by boat with ingredients and equipment. Booking lead time is longer than mainland Bali — confirm 5–7 days ahead so ferry and weather windows are planned.',
+      },
 ],
     nearbyAreas: [
       { slug: 'nusa-lembongan', name: 'Nusa Lembongan' },
@@ -1611,6 +1655,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is Mas far from central Ubud for a private chef?',
         a: 'Mas is about 10 minutes south of central Ubud — no surcharge applies. myCHEF serves all of the Ubud corridor including Mas, Pengosekan, and Nyuh Kuning.',
       },
+      {
+        q: 'Can you cater a retreat group in Mas?',
+        a: 'Yes — Mas boutique villas often host small retreat groups. We handle multi-day meal plans, Balinese feasts and fine dining with grocery sourcing from Pasar Ubud.',
+      },
     ],
     nearbyAreas: [
       { slug: 'ubud', name: 'Ubud' },
@@ -1656,6 +1704,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'How far is Penestanan from central Ubud?',
         a: 'Penestanan is 10–15 minutes from central Ubud by scooter — we treat it as part of the Ubud service area with no travel surcharge.',
+      },
+      {
+        q: 'Do you offer multi-day chef service in Penestanan?',
+        a: 'Yes — multi-day and weekly service for ridge villas above Campuhan is common. Menus can mix plant-forward lunches with fine dining dinners; no travel surcharge from Ubud.',
       },
     ],
     nearbyAreas: [
@@ -1703,6 +1755,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is Nyanyi near Canggu for a private chef?',
         a: 'Nyanyi is about 15–20 minutes north of Canggu along the Tabanan coast. myCHEF covers both areas — same service, same quality, just a quieter stretch of coast.',
       },
+      {
+        q: 'Can you source fresh seafood for a Nyanyi sunset dinner?',
+        a: 'Yes — when available we prioritise local seafood for Nyanyi coast villas and time service to the west-coast sunset. Confirm preferences when you book.',
+      },
     ],
     nearbyAreas: [
       { slug: 'canggu', name: 'Canggu' },
@@ -1748,6 +1804,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'Do you do events and weddings at villas in Cemagi?',
         a: 'Yes — Cemagi villas make excellent event venues. myCHEF handles catering for villa weddings, birthday parties, and retreat celebrations. We bring the full team, all equipment, and manage setup through cleanup.',
+      },
+      {
+        q: 'How far is Cemagi from Canggu for a private chef booking?',
+        a: 'Cemagi sits on the Tabanan coast between Canggu and Tanah Lot, within our regular west-coast service flow. Standard pricing applies; multi-day packages available.',
       },
     ],
     nearbyAreas: [
@@ -1795,6 +1855,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
         q: 'Is Seseh far from Canggu for grocery sourcing?',
         a: 'Seseh is about 20 minutes from Canggu. myCHEF handles all ingredient logistics — we source from Tabanan and Denpasar markets and arrive fully stocked.',
       },
+      {
+        q: 'Can you cook a honeymoon dinner at a Seseh cliff villa?',
+        a: 'Yes — Seseh is popular for private honeymoon and anniversary dinners. We handle discreet service, menu design and full cleanup at low-density black-sand villas.',
+      },
     ],
     nearbyAreas: [
       { slug: 'canggu', name: 'Canggu' },
@@ -1840,6 +1904,10 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       {
         q: 'Is Nusa Ceningan different from Nusa Lembongan for a chef booking?',
         a: 'They are different islands connected by the Yellow Bridge — myCHEF serves both. Ceningan is smaller and more remote; Lembongan has more villa options. Same logistics and transport apply to both.',
+      },
+      {
+        q: 'How far ahead should I book a private chef on Nusa Ceningan?',
+        a: 'Book 5–7 days ahead. Fast boat from Sanur, on-island transfer and full ingredient logistics are confirmed on booking with a fixed quote.',
       },
     ],
     nearbyAreas: [

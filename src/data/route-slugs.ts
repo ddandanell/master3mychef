@@ -8,7 +8,7 @@ export const LANDING_PAGE_SLUGS: string[] = [
   'bali-wedding-catering-packages',
   'michelin-private-chef-bali-prices',
   'seafood-bbq-catering-bali',
-  'group-villa-dinner-packages-bali',
+  // group-villa-dinner-packages-bali → dedicated GroupVillaDinnerPackagesBaliPage in App.tsx
   'corporate-retreat-catering-bali',
   'luxury-birthday-party-bali',
   'villa-staff-bali-agency',

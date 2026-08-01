@@ -46,10 +46,10 @@ export const LANDING_PAGES: ContentEntry[] = [
 },
 {
     "slug": "group-villa-dinner-packages-bali",
-    "title": "Group Villa Dinner Packages Bali | 10-150 Guests | myCHEF",
-    "description": "All-inclusive villa dinner packages for groups of 10-150 in Bali — tiered per-person pricing for reunions & gatherings. WhatsApp myCHEF.",
+    "title": "Group Villa Dinner Packages Bali | Private Chef & Luxury Dining | myCHEF",
+    "description": "Luxury group villa dinner packages in Bali for 10–150 guests. Private chef, villa catering, BBQ, fine dining and all-inclusive service for families, weddings and celebrations.",
     "date": "2026-05-17",
-    "h1": "Group Villa Dinner Packages Bali",
+    "h1": "Group Villa Dinner Packages in Bali",
 },
 {
     "slug": "corporate-retreat-catering-bali",

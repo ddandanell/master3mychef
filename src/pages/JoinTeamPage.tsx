@@ -196,7 +196,7 @@ export default function JoinTeamPage() {
       title="Join Bali's #1 Private Chef Team"
       description="Join myCHEF — Bali's top private chef service. Roles for chefs, bartenders, villa service staff & coordinators. Apply via WhatsApp today."
       seoTitle="Chef Jobs Bali | Join the myCHEF Team — Apply via WhatsApp"
-      seoDescription="Chef jobs in Bali with myCHEF. Roles for chefs, bartenders, waiters & coordinators. Join a fast-moving team trusted by 560+ villas. Apply via WhatsApp."
+      seoDescription="Chef jobs in Bali with myCHEF. Roles for chefs, bartenders, waiters & coordinators. Join a fast-moving team trusted across 560+ events. Apply via WhatsApp."
       h1="Join Bali's #1 Private Chef Team"
       subtitle="We're always looking for talented, passionate hospitality professionals."
       heroImage="/generated/mychef-staffing-bali-staffing-hero.webp"

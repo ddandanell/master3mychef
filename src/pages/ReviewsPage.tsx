@@ -184,7 +184,7 @@ export default function ReviewsPage() {
             <p className="text-xs uppercase tracking-[0.35em] text-[#C5A028] font-semibold mb-4">Guest reviews</p>
             <h1 className="mb-5 font-playfair text-3xl leading-tight sm:text-4xl md:text-6xl">What Our Guests Say</h1>
             <p className="text-lg md:text-xl text-[#4A4745] max-w-3xl leading-relaxed">
-              Featured feedback from 560+ villa dinners, catering events and private chef bookings across Bali — every review dated, located and tied to a real occasion.
+              Featured feedback from 560+ events, catering and private chef villa bookings across Bali — every review dated, located and tied to a real occasion.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a

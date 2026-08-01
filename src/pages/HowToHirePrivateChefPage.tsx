@@ -42,7 +42,7 @@ const SECTIONS = [
     imageAlt: 'Michelin-trained private chef plating a fine dining course in a Bali villa',
     body: `<p>The private chef market in Bali is growing rapidly — and almost completely unregulated. On any given week, you'll find a wide spectrum of operators: Michelin-trained professionals with verified food safety certification at one end, and informal "home cooks" offering villa meals at the other. The quality gap between them is enormous, and most guests don't know how to tell the difference until something goes wrong.</p>
     <p>This guide gives you a working framework for hiring a private chef in Bali with confidence. You'll learn what credentials actually matter, what six steps to follow from first contact to the dinner table, what questions every client should ask, and what fair pricing looks like in 2026. Whether you're planning a romantic villa dinner for two, a group celebration, or a week of daily private cooking, use this guide before you book.</p>
-    <p>myCHEF has served 12,000+ guests across 560+ villas in Bali since 2019. This is the framework we'd give our own family.</p>`,
+    <p>myCHEF has served 12,000+ guests across 560+ events and 500+ villa bookings in Bali since 2019. This is the framework we'd give our own family.</p>`,
   },
   {
     id: 'six-steps',

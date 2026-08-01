@@ -85,7 +85,7 @@ const FAQS = [
   },
   {
     question: 'How many villas and guests has myCHEF served?',
-    answer: 'myCHEF has served 560+ villas and more than 12,000 guests across Bali through private dining, catering, weddings, retreats, and extended villa stays.',
+    answer: 'myCHEF has served 560+ events, 500+ villa bookings and more than 12,000 guests across Bali through private dining, catering, weddings, retreats, and extended villa stays.',
   },
   {
     question: 'What makes myCHEF different from a freelance private chef?',

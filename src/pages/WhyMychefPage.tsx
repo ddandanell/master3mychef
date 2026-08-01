@@ -169,7 +169,7 @@ export default function WhyMychefPage() {
                 <td className="py-4 pr-4 font-medium text-[#1A1916]">Track record</td>
                 <td className="py-4 px-4">Word of mouth</td>
                 <td className="py-4 px-4">Platform reviews</td>
-                <td className="py-4 pl-4 font-medium text-[#1A1916]">560+ villas, 12,000+ guests</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">560+ events, 12,000+ guests</td>
               </tr>
               <tr>
                 <td className="py-4 pr-4 font-medium text-[#1A1916]">Dietary & kids' menus</td>

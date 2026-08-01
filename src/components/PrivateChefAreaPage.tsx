@@ -127,6 +127,41 @@ const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
     { to: '/fine-dining/romantic-dinner', label: 'romantic villa dinner' },
     { to: '/journal/private-chef-seminyak-guide', label: 'Seminyak area guide' },
   ],
+  kuta: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/birthdays', label: 'villa birthday catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  legian: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  umalas: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/retreat-catering', label: 'retreat catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  renon: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/corporate-events', label: 'corporate catering Bali' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  'batu-belig': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/romantic-dinner', label: 'romantic beach dinner' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  pecatu: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'clifftop tasting menus' },
+    { to: '/events/weddings', label: 'wedding catering Bali' },
+  ],
+  ungasan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/romantic-dinner', label: 'romantic villa dinner' },
+    { to: '/group-villa-dinner-packages-bali', label: 'group villa dinner packages' },
+  ],
 }
 
 const OCCASIONS = [

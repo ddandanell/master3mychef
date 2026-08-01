@@ -119,7 +119,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Seminyak, Bali | Hire a Chef for Your Villa',
     metaDescription:
-      'Hire a private chef in Seminyak, Bali. Villa dinners, tasting menus and events from IDR 700K/person. HACCP chefs, fixed quotes via WhatsApp myCHEF.',
+      'Hire a private chef in Seminyak, Bali. Villa dinners, tasting menus and events from IDR 700K/person. HACCP-certified chefs with fixed quotes via WhatsApp.',
     coordinates: { lat: -8.6748, lng: 115.1612 },
     bookingNote:
       'Book 1–3 days ahead for private dinners, 2–4 weeks for events. Peak season (July–August, December) fills fast — same-day bookings are often possible.',
@@ -188,7 +188,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Canggu, Bali | Villa Dining & Meal Prep',
     metaDescription:
-      'Hire a private chef in Canggu, Bali. Weekly meal prep, villa dinners, catering and birthday parties. HACCP chefs, transparent rates. WhatsApp myCHEF.',
+      'Hire a private chef in Canggu, Bali. Weekly meal prep, villa dinners, catering and birthday parties. HACCP-certified chefs with transparent rates. WhatsApp.',
     coordinates: { lat: -8.6522, lng: 115.1279 },
     bookingNote:
       'Book 1–2 days ahead for single dinners. Weekly meal prep packages need 3–5 days lead time. Events need 2–4 weeks.',
@@ -256,7 +256,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Ubud, Bali | Villa Dining, Retreat Catering',
     metaDescription:
-      'Hire a private chef in Ubud, Bali. Balinese rijsttafel, plant-based retreat catering and jungle villa dinners from IDR 700K/person. WhatsApp myCHEF.',
+      'Hire a private chef in Ubud, Bali. Balinese rijsttafel, plant-based retreat catering and jungle villa dinners from IDR 700K/person. WhatsApp myCHEF today.',
     coordinates: { lat: -8.5069, lng: 115.2625 },
     bookingNote:
       'Book 2–3 days ahead for single dinners. Retreat programmes need 1–2 weeks notice. Remote jungle villa access confirmed on booking.',
@@ -589,7 +589,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef Denpasar, Bali | Executive, Residential Dining | myCHEF',
     metaDescription:
-      'Hire a private chef in Denpasar, Bali. Executive dinner parties, corporate catering and household meal prep. HACCP-certified chefs. WhatsApp myCHEF.',
+      'Hire a private chef in Denpasar, Bali. Executive dinner parties, corporate catering and household meal prep. HACCP-certified chefs via WhatsApp myCHEF.',
     coordinates: { lat: -8.6705, lng: 115.2126 },
     bookingNote:
       'Book 1–3 days ahead. Corporate events need 1–2 weeks minimum. Airport transfers can be coordinated on request.',
@@ -1049,7 +1049,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Umalas, Bali | Villa Dining & Catering | myCHEF',
     metaDescription:
-      'Book a private chef in Umalas, Bali. Intimate villa dinners, catering and fine dining for retreats and groups. No travel surcharge. WhatsApp myCHEF.',
+      'Book a private chef in Umalas, Bali. Intimate villa dinners, catering and fine dining for retreats and groups. No travel surcharge — WhatsApp myCHEF.',
     coordinates: { lat: -8.6580, lng: 115.1460 },
     bookingNote: 'Book 24–48 hours ahead for Umalas. Same-day requests are reviewed on chef availability with no travel surcharge.',
     published: true,
@@ -1331,7 +1331,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Sayan, Bali | Jungle Villa Dining | myCHEF',
     metaDescription:
-      'Book a private chef in Sayan, Bali. Jungle fine dining above the Ayung River gorge — intimate, spectacular and managed end to end. WhatsApp myCHEF.',
+      'Book a private chef in Sayan, Bali. Jungle fine dining above the Ayung River gorge — intimate tasting menus managed end to end. Book via WhatsApp myCHEF.',
     coordinates: { lat: -8.5020, lng: 115.2470 },
     bookingNote: 'Book 48 hours ahead for Sayan gorge villas. Steep driveways and villa access are confirmed per address so the team arrives ready and fully equipped.',
     published: true,

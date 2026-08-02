@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger)
 const WA = 6289674072020
 const PRESS_EMAIL = 'bali@mychef.id'
 
-const heroStats = ['50+ staff', '560+ villas', '12,000+ guests']
+const heroStats = ['50+ staff', '560+ events', '12,000+ guests']
 
 const pressStats = [
   'Served 12,000+ guests',

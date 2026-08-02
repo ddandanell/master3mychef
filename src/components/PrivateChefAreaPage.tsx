@@ -79,18 +79,305 @@ const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
   ],
   pererenan: [
     { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
   ],
   sanur: [
     { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/catering', label: 'villa catering options' },
   ],
   seminyak: [
     { to: '/fine-dining/menus', label: 'private chef villa menus' },
     { to: '/journal/private-chef-seminyak-guide', label: 'Seminyak local' },
+    { to: '/events/weddings', label: 'wedding catering Bali' },
   ],
   ubud: [
     { to: '/catering/retreat-catering', label: 'retreat catering programme' },
     { to: '/fine-dining/menus', label: 'private chef villa menus (incl. vegetarian)' },
     { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
+  ],
+  uluwatu: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'clifftop tasting menus' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+  ],
+  jimbaran: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  'nusa-dua': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/corporate-events', label: 'corporate event catering' },
+    { to: '/group-villa-dinner-packages-bali', label: 'group villa dinner packages' },
+  ],
+  denpasar: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/corporate-events', label: 'corporate catering Bali' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  berawa: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/birthdays', label: 'villa birthday catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  petitenget: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/romantic-dinner', label: 'romantic villa dinner' },
+    { to: '/journal/private-chef-seminyak-guide', label: 'Seminyak area guide' },
+  ],
+  kuta: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/birthdays', label: 'villa birthday catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  legian: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  umalas: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/retreat-catering', label: 'retreat catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  renon: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/corporate-events', label: 'corporate catering Bali' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  'batu-belig': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/romantic-dinner', label: 'romantic beach dinner' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  pecatu: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'clifftop tasting menus' },
+    { to: '/events/weddings', label: 'wedding catering Bali' },
+  ],
+  ungasan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/romantic-dinner', label: 'romantic villa dinner' },
+    { to: '/group-villa-dinner-packages-bali', label: 'group villa dinner packages' },
+  ],
+  kerobokan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/pricing', label: 'private chef pricing' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  bukit: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'clifftop tasting menus' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+  ],
+  'tanjung-benoa': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/group-villa-dinner-packages-bali', label: 'group villa dinner packages' },
+    { to: '/events/corporate-events', label: 'corporate catering Bali' },
+  ],
+  sayan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'jungle villa tasting menus' },
+    { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
+  ],
+  tegallalang: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/catering/retreat-catering', label: 'retreat catering' },
+  ],
+  'tanah-lot': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/romantic-dinner', label: 'sunset romantic dinner' },
+    { to: '/events/weddings', label: 'wedding catering Bali' },
+  ],
+  'nusa-lembongan': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  'nusa-penida': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  'nusa-ceningan': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'island villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  mas: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/retreat-catering', label: 'retreat catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  penestanan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
+  ],
+  nyanyi: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  cemagi: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/weddings', label: 'wedding catering Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  seseh: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/romantic-dinner', label: 'romantic villa dinner' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  // Tier 2 — surf / highlands / east / north
+  balangan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'clifftop tasting menus' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+  ],
+  bingin: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'clifftop tasting menus' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+  ],
+  'padang-padang': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+  ],
+  sukawati: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
+  ],
+  payangan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/retreat-catering', label: 'retreat catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  keramas: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  bedugul: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/retreat-catering', label: 'highland retreat catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  jatiluwih: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  tabanan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/events/weddings', label: 'wedding catering Bali' },
+  ],
+  amed: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  sidemen: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/catering/retreat-catering', label: 'retreat catering' },
+  ],
+  candidasa: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  tulamben: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  lovina: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  singaraja: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/corporate-events', label: 'corporate catering Bali' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  pemuteran: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  kintamani: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'highland villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  // Tier 3 — specialty / remote / hinterland
+  kedewatan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'jungle villa tasting menus' },
+    { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
+  ],
+  'nyuh-kuning': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
+  ],
+  lodtunduh: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/retreat-catering', label: 'retreat catering' },
+    { to: '/group-villa-dinner-packages-bali', label: 'group villa dinner packages' },
+  ],
+  'tirta-gangga': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  munduk: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/retreat-catering', label: 'highland retreat catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  gianyar: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/catering', label: 'villa catering options' },
+  ],
+  'padang-bai': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  baturiti: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'highland villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  mengwi: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/events/weddings', label: 'wedding catering Bali' },
+  ],
+  ketewel: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  abiansemal: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'wine-pairing villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  cepaka: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
   ],
 }
 

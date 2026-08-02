@@ -169,7 +169,7 @@ export default function WhyMychefPage() {
                 <td className="py-4 pr-4 font-medium text-[#1A1916]">Track record</td>
                 <td className="py-4 px-4">Word of mouth</td>
                 <td className="py-4 px-4">Platform reviews</td>
-                <td className="py-4 pl-4 font-medium text-[#1A1916]">560+ villas, 12,000+ guests</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">560+ events, 12,000+ guests</td>
               </tr>
               <tr>
                 <td className="py-4 pr-4 font-medium text-[#1A1916]">Dietary & kids' menus</td>
@@ -234,7 +234,7 @@ export default function WhyMychefPage() {
       heroImageAlt="Luxury myCHEF dinner setup inside a Bali villa"
       ogImage="https://mychef.id/generated/mychef-location-bali-hub-bali.webp"
       keywords={['best private chef service bali', 'why mychef', 'trusted private chef bali', 'top rated private chef bali', 'mychef vs other chefs']}
-      highlights={['560+ Villas Served', '12,000+ Guests Hosted', '4.9/5 Guest Rating', '98% Repeat or Referred']}
+      highlights={['560+ Events Served', '12,000+ Guests Hosted', '500+ Villa Bookings', '98% Repeat or Referred']}
       sections={sections}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}

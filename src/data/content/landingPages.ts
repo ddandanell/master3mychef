@@ -215,7 +215,7 @@ export const LANDING_PAGES: ContentEntry[] = [
   {
     "slug": "best-private-chef-indonesia",
     "title": "Best Private Chef Indonesia | Michelin-Standard Team",
-    "description": "Why myCHEF is rated the best private chef service in Indonesia: Michelin-trained leadership, 560+ villas, world-class standards. WhatsApp us.",
+    "description": "Why myCHEF is rated the best private chef service in Indonesia: Michelin-trained leadership, 560+ events served, world-class standards. WhatsApp us.",
     "date": "2026-05-17",
     "h1": "The Best Private Chef Service in Indonesia",
     "jsonLd": [
@@ -234,7 +234,7 @@ export const LANDING_PAGES: ContentEntry[] = [
           "priceCurrency": "IDR",
           "lowPrice": "700000",
           "highPrice": "980000",
-          "description": "Why myCHEF is rated the best private chef service in Indonesia: Michelin-trained leadership, 560+ villas, world-class standards. WhatsApp us."
+          "description": "Why myCHEF is rated the best private chef service in Indonesia: Michelin-trained leadership, 560+ events served, world-class standards. WhatsApp us."
         }
       },
       {
@@ -246,7 +246,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "name": "Who is the best private chef in Indonesia?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Judge by verifiable criteria: named culinary leadership, track record, independent reviews, professional standards and transparent pricing. myCHEF offers Michelin-trained leadership, 560+ villas served, 12,000+ guests, a 4.9/5 guest rating and upfront per-person pricing."
+              "text": "Judge by verifiable criteria: named culinary leadership, track record, independent reviews, professional standards and transparent pricing. myCHEF offers Michelin-trained leadership, 560+ events served, 12,000+ guests, a 4.9/5 guest rating and upfront per-person pricing."
             }
           },
           {

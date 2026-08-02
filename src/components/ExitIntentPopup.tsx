@@ -117,7 +117,7 @@ export default function ExitIntentPopup() {
         {/* Body */}
         <p className="text-gray-500 text-sm leading-relaxed mb-6">
           Exact pricing by service type, guest count &amp; Bali area — plus the questions
-          every guest forgets to ask before booking. Used by 560+ villa hosts.
+          every guest forgets to ask before booking. Built from 560+ events and 500+ villa bookings.
         </p>
 
         {/* CTA */}

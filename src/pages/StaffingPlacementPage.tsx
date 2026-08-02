@@ -351,7 +351,7 @@ export default function StaffingPlacementPage() {
             ✅ Background-checked chefs · ✅ Trial cooking session included · ✅ 30-day replacement guarantee · ✅ Profiles within 48 hours
           </p>
           <p className="text-white/[60%] text-sm mt-4 italic">
-            Part of the myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link> network — 50+ active staff, 560+ villas served. Managing multiple properties? See <Link to="/staffing/for-villa-managers" className="text-[#C5A028] hover:underline">portfolio staffing for villa managers</Link>.
+            Part of the myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link> network — 50+ active staff, 560+ events served. Managing multiple properties? See <Link to="/staffing/for-villa-managers" className="text-[#C5A028] hover:underline">portfolio staffing for villa managers</Link>.
           </p>
         </div>
       </section>

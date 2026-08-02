@@ -1001,7 +1001,7 @@ export default function ChefProfilePage() {
             <p className="text-[#C5A028] text-sm font-medium">— {chef.guestName}</p>
           </div>
           <p className="text-gray-500 text-sm text-center mt-6">
-            myCHEF has served 560+ villa dining experiences in Bali.
+            myCHEF has served 560+ events and 500+ villa bookings in Bali.
           </p>
         </div>
       </section>

@@ -34,7 +34,7 @@ const SECTIONS = [
     title: 'A Track Record Built One Villa at a Time',
     features: [
       { icon: Users, title: '50+ Staff', desc: 'Chefs, service professionals, coordinators, and support staff trained for private hospitality in Bali villas.' },
-      { icon: House, title: '560+ Villas', desc: 'Trusted by guests, villa managers, and hosts across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, and beyond.' },
+      { icon: House, title: '560+ Events', desc: 'Trusted by guests, villa managers, and hosts across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, and beyond.' },
       { icon: UtensilsCrossed, title: '12,000+ Guests', desc: 'Served through intimate dinners, family stays, birthdays, weddings, retreats, and premium catered events.' },
       { icon: Award, title: `Since ${siteFacts.foundingYear}`, desc: `Operating in Bali since ${siteFacts.foundingYear} with systems refined around reliability, presentation, and guest comfort.` },
     ],
@@ -85,7 +85,7 @@ const FAQS = [
   },
   {
     question: 'How many villas and guests has myCHEF served?',
-    answer: 'myCHEF has served 560+ villas and more than 12,000 guests across Bali through private dining, catering, weddings, retreats, and extended villa stays.',
+    answer: 'myCHEF has served 560+ events, 500+ villa bookings and more than 12,000 guests across Bali through private dining, catering, weddings, retreats, and extended villa stays.',
   },
   {
     question: 'What makes myCHEF different from a freelance private chef?',

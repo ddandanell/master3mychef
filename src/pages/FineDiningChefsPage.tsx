@@ -249,7 +249,7 @@ export default function FineDiningChefsPage() {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-white/[80%]">
-            <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-[#C5A028]" /> 560+ villas served</span>
+            <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-[#C5A028]" /> 560+ events served</span>
             <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-[#C5A028]" /> 12,000+ guests hosted</span>
             <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-[#C5A028]" /> 50+ Indonesian hospitality professionals</span>
           </div>

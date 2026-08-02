@@ -67,7 +67,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       `Seminyak has the highest concentration of private pool villas in Bali. The Oberoi–Petitenget strip alone holds 200+ rentable luxury villas within two kilometres of the beach.`,
     guestProfile:
-      `Villa groups, couples celebrating anniversaries or honeymoons, expats and event hosts in Seminyak, Petitenget and Oberoi.`,
+      `Villa groups, couples celebrating anniversaries or honeymoons, expats and event hosts across Seminyak, Petitenget, Oberoi and the beachfront strip.`,
     landmarks: [
       'Petitenget',
       'Oberoi (Jl. Kayu Aya)',
@@ -204,7 +204,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     intro:
       `Ubud's villas don't sit on a strip — they're scattered through Sayan, Penestanan and the rice terraces of Tegallalang: smaller, more private, often wrapped in jungle. The people in them come for a reason. A week of yoga and meditation. A first trip to Bali that should taste like Bali. A month of writing or painting that runs on clean, consistent food rather than restaurant logistics. A myCHEF private chef in Ubud cooks to all three: plant-based menus for wellness programmes, authentic Balinese tasting dinners for travellers who want the real table, and quiet, excellent dinners for couples in jungle villas.`,
     villaDensity:
-      `Ubud holds 300+ boutique villas across rice terraces and jungle ravines — most built for exactly this kind of outdoor dining.`,
+      `Ubud holds 300+ boutique villas across rice terraces and jungle ravines — most built for outdoor dining, yoga decks and private chef evenings.`,
     guestProfile:
       `Wellness and retreat guests on multi-day programmes, couples in jungle villas, cultural travellers, plant-based diners, and creatives on longer Ubud stays who want consistent in-villa cooking.`,
     landmarks: [
@@ -410,7 +410,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     intro:
       `The five-star enclave runs on precision — gated estates, manicured grounds, service that arrives exactly when promised. Guests here expect the same standard at a private table, whether they're a board of twelve flying in for an incentive week, a family occupying a six-bedroom estate, or honeymooners who want one evening above the resort restaurants. A myCHEF private chef in Nusa Dua delivers exactly that: the discipline of a five-star kitchen, at your own table, quoted to the rupiah before you commit.`,
     villaDensity:
-      `Nusa Dua's ITDC resort zone has some of Bali's largest villa estates — 5+ bedroom properties with full kitchens, pools and event spaces.`,
+      `Nusa Dua's ITDC resort zone has some of Bali's largest villa estates — 5+ bedroom properties with full kitchens, pools and event spaces suited to corporate retreats, multi-generational families and formal private dinners.`,
     guestProfile:
       `Corporate retreat and incentive groups, high-net-worth multi-generational families, luxury honeymooners, and resort-adjacent guests who want five-star service at a private estate table.`,
     landmarks: [
@@ -481,7 +481,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       `Sanur has a settled villa market — mostly large 3–5 bedroom family homes along the beachside corridors and Bypass Ngurah Rai. Many are long-term rental properties used by expat families.`,
     guestProfile:
-      `Multi-generational families on longer holidays, long-term expat residents and older couples who prefer a quieter pace.`,
+      `Multi-generational families on longer holidays, long-term expat residents and older couples who prefer Sanur's quieter east-coast pace and easy beach access.`,
     landmarks: [
       'Beachside corridors',
       'Sindhu',
@@ -1386,7 +1386,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Tegallalang, Bali | Rice Terrace Villa Dining | myCHEF',
     metaDescription:
-      'Book a private chef in Tegallalang, Bali. Private dinners overlooking the famous rice terraces — Balinese cuisine, fine dining, and catering for retreats.',
+      'Book a private chef in Tegallalang, Bali. Private dinners overlooking the famous rice terraces — Balinese cuisine, fine dining and catering for retreats. WhatsApp.',
     coordinates: { lat: -8.4320, lng: 115.2790 },
     bookingNote: 'Book 48 hours ahead for Tegallalang terrace villas. Any travel allowance is quoted per address so the total is clear before you pay the deposit.',
     published: true,
@@ -1736,7 +1736,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       'Nyanyi has a medium, still-low-key villa strip on Tabanan\'s black-sand coast — private estates with ocean aspect and far fewer rentals than Canggu.',
     guestProfile:
-      'Surfers, remote workers, families on private villa stays and guests seeking an uncrowded coastline north of the Canggu belt.',
+      'Surfers, remote workers, families on private villa stays and guests seeking an uncrowded Tabanan coastline just north of the Canggu belt.',
     landmarks: ['Nyanyi Beach', 'Tabanan black-sand coast', 'Echo Beach (nearby)', 'Seseh–Nyanyi surf break', 'Pererenan rice fields (nearby)', 'Canggu surf belt north edge'],
     priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:
@@ -1786,7 +1786,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       'Cemagi\'s villa stock is medium density but high end — ocean-facing estates and rice-field compounds between Canggu and Tanah Lot with serious event kitchens.',
     guestProfile:
-      'Luxury villa guests on extended stays, wedding parties, retreat groups and families seeking seclusion on the Tabanan coast.',
+      'Luxury villa guests on extended stays, wedding parties, retreat groups and families seeking seclusion on Cemagi's quiet Tabanan coast.',
     landmarks: ['Cemagi beach', 'Tabanan rice fields', 'Tanah Lot (15 min)', 'Canggu surf coast (nearby)', 'Seseh black-sand stretch', 'West coast temple road'],
     priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:

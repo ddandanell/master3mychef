@@ -168,7 +168,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     h1: 'Private Chef Service in Ubud',
     heroImage: '/generated/mychef-city-ubud.webp',
     heroAlt: 'Jungle valley villa in Ubud, Bali set for a traditional Balinese private chef dinner with rice terrace views',
-    intro: 'From Sayan to the rice terraces of Tegalalang, our Ubud service embraces the island’s spiritual heart with organic, locally sourced menus.',
+    intro: 'From Sayan to the rice terraces of Tegalalang, our Ubud private chef service embraces the island’s spiritual heart with organic, locally sourced menus and retreat-ready meal plans.',
     areaDescription: [
       'Ubud villas are spread through deep jungle valleys, quiet village lanes, and expansive rice terraces. Guests here usually prioritize privacy, wellness, and a deeper connection to Balinese culture, markets and plant-forward produce.',
       'myCHEF plans Ubud service around organic sourcing, plant-forward nutrition, and the quiet, professional hosting that fits a retreat setting. We specialize in multi-day retreat catering, traditional Balinese "megibung" feasts, and healthy breakfast service.',
@@ -396,7 +396,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     h1: 'Private Chef Service in Jimbaran',
     heroImage: '/generated/mychef-city-jimbaran.webp',
     heroAlt: 'Clifftop and bay-side villa setting in Jimbaran, Bali styled for a sunset private chef dinner',
-    intro: 'Jimbaran is Bali\'s seafood coast: bay villas, cliff‑top estates, and guests who expect the sunset meal to be the main event of the day.',
+    intro: 'Jimbaran is Bali\'s seafood coast: bay villas, cliff-top estates, and guests who expect the sunset meal — grilled catch, tasting menus, or bay-view fine dining — to be the main event of the day.',
     areaDescription: [
       'Jimbaran spans two strong dining moods: laid-back villas near the bay and more elevated estates above the coast. Both suit private-chef service because guests usually want the seafood quality of the shoreline restaurants without the crowds, traffic, or beach-table compromise.',
       'myCHEF uses Jimbaran best for seafood-focused menus, villa BBQs, whole-fish service, and elegant plated dinners after a beach day. We shop around the morning landing, design menus around the freshest catch, and adapt service flow to outdoor terraces, lawn dinners, and open-air kitchens.',

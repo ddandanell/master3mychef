@@ -589,7 +589,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef Denpasar, Bali | Executive, Residential Dining | myCHEF',
     metaDescription:
-      'Hire a private chef in Denpasar, Bali. Executive dinner parties, corporate catering and household meal prep. HACCP-certified chefs via WhatsApp myCHEF.',
+      'Hire a private chef in Denpasar, Bali. Executive dinner parties, corporate catering and household meal prep. HACCP-certified chefs — WhatsApp myCHEF today.',
     coordinates: { lat: -8.6705, lng: 115.2126 },
     bookingNote:
       'Book 1–3 days ahead. Corporate events need 1–2 weeks minimum. Airport transfers can be coordinated on request.',
@@ -934,7 +934,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef in Legian, Bali | Villa Dining & Catering | myCHEF',
     metaDescription:
-      'Book a private chef in Legian, Bali. Villa group dinners, poolside catering, and event service. HACCP-certified, transparent pricing. WhatsApp myCHEF.',
+      'Book a private chef in Legian, Bali. Villa group dinners, poolside catering and event service. HACCP-certified chefs with transparent pricing. WhatsApp myCHEF.',
     coordinates: { lat: -8.7012, lng: 115.1677 },
     bookingNote: 'Book 1–2 days ahead for Legian dinners. Same availability and pricing as Seminyak — WhatsApp for same-day requests.',
     published: true,
@@ -1500,7 +1500,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef near Tanah Lot, Bali | Sunset Villa Dining | myCHEF',
     metaDescription:
-      'Book a private chef near Tanah Lot, Bali. Sunset dinners, honeymoon fine dining and retreat catering in Tabanan\'s iconic coastal area. WhatsApp myCHEF.',
+      'Book a private chef near Tanah Lot, Bali. Sunset dinners, honeymoon fine dining and retreat catering in Tabanan\'s iconic coastal area. WhatsApp myCHEF today.',
     coordinates: { lat: -8.6210, lng: 115.0870 },
     bookingNote: 'Book 48–72 hours ahead for Tanah Lot sunset villas. Travel allowance is quoted per address before you confirm — popular for honeymoon and temple-view dinners.',
     published: true,
@@ -1868,7 +1868,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef Seseh Bali | Cliffside Tabanan Dining | myCHEF',
     metaDescription:
-      "Hire a private chef in Seseh, Tabanan. myCHEF serves private coastal villas — fine dining, intimate dinners, and catering on the black-sand west coast.",
+      "Hire a private chef in Seseh, Tabanan. myCHEF serves private coastal villas — fine dining, intimate dinners and catering on the black-sand west coast. WhatsApp.",
     coordinates: { lat: -8.5900, lng: 115.1020 },
     bookingNote: 'Book 48 hours ahead for Seseh black-sand villas. Full ingredient logistics handled; same-day WhatsApp response for date availability.',
     published: true,
@@ -1977,7 +1977,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef Balangan Bali | Clifftop Villa Dining | myCHEF',
     metaDescription:
-      'Book a private chef in Balangan, Bali. myCHEF serves clifftop villas on the Bukit Peninsula — seafood dinners, Balinese menus, and surf-trip catering.',
+      'Book a private chef in Balangan, Bali. myCHEF serves clifftop villas on the Bukit Peninsula — seafood dinners, Balinese menus and surf-trip catering packages.',
     coordinates: { lat: -8.8255, lng: 115.0847 },
     bookingNote: 'Book 48 hours ahead for Balangan cliff dinners; 72 hours for groups or bespoke menus. Bukit access and gear are handled by our team.',
     published: true,
@@ -2258,7 +2258,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: 'Private Chef Keramas Bali | Black Sand Beach Villa Dining | myCHEF',
     metaDescription:
-      'Book a private chef in Keramas, Bali. myCHEF serves east Gianyar coast villas — surf-trip catering, Balinese menus, and private dining near the break.',
+      'Book a private chef in Keramas, Bali. myCHEF serves east Gianyar coast villas — surf-trip catering, Balinese menus and private dining near the break. WhatsApp.',
     coordinates: { lat: -8.5726, lng: 115.3370 },
     bookingNote: 'Book 48 hours ahead for Keramas black-sand villas. Our team covers the full Gianyar east coast with surf-trip and multi-day packages.',
     published: true,
@@ -3498,7 +3498,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: "Private Chef Abiansemal Bali | Highland Wine Estate Dining | myCHEF",
     metaDescription:
-      "Hire a private chef in Abiansemal. myCHEF serves central Badung estates — wine-pairing dinners, farm-to-table menus, and Hatten Wines country catering.",
+      "Hire a private chef in Abiansemal. myCHEF serves central Badung estates — wine-pairing dinners, farm-to-table menus and Hatten Wines country catering. WhatsApp.",
     coordinates: { lat: -8.5117, lng: 115.2117 },
     bookingNote: "Book 24–48 hours ahead. Central Badung — 30 minutes from Seminyak base.",
     published: true,

@@ -232,6 +232,92 @@ const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
     { to: '/fine-dining/romantic-dinner', label: 'romantic villa dinner' },
     { to: '/fine-dining/menus', label: 'private chef villa menus' },
   ],
+  // Tier 2 — surf / highlands / east / north
+  balangan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'clifftop tasting menus' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+  ],
+  bingin: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'clifftop tasting menus' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+  ],
+  'padang-padang': [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/catering/bbq-catering', label: 'villa BBQ catering' },
+  ],
+  sukawati: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/journal/private-chef-ubud-villa-dining', label: 'Ubud villa dining guide' },
+  ],
+  payangan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/retreat-catering', label: 'retreat catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  keramas: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+  ],
+  bedugul: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/catering/retreat-catering', label: 'highland retreat catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  jatiluwih: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  tabanan: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/events/weddings', label: 'wedding catering Bali' },
+  ],
+  amed: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  sidemen: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/catering/retreat-catering', label: 'retreat catering' },
+  ],
+  candidasa: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  tulamben: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  lovina: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'private chef villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  singaraja: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/events/corporate-events', label: 'corporate catering Bali' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  pemuteran: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/seafood-bbq-catering-bali', label: 'seafood BBQ catering' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
+  kintamani: [
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
+    { to: '/fine-dining/menus', label: 'highland villa menus' },
+    { to: '/pricing', label: 'private chef pricing' },
+  ],
 }
 
 const OCCASIONS = [

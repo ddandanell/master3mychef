@@ -1786,7 +1786,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     villaDensity:
       'Cemagi\'s villa stock is medium density but high end — ocean-facing estates and rice-field compounds between Canggu and Tanah Lot with serious event kitchens.',
     guestProfile:
-      'Luxury villa guests on extended stays, wedding parties, retreat groups and families seeking seclusion on Cemagi's quiet Tabanan coast.',
+      "Luxury villa guests on extended stays, wedding parties, retreat groups and families seeking seclusion on Cemagi's quiet Tabanan coast.",
     landmarks: ['Cemagi beach', 'Tabanan rice fields', 'Tanah Lot (15 min)', 'Canggu surf coast (nearby)', 'Seseh black-sand stretch', 'West coast temple road'],
     priceFrom: 'IDR 1,000,000++ per day for one meal',
     pricingNote:

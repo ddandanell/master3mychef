@@ -80,11 +80,12 @@ Full machine-readable map: **`src/data/keywordOwnership.ts`**.
 3. **Hubs**: catering Bali H1 + format links with primary anchors; fine dining Bali villa H1 + related services; chefs table Bali H1; butler service Bali / bartender hire Bali H1s; romantic dinner Bali H1 (links out to private dining owner, does not claim it).  
 4. **Private dining owner**: location guide + hire/fine-dining/chefs-table links in article body.
 
-## Still recommended
+## Still recommended / ops
 
-1. **GSC**: after deploy, Request indexing on top 15 updated URLs only.  
+1. **GSC Request indexing** — list: `docs/GSC-REQUEST-INDEXING-TOP15-2026-08-02.txt`.  
+   *API note (2026-08-02):* service account is only `siteUnverifiedUser` on `sc-domain:mychef.id`, so automated URL Inspection / Indexing API returns 403. An owner must Request indexing manually in GSC UI for those 15 URLs, or promote the SA and enable Indexing API.  
 2. **Ignore** ranking for long nonsense queries like “how to ensure food safety…” across many URLs — improve E-E-A-T FAQ on hub, don’t keyword-stuff.  
-3. **Monitor** cannibalization monthly via GSC query×page export.
+3. **Monitor** cannibalization monthly via GSC query×page export (query × page).
 
 ---
 

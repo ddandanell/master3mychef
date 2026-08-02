@@ -1,0 +1,29 @@
+# Top URLs to Request Indexing in Google Search Console
+# Property: sc-domain:mychef.id
+# After deploy of ownership body + ranking-safe meta (main ba641fc2)
+# How: GSC → URL Inspection → paste URL → Request indexing
+# Do only these priority URLs (avoid bulk spam)
+
+https://mychef.id/
+https://mychef.id/private-chef-bali
+https://mychef.id/private-dining-indonesia
+https://mychef.id/locations/canggu
+https://mychef.id/locations/seminyak
+https://mychef.id/locations/ubud
+https://mychef.id/locations/uluwatu
+https://mychef.id/locations/nusa-dua
+https://mychef.id/locations/sanur
+https://mychef.id/fine-dining
+https://mychef.id/fine-dining/chefs-table
+https://mychef.id/fine-dining/romantic-dinner
+https://mychef.id/catering
+https://mychef.id/in-villa-service/butlers
+https://mychef.id/in-villa-service/bartenders
+
+# Optional tier-1 hire pages (if time)
+# https://mychef.id/private-chef/canggu
+# https://mychef.id/private-chef/seminyak
+# https://mychef.id/private-chef/ubud
+# https://mychef.id/private-chef/uluwatu
+# https://mychef.id/catering/buffet
+# https://mychef.id/catering/bbq-catering

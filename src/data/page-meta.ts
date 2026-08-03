@@ -1900,7 +1900,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       services: {
     path: '/services',
-    title: 'All Services | Chefs, Catering, Events & Staffing in Bali',
+    title: 'Private Chef Services Bali | Compare All Options',
     description:
       'Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit.',
     canonical: `${SITE}/services`,

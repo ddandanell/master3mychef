@@ -44,7 +44,7 @@ const SECTIONS = [
         ['Fine-dining tasting menu', 'IDR 950K–980K', 'per person'],
         ['BBQ &amp; buffet catering', 'IDR 700K', 'per person, groups 8+'],
         ['Wedding catering', 'IDR 1.5M–3M+', 'per person'],
-        ['Private chef half day (cook & serve one meal)', 'IDR 1,000K++', 'per day, chef + assistant'],
+        ['Private chef — one meal a day', 'IDR 1,000,000++', 'per day, chef + assistant'],
         ['Daily chef, weekly rate', 'From IDR 900K++/day', '10% off standard'],
         ['Waiters & sommeliers', 'IDR 250K', 'per hour'],
         ['Bartenders', 'IDR 350K', 'per hour'],

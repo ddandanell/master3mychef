@@ -308,7 +308,7 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
     label: 'Kuta',
     h1: 'Private Chef in Kuta Bali — Villa Dining & Event Catering',
     title: 'Private Chef Kuta Bali | Villa Dining & Event Catering — myCHEF',
-    description: 'Hire a private chef in Kuta Bali for villa dinners, BBQ parties, and celebrations. myCHEF serves Kuta, Legian, and Tuban from IDR 2.5M++/half day.',
+    description: 'Hire a private chef in Kuta Bali for villa dinners, BBQ parties, and celebrations. myCHEF serves Kuta, Legian, and Tuban from IDR 1M++/day for one meal.',
     intro: 'In Kuta, myCHEF provides private chef services for families, groups, and celebrations staying near the heart of Bali. We specialize in poolside BBQ parties, family villa dinners, and birthday celebrations across Kuta, Legian, and Tuban.',
   },
   legian: {

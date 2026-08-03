@@ -1595,7 +1595,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much is a private chef in Nyanyi, Bali?',
-        a: 'Half-day bookings in Nyanyi start from IDR 1,000,000++ plus groceries at cost. Seafood-focused menus and BBQ packages are available. Contact us for a quote.',
+        a: 'One-meal bookings in Nyanyi start from IDR 1,000,000++ plus groceries at cost. Seafood-focused menus and BBQ packages are available. Contact us for a quote.',
       },
       {
         q: 'Is Nyanyi near Canggu for a private chef?',
@@ -1639,7 +1639,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
       },
       {
         q: 'How much does private chef catering cost in Cemagi?',
-        a: 'Half-day bookings start from IDR 1,000,000++ plus groceries at cost. Multi-day packages and full-board arrangements are available for longer villa stays. Contact us for a tailored quote.',
+        a: 'One-meal bookings start from IDR 1,000,000++ plus groceries at cost. Multi-day packages and full-board arrangements are available for longer villa stays. Contact us for a tailored quote.',
       },
       {
         q: 'Do you do events and weddings at villas in Cemagi?',

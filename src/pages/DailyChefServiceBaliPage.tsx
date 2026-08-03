@@ -31,19 +31,19 @@ This service is popular among digital nomads on extended stays, expat families m
     id: 'pricing',
     type: 'content',
     title: 'Daily Chef Service Rates in Bali',
-    body: `Every daily chef booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Our published rates:
+    body: `Every daily chef booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Our published rates (meal-count model):
 
-**Half Day**
-Cook and serve one meal, plus one additional meal prepared for later (no service for the prepared meal): IDR 2,500,000++ per day
-Weekly rate (10% off): IDR 2,250,000++ per day · Monthly rate (20% off): IDR 2,000,000++ per day
+**One meal a day**
+Cook and serve one meal (breakfast, lunch or dinner): IDR 1,000,000++ per day
+Weekly rate (10% off): IDR 900,000++ per day · Monthly rate (20% off): IDR 800,000++ per day
 
-**Full Day**
-Cook and serve two meals, plus one additional meal prepared for later: IDR 3,500,000++ per day
-Weekly rate (10% off): IDR 3,150,000++ per day · Monthly rate (20% off): IDR 2,800,000++ per day
+**Two meals a day**
+Cook and serve any two of breakfast, lunch or dinner: IDR 1,800,000++ per day
+Weekly rate (10% off): IDR 1,620,000++ per day · Monthly rate (20% off): IDR 1,440,000++ per day
 
-**Complete Full Day**
-Cook and serve breakfast, lunch and dinner: IDR 4,200,000++ per day
-Weekly rate (10% off): IDR 3,780,000++ per day · Monthly rate (20% off): IDR 3,360,000++ per day
+**Three meals a day**
+Cook and serve breakfast, lunch and dinner: IDR 2,700,000++ per day
+Weekly rate (10% off): IDR 2,430,000++ per day · Monthly rate (20% off): IDR 2,160,000++ per day
 
 Our chefs are specialists across Japanese, Western, Indonesian and Balinese, Italian, French, Mediterranean, Chinese, international and healthy cuisine, with more available on request. Most come from head or senior chef roles in five-star hotels and high-end restaurants, speak excellent English, and are assigned to match your preferred cuisine.
 
@@ -59,7 +59,7 @@ Prices are subject to a 10% service charge and 11% tax. A ${siteFacts.depositPer
 
 **Villa owners and property managers** — For villas with regular guest turnovers, a daily chef service creates a premium offering that justifies higher rental rates. Guests staying 1–4 weeks often book chef service as part of the villa package.
 
-**Retirees and long-stay travelers** — Many retirees in Bali prefer eating at home over restaurants but don't want the effort of daily cooking. A half-day chef booking at IDR 2,500,000++ per day — less at the weekly and monthly rates — is often cheaper than eating out as a household, with better quality and zero effort.
+**Retirees and long-stay travelers** — Many retirees in Bali prefer eating at home over restaurants but don't want the effort of daily cooking. A one-meal chef day at IDR 1,000,000++ per day — less at the weekly and monthly rates — is often cheaper than eating out as a household, with better quality and zero effort.
 
 **Wellness and health-focused residents** — Clients following strict dietary protocols — anti-inflammatory, ketogenic, Ayurvedic, low-FODMAP, or clinical elimination diets — need a chef who can execute specific recipes consistently. We match these clients with specialist chefs.`,
   },
@@ -123,7 +123,7 @@ const relatedPages = [
   { label: 'Live-In Chef Bali', href: '/staffing', desc: 'Full-time residential chef placement' },
   { label: 'Household Chef Bali', href: '/staffing/household-staff', desc: 'Long-term household chef arrangements' },
   { label: 'Chef Placement Agency', href: '/staffing/private-chef-placement', desc: 'How placement and vetting works' },
-  { label: 'Private Chef Bali Expats', href: '/hire-private-chef-bali-monthly', desc: 'Chef services for Bali residents' },
+  { label: 'Private Chef Bali Expats', href: '/private-chef-bali', desc: 'Chef services for Bali residents' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Full breakdown of chef pricing' },
   { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Complete hiring guide' },
 ]
@@ -135,7 +135,7 @@ export default function DailyChefServiceBaliPage() {
       title="Daily Chef Service Bali — Part-Time Cook Hire for Villa Stays & Expat Life"
       seoTitle="Daily Chef Service Bali — Regular In-Villa Cooking | myCHEF"
       description="Hire a daily chef in Bali for consistent home-cooked meals. Part-time and full-day options for villa stays, expat families, and digital nomads."
-      seoDescription="Daily chef service in Bali for expats, long-stay villa guests and families. Half-day, full-day and complete full-day rates with weekly and monthly discounts. Market sourcing included. From IDR 2,500,000++/day."
+      seoDescription="Daily chef service in Bali for expats, long-stay villa guests and families. One, two or three meals a day with weekly and monthly discounts. Market sourcing included. From IDR 1,000,000++/day."
       h1="Daily Chef Service Bali — Part-Time In-Villa Chef for Extended Stays & Expat Life"
       subtitle="Regular home cooking for villa renters, expat families, and digital nomads — without the complexity of full-time staff."
       heroImage="/images/blog/daily-chef-service-bali.jpg"
@@ -154,7 +154,7 @@ export default function DailyChefServiceBaliPage() {
         'in villa cook bali',
         'expat chef bali',
       ]}
-      highlights={['Chef + Assistant Included', 'Market Sourcing Included', 'Trial Sessions', 'From IDR 2,500,000++/day']}
+      highlights={['Chef + Assistant Included', 'Market Sourcing Included', 'Trial Sessions', 'From IDR 1,000,000++/day']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

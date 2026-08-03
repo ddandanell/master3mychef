@@ -18,7 +18,7 @@ const SECTIONS: PageSection[] = [
     body: `<p><strong>Long-term villa residents:</strong> After the first week or two of eating out daily, residents typically want a more sustainable, healthier, and more cost-effective solution. A household chef provides home-cooked quality at a fraction of the cost of daily restaurant meals.</p>
     <p><strong>Expatriate families:</strong> Bali's growing expatriate community — particularly around Canggu, Seminyak, and Ubud — includes many families who prioritise wholesome, consistent home cooking. A household chef on a 3 to 5 day weekly schedule handles breakfast prep, school lunch boxes, family dinners, and batch-cooking.</p>
     <p><strong>Remote workers and digital nomads:</strong> Professionals working remotely from Bali for 1 to 6 months find that a household chef is one of the most impactful quality-of-life additions to their stay.</p>
-    <p>Read more about Bali long-term private chef options in our <a href="/hire-private-chef-bali-monthly" class="text-[#7E6410] hover:underline font-medium">guide for expats</a>.</p>`,
+    <p>Read more about Bali long-term private chef options in our <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">guide for expats</a>.</p>`,
   },
   {
     id: 'service-structure',
@@ -36,9 +36,9 @@ const SECTIONS: PageSection[] = [
     title: 'How Much Does a Household Chef Cost in Bali?',
     body: `<p>Every household chef booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Our published rates:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Half day:</strong> Cook and serve one meal, plus one additional meal prepared for later (no service for the prepared meal) — IDR 2,500,000++ per day standard · IDR 2,250,000++ per day at the weekly rate (10% off) · IDR 2,000,000++ per day at the monthly rate (20% off).</li>
-      <li><strong>Full day:</strong> Cook and serve two meals, plus one additional meal prepared for later — IDR 3,500,000++ per day standard · IDR 3,150,000++ per day weekly · IDR 2,800,000++ per day monthly.</li>
-      <li><strong>Complete full day:</strong> Cook and serve breakfast, lunch and dinner — IDR 4,200,000++ per day standard · IDR 3,780,000++ per day weekly · IDR 3,360,000++ per day monthly.</li>
+      <li><strong>One meal a day:</strong> Cook and serve one meal (breakfast, lunch or dinner) — IDR 1,000,000++ per day standard · IDR 900,000++ per day at the weekly rate (10% off) · IDR 800,000++ per day at the monthly rate (20% off).</li>
+      <li><strong>Two meals a day:</strong> Cook and serve any two of breakfast, lunch or dinner — IDR 1,800,000++ per day standard · IDR 1,620,000++ per day weekly · IDR 1,440,000++ per day monthly.</li>
+      <li><strong>Three meals a day:</strong> Cook and serve breakfast, lunch and dinner — IDR 2,700,000++ per day standard · IDR 2,430,000++ per day weekly · IDR 2,160,000++ per day monthly.</li>
     </ul>
     <p style="margin-top:0.75rem;">A 3 days/week or 5 days/week schedule is billed at the monthly daily rate for the plan you choose. Our chefs are specialists across Japanese, Western, Indonesian and Balinese, Italian, French, Mediterranean, Chinese, international and healthy cuisine, with more available on request — most come from head or senior chef roles in five-star hotels and high-end restaurants and speak excellent English, and your chef is assigned to match your preferred cuisine. Prices are subject to a 10% service charge and 11% tax. For a full comparison see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
   },
@@ -96,12 +96,12 @@ export default function HouseholdChefBaliGuidePage() {
       heroImageAlt="Household chef preparing a family meal in a Bali villa kitchen"
       ogImage="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=80"
       keywords={['household chef bali', 'personal chef bali', 'bali household chef hire', 'private chef bali monthly', 'expat chef bali']}
-      highlights={['Monthly Arrangements', 'Groceries at Cost', 'All Bali Areas', 'From IDR 2,500,000++/day']}
+      highlights={['Monthly Arrangements', 'Groceries at Cost', 'All Bali Areas', 'From IDR 1,000,000++/day']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
         { label: 'Live-In Chef Bali Guide', href: '/staffing', desc: 'Hiring a live-in private chef for your Bali villa or home.' },
-        { label: 'Private Chef for Expats', href: '/hire-private-chef-bali-monthly', desc: 'Long-term private chef options for Bali expats and residents.' },
+        { label: 'Private Chef for Expats', href: '/private-chef-bali', desc: 'Long-term private chef options for Bali expats and residents.' },
         { label: 'Staffing Services', href: '/staffing', desc: 'Direct placement and managed staffing for Bali households.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef and staffing costs in Bali.' },
       ]}

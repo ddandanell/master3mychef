@@ -25,17 +25,20 @@ export default function FoodCostRoiCalculator() {
     `IDR ${Math.round(n).toLocaleString('en-US')}`
 
   return (
-    <div className="rounded-2xl border border-[#E8E6E3] bg-white p-6 md:p-8 shadow-sm">
-      <p className="text-[#C5A028] text-xs uppercase tracking-[0.3em] font-semibold mb-2">
-        Illustrative example only
-      </p>
+    <div className="rounded-2xl border border-[#C5A028]/30 bg-gradient-to-br from-white to-[#FAFAF8] p-6 md:p-8 shadow-sm">
+      <div className="flex flex-wrap items-center gap-2 mb-3">
+        <span className="rounded-full bg-[#C5A028] text-[#0A0A0A] text-[10px] font-bold uppercase tracking-[0.18em] px-3 py-1">
+          Illustrative only
+        </span>
+        <span className="text-xs text-[#8A8680]">Not a savings guarantee</span>
+      </div>
       <h3 className="font-playfair text-2xl md:text-3xl text-[#1A1A1A] mb-2">
         Food-cost opportunity calculator
       </h3>
       <p className="text-sm text-[#4A4745] mb-6 leading-relaxed">
         Educational estimates based on numbers you enter. Actual results depend on starting position,
         implementation quality, market conditions, pricing, staff behaviour, and management
-        follow-through. This is not a guarantee of savings.
+        follow-through.
       </p>
 
       <div className="grid sm:grid-cols-2 gap-4 mb-6">

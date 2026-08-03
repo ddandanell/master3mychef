@@ -169,7 +169,7 @@ export default function BookPage() {
                       to={card.href}
                       className="inline-flex items-center justify-center text-[#1A1A1A] font-semibold text-xs uppercase tracking-[2px] px-5 py-3 rounded-full border border-black/10 hover:border-[#C5A028] transition-colors"
                     >
-                      Learn more
+                      {card.label} details
                     </Link>
                   </div>
                 </div>

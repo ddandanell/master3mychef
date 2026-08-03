@@ -413,7 +413,7 @@ export default function FineDiningMenusPage() {
                 Discover what&apos;s shaping luxury villa dining this year, from ingredient sourcing to plating innovation.
               </p>
               <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
-                Read more <ChevronRight className="h-4 w-4" />
+                Fine dining trends guide <ChevronRight className="h-4 w-4" />
               </span>
             </Link>
 
@@ -428,7 +428,7 @@ export default function FineDiningMenusPage() {
                 Understand what goes into our menus—from market sourcing to kitchen team and plating precision.
               </p>
               <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
-                Read more <ChevronRight className="h-4 w-4" />
+                Private chef cost guide <ChevronRight className="h-4 w-4" />
               </span>
             </Link>
 
@@ -443,7 +443,7 @@ export default function FineDiningMenusPage() {
                 Learn about the credentials and experience behind our team of Michelin-trained chefs.
               </p>
               <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
-                Read more <ChevronRight className="h-4 w-4" />
+                Chef qualifications guide <ChevronRight className="h-4 w-4" />
               </span>
             </Link>
           </div>

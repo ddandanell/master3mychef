@@ -44,8 +44,8 @@ const SECTIONS = [
         ['Fine-dining tasting menu', 'IDR 950K–980K', 'per person'],
         ['BBQ &amp; buffet catering', 'IDR 700K', 'per person, groups 8+'],
         ['Wedding catering', 'IDR 1.5M–3M+', 'per person'],
-        ['Private chef half day (cook & serve one meal)', 'IDR 2,500K++', 'per day, chef + assistant'],
-        ['Daily chef, weekly rate', 'From IDR 2,250K++/day', '10% off standard'],
+        ['Private chef half day (cook & serve one meal)', 'IDR 1,000K++', 'per day, chef + assistant'],
+        ['Daily chef, weekly rate', 'From IDR 900K++/day', '10% off standard'],
         ['Waiters & sommeliers', 'IDR 250K', 'per hour'],
         ['Bartenders', 'IDR 350K', 'per hour'],
       ])
@@ -127,7 +127,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'In-Villa Staff',
     title: 'Service Staff Rates',
-    body: `<p>Waiters and servers from IDR 250K/hour (minimum 3 hours) · Bartenders from IDR 350K/hour · Butlers from IDR 400K/hour · Sommelier service quoted per event. One waiter per 10 guests is our standard ratio. For full-time or live-in arrangements, see <a href="/hire-private-chef-bali-monthly" class="font-semibold hover:underline">monthly &amp; long-stay chef hire</a>.</p>`,
+    body: `<p>Waiters and servers from IDR 250K/hour (minimum 3 hours) · Bartenders from IDR 350K/hour · Butlers from IDR 400K/hour · Sommelier service quoted per event. One waiter per 10 guests is our standard ratio. For full-time or live-in arrangements, see <a href="/private-chef-bali" class="font-semibold hover:underline">monthly &amp; long-stay chef hire</a>.</p>`,
   },
   {
     id: 'what-includes',
@@ -201,7 +201,7 @@ const FAQS = [
   {
     question: 'Is there a minimum guest count or spend?',
     answer:
-      `Private chef half-day bookings from IDR 2,500K++ per day include one chef and one dedicated assistant (weekly rate from IDR 2,250K++/day). Fine dining starts at 5 guests (2 for romantic dinners). Corporate catering carries a minimum spend of ${siteFacts.corporateMinSpend}.`,
+      `Private chef one-meal bookings from IDR 1,000,000++ per day include one chef and one dedicated assistant (weekly rate from IDR 900,000++/day). Fine dining starts at 5 guests (2 for romantic dinners). Corporate catering carries a minimum spend of ${siteFacts.corporateMinSpend}.`,
   },
   {
     question: 'Do you charge travel fees?',

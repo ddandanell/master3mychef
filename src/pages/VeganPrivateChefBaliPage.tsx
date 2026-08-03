@@ -61,7 +61,7 @@ This approach works well for groups of 6--30 where dietary requirements are genu
     id: 'occasions',
     type: 'content',
     title: 'When to Book a Vegan Private Chef in Bali',
-    body: `**Villa Holiday Chef** -- Daily meals for a vegan household or group on a villa holiday. Breakfast, lunch, and dinner cooked fresh every day. No restaurants, no guesswork, no hidden animal products. Complete full day (breakfast, lunch and dinner) at IDR 4,200,000++/day; half-day and full-day options from IDR 2,500,000++/day — one chef and one dedicated assistant included, groceries at cost with receipts. Weekly rate 10% off, monthly rate 20% off. Prices are subject to a 10% service charge and 11% tax.
+    body: `**Villa Holiday Chef** -- Daily meals for a vegan household or group on a villa holiday. Breakfast, lunch, and dinner cooked fresh every day. No restaurants, no guesswork, no hidden animal products. Three meals a day (breakfast, lunch and dinner) at IDR 2,700,000++/day; one-meal and two-meal plans from IDR 1,000,000++/day — one chef and one dedicated assistant included, groceries at cost with receipts. Weekly rate 10% off, monthly rate 20% off. Prices are subject to a 10% service charge and 11% tax.
 
 **Yoga and Wellness Retreat Catering** -- Bali is a major yoga retreat destination. We provide plant-based catering for multi-day and week-long retreats -- typically 2--3 meals per day for 8--30 participants, with a focus on nutrition and ingredient quality. Menus are designed in consultation with retreat facilitators.
 
@@ -109,7 +109,7 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/', desc: 'Full in-villa private chef service' },
-  { label: 'Daily Chef Service', href: '/hire-private-chef-bali-monthly', desc: 'All-day chef hire for villa stays' },
+  { label: 'Daily Chef Service', href: '/private-chef-bali', desc: 'All-day chef hire for villa stays' },
   { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Hands-on cooking with a private chef' },
   { label: 'Wellness Retreat Catering', href: '/catering/retreat-catering', desc: 'Plant-based retreat catering' },
   { label: 'Dietary Requirements Guide', href: '/blog/food-allergies-dietary-requirements-bali-private-chef', desc: 'Handling dietary requirements in Bali' },

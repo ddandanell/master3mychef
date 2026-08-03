@@ -10,7 +10,7 @@ const PRICING_TABLE = [
   {
     service: 'Daily Villa Chef Hire',
     guests: '2–10 guests',
-    priceRange: 'IDR 2,500,000++ – 4,200,000++ / day',
+    priceRange: 'IDR 1,000,000++ – 2,700,000++ / day',
     includes: 'Chef + assistant working as a pair, equipment, service. Groceries billed separately at cost with receipts. Weekly rate 10% off, monthly rate 20% off the daily rate.',
   },
   {
@@ -63,7 +63,7 @@ const WHAT_AFFECTS_PRICE = [
 const FAQS = [
   {
     q: 'How much does a private chef cost in Bali per day?',
-    a: 'Daily villa chef hire in Bali starts at IDR 2,500,000++ per day for a half day (one meal cooked and served, plus one additional meal prepared for later), IDR 3,500,000++ per day for a full day (two meals cooked and served, plus one prepared for later), and IDR 4,200,000++ per day for a complete full day (breakfast, lunch and dinner). Weekly bookings receive 10% off and monthly bookings 20% off the daily rate. Every booking includes one professional chef and one dedicated assistant, so service is always delivered as a pair. Groceries are charged separately at cost, supported by receipts. Prices are subject to a 10% service charge and 11% tax.',
+    a: 'Daily villa chef hire in Bali is priced by meal count: IDR 1,000,000++ per day for one meal, IDR 1,800,000++ per day for two meals, and IDR 2,700,000++ per day for three meals (breakfast, lunch and dinner). Weekly bookings receive 10% off and monthly bookings 20% off the daily rate. Every booking includes one professional chef and one dedicated assistant, so service is always delivered as a pair. Groceries are charged separately at cost, supported by receipts. Prices are subject to a 10% service charge and 11% tax.',
   },
   {
     q: 'What does a private dinner experience with a chef cost in Bali?',
@@ -98,7 +98,7 @@ export default function PrivateChefCostBaliPageBlog() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: 'How Much Does a Private Chef in Bali Cost? [2026 Guide]',
-    description: 'Private chef costs in Bali start from IDR 2.5M/day for a villa chef and assistant pair to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book.',
+    description: 'Private chef costs in Bali start from IDR 1M/day for a villa chef and assistant pair to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book.',
     author: {
       '@type': 'Organization',
       name: 'myCHEF.id',
@@ -130,7 +130,7 @@ export default function PrivateChefCostBaliPageBlog() {
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="How Much Does a Private Chef in Bali Cost? [2026 Guide] — myCHEF"
-        description="Private chef costs in Bali start from IDR 2.5M/day for a villa chef and assistant pair to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book."
+        description="Private chef costs in Bali start from IDR 1M/day for a villa chef and assistant pair to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book."
         canonical={CANONICAL}
         ogType="article"
         ogImage="/og-image.webp"
@@ -161,7 +161,7 @@ export default function PrivateChefCostBaliPageBlog() {
             How Much Does a Private Chef in Bali Cost?
           </h1>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
-            Real 2026 pricing from IDR 2,500,000++ per day for a daily villa chef to IDR 20,000,000+ for large events and weddings. What is included, what affects the price, and how to get your quote.
+            Real 2026 pricing from IDR 1,000,000++ per day for a daily villa chef to IDR 20,000,000+ for large events and weddings. What is included, what affects the price, and how to get your quote.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -190,8 +190,8 @@ export default function PrivateChefCostBaliPageBlog() {
           <h2 className="text-xl font-semibold mb-4">2026 Private Chef Cost Summary — Bali</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white/10 rounded p-4">
-              <div className="text-xl font-bold">From IDR 2.5M++ /day</div>
-              <div className="text-white/80 text-sm mt-1">Daily villa chef + assistant pair (half day; weekly −10%, monthly −20%)</div>
+              <div className="text-xl font-bold">From IDR 1M++ /day</div>
+              <div className="text-white/80 text-sm mt-1">Daily villa chef + assistant pair (one meal a day; weekly −10%, monthly −20%)</div>
             </div>
             <div className="bg-white/10 rounded p-4">
               <div className="text-xl font-bold">IDR 1.5M – 5M</div>

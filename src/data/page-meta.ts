@@ -1904,7 +1904,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     description:
       'Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit.',
     canonical: `${SITE}/services`,
-    h1: 'Our Services',
+    h1: 'Private Chef Services in Bali',
     ogImage: `${SITE}/generated/bali-hub-hero.webp`,
   },
 

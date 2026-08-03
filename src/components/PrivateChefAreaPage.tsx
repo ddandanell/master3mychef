@@ -73,18 +73,15 @@ const SERVICE_CARDS = [
 // Route-specific internal links that aren't covered by the service grid or nearby-areas mesh.
 const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
   canggu: [
-    { to: '/villa-chef', label: 'daily villa chef service' },
-    { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
     { to: '/fine-dining/menus', label: 'private chef villa menus' },
     { to: '/journal/private-chef-canggu-guide', label: 'Canggu local' },
   ],
   pererenan: [
-    { to: '/villa-chef', label: 'daily villa chef service' },
-    { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
   ],
   sanur: [
-    { to: '/villa-chef', label: 'daily villa chef service' },
-    { to: '/hire-private-chef-bali-monthly', label: 'monthly chef hire' },
+    { to: '/private-chef-bali', label: 'private chef in Bali' },
   ],
   seminyak: [
     { to: '/fine-dining/menus', label: 'private chef villa menus' },
@@ -137,7 +134,8 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       // shares its @id, so any divergence splits the entity in Google's graph.
       telephone: siteFacts.phoneDisplay,
       address: postalAddressSchema,
-      priceRange: 'IDR 2,000,000 – IDR 4,200,000',
+      // Owner-confirmed meal-count ladder (siteFacts MEAL_PLANS): 1–3 meals/day.
+      priceRange: 'IDR 1,000,000++ – IDR 2,700,000++',
       image: `${SITE}/og-image.webp`,
       areaServed: { '@type': 'Place', name: `${area.name}, Bali, Indonesia` },
       geo: {
@@ -159,12 +157,13 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       offers: {
         '@type': 'Offer',
         priceCurrency: 'IDR',
-        price: '2500000',
+        // Floor = one meal a day (siteFacts MEAL_PLANS[0].daily)
+        price: '1000000',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           priceCurrency: 'IDR',
-          price: '2500000',
-          unitText: 'per half day, from',
+          price: '1000000',
+          unitText: 'DAY',
         },
         availability: 'https://schema.org/InStock',
         url: canonical,
@@ -341,7 +340,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               Why myCHEF
             </p>
             <h2 className="font-playfair text-3xl md:text-4xl mb-6">
-              A managed company — not a freelance hub
+              {`A managed company for ${area.name} — not a freelance hub`}
             </h2>
             <p className="text-white/75 leading-8 mb-6">
               Freelance chef platforms connect you to an independent cook, then step away. myCHEF is
@@ -415,7 +414,9 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             <p className="text-[#C5A028] text-sm uppercase tracking-[0.35em] font-semibold mb-4">
               What is included
             </p>
-            <h2 className="font-playfair text-3xl mb-6">Everything handled for you</h2>
+            <h2 className="font-playfair text-3xl mb-6">
+              {`Everything handled for your ${area.name} villa`}
+            </h2>
             <ul className="space-y-3 text-[#4A4745]">
               {[
                 `Chef and team travel to your ${area.name} villa`,
@@ -468,7 +469,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
                 <CalendarCheck className="w-6 h-6 text-[#C5A028]" />
                 <p className="font-semibold text-sm text-[#1A1A1A]">{occasion.label}</p>
                 <p className="text-xs uppercase tracking-[2px] font-semibold text-[#C5A028] group-hover:text-[#1A1A1A] transition-colors">
-                  View →
+                  {occasion.label} →
                 </p>
               </Link>
             ))}
@@ -546,12 +547,12 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
-              { label: 'Private Chef Half Day', price: 'From IDR 2,500,000++', note: 'Per day · chef + assistant included · groceries at cost' },
+              { label: 'One Meal a Day', price: 'From IDR 1,000,000++', note: 'Per day · breakfast, lunch or dinner · chef + assistant' },
+              { label: 'Two Meals a Day', price: 'From IDR 1,800,000++', note: 'Per day · any two meals · chef + assistant' },
+              { label: 'Three Meals a Day', price: 'From IDR 2,700,000++', note: 'Per day · breakfast, lunch and dinner · chef + assistant' },
               { label: 'Villa Catering', price: 'From IDR 700,000 pp', note: 'Per person · 8–30 guests · buffet or plated' },
               { label: 'Fine Dining Tasting Menu', price: 'From IDR 980,000 pp', note: 'Per person · 5–7 courses · wine pairing available' },
-              { label: 'BBQ & Seafood Grill', price: 'From IDR 720,000 pp', note: 'Per person · charcoal grill · full service' },
               { label: 'Events & Weddings', price: 'Custom quote', note: 'Group size, menu, staffing level — quoted per event' },
-              { label: 'Weekly Chef Service', price: 'From IDR 2,250,000++ per day', note: 'Weekly rate (10% off standard) · chef + assistant included' },
             ].map((tier) => (
               <div key={tier.label} className="rounded-[20px] border border-white/10 bg-white/5 p-5">
                 <p className="font-playfair text-lg mb-1">{tier.label}</p>
@@ -560,6 +561,23 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               </div>
             ))}
           </div>
+
+          {/*
+            Every area page is a child of the Private Chef pillar. This is the one
+            contextual, keyword-anchored link up to it — 61 pages pointing at
+            /private-chef-bali with consistent intent is the whole point of the cluster.
+          */}
+          <p className="text-center text-white/70 text-sm mb-10">
+            These are the same rates everywhere we operate. Full meal plans, weekly and
+            monthly discounts and what is included are on the{' '}
+            <Link
+              to="/private-chef-bali#prices"
+              className="text-[#C5A028] font-medium hover:underline"
+            >
+              private chef Bali prices page
+            </Link>
+            .
+          </p>
 
           <div className="text-center">
             <a
@@ -643,7 +661,9 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
           <p className="text-[#C5A028] text-sm uppercase tracking-[0.35em] font-semibold mb-3">
             All myCHEF services
           </p>
-          <h2 className="font-playfair text-2xl md:text-3xl mb-8">Explore the full service menu</h2>
+          <h2 className="font-playfair text-2xl md:text-3xl mb-8">
+            {`Explore myCHEF services from ${area.name}`}
+          </h2>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[

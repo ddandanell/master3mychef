@@ -672,7 +672,7 @@ export default function EventsMainPage() {
                 </h3>
                 <p className="text-sm leading-relaxed text-[#4A4745]">{item.description}</p>
                 <span className="inline-flex items-center gap-2 mt-5 text-xs font-semibold tracking-[0.25em] uppercase text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors">
-                  Learn more <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                  {item.title} <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
             ))}
@@ -1050,7 +1050,7 @@ export default function EventsMainPage() {
                 From venue prep to timing coordination, learn how to orchestrate a wedding that feels effortless from the guest perspective.
               </p>
               <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
-                Read more <ChevronRight className="h-4 w-4" />
+                Villa wedding planning guide <ChevronRight className="h-4 w-4" />
               </span>
             </Link>
 
@@ -1065,7 +1065,7 @@ export default function EventsMainPage() {
                 Execute off-sites, executive dinners, and company retreats with the production quality of a five-star kitchen.
               </p>
               <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
-                Read more <ChevronRight className="h-4 w-4" />
+                Corporate events catering guide <ChevronRight className="h-4 w-4" />
               </span>
             </Link>
 
@@ -1080,7 +1080,7 @@ export default function EventsMainPage() {
                 Birthdays, anniversaries, and milestone moments deserve more than a restaurant reservation—they deserve a production.
               </p>
               <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
-                Read more <ChevronRight className="h-4 w-4" />
+                Milestone celebration planning guide <ChevronRight className="h-4 w-4" />
               </span>
             </Link>
           </div>

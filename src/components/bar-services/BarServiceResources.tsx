@@ -64,7 +64,7 @@ function ResourceCard({ resource }: { resource: BarResource }) {
           {resource.summary}
         </p>
         <span className="inline-flex items-center gap-2 text-[#C5A028] text-sm font-medium">
-          Read more
+          {resource.title}
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </span>
       </div>

@@ -1106,7 +1106,10 @@ export default function HubPage() {
                     {card.description}
                   </p>
                   <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-[#C5A028]">
-                    Learn more <ArrowRight className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" />
+                    {card.title === 'Flagship'
+                      ? 'Complete bar performance programme'
+                      : `Bar ${card.title.toLowerCase()} services`}{' '}
+                    <ArrowRight className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>
               ))}

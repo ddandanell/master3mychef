@@ -392,17 +392,17 @@ export default function InVillaServicePage() {
             <Link to="/blog/wedding-private-chef-bali-planning-guide" className="group rounded-[24px] border border-black/5 bg-white p-8 hover:border-[#C5A028] hover:shadow-lg transition-all">
               <h3 className="font-semibold text-lg text-[#1A1A1A] mb-2 group-hover:text-[#C5A028] transition-colors">Planning a Villa Wedding</h3>
               <p className="text-sm text-[#4A4745] mb-4">Coordinate service staff, timing, and guest flow for flawless multi-course wedding dinners.</p>
-              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">Read more →</span>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">Villa wedding planning guide →</span>
             </Link>
             <Link to="/blog/corporate-events-catering-bali-team-dining" className="group rounded-[24px] border border-black/5 bg-white p-8 hover:border-[#C5A028] hover:shadow-lg transition-all">
               <h3 className="font-semibold text-lg text-[#1A1A1A] mb-2 group-hover:text-[#C5A028] transition-colors">Corporate Event Setup</h3>
               <p className="text-sm text-[#4A4745] mb-4">How to set up professional catering and service teams for corporate dinners and team-building retreats.</p>
-              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">Read more →</span>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">Corporate event catering guide →</span>
             </Link>
             <Link to="/blog/how-to-plan-villa-birthday-party-bali" className="group rounded-[24px] border border-black/5 bg-white p-8 hover:border-[#C5A028] hover:shadow-lg transition-all">
               <h3 className="font-semibold text-lg text-[#1A1A1A] mb-2 group-hover:text-[#C5A028] transition-colors">Birthday Party Hosting</h3>
               <p className="text-sm text-[#4A4745] mb-4">From staffing ratios to service flow, create a memorable birthday celebration with professional support.</p>
-              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">Read more →</span>
+              <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">Villa birthday party guide →</span>
             </Link>
           </div>
         </div>

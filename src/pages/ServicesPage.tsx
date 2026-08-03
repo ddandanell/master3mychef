@@ -48,9 +48,10 @@ const SERVICES = [
   {
     slug: 'daily-villa-chef',
     label: 'Daily Villa Chef',
-    description: 'Breakfast, lunch and dinner across your whole stay. Groceries at cost, receipts provided.',
-    price: 'Half-day from IDR 2M; full-day from IDR 4M.',
-    url: '/villa-chef',
+    description: 'One, two or three meals a day across your stay. Groceries at cost, receipts provided.',
+    // Owner-confirmed meal-count rates (siteFacts MEAL_PLANS) — retired half/full-day ladder.
+    price: 'From IDR 1,000,000++/day for one meal (chef + assistant).',
+    url: '/private-chef-bali',
     cta: 'daily villa chef service',
     icon: ChefHat,
   },
@@ -58,8 +59,8 @@ const SERVICES = [
     slug: 'monthly-long-stay-chef',
     label: 'Monthly & Long-Stay Chef',
     description: 'Recurring chef days and meal-prep plans for long stays and residents.',
-    price: 'Weekly chef service from IDR 2,250,000++/day (10% off standard); live-in placement quoted individually.',
-    url: '/hire-private-chef-bali-monthly',
+    price: 'Weekly −10% and monthly −20% on daily rates; live-in placement quoted individually.',
+    url: '/private-chef-bali',
     cta: 'monthly chef arrangements',
     icon: CalendarCheck,
   },
@@ -192,7 +193,7 @@ export default function ServicesPage() {
             className="text-5xl md:text-7xl lg:text-8xl mb-6 leading-[1.02] max-w-[900px]"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            {"Our Services"}
+            Private Chef Services in Bali
           </h1>
           <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[640px] leading-relaxed">
             Eight services, one standard: extraordinary food in your villa, with zero stress. Every service includes menu planning, fresh shopping, on-site cooking and a spotless kitchen afterwards — and every one starts with a clear price.
@@ -402,8 +403,8 @@ export default function ServicesPage() {
               { label: 'BBQ catering', href: '/catering/bbq-catering', desc: 'Poolside grills, satay & live fire.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays, corporate & villa parties.' },
               { label: 'wedding catering', href: '/events/weddings', desc: 'Full-service wedding hospitality.' },
-              { label: 'daily villa chef service', href: '/villa-chef', desc: 'Daily private chef for your villa stay.' },
-              { label: 'monthly chef arrangements', href: '/hire-private-chef-bali-monthly', desc: 'Recurring chef days & meal prep.' },
+              { label: 'daily villa chef service', href: '/private-chef-bali', desc: 'Daily private chef for your villa stay.' },
+              { label: 'monthly chef arrangements', href: '/private-chef-bali', desc: 'Recurring chef days & meal prep.' },
               { label: 'in-villa service staff', href: '/in-villa-service', desc: 'Waiters, bartenders, butlers & sommelier.' },
               { label: 'villa staff placement', href: '/staffing', desc: 'Long-term chefs & household teams.' },
               { label: 'full pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },

@@ -216,6 +216,11 @@ const CorporateGuide = lazy(() => import('./pages/CorporateGuidePage'))
 const StaffingGuide = lazy(() => import('./pages/StaffingGuidePage'))
 const ManagingBooking = lazy(() => import('./pages/ManagingBookingPage'))
 
+// Restaurant & Kitchen Solutions (B2B)
+const RestaurantKitchenSolutionsHubPage = lazy(() => import('./pages/RestaurantKitchenSolutionsHubPage'))
+const RestaurantKitchenServicePage = lazy(() => import('./pages/RestaurantKitchenServicePage'))
+const RestaurantKitchenGuidePage = lazy(() => import('./pages/RestaurantKitchenGuidePage'))
+
 // Bar Services pages
 const BarServicesHubPage = lazy(() => import('./pages/BarServicesHubPage'))
 const BarServicePage = lazy(() => import('./pages/BarServicePage'))
@@ -533,6 +538,14 @@ export default function App() {
           <Route path="/help/corporate-guide" element={<CorporateGuide />} />
           <Route path="/help/staffing-guide" element={<StaffingGuide />} />
           <Route path="/help/managing-booking" element={<ManagingBooking />} />
+
+          {/* Restaurant & Kitchen Solutions (B2B) */}
+          <Route path="/restaurant-kitchen-solutions" element={<RestaurantKitchenSolutionsHubPage />} />
+          <Route path="/restaurant-kitchen-solutions/" element={<RestaurantKitchenSolutionsHubPage />} />
+          <Route path="/restaurant-kitchen-solutions/:slug" element={<RestaurantKitchenServicePage />} />
+          <Route path="/restaurant-kitchen-solutions/:slug/" element={<RestaurantKitchenServicePage />} />
+          <Route path="/guides/:slug" element={<RestaurantKitchenGuidePage />} />
+          <Route path="/guides/:slug/" element={<RestaurantKitchenGuidePage />} />
 
           {/* Bar Services */}
           <Route path="/bar-services/" element={<BarServicesHubPage />} />

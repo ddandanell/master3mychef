@@ -8,6 +8,7 @@ import { GUIDES } from './content/guides'
 import { BLOG_POSTS } from './content/blogPosts'
 import { JOURNAL_POSTS } from './content/journalPosts'
 import { BAR_SERVICES, BAR_RESOURCES } from './bar-services'
+import { RKS_GUIDES, RKS_HUB_PATH, RKS_SERVICES } from './restaurant-kitchen-solutions'
 import { PAGE_META, PAGE_META_BY_PATH } from './page-meta'
 import { REDIRECT_MAP } from './redirects'
 
@@ -157,6 +158,35 @@ export function buildSitemap(): SitemapEntry[] {
       slug: s.slug,
     }))
   )
+
+
+  // Restaurant & Kitchen Solutions (B2B)
+  const rksPages: SitemapEntry[] = [
+    {
+      path: RKS_HUB_PATH,
+      type: 'info',
+      title: PAGE_META['rks-hub'].title,
+      description: PAGE_META['rks-hub'].description,
+      priority: 0.9,
+      changefreq: 'weekly',
+    },
+    ...RKS_SERVICES.map((s) => ({
+      path: s.path,
+      type: 'service' as const,
+      title: s.title,
+      description: s.description,
+      priority: 0.85,
+      changefreq: 'monthly' as const,
+    })),
+    ...RKS_GUIDES.map((g) => ({
+      path: g.path,
+      type: 'info' as const,
+      title: g.title,
+      description: g.description,
+      priority: 0.7,
+      changefreq: 'monthly' as const,
+    })),
+  ]
 
   // Bar Services pages
   const barServicesPages: SitemapEntry[] = [
@@ -361,6 +391,7 @@ export function buildSitemap(): SitemapEntry[] {
     ...blogPosts,
     ...journalPosts,
     ...pillarSubPages,
+    ...rksPages,
     ...barServicesPages,
     ...infoPages,
   ]

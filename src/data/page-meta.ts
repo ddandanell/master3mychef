@@ -1538,7 +1538,108 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/aura-corporate.webp`,
   },
 
-      'bar-services-hub': {
+    
+  'rks-hub': {
+    path: '/restaurant-kitchen-solutions',
+    title: 'Restaurant and Kitchen Solutions Indonesia | MYCHEF.ID',
+    description:
+      'Professional restaurant consulting, kitchen audits, commercial kitchen design, menu development, training, equipment planning and operational support across Indonesia.',
+    canonical: `${SITE}/restaurant-kitchen-solutions`,
+    h1: 'Complete Restaurant and Commercial Kitchen Solutions',
+    ogImage: `${SITE}/generated/mychef-restaurant-kitchen-solutions-hub-hero.webp`,
+  },
+
+  'rks-kitchen-consulting-audit': {
+    path: '/restaurant-kitchen-solutions/kitchen-consulting-audit',
+    title: 'Restaurant Consulting and Kitchen Audit Services | MYCHEF.ID',
+    description:
+      'Restaurant kitchen audit and operational consulting in Indonesia: cost control, workflow, staff assessment, supplier review, and improvement roadmaps. Request an assessment.',
+    canonical: `${SITE}/restaurant-kitchen-solutions/kitchen-consulting-audit`,
+    h1: 'Restaurant Consulting and Kitchen Audit Services',
+    ogImage: `${SITE}/generated/mychef-restaurant-kitchen-audit-hero.webp`,
+  },
+
+  'rks-commercial-kitchen-design-build': {
+    path: '/restaurant-kitchen-solutions/commercial-kitchen-design-build',
+    title: 'Commercial Kitchen Design, Workflow and Build Solutions | MYCHEF.ID',
+    description:
+      'Commercial kitchen design and workflow planning in Indonesia: layout, equipment planning, renovation support, utility coordination and build collaboration.',
+    canonical: `${SITE}/restaurant-kitchen-solutions/commercial-kitchen-design-build`,
+    h1: 'Commercial Kitchen Design, Workflow and Build Solutions',
+    ogImage: `${SITE}/generated/mychef-commercial-kitchen-design-hero.webp`,
+  },
+
+  'rks-menu-development-training': {
+    path: '/restaurant-kitchen-solutions/menu-development-training',
+    title: 'Restaurant Menu Development and Staff Training | MYCHEF.ID',
+    description:
+      'Restaurant menu development and staff training in Indonesia: recipe standardisation, menu costing, COGS training, kitchen section training and opening support.',
+    canonical: `${SITE}/restaurant-kitchen-solutions/menu-development-training`,
+    h1: 'Restaurant Menu Development and Staff Training',
+    ogImage: `${SITE}/generated/mychef-menu-development-training-hero.webp`,
+  },
+
+  'rks-guide-audit-checklist': {
+    path: '/guides/commercial-kitchen-audit-checklist',
+    title: 'Commercial Kitchen Audit Checklist | MYCHEF.ID',
+    description:
+      'A practical commercial kitchen audit checklist for Indonesian restaurants: cost control, workflow, staffing, inventory and peak-service observation points.',
+    canonical: `${SITE}/guides/commercial-kitchen-audit-checklist`,
+    h1: 'Commercial Kitchen Audit Checklist',
+    ogImage: `${SITE}/generated/mychef-rks-guide-audit-checklist.webp`,
+  },
+
+  'rks-guide-food-cost': {
+    path: '/guides/how-to-reduce-restaurant-food-cost',
+    title: 'How to Reduce Restaurant Food Cost | MYCHEF.ID',
+    description:
+      'Practical ways to reduce restaurant food cost in Indonesia: recipes, portions, waste, purchasing, inventory and menu engineering.',
+    canonical: `${SITE}/guides/how-to-reduce-restaurant-food-cost`,
+    h1: 'How to Reduce Restaurant Food Cost',
+    ogImage: `${SITE}/generated/mychef-rks-guide-food-cost.webp`,
+  },
+
+  'rks-guide-workflow': {
+    path: '/guides/commercial-kitchen-workflow-optimization',
+    title: 'Commercial Kitchen Workflow Optimization | MYCHEF.ID',
+    description:
+      'How to optimise commercial kitchen workflow: linear flow, station zoning, pass design, dish flow and peak-service bottlenecks.',
+    canonical: `${SITE}/guides/commercial-kitchen-workflow-optimization`,
+    h1: 'Commercial Kitchen Workflow Optimization',
+    ogImage: `${SITE}/generated/mychef-rks-guide-workflow.webp`,
+  },
+
+  'rks-guide-menu-process': {
+    path: '/guides/restaurant-menu-development-process',
+    title: 'Restaurant Menu Development Process | MYCHEF.ID',
+    description:
+      'A clear restaurant menu development process: concept alignment, tastings, recipe cards, costing, section training and cooking trials.',
+    canonical: `${SITE}/guides/restaurant-menu-development-process`,
+    h1: 'Restaurant Menu Development Process',
+    ogImage: `${SITE}/generated/mychef-rks-guide-menu-process.webp`,
+  },
+
+  'rks-guide-cogs': {
+    path: '/guides/restaurant-cogs-calculation',
+    title: 'Restaurant COGS Calculation Guide | MYCHEF.ID',
+    description:
+      'How restaurant COGS calculation works: recipe cost, theoretical food cost, actual food cost, inventory and variance — for operators in Indonesia.',
+    canonical: `${SITE}/guides/restaurant-cogs-calculation`,
+    h1: 'Restaurant COGS Calculation Guide',
+    ogImage: `${SITE}/generated/mychef-rks-guide-cogs.webp`,
+  },
+
+  'rks-guide-kitchen-layout': {
+    path: '/guides/how-to-design-commercial-kitchen-layout',
+    title: 'How to Design a Commercial Kitchen Layout | MYCHEF.ID',
+    description:
+      'How to design a commercial kitchen layout: zoning, flow, equipment capacity, utilities coordination and renovation sequencing.',
+    canonical: `${SITE}/guides/how-to-design-commercial-kitchen-layout`,
+    h1: 'How to Design a Commercial Kitchen Layout',
+    ogImage: `${SITE}/generated/mychef-rks-guide-kitchen-layout.webp`,
+  },
+
+  'bar-services-hub': {
     path: '/bar-services/',
     title: 'Bar Consultant Bali | B2B Bar Services & Consulting | MyChef',
     description:

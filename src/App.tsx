@@ -16,6 +16,7 @@ const LunaPage = lazy(() => import('./pages/LunaPage'))
 const RomanticDinnerPage = lazy(() => import('./pages/RomanticDinnerPage'))
 const TastingMenuPage = lazy(() => import('./pages/TastingMenuPage'))
 const PrivateChefBaliPage = lazy(() => import('./pages/PrivateChefBaliPage'))
+const PrivateChefPillarPage = lazy(() => import('./pages/PrivateChefPillarPage'))
 const ChefsTablePage = lazy(() => import('./pages/ChefsTablePage'))
 const FineDiningMenusPage = lazy(() => import('./pages/FineDiningMenusPage'))
 const FineDiningChefsPage = lazy(() => import('./pages/FineDiningChefsPage'))
@@ -24,7 +25,6 @@ const KidsMenusPage = lazy(() => import('./pages/KidsMenusPage'))
 const BbqGrillPage = lazy(() => import('./pages/BbqGrillPage'))
 const DiningStylesPage = lazy(() => import('./pages/DiningStylesPage'))
 const FamilyStylingPage = lazy(() => import('./pages/FamilyStylingPage'))
-const SolPage = lazy(() => import('./pages/SolPage'))
 // const AuraPage = lazy(() => import('./pages/AuraPage'))
 const PartnersPage = lazy(() => import('./pages/PartnersPage'))
 const PressPage = lazy(() => import('./pages/PressPage'))
@@ -48,6 +48,7 @@ const EventsVillaPartiesPage = lazy(() => import('./pages/EventsVillaPartiesPage
 const VillaEventPackagesPage = lazy(() => import('./pages/VillaEventPackagesPage'))
 const VipTransportBaliPage = lazy(() => import('./pages/VipTransportBaliPage'))
 const CompleteVillaExperiencePage = lazy(() => import('./pages/CompleteVillaExperiencePage'))
+const GroupVillaDinnerPackagesBaliPage = lazy(() => import('./pages/GroupVillaDinnerPackagesBaliPage'))
 
 // New system-plan pages
 const CateringPage = lazy(() => import('./pages/CateringMainPage'))
@@ -215,6 +216,11 @@ const CorporateGuide = lazy(() => import('./pages/CorporateGuidePage'))
 const StaffingGuide = lazy(() => import('./pages/StaffingGuidePage'))
 const ManagingBooking = lazy(() => import('./pages/ManagingBookingPage'))
 
+// Restaurant & Kitchen Solutions (B2B)
+const RestaurantKitchenSolutionsHubPage = lazy(() => import('./pages/RestaurantKitchenSolutionsHubPage'))
+const RestaurantKitchenServicePage = lazy(() => import('./pages/RestaurantKitchenServicePage'))
+const RestaurantKitchenGuidePage = lazy(() => import('./pages/RestaurantKitchenGuidePage'))
+
 // Bar Services pages
 const BarServicesHubPage = lazy(() => import('./pages/BarServicesHubPage'))
 const BarServicePage = lazy(() => import('./pages/BarServicePage'))
@@ -300,6 +306,7 @@ export default function App() {
           <Route path="/villa-event-packages" element={<VillaEventPackagesPage />} />
           <Route path="/vip-transport-bali" element={<VipTransportBaliPage />} />
           <Route path="/complete-villa-experience" element={<CompleteVillaExperiencePage />} />
+          <Route path="/group-villa-dinner-packages-bali" element={<GroupVillaDinnerPackagesBaliPage />} />
           <Route path="/in-villa-service" element={<InVillaServicePage />} />
           <Route path="/in-villa-service/waiters" element={<ServiceWaitersPage />} />
           <Route path="/in-villa-service/butlers" element={<ServiceButlersPage />} />
@@ -363,7 +370,6 @@ export default function App() {
           <Route path="/certified/:slug" element={<CertifiedPartnerPage />} />
 
           {/* Legacy aliases */}
-          <Route path="/villa-chef" element={<SolPage />} />
           <Route path="/villa-partners" element={<PartnersPage />} />
 
           {/* Legacy area pages (still served at root for SEO continuity) */}
@@ -385,8 +391,11 @@ export default function App() {
             <Route key={m.slug} path={`/${m.slug}`} element={<AreaPage kind="micro-area" />} />
           ))}
 
-          {/* /private-chef-bali hub — area redirects are handled by REDIRECTS.map */}
-          <Route path="/private-chef-bali" element={<PrivateChefBaliPage />} />
+          {/* Private Chef pillar (2026-07-30). Owns the "private chef bali" term and is the
+              single published home of the day rates. /villa-chef and
+              /hire-private-chef-bali-monthly 301 here — see src/data/redirects.ts.
+              Area redirects (/private-chef-bali/[slug]) are handled by REDIRECTS.map above. */}
+          <Route path="/private-chef-bali" element={<PrivateChefPillarPage />} />
 
           {/* /private-chef/[slug] — Bali Domination Blueprint area landing pages */}
           {PUBLISHED_AREA_SLUGS.map((slug) => (
@@ -529,6 +538,14 @@ export default function App() {
           <Route path="/help/corporate-guide" element={<CorporateGuide />} />
           <Route path="/help/staffing-guide" element={<StaffingGuide />} />
           <Route path="/help/managing-booking" element={<ManagingBooking />} />
+
+          {/* Restaurant & Kitchen Solutions (B2B) */}
+          <Route path="/restaurant-kitchen-solutions" element={<RestaurantKitchenSolutionsHubPage />} />
+          <Route path="/restaurant-kitchen-solutions/" element={<RestaurantKitchenSolutionsHubPage />} />
+          <Route path="/restaurant-kitchen-solutions/:slug" element={<RestaurantKitchenServicePage />} />
+          <Route path="/restaurant-kitchen-solutions/:slug/" element={<RestaurantKitchenServicePage />} />
+          <Route path="/guides/:slug" element={<RestaurantKitchenGuidePage />} />
+          <Route path="/guides/:slug/" element={<RestaurantKitchenGuidePage />} />
 
           {/* Bar Services */}
           <Route path="/bar-services/" element={<BarServicesHubPage />} />

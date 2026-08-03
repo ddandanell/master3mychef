@@ -8,6 +8,7 @@ import { GUIDES } from './content/guides'
 import { BLOG_POSTS } from './content/blogPosts'
 import { JOURNAL_POSTS } from './content/journalPosts'
 import { BAR_SERVICES, BAR_RESOURCES } from './bar-services'
+import { RKS_GUIDES, RKS_HUB_PATH, RKS_SERVICES } from './restaurant-kitchen-solutions'
 import { PAGE_META, PAGE_META_BY_PATH } from './page-meta'
 import { REDIRECT_MAP } from './redirects'
 
@@ -158,6 +159,35 @@ export function buildSitemap(): SitemapEntry[] {
     }))
   )
 
+
+  // Restaurant & Kitchen Solutions (B2B)
+  const rksPages: SitemapEntry[] = [
+    {
+      path: RKS_HUB_PATH,
+      type: 'info',
+      title: PAGE_META['rks-hub'].title,
+      description: PAGE_META['rks-hub'].description,
+      priority: 0.9,
+      changefreq: 'weekly',
+    },
+    ...RKS_SERVICES.map((s) => ({
+      path: s.path,
+      type: 'service' as const,
+      title: s.title,
+      description: s.description,
+      priority: 0.85,
+      changefreq: 'monthly' as const,
+    })),
+    ...RKS_GUIDES.map((g) => ({
+      path: g.path,
+      type: 'info' as const,
+      title: g.title,
+      description: g.description,
+      priority: 0.7,
+      changefreq: 'monthly' as const,
+    })),
+  ]
+
   // Bar Services pages
   const barServicesPages: SitemapEntry[] = [
     {
@@ -293,7 +323,7 @@ export function buildSitemap(): SitemapEntry[] {
     { path: '/calculator', type: 'info', title: 'Pricing Calculator | Private Chef Bali | myCHEF.id', description: 'Estimate your private chef, catering, or event costs instantly. Transparent IDR pricing, no hidden fees.', priority: 0.6, changefreq: 'monthly' },
     { path: '/help', type: 'info', title: 'Help Centre | Private Chef & Catering Bali — myCHEF', description: 'Answers to your questions about booking a private chef or catering service in Bali. Guides, pricing, and planning support.', priority: 0.6, changefreq: 'monthly' },
     // Internally-linked pages restored from direct-access 404 (prerendered 2026-06-23)
-    { path: '/villa-chef', type: 'info', title: 'Private Chef Bali | Daily Villa Chef Service', description: 'Bali villa catering with a private chef for your stay. Daily breakfast, lunch, dinner. Groceries at cost. From IDR 2.5M++/half day.', priority: 0.7, changefreq: 'monthly' },
+    { path: '/private-chef-bali', type: 'service', title: 'Private Chef Bali | Prices From IDR 1,000,000++ Per Day', description: 'Hire a private chef in Bali. One meal IDR 1M++, two meals IDR 1.8M++, three meals IDR 2.7M++ per day. Chef plus dedicated assistant, groceries at cost, weekly and monthly rates.', priority: 0.95, changefreq: 'weekly' },
     { path: '/recommended-services', type: 'info', title: 'Build Your Perfect Villa Experience | myCHEF Concierge Bali', description: "Tell myCHEF what you're hosting and get the right service fast. Match guest count, mood, and budget to the best villa dining format.", priority: 0.6, changefreq: 'monthly' },
     { path: '/join-our-team', type: 'info', title: 'Chef Jobs Bali | Join the myCHEF Team — Apply via WhatsApp', description: 'Chef jobs in Bali with myCHEF. Roles for chefs, bartenders, waiters & coordinators. Join a fast-moving team trusted by 560+ villas. Apply via WhatsApp.', priority: 0.5, changefreq: 'monthly' },
     { path: '/help/getting-started', type: 'guide', title: 'How to Book a Private Chef Bali | Getting Started — myCHEF', description: 'Step-by-step guide to booking your first private chef in Bali. What to send, how quotes work & what happens after you confirm with myCHEF.', priority: 0.6, changefreq: 'monthly' },
@@ -363,6 +393,7 @@ export function buildSitemap(): SitemapEntry[] {
     ...blogPosts,
     ...journalPosts,
     ...pillarSubPages,
+    ...rksPages,
     ...barServicesPages,
     ...infoPages,
   ]

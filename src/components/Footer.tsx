@@ -210,8 +210,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/hire-private-chef-bali-monthly" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
-                  Monthly Private Chef
+                <Link to="/private-chef-bali" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Private Chef Bali
                 </Link>
               </li>
               <li>
@@ -400,6 +400,11 @@ export default function Footer() {
             <h4 className="text-xs uppercase tracking-[0.25em] text-[#C5A028] mb-5 font-bold group-hover:text-[#D4B033] transition-colors">Who We Serve</h4>
             <ul className="space-y-3">
               <li>
+                <Link to="/restaurant-kitchen-solutions" className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                  Restaurant and Kitchen Solutions
+                </Link>
+              </li>
+              <li>
                 <Link to="/bar-services/" className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   B2B Bar Services
                 </Link>
@@ -446,6 +451,7 @@ export default function Footer() {
             </Link>
           ))}
           <Link to="/services" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Services</Link>
+          <Link to="/restaurant-kitchen-solutions" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Restaurant & Kitchen Solutions</Link>
           <Link to="/bar-services/" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">B2B Bar Service</Link>
           <Link to="/recommended-services" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Recommended</Link>
           <Link to="/pricing" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Pricing</Link>

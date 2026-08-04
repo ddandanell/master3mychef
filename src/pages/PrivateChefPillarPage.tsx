@@ -290,6 +290,10 @@ const FAQS = [
     a: 'Yes. We run separate head chefs for Italian and Mediterranean, Japanese and seafood, Indonesian and Balinese, BBQ and open flame, plant-based and wellness, and pastry. Tell us what you want to eat and we match the specialist rather than sending whoever happens to be free.',
   },
   {
+    q: 'What is Chef Rotation?',
+    a: 'On any booking of 7 days or longer, Chef Rotation is included at no extra charge — the day rate stays the same whether you keep one chef the whole stay or switch. Instead of being locked into one cuisine, you can request a different specialist chef for any day: Japanese on Tuesday, Balinese on Wednesday, Italian on Thursday. It is day-by-day, not a fixed schedule set in advance — tell us the night before (or that morning) and we match the next day\'s chef to what you feel like eating.',
+  },
+  {
     q: 'Does the chef come to my villa, or do I go somewhere?',
     a: 'The chef comes to you. They cook in your villa kitchen, serve at your table, and clean up before they leave. It works in a rented villa, a private residence, a long-stay apartment or an Airbnb — we only need a working kitchen.',
   },
@@ -703,6 +707,12 @@ export default function PrivateChefPillarPage() {
             Most agencies send whoever is available. We do not. Each cuisine has its own head chef
             who has cooked it for years — so if you want Japanese on Tuesday and Balinese on
             Wednesday, you get the person who actually specialises in each one.
+          </p>
+          <p className="text-white/65 mt-4 max-w-2xl leading-relaxed">
+            That's <strong className="text-white">Chef Rotation</strong> — included at no extra
+            charge on any booking of 7 days or longer. You're not locked into one chef or one
+            cuisine for the whole stay; request a different specialist for any day, decided
+            day by day as you go.
           </p>
           <p className="text-white/65 mt-4 max-w-2xl leading-relaxed">
             The six below are our <strong className="text-white">head chefs</strong>. Each one runs

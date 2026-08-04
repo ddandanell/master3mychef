@@ -33,19 +33,21 @@ This service is popular among digital nomads on extended stays, expat families m
     title: 'Daily Chef Service Rates in Bali',
     body: `Every daily chef booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Our published rates:
 
-**Half Day**
-Cook and serve one meal, plus one additional meal prepared for later (no service for the prepared meal): IDR 1,000,000++ per day
+**One Meal a Day**
+Cook and serve one meal: IDR 1,000,000++ per day
 Weekly rate (10% off): IDR 900,000++ per day · Monthly rate (20% off): IDR 800,000++ per day
 
-**Full Day**
-Cook and serve two meals, plus one additional meal prepared for later: IDR 1,800,000++ per day
+**Two Meals a Day**
+Cook and serve two meals: IDR 1,800,000++ per day
 Weekly rate (10% off): IDR 1,620,000++ per day · Monthly rate (20% off): IDR 1,440,000++ per day
 
-**Complete Full Day**
+**Three Meals a Day**
 Cook and serve breakfast, lunch and dinner: IDR 2,700,000++ per day
 Weekly rate (10% off): IDR 2,430,000++ per day · Monthly rate (20% off): IDR 2,160,000++ per day
 
 Our chefs are specialists across Japanese, Western, Indonesian and Balinese, Italian, French, Mediterranean, Chinese, international and healthy cuisine, with more available on request. Most come from head or senior chef roles in five-star hotels and high-end restaurants, speak excellent English, and are assigned to match your preferred cuisine.
+
+**Chef Rotation, included on 7+ day bookings.** Book a week or longer and you're not locked into one chef or one cuisine for the whole stay. At no extra charge, request a different specialist chef — Japanese one day, Italian the next, Indonesian and Balinese after that — day by day, whenever you feel like a change. It's the reason clients on longer stays keep coming back: full access to our entire chef roster, not just whoever you started with.
 
 Prices are subject to a 10% service charge and 11% tax. A ${siteFacts.depositPercent}% deposit confirms your booking. Groceries are charged separately at cost, supported by receipts.`,
   },
@@ -59,7 +61,7 @@ Prices are subject to a 10% service charge and 11% tax. A ${siteFacts.depositPer
 
 **Villa owners and property managers** — For villas with regular guest turnovers, a daily chef service creates a premium offering that justifies higher rental rates. Guests staying 1–4 weeks often book chef service as part of the villa package.
 
-**Retirees and long-stay travelers** — Many retirees in Bali prefer eating at home over restaurants but don't want the effort of daily cooking. A half-day chef booking at IDR 1,000,000++ per day — less at the weekly and monthly rates — is often cheaper than eating out as a household, with better quality and zero effort.
+**Retirees and long-stay travelers** — Many retirees in Bali prefer eating at home over restaurants but don't want the effort of daily cooking. A one-meal-a-day chef booking at IDR 1,000,000++ per day — less at the weekly and monthly rates — is often cheaper than eating out as a household, with better quality and zero effort.
 
 **Wellness and health-focused residents** — Clients following strict dietary protocols — anti-inflammatory, ketogenic, Ayurvedic, low-FODMAP, or clinical elimination diets — need a chef who can execute specific recipes consistently. We match these clients with specialist chefs.`,
   },
@@ -101,6 +103,11 @@ const faqs = [
     question: 'What if I want to change my chef after a few weeks?',
     answer:
       'No problem. We maintain a roster of chefs and can arrange a changeover if your preferences or needs shift. We\'ll match you with a new chef and handle the transition. There\'s no penalty for changing.',
+  },
+  {
+    question: 'What is Chef Rotation, and how is it different from just switching chefs?',
+    answer:
+      'Chef Rotation is included free on any booking of 7 days or longer. Instead of committing to one chef and one cuisine for the whole stay, you can request a different specialist — Japanese, Italian, Indonesian and Balinese, and more — on any given day, with no extra charge and no formal changeover process. It gives you day-by-day access to our full chef roster rather than a single fixed cook.',
   },
   {
     question: 'Does the chef do the grocery shopping?',
@@ -154,7 +161,7 @@ export default function DailyChefServiceBaliPage() {
         'in villa cook bali',
         'expat chef bali',
       ]}
-      highlights={['Chef + Assistant Included', 'Market Sourcing Included', 'Trial Sessions', 'From IDR 1,000,000++/day']}
+      highlights={['Chef + Assistant Included', 'Market Sourcing Included', 'Chef Rotation on 7+ Day Bookings', 'From IDR 1,000,000++/day']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

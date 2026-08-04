@@ -92,11 +92,14 @@ NAV_SUBPAGES['/private-chef-bali'] = [
 ]
 
 // Contact dropdown — Contact and Help merged into one nav slot. Both pages stay live.
+// B2B solution pages are also listed here so venue operators can reach them from the top nav.
 NAV_SUBPAGES['/contact'] = [
   { label: 'Contact Us', href: '/contact', icon: 'User' },
   { label: 'Help Centre', href: '/help', icon: 'BookOpen' },
   { label: 'Pricing Guide', href: '/help/pricing', icon: 'Crown' },
   { label: 'FAQ', href: '/faq', icon: 'Utensils' },
+  { label: 'B2B Restaurant Solution', href: '/restaurant-kitchen-solutions', icon: 'Utensils' },
+  { label: 'B2B Bar Solution', href: '/bar-services/', icon: 'Wine' },
 ]
 
 // Dining styles dropdown — hand-written (menu collections are not a PILLARS pillar)

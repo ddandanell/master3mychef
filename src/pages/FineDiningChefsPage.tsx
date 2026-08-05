@@ -151,7 +151,7 @@ export default function FineDiningChefsPage() {
     <div ref={ref} className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Hire a Private Chef Bali | Meet the myCHEF Team"
-        description="Meet myCHEF's private chefs in Bali: Michelin-trained Adriano & specialists in Mediterranean, seafood & fire cooking. Hire yours via WhatsApp today."
+        description="Meet myCHEF's private chefs in Bali: Milan-trained Adriano & specialists in Mediterranean, seafood & fire cooking. Hire yours via WhatsApp today."
         canonical="https://mychef.id/fine-dining/our-chefs"
         ogImage="/generated/mychef-finedining-bali-chefs-hero.webp"
         jsonLd={[
@@ -160,7 +160,7 @@ export default function FineDiningChefsPage() {
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           serviceWithOfferSchema({
             name: 'Private Chef Bali — Fine Dining',
-            description: 'Hire a Michelin-trained private chef in Bali for fine dining villa experiences. Mediterranean and Wagyu tasting menus with full service and cleanup included.',
+            description: 'Hire a Milan-trained private chef in Bali for fine dining villa experiences. Mediterranean and Wagyu tasting menus with full service and cleanup included.',
             url: 'https://mychef.id/fine-dining/our-chefs',
             price: '350000',
             unitText: 'per person',

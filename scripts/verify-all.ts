@@ -12,6 +12,7 @@
  * 4. npm run typecheck (if available)
  * 5. npm run build
  * 6. No uncommitted changes in ai-skills/
+ * 7. Every static route is in the sitemap, noindexed, or redirected
  *
  * Run with: npx tsx scripts/verify-all.ts
  */
@@ -97,6 +98,62 @@ function checkPackageJson() {
   }
 }
 
+/**
+ * Every static route in App.tsx must be accounted for: in the sitemap, deliberately
+ * noindexed, or a redirect source. A page that is none of those is live, indexable and
+ * unsubmitted — invisible to Google with nothing in the repo saying that was intended.
+ *
+ * Added 2026-08-05 after an audit found /partner in exactly that state. Gating here
+ * rather than in .github/workflows/ for the reason given at the `lint` call below:
+ * the deploy PAT has no `workflow` scope.
+ */
+function checkRouteSitemapCoverage() {
+  header("Checking route/sitemap coverage");
+
+  const appSrc = readFileSync(resolve("src/App.tsx"), "utf-8");
+  const routes = [...appSrc.matchAll(/path="([^"]+)"/g)]
+    .map((m) => m[1])
+    .filter((p) => p.startsWith("/") && !p.includes(":") && !p.includes("*"))
+    // Trailing-slash aliases resolve to the same component as their canonical form.
+    .filter((p) => p === "/" || !p.endsWith("/"));
+
+  const sitemapSrc = readFileSync(resolve("src/data/sitemap.ts"), "utf-8");
+  const metaSrc = readFileSync(resolve("src/data/page-meta.ts"), "utf-8");
+  const redirectSrc = readFileSync(resolve("src/data/redirects.ts"), "utf-8");
+  const genSrc = readFileSync(resolve("scripts/generate-sitemap.ts"), "utf-8");
+
+  const redirectSources = new Set(
+    [...redirectSrc.matchAll(/from:\s*'([^']+)'/g)].map((m) => m[1])
+  );
+  const noindexPaths = new Set(
+    [...(genSrc.match(/const NOINDEX_PATHS = new Set\(\[([^\]]*)\]/)?.[1] ?? "")
+      .matchAll(/'([^']+)'/g)].map((m) => m[1])
+  );
+  // Paths reachable by the generator: an explicit entry, a metaInfo() key whose
+  // PAGE_META entry carries that path, or the deliberate bar-services exclusion.
+  const metaPaths = new Set(
+    [...metaSrc.matchAll(/path:\s*'([^']+)'/g)].map((m) => m[1])
+  );
+
+  const orphans = routes.filter((p) => {
+    if (redirectSources.has(p) || noindexPaths.has(p)) return false;
+    if (p === "/bar-services" || p.startsWith("/bar-services/")) return false; // owner decision 2026-07-28
+    if (sitemapSrc.includes(`'${p}'`) || sitemapSrc.includes(`"${p}"`)) return false;
+    return !metaPaths.has(p);
+  });
+
+  if (orphans.length > 0) {
+    fail(
+      `${orphans.length} live route(s) are neither in the sitemap, noindexed, nor redirected:\n` +
+        orphans.map((p) => `      ${p}`).join("\n") +
+        `\n    Add each to src/data/sitemap.ts, to NOINDEX_PATHS in scripts/generate-sitemap.ts,\n` +
+        `    or to src/data/redirects.ts. Do not edit public/sitemap.xml by hand.`
+    );
+  } else {
+    pass(`all ${routes.length} static routes accounted for`);
+  }
+}
+
 function runNpmScript(name: string) {
   header(`Running 'npm run ${name}'...`);
   try {
@@ -113,6 +170,7 @@ function main() {
   checkAiSkills();
   checkGitStatus();
   checkPackageJson();
+  checkRouteSitemapCoverage();
 
   // Lint. Re-enabled 2026-07-30 — the precondition the previous note set out
   // ("can be re-enabled once the debt is cleared") is now met: src/ is at zero

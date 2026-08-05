@@ -109,19 +109,16 @@ export default function Footer() {
                     Overview
                   </Link>
                 </li>
-                {pillar.subPages.map((sub) => {
-                  const isPrivateChefBali = pillar.slug === 'fine-dining' && sub.slug === 'private-chef-bali'
-                  return (
+                {pillar.subPages.map((sub) => (
                     <li key={sub.slug}>
                       <Link
-                        to={isPrivateChefBali ? '/' : `${pillar.url}/${sub.slug}`}
+                        to={`${pillar.url}/${sub.slug}`}
                         className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                       >
                         {sub.label}
                       </Link>
                     </li>
-                  )
-                })}
+                  ))}
                 {pillar.slug === 'fine-dining' && (
                   <li>
                     <Link
@@ -200,7 +197,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/catering" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
+                <Link to="/catering/floating-breakfast" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
                   Private Chef Breakfast
                 </Link>
               </li>
@@ -456,7 +453,7 @@ export default function Footer() {
           <Link to="/pricing" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Pricing</Link>
           <Link to="/calculator" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Price Calculator</Link>
           <Link to="/faq" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">FAQ</Link>
-          <Link to="/" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Reviews</Link>
+          <Link to="/reviews" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Reviews</Link>
           <Link to="/why-mychef" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Why myCHEF</Link>
           <Link to="/press" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Press</Link>
           <Link to="/join-our-team" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Join the Team</Link>

@@ -348,6 +348,10 @@ export function buildSitemap(): SitemapEntry[] {
     metaInfo('staffing', 'info', 0.8, 'monthly'),
     metaInfo('contact', 'info', 0.5, 'monthly'),
     metaInfo('certified-partner', 'info', 0.5, 'monthly'),
+    // B2B villa-manager referral programme. Distinct audience from /staffing/for-villa-managers
+    // (that page sells staffing; this one sells a commission partnership). Added 2026-08-05 —
+    // the page was live, indexable and internally linked but had no sitemap entry.
+    metaInfo('partner', 'service', 0.7, 'monthly'),
     metaInfo('press', 'info', 0.3, 'monthly'),
     metaInfo('privacy', 'legal', 0.3, 'yearly'),
     metaInfo('terms', 'legal', 0.3, 'yearly'),
@@ -362,6 +366,17 @@ export function buildSitemap(): SitemapEntry[] {
     metaInfo('blog-dietary-specific-chef-bali', 'blog-post', 0.8, 'monthly', '2026-06-30'),
     metaInfo('blog-hotel-restaurant-chef-staffing', 'blog-post', 0.8, 'monthly', '2026-06-30'),
     metaInfo('blog-indonesian-street-food-private-chef-bali', 'blog-post', 0.8, 'monthly', '2026-06-30'),
+    // Added 2026-08-05 (SEO audit). These eight routes were live, indexable and internally
+    // linked but had never been submitted — no sitemap entry and no PAGE_META entry.
+    // scripts/verify-all.ts now fails the build if a static route ends up in this state again.
+    metaInfo('blog-bachelor-party-bali-private-chef', 'blog-post', 0.7, 'monthly'),
+    metaInfo('blog-corporate-catering-bali-case-studies', 'blog-post', 0.7, 'monthly'),
+    metaInfo('blog-dry-season-menu-bali', 'blog-post', 0.7, 'monthly'),
+    metaInfo('blog-festive-season-menu-bali', 'blog-post', 0.7, 'monthly'),
+    metaInfo('blog-private-chef-seminyak-canggu-ubud-comparison', 'blog-post', 0.7, 'monthly'),
+    metaInfo('blog-private-dinner-party-bali', 'blog-post', 0.7, 'monthly'),
+    metaInfo('blog-wet-season-menu-bali', 'blog-post', 0.7, 'monthly'),
+    metaInfo('pricing-calculator', 'info', 0.7, 'monthly'),
     // Pages without PAGE_META entry (keep explicit)
     { path: '/calculator', type: 'info', title: 'Pricing Calculator | Private Chef Bali | myCHEF.id', description: 'Estimate your private chef, catering, or event costs instantly. Transparent IDR pricing, no hidden fees.', priority: 0.6, changefreq: 'monthly' },
     { path: '/join-our-team', type: 'info', title: 'Chef Jobs Bali | Join the myCHEF Team — Apply via WhatsApp', description: 'Chef jobs in Bali with myCHEF. Roles for chefs, bartenders, waiters and coordinators. Join a team trusted by 560+ events served. Apply via WhatsApp.', priority: 0.5, changefreq: 'monthly' },

@@ -7,7 +7,7 @@ const WA = 6289674072020
 const TRUST_PILLARS = [
   {
     emoji: '🎓',
-    title: 'Michelin-trained leadership',
+    title: 'Milan-trained leadership',
     desc: 'Adriano trained under a Michelin-starred chef in Milan, and his standards set the floor for every dish. The team includes eight named chefs, each with a published speciality, from live-fire BBQ to wellness retreat menus.',
     link: { label: 'meet the chef team', href: '/chefs' },
   },
@@ -225,9 +225,9 @@ export default function WhyMychefPage() {
       <PremiumPage
         slug="why-mychef"
       title="Why 560+ Villas Choose myCHEF"
-      description="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence."
+      description="Why 560+ Bali villas choose myCHEF: Milan-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence."
       seoTitle="Why myCHEF | The Private Chef Company 560+ Bali Villas Trust"
-      seoDescription="Why 560+ Bali villas choose myCHEF: Michelin-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence."
+      seoDescription="Why 560+ Bali villas choose myCHEF: Milan-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence."
       h1="Why 560+ Villas Choose myCHEF"
       subtitle="Anyone can say they're the best private chef service in Bali. We'd rather show you the evidence: named chefs, published prices, guarantees in writing, and a repeat-booking rate that does the talking."
       heroImage="/generated/mychef-location-bali-hub-bali.webp"
@@ -245,7 +245,7 @@ export default function WhyMychefPage() {
           name: 'Why 560+ Villas Choose myCHEF',
           url: 'https://mychef.id/why-mychef',
           about: { '@id': 'https://mychef.id/#business' },
-          description: 'The evidence behind myCHEF: Michelin-trained leadership, a 50+ Indonesian hospitality team, guarantees in writing and 12,000+ guests served.',
+          description: 'The evidence behind myCHEF: Milan-trained leadership, a 50+ Indonesian hospitality team, guarantees in writing and 12,000+ guests served.',
         },
       ]}
         ctaText="Chat on WhatsApp"

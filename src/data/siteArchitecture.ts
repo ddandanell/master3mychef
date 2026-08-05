@@ -73,12 +73,12 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     accent: '#C5A028',
     relatedPillars: ['catering', 'events', 'in-villa-service'],
     subPages: [
-      { slug: 'romantic-dinner', label: 'Romantic Dinner', h1: 'A Private Dinner Built for Two', title: 'Romantic Dinner Bali | Private Villa Chef for Two | myCHEF', description: 'Intimate five-course romantic dinners for two in your Bali villa: candlelight, flowers, sommelier pairing & Michelin-trained service. WhatsApp myCHEF.' },
+      { slug: 'romantic-dinner', label: 'Romantic Dinner', h1: 'A Private Dinner Built for Two', title: 'Romantic Dinner Bali | Private Villa Chef for Two | myCHEF', description: 'Intimate five-course romantic dinners for two in your Bali villa: candlelight, flowers, sommelier pairing & fine-dining service. WhatsApp myCHEF.' },
       { slug: 'tasting-menu', label: 'Tasting Menu', h1: 'A Private Tasting Menu in Your Bali Villa', title: 'Private Tasting Menu Bali | 5 & 7 Course Villa Degustation', description: 'Signature 5 & 7 course private tasting menus in your Bali villa — Italian technique, Balinese ingredients, optional wine pairing. WhatsApp myCHEF.' },
-      { slug: 'chefs-table', label: 'Chef’s Table', h1: "The Chef's Table — At Your Villa", title: 'Chef Table Experience Bali | Private Counter Dining | myCHEF', description: 'A private chef table at your Bali villa: counter-side seating, course-by-course commentary from Michelin-trained chefs. WhatsApp myCHEF.' },
+      { slug: 'chefs-table', label: 'Chef’s Table', h1: "The Chef's Table — At Your Villa", title: 'Chef Table Experience Bali | Private Counter Dining | myCHEF', description: 'A private chef table at your Bali villa: counter-side seating, course-by-course commentary from your head chef. WhatsApp myCHEF.' },
       { slug: 'menus', label: 'Our Menus', h1: 'Our Menus', title: 'Private Chef Menus Bali | 24 Fine Dining Set Menus | myCHEF', description: 'Browse 24 set menus for private villa dining in Bali — vegetarian, seafood, mixed meats & single-meat. From IDR 1.25M per guest.' },
-      { slug: 'our-chefs', label: 'Our Chefs', h1: 'Our Chefs', title: 'Our Chefs | Fine Dining Culinary Team | myCHEF', description: 'Meet the myCHEF fine dining brigade: Michelin-trained chefs crafting private villa dinners and tasting menus across Bali. Meet the team.' },
-      { slug: 'private-chef-bali', label: 'Tasting Menu at Your Villa', h1: 'A Michelin-Trained Tasting Menu. In Your Villa.', title: 'Michelin Tasting Menu Bali | Fine Dining in Your Villa | myCHEF', description: 'A five-course Michelin-trained tasting menu served in your Bali villa. Mediterranean or Wagyu, wine pairing, full chef brigade. From IDR 2.2M++ per person.' },
+      { slug: 'our-chefs', label: 'Our Chefs', h1: 'Our Chefs', title: 'Our Chefs | Fine Dining Culinary Team | myCHEF', description: 'Meet the myCHEF fine dining brigade: six specialist head chefs crafting private villa dinners and tasting menus across Bali. Meet the team.' },
+      { slug: 'private-chef-bali', label: 'Tasting Menu at Your Villa', h1: 'A Milan-Trained Tasting Menu. In Your Villa.', title: 'Michelin Tasting Menu Bali | Fine Dining in Your Villa | myCHEF', description: 'A five-course fine-dining tasting menu served in your Bali villa. Mediterranean or Wagyu, wine pairing, full chef brigade. From IDR 2.2M++ per person.' },
     ],
   },
   catering: {
@@ -228,7 +228,7 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
     label: 'Seminyak',
     h1: 'Private Chef Seminyak — Beachfront Villa Dining',
     title: 'Private Chef Seminyak | Beachfront Villa Dining — myCHEF',
-    description: 'Hire a private chef in Seminyak for beachfront villa dinners, parties, and fine dining. Michelin-trained chefs serving Petitenget and Oberoi area.',
+    description: 'Hire a private chef in Seminyak for beachfront villa dinners, parties, and fine dining. Specialist head chefs serving Petitenget and Oberoi area.',
     intro: 'Seminyak is Bali’s premier villa destination, where beachfront estates meet a world-class food scene. We provide on-demand fine dining that rivals the strip’s best restaurants, served in the privacy of your own villa.',
   },
   canggu: {
@@ -412,7 +412,7 @@ export const LOCATIONS: Record<LocationSlug, LocationPage> = {
     label: 'Ungasan',
     h1: 'Private Chef Ungasan — Clifftop Dining',
     title: 'Private Chef Ungasan | Clifftop Dining — myCHEF',
-    description: 'High-end private chef and event catering in Ungasan. Michelin-trained teams.',
+    description: 'High-end private chef and event catering in Ungasan. Specialist head chefs.',
     intro: 'Serving the premier estates of Ungasan, we deliver an ultra-premium hospitality layer that matches the standard of the world’s finest clifftop villas.',
   },
   pecatu: {

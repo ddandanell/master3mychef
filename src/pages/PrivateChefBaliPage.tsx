@@ -126,13 +126,13 @@ export default function PrivateChefBaliPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Michelin Tasting Menu Bali | Fine Dining in Your Villa | myCHEF"
-        description="A five-course Michelin-trained tasting menu served in your Bali villa. Mediterranean or Wagyu, wine pairing, full chef brigade. From IDR 2.2M++ per person."
+        description="A five-course fine-dining tasting menu served in your Bali villa. Mediterranean or Wagyu, wine pairing, full chef brigade. From IDR 2.2M++ per person."
         canonical={`${SITE}/fine-dining/private-chef-bali`}
         ogImage={`${SITE}/generated/mychef-experience-bali-luna-hero-v2.webp`}
         jsonLd={[
           detailedServiceSchema(
             'Michelin-Trained Private Chef Bali',
-            'A Michelin-trained executive chef and full brigade serve two signature five-course menus — Mediterranean Sea and Wagyu Experience — privately in Bali villas.',
+            'A Milan-trained executive chef and full brigade serve two signature five-course menus — Mediterranean Sea and Wagyu Experience — privately in Bali villas.',
             `${SITE}/fine-dining/private-chef-bali`
           ),
           offerSchema('Mediterranean Sea (5 courses)', 2200000, 'IDR', `${SITE}/fine-dining/private-chef-bali`),
@@ -148,7 +148,7 @@ export default function PrivateChefBaliPage() {
         <div className="absolute inset-0">
           <img
               src="/generated/mychef-experience-bali-luna-hero-v2.webp"
-            alt="Michelin-trained private chef preparing dinner in a Bali villa — myCHEF"
+            alt="Private chef preparing a fine-dining dinner in a Bali villa — myCHEF"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
             className="w-full h-full object-cover" />
@@ -193,8 +193,17 @@ export default function PrivateChefBaliPage() {
               Browse Menus <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
+          {/* Disambiguation link. This URL says "private-chef-bali" but the page sells a one-off
+              five-course tasting menu; day-rate private chef hire lives on /private-chef-bali.
+              Both are in the sitemap, so send hire intent to the pillar rather than losing it. */}
+          <p className="text-white/[60%] text-sm mb-6">
+            Looking for a chef for your whole stay instead?{' '}
+            <Link to="/private-chef-bali" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
+              See private chef day rates in Bali →
+            </Link>
+          </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Michelin-trained chef team</span>
+            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Milan-trained executive chef</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> All groceries included</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full cleanup after dinner</span>
           </div>
@@ -209,7 +218,7 @@ export default function PrivateChefBaliPage() {
           <div className="pcb-reveal">
             <img
               src="/generated/mychef-experience-bali-luna-table.webp"
-              alt="Michelin-trained private chef dinner table in a Bali villa — elegant setting, myCHEF"
+              alt="Private chef dinner table in a Bali villa — elegant setting, myCHEF"
               width={800} height={600} loading="lazy" decoding="async"
               className="w-full h-auto object-cover rounded-[20px]" />
           </div>
@@ -313,7 +322,7 @@ export default function PrivateChefBaliPage() {
           <div className="pcb-reveal order-1 md:order-2">
             <img
               src="/generated/mychef-finedining-bali-luna-chef-portrait.webp"
-              alt="Adriano — myCHEF executive chef, Michelin-trained, Bali private dining"
+              alt="Adriano — myCHEF executive chef, Milan-trained, Bali private dining"
               width={800} height={1000} loading="lazy" decoding="async"
               className="w-full h-auto object-cover rounded-[20px]" />
           </div>

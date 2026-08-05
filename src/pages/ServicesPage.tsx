@@ -85,20 +85,84 @@ const SERVICES = [
 
 const FAQS = [
   {
-    q: "What's the difference between fine dining and catering?",
-    a: 'Fine dining is a multi-course plated experience served course by course for smaller groups. Catering serves larger groups buffet-, family- or grazing-style. Same chefs, same ingredients — different format.',
+    q: "What's the difference between fine dining and catering in Bali?",
+    a: 'Fine dining is multi-course plated service for smaller groups. Catering feeds larger groups buffet-, family- or grazing-style. Same organisation — different format. <a href="/fine-dining">Fine dining →</a> · <a href="/catering">Catering →</a>',
+  },
+  {
+    q: 'What is the difference between private chef and catering?',
+    a: '<a href="/private-chef-bali">Private chef</a> is a day rate for multi-meal villa stays (groceries at cost). Catering is one-off event production. Many groups book both.',
   },
   {
     q: 'Can I combine services?',
-    a: 'Yes — a common pairing is a chef plus waiters and a bartender for a celebration, or a daily villa chef with one fine-dining evening mid-stay. One quote covers everything.',
+    a: 'Yes — chef + waiters + bartender is common, or daily chef with one fine-dining night mid-stay. One quote can cover the stack.',
   },
   {
     q: 'Do you handle dietary requirements?',
-    a: "Yes — vegan, gluten-free, halal, allergies and kids' menus across every service, at no extra charge.",
+    a: "Yes — vegan, gluten-free, halal-sensitive, allergies and kids' menus across services, at no extra charge when briefed early.",
   },
   {
-    q: 'How far ahead should I book?',
-    a: 'A few days for dinners, longer for events and weddings. Same-week requests are often possible — a 50% deposit locks your date.',
+    q: 'How far ahead should I book myCHEF in Bali?',
+    a: 'A few days for dinners; longer for events and weddings. Same-week is often possible. 50% deposit locks the date.',
+  },
+  {
+    q: 'How much do services cost?',
+    a: 'Private chef from IDR 1,000,000++/day; many dinners from ~IDR 700K–1.25M+/person depending on format. Full tables: <a href="/pricing">pricing</a>.',
+  },
+  {
+    q: 'Which service is right for a family villa week?',
+    a: 'Daily <a href="/private-chef-bali">private chef</a> meal plans, optionally plus one BBQ or fine dining night. Kids: <a href="/kids-menus">kids menus</a>.',
+  },
+  {
+    q: 'Which service is right for a wedding?',
+    a: '<a href="/events/weddings">Wedding catering</a> with full staffing — not a single daily chef. Packages also on <a href="/bali-wedding-catering-packages">wedding packages</a>.',
+  },
+  {
+    q: 'Do you provide waiters and bartenders only?',
+    a: 'Yes via <a href="/in-villa-service">in-villa service</a>. Long-term staff placement: <a href="/staffing">staffing</a>.',
+  },
+  {
+    q: 'Can you run experiences like cooking classes or proposal dinners?',
+    a: 'Yes — curated formats on <a href="/experiences">experiences</a>.',
+  },
+  {
+    q: 'Which areas of Bali do you cover?',
+    a: 'Island-wide. <a href="/locations">Locations →</a>',
+  },
+  {
+    q: 'What does "++" mean?',
+    a: '11% government tax + 10% service charge. Quotes show all-in totals before deposit.',
+  },
+  {
+    q: 'Are groceries included?',
+    a: 'Daily private chef: shopping included, food at cost with receipts. Most catering/fine dining packages include ingredients in the menu price.',
+  },
+  {
+    q: 'Do you clean up after service?',
+    a: 'Yes on serviced chef, dining and catering formats.',
+  },
+  {
+    q: 'How do I get a recommendation?',
+    a: 'WhatsApp occasion, guest count and villa area — or use <a href="/recommended-services">recommended services</a> and <a href="/dining-styles">dining styles</a>.',
+  },
+  {
+    q: 'What is the cancellation policy?',
+    a: 'Full refund 14+ days out, 50% at 7–13 days, none under 7. <a href="/cancellation">Policy →</a>',
+  },
+  {
+    q: 'Can corporate teams book myCHEF?',
+    a: 'Yes — dinners, offsites and multi-day programmes. <a href="/events/corporate">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
+  },
+  {
+    q: 'Is there a complete villa hospitality package?',
+    a: 'Yes — transfers, chef, staff, events and concierge on <a href="/complete-villa-experience">complete villa experience</a>.',
+  },
+  {
+    q: 'Where can I read reviews?',
+    a: '<a href="/reviews">Guest reviews</a> and <a href="/why-mychef">why myCHEF</a>.',
+  },
+  {
+    q: 'How do I book?',
+    a: 'WhatsApp or <a href="/book">book</a> / <a href="/quote">quote</a>. Common questions: <a href="/faq">FAQ</a>.',
   },
 ]
 
@@ -386,7 +450,7 @@ export default function ServicesPage() {
       <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Services FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

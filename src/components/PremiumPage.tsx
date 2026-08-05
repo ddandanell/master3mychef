@@ -620,7 +620,12 @@ export default function PremiumPage({
             <h2 className="font-playfair text-3xl md:text-4xl text-center mb-12">
               Frequently Asked
             </h2>
-            <FAQAccordion items={faqs.map(f => ({ q: f.question, a: f.answer }))} />
+            <FAQAccordion
+              items={faqs.map(f => ({ q: f.question, a: f.answer }))}
+              defaultOpenCount={2}
+              showToc={faqs.length >= 8}
+              ctaEvery={faqs.length >= 8 ? 5 : 0}
+            />
           </div>
         </section>
       )}

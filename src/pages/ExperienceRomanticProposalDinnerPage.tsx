@@ -179,14 +179,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  { question: 'How much does a proposal package in Bali cost?', answer: 'The foundation — a full-service styled proposal dinner — starts from IDR 3.5M++ per couple. Photography, music, florals and champagne are itemised add-ons (photographer from IDR 2.4M/2h; musician from IDR 2.4M/hour). Full packages are quoted individually, line by line.' },
-  { question: 'What\'s the difference between this and the proposal dinner?', answer: 'The proposal dinner is the chef-led dinner itself — food-first, intimate, styled table. This package adds the full production around it: floral and candle design, hidden photographer, musician, choreography and weeks of coordination.' },
-  { question: 'Can you keep it a complete surprise?', answer: 'Yes — it\'s the heart of the service. We coordinate only with you, stage everything while your partner is out, and work to whatever cue you choose.' },
-  { question: 'Can you arrange a photographer and musician?', answer: 'Yes. We work with Bali photographers who specialise in discreet proposal coverage and coordinate positioning, lighting and the signal to start shooting. Musicians, from acoustic guitar to violin, are quoted separately.' },
-  { question: 'What happens if it rains?', answer: 'Every terrace and garden setup has a covered fallback position confirmed during planning. The evening moves; the moment doesn\'t.' },
-  { question: 'What if my partner has dietary requirements?', answer: 'Tell us privately during planning and the entire menu is built around them — allergies, vegetarian, halal, anything — without a word said at the table.' },
-  { question: 'How far in advance should we book?', answer: 'Four to six weeks minimum; eight to twelve for peak season. Short-notice proposals are sometimes possible — message us and we\'ll tell you honestly what\'s achievable.' },
-  { question: 'What deposit is required?', answer: 'A 50% deposit confirms the date and team; the remaining 50% is due the day before the evening.' },
+  { question: 'How much does a proposal package in Bali cost?', answer: 'A full-service styled proposal dinner foundation starts from about <strong>IDR 3.5M++ per couple</strong>. Photography, music, florals and champagne are itemised add-ons (e.g. photographer from IDR 2.4M/2h; musician from IDR 2.4M/hour). Everything is line-itemed before deposit.' },
+  { question: 'What is the difference between this package and a proposal dinner?', answer: 'The <a href="/proposal-dinner">proposal dinner</a> is chef-led and food-first. This package adds full production: florals, candles, hidden photographer, musician, choreography and multi-week coordination. For a simpler couple dinner see <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
+  { question: 'Can you keep the proposal a complete surprise?', answer: 'Yes — that is the core of the service. We coordinate only with you (and villa staff if needed), stage while your partner is out, and follow your cue.' },
+  { question: 'Can you arrange a photographer and musician?', answer: 'Yes. Discreet Bali proposal photographers and musicians (guitar, violin and more) are coordinated for position, lighting and the shoot signal — quoted separately.' },
+  { question: 'What happens if it rains on proposal night?', answer: 'Every terrace/garden plan has a covered fallback confirmed in planning. The evening relocates; the moment does not cancel.' },
+  { question: 'What if my partner has dietary requirements?', answer: 'Tell us privately during planning. The whole menu is built around allergies, vegetarian, vegan, halal-sensitive or pregnancy-safe needs without announcing it at the table.' },
+  { question: 'How far in advance should we book a Bali proposal package?', answer: 'Four to six weeks minimum; eight to twelve in peak season. Short-notice is sometimes possible — we will say honestly what is achievable.' },
+  { question: 'What deposit is required?', answer: '50% deposit confirms date and team; balance due the day before. <a href="/cancellation">Cancellation policy →</a>' },
+  { question: 'Which villas and areas work best?', answer: 'Any villa with a workable kitchen and a private terrace/garden angle. Popular areas: Uluwatu cliffs, Seminyak/Canggu pools, Ubud jungle. <a href="/locations">Locations →</a>' },
+  { question: 'Can family or friends hide nearby?', answer: 'Yes — we can stage a reveal for a small group or keep it strictly two-person. Brief us on who knows.' },
+  { question: 'Do you provide the engagement ring tray or box styling?', answer: 'Styling support is available; the ring is yours. We time the presentation with courses or champagne.' },
+  { question: 'Is champagne included?', answer: 'Optional add-on or BYO. We chill, open and serve. Pair with <a href="/experiences/champagne-oyster-experience">champagne &amp; oyster</a> as a prelude if you want.' },
+  { question: 'Can we continue with honeymoon chef service after?', answer: 'Yes — multi-day dining after the yes via <a href="/honeymoon-chef">honeymoon chef</a> or <a href="/private-chef-bali">private chef day rates</a>.' },
+  { question: 'How secret is communication with the villa?', answer: 'We use coded briefs with managers when needed and never message the surprise guest. You approve every external contact.' },
+  { question: 'What time should the team arrive?', answer: 'Usually hours before the planned moment so setup is complete and staff are invisible when your partner returns.' },
+  { question: 'Can kids be at the villa?', answer: 'Possible with careful timing (kids with family elsewhere during the moment). Pure couple proposals are simpler.' },
+  { question: 'Do you clean up after the proposal dinner?', answer: 'Yes — full kitchen and service cleanup so the night ends on the moment, not the dishes.' },
+  { question: 'What if the chef or photographer is delayed?', answer: 'We run supervised teams with backup protocols. Critical path vendors are confirmed in writing before the day.' },
+  { question: 'How do I start planning confidentially?', answer: 'WhatsApp with “proposal — confidential”, your date window, villa area and budget band. We reply discreetly. <a href="/quote">Quote →</a> · <a href="/experiences">experiences →</a>' },
+  { question: 'Is this available outside peak sunset hours?', answer: 'Yes — sunrise, garden lunch proposals and late private dinners all work when the villa privacy plan is solid.' },
 ]
 
 const RELATED_PAGES = [

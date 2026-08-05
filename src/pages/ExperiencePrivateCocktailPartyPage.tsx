@@ -216,10 +216,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  { question: 'How much does a cocktail party package cost in Bali?', answer: 'Cocktail party packages run from IDR 700K–1.2M per person depending on staffing and menu. Free-flow and BYOB bar models are quoted separately.' },
-  { question: 'How many cocktails per person should I plan for a party?', answer: 'Plan two to three drinks per guest for the first two hours, then one drink per hour after that. Full bar-planning tables are in our bartender-ratio guide.' },
-  { question: 'How much is a cocktail party for 15 / 25 / 40 guests?', answer: 'Group-size pricing is built from the per-person band, with free-flow and dry-hire bar variants shown in your proposal.' },
-  { question: 'What canapés pair with cocktails?', answer: 'We design canapé and finger-food menus to match the drinks list, balancing salty, fresh, and bite-sized options that work standing up.' },
+  { question: 'How much does a cocktail party package cost in Bali?', answer: 'Cocktail party packages typically run from about <strong>IDR 700K–1.2M per person ++</strong> depending on staffing and canapés. Free-flow vs BYOB bar models are quoted separately. Bartender-only hire starts from IDR 350K/hour (3-hour minimum) via <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'How many cocktails per person should I plan?', answer: 'Plan two to three drinks per guest for the first two hours, then about one drink per hour after. Your proposal includes a bar plan matched to guest count and party length.' },
+  { question: 'How much is a cocktail party for 15, 25 or 40 guests?', answer: 'Built from the per-person band plus staffing ratio. Free-flow and dry-hire variants appear line-by-line on your proposal so you can compare.' },
+  { question: 'What canapés pair with cocktails?', answer: 'Chef-led canapés and finger food designed for standing service — salty, fresh, bite-sized, continuous flow rather than formal courses. Larger food formats: <a href="/catering">catering</a> or <a href="/events/villa-parties">villa parties</a>.' },
+  { question: 'Do you bring the full bar setup?', answer: 'Yes — station, glassware, ice plan, garnishes, tools and staffing. Spirits/wine are usually client-supplied or sourced at cost unless free-flow is quoted.' },
+  { question: 'Is alcohol included in the package price?', answer: 'Usually not. Packages cover professionals and canapés; bottles are BYO or sourced. Confirm free-flow options on the quote.' },
+  { question: 'Can you create custom and zero-proof cocktails?', answer: 'Yes — classics, Bali-inspired signatures and zero-proof options made with the same care. Mixology design: <a href="/in-villa-service/mixology">mixology</a>.' },
+  { question: 'How many bartenders do we need?', answer: 'Depends on headcount and service style. Small parties may run one bartender; larger villa parties scale staff so queues never form. We recommend the ratio on your quote.' },
+  { question: 'Do you clean up after the cocktail party?', answer: 'Yes — break-down, clear stations and restore the villa service areas. You wake up without bar mess.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage. <a href="/locations">Locations →</a>' },
+  { question: 'How far in advance should I book a villa cocktail party?', answer: '1–2 weeks is comfortable; peak season and large guest counts need more. Last-minute is often possible.' },
+  { question: 'What deposit and cancellation apply?', answer: '50% deposit confirms; balance due the day before. <a href="/cancellation">Cancellation policy →</a>' },
+  { question: 'Can this be a hens, bucks or birthday party?', answer: 'Yes — very common. For kids birthdays use <a href="/experiences/kids-birthday-chef-party">kids birthday chef party</a>; for adult milestones stack canapés + bar or full <a href="/events/birthdays">birthday catering</a>.' },
+  { question: 'Can we add a DJ, music or photographer?', answer: 'We focus on food and bar; entertainment partners can be coordinated when you brief us. Proposal-level production also on <a href="/experiences/romantic-proposal-dinner">proposal packages</a>.' },
+  { question: 'What if it rains on a poolside bar setup?', answer: 'We plan covered bar positions during site briefing so service continues under shelter.' },
+  { question: 'Can the same night include a seated dinner after cocktails?', answer: 'Yes — cocktail hour into <a href="/fine-dining">fine dining</a>, <a href="/three-course">three-course</a> or <a href="/bbq-grill">BBQ</a>.' },
+  { question: 'Do you work with villa managers on noise and access?', answer: 'Yes. Share complex rules early so load-in and quiet hours are respected.' },
+  { question: 'Is this different from B2B bar services for venues?', answer: 'This page is private villa parties. Venue operators should see <a href="/bar-services/">bar services</a> for consulting and management.' },
+  { question: 'How do I get a cocktail party quote?', answer: 'WhatsApp date, villa area, guest count and free-flow vs BYOB preference. Reply usually within the hour. <a href="/quote">Quote →</a> · <a href="/experiences">all experiences →</a>' },
+  { question: 'What if a bartender cannot make it?', answer: 'We send a verified replacement or refund that role — supervised teams, not random freelancers. <a href="/why-mychef">Why myCHEF →</a>' },
 ]
 
 const RELATED_PAGES = [

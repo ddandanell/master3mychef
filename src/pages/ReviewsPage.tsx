@@ -4,6 +4,7 @@ import { CalendarDays, MessageCircle, Star } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 type ReviewCategory = 'All' | 'Private Dinners' | 'Weddings' | 'Retreats & Corporate' | 'Celebrations & BBQs'
 
@@ -149,14 +150,32 @@ const REVIEWS: Review[] = [
   },
 ]
 
+const REVIEWS_FAQS = [
+  { q: 'Are these real myCHEF reviews?', a: 'Yes — each review names occasion, guest count, location and month. We curate which appear here, but every one is from a real Bali booking.' },
+  { q: 'What is the 98% repeat-or-referred figure?', a: 'The share of bookings from guests who booked before or were referred by someone who had. It is the loyalty metric we watch closest. Context: <a href="/why-mychef">why myCHEF</a>.' },
+  { q: 'Can I read reviews for my occasion or Bali area?', a: 'Yes — filter by occasion on this page. Area pages and private chef area guides also carry local context for Seminyak, Canggu, Ubud, Uluwatu and more. <a href="/locations">Locations →</a>' },
+  { q: 'How do I leave a review after my event?', a: 'Your concierge shares a review link after service. Honest feedback — good or critical — is read by the whole team.' },
+  { q: 'Do you publish negative feedback?', a: 'We prioritise useful, dated guest outcomes. If something goes wrong, our first response is fix or refund — then improve the system. See the replacement promise on <a href="/why-mychef">why myCHEF</a>.' },
+  { q: 'How many events has myCHEF served in Bali?', a: '560+ events, 500+ villa bookings and 12,000+ guests — the same framing used across the site for operational proof.' },
+  { q: 'Are reviews only for fine dining?', a: 'No — dinners, BBQs, weddings, retreats, family chef weeks and celebrations all appear. Match format via <a href="/services">services</a>.' },
+  { q: 'Can I talk to past clients?', a: 'Privacy comes first. We can share more case detail for corporate or multi-day programmes on request after a real enquiry.' },
+  { q: 'Where else can I verify myCHEF?', a: 'Google Business Profile, public chef profiles, published pricing and cancellation policy. Start at <a href="/about">about</a> and <a href="/chefs">chefs</a>.' },
+  { q: 'Do reviews mention cleanup and punctuality?', a: 'Often yes — guests repeatedly note arrival timing, calm service and kitchens left cleaner than found.' },
+  { q: 'Can I filter for wedding catering reviews?', a: 'Use the occasion filters on this page, then explore <a href="/events/weddings">wedding catering</a> for service detail.' },
+  { q: 'Are family and kids experiences reviewed?', a: 'Yes where guests shared them. For kids-first formats see <a href="/kids-menus">kids menus</a> and <a href="/experiences/kids-birthday-chef-party">kids birthday chef party</a>.' },
+  { q: 'Do long-stay private chef guests leave reviews?', a: 'Yes — multi-day villa chef weeks are a major category. Rates: <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'How quickly do you respond if a review flags an issue?', a: 'Operations issues are handled same-day via WhatsApp with the same fix-or-refund standard used on service day.' },
+  { q: 'Is star rating the same as Google rating?', a: 'On-page stars reflect guest feedback we display. Google stars are independent — both matter; we do not invent platform scores.' },
+  { q: 'Can corporate buyers see case studies?', a: 'Yes — <a href="/corporate-case-studies">corporate case studies</a> and <a href="/events/corporate">corporate events</a>.' },
+  { q: 'Do you serve my villa area if I only see reviews from another area?', a: 'Coverage is island-wide. A review from Canggu does not limit service in Ubud or Uluwatu. <a href="/locations">Locations →</a>' },
+  { q: 'How do reviews affect which chef I get?', a: 'We match cuisine and occasion first. You can still request a named chef from <a href="/chefs">our chefs</a>.' },
+  { q: 'Where should I start if reviews convinced me?', a: 'Send date, guests and villa area on WhatsApp — or <a href="/book">book</a> / <a href="/quote">quote</a> / <a href="/faq">FAQ</a>.' },
+  { q: 'Can I see menus that match reviewed dinners?', a: 'Yes — <a href="/dining-styles">dining styles</a>, <a href="/fine-dining/menus">set menus</a>, <a href="/bbq-grill">BBQ</a> and <a href="/fine-dining">fine dining</a>.' },
+]
+
 const REVIEWS_SCHEMAS = [
   breadcrumbSchema('Reviews', `${SITE}/reviews`),
-  faqPageSchema([
-    { question: 'Are these real reviews?', answer: 'Yes — each review names the occasion, guest count, location and month. We curate which appear here, but every one is from a real booking.' },
-    { question: 'What is the 98% repeat-or-referred figure?', answer: 'The share of bookings that come from guests who booked before or were referred by someone who had. It\'s the number we watch closest.' },
-    { question: 'Can I read reviews for my specific occasion or area?', answer: 'Yes — filter above by occasion (dinners, weddings, retreats, celebrations). Location pages carry their own area reviews, e.g. Uluwatu and Canggu.' },
-    { question: 'How do I leave a review after my event?', answer: 'Your concierge shares a review link after service. Honest feedback — good or bad — is read by the whole team.' },
-  ]),
+  faqPageSchema(REVIEWS_FAQS.map((f) => ({ question: f.q, answer: f.a }))),
 ]
 
 export default function ReviewsPage() {
@@ -355,6 +374,22 @@ export default function ReviewsPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-16 px-6 bg-white border-y border-[#ECE5D5] scroll-mt-24">
+        <div className="max-w-[760px] mx-auto">
+          <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4 text-center" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            Questions
+          </p>
+          <h2 className="text-2xl md:text-4xl text-center mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Reviews FAQ
+          </h2>
+          <p className="text-center text-[#4A4745] mb-10 leading-relaxed">
+            How we collect feedback, what the loyalty metrics mean, and how to verify myCHEF before you book in Bali.
+          </p>
+          <FAQAccordion items={REVIEWS_FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

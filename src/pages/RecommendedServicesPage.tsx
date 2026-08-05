@@ -34,20 +34,84 @@ const SCENARIOS = [
 
 const FAQS = [
   {
-    question: 'What if I am choosing between fine dining and catering?',
-    answer: 'Tell us the guest count, style of meal and how formal you want it to feel. We will recommend the right fit and explain why — usually the deciding factors are headcount and pacing, not budget.',
+    question: 'What if I am choosing between fine dining and catering in Bali?',
+    answer: 'Tell us guest count, formality and pacing. Headcount usually decides: intimate plated → <a href="/fine-dining">fine dining</a>; larger groups → <a href="/catering">catering</a> or <a href="/events">events</a>.',
   },
   {
-    question: 'Can one WhatsApp message really cover everything?',
-    answer: 'Yes — that is the point of this page. Describe the moment; we translate it into the right service, menu and staffing.',
+    question: 'Can one WhatsApp message cover everything?',
+    answer: 'Yes — that is the point of this page. Describe the moment; we translate it into service, menu and staffing.',
   },
   {
     question: 'Who answers these enquiries?',
-    answer: 'Marco and the myCHEF concierge team. You will get a specific recommendation from a person, not a generic sales reply.',
+    answer: 'The myCHEF concierge team. You get a specific recommendation from a person, not a generic bot reply.',
   },
   {
     question: 'What does the guidance cost?',
-    answer: 'Nothing. Recommendations are free and come with a fixed, upfront quote if you decide to book — no obligation.',
+    answer: 'Nothing. Recommendations are free and come with a fixed quote if you book — no obligation.',
+  },
+  {
+    question: 'When should I choose a daily private chef instead of one dinner?',
+    answer: 'Multi-day villa stays, families and anyone tired of restaurant logistics. Day rates live on <a href="/private-chef-bali">private chef Bali</a>.',
+  },
+  {
+    question: 'What is best for a romantic night for two?',
+    answer: '<a href="/fine-dining/romantic-dinner">Romantic dinner</a> or a tasting path on <a href="/fine-dining">fine dining</a>. Proposals: <a href="/experiences/romantic-proposal-dinner">proposal package</a>.',
+  },
+  {
+    question: 'What is best for kids and multi-gen families?',
+    answer: 'Daily chef + <a href="/kids-menus">kids menus</a>, or three-course adults with early kids service. See <a href="/dining-styles">dining styles</a>.',
+  },
+  {
+    question: 'What is best for a pool party?',
+    answer: '<a href="/bbq-grill">BBQ grill</a>, <a href="/catering/bbq-catering">BBQ catering</a> or a cocktail party experience. Staff via <a href="/in-villa-service">in-villa service</a>.',
+  },
+  {
+    question: 'What is best for a wedding in Bali?',
+    answer: 'Full <a href="/events/weddings">wedding catering</a> with staffing — not a single daily chef. Packages: <a href="/bali-wedding-catering-packages">wedding packages</a>.',
+  },
+  {
+    question: 'Do you recommend services for corporate retreats?',
+    answer: 'Yes — multi-day meals and gala nights. <a href="/events/corporate">Corporate events</a> · <a href="/catering/retreat-catering">Retreat catering</a>.',
+  },
+  {
+    question: 'How fast will I get a recommendation?',
+    answer: 'Usually within 2 hours on WhatsApp once you share date, guests, area and vibe.',
+  },
+  {
+    question: 'Will you push the most expensive option?',
+    answer: 'No. We match format to headcount and occasion. Published starts on <a href="/pricing">pricing</a> keep the conversation honest.',
+  },
+  {
+    question: 'Can you combine chef, bartender and transport?',
+    answer: 'Yes — one quote can stack <a href="/private-chef-bali">chef</a>, <a href="/in-villa-service/bartenders">bartender</a> and <a href="/vip-transport-bali">VIP transport</a>.',
+  },
+  {
+    question: 'What if I only know the occasion, not the menu?',
+    answer: 'That is enough. We shortlist 1–2 formats and sample menus; you approve before any deposit.',
+  },
+  {
+    question: 'Are recommendations available for all Bali areas?',
+    answer: 'Yes island-wide. <a href="/locations">Locations →</a>',
+  },
+  {
+    question: 'Where do I compare menu formats myself?',
+    answer: '<a href="/dining-styles">Dining styles</a> and <a href="/services">services</a> if you want to browse first.',
+  },
+  {
+    question: 'What deposit applies if I book after a recommendation?',
+    answer: 'Typically 50% to confirm; balance the day before. <a href="/cancellation">Cancellation policy →</a>',
+  },
+  {
+    question: 'Can villa managers use this page for guests?',
+    answer: 'Yes — send guest date/headcount and we return options managers can forward. Partner paths also on <a href="/partner">partner</a>.',
+  },
+  {
+    question: 'Is there a complete done-for-you villa package?',
+    answer: 'Yes — <a href="/complete-villa-experience">complete villa experience</a> for transfers, chef, staff and events under one team.',
+  },
+  {
+    question: 'How do I start?',
+    answer: 'WhatsApp occasion + date + guests + villa area, or open <a href="/book">book</a> / <a href="/quote">quote</a> / <a href="/faq">FAQ</a>.',
   },
 ]
 

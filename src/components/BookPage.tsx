@@ -71,10 +71,14 @@ export default function BookPage() {
         ogImage={getPageMeta('book').ogImage}
         noindex
         jsonLd={[breadcrumbSchema('Book', getPageMeta('book').canonical), faqPageSchema([
-          { question: 'How do I book a private chef in Bali?', answer: 'Simply send us a WhatsApp message with your date, villa location, and number of guests. We reply within the hour and send a full proposal within 24 hours.' },
-          { question: 'How far in advance do I need to book?', answer: 'We require a minimum of 48 hours advance notice. Bookings within 24 hours require 100% payment upfront. For events and catering, 3–7 days ahead is recommended.' },
-          { question: 'Do you serve villas outside Seminyak and Canggu?', answer: 'Yes — we cover all of Bali including Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and beyond. Just let us know your location when booking.' },
-          { question: 'What is included in the price?', answer: 'All-inclusive pricing covers fresh ingredients, professional chef and service staff, equipment, full table setup, and cleanup after your event. No hidden fees.' },
+          { question: 'How do I book a private chef in Bali?', answer: 'WhatsApp your date, villa location and guest count. We reply within about an hour and send a proposal within 24 hours. Or start from the service cards on this page — fine dining, catering, events, in-villa staff or long-term staffing.' },
+          { question: 'How far in advance do I need to book?', answer: 'A few days for most dinners; 3–7+ days for catering and events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+          { question: 'Do you serve villas outside Seminyak and Canggu?', answer: 'Yes — island-wide including Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan and beyond. Share your pin when booking. See /locations.' },
+          { question: 'What is included in the price?', answer: 'Depends on service: daily private chef is a day rate with groceries at cost; fine dining and many catering packages include ingredients, chef team, setup and cleanup. Your quote lists every line before deposit.' },
+          { question: 'What deposit confirms a booking?', answer: 'Usually 50% to lock date and team; balance due the day before. See /cancellation for refund tiers.' },
+          { question: 'Can I book multiple services in one message?', answer: 'Yes — chef + bartender + transport is common. We return one coordinated plan and quote.' },
+          { question: 'Do you handle dietary requirements at booking?', answer: 'Yes — tell us allergies and diets in the first message so menus are designed correctly from the start.' },
+          { question: 'Is this booking page the same as getting a quote?', answer: 'This page routes you to the right service and WhatsApp path. /quote is available when you want a structured proposal form.' },
         ])]}
       />
 

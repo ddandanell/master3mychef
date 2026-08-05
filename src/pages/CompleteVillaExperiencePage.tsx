@@ -81,10 +81,26 @@ const GUESTS = [
 ]
 
 const FAQS = [
-  { q: 'What does the Complete Villa Experience actually include?', a: 'It is a fully managed villa stay: VIP airport transfers, villa preparation, daily private chef service, event planning, bar service, in-villa staffing, concierge extras and full cleanup/handback. Every element is tailored to your group, villa and occasion.' },
-  { q: 'Can I book just part of the experience, or does it have to be the full package?', a: 'The Complete Villa Experience is designed as an integrated package, but we can also scope individual services such as transport, chef days or event staffing. If you only need one element, explore our VIP Transport Bali, villa event packages or in-villa service pages.' },
-  { q: 'Which areas of Bali do you cover?', a: 'We operate across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa, Pererenan and beyond. For remote estates or inter-island stays, contact us on WhatsApp and we will confirm logistics.' },
-  { q: 'How far in advance should I book?', a: 'For peak season and full villa takeovers, 4–6 weeks is ideal. For shorter stays or transport-only arrangements, 1–2 weeks is usually sufficient. Last-minute requests are often possible — message us and we will confirm within the hour.' },
+  { q: 'What does the Complete Villa Experience include in Bali?', a: 'A fully managed villa stay: VIP airport transfers, villa preparation, daily private chef service, event planning, bar service, in-villa staffing, concierge extras and full cleanup/handback — tailored to your group and villa.' },
+  { q: 'Can I book only part of the package?', a: 'Yes. The full experience is integrated, but you can scope transport, chef days or staffing alone via <a href="/vip-transport-bali">VIP transport</a>, <a href="/private-chef-bali">private chef</a>, <a href="/villa-event-packages">villa event packages</a> or <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'How much does a complete villa experience cost?', a: 'Pricing is custom by nights, guest count, meal plan, events and staff levels. You receive a fixed written quote before deposit — never a vague after-the-fact total. Related rates: <a href="/pricing">pricing</a>.' },
+  { q: 'Which areas of Bali do you cover?', a: 'Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa, Pererenan and beyond. <a href="/locations">Locations →</a>' },
+  { q: 'How far in advance should I book?', a: 'Peak season / full takeovers: 4–6 weeks ideal. Shorter stays or transport-only: 1–2 weeks often enough. Last-minute is frequently possible — WhatsApp us.' },
+  { q: 'Is daily private chef included every day?', a: 'Yes when scoped into the package — meal-count plans match <a href="/private-chef-bali">private chef</a> (1–3 meals/day). Groceries at cost with receipts unless a package includes food differently (stated on the quote).' },
+  { q: 'Do you handle airport transfers both ways?', a: 'Yes — VIP arrivals and departures can be included. Standalone: <a href="/vip-transport-bali">VIP transport Bali</a>.' },
+  { q: 'Can you plan a villa party or BBQ mid-stay?', a: 'Yes — event nights stack onto the stay: <a href="/bbq-grill">BBQ</a>, <a href="/catering">catering</a> or <a href="/events">events</a>.' },
+  { q: 'Is bar and bartender service included?', a: 'Optional within the package. Standalone rates on <a href="/in-villa-service/bartenders">bartenders</a> and <a href="/bar-services/">bar services</a>.' },
+  { q: 'Do you clean the villa at handback?', a: 'Service cleanup after meals is standard; full villa handback standards are scoped when housekeeping is included — confirm on the quote.' },
+  { q: 'Can families with kids book this?', a: 'Yes — kids menus, early service and multi-gen meal plans are common. <a href="/kids-menus">Kids menus →</a>' },
+  { q: 'What deposit and cancellation apply?', a: 'Typically 50% deposit to confirm the package; balance schedule stated on the quote. Cancellation tiers follow <a href="/cancellation">policy</a> unless a custom event contract says otherwise.' },
+  { q: 'Can wedding weeks use Complete Villa Experience?', a: 'Yes — welcome dinners, rehearsal, ceremony catering and guest breakfasts can sit under one operations team. <a href="/events/weddings">Wedding catering →</a>' },
+  { q: 'Do you coordinate with our villa manager?', a: 'Daily. Share manager contacts early for access, inventory and quiet hours.' },
+  { q: 'Is this available for corporate offsites?', a: 'Yes — multi-day retreats with meals, coffee stations and gala dinners. <a href="/events/corporate">Corporate events →</a> · <a href="/catering/retreat-catering">Retreat catering →</a>' },
+  { q: 'What if headcount changes during the stay?', a: 'Tell us early. Meal prep and staffing adjust; large last-minute jumps may change the quote for remaining days.' },
+  { q: 'Can we request Chef Rotation during a long stay?', a: 'On 7+ day chef scopes, Chef Rotation is included so cuisine can change day by day. See <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'How do I get a Complete Villa Experience proposal?', a: 'WhatsApp arrival date, nights, guest count, villa area and must-have services. We reply with a scoped proposal. <a href="/quote">Quote →</a> · <a href="/contact">Contact →</a>' },
+  { q: 'What if a staff member cannot make a shift?', a: 'Supervised teams with replacement cover — same promise as our chef and service guarantees. <a href="/why-mychef">Why myCHEF →</a>' },
+  { q: 'Is alcohol included?', a: 'Usually client-supplied or sourced at cost. Service staff and mixology are the hire; bottles are separate unless the quote says otherwise.' },
 ]
 
 export default function CompleteVillaExperiencePage() {
@@ -406,7 +422,7 @@ export default function CompleteVillaExperiencePage() {
       <section className="py-20 md:py-28 bg-white cve-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Complete Villa Experience FAQ" subtitle="Everything you need to know about our end-to-end villa hospitality service in Bali." />
-          <FAQAccordion items={FAQS} defaultOpenCount={2} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

@@ -44,19 +44,83 @@ const STATS = [
 const FAQS = [
   {
     question: 'Is myCHEF a company or a marketplace?',
-    answer: 'A company. Every chef and server is part of our in-house team — we don\'t broker strangers.',
+    answer: 'A company. Every chef and server is part of our in-house team — we do not broker strangers from a marketplace. Meet the team on <a href="/chefs">our chefs</a>.',
   },
   {
     question: 'What happens if something goes wrong on the day?',
     answer: 'We fix it on the spot. If a chef is unavailable, a replacement of equivalent calibre arrives within 2 hours — same menu brief, same standard — or you receive a 100% refund.',
   },
   {
-    question: 'Why do guests book again?',
-    answer: '98% of bookings are repeat or referred. The pattern in reviews is consistent: fast replies, calm service, food that exceeds the setting, kitchens left cleaner than found.',
+    question: 'Why do guests book myCHEF again in Bali?',
+    answer: 'About 98% of bookings are repeat or referred. The pattern in <a href="/reviews">reviews</a>: fast replies, calm service, food that exceeds the villa setting, kitchens left cleaner than found.',
   },
   {
     question: 'Do you only do fine dining?',
-    answer: 'No — the same team cooks poolside BBQs, family dinners, retreat meal plans and weddings for up to 200 guests. <a href="/services">See all services →</a>',
+    answer: 'No — the same organisation runs poolside BBQs, family dinners, retreat meal plans, catering and weddings for up to ~200 guests. Browse <a href="/services">all services</a>, <a href="/private-chef-bali">private chef</a> and <a href="/catering">catering</a>.',
+  },
+  {
+    question: 'How is myCHEF different from hiring a freelance private chef in Bali?',
+    answer: 'You get a chef + systems: named specialists, backup cover, grocery receipts at cost on daily hire, supervised staff, fixed quotes and a replacement-or-refund promise — not one person juggling shopping, cooking, service and cleanup alone.',
+  },
+  {
+    question: 'Are your prices published or do I have to enquire first?',
+    answer: 'Day rates and many menu starts are published — private chef from IDR 1,000,000++/day and dining-style collections with open starting prices. Full tables on <a href="/pricing">pricing</a>.',
+  },
+  {
+    question: 'What does "++" mean on myCHEF prices?',
+    answer: '11% government tax + 10% service charge. Every written quote states the all-in total before you pay a deposit.',
+  },
+  {
+    question: 'How fast do you reply on WhatsApp?',
+    answer: 'Usually within 2 hours during operating hours. Menu proposals typically follow within 24 hours once we have date, guests and villa area.',
+  },
+  {
+    question: 'What deposit and cancellation policy apply?',
+    answer: '50% deposit locks the booking; balance due the day before. Full refund 14+ days out, 50% at 7–13 days, none under 7 days. <a href="/cancellation">Cancellation policy →</a>',
+  },
+  {
+    question: 'Do you clean the villa kitchen after service?',
+    answer: 'Yes on serviced chef, fine dining and catering formats — dishes, stations and counters restored before we leave.',
+  },
+  {
+    question: 'Can you handle allergies and mixed dietary needs?',
+    answer: 'Yes, at no extra charge when briefed in advance — vegan, gluten-free, nut-free, shellfish allergy, pregnancy-safe, halal-sensitive and kids plates. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide →</a>',
+  },
+  {
+    question: 'Which areas of Bali do you cover?',
+    answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and more. <a href="/locations">Locations →</a>',
+  },
+  {
+    question: 'Can I request a specific chef?',
+    answer: 'Yes for multi-day stays and many dinners. Otherwise we match by cuisine and occasion from our head-chef roster. <a href="/chefs">Meet the chefs →</a>',
+  },
+  {
+    question: 'Do you work with villa managers and wedding planners?',
+    answer: 'Daily. Share contacts early so access, power, parking and noise rules are locked before deposit.',
+  },
+  {
+    question: 'Is myCHEF only for luxury villas?',
+    answer: 'We specialise in villa hospitality, but formats range from daily family chef service to fine dining and large events — choose on budget and occasion, not just villa tier.',
+  },
+  {
+    question: 'Can you staff waiters and bartenders without food?',
+    answer: 'Yes via <a href="/in-villa-service">in-villa service</a>. Long-term placements sit under <a href="/staffing">staffing</a>.',
+  },
+  {
+    question: 'How do I verify you are a real company in Bali?',
+    answer: 'Public chef profiles, published pricing, cancellation policy, NAP on site, Google Business Profile and hundreds of dated guest reviews. Start at <a href="/about">about</a> and <a href="/reviews">reviews</a>.',
+  },
+  {
+    question: 'What if my plans change mid-stay?',
+    answer: 'Menu and meal-count changes are normal on multi-day chef hire. Event date changes follow the cancellation tiers; we always re-quote in writing before extra charges.',
+  },
+  {
+    question: 'Do you offer monthly or live-in chef arrangements?',
+    answer: 'Yes — weekly/monthly discounts on <a href="/private-chef-bali">private chef day rates</a>, plus <a href="/staffing/live-in-chef">live-in chef</a> placement for longer households.',
+  },
+  {
+    question: 'How do I start with myCHEF?',
+    answer: 'WhatsApp date, guest count, villa area and what you want (daily chef, dinner, BBQ, wedding). Or <a href="/book">book</a> / <a href="/quote">quote</a> / <a href="/faq">FAQ</a>.',
   },
 ]
 

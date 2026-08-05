@@ -77,23 +77,83 @@ const SECTIONS = [
 const FAQS = [
   {
     question: 'Who founded myCHEF?',
-    answer: `myCHEF was founded by Adriano, a chef who trained under Michelin-level standards in ${siteFacts.founderTrainingCity} before bringing that discipline to Bali villa hospitality in ${siteFacts.foundingYear}.`,
+    answer: `myCHEF was founded by Adriano, a chef who trained under Michelin-level standards in ${siteFacts.founderTrainingCity} before bringing that discipline to Bali villa hospitality in ${siteFacts.foundingYear}. Meet him and the team on <a href="/chefs">our chefs</a>.`,
   },
   {
     question: 'How large is the myCHEF team?',
-    answer: 'We operate with 50+ staff across chefs, service, logistics, and coordination — built to handle everything from intimate dinners to large-format events.',
+    answer: 'We operate with 50+ staff across chefs, service, logistics and coordination — sized for intimate dinners through large-format events.',
   },
   {
     question: 'How many villas and guests has myCHEF served?',
-    answer: 'myCHEF has served 560+ events, 500+ villa bookings and more than 12,000 guests across Bali through private dining, catering, weddings, retreats, and extended villa stays.',
+    answer: `${siteFacts.reviewFraming} across private dining, catering, weddings, retreats and extended villa stays in Bali.`,
   },
   {
     question: 'What makes myCHEF different from a freelance private chef?',
-    answer: 'You get a full team, proven systems, menu depth, backup coverage, and fine-dining standards — not just one individual trying to manage shopping, cooking, service, and cleanup alone.',
+    answer: 'A full team, systems, menu depth, backup coverage and fine-dining standards — not one person juggling shopping, cooking, service and cleanup alone. <a href="/why-mychef">Why myCHEF →</a>',
   },
   {
     question: 'Can I meet the chefs before booking?',
-    answer: 'Yes. Visit the chefs page to see the lead profiles, then message us on WhatsApp if you want to request a specific chef or discuss the right fit for your event.',
+    answer: 'Yes. Browse lead profiles on <a href="/chefs">chefs</a>, then WhatsApp if you want a specific chef or cuisine fit.',
+  },
+  {
+    question: 'Is myCHEF based in Bali?',
+    answer: `Yes. Operations are Bali-based with address and contact published sitewide (${siteFacts.addressDisplay}). Service covers villa areas island-wide via <a href="/locations">locations</a>.`,
+  },
+  {
+    question: 'What services does myCHEF offer?',
+    answer: 'Private chef day rates, fine dining, catering, events, experiences, in-villa staff and long-term staffing. Start at <a href="/services">services</a>.',
+  },
+  {
+    question: 'Are your prices transparent?',
+    answer: 'Yes — published day rates and menu starts, with ++ tax/service explained and all-in quotes before deposit. <a href="/pricing">Pricing →</a>',
+  },
+  {
+    question: 'Do you only serve luxury travellers?',
+    answer: 'We specialise in villa hospitality for couples, families, groups, retreats and corporate hosts — formats scale from daily chef hire to weddings.',
+  },
+  {
+    question: 'How do I contact myCHEF?',
+    answer: `WhatsApp ${siteFacts.phoneDisplay}, email ${siteFacts.email}, or <a href="/contact">contact</a> / <a href="/book">book</a>.`,
+  },
+  {
+    question: 'What is your cancellation policy?',
+    answer: `${siteFacts.cancellationPolicy} Full detail: <a href="/cancellation">cancellation</a>.`,
+  },
+  {
+    question: 'Do you hire chefs and hospitality staff?',
+    answer: 'Yes — careers and team growth via <a href="/join-our-team">join our team</a>, and client-side placement via <a href="/staffing">staffing</a>.',
+  },
+  {
+    question: 'Can villa managers partner with myCHEF?',
+    answer: 'Yes. Partner and referral pathways exist for villa operators — see <a href="/partner">partner</a> and related villa programmes.',
+  },
+  {
+    question: 'Where can I read independent guest feedback?',
+    answer: 'Curated, dated reviews on <a href="/reviews">reviews</a> plus Google Business Profile signals tied to our public NAP.',
+  },
+  {
+    question: 'Do you cook Indonesian and international cuisine?',
+    answer: 'Both. Specialist head chefs cover Balinese/Indonesian, Mediterranean, Japanese, BBQ, plant-based and pastry.',
+  },
+  {
+    question: 'Is grocery markup part of your model?',
+    answer: `On daily private chef hire, ${siteFacts.groceryPolicy.toLowerCase()} with receipts. Package dining usually includes ingredients in the menu price.`,
+  },
+  {
+    question: 'How long has myCHEF operated in Bali?',
+    answer: `Since ${siteFacts.foundingYear}, building from fine-dining roots into full villa hospitality operations.`,
+  },
+  {
+    question: 'Can you support multi-day family villa stays?',
+    answer: 'Yes — meal plans from one to three meals per day with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali →</a>',
+  },
+  {
+    question: 'Do you cater weddings and corporate retreats?',
+    answer: 'Yes. <a href="/events/weddings">Weddings</a>, <a href="/events/corporate">corporate events</a> and <a href="/catering/retreat-catering">retreat catering</a>.',
+  },
+  {
+    question: 'What should I send in my first message?',
+    answer: 'Date, villa area, guest count and the service you want (daily chef, dinner, BBQ, wedding). We reply with availability and a fixed quote path.',
   },
 ]
 

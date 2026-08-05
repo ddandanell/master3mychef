@@ -292,12 +292,84 @@ const SECTIONS = [
 
 const FAQS = [
   {
-    question: 'Who will cook at my villa?',
-    answer: 'A named chef from our 50+ person Indonesian team, matched to your cuisine and event. Chef profiles are public on the myCHEF chefs page, and your brief is confirmed before the date.',
+    question: 'Who will cook at my villa in Bali?',
+    answer: 'A named chef from our 50+ person Indonesian team, matched to your cuisine and event. Profiles are public on this page; your brief is confirmed before the date. Book via <a href="/private-chef-bali">private chef</a> or <a href="/book">book</a>.',
   },
   {
     question: 'Are your chefs Indonesian?',
-    answer: 'Yes. All myCHEF chefs are Indonesian professionals, led by Milan-trained leadership. This is a genuine differentiator versus expat-chef competitors.',
+    answer: 'Yes. myCHEF chefs are Indonesian professionals, led by Milan-trained leadership — a real differentiator versus expat-only marketplace freelancers.',
+  },
+  {
+    question: 'Can I request a specific myCHEF chef?',
+    answer: 'Yes, especially for multi-day stays and repeat guests. For single dinners we match the best available specialist for your cuisine if your first choice is booked.',
+  },
+  {
+    question: 'What is Chef Rotation?',
+    answer: 'On weekly (7+ day) private chef bookings you can request a different specialist by day — Japanese one night, Balinese the next — at no extra day-rate charge. Details on <a href="/private-chef-bali">private chef Bali</a>.',
+  },
+  {
+    question: 'Who is Adriano?',
+    answer: 'Adriano is the founder and executive chef, trained to fine-dining standards in Milan. He leads technique standards for the team and still cooks select villa evenings. More on <a href="/about">about myCHEF</a>.',
+  },
+  {
+    question: 'Do head chefs cook every booking personally?',
+    answer: 'Head chefs set recipes and standards and cook many bookings themselves. Larger or concurrent services may run with brigade members trained to the same standard under head-chef systems.',
+  },
+  {
+    question: 'What cuisines can your chefs cook?',
+    answer: 'Italian &amp; Mediterranean, Japanese &amp; seafood, Indonesian &amp; Balinese, BBQ &amp; open flame, plant-based &amp; wellness, and pastry/desserts — plus custom fusion when briefed.',
+  },
+  {
+    question: 'How are chefs trained and vetted?',
+    answer: 'Multi-month training, food-safety practice, villa service standards and ongoing supervision. You are not hiring an unverified WhatsApp number.',
+  },
+  {
+    question: 'What if my assigned chef cannot make it?',
+    answer: 'We send a verified replacement of equivalent calibre or refund that service. <a href="/why-mychef">Why myCHEF →</a>',
+  },
+  {
+    question: 'Can chefs handle allergies and kids menus?',
+    answer: 'Yes — dietary redesign is routine. See <a href="/kids-menus">kids menus</a> and our <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">allergy guide</a>.',
+  },
+  {
+    question: 'Do chefs shop for groceries?',
+    answer: 'Yes on daily private chef hire. Shopping work is included; food is billed at cost with receipts. Fine dining/catering packages usually include ingredients in the per-person price.',
+  },
+  {
+    question: 'Which areas of Bali do chefs travel to?',
+    answer: 'Island-wide villa coverage. <a href="/locations">Locations →</a>',
+  },
+  {
+    question: 'How far in advance should I book a named chef?',
+    answer: 'For peak season or a specific head chef, 2+ weeks is safer. Many dinners book with a few days’ notice when schedules allow.',
+  },
+  {
+    question: 'Can the same chef cook fine dining and casual family meals?',
+    answer: 'Yes. Multi-day stays often mix simple breakfasts with one tasting-level dinner. Formats live under <a href="/dining-styles">dining styles</a> and <a href="/fine-dining">fine dining</a>.',
+  },
+  {
+    question: 'Do you place long-term household chefs?',
+    answer: 'Yes via <a href="/staffing">staffing</a> and <a href="/staffing/live-in-chef">live-in chef</a> — different from holiday day-rate hire.',
+  },
+  {
+    question: 'How do I book after choosing a chef style?',
+    answer: 'WhatsApp cuisine preference, date, guests and villa area. We confirm who is available and send a fixed quote. <a href="/quote">Quote →</a>',
+  },
+  {
+    question: 'Are pastry and dessert specialists available?',
+    answer: 'Yes — celebration cakes, plated desserts and petit fours for dinners and events.',
+  },
+  {
+    question: 'Can chefs run a cooking class or sushi masterclass?',
+    answer: 'Yes as curated experiences: <a href="/experiences/private-cooking-class">cooking class</a> and <a href="/experiences/sushi-masterclass">sushi masterclass</a>.',
+  },
+  {
+    question: 'Do chefs bring equipment for villa kitchens?',
+    answer: 'Specialised tools travel with the team when the menu needs them; standard villa kitchens cover most services.',
+  },
+  {
+    question: 'Where can I read guest feedback on the chef team?',
+    answer: 'Dated reviews on <a href="/reviews">reviews</a> and occasion stories across fine dining, catering and private chef pages.',
   },
 ]
 

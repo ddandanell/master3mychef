@@ -73,31 +73,26 @@ const SEGMENTS = [
 ]
 
 const HUB_FAQS = [
-  {
-    question: 'What bar services does MyChef offer in Bali?',
-    answer:
-      'We offer bar audits, costing and inventory control, cocktail menu development, signature cocktail creation, bar staff training, temporary bartender staffing, permanent bar staff recruitment, new bar setup, monthly bar management support, bar equipment supply and rental, and the complete bar performance programme.',
-  },
-  {
-    question: 'Do you only work with hotels and restaurants?',
-    answer:
-      'No. We work with boutique hotels, luxury villas, beach clubs, restaurants, cafés, wedding organisers, villa-management companies, yacht charters and private estates across Bali.',
-  },
-  {
-    question: 'How quickly can you respond to a bar staffing emergency?',
-    answer:
-      'For temporary bartender staffing we can usually confirm availability within a few hours and deploy vetted staff for events with reasonable lead time. Urgent venue cover requests are prioritised and handled through WhatsApp.',
-  },
-  {
-    question: 'Are your bartenders employed by MyChef or by the venue?',
-    answer:
-      'Temporary staff are employed by MyChef, so payroll, BPJS and compliance sit with us. Permanent recruitment places a candidate as a direct venue hire once the trial period is complete.',
-  },
-  {
-    question: 'How do I get a proposal for my venue?',
-    answer:
-      'Message us on WhatsApp with your venue type, location, the service you need and your preferred timeline. A bar specialist will reply within four business hours with tailored next steps or a written proposal.',
-  },
+  { question: 'What bar services does myCHEF offer in Bali?', answer: 'Venue bar staffing, bartender hire, mixology programmes, emergency cover and B2B bar consulting for hotels, restaurants, beach clubs and villas. Explore <a href="/bar-services/">bar services</a> and villa <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Do you only work with hotels and restaurants?', answer: 'No — villas, beach clubs, events and wedding bars too. Private villa cocktail parties live under <a href="/experiences/private-cocktail-party">private cocktail party</a>.' },
+  { question: 'How quickly can you respond to a bar staffing emergency?', answer: 'Same-day and next-day cover is often possible in South Bali when shifts open — WhatsApp with venue, time and headcount.' },
+  { question: 'Are bartenders employed by myCHEF or freelancers?', answer: 'Supervised myCHEF bar teams with briefing and replacement cover — not random marketplace freelancers.' },
+  { question: 'How do I get a proposal for my venue?', answer: 'Share venue type, shift pattern, service style and start date — we return a written proposal. <a href="/bar-services/contact">Bar services contact</a>.' },
+  { question: 'What is the typical bartender rate for villas?', answer: 'Private villa bartenders from about IDR 350,000/hour with a 3-hour minimum. <a href="/in-villa-service/bartenders">Details →</a>' },
+  { question: 'Do you supply alcohol and glassware?', answer: 'Glassware and tools can be scoped; alcohol is usually client-supplied or sourced at cost.' },
+  { question: 'Can you design signature cocktail menus?', answer: 'Yes — mixology and menu development for venues and villa events. <a href="/in-villa-service/mixology">Mixology →</a>' },
+  { question: 'Wedding and event bar teams?', answer: 'Yes — scaled to guest count for villas and venues. <a href="/events/weddings">Wedding catering</a> food pairing available.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide with densest coverage in Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua and Jimbaran.' },
+  { question: 'Training for existing venue teams?', answer: 'B2B programmes can include training and SOPs via bar services packages.' },
+  { question: 'Emergency no-show cover?', answer: 'Replacement bar staff when available under our staffing guarantee model.' },
+  { question: 'How do villa private bars differ from venue contracts?', answer: 'Villa hires are shift-based event staffing; venues often need recurring rosters and SOPs.' },
+  { question: 'Deposit terms?', answer: 'Typically 50% to confirm shifts or programmes; balance as quoted.' },
+  { question: 'Cancellation?', answer: 'Follows standard tiers unless a venue contract states otherwise. <a href="/cancellation">Policy →</a>' },
+  { question: 'Can you staff New Year and peak season?', answer: 'Yes with early booking — peak nights fill first.' },
+  { question: 'English-speaking bartenders?', answer: 'Yes for guest-facing villa and international venue service.' },
+  { question: 'Zero-proof programmes?', answer: 'Yes — full zero-proof cocktail lists.' },
+  { question: 'How to start a B2B conversation?', answer: 'WhatsApp or <a href="/bar-services/contact">contact</a> with venue details.' },
+  { question: 'Related villa F&B?', answer: 'Pair bars with <a href="/catering">catering</a> or <a href="/private-chef-bali">private chef</a> for full hospitality.' },
 ]
 
 export default function BarServicesHubPage() {
@@ -560,7 +555,7 @@ export default function BarServicesHubPage() {
               Common questions about bar services in Bali
             </h2>
           </div>
-          <FAQAccordion items={HUB_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} dark />
+          <FAQAccordion items={HUB_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} dark />
           <div className="mt-10 text-center">
             <a
               href="/bar-services/faq/"

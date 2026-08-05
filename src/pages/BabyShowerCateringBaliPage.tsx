@@ -122,42 +122,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'How do you handle pregnancy dietary guidelines?',
-    answer: 'We brief chefs specifically on pregnancy dietary guidelines and mark all dishes clearly. Raw fish, unpasteurised cheeses, raw eggs and high-mercury fish are excluded from the menu, and every dish is reviewed before the brief is finalised. Our kitchens handle nuts, shellfish, dairy, gluten and eggs, so we cannot guarantee a fully allergen-free preparation — tell us your requirements in writing before the event and we will build the menu around them.',
-  },
-  {
-    question: 'Do you provide a non-alcoholic drinks station?',
-    answer: 'Yes, this is our default for baby showers. We do beautiful mocktail and juice setups with tropical fresh ingredients — virgin mojitos, watermelon coolers, lychee spritzes, and coconut water punch are all included. Guests who want wine or spirits can be accommodated separately.',
-  },
-  {
-    question: 'How many guests can you accommodate?',
-    answer: '8–40 guests for a villa baby shower setting. Below 8, the setup effort is disproportionate; above 40, we recommend discussing a custom format. The sweet spot for a villa baby shower is typically 12–25 guests.',
-  },
-  {
-    question: 'Can you make a custom themed cake?',
-    answer: 'We partner with Bali cake designers and can coordinate a custom cake for your baby shower. The cake is quoted separately from the catering package. Just let us know the theme, colours, and any dietary requirements for the cake.',
-  },
-  {
-    question: 'Do you coordinate the decoration or florals?',
-    answer: 'We can refer you to our florist and decoration partners who specialise in villa events. Our own scope covers all food and drinks styling — the grazing table presentation, drinks station setup, and dish labelling. For florals and venue decoration, our partners handle that side.',
-  },
-  {
-    question: 'Can guests with different dietary requirements be accommodated?',
-    answer: 'Yes — vegan, gluten-free, and nut-free guests are all handled simultaneously. We label every dish clearly. When you confirm your booking, simply list all dietary requirements and we build the menu around them from the start.',
-  },
-  {
-    question: 'How far in advance should I book a baby shower chef?',
-    answer: '1–2 weeks is ideal for most dates. For peak season (July–August and December), 3–4 weeks is recommended. Same-week bookings are sometimes possible depending on chef availability — message us to check.',
-  },
-  {
-    question: 'Do you bring all the equipment and tableware?',
-    answer: 'Yes. Our team brings all cooking equipment, serving boards, grazing table props, and glassware for the drinks station. You supply the table surface; we bring everything else.',
-  },
-  {
-    question: 'Can the baby shower be set up outdoors by the pool?',
-    answer: 'Absolutely. Most villa baby showers are set up poolside or on the terrace. We assess the space on arrival and build the grazing table and drinks station to suit the natural light and breeze. Shade and temperature are always considered.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

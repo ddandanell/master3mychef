@@ -460,6 +460,17 @@ const FAQS = [
   { q: 'How far ahead should we book?', a: 'Two to four weeks is ideal; for peak season (June–September), earlier is better so we can reserve the right chef for your full dates.' },
   { q: 'Can guests have alcohol at a wellness retreat?', a: 'That is your call as the organiser — we serve to your programme rules, from fully dry retreats to a single wine-paired closing dinner.' },
   { q: 'Can you guarantee an allergen-free environment?', a: 'No. We take reasonable precautions — intake forms, dish labelling and separation procedures — but we cannot guarantee an entirely allergen-free environment, particularly in third-party villa or venue kitchens. Guests with serious allergies should provide complete written requirements before the event.' },
+  { q: 'How much does catering in Bali cost?', a: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { q: 'What formats do you offer?', a: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { q: 'Is catering the same as private chef hire?', a: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Do prices include staff and cleanup?', a: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { q: 'Can you cook in an Airbnb villa?', a: 'Yes with a workable kitchen — share the listing when booking.' },
+  { q: 'Minimum guest counts?', a: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { q: 'Can menus be customised?', a: 'Yes — proteins, spice, diets locked before shopping.' },
+  { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront.' },
+  { q: 'Can we add bartenders?', a: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { q: 'Kids and allergies?', a: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { q: 'How do I book catering?', a: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
 ]
 
 /**
@@ -1182,7 +1193,7 @@ export default function CateringRetreatPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="FAQ" title="Retreat Catering FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={6} />
+          <FAQAccordion items={FAQS} defaultOpenCount={6} showToc ctaEvery={5} />
         </div>
       </section>
 

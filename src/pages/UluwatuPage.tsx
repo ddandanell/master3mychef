@@ -9,30 +9,26 @@ const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Uluwatu. Can you send a menu proposal?')
 
 const FAQS = [
-  {
-    q: 'Where should we eat out in Uluwatu?',
-    a: 'Clifftop sunset venues for the big-view experience, Bingin and Padang-Padang beach grills for barefoot seafood, and the Ungasan corridor for casual local meals. Everything requires transport — plan around the sunset.',
-  },
-  {
-    q: 'Is Uluwatu dining really that spread out?',
-    a: "Yes — venues are kilometres apart along cliff roads, and there is no walkable dining strip. It's the main reason in-villa dining is so popular with Bukit villa guests.",
-  },
-  {
-    q: 'How much does private dining in Uluwatu cost?',
-    a: 'Clifftop villa dinners start at IDR 700K–750K per person and seafood BBQs at IDR 700K–900K, quoted ++ (11% tax plus 10% service). Wedding and event menus range higher depending on production. Quotes are fixed upfront.',
-  },
-  {
-    q: 'How does sunset timing work for a villa dinner?',
-    a: "We plan the run sheet around the day's sunset: aperitifs in the light, first course as the sun drops, mains under the stars — adjusted for the season and your terrace's exposure.",
-  },
-  {
-    q: 'Can you cater a clifftop wedding dinner?',
-    a: 'Yes — rehearsal dinners and wedding receptions with full chef brigade, waitstaff, bar service and complete production, coordinated with your villa or venue manager.',
-  },
-  {
-    q: 'Are there travel fees for remote villas?',
-    a: 'A small travel allowance can apply for remote headland properties; it\'s always quoted upfront before you confirm.',
-  },
+  { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
+  { q: 'Same prices as other areas?', a: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { q: 'Fine dining available here?', a: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { q: 'BBQ and parties?', a: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { q: 'Daily chef for a week?', a: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'Staff and bartenders?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'How far ahead to book here?', a: 'A few days typical; peak season longer.' },
+  { q: 'Last-minute possible?', a: 'Often yes — WhatsApp the area and date.' },
+  { q: 'Kids-friendly service?', a: 'Yes — <a href="/kids-menus">kids menus</a>.' },
+  { q: 'How to book for this area?', a: 'WhatsApp villa pin, dates and guests — <a href="/book">book</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const SCENE = [

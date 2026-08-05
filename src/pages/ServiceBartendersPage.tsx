@@ -85,14 +85,26 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: "How much does a private bartender cost in Bali?", a: "IDR 350,000 per hour with a 3-hour minimum, covering the bartender, full bar kit, glassware, ice and garnishes. Alcohol is separate — bring your own from our shopping list, or we source everything for a 15% service fee. Rates are ++ (11% tax + 10% service)." },
-  { q: "Is the alcohol included?", a: "Not in the hourly rate — this keeps pricing fair, since you only pay for the bottles you actually want. We provide an exact shopping list, or source certified, licensed-distributor stock for you." },
-  { q: "Is the alcohol you source genuine?", a: "Yes. We purchase only from licensed distributors with excise-stamped stock, and local spirits such as arak come only from licensed Balinese producers. Bali's counterfeit spirits market is real — sourcing is the one place never to cut corners." },
-  { q: "What cocktails can your bartenders make?", a: "All the classics — Martini, Old Fashioned, Mojito, Margarita — plus signature cocktails designed for your event. Premium bartenders offer molecular and flair techniques." },
-  { q: "Do you offer non-alcoholic options?", a: "Absolutely. Mocktails, fresh juices, infused waters and zero-proof cocktails are standard, and increasingly popular." },
-  { q: "Can you do a themed bar?", a: "Yes — Tiki, Prohibition, Tropical, Mediterranean and more. We design the menu, garnishes and presentation to match." },
-  { q: "What happens if we run low on alcohol?", a: "We monitor stock through service and alert you early. For remote villas we recommend a 20% buffer on initial purchases." },
-  { q: "How far in advance should I book, and which areas do you cover?", a: "3–7 days for standard service; 2–4 weeks for premium events in peak season. Same-day bookings are often possible. We cover all of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and beyond; remote areas may carry a modest travel fee." },
+  { q: 'How much does a private bartender cost in Bali?', a: 'IDR 350,000 per hour with a 3-hour minimum, covering the bartender, full bar kit, glassware, ice and garnishes. Alcohol is separate — bring your own from our shopping list, or we source everything for a 15% service fee. Rates are ++ (11% tax + 10% service).' },
+  { q: 'Is the alcohol included?', a: 'Not in the hourly rate — this keeps pricing fair, since you only pay for the bottles you actually want. We provide an exact shopping list, or source certified, licensed-distributor stock for you.' },
+  { q: 'Is the alcohol you source genuine?', a: 'Yes. We purchase only from licensed distributors with excise-stamped stock, and local spirits such as arak come only from licensed Balinese producers. Bali\'s counterfeit spirits market is real — sourcing is the one place never to cut corners.' },
+  { q: 'What cocktails can your bartenders make?', a: 'All the classics — Martini, Old Fashioned, Mojito, Margarita — plus signature cocktails designed for your event. Premium bartenders offer molecular and flair techniques.' },
+  { q: 'Do you offer non-alcoholic options?', a: 'Absolutely. Mocktails, fresh juices, infused waters and zero-proof cocktails are standard, and increasingly popular.' },
+  { q: 'Can you do a themed bar?', a: 'Yes — Tiki, Prohibition, Tropical, Mediterranean and more. We design the menu, garnishes and presentation to match.' },
+  { q: 'What happens if we run low on alcohol?', a: 'We monitor stock through service and alert you early. For remote villas we recommend a 20% buffer on initial purchases.' },
+  { q: 'How far in advance should I book, and which areas do you cover?', a: '3–7 days for standard service; 2–4 weeks for premium events in peak season. Same-day bookings are often possible. We cover all of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and beyond; remote areas may carry a modest travel fee.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
+  { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
+  { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },
+  { q: 'Alcohol included?', a: 'No — BYO or sourced at cost; hire covers the professional.' },
+  { q: 'Waiter ratio?', a: 'About one waiter per 10 guests for formal service.' },
+  { q: 'Butler service?', a: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
+  { q: 'Mixology and signature cocktails?', a: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },
+  { q: 'Areas covered?', a: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { q: 'Combine with private chef?', a: 'Yes — most common luxury setup.' },
+  { q: 'Vetted staff?', a: 'Employed/supervised teams with replacement-or-refund cover.' },
+  { q: 'How to book staff?', a: 'WhatsApp date, area, headcount and roles needed.' },
 ]
 
 export default function ServiceBartendersPage() {
@@ -269,7 +281,7 @@ export default function ServiceBartendersPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Bartender Hire FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

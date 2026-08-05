@@ -70,26 +70,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "Does a private chef in Sanur have experience cooking for families with young children?",
-    answer: "Yes. Sanur is Bali's most family-oriented area and our Sanur chefs are experienced with parallel family menus — cooking adult dishes alongside mild, child-friendly options with different timing. This is the most common format in Sanur. Specify ages and preferences when booking.",
-  },
-  {
-    question: "Can I book a private chef for multiple meals over a 2-week villa stay in Sanur?",
-    answer: "Yes. Multi-session bookings are common in Sanur. You can book a chef for a specific number of meals per week across your stay — for example, 2 dinners and 1 brunch per week. Multi-session bookings receive a discount and the chef adapts menus based on your evolving preferences as the stay progresses.",
-  },
-  {
-    question: "Does myCHEF provide chefs for corporate events and team dinners in Sanur?",
-    answer: "Yes. Corporate group dinners for teams staying at Sanur villa properties or conference hotels are a regular part of our Sanur business. We can provide full catering for 10-40 guests including waitstaff. Contact us with your group size, date, and venue details.",
-  },
-  {
-    question: "Can a myCHEF chef source ingredients from Sindhu market in Sanur?",
-    answer: "Yes. For Sanur bookings, our chefs regularly source from Sindhu morning market and the Kesiman area wet markets. Fresh local produce and Balinese ingredients sourced from these markets are part of what makes a Sanur private chef dinner distinctly local and high quality.",
-  },
-  {
-    question: "Do you cover expat household regular meal services in Sanur?",
-    answer: "Yes. We provide ongoing household chef arrangements for Sanur's expat community — chefs who visit regularly (weekly or several times per week) to cook meals for your household. This is a longer-term arrangement separate from a single event booking. See our household chef guide for details.",
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'From IDR 1,000,000++/day for one meal (chef + assistant). Two meals IDR 1.8M++, three IDR 2.7M++. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'Do you serve this Bali area?', answer: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Is there a travel fee?', answer: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { question: 'Can you cook in Airbnb villas here?', answer: 'Yes with a workable kitchen — share the listing.' },
+  { question: 'Same prices as other areas?', answer: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
 ]
 
 export default function PrivateChefSanurGuidePage() {

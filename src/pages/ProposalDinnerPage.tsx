@@ -157,6 +157,20 @@ const FAQS = [
   { question: 'Can you arrange a photographer for the proposal moment?', answer: 'Yes — we have a network of Bali villa photographers who specialise in natural, unobtrusive event photography. We coordinate their timing and positioning. Photographer fees are billed separately.' },
   { question: 'What does a proposal dinner cost in Bali?', answer: 'Base packages start from IDR 3,500,000++ per person (minimum two persons). A complete proposal evening typically totals IDR 7,000,000–15,000,000 for two persons. High-end packages can reach IDR 25,000,000–50,000,000++.' },
   { question: 'Do you handle proposal coordination beyond just the dinner?', answer: 'Yes — floral and rose petal setup, candle arrangements, champagne staging, villa staff briefing, and photographer coordination. We handle everything so you can focus on the moment.' },
+  { question: 'What private experiences do you offer?', answer: 'Cocktail parties, sushi masterclass, cooking class, kids birthday chef party, champagne & oyster, proposal dinners. <a href="/experiences">Experiences</a>.' },
+  { question: 'Do you bring equipment?', answer: 'Yes — tools, stations and ingredients for the experience.' },
+  { question: 'Can experiences be customised?', answer: 'Yes — duration, guest count and menu flow are tailored.' },
+  { question: 'Setup and cleanup included?', answer: 'Yes — we run the experience end to end.' },
+  { question: 'Hotels or only villas?', answer: 'Mostly villas; venues possible with permission.' },
+  { question: 'Dietary needs?', answer: 'Built in when briefed at enquiry.' },
+  { question: 'How far ahead to book?', answer: '2–4 weeks ideal; peak and proposals longer.' },
+  { question: 'Combine with dinner after?', answer: 'Yes — into fine dining, three-course or BBQ.' },
+  { question: 'Kids allowed?', answer: 'Depends on format — kids parties and family cooking classes yes.' },
+  { question: 'Deposit?', answer: '50% typical to confirm.' },
+  { question: 'Areas?', answer: 'Bali-wide. <a href="/locations">Locations</a>.' },
+  { question: 'How to book?', answer: 'WhatsApp experience, date, area, guests — <a href="/quote">quote</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
 ]
 
 const RELATED_PAGES = [

@@ -153,38 +153,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: "What's the best Balinese dish for a large villa dinner?",
-    answer: 'Babi guling (roasted suckling pig) is the crowd favourite for groups of 8 or more — it requires full-day preparation and creates a genuine ceremonial atmosphere. For groups that include non-pork eaters, a rijsttafel (rice table) with 12–15 dishes is the most versatile option.',
-  },
-  {
-    question: 'Is Balinese cuisine very spicy?',
-    answer: 'Traditional Balinese uses chilies, but heat is always customisable. We adjust sambal intensity from very mild to fiery based on guest preferences. Guests with low spice tolerance should inform us at booking — most dishes can be made mild without losing their character.',
-  },
-  {
-    question: 'What seasonal ingredients are best in Bali right now?',
-    answer: "Bali's dry season (April–October) brings the best highland vegetables: sweet tomatoes, corn, mushrooms, and strawberries from Baturiti. The wet season (November–March) is ideal for tropical fruits — rambutan, mangosteens, starfruit, and jackfruit. Fish is excellent year-round from Jimbaran market.",
-  },
-  {
-    question: 'Can I mix Balinese and international cuisine in one menu?',
-    answer: 'Absolutely — hybrid menus are popular. A typical approach: Balinese-style amuse-bouche and appetisers, then a choice of traditional or Western main, finishing with a Balinese dessert like black rice pudding or pandan panna cotta.',
-  },
-  {
-    question: 'How much advance notice is needed for dietary accommodations?',
-    answer: 'Provide all dietary requirements at booking time. Specialist sourcing for serious allergies (nuts, shellfish) requires 48+ hours minimum. Last-minute changes limit what the chef can safely prepare.',
-  },
-  {
-    question: "What's the difference between a catering menu and a fine dining tasting menu?",
-    answer: 'Catering menus focus on group service, volume, and variety — designed so a chef can serve 8–20 guests efficiently. Fine dining tasting menus are plated individually, paced over 2–3 hours, and built around a single chef showcasing artistry in 4–7 courses. See our fine dining page for the difference in detail.',
-  },
-  {
-    question: 'Do your chefs use fresh local produce or imports?',
-    answer: "Local produce is always preferred and sourced daily. Imports are used for specific ingredients not available in Bali — French cheeses, Japanese wagyu, specific wine pairings. We tell you at booking which components require import sourcing and the associated cost.",
-  },
-  {
-    question: 'Can myCHEF create a plant-based menu for a yoga retreat?',
-    answer: 'Yes — plant-forward and fully vegan menus are one of our specialties in Bali. We design around fresh highland vegetables, coconut milk, tempeh, tofu, jackfruit, and tropical fruits. Multi-day retreat catering with daily menu variety is available for groups of 4–30 guests.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

@@ -9,30 +9,26 @@ const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning a private dinner at home in Denpasar. Can you send a menu proposal?')
 
 const FAQS = [
-  {
-    q: 'Where should we eat in Denpasar?',
-    a: 'Renon is the city\'s expat dining heart — cafés, bakeries and international restaurants around the green. For local institutions, the night markets and long-running warungs serve the food residents actually queue for. The Sanur-edge corridor adds beachside options minutes from the city.',
-  },
-  {
-    q: 'What are the private dining options in Denpasar?',
-    a: 'Denpasar has few restaurant private rooms — the city\'s real private dining happens at home. Houses, apartments and residential compounds across Renon, Panjer and south Denpasar host chef-cooked dinners without the drive to the villa districts.',
-  },
-  {
-    q: 'Can we hire a private chef in Denpasar?',
-    a: 'Yes — Denpasar is our home base, so response is the fastest in the city. Menus, formats and fixed pricing are on the service page — hire a private chef in Denpasar via the link below.',
-  },
-  {
-    q: 'Do you serve Denpasar residences, not just tourist villas?',
-    a: 'Yes — houses and apartments, not only villas. Residential bookings are standard for us in Denpasar: family dinners, milestone celebrations, embassy-residence hosting and recurring weekly chef service all happen in ordinary city kitchens.',
-  },
-  {
-    q: 'Do you charge a travel fee to Denpasar?',
-    a: 'We\'re based in Panjer — Denpasar is home turf, so there are no travel games: your fixed upfront quote covers everything, and any cost is confirmed before you book, never on the day.',
-  },
-  {
-    q: 'Can dietary requirements be handled?',
-    a: 'Yes — vegetarian, vegan, gluten-free, halal and allergy-aware menus are planned and shopped for in advance. Tell us when you enquire.',
-  },
+  { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
+  { q: 'Same prices as other areas?', a: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { q: 'Fine dining available here?', a: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { q: 'BBQ and parties?', a: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { q: 'Daily chef for a week?', a: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'Staff and bartenders?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'How far ahead to book here?', a: 'A few days typical; peak season longer.' },
+  { q: 'Last-minute possible?', a: 'Often yes — WhatsApp the area and date.' },
+  { q: 'Kids-friendly service?', a: 'Yes — <a href="/kids-menus">kids menus</a>.' },
+  { q: 'How to book for this area?', a: 'WhatsApp villa pin, dates and guests — <a href="/book">book</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const SCENE = [

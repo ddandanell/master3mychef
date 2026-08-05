@@ -58,30 +58,26 @@ const NOT_INCLUDED = [
 ]
 
 const FAQS = [
-  {
-    q: 'How far in advance should I book?',
-    a: 'Weddings should be booked 2-3 months in advance. This gives us time to lock the best chefs, plan the full service, and coordinate with your other vendors.',
-  },
-  {
-    q: 'Can you handle dietary restrictions for many guests?',
-    a: 'Yes. We regularly handle mixed dietary tables (vegan, gluten-free, halal, allergies). The chef will have a detailed breakdown and prep accordingly.',
-  },
-  {
-    q: 'Do you provide a wedding cake?',
-    a: 'We can cook savoury desserts, but for traditional wedding cakes, we recommend local pastry chefs. We\'ll coordinate timing and serving.',
-  },
-  {
-    q: 'What if the guest count changes?',
-    a: 'Notify us as soon as possible. We can usually adjust team size and quantities. Changes within 48 hours may incur ingredient overages.',
-  },
-  {
-    q: 'Can we have a rehearsal dinner too?',
-    a: 'Yes. Many couples book a separate rehearsal or welcome dinner 1-2 days before the wedding. We\'ll coordinate both events at a package rate.',
-  },
-  {
-    q: 'What about cocktail hour or pre-dinner drinks?',
-    a: 'We can provide a full bar with bartender and appetizers during cocktail hour. This is coordinated as part of the overall service plan.',
-  },
+  { q: 'How much does wedding catering in Bali cost?', a: 'Receptions typically IDR 1.5M–3M++ per person; intimate formats can start lower. See <a href="/events/weddings">wedding catering</a> and <a href="/bali-wedding-catering-packages">packages</a>.' },
+  { q: 'Do you offer menu tastings for weddings?', a: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
+  { q: 'Can you handle banjar fees and villa permissions?', a: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
+  { q: 'Can guests bring their own alcohol?', a: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
+  { q: 'What is the rain plan for outdoor receptions?', a: 'Every outdoor wedding has a covered fallback (marquee/indoor) confirmed before the day.' },
+  { q: 'Do you cater rehearsal and welcome dinners?', a: 'Yes — BBQ, family-style or plated formats via <a href="/events">events</a> and <a href="/catering">catering</a>.' },
+  { q: 'What staffing ratio do you use?', a: 'About one waiter per 8–10 seated guests, plus kitchen lead; cocktail hours add tray staff.' },
+  { q: 'Can you work with our wedding planner?', a: 'Yes — daily collaboration with planners and villa managers.' },
+  { q: 'Do you offer halal-friendly wedding menus?', a: 'Yes — pork-free and halal-sensitive lines when specified at planning.' },
+  { q: 'How is this different from a private chef dinner?', a: 'Weddings are multi-guest production. Couples dinners: <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
+  { q: 'Which areas host most villa weddings?', a: 'Uluwatu, Canggu, Seminyak, Ubud, Nusa Dua and Jimbaran are common — we cover island-wide.' },
+  { q: 'Can kids and elderly dietary needs be managed?', a: 'Yes — labelled plates and briefed service for mixed multi-gen guest lists.' },
+  { q: 'Is this guide free?', a: 'Yes — educational content to help you plan. Booking is optional.' },
+  { q: 'Can myCHEF deliver what this guide describes?', a: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'How do I get prices after reading?', a: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { q: 'Does advice apply across Bali?', a: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { q: 'Allergies covered in real bookings?', a: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { q: 'Daily chef vs one dinner?', a: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { q: 'How to book after this guide?', a: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { q: 'Related services?', a: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
 ]
 
 export default function WeddingGuidePage() {

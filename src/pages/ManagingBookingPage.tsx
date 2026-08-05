@@ -86,38 +86,26 @@ const PREPARATION_STEPS = [
 ]
 
 const FAQS = [
-  {
-    q: 'Can I change the menu after I\'ve booked?',
-    a: 'Yes. You can request menu changes up to 48 hours before the service. The chef will work with you to swap dishes, adjust spice levels, or substitute proteins. Last-minute changes (within 24 hours) may incur small ingredient overages.',
-  },
-  {
-    q: 'What if the guest count changes?',
-    a: 'Notify us as soon as possible. If guest count increases or decreases by more than 10%, we can adjust team size and ingredient quantities. Changes within 48 hours may incur small adjustments to your invoice.',
-  },
-  {
-    q: 'Can I request different dietary options for different guests?',
-    a: 'Absolutely. We accommodate mixed dietary tables regularly—vegan, gluten-free, halal, paleo, allergies, and more. Just provide a detailed breakdown (e.g., "4 vegan, 2 gluten-free, 8 standard") at least 1 week before the event.',
-  },
-  {
-    q: 'What if there\'s a problem during the service?',
-    a: 'The chef team handles most situations on the spot—if a dish isn\'t right, they offer alternatives immediately. We also call beforehand to confirm final details and check in after service to ensure you were happy.',
-  },
-  {
-    q: 'Can I adjust the timing of courses on the day?',
-    a: 'Yes, but communicate early. If you want a longer break between courses or faster pacing, let the chef know once they arrive. They\'re flexible and will adapt to your flow.',
-  },
-  {
-    q: 'What if someone has a severe allergy I just learned about?',
-    a: 'Call or WhatsApp immediately. If the allergy is to something already planned, we can substitute ingredients or modify the menu. The chef takes allergies very seriously and will work around them.',
-  },
-  {
-    q: 'Do I need to provide plates, glasses, and cutlery?',
-    a: 'We can provide linens, glassware, and basic service items, or you can use your villa\'s own. We typically include these in the quote. If you\'d prefer your own tableware, let us know when you book.',
-  },
-  {
-    q: 'What if my villa kitchen is very small?',
-    a: 'We work with kitchens of all sizes. We\'ll bring portable equipment, use your outdoor areas if needed, and set up efficiently. Just let us know the kitchen layout in advance so we can plan.',
-  },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
+  { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { q: 'What does "++" mean on prices?', a: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { q: 'Which areas of Bali do you cover?', a: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { q: 'How far in advance should I book?', a: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { q: 'Can you accommodate allergies and special diets?', a: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { q: 'Do you clean up after service?', a: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { q: 'How do I get a quote?', a: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { q: 'What if a chef or staff member cannot make it?', a: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 export default function ManagingBookingPage() {

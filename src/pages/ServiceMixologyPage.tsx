@@ -158,6 +158,18 @@ const FAQS = [
   { q: 'What is the difference between this and hiring a bartender?', a: 'Mixology is a designed experience — custom menus, storytelling, technique and theatre. Bartender service is high-quality, high-volume drink service. For large parties we often recommend both.' },
   { q: 'How far in advance should I book?', a: '1–2 weeks for standard sessions; 3–4 weeks for Signature Programs in peak season.' },
   { q: 'Which areas do you cover?', a: 'Travel is included across South Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Other areas quoted by location.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
+  { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
+  { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },
+  { q: 'Alcohol included?', a: 'No — BYO or sourced at cost; hire covers the professional.' },
+  { q: 'Waiter ratio?', a: 'About one waiter per 10 guests for formal service.' },
+  { q: 'Butler service?', a: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
+  { q: 'Mixology and signature cocktails?', a: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },
+  { q: 'Areas covered?', a: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { q: 'Combine with private chef?', a: 'Yes — most common luxury setup.' },
+  { q: 'Vetted staff?', a: 'Employed/supervised teams with replacement-or-refund cover.' },
+  { q: 'How to book staff?', a: 'WhatsApp date, area, headcount and roles needed.' },
 ]
 
 export default function ServiceMixologyPage() {
@@ -408,7 +420,7 @@ export default function ServiceMixologyPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Mixology FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

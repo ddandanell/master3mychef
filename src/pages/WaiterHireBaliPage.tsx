@@ -94,31 +94,26 @@ A 50% deposit confirms your booking. Balance is due the day before the event.`,
 ]
 
 const faqs = [
-  {
-    question: 'Can I hire just waiters without a chef?',
-    answer:
-      'Yes. Waiter hire is available as a standalone service. Many clients hire our service staff to manage a catered event where food is being handled by a different provider, or for events where the host is cooking themselves and just needs professional service and cleanup support. We\'re flexible -- hire exactly what you need.',
-  },
-  {
-    question: 'What do waiters wear?',
-    answer:
-      'All staff arrive in a standard myCHEF uniform: smart black-and-white formal service attire. For events with a specific dress code or colour theme, please advise us during booking and we\'ll confirm what our team can accommodate. For Balinese-style events, we can arrange traditional Balinese service attire (kebaya and sarong) on request.',
-  },
-  {
-    question: 'How early do service staff arrive before the event?',
-    answer:
-      'Standard arrival is 1.5--2 hours before service begins. For large events with complex table setup or multiple service areas, the team may arrive 2.5--3 hours early. We confirm exact arrival times during briefing. Early arrival is part of the booking -- you\'re not charged extra for setup time within the agreed event window.',
-  },
-  {
-    question: 'Do waiters handle alcohol service?',
-    answer:
-      'Yes. Service staff manage wine pouring, beer and soft drink service, and water table management. For events with a dedicated bar, we recommend a separate bartender or mixologist for the bar station while waiters focus on table service. This keeps both service streams running efficiently.',
-  },
-  {
-    question: 'What happens if a waiter cancels last minute?',
-    answer:
-      'myCHEF offers a same-day replacement guarantee. Our roster of trained service staff allows us to deploy a replacement within 2--3 hours of a cancellation. We have never left a client short-staffed on event day. You will be notified immediately if there is any change to your confirmed team.',
-  },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
+  { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
+  { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
+  { question: 'Alcohol included?', answer: 'No — BYO or sourced at cost; hire covers the professional.' },
+  { question: 'Waiter ratio?', answer: 'About one waiter per 10 guests for formal service.' },
+  { question: 'Butler service?', answer: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
+  { question: 'Mixology and signature cocktails?', answer: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },
+  { question: 'Areas covered?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Combine with private chef?', answer: 'Yes — most common luxury setup.' },
+  { question: 'Vetted staff?', answer: 'Employed/supervised teams with replacement-or-refund cover.' },
+  { question: 'How to book staff?', answer: 'WhatsApp date, area, headcount and roles needed.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

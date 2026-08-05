@@ -92,31 +92,26 @@ Booking via myCHEF gives you one point of contact for bar staff, food service, a
 ]
 
 const faqs = [
-  {
-    question: 'How many bartenders do I need for my villa party?',
-    answer:
-      'A general rule: 1 bartender handles up to 40 guests comfortably in a casual villa setting. For 40–80 guests, we recommend 2 staff (bartender + bar back). For 80+ guests or formal events, a 3-person bar team keeps service flowing without wait times. We\'ll advise based on your specific event layout and drink service style.',
-  },
-  {
-    question: 'Do I need to supply the alcohol, or can myCHEF provide it?',
-    answer:
-      'By default, clients supply their own alcohol — this keeps costs predictable and avoids markup on spirits and wine. However, for an additional sourcing fee, we can organise alcohol procurement, delivery, and ice. Ask our team when you enquire.',
-  },
-  {
-    question: 'Can the bartender create a custom signature cocktail for our event?',
-    answer:
-      'Yes — our mixologist-level bartenders specialise in bespoke cocktail design. Share your preferences, theme, or brief, and they\'ll develop 1–2 signature drinks tailored to your event. This service requires booking a craft/mixologist package and at least 5 days lead time.',
-  },
-  {
-    question: 'Do bartenders bring their own equipment?',
-    answer:
-      'Standard bartenders bring personal tools (shakers, jiggers, strainers). For a full mobile bar setup — portable bar counter, glassware, ice bins — you need to add our mobile bar package. We\'ll confirm equipment requirements during your briefing call.',
-  },
-  {
-    question: 'What happens if my bartender cancels on the day?',
-    answer:
-      'myCHEF\'s same-day replacement guarantee covers this scenario. If your bartender cannot attend due to illness or emergency, we activate our standby roster and send a replacement at no additional cost. This guarantee is why villa managers and event planners book with us repeatedly.',
-  },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
+  { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
+  { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
+  { question: 'Alcohol included?', answer: 'No — BYO or sourced at cost; hire covers the professional.' },
+  { question: 'Waiter ratio?', answer: 'About one waiter per 10 guests for formal service.' },
+  { question: 'Butler service?', answer: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
+  { question: 'Mixology and signature cocktails?', answer: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },
+  { question: 'Areas covered?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Combine with private chef?', answer: 'Yes — most common luxury setup.' },
+  { question: 'Vetted staff?', answer: 'Employed/supervised teams with replacement-or-refund cover.' },
+  { question: 'How to book staff?', answer: 'WhatsApp date, area, headcount and roles needed.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

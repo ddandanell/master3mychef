@@ -71,26 +71,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "Does a private chef in Jimbaran source seafood from the Kedonganan fish market?",
-    answer: "Yes. For Jimbaran seafood dinners, our chefs source directly from the Kedonganan market — one of Bali's main fish landing points — on the morning of service. This ensures the freshest possible catch. We can confirm available species and suggest the best options based on what's in season and at its best quality.",
-  },
-  {
-    question: "Can a private chef cook a traditional Jimbaran-style seafood spread at my villa?",
-    answer: "Yes. The classic Jimbaran format — whole grilled fish, tiger prawns, squid, and clams served sharing-style with Jimbaran sambal, plecing, and rice — is one of our most popular formats in this area. Your chef sets up the grill at your villa and recreates the Jimbaran warung experience in a private setting.",
-  },
-  {
-    question: "Do you cover Uluwatu and Pecatu clifftop villas as well as Jimbaran Bay?",
-    answer: "Yes. myCHEF covers the full Jimbaran and Bukit Peninsula area including Jimbaran Bay, Kedonganan, Pecatu, Ungasan, Uluwatu, Balangan, and Dreamland. There is no travel surcharge within this zone.",
-  },
-  {
-    question: "What is the best private chef experience for a honeymoon at a Jimbaran villa?",
-    answer: "Most Jimbaran honeymoon clients book either a romantic 4-5 course seafood dinner for two at sunset (with full table setup, candles, and flowers), or a floating breakfast the following morning. For cliff villa honeymoons in Pecatu or Uluwatu, a sunset tasting menu on the villa terrace is the premium option — the setting is extraordinary.",
-  },
-  {
-    question: "Can you do a seafood BBQ for a large group of 15-20 at a Bukit Peninsula villa?",
-    answer: "Yes. Large group live-fire BBQ is a popular format for Bukit villa groups. Our chef brings the BBQ setup, sources all seafood and proteins from the market, and manages the full spread. This format is excellent for bachelor/bachelorette parties, family reunions, and corporate groups staying at the larger Bukit compounds.",
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'From IDR 1,000,000++/day for one meal (chef + assistant). Two meals IDR 1.8M++, three IDR 2.7M++. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'Do you serve this Bali area?', answer: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Is there a travel fee?', answer: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { question: 'Can you cook in Airbnb villas here?', answer: 'Yes with a workable kitchen — share the listing.' },
+  { question: 'Same prices as other areas?', answer: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
 ]
 
 export default function PrivateChefJimbaranGuidePage() {

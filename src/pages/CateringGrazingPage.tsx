@@ -192,6 +192,16 @@ const FAQS = [
   { q: 'Is a grazing table enough for a wedding?', a: 'For cocktail hour, absolutely. As the only food for a full reception, we\'d honestly recommend pairing it with a dinner format — we\'ll build the stack in one quote.' },
   { q: 'How far ahead should I book?', a: 'Three to seven days for most tables; two weeks or more for wedding-season dates. A 50% deposit confirms. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
   { q: 'Can you add hot food or staff?', a: 'Yes — hot canapés, live stations, waiters, and bartenders are all add-ons. That\'s the advantage of booking grazing through a full catering company.' },
+  { q: 'How much does catering in Bali cost?', a: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { q: 'What formats do you offer?', a: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { q: 'Is catering the same as private chef hire?', a: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Do prices include staff and cleanup?', a: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { q: 'Can you cook in an Airbnb villa?', a: 'Yes with a workable kitchen — share the listing when booking.' },
+  { q: 'Minimum guest counts?', a: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { q: 'Can menus be customised?', a: 'Yes — proteins, spice, diets locked before shopping.' },
+  { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront.' },
+  { q: 'Can we add bartenders?', a: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { q: 'Kids and allergies?', a: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
 ]
 
 /* ═══════════════════════════════════════════════════════════════
@@ -631,7 +641,7 @@ export default function CateringGrazingPage() {
             title="Grazing Table Questions"
             subtitle="Everything you need to know about booking a grazing table in Bali."
           />
-          <FAQAccordion items={FAQS} defaultOpenCount={3} />
+          <FAQAccordion items={FAQS} defaultOpenCount={3} showToc ctaEvery={5} />
         </div>
       </section>
 

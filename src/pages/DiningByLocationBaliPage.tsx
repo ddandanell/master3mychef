@@ -95,26 +95,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'Does villa location really affect the private chef experience?',
-    answer: 'Yes — significantly. Location affects ingredient sourcing (what\'s available and how quickly), guest expectations (Uluwatu guests expect a different experience than Ubud), chef travel logistics, and the setting itself. A good chef adapts, but knowing your area helps them plan better.',
-  },
-  {
-    question: 'Which Bali neighborhood has the best ingredients for private dining?',
-    answer: 'Seminyak and Canggu have the best access to diverse suppliers — including imported ingredients. Ubud and Sanur have the best locally-grown organic produce and fresh seafood respectively. Uluwatu is most logistically challenging but still achievable with planning.',
-  },
-  {
-    question: 'Can a chef from Seminyak work at an Uluwatu villa?',
-    answer: 'Yes — chefs work across Bali. Travel time and logistics are a factor. For distant locations (Uluwatu, Sidemen, Amed), factor in 45–90 minutes travel each way and plan for ingredient pre-positioning. Some chefs add a travel surcharge for distant locations.',
-  },
-  {
-    question: 'Is Ubud good for international cuisine, not just Balinese food?',
-    answer: 'Yes. Ubud has an international traveler base, and chefs there can do Mediterranean, contemporary, or fusion menus. However, Ubud\'s strength is farm-to-table and Balinese — if you specifically want Western fine dining, Seminyak or Uluwatu will serve you better.',
-  },
-  {
-    question: 'What is the typical cost range for a private dinner across Bali neighborhoods?',
-    answer: 'Budget IDR 700K–3.2M/person depending on location and menu style. Ubud and Sanur are most affordable (IDR 700K–1.2M). Seminyak and Canggu mid-range (IDR 700K–2.4M). Uluwatu commands a premium (IDR 1.9M–3.2M+) due to logistics and guest expectations. Pricing includes chef service and ingredients.',
-  },
+  { question: 'Do you serve this Bali area?', answer: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Is there a travel fee?', answer: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { question: 'Can you cook in Airbnb villas here?', answer: 'Yes with a workable kitchen — share the listing.' },
+  { question: 'Same prices as other areas?', answer: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'How far ahead to book here?', answer: 'A few days typical; peak season longer.' },
+  { question: 'Last-minute possible?', answer: 'Often yes — WhatsApp the area and date.' },
+  { question: 'Kids-friendly service?', answer: 'Yes — <a href="/kids-menus">kids menus</a>.' },
+  { question: 'How to book for this area?', answer: 'WhatsApp villa pin, dates and guests — <a href="/book">book</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

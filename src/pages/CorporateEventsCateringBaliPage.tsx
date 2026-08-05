@@ -168,38 +168,26 @@ const PRICING_TABLE = [
 ]
 
 const FAQS = [
-  {
-    q: 'How much does corporate event catering cost in Bali?',
-    a: 'Corporate catering in Bali costs from IDR 700,000 per person for working lunches, full-board retreats are quoted individually per person per day, and executive plated dinners from IDR 1,500,000–3,500,000+ per person. All prices vary by guest count, menu complexity, and event duration. We provide detailed quotes within 4 hours of your enquiry.',
-  },
-  {
-    q: 'Can myCHEF handle large corporate events in Bali?',
-    a: 'Yes. We regularly cater events from 10 to 200+ guests. For large events we deploy teams of 5–15 staff including head chefs, sous chefs, kitchen assistants, and trained front-of-house. We have catered product launches, conferences, and multi-day retreats across Bali simultaneously.',
-  },
-  {
-    q: 'Do you provide NPWP-ready invoices for corporate clients?',
-    a: 'Yes. myCHEF issues formal tax invoices compatible with Indonesian NPWP requirements. We can also structure pricing as nett or ++ depending on your company\'s procurement requirements. Contact us in advance to set up the correct billing format.',
-  },
-  {
-    q: 'How far in advance should we book corporate catering in Bali?',
-    a: 'For executive dinners and single-event catering, 1–2 weeks notice is sufficient for most dates. For multi-day retreats and large events (50+ guests), we recommend 4–8 weeks in advance, particularly during peak season (July–August and December). This allows time for menu planning, dietary collection, and supplier coordination.',
-  },
-  {
-    q: 'Can you accommodate complex dietary requirements for corporate groups?',
-    a: 'Yes. We handle vegan, vegetarian, gluten-free, dairy-free, halal, kosher, and medically restricted diets simultaneously. For corporate retreats we send guests a pre-event dietary form and build individual accommodations into the menu at no extra cost. Our chefs are trained to avoid cross-contamination for allergy-critical requirements.',
-  },
-  {
-    q: 'Do you handle venue setup, AV coordination, and event logistics?',
-    a: 'myCHEF handles all food and beverage logistics including kitchen setup, equipment, tableware, service, and cleanup. For larger events we coordinate timing with your AV or event production team. We do not provide AV equipment or venue decoration, but we work closely with your event team to ensure timing is seamless.',
-  },
-  {
-    q: 'Can you provide a dedicated chef team for a multi-week company offsite?',
-    a: 'Yes. For extended offsites (2+ weeks) we provide live-in or daily-visit chef arrangements with full meal planning support. This is particularly popular for tech companies running sprint retreats and wellness companies running leadership programmes.',
-  },
-  {
-    q: 'What locations in Bali do you serve for corporate events?',
-    a: 'We serve all major Bali locations including Seminyak, Canggu, Uluwatu, Ubud, Jimbaran, Sanur, Nusa Dua, Pererenan, and the Bukit Peninsula. For remote locations we coordinate ingredient logistics in advance and may apply a travel supplement depending on distance.',
-  },
+  { q: 'How much does catering in Bali cost?', a: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { q: 'What formats do you offer?', a: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { q: 'Is catering the same as private chef hire?', a: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Do prices include staff and cleanup?', a: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { q: 'Can you cook in an Airbnb villa?', a: 'Yes with a workable kitchen — share the listing when booking.' },
+  { q: 'Minimum guest counts?', a: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { q: 'Can menus be customised?', a: 'Yes — proteins, spice, diets locked before shopping.' },
+  { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront.' },
+  { q: 'Can we add bartenders?', a: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { q: 'Kids and allergies?', a: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { q: 'How do I book catering?', a: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { q: 'Rain plan?', a: 'Covered setups and indoor pivots planned ahead.' },
+  { q: 'Corporate catering price range?', a: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { q: 'NPWP invoices?', a: 'Yes on request.' },
+  { q: 'Multi-day retreats?', a: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
+  { q: 'Guest counts?', a: 'From leadership dinners to 100–200+ programmes.' },
+  { q: 'Dietary for mixed teams?', a: 'Yes when headcount by diet is shared.' },
+  { q: 'Villa and venue work?', a: 'Yes — share access rules.' },
+  { q: 'Bartenders and waiters?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'Case studies?', a: 'Yes — <a href="/corporate-case-studies">case studies</a>.' },
 ]
 
 const WA_MSG = encodeURIComponent(

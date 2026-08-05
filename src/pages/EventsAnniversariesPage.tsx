@@ -72,13 +72,25 @@ const ADDONS = [
 
 const FAQS = [
   { q: 'How much does an anniversary dinner in Bali cost?', a: 'From IDR 1.2M–1.5M++ per person for dinners (minimum 2 guests) and IDR 2.5M++ per person for vow renewals with reception. ++ adds 11% government tax and 10% service charge; quotes always state the full total including tax and service before you confirm.' },
-  { q: "What's the difference between an anniversary dinner and a regular private chef dinner?", a: 'The occasion layer: styled table and candle landscape, petal pathway, personalised signage and toast, a photographer to capture it, and surprise coordination — bundled into the package rather than improvised.' },
+  { q: 'What\'s the difference between an anniversary dinner and a regular private chef dinner?', a: 'The occasion layer: styled table and candle landscape, petal pathway, personalised signage and toast, a photographer to capture it, and surprise coordination — bundled into the package rather than improvised.' },
   { q: 'Can you arrange the whole thing as a surprise?', a: 'Yes — it is our specialty on this page. We coordinate with one person only, stage everything while your partner is out, and time the reveal with you in advance.' },
   { q: 'Can the dinner be on a beach instead of at our villa?', a: 'Yes — a partner beach venue is available with a IDR 1.5M surcharge plus the local beach permit, which we arrange. Villa dinners remain the most private option.' },
   { q: 'Can we use your fine-dining menus?', a: 'Yes — the Mediterranean Sea (IDR 2.2M++) and Wagyu (IDR 2.4M++) menus are available for anniversary dinners, or we design a custom menu at no extra planning cost.' },
   { q: 'How far in advance should we book?', a: 'Seven days minimum, fourteen recommended. Vow renewals need 21+ days for officiant and permit coordination. Peak-season dates go earlier.' },
   { q: 'What is the cancellation policy?', a: 'Full refund 14+ days before, 50% refund 7–13 days before, no refund under 7 days. Terms are written into every quote.' },
   { q: 'What deposit is required?', a: '50% confirms your date, with the balance due before the event.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
 ]
 
 const ANNIVERSARY_SCHEMA = {
@@ -414,7 +426,7 @@ export default function EventsAnniversariesPage() {
       <section className="py-20 md:py-28 bg-white anniversary-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Anniversary Dinner Bali — FAQ" subtitle="Everything you need to know about anniversary dinners with myCHEF." />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

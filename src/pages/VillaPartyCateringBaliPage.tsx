@@ -95,31 +95,26 @@ Surcharges apply for events in Ubud, Amed, and outer islands.`,
 ]
 
 const faqs = [
-  {
-    question: 'Can myCHEF cater a villa party of 100 or more guests?',
-    answer:
-      'Yes. We regularly cater large villa events from 60 to 200+ guests. For large events, we deploy a full team: multiple chefs, kitchen assistants, waiters, and bar staff. Team composition is confirmed during your briefing call. Advance booking is essential for large events — 2–4 weeks minimum.',
-  },
-  {
-    question: 'Do you handle drinks and alcohol at villa parties?',
-    answer:
-      'We provide professional bar staff and mixologists, but clients typically supply their own alcohol (this keeps costs transparent and avoids markup). We bring the equipment, garnishes, ice, and non-alcoholic mixers. For an additional fee, we can source and deliver alcohol to your villa. Ask when enquiring.',
-  },
-  {
-    question: 'Can we choose an Indonesian menu for our villa party?',
-    answer:
-      'Absolutely. Indonesian menus are among our most popular for villa parties. Options include a full Balinese feast, a satay and BBQ grill, an Indonesian buffet with nasi goreng, rendang, and lawar, or a traditional babi guling roast for special occasions. Our chefs excel at authentic Indonesian cooking.',
-  },
-  {
-    question: 'How early do your team arrive to set up?',
-    answer:
-      'Setup timing depends on event scale. For parties under 30 guests, the team typically arrives 1.5–2 hours before service begins. For large events with full setup (buffet stations, bar, decor coordination), we may arrive 3–4 hours early. We confirm arrival times during briefing.',
-  },
-  {
-    question: 'What if the villa doesn\'t have a proper kitchen?',
-    answer:
-      'Many Bali villas have outdoor kitchens or limited cooking facilities. Our chefs are experienced working in varied kitchen environments. For events requiring extensive cooking without proper facilities, we can pre-prepare components at a commissary kitchen and finish on-site. We confirm kitchen requirements during enquiry.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

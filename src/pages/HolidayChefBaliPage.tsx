@@ -91,36 +91,26 @@ All festive bookings require a 50% deposit to confirm.`,
 ]
 
 const faqs = [
-  {
-    question: 'How far in advance should I book a holiday chef for Christmas or New Year?',
-    answer:
-      'We recommend booking by 30 November at the latest for Christmas bookings, and October--November for New Year\'s Eve. The best chefs commit early during the festive season, and specific ingredients (especially imported turkey or specialty seafood) need to be ordered well in advance.',
-  },
-  {
-    question: 'Can you source a proper roast turkey in Bali?',
-    answer:
-      'Yes. We work with specialist suppliers who stock imported and locally raised turkeys for the festive season. We manage the sourcing entirely -- you tell us your group size and preferred size of bird, and we handle the rest. Order as early as possible to guarantee availability.',
-  },
-  {
-    question: 'Do you provide Christmas Day service for large families (15+ guests)?',
-    answer:
-      'Yes. Large group festive catering is a core service. For groups of 15 or more, we typically bring two chefs and additional service staff to ensure the timing and quality of a large roast dinner is managed properly. Tell us your group size when enquiring.',
-  },
-  {
-    question: 'Can we book the chef for daily service across the full holiday period?',
-    answer:
-      "Yes. Daily festive chef service -- breakfast and dinner every day across December 20--January 5, or any subset of that period -- is one of our most popular offerings. The chef builds a rotating seasonal menu, adapts to what the group wants each day, and becomes part of the household for the holiday. This is often more economical than booking individual meals separately.",
-  },
-  {
-    question: 'Is there a New Year\'s Eve surcharge?',
-    answer:
-      "Yes. New Year's Eve is the single highest-demand night of the year in Bali, and our pricing reflects that. All festive pricing includes a seasonal surcharge. We are transparent about this from the first quote -- you will always know the full cost before confirming.",
-  },
-  {
-    question: 'Can you provide bartenders and cocktail service for a festive party at the villa?',
-    answer:
-      "Yes. We can arrange bartenders, mixologists, and canape service teams for festive villa parties and cocktail hours. Our [Bartender Hire Bali](/in-villa-service/bartenders) and [Mixologist Hire Bali](/in-villa-service/mixology) pages cover this in more detail.",
-  },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
+  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { question: 'How far in advance should I book?', answer: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { question: 'Do you clean up after service?', answer: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { question: 'What if a chef or staff member cannot make it?', answer: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const relatedPages = [

@@ -77,36 +77,26 @@ Service team (1--2 servers) is included for groups of 6 or more. Ingredient cost
 ]
 
 const faqs = [
-  {
-    question: 'How long does a tasting menu dinner take at a Bali villa?',
-    answer:
-      "A 7-course tasting menu typically runs 2.5--3 hours from the first amuse-bouche to the final dessert, at a comfortable pace. A 9--11 course menu runs 3--4 hours. We pace to the group: if conversation at a particular course is flowing, we wait. The evening is not on a schedule.",
-  },
-  {
-    question: 'What is the minimum group size for a private tasting menu?',
-    answer:
-      'We can deliver a private tasting menu for as few as 2 guests. There is a minimum spend that makes the full team and kitchen setup worthwhile, so very small groups may find the per-person price higher than larger groups. We will be transparent about this in the quote.',
-  },
-  {
-    question: 'Can the tasting menu be vegetarian or vegan?',
-    answer:
-      'Yes, completely. A fully plant-based tasting menu is a genuine specialty rather than a compromise -- Bali\'s ingredients are extraordinary for plant-based fine dining. We can also design menus that are predominantly plant-based with fish or meat additions for specific guests.',
-  },
-  {
-    question: 'How much notice is needed to book a private tasting menu?',
-    answer:
-      'For a standard tasting menu, 48--72 hours is the minimum. This allows time for chef briefing, menu planning, ingredient sourcing from the market, and preparation. For milestone occasions or very specific menu requests, 5--7 days is better.',
-  },
-  {
-    question: 'Can you arrange wine pairing for the tasting menu?',
-    answer:
-      'Yes. Wine pairing can be arranged with advance notice. We work with local wine importers to source appropriate bottles and can involve our sommelier in the pairing design. An alternative is a curated non-alcoholic pairing (juices, shrubs, kombucha) for guests who prefer this.',
-  },
-  {
-    question: 'What is the difference between a tasting menu and a regular private chef dinner?',
-    answer:
-      "A regular private chef dinner is a restaurant-format meal: a starter, main, dessert, chosen from a menu. A tasting menu is a progressive culinary experience where the chef designs the entire arc of the evening, each course building on the last. It is more ambitious, more personal, and more memorable -- and priced accordingly.",
-  },
+  { question: 'How much is fine dining in a Bali villa?', answer: 'Signature tasting paths often from about IDR 2.2M–2.4M++ per person depending on menu. <a href="/fine-dining">Fine dining</a> · <a href="/fine-dining/menus">menus</a>.' },
+  { question: 'What is included?', answer: 'Chef brigade, multi-course menu, ingredients (as quoted), service and full cleanup.' },
+  { question: 'Wine pairing?', answer: 'Optional add-on (often ~IDR 850K/person) or BYO service.' },
+  { question: 'Minimum guests?', answer: 'Tasting menus usually 4–24; couples use <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
+  { question: 'Dietary adaptations?', answer: 'Yes at no extra charge when briefed.' },
+  { question: 'How long does the evening take?', answer: 'Plan roughly 3–4 hours for a five-course tasting with pauses.' },
+  { question: 'Chef\'s table option?', answer: 'Yes — <a href="/fine-dining/chefs-table">chef\'s table</a>.' },
+  { question: 'Can kids join?', answer: 'With adapted plates, or pair <a href="/kids-menus">kids menus</a>.' },
+  { question: 'Difference from daily private chef?', answer: 'Event multi-course vs multi-day meal plans on <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Where do you serve?', answer: 'Villas island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Surprise setups?', answer: 'Yes for proposals and anniversaries — coordinate empty-villa timing.' },
+  { question: 'How to book?', answer: 'WhatsApp date, guests, area and menu path — <a href="/quote">quote</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

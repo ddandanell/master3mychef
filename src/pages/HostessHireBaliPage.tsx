@@ -75,36 +75,26 @@ We place host and hostess staff across Seminyak, Canggu, Uluwatu, Nusa Dua, Jimb
 ]
 
 const faqs = [
-  {
-    question: 'How many hostesses do I need for my event?',
-    answer:
-      'As a general guide: 1 hostess per 30--50 guests for a reception or party; 1 per 20--25 for registration-heavy events like conferences; 2--3 for a formal gala of 100+ with multiple entry points. We will make a specific recommendation based on your venue layout and programme.',
-  },
-  {
-    question: 'Can hostesses speak languages other than English?',
-    answer:
-      'Yes, with advance notice. We have staff who speak Mandarin, Japanese, French, German, Korean, and of course Bahasa Indonesia. Multilingual requests need at least 1 week notice to confirm availability.',
-  },
-  {
-    question: 'What is the dress code for your hostesses?',
-    answer:
-      'We adapt to your event. Standard presentation is smart business casual or elegant formal depending on event type. For branded events, we can wear your provided uniforms or follow a specific colour palette. For traditional or cultural events, we can discuss appropriate dress. Let us know your requirements at booking.',
-  },
-  {
-    question: 'Can I hire a hostess for a small private dinner party?',
-    answer:
-      'Yes. A single hostess for an intimate dinner of 8--15 people at a villa adds a professional welcome touch without overwhelming the occasion. She can also assist with light front-of-house duties during the meal if needed.',
-  },
-  {
-    question: 'How far in advance should I book hostess staff in Bali?',
-    answer:
-      'For small events, 3--5 days is usually sufficient. For large corporate events, galas, or events requiring multilingual staff or specific briefing, 1--2 weeks is better. During Bali peak season (July--August, Christmas--New Year), book as early as possible.',
-  },
-  {
-    question: 'Do you provide male hosts as well as female hostesses?',
-    answer:
-      'Yes. We can provide both male hosts and female hostesses depending on your preference and event type. Mixed-gender front-of-house teams work well for large events and corporate settings.',
-  },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
+  { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
+  { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
+  { question: 'Alcohol included?', answer: 'No — BYO or sourced at cost; hire covers the professional.' },
+  { question: 'Waiter ratio?', answer: 'About one waiter per 10 guests for formal service.' },
+  { question: 'Butler service?', answer: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
+  { question: 'Mixology and signature cocktails?', answer: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },
+  { question: 'Areas covered?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Combine with private chef?', answer: 'Yes — most common luxury setup.' },
+  { question: 'Vetted staff?', answer: 'Employed/supervised teams with replacement-or-refund cover.' },
+  { question: 'How to book staff?', answer: 'WhatsApp date, area, headcount and roles needed.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

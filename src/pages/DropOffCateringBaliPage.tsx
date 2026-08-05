@@ -85,36 +85,26 @@ For most villa stays, the ideal approach is a combination: drop-off for weekday 
 ]
 
 const faqs = [
-  {
-    question: 'How far in advance do I need to order drop-off catering?',
-    answer:
-      'We ask for at least 24 hours notice for drop-off orders, and 48 hours is better for larger or more complex menus. For last-minute orders (same day), contact us directly on WhatsApp and we will confirm whether we can accommodate.',
-  },
-  {
-    question: 'Is drop-off catering cheaper than hiring a private chef?',
-    answer:
-      'Yes, significantly. Drop-off catering eliminates the labour cost of having a chef and service team on-site for 4--6 hours. You typically pay for food and preparation only, plus a delivery fee. For groups where the occasion does not require on-site service, it is the better-value choice.',
-  },
-  {
-    question: 'How does the food stay hot during delivery?',
-    answer:
-      'Hot dishes are packed in insulated carriers and timed so they arrive close to your meal time. For larger orders or events where food needs to stay warm for an extended period, we can provide chafing dishes and sterno fuel on request.',
-  },
-  {
-    question: 'Can you accommodate dietary restrictions for drop-off catering?',
-    answer:
-      'Yes. When you place the order, tell us about allergies and dietary requirements. We design menus around them and label dishes clearly. For very complex multi-restriction groups, the full chef service (where the chef can adapt in real-time) may be a better option.',
-  },
-  {
-    question: 'What areas does drop-off catering cover in Bali?',
-    answer:
-      'We deliver across all major villa areas: Canggu, Seminyak, Uluwatu, Jimbaran, Nusa Dua, Sanur, Ubud, and Pererenan. Delivery charges vary by distance from our kitchen. Areas farther out may have a minimum order requirement.',
-  },
-  {
-    question: 'Can I order drop-off catering for just one meal?',
-    answer:
-      'Yes, single-meal orders are welcome. There is a minimum order value per delivery. You can also combine drop-off for some meals with full chef service for others -- many villa stays use both formats during the same week.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

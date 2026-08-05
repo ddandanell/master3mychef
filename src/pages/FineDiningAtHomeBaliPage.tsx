@@ -88,36 +88,26 @@ For large groups (10+), group pricing applies and the per-person cost typically 
 ]
 
 const faqs = [
-  {
-    question: 'Is fine dining at home actually comparable to Bali\'s best restaurants?',
-    answer:
-      "For food quality, yes -- and in several ways better. The ingredients are sourced specifically for your group on the day, the menu is designed around your preferences, and the chef's undivided attention goes entirely to your table. What's different is the atmosphere: you get privacy and intimacy that no restaurant can provide, rather than the ambience of a formal dining room.",
-  },
-  {
-    question: 'What is the minimum group size for fine dining at home?',
-    answer:
-      'We can accommodate groups as small as 2 for a romantic private dinner. Fine dining at home is particularly well suited to groups of 4--12, where the intimacy of a private setting and the quality of the food combine most effectively.',
-  },
-  {
-    question: 'Do you provide the tableware and glassware?',
-    answer:
-      "For standard private dining, we work with what is available at the villa -- most Bali luxury villas have excellent tableware. For premium experiences, we can arrange additional polished glassware, white-glove service, and table styling. Please request this when enquiring.",
-  },
-  {
-    question: 'Can the chef accommodate multiple different dietary requirements within one group?',
-    answer:
-      'Yes, this is standard practice in private dining. If some guests eat everything, some are vegan, and one is gluten-intolerant, the chef designs appropriate versions of each course for each guest. There is no lesser experience for restricted guests -- the dietary adaptation is built into the menu design.',
-  },
-  {
-    question: 'How far in advance do I need to book?',
-    answer:
-      'For a fine dining experience, we recommend 48--72 hours minimum. This allows time for chef assignment, menu design, and ingredient sourcing. For more ambitious requests -- specific ingredients, imported wine pairing, multiple dietary variations -- 5--7 days is ideal.',
-  },
-  {
-    question: 'Does the chef clean up after the dinner?',
-    answer:
-      "Yes. Cleanup is part of the service. The kitchen is returned to how it was found, the dining area is cleared, and we remove all our equipment. You simply enjoy the dinner.",
-  },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
+  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { question: 'How far in advance should I book?', answer: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { question: 'Do you clean up after service?', answer: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { question: 'What if a chef or staff member cannot make it?', answer: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const relatedPages = [

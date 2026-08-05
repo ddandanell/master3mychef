@@ -93,31 +93,26 @@ All sizes include delivery and setup at your venue. A setup fee applies for venu
 ]
 
 const faqs = [
-  {
-    question: 'How far in advance should I book a grazing table?',
-    answer:
-      'For standard events, 3–5 days is usually sufficient. For weddings and large events (50+ guests), 2–3 weeks is recommended to secure your date and plan sourcing. During peak season (June–September, December–January), add extra lead time.',
-  },
-  {
-    question: 'Can you do a fully vegan or halal grazing table?',
-    answer:
-      'Yes. Our team designs fully vegan grazing boards using plant-based cheeses, seasonal fruits, vegetable-forward dips, and plant proteins. Halal boards replace all pork products with certified halal beef and chicken alternatives. Communicate your requirements when booking.',
-  },
-  {
-    question: 'Do you deliver to villas outside Seminyak and Canggu?',
-    answer:
-      'We deliver across South Bali (Seminyak, Canggu, Uluwatu, Jimbaran, Sanur, Nusa Dua) at standard rates. Ubud and Pererenan have a delivery surcharge. For Amed, Lovina, and outer islands, contact us to confirm feasibility.',
-  },
-  {
-    question: 'Can a grazing table feed guests as the main meal at a party?',
-    answer:
-      'A grazing table works well as the sole catering for cocktail-style events where guests mingle and graze continuously. For events where guests need a full meal, we recommend pairing the grazing table with our catering service (hot dishes, BBQ, or plated). We can design a combined offering.',
-  },
-  {
-    question: 'How long does the grazing table last before food needs replenishing?',
-    answer:
-      'A well-stocked grazing table typically lasts 2–2.5 hours for the stated guest count. For longer events, we recommend a replenishment package — a second round of fresh ingredients delivered mid-event. We can staff a table attendant who manages replenishment continuously for large events.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

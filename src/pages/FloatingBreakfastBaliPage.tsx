@@ -125,30 +125,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'How far in advance should I book a floating breakfast?',
-    answer: 'We recommend booking at least 48 hours in advance so the chef team can confirm availability, source the freshest ingredients, and prepare the setup. During peak season (July–August and December–January), we advise booking 1 week ahead — villa areas fill up quickly and our chefs have limited availability on popular dates.',
-  },
-  {
-    question: 'Do I need my own pool?',
-    answer: 'Yes — a private pool is required for the floating breakfast experience. The good news is that the vast majority of Bali villas include a private pool as standard. If you are unsure whether your accommodation qualifies, send us your villa name or address and we will confirm before you book.',
-  },
-  {
-    question: 'Can you do a floating breakfast for large groups?',
-    answer: 'Yes. We can set up to 6 floating trays simultaneously, accommodating groups of up to 6 guests at one time. For groups larger than 6, we recommend our terrace-style breakfast setup — the same menu and chef service, served at a poolside table rather than on floating trays.',
-  },
-  {
-    question: 'What time does the floating breakfast start?',
-    answer: 'Most guests choose a breakfast time between 7:30am and 9:30am — this captures the best morning light, particularly in Uluwatu and Ubud, and suits the natural rhythm of a holiday morning. We can accommodate earlier starts (from 6:30am) or later slots (up to 11:00am) on request.',
-  },
-  {
-    question: 'Is the floating breakfast safe for children?',
-    answer: 'Yes — the Family Edition package is specifically designed with young children in mind. Rather than free-floating trays, we use a pool-ledge setup where trays rest securely on the pool edge. Children can wade in the shallow end while the setup remains stable. The chef also adjusts portion sizes and menu items for younger guests.',
-  },
-  {
-    question: 'What if the weather is bad?',
-    answer: 'Bali\'s tropical climate is reliable, but if heavy rain occurs on the morning of your booking, we pivot immediately to an in-villa terrace breakfast with the identical menu, the same chef, and the same styling — minus the pool. The rose petals go on the table instead. We handle the adaptation at no extra charge and notify you the evening before if a weather change is likely.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

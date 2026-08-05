@@ -80,31 +80,26 @@ This approach works well for groups of 6--30 where dietary requirements are genu
 ]
 
 const faqs = [
-  {
-    question: 'Is it easy to eat vegan in Bali?',
-    answer:
-      "Bali is genuinely one of the best places in the world to eat vegan. The island's natural produce -- tropical fruits, organic highland vegetables, tempeh, coconut, jackfruit, and extraordinary fresh herbs and spices -- is a plant-based kitchen's native ingredient list. With a specialist vegan private chef, you are not adapting a meat-based cuisine: you are cooking in an environment where plant-based food is naturally outstanding.",
-  },
-  {
-    question: 'Can a vegan private chef cater for mixed groups with different dietary requirements?',
-    answer:
-      'Yes, and this is one of our most common booking types. The approach: design a predominantly plant-based menu that works for the whole group, then provide separate protein options for non-vegan guests. Vegan guests eat the same high-quality core menu as everyone else. We manage the coordination at the design stage so the chef is not running two separate services on the night.',
-  },
-  {
-    question: 'What is the difference between a vegan chef and a regular chef cooking vegan food?',
-    answer:
-      'A specialist vegan chef understands how to build flavour without animal products -- specifically how to create depth, umami, and satisfaction from plants alone. A regular chef who removes animal products often produces flat, unsatisfying food because the techniques are different. Our vegan specialists know fermentation, whole-food nutrition, plant protein construction, and the specific ingredients that give vegan cooking its full potential.',
-  },
-  {
-    question: 'Can you cater a vegan yoga retreat in Bali?',
-    answer:
-      "Yes. We regularly cater yoga and wellness retreats across Bali. For retreats, we design full-day menus (breakfast, lunch, dinner) in consultation with the retreat facilitator, accounting for the nutritional requirements of an active programme. Menus are plant-based, whole-food, and nutrient-dense. We can accommodate multiple additional requirements (gluten-free, raw, low-sugar) simultaneously.",
-  },
-  {
-    question: 'Do you charge more for vegan chef service in Bali?',
-    answer:
-      "Not typically. The base rate for a vegan private chef is the same as for a standard private chef. Some specialty ingredients -- organic produce from specific suppliers, certain fermented foods, specialty plant-based proteins -- may add a small cost to the ingredient budget, which is billed at market cost. We are transparent about this at the proposal stage.",
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'From IDR 1,000,000++/day for one meal (chef + assistant). Two meals IDR 1.8M++, three IDR 2.7M++. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

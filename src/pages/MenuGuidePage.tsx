@@ -52,30 +52,26 @@ const DIETARY_NEEDS = [
 ]
 
 const FAQS = [
-  {
-    q: 'How do I choose a menu?',
-    a: 'Tell us your preferences (cuisine type, dietary needs, spice level) and guest count. Our chefs propose 2-3 menu options tailored to your villa and event. You approve or request adjustments.',
-  },
-  {
-    q: 'Can I customize dishes?',
-    a: 'Yes. You can adjust courses, swap proteins, change spice levels, or request specific preparations. Most customizations are no extra charge if within available ingredients.',
-  },
-  {
-    q: 'What if someone has a severe allergy?',
-    a: 'Let us know immediately when you book. We take allergies very seriously — separate prep, dedicated utensils, and full communication with the chef team.',
-  },
-  {
-    q: 'Can I mix cuisines in one event?',
-    a: 'Absolutely. Some events feature a mix of Indonesian starter, Mediterranean mains, and Asian-fusion dessert. Discuss with the chef during the proposal stage.',
-  },
-  {
-    q: 'Do you provide wine or beverage pairings?',
-    a: 'Wine and spirits are not included in the base price, but we can recommend local wine shops or coordinate with sommeliers for pairings at an additional cost.',
-  },
-  {
-    q: 'What if I change my mind about the menu?',
-    a: 'You can request changes up to 48 hours before service. After that, we\'ll do our best to accommodate if ingredients are available.',
-  },
+  { q: 'Is this guide free?', a: 'Yes — educational content to help you plan. Booking is optional.' },
+  { q: 'Can myCHEF deliver what this guide describes?', a: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'How do I get prices after reading?', a: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { q: 'Does advice apply across Bali?', a: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { q: 'Allergies covered in real bookings?', a: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { q: 'Daily chef vs one dinner?', a: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { q: 'How to book after this guide?', a: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { q: 'Related services?', a: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
+  { q: 'Cancellation if I book?', a: 'See <a href="/cancellation">cancellation policy</a>.' },
+  { q: 'Who writes the operational standards?', a: 'myCHEF operations and chef leadership in Bali.' },
+  { q: 'Can villa managers share this guide?', a: 'Yes — free to share with guests.' },
+  { q: 'More FAQs?', a: 'Central hub: <a href="/faq">FAQ</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 export default function MenuGuidePage() {

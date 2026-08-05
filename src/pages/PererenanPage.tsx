@@ -9,30 +9,26 @@ const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Pererenan. Can you send a menu proposal?')
 
 const FAQS = [
-  {
-    q: 'Is there enough dining out in Pererenan?',
-    a: 'For a few nights, easily — the village strip is quality-led and growing. Over longer stays, most guests mix local favourites, trips into Canggu, and in-villa dining. The neighbourhood rewards eating in more than most.',
-  },
-  {
-    q: 'How does Pererenan compare to Canggu for dining?',
-    a: 'Quieter, newer and less crowded — a compact quality scene rather than Canggu\'s sprawl. Batu Bolong and Berawa are ten minutes away when you want density.',
-  },
-  {
-    q: 'How much does private dining in Pererenan cost?',
-    a: 'Villa dinners start from IDR 700K per person and group feasts from IDR 700K–800K, quoted ++ (11% tax plus 10% service). Weekly chef service is priced per day based on household size and meals. All quotes are fixed upfront.',
-  },
-  {
-    q: 'How does weekly chef service work?',
-    a: 'A consistent chef is assigned to your villa for the stay — breakfast prep, lunches, kids\' meals and dinners built around your rhythm, with shopping and kitchen management included. Menus are proposed before you confirm.',
-  },
-  {
-    q: 'Is Pererenan too remote for a chef service?',
-    a: 'No — we cook here weekly and know the rice-field lanes well. Any travel consideration for the most remote addresses is quoted upfront.',
-  },
-  {
-    q: 'Which areas do you cover?',
-    a: 'Pererenan Beach and village, Pantai Lima, Seseh, Batu Mejan and the north Canggu rice fields, with fast coverage of the wider Canggu area.',
-  },
+  { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
+  { q: 'Same prices as other areas?', a: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { q: 'Fine dining available here?', a: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { q: 'BBQ and parties?', a: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { q: 'Daily chef for a week?', a: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'Staff and bartenders?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'How far ahead to book here?', a: 'A few days typical; peak season longer.' },
+  { q: 'Last-minute possible?', a: 'Often yes — WhatsApp the area and date.' },
+  { q: 'Kids-friendly service?', a: 'Yes — <a href="/kids-menus">kids menus</a>.' },
+  { q: 'How to book for this area?', a: 'WhatsApp villa pin, dates and guests — <a href="/book">book</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const SCENE = [

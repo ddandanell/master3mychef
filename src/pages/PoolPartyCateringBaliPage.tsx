@@ -89,31 +89,26 @@ All pricing includes chef, ingredients, and service staff. Alcohol and cocktail 
 ]
 
 const faqs = [
-  {
-    question: 'What food formats work best for a pool party in Bali?',
-    answer:
-      'Finger food and grazing tables are the most practical -- food guests can eat while moving around, in the sun and heat, without cutlery or plates. Pass-around trays of small bites, a central grazing board, and a live BBQ or wok station are the most popular combinations. We avoid heavy or unwieldy items and design specifically for the pool party environment.',
-  },
-  {
-    question: 'How many service staff do we need for a Bali pool party?',
-    answer:
-      'As a general guide: 1 service staff per 15--20 guests for casual passing, 1 per 10--15 guests for more active service. For a 30-guest party we typically provide 2 waiters plus a chef. For 60 guests, a team of 4--5 (chef, sous chef, 2--3 waiters) is standard. We confirm the right staffing level when we send your proposal.',
-  },
-  {
-    question: 'Can we add a cocktail bar or mixologist to the pool party package?',
-    answer:
-      "Yes. A mixologist managing a dedicated cocktail station is one of the most popular add-ons for Bali pool parties. We provide the mixologist and all bar equipment; the client supplies alcohol. The mixologist designs a custom cocktail menu for the occasion -- typically 2--3 signature drinks plus classics. It's priced at IDR 1,500,000 flat on top of the catering package.",
-  },
-  {
-    question: 'Can pool party catering accommodate dietary requirements across a large group?',
-    answer:
-      'Yes. Pool party menus are well-suited to dietary accommodation because the format is naturally varied -- there are multiple items on offer and guests select what they want. We label everything clearly, ensure vegan, gluten-free, and halal options are always available in the spread, and brief the service team on what is in each dish.',
-  },
-  {
-    question: 'What is the minimum booking size for pool party catering?',
-    answer:
-      "Minimum 8 guests. For groups under 8, a private chef dinner is usually a better format and more cost-effective. Contact us if you're unsure -- we'll suggest the right format for your group size and occasion.",
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

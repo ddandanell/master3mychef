@@ -114,30 +114,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'Is a villa butler the same as a housekeeper?',
-    answer: 'No — a housekeeper manages cleaning and laundry. A butler manages guest experience, table service, and the overall flow of the villa stay. Some properties have both.',
-  },
-  {
-    question: 'How long does it take to place a butler?',
-    answer: 'Typically 1–2 weeks from brief to confirmed placement. Rush placements possible with a limited candidate pool.',
-  },
-  {
-    question: 'Can I hire a butler for just a 2-week holiday?',
-    answer: 'Yes — short-term holiday butlers are one of our most popular services. Minimum 5 days.',
-  },
-  {
-    question: 'Do butlers speak English?',
-    answer: 'We assess English proficiency as part of our vetting. All myCHEF butlers have confirmed English communication skills.',
-  },
-  {
-    question: 'What is the difference between a private butler and a hotel butler?',
-    answer: 'A hotel butler serves multiple guests across a floor. A private villa butler is exclusively dedicated to your household — the attention and personalisation is incomparably higher.',
-  },
-  {
-    question: 'Do you replace the butler if it does not work out?',
-    answer: 'Yes — 90-day replacement guarantee on all placements.',
-  },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
+  { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
+  { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
+  { question: 'Alcohol included?', answer: 'No — BYO or sourced at cost; hire covers the professional.' },
+  { question: 'Waiter ratio?', answer: 'About one waiter per 10 guests for formal service.' },
+  { question: 'Butler service?', answer: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
+  { question: 'Mixology and signature cocktails?', answer: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },
+  { question: 'Areas covered?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Combine with private chef?', answer: 'Yes — most common luxury setup.' },
+  { question: 'Vetted staff?', answer: 'Employed/supervised teams with replacement-or-refund cover.' },
+  { question: 'How to book staff?', answer: 'WhatsApp date, area, headcount and roles needed.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

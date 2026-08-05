@@ -137,30 +137,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'Does myCHEF serve Seminyak, Canggu, and Ubud?',
-    answer: 'Yes — all three and more. We cover all major Bali villa areas including Uluwatu, Nusa Dua, Jimbaran, Sanur, and beyond.',
-  },
-  {
-    question: 'Is private chef pricing different across areas?',
-    answer: 'The area itself does not change the price — menu level and group size determine cost. Occasional logistics fees apply to very remote locations.',
-  },
-  {
-    question: 'Which area has the best villa kitchens?',
-    answer: 'Ubud luxury villas often have the best-equipped kitchens. Modern Canggu villas are well-equipped. Older Seminyak villas can vary — always worth checking with your villa host.',
-  },
-  {
-    question: 'Can we do dinners in two different areas on the same trip?',
-    answer: 'Yes — multi-location trips are common. We coordinate chefs for each location.',
-  },
-  {
-    question: 'What if I am staying in Uluwatu or Nusa Dua?',
-    answer: 'We serve both. See our dedicated Uluwatu and Nusa Dua pages for location-specific details.',
-  },
-  {
-    question: 'Which area is best for a honeymoon dinner?',
-    answer: 'Seminyak for luxury polish, Ubud for spiritual atmosphere. Both are exceptional — it depends whether you want beach access or jungle serenity.',
-  },
+  { question: 'Do you serve this Bali area?', answer: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Is there a travel fee?', answer: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { question: 'Can you cook in Airbnb villas here?', answer: 'Yes with a workable kitchen — share the listing.' },
+  { question: 'Same prices as other areas?', answer: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'How far ahead to book here?', answer: 'A few days typical; peak season longer.' },
+  { question: 'Last-minute possible?', answer: 'Often yes — WhatsApp the area and date.' },
+  { question: 'Kids-friendly service?', answer: 'Yes — <a href="/kids-menus">kids menus</a>.' },
+  { question: 'How to book for this area?', answer: 'WhatsApp villa pin, dates and guests — <a href="/book">book</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

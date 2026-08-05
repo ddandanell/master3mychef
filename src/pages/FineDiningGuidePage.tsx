@@ -114,42 +114,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'What is the difference between a tasting menu and a regular dinner?',
-    answer: 'A tasting menu features 6–10 small courses designed to showcase technique, progression, and flavor storytelling. Regular dinners are typically 2–3 courses with larger portions.',
-  },
-  {
-    question: 'How long does a fine dining tasting menu take?',
-    answer: 'Expect 2–3 hours. Courses are paced to allow conversation between services, wine appreciation, and palate cleansing.',
-  },
-  {
-    question: 'Can I request dietary accommodations in a tasting menu?',
-    answer: 'Absolutely. Share all dietary restrictions, allergies, and preferences in advance. The chef will design alternatives for each course.',
-  },
-  {
-    question: 'Do I need to provide wine, or can the chef arrange it?',
-    answer: 'You can bring your own, or the chef can source wine. Discuss pairings in the planning consultation.',
-  },
-  {
-    question: 'What is the minimum group size for fine dining?',
-    answer: "Fine dining works beautifully for 2–4 people for intimacy, or larger groups for shared experience. There's no minimum, but pricing is per person.",
-  },
-  {
-    question: 'How far in advance should I book a private fine dining experience?',
-    answer: 'We recommend booking 4–6 weeks ahead to allow time for menu co-creation, ingredient sourcing, and chef preparation. 2–3 weeks is workable for most requests. Rush bookings within one week are possible subject to chef availability and may carry a premium surcharge. The earlier you book, the more creative latitude your chef has.',
-  },
-  {
-    question: 'Can the chef accommodate dietary restrictions for fine dining?',
-    answer: 'Yes — and this is one of the strongest advantages of private chef fine dining over a restaurant. Your chef designs the entire menu around your group. Whether you require gluten-free, vegan, nut-free, kosher, halal, or have specific ingredient aversions, every course will be fully adapted. Share all restrictions clearly at the time of booking so the chef can plan accordingly.',
-  },
-  {
-    question: 'What is included in the fine dining price — ingredients, equipment, and service?',
-    answer: 'Our fine dining packages include the chef\'s time, all ingredients, professional kitchen equipment, table setup, and full service from arrival through to cleanup. Wine and alcohol are generally priced separately. Optional additions include a sommelier, a dedicated waiter, specialty ingredients such as truffle or caviar, and floral table arrangements. Your booking confirmation will itemise exactly what is included.',
-  },
-  {
-    question: 'Do you offer wine pairing with fine dining?',
-    answer: 'Yes. You can choose to add a curated wine pairing to any tasting menu. Your chef or our in-house sommelier will select wines that complement each course — typically 4–6 different pours across an 8-course menu. Alternatively, you can bring your own bottles and ask the chef for pairing recommendations in advance. Wine pairing typically adds IDR 400K–800K per person depending on the selection.',
-  },
+  { question: 'Is this guide free?', answer: 'Yes — educational content to help you plan. Booking is optional.' },
+  { question: 'Can myCHEF deliver what this guide describes?', answer: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'How do I get prices after reading?', answer: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { question: 'Does advice apply across Bali?', answer: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { question: 'Allergies covered in real bookings?', answer: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { question: 'Daily chef vs one dinner?', answer: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { question: 'How to book after this guide?', answer: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { question: 'Related services?', answer: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
+  { question: 'Cancellation if I book?', answer: 'See <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'Who writes the operational standards?', answer: 'myCHEF operations and chef leadership in Bali.' },
+  { question: 'Can villa managers share this guide?', answer: 'Yes — free to share with guests.' },
+  { question: 'More FAQs?', answer: 'Central hub: <a href="/faq">FAQ</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

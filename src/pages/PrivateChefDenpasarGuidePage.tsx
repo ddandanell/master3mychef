@@ -70,26 +70,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "Does myCHEF provide catering for corporate events and official functions in Denpasar?",
-    answer: "Yes. Corporate team dinners, official reception catering, executive private dinners, and government function catering in Denpasar are a regular part of our operations. We provide HACCP-certified chefs with formal training appropriate for official functions, and can supply full waitstaff for events requiring front-of-house service.",
-  },
-  {
-    question: "Can a myCHEF chef source from Pasar Badung in Denpasar?",
-    answer: "Yes. For Denpasar bookings, our chefs source directly from Pasar Badung — Bali's largest and most important fresh market. The proximity to Badung gives Denpasar clients access to the freshest produce and widest range of Balinese ingredients on the island, sourced on the morning of service.",
-  },
-  {
-    question: "Do you provide household chef services for executive residences in Denpasar?",
-    answer: "Yes. We provide ongoing household chef arrangements for executive residents, embassy personnel, and business owners in Denpasar. A chef who visits your residence regularly (daily, or several times per week) to prepare meals. Contact us with your location, household size, and frequency requirements.",
-  },
-  {
-    question: "Can myCHEF cater a large reception or official function for 40-60 guests in Denpasar?",
-    answer: "Yes. We handle large receptions and official functions with full canapé and standing service, seated dinner formats, and full-service setups. For 40-60 guests we supply a head chef, kitchen crew, and dedicated front-of-house service team. Advance booking of at least 1 week is required for events of this size.",
-  },
-  {
-    question: "What is the difference between booking a private chef in Denpasar vs Seminyak?",
-    answer: "The main difference is context. Seminyak bookings are predominantly holiday villa experiences — romantic dinners, group holidays, fine dining. Denpasar bookings are predominantly corporate, executive, and household — professional catering with a business or residential context. Our chefs in both areas are equally trained, but the typical formats differ.",
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'From IDR 1,000,000++/day for one meal (chef + assistant). Two meals IDR 1.8M++, three IDR 2.7M++. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'Do you serve this Bali area?', answer: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Is there a travel fee?', answer: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { question: 'Can you cook in Airbnb villas here?', answer: 'Yes with a workable kitchen — share the listing.' },
+  { question: 'Same prices as other areas?', answer: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
 ]
 
 export default function PrivateChefDenpasarGuidePage() {

@@ -94,31 +94,26 @@ Our sommeliers are fluent in Bali's local wine landscape and can advise exactly 
 ]
 
 const faqs = [
-  {
-    question: 'Do we need to provide the wine or does the sommelier source it?',
-    answer:
-      "You can do either. Many clients prefer to supply their own wine and hire the sommelier for service only. Others prefer the sommelier to advise on and source the wine, which they do at cost plus a logistics fee. For the best results, brief your sommelier on your budget per bottle and approximate guest count -- they'll build the best possible selection within your parameters.",
-  },
-  {
-    question: 'Can a sommelier design pairings for an Indonesian or Balinese menu?',
-    answer:
-      'Yes, and it\'s one of the most creative pairing challenges. Indonesian cuisine\'s complex spice profiles, rich coconut sauces, and fresh aromatics actually pair beautifully with certain wines -- off-dry German Rieslings, aged white Burgundy, and light Pinot Noir are perennial favourites. Our sommeliers have experience designing pairings for Southeast Asian menus specifically.',
-  },
-  {
-    question: 'What credentials should a sommelier have?',
-    answer:
-      'We source sommeliers with WSET Level 3 or above, or equivalent credentials from the Court of Master Sommeliers. All have practical hospitality experience in fine dining environments. We match you with a sommelier appropriate to the scale and formality of your event -- a 7-course chef\'s table dinner warrants a more senior specialist than a casual garden party.',
-  },
-  {
-    question: 'Can the sommelier manage both wine and cocktail service at the same event?',
-    answer:
-      'A sommelier is specifically trained in wine, spirits, and still-service protocol. For events that need both a cocktail bar and formal wine service, we recommend booking a sommelier and a separate bartender or mixologist. The two specialists work different stations and together cover the full beverage programme.',
-  },
-  {
-    question: 'How much wine should we plan for per guest?',
-    answer:
-      'A general guide: half a bottle per person for a 3-course dinner, three-quarters of a bottle per person for a longer tasting menu event. For a cocktail reception followed by a dinner, account for 1--2 pre-dinner drinks plus half a bottle during the meal. Your sommelier will review your specific menu and service windows and provide a precise quantity recommendation.',
-  },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
+  { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
+  { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
+  { question: 'Alcohol included?', answer: 'No — BYO or sourced at cost; hire covers the professional.' },
+  { question: 'Waiter ratio?', answer: 'About one waiter per 10 guests for formal service.' },
+  { question: 'Butler service?', answer: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
+  { question: 'Mixology and signature cocktails?', answer: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },
+  { question: 'Areas covered?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Combine with private chef?', answer: 'Yes — most common luxury setup.' },
+  { question: 'Vetted staff?', answer: 'Employed/supervised teams with replacement-or-refund cover.' },
+  { question: 'How to book staff?', answer: 'WhatsApp date, area, headcount and roles needed.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

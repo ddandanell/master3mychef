@@ -11,31 +11,26 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 const SITE = 'https://mychef.id'
 
 const GENERAL_FAQS = [
-  {
-    question: 'What areas in Bali do you cover?',
-    answer:
-      'We cover all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Kuta, Legian, Pererenan and Denpasar. Travel fees may apply for remote locations.',
-  },
-  {
-    question: 'Do you work with hotels and villas?',
-    answer:
-      'Yes. We work with boutique hotels, luxury villas, beach clubs, restaurants, cafés and event companies across Bali. Our services are built for both recurring venue support and one-off events.',
-  },
-  {
-    question: 'How do I get a quote?',
-    answer:
-      'Message us on WhatsApp with your venue type, location, service needed and preferred dates. We usually reply within one business day with a tailored proposal.',
-  },
-  {
-    question: 'Do you provide staff for events and weddings?',
-    answer:
-      'Yes. Our temporary bartender staffing service supplies vetted bartenders and barbacks for events, weddings and venue cover. Staff are employed by us, so you carry no employment-law risk.',
-  },
-  {
-    question: 'Can you help open a new bar from scratch?',
-    answer:
-      'Yes. Our New Bar Setup service covers concept, layout, equipment procurement, supplier onboarding, SOP library and opening-week support.',
-  },
+  { question: 'What areas in Bali do you cover for bar services?', answer: 'Major hospitality zones island-wide — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and more.' },
+  { question: 'Do you work with hotels and villas?', answer: 'Yes — hotels, restaurants, beach clubs, villas and private events.' },
+  { question: 'How do I get a quote?', answer: 'Share venue/shift details on WhatsApp or via <a href="/bar-services/contact">contact</a> for a written proposal.' },
+  { question: 'Do you provide staff for events and weddings?', answer: 'Yes — event bar teams and wedding bars. Food via <a href="/events/weddings">wedding catering</a> if needed.' },
+  { question: 'Can you help open a new bar from scratch?', answer: 'Yes — consulting, SOPs, menu development and opening teams under B2B bar services.' },
+  { question: 'Bartender rates for private villas?', answer: 'From about IDR 350K/hour (3-hour minimum). <a href="/in-villa-service/bartenders">Bartenders →</a>' },
+  { question: 'Alcohol supply?', answer: 'Usually client-supplied or sourced at cost.' },
+  { question: 'Emergency staffing?', answer: 'Often same-day/next-day when inventory allows.' },
+  { question: 'Training existing staff?', answer: 'Available on B2B programmes.' },
+  { question: 'Mixology menus?', answer: 'Yes — signature and zero-proof lists.' },
+  { question: 'Deposit?', answer: 'Typically 50% to confirm.' },
+  { question: 'Cancellation?', answer: '<a href="/cancellation">Cancellation policy</a> unless contract overrides.' },
+  { question: 'Languages?', answer: 'English-capable guest service available.' },
+  { question: 'Peak season booking?', answer: 'Book early for NYE and high season.' },
+  { question: 'Glassware and bar tools?', answer: 'Can be included in mobile bar scopes.' },
+  { question: 'Multi-venue hotel groups?', answer: 'Yes — multi-outlet programmes quoted.' },
+  { question: 'Villa cocktail parties?', answer: '<a href="/experiences/private-cocktail-party">Private cocktail party</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 24 hours of a complete brief.' },
+  { question: 'Who do I contact?', answer: 'WhatsApp +62 896-7407-2020 or bar services contact page.' },
+  { question: 'More FAQs?', answer: 'Service-specific FAQs also appear on each bar service page and the FAQ hub.' },
 ]
 
 const TRUST_SIGNALS = [

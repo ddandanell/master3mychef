@@ -73,26 +73,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "How many waitstaff do I need for a dinner party of 14 people at a Bali villa?",
-    answer: "For 14 guests with plated service, we recommend 1 head waiter + 2 servers + 1 kitchen runner, plus a bartender if you're serving cocktails or wine throughout. This ensures simultaneous service without delay and lets the chef focus on cooking. For sharing-style service, 1 head waiter + 1 server is often sufficient.",
-  },
-  {
-    question: "Can myCHEF provide both a private chef and event waitstaff for the same event?",
-    answer: "Yes. myCHEF provides the complete team — private chef, waitstaff, bartender, and kitchen crew — for villa events of any size. Booking everything through us ensures coordination between kitchen and floor, which produces significantly better service than sourcing the chef and waitstaff separately.",
-  },
-  {
-    question: "What does event waitstaff in Bali cost?",
-    answer: "Standard server rates are IDR 200,000–300,000 per person per event (5-6 hour service). A head waiter is IDR 350,000–500,000. A bartender is IDR 300,000–450,000. For a dinner party of 12 guests, a typical front-of-house team (head waiter + 2 servers + bartender) costs approximately IDR 1,000,000–1,300,000 total.",
-  },
-  {
-    question: "Does myCHEF provide event staff for corporate events and large receptions in Bali?",
-    answer: "Yes. For corporate team dinners, official receptions, and large villa events (20-80 guests), we provide full event teams including a floor coordinator, multiple servers, bartenders, and kitchen crew. Advance booking of at least 1 week is required for large events.",
-  },
-  {
-    question: "What is the difference between a head waiter and an event coordinator for Bali events?",
-    answer: "A head waiter manages service during the meal — timing courses, coordinating with the kitchen, managing the servers. An event coordinator has a broader role: managing the full event timeline from arrival through to close, coordinating all vendors, handling logistics, and acting as the point of contact between the client and all service teams. For events of 30+ guests, both roles are recommended.",
-  },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
+  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { question: 'How far in advance should I book?', answer: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { question: 'Do you clean up after service?', answer: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { question: 'What if a chef or staff member cannot make it?', answer: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 export default function EventStaffBaliPage() {

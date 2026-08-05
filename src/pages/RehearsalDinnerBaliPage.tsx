@@ -88,31 +88,26 @@ A 50% deposit confirms the booking. Balance is due the day before the event.`,
 ]
 
 const faqs = [
-  {
-    question: 'How far in advance should we book rehearsal dinner catering?',
-    answer:
-      'For weddings during peak season (June--September, December--January), book rehearsal dinner catering at the same time as your wedding catering -- ideally 4--8 weeks in advance. During quieter periods, 2 weeks is typically sufficient. Because rehearsal dinners are coordinated alongside the main wedding, having one point of contact for both events simplifies logistics significantly.',
-  },
-  {
-    question: 'Can myCHEF cater both the rehearsal dinner and the wedding reception?',
-    answer:
-      'Yes, and many clients prefer this. When we cater both events, we know your preferences, have established relationships with your villa team, and can design menus that are complementary without being repetitive. There is also typically a package discount for booking both events together.',
-  },
-  {
-    question: "What's the typical size of a Bali rehearsal dinner?",
-    answer:
-      'Most Bali rehearsal dinners range from 10--40 guests -- immediate family, the wedding party, and close friends who have traveled for the occasion. The more intimate the guest list, the more personal and relaxed the atmosphere tends to be. For couples with 60+ attending the wedding, a welcome cocktail format often works better than a seated rehearsal dinner at this scale.',
-  },
-  {
-    question: 'Can we include a traditional Balinese element for international guests?',
-    answer:
-      'Absolutely -- this is one of the most memorable things you can do for guests arriving from overseas. A Balinese welcome offering, traditional flower arrangements, a musician playing gamelan softly in the background, or a menu built around traditional Balinese dishes all create a cultural experience that feels genuinely placed. Our chefs are Balinese and can guide the authentic elements.',
-  },
-  {
-    question: 'What if our guest list changes close to the rehearsal dinner?',
-    answer:
-      'Guest count changes are normal in the week before a wedding. We build a small buffer into our sourcing quantities. Additions of up to 10% of the confirmed guest count can typically be accommodated with 24 hours\' notice. Larger additions should be communicated as early as possible so we can adjust staffing.',
-  },
+  { question: 'How much does wedding catering in Bali cost?', answer: 'Receptions typically IDR 1.5M–3M++ per person; intimate formats can start lower. See <a href="/events/weddings">wedding catering</a> and <a href="/bali-wedding-catering-packages">packages</a>.' },
+  { question: 'Do you offer menu tastings for weddings?', answer: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
+  { question: 'Can you handle banjar fees and villa permissions?', answer: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
+  { question: 'Can guests bring their own alcohol?', answer: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
+  { question: 'What is the rain plan for outdoor receptions?', answer: 'Every outdoor wedding has a covered fallback (marquee/indoor) confirmed before the day.' },
+  { question: 'Do you cater rehearsal and welcome dinners?', answer: 'Yes — BBQ, family-style or plated formats via <a href="/events">events</a> and <a href="/catering">catering</a>.' },
+  { question: 'What staffing ratio do you use?', answer: 'About one waiter per 8–10 seated guests, plus kitchen lead; cocktail hours add tray staff.' },
+  { question: 'Can you work with our wedding planner?', answer: 'Yes — daily collaboration with planners and villa managers.' },
+  { question: 'Do you offer halal-friendly wedding menus?', answer: 'Yes — pork-free and halal-sensitive lines when specified at planning.' },
+  { question: 'How is this different from a private chef dinner?', answer: 'Weddings are multi-guest production. Couples dinners: <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
+  { question: 'Which areas host most villa weddings?', answer: 'Uluwatu, Canggu, Seminyak, Ubud, Nusa Dua and Jimbaran are common — we cover island-wide.' },
+  { question: 'Can kids and elderly dietary needs be managed?', answer: 'Yes — labelled plates and briefed service for mixed multi-gen guest lists.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

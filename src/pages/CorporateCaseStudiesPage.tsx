@@ -167,30 +167,26 @@ const SERVICES = [
 ]
 
 const FAQS = [
-  {
-    q: 'Do you provide proper invoices for corporate accounting?',
-    a: 'Yes — NPWP-compliant invoices with a clear per-head breakdown and no surprise line items, so your finance team can process the expense cleanly.',
-  },
-  {
-    q: 'How far in advance should we book a corporate event in Bali?',
-    a: 'Two to three weeks is usually enough for a single dinner. For multi-day offsites, retreats, or dates in peak season and Indonesian holidays, book one to three months ahead.',
-  },
-  {
-    q: 'Can you handle a large dietary matrix across a whole team?',
-    a: 'Yes. We collect every requirement in advance and build menus so vegan, gluten-free, allergy and religious needs are integrated into the main service — never separate "special" plates.',
-  },
-  {
-    q: 'What group sizes do you cater for?',
-    a: 'From executive dinners of eight up to conference catering for 200 or more. Staffing and service style scale with headcount and formality.',
-  },
-  {
-    q: 'What budget should we expect for corporate catering in Bali?',
-    a: 'Corporate and event formats in Bali typically start from IDR 700K per person ++ (11% government tax + 10% service charge), with the final figure depending on menu, staffing and production. Every quote is fixed and itemised before you commit.',
-  },
-  {
-    q: 'Do you travel to our villa or resort anywhere in Bali?',
-    a: 'Yes — Seminyak, Canggu, Uluwatu, Ubud, Nusa Dua, Jimbaran and beyond. We handle ingredient sourcing and logistics for remote locations as part of planning.',
-  },
+  { q: 'Corporate catering price range?', a: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { q: 'NPWP invoices?', a: 'Yes on request.' },
+  { q: 'Multi-day retreats?', a: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
+  { q: 'Guest counts?', a: 'From leadership dinners to 100–200+ programmes.' },
+  { q: 'Dietary for mixed teams?', a: 'Yes when headcount by diet is shared.' },
+  { q: 'Villa and venue work?', a: 'Yes — share access rules.' },
+  { q: 'Bartenders and waiters?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'Case studies?', a: 'Yes — <a href="/corporate-case-studies">case studies</a>.' },
+  { q: 'Book from overseas?', a: 'Yes — WhatsApp/email planning before arrival.' },
+  { q: 'Headcount changes?', a: 'Re-quoted in writing with notice.' },
+  { q: 'Alcohol?', a: 'BYO or sourced at cost.' },
+  { q: 'How to start?', a: 'Share dates, headcount, venues, meal map — <a href="/quote">quote</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const webPageSchema = {

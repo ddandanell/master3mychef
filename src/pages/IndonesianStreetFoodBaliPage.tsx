@@ -123,30 +123,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'Is this suitable for guests who\'ve never tried Indonesian food?',
-    answer: 'Absolutely — our chefs explain each dish and we adjust spice levels for international palates. Indonesian cuisine covers a huge range of flavour profiles, from mild and coconut-forward to intensely spiced. We introduce dishes in a way that builds familiarity and we always serve sambal on the side so guests can control their own heat.',
-  },
-  {
-    question: 'Can you do a vegetarian or vegan Indonesian feast?',
-    answer: 'Yes, we have a full plant-based Indonesian menu — no babi guling, tempeh-forward, with tofu satay replacing meat satay. Indonesian cuisine has deep vegetarian traditions, particularly in Javanese cooking, and many of the most celebrated dishes (gado-gado, tempeh manis, mie goreng, es cendol) are naturally plant-based or easily adapted.',
-  },
-  {
-    question: 'Is the market visit included in the price?',
-    answer: 'The market visit is an IDR 200K/person supplement on top of the feast menu price. It typically takes place at dawn (6–7am) before cooking begins. We highly recommend it — experiencing a Balinese wet market with a local chef who knows the vendors transforms your understanding of every dish you eat that evening.',
-  },
-  {
-    question: 'How spicy are Indonesian dishes?',
-    answer: 'Adjustable. We serve sambal on the side so guests control their own heat. Base dishes are cooked to medium-mild by default — present but not overwhelming. If your group enjoys heat, we can increase the chilli in the base cooking. If you have guests who cannot eat any spice, we prepare their portions separately.',
-  },
-  {
-    question: 'Can you explain the dishes during service?',
-    answer: 'Yes, this is a core part of the experience. Our chefs love talking about Indonesian food culture — the ceremonies dishes belong to, the regional origins, the techniques involved. If you would like a more structured introduction, we can do a brief tasting before the main feast with commentary on each dish.',
-  },
-  {
-    question: 'What\'s the difference between Balinese and Indonesian cuisine?',
-    answer: 'Balinese cuisine is a subset of Indonesian but uses distinctive spice blends (base wangi, base gede) and features pork heavily — unique in Muslim-majority Indonesia, where Bali\'s Hindu population makes pork-based dishes like babi guling possible. Balinese food also uses more fresh herbs and tends toward more aromatic, floral profiles. Our menus offer both: the Balinese Village Feast focuses on Bali\'s ceremonial food culture; the Indonesian Archipelago menu explores mainland and outer-island traditions.',
-  },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
+  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { question: 'How far in advance should I book?', answer: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { question: 'Do you clean up after service?', answer: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { question: 'What if a chef or staff member cannot make it?', answer: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const RELATED_PAGES = [

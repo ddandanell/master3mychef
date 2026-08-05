@@ -62,26 +62,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "What is the minimum engagement period for a household chef arrangement in Bali?",
-    answer: "The minimum engagement for a managed household chef service is one calendar month. For ad hoc day-rate bookings, there is no minimum.",
-  },
-  {
-    question: "Can a household chef accommodate multiple dietary requirements within the same household?",
-    answer: "Yes. If your household includes a vegan, a meat-eater, a gluten-intolerant family member, and children with separate preferences, your chef plans menus that accommodate everyone simultaneously.",
-  },
-  {
-    question: "What happens if my household chef is sick or unavailable?",
-    answer: "Under the managed household chef service, myCHEF provides a qualified substitute chef for any days your regular chef is unavailable.",
-  },
-  {
-    question: "Do household chef arrangements include grocery shopping?",
-    answer: "Yes. Your chef shops at local markets and selected suppliers and charges ingredients at cost. You receive an itemised weekly grocery report.",
-  },
-  {
-    question: "Is a household chef available outside of Canggu and Seminyak?",
-    answer: "Yes. We place household chefs across Bali including Ubud, Uluwatu, Nusa Dua, Sanur, Jimbaran, Berawa, Pererenan, and the wider expat belt.",
-  },
+  { question: 'What staffing services do you offer in Bali?', answer: 'Day-rate in-villa staff and long-term placement of chefs, managers, butlers and household teams. <a href="/staffing">Staffing</a> · <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'How fast is placement?', answer: 'Often around 48 hours for roles with ready candidates; specialist searches take longer.' },
+  { question: 'Replacement guarantee?', answer: 'Placement programmes typically include a replacement window (e.g. 30 days) in writing.' },
+  { question: 'Live-in vs live-out?', answer: 'Live-in resides on property; live-out works set shifts. We help you choose.' },
+  { question: 'Background checks?', answer: 'Candidates are interviewed, reference-checked and supervised through myCHEF systems.' },
+  { question: 'Can we hire staff without catering?', answer: 'Yes for event staff. <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'Hotel and restaurant staffing?', answer: 'Yes — <a href="/staffing/hotels">hotel staffing</a> and B2B kitchen solutions.' },
+  { question: 'Trial days?', answer: 'Paid trials before long-term placement are common.' },
+  { question: 'English-speaking staff?', answer: 'Guest-facing roles are English-capable; we match language needs.' },
+  { question: 'What info starts a search?', answer: 'Role, location, live-in/out, languages, salary band, start date.' },
+  { question: 'Backup if staff is sick?', answer: 'Temporary cover can be arranged through the network.' },
+  { question: 'How to start?', answer: 'WhatsApp the brief or <a href="/contact">contact</a>.' },
+  { question: 'Is this guide free?', answer: 'Yes — educational content to help you plan. Booking is optional.' },
+  { question: 'Can myCHEF deliver what this guide describes?', answer: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'How do I get prices after reading?', answer: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { question: 'Does advice apply across Bali?', answer: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { question: 'Allergies covered in real bookings?', answer: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { question: 'Daily chef vs one dinner?', answer: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { question: 'How to book after this guide?', answer: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { question: 'Related services?', answer: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
 ]
 
 export default function HouseholdChefBaliGuidePage() {

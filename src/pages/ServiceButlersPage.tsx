@@ -109,6 +109,18 @@ const FAQS = [
   { q: 'How far in advance should I book?', a: '1–2 weeks for Day Butlers; 3–4 weeks for Residence Butlers in peak season (July–August, December–New Year). Shorter notice is often possible — ask on WhatsApp.' },
   { q: 'What areas do you cover?', a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
   { q: 'What is the difference between hiring a butler and booking a villa with butler service?', a: 'Villas advertising "butler service" typically include a shared staff member during fixed hours. A hired myCHEF butler is dedicated to your group alone, briefed to your preferences, and booked for exactly the days and hours you choose.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
+  { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
+  { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },
+  { q: 'Alcohol included?', a: 'No — BYO or sourced at cost; hire covers the professional.' },
+  { q: 'Waiter ratio?', a: 'About one waiter per 10 guests for formal service.' },
+  { q: 'Butler service?', a: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
+  { q: 'Mixology and signature cocktails?', a: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },
+  { q: 'Areas covered?', a: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { q: 'Combine with private chef?', a: 'Yes — most common luxury setup.' },
+  { q: 'Vetted staff?', a: 'Employed/supervised teams with replacement-or-refund cover.' },
+  { q: 'How to book staff?', a: 'WhatsApp date, area, headcount and roles needed.' },
 ]
 
 export default function ServiceButlersPage() {
@@ -258,7 +270,7 @@ export default function ServiceButlersPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Butler Service FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

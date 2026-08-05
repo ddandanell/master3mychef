@@ -69,26 +69,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "What type of cuisine does a Seminyak private chef typically serve?",
-    answer: "Our Seminyak chefs are versatile and can cook across cuisines, but the most common requests are modern European/Mediterranean, premium Indonesian fine dining, and Japanese-influenced menus.",
-  },
-  {
-    question: "Can a private chef set up a proposal dinner at my Seminyak villa?",
-    answer: "Yes. We handle private proposal dinners regularly. We coordinate the menu, table setup, fresh flowers, candles, and timing with your specific proposal moment in mind.",
-  },
-  {
-    question: "Does myCHEF provide a sommelier or wine pairing service in Seminyak?",
-    answer: "Yes. We can arrange a wine pairing consultation and service alongside your private chef dinner. Wine costs are additional and quoted transparently.",
-  },
-  {
-    question: "What is the typical cost for a private chef honeymoon dinner in Seminyak?",
-    answer: "A romantic private chef dinner for two in Seminyak — 4 to 5 courses, premium ingredients, full setup and service — starts from approximately IDR 1,200,000 to 1,800,000 per person, excluding wine.",
-  },
-  {
-    question: "Do you cover Kerobokan and Batu Belig as well as central Seminyak?",
-    answer: "Yes. We cover the full Seminyak luxury corridor including Seminyak core, Oberoi, Petitenget, Kerobokan, and Batu Belig.",
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'From IDR 1,000,000++/day for one meal (chef + assistant). Two meals IDR 1.8M++, three IDR 2.7M++. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'Do you serve this Bali area?', answer: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Is there a travel fee?', answer: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { question: 'Can you cook in Airbnb villas here?', answer: 'Yes with a workable kitchen — share the listing.' },
+  { question: 'Same prices as other areas?', answer: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
 ]
 
 export default function PrivateChefSeminyakGuidePage() {

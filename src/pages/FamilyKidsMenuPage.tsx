@@ -7,30 +7,26 @@ const SITE = 'https://mychef.id'
 const CANONICAL = `${SITE}/blog/family-kids-menu-private-chef-bali`
 
 const FAQS = [
-  {
-    q: 'Can a private chef in Bali cook for young children?',
-    a: 'Yes — myCHEF chefs are experienced cooking for all ages. We build a separate kids\' menu into the family meal plan covering age-appropriate portions, mild flavours, and familiar dishes. You tell us the children\'s ages and preferences; the chef handles the rest.',
-  },
-  {
-    q: 'What does a typical family villa dinner look like in Bali?',
-    a: 'The chef arrives 1.5–2 hours before serving time, sets up in your villa kitchen, and serves adults and children at the same table. Kids\' plates can come out earlier if needed. After the meal, the chef cleans up completely. The whole evening runs on the family\'s timeline — no rush, no transfers, no restaurant stress.',
-  },
-  {
-    q: 'How do I communicate my children\'s dietary needs to the chef?',
-    a: 'When you message us on WhatsApp, include a brief note: children\'s ages, any dislikes or allergies, whether they eat spice, and any preferred foods. We pass this to the chef and build it into the menu proposal before you approve anything.',
-  },
-  {
-    q: 'Is a private chef more expensive than a family restaurant dinner in Bali?',
-    a: 'Not necessarily. A family of 4–6 eating at a decent Seminyak or Canggu restaurant easily spends IDR 4M–6M when you include food, drinks, service charge, and two-way transfers. A myCHEF villa dinner for the same group runs IDR 3M–5M all-inclusive — and the kids eat something they actually want, at home, without anyone melting down in a restaurant.',
-  },
-  {
-    q: 'What ages do your kids\' menus cover?',
-    a: 'We tailor the kids\' menu to the ages in your group. Toddlers (1–3) get simple finger foods, soft textures, and mild flavours. Kids (4–8) get familiar dishes — pasta, grilled chicken, steamed vegetables — adapted to local ingredients. Older children (9+) typically eat from a slightly modified version of the adult menu.',
-  },
-  {
-    q: 'How much notice do I need to give for a family dinner?',
-    a: 'Most families book 24–48 hours in advance. We can sometimes accommodate same-day requests depending on date and location. Send us a WhatsApp message with your date, villa location, number of adults and children with ages, and any dietary notes — and we will come back with a menu proposal within two hours.',
-  },
+  { q: 'Kids menu prices?', a: 'Often from about IDR 250K–350K per child ++. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Nut-free?', a: 'Kids menus are nut-free as standard; other allergies adapted when briefed.' },
+  { q: 'Ages?', a: 'Roughly 3–12 with milder flavours and child portions.' },
+  { q: 'Adults at the same event?', a: 'Yes — kids first, adults from dining styles collections.' },
+  { q: 'Birthday chef parties?', a: 'Yes — <a href="/experiences/kids-birthday-chef-party">kids birthday chef party</a>.' },
+  { q: 'Halal adaptable?', a: 'Yes when specified.' },
+  { q: 'Minimum children?', a: 'Often around six for party menus; smaller groups can fold into family chef days.' },
+  { q: 'Picky eaters?', a: 'Pasta, pizza, burgers and familiar builds available.' },
+  { q: 'Daily chef with kids?', a: 'Yes on multi-day <a href="/private-chef-bali">private chef</a> stays.' },
+  { q: 'Cleanup?', a: 'Included on serviced bookings.' },
+  { q: 'Areas?', a: 'Bali-wide.' },
+  { q: 'How to book?', a: 'WhatsApp ages, allergies, date and villa area.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const WA_MSG = encodeURIComponent(

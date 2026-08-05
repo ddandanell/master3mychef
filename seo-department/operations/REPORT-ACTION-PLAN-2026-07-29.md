@@ -11,7 +11,7 @@
 | Step | What | Status |
 |---|---|---|
 | 0 | Verify already-shipped fixes | ✅ Technical layer verified live; residual head-term title found & fixed · ⏳ GSC layer awaits fresh data (scheduled 12 Aug) |
-| 1 | Live-inspect 8 /private-chef/ URLs, request indexing | ✅ Done — 7/8 already indexed; kuta requested (re-check ~5 Aug) · bonus re-crawls for 2 retitled pages |
+| 1 | Live-inspect 8 /private-chef/ URLs, request indexing | ✅ **Done — 8/8 indexed** (kuta confirmed indexed 5 Aug re-check) · bonus re-crawls for 2 retitled pages |
 | 2 | `private chef bali` page-2→1 push | ✅ 2.1 61-page home anchor · ✅ 2.2 homepage meta rewrite (R-003 claim removed) · ✅ 2.3 head-term exclusivity enforced · ⏳ 2.4 = authority (Step 6) |
 | 3 | Untapped pools: private dining + home chef | ✅ Done — 4 contextual anchors + homepage FAQ snippet target, all live |
 | 4 | Page-2 internal-linking pass (5 queries) | ✅ Done — anchors added/verified for all five, live |
@@ -21,7 +21,7 @@
 
 **Deployed commits (all live on mychef.id):** `74d21212` (minimums+pipeline), `4bf1c2a9` (menu minGuests), `edaeb854` (redirects+menu retarget), `8bbb3aa5` (Step 0 residual), `b86f39eb` (Step 2), `53572f58` (Step 3), `2b7ae9e7` (Step 4).
 
-**Scheduled check-ups (both confirmed enabled, auto-run one-time):** 5 Aug 09:00 — kuta indexing re-check · 12 Aug 09:00 — full GSC re-verification of all shipped fixes. Monthly: user supplies a fresh analysis-export (same format as analysis_961) and it gets checked against this plan's verify-checkpoints.
+**Scheduled check-ups:** ✅ 5 Aug 09:00 — kuta indexing re-check, **done, page confirmed indexed** · ⏳ 12 Aug 09:00 — full GSC re-verification of all shipped fixes, still pending. Monthly: user supplies a fresh analysis-export (same format as analysis_961) and it gets checked against this plan's verify-checkpoints.
 
 **Owner decisions now blocking Step 6:** (1) publish the cost asset as a new URL or extend `/pricing`; (2) approve the price figures for external citation; (3) sign off outreach sending. Everything else on this plan is either done or waiting on data.
 
@@ -101,6 +101,19 @@ Bonus (quota permitting): re-crawl requested for the two pages retitled today �
 **Note:** 7 of 8 already indexed — further confirmation that the Page Indexing report's "193 not indexed" is unreliable. The correction-doc rule (live-verify before acting) held again.
 
 **Re-check:** ~2026-08-05, re-inspect /private-chef/kuta.
+
+### Re-check executed 2026-08-05 (live URL Inspection, scheduled task)
+
+| Check | Result |
+|---|---|
+| GSC URL Inspection verdict | ✅ **"URL is on Google"** — Indeksering af sider: **Siden er indekseret** (page is indexed) |
+| Last crawl | 2026-08-03, 16:19:15 (Googlebot smartphone) |
+| Crawl allowed / Page fetch / Indexing allowed | Yes / Successful / Yes |
+| Sitemaps field in inspection | Still shows "Midlertidig fejl behandles" (temporary error being processed) — cosmetic; page is indexed regardless, likely discovered via internal links rather than sitemap re-read |
+| Live reachability | ✅ `https://mychef.id/private-chef/kuta` returns HTTP 200 |
+| Present in `public/sitemap.xml` | ✅ confirmed (`<loc>https://mychef.id/private-chef/kuta</loc>`, lastmod 2026-06-27) |
+
+**Outcome:** kuta is now indexed — 8/8 `/private-chef/` area pages confirmed indexed. No re-request needed. The "Sitemaps: temporary error" field is worth a glance at the 12 Aug full re-verification but is not blocking; the URL Inspection tool is the authoritative signal here, per the correction-doc rule (live-verify, don't trust secondary report fields).
 
 ---
 

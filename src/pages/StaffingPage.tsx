@@ -114,15 +114,87 @@ const STEPS = [
   },
 ]
 
-// ── 4. FAQ (2 questions) ────────────────────────────────────────────────────
+// ── 4. FAQ — placement objections, PAA, villa-operator questions ─────────────
 const FAQS = [
   {
-    q: 'What is the difference between live-in and live-out villa staff?',
-    a: 'Live-in staff reside on the property with accommodation and meals provided; live-out staff commute and work set shifts. The choice depends on coverage needs, privacy, roster, and cost.',
+    q: 'What is the difference between live-in and live-out villa staff in Bali?',
+    a: 'Live-in staff reside on the property with accommodation and meals provided; live-out staff commute and work set shifts. Live-in suits continuous coverage and early/late service; live-out suits privacy-focused households and defined rosters. We help you choose during intake.',
   },
   {
-    q: 'Household staff vs villa staff - what is the difference?',
-    a: 'Household staff serve a private residence, often with long-term, family-focused roles. Villa staff run hospitality property operations with different profiles, rosters, and guest-service expectations.',
+    q: 'Household staff vs villa staff — what is the difference?',
+    a: 'Household staff serve a private residence with long-term, family-focused roles. Villa staff run hospitality property operations — guest turnovers, SOPs, and higher volume service expectations. Profiles, English level and roster design differ. See <a href="/staffing/household">household</a> and <a href="/staffing/villa-staff">villa staff</a>.',
+  },
+  {
+    q: 'How fast can you place a private chef or villa staff in Bali?',
+    a: 'Average placement is around 48 hours for roles we already have vetted candidates for. Specialist or multi-role teams can take longer. Urgent cover and temporary chefs can often start sooner via our event and daily chef teams on <a href="/private-chef-bali">private chef Bali</a>.',
+  },
+  {
+    q: 'Do you place live-in private chefs in Bali?',
+    a: 'Yes. Live-in chef placement is a core staffing lane for long-stay homes, estates and multi-villa compounds. Details: <a href="/staffing/live-in-chef">live-in chef</a>. For short villa holidays, book a <a href="/private-chef-bali">daily private chef</a> instead of a full placement.',
+  },
+  {
+    q: 'What roles can myCHEF place in Bali?',
+    a: 'Private chefs, live-in chefs, villa managers, butlers, housekeepers, service teams and hotel/restaurant kitchen placements. Explore <a href="/staffing/placement">placement</a>, <a href="/staffing/villa-managers">villa managers</a> and <a href="/staffing/hotels">hotel staffing</a>.',
+  },
+  {
+    q: 'Are candidates vetted and background-checked?',
+    a: 'Yes. Candidates are interviewed, reference-checked and matched to your property’s language, cuisine and service standards. We remain the accountable partner if something is not working.',
+  },
+  {
+    q: 'What is your replacement guarantee for staff placements?',
+    a: 'We include a replacement window (commonly 30 days on placement programmes) so you are not stuck with a poor fit. Exact terms are written into your placement agreement before start date.',
+  },
+  {
+    q: 'Can you provide temporary or event staff as well as long-term placements?',
+    a: 'Yes. Long-term placement is this page’s focus; day-rate waiters, bartenders, butlers and chefs for events sit under <a href="/in-villa-service">in-villa service</a> and <a href="/events">events</a>. Many villa operators use both.',
+  },
+  {
+    q: 'How much does villa staff placement cost in Bali?',
+    a: 'Fees depend on role seniority, live-in vs live-out, and whether you need a single hire or a full team. We quote after a short brief — no generic public rate that would mislead for a head chef vs housekeeper. Message WhatsApp for a placement estimate.',
+  },
+  {
+    q: 'Do you place staff for hotels and restaurants as well as villas?',
+    a: 'Yes — kitchen and F&amp;B roles for hotels, restaurants and beach clubs, plus consulting via our B2B kitchen solutions. See <a href="/staffing/hotels">hotel staffing</a> and <a href="/restaurant-kitchen-solutions">restaurant kitchen solutions</a>.',
+  },
+  {
+    q: 'Can you replace a chef who leaves mid-contract?',
+    a: 'Yes. Continuity is a primary reason operators hire through myCHEF rather than a one-off classifieds ad. We maintain a bench of chefs and can bridge with temporary cover while a permanent replacement is shortlisted.',
+  },
+  {
+    q: 'What information do you need to start a placement?',
+    a: 'Property type and location, live-in vs live-out, languages, cuisine or service style, roster, salary band, start date and any must-have experience (kids, large groups, fine dining, villa SOPs). Send that on WhatsApp and we open the shortlist.',
+  },
+  {
+    q: 'Do placed chefs handle groceries and menu planning?',
+    a: 'Yes when that is in the role brief. Long-term household chefs typically plan menus, shop or coordinate suppliers, cook and manage kitchen hygiene. Event-style service without employment is better as <a href="/private-chef-bali">daily chef hire</a>.',
+  },
+  {
+    q: 'Can you staff multi-villa compounds or estate properties?',
+    a: 'Yes — managers, chefs and service teams sized for multi-key estates. We map coverage by villa, shared kitchen and guest arrival peaks rather than forcing a one-size roster.',
+  },
+  {
+    q: 'What areas of Bali do you cover for staffing?',
+    a: 'Island-wide placements with strongest density in Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Remote properties are possible with travel and housing factored into the package.',
+  },
+  {
+    q: 'How is staffing different from booking a private chef for a holiday?',
+    a: 'Staffing = employment-style or long-term placement for a property or household. Holiday private chef = day-rate service for your dates only, no employment relationship. Most travellers want <a href="/private-chef-bali">private chef Bali</a>; owners and GM teams want this staffing page.',
+  },
+  {
+    q: 'Do you help with work documentation and onboarding?',
+    a: 'We guide role design, interviews and onboarding standards. Legal employment structure depends on whether you hire directly or through an agreed model — we flag requirements early so start dates are realistic.',
+  },
+  {
+    q: 'Can I trial a chef before long-term placement?',
+    a: 'Often yes — a paid trial service day or short temporary engagement is the cleanest way to test cuisine fit, communication and villa chemistry before locking a long-term seat.',
+  },
+  {
+    q: 'What if our requirements change after placement?',
+    a: 'Tell us early. Roster changes, extra villas online, or a shift from family to guest-house mode may need a different profile. We adjust the plan rather than forcing the original hire into the wrong job.',
+  },
+  {
+    q: 'How do I start a staffing conversation with myCHEF?',
+    a: 'WhatsApp +62 896-7407-2020 with your property location, roles needed and start date — or use <a href="/contact">contact</a>. We reply with next steps and a shortlist timeline.',
   },
 ]
 
@@ -461,7 +533,9 @@ export default function StaffingPage() {
           </div>
           <FAQAccordion
             items={FAQS}
-            defaultOpenCount={4}
+            defaultOpenCount={3}
+            showToc
+            ctaEvery={5}
           />
         </div>
       </section>

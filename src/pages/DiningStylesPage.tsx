@@ -1,12 +1,96 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle } from 'lucide-react'
-import SeoHead, { breadcrumbSchema, localBusinessSchema } from '@/components/SeoHead'
+import SeoHead, { breadcrumbSchema, localBusinessSchema, faqPageSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 import { CLASSIC_MENUS, THREE_COURSE_MENUS, KIDS_MENUS, BBQ_MENUS } from '@/data/menus'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import { ArticleContentSection } from '@/components/shared'
+
+const DINING_STYLES_FAQS = [
+  {
+    q: 'What dining styles can I book for a Bali villa?',
+    a: 'Six collections: <a href="/fine-dining/menus">classic set menus</a>, <a href="/three-course">three-course</a>, <a href="/bbq-grill">BBQ grill</a>, <a href="/kids-menus">kids menus</a>, full <a href="/fine-dining">fine dining</a> evenings, and <a href="/catering">catering &amp; events</a>.',
+  },
+  {
+    q: 'How do I choose between plated, buffet, BBQ and grazing?',
+    a: 'Plated = dinner is the event. Family-style = shared platters. Buffet = larger headcounts and mixed diets. Grazing = standing/mingling. Live-fire BBQ = theatre and outdoor energy. Use the format guide on this page or WhatsApp us with guest count and mood.',
+  },
+  {
+    q: 'How much do villa dining styles cost in Bali?',
+    a: 'Indicative starts: kids from IDR 250K/child, three-course from IDR 850K/guest, BBQ from IDR 950K/guest, classic sets from IDR 1.25M/guest — all ++. Daily chef stays use <a href="/private-chef-bali">private chef day rates</a>. Full tables: <a href="/pricing">pricing</a>.',
+  },
+  {
+    q: 'What does "++" mean on dining style prices?',
+    a: '11% government tax + 10% service charge. Written quotes show the all-in total before deposit.',
+  },
+  {
+    q: 'Can kids and adults use different dining styles on the same night?',
+    a: 'Yes — the most common setup is <a href="/kids-menus">kids menus</a> early, then adult three-course, BBQ or fine dining. One coordinated team.',
+  },
+  {
+    q: 'Is dining styles the same as hiring a daily private chef?',
+    a: 'No. Dining styles are menu/format collections for a sitting or party. Multi-day villa cooking is <a href="/private-chef-bali">private chef hire</a> (1–3 meals/day, groceries at cost).',
+  },
+  {
+    q: 'Do you cook every dining style in our villa kitchen?',
+    a: 'Yes for villa formats. BBQ brings its own grill station. Share your villa link so we match equipment to the kitchen.',
+  },
+  {
+    q: 'Can you handle allergies across dining styles?',
+    a: 'Yes — vegan, gluten-free, nut-free, shellfish allergy, pregnancy-safe and more, planned before shopping. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide →</a>',
+  },
+  {
+    q: 'How far in advance should I book?',
+    a: 'A few days for most dinners; peak season, large BBQs and fine dining need more. Last-minute is often possible.',
+  },
+  {
+    q: 'What deposit and cancellation apply?',
+    a: '50% deposit locks the date; balance the day before. Full refund 14+ days out, 50% at 7–13 days, none under 7. <a href="/cancellation">Policy →</a>',
+  },
+  {
+    q: 'Which style is best for a romantic dinner for two?',
+    a: '<a href="/fine-dining/romantic-dinner">Romantic dinner</a> or a tasting path on <a href="/fine-dining">fine dining</a>. Three-course can work for a lighter couple’s night.',
+  },
+  {
+    q: 'Which style is best for 20+ guests at a villa party?',
+    a: 'BBQ grill, buffet-style catering or full <a href="/events">event catering</a>. Plated tasting menus cap lower for quality reasons.',
+  },
+  {
+    q: 'Do all styles include cleanup?',
+    a: 'Serviced formats include kitchen/service cleanup. Drop-off catering is the exception (no on-site team). Confirm on your quote.',
+  },
+  {
+    q: 'Can we mix Indonesian and Western menus?',
+    a: 'Yes. Chef specialists cover Balinese/Indonesian, Mediterranean, Japanese, BBQ and more — including mid-stay rotation on weekly private chef bookings.',
+  },
+  {
+    q: 'Is alcohol included in any dining style?',
+    a: 'No. BYO is welcome, or add <a href="/in-villa-service/bartenders">bartenders</a> / wine pairing on fine dining.',
+  },
+  {
+    q: 'Which areas of Bali do you cover?',
+    a: 'Island-wide. Browse <a href="/locations">locations</a> for Seminyak, Canggu, Ubud, Uluwatu and more.',
+  },
+  {
+    q: 'How do I get a recommendation for the right dining style?',
+    a: 'WhatsApp occasion, guest count, ages, dietary needs and villa area — we reply with a shortlist. Or use <a href="/recommended-services">recommended services</a>.',
+  },
+  {
+    q: 'Can dining styles be used for corporate villa dinners?',
+    a: 'Yes — three-course, set menus and BBQ are popular for offsites. Larger programmes: <a href="/events/corporate">corporate events</a>.',
+  },
+  {
+    q: 'What if our guest count changes after we book?',
+    a: 'Final headcount is usually due ~48 hours before service. We adjust food and staff; big increases may change minimums.',
+  },
+  {
+    q: 'How do I book after choosing a dining style?',
+    a: 'Open the collection page, pick a menu or ask us to choose, then confirm with a fixed quote and 50% deposit. <a href="/book">Book →</a> · <a href="/quote">Quote →</a>',
+  },
+]
 
 const canonical = 'https://mychef.id/dining-styles'
 
@@ -105,6 +189,7 @@ export default function DiningStylesPage() {
         jsonLd={[
           localBusinessSchema,
           breadcrumbSchema('Dining Styles', canonical),
+          faqPageSchema(DINING_STYLES_FAQS.map((f) => ({ question: f.q, answer: f.a }))),
           {
             '@context': 'https://schema.org',
             '@type': 'CollectionPage',
@@ -293,6 +378,20 @@ export default function DiningStylesPage() {
           <p className="mt-8 text-white/60 text-center">
             Want to see exactly how each format looks on the table — settings, pacing, staffing? Read <Link to="/family-styling" className="text-[#C5A028] hover:underline">how we style each experience</Link>.
           </p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-20 px-6 border-t border-white/10 scroll-mt-24" style={{ background: '#0A0A0A' }}>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Questions</p>
+            <h2 className="font-playfair text-3xl md:text-4xl mb-4">Dining Styles FAQ</h2>
+            <p className="text-white/60 leading-relaxed">
+              How to choose a format, what it costs, kids vs adults, deposits and how villa dining works in Bali.
+            </p>
+          </div>
+          <FAQAccordion items={DINING_STYLES_FAQS} dark defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

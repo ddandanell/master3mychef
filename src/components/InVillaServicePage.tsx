@@ -92,14 +92,86 @@ const SERVICE_EXPLAINERS = [
 ]
 
 const FAQS = [
-  { q: 'How much does it cost to hire villa service staff in Bali?', a: 'Waiters from IDR 250,000/hour, hosts from IDR 300,000/hour, bartenders from IDR 350,000/hour (all 3-hour minimums). Butlers from IDR 1,200,000/day, sommelier from IDR 1,200,000/dinner, mixology from IDR 1,500,000/session. All rates ++ (11% tax + 10% service).' },
-  { q: 'Is there a minimum booking?', a: 'Hourly roles carry a 3-hour minimum; waiter bookings start at two waiters. Butler, sommelier and mixology are priced per day, dinner or session.' },
-  { q: 'Can I hire staff without booking catering?', a: 'Yes — our teams regularly support self-catered events and other caterers.' },
-  { q: 'What do staff wear and bring?', a: 'Professional uniforms matched to your event\'s formality, plus all role-specific tools — bar kits for bartenders, service equipment for waiters. Specialty glassware, ice and garnishes are arranged during briefing.' },
-  { q: 'Are your staff vetted and supervised?', a: 'All staff are background-checked, employed and supervised by myCHEF, and covered by our replacement-or-refund guarantee if anyone cannot make it on the day.' },
-  { q: 'What is the cancellation policy?', a: 'Cancel 14 or more days before service for a full refund, 7–13 days for a 50% refund; less than 7 days is non-refundable, and the deposit follows the same tiers. Full terms are on our <a href="/cancellation">cancellation policy</a> page.' },
-  { q: 'Which areas do you cover?', a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may carry a modest travel fee, quoted upfront.' },
-  { q: 'How far ahead should I book?', a: '3+ days for small teams, 2+ weeks for 10+ staff or peak season. Last-minute is frequently possible.' },
+  {
+    q: 'How much does it cost to hire villa service staff in Bali?',
+    a: 'Waiters from <strong>IDR 250,000/hour</strong>, hosts from IDR 300,000/hour, bartenders from <strong>IDR 350,000/hour</strong> (all 3-hour minimums). Butlers from IDR 1,200,000/day, sommelier from IDR 1,200,000/dinner, mixology from IDR 1,500,000/session. All rates ++ (11% tax + 10% service). Pair with food via <a href="/catering">catering</a> or <a href="/private-chef-bali">private chef</a>.',
+  },
+  {
+    q: 'Is there a minimum booking for in-villa staff?',
+    a: 'Hourly roles carry a 3-hour minimum; waiter bookings start at two waiters for proper service flow. Butler, sommelier and mixology are priced per day, dinner or session.',
+  },
+  {
+    q: 'Can I hire staff without booking catering?',
+    a: 'Yes. Our waiters, bartenders and butlers regularly support self-catered villas, other caterers, and BYO food nights. Food is optional — service quality is not.',
+  },
+  {
+    q: 'What do staff wear and bring to a Bali villa?',
+    a: 'Professional uniforms matched to your formality, plus role tools — bar kits for bartenders, service gear for waiters. Specialty glassware, ice and garnishes are arranged at briefing. Tell us dress code (black tie, tropical, resort casual).',
+  },
+  {
+    q: 'Are your villa staff vetted and supervised?',
+    a: 'Yes. Staff are background-checked, employed and supervised by myCHEF — not random freelancers from a group chat. If someone cannot make it, our replacement-or-refund guarantee protects your evening. <a href="/why-mychef">Why myCHEF →</a>',
+  },
+  {
+    q: 'What is the cancellation policy for staff hire?',
+    a: 'Full refund 14+ days before service, 50% at 7–13 days, non-refundable under 7 days; deposit follows the same tiers. <a href="/cancellation">Cancellation policy →</a>',
+  },
+  {
+    q: 'Which areas of Bali do you cover for in-villa service?',
+    a: 'Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa, Pererenan and more. Remote areas may carry a modest travel fee, always quoted upfront. <a href="/locations">Locations →</a>',
+  },
+  {
+    q: 'How far ahead should I book waiters or bartenders?',
+    a: '3+ days for small teams; 2+ weeks for 10+ staff, peak season or multi-role events. Last-minute coverage is frequently possible — message WhatsApp with date and headcount.',
+  },
+  {
+    q: 'How many waiters do I need for my villa dinner?',
+    a: 'Start at <strong>one waiter per 10 guests</strong> for plated or formal service; buffet and BBQ can run leaner. We recommend the ratio on your quote once we know service style and whether kids are seated separately.',
+  },
+  {
+    q: 'Can you provide a private bartender for a villa party in Bali?',
+    a: 'Yes — cocktail service, welcome drinks and full evening bars. Rates from IDR 350,000/hour (3-hour minimum). Details: <a href="/in-villa-service/bartenders">bartenders</a> and <a href="/bar-services/">bar services</a>.',
+  },
+  {
+    q: 'Do you offer butler service for luxury villa stays?',
+    a: 'Yes — day butlers for guest hosting, wine service and seamless villa hospitality. See <a href="/in-villa-service/butlers">butlers</a> and daily rate context on <a href="/butler-service-bali-daily-rate">butler service Bali</a>.',
+  },
+  {
+    q: 'Can staff work alongside our own villa team?',
+    a: 'Yes. We brief with your villa manager so roles do not collide — myCHEF staff handle guest-facing service while housekeepers keep rooms and common areas. Share SOPs when you book.',
+  },
+  {
+    q: 'Is alcohol included when I hire a bartender?',
+    a: 'No. Spirits, wine, beer, mixers and ice are usually client-supplied or sourced at cost. The hire covers the professional, tools and service. Confirm ice, glassware and garnish plan on the briefing call.',
+  },
+  {
+    q: 'Can you staff a wedding or large event, not just a dinner?',
+    a: 'Yes — scaled FOH teams for weddings, corporate dinners and villa parties. For full food + staff production start at <a href="/events">events</a> or <a href="/events/weddings">wedding catering</a>.',
+  },
+  {
+    q: 'What if a staff member cannot arrive on the day?',
+    a: 'We send a replacement of equivalent role or refund that role. You are not left mid-service without cover — that guarantee is why operators book supervised teams rather than ad-hoc freelancers.',
+  },
+  {
+    q: 'Do you provide long-term villa staff placements?',
+    a: 'Day-rate and event staffing is this page. For live-in chefs, managers and permanent teams use <a href="/staffing">staffing</a> and <a href="/staffing/live-in-chef">live-in chef</a>.',
+  },
+  {
+    q: 'Can I combine private chef and waiters for one evening?',
+    a: 'Yes — the most common luxury setup in Bali villas. Book the chef on <a href="/private-chef-bali">private chef</a> or a <a href="/fine-dining">fine dining</a> menu, then add waiters/bartender here so service matches the kitchen.',
+  },
+  {
+    q: 'What languages do your service staff speak?',
+    a: 'English-capable service is standard for guest-facing roles; Bahasa Indonesia is native for most of the team. Flag any other language needs early so we match the right people.',
+  },
+  {
+    q: 'How do I book in-villa service staff?',
+    a: 'WhatsApp date, villa area, guest count, roles needed and service style. We confirm availability, headcount and the all-in total. 50% deposit locks the team. Or <a href="/contact">contact us</a>.',
+  },
+  {
+    q: 'Do you clean the service areas after the event?',
+    a: 'Service staff break down stations, clear tables and leave guest areas tidy as part of the shift. Full kitchen deep-clean after cooking is included when you also book myCHEF chefs or catering — confirm scope on the quote.',
+  },
 ]
 
 export default function InVillaServicePage() {
@@ -130,16 +202,7 @@ export default function InVillaServicePage() {
     url: canonical,
   }
 
-  const faqJsonLd = faqPageSchema([
-    { question: 'How much does it cost to hire villa service staff in Bali?', answer: 'Waiters from IDR 250,000/hour, hosts from IDR 300,000/hour, bartenders from IDR 350,000/hour (3-hour minimums). Butlers from IDR 1,200,000/day, sommelier from IDR 1,200,000/dinner, mixology from IDR 1,500,000/session. Rates are subject to 11% tax + 10% service charge.' },
-    { question: 'Is there a minimum booking?', answer: 'Hourly roles carry a 3-hour minimum; waiter bookings start at two waiters. Butler, sommelier and mixology services are priced per day, dinner or session.' },
-    { question: 'Can I hire staff without booking catering?', answer: 'Yes. In-villa service staff can be hired independently for self-catered events or to support another caterer.' },
-    { question: 'What do staff wear and bring?', answer: 'Professional uniforms matched to event formality plus all role-specific service tools; specialty glassware, ice and garnishes are arranged at briefing.' },
-    { question: 'Are your staff vetted and supervised?', answer: 'All staff are background-checked, employed and supervised by myCHEF, with a replacement-or-refund guarantee if anyone cannot make it on the day.' },
-    { question: 'What is the cancellation policy?', answer: 'Cancellations 14 or more days before service receive a full refund, 7-13 days a 50% refund, and less than 7 days is non-refundable; the deposit follows the same tiers.' },
-    { question: 'Which areas do you cover?', answer: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may carry a modest travel fee quoted upfront.' },
-    { question: 'How far ahead should I book?', answer: '3+ days for small teams, 2+ weeks for 10+ staff or peak season. Last-minute bookings are frequently possible via WhatsApp.' },
-  ])
+  const faqJsonLd = faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a })))
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
@@ -415,7 +478,7 @@ export default function InVillaServicePage() {
         <div className="max-w-[800px] mx-auto px-6">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4 text-center">Questions</p>
           <h2 className="font-playfair text-3xl md:text-4xl text-center mb-12">Frequently Asked</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

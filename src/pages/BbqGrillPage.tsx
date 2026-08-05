@@ -103,36 +103,84 @@ const MENU_SECTIONS = [
 
 const FAQS = [
   {
-    q: 'What is the minimum group size?',
-    a: 'Eight guests. The live grill station is built for parties — birthdays, villa gatherings and celebration dinners where fire and smoke are part of the show.',
+    q: 'How much does a BBQ grill experience cost in Bali?',
+    a: 'BBQ grill menus start from about <strong>IDR 950K per guest ++</strong>. Full-service party BBQ with staff and buffet styling is quoted per head on <a href="/catering/bbq-catering">BBQ catering</a>. Compare styles on <a href="/dining-styles">dining styles</a>.',
+  },
+  {
+    q: 'What is the minimum group size for BBQ grill menus?',
+    a: 'Typically eight guests. The live grill station is built for parties — birthdays, villa gatherings and celebration dinners where fire is part of the show.',
   },
   {
     q: 'Do you bring the grill, or do we need one at the villa?',
-    a: 'We bring everything: charcoal and gas grills, smoker boxes, professional tools and all fuel. Your villa kitchen stays untouched, and we take it all away afterwards.',
+    a: 'We bring charcoal and gas grills, smoker boxes, tools and fuel. Your villa kitchen stays free of our heavy gear; we pack out after service.',
   },
   {
     q: 'Charcoal or gas — and can you smoke meats?',
-    a: 'Both. Charcoal for slow smoky char, gas for precise heat on larger parties, and smoker boxes with apple, hickory and mesquite chips for low-and-slow brisket, ribs and whole fish.',
+    a: 'Both. Charcoal for smoky char, gas for precise heat on larger parties, plus smoker boxes (apple, hickory, mesquite) for brisket, ribs and whole fish.',
   },
   {
-    q: 'Can the grill menus be adapted for dietary requirements?',
-    a: 'Yes. Most grill menus adapt to vegetarian, vegan, gluten-free and halal requirements, and mixed menus let seafood-lovers and meat-lovers eat at the same party. Tell us about allergies and preferences when you enquire and we will adjust the menu before your date.',
+    q: 'Can BBQ grill menus be adapted for dietary requirements?',
+    a: 'Yes — vegetarian, vegan, gluten-free, allergy and many halal-friendly paths. Mixed menus let seafood- and meat-lovers share one party. Brief us at enquiry.',
   },
   {
-    q: 'What if it rains?',
-    a: 'We adapt the setup to covered terrace areas of your villa; if the weather makes grilling impossible, we reschedule or rework the menu indoors — decided with you in advance, never on the night.',
+    q: 'What if it rains on BBQ night in Bali?',
+    a: 'We plan covered terraces or rework indoors when needed — decided with you in advance, not improvised mid-service.',
   },
   {
-    q: 'Which areas do you serve?',
-    a: 'Bali-wide. Travel fees may apply for remote areas and are always quoted upfront.',
+    q: 'Which areas of Bali do you serve for BBQ?',
+    a: 'Island-wide. Travel fees for remote areas are quoted upfront. <a href="/locations">Locations →</a>',
   },
   {
     q: 'What deposit is required?',
-    a: 'A 50% deposit secures your date, chef and grill station; the remaining 50% is due the day before the event.',
+    a: '50% deposit locks date, chef and grill station; balance due the day before. <a href="/cancellation">Cancellation policy →</a>',
   },
   {
-    q: 'We want full-service BBQ with staff, buffet styling and a bar — is that different?',
-    a: 'Yes — that is our BBQ catering service, with waiting staff, buffet styling and bar options for larger celebrations. For dedicated packages see villa BBQ party packages and seafood BBQ catering.',
+    q: 'BBQ grill menus vs full BBQ catering — what is the difference?',
+    a: 'This page is the live-grill menu collection. Full-service party production with wait staff, buffet styling and bar is <a href="/catering/bbq-catering">BBQ catering</a>, plus <a href="/villa-bbq-catering-bali">villa BBQ packages</a> and <a href="/seafood-bbq-catering-bali">seafood BBQ</a>.',
+  },
+  {
+    q: 'Is alcohol included with BBQ grill?',
+    a: 'No. BYO is welcome, or add a <a href="/in-villa-service/bartenders">bartender</a>.',
+  },
+  {
+    q: 'Do you clean up after the BBQ?',
+    a: 'Yes on serviced formats — grill station, service areas and kitchen restored. Confirm scope on your quote.',
+  },
+  {
+    q: 'Can kids eat at a BBQ grill evening?',
+    a: 'Yes — milder items on the grill or parallel <a href="/kids-menus">kids menus</a>.',
+  },
+  {
+    q: 'How far in advance should I book a villa BBQ in Bali?',
+    a: '3–7 days is typical; peak season and large parties need more. Last-minute is often possible.',
+  },
+  {
+    q: 'Can we combine BBQ with a private chef stay?',
+    a: 'Yes — many guests book multi-day <a href="/private-chef-bali">private chef</a> service and one BBQ night as the celebration meal.',
+  },
+  {
+    q: 'Is pork available, and can you run pork-free BBQ?',
+    a: 'Both. We can build fully pork-free / halal-friendly grills. Traditional <a href="/catering/babi-guling">babi guling</a> is a separate pork feast product.',
+  },
+  {
+    q: 'What does "++" mean on BBQ prices?',
+    a: '11% government tax + 10% service charge. Quotes state the all-in total before deposit.',
+  },
+  {
+    q: 'Do you handle seafood BBQ and whole fish?',
+    a: 'Yes — prawns, whole fish, lobster upgrades and Jimbaran-style flame cooking. See also <a href="/seafood-bbq-catering-bali">seafood BBQ catering</a>.',
+  },
+  {
+    q: 'How long does a BBQ grill evening run?',
+    a: 'Plan 2–3+ hours of service depending on guest count and whether you want continuous grazing vs seated waves.',
+  },
+  {
+    q: 'How do I book a BBQ grill experience?',
+    a: 'WhatsApp date, guests, villa area and menu style (mixed grill, seafood, vegetarian). Fixed quote → 50% deposit. <a href="/quote">Quote →</a>',
+  },
+  {
+    q: 'What if the grill chef cannot make it?',
+    a: 'We send a verified replacement or refund. <a href="/why-mychef">Why myCHEF →</a>',
   },
 ]
 
@@ -407,7 +455,7 @@ export default function BbqGrillPage() {
             <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
             <h2 className="font-playfair text-3xl md:text-4xl text-white">BBQ Grill Experience FAQ</h2>
           </div>
-          <FAQAccordion items={FAQS} dark />
+          <FAQAccordion items={FAQS} dark defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

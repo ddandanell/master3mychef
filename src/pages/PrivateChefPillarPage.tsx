@@ -261,61 +261,129 @@ const areaLabel = (slug: string) =>
     .join(' ')
 
 /* ------------------------------------------------------------------ *
- * FAQs. These are the questions people actually send on WhatsApp, and
- * they are the ones that win the "People also ask" box.
+ * FAQs. WhatsApp + PAA + villa-forum questions, GEO-ready answers.
+ * Each answer: one intent, immediate answer first, Bali + internal links.
  * ------------------------------------------------------------------ */
 const FAQS = [
   {
-    q: 'How much is a private chef in Bali?',
-    a: `${privateChefPricing.headline} That is per day, for one chef plus a dedicated assistant at your villa. Weekly bookings take ${STAY_DISCOUNTS.weekly.off * 100}% off the daily rate and monthly bookings take ${STAY_DISCOUNTS.monthly.off * 100}% off. Groceries are sourced by us and billed separately at cost with receipts.`,
+    q: 'How much does a private chef cost in Bali?',
+    a: `${privateChefPricing.headline} That is a day rate for one professional chef plus a dedicated assistant at your villa — not a per-person marketplace fee. Weekly bookings take ${STAY_DISCOUNTS.weekly.off * 100}% off; monthly take ${STAY_DISCOUNTS.monthly.off * 100}% off. Groceries are billed separately at cost with receipts. See the full table on our <a href="/pricing">pricing page</a> or this page’s <a href="#prices">meal plans</a>.`,
+  },
+  {
+    q: 'What is included in the private chef day rate?',
+    a: 'Chef + dedicated assistant, menu planning around your tastes and allergies, grocery sourcing and market runs, cooking, plating, table service, and full kitchen cleanup after every meal. Alcohol, premium ingredients (lobster, imported wagyu) and tax/service (++) sit outside the day rate and are quoted before you confirm. Compare formats on <a href="/private-chef-bali#prices">meal plans</a>.',
+  },
+  {
+    q: 'Are groceries included when I hire a private chef in Bali?',
+    a: `The shopping work is included; the food cost is not. Your chef plans the menu and shops fresh — fish from the coast, produce from highland markets, specialist items from the right suppliers. You never go to a supermarket. ${siteFacts.groceryPolicy}; every receipt is handed over. This is the model guests ask about most on villa forums because many competitors bury a markup inside a “package” price.`,
+  },
+  {
+    q: 'What does "++" mean on private chef prices in Bali?',
+    a: `${privateChefPricing.taxExample} Every myCHEF quote states the full all-in total before you pay a deposit — no surprise line items after service.`,
   },
   {
     q: 'How do I hire a private chef for my Bali villa?',
-    a: 'Send us your villa location, your dates and how many people are staying. We reply within two hours with an available head chef, a sample menu and the all-in total. A 50% deposit confirms the dates. You do not need to own the villa — most of our guests are renting.',
+    a: 'Message us on WhatsApp with your villa area, dates, guest count and how many meals per day you want. We reply within two hours with an available head chef, a sample menu and the all-in total. A 50% deposit confirms the dates. You do not need to own the villa — most guests are renting Airbnbs or villa complexes. Start on <a href="/book">book</a> or <a href="/quote">request a quote</a>.',
   },
   {
-    q: 'What does "++" mean on your prices?',
-    a: `${privateChefPricing.taxExample} Every quote we send states the full all-in total, so there is never a surprise at the end.`,
+    q: 'Can a private chef cook in our villa kitchen in Bali?',
+    a: 'Yes. We cook in your villa kitchen, serve at your table, and leave the kitchen as we found it. A working stove, fridge, sink and basic cookware cover most days; for BBQ nights or fine-dining brigades we bring extra equipment. Tell us the villa link when you enquire so we can plan the setup. For event-scale service see <a href="/catering/villa-catering">villa catering</a>.',
+  },
+  {
+    q: 'Does the private chef clean up after cooking?',
+    a: 'Yes — full cleanup is always included. Dishes, pots, counters and the dining area are restored after every meal. You do not wash up on holiday. That is one of the strongest reasons families hire a private chef in Bali instead of self-catering.',
+  },
+  {
+    q: 'Can you accommodate food allergies and dietary requirements?',
+    a: 'Yes, at no extra charge. Vegan, vegetarian, gluten-free, dairy-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus are routine. Tell us before we plan the first menu — not on the day — so we can separate prep and label plates. Deep dive: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies guide</a>.',
+  },
+  {
+    q: 'Do you cook for children and picky eaters?',
+    a: 'Yes. We run milder spice, familiar dishes (pasta, grilled chicken, rice bowls), early kids’ meal times and adult menus in parallel. Ages and preferences go into the brief so the kids eat while the adults get a proper dinner. See <a href="/kids-menus">kids menus</a> and <a href="/blog/family-kids-menu-private-chef-bali">family dining guide</a>.',
   },
   {
     q: 'Is one meal breakfast, lunch or dinner?',
-    a: 'Whichever you want, and you can change it day to day. Most guests take dinner. Families with young children often take breakfast and dinner and eat out at lunch.',
+    a: 'Whichever you want, and you can change it day to day. Most guests take dinner. Families often take breakfast + dinner and eat out at lunch. The One / Two / Three Meals plans are meal-count based, not day-part locked — details under <a href="#prices">prices</a>.',
   },
   {
-    q: 'Who buys the groceries, and are they included?',
-    a: `We do — all of it. Your chef plans the menu, works out what is needed and shops for it, fresh, every day or every second day depending on what the food requires. Fish comes from the coast, produce from the highland markets, specialist items from the suppliers who stock them. You never see a supermarket. The shopping work is included in your day rate; the cost of the food itself is billed separately at what we paid. ${siteFacts.groceryPolicy} and every receipt is handed over.`,
+    q: 'Can I choose the cuisine and a specific chef?',
+    a: 'Yes. We match head chefs by cuisine: Italian &amp; Mediterranean, Japanese &amp; seafood, Indonesian &amp; Balinese, BBQ &amp; open flame, plant-based &amp; wellness, and pastry. For multi-day stays you can request a named chef; for single dinners we match the best available specialist. Meet the team on <a href="/chefs">our chefs</a>.',
   },
   {
-    q: 'Can I choose the cuisine and the chef?',
-    a: 'Yes. We run separate head chefs for Italian and Mediterranean, Japanese and seafood, Indonesian and Balinese, BBQ and open flame, plant-based and wellness, and pastry. Tell us what you want to eat and we match the specialist rather than sending whoever happens to be free.',
+    q: 'What is Chef Rotation on weekly private chef bookings?',
+    a: 'On any booking of 7 days or longer, Chef Rotation is included at no extra charge. Request a different specialist for any day — Japanese Tuesday, Balinese Wednesday, Italian Thursday — day by day, not a fixed schedule. Tell us the night before (or that morning) and we match the next day’s chef to what you feel like eating.',
   },
   {
-    q: 'What is Chef Rotation?',
-    a: 'On any booking of 7 days or longer, Chef Rotation is included at no extra charge — the day rate stays the same whether you keep one chef the whole stay or switch. Instead of being locked into one cuisine, you can request a different specialist chef for any day: Japanese on Tuesday, Balinese on Wednesday, Italian on Thursday. It is day-by-day, not a fixed schedule set in advance — tell us the night before (or that morning) and we match the next day\'s chef to what you feel like eating.',
-  },
-  {
-    q: 'Does the chef come to my villa, or do I go somewhere?',
-    a: 'The chef comes to you. They cook in your villa kitchen, serve at your table, and clean up before they leave. It works in a rented villa, a private residence, a long-stay apartment or an Airbnb — we only need a working kitchen.',
-  },
-  {
-    q: 'Do you cover my area of Bali?',
-    a: 'All of it. Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur, Denpasar, Pererenan, Berawa, Umalas and everywhere between, with no travel surcharge across South Bali. Remote areas such as Amed, Lovina and Munduk carry a distance component that we quote upfront before you commit.',
+    q: 'Do you cover Seminyak, Canggu, Ubud, Uluwatu and other Bali areas?',
+    a: 'Yes — island-wide private chef service. Core areas with no South Bali travel surcharge include Seminyak, Canggu, Berawa, Pererenan, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur, Denpasar, Kerobokan and Umalas. Remote areas (Amed, Lovina, Munduk) get a distance component quoted upfront. Browse <a href="/locations">locations</a>.',
   },
   {
     q: 'How far in advance should I book a private chef in Bali?',
-    a: 'Three to seven days is comfortable for most dates. For July, August, Christmas and New Year, book two to four weeks out — those dates fill first.',
+    a: 'Three to seven days is comfortable for most dates. For July–August, Christmas and New Year, book two to four weeks out. Same-day and next-day private chef requests are often possible outside peak — message WhatsApp and we will say yes or no within two hours.',
   },
   {
-    q: 'What deposit do you take and what if I cancel?',
-    a: `A ${siteFacts.depositPercent}% deposit confirms your dates, with the balance due ${siteFacts.balanceTiming}. ${siteFacts.cancellationPolicy}`,
+    q: 'Can I book a last-minute private chef in Bali?',
+    a: 'Often yes for one or two meals if a chef is free in your area. Large multi-day programmes and peak-season dates need more notice. For event-scale last-minute food without full service, <a href="/catering/drop-off-catering">drop-off catering</a> can be a faster backup.',
   },
   {
-    q: 'Is hiring a private chef cheaper than eating out in Bali?',
-    a: 'For groups, usually yes. Two meals a day is IDR 1,800,000++ for the chef team however many of you there are — split across six people that is roughly IDR 300,000 each for the day, plus food at cost — less than one mid-range restaurant dinner in Seminyak, and you are not booking taxis or tables.',
+    q: 'What deposit do you require and when is the balance due?',
+    a: `A ${siteFacts.depositPercent}% deposit confirms your chef and dates. The remaining balance is due ${siteFacts.balanceTiming}, by bank transfer or credit card. Your written quote shows the full all-in total before you pay anything.`,
   },
   {
-    q: 'Can you handle allergies and dietary requirements?',
-    a: 'Yes, at no extra cost. Vegan, vegetarian, gluten-free, halal-sensitive, nut allergies and children’s menus are all routine. Tell us before we plan the menu rather than on the day, and we build around it.',
+    q: 'What is the cancellation and refund policy?',
+    a: `${siteFacts.cancellationPolicy} Full policy: <a href="/cancellation">cancellation page</a>.`,
+  },
+  {
+    q: 'What payment methods do you accept?',
+    a: 'Bank transfer (IDR) and major credit cards. International transfers are fine; we send clear bank details and an invoice with the deposit request. Corporate clients can receive NPWP-ready documentation on request.',
+  },
+  {
+    q: 'Is hiring a private chef cheaper than restaurants in Bali?',
+    a: 'For couples on one dinner, it is a luxury choice rather than a pure saving. For groups of six or more on two meals a day, the day rate split per person is often less than one mid-range Seminyak dinner — plus no taxis, no tables, no “what shall we eat” debate. Worked example above on this page; full maths on <a href="/blog/private-chef-cost-bali">private chef cost guide</a>.',
+  },
+  {
+    q: 'What if our chef cannot make it on the day?',
+    a: 'We send a verified replacement of equivalent calibre within two hours — same menu brief — or you receive a 100% refund for that service. Your evening is protected. Why guests trust the model: <a href="/why-mychef">why myCHEF</a>.',
+  },
+  {
+    q: 'Do I need a fully equipped kitchen for a private chef in Bali?',
+    a: 'A standard villa kitchen is enough. We bring specialised tools when the menu needs them (induction, plating kits, BBQ gear). Hotel rooms without kitchens are not suitable; if your rental only has a mini-kitchen, tell us early so we can design a realistic menu or suggest <a href="/catering/drop-off-catering">drop-off</a>.',
+  },
+  {
+    q: 'When does the chef arrive and how long do they stay?',
+    a: 'For a single dinner, expect arrival about 2–3 hours before service. For multi-meal days the team works to your schedule — breakfast prep can start early, dinner service later. After the last plate they clean and leave; they do not sleep at the villa unless you book <a href="/staffing/live-in-chef">live-in chef</a> placement.',
+  },
+  {
+    q: 'Can you handle BBQ nights and open-flame cooking at the villa?',
+    a: 'Yes. Our BBQ head chef runs poolside and garden grills — seafood, mixed grill, wagyu and Indonesian flame dishes. For larger BBQ parties use <a href="/catering/bbq-catering">BBQ catering</a> or <a href="/bbq-grill">BBQ grill menus</a>; for multi-day stays BBQ can be one of your Chef Rotation days.',
+  },
+  {
+    q: 'What is the difference between a daily private chef and fine dining in Bali?',
+    a: 'Daily private chef is a meal-count day rate (from IDR 1,000,000++/day) with groceries at cost — ideal for stays. Fine dining is a multi-course tasting experience with a larger brigade and all ingredients included in the per-person price. See <a href="/fine-dining">fine dining</a> and <a href="/fine-dining/tasting-menu">tasting menus</a>.',
+  },
+  {
+    q: 'Can I hire a private chef for a wedding or large event in Bali?',
+    a: 'For 20–200 guests we recommend event catering with full staffing rather than a single daily chef. Wedding packages run from roughly IDR 1.5M–3M+ per person depending on menu and production. Start at <a href="/events/weddings">wedding catering</a> or <a href="/bali-wedding-catering-packages">wedding packages</a>.',
+  },
+  {
+    q: 'Do you offer weekly or monthly private chef hire in Bali?',
+    a: `Yes. Book 7+ days for ${STAY_DISCOUNTS.weekly.off * 100}% off the daily rate, or 28+ days for ${STAY_DISCOUNTS.monthly.off * 100}% off. Weekly stays include Chef Rotation at no extra charge. Long-stay and expat households can also explore <a href="/staffing/live-in-chef">live-in chef</a> placement.`,
+  },
+  {
+    q: 'Can you add waiters, a bartender or a butler to our private chef booking?',
+    a: 'Yes. Waiters, hosts, bartenders, butlers and sommeliers can be added to any dinner or multi-day stay. Typical ratios start at one waiter per 10 guests; bartender rates from IDR 350,000/hour (3-hour minimum). See <a href="/in-villa-service">in-villa service</a> and <a href="/in-villa-service/bartenders">bartenders</a>.',
+  },
+  {
+    q: 'Is alcohol included with a private chef in Bali?',
+    a: 'No. You may bring your own wine and spirits (we open and serve) or ask us to source at cost. For full bar service add a <a href="/in-villa-service/bartenders">private bartender</a> or explore <a href="/bar-services/">bar services</a>. Fine-dining wine pairing is an optional add-on on tasting menus.',
+  },
+  {
+    q: 'How is myCHEF different from freelance marketplace private chefs?',
+    a: `Marketplace listings are usually one freelance cook for one meal, often without an assistant, table service or cleanup guarantee. myCHEF is a chef + assistant day rate, named head-chef matching, grocery receipts at cost, supervised teams, and a replacement-or-refund promise. ${siteFacts.reviewFraming}. Compare options on <a href="/why-mychef">why myCHEF</a>.`,
+  },
+  {
+    q: 'Can you cook Indonesian and Balinese food as well as Western cuisines?',
+    a: 'Yes. Head Chef Ni Putu Asri leads ceremonial Balinese and Indonesian menus (bebek betutu, lawar, nasi goreng kampung and feast formats) alongside Italian, Mediterranean, Japanese, BBQ and plant-based specialists. Request the cuisine when you book — or rotate day by day on weekly stays.',
   },
 ] as const
 
@@ -908,12 +976,15 @@ export default function PrivateChefPillarPage() {
       </section>
 
       {/* ----------------------------------------------------------- FAQ */}
-      <section className="bg-white py-20 sm:py-24">
+      <section id="faq" className="bg-white py-20 sm:py-24 scroll-mt-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight mb-10">
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight mb-4">
             Private chef Bali — frequently asked questions
           </h2>
-          <FAQAccordion items={FAQS.map(({ q, a }) => ({ q, a }))} defaultOpenCount={2} />
+          <p className="text-[#4A4745] text-sm md:text-base leading-relaxed mb-10">
+            Pricing, groceries, villa kitchens, allergies, kids, deposits and long-stay chef hire — the questions guests ask before booking a private chef in Bali.
+          </p>
+          <FAQAccordion items={FAQS.map(({ q, a }) => ({ q, a }))} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

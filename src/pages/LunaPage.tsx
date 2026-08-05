@@ -58,10 +58,26 @@ const WHATS_INCLUDED = [
 ]
 
 const FAQS = [
-  { question: 'How much is a fine dining private chef in Bali?', answer: 'Fine-dining and tasting menus start from IDR 950K per person, with premium tiers up to IDR 2.2M++. Full details are on the Michelin private chef pricing and fine-dining menus pages.' },
-  { question: 'What is included in a fine dining experience at my villa?', answer: 'A multi-course tasting menu cooked fresh on site, menu design, shopping at cost, plated service, and cleanup. Choose Kitchen-Service for a chef-only format or Full-Service with tableware and staff.' },
-  { question: 'Can you do wine pairing in a villa?', answer: 'Yes. Wine pairing adds IDR 850K per person to tasting menus, and a private sommelier can join from IDR 1.2M per dinner.' },
-  { question: 'Can you do fine dining for large groups (24+ guests)?', answer: 'Tasting menus are calibrated for up to 24 guests. Beyond that we move to plated catering or group formats to maintain quality and timing.' },
+  { question: 'How much is a fine dining private chef in Bali?', answer: 'Signature villa fine-dining tasting menus typically run from roughly <strong>IDR 950K–2.4M++ per person</strong> depending on menu path (Mediterranean, Wagyu and set collections). Your quote is fixed before deposit. See <a href="/fine-dining/menus">fine dining menus</a>, <a href="/fine-dining/tasting-menu">tasting menu</a> and <a href="/michelin-private-chef-bali-prices">Michelin private chef prices</a>.' },
+  { question: 'What is included in a fine dining experience at my villa?', answer: 'Multi-course tasting cooked fresh on site, menu design, premium ingredients (format-dependent), plated service, table setting and full kitchen cleanup. Full-service evenings add wait staff and presentation. Confirm line items on your written quote.' },
+  { question: 'What does "++" mean on fine dining prices?', answer: '"++" means 11% government tax and 10% service charge on top of the listed price. Every myCHEF quote shows the all-in total before you pay a 50% deposit.' },
+  { question: 'Can you do wine pairing in a Bali villa?', answer: 'Yes. Wine pairing typically adds about IDR 850K per person on tasting menus; a private sommelier can join from roughly IDR 1.2M per dinner. BYO wine is welcome — we open and serve. Bar add-ons: <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Can you do fine dining for large groups (24+ guests)?', answer: 'Tasting menus are calibrated for up to about 24 guests. Beyond that we recommend plated catering or group formats so pacing and plate quality stay restaurant-level. See <a href="/catering/plated-catering">plated catering</a> and <a href="/events">events</a>.' },
+  { question: 'What is the difference between fine dining and a daily private chef?', answer: 'Fine dining is a multi-course event with a brigade, presentation and ingredients in the per-person price. A <a href="/private-chef-bali">daily private chef</a> is a meal-count day rate (from IDR 1M++/day) with groceries at cost — ideal for multi-day stays, not a tasting show.' },
+  { question: 'Do you come to any villa in Bali for fine dining?', answer: 'Yes — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur, Berawa, Pererenan and beyond. Share your villa link so we assess kitchen and service space. <a href="/locations">Locations →</a>' },
+  { question: 'How far in advance should I book fine dining in Bali?', answer: '7+ days is comfortable; peak season (July–August, Christmas–New Year) often needs 2+ weeks. Last-minute evenings are sometimes possible — WhatsApp and we confirm within about an hour.' },
+  { question: 'Can you adapt fine dining menus for allergies and diets?', answer: 'Yes, at no extra charge — gluten-free, shellfish allergy, vegan, vegetarian, pregnancy-safe, nut-free and halal-sensitive paths. Tell us at booking so courses are redesigned, not improvised on the night. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide →</a>' },
+  { question: 'What deposit and cancellation apply to fine dining?', answer: '50% deposit locks chef and date; balance due the day before. Full refund 14+ days out, 50% at 7–13 days, non-refundable under 7 days. <a href="/cancellation">Cancellation policy →</a>' },
+  { question: 'Is romantic dinner for two different from the group tasting menu?', answer: 'Same kitchen standard — intimate evenings for two get candlelit setup and pacing designed for couples. See <a href="/fine-dining/romantic-dinner">romantic dinner</a> and <a href="/experiences/romantic-proposal-dinner">proposal dinner</a>.' },
+  { question: 'What is a chef’s table experience in Bali?', answer: 'Counter-side multi-course dining with the chef — smaller guest count, commentary course by course. Details on <a href="/fine-dining/chefs-table">chef’s table</a>.' },
+  { question: 'Do you clean the kitchen after fine dining?', answer: 'Yes. Full cleanup is included — dishes, stations and counters restored before the team leaves.' },
+  { question: 'Can children join a fine dining evening?', answer: 'Yes with adapted plates and milder courses. For parties built around kids, pair with <a href="/kids-menus">kids menus</a> or book a more relaxed <a href="/three-course">three-course</a> format.' },
+  { question: 'Can I customise courses on the tasting menu?', answer: 'Yes. Signature paths (Mediterranean Sea, Wagyu Experience and classic sets) are starting points — proteins, spice and dietary swaps are locked before service day.' },
+  { question: 'How long does a fine dining villa evening last?', answer: 'Plan roughly 3–4 hours door to dessert for a five-course tasting with pauses. Arrival of the team is typically 2–3 hours before first course.' },
+  { question: 'Is this suitable for client dinners and small corporate hosting?', answer: 'Yes — privacy, pacing and consistency are why teams book villa fine dining instead of restaurants. For larger corporate production see <a href="/events/corporate">corporate events</a>.' },
+  { question: 'What if the chef or team cannot make it?', answer: 'We send a verified replacement of equivalent calibre or refund that service. Your evening is protected. <a href="/why-mychef">Why myCHEF →</a>' },
+  { question: 'How do I book fine dining with myCHEF?', answer: 'WhatsApp date, guest count, villa area and menu preference. We reply with availability and a fixed quote; 50% deposit confirms. Or use <a href="/quote">request a quote</a> / <a href="/book">book</a>.' },
+  { question: 'Can I add waiters or a bartender to fine dining?', answer: 'Yes. Full-service packages already include service staff; extra waiters and bartenders scale for larger tables. <a href="/in-villa-service">In-villa service →</a>' },
 ]
 
 const TESTIMONIALS = [
@@ -1250,8 +1266,10 @@ export default function LunaPage() {
           </div>
           <FAQAccordion
             items={FAQS.map((f) => ({ q: f.question, a: f.answer }))}
-            defaultOpenCount={4}
+            defaultOpenCount={3}
             dark
+            showToc
+            ctaEvery={5}
           />
           <div className="text-center mt-12">
             <p className="text-white/[50%] text-sm mb-4">Peak season books 2+ weeks ahead. Message Sofia to check availability.</p>

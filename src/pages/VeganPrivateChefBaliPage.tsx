@@ -112,7 +112,7 @@ const relatedPages = [
   { label: 'Daily Chef Service', href: '/private-chef-bali', desc: 'All-day chef hire for villa stays' },
   { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Hands-on cooking with a private chef' },
   { label: 'Wellness Retreat Catering', href: '/catering/retreat-catering', desc: 'Plant-based retreat catering' },
-  { label: 'Dietary Requirements Guide', href: '/blog/food-allergies-dietary-requirements-bali-private-chef', desc: 'Handling dietary requirements in Bali' },
+  { label: 'Dietary Requirements Guide', href: '/blog/food-allergies-dietary-requirements-private-chef-bali', desc: 'Handling dietary requirements in Bali' },
   { label: 'Brunch Catering Bali', href: '/catering', desc: 'Private chef brunch for villa stays' },
 ]
 

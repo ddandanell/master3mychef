@@ -124,7 +124,7 @@ export const REDIRECTS: Redirect[] = [
   // DiningByLocationBaliPage. Redirecting it orphaned real, indexable content.
   // --- SEO landing pages → most relevant pillar ---
   // (Landing page redirects removed to allow dedicated content to rank)
-  { from: '/private-chef-booking-indonesia', to: '/quote', reason: 'Booking SEO → quote form.' },
+  { from: '/private-chef-booking-indonesia', to: '/chef-for-hire-indonesia', reason: 'Booking SEO → quote form.' },
   { from: '/private-chef-breakfast-bali', to: '/catering', reason: 'Breakfast service → catering.' },
 
   // --- Pricing pages ---

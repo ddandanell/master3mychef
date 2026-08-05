@@ -451,7 +451,7 @@ export default function Footer() {
           <Link to="/bar-services/" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">B2B Bar Solution</Link>
           <Link to="/recommended-services" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Recommended</Link>
           <Link to="/pricing" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Pricing</Link>
-          <Link to="/calculator" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Price Calculator</Link>
+          <Link to="/pricing-calculator" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Price Calculator</Link>
           <Link to="/faq" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">FAQ</Link>
           <Link to="/reviews" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Reviews</Link>
           <Link to="/why-mychef" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Why myCHEF</Link>

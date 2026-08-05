@@ -160,12 +160,12 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Staffing & Placement', href: '/staffing/placement', desc: 'Full details on myCHEF\'s chef placement service for Bali households.' },
-  { label: 'Live-In Chef Service', href: '/staffing/live-in', desc: 'Our dedicated live-in chef staffing page with service inclusions and process.' },
+  { label: 'Staffing & Placement', href: '/staffing/private-chef-placement', desc: 'Full details on myCHEF\'s chef placement service for Bali households.' },
+  { label: 'Live-In Chef Service', href: '/staffing/live-in-chef', desc: 'Our dedicated live-in chef staffing page with service inclusions and process.' },
   { label: 'Villa Staff Bali', href: '/staffing/villa-staff', desc: 'Complete villa staffing solutions — chefs, butlers, hosts, and more.' },
   { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'End-to-end guide to hiring a private chef in Bali — the complete process.' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Full pricing breakdown for private chefs in Bali by format and session length.' },
-  { label: 'Staffing for Hotels & Restaurants', href: '/staffing/hotels-restaurants', desc: 'Culinary staffing solutions for hospitality businesses in Bali.' },
+  { label: 'Staffing for Hotels & Restaurants', href: '/staffing/for-hotels-restaurants', desc: 'Culinary staffing solutions for hospitality businesses in Bali.' },
 ]
 
 export default function LiveInChefBaliHiringGuidePage() {

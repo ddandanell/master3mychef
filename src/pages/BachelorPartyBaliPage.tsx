@@ -175,7 +175,7 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Bachelorette Party Bali', href: '/events/villa-parties', desc: 'Hen\'s night catering and private chef packages for Bali villas.' },
-  { label: 'BBQ Catering Bali', href: '/catering/bbq', desc: 'Full BBQ catering options for villa events and group celebrations.' },
+  { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Full BBQ catering options for villa events and group celebrations.' },
   { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for groups of 20–100+ at Bali villas and venues.' },
   { label: 'Villa Dinner Party', href: '/blog/private-dinner-party-bali', desc: 'How to host the perfect private dinner party at your Bali villa.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF packages and add-on services.' },

@@ -720,7 +720,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'group-villa-dinner-packages-bali': {
     path: '/group-villa-dinner-packages-bali',
-    title: 'Group Villa Dinner Packages Bali | Private Chef & Luxury Dining | myCHEF',
+    title: 'Group Villa Dinner Packages Bali | Private Chef Dining',
     description:
       'Luxury group villa dinner packages in Bali for 10–150 guests. Private chef, villa catering, BBQ, fine dining and all-inclusive service for families, weddings and celebrations.',
     canonical: `${SITE}/group-villa-dinner-packages-bali`,
@@ -1240,7 +1240,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'fine-dining-private-chef-bali': {
     path: '/fine-dining/private-chef-bali',
-    title: 'Michelin Tasting Menu Bali | Fine Dining in Your Villa | myCHEF',
+    title: 'Michelin Tasting Menu Bali | Fine Dining in Your Villa',
     description:
       'A five-course fine-dining tasting menu served in your Bali villa. Mediterranean or Wagyu, wine pairing, full chef brigade. From IDR 2.2M++ per person.',
     canonical: `${SITE}/fine-dining/private-chef-bali`,
@@ -1302,7 +1302,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'blog-festive-season-menu-bali': {
     path: '/blog/festive-season-menu-bali',
-    title: 'Private Chef Christmas & New Year Menu Bali | Festive Dining Guide',
+    title: 'Christmas & New Year Menu Bali | Private Chef Guide',
     description:
       'Plan your Christmas Eve dinner, Christmas Day feast or New Year\'s Eve gala with a private chef in Bali. Menu ideas, booking tips and festive dining guide.',
     canonical: `${SITE}/blog/festive-season-menu-bali`,
@@ -1312,7 +1312,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'blog-private-chef-seminyak-canggu-ubud-comparison': {
     path: '/blog/private-chef-seminyak-canggu-ubud-comparison',
-    title: 'Seminyak vs Canggu vs Ubud: Which Area for Your Private Chef Dinner?',
+    title: 'Seminyak vs Canggu vs Ubud: Best Area for a Private Chef',
     description:
       'Choosing between Seminyak, Canggu, and Ubud for your Bali villa? Compare private chef experiences, food styles, prices, and vibes for each area. Expert guide.',
     canonical: `${SITE}/blog/private-chef-seminyak-canggu-ubud-comparison`,
@@ -1322,7 +1322,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'blog-private-dinner-party-bali': {
     path: '/blog/private-dinner-party-bali',
-    title: 'Private Dinner Party Bali | Villa Dinner Parties with a Private Chef',
+    title: 'Private Dinner Party Bali | Villa Dinners with a Chef',
     description:
       'Host a private dinner party at your Bali villa with a professional chef. Menu planning, setup, service — all handled. Groups of 4–30. From IDR 700,000/person.',
     canonical: `${SITE}/blog/private-dinner-party-bali`,
@@ -1342,7 +1342,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'pricing-calculator': {
     path: '/pricing-calculator',
-    title: 'Private Chef Pricing Calculator Bali | Instant Cost Estimate | myCHEF',
+    title: 'Private Chef Cost Calculator Bali | Instant Estimate',
     description:
       'Get an instant private chef cost estimate for your Bali villa. Select service type, guest count and menu level — see your price in seconds.',
     canonical: `${SITE}/pricing-calculator`,
@@ -1662,7 +1662,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
   'rks-commercial-kitchen-design-build': {
     path: '/restaurant-kitchen-solutions/commercial-kitchen-design-build',
-    title: 'Commercial Kitchen Design, Workflow and Build Solutions | MYCHEF.ID',
+    title: 'Commercial Kitchen Design & Build Bali | myCHEF',
     description:
       'Commercial kitchen design and workflow planning in Indonesia: layout, equipment planning, renovation support, utility coordination and build collaboration.',
     canonical: `${SITE}/restaurant-kitchen-solutions/commercial-kitchen-design-build`,
@@ -1822,7 +1822,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'experience-kids-birthday-chef-party': {
     path: '/experiences/kids-birthday-chef-party',
-    title: 'Kids Birthday Party Bali | Catering, Entertainment & Villa Parties',
+    title: 'Kids Birthday Party Bali | Catering & Entertainment',
     description:
       'Complete kids birthday party planning in Bali: villa catering, interactive chef parties, entertainment, foam parties, decorations and adult bar service. WhatsApp.',
     canonical: `${SITE}/experiences/kids-birthday-chef-party`,
@@ -2391,7 +2391,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       journal: {
     path: '/journal',
-    title: 'Bali Private Chef Journal | Cost Guides, Menus & Hosting Tips',
+    title: 'Bali Private Chef Journal | Cost Guides & Menus',
     description:
       'SEO-ready guides for hosting in Bali: private chef cost 2026, Seminyak Canggu Ubud dining, villa wedding catering, BBQ prices, and retreat menus. myCHEF journal.',
     canonical: `${SITE}/journal`,

@@ -197,7 +197,7 @@ const RELATED_PAGES = [
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef and catering options for bachelor parties at Bali villas.' },
   { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Romantic proposal dinner setup with private chef at your Bali villa.' },
   { label: 'Anniversary Dinner', href: '/events/anniversaries', desc: 'Intimate anniversary dinner catering for couples at Bali villas.' },
-  { label: 'Grazing Table Bali', href: '/catering/grazing', desc: 'Full details on myCHEF grazing tables — sizing, pricing, and styling options.' },
+  { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Full details on myCHEF grazing tables — sizing, pricing, and styling options.' },
   { label: 'Pricing Guide', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and group sizes.' },
   { label: 'Event Planning Bali', href: '/blog/event-planning-bali', desc: 'Complete logistics guide for planning a villa event in Bali.' },
 ]

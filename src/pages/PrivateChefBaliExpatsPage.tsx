@@ -106,7 +106,7 @@ const SECTIONS = [
     },
     secondaryAction: {
       label: 'View Staffing Options',
-      href: '/staffing/placement',
+      href: '/staffing/private-chef-placement',
     },
   },
 ]
@@ -140,7 +140,7 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Live-In Chef Bali', href: '/staffing', desc: 'Complete guide to live-in chef arrangements for Bali villas and households.' },
-  { label: 'Staffing Placement', href: '/staffing/placement', desc: 'myCHEF private chef placement and long-term staffing services.' },
+  { label: 'Staffing Placement', href: '/staffing/private-chef-placement', desc: 'myCHEF private chef placement and long-term staffing services.' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Full pricing breakdown for private chef services in Bali.' },
   { label: 'Private Chef Canggu', href: '/private-chef/canggu', desc: 'Private chef services in Canggu — the expat heartland of Bali.' },
   { label: 'Private Chef Seminyak', href: '/private-chef/seminyak', desc: 'Private chef services in Seminyak — luxury villa dining.' },

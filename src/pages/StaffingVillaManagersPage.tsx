@@ -143,6 +143,14 @@ export default function StaffingVillaManagersPage() {
               <Calendar className="w-4 h-4" /> Request Partnership Info
             </a>
           </div>
+          {/* /partner had zero inbound internal links before 2026-08-05. It is the commission
+              referral programme; this page sells staffing. Related audience, distinct offer. */}
+          <p className="text-white/[70%] text-sm mt-6">
+            Prefer to earn commission on referrals rather than hire?{' '}
+            <Link to="/partner" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">
+              See the villa manager partnership programme →
+            </Link>
+          </p>
         </div>
       </section>
 

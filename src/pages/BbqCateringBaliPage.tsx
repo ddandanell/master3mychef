@@ -137,7 +137,7 @@ const RELATED_PAGES = [
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef for bachelor parties at Bali villas.' },
   { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering solutions for groups of 20 to 100+ in Bali.' },
   { label: 'Birthday Party Bali', href: '/events/birthdays', desc: 'Private chef birthday catering at Bali villas.' },
-  { label: 'Catering BBQ', href: '/catering/bbq', desc: 'Browse all myCHEF BBQ catering options.' },
+  { label: 'Catering BBQ', href: '/catering/bbq-catering', desc: 'Browse all myCHEF BBQ catering options.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF catering packages.' },
   { label: 'Private Dinner Party', href: '/blog/private-dinner-party-bali', desc: 'Intimate private dinner party catering at Bali villas.' },
 ]

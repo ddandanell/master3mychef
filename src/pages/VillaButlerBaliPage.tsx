@@ -144,7 +144,7 @@ const RELATED_PAGES = [
   { label: 'Villa Staff Hiring Guide', href: '/staffing/villa-staff', desc: 'Complete guide to building a full villa team in Bali.' },
   { label: 'Live-In Chef Guide', href: '/staffing', desc: 'How to hire a live-in private chef for your Bali villa.' },
   { label: 'Staffing Villa Staff', href: '/staffing/villa-staff', desc: 'Browse all villa staff placement services from myCHEF.' },
-  { label: 'Staffing Placement', href: '/staffing/placement', desc: 'How the myCHEF placement process works end to end.' },
+  { label: 'Staffing Placement', href: '/staffing/private-chef-placement', desc: 'How the myCHEF placement process works end to end.' },
   { label: 'Private Dinner Party Bali', href: '/blog/private-dinner-party-bali', desc: 'How to plan a private dinner party at a Bali villa.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF services and placements.' },
 ]

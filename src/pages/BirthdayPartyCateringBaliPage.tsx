@@ -144,7 +144,7 @@ const RELATED_PAGES = [
   { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Bachelor party catering with private chef and bartender service.' },
   { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for groups of 20–100+ at Bali villas and venues.' },
   { label: 'Villa Dinner Party', href: '/blog/private-dinner-party-bali', desc: 'Private dinner party catering at Bali villas.' },
-  { label: 'Kids Menu Guide', href: '/blog/family-kids-private-chef-menu-guide-bali', desc: 'Family-friendly and kids menu options for Bali villa stays.' },
+  { label: 'Kids Menu Guide', href: '/blog/family-kids-menu-private-chef-bali', desc: 'Family-friendly and kids menu options for Bali villa stays.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing guide for all myCHEF services.' },
 ]
 

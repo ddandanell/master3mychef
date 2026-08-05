@@ -19,10 +19,26 @@ const WA_LINK = buildWhatsAppUrl({ serviceName: 'VIP transport in Bali', intent:
 const SITE = 'https://mychef.id'
 
 const FAQS = [
-  { q: 'Which areas do you cover?', a: 'Airport transfers and private drivers across Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and the Bukit Peninsula. Other routes on request.' },
-  { q: 'What group sizes can you handle?', a: 'From couples to groups of 40+, with multiple vehicles and a dedicated coordinator for weddings and events.' },
-  { q: 'Do you provide child seats?', a: 'Yes — child and infant seats at no extra charge. Tell us ages and weights at booking so the correct seat is installed before arrival.' },
-  { q: 'How far ahead should I book, and what if plans change?', a: '48–72 hours is usually enough; allow 2–3 weeks for weddings and large events. A 50% deposit confirms your vehicle and driver. Cancellations 14+ days before the transfer receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { q: 'Which areas of Bali do you cover for VIP transport?', a: 'Airport transfers and private drivers across Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and the Bukit. Other routes on request. Pair with villa dining via <a href="/locations">locations</a>.' },
+  { q: 'What group sizes can you handle?', a: 'From couples to groups of 40+, with multiple vehicles and a coordinator for weddings and events. Large arrivals often combine with <a href="/complete-villa-experience">complete villa experience</a>.' },
+  { q: 'Do you provide child seats?', a: 'Yes — child and infant seats at no extra charge. Tell us ages and weights at booking so the correct seat is installed before landing.' },
+  { q: 'How far ahead should I book VIP transport in Bali?', a: '48–72 hours is usually enough; allow 2–3 weeks for weddings and large multi-vehicle moves. Peak season arrivals book earlier.' },
+  { q: 'What is the deposit and cancellation policy?', a: 'A 50% deposit confirms vehicle and driver. Full refund 14+ days before, 50% at 7–13 days, non-refundable under 7 days. <a href="/cancellation">Cancellation policy →</a>' },
+  { q: 'Do you offer airport meet-and-greet?', a: 'Yes — name-board arrival, luggage help and direct villa drop-off. Share flight numbers so we track delays.' },
+  { q: 'Can you handle late-night or early-morning flights?', a: 'Yes. Night and dawn transfers are routine for international arrivals into DPS.' },
+  { q: 'Is the vehicle private or shared?', a: 'Private — your group only. We size the vehicle to luggage and guest count.' },
+  { q: 'Can the same driver stay for the whole villa holiday?', a: 'Yes — daily driver packages for shopping runs, dinners out and inter-area trips. Often stacked with <a href="/private-chef-bali">private chef</a> stays.' },
+  { q: 'Do you provide English-speaking drivers?', a: 'Yes. Professional, discreet drivers used to villa and wedding logistics.' },
+  { q: 'Can you transport wedding guests between venues?', a: 'Yes — multi-vehicle shuttles timed to ceremonies and receptions. Coordinate with <a href="/events/weddings">wedding catering</a>.' },
+  { q: 'What about surfboard, golf or oversized luggage?', a: 'Tell us in advance so we assign the right vehicle. Extra space is planned, not improvised at the curb.' },
+  { q: 'Do prices include tolls and parking?', a: 'Quotes state what is included. Tolls/parking are either bundled or itemised — never a surprise after the ride without agreement.' },
+  { q: 'Can you pick up from hotels as well as villas?', a: 'Yes — hotels, villas and venues across the coverage map.' },
+  { q: 'What if our flight is delayed?', a: 'Share the flight number. We monitor and adjust pickup without making you renegotiate from the plane.' },
+  { q: 'Can transport be booked with a private chef arrival day?', a: 'Yes — common combo: land, settle, chef cooks dinner. Start at <a href="/book">book</a> or WhatsApp both needs in one message.' },
+  { q: 'Do you offer intercity trips outside Bali?', a: 'This product is Bali-focused. Inter-island or Java routes need a custom quote — ask and we will say what is possible.' },
+  { q: 'How do I pay for VIP transport?', a: 'Deposit to confirm; balance per the quote (often before or on service day). Bank transfer and card options as stated on the invoice.' },
+  { q: 'Is smoking or pets allowed in the vehicle?', a: 'No smoking. Pets only when pre-approved with an appropriate vehicle — request at booking.' },
+  { q: 'How do I book VIP transport with myCHEF?', a: 'WhatsApp flight/date, passenger count, villa pin and child-seat needs. Or use <a href="/contact">contact</a> / <a href="/quote">quote</a>.' },
 ]
 
 export default function VipTransportBaliPage() {
@@ -227,7 +243,7 @@ export default function VipTransportBaliPage() {
       <section className="py-20 md:py-28 bg-[#FAFAF8] transport-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="VIP Transport FAQ" subtitle="Everything you need to know about booking luxury transport in Bali with myCHEF." />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

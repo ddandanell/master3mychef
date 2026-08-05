@@ -262,7 +262,7 @@ export default function FAQPage() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { label: 'Pricing', href: '/pricing', desc: 'Transparent rates for all services.' },
-              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Fine-dining tasting menus.' },
               { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate.' },
               { label: 'Villa Chef', href: '/private-chef-bali', desc: 'Daily chef for your villa stay.' },

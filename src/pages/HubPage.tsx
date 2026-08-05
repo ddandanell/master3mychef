@@ -265,7 +265,7 @@ export default function HubPage() {
     '@type': ['LocalBusiness', 'FoodEstablishment'],
     '@id': 'https://mychef.id/#business',
     name: siteFacts.businessName,
-    description: 'Private chef company in Bali delivering Michelin-trained villa dining, catering and event hospitality.',
+    description: 'Private chef company in Bali delivering restaurant-level villa dining, catering and event hospitality.',
     url: 'https://mychef.id/',
     telephone: siteFacts.phoneDisplay,
     email: siteFacts.email,
@@ -295,7 +295,7 @@ export default function HubPage() {
     ]),
     serviceSchema(
       'Private Chef / Fine Dining',
-      'Italian tasting menus and open-flame dining experiences in your Bali villa. Michelin-trained leadership.',
+      'Italian tasting menus and open-flame dining experiences in your Bali villa. Milan-trained leadership.',
       'https://mychef.id/fine-dining',
       '$$$$'
     ),
@@ -335,7 +335,7 @@ export default function HubPage() {
         ogImage={getPageMeta('home').ogImage}
         jsonLd={homeSchemas}
       />
-      {/* HERO — premium brand identity with Michelin-trained founder story front and centre */}
+      {/* HERO — premium brand identity with Milan-trained founder story front and centre */}
       <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 md:pb-32" style={{ background: 'var(--u-bg)' }}>
         <div className="mb-10 md:mb-14">
           <div className="relative min-h-screen overflow-hidden">
@@ -364,7 +364,7 @@ export default function HubPage() {
                 </h1>
                 <div className="gold-arc mb-6" />
                 <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
-                  Restaurant-level dining, cooked fresh in your villa by a Michelin-trained team. We shop, we cook, we serve, we clean — you just enjoy. From intimate dinners for two to weddings for 200, across Seminyak, Canggu, Ubud, Uluwatu and beyond.
+                  Restaurant-level dining, cooked fresh in your villa by a specialist chef team. We shop, we cook, we serve, we clean — you just enjoy. From intimate dinners for two to weddings for 200, across Seminyak, Canggu, Ubud, Uluwatu and beyond.
                 </p>
                 <div className="hub-hero-cta mb-4 flex flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
                   <a href="https://wa.me/6289674072020?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
@@ -774,7 +774,7 @@ export default function HubPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
             {[
-              { name: 'Adriano', role: 'founder, Michelin-trained in Milan' },
+              { name: 'Adriano', role: 'founder, fine-dining trained in Milan' },
               { name: 'I Made Surya', role: 'Mediterranean & handmade pasta' },
               { name: 'Bayu Pranata', role: 'BBQ & live-fire specialist' },
               { name: 'Ni Putu Asri', role: 'Balinese & Indonesian feasts' },

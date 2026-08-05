@@ -50,7 +50,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     slug: 'seminyak',
     name: 'Seminyak',
     title: 'Private Chef Seminyak | Beachfront Villa Dining — myCHEF',
-    description: 'Hire a private chef in Seminyak for beachfront villa dinners, BBQs and events. Michelin-trained team, fast setup, all Seminyak areas covered. WhatsApp myCHEF.',
+    description: 'Hire a private chef in Seminyak for beachfront villa dinners, BBQs and events. specialist chef team, fast setup, all Seminyak areas covered. WhatsApp myCHEF.',
     h1: 'Private Chef Service in Seminyak',
     heroImage: '/generated/mychef-city-seminyak.webp',
     heroAlt: 'Luxury beachfront villa in Seminyak, Bali set for a private chef sunset dinner by the pool',
@@ -64,7 +64,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
       {
         title: 'Beachfront fine dining',
         href: '/fine-dining',
-        summary: 'Michelin-trained chefs delivering multi-course tasting menus directly to your Seminyak beachfront villa.',
+        summary: 'specialist head chefs delivering multi-course tasting menus directly to your Seminyak beachfront villa.',
         availability: 'Daily breakfast, lunch, and dinner coverage.',
       },
       {

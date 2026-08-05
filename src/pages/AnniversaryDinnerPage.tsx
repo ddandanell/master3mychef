@@ -92,7 +92,7 @@ const SECTIONS = [
       {
         icon: Clock,
         title: 'Discreet Service',
-        desc: 'Your myCHEF team consists of a Michelin-trained chef and one dedicated server. We are present when needed and invisible when not. No hovering, no check-ins mid-conversation, no third-party catering crews with unfamiliar faces. The evening belongs to you.'
+        desc: 'Your myCHEF team consists of a specialist head chef and one dedicated server. We are present when needed and invisible when not. No hovering, no check-ins mid-conversation, no third-party catering crews with unfamiliar faces. The evening belongs to you.'
       },
     ],
   },
@@ -170,7 +170,7 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'myCHEF\'s signature romantic dinner experience for couples at Bali villas.' },
-  { label: 'Tasting Menu Bali', href: '/fine-dining/tasting-menu', desc: 'Multi-course tasting menus from our Michelin-trained chef team.' },
+  { label: 'Tasting Menu Bali', href: '/fine-dining/tasting-menu', desc: 'Multi-course tasting menus from our specialist head chef team.' },
   { label: 'Birthday Dinners', href: '/events/birthdays', desc: 'Private villa birthday celebrations — intimate or group events.' },
   { label: 'Private Chef Seminyak', href: '/private-chef/seminyak', desc: 'Private chef services for Seminyak and Canggu villas.' },
   { label: 'Private Chef Ubud', href: '/private-chef/ubud', desc: 'Anniversary and romantic dinners in Ubud\'s rice terrace villas.' },
@@ -183,9 +183,9 @@ export default function AnniversaryDinnerPage() {
     <PremiumPage
       slug="blog/anniversary-dinner-villa-bali"
       title="Anniversary Dinner Bali Villa | Private Chef Celebrations | myCHEF"
-      description="Celebrate your anniversary with a private chef dinner at your Bali villa. Custom menu, intimate setup, Michelin-trained team. From IDR 2,500,000++ per person."
+      description="Celebrate your anniversary with a private chef dinner at your Bali villa. Custom menu, intimate setup, specialist chef team. From IDR 2,500,000++ per person."
       seoTitle="Anniversary Dinner Bali Villa | Private Chef Celebrations | myCHEF"
-      seoDescription="Celebrate your anniversary with a private chef dinner at your Bali villa. Custom menu, intimate setup, Michelin-trained team. From IDR 2,500,000++ per person."
+      seoDescription="Celebrate your anniversary with a private chef dinner at your Bali villa. Custom menu, intimate setup, specialist chef team. From IDR 2,500,000++ per person."
       canonicalUrl="https://mychef.id/blog/anniversary-dinner-villa-bali"
       h1="Anniversary Dinner Bali Villa"
       subtitle="Private Chef for Milestone Celebrations — Intimate, Personalized, Unforgettable"
@@ -204,7 +204,7 @@ export default function AnniversaryDinnerPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Anniversary Dinner Bali Villa | Private Chef for Milestone Celebrations',
-          description: 'Celebrate your anniversary with a private chef dinner at your Bali villa. Custom menu, intimate setup, Michelin-trained team. From IDR 2,500,000++ per person.',
+          description: 'Celebrate your anniversary with a private chef dinner at your Bali villa. Custom menu, intimate setup, specialist chef team. From IDR 2,500,000++ per person.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: {
             '@type': 'Organization',

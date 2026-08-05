@@ -12,7 +12,7 @@ const SECTIONS = [
 
     <p>A private dinner party at your Bali villa turns that formula on its head. Your space, your timeline, your menu. The chef arrives three hours before your guests — prepping, plating, and staging everything while you shower and relax. Guests arrive to candlelight, fresh flowers, and a cold glass of champagne. No commute, no queue, no shouting over ambient music.</p>
 
-    <p>The private chef difference goes beyond convenience. When you brief a chef on your guests — who has a shellfish allergy, who is vegetarian, who celebrates a birthday tonight — that information shapes every dish. The meal is designed around your people, not a standardised menu optimised for throughput. A Michelin-trained chef cooking for twelve in a private villa brings a level of attention that no restaurant kitchen ever can.</p>
+    <p>The private chef difference goes beyond convenience. When you brief a chef on your guests — who has a shellfish allergy, who is vegetarian, who celebrates a birthday tonight — that information shapes every dish. The meal is designed around your people, not a standardised menu optimised for throughput. A specialist head chef cooking for twelve in a private villa brings a level of attention that no restaurant kitchen ever can.</p>
 
     <p>Bali's villa architecture is built for this format. A pool terrace with a long dining table, lanterns reflected in the water, the sound of cicadas replacing restaurant chatter — it is the setting every Bali dinner party should have. When guests remember the evening a year later, they will not remember the restaurant. They will remember the villa, the food, and the way the whole evening felt effortless.</p>
 

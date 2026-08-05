@@ -779,7 +779,7 @@ export default function CateringPlatedPage() {
               { label: 'grazing table welcome', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
               { label: 'Drop-Off Catering', href: '/catering/drop-off-catering', desc: 'Fresh food delivered to your villa.' },
               { label: 'Villa Chef', href: '/private-chef-bali', desc: 'Daily chef for your villa stay.' },
-              { label: 'private fine dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
+              { label: 'private fine dining', href: '/fine-dining', desc: 'Fine-dining tasting menus.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>

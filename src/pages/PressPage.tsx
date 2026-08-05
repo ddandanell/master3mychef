@@ -196,7 +196,7 @@ export default function PressPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Our Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Fine-dining tasting menus in your villa.' },
               { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing tables.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays & corporate events.' },
               { label: 'Reviews', href: '/reviews', desc: `${siteFacts.reviewFraming}` },

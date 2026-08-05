@@ -255,7 +255,7 @@ export default function ManagingBookingPage() {
               { label: 'FAQ', href: '/faq', desc: 'Common questions about booking and service.' },
               { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all services.' },
               { label: 'Cancellation Policy', href: '/cancellation', desc: 'Refund and change terms.' },
-              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Fine-dining tasting menus.' },
               { label: 'Catering', href: '/catering', desc: 'BBQ, buffet, plated & grazing.' },
               { label: 'Get a Quote', href: '/quote', desc: 'Detailed proposal within 24 hours.' },
             ].map((item) => (

@@ -2938,7 +2938,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     ],
     metaTitle: "Private Chef Kedewatan Bali | Ayung Gorge Villa Dining | myCHEF",
     metaDescription:
-      "Hire a private chef in Kedewatan. myCHEF serves Amandari-area gorge villas with Michelin-trained chefs — tasting menus, intimate dinners and luxury catering. WhatsApp myCHEF.",
+      "Hire a private chef in Kedewatan. myCHEF serves Amandari-area gorge villas with specialist head chefs — tasting menus, intimate dinners and luxury catering. WhatsApp myCHEF.",
     coordinates: { lat: -8.4744, lng: 115.2397 },
     bookingNote: "Book 72 hours ahead for fine-dining menus. 24-hour notice available for standard sessions.",
     published: true,

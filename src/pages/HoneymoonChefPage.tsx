@@ -155,13 +155,13 @@ export default function HoneymoonChefPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Honeymoon Private Chef Bali | Romantic Villa Dining | myCHEF"
-        description="A private chef for your Bali honeymoon. Sunset dinners, breakfast in bed, custom romantic menus. Michelin-trained team. From IDR 2.5M++ per person. WhatsApp us."
+        description="A private chef for your Bali honeymoon. Sunset dinners, breakfast in bed, custom romantic menus. specialist chef team. From IDR 2.5M++ per person. WhatsApp us."
         canonical={`${SITE}/blog/honeymoon-private-chef-bali`}
         ogImage={`${SITE}/generated/mychef-experience-bali-luna-gallery-1.webp`}
         jsonLd={[
           detailedServiceSchema(
             'Honeymoon Private Chef Bali',
-            'A private chef for your Bali honeymoon — Michelin-trained Balinese team, sunrise breakfasts, rotating romantic dinner menus, and full-stay villa packages. Serving Uluwatu, Seminyak, Ubud, Jimbaran and all Bali villa areas.',
+            'A private chef for your Bali honeymoon — specialist Balinese team, sunrise breakfasts, rotating romantic dinner menus, and full-stay villa packages. Serving Uluwatu, Seminyak, Ubud, Jimbaran and all Bali villa areas.',
             `${SITE}/blog/honeymoon-private-chef-bali`
           ),
           offerSchema('Honeymoon Dinner — per person', 2500000, 'IDR', `${SITE}/blog/honeymoon-private-chef-bali`),
@@ -200,7 +200,7 @@ export default function HoneymoonChefPage() {
             <span className="italic">For Your Bali Honeymoon</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto leading-relaxed">
-            Sunrise breakfasts prepared at your villa. Rotating romantic dinner menus. A Michelin-trained team that learns your preferences and builds every meal around you — for 5 to 14 nights.
+            Sunrise breakfasts prepared at your villa. Rotating romantic dinner menus. A specialist chef team that learns your preferences and builds every meal around you — for 5 to 14 nights.
           </p>
           <p className="text-white/[60%] text-sm mb-10 tracking-wide">
             From IDR 2,500,000++ per person · Full-stay packages available · All Bali villa areas — <a href="/pricing" className="text-[#C5A028] hover:underline">see pricing</a>
@@ -222,7 +222,7 @@ export default function HoneymoonChefPage() {
             </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Michelin-trained Balinese team</span>
+            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> specialist Balinese team</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Breakfast + dinner packages</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full kitchen cleanup included</span>
           </div>
@@ -330,7 +330,7 @@ export default function HoneymoonChefPage() {
               Honeymoon Tasting Experience
             </h2>
             <p className="text-[#4A4745] max-w-[560px] mx-auto text-base leading-relaxed">
-              A six-movement menu built around Balinese ingredients and Michelin-trained technique. Champagne pairing available. This is the menu we recommend for your first evening — your chef will build from here.
+              A six-movement menu built around Balinese ingredients and Milan-trained technique. Champagne pairing available. This is the menu we recommend for your first evening — your chef will build from here.
             </p>
           </div>
 
@@ -529,7 +529,7 @@ export default function HoneymoonChefPage() {
             <h3 className="text-[#1A1A1A] text-lg mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>What Is Always Included</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
-                'Private Michelin-trained Balinese chef',
+                'Private specialist Balinese chef',
                 'All groceries, sourced fresh daily (at cost)',
                 'Cooking equipment and utensils',
                 'Full table setup — linens, candles, glassware',

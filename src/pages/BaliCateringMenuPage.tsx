@@ -54,7 +54,7 @@ const SECTIONS = [
     title: 'Modern Fusion Menus for Contemporary Tastes',
     features: [
       { icon: Flame, title: 'Mediterranean-Balinese', desc: 'Italian, Spanish, and Moroccan techniques applied to Balinese ingredients. Charred octopus with sambal matah, turmeric risotto with local mushrooms, wood-fired snapper with galangal butter. Popular for romantic dinners and intimate groups.' },
-      { icon: Utensils, title: 'Contemporary Balinese', desc: 'French plating and sourcing rigour applied to Balinese cooking methods. Deconstructed sate lilit, galangal-poached fish with microgreens, slow-cooked pork belly with black rice and sambal hijau. Our Michelin-trained chefs thrive here.' },
+      { icon: Utensils, title: 'Contemporary Balinese', desc: 'French plating and sourcing rigour applied to Balinese cooking methods. Deconstructed sate lilit, galangal-poached fish with microgreens, slow-cooked pork belly with black rice and sambal hijau. Our specialist head chefs thrive here.' },
       { icon: Users, title: 'Asian Contemporary', desc: 'Refined stir-fries, hand-folded dumplings, Japanese-inspired crudo with local fish, noodle dishes. Familiar to guests from Singapore, Hong Kong, and Tokyo. Versatile for large groups with mixed palates.' },
       { icon: Leaf, title: 'Farm-to-Table', desc: 'Seasonal highland vegetables, simply grilled proteins, house-baked bread, cold-pressed salad dressings. Ingredient-focused with minimal intervention — the Baturiti strawberry salad or Kintamani highland mushroom toast are signature dishes in this style.' },
     ],

@@ -39,7 +39,7 @@ const SECTIONS = [
     subtitle: 'Complete Hiring Guide',
     title: 'How to Hire a Private Chef in Bali: What You Need to Know',
     image: '/generated/mychef-experience-bali-fine-dining-4.webp',
-    imageAlt: 'Michelin-trained private chef plating a fine dining course in a Bali villa',
+    imageAlt: 'fine-dining private chef plating a fine dining course in a Bali villa',
     body: `<p>The private chef market in Bali is growing rapidly — and almost completely unregulated. On any given week, you'll find a wide spectrum of operators: Michelin-trained professionals with verified food safety certification at one end, and informal "home cooks" offering villa meals at the other. The quality gap between them is enormous, and most guests don't know how to tell the difference until something goes wrong.</p>
     <p>This guide gives you a working framework for hiring a private chef in Bali with confidence. You'll learn what credentials actually matter, what six steps to follow from first contact to the dinner table, what questions every client should ask, and what fair pricing looks like in 2026. Whether you're planning a romantic villa dinner for two, a group celebration, or a week of daily private cooking, use this guide before you book.</p>
     <p>myCHEF has served 12,000+ guests across 560+ events and 500+ villa bookings in Bali since 2019. This is the framework we'd give our own family.</p>`,
@@ -75,7 +75,7 @@ const SECTIONS = [
     body: `<p>Bali has a wide spectrum of people calling themselves private chefs. At the professional end, you're hiring someone who has completed formal culinary training (a diploma programme, an apprenticeship in a Michelin-star kitchen, or equivalent), holds current food safety certification, works with professional liability insurance, and operates within a structure that includes a backup or replacement if they're unavailable on your date.</p>
     <p><strong>HACCP Certification</strong> — Hazard Analysis and Critical Control Points — is the international food safety standard used by professional kitchens worldwide. A HACCP-certified chef has been trained to identify and control biological, chemical, and physical hazards at every stage of food preparation. For large groups, allergy-sensitive guests, or events where the consequences of a food safety failure are serious, this certification is non-negotiable.</p>
     <p>The <strong>same-day replacement guarantee</strong> is equally important for villa events. If your booked chef falls ill on the morning of a dinner for sixteen guests, an unaffiliated freelancer has no backup for you. A professional service like myCHEF maintains a vetted roster and can deploy a replacement chef of equivalent calibre — same menu, same standard — with minimal disruption. For event-critical bookings, always ask: "What happens if you're unavailable on the day?"</p>
-    <p>myCHEF operates with all of the above as standard: Michelin-trained team, HACCP certification, same-day replacement guarantee, and money-back assurance. It's the framework we built after seeing too many guests left stranded by informal operators in the years before we launched.</p>`,
+    <p>myCHEF operates with all of the above as standard: specialist chef team, HACCP certification, same-day replacement guarantee, and money-back assurance. It's the framework we built after seeing too many guests left stranded by informal operators in the years before we launched.</p>`,
   },
   {
     id: 'questions-to-ask',
@@ -221,7 +221,7 @@ export default function HowToHirePrivateChefPage() {
     '@type': 'Article',
     headline: 'How to Hire a Private Chef in Bali (2026) — Complete Guide',
     description:
-      'Step-by-step guide to hiring a private chef in Bali. What to ask, what to expect, how pricing works, how to book. Michelin-trained chefs from IDR 1,500,000++.',
+      'Step-by-step guide to hiring a private chef in Bali. What to ask, what to expect, how pricing works, how to book. specialist head chefs from IDR 1,500,000++.',
     author: {
       '@type': 'Person',
       name: 'Adriano Cattaneo',
@@ -259,14 +259,14 @@ export default function HowToHirePrivateChefPage() {
     <PremiumPage
       slug="blog/how-to-hire-private-chef-bali-complete-guide"
       title="How to Hire a Private Chef in Bali (2026) | Complete Guide"
-      description="Step-by-step guide to hiring a private chef in Bali. What to ask, what to expect, how pricing works, how to book. Michelin-trained chefs from IDR 1,500,000++."
+      description="Step-by-step guide to hiring a private chef in Bali. What to ask, what to expect, how pricing works, how to book. specialist head chefs from IDR 1,500,000++."
       seoTitle="How to Hire a Private Chef in Bali (2026) | Complete Guide | myCHEF"
-      seoDescription="Step-by-step guide to hiring a private chef in Bali. What to ask, what to expect, how pricing works, how to book. Michelin-trained chefs from IDR 1,500,000++."
+      seoDescription="Step-by-step guide to hiring a private chef in Bali. What to ask, what to expect, how pricing works, how to book. specialist head chefs from IDR 1,500,000++."
       canonicalUrl={CANONICAL}
       h1="How to Hire a Private Chef in Bali"
       subtitle="Step-by-step guide: what to look for, what to ask, how pricing works, and how to book with confidence."
       heroImage="/generated/mychef-experience-bali-fine-dining-4.webp"
-      heroImageAlt="Michelin-trained private chef presenting a fine dining course in a Bali villa"
+      heroImageAlt="fine-dining private chef presenting a fine dining course in a Bali villa"
       ogImage="https://mychef.id/generated/mychef-experience-bali-fine-dining-4.webp"
       keywords={[
         'how to hire private chef bali',

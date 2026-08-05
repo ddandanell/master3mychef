@@ -61,7 +61,7 @@ const partnerBenefits = [
   {
     icon: ShieldCheck,
     title: 'Certified execution',
-    desc: 'Michelin-trained leadership, vetted teams, and SOP-led service designed for high-end villa operations.',
+    desc: 'Milan-trained leadership, vetted teams, and SOP-led service designed for high-end villa operations.',
   },
 ]
 
@@ -181,7 +181,7 @@ export default function PartnersPage() {
             Partner With Bali&apos;s Premier Private Chef Service
           </h1>
           <p className="part-hero-sub text-[#4A4745] text-base md:text-lg max-w-[760px] mb-8 leading-relaxed">
-            myCHEF.id helps journalists cover the Bali private dining story and helps villa managers unlock a stronger guest experience through the Certified Partner programme. Founded by Adriano, Michelin-trained in Milan, and trusted across Bali for private chef, catering, events, and staffing.
+            myCHEF.id helps journalists cover the Bali private dining story and helps villa managers unlock a stronger guest experience through the Certified Partner programme. Founded by Adriano, fine-dining trained in Milan, and trusted across Bali for private chef, catering, events, and staffing.
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10">
@@ -238,7 +238,7 @@ export default function PartnersPage() {
             <p className="text-[#C5A028] text-xs uppercase tracking-[0.35em] font-semibold mb-4">Press & Media</p>
             <h2 className="font-playfair text-3xl md:text-5xl leading-[1.08] mb-5">A quick media brief for journalists, editors, and Bali storytellers.</h2>
             <p className="text-[#4A4745] text-base leading-relaxed mb-6 max-w-[720px]">
-              myCHEF has served 12,000+ guests across Bali villas, events, and private dining experiences. Our press kit covers the brand story, Adriano&apos;s Michelin-trained Milan background, company milestones, and approved visual assets for editorial requests.
+              myCHEF has served 12,000+ guests across Bali villas, events, and private dining experiences. Our press kit covers the brand story, Adriano&apos;s Milan fine-dining background, company milestones, and approved visual assets for editorial requests.
             </p>
             <p className="text-[#1A1A1A] text-sm md:text-base font-medium mb-8">
               {pressStats.join(' · ')}

@@ -270,7 +270,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           { question: 'Who is the best private chef in Bali?', answer: 'The best private chef for your villa is a vetted professional with food-safety certification, a replacement guarantee, and a track record in villa kitchens. myCHEF is a managed team that has served 560+ events and 12,000+ guests since 2019, with 500+ villa bookings across fine dining, BBQ, and event menus.' },
           { question: 'How to choose a private chef in Bali?', answer: 'Look for vetting, insurance, a replacement plan, a written quote, and references. Ask how the chef handles your villa kitchen, dietary needs, and event size. A managed team gives you one accountable point of contact rather than a single freelancer.' },
           { question: 'Are private chef marketplaces reliable?', answer: 'Marketplaces list freelancers with variable vetting and no replacement guarantee. A managed culinary team provides vetted chefs, a two-hour replacement guarantee, and one accountable quote for your event.' },
-          { question: 'Are your chefs vetted and background-checked?', answer: 'Yes. myCHEF is a managed, vetted and background-checked team of Indonesian professional chefs, led by a Michelin-trained founder. We are not a freelancer marketplace.' },
+          { question: 'Are your chefs vetted and background-checked?', answer: 'Yes. myCHEF is a managed, vetted and background-checked team of Indonesian professional chefs, led by a Milan-trained founder. We are not a freelancer marketplace.' },
           { question: 'What happens if my chef cancels or falls ill?', answer: 'Your evening is protected. We dispatch a verified replacement of equivalent calibre within two hours with the same menu brief and same standard, or we refund 100%.' },
         ]
       : entry.slug === 'butler-service-bali-daily-rate'
@@ -376,7 +376,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
               ]
             : entry.slug === 'michelin-private-chef-bali-prices'
               ? [
-                  { question: 'Is a Michelin-trained chef always the most expensive option?', answer: 'Not always. A premium tasting menu for 8 guests (from IDR 950K++ per person) can cost less per head than a fully staffed standard dinner with bar service. The tiers overlap — the difference is where the money goes: ingredients and craft, versus staffing scale.' },
+                  { question: 'Is a specialist head chef always the most expensive option?', answer: 'Not always. A premium tasting menu for 8 guests (from IDR 950K++ per person) can cost less per head than a fully staffed standard dinner with bar service. The tiers overlap — the difference is where the money goes: ingredients and craft, versus staffing scale.' },
                   { question: 'Are groceries included in the price?', answer: 'Yes for fine-dining menus — the per-person price includes all ingredients. For daily or weekly chef service, groceries are billed separately at cost with receipts, never marked up.' },
                   { question: 'What does the Chef’s Table cost?', answer: 'IDR 3,500K++ per person for 6 guests, always Full-Service, cooked counter-side by the chef.' },
                   { question: 'Can two people book a Michelin-tier dinner?', answer: 'Yes — the Romantic Dinner for Two is IDR 3,500K per couple Full-Service (IDR 2,800K Kitchen-Service), with a customised menu, candles and full setup.' },
@@ -545,7 +545,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                 <ul className="mt-8 space-y-4">
                   <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#7E6410]" strokeWidth={2.5} /></div> <span className="text-lg">Message us on WhatsApp for an immediate answer from our guest relations team.</span></li>
                   <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#7E6410]" strokeWidth={2.5} /></div> <span className="text-lg">Request a personalized quote — we respond within 24 hours with a full proposal.</span></li>
-                  <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#7E6410]" strokeWidth={2.5} /></div> <span className="text-lg">Browse our sample menus to see exactly what our Michelin-trained chefs can cook.</span></li>
+                  <li className="flex items-start gap-3"><div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#C5A028]/10"><Check className="h-4 w-4 text-[#7E6410]" strokeWidth={2.5} /></div> <span className="text-lg">Browse our sample menus to see exactly what our specialist head chefs can cook.</span></li>
                 </ul>
               </div>
             )}

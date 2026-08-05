@@ -104,7 +104,7 @@ export default function RomanticDinnerPage() {
         jsonLd={[
           serviceWithAggregateOfferSchema({
             name: 'Romantic Private Dinner Bali',
-            description: 'A private candlelit villa dinner in Bali for two — Michelin-trained chef, five-course tasting menu, table setting, flowers on request, and full cleanup. myCHEF.id serves romantic dinners across Seminyak, Canggu, Ubud, Uluwatu, and all Bali villa areas.',
+            description: 'A private candlelit villa dinner in Bali for two — specialist head chef, five-course tasting menu, table setting, flowers on request, and full cleanup. myCHEF.id serves romantic dinners across Seminyak, Canggu, Ubud, Uluwatu, and all Bali villa areas.',
             url: `${SITE}/fine-dining/romantic-dinner`,
             lowPrice: '2200000',
             highPrice: '2400000',
@@ -116,7 +116,7 @@ export default function RomanticDinnerPage() {
             description: 'Simple 3-step process to book a private romantic dinner with myCHEF in your Bali villa.',
             steps: [
               { name: 'Choose Your Date & Villa', text: 'Pick your preferred evening and confirm your villa address. We serve across Seminyak, Canggu, Ubud, Uluwatu, and all Bali areas.' },
-              { name: 'Select Your Menu', text: 'Choose between our Mediterranean Sea menu or Wagyu-focused menu. Both are 5-course tasting experiences prepared by a Michelin-trained chef.' },
+              { name: 'Select Your Menu', text: 'Choose between our Mediterranean Sea menu or Wagyu-focused menu. Both are 5-course tasting experiences prepared by a specialist head chef.' },
               { name: 'Chef Arrives & Prepares', text: 'Your chef arrives 3 hours before service with all ingredients, prepares the meal in your villa kitchen, and leaves everything spotless.' },
             ],
           }),
@@ -153,7 +153,7 @@ export default function RomanticDinnerPage() {
             <span className="italic">Built for Two</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto leading-relaxed">
-            Romantic dinner Bali means no other table, no other guests — a candlelit setting in your own villa, five Michelin-trained courses, and a team that becomes invisible the moment you sit down. For larger at-home evenings see{' '}
+            Romantic dinner Bali means no other table, no other guests — a candlelit setting in your own villa, five fine-dining courses, and a team that becomes invisible the moment you sit down. For larger at-home evenings see{' '}
             <Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline">private dining</Link>.
           </p>
           <p className="text-white/[60%] text-sm mb-10 tracking-wide">
@@ -176,7 +176,7 @@ export default function RomanticDinnerPage() {
             </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Michelin-trained chef</span>
+            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> specialist head chef</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Table setting + candles included</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full kitchen cleanup</span>
           </div>
@@ -470,7 +470,7 @@ export default function RomanticDinnerPage() {
           <div className="rounded-[28px] border border-[#E5D9B5] p-8 md:p-10">
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {[
-                'Michelin-trained chef + kitchen team',
+                'head chef + kitchen team',
                 'All premium ingredients (grocery included)',
                 'Table linens, candles, and glassware',
                 'Full service during the meal',

@@ -89,7 +89,7 @@ const FAQS = [
   },
   {
     question: 'What makes myCHEF different from a freelance private chef?',
-    answer: 'You get a full team, proven systems, menu depth, backup coverage, and Michelin-trained standards — not just one individual trying to manage shopping, cooking, service, and cleanup alone.',
+    answer: 'You get a full team, proven systems, menu depth, backup coverage, and fine-dining standards — not just one individual trying to manage shopping, cooking, service, and cleanup alone.',
   },
   {
     question: 'Can I meet the chefs before booking?',

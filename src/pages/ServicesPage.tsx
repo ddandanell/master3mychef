@@ -12,7 +12,7 @@ const SERVICES = [
   {
     slug: 'fine-dining',
     label: 'Fine Dining',
-    description: 'Multi-course tasting menus — Italian, French, Mediterranean, Wagyu — plated in your villa by a Michelin-trained team. From 5 guests (2 for romantic dinners).',
+    description: 'Multi-course tasting menus — Italian, French, Mediterranean, Wagyu — plated in your villa by a specialist chef team. From 5 guests (2 for romantic dinners).',
     price: 'From IDR 950K++ per person.',
     url: '/fine-dining',
     cta: 'Explore fine dining',
@@ -162,7 +162,7 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-[#050505] text-white">
       <SeoHead
         title="Private Chef Services in Bali | Compare Every myCHEF Service"
-        description="Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. Michelin-trained team. WhatsApp us to find the right fit."
+        description="Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. specialist chef team. WhatsApp us to find the right fit."
         canonical={`${SITE}/services`}
         ogImage={`${SITE}/generated/mychef-location-bali-hub-hero.webp`}
         jsonLd={[collectionPageSchema, breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
@@ -397,7 +397,7 @@ export default function ServicesPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>All Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus in your villa.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Fine-dining tasting menus in your villa.' },
               { label: 'Catering', href: '/catering', desc: 'Buffets, plated dinners & grazing tables.' },
               { label: 'BBQ catering', href: '/catering/bbq-catering', desc: 'Poolside grills, satay & live fire.' },
               { label: 'Events', href: '/events', desc: 'Weddings, birthdays, corporate & villa parties.' },

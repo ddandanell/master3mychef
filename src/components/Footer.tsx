@@ -406,31 +406,12 @@ export default function Footer() {
                   B2B Bar Solution
                 </Link>
               </li>
-              <li>
-                <Link to="/bar-services/#hotels" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
-                  Hotels & Resorts
-                </Link>
-              </li>
-              <li>
-                <Link to="/bar-services/#villas" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
-                  Villas & Estates
-                </Link>
-              </li>
-              <li>
-                <Link to="/bar-services/#beach-clubs" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
-                  Beach Clubs
-                </Link>
-              </li>
-              <li>
-                <Link to="/bar-services/#restaurants" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
-                  Restaurants & Cafés
-                </Link>
-              </li>
-              <li>
-                <Link to="/bar-services/#events" className="text-sm text-white/50 hover:text-white hover:translate-x-1 inline-block transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1">
-                  Events & Weddings
-                </Link>
-              </li>
+              {/* The five per-segment anchors (#hotels, #villas, #beach-clubs, #restaurants,
+                  #events) were removed 2026-08-05. All 22 /bar-services/ URLs are deliberately
+                  excluded from the sitemap (owner decision 2026-07-28, unproven line) to protect
+                  crawl budget for the /private-chef/ area pages — but the footer was pushing six
+                  sitewide links at that cluster from all 243 pages, working against that decision.
+                  One entry point is enough; the hub links onward to every segment. */}
             </ul>
           </div>
 

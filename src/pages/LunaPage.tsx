@@ -47,7 +47,7 @@ const HOW_IT_WORKS = [
 ]
 
 const WHATS_INCLUDED = [
-  'Michelin-trained executive chef',
+  'Milan-trained executive chef',
   'Sous chef & kitchen team',
   'Professional service staff',
   'Sommelier wine pairing (optional)',
@@ -268,7 +268,7 @@ export default function LunaPage() {
         jsonLd={[
           serviceWithAggregateOfferSchema({
             name: 'Private Chef Fine Dining Bali',
-            description: '24 classic set menus served privately in your Bali villa — vegetarian, seafood, mixed meats, and single-meat. Michelin-trained chef, sommelier wine pairing, open-flame cooking.',
+            description: '24 classic set menus served privately in your Bali villa — vegetarian, seafood, mixed meats, and single-meat. specialist head chef, sommelier wine pairing, open-flame cooking.',
             url: 'https://mychef.id/fine-dining',
             lowPrice: '1250000',
             highPrice: '3600000',
@@ -346,7 +346,7 @@ export default function LunaPage() {
             Fine Dining Bali Villa — Private Tasting Menus
           </h1>
           <p className="luna-hero-sub mb-4 max-w-[640px] text-base leading-relaxed text-white/[85%] md:text-xl font-medium">
-            Fine dining Bali villa service with 24 classic set menus across four families — vegetarian, seafood, mixed meats, and single-meat — prepared by a Michelin-trained team. Served privately in your villa. Minimum 5 guests.
+            Fine dining Bali villa service with 24 classic set menus across four families — vegetarian, seafood, mixed meats, and single-meat — prepared by a specialist chef team. Served privately in your villa. Minimum 5 guests.
           </p>
           <p className="mb-12 max-w-[640px] text-base leading-relaxed text-[#C5A028] md:text-xl font-medium">
             From IDR 1,250,000++ per guest
@@ -526,7 +526,7 @@ export default function LunaPage() {
             <div className="luna-reveal">
               <img
                 src="/generated/mychef-experience-bali-luna-collage.webp"
-                alt="Michelin-trained chef preparing a Mediterranean tasting menu in a private Bali villa kitchen"
+                alt="specialist head chef preparing a Mediterranean tasting menu in a private Bali villa kitchen"
                 width={800}
                 height={600}
                 className="rounded-2xl w-full aspect-[4/3] object-cover"
@@ -730,13 +730,13 @@ export default function LunaPage() {
               </div>
               <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Same chef, same food, exceptional value</p>
               <p className="text-white/[65%] leading-relaxed mb-8">
-                The same Michelin-trained chef. The same ingredients, techniques, and recipes. The difference? We use your villa&apos;s plates, glassware, and kitchen. The evening feels more intimate — like having a world-class chef cook in your own home. Cleanup is included, and your kitchen is left exactly as we found it.
+                The same specialist head chef. The same ingredients, techniques, and recipes. The difference? We use your villa&apos;s plates, glassware, and kitchen. The evening feels more intimate — like having a world-class chef cook in your own home. Cleanup is included, and your kitchen is left exactly as we found it.
               </p>
               <div className="mb-8">
                 <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>What&apos;s included</p>
                 <div className="space-y-3">
                   {[
-                    'Michelin-trained private chef',
+                    'fine-dining private chef',
                     'All ingredients (premium, fresh)',
                     'Multi-course tasting menu',
                     'Service using your villa&apos;s tableware',
@@ -1045,7 +1045,7 @@ export default function LunaPage() {
               <p className="text-[#C5A028] text-xs tracking-[0.2em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>By special arrangement</p>
               <div className="w-12 h-[2px] bg-[#C5A028] mb-8" />
               <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
-                A romantic dinner in Bali should not mean fighting for a table at a crowded restaurant. It should mean your own villa, your own chef, and an evening that moves at your pace. We design intimate dinners for couples who want privacy without compromise — the same Michelin-trained team, the same ingredients, the same attention to detail, scaled to an evening for two.
+                A romantic dinner in Bali should not mean fighting for a table at a crowded restaurant. It should mean your own villa, your own chef, and an evening that moves at your pace. We design intimate dinners for couples who want privacy without compromise — the same specialist chef team, the same ingredients, the same attention to detail, scaled to an evening for two.
               </p>
               <p className="text-[#1A1A1A]/70 mb-6 leading-relaxed">
                 The table is set with candles and crystal. The courses arrive unhurried. The wine is paired to your preference. And the only other voices in the room are the ones you choose to hear. Whether it is a proposal, an anniversary, or simply a night that deserves to be remembered, we build the evening around you.
@@ -1361,7 +1361,7 @@ export default function LunaPage() {
 
       <LocationChips
         title="Fine Dining Across Bali"
-        subtitle="The same Michelin-trained team, the same standards — in every villa from Seminyak to the Bukit Peninsula."
+        subtitle="The same specialist chef team, the same standards — in every villa from Seminyak to the Bukit Peninsula."
         dark
       />
 

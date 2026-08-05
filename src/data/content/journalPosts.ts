@@ -10,7 +10,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     date: '2026-05-10',
     readTime: 7,
     excerpt:
-      'How Michelin-trained Italian technique shows up at a Bali villa dinner — plating, sauces, and service standards that guests notice.',
+      'How Milan-trained Italian technique shows up at a Bali villa dinner — plating, sauces, and service standards that guests notice.',
     image: '/generated/mychef-journal-michelin-training-bali.webp',
     focusKeyword: 'Michelin training Bali private chef',
   },

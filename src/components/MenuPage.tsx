@@ -120,10 +120,10 @@ export default function MenuPage() {
                 Tasting Menus.<br /><span className="italic">In your villa.</span>
               </h2>
               <p className="text-white/[65%] text-base leading-relaxed mb-6">
-                The Luna fine dining collection features two multi-course menus — Mediterranean Sea (IDR 2,200,000++) and Wagyu Experience (IDR 2,400,000++) — prepared by a Michelin-trained team in your villa kitchen.
+                The Luna fine dining collection features two multi-course menus — Mediterranean Sea (IDR 2,200,000++) and Wagyu Experience (IDR 2,400,000++) — prepared by a specialist chef team in your villa kitchen.
               </p>
               <ul className="space-y-2 mb-8">
-                {['Five courses, handmade pasta, premium ingredients', 'Michelin-trained chef + team of 6–10', 'All groceries, service, and cleanup included', 'Optional wine pairing +IDR 850K per person'].map((item) => (
+                {['Five courses, handmade pasta, premium ingredients', 'head chef + team of 6–10', 'All groceries, service, and cleanup included', 'Optional wine pairing +IDR 850K per person'].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-white/[65%]">
                     <Check className="w-4 h-4 text-[#C5A028] flex-shrink-0 mt-0.5" />
                     <span>{item}</span>

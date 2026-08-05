@@ -37,7 +37,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'The Menu',
     title: 'What a Proposal Dinner Menu Looks Like',
-    body: `<p>A proposal dinner menu is not simply a tasting menu — it is a curated narrative built around two people. Our Michelin-trained team designs each course to carry the evening forward, building in pace and intensity toward the moment you have planned.</p>
+    body: `<p>A proposal dinner menu is not simply a tasting menu — it is a curated narrative built around two people. Our specialist chef team designs each course to carry the evening forward, building in pace and intensity toward the moment you have planned.</p>
 
     <p><strong>A typical 6-course proposal menu might move like this:</strong></p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.5rem;margin-bottom:0.5rem;">
@@ -161,7 +161,7 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private chef romantic dinner experiences for couples in Bali villas.' },
-  { label: 'Tasting Menu', href: '/fine-dining/tasting-menu', desc: 'Bespoke tasting menus designed by our Michelin-trained team.' },
+  { label: 'Tasting Menu', href: '/fine-dining/tasting-menu', desc: 'Bespoke tasting menus designed by our specialist chef team.' },
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Day rates, meal plans and how private chef hire works across Bali.' },
   { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and event types.' },
   { label: 'Uluwatu Private Chef', href: '/private-chef/uluwatu', desc: 'Private chef services for Uluwatu clifftop villas.' },
@@ -174,9 +174,9 @@ export default function ProposalDinnerPage() {
     <PremiumPage
       slug="blog/proposal-dinner-bali-private-chef"
       title="Proposal Dinner Bali: Private Chef for Your Perfect Moment"
-      description="Plan the perfect proposal dinner in Bali. Private chef, candlelit villa setup, custom menu. Michelin-trained team. From IDR 3,500,000++. Message us on WhatsApp."
+      description="Plan the perfect proposal dinner in Bali. Private chef, candlelit villa setup, custom menu. specialist chef team. From IDR 3,500,000++. Message us on WhatsApp."
       seoTitle="Proposal Dinner Bali | Private Chef for Your Perfect Moment | myCHEF"
-      seoDescription="Plan the perfect proposal dinner in Bali. Private chef, candlelit villa setup, custom menu. Michelin-trained team. From IDR 3,500,000++. Message us on WhatsApp."
+      seoDescription="Plan the perfect proposal dinner in Bali. Private chef, candlelit villa setup, custom menu. specialist chef team. From IDR 3,500,000++. Message us on WhatsApp."
       canonicalUrl="https://mychef.id/blog/proposal-dinner-bali-private-chef"
       h1="Proposal Dinner Bali"
       subtitle="A Private Chef Experience for Your Perfect Moment"
@@ -208,7 +208,7 @@ export default function ProposalDinnerPage() {
           '@type': 'BlogPosting',
           headline: 'Proposal Dinner Bali: Private Chef for Your Perfect Moment',
           description:
-            'Plan the perfect proposal dinner in Bali. Private chef, candlelit villa setup, custom tasting menu. Michelin-trained team. From IDR 3,500,000++.',
+            'Plan the perfect proposal dinner in Bali. Private chef, candlelit villa setup, custom tasting menu. specialist chef team. From IDR 3,500,000++.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: {
             '@type': 'Organization',

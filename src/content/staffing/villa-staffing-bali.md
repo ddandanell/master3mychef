@@ -45,7 +45,7 @@ Complete villa staffing means we handle every aspect of building, verifying, and
 
 **Villa Manager / Estate Manager.** Your on-property leader for guest relations, staff supervision, vendor coordination, maintenance oversight, and reporting. We recruit managers with proven luxury hospitality experience and verified track records. Learn more about our [villa manager recruitment](/staffing/villa-manager) process.
 
-**Private Chef & Kitchen Team.** From experienced villa chefs to Michelin-trained talent, we place culinary professionals who design menus, accommodate dietary requirements, manage grocery systems, and maintain food safety leadership. Every chef is verified for current food safety knowledge and practical kitchen assessment. See our [private chef placement](/staffing/private-chef) service.
+**Private Chef & Kitchen Team.** From experienced villa chefs to senior culinary talent, we place culinary professionals who design menus, accommodate dietary requirements, manage grocery systems, and maintain food safety leadership. Every chef is verified for current food safety knowledge and practical kitchen assessment. See our [private chef placement](/staffing/private-chef) service.
 
 **Housekeeping & Villa Cleaning.** Meticulous standards for daily cleaning, turndown service, laundry, linen management, and deep-clean schedules. Our housekeepers are trained to documented SOPs and supported by regular quality audits. Explore our [housekeeping and villa cleaning](/staffing/housekeeping-cleaning) standards.
 

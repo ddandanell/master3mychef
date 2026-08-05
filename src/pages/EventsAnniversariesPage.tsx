@@ -488,7 +488,7 @@ export default function EventsAnniversariesPage() {
               { label: 'villa wedding catering', href: '/events/weddings', desc: 'Villa wedding catering and planning.' },
               { label: 'Birthdays', href: '/events/birthdays', desc: 'Milestone birthday celebrations.' },
               { label: 'Villa Parties', href: '/events/villa-parties', desc: 'Private celebrations and mixers.' },
-              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained private dinners.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Fine-dining private dinners.' },
               { label: 'Catering', href: '/catering', desc: 'Full-service catering for any event.' },
               { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, bartenders, and staff.' },
             ].map((item) => (

@@ -36,7 +36,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     name: 'Adriano',
     role: 'Executive Chef & Founder',
     origin: 'Milan, Italy',
-    badge: `Michelin-trained in ${siteFacts.founderTrainingCity} · Founded myCHEF in Bali ${siteFacts.foundingYear}`,
+    badge: `Milan-trained in ${siteFacts.founderTrainingCity} · Founded myCHEF in Bali ${siteFacts.foundingYear}`,
     portrait: '/generated/chef-adriano-portrait.webp',
     portraitAlt: 'Adriano — Executive Chef and Founder of myCHEF Bali',
     specialty: 'Mediterranean Fine Dining',
@@ -50,7 +50,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
       'Today, Adriano still leads every signature tasting experience, manages recipe development across the full menu catalogue, and personally trains each new head chef before they run a booking on their own. If you are booking a milestone anniversary, a VIP dinner, or a romantic proposal in Bali, there is a strong chance Adriano is the one standing in your villa kitchen.',
     ],
     achievements: [
-      `Michelin-trained in ${siteFacts.founderTrainingCity}, northern Italy`,
+      `Milan-trained in ${siteFacts.founderTrainingCity}, northern Italy`,
       `Founded myCHEF in Bali in ${siteFacts.foundingYear}`,
       'Trained and mentored 50+ hospitality professionals',
       'Leads VIP dinners, proposals, and milestone occasions',
@@ -117,7 +117,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
     ],
     seoTitle: "Adriano — Private Chef Bali | Michelin-Trained Founder | myCHEF",
     seoDescription:
-      `Book Adriano, Executive Chef & Founder of myCHEF Bali. Michelin-trained in ${siteFacts.founderTrainingCity}. Italian tasting menus, romantic dinners, VIP villa experiences. WhatsApp.`,
+      `Book Adriano, Executive Chef & Founder of myCHEF Bali. Milan-trained in ${siteFacts.founderTrainingCity}. Italian tasting menus, romantic dinners, VIP villa experiences. WhatsApp.`,
     ogImage: 'https://mychef.id/generated/chef-adriano-portrait.webp',
   },
 
@@ -137,7 +137,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
       'I Made Surya was born in Ubud and grew up close to the wet markets and rice fields that define Balinese food culture from the ground up. He learned to cook traditional Balinese dishes before he ever picked up a professional knife — which means his understanding of fresh produce, spice balance, and seasonal ingredients is instinctive rather than textbook.',
       "He joined myCHEF through the company's in-house training program and was mentored directly by Adriano over a 12-month period. That immersion covered Italian pasta-making technique, Mediterranean plating, sauce construction, and the timing and pacing required to run a fine-dining service inside an unfamiliar villa kitchen.",
       'Today Surya leads Mediterranean villa menus and is the chef guests ask back by name. His handmade pasta is consistently one of the most requested dishes across the entire myCHEF catalogue — particularly his tagliolini with fresh seafood from the Jimbaran market, finished with local citrus and olive oil.',
-      'What makes Surya exceptional is the combination: Adriano\'s European technique applied through a palate shaped by Bali. He selects his ingredients at market before dawn, adapts to what\'s freshest rather than forcing a fixed menu, and delivers food that feels considered rather than executed. For guests who want the experience of a Michelin-trained kitchen without the formality, Surya is the answer.',
+      'What makes Surya exceptional is the combination: Adriano\'s European technique applied through a palate shaped by Bali. He selects his ingredients at market before dawn, adapts to what\'s freshest rather than forcing a fixed menu, and delivers food that feels considered rather than executed. For guests who want the experience of a fine-dining kitchen without the formality, Surya is the answer.',
     ],
     achievements: [
       'Leads Mediterranean villa menus across Bali',

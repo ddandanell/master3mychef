@@ -181,7 +181,7 @@ export default function CompleteVillaExperiencePage() {
                 From the moment your flight is confirmed, our team begins preparing your stay. We arrange airport transfers, stock the villa, brief the chef, schedule staff and plan any celebrations. While you are in Bali, we remain on call — adjusting menus, adding excursions, handling surprises. When you leave, we restore the villa and hand it back flawlessly.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                This is not a collection of separate services. It is one integrated hospitality operation, led by a Michelin-trained culinary team and supported by villa professionals who understand that the best service is invisible.
+                This is not a collection of separate services. It is one integrated hospitality operation, led by a Milan-trained culinary team and supported by villa professionals who understand that the best service is invisible.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -510,7 +510,7 @@ export default function CompleteVillaExperiencePage() {
             </div>
           </div>
           <p className="text-white/40 text-xs tracking-wide uppercase">
-            HACCP Food Safety Certified · Michelin-trained culinary leadership · Serving Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Berawa, Pererenan, Sanur and villas across Bali
+            HACCP Food Safety Certified · Milan-trained culinary leadership · Serving Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Berawa, Pererenan, Sanur and villas across Bali
           </p>
         </div>
       </section>

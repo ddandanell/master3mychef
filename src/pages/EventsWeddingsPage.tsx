@@ -21,7 +21,7 @@ const ACCENT = '#C5A028'
 const FORMAT_CARDS = [
   {
     title: 'Plated receptions',
-    desc: 'Multi-course fine dining with synchronised table service, led by Michelin-trained chefs. Plated service gives speeches a clean cadence and the evening a restaurant polish — inside your villa. Our standard ratio is one waiter per 8–10 guests, plus a service manager and kitchen lead.',
+    desc: 'Multi-course fine dining with synchronised table service, led by specialist head chefs. Plated service gives speeches a clean cadence and the evening a restaurant polish — inside your villa. Our standard ratio is one waiter per 8–10 guests, plus a service manager and kitchen lead.',
   },
   {
     title: 'Buffets and live stations',
@@ -598,7 +598,7 @@ export default function EventsWeddingsPage() {
               { label: 'Villa Parties', href: '/events/villa-parties', desc: 'Cocktail receptions and celebrations.' },
               { label: 'Corporate Events', href: '/events/corporate-events', desc: 'Business retreats and offsites.' },
               { label: 'Catering', href: '/catering', desc: 'Full-service catering for any event.' },
-              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Fine-dining tasting menus.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
                 <p className="font-semibold text-sm text-[#1A1A1A] mb-1">{item.label}</p>

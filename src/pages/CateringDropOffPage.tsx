@@ -1071,7 +1071,7 @@ export default function CateringDropOffPage() {
               { label: 'grazing boxes & tables', href: '/catering/grazing-tables', desc: 'Styled spreads for events.' },
               { label: 'Buffet Catering', href: '/catering/buffet', desc: 'Large-group buffet service.' },
               { label: 'Plated Dinners', href: '/catering/plated-catering', desc: 'Formal course service.' },
-              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Fine-dining tasting menus.' },
             ].map((item) => (
               <Link
                 key={item.href}

@@ -239,7 +239,7 @@ export default function FoodAllergiesPage() {
             <h2 className="text-2xl md:text-3xl font-bold">Our HACCP Allergen Safety Protocol</h2>
           </div>
           <p className="text-[#CCC] mb-10 max-w-2xl">
-            HACCP (Hazard Analysis Critical Control Points) is the food safety standard used in commercial food production. All myCHEF chefs are certified. This is how allergen safety works across a full booking.
+            HACCP (Hazard Analysis Critical Control Points) is the food safety standard used in commercial food production. We work to HACCP principles throughout — separate preparation surfaces, dedicated utensils, and an allergen briefing before every service. This is how allergen safety works across a full booking.
           </p>
 
           <div className="space-y-0">

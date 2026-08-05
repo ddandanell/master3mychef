@@ -532,7 +532,7 @@ export default function PrivateChefCostBaliPageBlog() {
           <h2 className="text-2xl font-light mb-6">Explore Our Services</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { label: 'Fine Dining', path: '/fine-dining', desc: 'Multi-course tasting menus at your villa — Michelin-trained chefs' },
+              { label: 'Fine Dining', path: '/fine-dining', desc: 'Multi-course tasting menus at your villa — specialist head chefs' },
               { label: 'Catering Services', path: '/catering', desc: 'BBQ, buffet, plated, and grazing menus for all group sizes' },
               { label: 'Events', path: '/events', desc: 'Weddings, birthdays, and corporate events with full staffing' },
               { label: 'Getting Started', path: '/help/getting-started', desc: 'New to private chef booking? Start here' },

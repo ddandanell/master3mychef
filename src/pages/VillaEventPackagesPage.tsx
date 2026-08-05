@@ -421,7 +421,7 @@ export default function VillaEventPackagesPage() {
             </div>
           </div>
           <p className="text-white/40 text-xs tracking-wide uppercase">
-            HACCP Food Safety Certified · Michelin-trained culinary leadership · Serving Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and villas across Bali
+            HACCP Food Safety Certified · Milan-trained culinary leadership · Serving Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and villas across Bali
           </p>
         </div>
       </section>

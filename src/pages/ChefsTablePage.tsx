@@ -283,7 +283,7 @@ export default function ChefsTablePage() {
               This Experience Is Only Available With Adriano
             </h2>
             <p className="text-[#4A4745] text-base leading-relaxed mb-4">
-              Michelin-trained in Milan. Ten years in restaurants across Italy and Japan before coming to Bali. He still leads every tasting menu, every Chef's Table, and every kitchen training.
+              fine-dining trained in Milan. Ten years in restaurants across Italy and Japan before coming to Bali. He still leads every tasting menu, every Chef's Table, and every kitchen training.
             </p>
             <p className="text-[#4A4745] text-base leading-relaxed mb-8">
               If Adriano is unavailable on your date, we will offer to rebook — not replace him. Two of these evenings happen per weekend. That is all.

@@ -523,7 +523,7 @@ export default function EventsBabyShowersPage() {
               { label: 'Birthdays', href: '/events/birthdays', desc: 'Milestone birthday celebrations.' },
               { label: 'Villa Parties', href: '/events/villa-parties', desc: 'Private celebrations and mixers.' },
               { label: 'Catering', href: '/catering', desc: 'Full-service catering for any event.' },
-              { label: 'Fine Dining', href: '/fine-dining', desc: 'Michelin-trained tasting menus.' },
+              { label: 'Fine Dining', href: '/fine-dining', desc: 'Fine-dining tasting menus.' },
               { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, bartenders, and staff.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">

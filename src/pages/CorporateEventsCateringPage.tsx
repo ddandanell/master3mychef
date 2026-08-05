@@ -73,7 +73,7 @@ const SECTIONS: PageSection[] = [
     title: 'Hotel-Quality Food. Villa-Scale Flexibility.',
     body: `<p>Companies running retreats, incentive trips, and offsites in Bali face a consistent problem: the venues are exceptional but the catering options are not. Hotel restaurants can serve their own banquet room. They cannot staff your private villa in Ubud or your clifftop resort in Uluwatu with the same quality and professionalism.</p>
 <p>Most corporate groups end up with one of two outcomes — either they pay hotel banquet rates for a space they did not want, or they compromise on quality by using a villa caterer that cannot handle dietary compliance, dietary surveys, or large-format service at a professional level.</p>
-<p>myCHEF exists for the third option: a fully certified, professionally staffed catering operation that treats your villa, resort, or offsite venue as its primary stage. Michelin-trained standards, HACCP certification, international menus, and a dedicated service team — brought to wherever your group is meeting.</p>`,
+<p>myCHEF exists for the third option: a fully certified, professionally staffed catering operation that treats your villa, resort, or offsite venue as its primary stage. fine-dining standards, HACCP certification, international menus, and a dedicated service team — brought to wherever your group is meeting.</p>`,
     image: '/generated/mychef-catering-bali-hub-catering.webp',
     imageAlt:
       'Indonesian chef team setting up corporate dinner service at a Bali villa, with elegant table arrangements and professional presentation',
@@ -156,7 +156,7 @@ After service, we conduct full cleanup and restore the venue to its original con
       {
         icon: Star,
         title: 'International Menu Portfolio',
-        desc: 'Western, Asian, Indonesian, and fusion menus designed to professional standard. Michelin-trained culinary direction across all event formats.',
+        desc: 'Western, Asian, Indonesian, and fusion menus designed to professional standard. Milan-trained culinary direction across all event formats.',
       },
       {
         icon: Clock,
@@ -233,7 +233,7 @@ const RELATED_PAGES = [
   {
     label: 'About myCHEF',
     href: '/fine-dining/our-chefs',
-    desc: 'Michelin-trained founder, HACCP certification, and 50+ professional staff.',
+    desc: 'Milan-trained founder, HACCP certification, and 50+ professional staff.',
   },
 ]
 

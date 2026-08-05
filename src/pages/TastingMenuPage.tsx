@@ -163,13 +163,13 @@ export default function TastingMenuPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Tasting Menu Bali | 5-Course Private Villa Dining — myCHEF"
-        description="Private tasting menu in your Bali villa: Michelin-trained chef, 5 courses, handmade pasta, Mediterranean or Wagyu path. From IDR 2.2M/pp. WhatsApp us."
+        description="Private tasting menu in your Bali villa: specialist head chef, 5 courses, handmade pasta, Mediterranean or Wagyu path. From IDR 2.2M/pp. WhatsApp us."
         canonical={`${SITE}/fine-dining/tasting-menu`}
         ogImage={`${SITE}/generated/mychef-finedining-bali-luna-plating.webp`}
         jsonLd={[
           serviceWithAggregateOfferSchema({
             name: 'Private Tasting Menu Bali',
-            description: 'A private multi-course tasting menu experience in your Bali villa. Choose Mediterranean Sea or Wagyu Experience — Michelin-trained chefs, handmade pasta, premium ingredients, and full service in your villa. myCHEF.id serves across all Bali villa areas.',
+            description: 'A private multi-course tasting menu experience in your Bali villa. Choose Mediterranean Sea or Wagyu Experience — specialist head chefs, handmade pasta, premium ingredients, and full service in your villa. myCHEF.id serves across all Bali villa areas.',
             url: `${SITE}/fine-dining/tasting-menu`,
             lowPrice: '2200000',
             highPrice: '2400000',
@@ -178,7 +178,7 @@ export default function TastingMenuPage() {
           breadcrumbSchema('Tasting Menu Bali', `${SITE}/fine-dining/tasting-menu`, 'Fine Dining', `${SITE}/fine-dining`),
           howToSchema({
             name: 'How to Book a Private Tasting Menu in Bali',
-            description: 'Book a 5-course private tasting menu in your Bali villa with a Michelin-trained chef.',
+            description: 'Book a 5-course private tasting menu in your Bali villa with a specialist head chef.',
             steps: [
               { name: 'Message Us Your Details', text: 'Tell us your date, villa location, and guest count. We confirm availability and pricing within 1 hour.' },
               { name: 'Choose Your Menu Path', text: 'Select Mediterranean Sea (IDR 2.2M++) or Wagyu Experience (IDR 2.4M++). Half the table can have each menu.' },
@@ -218,7 +218,7 @@ export default function TastingMenuPage() {
             <span className="italic">In Your Bali Villa</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-3 max-w-2xl mx-auto leading-relaxed">
-            Five courses. A Michelin-trained team. Handmade pasta rolled in your kitchen the afternoon of your dinner.
+            Five courses. A specialist chef team. Handmade pasta rolled in your kitchen the afternoon of your dinner.
           </p>
           <p className="text-white/[55%] text-sm mb-10 tracking-wide">
             From IDR 2,200,000++ per person · Wine pairing +IDR 850,000 · 4 guests minimum
@@ -240,7 +240,7 @@ export default function TastingMenuPage() {
             </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Michelin-trained kitchen</span>
+            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> fine-dining kitchen</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> All ingredients included</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full table service + cleanup</span>
           </div>
@@ -259,7 +259,7 @@ export default function TastingMenuPage() {
             "A tasting menu is not a meal.<br />
             <span className="italic">It is a story told in courses</span> — cold to warm, delicate to bold, and back again. Every plate is a decision, not just an ingredient."
           </blockquote>
-          <p className="text-white/[40%] text-sm mt-8 tracking-wide uppercase">— Adriano · Executive Chef · Michelin-trained, Milan</p>
+          <p className="text-white/[40%] text-sm mt-8 tracking-wide uppercase">— Adriano · Executive Chef · Milan-trained</p>
         </div>
       </section>
 
@@ -439,7 +439,7 @@ export default function TastingMenuPage() {
                 </div>
               </div>
               {[
-                'Michelin-trained chef + kitchen team of 6–10',
+                'head chef + kitchen team of 6–10',
                 'All premium ingredients (grocery sourced same-day)',
                 'Table linens, candles, glassware, and tableware',
                 'Full service across all courses',

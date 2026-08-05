@@ -440,7 +440,7 @@ export default function FineDiningMenusPage() {
                 Chef Training & Qualifications
               </h3>
               <p className="text-sm text-white/[70%] mb-4">
-                Learn about the credentials and experience behind our team of Michelin-trained chefs.
+                Learn about the credentials and experience behind our team of specialist head chefs.
               </p>
               <span className="inline-flex items-center gap-2 text-sm text-[#C5A028] group-hover:gap-3 transition-all">
                 Read more <ChevronRight className="h-4 w-4" />

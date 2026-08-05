@@ -76,7 +76,7 @@ The first 30 days include enhanced oversight, structured feedback loops, and dai
 Our staffing practice covers every hospitality role a villa or private estate requires. Each placement follows the same 7-step protocol and receives the same ongoing management support.
 
 **Private Chefs & Villa Cooks**
-Michelin-trained and private-villa experienced chefs matched to your cuisine preferences, dietary requirements, and guest profile. Every culinary placement includes verification of food safety knowledge and HACCP or equivalent certification where applicable. [Explore private chef placement](/staffing/private-chef)
+senior, private-villa experienced chefs matched to your cuisine preferences, dietary requirements, and guest profile. Every culinary placement includes verification of food safety knowledge and HACCP or equivalent certification where applicable. [Explore private chef placement](/staffing/private-chef)
 
 **Villa Managers & Estate Managers**
 The person who runs your villa so you do not have to. Guest relations, staff supervision, vendor coordination, and reporting — all managed locally on your behalf. [Learn about villa manager recruitment](/staffing/villa-manager)

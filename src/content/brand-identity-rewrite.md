@@ -19,7 +19,7 @@
 | # | Subheadline | Character Count |
 |---|-------------|-----------------|
 | 1 | From intimate villa dinners to full events — extraordinary food starting from IDR 1.5M per guest, without you leaving your pool. | 109 |
-| 2 | You stay in your villa. We bring the kitchen, the team, and the Michelin-trained craft — from IDR 1.5M per guest. | 101 |
+| 2 | You stay in your villa. We bring the kitchen, the team, and the fine-dining craft — from IDR 1.5M per guest. | 101 |
 | 3 | No restaurants. No reservations. Just your villa, your guests, and a private chef experience from IDR 1.5M. | 99 |
 | 4 | Adriano's team of 50+ hospitality professionals brings restaurant-quality dining to your Bali villa, starting at IDR 1.5M. | 109 |
 | 5 | Your villa becomes the venue. Your chef arrives with everything. Pricing from IDR 1.5M per guest. | 91 |

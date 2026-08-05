@@ -462,6 +462,23 @@ const FAQS = [
   { q: 'Can you guarantee an allergen-free environment?', a: 'No. We take reasonable precautions — intake forms, dish labelling and separation procedures — but we cannot guarantee an entirely allergen-free environment, particularly in third-party villa or venue kitchens. Guests with serious allergies should provide complete written requirements before the event.' },
 ]
 
+/**
+ * Retreat areas are not all /locations/ pages. Three of the slugs in LOCATIONS above
+ * (sidemen, munduk, north-bali) have no page under /locations/, so the previous
+ * `/locations/${loc.slug}` template linked every visitor to a 404 — confirmed live
+ * 2026-08-05 by crawling all 243 sitemap URLs. Map those three to the real page that
+ * covers the area; everything else keeps the /locations/ destination.
+ */
+const RETREAT_AREA_HREF: Record<string, string> = {
+  sidemen: '/private-chef/sidemen',
+  munduk: '/private-chef/munduk',
+  'north-bali': '/locations/lovina', // North Bali section describes Lovina and its coast
+}
+
+function retreatAreaHref(slug: string): string {
+  return RETREAT_AREA_HREF[slug] ?? `/locations/${slug}`
+}
+
 export default function CateringRetreatPage() {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -1086,7 +1103,7 @@ export default function CateringRetreatPage() {
                   )}
                   {loc.descAfter}
                 </p>
-                <a href={`/locations/${loc.slug}`} className="inline-flex items-center gap-1 text-xs font-medium text-[#1A1A1A] hover:text-[#C5A028] transition-colors">
+                <a href={retreatAreaHref(loc.slug)} className="inline-flex items-center gap-1 text-xs font-medium text-[#1A1A1A] hover:text-[#C5A028] transition-colors">
                   Retreat catering in {loc.title} <ArrowRight className="w-3 h-3" />
                 </a>
               </div>

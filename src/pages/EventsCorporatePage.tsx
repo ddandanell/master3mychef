@@ -118,17 +118,26 @@ const ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'What does corporate event catering in Bali cost?', a: 'Every corporate event is quoted individually based on format, guest count, venue logistics and production requirements. Contact us for a fixed, itemised proposal.' },
-  { q: 'Can you issue a tax invoice (faktur pajak)?', a: 'Yes — we are NPWP-registered. Tax invoice issued upon 50% deposit. Standard rate 11% PPN.' },
-  { q: 'What are your B2B payment terms?', a: '50% deposit at booking. Balance before event. Net-30 invoicing available with credit check for repeat corporate buyers.' },
-  { q: 'Do you have liability insurance?', a: 'Yes — public liability + product liability covered. Insurance certificate provided on request.' },
-  { q: 'Can you handle Bahasa + English speakers?', a: 'Yes — all coordinators bilingual. Mandarin available on request.' },
-  { q: 'How do you manage dietary restrictions for large groups?', a: 'Pre-event dietary form sent 14 days before. We label every dish at the buffet / plate. Halal / vegan / GF / nut allergy / shellfish allergy all handled.' },
-  { q: 'What does the first proposal include?', a: 'The first proposal covers menu structure, staffing assumptions, timing, venue/kitchen assumptions, invoice terms, and any optional rentals or AV line items so internal approval does not depend on a second explanation call.' },
-  { q: 'Can you work inside resorts or function rooms, or only villas?', a: 'Yes — we can scope for villas, resorts, private venues, and temporary event builds. The important part is access, kitchen setup, service route, and venue rules, which is why we ask for venue type in the first brief.' },
-  { q: 'Can you organize the whole offsite?', a: 'Yes — through our villa management + activity partners. We become your single coordinator.' },
-  { q: 'Lead time for corporate events?', a: 'Day events: 2 weeks. Multi-day retreats: 4–6 weeks. Product launches with custom build: 6–12 weeks.' },
-  { q: 'Can you handle global executives?', a: 'Yes — VIP handling is standard. Private dietary preferences, security coordination, and personalised meal service all available.' },
+  { q: 'How much does corporate event catering cost in Bali?', a: 'Corporate dinners typically start around <strong>IDR 700K–1.2M++ per person</strong> depending on format; programmes have higher production. Minimum spend for many corporate programmes is published on catering pages. <a href="/pricing">Pricing →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>.' },
+  { q: 'Can you cater multi-day corporate retreats?', a: 'Yes — breakfast through dinner, coffee stations and gala nights. See <a href="/catering/retreat-catering">retreat catering</a> and <a href="/complete-villa-experience">complete villa experience</a>.' },
+  { q: 'Do you provide NPWP invoices for companies?', a: 'Yes — corporate clients can receive NPWP-ready documentation on request.' },
+  { q: 'How many guests can you handle for offsites?', a: 'From small leadership dinners (~10) to 100–200+ for larger programmes, with kitchen and FOH scaled to headcount.' },
+  { q: 'Can you work in villa boardrooms and beach clubs?', a: 'Yes — villas, estates and many venues. Share access rules early.' },
+  { q: 'Do you handle dietary and cultural requirements for mixed teams?', a: 'Yes — vegan, GF, halal-sensitive, allergies and kids of attendees when briefed.' },
+  { q: 'How far in advance should companies book?', a: '2–4 weeks is comfortable; peak season and multi-day retreats need more. Last-minute dinners are often possible.' },
+  { q: 'What deposit applies to corporate bookings?', a: 'Typically 50% to confirm; balance schedule on the quote. <a href="/cancellation">Cancellation policy →</a>' },
+  { q: 'Can you add AV, coffee breaks and late snacks?', a: 'Food & beverage is our core; we coordinate coffee stations and snack waves. AV usually via your venue or planner.' },
+  { q: 'Do you staff waiters and bartenders for corporate nights?', a: 'Yes via <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'Can international teams book while still overseas?', a: 'Yes — WhatsApp/email planning is normal; deposits lock dates before arrival.' },
+  { q: 'What areas of Bali do you cover for corporate events?', a: 'Island-wide. <a href="/locations">Locations →</a>' },
+  { q: 'Can you run team BBQs and plated client dinners?', a: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a>, <a href="/fine-dining">fine dining</a> and plated formats.' },
+  { q: 'Do you offer case studies?', a: 'Yes — <a href="/corporate-case-studies">corporate case studies</a>.' },
+  { q: 'What if headcount changes mid-retreat?', a: 'We re-quote remaining days in writing; food waste and staffing are adjusted with notice.' },
+  { q: 'Can one coordinator manage the whole F&B programme?', a: 'Yes — single account lead for multi-day run-of-show.' },
+  { q: 'Is alcohol included?', a: 'Usually BYO or sourced at cost with bartender hire.' },
+  { q: 'How fast is a corporate proposal?', a: 'Often within 24 hours of a complete brief (dates, guests, venues, meal map).' },
+  { q: 'How do we start?', a: 'WhatsApp dates, headcount, villa/venue list and meal requirements — or <a href="/quote">quote</a> / <a href="/contact">contact</a>.' },
+  { q: 'What if a chef team cannot make a service?', a: 'Replacement cover or refund for that service — supervised teams. <a href="/why-mychef">Why myCHEF →</a>.' },
 ]
 
 export default function EventsCorporatePage() {
@@ -472,7 +481,7 @@ export default function EventsCorporatePage() {
       <section className="py-20 md:py-28 bg-white corporate-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Corporate FAQ" subtitle="B2B-focused answers for procurement and event teams." />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

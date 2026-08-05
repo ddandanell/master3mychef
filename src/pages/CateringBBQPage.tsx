@@ -108,14 +108,26 @@ const BBQ_VS_OTHERS = [
 ]
 
 const FAQS = [
-  { q: 'How much does BBQ catering in Bali cost?', a: 'From IDR 700,000 per person for Indonesian BBQ, IDR 850,000 for International BBQ, and IDR 950,000 for Premium Surf & Turf — chef, service assistant, equipment, ingredients, and cleanup included. Prices are ++ (11% government tax + 10% service charge).' },
-  { q: "What's the minimum number of guests?", a: 'Ten guests — the same minimum in every area we serve, from Seminyak to Uluwatu. The only difference by location is a travel fee for farther areas, always quoted per booking and itemised upfront.' },
-  { q: 'Do you bring the grill and equipment?', a: 'Yes — grills, fuel, tools, chafing dishes, platters, prep stations, and cleanup supplies. You do not need to own anything.' },
-  { q: 'Can you do a seafood-focused or vegetarian BBQ?', a: 'Absolutely. Any package can go seafood-heavy, and we run full vegetarian and vegan grills with plant-based proteins, grilled vegetables, salads, and sides. For a dedicated market-fresh seafood menu, see our seafood BBQ page.' },
-  { q: 'Are drinks included?', a: 'Not in the base package. Add a bartender with a 3-hour open bar for IDR 4,000,000 flat, or wine and soft-drink packages as line items in your quote.' },
-  { q: 'What if it rains?', a: 'We monitor the forecast and set up under covered terraces or verandas, or bring pop-up tents for uncovered areas. Every outdoor booking has a plan B at no extra charge.' },
-  { q: 'How far ahead should I book?', a: 'Three to seven days for Seminyak/Canggu, one to two weeks elsewhere; last-minute is often possible. A 50% deposit locks your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable.' },
-  { q: 'Can I customise the menu?', a: 'Every menu is built for your group — protein focus, spice levels, dietary needs, kids\' portions. Nothing is off-the-shelf.' },
+  { q: 'How much does BBQ catering in Bali cost?', a: 'From <strong>IDR 700,000++ per person</strong> for Indonesian BBQ, IDR 850,000 for International BBQ, and IDR 950,000 for Premium Surf &amp; Turf — chef, service assistant, equipment, ingredients and cleanup included. ++ is 11% tax + 10% service. Menu collection also on <a href="/bbq-grill">BBQ grill</a>.' },
+  { q: "What's the minimum number of guests for BBQ catering?", a: 'Typically ten guests island-wide. Farther areas may add a travel fee — always itemised upfront. Smaller intimate grills can use <a href="/bbq-grill">BBQ grill menus</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Do you bring the grill and equipment?', a: 'Yes — grills, fuel, tools, chafing dishes, platters, prep stations and cleanup supplies. You do not need to own a grill.' },
+  { q: 'Can you do a seafood-focused or vegetarian BBQ?', a: 'Yes — seafood-heavy packages and full vegetarian/vegan grills. Dedicated product: <a href="/seafood-bbq-catering-bali">seafood BBQ catering</a> and <a href="/villa-bbq-catering-bali">villa BBQ packages</a>.' },
+  { q: 'Are drinks included in BBQ catering?', a: 'Not in the base package. Add a <a href="/in-villa-service/bartenders">bartender</a> or open-bar options as line items on the quote.' },
+  { q: 'What if it rains on BBQ day?', a: 'Covered terraces, verandas or tents — plan B is free of charge and confirmed before the day.' },
+  { q: 'How far ahead should I book BBQ catering in Bali?', a: '3–7 days for Seminyak/Canggu; 1–2 weeks farther out. Last-minute is often possible. 50% deposit locks the date. <a href="/cancellation">Cancellation policy →</a>' },
+  { q: 'Can I customise the BBQ menu?', a: 'Yes — protein mix, spice, diets and kids portions are designed for your group, not off-the-shelf only.' },
+  { q: 'Is BBQ catering different from the BBQ grill dining style?', a: 'This page is full-service party BBQ with staff. <a href="/bbq-grill">BBQ grill</a> is the menu collection format; both use live fire at the villa.' },
+  { q: 'Do you clean up after the BBQ?', a: 'Yes — grill station, service areas and kitchen restored on serviced packages.' },
+  { q: 'Can kids eat at a BBQ catering event?', a: 'Yes — milder items or parallel <a href="/kids-menus">kids menus</a>.' },
+  { q: 'Which areas of Bali do you cover?', a: 'Island-wide villa BBQ. <a href="/locations">Locations →</a>' },
+  { q: 'Can we combine BBQ with a wedding or birthday?', a: 'Yes — welcome BBQs and casual receptions are common. <a href="/events/weddings">Weddings</a> · <a href="/events/birthdays">Birthdays</a> · <a href="/events/villa-parties">Villa parties</a>.' },
+  { q: 'Is pork available / can you run pork-free BBQ?', a: 'Both. Pork-free and halal-friendly grills are available. Traditional <a href="/catering/babi-guling">babi guling</a> is a separate pork feast.' },
+  { q: 'What does "++" mean?', a: '11% government tax + 10% service charge. Quotes show all-in totals before deposit.' },
+  { q: 'How many staff come with BBQ catering?', a: 'Chef plus service support scaled to headcount. Extra waiters/bartenders available via <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'Can the BBQ run poolside?', a: 'Yes — pool decks and gardens are standard, with heat and smoke placement planned for guest comfort.' },
+  { q: 'What if guest count changes?', a: 'Final numbers usually due ~48 hours before. We adjust food and staff; large jumps may affect minimums.' },
+  { q: 'How do I book BBQ catering with myCHEF?', a: 'WhatsApp date, guests, villa area and package preference. <a href="/quote">Quote →</a> · <a href="/catering">all catering →</a>' },
+  { q: 'What if the team cannot make it?', a: 'Verified replacement or refund — supervised teams. <a href="/why-mychef">Why myCHEF →</a>' },
 ]
 
 export default function CateringBBQPage() {
@@ -593,7 +605,7 @@ export default function CateringBBQPage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Chapter 11 — FAQ" title="BBQ Catering FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

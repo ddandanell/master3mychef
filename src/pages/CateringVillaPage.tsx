@@ -124,12 +124,26 @@ const FAMILY_COVERAGE_OPTIONS = [
 ]
 
 const FAQS = [
-  { q: 'Can a caterer cook in my villa in Bali?', a: 'Yes. Cooking happens in your villa kitchen after a quick kitchen assessment. Missing equipment is brought by the team, and Full-Service bookings add tableware and staff.' },
-  { q: 'What kitchen requirements are needed for villa catering?', a: 'A working hob or oven and counter space suffice for most menus. For large groups or live-fire formats we bring mobile equipment and confirm power, water, and operating logistics in advance.' },
-  { q: 'Is there a minimum group size for villa catering?', a: 'Villa catering packages are designed for groups of eight or more — the same minimum in every area we serve. For smaller groups, our private chef and fine dining services are a better fit.' },
-  { q: 'How much is villa catering per day in Bali?', a: 'Multi-day villa catering is priced by custom quotation based on the number of guests, meals, days, menu style, and service requirements. Single services start from IDR 450,000++ per person for villa lunches and IDR 650,000++ per person for villa dinners.' },
-  { q: 'Do caterers clean up after a villa event?', a: 'Yes. Full cleanup is included: the team packs equipment, clears service ware, and leaves the kitchen and event space tidy before departure.' },
-  { q: 'Is grocery shopping included in villa catering?', a: 'Yes — normal groceries are included in your quotation, and the chef or team does all shopping with fresh market sourcing each service day. Premium upgrades such as lobster or imported beef are quoted separately.' },
+  { q: 'What is villa catering in Bali?', a: 'Chef-led food service at your private villa — BBQ, buffet, plated, drop-off or grazing — with setup and cleanup on serviced formats. Hub: <a href="/catering">catering</a>.' },
+  { q: 'How much does villa catering cost?', a: 'Many formats start around <strong>IDR 700K++ per person</strong>; plated and premium menus higher. <a href="/pricing">Pricing →</a>.' },
+  { q: 'What is the minimum guest count?', a: 'Depends on format: drop-off lower, BBQ ~10, buffet higher. We route you to the right package.' },
+  { q: 'Do you cook in our Airbnb kitchen?', a: 'Yes when the kitchen is workable; we bring gear for BBQ and large service. Share the listing link.' },
+  { q: 'Is villa catering the same as a daily private chef?', a: 'No. Catering is usually one event. Multi-day meals use <a href="/private-chef-bali">private chef day rates</a>.' },
+  { q: 'Do you clean up after villa catering?', a: 'Yes on serviced packages. Drop-off does not include on-site cleanup.' },
+  { q: 'Can you handle kids and allergies?', a: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols when briefed. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide →</a>.' },
+  { q: 'Which areas do you cover?', a: 'Island-wide. <a href="/locations">Locations →</a>.' },
+  { q: 'What deposit is required?', a: '50% to confirm; balance the day before. <a href="/cancellation">Policy →</a>.' },
+  { q: 'Can we add waiters and a bartender?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'What if it rains?', a: 'Covered setups and indoor pivots planned ahead.' },
+  { q: 'Do you offer drop-off only?', a: 'Yes — <a href="/catering/drop-off-catering">drop-off catering</a>.' },
+  { q: 'Can villa catering run for birthdays and parties?', a: 'Yes — <a href="/events/birthdays">birthdays</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { q: 'Is alcohol included?', a: 'Usually BYO or sourced at cost.' },
+  { q: 'How far ahead should we book?', a: 'A few days to two weeks depending on size; peak season longer.' },
+  { q: 'What does ++ mean?', a: '11% tax + 10% service on listed prices.' },
+  { q: 'Can we customise the menu?', a: 'Yes — proteins, spice, diets locked before shopping.' },
+  { q: 'Do you bring tableware?', a: 'On serviced formats, yes as scoped on the quote.' },
+  { q: 'How do I book villa catering?', a: 'WhatsApp date, guests, area and format — <a href="/quote">quote</a>.' },
+  { q: 'What if staff cannot arrive?', a: 'Replacement or refund. <a href="/why-mychef">Why myCHEF →</a>.' },
 ]
 
 const serviceSchemaBase = serviceWithAggregateOfferSchema({
@@ -569,7 +583,7 @@ export default function CateringVillaPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Chapter 12 — FAQ" title="Villa Catering FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

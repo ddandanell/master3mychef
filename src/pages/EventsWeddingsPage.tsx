@@ -47,15 +47,26 @@ const ADDONS = [
 ]
 
 const FAQS = [
-  { q: 'How much does wedding catering in Bali cost?', a: 'Full wedding receptions typically range IDR 1.5M–3M++ per person, with intimate formats from around IDR 700K++ per person. ++ adds 11% government tax and 10% service charge; every proposal shows the all-in total. See our wedding catering packages and per-person prices for tier breakdowns and guest-count scenarios.' },
-  { q: 'How many guests can you cater?', a: 'From 10-guest micro-weddings to 250+ guest receptions. Buffet and live-station formats typically work from 30 guests; across Bali, set-menu wedding catering commonly carries 20–25 guest minimums — intimate weddings below that are usually better served by our private chef dinner formats.' },
-  { q: 'Do you offer tastings?', a: 'Yes — a pre-event tasting is included in every wedding booking, scheduled 2–4 weeks before the day. We taste three dishes per course and finalise the menu together afterwards.' },
-  { q: 'What about banjar fees and villa permission?', a: 'Most Bali villages (banjar) charge a function fee for events — around USD 300 is market guidance from Bali venue norms, not a myCHEF charge — and many villas require outside-vendor approval and have noise curfews. We confirm all of it with your villa manager during planning and list every fee in your proposal.' },
-  { q: 'Can we bring our own alcohol?', a: 'Yes. Choose full bar service (bartenders, stock, ice, glassware managed by us) or BYO with service only. Where venues charge corkage, market guidance from Bali venue norms runs USD 35–47 per bottle; myCHEF\'s own corkage waiver for villa parties is a flat IDR 250,000 — we will tell you honestly which option costs less for your guest count.' },
-  { q: 'What happens if it rains?', a: 'Every wedding has a wet-weather backup in the booking: marquee hire and an indoor relocation plan. Wet season runs roughly November–March, and plan B is non-negotiable for outdoor receptions then.' },
-  { q: 'Can you cater dietary, halal or multicultural weddings?', a: 'Yes — halal-friendly lines, vegan and gluten-free menus, allergy protocols with separate prep, and multi-cuisine service (for example an Indonesian buffet alongside Western plated). Cultural and religious ceremony requirements are mapped at the consult.' },
-  { q: 'What does "++" mean, and what deposit is required?', a: '"++" means 11% government tax + 10% service charge are added to the quoted price. A 50% deposit confirms your wedding date, with the balance due the day before the event. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
-  { q: 'How far in advance should I book?', a: 'Three to ten months for peak season (July–September, December–January). One month minimum for off-peak celebrations. Full planning and coordination requires at least three months\u2019 lead time.' },
+  { q: 'How much does wedding catering in Bali cost?', a: 'Full receptions typically <strong>IDR 1.5M–3M++ per person</strong>; intimate formats from around IDR 700K++. ++ is 11% tax + 10% service; proposals show all-in totals. Packages: <a href="/bali-wedding-catering-packages">wedding packages</a>.' },
+  { q: 'How many guests can you cater for a Bali wedding?', a: 'From ~10-guest micro-weddings to 200–250+ receptions. Buffet/live stations often from ~30 guests; intimate dinners may use <a href="/fine-dining">fine dining</a> or <a href="/private-chef-bali">private chef</a> formats.' },
+  { q: 'Do you offer wedding menu tastings?', a: 'Yes — a pre-event tasting is included in wedding bookings, usually 2–4 weeks before the day. We finalise the menu together afterwards.' },
+  { q: 'What about banjar fees and villa permission?', a: 'Many banjars charge a function fee (market guidance ~USD 300 — not a myCHEF fee). Villas often need outside-vendor approval and have noise curfews. We confirm with your villa manager and list fees in the proposal.' },
+  { q: 'Can we bring our own alcohol to a villa wedding?', a: 'Yes — full bar service or BYO with service only. Corkage varies by venue; we advise which option is cheaper for your count. Bartenders: <a href="/in-villa-service/bartenders">hire bartenders</a>.' },
+  { q: 'What happens if it rains on the wedding day?', a: 'Every booking has wet-weather plan B: marquee and/or indoor relocation, locked before the day — especially November–March wet season.' },
+  { q: 'Can you cater dietary, halal or multicultural weddings?', a: 'Yes — halal-friendly lines, vegan/GF, allergy prep zones, and multi-cuisine service (e.g. Indonesian buffet + Western plated). Ceremony needs mapped at consult.' },
+  { q: 'What does "++" mean, and what deposit is required?', a: '"++" = 11% tax + 10% service. 50% deposit locks the date; balance due the day before. <a href="/cancellation">Cancellation policy →</a>' },
+  { q: 'How far in advance should I book wedding catering in Bali?', a: '3–10 months for peak (Jul–Sep, Dec–Jan). Off-peak can be shorter; full coordination is smoother with 3+ months.' },
+  { q: 'Do you handle welcome dinners and rehearsal dinners?', a: 'Yes — BBQ, family-style or plated. Formats on this page and <a href="/events">events</a>.' },
+  { q: 'What staffing ratios do you use for seated weddings?', a: 'About 1 waiter per 8–10 guests plus kitchen lead and service manager; cocktail hours add tray staff. Butlers/sommeliers via <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'Can myCHEF work with our wedding planner?', a: 'Daily. Share planner and villa contacts early so load-in, power and run-of-show stay aligned.' },
+  { q: 'Do you provide cake and dessert stations?', a: 'Yes — celebration cakes and dessert stations via our pastry team, or we coordinate your preferred baker into service.' },
+  { q: 'Is this different from a proposal dinner package?', a: 'Yes — weddings are multi-guest reception production. Couples-only: <a href="/experiences/romantic-proposal-dinner">proposal package</a> / <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
+  { q: 'Which Bali areas do you cover for weddings?', a: 'Island-wide villas and many venues. <a href="/locations">Locations →</a>' },
+  { q: 'Can guest dietary cards be managed on the day?', a: 'Yes — place cards / allergen labels and briefed waiters so restricted guests are served safely.' },
+  { q: 'What about late-night snacks after the reception?', a: 'Optional add-on in the run-sheet (sliders, noodles, satay) so energy stays high after speeches.' },
+  { q: 'Do you clean the villa after the wedding?', a: 'Yes on our catering scope — kitchen, service stations, plate clear and rubbish removal for a clean handback.' },
+  { q: 'How do I get a wedding catering proposal?', a: 'WhatsApp date, guest estimate, villa/venue and style (plated/buffet/BBQ). <a href="/quote">Quote →</a> · <a href="/bali-wedding-catering-packages">packages →</a>' },
+  { q: 'What if headcount changes close to the wedding?', a: 'Final numbers typically lock ~48–72 hours out. We adjust food and staff; large increases may change minimums — confirmed in writing.' },
 ]
 
 const FLOW_STEPS = [
@@ -517,7 +528,7 @@ export default function EventsWeddingsPage() {
       <section className="py-20 md:py-28 bg-white wedding-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Wedding Catering Bali — FAQ" subtitle="Everything you need to know about booking a villa wedding with myCHEF." />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

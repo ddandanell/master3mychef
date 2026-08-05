@@ -59,14 +59,14 @@ const PRICING_TIERS = [
 
 const FAQS = [
   { q: 'Where are full prices listed?', a: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
-  { q: 'Daily chef rates?', a: 'IDR 1M++ / 1.8M++ / 2.7M++ for 1/2/3 meals per day.' },
+  { q: 'Daily chef rates?', a: 'Published day rates depend on how many meals you want cooked.' },
   { q: 'What is included vs groceries?', a: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
   { q: 'Weekly and monthly discounts?', a: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
   { q: 'Deposit?', a: 'Usually 50%.' },
   { q: 'Cancellation tiers?', a: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
   { q: 'Hidden fees?', a: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
-  { q: 'Wedding price band?', a: 'Often IDR 1.5M–3M++ per person for full receptions.' },
-  { q: 'Staff hourly rates?', a: 'Waiters ~IDR 250K/hour; bartenders ~IDR 350K/hour (minimums apply).' },
+  { q: 'Wedding price band?', a: 'Full receptions are quoted per person on the wedding catering pages.' },
+  { q: 'Staff hourly rates?', a: 'Staff hourly rates are published on in-villa service pages.' },
   { q: 'How to get an exact total?', a: 'Share date, guests, area and format for a fixed quote.' },
   { q: 'Currency?', a: 'IDR pricing; international transfers accepted as invoiced.' },
   { q: 'Compare formats?', a: 'Use <a href="/dining-styles">dining styles</a> and <a href="/services">services</a>.' },

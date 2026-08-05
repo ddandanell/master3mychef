@@ -119,7 +119,7 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  { question: 'How much does wedding catering in Bali cost?', answer: 'Receptions typically IDR 1.5M–3M++ per person; intimate formats can start lower. See <a href="/events/weddings">wedding catering</a> and <a href="/bali-wedding-catering-packages">packages</a>.' },
+  { question: 'How much does wedding catering in Bali cost?', answer: 'Wedding reception catering is quoted per guest based on menu and guest count. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/pricing">pricing</a> for published guidance.' },
   { question: 'Do you offer menu tastings for weddings?', answer: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
   { question: 'Can you handle banjar fees and villa permissions?', answer: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
   { question: 'Can guests bring their own alcohol?', answer: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
@@ -131,7 +131,7 @@ const FAQS = [
   { question: 'How is this different from a private chef dinner?', answer: 'Weddings are multi-guest production. Couples dinners: <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
   { question: 'Which areas host most villa weddings?', answer: 'Uluwatu, Canggu, Seminyak, Ubud, Nusa Dua and Jimbaran are common — we cover island-wide.' },
   { question: 'Can kids and elderly dietary needs be managed?', answer: 'Yes — labelled plates and briefed service for mixed multi-gen guest lists.' },
-  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around published rates per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
   { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
   { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
   { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },

@@ -58,7 +58,7 @@ const COMPARISON_ROWS = [
 ]
 
 const FAQS = [
-  { q: 'How much is a private chef in Bali per day?', a: 'From IDR 1,000,000++/day for one meal (chef + assistant). Two meals IDR 1.8M++, three IDR 2.7M++. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { q: 'How much is a private chef in Bali per day?', a: 'Daily private chef rates are published by meal count with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali</a>.' },
   { q: 'Are groceries included?', a: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
   { q: 'What is Chef Rotation?', a: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
   { q: 'Can the chef cook in our villa kitchen?', a: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },

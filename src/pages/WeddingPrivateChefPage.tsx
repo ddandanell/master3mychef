@@ -101,7 +101,7 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  { question: 'How much does wedding catering in Bali cost?', answer: 'Receptions typically IDR 1.5M–3M++ per person; intimate formats can start lower. See <a href="/events/weddings">wedding catering</a> and <a href="/bali-wedding-catering-packages">packages</a>.' },
+  { question: 'How much does wedding catering in Bali cost?', answer: 'Wedding reception catering is quoted per guest based on menu and guest count. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/pricing">pricing</a> for published guidance.' },
   { question: 'Do you offer menu tastings for weddings?', answer: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
   { question: 'Can you handle banjar fees and villa permissions?', answer: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
   { question: 'Can guests bring their own alcohol?', answer: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
@@ -113,7 +113,7 @@ const FAQS = [
   { question: 'How is this different from a private chef dinner?', answer: 'Weddings are multi-guest production. Couples dinners: <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
   { question: 'Which areas host most villa weddings?', answer: 'Uluwatu, Canggu, Seminyak, Ubud, Nusa Dua and Jimbaran are common — we cover island-wide.' },
   { question: 'Can kids and elderly dietary needs be managed?', answer: 'Yes — labelled plates and briefed service for mixed multi-gen guest lists.' },
-  { question: 'How much is a private chef in Bali per day?', answer: 'From IDR 1,000,000++/day for one meal (chef + assistant). Two meals IDR 1.8M++, three IDR 2.7M++. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'How much is a private chef in Bali per day?', answer: 'from published rates for one meal (chef + assistant). Two meals published rates, three published rates. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
   { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
   { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
   { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },

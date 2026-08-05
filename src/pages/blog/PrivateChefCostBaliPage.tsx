@@ -61,7 +61,7 @@ const WHAT_AFFECTS_PRICE = [
 ]
 
 const FAQS = [
-  { q: 'How much is a private chef in Bali per day?', a: 'From IDR 1,000,000++/day for one meal (chef + assistant). Two meals IDR 1.8M++, three IDR 2.7M++. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { q: 'How much is a private chef in Bali per day?', a: 'Daily private chef rates are published by meal count with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali</a>.' },
   { q: 'Are groceries included?', a: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
   { q: 'What is Chef Rotation?', a: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
   { q: 'Can the chef cook in our villa kitchen?', a: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
@@ -74,13 +74,13 @@ const FAQS = [
   { q: 'Payment methods?', a: 'Bank transfer and major cards; deposit then balance as quoted.' },
   { q: 'Last-minute private chef?', a: 'Often possible outside peak — WhatsApp availability.' },
   { q: 'Where are full prices listed?', a: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
-  { q: 'Daily chef rates?', a: 'IDR 1M++ / 1.8M++ / 2.7M++ for 1/2/3 meals per day.' },
+  { q: 'Daily chef rates?', a: 'Published day rates depend on how many meals you want cooked.' },
   { q: 'What is included vs groceries?', a: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
   { q: 'Weekly and monthly discounts?', a: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
   { q: 'Deposit?', a: 'Usually 50%.' },
   { q: 'Cancellation tiers?', a: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
   { q: 'Hidden fees?', a: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
-  { q: 'Wedding price band?', a: 'Often IDR 1.5M–3M++ per person for full receptions.' },
+  { q: 'Wedding price band?', a: 'Full receptions are quoted per person on the wedding catering pages.' },
 ]
 
 const WA_MSG = encodeURIComponent('Hi myCHEF! I want to know how much a private chef costs in Bali. Can you send me pricing?')

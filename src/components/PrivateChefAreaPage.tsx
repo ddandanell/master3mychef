@@ -9,10 +9,12 @@ import { Link, Navigate } from 'react-router-dom'
 import { MessageCircle, Check, ChefHat, UtensilsCrossed, Flame, Users, Sparkles, MapPin, Star, Clock, ShieldCheck, ArrowRight, CalendarCheck, Utensils } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, postalAddressSchema } from '@/components/SeoHead'
 import { getPrivateChefArea, PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
+import { buildAreaFaqs, stripFaqHtml } from '@/data/privateChefAreaFaqs'
 import { hasLocationPage } from '@/data/siteArchitecture'
 import { getPageMetaByPath } from '@/data/page-meta'
 import { siteFacts } from '@/data/siteFacts'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -406,9 +408,14 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
   const pageDescription = mappedMeta?.description ?? area.metaDescription
   const pageH1 = mappedMeta?.h1 ?? `Private Chef in ${area.name}, Bali`
 
-  // Travel-fee FAQs are kept in the visible accordion but excluded from the
-  // FAQPage schema until the business policy is confirmed.
-  const schemaFaqs = area.faqs.filter((f) => !f.q.toLowerCase().includes('travel fee'))
+  // Enrich authored FAQs with shared commercial + cluster intents (16–20 total).
+  const displayFaqs = buildAreaFaqs(area, 18)
+
+  // Travel-fee FAQs stay on-page but are excluded from FAQPage schema until
+  // the business policy is fully confirmed in schema.
+  const schemaFaqs = displayFaqs
+    .filter((f) => !f.q.toLowerCase().includes('travel fee'))
+    .map((f) => ({ question: f.q, answer: stripFaqHtml(f.a) }))
 
   const structuredData = [
     {
@@ -454,7 +461,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
         url: canonical,
       },
     },
-    faqPageSchema(schemaFaqs.map((f) => ({ question: f.q, answer: f.a }))),
+    faqPageSchema(schemaFaqs),
     breadcrumbSchema(area.name, canonical, 'Private Chef Bali', `${SITE}/`),
   ]
 
@@ -882,29 +889,18 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       </section>
 
       {/* ── 8. FAQ ───────────────────────────────────────────────────────────── */}
-      <section className="px-6 py-20 md:px-10 bg-white">
+      <section id="faq" className="px-6 py-20 md:px-10 bg-white scroll-mt-24">
         <div className="max-w-[860px] mx-auto">
           <p className="text-center text-[#C5A028] text-sm uppercase tracking-[0.35em] font-semibold mb-3">
             FAQ
           </p>
-          <h2 className="text-center font-playfair text-3xl md:text-4xl mb-12">
+          <h2 className="text-center font-playfair text-3xl md:text-4xl mb-4">
             Questions about {area.name}
           </h2>
-
-          <div className="space-y-5">
-            {area.faqs.map((faq, i) => (
-              <details
-                key={i}
-                className="group border border-[#E5E3E0] rounded-2xl overflow-hidden"
-              >
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer font-semibold text-[#1A1A1A] text-base list-none select-none hover:bg-[#FAFAF8] transition-colors">
-                  {faq.q}
-                  <ArrowRight className="w-4 h-4 text-[#C5A028] flex-shrink-0 group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-6 pb-5 text-[#4A4745] leading-7 text-sm">{faq.a}</div>
-              </details>
-            ))}
-          </div>
+          <p className="text-center text-[#4A4745] text-sm md:text-base leading-relaxed mb-10 max-w-2xl mx-auto">
+            Pricing, villa kitchens, travel, peak season, parties and how to book a private chef in {area.name}, Bali.
+          </p>
+          <FAQAccordion items={displayFaqs} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

@@ -2,12 +2,16 @@
 // Adds event firing for WhatsApp CTA clicks and optionally calls a server endpoint
 // to send hashed PII via the Conversions API. Respects the existing va-disable opt-out.
 
-export function fbqSafe(...args: any[]) {
+type FbqArgs = [command: string, ...rest: unknown[]]
+type FbqWindow = Window & { fbq?: (...args: FbqArgs) => void }
+
+export function fbqSafe(...args: FbqArgs) {
   try {
-    if (typeof window !== 'undefined' && (window as any).fbq && typeof (window as any).fbq === 'function') {
-      (window as any).fbq(...args)
+    const w = window as unknown as FbqWindow
+    if (typeof window !== 'undefined' && typeof w.fbq === 'function') {
+      w.fbq(...args)
     }
-  } catch (e) {
+  } catch {
     // swallow
   }
 }
@@ -15,7 +19,7 @@ export function fbqSafe(...args: any[]) {
 export function allowAnalytics() {
   try {
     return localStorage.getItem('va-disable') === null
-  } catch (e) {
+  } catch {
     return true
   }
 }
@@ -25,7 +29,7 @@ export function trackWhatsAppClick({ href, label }: { href: string; label?: stri
   const page_path = window.location.pathname
   const page_url = window.location.href
   const content_name = document.title || page_path
-  const payload: Record<string, any> = {
+  const payload: Record<string, string> = {
     content_name,
     content_category: 'WhatsApp',
     page_path,

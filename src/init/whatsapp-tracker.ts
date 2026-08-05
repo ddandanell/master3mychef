@@ -12,7 +12,7 @@ import { trackWhatsAppClick } from '../lib/facebookPixel'
  * server will only forward to Meta if configured via env vars.
  */
 
-function postServerConversion(payload: Record<string, any>) {
+function postServerConversion(payload: Record<string, unknown>) {
   try {
     const body = JSON.stringify(payload)
     if (navigator.sendBeacon) {
@@ -22,7 +22,7 @@ function postServerConversion(payload: Record<string, any>) {
     } else {
       void fetch('/api/fb-conversions', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body })
     }
-  } catch (e) {
+  } catch {
     // ignore
   }
 }

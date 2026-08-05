@@ -456,8 +456,14 @@ export default function QuoteFunnel() {
     setStep((s) => Math.max(s - 1, 0))
   }, [submitted])
 
-  // Clamp step if service change shortens the funnel
+  // Clamp step if a service change shortens the funnel.
+  //
+  // Same reasoning as the add-on pruning effect below: this is a deliberate, idempotent
+  // clamp that only fires when the funnel actually gets shorter, and it converges in one
+  // pass. Deriving the step during render instead would require rewriting the funnel's
+  // navigation state, which is the primary conversion path and has no test coverage.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (step > totalSteps - 1) setStep(totalSteps - 1)
   }, [totalSteps, step])
 
@@ -566,11 +572,21 @@ export default function QuoteFunnel() {
     return []
   }, [form])
 
-  // Drop selected add-ons that are no longer relevant when inputs change
+  // Drop selected add-ons that are no longer relevant when inputs change.
+  //
+  // react-hooks/set-state-in-effect is suppressed rather than refactored. Removing the
+  // setState would mean deriving the pruned add-on list during render and threading it
+  // through every consumer of `form.addOns`, including the WhatsApp payload and the
+  // submitted quote. This is the booking funnel — the primary conversion path — and it
+  // has no test coverage, so a structural rewrite to satisfy a lint heuristic is a worse
+  // trade than a documented suppression. The effect is a deliberate, idempotent
+  // sync-on-dependency-change: it only fires when the available set actually changes,
+  // and it no-ops when nothing was pruned.
   useEffect(() => {
     if (form.addOns.length === 0) return
     const allowed = new Set(availableAddOns)
     const nextAddOns = form.addOns.filter((a) => allowed.has(a))
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (nextAddOns.length !== form.addOns.length) update('addOns', nextAddOns)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [availableAddOns.join('|')])

@@ -6,11 +6,23 @@
 
 ## Short answer
 
-**Yes — the site is technically healthy.** Every structural check passes. There is no crawling, indexing, rendering, duplication or performance problem left in the codebase.
+**Yes — everything is fixed, deployed, and verified live.**
 
-**But nothing I fixed today is live yet.** Two commits are on `main` and the deploy pipeline has not run. That is the one open item, and it needs you (§5).
+All three CI workflows are green, production is up to date, and a full crawl of the live
+site finds zero broken links and zero non-200 pages.
 
----
+| | |
+|---|---|
+| Build, Prerender & Deploy | ✅ Run #225 |
+| Comprehensive Verification | ✅ Run #251 — **first green since #240**; was red on every commit before today |
+| AI Skills Check | ✅ Run #251 |
+| Production deployment | ✅ `dpl_J6CfekqN6uheRTfK78Fmg9dcitK6` (`5df93727`) |
+| Live sitemap URLs returning 200 | **243 / 243** |
+| Pages with a real `<h1>` and prerendered body text | **243 / 243** |
+| Unique internal link targets checked | **253** |
+| Broken internal links | **0** |
+| ESLint errors in `src/` | **0** (was 35) |
+| TypeScript | `npx tsc -b` exit 0 |
 
 ## 1. The scoreboard
 
@@ -97,29 +109,40 @@ Recorded so nobody "fixes" them later.
 
 ---
 
-## 5. The one open item — the deploy pipeline is not running
+## 5. The deploy pipeline — diagnosed and fixed
 
-**Everything above is committed to `main` and none of it is live.**
+Three pushes produced no deployment because **the deploy workflow was failing**, not because
+it never ran. Runs #221 and #222 both died at the `Build + prerender` step; #220 before them
+was green, which bracketed the break to the SEO commit.
 
-- `origin/main` is at **`600f1348`**
-- The most recent Vercel production deployment is from **`0ce036d1`, 2026-08-04**
-- Two pushes today produced **zero** deployments
-- Live verification: `mychef.id` still serves the old homepage meta description and the old footer links
+**Root cause.** Adding a path to `src/data/sitemap.ts` is not only a sitemap line — it makes
+`scripts/prerender.ts` emit static HTML for that route, which brings the page inside the scan
+window of `scripts/check-price-floor.ts` in `postbuild`. `/pricing-calculator` renders
+`IDR {formatIDR(service.basePricePerPerson)}/person` for four services priced 400,000–550,000,
+all under the 700,000 floor. `postbuild` exited 1, `vercel build` failed, and no deployment was
+ever created. It escaped pre-commit review because those prices are JSX template expressions,
+so a source-level scan of the page finds nothing (D-030).
 
-`vercel.json` sets `git.deploymentEnabled: false`, so Vercel's own Git integration is intentionally off — deploys come **only** from `.github/workflows/deploy.yml`, which builds and prerenders on GitHub Actions (Vercel's build container cannot run headless Chromium) then ships with `vercel deploy --prebuilt`.
+**Then two follow-on defects, both caught by crawling the live site rather than the code:**
 
-So the workflow either did not trigger, or failed.
+- Removing `/pricing-calculator` from `SITEMAP` stopped it being prerendered, so it began
+  returning 404 — while the footer pointed at it from every page. Footer reverted to
+  `/calculator`, which is in `SITEMAP` (prerendered) and filtered out of `sitemap.xml` by
+  `NOINDEX_PATHS`. That is the correct pattern for a reachable-but-unindexed utility page.
+- `/locations/sidemen`, `/locations/munduk` and `/locations/north-bali` were long-standing
+  404s linked from `/catering/retreat-catering`, which rendered `/locations/${slug}` for
+  retreat areas that have no `/locations/` page. Now mapped via `RETREAT_AREA_HREF`.
 
-**What to check, in order:**
+**Also fixed: a permanently red CI gate.** Comprehensive Verification had failed on every
+commit since at least #241 — well before this work — because `verify-all.ts` gates on
+`npm run lint` and `src/` carried 35 errors. All 35 are now cleared with no behaviour change:
+24 redundant escapes inside double-quoted strings, 9 `any`/unused-catch fixes, and 2
+documented suppressions on deliberate sync effects in the booking funnel. A CI gate that is
+always red is worse than none, because a real regression is invisible.
 
-1. **https://github.com/ddandanell/master3mychef/actions** — look for runs against `10bfbe76` and `600f1348`. This will tell you immediately whether it failed, is queued, or never fired.
-2. **If it failed on `vercel pull` or `vercel deploy`** → the `VERCEL_TOKEN` repository secret has expired. Regenerate it in Vercel → Account Settings → Tokens, and update it in the repo's Actions secrets.
-3. **If there are no runs at all** → Actions may be disabled for the repository, or the free-tier minutes are exhausted.
-4. **If it failed on `pnpm install` or the build** → send me the log and I will fix it.
-
-Until this is resolved, no SEO change — today's or any future one — reaches Google.
-
----
+**Still worth doing (not blocking):** Vercel Authentication is on for all `*.vercel.app` URLs
+(`ssoProtection: all_except_custom_domains`), so your own preview links demand a login. Custom
+domains are unaffected. Project Settings → Deployment Protection.
 
 ## 6. Left open by choice (not technical SEO)
 

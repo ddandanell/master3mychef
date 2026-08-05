@@ -131,11 +131,26 @@ const TESTIMONIALS = [
 ]
 
 const FAQS = [
-  { q: 'How many courses are in a tasting menu?', a: 'Typically four to seven courses progressing from snacks to dessert. myCHEF\'s signature format is five courses, including Wagyu and Mediterranean menus.' },
-  { q: 'How long does a tasting menu take?', a: 'Plan the full evening, roughly 17:30 to 22:00 act by act: arrival, aperitif, courses with pauses, and dessert. Timing is set around sunset and your schedule.' },
-  { q: 'What is the minimum number of guests for a tasting menu?', a: 'Tasting menus run for four to 24 guests. Smaller parties can book the standard private dinner format; larger groups move to plated catering.' },
-  { q: 'Can tasting menus be adapted for dietary needs?', a: 'Yes. Vegetarian, vegan, gluten-free, and allergy adaptations are designed into the menu at no extra charge. Requirements are collected at booking.' },
-  { q: 'Can I add wine pairing to a tasting menu?', a: 'Yes. Pairing adds IDR 850K per person. A sommelier-led zero-proof pairing is also available.' },
+  { q: 'How much does a private tasting menu cost in Bali?', a: 'Signature villa tasting menus typically start from about <strong>IDR 2.2M–2.4M++ per person</strong> for Mediterranean or Wagyu paths, ingredients and service included in the quote model. Browse <a href="/fine-dining/menus">set menus</a> and <a href="/fine-dining">fine dining</a>.' },
+  { q: 'How many courses are in a tasting menu?', a: 'Typically four to seven courses from snacks to dessert. myCHEF’s signature villa format is five courses — Mediterranean Sea and Wagyu Experience.' },
+  { q: 'How long does a tasting menu evening take?', a: 'Plan the full evening — roughly 3–4 hours with pauses, often timed around sunset (e.g. 17:30–22:00). Your schedule sets the first course.' },
+  { q: 'What is the minimum number of guests for a tasting menu?', a: 'Usually four to 24 guests. Couples should see <a href="/fine-dining/romantic-dinner">romantic dinner</a>. Larger groups move to <a href="/catering/plated-catering">plated catering</a>.' },
+  { q: 'Can tasting menus be adapted for dietary needs?', a: 'Yes — vegetarian, vegan, gluten-free, allergy and pregnancy-safe paths at no extra charge when briefed at booking.' },
+  { q: 'Can I add wine pairing to a tasting menu in Bali?', a: 'Yes — roughly IDR 850K per person. Zero-proof pairings and BYO wine service are available. <a href="/in-villa-service">In-villa service →</a>' },
+  { q: 'What is included in the tasting menu price?', a: 'Chef brigade, multi-course menu, premium ingredients for the path you choose, plating, service and full kitchen cleanup. Optional: wine pairing, flowers, extra staff.' },
+  { q: 'Do you cook the tasting menu in our villa kitchen?', a: 'Yes. We assess your kitchen, bring specialised tools when needed, and restore the space after service.' },
+  { q: 'What does "++" mean?', a: '11% government tax + 10% service charge on the listed price. Quotes show all-in totals before deposit.' },
+  { q: 'How far ahead should I book a tasting menu?', a: '7+ days preferred; peak season 2+ weeks. Last-minute is sometimes possible — WhatsApp availability.' },
+  { q: 'Mediterranean Sea vs Wagyu Experience — which should I choose?', a: 'Mediterranean is seafood-forward and lighter; Wagyu is beef-focused and richer. We help you match guests and occasion.' },
+  { q: 'Can children join a tasting menu dinner?', a: 'Yes with adapted plates, or book <a href="/kids-menus">kids menus</a> / <a href="/three-course">three-course</a> for a lighter pace.' },
+  { q: 'Is a tasting menu the same as daily private chef hire?', a: 'No. Tasting is a multi-course event. Multi-day meals use <a href="/private-chef-bali">private chef day rates</a> with groceries at cost.' },
+  { q: 'What deposit and cancellation policy apply?', a: '50% deposit; balance the day before. Full refund 14+ days, 50% at 7–13 days, none under 7. <a href="/cancellation">Policy →</a>' },
+  { q: 'Which areas of Bali do you serve for tasting menus?', a: 'All major villa regions — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and more. <a href="/locations">Locations →</a>' },
+  { q: 'Can we customise courses or add a chef’s table format?', a: 'Course swaps are normal. For counter-side commentary see <a href="/fine-dining/chefs-table">chef’s table</a>.' },
+  { q: 'Do you clean up after the tasting menu?', a: 'Yes — full cleanup included.' },
+  { q: 'How do I book a tasting menu with myCHEF?', a: 'WhatsApp date, guests, villa area and menu path. Fixed quote, then 50% deposit. <a href="/quote">Quote →</a> · <a href="/book">Book →</a>' },
+  { q: 'What if someone on the team cannot make it?', a: 'Verified replacement within our guarantee window or refund. <a href="/why-mychef">Why myCHEF →</a>' },
+  { q: 'Can we add waiters or a bartender?', a: 'Yes — scale FOH for larger tables. <a href="/in-villa-service">In-villa service →</a>' },
 ]
 
 export default function TastingMenuPage() {
@@ -504,7 +519,7 @@ export default function TastingMenuPage() {
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
             <h2 className="text-3xl md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>Common Questions</h2>
           </div>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

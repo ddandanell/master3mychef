@@ -308,15 +308,83 @@ const EVENTS_TESTIMONIALS = [
 const FAQS = [
   {
     q: 'How much does event catering cost in Bali?',
-    a: 'Per-format pricing starts from IDR 700K per person for dinners, IDR 700K–1.2M for corporate tiers, and IDR 1.5M–3M+ for weddings. Exact pricing depends on guest count, menu, and service style.',
+    a: 'Dinners typically start from <strong>IDR 700K per person ++</strong>. Corporate tiers often run IDR 700K–1.2M/person; weddings roughly IDR 1.5M–3M+ per person depending on menu, production and staffing. Your quote is fixed before deposit. <a href="/pricing">Pricing →</a> · <a href="/quote">Request a quote →</a>',
+  },
+  {
+    q: 'What types of events do you cater in Bali?',
+    a: 'Weddings, birthdays, anniversaries, villa parties, corporate retreats, baby showers, bachelor/bachelorette nights and multi-day programmes. Browse formats on this page or jump to <a href="/events/weddings">weddings</a>, <a href="/events/corporate">corporate</a> or <a href="/events/villa-parties">villa parties</a>.',
   },
   {
     q: 'Can you cater events for 100+ guests in Bali?',
-    a: 'Yes. We cater weddings for 20–200 guests, corporate events for 10–200 guests, and villa events for up to 150 guests, with full kitchen and service teams scaled to the size.',
+    a: 'Yes. Weddings 20–200 guests, corporate 10–200, villa events up to ~150, with kitchen and service teams scaled to headcount. Larger productions get a dedicated coordinator and written run-of-show.',
   },
   {
     q: 'Can you cater a last-minute event in Bali?',
-    a: 'Often yes for smaller events — same-day or next-day bookings are frequently possible, and drop-off catering can be arranged in 24–48 hours. Large productions need one to two weeks or more.',
+    a: 'Often yes for smaller villa dinners and parties — same-day or next-day is frequently possible. <a href="/catering/drop-off-catering">Drop-off catering</a> can land in 24–48 hours. Full wedding or gala production needs one to two weeks or more; peak season longer.',
+  },
+  {
+    q: 'Do you provide staff as well as food for Bali events?',
+    a: 'Yes. Chef teams, waiters, hosts, bartenders, butlers and coordinators can be packaged with the menu — or hired à la carte via <a href="/in-villa-service">in-villa service</a>. Standard starting ratio: one waiter per 10 guests.',
+  },
+  {
+    q: 'Can you work in our rental villa or Airbnb for an event?',
+    a: 'Yes. Most events are in private villas. Share the villa link and manager contact so we plan kitchen access, power, parking and noise rules. For pure food without staff, use <a href="/catering/villa-catering">villa catering</a> or drop-off.',
+  },
+  {
+    q: 'How do deposits and cancellations work for events?',
+    a: '50% deposit locks the date; balance due the day before. Full refund 14+ days out, 50% at 7–13 days, non-refundable under 7 days. <a href="/cancellation">Cancellation policy →</a>',
+  },
+  {
+    q: 'Can you handle dietary requirements at large events?',
+    a: 'Yes. Mixed vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and pork-free/halal-friendly tables are planned in advance with labelled plates and separate prep where needed. Tell us headcount by diet when you lock numbers.',
+  },
+  {
+    q: 'Do you cater outdoor pool parties and garden dinners?',
+    a: 'Yes — pool decks, gardens and open lawns are common. We plan rain cover, power and service routes. See <a href="/events/villa-parties">villa parties</a> and <a href="/catering/bbq-catering">BBQ catering</a> for open-flame formats.',
+  },
+  {
+    q: 'What is included in a typical Bali event catering package?',
+    a: 'Menu, chef team, service staff (for serviced formats), equipment, setup, service and full cleanup. Alcohol is usually BYO or sourced at cost; bar staff are optional add-ons. Exact inclusions are listed line-by-line on your quote.',
+  },
+  {
+    q: 'Can you do plated fine dining for a small wedding or rehearsal dinner?',
+    a: 'Yes. Intimate plated and tasting formats sit between <a href="/fine-dining">fine dining</a> and full wedding production. Rehearsal dinners and welcome drinks are common add-ons to wedding weekends.',
+  },
+  {
+    q: 'Do you offer corporate event catering with invoices in Bali?',
+    a: 'Yes — team dinners, offsites and multi-day retreats with NPWP-ready documentation on request. Minimums and tiers are on <a href="/events/corporate">corporate events</a> and <a href="/catering/corporate-catering">corporate catering</a>.',
+  },
+  {
+    q: 'How far in advance should I book wedding catering in Bali?',
+    a: 'Ideally 4–8+ weeks for peak wedding months; shorter windows are sometimes possible for weekday or smaller guest counts. Timeline guide: <a href="/blog/bali-wedding-catering-complete-guide">wedding catering guide</a>.',
+  },
+  {
+    q: 'What if guest count changes close to the event?',
+    a: 'Final headcount is typically due 48 hours before service. Small changes are adjusted without drama; large increases may affect staffing minimums and ingredient runs — we confirm impact in writing before charging more.',
+  },
+  {
+    q: 'Can you provide a bartender and full bar service for our event?',
+    a: 'Yes. Private bartenders from IDR 350K/hour (3-hour minimum) plus mixology packages. Explore <a href="/in-villa-service/bartenders">bartenders</a> and <a href="/bar-services/">bar services</a>.',
+  },
+  {
+    q: 'Is event catering different from hiring a daily private chef?',
+    a: 'Yes. Event catering is one-off production for a celebration. A <a href="/private-chef-bali">daily private chef</a> is a multi-day meal plan for your villa stay. Many groups book both — chef for the week, catering for the party night.',
+  },
+  {
+    q: 'Do you clean up after the event?',
+    a: 'Yes on all serviced packages — kitchen, service stations and dining areas restored. Drop-off formats do not include on-site cleanup because there is no service team remaining.',
+  },
+  {
+    q: 'Which areas of Bali do you cover for events?',
+    a: 'Island-wide: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa, Pererenan and beyond. Remote venues may include a travel fee quoted upfront. <a href="/locations">Locations →</a>',
+  },
+  {
+    q: 'Can you coordinate with our wedding planner or villa manager?',
+    a: 'Yes. We work daily with planners, villa managers and photographers. Share contacts early so load-in times, power, parking and noise curfews are locked before the deposit.',
+  },
+  {
+    q: 'How fast will I get an event quote?',
+    a: 'Most villa events receive a menu proposal within 2–24 hours of a complete brief (date, guests, area, format). Complex weddings may need a short discovery call first. <a href="/quote">Start a quote →</a>',
   },
 ]
 
@@ -1095,7 +1163,7 @@ export default function EventsMainPage() {
             title="Event Catering Bali — FAQ"
             subtitle="Common questions about booking villa event catering in Bali — from cost per guest and minimums to villa fees and wet-weather plans."
           />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={3} showToc ctaEvery={5} />
         </div>
       </section>
 

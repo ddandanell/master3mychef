@@ -15,32 +15,84 @@ const WA_KIDS = buildWhatsAppUrl({ serviceName: "Kids' Party Menus" })
 
 const FAQS = [
   {
-    q: "How much do kids' menus cost?",
-    a: 'From IDR 250,000 to IDR 350,000 per child depending on the menu, including starter, main, dessert, the chef, ingredients and cleanup. Prices are subject to 11% government tax + 10% service charge.',
+    q: "How much do kids' menus cost in Bali?",
+    a: 'From about <strong>IDR 250,000–350,000 per child ++</strong> depending on the menu — starter, main, dessert, chef, ingredients and cleanup. Tax and service (++) apply. <a href="/pricing">Pricing →</a>',
   },
   {
     q: 'What is the minimum number of children?',
-    a: 'Six children per booking. We regularly cater parties of 20+ children with advance notice.',
+    a: 'Typically six children per booking. We regularly cater parties of 20+ with advance notice. Smaller family tables can often be folded into an adult dinner brief — ask on WhatsApp.',
   },
   {
-    q: 'How do you handle allergies?',
-    a: 'Every menu is nut-free as standard. For any other allergy — gluten, dairy, egg, shellfish — our chefs adapt the menu in advance, at no extra charge.',
+    q: "How do you handle kids' food allergies?",
+    a: 'Every kids menu is <strong>nut-free as standard</strong>. Gluten, dairy, egg, shellfish and other allergies are adapted in advance at no extra charge. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide →</a>',
   },
   {
-    q: 'Are the menus halal?',
-    a: "Yes, all kids' menus are halal adaptable. Tell us your requirements when booking and we source and prepare accordingly. (Any non-halal add-on, such as bacon, is always clearly marked.)",
+    q: "Are kids' menus halal adaptable?",
+    a: 'Yes. Tell us requirements when booking. Any non-halal add-on (e.g. bacon) is clearly marked and never assumed.',
   },
   {
     q: 'What ages are the menus designed for?',
-    a: 'Roughly 3–12, with mild flavours and child-sized portions throughout. Younger children can be served simpler plates from the same menus — just ask.',
+    a: 'Roughly ages 3–12, mild flavours and child-sized portions. Younger children can get simpler plates from the same menus.',
   },
   {
-    q: 'Can adults eat at the same event?',
-    a: 'Absolutely. Kids are usually served first from these menus; adults order separately from our main menu collections, and one team runs both.',
+    q: 'Can adults eat at the same villa event?',
+    a: 'Yes. Kids usually eat first; adults order from <a href="/dining-styles">dining styles</a> (three-course, BBQ, fine dining). One team runs both.',
   },
   {
     q: 'What deposit is required?',
-    a: 'A 50% deposit confirms your booking; the balance is due the day before the event.',
+    a: '50% deposit confirms; balance due the day before. <a href="/cancellation">Cancellation policy →</a>',
+  },
+  {
+    q: 'Do you run kids birthday chef parties as well as menus?',
+    a: 'Yes — full interactive parties live on <a href="/experiences/kids-birthday-chef-party">kids birthday chef party</a> and event catering at <a href="/events/birthdays">birthdays</a>.',
+  },
+  {
+    q: 'Are kids menus available with a multi-day private chef?',
+    a: 'Yes. On weekly stays we plan kids plates every day alongside adult meals. See <a href="/private-chef-bali">private chef Bali</a> and <a href="/blog/family-kids-menu-private-chef-bali">family kids guide</a>.',
+  },
+  {
+    q: 'Do you clean up after a kids party meal?',
+    a: 'Yes — kitchen and service cleanup is included on serviced bookings.',
+  },
+  {
+    q: 'Can picky eaters get pasta, burgers or pizza?',
+    a: 'Yes — those familiar formats are core to the kids collection, with healthier builds and fruit/dessert options parents actually approve.',
+  },
+  {
+    q: 'Which areas of Bali do you cover?',
+    a: 'Island-wide villa service. <a href="/locations">Locations →</a>',
+  },
+  {
+    q: 'How far in advance should I book kids menus?',
+    a: 'A few days is usually enough; weekend parties and school-holiday weeks book earlier. Last-minute is often possible.',
+  },
+  {
+    q: 'Is spice kept mild for children?',
+    a: 'Yes — no chilli by default. Adults can still get sambal or spice on their own plates.',
+  },
+  {
+    q: 'Can we combine kids menus with BBQ grill?',
+    a: 'Yes — kids eat early from their menu while the <a href="/bbq-grill">BBQ grill</a> runs for adults, or we put mild grill items on the kids board.',
+  },
+  {
+    q: 'What does "++" mean?',
+    a: '11% government tax + 10% service charge on listed prices. Quotes show all-in totals.',
+  },
+  {
+    q: 'Do you provide high chairs or kids tableware?',
+    a: 'We work with villa inventory first. Special rentals can be arranged when needed — flag ages when you book.',
+  },
+  {
+    q: 'How do I book kids party menus with myCHEF?',
+    a: 'WhatsApp date, number of children, ages, allergies and villa area. Fixed quote → 50% deposit. <a href="/quote">Quote →</a>',
+  },
+  {
+    q: 'Can the same chef cook for kids and a romantic adult dinner later?',
+    a: 'Often yes on multi-service days, or we split teams for large parties. <a href="/fine-dining/romantic-dinner">Romantic dinner →</a>',
+  },
+  {
+    q: 'What if a child has a severe allergy (e.g. peanut, shellfish)?',
+    a: 'Tell us at enquiry. We redesign the menu, control prep zones and label plates. For complex medical diets we may request written guidance from parents before shopping.',
   },
 ]
 
@@ -201,7 +253,7 @@ export default function KidsMenusPage() {
             <p className="font-cormorant text-[#E8985E] text-xs uppercase tracking-[4px] mb-4">Frequently Asked Questions</p>
             <h2 className="font-playfair text-3xl md:text-4xl text-white">Before You Book</h2>
           </div>
-          <FAQAccordion items={FAQS} dark />
+          <FAQAccordion items={FAQS} dark defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

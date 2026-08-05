@@ -81,16 +81,84 @@ const TESTIMONIALS: Testimonial[] = [
 
 const FAQS: FAQItem[] = [
   {
-    q: 'Can I customize the menu?',
-    a: 'Yes. Every menu is designed around your tastes, dietary needs, and occasion. The 24 set menus are starting points, and dietary customisation is included.',
+    q: 'How much do classic set menus cost in Bali?',
+    a: 'Classic set menus start from about <strong>IDR 1.25M per guest ++</strong>. Exact pricing depends on the menu family (vegetarian, seafood, mixed meats, single meat) and guest count. See <a href="/pricing">pricing</a> or request a <a href="/quote">quote</a>.',
+  },
+  {
+    q: 'Can I customize a set menu?',
+    a: 'Yes. The 24 set menus are starting points. Dietary needs, proteins, spice and occasion tweaks are included in planning — locked before service day.',
   },
   {
     q: 'Do menu prices include groceries and service?',
-    a: 'Menu prices are per person ++ (11% government tax + 10% service charge added). Groceries for standard menus are covered in the quote model, with premium upgrades itemised.',
+    a: 'Prices are per person <strong>++</strong> (11% tax + 10% service). Standard menu ingredients are covered in the quote model; premium upgrades (e.g. lobster, imported wagyu) are itemised.',
   },
   {
     q: "Can we book a chef's table experience?",
-    a: 'Yes — the <a href="/fine-dining/chefs-table">chef\'s table in Bali</a> seats up to six guests counter-side, with course-by-course commentary from the chef. It is arranged separately from the standard set menus.',
+    a: 'Yes — the <a href="/fine-dining/chefs-table">chef\'s table in Bali</a> seats up to six guests counter-side with course-by-course commentary. Arranged separately from standard set menus.',
+  },
+  {
+    q: 'What is the difference between set menus and a tasting menu?',
+    a: 'Set menus are curated multi-course collections you browse and pick. Signature <a href="/fine-dining/tasting-menu">tasting menus</a> (Mediterranean / Wagyu) are fixed-path showpieces. Both are cooked in your villa.',
+  },
+  {
+    q: 'What is the minimum guest count for set menus?',
+    a: 'Most set menus suit small villa groups; exact minimums appear on each menu card and quote. Couples often book <a href="/fine-dining/romantic-dinner">romantic dinner</a>.',
+  },
+  {
+    q: 'Can set menus handle mixed dietary requirements at one table?',
+    a: 'Yes — parallel plates for vegan, gluten-free, allergy and kids are planned in advance so the whole table is served together.',
+  },
+  {
+    q: 'Do you cook these menus in Airbnb villas across Bali?',
+    a: 'Yes, anywhere with a workable kitchen. Share your villa link when enquiring. <a href="/locations">Locations →</a>',
+  },
+  {
+    q: 'How far in advance should I book a set menu dinner?',
+    a: 'A few days to a week is typical; peak season and large groups need more. Last-minute is sometimes possible via WhatsApp.',
+  },
+  {
+    q: 'What deposit do you require?',
+    a: '50% deposit confirms date and chef; balance due the day before. <a href="/cancellation">Cancellation tiers →</a>',
+  },
+  {
+    q: 'Is wine included with set menus?',
+    a: 'No. BYO is welcome, or add pairing / bartender. <a href="/in-villa-service/bartenders">Bartenders →</a>',
+  },
+  {
+    q: 'Can kids eat from these menus?',
+    a: 'We adapt milder plates or add <a href="/kids-menus">kids menus</a> so adults keep the full set while children get familiar food.',
+  },
+  {
+    q: 'How do set menus compare to BBQ grill or three-course?',
+    a: 'Set menus are plated fine dining. <a href="/three-course">Three-course</a> is lighter and faster. <a href="/bbq-grill">BBQ grill</a> is live-fire theatre. Compare on <a href="/dining-styles">dining styles</a>.',
+  },
+  {
+    q: 'Do you clean up after service?',
+    a: 'Yes — full kitchen cleanup is included on serviced dinners.',
+  },
+  {
+    q: 'How do I choose the right menu family?',
+    a: 'Tell us occasion, guest count, must-have proteins and dietary needs — we recommend a shortlist in one WhatsApp reply. Or browse filters on this page.',
+  },
+  {
+    q: 'Are these menus available island-wide in Bali?',
+    a: 'Yes. Travel fees for remote areas are quoted upfront when they apply.',
+  },
+  {
+    q: 'Can we upgrade a set menu night into a full event?',
+    a: 'Yes — add waiters, bartender, flowers or scale into <a href="/events">event catering</a> for larger celebrations.',
+  },
+  {
+    q: 'What if our guest count changes?',
+    a: 'Final numbers are typically due ~48 hours before service. We adjust portions and staffing; large increases may affect minimums.',
+  },
+  {
+    q: 'How do I book a classic set menu with myCHEF?',
+    a: 'Pick a menu (or ask for a recommendation), send date, guests and villa area on WhatsApp. Fixed quote → 50% deposit. <a href="/book">Book →</a>',
+  },
+  {
+    q: 'Is daily private chef the same product?',
+    a: 'No. Multi-day meal plans use <a href="/private-chef-bali">private chef day rates</a>. Set menus are one-evening plated dining.',
   },
 ]
 
@@ -567,7 +635,7 @@ export default function FineDiningMenusPage() {
             </h2>
           </div>
           <div className="reveal">
-            <FAQAccordion items={FAQS} />
+            <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
           </div>
         </div>
       </section>

@@ -145,7 +145,8 @@ const AREAS = [
 ]
 
 /** Top FAQs shown on page + mirrored in FAQ schema (match visible content). */
-const PRIMARY_FAQS = CATERING_FAQS.slice(0, 10)
+/** Full catering FAQ set for TOC, schema and long-tail coverage (no new pages). */
+const PRIMARY_FAQS = CATERING_FAQS
 
 export default function CateringMainPage() {
   const ref = useRef<HTMLDivElement>(null)
@@ -785,8 +786,12 @@ export default function CateringMainPage() {
       {/* ═══════ FAQ ═══════ */}
       <section className="py-12 md:py-16 px-6 bg-white">
         <div className="max-w-[760px] mx-auto">
-          <SectionHeader eyebrow="Questions" title="Catering FAQ" />
-          <FAQAccordion items={PRIMARY_FAQS} defaultOpenCount={3} />
+          <SectionHeader
+            eyebrow="Questions"
+            title="Catering FAQ"
+            subtitle="Pricing, villa kitchens, allergies, BBQ, deposits and what is included — before you book catering in Bali."
+          />
+          <FAQAccordion items={PRIMARY_FAQS} defaultOpenCount={3} showToc ctaEvery={5} />
         </div>
       </section>
 

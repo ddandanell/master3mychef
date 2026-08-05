@@ -4,9 +4,93 @@ import SeoHead, { localBusinessSchema, breadcrumbSchema, faqPageSchema } from '.
 import { LOCATIONS, hasLocationPage } from '@/data/siteArchitecture'
 import { PRIVATE_CHEF_AREAS } from '@/data/privateChefAreas'
 import Breadcrumb from './shared/Breadcrumb'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 import OptimizedImage from '@/components/OptimizedImage'
 const SITE = 'https://mychef.id'
+
+const LOCATION_FAQS = [
+  {
+    q: 'Which areas in Bali does myCHEF cover?',
+    a: 'All major villa regions: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa, Pererenan, Bukit and more — plus private chef area pages for finer coverage. <a href="/private-chef-bali">Private chef Bali →</a>',
+  },
+  {
+    q: 'Does myCHEF travel to my villa location?',
+    a: 'Yes. The team comes to your villa with ingredients, equipment and setup. You do not leave the property. Remote areas may include a travel fee quoted upfront.',
+  },
+  {
+    q: 'Is pricing the same in every Bali area?',
+    a: 'Core South Bali day rates and menu starts are published without surprise area markups for standard zones. Distance components for remote locations are always shown before deposit. <a href="/pricing">Pricing →</a>',
+  },
+  {
+    q: 'How far in advance should I book a private chef in my area?',
+    a: 'A few days is typical; peak season and large events need more. Same-day/next-day is often possible outside peak — WhatsApp your area and dates.',
+  },
+  {
+    q: 'Do you serve Airbnb and rental villas in Seminyak, Canggu and Ubud?',
+    a: 'Yes. Most bookings are rentals. Share the listing link and access instructions so arrival is smooth.',
+  },
+  {
+    q: 'Can you do fine dining and BBQ in the same villa areas?',
+    a: 'Yes island-wide. Choose format on <a href="/dining-styles">dining styles</a>, <a href="/fine-dining">fine dining</a> or <a href="/bbq-grill">BBQ grill</a>.',
+  },
+  {
+    q: 'Which area is best for a romantic cliffside dinner?',
+    a: 'Uluwatu and Bukit villas are popular for ocean views; Seminyak and Canggu for beach energy; Ubud for jungle quiet. We cook wherever your villa is. <a href="/fine-dining/romantic-dinner">Romantic dinner →</a>',
+  },
+  {
+    q: 'Do you cover wedding venues outside the villa belt?',
+    a: 'Yes for many venues — logistics and load-in are planned with the venue manager. Start at <a href="/events/weddings">wedding catering</a>.',
+  },
+  {
+    q: 'Is there a travel fee to Ubud or Uluwatu?',
+    a: 'Standard coverage includes major villa hubs. Any distance fee for outlying spots is quoted before you commit — never as a surprise on the day.',
+  },
+  {
+    q: 'Can multi-day private chef service move between villas?',
+    a: 'Yes if you change villas mid-stay. Tell us both addresses and dates so staffing and shopping routes stay clean.',
+  },
+  {
+    q: 'How do I find a chef specifically for my neighbourhood?',
+    a: 'Use the area cards on this page, the private chef by area index below, or go direct to <a href="/private-chef-bali">private chef Bali</a> and mention your area on WhatsApp.',
+  },
+  {
+    q: 'Do you offer last-minute catering in Canggu or Seminyak?',
+    a: 'Often yes for dinners and drop-off. Large productions need more notice. <a href="/catering/drop-off-catering">Drop-off catering →</a>',
+  },
+  {
+    q: 'Can you staff waiters and bartenders in every location?',
+    a: 'Yes across the same coverage map. <a href="/in-villa-service">In-villa service →</a>',
+  },
+  {
+    q: 'What deposit do you require regardless of location?',
+    a: '50% to confirm; balance the day before. Cancellation tiers: <a href="/cancellation">policy</a>.',
+  },
+  {
+    q: 'Are groceries included for daily chef service in all areas?',
+    a: 'Shopping work is included; food is billed at cost with receipts — same policy island-wide. <a href="/private-chef-bali#groceries">Groceries →</a>',
+  },
+  {
+    q: 'Do you serve family villas in Nusa Dua and Sanur?',
+    a: 'Yes — popular for multi-gen holidays with kids menus + adult dining. <a href="/kids-menus">Kids menus →</a>',
+  },
+  {
+    q: 'Can corporate offsites book chefs across multiple Bali locations?',
+    a: 'Yes — one account manager, multiple villa or venue drops. <a href="/events/corporate">Corporate events →</a>',
+  },
+  {
+    q: 'How do I book for my exact villa pin?',
+    a: 'WhatsApp area + Google Maps/villa link + dates + guest count. We confirm chef coverage and any travel fee before deposit. <a href="/book">Book →</a>',
+  },
+  {
+    q: 'Is Jimbaran good for seafood BBQ with myCHEF?',
+    a: 'Yes — seafood and flame cooking are a strong fit. See <a href="/seafood-bbq-catering-bali">seafood BBQ</a> and <a href="/bbq-grill">BBQ grill</a>.',
+  },
+  {
+    q: 'What if my villa is in a gated complex with access rules?',
+    a: 'Normal — we work with security and villa managers daily. Share gate procedures and parking notes when you book.',
+  },
+]
 
 const LOCATION_DETAILS = [
   {
@@ -74,11 +158,11 @@ export default function LocationsHubPage() {
         description="Hire a private chef across Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran and Sanur. Villa dining, catering and events in every region."
         ogImage="/mychef-misc-bali-og-image.webp"
         canonical={canonical}
-        jsonLd={[{ ...localBusinessSchema, }, breadcrumbSchema('Locations', canonical), faqPageSchema([
-          { question: 'Which areas in Bali does myCHEF.id cover?', answer: 'myCHEF.id covers all major Bali areas including Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan, and Bingin — with 560+ events served and 500+ villa bookings across the island.' },
-          { question: 'Does myCHEF.id travel to my villa location?', answer: 'Yes — our team travels to your villa anywhere in Bali. We handle all logistics including ingredients, equipment, and setup, so you never need to leave your villa.' },
-          { question: 'How far in advance do I need to book?', answer: 'We require a minimum of 48 hours advance notice. For bookings within 24 hours, 100% payment is required upfront. Contact us via WhatsApp to check last-minute availability.' },
-        ])]}
+        jsonLd={[
+          { ...localBusinessSchema },
+          breadcrumbSchema('Locations', canonical),
+          faqPageSchema(LOCATION_FAQS.map((f) => ({ question: f.q, answer: f.a }))),
+        ]}
       />
 
       {/* Hero */}
@@ -247,6 +331,18 @@ export default function LocationsHubPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-16 md:py-24 bg-white scroll-mt-24">
+        <div className="max-w-[760px] mx-auto px-6">
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4 text-center">Coverage FAQ</p>
+          <h2 className="font-playfair text-3xl md:text-4xl text-center mb-4">Private Chef Locations — FAQ</h2>
+          <p className="text-center text-[#4A4745] mb-10 leading-relaxed">
+            Areas we cover, travel fees, Airbnb villas, last-minute bookings and how service works across Bali.
+          </p>
+          <FAQAccordion items={LOCATION_FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

@@ -71,14 +71,26 @@ const TESTIMONIALS = [
 ]
 
 const FAQS = [
-  { q: 'Is 2 guests the minimum?', a: 'Yes — romantic dinners are designed for 2. For intimate group dinners of 4–12, we run the same fine dining menu as a private villa experience. Message us for details.' },
-  { q: 'Can you arrange a surprise setup?', a: 'Absolutely. Tell us when the villa is empty and we arrive, set the table, and everything is ready before your partner walks out. We coordinate with villa reception.' },
-  { q: 'Can I propose during the dinner?', a: 'We have set up proposals before. Tell us your plan and we will coordinate the timing, the champagne moment, and keep the photographer ready for the right second.' },
-  { q: 'What if I want the Wagyu menu instead?', a: 'Both tasting menus are available. Mediterranean Sea is our most romantic menu — lighter, seafood-forward, beautiful plating. Wagyu is heavier and more dramatic. We recommend Mediterranean for most couples, Wagyu if your partner loves beef.' },
-  { q: 'How far in advance should I book?', a: '3–7 days is ideal. For peak season (July–August, December–January) or if you want Adriano specifically, 2+ weeks is better. We can sometimes accommodate 48-hour requests — message us.' },
-  { q: 'What time does the team arrive?', a: 'Typically 3 hours before your service time. They prepare, set the table, and will be invisible in the kitchen by the time you sit down.' },
-  { q: 'What is included in the price?', a: 'Chef and kitchen team, all premium ingredients (grocery sourced same-day), table linens and candles, service staff, full kitchen cleanup. Flowers, champagne, photographer, and musician are optional add-ons.' },
-  { q: 'Can you accommodate allergies?', a: 'Yes — every course is adaptable. Gluten-free, shellfish allergy, pregnancy-friendly, vegan, halal — no extra charge. Tell us when booking and we plan the menu around you.' },
+  { q: 'How much does a romantic dinner in a Bali villa cost?', a: 'Signature romantic tasting dinners typically start from about <strong>IDR 2.2M++ per person</strong> (Mediterranean) or IDR 2.4M++ (Wagyu path), including chef team, ingredients, setting and cleanup. Flowers, champagne, photographer and musician are optional. <a href="/pricing">Pricing →</a>' },
+  { q: 'Is 2 guests the minimum for a romantic dinner?', a: 'Yes — romantic dinners are designed for two. For intimate groups of 4–12 we run fine dining as a private villa experience. See <a href="/fine-dining">fine dining</a> and <a href="/fine-dining/tasting-menu">tasting menu</a>.' },
+  { q: 'What is included in the romantic dinner price?', a: 'Chef and kitchen team, premium ingredients (same-day sourcing), table linens and candles, service staff and full kitchen cleanup. Add-ons: flowers, champagne, photographer, musician, wine pairing.' },
+  { q: 'Can you arrange a surprise setup at our Bali villa?', a: 'Yes. Tell us when the villa is empty; we arrive, set the table and are ready before your partner walks out. We coordinate with villa reception or your manager.' },
+  { q: 'Can I propose during the private chef dinner?', a: 'Yes — we time courses, champagne and privacy around your plan. For full proposal production see <a href="/experiences/romantic-proposal-dinner">romantic proposal dinner</a> and <a href="/proposal-dinner">proposal dinner</a>.' },
+  { q: 'Mediterranean or Wagyu menu for a romantic evening?', a: 'Mediterranean Sea is lighter and seafood-forward — most couples choose it. Wagyu is richer and more dramatic if your partner loves beef. Both are five-course villa tastings.' },
+  { q: 'How far in advance should I book a romantic dinner in Bali?', a: '3–7 days is ideal; peak season or named-chef requests: 2+ weeks. 48-hour requests are sometimes possible — WhatsApp us.' },
+  { q: 'What time does the romantic dinner team arrive?', a: 'Typically about 3 hours before service. They prep, set the table and stay discreet so the reveal feels seamless.' },
+  { q: 'Can you accommodate allergies and pregnancy-safe menus?', a: 'Yes — gluten-free, shellfish allergy, vegan, pregnancy-friendly and more, no extra charge. Tell us when booking. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide →</a>' },
+  { q: 'Do you clean up after the romantic dinner?', a: 'Yes. Full kitchen and service cleanup is included — you wake up to a clean villa, not a sink of dishes.' },
+  { q: 'Is alcohol included?', a: 'No. BYO wine/champagne is welcome (we serve), or add wine pairing / bartender. <a href="/in-villa-service/bartenders">Bartenders →</a>' },
+  { q: 'Which Bali areas do you cover for romantic dinners?', a: 'Island-wide villa service — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur and more. <a href="/locations">Locations →</a>' },
+  { q: 'What deposit and cancellation policy apply?', a: '50% deposit to confirm; balance the day before. Full refund 14+ days out, 50% at 7–13 days, none under 7 days. <a href="/cancellation">Policy →</a>' },
+  { q: 'Can honeymooners book multi-night romantic dining?', a: 'Yes — combine one signature romantic dinner with a <a href="/private-chef-bali">daily private chef</a> or see <a href="/honeymoon-chef">honeymoon chef</a>.' },
+  { q: 'How do I book a romantic private chef dinner in Bali?', a: 'WhatsApp date, villa area and menu preference (or surprise brief). Fixed quote within hours; 50% locks the evening. <a href="/quote">Quote →</a>' },
+  { q: 'What if it rains on an outdoor terrace setup?', a: 'We plan covered dining or move indoors if the villa allows. Weather is designed into the setup plan, not improvised at service time.' },
+  { q: 'Can we add a photographer or live musician?', a: 'Yes as optional add-ons coordinated around courses so photography and music do not interrupt plating.' },
+  { q: 'Is this different from restaurant private dining in Bali?', a: 'You stay in your villa — no transfers, no other tables, full privacy. The kitchen comes to you with a brigade and tasting pacing.' },
+  { q: 'Can kids be present during a romantic dinner?', a: 'Possible with early kids’ service and a quieter adult tasting after, or a separate <a href="/kids-menus">kids menu</a> night. Pure couple evenings usually run without children at the table.' },
+  { q: 'What if the team is delayed or unavailable?', a: 'We send a verified replacement or refund. Your night is protected. <a href="/why-mychef">Why myCHEF →</a>' },
 ]
 
 export default function RomanticDinnerPage() {
@@ -513,7 +525,7 @@ export default function RomanticDinnerPage() {
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
             <h2 className="text-3xl md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>Common Questions</h2>
           </div>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

@@ -46,24 +46,84 @@ const STEPS = [
 
 const FAQS = [
   {
-    q: 'What is the minimum group size?',
-    a: 'The Three-Course Collection starts at 6 guests. The lighter format is built for groups — casual villa lunches, family dinners and easy celebration meals where a full tasting menu would be too much. For a more formal evening, see our private chef service in Bali.',
+    q: 'How much does three-course villa dining cost in Bali?',
+    a: 'Three-course menus start from about <strong>IDR 850K per guest ++</strong>. Compare formats on <a href="/dining-styles">dining styles</a> and full rates on <a href="/pricing">pricing</a>.',
   },
   {
-    q: 'How long does the service take?',
-    a: 'Allow 1.5 to 2 hours from first plate to dessert. Your chef arrives early to set up and leaves your kitchen spotless.',
+    q: 'What is the minimum group size for three-course menus?',
+    a: 'The collection typically starts at about 6 guests — built for casual villa lunches, family dinners and easy celebrations. For tasting-level formality see <a href="/fine-dining">fine dining</a> or <a href="/private-chef-bali">private chef</a>.',
   },
   {
-    q: 'Can the menus be adapted for dietary requirements?',
-    a: 'Yes. Most menus adapt for vegetarian, vegan, gluten-free and halal needs, and several are halal-friendly as written. Tell us about allergies when you enquire and we adjust the menu before your date.',
+    q: 'How long does three-course service take?',
+    a: 'Allow 1.5–2 hours from first plate to dessert. The chef arrives early to set up and leaves the kitchen spotless.',
+  },
+  {
+    q: 'Can three-course menus be adapted for dietary requirements?',
+    a: 'Yes — vegetarian, vegan, gluten-free, allergy and many halal-friendly paths. Tell us when you enquire so we redesign before the date.',
+  },
+  {
+    q: 'Three-course vs fine dining tasting menu — which should I pick?',
+    a: 'Three-course is lighter and faster for relaxed groups. Five-course tasting is the full show. Browse <a href="/fine-dining/tasting-menu">tasting menu</a> and <a href="/fine-dining/menus">set menus</a>.',
+  },
+  {
+    q: 'Can we add kids’ plates to a three-course dinner?',
+    a: 'Yes — pair with <a href="/kids-menus">kids menus</a> so children eat early while adults keep the full three courses.',
   },
   {
     q: 'Which areas of Bali do you serve?',
-    a: 'Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua and beyond. Send your villa location on WhatsApp and we confirm any travel fee before you book.',
+    a: 'Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua and beyond. Remote travel fees are quoted upfront. <a href="/locations">Locations →</a>',
   },
   {
     q: 'How do I secure my date?',
-    a: 'A 50% deposit secures your date, chef and menu; the balance is due the day before the event. Message us your date, guest count and villa — we confirm availability within the hour.',
+    a: '50% deposit locks date, chef and menu; balance due the day before. WhatsApp date, guests and villa — availability usually within the hour.',
+  },
+  {
+    q: 'What does "++" mean on three-course prices?',
+    a: '11% government tax + 10% service charge. Quotes show the all-in total before you pay.',
+  },
+  {
+    q: 'Is wine included?',
+    a: 'No. BYO is fine, or add service staff / bartender via <a href="/in-villa-service">in-villa service</a>.',
+  },
+  {
+    q: 'Do you clean up after three-course service?',
+    a: 'Yes — full kitchen cleanup is included.',
+  },
+  {
+    q: 'Can this work for lunch as well as dinner?',
+    a: 'Yes. Three-course is popular for villa lunches and early dinners when a full tasting would feel heavy.',
+  },
+  {
+    q: 'How far in advance should I book?',
+    a: 'A few days is usually enough; peak season and large groups need more lead time. Last-minute is often possible.',
+  },
+  {
+    q: 'What if guest count changes?',
+    a: 'Confirm final numbers about 48 hours ahead. We adjust portions and staffing; large jumps may affect minimums.',
+  },
+  {
+    q: 'Can we upgrade to BBQ or fine dining later in the stay?',
+    a: 'Yes — many groups book three-course mid-week and <a href="/bbq-grill">BBQ</a> or <a href="/fine-dining">fine dining</a> for a celebration night.',
+  },
+  {
+    q: 'Is this the same as daily private chef hire?',
+    a: 'No. Three-course is a menu collection for one sitting. Multi-day cooking uses <a href="/private-chef-bali">private chef day rates</a>.',
+  },
+  {
+    q: 'What is the cancellation policy?',
+    a: 'Full refund 14+ days before, 50% at 7–13 days, none under 7 days. <a href="/cancellation">Full policy →</a>',
+  },
+  {
+    q: 'How do I book three-course dining with myCHEF?',
+    a: 'Message WhatsApp with date, guest count, villa area and any dietary notes — or <a href="/quote">request a quote</a>.',
+  },
+  {
+    q: 'Can vegetarians and meat-eaters share one three-course evening?',
+    a: 'Yes. We run parallel mains so the table stays together without forcing one diet on everyone.',
+  },
+  {
+    q: 'Do you bring tableware?',
+    a: 'Service formats include what the menu needs; villa tableware is often used for lighter dinners. Confirm on your quote.',
   },
 ]
 
@@ -301,7 +361,7 @@ export default function ThreeCoursePage() {
             <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
             <h2 className="font-playfair text-3xl md:text-5xl text-white">Three-Course Dining FAQ</h2>
           </div>
-          <FAQAccordion items={FAQS} dark />
+          <FAQAccordion items={FAQS} dark defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

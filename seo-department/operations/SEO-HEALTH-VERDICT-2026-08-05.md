@@ -76,13 +76,13 @@ By device — **mobile is faster than desktop**, which matters because Google in
 
 ## 3. What was actually broken, and is now fixed
 
-Committed in `10bfbe76` and `600f1348`.
+Committed in `10bfbe76`, `600f1348`, `171259cb`, `b168ec69` and `5df93727` — all deployed and verified live.
 
-**Nine pages were invisible to Google.** Live, indexable, internally linked — but absent from the sitemap *and* from the prerender pass, meaning crawlers received an empty shell. Seven substantial blog pages, `/pricing-calculator`, and `/partner`. Adding them to `sitemap.ts` fixes both problems at once, because `inject-meta` and `prerender` both read from that array.
+**Eight pages were invisible to Google.** Live, indexable, internally linked — but absent from the sitemap *and* from the prerender pass, meaning crawlers received an empty shell. Seven substantial blog pages plus `/partner`. Adding them to `sitemap.ts` fixes both problems at once, because `inject-meta` and `prerender` both read from that array. (`/pricing-calculator` was a ninth candidate but is held back until its prices are reconciled — see §5 and D-030.)
 
 **Twelve internal links pointed at 404s.** All slug typos where the real page exists under a different name — `/staffing/placement` (5 links), `/catering/bbq` (2), and five others. Sitewide links into dead ends waste crawl budget and leak nothing back.
 
-**Two newly-submitted pages had zero inbound links.** `/partner` and `/pricing-calculator`. Submitting a page to Google with no internal links is a weak signal. Both now have contextual links, and the footer's "Price Calculator" was moved off `/calculator` (which is `noindex`) onto the indexable `/pricing-calculator` — every page on the site was spending a footer slot on a URL Google is told to ignore.
+**`/partner` had zero inbound links.** Submitting a page to Google with no internal links is a weak signal; it now has a contextual link from `/staffing/for-villa-managers`, a related audience with a distinct offer. The footer's "Price Calculator" briefly pointed at `/pricing-calculator` and was reverted to `/calculator` once that page left the prerender set — see §5.
 
 **A 301 dead-ended on a noindex page.** `/private-chef-booking-indonesia` → `/quote`, which is `noindex,follow`. Repointed to `/chef-for-hire-indonesia` — same intent, indexable.
 

@@ -119,30 +119,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'How far ahead should I book a villa dinner party chef?',
-    answer: '1–2 weeks in advance is ideal and gives us the most time to design your menu, source premium ingredients, and assign the right chef for your occasion. We can accommodate requests with as little as 48 hours notice depending on availability — contact us directly for urgent bookings.',
-  },
-  {
-    question: "What's included in the dinner party package?",
-    answer: 'Everything needed for the evening: the chef, all fresh ingredients, cooking equipment, full table service throughout dinner, and complete post-dinner cleanup. You do not need to provide anything beyond your villa kitchen and the dining space. Tableware and glassware can be discussed during the planning call.',
-  },
-  {
-    question: 'Can I choose the menu?',
-    answer: '100%. Every menu is designed around your brief — your preferences, your guests\' dietary requirements, your preferred cuisine style, and the atmosphere you want to create. We present a draft menu proposal and refine it through one or two rounds of feedback until it is exactly right.',
-  },
-  {
-    question: 'How many guests can you cater for at a villa dinner?',
-    answer: 'We cater villa dinner parties from 4 to 30 guests comfortably. For groups of 4–12 we typically recommend plated service. For 12–20 we often suggest family-style sharing. For 20–30 a hybrid format works best. We adjust the service format and staffing based on your final guest count.',
-  },
-  {
-    question: 'Do you supply tableware and décor?',
-    answer: 'We supply all service equipment: serving platters, utensils, and everything the kitchen needs. For tableware (plates, glassware, cutlery) and décor, we can coordinate with our trusted Bali suppliers on request — this is a common add-on for events where the villa tableware is not sufficient or where the host wants a specific aesthetic.',
-  },
-  {
-    question: 'What does a private villa dinner party cost in Bali?',
-    answer: 'Private villa dinner parties start from IDR 700,000 per person for a 3-course menu, and from IDR 750,000 per person for a 5-course menu. Final pricing depends on guest count, menu complexity, and any additional service staff required. We send a detailed quote with your bespoke menu proposal — typically within 2 hours of your enquiry.',
-  },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
+  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { question: 'How far in advance should I book?', answer: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { question: 'Do you clean up after service?', answer: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { question: 'What if a chef or staff member cannot make it?', answer: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const RELATED_PAGES = [

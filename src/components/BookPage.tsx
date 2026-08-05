@@ -71,14 +71,26 @@ export default function BookPage() {
         ogImage={getPageMeta('book').ogImage}
         noindex
         jsonLd={[breadcrumbSchema('Book', getPageMeta('book').canonical), faqPageSchema([
-          { question: 'How do I book a private chef in Bali?', answer: 'WhatsApp your date, villa location and guest count. We reply within about an hour and send a proposal within 24 hours. Or start from the service cards on this page — fine dining, catering, events, in-villa staff or long-term staffing.' },
-          { question: 'How far in advance do I need to book?', answer: 'A few days for most dinners; 3–7+ days for catering and events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
-          { question: 'Do you serve villas outside Seminyak and Canggu?', answer: 'Yes — island-wide including Ubud, Uluwatu, Sanur, Nusa Dua, Pererenan and beyond. Share your pin when booking. See /locations.' },
-          { question: 'What is included in the price?', answer: 'Depends on service: daily private chef is a day rate with groceries at cost; fine dining and many catering packages include ingredients, chef team, setup and cleanup. Your quote lists every line before deposit.' },
-          { question: 'What deposit confirms a booking?', answer: 'Usually 50% to lock date and team; balance due the day before. See /cancellation for refund tiers.' },
-          { question: 'Can I book multiple services in one message?', answer: 'Yes — chef + bartender + transport is common. We return one coordinated plan and quote.' },
-          { question: 'Do you handle dietary requirements at booking?', answer: 'Yes — tell us allergies and diets in the first message so menus are designed correctly from the start.' },
-          { question: 'Is this booking page the same as getting a quote?', answer: 'This page routes you to the right service and WhatsApp path. /quote is available when you want a structured proposal form.' },
+          { question: 'How do I book a private chef in Bali?', answer: 'WhatsApp your date, villa location and guest count. We reply within about an hour and send a proposal within 24 hours. Or use the service cards on this page.' },
+          { question: 'How far in advance do I need to book?', answer: 'A few days for most dinners; 3–7+ days for catering and events; longer for peak season and weddings. Last-minute is often possible.' },
+          { question: 'Do you serve villas outside Seminyak and Canggu?', answer: 'Yes — island-wide. Share your pin when booking. <a href="/locations">Locations →</a>' },
+          { question: 'What is included in the price?', answer: 'Depends on service: daily private chef is a day rate with groceries at cost; fine dining and many catering packages include ingredients, chef team, setup and cleanup.' },
+          { question: 'What deposit confirms a booking?', answer: 'Usually 50% to lock date and team; balance due the day before. <a href="/cancellation">Cancellation →</a>' },
+          { question: 'Can I book multiple services in one message?', answer: 'Yes — chef + bartender + transport is common.' },
+          { question: 'Do you handle dietary requirements at booking?', answer: 'Yes — tell us allergies and diets in the first message.' },
+          { question: 'Is this the same as getting a quote?', answer: 'This page routes you to the right service; <a href="/quote">quote</a> is available for structured proposals.' },
+          { question: 'Which service should I choose?', answer: 'Use <a href="/recommended-services">recommended services</a> or <a href="/dining-styles">dining styles</a> if unsure.' },
+          { question: 'Fine dining booking?', answer: 'Start on <a href="/fine-dining">fine dining</a> or WhatsApp tasting preferences.' },
+          { question: 'Catering booking?', answer: '<a href="/catering">Catering hub</a>.' },
+          { question: 'Events and weddings?', answer: '<a href="/events">Events</a> · <a href="/events/weddings">weddings</a>.' },
+          { question: 'Staff only?', answer: '<a href="/in-villa-service">In-villa service</a> · <a href="/staffing">staffing</a>.' },
+          { question: 'Daily chef rates?', answer: 'From IDR 1M++/day — <a href="/private-chef-bali">private chef Bali</a>.' },
+          { question: 'Payment methods?', answer: 'Bank transfer and cards as invoiced.' },
+          { question: 'Response time?', answer: 'Usually within 2 hours on WhatsApp.' },
+          { question: 'Business hours?', answer: 'Typically 08:00–22:00 WITA.' },
+          { question: 'Contact details?', answer: 'WhatsApp +62 896-7407-2020 · bali@mychef.id · <a href="/contact">contact</a>.' },
+          { question: 'More FAQs?', answer: '<a href="/faq">FAQ hub</a>.' },
+          { question: 'Why book myCHEF?', answer: '<a href="/why-mychef">Why myCHEF</a> · <a href="/reviews">reviews</a>.' }
         ])]}
       />
 

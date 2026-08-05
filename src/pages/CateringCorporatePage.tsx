@@ -205,6 +205,18 @@ const FAQS = [
   { q: 'How far in advance should we book corporate catering?', a: 'Two to four weeks is ideal for most corporate catering. For conferences of 100+ guests, one to two months secures the best team and logistics.' },
   { q: 'Do you cater at offices and venues, or only villas?', a: 'All three — offices, villas, co-working spaces, hotels and conference venues, Bali-wide. For recurring office lunches, see our drop-off catering service.' },
   { q: 'Can you do last-minute corporate catering?', a: 'Small-group corporate orders are often possible within 24–48 hours. Larger productions need a few days to a week, with a dedicated event manager assigned.' },
+  { q: 'How much does catering in Bali cost?', a: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { q: 'What formats do you offer?', a: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { q: 'Is catering the same as private chef hire?', a: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Do prices include staff and cleanup?', a: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { q: 'Can you cook in an Airbnb villa?', a: 'Yes with a workable kitchen — share the listing when booking.' },
+  { q: 'Minimum guest counts?', a: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { q: 'Can menus be customised?', a: 'Yes — proteins, spice, diets locked before shopping.' },
+  { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront.' },
+  { q: 'Can we add bartenders?', a: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { q: 'Kids and allergies?', a: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { q: 'How do I book catering?', a: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { q: 'Rain plan?', a: 'Covered setups and indoor pivots planned ahead.' },
 ]
 
 export default function CateringCorporatePage() {
@@ -751,7 +763,7 @@ export default function CateringCorporatePage() {
       <section className="py-20 md:py-28 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="FAQ" title="Corporate Catering FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={5} />
+          <FAQAccordion items={FAQS} defaultOpenCount={5} showToc ctaEvery={5} />
         </div>
       </section>
 

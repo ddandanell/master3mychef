@@ -77,6 +77,19 @@ const FAQS = [
   { q: 'Do you provide the cake and decorations?', a: 'A standard cake (chocolate or vanilla, single tier, name in icing) is included in both formats. Custom tiered cakes (+IDR 2–4M), themed decor (+IDR 3.5–7.5M) and entertainment are add-ons — we coordinate trusted suppliers so everything arrives on one timeline.' },
   { q: 'What happens if it rains?', a: 'We plan a covered or indoor fallback for every outdoor setup — same menu, same styling, moved inside the villa or under cover. BBQ service shifts to a sheltered area; the party continues.' },
   { q: 'How do deposits and cancellation work?', a: 'A 50% deposit confirms your date and locks your chef team. Cancellation: 14+ days before the event, full refund; 7–13 days before, 50% refund; under 7 days, no refund. Booking lead times: 7 days for dinners, 10–14 days for villa parties.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
+  { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { q: 'What does "++" mean on prices?', a: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
 ]
 
 const STAFFING_POINTS = [
@@ -362,7 +375,7 @@ export default function EventsBirthdaysPage() {
       <section className="py-20 md:py-28 bg-white birthday-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Birthday Catering Bali — FAQ" subtitle="Common questions about booking birthday parties with myCHEF." />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

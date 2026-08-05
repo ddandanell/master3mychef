@@ -94,50 +94,26 @@ const TIMELINE = [
 ]
 
 const FAQS = [
-  {
-    q: 'How do I request a private chef in Bali?',
-    a: 'The fastest way is to message us on WhatsApp with your date, villa area, guest count, and cuisine preferences. We reply within 1 hour and send a full proposal within 24 hours. You can also fill in the quote form on our website if you prefer.',
-  },
-  {
-    q: 'How much notice do I need to give?',
-    a: 'For small dinners (2–6 guests), 48 hours is often fine. For larger catering or events, 1 week gives us time to source specialty ingredients and lock your preferred chef. Weddings and events over 30 guests should be booked 2+ weeks out.',
-  },
-  {
-    q: 'What information do I need to provide when booking?',
-    a: 'We need your villa name or area, your event date and time, guest count, any dietary requirements or allergies, and a general idea of the cuisine style or occasion. The more context you share, the better we can tailor the proposal.',
-  },
-  {
-    q: 'Can I request a specific chef?',
-    a: 'Yes. Visit the chefs page to browse our lead profiles, then mention your preference when you message us. We will confirm availability and let you know if that chef is a good match for your event style and size.',
-  },
-  {
-    q: 'What if I have guests with dietary requirements?',
-    a: 'All dietary needs are handled as standard — vegan, gluten-free, nut allergies, halal, and more. Share the requirements when you enquire and the chef will design a menu that works for every guest at the table.',
-  },
-  {
-    q: 'Is there a minimum booking?',
-    a: 'We work with groups from 2 upward. For intimate dinners, our private chef experience starts with a 3-course set menu. For very large events or wedding catering, get in touch and we will scope it properly.',
-  },
-  {
-    q: 'How is payment handled?',
-    a: 'We take a 50% deposit to confirm your booking and lock the chef and team. The remaining 50% is due the day before the event. We accept bank transfer and most major payment methods.',
-  },
-  {
-    q: 'What if I\'m not sure exactly when I need the service?',
-    a: 'You don\'t need to commit to a specific date. Tell us your rough window (e.g., "mid-July") and we\'ll confirm availability once you decide.',
-  },
-  {
-    q: 'Can I change the menu after I book?',
-    a: 'Yes. You can request changes up to 48 hours before service. The chef will work with you to adjust courses, proteins, spice level, or ingredients.',
-  },
-  {
-    q: 'What if there\'s a problem during the service?',
-    a: 'The chef team handles it in the moment. If something isn\'t right, we address it immediately and offer alternatives. We also follow up the next day to ensure you were happy.',
-  },
-  {
-    q: 'Do I need to have anything ready at my villa?',
-    a: 'No. We bring everything except a working kitchen and basic equipment (cutting boards, pots, pans). We provide aprons, service gear, and specialty equipment if needed.',
-  },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
+  { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { q: 'What does "++" mean on prices?', a: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { q: 'Which areas of Bali do you cover?', a: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { q: 'How far in advance should I book?', a: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { q: 'Can you accommodate allergies and special diets?', a: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { q: 'Do you clean up after service?', a: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { q: 'How do I get a quote?', a: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { q: 'What if a chef or staff member cannot make it?', a: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 export default function GettingStartedPage() {

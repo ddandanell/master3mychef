@@ -27,9 +27,26 @@ export default function CertifiedPartnerPage() {
         canonical={canonical}
         ogImage={`${SITE}/generated/mychef-misc-bali-about-best-partner-2026.webp`}
         jsonLd={[breadcrumbSchema(niceName, canonical), faqPageSchema([
-          { question: 'What does myCHEF Certified Partner mean?', answer: 'A myCHEF Certified Partner villa has completed at least 10 verified myCHEF private dining events, maintains a 4.8+ guest rating, and is officially recognised for excellence in Michelin-level private dining execution in Bali.' },
-          { question: 'How does a villa become a myCHEF Certified Partner?', answer: 'Villas earn certified partner status by consistently hosting successful myCHEF private dining events, maintaining high guest satisfaction scores, and meeting our service and quality standards over 12+ months.' },
-          { question: 'Can guests book myCHEF dining at any Certified Partner villa?', answer: 'Yes — if you are staying at a myCHEF Certified Partner villa, our team is pre-approved to cook and serve on the property. Book via WhatsApp at +62 896-7407-2020.' },
+          { question: 'What does myCHEF Certified Partner mean?', answer: 'A Certified Partner villa has completed verified myCHEF private dining events, maintains high guest standards, and is recognised for private dining execution in Bali.' },
+          { question: 'How does a villa become a Certified Partner?', answer: 'By consistently hosting successful myCHEF services, maintaining guest satisfaction, and meeting quality standards over time.' },
+          { question: 'Can guests book myCHEF at any Certified Partner villa?', answer: 'Yes — if you stay at a partner villa, our team is pre-approved to cook and serve. Book via WhatsApp +62 896-7407-2020.' },
+          { question: 'Does partnership guarantee availability?', answer: 'Partners get priority coordination; peak dates still require early booking.' },
+          { question: 'What services can partners offer guests?', answer: 'Private chef, fine dining, catering, BBQ, staffing and experiences. <a href="/services">Services →</a>' },
+          { question: 'Is there a fee for guests at partner villas?', answer: 'Guest pricing follows published myCHEF rates — partnership is operational, not a guest surcharge.' },
+          { question: 'How do villa managers join?', answer: 'Contact partnerships via WhatsApp/email with villa details. <a href="/partner">Partner →</a>' },
+          { question: 'Marketing support for partners?', answer: 'Co-branded guest messaging and preferred listing opportunities as programmes allow.' },
+          { question: 'Quality standards required?', answer: 'Kitchen readiness, access logistics, guest communication and feedback loops.' },
+          { question: 'Can multi-villa groups join?', answer: 'Yes — portfolio partnerships available.' },
+          { question: 'Areas covered?', answer: 'Island-wide villa markets. <a href="/locations">Locations →</a>' },
+          { question: 'Guest reviews?', answer: 'See <a href="/reviews">reviews</a>.' },
+          { question: 'Private chef day rates for partner stays?', answer: '<a href="/private-chef-bali">Private chef Bali</a>.' },
+          { question: 'Events and weddings at partner villas?', answer: 'Yes — <a href="/events/weddings">wedding catering</a> with venue rules respected.' },
+          { question: 'Staffing support for partners?', answer: '<a href="/staffing">Staffing</a> and <a href="/in-villa-service">in-villa service</a>.' },
+          { question: 'How fast is guest booking confirmation?', answer: 'Usually within hours on WhatsApp.' },
+          { question: 'Dietary handling?', answer: 'Standard myCHEF allergy protocols apply.' },
+          { question: 'Cancellation for guest bookings?', answer: '<a href="/cancellation">Cancellation policy</a>.' },
+          { question: 'Difference vs marketplace chefs?', answer: 'Supervised teams, backup cover, fixed quotes. <a href="/why-mychef">Why myCHEF →</a>' },
+          { question: 'How to verify a villa is certified?', answer: 'Ask the villa or confirm with myCHEF on WhatsApp before booking.' }
         ])]}
       />
 

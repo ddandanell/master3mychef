@@ -66,6 +66,20 @@ const FAQS = [
   { question: 'Do you provide service staff for retreats?', answer: 'Yes. We provide chefs, kitchen assistants, and service staff as needed. For larger retreats, we can also provide bartenders and event coordinators.' },
   { question: 'Can you set up a juice or smoothie bar?', answer: 'Yes. Fresh-pressed juice bars, smoothie stations, and specialty coffee service are popular additions to retreat catering. We source local tropical fruits and organic ingredients.' },
   { question: 'What is the pricing for retreat catering?', answer: 'Retreat programmes are priced per group, length and menu. Contact us for a tailored proposal with a fixed quote.' },
+  { question: 'Corporate catering price range?', answer: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { question: 'NPWP invoices?', answer: 'Yes on request.' },
+  { question: 'Multi-day retreats?', answer: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
+  { question: 'Guest counts?', answer: 'From leadership dinners to 100–200+ programmes.' },
+  { question: 'Dietary for mixed teams?', answer: 'Yes when headcount by diet is shared.' },
+  { question: 'Villa and venue work?', answer: 'Yes — share access rules.' },
+  { question: 'Bartenders and waiters?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'Case studies?', answer: 'Yes — <a href="/corporate-case-studies">case studies</a>.' },
+  { question: 'Book from overseas?', answer: 'Yes — WhatsApp/email planning before arrival.' },
+  { question: 'Headcount changes?', answer: 'Re-quoted in writing with notice.' },
+  { question: 'Alcohol?', answer: 'BYO or sourced at cost.' },
+  { question: 'How to start?', answer: 'Share dates, headcount, venues, meal map — <a href="/quote">quote</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
 ]
 
 const RELATED_PAGES = [

@@ -33,30 +33,26 @@ const breadcrumbs = breadcrumbSchema(
 )
 
 const faqs = [
-  {
-    q: 'Can your chefs cook for guests with a severe nut allergy?',
-    a: 'Yes. When a nut allergy is disclosed at booking, the chef uses completely separate equipment — cutting boards, knives, pans, and utensils — that have never contacted nuts. No nut-containing ingredients enter the kitchen that day. We recommend disclosing severity (anaphylactic vs. intolerance) so we can calibrate the level of isolation.',
-  },
-  {
-    q: 'Do you accommodate halal dietary requirements?',
-    a: 'Yes. myCHEF chefs source halal-certified meat and poultry for bookings requiring halal meals. Pork and alcohol are excluded from the entire menu. Guests can confirm halal requirements at booking; no premium applies.',
-  },
-  {
-    q: 'Can the chef cook a fully gluten-free menu?',
-    a: 'Yes. Our chefs are trained to identify hidden gluten sources — soy sauce, marinades, stock cubes, and flour-dusted proteins. For coeliac-severity gluten intolerance, the chef uses clean, dedicated cookware and avoids cross-contact throughout prep and service.',
-  },
-  {
-    q: 'What if my group has multiple conflicting dietary requirements?',
-    a: 'Mixed dietary groups are the norm, not the exception. The typical booking includes omnivores, one or two vegetarians, and a child with a preference or intolerance. The chef plans a menu with a shared base where possible and modifies individual components. No extra charge for standard dietary variations.',
-  },
-  {
-    q: 'How do I communicate my dietary requirements to the chef?',
-    a: "At booking via WhatsApp, tell us: every allergy (severity included), every intolerance, every hard exclusion, every dietary category (vegan, halal, keto, etc.), and any personal dislikes. The chef receives this before shopping. You'll review and approve the proposed menu before the booking is confirmed.",
-  },
-  {
-    q: 'Are your chefs HACCP certified?',
-    a: 'Yes. All myCHEF chefs hold HACCP (Hazard Analysis Critical Control Points) certification. This covers temperature control, cross-contamination prevention, allergen separation, and food handling hygiene — the same standard used in commercial food production.',
-  },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
+  { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { q: 'What does "++" mean on prices?', a: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { q: 'Which areas of Bali do you cover?', a: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { q: 'How far in advance should I book?', a: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { q: 'Can you accommodate allergies and special diets?', a: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { q: 'Do you clean up after service?', a: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { q: 'How do I get a quote?', a: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { q: 'What if a chef or staff member cannot make it?', a: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const faqSchema = faqPageSchema(faqs.map(({ q, a }) => ({ question: q, answer: a })))

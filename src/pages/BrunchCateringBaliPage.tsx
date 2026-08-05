@@ -83,31 +83,26 @@ All pricing includes ingredients, chef, and light service. Alcohol and cocktail 
 ]
 
 const faqs = [
-  {
-    question: 'What is the typical timing for a private chef brunch in Bali?',
-    answer:
-      'Most villa brunches run between 9am and 1pm. For occasion events (post-wedding, birthday), 11am--2pm tends to work well as guests sleep later after a celebration. The chef arrives 1.5--2 hours before the first dish is served. We confirm exact timing at booking and brief the team accordingly.',
-  },
-  {
-    question: 'Can we have a bottomless brunch with cocktails?',
-    answer:
-      "Yes. We offer a cocktail brunch add-on that includes a mixologist managing a dedicated brunch bar -- typically mimosas, bellinis, Aperol spritz, and a signature brunch cocktail. Clients supply their own alcohol; the mixologist brings everything else. This works well for celebrations and hen parties. It's priced per person on top of the brunch food package.",
-  },
-  {
-    question: 'Can we book a private chef brunch for a single morning during our villa stay?',
-    answer:
-      'Absolutely. Brunch catering is available as a one-off booking -- you do not need to commit to a full chef stay. Many guests on multi-day villa holidays book a private brunch for a special morning (a birthday, a farewell day) and handle other meals themselves. Minimum booking is 4 guests.',
-  },
-  {
-    question: 'Is a private brunch different from hiring a chef for daily meals?',
-    answer:
-      'Daily chef service covers all meals throughout the day. A private brunch booking is for the morning meal only -- the chef arrives, prepares and serves brunch, and departs after cleanup. This is a more flexible and lower-commitment option for guests who want an exceptional morning experience without full-day service.',
-  },
-  {
-    question: 'Can the brunch menu accommodate guests with dietary requirements?',
-    answer:
-      'Yes. Dietary requirements are incorporated into the menu design from the start. We regularly cater vegan, gluten-free, dairy-free, halal, and nut-free brunches. For groups with mixed requirements, the chef designs a core menu that works for the majority and adapts specific elements per guest. Share all requirements at booking.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

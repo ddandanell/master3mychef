@@ -77,36 +77,26 @@ Our gluten-free service goes further than most:
 ]
 
 const faqs = [
-  {
-    question: 'Can you cook for a group with multiple different dietary requirements?',
-    answer:
-      'Yes, this is our standard operating mode. Mixed groups -- where some guests eat everything, some are vegan, one is coeliac, and another keeps halal -- are very common. We design each course so that every guest receives an excellent version appropriate to their diet. Nobody eats a lesser meal.',
-  },
-  {
-    question: 'How do you handle coeliac disease specifically?',
-    answer:
-      'For coeliac disease, we treat it as a medical requirement rather than a preference. Separate preparation surfaces, dedicated utensils, careful review of all sauces and condiments for hidden gluten sources (soy sauce, commercial stocks, spice blends), and explicit awareness of cross-contamination risk. We discuss the severity with you during the consultation.',
-  },
-  {
-    question: 'Is vegan food in Bali actually good, or is it a compromise?',
-    answer:
-      "Bali is one of the best places in the world to eat plant-based food. The produce is extraordinary: tropical fruits, highland vegetables, fresh herbs, tempeh, tofu, coconut in every form. Our vegan menus are not compromises -- they are menus designed around what Bali's ingredients do best. Many guests who are not vegan prefer the plant-based options.",
-  },
-  {
-    question: 'Can you source halal-certified meat in Bali?',
-    answer:
-      "Yes. Bali has established halal-certified suppliers for beef, chicken, and lamb. Indonesia is a Muslim-majority country and halal sourcing infrastructure exists across the island. We source from certified suppliers and can provide documentation on request.",
-  },
-  {
-    question: 'Do you offer daily service for guests following keto or specific dietary protocols for an extended stay?',
-    answer:
-      "Yes. Daily chef service with a consistent dietary specification is one of our most popular offerings for health-conscious guests. We provide breakfast and dinner (or all three meals) across your stay, with a rotating menu that stays within your dietary parameters. Full nutritional information is available on request.",
-  },
-  {
-    question: 'What areas do you cover for dietary-specific chef service?',
-    answer:
-      'All major Bali villa areas: Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Nusa Dua, Sanur, Pererenan, and surrounding areas. Ubud has a particularly strong plant-based and wellness cooking tradition and is our most-requested location for vegan and health-specific menus.',
-  },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
+  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { question: 'How far in advance should I book?', answer: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { question: 'Do you clean up after service?', answer: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { question: 'What if a chef or staff member cannot make it?', answer: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const relatedPages = [

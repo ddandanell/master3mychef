@@ -9,30 +9,26 @@ const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Canggu. Can you send a menu proposal?')
 
 const FAQS = [
-  {
-    q: 'Which part of Canggu is best for eating out?',
-    a: 'Batu Bolong for variety and nightlife energy, Echo Beach for sunset seafood, Berawa for boutique wine-bar dining, and the Babakan lanes for cheap, excellent local warungs.',
-  },
-  {
-    q: 'Do Canggu restaurants take reservations?',
-    a: 'Many of the popular dinner spots do — and the best ones need them, especially for groups. Walk-ins at 7–8pm on Batu Bolong often mean a wait.',
-  },
-  {
-    q: 'How much does private dining in Canggu cost?',
-    a: 'In-villa dinners start from IDR 700K per person, BBQ catering from IDR 700K–800K, and weekly chef service from IDR 900K++ per day at the weekly rate — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
-  },
-  {
-    q: 'Is a villa dinner worth it versus eating out in Canggu?',
-    a: 'For groups of six or more, usually yes: one fixed price covers menu, chef, shopping, cooking and clean-up, with no queues, no split tables and no scooter ride home.',
-  },
-  {
-    q: 'Can you handle vegan, gluten-free or high-protein diets?',
-    a: 'Yes — Canggu bookings are our most dietary-diverse. Menus are planned around your requirements before we shop.',
-  },
-  {
-    q: 'How far ahead should I book?',
-    a: 'A few days is ideal; same-day is often possible for dinners. Weekly services and retreats should be arranged at least a week ahead.',
-  },
+  { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
+  { q: 'Same prices as other areas?', a: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { q: 'Fine dining available here?', a: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { q: 'BBQ and parties?', a: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { q: 'Daily chef for a week?', a: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'Staff and bartenders?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'How far ahead to book here?', a: 'A few days typical; peak season longer.' },
+  { q: 'Last-minute possible?', a: 'Often yes — WhatsApp the area and date.' },
+  { q: 'Kids-friendly service?', a: 'Yes — <a href="/kids-menus">kids menus</a>.' },
+  { q: 'How to book for this area?', a: 'WhatsApp villa pin, dates and guests — <a href="/book">book</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const SCENE = [

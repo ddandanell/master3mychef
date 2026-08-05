@@ -159,30 +159,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'Is plated service more expensive than buffet in Bali?',
-    answer: 'Yes — typically 20–35% more per person. Plated service requires more prep time, a higher chef-to-guest ratio for simultaneous service, and more service staff per table. The premium is worth it for intimate events of 2–12 where presentation is central to the experience.',
-  },
-  {
-    question: 'What is the minimum group size for buffet catering?',
-    answer: 'Buffet catering makes practical and economic sense from 8 guests upward. Below 8, the setup effort (serving tables, chafing dishes, labeling, display) outweighs the benefit. Smaller groups are better served by plated or family-style sharing.',
-  },
-  {
-    question: 'Which is better for a Bali villa wedding — buffet or plated?',
-    answer: 'It depends on guest count and budget. Under 20 guests: plated is the gold standard for weddings — intimate, elegant, photographable. 20–50 guests: a hybrid (plated entrée, buffet main, plated dessert) balances elegance with practicality. Above 50 guests: buffet or food stations are most efficient.',
-  },
-  {
-    question: 'What is family-style service and how does it differ from buffet?',
-    answer: "Family-style means large sharing platters are placed on the dining table and guests serve themselves — similar to how dishes are shared in Indonesian cuisine. Unlike a buffet (where guests go to a separate serving station), family-style keeps guests seated at the table throughout the meal. It combines the social warmth of sharing with the seated intimacy of a dinner party.",
-  },
-  {
-    question: 'Can myCHEF accommodate multiple dietary requirements in a plated format?',
-    answer: 'Yes, with advance notice. For 1–2 dietary variations in a group (e.g., one vegan, one gluten-free), the chef prepares separate plates and tracks every seat position. For groups with 3 or more distinct dietary tracks, we recommend buffet or family-style service — it is safer, less error-prone, and allows guests to self-select.',
-  },
-  {
-    question: 'How long does a plated dinner take vs a buffet?',
-    answer: 'A plated tasting menu of 4–6 courses runs 2.5–3.5 hours from first course to dessert, with 15–20 minute intervals between courses. A buffet dinner typically takes 1–2 hours from opening to guests finishing. If you have a time constraint, buffet or a shorter 3-course plated menu is more practical.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Villa formats are quoted per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

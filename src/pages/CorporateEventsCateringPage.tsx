@@ -33,36 +33,26 @@ const ARTICLE_SCHEMA = {
 }
 
 const FAQS = [
-  {
-    question: 'What is your minimum group size for corporate catering?',
-    answer:
-      'The minimum group size for corporate catering is 10 persons. We cater groups up to 200 guests across Bali, with volume pricing available for groups of 50 or more.',
-  },
-  {
-    question: 'Are you HACCP certified?',
-    answer:
-      'Yes. myCHEF holds full HACCP (Hazard Analysis and Critical Control Points) certification, which means our food handling, preparation, temperature management, and service procedures meet international food safety standards. This is a requirement for many corporate procurement policies and is a key reason companies with formal compliance obligations choose us.',
-  },
-  {
-    question: 'Can you cater a 3-day retreat with breakfast, lunch, and dinner daily?',
-    answer:
-      'Yes. We offer full-day packages covering all three meals for multi-day retreats. This includes a daily dietary brief, rotating menus to avoid fatigue across the programme, and a consistent service team for the duration of the event. Breakfast, working lunches, and gala dinners can all be scoped within a single package.',
-  },
-  {
-    question: 'How do you handle dietary surveys for large groups?',
-    answer:
-      'We send a standardised dietary form prior to the event. Our culinary team analyses responses and designs menus that accommodate allergies, religious requirements (halal, vegetarian, vegan), and personal preferences at scale — without running separate menus. This is standard for any group above 20 persons.',
-  },
-  {
-    question: 'Do you provide equipment, or does the venue need a kitchen?',
-    answer:
-      'We bring portable professional-grade equipment for venues without commercial kitchens — including induction stations, chafing sets, hot-holding units, and service equipment. A full kitchen is not required. We conduct a site assessment prior to the event to confirm what is needed and ensure service runs smoothly regardless of the venue.',
-  },
-  {
-    question: 'Can I get an NDA for executive client entertainment?',
-    answer:
-      'Yes. Full confidentiality agreements are available for executive dinners, client entertainment, and sensitive corporate events. We operate discreetly by default — our team does not discuss guest lists, event content, or company details. An NDA formalises that commitment and is available on request before confirming a booking.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'Corporate catering price range?', answer: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { question: 'NPWP invoices?', answer: 'Yes on request.' },
+  { question: 'Multi-day retreats?', answer: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
+  { question: 'Guest counts?', answer: 'From leadership dinners to 100–200+ programmes.' },
+  { question: 'Dietary for mixed teams?', answer: 'Yes when headcount by diet is shared.' },
+  { question: 'Villa and venue work?', answer: 'Yes — share access rules.' },
+  { question: 'Bartenders and waiters?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'Case studies?', answer: 'Yes — <a href="/corporate-case-studies">case studies</a>.' },
 ]
 
 const SECTIONS: PageSection[] = [

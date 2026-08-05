@@ -29,9 +29,21 @@ const FAQS = [
   { q: 'How quickly will myCHEF respond?', a: 'We typically reply within minutes on WhatsApp. For email enquiries, expect a response within a few hours during business hours.' },
   { q: 'Can I call instead of using WhatsApp?', a: 'Yes. You can call +62 896-7407-2020 directly. Our lines are open daily from 08:00 to 22:00 WITA.' },
   { q: 'What information should I include in my first message?', a: 'Let us know your name, the service you are interested in, your villa or location in Bali, group size, and preferred date. The more detail, the faster we can help.' },
-  { q: 'Do you have an office I can visit in Bali?', a: `Yes. Our office is at ${siteFacts.addressDisplay}. We serve all of Bali including Seminyak, Canggu, Ubud, Uluwatu, and Sanur.` },
+  { q: 'Do you have an office I can visit in Bali?', a: 'Yes. Our office is in Denpasar Selatan, Bali (full address on the footer). We serve all of Bali including Seminyak, Canggu, Ubud, Uluwatu, and Sanur. <a href="/locations">Locations →</a>' },
   { q: 'Can I email myCHEF instead?', a: 'Absolutely. Send detailed proposals or longer enquiries to bali@mychef.id and we will route them to the right coordinator.' },
   { q: 'What are your business hours?', a: 'We are open daily from 08:00 to 22:00 WITA (Bali time). WhatsApp messages outside these hours are answered first thing the next morning.' },
+  { q: 'Best way to book?', a: 'WhatsApp with date, guests, area and service — or <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices before messaging?', a: 'Published tables on <a href="/pricing">pricing</a> and day rates on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'Do you handle corporate enquiries?', a: 'Yes — mention multi-day schedule and NPWP invoice needs. <a href="/events/corporate">Corporate events →</a>' },
+  { q: 'Partner or villa manager enquiries?', a: 'Yes — see <a href="/partner">partner</a> pathways.' },
+  { q: 'Urgent same-day requests?', a: 'Often possible — message ASAP with location and guest count.' },
+  { q: 'Languages spoken?', a: 'English and Indonesian service.' },
+  { q: 'Can you call me back?', a: 'WhatsApp first is fastest; calls are arranged when needed.' },
+  { q: 'Where is the full FAQ?', a: 'Central hub: <a href="/faq">FAQ</a>.' },
+  { q: 'Which services can I book via contact?', a: 'Private chef, fine dining, catering, events, staffing and in-villa service. <a href="/services">Services →</a>' },
+  { q: 'What is the cancellation policy if I book?', a: 'Full refund 14+ days out, 50% at 7–13 days, none under 7 days. <a href="/cancellation">Policy →</a>' },
+  { q: 'Do you cover all Bali villa areas?', a: 'Yes. <a href="/locations">Locations →</a>' },
+  { q: 'How do I request a specific chef?', a: 'Ask when you message — team profiles on <a href="/chefs">chefs</a>.' },
 ]
 
 const CONCIERGES: Concierge[] = [
@@ -422,7 +434,7 @@ export default function ContactPage() {
       <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Contact FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
     </div>

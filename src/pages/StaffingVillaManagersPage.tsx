@@ -83,6 +83,25 @@ const HOW_IT_WORKS = [
 
 const FAQS = [
   { q: 'Can we get staff cover for villa check-in days / peak season?', a: 'Yes. Short-term cover teams are available through in-villa service while permanent roles are recruited.' },
+  { q: 'What staffing services do you offer in Bali?', a: 'Day-rate in-villa staff and long-term placement of chefs, managers, butlers and household teams. <a href="/staffing">Staffing</a> · <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'How fast is placement?', a: 'Often around 48 hours for roles with ready candidates; specialist searches take longer.' },
+  { q: 'Replacement guarantee?', a: 'Placement programmes typically include a replacement window (e.g. 30 days) in writing.' },
+  { q: 'Live-in vs live-out?', a: 'Live-in resides on property; live-out works set shifts. We help you choose.' },
+  { q: 'Background checks?', a: 'Candidates are interviewed, reference-checked and supervised through myCHEF systems.' },
+  { q: 'Can we hire staff without catering?', a: 'Yes for event staff. <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'Hotel and restaurant staffing?', a: 'Yes — <a href="/staffing/hotels">hotel staffing</a> and B2B kitchen solutions.' },
+  { q: 'Trial days?', a: 'Paid trials before long-term placement are common.' },
+  { q: 'English-speaking staff?', a: 'Guest-facing roles are English-capable; we match language needs.' },
+  { q: 'What info starts a search?', a: 'Role, location, live-in/out, languages, salary band, start date.' },
+  { q: 'Backup if staff is sick?', a: 'Temporary cover can be arranged through the network.' },
+  { q: 'How to start?', a: 'WhatsApp the brief or <a href="/contact">contact</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
 ]
 
 export default function StaffingVillaManagersPage() {
@@ -232,7 +251,7 @@ export default function StaffingVillaManagersPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Villa Manager FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

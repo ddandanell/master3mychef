@@ -142,26 +142,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: "What's the minimum group size for corporate catering?",
-    answer: '8 guests minimum for a dedicated private chef service. Below 8, we recommend our fine dining format, which works from 2 guests upward. For corporate events, 8 is the practical minimum for the staffing and setup to be efficient.',
-  },
-  {
-    question: 'Can you handle multiple dietary requirements across a large team?',
-    answer: 'Yes. We collect every dietary requirement during the planning stage and build menus so all dietary tracks — vegan, gluten-free, halal, nut-free, and others — are integrated into the main service with dedicated prep stations. No one receives a singled-out "special plate."',
-  },
-  {
-    question: 'Do you provide service staff as well as chefs?',
-    answer: 'Yes. myCHEF provides chefs, uniformed service staff, and event coordinators as a complete package. For corporate events, we match staffing ratios to the formality and scale of your event — from 1 staff per 6 guests for informal retreats to 1 per 4 for plated executive dinners.',
-  },
-  {
-    question: 'Can you align the menu and presentation with our brand?',
-    answer: "Yes. We've worked with luxury brands on presentation-aligned tasting menus, including custom amuse-bouche vessels, colourway-matched tableware sourcing, and coordination with your event decorator. We brief from your creative guidelines, not a standard format.",
-  },
-  {
-    question: 'How far in advance should we book for a corporate retreat?',
-    answer: '2–4 weeks for a single corporate dinner or event. 6+ weeks for large multi-day retreats, events during peak season (July–August, December), or events with complex logistics such as remote villa locations or high-volume guest counts.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'Corporate catering price range?', answer: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { question: 'NPWP invoices?', answer: 'Yes on request.' },
+  { question: 'Multi-day retreats?', answer: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
+  { question: 'Guest counts?', answer: 'From leadership dinners to 100–200+ programmes.' },
+  { question: 'Dietary for mixed teams?', answer: 'Yes when headcount by diet is shared.' },
+  { question: 'Villa and venue work?', answer: 'Yes — share access rules.' },
+  { question: 'Bartenders and waiters?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'Case studies?', answer: 'Yes — <a href="/corporate-case-studies">case studies</a>.' },
 ]
 
 const RELATED_PAGES = [

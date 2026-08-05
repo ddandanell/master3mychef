@@ -101,30 +101,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'How far in advance should I book a private chef for a Bali wedding?',
-    answer: '6 months is ideal for premium dates (June–September, December). 4 months is acceptable. Less than 3 months limits your chef selection and forces simpler menus due to ingredient sourcing constraints.',
-  },
-  {
-    question: 'Can a private chef handle both the rehearsal dinner and the main reception?',
-    answer: 'Yes — and we recommend it. Using the same chef team across all wedding events creates consistency, reduces coordination effort, and often comes with a multi-event discount. The chef already knows your preferences and kitchen by day two.',
-  },
-  {
-    question: 'What happens if my villa kitchen is too small for a large guest count?',
-    answer: 'A professional catering chef will assess your kitchen in advance and bring or rent supplemental equipment (portable ovens, warming stations, prep surfaces). Some dishes can be partially prepared off-site and finished at the villa. Your chef manages this — your job is to flag the kitchen limitations early.',
-  },
-  {
-    question: 'How do you handle allergies across a large mixed guest list?',
-    answer: 'Collect dietary forms 6–8 weeks before the event. Share the full list with your chef. A skilled catering chef separates allergen-free preparations, labels dishes clearly, and briefs service staff on which plates are allergen-specific. Confirm this protocol during the hiring process.',
-  },
-  {
-    question: 'What is included in the chef fee vs. what do I pay separately?',
-    answer: 'Chef fee covers time, expertise, menu planning, and kitchen management. Ingredient costs are typically a separate budget line (chef shops and provides receipts, or you provide a grocery allowance). Equipment rental, service staff, and beverage management may be included or separate — confirm all inclusions in writing before signing.',
-  },
-  {
-    question: 'Can a private chef do a tasting menu before the wedding to confirm the food?',
-    answer: 'Yes, and we strongly recommend it for main reception menus. A tasting session (typically 2–3 months before the event) lets you approve each course, adjust flavors, and finalize wine pairings. Tastings for two people are billed separately and are worth it for a wedding.',
-  },
+  { question: 'How much does wedding catering in Bali cost?', answer: 'Wedding reception catering is quoted per guest based on menu and guest count. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/pricing">pricing</a> for published guidance.' },
+  { question: 'Do you offer menu tastings for weddings?', answer: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
+  { question: 'Can you handle banjar fees and villa permissions?', answer: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
+  { question: 'Can guests bring their own alcohol?', answer: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
+  { question: 'What is the rain plan for outdoor receptions?', answer: 'Every outdoor wedding has a covered fallback (marquee/indoor) confirmed before the day.' },
+  { question: 'Do you cater rehearsal and welcome dinners?', answer: 'Yes — BBQ, family-style or plated formats via <a href="/events">events</a> and <a href="/catering">catering</a>.' },
+  { question: 'What staffing ratio do you use?', answer: 'About one waiter per 8–10 seated guests, plus kitchen lead; cocktail hours add tray staff.' },
+  { question: 'Can you work with our wedding planner?', answer: 'Yes — daily collaboration with planners and villa managers.' },
+  { question: 'Do you offer halal-friendly wedding menus?', answer: 'Yes — pork-free and halal-sensitive lines when specified at planning.' },
+  { question: 'How is this different from a private chef dinner?', answer: 'Weddings are multi-guest production. Couples dinners: <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
+  { question: 'Which areas host most villa weddings?', answer: 'Uluwatu, Canggu, Seminyak, Ubud, Nusa Dua and Jimbaran are common — we cover island-wide.' },
+  { question: 'Can kids and elderly dietary needs be managed?', answer: 'Yes — labelled plates and briefed service for mixed multi-gen guest lists.' },
+  { question: 'How much is a private chef in Bali per day?', answer: 'from published rates for one meal (chef + assistant). Two meals published rates, three published rates. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
 ]
 
 const RELATED_PAGES = [

@@ -80,6 +80,18 @@ const FAQS = [
   { q: 'Can we photograph or film the evening?', a: 'Yes — personal photography is welcome throughout. We ask that any commercial use or publication be discussed in advance.' },
   { q: 'How far in advance do I need to book?', a: 'We take 2 Chef\'s Table bookings per weekend. Peak season (July–August, December) books 3+ weeks ahead. Message Sofia as early as possible — availability is genuinely limited.' },
   { q: 'Is wine pairing included?', a: 'Wine pairing is optional at +IDR 1,100,000 per guest (extended pours, 6–7 glasses, matched by course). The Franciacorta aperitif is always included.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
 ]
 
 export default function ChefsTablePage() {
@@ -404,7 +416,7 @@ export default function ChefsTablePage() {
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
             <h2 className="text-3xl md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>Common Questions</h2>
           </div>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

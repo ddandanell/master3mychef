@@ -135,42 +135,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'Can you cater a 7-day retreat with no repeated meals?',
-    answer: 'Yes, this is standard for our retreat programs. We design variety across the full program — no main dish repeats across a 7-day stay for breakfast, lunch, or dinner. We build a full meal matrix before the retreat begins.',
-  },
-  {
-    question: 'Do you cook on-site at the retreat villa?',
-    answer: 'Yes, our chefs cook on-site in the retreat kitchen daily. We do not deliver pre-cooked meals. On-site cooking ensures freshness, allows real-time adjustments, and gives guests the option to interact with the chef.',
-  },
-  {
-    question: 'What is the minimum group size for retreat catering?',
-    answer: '5 guests minimum for a dedicated retreat catering program. Smaller groups can be accommodated but may incur a minimum daily fee rather than a per-person rate.',
-  },
-  {
-    question: 'Can you accommodate multiple dietary restrictions simultaneously?',
-    answer: 'Yes — we handle vegan, gluten-free, nut-free, and sugar-free simultaneously as standard. Accommodation is built into the menu design from the start, not managed as an afterthought. Our upfront dietary mapping process captures every restriction before the programme begins.',
-  },
-  {
-    question: 'Do you provide snacks and drinks as well as meals?',
-    answer: 'Yes, retreat packages include morning snack, afternoon snack, herbal tea station, and filtered water service as standard. Cold-pressed juices and wellness shots are available as add-ons for Detox & Cleanse programs.',
-  },
-  {
-    question: 'Can we visit the kitchen and see the cooking?',
-    answer: 'Yes, many retreats incorporate a cooking demonstration or farmers market visit as part of the program experience. This is available as a paid add-on and can be a highlight of the retreat — guests learn about Balinese ingredients and preparation techniques directly from our chef.',
-  },
-  {
-    question: 'Can the chef accommodate a raw or fully raw food programme?',
-    answer: 'Yes — our Detox & Cleanse programme includes raw and cold-pressed options. For fully raw retreats, we design a complete menu of raw nori wraps, zucchini noodles, dehydrated crackers, and living foods. This is confirmed at the proposal stage so ingredients can be sourced accordingly.',
-  },
-  {
-    question: 'Do you provide a cooking demonstration as part of the retreat?',
-    answer: 'Yes, cooking demonstrations are available as a paid add-on. The chef leads a 60–90 minute session on Balinese ingredients and techniques, which guests consistently rate as a retreat highlight. Book this at the programme design stage.',
-  },
-  {
-    question: 'What happens if a guest joins with an unlisted dietary requirement?',
-    answer: 'We build flexibility into every programme. If a new requirement emerges during the retreat, the chef adapts the daily menu in real time. Because our chefs cook on-site, adjustments are immediate — no pre-cooked meal substitutions.',
-  },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
+  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
+  { question: 'Corporate catering price range?', answer: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { question: 'NPWP invoices?', answer: 'Yes on request.' },
+  { question: 'Multi-day retreats?', answer: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
+  { question: 'Guest counts?', answer: 'From leadership dinners to 100–200+ programmes.' },
+  { question: 'Dietary for mixed teams?', answer: 'Yes when headcount by diet is shared.' },
+  { question: 'Villa and venue work?', answer: 'Yes — share access rules.' },
+  { question: 'Bartenders and waiters?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'Case studies?', answer: 'Yes — <a href="/corporate-case-studies">case studies</a>.' },
 ]
 
 const RELATED_PAGES = [

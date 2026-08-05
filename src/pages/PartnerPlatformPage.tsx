@@ -76,6 +76,20 @@ const FAQS = [
   { q: 'Can we keep our existing villa brand?', a: 'Yes. The White-Label model is built exactly for this — neutral uniforms, unmarked equipment, the experience appears fully owned by the villa.' },
   { q: 'How are guests introduced to the dining option?', a: 'Through whatever channels the villa already uses: pre-arrival emails, the guest app, in-villa welcome books, WhatsApp, the concierge, or our shared booking link.' },
   { q: 'How fast is settlement?', a: 'Monthly. Full settlement is paid out on the 5th of each month with a detailed report covering every completed order.' },
+  { q: 'How fast do you reply?', a: 'Usually within 2 hours on WhatsApp during operating hours.' },
+  { q: 'Best way to book?', a: 'WhatsApp with date, guests, area and service — or <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Phone number?', a: 'Published sitewide — WhatsApp +62 896-7407-2020.' },
+  { q: 'Email?', a: 'bali@mychef.id for written requests and invoices.' },
+  { q: 'Office location?', a: 'Denpasar, Bali — full address on the site footer and contact pages.' },
+  { q: 'Languages?', a: 'English and Indonesian service.' },
+  { q: 'Corporate enquiries?', a: 'Yes — mention NPWP needs and multi-day schedule.' },
+  { q: 'Partner / villa manager enquiries?', a: 'Yes — <a href="/partner">partner</a> pathways.' },
+  { q: 'Urgent same-day requests?', a: 'Often possible — message ASAP with location.' },
+  { q: 'What to include in first message?', a: 'Date, villa area, guest count, service type, diets.' },
+  { q: 'Can you call me?', a: 'WhatsApp first is fastest; calls arranged when needed.' },
+  { q: 'FAQ hub?', a: 'Yes — <a href="/faq">FAQ</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
 ]
 
 export default function PartnerPlatformPage() {
@@ -518,7 +532,7 @@ export default function PartnerPlatformPage() {
         <div className="max-w-[800px] mx-auto">
           <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">13 — Frequently asked</p>
           <h2 className="font-playfair text-4xl md:text-5xl leading-tight mb-12">Partner program FAQ</h2>
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

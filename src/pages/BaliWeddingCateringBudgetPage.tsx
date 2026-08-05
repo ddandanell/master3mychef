@@ -119,30 +119,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'What is a realistic wedding catering budget per head in Bali in 2026?',
-    answer: 'For quality private chef catering with proper service: IDR 700K–800K/person for food. Add IDR 200K–500K/person if you want beverage service included.',
-  },
-  {
-    question: 'Does myCHEF include a service charge in the quote?',
-    answer: 'Yes — our quotes are all-inclusive with no hidden service charge added at the end.',
-  },
-  {
-    question: 'Can you do a tasting before the wedding?',
-    answer: 'Yes — pre-wedding tastings are available. The cost is IDR 750K per couple and is credited against your booking if you proceed.',
-  },
-  {
-    question: 'How many staff do I need for 60 wedding guests?',
-    answer: 'For a seated plated dinner: 1 head chef, 2 sous chefs, 6 servers. For a buffet: 1 head chef, 2 sous chefs, 4 servers. We recommend 1 server per 10 guests for seated dining.',
-  },
-  {
-    question: 'Can we supply our own alcohol to save money?',
-    answer: 'Yes — this is common and saves significantly. We provide glassware, ice, service. You supply the alcohol.',
-  },
-  {
-    question: 'How far in advance should we book wedding catering?',
-    answer: 'For peak season (July, August, December): 4–6 months. Off-peak: 6–8 weeks minimum.',
-  },
+  { question: 'How much does wedding catering in Bali cost?', answer: 'Wedding reception catering is quoted per guest based on menu and guest count. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/pricing">pricing</a> for published guidance.' },
+  { question: 'Do you offer menu tastings for weddings?', answer: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
+  { question: 'Can you handle banjar fees and villa permissions?', answer: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
+  { question: 'Can guests bring their own alcohol?', answer: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
+  { question: 'What is the rain plan for outdoor receptions?', answer: 'Every outdoor wedding has a covered fallback (marquee/indoor) confirmed before the day.' },
+  { question: 'Do you cater rehearsal and welcome dinners?', answer: 'Yes — BBQ, family-style or plated formats via <a href="/events">events</a> and <a href="/catering">catering</a>.' },
+  { question: 'What staffing ratio do you use?', answer: 'About one waiter per 8–10 seated guests, plus kitchen lead; cocktail hours add tray staff.' },
+  { question: 'Can you work with our wedding planner?', answer: 'Yes — daily collaboration with planners and villa managers.' },
+  { question: 'Do you offer halal-friendly wedding menus?', answer: 'Yes — pork-free and halal-sensitive lines when specified at planning.' },
+  { question: 'How is this different from a private chef dinner?', answer: 'Weddings are multi-guest production. Couples dinners: <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
+  { question: 'Which areas host most villa weddings?', answer: 'Uluwatu, Canggu, Seminyak, Ubud, Nusa Dua and Jimbaran are common — we cover island-wide.' },
+  { question: 'Can kids and elderly dietary needs be managed?', answer: 'Yes — labelled plates and briefed service for mixed multi-gen guest lists.' },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around published rates per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
 ]
 
 const RELATED_PAGES = [

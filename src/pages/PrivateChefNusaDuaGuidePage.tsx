@@ -76,30 +76,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "Can a private chef come to my resort hotel in Nusa Dua, or only private villas?",
-    answer: "myCHEF chefs can serve guests at private villas and at resort-managed accommodation where the property allows external catering. Many five-star hotels in Nusa Dua have arrangements for in-suite or in-villa dining with approved external chefs. We recommend confirming with your hotel or villa manager before booking — our team can advise on properties we have worked with before.",
-  },
-  {
-    question: "How much does a private chef cost per person in Nusa Dua?",
-    answer: "Pricing ranges from IDR 700,000 per person for everyday 2–3 course dining up to IDR 1,500,000 per person for a premium 6–8 course fine dining experience. The exact cost depends on the number of courses, the complexity of the menu, group size, and any premium ingredient upgrades. Use our online calculator for a tailored estimate.",
-  },
-  {
-    question: "What cuisines are available from private chefs in Nusa Dua?",
-    answer: "Our chefs cover a wide range — Indonesian regional cuisine, fresh Balinese seafood, Western fine dining, Japanese, Mediterranean, and plant-based menus. Most chefs are comfortable across multiple styles. Share your preferences when you enquire and we will match you with the best fit.",
-  },
-  {
-    question: "Can you cater for dietary requirements including halal, vegan, and gluten-free?",
-    answer: "Yes. All dietary requirements including halal, vegan, vegetarian, gluten-free, dairy-free, nut-free, and specific food allergies are accommodated. Inform us at the time of booking so your chef can design the menu accordingly. We treat allergy information with the highest priority.",
-  },
-  {
-    question: "How far in advance do I need to book a private chef in Nusa Dua?",
-    answer: "For standard bookings, 3–5 days notice is usually sufficient. For fine dining tasting menus, large groups of 10 or more, or special occasions such as anniversaries and proposals, we recommend 1–2 weeks ahead. Last-minute bookings within 24–48 hours may be possible subject to chef availability — contact us directly and we will do our best.",
-  },
-  {
-    question: "Does the chef handle shopping, setup, and cleanup?",
-    answer: "Yes. Your chef handles all ingredient sourcing from trusted Bali markets and suppliers, arrives with all necessary equipment, sets up the dining area, cooks the full meal, and leaves your kitchen clean. You do not need to provide anything beyond a functional kitchen and dining space.",
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'Daily private chef rates are published by meal count with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'Is this guide free?', answer: 'Yes — educational content to help you plan. Booking is optional.' },
+  { question: 'Can myCHEF deliver what this guide describes?', answer: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'How do I get prices after reading?', answer: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { question: 'Does advice apply across Bali?', answer: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { question: 'Allergies covered in real bookings?', answer: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { question: 'Daily chef vs one dinner?', answer: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { question: 'How to book after this guide?', answer: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { question: 'Related services?', answer: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
 ]
 
 export default function PrivateChefNusaDuaGuidePage() {

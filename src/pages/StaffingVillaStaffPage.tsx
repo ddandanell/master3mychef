@@ -101,6 +101,17 @@ const FAQS = [
   { q: 'Do you train villa staff before placement?', a: 'We provide basic hospitality training and can arrange specialised training for guest-facing roles on request.' },
   { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
   { q: 'What is your placement fee?', a: 'Placement fees are discussed once we understand the role, team size and candidate requirements. We provide a written quote before any commitment.' },
+  { q: 'What staffing services do you offer in Bali?', a: 'Day-rate in-villa staff and long-term placement of chefs, managers, butlers and household teams. <a href="/staffing">Staffing</a> · <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'How fast is placement?', a: 'Often around 48 hours for roles with ready candidates; specialist searches take longer.' },
+  { q: 'Replacement guarantee?', a: 'Placement programmes typically include a replacement window (e.g. 30 days) in writing.' },
+  { q: 'Live-in vs live-out?', a: 'Live-in resides on property; live-out works set shifts. We help you choose.' },
+  { q: 'Background checks?', a: 'Candidates are interviewed, reference-checked and supervised through myCHEF systems.' },
+  { q: 'Can we hire staff without catering?', a: 'Yes for event staff. <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'Hotel and restaurant staffing?', a: 'Yes — <a href="/staffing/hotels">hotel staffing</a> and B2B kitchen solutions.' },
+  { q: 'Trial days?', a: 'Paid trials before long-term placement are common.' },
+  { q: 'English-speaking staff?', a: 'Guest-facing roles are English-capable; we match language needs.' },
+  { q: 'What info starts a search?', a: 'Role, location, live-in/out, languages, salary band, start date.' },
+  { q: 'Backup if staff is sick?', a: 'Temporary cover can be arranged through the network.' },
 ]
 
 export default function StaffingVillaStaffPage() {
@@ -237,7 +248,7 @@ export default function StaffingVillaStaffPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Villa Staff FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

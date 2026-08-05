@@ -114,26 +114,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: "What's the minimum set of credentials I should require?",
-    answer: 'Culinary training (formal school, apprenticeship, or 5+ years professional kitchen), food safety certification (HACCP or Servsafe), and references from 2–3 past clients (call them directly).',
-  },
-  {
-    question: 'Should I always do a trial meal?',
-    answer: "For high-stakes events (weddings, fine dining), yes. For casual group stays, it's optional but helpful if you're unsure about fit.",
-  },
-  {
-    question: 'How important are Michelin credentials?',
-    answer: 'Michelin experience signals precision and technique excellence, but not all skilled chefs have it. Strong references and a trial meal matter more than brand names.',
-  },
-  {
-    question: "What if a chef's references are glowing but my gut says no?",
-    answer: "Trust your gut. Chemistry and communication matter. If you don't feel comfortable, keep looking.",
-  },
-  {
-    question: "Can I negotiate the chef's deposit amount?",
-    answer: 'Yes, though 50% deposit / 50% final balance is standard. Discuss payment terms upfront as part of contract negotiation.',
-  },
+  { question: 'Is this guide free?', answer: 'Yes — educational content to help you plan. Booking is optional.' },
+  { question: 'Can myCHEF deliver what this guide describes?', answer: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'How do I get prices after reading?', answer: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { question: 'Does advice apply across Bali?', answer: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { question: 'Allergies covered in real bookings?', answer: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { question: 'Daily chef vs one dinner?', answer: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { question: 'How to book after this guide?', answer: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { question: 'Related services?', answer: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
+  { question: 'Cancellation if I book?', answer: 'See <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'Who writes the operational standards?', answer: 'myCHEF operations and chef leadership in Bali.' },
+  { question: 'Can villa managers share this guide?', answer: 'Yes — free to share with guests.' },
+  { question: 'More FAQs?', answer: 'Central hub: <a href="/faq">FAQ</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

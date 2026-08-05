@@ -58,26 +58,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "Is there a cost to join the myCHEF villa manager partnership programme?",
-    answer: "No. There is no fee, minimum commitment, or exclusive arrangement required to participate. The programme is free to join.",
-  },
-  {
-    question: "How is commission calculated and when is it paid?",
-    answer: "Commission is a fixed percentage of the net service fee for each booking attributed to your referral. Exact rates are agreed during onboarding. Payment is made monthly via bank transfer.",
-  },
-  {
-    question: "What if a guest has a problem with a myCHEF service at my villa?",
-    answer: "myCHEF takes full responsibility for the quality of service delivery. Complaints are handled directly between the guest and myCHEF.",
-  },
-  {
-    question: "Do you offer exclusive partnerships, or do you work with multiple villas in the same area?",
-    answer: "We work with multiple partner villas in each area. However, priority scheduling is reserved for partner villas during peak periods.",
-  },
-  {
-    question: "Can I refer guests for staffing placements as well as one-time bookings?",
-    answer: "Yes. Partner villa managers who refer guests seeking longer-term staffing arrangements also earn a referral commission on completed placements.",
-  },
+  { question: 'How fast do you reply?', answer: 'Usually within 2 hours on WhatsApp during operating hours.' },
+  { question: 'Best way to book?', answer: 'WhatsApp with date, guests, area and service — or <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Phone number?', answer: 'Published sitewide — WhatsApp +62 896-7407-2020.' },
+  { question: 'Email?', answer: 'bali@mychef.id for written requests and invoices.' },
+  { question: 'Office location?', answer: 'Denpasar, Bali — full address on the site footer and contact pages.' },
+  { question: 'Languages?', answer: 'English and Indonesian service.' },
+  { question: 'Corporate enquiries?', answer: 'Yes — mention NPWP needs and multi-day schedule.' },
+  { question: 'Partner / villa manager enquiries?', answer: 'Yes — <a href="/partner">partner</a> pathways.' },
+  { question: 'Urgent same-day requests?', answer: 'Often possible — message ASAP with location.' },
+  { question: 'What to include in first message?', answer: 'Date, villa area, guest count, service type, diets.' },
+  { question: 'Can you call me?', answer: 'WhatsApp first is fastest; calls arranged when needed.' },
+  { question: 'FAQ hub?', answer: 'Yes — <a href="/faq">FAQ</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 export default function VillaManagerPartnerPage() {

@@ -108,26 +108,26 @@ const REQUEST_STEPS: RequestStep[] = [
 ]
 
 const FAQS = [
-  {
-    q: 'Can I choose my own chef?',
-    a: 'Yes, subject to availability. Tell us who you want when you message and we will check that chef first before suggesting anyone else.',
-  },
-  {
-    q: 'What if my preferred chef is unavailable?',
-    a: 'We will suggest the closest-fit alternative based on menu style and group size, or help you rebook for a date when your preferred chef is available.',
-  },
-  {
-    q: 'Is Adriano available for all bookings?',
-    a: "No. Adriano is reserved for Chef's Table on Fridays and Saturdays, plus a limited number of 7-course tasting menus and custom collaborations.",
-  },
-  {
-    q: 'Are the chefs vetted?',
-    a: 'Yes. Every myCHEF chef passes a background check, food safety certification review, and in-person skills assessment before leading a booking.',
-  },
-  {
-    q: 'Can I meet the chef before booking?',
-    a: 'Yes. We can arrange a WhatsApp intro call so you can align on style, dietary needs, and the kind of evening you want to host.',
-  },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
+  { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { q: 'What does "++" mean on prices?', a: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { q: 'Which areas of Bali do you cover?', a: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { q: 'How far in advance should I book?', a: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { q: 'Can you accommodate allergies and special diets?', a: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { q: 'Do you clean up after service?', a: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { q: 'How do I get a quote?', a: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { q: 'What if a chef or staff member cannot make it?', a: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 export default function FineDiningChefsPage() {
@@ -492,7 +492,7 @@ export default function FineDiningChefsPage() {
             </p>
           </div>
           <div className="reveal">
-            <FAQAccordion items={FAQS} defaultOpenCount={1} />
+            <FAQAccordion items={FAQS} defaultOpenCount={1} showToc ctaEvery={5} />
           </div>
         </div>
       </section>

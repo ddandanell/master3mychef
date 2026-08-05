@@ -133,30 +133,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'How long does it take to find and place a live-in chef?',
-    answer: 'Typically 1–3 weeks from the moment we receive your brief. We present 2–3 vetted candidates with full profiles and cooking test results. We strongly recommend a 2-week paid trial period before confirming the placement as permanent — this is included in our standard process.',
-  },
-  {
-    question: 'Can a live-in chef handle multiple cuisines?',
-    answer: 'Yes. Most of our senior placements cook confidently across Asian (Indonesian, Thai, Japanese), Mediterranean, and Western cuisines. If you have specific specialty requests — Indian, vegan raw food, classical French — we can source candidates with that background. Specialty requests may extend the search by 1–2 weeks.',
-  },
-  {
-    question: 'Do I need to provide accommodation?',
-    answer: 'It depends on the arrangement. We place chefs who live on-site at your property (most common for villa homeowners with a staff room), as well as chefs who commute daily from nearby accommodation with a housing allowance. We will discuss what works best for your household during the briefing call.',
-  },
-  {
-    question: 'What is the difference between myCHEF placement and direct hiring?',
-    answer: 'When you hire directly, you carry the full vetting burden — background checks, cooking tests, reference calls — and you have no recourse if the placement fails. myCHEF pre-vets, tests, and reference-checks every candidate before you meet them. We also provide a 90-day free replacement guarantee: if the chef does not work out within 90 days of placement, we find you a replacement at no additional placement fee.',
-  },
-  {
-    question: 'Can I hire a live-in chef for a short stay of 1–3 months?',
-    answer: 'Yes, we offer short-term placements with a minimum commitment of 1 month. Short-term candidates are typically drawn from our pool of chefs between longer placements, or professionals available for project-based arrangements. Note that the placement fee applies regardless of duration.',
-  },
-  {
-    question: 'What happens if the chef does not work out?',
-    answer: 'We provide a free replacement within 90 days of the original placement. If the issue is a skills mismatch, we will match you with a more suitable candidate. If there is a conduct issue, we will advise on the appropriate employment process and support you through it. After 90 days, a reduced re-placement fee applies.',
-  },
+  { question: 'Is this guide free?', answer: 'Yes — educational content to help you plan. Booking is optional.' },
+  { question: 'Can myCHEF deliver what this guide describes?', answer: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'How do I get prices after reading?', answer: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { question: 'Does advice apply across Bali?', answer: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { question: 'Allergies covered in real bookings?', answer: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { question: 'Daily chef vs one dinner?', answer: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { question: 'How to book after this guide?', answer: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { question: 'Related services?', answer: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
+  { question: 'Cancellation if I book?', answer: 'See <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'Who writes the operational standards?', answer: 'myCHEF operations and chef leadership in Bali.' },
+  { question: 'Can villa managers share this guide?', answer: 'Yes — free to share with guests.' },
+  { question: 'More FAQs?', answer: 'Central hub: <a href="/faq">FAQ</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const RELATED_PAGES = [

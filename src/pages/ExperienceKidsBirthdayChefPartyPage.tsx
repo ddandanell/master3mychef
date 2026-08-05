@@ -262,6 +262,12 @@ const FAQS = [
   { question: 'How much does a kids birthday party in Bali cost?', answer: 'Every party is quoted individually based on guest numbers, ages, food, drinks, entertainment, decoration, equipment, staffing and venue. Parties can be arranged from six children; minimum booking requirements apply. You receive an itemised proposal before anything is confirmed.' },
   { question: 'How early should we book?', answer: 'At least two to three weeks for a small party, and four weeks or more for larger events with entertainment, decoration and custom cakes. Last-minute requests are sometimes possible — ask.' },
   { question: 'Is cleanup included?', answer: 'Yes. Breakdown, equipment collection and cleanup of the agreed areas are included in every proposal.' },
+  { question: 'What private experiences do you offer?', answer: 'Cocktail parties, sushi masterclass, cooking class, kids birthday chef party, champagne & oyster, proposal dinners. <a href="/experiences">Experiences</a>.' },
+  { question: 'Do you bring equipment?', answer: 'Yes — tools, stations and ingredients for the experience.' },
+  { question: 'Can experiences be customised?', answer: 'Yes — duration, guest count and menu flow are tailored.' },
+  { question: 'Setup and cleanup included?', answer: 'Yes — we run the experience end to end.' },
+  { question: 'Hotels or only villas?', answer: 'Mostly villas; venues possible with permission.' },
+  { question: 'Dietary needs?', answer: 'Built in when briefed at enquiry.' },
 ]
 
 const RELATED_PAGES = [

@@ -8,26 +8,26 @@ import { Link } from 'react-router-dom'
  * emitted as FAQPage JSON-LD. Keep the two in sync by only editing this array.
  */
 const FAQS = [
-  {
-    q: 'What does the base price include?',
-    a: 'All base prices include a professional Indonesian chef, all ingredients sourced to your preferences, cooking equipment, plating, and service. The chef arrives 2–3 hours before your meal to prepare everything in your villa kitchen.',
-  },
-  {
-    q: 'Are ingredients included?',
-    a: 'Yes. myCHEF sources all fresh ingredients from trusted Bali suppliers. If you have specific dietary requirements, allergies, or want premium ingredients (e.g. imported Wagyu, live seafood), this may affect the final quote.',
-  },
-  {
-    q: 'Is cleanup included?',
-    a: 'Yes. Our chefs leave your kitchen cleaner than they found it. Full kitchen cleanup is standard with every booking.',
-  },
-  {
-    q: 'How accurate is this estimate?',
-    a: 'The calculator gives you a realistic range based on typical engagements. Your final quote from myCHEF may vary based on your villa location, specific menu, date, and any premium ingredient requests. Share your estimate on WhatsApp and we\'ll send a precise quote within a few hours.',
-  },
-  {
-    q: 'Is there a minimum spend?',
-    a: 'Our minimum booking is for 2 guests. For groups under 6, a small-party rate applies (as shown in the calculator). There is no minimum per-event spend for standard bookings.',
-  },
+  { q: 'Where are full prices listed?', a: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'Daily chef rates?', a: 'IDR 1M++ / 1.8M++ / 2.7M++ for 1/2/3 meals per day.' },
+  { q: 'What is included vs groceries?', a: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
+  { q: 'Weekly and monthly discounts?', a: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
+  { q: 'Deposit?', a: 'Usually 50%.' },
+  { q: 'Cancellation tiers?', a: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
+  { q: 'Hidden fees?', a: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
+  { q: 'Wedding price band?', a: 'Often IDR 1.5M–3M++ per person for full receptions.' },
+  { q: 'Staff hourly rates?', a: 'Waiters ~IDR 250K/hour; bartenders ~IDR 350K/hour (minimums apply).' },
+  { q: 'How to get an exact total?', a: 'Share date, guests, area and format for a fixed quote.' },
+  { q: 'Currency?', a: 'IDR pricing; international transfers accepted as invoiced.' },
+  { q: 'Compare formats?', a: 'Use <a href="/dining-styles">dining styles</a> and <a href="/services">services</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 // ── Types ────────────────────────────────────────────────────────────────────

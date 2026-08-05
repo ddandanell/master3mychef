@@ -97,31 +97,26 @@ Popular signature cocktail styles for Bali villas include: tropical rum/gin with
 ]
 
 const faqs = [
-  {
-    question: "What's the difference between a bartender and a mixologist?",
-    answer:
-      'A bartender serves drinks from a standard menu efficiently. A mixologist brings cocktail craft knowledge -- the ability to design original recipes, balance flavour profiles, and create custom menus. For events where the bar experience matters as much as the food, a mixologist elevates the occasion significantly. For straightforward service (beer, wine, standard cocktails), a bartender is more cost-effective.',
-  },
-  {
-    question: 'Can the mixologist create an alcohol-free cocktail menu?',
-    answer:
-      'Yes. Non-alcoholic cocktail menus (mocktails) are increasingly popular at Bali events, especially wellness retreats, baby showers, and events with mixed drinking and non-drinking guests. Our mixologists design mocktail menus with the same complexity and craft as their alcoholic counterparts -- using shrubs, kombucha bases, fresh juices, and botanicals.',
-  },
-  {
-    question: 'How many cocktails can a mixologist serve per hour?',
-    answer:
-      'A skilled mixologist serving pre-batched cocktails can serve 30--50 drinks per hour. For hand-crafted, made-to-order cocktails, 15--25 per hour per mixologist is realistic. For large events (60+ guests), we always recommend two mixologists to ensure service speed during peak periods.',
-  },
-  {
-    question: 'Do we need to provide the alcohol or do you supply it?',
-    answer:
-      "Clients supply their own alcohol -- this keeps the costs transparent and avoids venue-style markups. We'll provide a recommended spirits list and quantities based on your guest count and event duration. For a logistics fee, we can source and deliver spirits to your villa if you prefer a hands-off approach.",
-  },
-  {
-    question: 'Can we book a mixologist without a chef?',
-    answer:
-      "Absolutely. Mixologist hire is available as a standalone service. Many clients book a mixologist for welcome drinks while the chef handles the dinner, or add one to an event that already has catering from another provider. We're flexible -- contact us with whatever combination suits your event.",
-  },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
+  { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
+  { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
+  { question: 'Alcohol included?', answer: 'No — BYO or sourced at cost; hire covers the professional.' },
+  { question: 'Waiter ratio?', answer: 'About one waiter per 10 guests for formal service.' },
+  { question: 'Butler service?', answer: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
+  { question: 'Mixology and signature cocktails?', answer: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },
+  { question: 'Areas covered?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Combine with private chef?', answer: 'Yes — most common luxury setup.' },
+  { question: 'Vetted staff?', answer: 'Employed/supervised teams with replacement-or-refund cover.' },
+  { question: 'How to book staff?', answer: 'WhatsApp date, area, headcount and roles needed.' },
+  { question: 'What bar services do you offer?', answer: 'Villa bartenders, mixology, and B2B bar solutions. <a href="/in-villa-service/bartenders">Bartenders</a> · <a href="/bar-services/">bar services</a>.' },
+  { question: 'Bartender hourly rate?', answer: 'From about IDR 350,000/hour with a 3-hour minimum.' },
+  { question: 'Do you supply alcohol?', answer: 'Usually client-supplied or sourced at cost.' },
+  { question: 'Mobile bar setup?', answer: 'Yes — stations, glassware plans and tools as scoped.' },
+  { question: 'Zero-proof cocktails?', answer: 'Yes — full zero-proof menus available.' },
+  { question: 'Wedding bar teams?', answer: 'Yes — scaled for guest count.' },
+  { question: 'B2B for venues?', answer: 'Yes — consulting and bar programmes on <a href="/bar-services/">bar services</a>.' },
+  { question: 'Cleanup?', answer: 'Stations broken down and guest areas cleared.' },
 ]
 
 const relatedPages = [

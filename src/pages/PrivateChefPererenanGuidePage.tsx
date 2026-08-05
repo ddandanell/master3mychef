@@ -59,26 +59,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "Does myCHEF cover Pererenan and Cemagi villas?",
-    answer: "Yes. myCHEF covers the full Pererenan corridor including Pererenan Beach, the rice field villas between Pererenan and Cemagi, and Cemagi itself. We also cover Seseh with advance notice. There is no travel surcharge within this zone.",
-  },
-  {
-    question: "Can a private chef in Pererenan cater to a vegan or plant-based wellness retreat group?",
-    answer: "Yes. Plant-based and vegan retreat catering is one of the most common requests in Pererenan. Our chefs are trained in plant-based cooking and can produce communal-style spreads suited to retreat group sizes (8-20 people) across multiple meals per day. Specify dietary structure, allergy information, and meal frequency when booking.",
-  },
-  {
-    question: "How different is Pererenan from Canggu for private chef bookings?",
-    answer: "Pererenan and Canggu share the same market access and chef pool. The main difference is the villa character and guest type: Pererenan villas tend to be more secluded (rice field or beachfront, quieter lane access) and guests tend to stay longer and want a calmer, more private experience. The booking process and pricing are identical.",
-  },
-  {
-    question: "Can a private chef cook a rice field sunset dinner for 2 at a Pererenan villa?",
-    answer: "Yes. This is one of the most requested formats in Pererenan — a 4-5 course dinner served on a villa terrace overlooking rice fields at sunset. The chef handles all sourcing, setup, cooking, and service. Full table setup including flowers and candles can be arranged on request.",
-  },
-  {
-    question: "Can I book a chef for recurring weekly meals over a 2-week Pererenan villa stay?",
-    answer: "Yes. Multi-session bookings across a longer stay are common in Pererenan. You confirm the sessions you want (e.g., 4 dinners over 2 weeks), the chef plans menus across the period, sources fresh each session, and adapts to your preferences as the stay progresses. Multi-session bookings receive a 10% discount.",
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'Daily private chef rates are published by meal count with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'Do you serve this Bali area?', answer: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Is there a travel fee?', answer: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { question: 'Can you cook in Airbnb villas here?', answer: 'Yes with a workable kitchen — share the listing.' },
+  { question: 'Same prices as other areas?', answer: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
 ]
 
 export default function PrivateChefPererenanGuidePage() {

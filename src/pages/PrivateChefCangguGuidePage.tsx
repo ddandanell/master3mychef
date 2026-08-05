@@ -72,26 +72,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "How far in advance do I need to book a private chef in Canggu?",
-    answer: "We recommend 48-72 hours minimum, especially for peak season and larger groups. For bachelor/bachelorette parties with 15+ guests, booking at least a week in advance is strongly recommended.",
-  },
-  {
-    question: "Can a private chef cook for 20-30 people at a Canggu villa?",
-    answer: "Yes. For groups of 15-30, we typically provide the lead chef plus a kitchen assistant and at least one server. We design menus as sharing-format spreads.",
-  },
-  {
-    question: "Can a private chef do a BBQ at our Canggu villa?",
-    answer: "Yes. BBQ and live-fire cooking is one of our most popular formats in Canggu. We bring the equipment and design a full BBQ menu — marinated meats, fresh seafood, satay, grilled vegetables, and sauces.",
-  },
-  {
-    question: "Do you cover all parts of Canggu including Berawa, Pererenan, and Echo Beach?",
-    answer: "Yes. We cover the full Canggu area including Batu Bolong, Berawa, Pererenan, Echo Beach, Seseh, Cemagi, Tibubeneng, and Umalas.",
-  },
-  {
-    question: "Can a Canggu private chef also do the floating breakfast the next morning?",
-    answer: "Yes. Many guests book a private chef dinner one evening and a floating breakfast the following morning.",
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'Daily private chef rates are published by meal count with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'Do you serve this Bali area?', answer: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Is there a travel fee?', answer: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
+  { question: 'Can you cook in Airbnb villas here?', answer: 'Yes with a workable kitchen — share the listing.' },
+  { question: 'Same prices as other areas?', answer: 'Published day rates and menu starts apply; only remote logistics may differ.' },
+  { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
+  { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
+  { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
+  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
 ]
 
 export default function PrivateChefCangguGuidePage() {

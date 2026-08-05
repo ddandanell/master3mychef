@@ -104,6 +104,22 @@ const FAQS = [
   { q: 'Can catering work around retreat schedules and excursions?', a: 'Yes. Meals are energy-timed around sessions and excursions, and menus are co-designed with facilitators.' },
   { q: 'Do you cater retreats in Sidemen / Amed / East Bali?', a: 'Yes. East Bali retreats are served with distance logistics quoted upfront. We have experience in Sidemen and other remote retreat locations.' },
   { q: 'Can your team work with a retreat venue\'s kitchen?', a: 'Yes. We assess the kitchen before the programme, bring missing equipment, and plan service around the venue layout and schedule.' },
+  { q: 'Corporate catering price range?', a: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { q: 'NPWP invoices?', a: 'Yes on request.' },
+  { q: 'Multi-day retreats?', a: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
+  { q: 'Guest counts?', a: 'From leadership dinners to 100–200+ programmes.' },
+  { q: 'Dietary for mixed teams?', a: 'Yes when headcount by diet is shared.' },
+  { q: 'Villa and venue work?', a: 'Yes — share access rules.' },
+  { q: 'Bartenders and waiters?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'Case studies?', a: 'Yes — <a href="/corporate-case-studies">case studies</a>.' },
+  { q: 'Book from overseas?', a: 'Yes — WhatsApp/email planning before arrival.' },
+  { q: 'Headcount changes?', a: 'Re-quoted in writing with notice.' },
+  { q: 'Alcohol?', a: 'BYO or sourced at cost.' },
+  { q: 'How to start?', a: 'Share dates, headcount, venues, meal map — <a href="/quote">quote</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
 ]
 
 const RETREAT_GALLERY = [
@@ -459,7 +475,7 @@ export default function EventsRetreatsPage() {
       <section className="py-20 md:py-28 bg-white retreat-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Retreat FAQ" subtitle="Operations-focused answers for retreat organisers." />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

@@ -6,30 +6,26 @@ const CANONICAL = 'https://mychef.id/blog/how-to-hire-private-chef-bali-complete
 const WA_LINK = 'https://wa.me/6289674072020?text=' + encodeURIComponent('Hi myCHEF, I\'d like to hire a private chef in Bali. Can you help me?')
 
 const FAQS = [
-  {
-    question: 'How much does it cost to hire a private chef in Bali?',
-    answer: 'Private chef hire in Bali ranges from IDR 1,500,000 to IDR 8,000,000+ per person depending on the tier. Budget chefs (casual family meals, daily cooking) start from IDR 800,000–1,500,000 per person. Mid-range fine dining and event catering runs IDR 1,500,000–3,000,000 per person. Premium Michelin-standard tasting menus with multi-chef teams start from IDR 3,000,000–8,000,000+ per person. Grocery costs are charged at-cost on top of the service fee.',
-  },
-  {
-    question: 'How far in advance do I need to book a private chef in Bali?',
-    answer: 'A minimum of one week is recommended for casual villa meals. For special events, celebrations, or dinner parties, book 3–4 weeks ahead to allow time for menu planning and ingredient sourcing. During peak season (July–August, December–January), 6 weeks advance notice is strongly advised as the best chefs fill quickly.',
-  },
-  {
-    question: 'Do I need a fully equipped kitchen to hire a private chef?',
-    answer: 'No. myCHEF chefs bring portable induction hobs, specialist cookware, knives, and equipment if your villa kitchen is basic or incomplete. We conduct a kitchen assessment before the date and arrive fully prepared. Most Bali villas have adequate setups, but we never leave you stuck.',
-  },
-  {
-    question: 'What if I have guests with severe food allergies?',
-    answer: 'All myCHEF menus are designed from scratch around your group\'s dietary requirements, including severe allergies. Our HACCP-certified chefs apply strict cross-contamination protocols — separate prep surfaces, dedicated utensils, and ingredient verification at source. We ask for a full allergy brief at booking and reconfirm on the day.',
-  },
-  {
-    question: 'Can I hire a chef for just breakfast in Bali?',
-    answer: 'Yes. Daily breakfast service is available from IDR 700,000++ per person. We also offer breakfast-only weekly packages for extended villa stays. Whether you want a full cooked spread, fresh tropical juices, eggs to order, or a healthy wellness breakfast, we\'ll tailor it to your preferences and schedule.',
-  },
-  {
-    question: 'Is a private chef worth it compared to restaurant dining in Bali?',
-    answer: 'At 4 or more guests, a private chef is cost-comparable to a quality restaurant dinner — and infinitely more flexible. You eat at your own pace, in your own villa, with a fully customised menu. No transport, no queues, no compromising on dietary needs. For families, couples, or groups with specific preferences, the private chef experience is almost always better value and far more memorable.',
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'Daily rates depend on meals per day, with weekly and monthly discounts on longer stays. See <a href="/private-chef-bali">private chef Bali</a> and <a href="/pricing">pricing</a>. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const SECTIONS = [

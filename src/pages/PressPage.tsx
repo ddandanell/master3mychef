@@ -34,9 +34,26 @@ export default function PressPage() {
         canonical={`${SITE}/press`}
         ogImage={`${SITE}/generated/partner-platform-hero.webp`}
         jsonLd={[breadcrumbSchema('Press & Media', `${SITE}/press`), faqPageSchema([
-          { question: 'How do I request a press kit for myCHEF.id?', answer: `Press kits, high-resolution imagery, and interview requests can be arranged via WhatsApp at ${siteFacts.phoneDisplay} or email ${siteFacts.email}. We respond within 24 hours.` },
-          { question: 'How can media cover myCHEF.id?', answer: 'We are happy to provide press materials, coordinate interviews, and arrange villa dining previews or chef demonstrations in Bali. Contact our communications team via WhatsApp or email to discuss coverage arrangements.' },
-          { question: 'Can myCHEF.id arrange chef demonstrations for media?', answer: 'Yes — we can arrange live cooking demonstrations, villa dining press previews, and media experiences. Contact our team via WhatsApp to discuss coverage arrangements.' },
+          { question: 'How do I request a press kit for myCHEF?', answer: 'Press kits, high-resolution imagery and interview requests via WhatsApp +62 896-7407-2020 or bali@mychef.id. We respond within 24 hours.' },
+          { question: 'How can media cover myCHEF?', answer: 'We provide press materials, interviews and villa dining previews or chef demonstrations in Bali. Contact communications via WhatsApp or email.' },
+          { question: 'Can myCHEF arrange chef demonstrations for media?', answer: 'Yes — live cooking demos, villa dining previews and media experiences. WhatsApp to arrange.' },
+          { question: 'Where is myCHEF based?', answer: 'Bali, Indonesia — Denpasar operations serving island-wide villas. <a href="/about">About →</a>' },
+          { question: 'Can we photograph a private chef service?', answer: 'With guest consent and advance planning — coordinate through the press contact so privacy is protected.' },
+          { question: 'Do you have brand assets and logos?', answer: 'Yes in the press kit.' },
+          { question: 'Founder interviews?', answer: 'Possible with notice — Adriano and chef leadership. <a href="/chefs">Chefs →</a>' },
+          { question: 'Statistics we can cite?', answer: 'Use published operational framing on site: 560+ events, 12,000+ guests, 500+ villa bookings — and link to <a href="/reviews">reviews</a>.' },
+          { question: 'Product categories for stories?', answer: 'Private chef, fine dining, catering, weddings, staffing, experiences.' },
+          { question: 'Response time for media?', answer: 'Within 24 hours on working days.' },
+          { question: 'Can influencers request collaborations?', answer: 'Selective — send audience, concept and dates.' },
+          { question: 'High-res food photography?', answer: 'Available via press kit / approved shoots.' },
+          { question: 'On-site filming permissions?', answer: 'Require villa owner/guest approval plus our ops brief.' },
+          { question: 'Press visits peak season?', answer: 'Book early in July–August and December.' },
+          { question: 'Commercial usage of images?', answer: 'Licensed assets only — ask for usage terms.' },
+          { question: 'Who is the media contact?', answer: 'bali@mychef.id / WhatsApp +62 896-7407-2020.' },
+          { question: 'Awards or certifications claims?', answer: 'Only use statements published on mychef.id to avoid outdated claims.' },
+          { question: 'Crisis or correction contact?', answer: 'Same press channels for urgent corrections.' },
+          { question: 'Can we quote pricing in articles?', answer: 'Use published ranges on <a href="/pricing">pricing</a> and note ++ tax/service.' },
+          { question: 'More brand context?', answer: '<a href="/why-mychef">Why myCHEF</a> · <a href="/about">About</a>.' }
         ])]}
       />
 

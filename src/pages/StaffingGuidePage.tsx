@@ -83,30 +83,26 @@ const STAFF_STANDARDS = [
 ]
 
 const FAQS = [
-  {
-    q: 'Can I hire service staff without a chef?',
-    a: 'Absolutely. You can book waiters, bartenders, or household assistants separately. Many guests hire external catering and use our service team.',
-  },
-  {
-    q: 'Do service staff wear uniforms?',
-    a: 'Yes. We provide smart uniforms suited to your event style. Formal attire, business casual, or branded uniforms can be arranged.',
-  },
-  {
-    q: 'What language do staff speak?',
-    a: 'All staff are fluent in English. Many also speak additional languages. Let us know if you need specific language support.',
-  },
-  {
-    q: 'Can I request the same staff for multiple events?',
-    a: 'Yes. If you book repeat services during your stay, we\'ll try to send the same team for consistency and familiarity.',
-  },
-  {
-    q: 'What if I\'m not happy with the service team?',
-    a: 'Let us know immediately. We can adjust the team for future services. Your satisfaction is paramount.',
-  },
-  {
-    q: 'How is payment handled?',
-    a: 'Staff costs are invoiced separately from chef services. 50% deposit upfront, balance due within 48 hours of service.',
-  },
+  { q: 'What staffing services do you offer in Bali?', a: 'Day-rate in-villa staff and long-term placement of chefs, managers, butlers and household teams. <a href="/staffing">Staffing</a> · <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'How fast is placement?', a: 'Often around 48 hours for roles with ready candidates; specialist searches take longer.' },
+  { q: 'Replacement guarantee?', a: 'Placement programmes typically include a replacement window (e.g. 30 days) in writing.' },
+  { q: 'Live-in vs live-out?', a: 'Live-in resides on property; live-out works set shifts. We help you choose.' },
+  { q: 'Background checks?', a: 'Candidates are interviewed, reference-checked and supervised through myCHEF systems.' },
+  { q: 'Can we hire staff without catering?', a: 'Yes for event staff. <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'Hotel and restaurant staffing?', a: 'Yes — <a href="/staffing/hotels">hotel staffing</a> and B2B kitchen solutions.' },
+  { q: 'Trial days?', a: 'Paid trials before long-term placement are common.' },
+  { q: 'English-speaking staff?', a: 'Guest-facing roles are English-capable; we match language needs.' },
+  { q: 'What info starts a search?', a: 'Role, location, live-in/out, languages, salary band, start date.' },
+  { q: 'Backup if staff is sick?', a: 'Temporary cover can be arranged through the network.' },
+  { q: 'How to start?', a: 'WhatsApp the brief or <a href="/contact">contact</a>.' },
+  { q: 'Is this guide free?', a: 'Yes — educational content to help you plan. Booking is optional.' },
+  { q: 'Can myCHEF deliver what this guide describes?', a: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'How do I get prices after reading?', a: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { q: 'Does advice apply across Bali?', a: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { q: 'Allergies covered in real bookings?', a: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { q: 'Daily chef vs one dinner?', a: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { q: 'How to book after this guide?', a: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { q: 'Related services?', a: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
 ]
 
 export default function StaffingGuidePage() {

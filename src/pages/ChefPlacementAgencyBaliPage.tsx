@@ -67,26 +67,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "What is the difference between a chef placement and a regular private chef booking?",
-    answer: "A placement is an ongoing arrangement — a chef who works for your household or property regularly (daily, weekly, or monthly). A booking is for a specific event or stay. Placement involves a more thorough matching process, a trial session, and a formal agreement covering schedule, remuneration, and responsibilities.",
-  },
-  {
-    question: "How long does the chef placement process take?",
-    answer: "For most placements, from initial briefing to confirmed start date is 1-2 weeks. This includes the requirements conversation, chef shortlisting, trial session scheduling, and agreement finalisation. For urgent placements (needed within 3-5 days), contact us directly — we can often move faster for straightforward requirements.",
-  },
-  {
-    question: "Is there a placement fee?",
-    answer: "Yes. Chef placements involve a one-time placement fee separate from the chef's ongoing remuneration. The placement fee covers the matching process, shortlisting, trial coordination, and agreement preparation. Contact us for the current placement fee structure — it is calculated based on the type and duration of placement.",
-  },
-  {
-    question: "Can myCHEF provide a backup chef if our placed chef is unavailable?",
-    answer: "Yes. One of the advantages of placing through myCHEF rather than hiring independently is backup cover. If your placed chef is sick, on leave, or unavailable for a session, we can provide a qualified backup chef with knowledge of your household's preferences and dietary requirements.",
-  },
-  {
-    question: "What cuisine backgrounds are available through the myCHEF placement program?",
-    answer: "Our placement pool includes chefs with backgrounds in Indonesian/Balinese, Western (French, Italian, Mediterranean), Japanese, Asian fusion, and plant-based/vegan cooking. For specialist requirements (kosher, halal-certified, molecular gastronomy), contact us directly to discuss availability.",
-  },
+  { question: 'What staffing services do you offer in Bali?', answer: 'Day-rate in-villa staff and long-term placement of chefs, managers, butlers and household teams. <a href="/staffing">Staffing</a> · <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'How fast is placement?', answer: 'Often around 48 hours for roles with ready candidates; specialist searches take longer.' },
+  { question: 'Replacement guarantee?', answer: 'Placement programmes typically include a replacement window (e.g. 30 days) in writing.' },
+  { question: 'Live-in vs live-out?', answer: 'Live-in resides on property; live-out works set shifts. We help you choose.' },
+  { question: 'Background checks?', answer: 'Candidates are interviewed, reference-checked and supervised through myCHEF systems.' },
+  { question: 'Can we hire staff without catering?', answer: 'Yes for event staff. <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'Hotel and restaurant staffing?', answer: 'Yes — <a href="/staffing/hotels">hotel staffing</a> and B2B kitchen solutions.' },
+  { question: 'Trial days?', answer: 'Paid trials before long-term placement are common.' },
+  { question: 'English-speaking staff?', answer: 'Guest-facing roles are English-capable; we match language needs.' },
+  { question: 'What info starts a search?', answer: 'Role, location, live-in/out, languages, salary band, start date.' },
+  { question: 'Backup if staff is sick?', answer: 'Temporary cover can be arranged through the network.' },
+  { question: 'How to start?', answer: 'WhatsApp the brief or <a href="/contact">contact</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 export default function ChefPlacementAgencyBaliPage() {

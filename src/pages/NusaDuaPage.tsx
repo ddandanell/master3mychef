@@ -10,30 +10,26 @@ const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Nusa Dua. Can you send a menu proposal?')
 
 const FAQS = [
-  {
-    q: 'Where should we eat out in Nusa Dua?',
-    a: 'Bali Collection for the easiest walkable choice, resort dining rooms for formal occasions, and Tanjung Benoa for casual local seafood. Estate guests often find in-villa dining the best overall answer.',
-  },
-  {
-    q: 'Is Nusa Dua expensive for dining?',
-    a: 'Resort and precinct restaurants price at international hotel levels, with tax and service added. In-villa chef dinners start from IDR 700K per person ++ — often comparable or better for groups, with privacy included.',
-  },
-  {
-    q: 'How much does private dining in Nusa Dua cost?',
-    a: 'Villa fine dining runs IDR 700K–900K per person, corporate catering IDR 700K–800K, and celebrations from IDR 700K up depending on production — all quoted ++ (11% tax plus 10% service) and fixed upfront.',
-  },
-  {
-    q: 'How do you handle gated-estate access?',
-    a: 'We coordinate security entry documentation with estate management in advance, arrive early to stage, and run service to the agreed brief. It\'s standard procedure for our peninsula teams.',
-  },
-  {
-    q: 'Can you cater a corporate offsite or board dinner?',
-    a: `Yes — structured breakfasts, working lunches and executive dinners for 10–60 guests, with full-board options for multi-day programmes and precise run sheets. Corporate programmes carry a minimum spend of ${siteFacts.corporateMinSpend}.`,
-  },
-  {
-    q: 'Which areas do you cover?',
-    a: 'The full peninsula: the ITDC zone, Geger, Sawangan, the Benoa-side estates and Tanjung Benoa, plus nearby Bukit villas.',
-  },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
+  { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { q: 'What does "++" mean on prices?', a: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { q: 'Which areas of Bali do you cover?', a: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { q: 'How far in advance should I book?', a: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { q: 'Can you accommodate allergies and special diets?', a: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { q: 'Do you clean up after service?', a: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { q: 'How do I get a quote?', a: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { q: 'What if a chef or staff member cannot make it?', a: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const SCENE = [

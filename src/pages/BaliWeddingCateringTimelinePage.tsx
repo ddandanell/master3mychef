@@ -33,38 +33,26 @@ const breadcrumbs = breadcrumbSchema(
 )
 
 const faqs = [
-  {
-    q: 'How far in advance should I book a private chef for a Bali wedding?',
-    a: 'For weddings of 20+ guests, book 3–6 months in advance to secure your preferred chef, lock in the menu, and allow time for a tasting. Peak Bali wedding season (July–September and December) books out the fastest. For smaller intimate weddings of under 20 guests, 4–8 weeks can be sufficient, but earlier is always safer.',
-  },
-  {
-    q: 'Can a private chef handle a full wedding reception with 60+ guests?',
-    a: 'Yes. myCHEF scales events to any size. For larger weddings we assign a lead chef plus commis support, a dedicated service team including waiters and bartenders, and a logistics coordinator. All food is freshly prepared on-site at the villa kitchen or a temporary kitchen setup if the venue requires it.',
-  },
-  {
-    q: 'What does Bali wedding catering cost with a private chef?',
-    a: 'Wedding catering costs depend on guest count, menu complexity, service hours, and staffing. Every wedding is quoted individually — you receive a detailed, itemised proposal before any deposit. Message us on WhatsApp with your date and guest count for a tailored quote.',
-  },
-  {
-    q: 'Can we have a menu tasting before the wedding?',
-    a: 'Yes, and we strongly recommend it. A tasting session is scheduled 4–8 weeks before the wedding date. The chef prepares representative dishes from the proposed menu for 2–4 people. This is your opportunity to adjust seasoning, swap courses, and finalise presentation. Tasting sessions are charged separately from the wedding package.',
-  },
-  {
-    q: 'Can you accommodate dietary requirements and allergies across a mixed wedding guest list?',
-    a: 'Yes. We collect dietary information from the couple for all guests — allergies, intolerances, vegan, halal, gluten-free, and other requirements — at the time of menu finalisation. The chef plans separate preparations for allergy-critical guests and designs a menu with a shared base adapted for each dietary category. No guest goes without.',
-  },
-  {
-    q: 'Do you provide bar service and alcohol for weddings?',
-    a: "Yes. myCHEF can supply bartenders, mixologists, and a full bar setup including spirits, wine, champagne, beer, and signature cocktails. We source alcohol at cost or you can supply your own and we'll serve it. Alcohol procurement in Bali requires lead time, so confirm bar requirements at least 3 weeks before the event.",
-  },
-  {
-    q: 'What is included in the wedding catering package?',
-    a: 'A standard myCHEF wedding package includes: custom menu design and consultation, a pre-event tasting (optional), all ingredient sourcing and shopping, full on-site kitchen preparation, plated or buffet service, uniformed service staff, crockery and cutlery (if required), kitchen cleanup, and waste removal. A dedicated event coordinator manages timing on the day.',
-  },
-  {
-    q: 'Can you handle a wedding at a villa that has a small kitchen?',
-    a: 'Yes. Our chefs are experienced working in residential villa kitchens of all sizes. For larger guest counts where the villa kitchen is a limiting factor, we bring additional portable cooking equipment. We do a kitchen assessment as part of the planning process — no surprises on the day.',
-  },
+  { q: 'How much does wedding catering in Bali cost?', a: 'Wedding reception catering is quoted per guest based on menu and guest count. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/pricing">pricing</a> for published guidance.' },
+  { q: 'Do you offer menu tastings for weddings?', a: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
+  { q: 'Can you handle banjar fees and villa permissions?', a: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
+  { q: 'Can guests bring their own alcohol?', a: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
+  { q: 'What is the rain plan for outdoor receptions?', a: 'Every outdoor wedding has a covered fallback (marquee/indoor) confirmed before the day.' },
+  { q: 'Do you cater rehearsal and welcome dinners?', a: 'Yes — BBQ, family-style or plated formats via <a href="/events">events</a> and <a href="/catering">catering</a>.' },
+  { q: 'What staffing ratio do you use?', a: 'About one waiter per 8–10 seated guests, plus kitchen lead; cocktail hours add tray staff.' },
+  { q: 'Can you work with our wedding planner?', a: 'Yes — daily collaboration with planners and villa managers.' },
+  { q: 'Do you offer halal-friendly wedding menus?', a: 'Yes — pork-free and halal-sensitive lines when specified at planning.' },
+  { q: 'How is this different from a private chef dinner?', a: 'Weddings are multi-guest production. Couples dinners: <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
+  { q: 'Which areas host most villa weddings?', a: 'Uluwatu, Canggu, Seminyak, Ubud, Nusa Dua and Jimbaran are common — we cover island-wide.' },
+  { q: 'Can kids and elderly dietary needs be managed?', a: 'Yes — labelled plates and briefed service for mixed multi-gen guest lists.' },
+  { q: 'How much does catering in Bali cost?', a: 'Villa formats are quoted per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { q: 'What formats do you offer?', a: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { q: 'Is catering the same as private chef hire?', a: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Do prices include staff and cleanup?', a: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { q: 'Can you cook in an Airbnb villa?', a: 'Yes with a workable kitchen — share the listing when booking.' },
+  { q: 'Minimum guest counts?', a: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { q: 'Can menus be customised?', a: 'Yes — proteins, spice, diets locked before shopping.' },
+  { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront.' },
 ]
 
 const faqSchema = faqPageSchema(faqs.map(({ q, a }) => ({ question: q, answer: a })))

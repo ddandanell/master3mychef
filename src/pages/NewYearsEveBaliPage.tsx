@@ -154,42 +154,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: "When should I book for New Year's Eve?",
-    answer: 'By October at the latest. Peak season chefs are fully booked before December. The best chefs — those with fine-dining backgrounds and multi-course timing experience — commit to NYE bookings from September. Enquire early to secure your preferred chef and menu.',
-  },
-  {
-    question: 'Do you serve alcohol on NYE?',
-    answer: 'We provide full table service throughout the evening. Alcohol is client-supplied; we can recommend Bali wine importers and champagne sources if you need guidance on what to order and where to source it.',
-  },
-  {
-    question: 'Can you do midnight champagne service?',
-    answer: 'Yes — coordinated countdown, champagne on ice, poured at midnight. The midnight moment is a standard part of all NYE packages. The chef and service team manage the timing so it happens exactly at midnight.',
-  },
-  {
-    question: "What's the minimum group size for NYE?",
-    answer: 'No minimum. We do intimate dinners for 2 through to villa parties of 30+. The Couples NYE package is designed specifically for two people; the Group Feast Package scales for large villa groups.',
-  },
-  {
-    question: 'Is there a NYE surcharge?',
-    answer: 'Yes, a 25% festive surcharge applies on December 31. This reflects the premium on chef availability and the extended service hours (typically 4pm to 2am). The surcharge is quoted upfront — no surprises.',
-  },
-  {
-    question: 'What if I want a specific dish or cuisine?',
-    answer: 'NYE menus are fully bespoke. Share your preferences — favourite ingredients, cuisines, dietary requirements, dishes you love — and the chef designs the menu around them. There is no fixed template.',
-  },
-  {
-    question: 'Can I book a NYE chef for a group of 30 or more?',
-    answer: 'Yes — our Group Feast Package is designed for large villa groups. For 30+ guests, we deploy a multi-chef team and a dedicated service coordinator. We recommend booking at least 6–8 weeks in advance for groups of this size.',
-  },
-  {
-    question: 'What happens if my villa does not have a full kitchen?',
-    answer: 'We bring portable induction burners, prep tables, and all necessary equipment. Most Bali villas have adequate kitchen space, but if yours is limited, we simply supplement with our own production kit. No problem.',
-  },
-  {
-    question: 'Can I request a specific chef I have used before?',
-    answer: 'Yes, subject to availability. If you have a preferred chef from a previous booking, let us know when you enquire and we will check their NYE schedule. We cannot guarantee specific chefs for same-week bookings, but early requests are almost always accommodated.',
-  },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
+  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { question: 'How far in advance should I book?', answer: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { question: 'Do you clean up after service?', answer: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { question: 'What if a chef or staff member cannot make it?', answer: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const RELATED_PAGES = [

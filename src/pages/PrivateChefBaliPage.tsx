@@ -105,6 +105,18 @@ const FAQS = [
   { q: 'Can you cook for guests with dietary restrictions?', a: 'Every course is adaptable. Gluten-free, vegan, halal, shellfish allergy, pregnancy-safe, nut-free — no extra charge. Tell us when booking.' },
   { q: 'Does the price include wine?', a: 'No — wine is optional. Add our sommelier wine pairing at IDR 850,000 per person, or bring your own bottles and we will open and serve them.' },
   { q: 'What is "++" in the pricing?', a: '"++" means 11% government tax and 10% service charge are added. Your quote states the full total including tax and service before you confirm.' },
+  { q: 'How much is a private chef in Bali per day?', a: 'From IDR 1,000,000++/day for one meal (chef + assistant). Two meals IDR 1.8M++, three IDR 2.7M++. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { q: 'Are groceries included?', a: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { q: 'What is Chef Rotation?', a: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { q: 'Can the chef cook in our villa kitchen?', a: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { q: 'Is this cheaper than restaurants for groups?', a: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { q: 'Can I request a specific chef?', a: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { q: 'Fine dining vs daily chef?', a: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { q: 'Do you cover my area?', a: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { q: 'Kids menus with daily chef?', a: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { q: 'Live-in vs daily chef?', a: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { q: 'Payment methods?', a: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { q: 'Last-minute private chef?', a: 'Often possible outside peak — WhatsApp availability.' },
 ]
 
 export default function PrivateChefBaliPage() {
@@ -412,7 +424,7 @@ export default function PrivateChefBaliPage() {
             <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Questions</p>
             <h2 className="text-3xl md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>Frequently Asked</h2>
           </div>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

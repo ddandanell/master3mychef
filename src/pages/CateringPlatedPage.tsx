@@ -155,6 +155,18 @@ const FAQS = [
   { q: 'Can we taste the menu beforehand?', a: 'Pre-event tastings are available for bookings of 40+ guests; for smaller dinners we refine the menu with you over WhatsApp until it\'s right.' },
   { q: 'How far ahead should I book?', a: 'One to two weeks is ideal, more in peak season. A 50% deposit confirms your date; cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
   { q: 'Is this right for a rehearsal dinner or small wedding?', a: 'Very much so — it\'s our most-booked format for rehearsal dinners. For full wedding reception catering, see <a href="/events/weddings">wedding catering</a>.' },
+  { q: 'How much does catering in Bali cost?', a: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { q: 'What formats do you offer?', a: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { q: 'Is catering the same as private chef hire?', a: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Do prices include staff and cleanup?', a: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { q: 'Can you cook in an Airbnb villa?', a: 'Yes with a workable kitchen — share the listing when booking.' },
+  { q: 'Minimum guest counts?', a: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { q: 'Can menus be customised?', a: 'Yes — proteins, spice, diets locked before shopping.' },
+  { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront.' },
+  { q: 'Can we add bartenders?', a: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { q: 'Kids and allergies?', a: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { q: 'How do I book catering?', a: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
+  { q: 'Rain plan?', a: 'Covered setups and indoor pivots planned ahead.' },
 ]
 
 const BASE_PLATED_SERVICE_SCHEMA = serviceWithAggregateOfferSchema({
@@ -686,7 +698,7 @@ export default function CateringPlatedPage() {
             eyebrow="Questions"
             title="Plated Catering Bali FAQ"
           />
-          <FAQAccordion items={FAQS} defaultOpenCount={3} />
+          <FAQAccordion items={FAQS} defaultOpenCount={3} showToc ctaEvery={5} />
         </div>
       </section>
 

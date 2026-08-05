@@ -101,22 +101,26 @@ const testimonials = [
 ]
 
 const faqs = [
-  {
-    q: 'Who should use this page?',
-    a: 'Two groups: press who need a quick brand and founder overview, and villa managers who want to explore the myCHEF Certified Partner programme.',
-  },
-  {
-    q: 'What does the Certified Partner programme include?',
-    a: 'Priority booking access, commissions (12% co-branded / 7% white-label per booking, paid monthly), branded guest menus, operational support, and a dedicated myCHEF point of contact for guest dining coordination.',
-  },
-  {
-    q: 'Can journalists request founder commentary?',
-    a: 'Yes. Press can request Adriano commentary, company background, service facts, and approved images by emailing bali@mychef.id.',
-  },
-  {
-    q: 'What types of properties do you work with?',
-    a: 'Luxury villas, boutique hotels, wellness retreats, estates, and hospitality groups across Bali that want stronger guest dining and reliable staffing execution.',
-  },
+  { q: 'How fast do you reply?', a: 'Usually within 2 hours on WhatsApp during operating hours.' },
+  { q: 'Best way to book?', a: 'WhatsApp with date, guests, area and service — or <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Phone number?', a: 'Published sitewide — WhatsApp +62 896-7407-2020.' },
+  { q: 'Email?', a: 'bali@mychef.id for written requests and invoices.' },
+  { q: 'Office location?', a: 'Denpasar, Bali — full address on the site footer and contact pages.' },
+  { q: 'Languages?', a: 'English and Indonesian service.' },
+  { q: 'Corporate enquiries?', a: 'Yes — mention NPWP needs and multi-day schedule.' },
+  { q: 'Partner / villa manager enquiries?', a: 'Yes — <a href="/partner">partner</a> pathways.' },
+  { q: 'Urgent same-day requests?', a: 'Often possible — message ASAP with location.' },
+  { q: 'What to include in first message?', a: 'Date, villa area, guest count, service type, diets.' },
+  { q: 'Can you call me?', a: 'WhatsApp first is fastest; calls arranged when needed.' },
+  { q: 'FAQ hub?', a: 'Yes — <a href="/faq">FAQ</a>.' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 export default function PartnersPage() {
@@ -395,7 +399,7 @@ export default function PartnersPage() {
           <h2 className="font-playfair text-3xl md:text-5xl mb-4">Common press and partner questions</h2>
         </div>
         <div className="max-w-[800px] mx-auto">
-          <FAQAccordion items={faqs} defaultOpenCount={4} />
+          <FAQAccordion items={faqs} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

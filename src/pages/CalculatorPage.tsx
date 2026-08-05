@@ -875,6 +875,23 @@ const FAQS = [
   { question: 'Is this calculator accurate?', answer: 'This gives you a rough estimate. Final pricing depends on menu customization, villa location, seasonal ingredients, and specific requirements. Contact us for a precise quote.' },
   { question: 'What is not included in the estimate?', answer: 'Alcohol (except wine pairing), specialty equipment rentals, venue decorations, and transport outside standard service areas are not included.' },
   { question: 'Can I adjust the menu after getting a quote?', answer: 'Yes. Your proposal is not final until you pay the deposit. We can adjust menus, guest counts, and add-ons at any time before booking confirmation.' },
+  { question: 'Where are full prices listed?', answer: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
+  { question: 'Daily chef rates?', answer: 'IDR 1M++ / 1.8M++ / 2.7M++ for 1/2/3 meals per day.' },
+  { question: 'What is included vs groceries?', answer: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
+  { question: 'Weekly and monthly discounts?', answer: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
+  { question: 'Deposit?', answer: 'Usually 50%.' },
+  { question: 'Cancellation tiers?', answer: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
+  { question: 'Hidden fees?', answer: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
+  { question: 'Wedding price band?', answer: 'Often IDR 1.5M–3M++ per person for full receptions.' },
+  { question: 'Staff hourly rates?', answer: 'Waiters ~IDR 250K/hour; bartenders ~IDR 350K/hour (minimums apply).' },
+  { question: 'How to get an exact total?', answer: 'Share date, guests, area and format for a fixed quote.' },
+  { question: 'Currency?', answer: 'IDR pricing; international transfers accepted as invoiced.' },
+  { question: 'Compare formats?', answer: 'Use <a href="/dining-styles">dining styles</a> and <a href="/services">services</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
 ]
 
 const RELATED_PAGES = [

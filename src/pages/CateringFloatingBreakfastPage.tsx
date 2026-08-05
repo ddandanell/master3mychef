@@ -211,6 +211,16 @@ const FAQS = [
   { q: 'What if our villa pool is not suitable for a tray?', a: 'We style a poolside or indoor breakfast table with the same menu and presentation instead. Pool suitability — access, calm water, and space for safe placement — is confirmed before your slot.' },
   { q: 'How far in advance should I book?', a: 'Two to three days minimum. For peak season (June–August and December–January), one to two weeks secures your preferred date and slot.' },
   { q: 'What deposit is required?', a: 'A 50% deposit confirms your booking; the balance is due the day before the event.' },
+  { q: 'How much does catering in Bali cost?', a: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { q: 'What formats do you offer?', a: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { q: 'Is catering the same as private chef hire?', a: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'Do prices include staff and cleanup?', a: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { q: 'Can you cook in an Airbnb villa?', a: 'Yes with a workable kitchen — share the listing when booking.' },
+  { q: 'Minimum guest counts?', a: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { q: 'Can menus be customised?', a: 'Yes — proteins, spice, diets locked before shopping.' },
+  { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront.' },
+  { q: 'Can we add bartenders?', a: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { q: 'Kids and allergies?', a: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
 ]
 
 export default function CateringFloatingBreakfastPage() {
@@ -707,7 +717,7 @@ export default function CateringFloatingBreakfastPage() {
             eyebrow="Questions"
             title="Floating Breakfast FAQ"
           />
-          <FAQAccordion items={FAQS} defaultOpenCount={3} />
+          <FAQAccordion items={FAQS} defaultOpenCount={3} showToc ctaEvery={5} />
         </div>
       </section>
 

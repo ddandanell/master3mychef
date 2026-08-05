@@ -91,31 +91,26 @@ All pricing includes fresh ingredients, chef, and basic service. Add-ons include
 ]
 
 const faqs = [
-  {
-    question: 'How is private dining at a villa different from a restaurant?',
-    answer:
-      'The fundamental difference is exclusivity. At a restaurant, you share the kitchen, the staff, and the space with dozens of other guests. Private dining gives you a chef, a team, and a setting that exists only for your group that evening. The menu is designed for you, service is paced to your rhythm, and there is no noise or distraction from other diners. For special occasions, the difference in experience is significant.',
-  },
-  {
-    question: 'Can a private chef accommodate complex dietary requirements?',
-    answer:
-      'Yes, and this is one of the primary advantages of private dining over restaurant dining. When you book a private chef, dietary requirements are built into the menu design from the start -- not accommodated as an afterthought. We regularly manage vegan, gluten-free, nut-free, halal, kosher, and complex elimination diets across all guests at the same table. Share requirements at booking and your chef designs around them.',
-  },
-  {
-    question: 'How far in advance should we book private dining in Bali?',
-    answer:
-      'For a single dinner, 24--48 hours is typically sufficient. For a multi-day chef stay or an occasion dinner for 20+ guests, 3--7 days is recommended. During peak season (June--September, December--January), we recommend booking as early as possible -- premium chef availability fills quickly. For villa weddings and large-group events, 2--4 weeks gives us the time to confirm the right team and menu.',
-  },
-  {
-    question: 'Do we need to supply anything for the private dining experience?',
-    answer:
-      'Your villa kitchen, basic cookware, and dining equipment (plates, glasses, cutlery) are used. Most Bali villas are well-equipped. The chef brings their own knives and specialist tools. Ingredients are sourced fresh by the chef on the day. Alcohol is supplied by the client -- we advise on quantities and can arrange wine if needed.',
-  },
-  {
-    question: 'Can we have private dining at the beach or a location outside the villa?',
-    answer:
-      'For outdoor dining within the villa grounds -- poolside, in the garden, on the roof terrace -- absolutely. For external locations (beach, rice field, jungle clearing), we work with venue-specific setups and coordinate accordingly. Off-property dining requires advance planning and may involve additional logistics. Contact us with your vision and we will confirm what is possible.',
-  },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
+  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
+  { question: 'How far in advance should I book?', answer: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
+  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { question: 'Do you clean up after service?', answer: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
+  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
+  { question: 'What if a chef or staff member cannot make it?', answer: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const relatedPages = [

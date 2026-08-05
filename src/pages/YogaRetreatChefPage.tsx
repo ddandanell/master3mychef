@@ -75,26 +75,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'Can a private chef in Bali handle a fully vegan retreat menu?',
-    answer: 'Yes — and Bali is arguably the best place in Asia for it. Tempeh, tofu, local vegetables, coconut products, and extraordinary tropical fruits make plant-based cooking natural and abundant. Most retreat chefs in Bali specialize in plant-forward menus by default.',
-  },
-  {
-    question: 'How do you handle guests with multiple conflicting dietary needs?',
-    answer: 'Collect all dietary requirements from guests at registration, at least 3 weeks before the retreat. Share the full list with the chef. A skilled retreat chef designs base meals that accommodate the majority, with clearly labelled variations (vegan, gluten-free, nut-free) served alongside. No guest eats something lesser — just a variation.',
-  },
-  {
-    question: 'Do retreat chefs also handle kitchen cleanup and dishwashing?',
-    answer: 'Chef responsibilities cover kitchen prep and cooking cleanup. Dishwashing for large groups is typically handled by a kitchen assistant arranged as part of your staffing plan. For retreats of 20+ guests, budget for 1–2 kitchen helpers beyond the chef team.'
-  },
-  {
-    question: 'Can the chef create raw or living food menus for a raw food retreat?',
-    answer: 'Yes, with the right chef. Request specifically a chef with raw food experience — it is a distinct culinary specialization involving dehydrating, sprouting, fermentation, and preparation without heat above 42°C. Not all chefs have this background; mention it explicitly when requesting recommendations.',
-  },
-  {
-    question: 'What notice do you need to plan a retreat catering schedule?',
-    answer: '4–6 weeks is ideal. This allows menu planning, ingredient sourcing confirmation (especially for organic produce), staff scheduling, and a pre-retreat consultation call with the retreat leader. For retreats over 30 people or longer than 10 days, 6–8 weeks is recommended.',
-  },
+  { question: 'Can a private chef in Bali handle a fully vegan retreat menu?', answer: 'Yes — and Bali is arguably the best place in Asia for it. Tempeh, tofu, local vegetables, coconut products, and extraordinary tropical fruits make plant-based cooking natural and abundant. Most retreat chefs in Bali specialize in plant-forward menus by default.\',   },   {     question: \'How do you handle guests with multiple conflicting dietary needs?\',     answer: \'Collect all dietary requirements from guests at registration, at least 3 weeks before the retreat. Share the full list with the chef. A skilled retreat chef designs base meals that accommodate the majority, with clearly labelled variations (vegan, gluten-free, nut-free) served alongside. No guest eats something lesser — just a variation.\',   },   {     question: \'Do retreat chefs also handle kitchen cleanup and dishwashing?\',     answer: \'Chef responsibilities cover kitchen prep and cooking cleanup. Dishwashing for large groups is typically handled by a kitchen assistant arranged as part of your staffing plan. For retreats of 20+ guests, budget for 1–2 kitchen helpers beyond the chef team.' },
+  { question: 'Corporate catering price range?', answer: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { question: 'NPWP invoices?', answer: 'Yes on request.' },
+  { question: 'Multi-day retreats?', answer: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
+  { question: 'Guest counts?', answer: 'From leadership dinners to 100–200+ programmes.' },
+  { question: 'Dietary for mixed teams?', answer: 'Yes when headcount by diet is shared.' },
+  { question: 'Villa and venue work?', answer: 'Yes — share access rules.' },
+  { question: 'Bartenders and waiters?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'Case studies?', answer: 'Yes — <a href="/corporate-case-studies">case studies</a>.' },
+  { question: 'Book from overseas?', answer: 'Yes — WhatsApp/email planning before arrival.' },
+  { question: 'Headcount changes?', answer: 'Re-quoted in writing with notice.' },
+  { question: 'Alcohol?', answer: 'BYO or sourced at cost.' },
+  { question: 'How to start?', answer: 'Share dates, headcount, venues, meal map — <a href="/quote">quote</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
 ]
 
 const RELATED_PAGES = [

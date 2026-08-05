@@ -83,30 +83,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "What is the difference between a private chef and a villa cook?",
-    answer: "A private chef has formal culinary training and can execute multi-cuisine menus at restaurant standard — including complex dietary requirements, multi-course tasting menus, and fine dining presentation. A villa cook typically has practical cooking experience suited to local Indonesian cuisine and simple preparations. The price difference reflects the training and skill level involved.",
-  },
-  {
-    question: "Does a private chef do the grocery shopping?",
-    answer: "Yes. As part of the engagement, the chef sources all ingredients from local markets and grocery suppliers, with groceries charged to the client at cost (no markup). The sourcing is part of the service — a professional chef selects ingredients based on quality and freshness, not convenience.",
-  },
-  {
-    question: "Is kitchen cleanup included in the private chef service?",
-    answer: "Yes. After service, the chef is responsible for washing up, disposing of waste, storing leftover ingredients, and returning the kitchen to its original clean state. Most clients prefer the chef to clean as they go during multi-course dinners.",
-  },
-  {
-    question: "Can a private chef handle serious food allergies and dietary restrictions?",
-    answer: "Yes. Professionally trained private chefs understand cross-contamination, ingredient labelling, and dietary substitution techniques. When you book, always specify any serious allergies or dietary requirements (coeliac, nut allergy, strict vegan, halal, etc.) clearly during the menu consultation so the chef can plan accordingly.",
-  },
-  {
-    question: "Does a private chef also do the table service and wine pouring?",
-    answer: "Light service — bringing courses from kitchen to table, basic water and wine top-ups — is typically managed by the chef in small villa dinner settings. For larger or more formal events requiring dedicated waitstaff and full table service, myCHEF provides separate service staff. This is specified at booking.",
-  },
-  {
-    question: "What is the difference between a private chef and a household chef?",
-    answer: "A private chef is typically hired for a specific event or villa stay (a dinner, a week's holiday). A household chef is a longer-term placement — someone who cooks daily meals for a household on an ongoing basis, often living in. The responsibilities are similar, but the household chef role involves more scheduling and routine management. See our household chef guide for more detail.",
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'Daily private chef rates are published by meal count with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 export default function PrivateChefRolesResponsibilitiesPage() {

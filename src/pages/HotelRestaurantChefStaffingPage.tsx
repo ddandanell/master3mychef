@@ -89,36 +89,26 @@ Contact us to discuss your specific requirements and receive a fee structure rel
 ]
 
 const faqs = [
-  {
-    question: 'Can you place a chef at short notice for an urgent operational gap?',
-    answer:
-      'Yes. For line cook and junior chef positions, we can often mobilise within 24 hours. For head chef and sous chef positions, 48--72 hours is more typical. For executive chef placements, a week or more allows for proper candidate review and trial. Contact us directly via WhatsApp for urgent requests.',
-  },
-  {
-    question: 'Do you place foreign nationals in Bali kitchens?',
-    answer:
-      'We can source international talent and facilitate introductions. Work authorisation and visa requirements for foreign nationals in Indonesia are the responsibility of the employer. We can provide guidance on the general requirements and connect you with appropriate administrative support, but we do not act as a visa sponsor or immigration agent.',
-  },
-  {
-    question: 'What cuisine specialisations do you have in your network?',
-    answer:
-      'We have strong networks in European fine dining, Japanese (sushi, ramen, omakase), Italian, Balinese and Indonesian, Southeast Asian, plant-based and wellness cooking, pastry and boulangerie, and general hotel kitchen operations. For more niche cuisines, we may need additional time to source appropriate candidates.',
-  },
-  {
-    question: 'Do you offer a replacement guarantee for permanent placements?',
-    answer:
-      'Yes. Our permanent placements include a 3-month replacement guarantee. If the placed candidate leaves or does not perform to the agreed standard within 3 months, we will conduct a replacement search at no additional fee.',
-  },
-  {
-    question: 'Can you staff a full kitchen brigade for a new restaurant launch?',
-    answer:
-      "Yes. We have successfully placed full brigades for new F&B concepts in Bali: executive chef, sous chef, chef de partie stations, and pastry. A full brigade placement is treated as a project -- we work with the ownership team on the concept, cuisine direction, and team structure before sourcing candidates.",
-  },
-  {
-    question: 'What is different about myCHEF staffing compared to a general recruitment agency?',
-    answer:
-      "We are a culinary-specific operation with a direct relationship with our chef network -- we know many of our candidates from having worked with them in private dining engagements. We assess actual cooking skill, not just CVs. We understand the difference between a hotel kitchen format and a restaurant brigade format, and we match accordingly.",
-  },
+  { question: 'What staffing services do you offer in Bali?', answer: 'Day-rate in-villa staff and long-term placement of chefs, managers, butlers and household teams. <a href="/staffing">Staffing</a> · <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'How fast is placement?', answer: 'Often around 48 hours for roles with ready candidates; specialist searches take longer.' },
+  { question: 'Replacement guarantee?', answer: 'Placement programmes typically include a replacement window (e.g. 30 days) in writing.' },
+  { question: 'Live-in vs live-out?', answer: 'Live-in resides on property; live-out works set shifts. We help you choose.' },
+  { question: 'Background checks?', answer: 'Candidates are interviewed, reference-checked and supervised through myCHEF systems.' },
+  { question: 'Can we hire staff without catering?', answer: 'Yes for event staff. <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'Hotel and restaurant staffing?', answer: 'Yes — <a href="/staffing/hotels">hotel staffing</a> and B2B kitchen solutions.' },
+  { question: 'Trial days?', answer: 'Paid trials before long-term placement are common.' },
+  { question: 'English-speaking staff?', answer: 'Guest-facing roles are English-capable; we match language needs.' },
+  { question: 'What info starts a search?', answer: 'Role, location, live-in/out, languages, salary band, start date.' },
+  { question: 'Backup if staff is sick?', answer: 'Temporary cover can be arranged through the network.' },
+  { question: 'How to start?', answer: 'WhatsApp the brief or <a href="/contact">contact</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 const relatedPages = [

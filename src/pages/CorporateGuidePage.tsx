@@ -55,30 +55,26 @@ const RETREAT_SAMPLES = [
 ]
 
 const FAQS = [
-  {
-    q: 'What makes a good corporate retreat menu?',
-    a: 'Mix nutritious breakfasts and lunches with memorable dinners. Include dietary options (vegan, gluten-free, low-sugar) and avoid heavy meals during work time. Our chefs coordinate timing with your schedule.',
-  },
-  {
-    q: 'Can we do team dinners without a full retreat?',
-    a: 'Absolutely. We do one-off team dinners, client entertaining dinners, and partner appreciation events. Just arrange a venue and let us handle the food and service.',
-  },
-  {
-    q: 'How do payment plans work for long stays?',
-    a: 'For multi-day retreats, we typically invoice per day or per meal. Discuss your budget and timing during the proposal — we can structure payments to match your finance needs.',
-  },
-  {
-    q: 'What if dietary needs vary widely?',
-    a: 'We create a dietary breakdown of all attendees and plan menus that naturally accommodate multiple preferences. For example, grilled proteins with various sauces and sides.',
-  },
-  {
-    q: 'Can we have flexibility in meal times?',
-    a: 'Yes. If your schedule changes, notify us as soon as possible. We can shift meal times, adjust portions, or swap courses to fit your day.',
-  },
-  {
-    q: 'What about alcohol-free events?',
-    a: 'No problem. We offer elegant non-alcoholic beverages, mocktails, and creative drinks. Inform us during booking if the event is dry.',
-  },
+  { q: 'Corporate catering price range?', a: 'Corporate dinners and multi-day programmes are custom-quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { q: 'NPWP invoices?', a: 'Yes on request.' },
+  { q: 'Multi-day retreats?', a: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
+  { q: 'Guest counts?', a: 'From leadership dinners to 100–200+ programmes.' },
+  { q: 'Dietary for mixed teams?', a: 'Yes when headcount by diet is shared.' },
+  { q: 'Villa and venue work?', a: 'Yes — share access rules.' },
+  { q: 'Bartenders and waiters?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'Case studies?', a: 'Yes — <a href="/corporate-case-studies">case studies</a>.' },
+  { q: 'Book from overseas?', a: 'Yes — WhatsApp/email planning before arrival.' },
+  { q: 'Headcount changes?', a: 'Re-quoted in writing with notice.' },
+  { q: 'Alcohol?', a: 'BYO or sourced at cost.' },
+  { q: 'How to start?', a: 'Share dates, headcount, venues, meal map — <a href="/quote">quote</a>.' },
+  { q: 'Is this guide free?', a: 'Yes — educational content to help you plan. Booking is optional.' },
+  { q: 'Can myCHEF deliver what this guide describes?', a: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'How do I get prices after reading?', a: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { q: 'Does advice apply across Bali?', a: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { q: 'Allergies covered in real bookings?', a: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { q: 'Daily chef vs one dinner?', a: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { q: 'How to book after this guide?', a: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { q: 'Related services?', a: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
 ]
 
 const PLANNING_STEPS = [

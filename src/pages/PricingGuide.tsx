@@ -58,30 +58,26 @@ const PRICING_TIERS = [
 ]
 
 const FAQS = [
-  {
-    q: 'What does "++" mean in the pricing?',
-    a: '"++" indicates that government tax (11%) and service charge (10%) are added to the quoted price. So IDR 2.2M++ = approximately IDR 2.64M total.',
-  },
-  {
-    q: 'Is there a discount for large groups?',
-    a: 'Yes. For groups above 30 people, we offer negotiated per-person pricing. Larger catering events (50+) usually see 10–15% savings.',
-  },
-  {
-    q: 'What about payment plans?',
-    a: 'We take a 50% deposit to lock the date and team, then remaining 50% due the day before the event. Bookings within 24 hours require 100% payment upfront.',
-  },
-  {
-    q: 'Are there cancellation fees?',
-    a: 'Cancellations 14+ days before the event receive a full refund, 7–13 days before a 50% refund, and under 7 days are non-refundable. The deposit follows the same tiers; full terms are on our cancellation policy page.',
-  },
-  {
-    q: 'What if I add more guests last minute?',
-    a: 'We can usually accommodate if the chef team has capacity. Additional guests are billed at the per-person rate. Notify us as soon as possible.',
-  },
-  {
-    q: 'Do you offer payment plans for big weddings?',
-    a: 'Yes. For weddings and large events, we work with clients on payment schedules. Discuss at proposal stage.',
-  },
+  { q: 'Where are full prices listed?', a: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'Daily chef rates?', a: 'Published day rates depend on how many meals you want cooked.' },
+  { q: 'What is included vs groceries?', a: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
+  { q: 'Weekly and monthly discounts?', a: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
+  { q: 'Deposit?', a: 'Usually 50%.' },
+  { q: 'Cancellation tiers?', a: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
+  { q: 'Hidden fees?', a: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
+  { q: 'Wedding price band?', a: 'Full receptions are quoted per person on the wedding catering pages.' },
+  { q: 'Staff hourly rates?', a: 'Staff hourly rates are published on in-villa service pages.' },
+  { q: 'How to get an exact total?', a: 'Share date, guests, area and format for a fixed quote.' },
+  { q: 'Currency?', a: 'IDR pricing; international transfers accepted as invoiced.' },
+  { q: 'Compare formats?', a: 'Use <a href="/dining-styles">dining styles</a> and <a href="/services">services</a>.' },
+  { q: 'Is this guide free?', a: 'Yes — educational content to help you plan. Booking is optional.' },
+  { q: 'Can myCHEF deliver what this guide describes?', a: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { q: 'How do I get prices after reading?', a: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { q: 'Does advice apply across Bali?', a: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { q: 'Allergies covered in real bookings?', a: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { q: 'Daily chef vs one dinner?', a: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { q: 'How to book after this guide?', a: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { q: 'Related services?', a: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
 ]
 
 export default function PricingGuide() {

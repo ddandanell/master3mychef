@@ -106,13 +106,25 @@ const PARTY_TESTIMONIALS = [
 
 const FAQS = [
   { q: 'How much does villa party catering cost in Bali?', a: 'From IDR 650K++/person for a cocktail reception (20–80 guests), IDR 850K++ for a sundowner (15–50) and IDR 950K++ for a casual mixer (10–30). "++" adds 11% government tax + 10% service charge. Example: a 30-guest reception runs IDR 19.5M++. For full-menu dining rather than party formats, see <a href="/catering/villa-catering">villa catering in Bali</a>.' },
-  { q: "What's the minimum guest count?", a: '20 for cocktail receptions, 15 for sundowners, 10 for mixers. Smaller groups can be quoted with adjusted pricing — just ask.' },
-  { q: "Do we need the villa's permission — and what about noise rules?", a: "Yes, for parties beyond a quiet dinner. We coordinate with your villa manager on event approval, noise expectations and curfew times before confirming, and design the sound plan around the property. Some neighbourhoods also expect banjar (community) notification for larger events — we advise on what's customary for your location." },
-  { q: 'Can we bring our own alcohol?', a: "Yes. All formats include a standard bar, but you're welcome to supplement with your own bottles. Corkage may apply depending on the package — we'll confirm in your quote." },
+  { q: 'What\'s the minimum guest count?', a: '20 for cocktail receptions, 15 for sundowners, 10 for mixers. Smaller groups can be quoted with adjusted pricing — just ask.' },
+  { q: 'Do we need the villa\'s permission — and what about noise rules?', a: 'Yes, for parties beyond a quiet dinner. We coordinate with your villa manager on event approval, noise expectations and curfew times before confirming, and design the sound plan around the property. Some neighbourhoods also expect banjar (community) notification for larger events — we advise on what\'s customary for your location.' },
+  { q: 'Can we bring our own alcohol?', a: 'Yes. All formats include a standard bar, but you\'re welcome to supplement with your own bottles. Corkage may apply depending on the package — we\'ll confirm in your quote.' },
   { q: 'Can you handle dietary requirements?', a: 'Yes — vegetarian, vegan, gluten-free and allergy-aware options are planned into every menu at briefing, across canapés, BBQ and sharing formats.' },
   { q: 'Can we have a pool party?', a: 'Absolutely — many of our villa parties are poolside. We provide pool floats and waterproof decor, and time food service around swimming.' },
   { q: 'What happens if it rains?', a: 'Every outdoor format has a covered fallback planned in advance: grill stations move to sheltered areas, the bar relocates under cover, and the timeline flexes around the weather.' },
   { q: 'How do deposits, timing and cancellation work?', a: 'Sundowners start at 5:30pm for sunset; cocktail receptions from 4pm; mixers from 7pm. A 50% deposit confirms your date. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
+  { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
+  { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
 ]
 
 const VILLA_RULES_POINTS = [
@@ -498,7 +510,7 @@ export default function EventsVillaPartiesPage() {
       <section className="py-20 md:py-28 bg-white party-reveal">
         <div className="max-w-3xl mx-auto px-6">
           <SectionHeader eyebrow="Questions" title="Villa Party Bali — FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
         </div>
       </section>
 

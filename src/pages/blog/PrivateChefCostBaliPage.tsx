@@ -61,34 +61,26 @@ const WHAT_AFFECTS_PRICE = [
 ]
 
 const FAQS = [
-  {
-    q: 'How much does a private chef cost in Bali per day?',
-    a: 'Daily villa chef hire in Bali starts at IDR 1,000,000++ per day for a half day (one meal cooked and served, plus one additional meal prepared for later), IDR 1,800,000++ per day for a full day (two meals cooked and served, plus one prepared for later), and IDR 2,700,000++ per day for a complete full day (breakfast, lunch and dinner). Weekly bookings receive 10% off and monthly bookings 20% off the daily rate. Every booking includes one professional chef and one dedicated assistant, so service is always delivered as a pair. Groceries are charged separately at cost, supported by receipts. Prices are subject to a 10% service charge and 11% tax.',
-  },
-  {
-    q: 'What does a private dinner experience with a chef cost in Bali?',
-    a: 'A private dinner experience for 2 to 8 guests ranges from IDR 1,500,000 to IDR 5,000,000 in total. This covers a multi-course menu, the chef and service staff, setup, and full cleanup after the meal. Price depends on the number of courses, cuisine style, and guest count.',
-  },
-  {
-    q: 'How much does event catering cost in Bali for 20 to 50 guests?',
-    a: 'Event catering for 20 to 50 guests typically runs IDR 8,000,000 to IDR 25,000,000 total. This includes a full chef brigade, service staff, buffet or plated service, setup, and cleanup. Per-person cost depends on menu complexity and service duration.',
-  },
-  {
-    q: 'What is the minimum cost for a large wedding or event with 50+ guests?',
-    a: 'Large events and weddings with 50 or more guests start from IDR 20,000,000. Pricing scales significantly with guest count, menu tiers, staffing requirements, and the number of service hours. Full wedding catering for 100+ guests can reach IDR 100,000,000 or more.',
-  },
-  {
-    q: 'Are groceries included in the private chef price in Bali?',
-    a: 'No. In most private chef arrangements in Bali, groceries and ingredients are billed separately at cost. The chef fee covers the chef\'s time, expertise, equipment, and service. This is standard practice and means you only pay for what is actually purchased for your menu.',
-  },
-  {
-    q: 'Is tipping expected for a private chef in Bali?',
-    a: 'Tipping is not mandatory but is appreciated. A gratuity of 10 to 20 percent of the service fee is a warm acknowledgment of excellent work. If the chef and team delivered an exceptional experience, a tip of IDR 100,000 to 300,000 per staff member is a kind and appropriate gesture.',
-  },
-  {
-    q: 'How do I compare private chef quotes in Bali?',
-    a: 'When comparing quotes, check whether groceries are included or separate, whether the price is nett (all-inclusive) or marked "++" (tax and service charge added on top), the number of staff included, what courses or meal formats are covered, and any travel or logistics fees for remote locations.',
-  },
+  { q: 'How much is a private chef in Bali per day?', a: 'Daily private chef rates are published by meal count with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { q: 'Are groceries included?', a: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { q: 'What is Chef Rotation?', a: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { q: 'Can the chef cook in our villa kitchen?', a: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { q: 'Is this cheaper than restaurants for groups?', a: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { q: 'Can I request a specific chef?', a: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { q: 'Fine dining vs daily chef?', a: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { q: 'Do you cover my area?', a: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { q: 'Kids menus with daily chef?', a: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { q: 'Live-in vs daily chef?', a: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { q: 'Payment methods?', a: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { q: 'Last-minute private chef?', a: 'Often possible outside peak — WhatsApp availability.' },
+  { q: 'Where are full prices listed?', a: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'Daily chef rates?', a: 'Published day rates depend on how many meals you want cooked.' },
+  { q: 'What is included vs groceries?', a: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
+  { q: 'Weekly and monthly discounts?', a: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
+  { q: 'Deposit?', a: 'Usually 50%.' },
+  { q: 'Cancellation tiers?', a: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
+  { q: 'Hidden fees?', a: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
+  { q: 'Wedding price band?', a: 'Full receptions are quoted per person on the wedding catering pages.' },
 ]
 
 const WA_MSG = encodeURIComponent('Hi myCHEF! I want to know how much a private chef costs in Bali. Can you send me pricing?')

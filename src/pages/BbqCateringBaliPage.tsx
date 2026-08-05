@@ -107,30 +107,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'Do you use charcoal or gas for the BBQ?',
-    answer: 'We prefer charcoal for the flavour. Some villa rules require gas — we work within villa restrictions and will always achieve great results either way.',
-  },
-  {
-    question: 'How much space does the BBQ setup need?',
-    answer: 'Ideally a 3m x 3m clear area away from the pool edge and overhanging vegetation. We assess this when you share your villa details.',
-  },
-  {
-    question: 'Can you do a whole pig (babi guling) at a villa?',
-    answer: 'Yes — this is a myCHEF specialty and a showstopping centrepiece for large groups. Requires advance notice of at least 3 days.',
-  },
-  {
-    question: 'Is BBQ suitable for vegetarians?',
-    answer: 'Yes — our plant-based BBQ package features a full vegetarian grill menu that non-vegetarian guests love too.',
-  },
-  {
-    question: 'How many chefs does a BBQ event need?',
-    answer: 'Typically 1 pit chef + 1 kitchen support for groups up to 20. Larger groups get additional team members.',
-  },
-  {
-    question: 'What is included in the BBQ package price?',
-    answer: 'Chef labour, all ingredients, charcoal/fuel, serving equipment, and cleanup. Alcohol is not included.',
-  },
+  { question: 'How much does BBQ catering cost in Bali?', answer: 'Packages often from IDR 700K–950K++ per person depending on menu. <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/bbq-grill">BBQ grill menus</a>.' },
+  { question: 'Do you bring the grill?', answer: 'Yes — grills, fuel, tools and stations. You do not need villa equipment.' },
+  { question: 'What if it rains during a BBQ?', answer: 'Covered terraces or tents — plan B is confirmed before service.' },
+  { question: 'Can you do seafood or vegetarian BBQ?', answer: 'Yes. Also <a href="/seafood-bbq-catering-bali">seafood BBQ</a>.' },
+  { question: 'Is alcohol included?', answer: 'Usually BYO or sourced at cost with optional bartender.' },
+  { question: 'What is the minimum guest count?', answer: 'Typically around 10 for full BBQ catering; smaller groups can use grill menus or private chef.' },
+  { question: 'Can kids eat at a BBQ?', answer: 'Yes — milder items or <a href="/kids-menus">kids menus</a>.' },
+  { question: 'Is BBQ different from daily private chef?', answer: 'BBQ catering is event production; multi-day meals use <a href="/private-chef-bali">private chef day rates</a>.' },
+  { question: 'Do you clean up after BBQ?', answer: 'Yes on serviced packages.' },
+  { question: 'Can BBQ be poolside?', answer: 'Yes — heat and smoke placement planned for guest comfort.' },
+  { question: 'Pork-free options?', answer: 'Yes — fully pork-free/halal-friendly grills available.' },
+  { question: 'How far ahead to book a villa BBQ?', answer: '3–7 days typical; peak season longer. Last-minute often possible.' },
+  { question: 'How much does catering in Bali cost?', answer: 'Many villa formats start around IDR 700K++ per person. See <a href="/catering">catering</a> and <a href="/pricing">pricing</a>.' },
+  { question: 'What formats do you offer?', answer: 'BBQ, buffet, plated, drop-off, grazing, floating breakfast, retreat and corporate — all under <a href="/catering">catering</a>.' },
+  { question: 'Is catering the same as private chef hire?', answer: 'No. Catering is usually one event; multi-day stays use <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Do prices include staff and cleanup?', answer: 'Serviced packages include chef/staff and cleanup; drop-off does not keep staff on site.' },
+  { question: 'Can you cook in an Airbnb villa?', answer: 'Yes with a workable kitchen — share the listing when booking.' },
+  { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
+  { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
+  { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
 ]
 
 const RELATED_PAGES = [

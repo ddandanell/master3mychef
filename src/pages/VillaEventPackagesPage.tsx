@@ -62,14 +62,25 @@ const SAMPLE_WEEKEND = [
 
 const FAQS = [
   { question: 'What exactly is bundled in a villa event package?', answer: 'Chef and kitchen team, menu and groceries at cost, bar service, service staff, day-of coordinator, decor and entertainment coordination, setup, full cleanup and villa handback.' },
-  { question: 'How much does a villa event package cost?', answer: "From IDR 650K++/person (cocktail reception, 20–80 guests), IDR 850K++/person (sundowner or birthday party, 15–50) and IDR 1.5M++/person (intimate dinner, 4–12). '++' adds 11% government tax + 10% service charge." },
+  { question: 'How much does a villa event package cost?', answer: 'From IDR 650K++/person (cocktail reception, 20–80 guests), IDR 850K++/person (sundowner or birthday party, 15–50) and IDR 1.5M++/person (intimate dinner, 4–12). \'++\' adds 11% government tax + 10% service charge.' },
   { question: 'Is a package cheaper than booking everything separately?', answer: 'Usually better value and always cleaner: one setup crew, one coordinator, no duplicated logistics, quoted as a single itemised total.' },
-  { question: "What's the minimum group size?", answer: '4 guests for intimate dinners, 10 for showers, 15 for parties, 20 for cocktail receptions.' },
+  { question: 'What\'s the minimum group size?', answer: '4 guests for intimate dinners, 10 for showers, 15 for parties, 20 for cocktail receptions.' },
   { question: 'Do we need the villa\'s permission? What about noise and banjar rules?', answer: 'Yes — event approval is confirmed with the villa manager, and sound, timing and guest flow are planned around the property\'s rules including banjar notification where customary.' },
   { question: 'Can you coordinate our decor, DJ and photographer?', answer: 'Yes — styling, entertainment and photography are coordinated through trusted suppliers on one timeline, priced upfront in the proposal.' },
   { question: 'What if it rains?', answer: 'Every package includes a covered fallback — grills and bars move under shelter, styling relocates indoors, the timeline adjusts.' },
   { question: 'How do deposits and cancellation work?', answer: 'A 50% deposit confirms the date and locks the team. Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
   { question: 'Is this the same as the Complete Villa Experience?', answer: 'No — a villa event package covers one occasion; the Complete Villa Experience covers a whole multi-day stay with daily chef, staffing and concierge.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
 ]
 
 const serviceSchema = {

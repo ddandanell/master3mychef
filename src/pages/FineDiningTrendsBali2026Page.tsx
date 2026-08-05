@@ -88,22 +88,26 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  {
-    question: "What is the biggest fine dining trend in Bali in 2026?",
-    answer: "The most significant shift is the serious treatment of Indonesian ingredients within fine dining formats — building tasting menus around hyperlocal produce and lesser-known Indonesian flavour profiles rather than defaulting to European cuisine. Guests increasingly request 'modern Indonesian' or 'hyperlocal Bali' tasting menus rather than purely French or Italian formats.",
-  },
-  {
-    question: "Can a private chef in Bali accommodate a table with multiple dietary requirements?",
-    answer: "Yes. Multi-dietary group menus — where a single table includes vegan, pescatarian, coeliac, and halal guests — are one of the most common requests in 2026. Professional private chefs with dietary training can produce menus that feel equally considered and high-quality across all constraints simultaneously. Specify all requirements clearly at booking.",
-  },
-  {
-    question: "Is natural wine available for private chef dinners in Bali?",
-    answer: "Yes, though it requires more advance notice than conventional wine. myCHEF works with specialist importers in Seminyak and Canggu who carry natural, biodynamic, and low-intervention bottles. If natural wine pairing is important to you, mention it at booking with as much lead time as possible.",
-  },
-  {
-    question: "What is the best experience-led private dining format in Bali?",
-    answer: "The most memorable bookings combine setting and cuisine: cliff dinners at Uluwatu at sunset, rice field dinners in Ubud at dusk, or an interactive cooking class followed by eating the dinner you helped prepare. These experiences are impossible to replicate at any restaurant, which is precisely why villa guests choose private chef over restaurant dining.",
-  },
+  { question: 'Is this guide free?', answer: 'Yes — educational content to help you plan. Booking is optional.' },
+  { question: 'Can myCHEF deliver what this guide describes?', answer: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'How do I get prices after reading?', answer: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { question: 'Does advice apply across Bali?', answer: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { question: 'Allergies covered in real bookings?', answer: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { question: 'Daily chef vs one dinner?', answer: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { question: 'How to book after this guide?', answer: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { question: 'Related services?', answer: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
+  { question: 'Cancellation if I book?', answer: 'See <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'Who writes the operational standards?', answer: 'myCHEF operations and chef leadership in Bali.' },
+  { question: 'Can villa managers share this guide?', answer: 'Yes — free to share with guests.' },
+  { question: 'More FAQs?', answer: 'Central hub: <a href="/faq">FAQ</a>.' },
+  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
+  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
+  { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
 ]
 
 export default function FineDiningTrendsBali2026Page() {

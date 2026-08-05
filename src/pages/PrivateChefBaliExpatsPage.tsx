@@ -112,30 +112,26 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  {
-    question: 'Can I hire a chef month-to-month without a long contract?',
-    answer: 'Yes, we offer rolling monthly contracts with 2-week cancellation notice. There is a 1-month minimum to ensure fair terms for both you and the chef, but after that initial month you are free to continue, pause, or end the arrangement with two weeks notice.',
-  },
-  {
-    question: 'Do I need to provide the kitchen equipment?',
-    answer: 'Most Bali villa kitchens are reasonably well-equipped. We assess on the first visit and advise on any gaps — typically this means a good knife set and a reliable wok, which most villas already have. For longer-term arrangements, some clients invest in a few additional tools; we advise on what is actually needed rather than what is nice to have.',
-  },
-  {
-    question: 'Can my chef do the grocery shopping as well?',
-    answer: 'Yes, and most clients prefer this arrangement. We set up a weekly grocery budget at the start of the placement, your chef handles all shopping from the morning market and nearby suppliers, and you receive a weekly expense summary. Some clients prefer to do occasional market trips with their chef — particularly in the first few weeks — which is always welcome.',
-  },
-  {
-    question: 'What if I travel and don\'t need the chef for 2 weeks?',
-    answer: 'We offer pause provisions in monthly contracts for travel periods of 7 days or longer. You give advance notice (typically one week), the arrangement pauses, and you are not charged for days the chef is not working. This is especially relevant for expats who travel frequently between Bali and other locations.',
-  },
-  {
-    question: 'Can the chef cook for dinner parties as well as daily meals?',
-    answer: 'Yes, and many long-stay clients value this capability highly. For casual dinner parties of up to 6–8 guests, your regular chef handles everything. For more formal events or larger gatherings of 8 or more guests, we recommend supplementary staffing — an additional kitchen assistant or service staff — which we can arrange. Formal event cooking is priced separately from the monthly retainer.',
-  },
-  {
-    question: 'What cuisines can expat chefs typically cook?',
-    answer: 'Most of our long-term placement chefs are trained across Indonesian, Western (European and American), and one additional specialty cuisine — typically Thai, Japanese, or Mediterranean. Chefs with specialty cuisine expertise (French classical, Indian, Japanese kaiseki) are available on request and placed accordingly. During the intake consultation, we match your cuisine preferences with chef profiles in our placement pool.',
-  },
+  { question: 'How much is a private chef in Bali per day?', answer: 'Daily private chef rates are published by meal count with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
+  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
+  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
+  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
+  { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
+  { question: 'Payment methods?', answer: 'Bank transfer and major cards; deposit then balance as quoted.' },
+  { question: 'Last-minute private chef?', answer: 'Often possible outside peak — WhatsApp availability.' },
+  { question: 'Is this guide free?', answer: 'Yes — educational content to help you plan. Booking is optional.' },
+  { question: 'Can myCHEF deliver what this guide describes?', answer: 'Yes — start at <a href="/services">services</a> or <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'How do I get prices after reading?', answer: 'See <a href="/pricing">pricing</a> or WhatsApp a fixed quote request.' },
+  { question: 'Does advice apply across Bali?', answer: 'Yes for major villa areas — confirm logistics for remote spots.' },
+  { question: 'Allergies covered in real bookings?', answer: 'Yes — brief us at enquiry. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide</a>.' },
+  { question: 'Daily chef vs one dinner?', answer: 'Multi-day stays → private chef day rates; celebration nights → fine dining or catering.' },
+  { question: 'How to book after this guide?', answer: 'WhatsApp date, guests, area — <a href="/book">book</a>.' },
+  { question: 'Related services?', answer: 'Browse <a href="/dining-styles">dining styles</a> and <a href="/events">events</a>.' },
 ]
 
 const RELATED_PAGES = [

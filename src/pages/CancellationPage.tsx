@@ -3,7 +3,6 @@ import { ArrowLeft, MessageCircle, Shield, AlertTriangle, CheckCircle2, XCircle,
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
-import { siteFacts } from '@/data/siteFacts'
 
 const CLIENT_POLICY = [
   {
@@ -43,16 +42,26 @@ const CHEF_POLICY = [
 ]
 
 const FAQS = [
-  { q: 'What is the myCHEF cancellation policy?', a: siteFacts.cancellationPolicy },
+  { q: 'What is the myCHEF cancellation policy?', a: 'Cancellations made 14 or more days before the event receive a full refund. Cancellations between 7–13 days before receive a 50% refund. Cancellations less than 7 days before are non-refundable.' },
   { q: 'Can I get a full refund if I cancel my booking?', a: 'Yes — if you cancel 14 or more days before your scheduled booking, you receive a 100% full refund of all payments made, no questions asked.' },
-  { q: 'What happens if I cancel less than 7 days before?', a: 'Unfortunately, no refund is provided for cancellations made less than 7 days before the event. By this point, all ingredients have been purchased and the chef has blocked their calendar exclusively for your booking.' },
-  { q: 'Can I reschedule instead of cancelling?', a: 'Yes, you may request a reschedule instead of a cancellation. All change requests must be submitted directly to MyChef no later than 72 hours before the booking starts. Later requests may be treated as a cancellation.' },
-  { q: 'What if myCHEF cancels my booking?', a: 'If MyChef or the assigned chef cancels or fails to deliver the service, you will receive a full refund of all payments made. If service begins but cannot be completed for reasons caused by MyChef, a fair refund will be issued based on time worked.' },
-  { q: 'How long does a refund take?', a: 'Once your cancellation is confirmed and approved, refunds are typically processed within 5–10 business days, depending on your bank or payment provider.' },
-  { q: 'Is the deposit refundable?', a: `The deposit follows the same cancellation tiers: 100% refundable if cancelled 14+ days before, 50% refundable within 7–13 days, and non-refundable if cancelled less than 7 days before.` },
-  { q: 'What if there is an emergency and I need to cancel?', a: 'We understand emergencies happen. Please contact us directly via WhatsApp as soon as possible. While our policy is firm due to perishable ingredients and chef scheduling, we review emergency requests on a case-by-case basis.' },
-  { q: 'What happens if the chef cannot access the property or kitchen?', a: 'If the chef cannot perform because access to the property, kitchen, or guests is not provided at the agreed time, it is treated as a same-day cancellation and no refund applies. Please make sure access, power, water, and workspace are ready before the agreed start time.' },
-  { q: 'What about outdoor events and bad weather?', a: 'For outdoor events, the client is responsible for a viable sheltered backup space. Where severe weather beyond either party\'s control prevents service, we work in good faith to reschedule, and any refund is issued net of unrecoverable costs already incurred (such as perishable groceries already purchased).' },
+  { q: 'What happens if I cancel 7 to 13 days before?', a: 'You receive a 50% refund of the total amount. By this window ingredients may already be ordered and chef time blocked.' },
+  { q: 'What if I cancel less than 7 days before?', a: 'No refund. Ingredients are purchased and the chef calendar is locked.' },
+  { q: 'Is the deposit refundable?', a: 'The deposit follows the same tiers: 100% refundable at 14+ days, 50% at 7–13 days, and non-refundable under 7 days.' },
+  { q: 'What if there is an emergency and I need to cancel?', a: 'Contact WhatsApp immediately. Policy is firm due to perishable ingredients and scheduling; emergencies are reviewed case-by-case.' },
+  { q: 'How do I cancel a booking?', a: 'Message WhatsApp or email bali@mychef.id with your booking reference and date. Written confirmation closes the loop.' },
+  { q: 'Does the policy apply to weddings and large events?', a: 'Standard tiers apply unless a custom event contract states otherwise — always check your proposal.' },
+  { q: 'What about date changes instead of cancellation?', a: 'Date changes are treated as a modification when capacity allows; if not possible, cancellation tiers apply. We re-confirm in writing.' },
+  { q: 'Do weather issues get special treatment?', a: 'Outdoor plans include rain backups for service. Full cancellations still follow the published tiers unless we cannot deliver an agreed plan B.' },
+  { q: 'What if myCHEF cancels?', a: 'If we cannot fulfil, you receive a full refund or free reschedule — guest protection is covered under our service guarantee. <a href="/why-mychef">Why myCHEF →</a>' },
+  { q: 'Does ++ tax get refunded too?', a: 'Refunds apply to amounts paid, including tax/service portions already collected, per the tier.' },
+  { q: 'Can I cancel only part of a multi-day chef booking?', a: 'Partial day reductions are re-quoted; cancelled days follow the same time-based tiers from each service date.' },
+  { q: 'How does this work with weekly or monthly chef hire?', a: 'Same tiers relative to each confirmed service block unless your written agreement says otherwise.' },
+  { q: 'Where is the policy published?', a: 'This page is the source of truth, mirrored in <a href="/faq">FAQ</a> and quotes.' },
+  { q: 'What if guest count drops close to the event?', a: 'Headcount reductions near the date may not fully reduce the total if food is already purchased — we confirm adjustments in writing.' },
+  { q: 'Are force majeure events covered?', a: 'Genuine force majeure is reviewed case-by-case; document the situation ASAP on WhatsApp.' },
+  { q: 'How fast are refunds paid?', a: 'Approved refunds are processed after written confirmation; bank timing varies by method.' },
+  { q: 'Can I buy cancellation insurance?', a: 'We do not sell insurance; some travel insurers cover private dining — check your policy.' },
+  { q: 'Who do I contact about a refund status?', a: 'WhatsApp +62 896-7407-2020 or bali@mychef.id with your booking details.' },
 ]
 
 const DEDUCTIONS = [
@@ -166,7 +175,7 @@ export default function CancellationPage() {
       <section className="py-20 md:py-28 px-6 bg-[#FAFAF8]">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Cancellation FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

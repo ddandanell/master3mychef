@@ -139,13 +139,26 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'How long does live-in chef placement take?', a: 'Typically one to two weeks from brief to placement. Trial sessions are scheduled within three to five days of shortlist approval.' },
-  { q: 'What if the live-in chef is not the right fit?', a: 'We offer a 30-day replacement guarantee. If the match is not right, we restart the search at no additional cost.' },
-  { q: 'Do you handle contracts and payroll for live-in chefs?', a: 'Yes. A standard Indonesian employment contract is part of every live-in placement, and we guide you on payroll, BPJS and THR; households with more complex arrangements are referred to local payroll partners.' },
-  { q: 'Where does the chef live?', a: 'On-site, in your property\'s staff accommodation, which we help you define in the employment contract — including working hours, days off and house rules.' },
-  { q: 'What cuisines can your live-in chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, halal and kosher — we match cuisine to your preference.' },
-  { q: 'Can the live-in chef cook for events as well?', a: 'Yes. Estate and family placements include event cooking. Additional event coverage can be arranged at separate rates.' },
-  { q: 'What areas do you cover?', a: 'All Bali areas — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
+  { q: 'How long does live-in chef placement take in Bali?', a: 'Typically one to two weeks from brief to placement. Trial sessions usually within 3–5 days of shortlist approval.' },
+  { q: 'What if the live-in chef is not the right fit?', a: '30-day replacement guarantee — we restart the search at no additional placement fee if the match is wrong.' },
+  { q: 'Do you handle contracts and payroll for live-in chefs?', a: 'Yes. A standard Indonesian employment contract is part of placement; we guide payroll, BPJS and THR. Complex setups may use local payroll partners.' },
+  { q: 'Where does the live-in chef stay?', a: 'On-site staff accommodation defined in the contract — hours, days off and house rules included.' },
+  { q: 'What cuisines can live-in chefs cook?', a: 'Mediterranean, Italian, French, Asian fusion, Balinese, Japanese, plant-based, and halal-sensitive households — matched to your brief.' },
+  { q: 'Can the live-in chef cook for events as well?', a: 'Yes. Family/estate placements often include event cooking; large parties may add temporary staff from <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'What areas of Bali do you cover for live-in placement?', a: 'Island-wide — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and beyond. <a href="/locations">Locations →</a>' },
+  { q: 'How is live-in chef different from daily private chef hire?', a: 'Live-in is employment-style placement for a household. Holiday multi-day cooking is a day rate on <a href="/private-chef-bali">private chef Bali</a> — no employment contract.' },
+  { q: 'Can we trial a chef before long-term placement?', a: 'Yes — paid trial service days are the cleanest way to test cuisine, communication and villa chemistry.' },
+  { q: 'What salary should we budget for a live-in chef?', a: 'Depends on experience, languages, cuisine and estate complexity. We quote after the brief rather than publish a single number that misleads.' },
+  { q: 'Do live-in chefs shop for groceries?', a: 'Usually yes when in the role brief — menu planning, shopping or supplier coordination and kitchen hygiene.' },
+  { q: 'What if the chef is sick or on leave?', a: 'Backup cover can be arranged through myCHEF — a key advantage vs hiring solo. See <a href="/staffing">staffing hub</a>.' },
+  { q: 'Can the chef cook for kids and special diets daily?', a: 'Yes when briefed — allergies, kids plates and wellness menus are common household requirements.' },
+  { q: 'Do you place couples (chef + housekeeper) together?', a: 'Often possible for estates — we can shortlist complementary pairs or build a small team.' },
+  { q: 'Is English-speaking required?', a: 'Most family placements prefer strong English; we match language level to your household.' },
+  { q: 'How do days off and overtime work?', a: 'Defined in the employment contract before start — roster, overtime and public holidays should never be verbal only.' },
+  { q: 'Can expats and long-stay renters use live-in placement?', a: 'Yes when accommodation and legal employment structure are clear. Short villa holidays should use <a href="/private-chef-bali">daily chef</a> instead.' },
+  { q: 'What documents do you need from us to start?', a: 'Property type, location, cuisine, household size, kids/pets, accommodation photos, salary band and start date.' },
+  { q: 'How do I start a live-in chef search?', a: 'WhatsApp the brief above or use <a href="/contact">contact</a>. Related: <a href="/staffing/placement">placement</a> · <a href="/staffing">all staffing</a>.' },
+  { q: 'Is there a placement fee?', a: 'Yes — fees depend on seniority and exclusivity of the search. Quoted after the brief, before candidates are released.' },
 ]
 
 export default function StaffingLiveInPage() {
@@ -322,7 +335,7 @@ export default function StaffingLiveInPage() {
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[800px] mx-auto">
           <SectionHeader eyebrow="Questions" title="Live-In Chef FAQ" />
-          <FAQAccordion items={FAQS} defaultOpenCount={4} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

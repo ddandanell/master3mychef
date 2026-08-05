@@ -376,7 +376,20 @@ export function buildSitemap(): SitemapEntry[] {
     metaInfo('blog-private-chef-seminyak-canggu-ubud-comparison', 'blog-post', 0.7, 'monthly'),
     metaInfo('blog-private-dinner-party-bali', 'blog-post', 0.7, 'monthly'),
     metaInfo('blog-wet-season-menu-bali', 'blog-post', 0.7, 'monthly'),
-    metaInfo('pricing-calculator', 'info', 0.7, 'monthly'),
+    // NOT /pricing-calculator — deliberately excluded, see below.
+    //
+    // Adding it here on 2026-08-05 broke the deploy (Actions runs #221 and #222 both
+    // failed at `vercel build`). Putting a path in SITEMAP makes prerender emit static
+    // HTML for it, which brings it inside the scan window of scripts/check-price-floor.ts.
+    // PricingCalculatorPage renders `IDR {formatIDR(service.basePricePerPerson)}/person`
+    // for villa catering (400,000), floating breakfast (450,000), corporate (480,000) and
+    // wedding (550,000) — all under the 700,000 per-person floor that script enforces, so
+    // postbuild exits 1 and nothing deploys.
+    //
+    // This is a real price contradiction, not a tooling quirk: the calculator advertises
+    // per-guest rates below the floor published everywhere else. Whitelisting the page
+    // would ship that contradiction into the index. Resolve the prices with management
+    // first, then either re-add this line or add the path to FLOOR_EXCEPTION_PATHS.
     // Pages without PAGE_META entry (keep explicit)
     { path: '/calculator', type: 'info', title: 'Pricing Calculator | Private Chef Bali | myCHEF.id', description: 'Estimate your private chef, catering, or event costs instantly. Transparent IDR pricing, no hidden fees.', priority: 0.6, changefreq: 'monthly' },
     { path: '/join-our-team', type: 'info', title: 'Chef Jobs Bali | Join the myCHEF Team — Apply via WhatsApp', description: 'Chef jobs in Bali with myCHEF. Roles for chefs, bartenders, waiters and coordinators. Join a team trusted by 560+ events served. Apply via WhatsApp.', priority: 0.5, changefreq: 'monthly' },

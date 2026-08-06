@@ -191,7 +191,7 @@ export default function ReviewsPage() {
   return (
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="myCHEF Reviews | 560+ Villas Served in Bali"
+        title="myCHEF Reviews | 560+ Events Served in Bali"
         description="Read guest reviews from myCHEF Bali villa dinners, weddings, retreats & events — real hosts, real outcomes."
         canonical={canonical}
         ogImage={`${SITE}/dining-table.webp`}

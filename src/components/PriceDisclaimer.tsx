@@ -8,9 +8,11 @@ interface PriceDisclaimerProps {
 /**
  * PriceDisclaimer
  *
- * Displays a consistent notice that service charge and VAT are not included
- * in displayed prices but will be added to the final quote. Use this component
- * anywhere prices are shown on the website.
+ * Displays a consistent notice that published rates are ++ (tax and service
+ * charge added) and that every quote is confirmed as a fixed, itemised total.
+ * Wording must never call published rates "estimates" — transparent fixed
+ * pricing is the site's core trust promise (see siteFacts / D-035).
+ * Use this component anywhere prices are shown on the website.
  */
 export default function PriceDisclaimer({
   className = '',
@@ -24,9 +26,9 @@ export default function PriceDisclaimer({
       {showIcon && (
         <Info className="inline-block w-3.5 h-3.5 mr-1.5 -mt-0.5 text-[#8B6F1A]" />
       )}
-      Prices shown are estimates and do not include service charge or VAT.
-      Service charge (10%) and government tax (11%) will be added to your
-      final quote.
+      Published rates are ++ — 10% service charge and 11% government tax are
+      added to the listed price. Your quote is always confirmed as a fixed,
+      itemised all-in total before you commit.
     </p>
   )
 }

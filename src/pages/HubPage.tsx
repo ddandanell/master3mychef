@@ -190,7 +190,7 @@ const REVIEWS = [
   { name: 'Yuki & Kenji', location: 'Osaka', dept: 'Events', text: 'Traditional Japanese wedding ceremony followed by a Western-style reception. The team respected every ritual while delivering world-class cuisine.' },
 ]
 
-const HERO_STATS = ['560+ villas served', '12,000+ happy guests', 'Same-day confirmation']
+const HERO_STATS = ['560+ events served', '12,000+ happy guests', 'Same-day confirmation']
 
 const FEATURED_TESTIMONIALS = [
   {
@@ -388,7 +388,7 @@ export default function HubPage() {
                   </Link>
                 </div>
                 <p className="text-sm uppercase tracking-[0.18em] text-white/60" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  560+ villas served · 12,000+ happy guests · Same-day confirmation
+                  560+ events served · 12,000+ happy guests · Same-day confirmation
                 </p>
                 <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70">
                   <Link to="/services" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">explore all private chef services in Bali</Link>,{' '}
@@ -843,7 +843,7 @@ export default function HubPage() {
                 We are not a marketplace. We are not an app. We are a kitchen that travels — and we take that seriously.
               </p>
               <div className="flex flex-wrap gap-4">
-                {['560+ villas served', '12,000+ happy guests', 'Same-day confirmation', '50+ staff'].map((item) => (
+                {['560+ events served', '12,000+ happy guests', 'Same-day confirmation', '50+ staff'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <Check className="w-4 h-4" style={{ color: 'var(--u-accent)' }} />
                     <span className="text-sm font-medium" style={{ color: 'var(--u-text)' }}>{item}</span>
@@ -1007,7 +1007,7 @@ export default function HubPage() {
               className="text-sm uppercase tracking-[0.1em]"
               style={{ color: '#9d8d78' }}
             >
-              ✓ 560+ villas served · 12,000+ happy guests · Same-day confirmation
+              ✓ 560+ events served · 12,000+ happy guests · Same-day confirmation
             </p>
           </div>
 
@@ -1091,11 +1091,11 @@ export default function HubPage() {
               <div className="mt-8 flex flex-wrap gap-8">
                 <div>
                   <p className="font-playfair text-3xl text-[#1A1A1A]">560+</p>
-                  <p className="text-sm text-[#4A4745]">villas served</p>
+                  <p className="text-sm text-[#4A4745]">events served</p>
                 </div>
                 <div>
                   <p className="font-playfair text-3xl text-[#1A1A1A]">500+</p>
-                  <p className="text-sm text-[#4A4745]">events delivered</p>
+                  <p className="text-sm text-[#4A4745]">villa bookings</p>
                 </div>
               </div>
             </div>
@@ -1159,7 +1159,7 @@ export default function HubPage() {
           <div className="text-center mb-16">
             <p className="u-label mb-4">Guest Words</p>
             <h2 className="u-heading text-4xl md:text-5xl mb-3">Featured Guest Words</h2>
-            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. 560+ villas served · 12,000+ happy guests · Same-day confirmation.</p>
+            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. 560+ events served · 12,000+ happy guests · Same-day confirmation.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {REVIEWS.map((review, i) => (
@@ -1328,7 +1328,7 @@ export default function HubPage() {
           </div>
           <div className="text-center">
             <Link to="/why-mychef" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
-              Why 560+ villas choose myCHEF <ArrowRight className="w-4 h-4" />
+              Why villas across Bali choose myCHEF <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

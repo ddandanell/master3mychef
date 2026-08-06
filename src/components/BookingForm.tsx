@@ -2,6 +2,7 @@ import { useId, useState } from 'react'
 import { appendLeadRef } from '@/lib/whatsapp'
 import { Calendar, Users, MapPin, Utensils, Check } from 'lucide-react'
 import { trackWhatsAppClick, trackFormStart, trackFormComplete } from '@/lib/analytics'
+import { siteFacts } from '@/data/siteFacts'
 
 interface BookingFormProps {
   universe: 'luna' | 'sol' | 'aura'
@@ -11,39 +12,36 @@ interface BookingFormProps {
 const CONFIG = {
   luna: {
     title: 'Reserve Your Fine Dining Experience',
-    subtitle: 'Sofia will confirm your menu and date within the hour.',
+    subtitle: 'We confirm your menu and date within 2 hours.',
     fields: [
       { name: 'date', label: 'Preferred Date', type: 'date', icon: 'Calendar' },
       { name: 'guests', label: 'Number of Guests', type: 'number', icon: 'Users', placeholder: 'e.g. 8' },
       { name: 'villa', label: 'Villa Location', type: 'text', icon: 'MapPin', placeholder: 'Seminyak, Canggu, Ubud...' },
       { name: 'menu', label: 'Menu Experience', type: 'select', icon: 'Utensils', options: ['Mediterranean Sea Experience (IDR 2.2M++ pp)', 'Wagyu Experience (IDR 2.4M++ pp)'] },
     ],
-    whatsappName: 'Sofia',
     whatsappNumber: 6289674072020,
   },
   sol: {
     title: 'Book Your Private Villa Chef',
-    subtitle: 'Daniel will match you with the perfect chef for your stay.',
+    subtitle: 'Tell us your dates — we match the head chef to your stay.',
     fields: [
       { name: 'checkin', label: 'Check-in Date', type: 'date', icon: 'Calendar' },
       { name: 'checkout', label: 'Check-out Date', type: 'date', icon: 'Calendar' },
       { name: 'guests', label: 'Number of Guests', type: 'number', icon: 'Users', placeholder: 'e.g. 6' },
       { name: 'villa', label: 'Villa Location', type: 'text', icon: 'MapPin', placeholder: 'Seminyak, Canggu, Ubud...' },
-      { name: 'meals', label: 'Meal Plan', type: 'select', icon: 'Utensils', options: ['Breakfast Only', 'Half Board', 'Full Board', 'Custom'] },
+      { name: 'meals', label: 'Meal Plan', type: 'select', icon: 'Utensils', options: ['One Meal a Day (breakfast, lunch or dinner)', 'Two Meals a Day', 'Three Meals a Day', 'Not sure yet'] },
     ],
-    whatsappName: 'Daniel',
     whatsappNumber: 6289674072020,
   },
   aura: {
     title: 'Plan Your Event',
-    subtitle: 'Olivia will design a proposal tailored to your occasion.',
+    subtitle: 'We design a proposal tailored to your occasion.',
     fields: [
       { name: 'eventType', label: 'Event Type', type: 'select', icon: 'Utensils', options: ['Wedding', 'Corporate Retreat', 'Birthday', 'Anniversary', 'Other'] },
       { name: 'date', label: 'Event Date', type: 'date', icon: 'Calendar' },
       { name: 'guests', label: 'Number of Guests', type: 'number', icon: 'Users', placeholder: 'e.g. 50' },
       { name: 'villa', label: 'Villa Location', type: 'text', icon: 'MapPin', placeholder: 'Seminyak, Canggu, Ubud...' },
     ],
-    whatsappName: 'Olivia',
     whatsappNumber: 6289674072020,
   },
 }
@@ -73,7 +71,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
       .filter(([, v]) => v)
       .map(([k, v]) => `${k}: ${v}`)
       .join('\n')
-    const fullMsg = `Hi ${config.whatsappName}, I'm interested in booking.\n\n${msg}`
+    const fullMsg = `Hi myCHEF, I'm interested in booking.\n\n${msg}`
     const timeToComplete = Math.round((Date.now() - startTime) / 1000)
     trackFormComplete(`booking-form-${universe}`, `booking-form`, universe, timeToComplete)
     trackWhatsAppClick(`booking-form-${universe}`)
@@ -88,10 +86,10 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
           <Check className="w-8 h-8 text-black" />
         </div>
         <h3 className="text-2xl mb-3" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>
-          Message Sent to {config.whatsappName}
+          Message Sent
         </h3>
         <p className="mb-6" style={{ color: 'var(--u-text-muted)' }}>
-          {config.whatsappName} typically responds within the hour. Meanwhile, feel free to browse our menus.
+          Our team typically replies within 2 hours. Meanwhile, feel free to browse our menus.
         </p>
         <button
           onClick={() => { setSubmitted(false); setFormData({}) }}
@@ -178,7 +176,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
         <div className="p-4 rounded-xl border border-dashed" style={{ borderColor: 'var(--u-border)' }}>
           <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--u-accent)', fontFamily: "'Cormorant Garamond', serif" }}>Payment</p>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--u-text-muted)' }}>
-            <strong className="text-white/[80%]">50% deposit</strong> confirms your booking and locks your chef. Bookings within 24 hours require 100% upfront. The remaining 50% is paid when the chef arrives at your villa, before service begins.
+            <strong className="text-white/[80%]">{siteFacts.depositPercent}% deposit</strong> confirms your booking and locks your chef. The remaining balance is due {siteFacts.balanceTiming}.
           </p>
         </div>
 
@@ -187,7 +185,7 @@ export default function BookingForm({ universe, compact }: BookingFormProps) {
           className="w-full min-h-[44px] rounded-xl py-4 text-sm font-semibold uppercase tracking-widest text-black transition-all hover:scale-[1.01] active:scale-[0.99]"
           style={{ background: 'var(--u-accent)' }}
         >
-          Send to {config.whatsappName} via WhatsApp
+          Send via WhatsApp
         </button>
       </form>
     </div>

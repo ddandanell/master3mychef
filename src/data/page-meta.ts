@@ -2171,13 +2171,13 @@ export const PAGE_META: Record<string, PageMeta> = {
     description:
       'Why 560+ Bali villas trust myCHEF: Milan-trained leadership, 50+ local staff, same-day confirmation & no-stress guarantee. See the full difference.',
     canonical: `${SITE}/why-mychef`,
-    h1: 'Why 560+ Villas Choose myCHEF',
+    h1: 'Why Bali Villas Choose myCHEF',
     ogImage: `${SITE}/generated/misc-hub-bali-lg.webp`,
   },
 
       reviews: {
     path: '/reviews',
-    title: 'myCHEF Reviews | 560+ Villas Served in Bali',
+    title: 'myCHEF Reviews | 560+ Events Served in Bali',
     description:
       'Read guest reviews from myCHEF Bali villa dinners, weddings, retreats and events — real hosts, real outcomes. Book with confidence via WhatsApp myCHEF today.',
     canonical: `${SITE}/reviews`,

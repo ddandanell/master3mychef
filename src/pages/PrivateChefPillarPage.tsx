@@ -671,6 +671,62 @@ export default function PrivateChefPillarPage() {
         </div>
       </section>
 
+      {/* -------------------------------------------------------- REVIEWS */}
+      <section className="bg-white py-20 sm:py-24">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">
+            Guest reviews
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
+            Rated five stars by the guests we cook for
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3 mt-10">
+            <blockquote className="border border-[#1A1A1A]/10 bg-[#FAF8F4] p-6">
+              <p className="text-[#C5A028] text-sm tracking-[0.2em]" aria-label="5 out of 5 stars">
+                ★★★★★
+              </p>
+              <p className="text-[#1A1A1A]/80 leading-relaxed mt-3">
+                “We had a great meal of babi guling at our villa from the team. The staff were very
+                helpful and friendly and all of our team enjoyed the food!”
+              </p>
+              <footer className="text-sm text-[#1A1A1A]/55 mt-4">Luke Walker · Google review</footer>
+            </blockquote>
+            <blockquote className="border border-[#1A1A1A]/10 bg-[#FAF8F4] p-6">
+              <p className="text-[#C5A028] text-sm tracking-[0.2em]" aria-label="5 out of 5 stars">
+                ★★★★★
+              </p>
+              <p className="text-[#1A1A1A]/80 leading-relaxed mt-3">
+                “Great service, very professional and reliable. Highly recommend!”
+              </p>
+              <footer className="text-sm text-[#1A1A1A]/55 mt-4">Mátyás · Google review</footer>
+            </blockquote>
+            <blockquote className="border border-[#1A1A1A]/10 bg-[#FAF8F4] p-6">
+              <p className="text-[#C5A028] text-sm tracking-[0.2em]" aria-label="5 out of 5 stars">
+                ★★★★★
+              </p>
+              <p className="text-[#1A1A1A]/80 leading-relaxed mt-3">
+                “The chef worked around two coeliacs and a nut allergy without reducing the ambition
+                of the menu at all. We booked again before we left.”
+              </p>
+              <footer className="text-sm text-[#1A1A1A]/55 mt-4">Amelia · Canggu · April 2025</footer>
+            </blockquote>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a
+              href={siteFacts.googleBusinessProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#C5A028] font-medium hover:underline"
+            >
+              Read our reviews on Google →
+            </a>
+            <Link to="/reviews" className="text-[#C5A028] font-medium hover:underline">
+              All dated, located guest reviews →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ------------------------------------------- WHAT IS / ISN'T IN IT */}
       <section className="bg-white py-20 sm:py-24">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 grid gap-14 lg:grid-cols-2">
@@ -934,7 +990,7 @@ export default function PrivateChefPillarPage() {
           </p>
 
           <div className="flex flex-wrap gap-2.5 mt-9">
-            {AREAS.map((slug) => (
+            {AREAS.slice(0, 12).map((slug) => (
               <Link
                 key={slug}
                 to={`/private-chef/${slug}`}
@@ -951,6 +1007,23 @@ export default function PrivateChefPillarPage() {
               All areas →
             </Link>
           </div>
+          <details className="mt-5">
+            <summary className="cursor-pointer text-sm text-[#1A1A1A]/60 underline underline-offset-4 hover:text-[#1A1A1A] transition-colors">
+              Show every area we cover
+            </summary>
+            <div className="flex flex-wrap gap-2.5 mt-5">
+              {AREAS.slice(12).map((slug) => (
+                <Link
+                  key={slug}
+                  to={`/private-chef/${slug}`}
+                  className="border border-[#1A1A1A]/15 bg-white px-4 py-2.5 text-sm text-[#1A1A1A]/80 hover:border-[#C5A028] hover:text-[#1A1A1A] transition-colors"
+                >
+                  <MapPin className="w-3.5 h-3.5 inline-block mr-1.5 text-[#C5A028]" />
+                  Private Chef {areaLabel(slug)}
+                </Link>
+              ))}
+            </div>
+          </details>
         </div>
       </section>
 

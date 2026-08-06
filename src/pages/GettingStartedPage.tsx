@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, Calendar, Clock, CheckCircle, ArrowRight, ChefHat } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA_NUMBER = '6289674072020'
@@ -254,14 +255,7 @@ export default function GettingStartedPage() {
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-light mb-4">Frequently Asked Questions</h2>
           <p className="text-[#666] mb-12 text-lg">Everything you need to know before booking your first private chef in Bali.</p>
-          <div className="space-y-8">
-            {FAQS.map((item, i) => (
-              <div key={i} className="pb-8 border-b border-[#EEE] last:border-0">
-                <h3 className="text-lg font-semibold mb-3">{item.q}</h3>
-                <p className="text-[#666] leading-relaxed">{item.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

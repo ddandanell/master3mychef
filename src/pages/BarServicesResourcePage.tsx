@@ -37,6 +37,56 @@ const RESOURCE_PAGE_FAQS = [
     answer:
       'You are welcome to share the link with your team or print the page for internal use. For larger groups or white-label training, contact us about a private Bar Staff Training session.',
   },
+  {
+    question: 'Can I share this guide with investors or partners?',
+    answer:
+      'Yes — share the page link with partners. For printed packs or customised versions for a multi-outlet group, contact us via <a href="/bar-services/contact">bar services contact</a>.',
+  },
+  {
+    question: 'Are the numbers in these guides guarantees?',
+    answer:
+      'No. Benchmarks are directional for Bali hospitality planning. Your actual salaries, rent and pour costs depend on venue, concept and year.',
+  },
+  {
+    question: 'How do these guides relate to paid bar services?',
+    answer:
+      'Guides educate. Paid services implement — audits, menus, training, staffing and setup. Use the guide, then scope a project if you need hands-on help.',
+  },
+  {
+    question: 'Do you update resources when Bali labour or supply costs change?',
+    answer:
+      'We refresh major benchmarks when market conditions shift. Check the page date context and confirm critical figures on a discovery call before budgeting.',
+  },
+  {
+    question: 'Can I request a Bahasa Indonesia version?',
+    answer:
+      'Some materials can be adapted for local team training under a paid scope. Public pages are primarily English for international operators.',
+  },
+  {
+    question: 'Is this advice only for South Bali?',
+    answer:
+      'Core examples assume South Bali and Ubud market conditions. Outer-island or remote venues need localised costing — ask when you contact us.',
+  },
+  {
+    question: 'Can my general manager use this as an SOP starter?',
+    answer:
+      'Yes as a starting framework. Convert relevant sections into venue-specific SOPs and train the team — we can help formalise that process.',
+  },
+  {
+    question: 'Do resources include cocktail recipes?',
+    answer:
+      'Some resources cover menu and costing principles; signature recipe development is a separate service under cocktail menu development.',
+  },
+  {
+    question: 'How do I pick the right resource for my problem?',
+    answer:
+      'Cost issues → costing guides; hiring → salary and recruitment resources; opening → new bar setup guides. Or message us with your symptom and we point you to the right page.',
+  },
+  {
+    question: 'What if my question is not covered in any resource?',
+    answer:
+      'Contact us with the gap — high-frequency questions often become new resources, and unique problems become consulting scopes.',
+  },
 ]
 
 function countWords(text: string): number {
@@ -296,7 +346,7 @@ export default function BarServicesResourcePage() {
               Questions about this guide
             </h2>
           </div>
-          <FAQAccordion items={RESOURCE_PAGE_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} dark />
+          <FAQAccordion items={RESOURCE_PAGE_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} dark showToc ctaEvery={5} />
           <div className="mt-10 text-center">
             <a
               href="/bar-services/faq/"

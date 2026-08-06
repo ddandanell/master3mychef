@@ -2,6 +2,7 @@ import { useState } from 'react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import { MEAL_PLANS, formatIDR as formatIDRFull, planDailyRate } from '@/data/siteFacts'
 import { Link } from 'react-router-dom'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 /**
  * Single source for the "What's included" block — rendered visibly below and
@@ -554,14 +555,7 @@ export default function PricingCalculatorPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-bold text-stone-900 mb-8 text-center">What's included in the price?</h2>
-          <div className="space-y-6">
-            {FAQS.map(({ q, a }) => (
-              <div key={q} className="border-b border-stone-100 pb-6">
-                <h3 className="font-semibold text-stone-900 mb-2">{q}</h3>
-                <p className="text-stone-600 leading-relaxed">{a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
 
           {/* Bottom CTA */}
           <div className="mt-12 text-center bg-stone-50 rounded-2xl p-8">

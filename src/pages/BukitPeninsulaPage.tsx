@@ -3,12 +3,18 @@ import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner on the Bukit Peninsula. Can you send a menu proposal?')
 
 const FAQS = [
+  { q: 'Which Bukit areas do you cover?', a: 'Uluwatu, Pecatu, Bingin, Padang Padang, Ungasan and nearby Bukit villa zones. See also <a href="/locations/uluwatu">Uluwatu dining</a>.' },
+  { q: 'Can cliff villas host full catering teams?', a: 'Often yes with access planning — stairs, buggies and power matter. Send villa notes early.' },
+  { q: 'Are sunset BBQs realistic on the Bukit?', a: 'Yes when wind and safety allow; we adapt menu and setup. <a href="/catering/bbq-catering">BBQ</a>.' },
+  { q: 'How do you handle peak surf-season demand on the Bukit?', a: 'Book early for July–August and holiday weeks. Flexible midweek dates are easier.' },
+  { q: 'Can one proposal cover multiple Bukit villa nights?', a: 'Yes — multi-night chef or catering programmes for villa takeovers are common.' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
   { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
@@ -335,19 +341,7 @@ export default function BukitPeninsulaPage() {
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
           <h2 className="font-playfair text-3xl mb-10">Bukit Dining FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
-                  {faq.q}
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 text-[#C5A028] group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-[#4A4745] leading-relaxed border-t border-[#E8E6E3] pt-4 text-sm">
-                  {faq.a}
-                </div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

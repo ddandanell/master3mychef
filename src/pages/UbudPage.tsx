@@ -3,12 +3,18 @@ import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Ubud. Can you send a menu proposal?')
 
 const FAQS = [
+  { q: 'Do you provide private chefs in Ubud jungle villas?', a: 'Yes — Ubud and nearby hillside villas are covered. Share access notes (steep driveways, no lift) so we plan equipment and timing. <a href="/private-chef/ubud">Private chef Ubud</a>.' },
+  { q: 'Can you cater yoga and wellness retreats in Ubud?', a: 'Yes — plant-forward and multi-day retreat menus are a strength. See <a href="/catering/retreat-catering">retreat catering</a> and our wellness chefs.' },
+  { q: 'Is there a travel fee for Ubud from South Bali?', a: 'Ubud is a regular service zone. Exact logistics depend on villa location; any travel component is quoted upfront on your proposal.' },
+  { q: 'Can we book a Balinese feast for guests new to Ubud?', a: 'Yes — cultural Indonesian and Balinese villa dinners are popular. Ask for an Indonesian specialist chef on WhatsApp.' },
+  { q: 'How does Ubud dining at the villa compare to restaurant reservations?', a: 'In-villa service skips traffic and queues, with a menu built for your group. Compare styles in our <a href="/blog/seminyak-vs-canggu-vs-ubud">area comparison</a> when relevant.' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
   { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
@@ -308,19 +314,7 @@ export default function UbudPage() {
       </section>
 
           <h2 className="font-playfair text-3xl mb-10">Ubud Dining FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
-                  {faq.q}
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 text-[#C5A028] group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-[#4A4745] leading-relaxed border-t border-[#E8E6E3] pt-4 text-sm">
-                  {faq.a}
-                </div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

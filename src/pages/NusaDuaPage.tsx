@@ -4,12 +4,18 @@ import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@
 import { siteFacts } from '@/data/siteFacts'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Nusa Dua. Can you send a menu proposal?')
 
 const FAQS = [
+  { q: 'Do you serve private chefs inside Nusa Dua resorts and gated estates?', a: 'Yes when villa kitchen access is allowed by the property. Share resort rules and security procedures early. <a href="/private-chef/nusa-dua">Private chef Nusa Dua</a>.' },
+  { q: 'Can corporate groups book catering in Nusa Dua?', a: 'Yes — executive dinners and multi-day programmes are routine. <a href="/catering/corporate-catering">Corporate catering</a>.' },
+  { q: 'Is fine dining available for hotel villas in Nusa Dua?', a: 'Yes — tasting menus and plated dinners for villa categories that allow external chefs. <a href="/fine-dining">Fine dining</a>.' },
+  { q: 'How do security check-ins work for chef teams?', a: 'We follow resort access lists — send guest names, vehicle details and timing as required by the property.' },
+  { q: 'Can you coordinate multi-day dining for conference groups?', a: 'Yes — breakfast through dinner plans with dietary matrices for large groups.' },
   { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
   { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
   { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
@@ -284,17 +290,7 @@ export default function NusaDuaPage() {
       </section>
 
           <h2 className="font-playfair text-3xl mb-10">Nusa Dua Dining FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
-                  {faq.q}
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 text-[#C5A028] group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-[#4A4745] leading-relaxed border-t border-[#E8E6E3] pt-4 text-sm">{faq.a}</div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

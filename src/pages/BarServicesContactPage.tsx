@@ -76,6 +76,56 @@ const CONTACT_FAQS = [
     answer:
       'Yes. Before any commitment you receive a clear written scope, timeline and pricing. No hidden retainers and no vague day rates.',
   },
+  {
+    question: 'What is the best channel for urgent same-day bartender cover?',
+    answer:
+      'WhatsApp is fastest for same-day or next-day bar cover. Include venue name, shift times, role needed and location. We reply with availability or a clear no if inventory is empty.',
+  },
+  {
+    question: 'Do you invoice companies and hotels?',
+    answer:
+      'Yes. B2B clients receive written proposals and invoices suitable for hotel, restaurant and event-company accounts. Share billing entity details early.',
+  },
+  {
+    question: 'Can international owners brief you remotely?',
+    answer:
+      'Yes. Many owners brief on WhatsApp or a scheduled call from abroad while local managers handle on-site access for audits and training.',
+  },
+  {
+    question: 'Which bar services can I combine in one proposal?',
+    answer:
+      'Common stacks: audit + training, menu development + costing, temporary staffing + event support, or a full performance programme. See the <a href="/bar-services">bar services hub</a>.',
+  },
+  {
+    question: 'Do you require a site visit before quoting?',
+    answer:
+      'Not always. Staffing and many training scopes can be quoted from a clear brief. Audits, new bar setups and layout work usually need a visit or detailed photos/plans.',
+  },
+  {
+    question: 'What are your business hours for bar service replies?',
+    answer:
+      'Monday–Saturday, Bali time, with urgent cover prioritised. Complex consulting proposals may follow within one business day of a complete brief.',
+  },
+  {
+    question: 'Can you NDA a concept before we share financials?',
+    answer:
+      'Yes — NDAs are available for concept, recipe and commercial data before deeper discovery.',
+  },
+  {
+    question: 'How do I switch from a free health call to a paid project?',
+    answer:
+      'After the call we send a written scope if there is a fit. You decide — no automatic retainers and no pressure close.',
+  },
+  {
+    question: 'Do you support beach clubs and nightlife venues?',
+    answer:
+      'Yes — high-volume bars, beach clubs and late service venues are in scope for staffing, costing, menus and training.',
+  },
+  {
+    question: 'Where can I read bar resources before contacting you?',
+    answer:
+      'Start at the <a href="/bar-services/resources">bar resources index</a> for salary, costing and setup guides, then contact us when you want implementation help.',
+  },
 ]
 
 const CONTACT_GALLERY = [
@@ -598,7 +648,7 @@ export default function BarServicesContactPage() {
               Questions about contacting us
             </h2>
           </div>
-          <FAQAccordion items={CONTACT_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} dark />
+          <FAQAccordion items={CONTACT_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} dark showToc ctaEvery={5} />
           <div className="mt-10 text-center">
             <a
               href="/bar-services/faq/"

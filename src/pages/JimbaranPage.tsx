@@ -3,12 +3,18 @@ import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa seafood dinner in Jimbaran. Can you send a menu proposal?')
 
 const FAQS = [
+  { q: 'Can we book a seafood-focused private chef in Jimbaran?', a: 'Yes — Jimbaran is ideal for seafood-led villa menus when catch and supply allow. Request a seafood specialist on WhatsApp. <a href="/private-chef/jimbaran">Private chef Jimbaran</a>.' },
+  { q: 'Do you cover Jimbaran beach villas and inland estates?', a: 'Yes across Jimbaran villa zones. Beach access and kitchen constraints should be noted in your brief.' },
+  { q: 'Can families book casual villa dinners after a beach day?', a: 'Yes — flexible timing and kids plates are common. See <a href="/kids-menus">kids menus</a>.' },
+  { q: 'Is Jimbaran good for larger villa celebrations?', a: 'Yes — many estates host 20–80 guest dinners with buffet or BBQ formats. <a href="/catering">Catering</a>.' },
+  { q: 'Any travel fee for Jimbaran?', a: 'Jimbaran is core South Bali coverage. Your quote lists any exception for unusually remote access.' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
   { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
@@ -273,17 +279,7 @@ export default function JimbaranPage() {
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
           <h2 className="font-playfair text-3xl mb-10">Jimbaran Dining FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
-                  {faq.q}
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 text-[#C5A028] group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-[#4A4745] leading-relaxed border-t border-[#E8E6E3] pt-4 text-sm">{faq.a}</div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

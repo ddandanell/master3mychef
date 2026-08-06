@@ -410,7 +410,7 @@ export default function RestaurantKitchenSolutionsHubPage() {
             title="Straight answers before you enquire"
             subtitle="Scope, documents, geography, fees, and what happens after the first assessment."
           />
-          <FAQAccordion items={RKS_HUB.faqs.map((f) => ({ q: f.question, a: f.answer }))} />
+          <FAQAccordion items={RKS_HUB.faqs.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

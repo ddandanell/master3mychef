@@ -12,6 +12,7 @@ import { Breadcrumb, PressStrip } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 gsap.registerPlugin(ScrollTrigger)
 
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'an all-inclusive villa event package in Bali', intent: 'a tailored quotation' })
@@ -339,14 +340,7 @@ export default function VillaEventPackagesPage() {
             title="Villa Event Packages — FAQ"
             subtitle="Everything hosts ask before booking a single-event package in a Bali villa."
           />
-          <div className="space-y-6">
-            {FAQS.map((faq) => (
-              <div key={faq.question} className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-6 md:p-8">
-                <h3 className="text-lg mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{faq.question}</h3>
-                <p className="text-[#4A4745] leading-relaxed text-sm">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
           <div className="text-center mt-10">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-event-packages-faq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               <MessageCircle className="w-4 h-4" /> Request a Tailored Quotation

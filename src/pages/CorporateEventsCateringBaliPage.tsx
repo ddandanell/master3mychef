@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ChevronRight, MessageCircle, CheckCircle, Users, Calendar, MapPin, Star } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import { PHONE } from '@/data/siteArchitecture'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const CANONICAL = `${SITE}/blog/corporate-events-catering-bali`
@@ -495,14 +496,7 @@ export default function CorporateEventsCateringBaliPage() {
       {/* FAQ */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-light mb-10">Frequently Asked Questions</h2>
-        <div className="space-y-8">
-          {FAQS.map((faq) => (
-            <div key={faq.q} className="border-b border-[#E0DDD6] pb-8 last:border-0 last:pb-0">
-              <h3 className="font-semibold text-[#1A1A1A] mb-3">{faq.q}</h3>
-              <p className="text-[#555] leading-relaxed">{faq.a}</p>
-            </div>
-          ))}
-        </div>
+        <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
       </section>
 
       {/* Related pages */}

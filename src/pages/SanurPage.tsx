@@ -3,12 +3,18 @@ import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner or breakfast in Sanur. Can you send a menu proposal?')
 
 const FAQS = [
+  { q: 'Is private chef service available in Sanur?', a: 'Yes — Sanur villas and long-stay homes are covered. <a href="/private-chef/sanur">Private chef Sanur</a>.' },
+  { q: 'Are quieter family villas in Sanur a good fit for daily chef service?', a: 'Yes — Sanur’s calmer pace suits weekly meal prep and family menus. Kids plates available.' },
+  { q: 'Can you cook lighter, health-focused menus in Sanur?', a: 'Yes — wellness-leaning and simple fresh menus are easy to brief. Plant-forward chefs available on request.' },
+  { q: 'Do you cover nearby east-coast villas from Sanur?', a: 'Many nearby addresses are fine; remote east-coast spots may include a travel note on the quote.' },
+  { q: 'How do Sanur prices compare to Seminyak?', a: 'Published day rates are the same sitewide; only logistics differ. See <a href="/pricing">pricing</a>.' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
   { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
@@ -285,17 +291,7 @@ export default function SanurPage() {
       </section>
 
           <h2 className="font-playfair text-3xl mb-10">Sanur Dining FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
-                  {faq.q}
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 text-[#C5A028] group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-[#4A4745] leading-relaxed border-t border-[#E8E6E3] pt-4 text-sm">{faq.a}</div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

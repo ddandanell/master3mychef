@@ -250,6 +250,46 @@ export const RKS_HUB = {
       answer:
         'You receive prioritised findings and recommended next steps. Implementation, redesign, menu work, or training are optional follow-on scopes — you decide how far to go.',
     },
+    {
+      question: 'How is restaurant kitchen consulting different from private chef booking?',
+      answer:
+        'This practice is B2B operations support for restaurants, hotels and commercial kitchens. Villa private chef and catering bookings are a separate consumer service on myCHEF.id.',
+    },
+    {
+      question: 'Do you work with cafés and bars as well as full restaurants?',
+      answer:
+        'Yes — cafés, bars, bakeries, hotel outlets, central kitchens and multi-outlet groups are all in scope when the operational issues match our services.',
+    },
+    {
+      question: 'What languages can engagements run in?',
+      answer:
+        'English is standard for international owners and managers. Bahasa Indonesia support is available for on-site team training depending on the facilitator assigned.',
+    },
+    {
+      question: 'How quickly can a project start?',
+      answer:
+        'Simple remote reviews can often begin within days of signed scope. Multi-day on-site audits and design projects are scheduled against venue access and team availability.',
+    },
+    {
+      question: 'Will you replace our head chef or current managers?',
+      answer:
+        'No. We diagnose, design systems and train. Hiring decisions stay with ownership — recruitment assistance is optional when you ask for it.',
+    },
+    {
+      question: 'Can you support multi-outlet restaurant groups?',
+      answer:
+        'Yes. Group work can standardise recipes, costing, audits and training across outlets while respecting each site’s constraints.',
+    },
+    {
+      question: 'Do you offer ongoing kitchen management retainers?',
+      answer:
+        'Follow-up and periodic reviews can be scoped after the first engagement. There is no mandatory long retainer — start with a clear written proposal.',
+    },
+    {
+      question: 'How do you handle confidential commercial data?',
+      answer:
+        'Sales, cost and supplier data are used only for the engagement and shared with stakeholders you designate. NDAs can be signed when required.',
+    },
   ] as RksFaq[],
 }
 
@@ -370,6 +410,42 @@ export const RKS_SERVICES: RksServicePage[] = [
         answer:
           'No. Food-safety practices may be observed as part of operations, but the primary goal is commercial and operational performance: cost, consistency, workflow, and team capability.',
       },
+      {
+        question: 'What KPI improvements should we expect after an audit?',
+        answer:
+          'Typical focus areas are food-cost gap reduction, waste visibility, ticket times and consistency. Exact targets depend on baseline data and how fully recommendations are implemented.',
+      },
+      {
+        question: 'Can you observe peak dinner service?',
+        answer:
+          'Yes when included in scope. Peak observation often reveals bottlenecks that paperwork alone misses.',
+      },
+      {
+        question: 'Do you benchmark us against other Bali restaurants?',
+        answer:
+          'We use industry ranges and your own theoretical vs actual numbers. We do not publish other clients’ confidential figures.',
+      },
+      {
+        question: 'What deliverables do we receive?',
+        answer:
+          'A written findings pack with prioritised issues, recommended actions and optional implementation roadmap — format confirmed in the proposal.',
+      },
+      {
+        question: 'Can hotel F&B outlets use this service?',
+        answer:
+          'Yes. Hotel kitchens, banquet production and multi-outlet F&B teams are common audit clients.',
+      },
+      {
+        question: 'Is remote document review possible without a site visit?',
+        answer:
+          'Partial remote review is possible for menus, recipes and cost sheets. On-site work is recommended when workflow or equipment is the issue.',
+      },
+      {
+        question: 'How do we prepare the team so the audit is not disruptive?',
+        answer:
+          'We schedule interviews and observation windows with management. Floor teams keep serving; we stay out of the way during rush unless observation is the point.',
+      }
+
     ],
     relatedGuideSlugs: [
       'commercial-kitchen-audit-checklist',
@@ -482,6 +558,37 @@ export const RKS_SERVICES: RksServicePage[] = [
         answer:
           'By scope, complexity, number of outlets, drawing depth, site visits, and implementation support. You receive a written proposal before work starts.',
       },
+      {
+        question: 'Do you only design new kitchens or also renovations?',
+        answer:
+          'Both. New builds, relocations and phased renovations of existing kitchens are in scope.',
+      },
+      {
+        question: 'Will you force specific equipment brands?',
+        answer:
+          'No. Equipment is specified for capacity, workflow and budget. Brands are proposed and confirmed with you.',
+      },
+      {
+        question: 'How do you size equipment for our menu?',
+        answer:
+          'From menu, covers, peak turns and prep model — not from a generic package list.',
+      },
+      {
+        question: 'Do you supervise installation?',
+        answer:
+          'Supervision and commissioning support can be included when agreed. Basic planning engagements may stop at drawings and schedules.',
+      },
+      {
+        question: 'Can villa estate or central production kitchens use this service?',
+        answer:
+          'Yes — commercial standards apply to estate production kitchens and commissaries as well as restaurants.',
+      },
+      {
+        question: 'What is the typical design sequence?',
+        answer:
+          'Brief → workflow concept → equipment list → layout iterations → coordination with builders → optional install support.',
+      }
+
     ],
     relatedGuideSlugs: [
       'how-to-design-commercial-kitchen-layout',
@@ -581,6 +688,42 @@ export const RKS_SERVICES: RksServicePage[] = [
         answer:
           'Yes, where agreed. We can define role profiles and support hiring so the menu has the hands it needs.',
       },
+      {
+        question: 'Do you cost every dish before launch?',
+        answer:
+          'Yes when costing is in scope — target food-cost %, yield and plate contribution are part of a complete menu system.',
+      },
+      {
+        question: 'Can you rebuild an existing menu without a full rebrand?',
+        answer:
+          'Yes. Many projects rationalise SKUs, fix recipes and retrain on the current concept rather than inventing a new brand.',
+      },
+      {
+        question: 'How long does kitchen training usually take?',
+        answer:
+          'From focused section refreshers to multi-day launch training — duration follows menu complexity and team size.',
+      },
+      {
+        question: 'Do you create photo-ready plating guides?',
+        answer:
+          'Plating standards and section cards can be included so every shift plates the same dish the same way.',
+      },
+      {
+        question: 'Can training cover allergens and dietary tickets?',
+        answer:
+          'Yes — allergen handling, ticket communication and separate prep rules can be built into SOPs and drills.',
+      },
+      {
+        question: 'Will you train only BOH or also FOH on the new menu?',
+        answer:
+          'FOH menu knowledge can be included so service sells and explains dishes accurately.',
+      },
+      {
+        question: 'Do you support seasonal menu updates later?',
+        answer:
+          'Yes as follow-on scopes — seasonal swaps with costing and short retraining keep the system alive.',
+      }
+
     ],
     relatedGuideSlugs: [
       'restaurant-menu-development-process',
@@ -647,6 +790,47 @@ export const RKS_GUIDES: RksGuidePage[] = [
         answer:
           'Many operators review cost and inventory weekly, and run a fuller operational walkthrough monthly or after major menu or staffing changes.',
       },
+      {
+        question: 'What should managers check weekly vs monthly?',
+        answer:
+          'Weekly: inventory accuracy, high-waste items, overtime drivers. Monthly: full walkthrough, recipe compliance sampling, supplier scorecards.',
+      },
+      {
+        question: 'Can independent cafés use the same checklist as hotels?',
+        answer:
+          'Yes — scale the depth. Smaller venues still need cost, hygiene habits, receiving and opening/closing discipline.',
+      },
+      {
+        question: 'Should we share checklist results with owners?',
+        answer:
+          'Yes. A short red/amber/green summary helps owners prioritise investment without drowning in kitchen detail.',
+      },
+      {
+        question: 'How does this checklist relate to a paid myCHEF audit?',
+        answer:
+          'Self-checks prepare your team. A paid engagement adds independent observation, prioritisation and a written action pack.',
+      },
+      {
+        question: 'What tools do we need to run the checklist?',
+        answer:
+          'Basic inventory sheets, a thermometer, access to purchase invoices and 30–60 minutes of calm observation time.',
+      },
+      {
+        question: 'Can multi-outlet groups standardise one checklist?',
+        answer:
+          'Yes — keep a core shared list and add outlet-specific lines for equipment or concept differences.',
+      },
+      {
+        question: 'How do we avoid “checklist theatre” where staff tick boxes blindly?',
+        answer:
+          'Rotate reviewers, verify with spot counts and link findings to real numbers like food cost and ticket times.',
+      },
+      {
+        question: 'Is food safety certification covered here?',
+        answer:
+          'The checklist flags hygiene habits; formal certification and legal inspections remain the responsibility of the operator and authorities.',
+      }
+
     ],
   },
   {
@@ -701,6 +885,47 @@ export const RKS_GUIDES: RksGuidePage[] = [
         answer:
           'Training helps when the system exists. If recipes, inventory, and purchasing controls are missing, training fades within weeks.',
       },
+      {
+        question: 'What food-cost percentage is healthy in Indonesia?',
+        answer:
+          'It depends on concept and pricing power. Track theoretical vs actual first; chasing a vanity percentage without menu engineering often fails.',
+      },
+      {
+        question: 'How fast can waste controls show results?',
+        answer:
+          'Visible waste and portion controls often move numbers within weeks if counts are real and chefs own the process.',
+      },
+      {
+        question: 'Should we cut portion sizes to fix cost?',
+        answer:
+          'Only with intentional menu engineering. Silent shrink hurts reviews. Better levers: yield, purchasing, prep discipline and mix.',
+      },
+      {
+        question: 'How do supplier negotiations fit in?',
+        answer:
+          'After you know true usage. Negotiate volume and quality with data — not guesswork.',
+      },
+      {
+        question: 'Can delivery apps destroy food cost even if kitchen is tight?',
+        answer:
+          'Packaging, remakes and channel mix affect contribution. Cost control must include channel reality, not only dine-in recipes.',
+      },
+      {
+        question: 'Do I need software to control COGS?',
+        answer:
+          'Spreadsheets can start. Software helps multi-outlet groups, but process discipline matters more than the tool.',
+      },
+      {
+        question: 'How often should we recount inventory?',
+        answer:
+          'Key proteins and high-value items more frequently; full counts on a fixed weekly or biweekly cadence many operators can sustain.',
+      },
+      {
+        question: 'Where does menu mix fit into cost reduction?',
+        answer:
+          'Promoting high-contribution dishes and retiring chronic losers often beats squeezing every recipe by a few percent.',
+      }
+
     ],
   },
   {
@@ -750,6 +975,47 @@ export const RKS_GUIDES: RksGuidePage[] = [
         answer:
           'When collisions are structural: wrong equipment placement, impossible clean/dirty separation, or capacity ceilings that block the business plan.',
       },
+      {
+        question: 'What is the first symptom of bad kitchen workflow?',
+        answer:
+          'Cross-traffic at peak, tickets stacking at one station, or pass congestion while other sections idle.',
+      },
+      {
+        question: 'Can workflow improve without buying new equipment?',
+        answer:
+          'Often yes — station ownership, prep timing, ticket rails and simple layout moves beat premature capex.',
+      },
+      {
+        question: 'How do you measure ticket time fairly?',
+        answer:
+          'Sample peak vs off-peak, by course type, and separate fire delays from expo delays.',
+      },
+      {
+        question: 'Should FOH changes be part of kitchen workflow projects?',
+        answer:
+          'Yes when order batching, course firing or table turns create BOH spikes.',
+      },
+      {
+        question: 'How long does a workflow sprint usually take?',
+        answer:
+          'Focused single-outlet mapping can be days; culture change and retraining take longer after the design is clear.',
+      },
+      {
+        question: 'Do open kitchens need different workflow rules?',
+        answer:
+          'Yes — noise, visibility and guest sightlines constrain where prep and dirty dish paths can go.',
+      },
+      {
+        question: 'Can villa production kitchens use the same ideas?',
+        answer:
+          'Yes — batch prep, station clarity and pass discipline apply to estate catering kitchens too.',
+      },
+      {
+        question: 'What documents come out of a workflow project?',
+        answer:
+          'Station maps, prep calendars, ticket rules and sometimes equipment relocation lists — agreed in scope.',
+      }
+
     ],
   },
   {
@@ -799,6 +1065,47 @@ export const RKS_GUIDES: RksGuidePage[] = [
         answer:
           'Photograph after recipes are locked. Training from temporary plating creates permanent inconsistency.',
       },
+      {
+        question: 'What is the right number of dishes for a new menu?',
+        answer:
+          'Enough to express the concept and cover dietary needs — not so many that prep and quality collapse. Rational menus usually outperform oversized ones.',
+      },
+      {
+        question: 'When should costing happen in the process?',
+        answer:
+          'Early and again after trials. Designing pretty dishes first then discovering they cannot hit target cost wastes time.',
+      },
+      {
+        question: 'How many tasting rounds are normal?',
+        answer:
+          'Two to three focused tastings beat endless revisions without criteria.',
+      },
+      {
+        question: 'Should suppliers influence the menu?',
+        answer:
+          'Reliable supply should constrain ambition. Signature dishes need backup plans when product is seasonal.',
+      },
+      {
+        question: 'How do we train a team on a brand-new menu?',
+        answer:
+          'Recipe cards, section leads, dry runs and a soft-open window — not a single pre-shift speech.',
+      },
+      {
+        question: 'Can we launch in phases?',
+        answer:
+          'Yes — core menu first, then specials and seasonal layers once execution is stable.',
+      },
+      {
+        question: 'What role does plateware play?',
+        answer:
+          'Plateware affects portion perception, wash capacity and cost. Choose it with the dish, not after.',
+      },
+      {
+        question: 'How do we keep the menu alive after launch?',
+        answer:
+          'Quarterly engineering reviews: sales mix, contribution, ticket times and guest feedback.',
+      }
+
     ],
   },
   {
@@ -848,6 +1155,47 @@ export const RKS_GUIDES: RksGuidePage[] = [
         answer:
           'Weekly counts for high-value and high-turn items are common; full counts at least monthly. Frequency should match theft/waste risk and team capacity.',
       },
+      {
+        question: 'What is theoretical vs actual food cost?',
+        answer:
+          'Theoretical is recipe × sales mix; actual is purchases adjusted for inventory. The gap is where waste, theft, yield loss and errors hide.',
+      },
+      {
+        question: 'How do I calculate food cost percentage?',
+        answer:
+          'Cost of goods used ÷ food sales for the same period. Be consistent about what counts as food sales and comps.',
+      },
+      {
+        question: 'Should beverage cost be separate?',
+        answer:
+          'Yes. Blended “cost of sales” hides bar or kitchen problems. Track food and beverage separately.',
+      },
+      {
+        question: 'How do comps and staff meals affect COGS?',
+        answer:
+          'They must be classified consistently. Untracked comps inflate apparent food cost and confuse decisions.',
+      },
+      {
+        question: 'How often should COGS be closed?',
+        answer:
+          'Monthly is minimum; weekly flash counts on key items help high-volume sites.',
+      },
+      {
+        question: 'Do I need exact recipes for theoretical cost?',
+        answer:
+          'Yes for accuracy. Without standard recipes, theoretical cost is fiction.',
+      },
+      {
+        question: 'What is a reasonable variance between theoretical and actual?',
+        answer:
+          'Concept-dependent. Treat widening gaps as an operational alarm even if the absolute percentage looks “industry average”.',
+      },
+      {
+        question: 'Can myCHEF build COGS systems for our team?',
+        answer:
+          'Yes under menu development and consulting scopes — recipe costing, count cadence and manager routines.',
+      }
+
     ],
   },
   {
@@ -897,6 +1245,47 @@ export const RKS_GUIDES: RksGuidePage[] = [
         answer:
           'Renders help stakeholders understand space. Operators often need accurate equipment plans and utility coordination more than marketing visuals.',
       },
+      {
+        question: 'What comes first: menu or layout?',
+        answer:
+          'Menu and volume first. Layout that ignores the menu creates expensive bottlenecks.',
+      },
+      {
+        question: 'How much space do we need per cover?',
+        answer:
+          'There is no universal number — depends on prep model, storage, dishwashing and service style. We size from process, not slogans.',
+      },
+      {
+        question: 'Should dirty and clean paths ever cross?',
+        answer:
+          'Avoid it. Crossed clean/dirty flows create hygiene and speed problems.',
+      },
+      {
+        question: 'Where should the dish pit sit relative to the pass?',
+        answer:
+          'Close enough for speed, separated enough that noise and splash do not destroy expo quality.',
+      },
+      {
+        question: 'Can a small kitchen still support a large menu?',
+        answer:
+          'Only with ruthless menu engineering, batch prep and storage discipline — or the menu must shrink.',
+      },
+      {
+        question: 'What utilities are most often underspecified?',
+        answer:
+          'Power phases, ventilation, drainage and hot water. Fix on paper before concrete is poured.',
+      },
+      {
+        question: 'How do we plan for future growth?',
+        answer:
+          'Leave modular space and utility capacity for one more station rather than filling every square metre on day one.',
+      },
+      {
+        question: 'Do you provide CAD drawings?',
+        answer:
+          'Drawing format is agreed in the proposal — from conceptual bubble diagrams to detailed equipment layouts.',
+      }
+
     ],
   },
 ]

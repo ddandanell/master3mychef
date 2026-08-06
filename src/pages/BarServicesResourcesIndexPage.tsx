@@ -65,6 +65,56 @@ const RESOURCES_FAQS = [
     answer:
       'The benchmarks are based on South Bali and Ubud hospitality market data. Remote areas or specialised venues may differ, so we always recommend confirming with a short conversation before you budget.',
   },
+  {
+    question: 'How often are new bar resources added?',
+    answer:
+      'We add guides when operators repeatedly ask the same planning questions — salaries, pour cost, opening checklists and training outlines.',
+  },
+  {
+    question: 'Can I download everything as one ZIP?',
+    answer:
+      'Resources are published as individual pages for easy sharing and search. Request a bundled pack via <a href="/bar-services/contact">contact</a> if you need an offline set for a group.',
+  },
+  {
+    question: 'Are resources suitable for hotel F&B directors?',
+    answer:
+      'Yes — multi-outlet and hotel bar leaders use them for internal alignment before requesting audits or training.',
+  },
+  {
+    question: 'Do you cover zero-proof and wellness bar trends?',
+    answer:
+      'Menu development services include zero-proof lists. Resource pages expand as demand grows; ask if you need a current brief.',
+  },
+  {
+    question: 'Can students or hospitality schools use these pages?',
+    answer:
+      'Yes for education. Commercial reuse in paid courses requires permission — contact us.',
+  },
+  {
+    question: 'How do resources differ from the bar services FAQ hub?',
+    answer:
+      'Resources are deeper guides. The <a href="/bar-services/faq">FAQ hub</a> answers short operational questions and links into services.',
+  },
+  {
+    question: 'Is registration required to read resources?',
+    answer:
+      'No — pages are public. Implementation support is quoted separately.',
+  },
+  {
+    question: 'Can you create a private resource for our hotel group?',
+    answer:
+      'Yes under a consulting scope — branded SOPs, cost models and training decks for internal use only.',
+  },
+  {
+    question: 'Do resources replace a bar audit?',
+    answer:
+      'No. They help you prepare and prioritise. An audit validates numbers on-site and produces a prioritised action list.',
+  },
+  {
+    question: 'What should I read first as a new bar owner?',
+    answer:
+      'Start with costing and staffing benchmarks, then new bar setup material, then contact us for a health call before major spend.',
+  },
 ]
 
 export default function BarServicesResourcesIndexPage() {
@@ -329,7 +379,7 @@ export default function BarServicesResourcesIndexPage() {
               Questions about our bar resources
             </h2>
           </div>
-          <FAQAccordion items={RESOURCES_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} dark />
+          <FAQAccordion items={RESOURCES_FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} dark showToc ctaEvery={5} />
           <div className="mt-10 text-center">
             <a
               href="/bar-services/faq/"

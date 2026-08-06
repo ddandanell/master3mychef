@@ -4,6 +4,7 @@ import { Wine, Users, Music, Sparkles, GlassWater, UtensilsCrossed } from 'lucid
 import type { PageSection } from '@/components/PremiumPage'
 import {
   COCKTAIL_FREE_FLOW_NOTE,
+  COCKTAIL_IMAGE_PATHS,
   COCKTAIL_MIN_GUESTS,
   COCKTAIL_PACKAGES,
   COCKTAIL_PRICE_FLOOR_DISPLAY,

@@ -534,7 +534,10 @@ export default function PremiumPage({
                     </h2>
                   )}
                   {section.body && (
-                    <p className="text-lg text-[#4A4745] mb-8">{section.body}</p>
+                    <div
+                      className="text-lg text-[#4A4745] mb-8 leading-relaxed [&_a]:text-[#7E6410] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#C5A028]"
+                      dangerouslySetInnerHTML={{ __html: downgradeArticleH1(section.body) }}
+                    />
                   )}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     {renderAction(
@@ -570,9 +573,10 @@ export default function PremiumPage({
                     </h2>
                   )}
                   {section.body && (
-                    <p className={`mx-auto max-w-3xl text-center leading-relaxed ${isDark ? 'text-white/[75%]' : 'text-[#4A4745]'}`}>
-                      {section.body}
-                    </p>
+                    <div
+                      className={`mx-auto max-w-3xl text-center leading-relaxed [&_a]:text-[#7E6410] [&_a]:font-medium [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-[#C5A028] ${isDark ? 'text-white/[75%]' : 'text-[#4A4745]'}`}
+                      dangerouslySetInnerHTML={{ __html: downgradeArticleH1(section.body) }}
+                    />
                   )}
                   <div className={section.title || section.body ? 'mt-10' : ''}>{section.render}</div>
                 </div>

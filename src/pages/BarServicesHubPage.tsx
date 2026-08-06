@@ -78,7 +78,7 @@ const HUB_FAQS = [
   { question: 'How quickly can you respond to a bar staffing emergency?', answer: 'Same-day and next-day cover is often possible in South Bali when shifts open — WhatsApp with venue, time and headcount.' },
   { question: 'Are bartenders employed by myCHEF or freelancers?', answer: 'Supervised myCHEF bar teams with briefing and replacement cover — not random marketplace freelancers.' },
   { question: 'How do I get a proposal for my venue?', answer: 'Share venue type, shift pattern, service style and start date — we return a written proposal. <a href="/bar-services/contact">Bar services contact</a>.' },
-  { question: 'What is the typical bartender rate for villas?', answer: 'Private villa bartenders from about IDR 350,000/hour with a 3-hour minimum. <a href="/in-villa-service/bartenders">Details →</a>' },
+  { question: 'What is the typical bartender rate for villas?', answer: 'Villa cocktail packages from IDR 500,000++ per guest (min 10). Not hourly hire. <a href="/in-villa-service/bartenders">Details →</a>' },
   { question: 'Do you supply alcohol and glassware?', answer: 'Glassware and tools can be scoped; alcohol is usually client-supplied or sourced at cost.' },
   { question: 'Can you design signature cocktail menus?', answer: 'Yes — mixology and menu development for venues and villa events. <a href="/in-villa-service/mixology">Mixology →</a>' },
   { question: 'Wedding and event bar teams?', answer: 'Yes — scaled to guest count for villas and venues. <a href="/events/weddings">Wedding catering</a> food pairing available.' },

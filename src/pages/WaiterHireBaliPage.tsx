@@ -94,7 +94,7 @@ A 50% deposit confirms your booking. Balance is due the day before the event.`,
 ]
 
 const faqs = [
-  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
   { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
@@ -118,7 +118,7 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Full event crew hire including setup and breakdown' },
-  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Bar staff and mobile bar packages' },
+  { label: 'Cocktail Packages Bali', href: '/in-villa-service/bartenders', desc: 'Complete cocktail packages (not hourly hire)' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'End-to-end villa party catering' },
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'In-villa private chef service' },
   { label: 'Plated Dinner Catering', href: '/catering/plated-catering', desc: 'Formal multi-course dinner service' },

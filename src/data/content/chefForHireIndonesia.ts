@@ -85,7 +85,7 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
     <li><strong>Chef days (Bali):</strong> from IDR 1,000,000++ per day for one meal, with one professional chef and one dedicated assistant included; groceries at cost with receipts</li>
     <li><strong>Weekly chef service:</strong> from IDR 900,000++ per day at the weekly rate (10% off standard); monthly rate from IDR 800,000++ per day (20% off)</li>
     <li><strong>Live-in placement:</strong> tailored quote from our staffing team, based on the household brief</li>
-    <li><strong>Service staff:</strong> waiters and sommeliers from IDR 250K per hour; bartenders from IDR 350K per hour</li>
+    <li><strong>Service staff:</strong> waiters and sommeliers from IDR 250K per hour; bartenders from IDR 500,000++ per guest</li>
   </ul>
   <p>Prices are quoted ++ (11% government tax + 10% service charge) as one fixed figure before you commit — a deposit confirms your date. Full detail lives on the <a href="/pricing">current pricing</a>.</p>
 </section>

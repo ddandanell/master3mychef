@@ -13,7 +13,7 @@ const FAQS = [
   { q: 'Do you offer private chefs in Kuta and Legian?', a: 'Yes for villas and suitable kitchens in Kuta, Legian and nearby streets. Share kitchen photos if the space is compact.' },
   { q: 'Can hotel rooms book a private chef?', a: 'Private chefs need a real kitchen — pure hotel rooms usually do not work. Villas and apartment kitchens do.' },
   { q: 'Is BBQ possible for Kuta group villas?', a: 'Yes when outdoor space and rules allow. <a href="/catering/bbq-catering">BBQ catering</a>.' },
-  { q: 'Can bachelor or group trips book chef + bartender packages?', a: 'Yes — popular for group villas. See <a href="/events/villa-parties">villa parties</a> and bartender hire.' },
+  { q: 'Can bachelor or group trips book chef + bartender packages?', a: 'Yes — popular for group villas. See <a href="/events/villa-parties">villa parties</a> and <a href="/in-villa-service/bartenders">cocktail packages</a>.' },
   { q: 'How last-minute can Kuta bookings be?', a: 'Often same-week; same-day depends on chef inventory. WhatsApp is the fastest path.' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
@@ -244,7 +244,7 @@ export default function KutaPage() {
               This corridor runs on celebrations — bucks and hens trips, milestone birthdays, surf-crew reunions. The pattern that works: a proper catered feast at the villa first, drinks mixed at your own pool, then the night out with a full stomach and a home base to return to. We plan party timelines around each villa&apos;s noise rules — most enforce music curfews somewhere between 22:00 and midnight — and we can advise on safe, honest alcohol sourcing for your group.
             </p>
             <p className="mb-0 leading-relaxed">
-              For the full production, see our <Link to="/events/villa-parties" className="text-[#C5A028] hover:underline font-medium">villa party catering</Link>, add a professional <Link to="/in-villa-service/bartenders" className="text-[#C5A028] hover:underline font-medium">bartender</Link> from IDR 350K per hour (three-hour minimum), or go straight for a poolside <Link to="/catering/bbq-catering" className="text-[#C5A028] hover:underline font-medium">BBQ catering</Link> spread — the Kuta-Legian signature.
+              For the full production, see our <Link to="/events/villa-parties" className="text-[#C5A028] hover:underline font-medium">villa party catering</Link>, add a professional <Link to="/in-villa-service/bartenders" className="text-[#C5A028] hover:underline font-medium">bartender</Link> from IDR 500,000++ per guest (min 10 guests), or go straight for a poolside <Link to="/catering/bbq-catering" className="text-[#C5A028] hover:underline font-medium">BBQ catering</Link> spread — the Kuta-Legian signature.
             </p>
           </div>
         </div>

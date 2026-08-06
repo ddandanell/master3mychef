@@ -114,7 +114,7 @@ export default function PillarSubPage() {
       { q: 'How many staff do I need?', a: 'Plated: ~1 waiter per 8–10 guests. Buffet: ~1 per 15. Cocktail: ~1 bartender per 20–25.' },
       { q: 'What do your staff wear?', a: 'Professional uniforms matched to formality — black/white formal or smart resort casual.' },
       { q: 'How far in advance should I book staff?', a: '3+ days small teams; 2+ weeks large events or peak season.' },
-      { q: 'Bartender rates?', a: 'From about IDR 350,000/hour with a 3-hour minimum. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
+      { q: 'Bartender rates?', a: 'Complete cocktail packages from IDR 500,000++ per guest (min 10) — not hourly hire. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
       { q: 'Waiter rates?', a: 'From about IDR 250,000/hour with minimums. Details on the service pages.' },
       { q: 'Alcohol included?', a: 'No — BYO or sourced at cost; hire covers the professional.' },
       { q: 'Butler service?', a: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },

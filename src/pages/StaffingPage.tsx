@@ -593,7 +593,7 @@ export default function StaffingPage() {
               <Link to="/in-villa-service" className="underline" style={{ color: '#C5A028' }}>
                 in-villa service team
               </Link>{' '}
-              provides waiters, bartenders and butlers by the hour for events and villa stays.
+              provides waiters and butlers by the hour, and complete cocktail packages (not hourly bartender hire) for events and villa stays.
             </p>
           </div>
           {/* Sub-service links */}

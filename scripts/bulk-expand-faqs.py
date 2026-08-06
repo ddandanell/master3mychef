@@ -54,7 +54,7 @@ TOPIC_PACKS: dict[str, list[tuple[str, str]]] = {
         ("Do you bring the grill?", "Yes — grills, fuel, tools and stations. You do not need villa equipment."),
         ("What if it rains during a BBQ?", "Covered terraces or tents — plan B is confirmed before service."),
         ("Can you do seafood or vegetarian BBQ?", "Yes. Also <a href=\"/seafood-bbq-catering-bali\">seafood BBQ</a>."),
-        ("Is alcohol included?", "Usually BYO or sourced at cost with optional bartender."),
+        ("Is alcohol included?", "Usually BYO or sourced at cost with optional cocktail packages."),
         ("What is the minimum guest count?", "Typically around 10 for full BBQ catering; smaller groups can use grill menus or private chef."),
         ("Can kids eat at a BBQ?", "Yes — milder items or <a href=\"/kids-menus\">kids menus</a>."),
         ("Is BBQ different from daily private chef?", "BBQ catering is event production; multi-day meals use <a href=\"/private-chef-bali\">private chef day rates</a>."),
@@ -120,7 +120,7 @@ TOPIC_PACKS: dict[str, list[tuple[str, str]]] = {
         ("How to start?", "WhatsApp the brief or <a href=\"/contact\">contact</a>."),
     ],
     "in_villa": [
-        ("How much do waiters and bartenders cost in Bali?", "Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href=\"/in-villa-service\">In-villa service</a>."),
+        ("How much do waiters and bartenders cost in Bali?", "Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href=\"/in-villa-service\">In-villa service</a>."),
         ("Minimum booking?", "Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters."),
         ("Can we hire staff without food?", "Yes — self-catered or third-party caterer support is normal."),
         ("What do staff wear?", "Professional uniforms matched to event formality."),

@@ -306,7 +306,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           ? [
               { question: 'How many guests can you handle?', answer: 'From small private dinners to large villa parties. Share your numbers and venue and we build the right team around it — one chef for an intimate dinner, a full culinary crew for a large celebration.' },
               { question: 'What is the difference between hiring an event chef and booking catering?', answer: 'Chef hire puts a professional chef (and optional staff) inside your event with a menu built for you. Catering lines are structured service formats for scale, and the events team adds full production — same company, different scope.' },
-              { question: 'Do you handle drinks and styling too?', answer: 'Yes — bar service and table styling can be added alongside the food. Sommeliers are available from IDR 250K per hour and bartenders from IDR 350K per hour.' },
+              { question: 'Do you handle drinks and styling too?', answer: 'Yes — bar service and table styling can be added alongside the food. Sommeliers are available from IDR 250K per hour and bartenders from IDR 500,000++ per guest.' },
               { question: 'How far ahead should I book?', answer: 'Single dinners: two to three weeks is usually comfortable. Peak-season dates and large events should be booked earlier. Availability is usually confirmed within 2 hours on WhatsApp.' },
               { question: 'Which areas do you cover?', answer: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua and beyond. Any travel fee is confirmed upfront.' },
             ]
@@ -318,7 +318,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           { question: 'Do villas allow outside BBQ catering?', answer: 'Most villas welcome outside catering with advance notice. We coordinate access and house rules with your villa manager and flag any banjar function fee in your quote upfront.' },
           { question: 'What happens if it rains during the party?', answer: 'Wet-season BBQs relocate under covered terraces, verandas or pop-up tents. Gas grills work under cover where open flame is not allowed — the party goes ahead.' },
           { question: 'How far ahead should I book and what is the cancellation policy?', answer: 'One to two weeks ahead in peak season; three to seven days otherwise. A deposit locks your date (a 50% deposit). Cancellations 14+ days before receive a full refund, 7–13 days before receive a 50% refund, and under 7 days are non-refundable (see /cancellation policy).' },
-          { question: 'Can you provide drinks and a bartender?', answer: 'Yes. Add a private bartender with a 3-hour open bar for IDR 4,000,000 flat, or wine, beer and soft-drink packages as itemised add-ons.' },
+          { question: 'Can you provide drinks and a bartender?', answer: 'Yes. Complete cocktail packages from IDR 500,000++ per guest (min 10) — not hourly bartender hire — or wine, beer and soft-drink packages as itemised add-ons. See /in-villa-service/bartenders.' },
         ]
       : entry.slug === 'seafood-bbq-catering-bali'
       ? [

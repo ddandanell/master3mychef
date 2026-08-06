@@ -75,7 +75,7 @@ We place host and hostess staff across Seminyak, Canggu, Uluwatu, Nusa Dua, Jimb
 ]
 
 const faqs = [
-  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
   { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
@@ -99,7 +99,7 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Waiter Hire Bali', href: '/in-villa-service/waiters', desc: 'Professional service staff for events' },
-  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Event bartenders and mobile bar' },
+  { label: 'Cocktail Packages Bali', href: '/in-villa-service/bartenders', desc: 'Complete cocktail packages and mobile bar' },
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Full event staffing solutions' },
   { label: 'Villa Butler Bali', href: '/in-villa-service/butlers', desc: 'Personal butler service for villas' },
   { label: 'Corporate Events Catering', href: '/blog/corporate-events-catering-bali-team-dining', desc: 'Corporate dining and events in Bali' },

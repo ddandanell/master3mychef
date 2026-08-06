@@ -244,7 +244,7 @@ export default function EventsBirthdaysPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
-                  <p className="text-[#4A4745] leading-relaxed"><strong>Bar service</strong> — a staffed open bar in the villa party format, or add a <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">private bartender hire</Link> from IDR 350K/hour to any dinner.</p>
+                  <p className="text-[#4A4745] leading-relaxed"><strong>Bar service</strong> — a staffed open bar in the villa party format, or add <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">cocktail packages</Link> from IDR 500,000++ per guest to any dinner.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-4 h-4 text-[#2C5F7C] mt-1 shrink-0" />
@@ -432,7 +432,7 @@ export default function EventsBirthdaysPage() {
             <Link to="/kids-menus" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">kids</Link>{' '}
             menus. Add{' '}
             <Link to="/villa-bbq-catering-bali" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa BBQ catering</Link>, a{' '}
-            <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">private bartender</Link>, or explore{' '}
+            <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">cocktail packages</Link>, or explore{' '}
             <Link to="/events/villa-parties" className="text-[#2C5F7C] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">villa party formats</Link>.
           </p>
         </div>

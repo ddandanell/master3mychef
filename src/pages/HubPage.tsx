@@ -95,14 +95,14 @@ const HOW_IT_WORKS = [
 const COMPARISON_ROWS = [
   { feature: 'Vetted, background-checked team', freelance: 'Varies', marketplace: 'Varies', mychef: 'Always' },
   { feature: 'Backup if your chef falls ill', freelance: 'None', marketplace: 'Rebooking', mychef: 'Replacement within 2 hours or 100% refund' },
-  { feature: 'Full staffing (waiters, bar, sommelier)', freelance: 'Rarely', marketplace: 'No', mychef: 'From IDR 250K/hour; bartenders 350K/hour' },
+  { feature: 'Full staffing (waiters, bar, sommelier)', freelance: 'Rarely', marketplace: 'No', mychef: 'From IDR 250K/hour; bartenders 500,000++ per guest' },
   { feature: 'Itemised fixed quote before you pay', freelance: 'Sometimes', marketplace: 'Platform estimate', mychef: 'Always, within 24 hours' },
   { feature: 'Kitchen left spotless', freelance: 'Hopefully', marketplace: '—', mychef: 'Guaranteed' },
 ]
 
 const FAQS = [
   { q: 'How much does a private chef in Bali cost?', a: 'Villa dinners start from IDR 700K per person and tasting menus from IDR 950K per person, ++ (11% government tax + 10% service charge). Your fixed quote depends on menu, guest count and staffing. <a href="/pricing">Full price tables →</a>' },
-  { q: 'What\'s included in the price?', a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters and sommeliers can be added from IDR 250K/hour; bartenders from IDR 350K/hour.' },
+  { q: 'What\'s included in the price?', a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters and sommeliers can be added from IDR 250K/hour; cocktail packages from IDR 500,000++ per guest.' },
   { q: 'Do you offer a home chef service in Bali?', a: 'Yes — our private chefs work as your home chef for a single evening or on a daily or weekly basis: menu planning, market shopping, cooking and full clean-up at your villa or residence. See the <a href="/private-chef-bali">daily villa chef service</a>, or explore <a href="/private-dining-indonesia">private dining</a> for at-home fine dining.' },
   { q: 'How far in advance should I book?', a: 'A few days is ideal for dinners; weddings and large events deserve weeks. Same-day and next-day requests are often possible — message us and we\'ll tell you honestly.' },
   { q: 'Which areas do you serve?', a: 'All of Bali\'s main villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit. Remote-area travel is always quoted upfront.' },
@@ -398,7 +398,7 @@ export default function HubPage() {
                   <Link to="/catering" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">catering Bali</Link>,{' '}
                   <Link to="/fine-dining/chefs-table" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">chefs table Bali</Link>,{' '}
                   <Link to="/in-villa-service/butlers" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">butler service Bali</Link>,{' '}
-                  <Link to="/in-villa-service/bartenders" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">bartender hire Bali</Link>, or{' '}
+                  <Link to="/in-villa-service/bartenders" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">cocktail packages Bali</Link>, or{' '}
                   <Link to="/faq" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">booking questions answered</Link>.
                 </p>
               </div>
@@ -545,8 +545,8 @@ export default function HubPage() {
                   <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 250K / hour</td>
                 </tr>
                 <tr>
-                  <td className="px-5 py-3">Bartenders</td>
-                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 350K / hour (3h min)</td>
+                  <td className="px-5 py-3">Cocktail packages</td>
+                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>From IDR 500K++ / guest (min 10)</td>
                 </tr>
               </tbody>
             </table>
@@ -742,7 +742,7 @@ export default function HubPage() {
               { title: 'Private dining', desc: 'At-home fine dining across Indonesia — chef, service team and cleanup at your table.', href: '/private-dining-indonesia', cta: 'Explore private dining →' },
               { title: 'Hire private chef Bali', desc: 'Breakfast, lunch and dinner across your whole stay, groceries at cost. Daily and monthly rates published.', href: '/private-chef-bali', cta: 'Hire a private chef in Bali →' },
               { title: "Chef's table Bali", desc: 'Counter seating with Adriano — 7-course market menu, max 6 guests, Friday & Saturday only.', href: '/fine-dining/chefs-table', cta: "Book chefs table Bali →" },
-              { title: 'Butler service & bartender hire', desc: 'Waiters, bartenders, butlers and sommeliers by the shift for villa stays and events.', href: '/in-villa-service', cta: 'Explore butler service & bartender hire →' },
+              { title: 'Butler service & cocktail packages', desc: 'Waiters, butlers and sommeliers by the shift; complete cocktail packages per guest for villa stays and events.', href: '/in-villa-service', cta: 'Explore butler service & cocktail packages →' },
             ].map((service) => (
               <div key={service.href} className="p-8 rounded-2xl border transition-all hover:shadow-lg" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{service.title}</h3>

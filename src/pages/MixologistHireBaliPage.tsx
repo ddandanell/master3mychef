@@ -97,7 +97,7 @@ Popular signature cocktail styles for Bali villas include: tropical rum/gin with
 ]
 
 const faqs = [
-  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
   { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
@@ -110,7 +110,7 @@ const faqs = [
   { question: 'Vetted staff?', answer: 'Employed/supervised teams with replacement-or-refund cover.' },
   { question: 'How to book staff?', answer: 'WhatsApp date, area, headcount and roles needed.' },
   { question: 'What bar services do you offer?', answer: 'Villa bartenders, mixology, and B2B bar solutions. <a href="/in-villa-service/bartenders">Bartenders</a> · <a href="/bar-services/">bar services</a>.' },
-  { question: 'Bartender hourly rate?', answer: 'From about IDR 350,000/hour with a 3-hour minimum.' },
+  { question: 'Cocktail package rate?', answer: 'From IDR 500,000++ per guest (min 10) for complete cocktail packages — not hourly hire. <a href="/in-villa-service/bartenders">Packages →</a>' },
   { question: 'Do you supply alcohol?', answer: 'Usually client-supplied or sourced at cost.' },
   { question: 'Mobile bar setup?', answer: 'Yes — stations, glassware plans and tools as scoped.' },
   { question: 'Zero-proof cocktails?', answer: 'Yes — full zero-proof menus available.' },
@@ -120,7 +120,7 @@ const faqs = [
 ]
 
 const relatedPages = [
-  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Bar staff hire for events' },
+  { label: 'Cocktail Service Packages', href: '/in-villa-service/bartenders', desc: 'Complete cocktail packages for villas' },
   { label: 'Sommelier Hire Bali', href: '/in-villa-service/sommelier', desc: 'Wine service and pairing expertise' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full catering for villa celebrations' },
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and event crew hire' },

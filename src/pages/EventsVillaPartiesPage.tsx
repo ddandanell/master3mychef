@@ -308,7 +308,7 @@ export default function EventsVillaPartiesPage() {
                 The Bar, Properly Run
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                At a villa party the bar is the social centre — it needs ice, glassware, garnish prep and enough staff to avoid queues. Every format includes a standard open bar (beer, wine, spirits, mixers, soft drinks). Upgrade to a <strong>cocktail bar</strong> (+IDR 1.5M) for signature cocktails and fresh ingredients, or a <strong>premium bar</strong> (+IDR 3M) for top-shelf spirits, champagne and a custom menu. Larger or more complex parties can add an extra bartender and barback (+IDR 1.8–3.2M), or hire a <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">private bartender hire</Link> from IDR 350K/hour for smaller gatherings. Our bartenders are briefed on responsible service — pacing drinks rather than pushing an open bar blindly.
+                At a villa party the bar is the social centre — it needs ice, glassware, garnish prep and enough staff to avoid queues. Every format includes a standard open bar (beer, wine, spirits, mixers, soft drinks). Upgrade to a <strong>cocktail bar</strong> (+IDR 1.5M) for signature cocktails and fresh ingredients, or a <strong>premium bar</strong> (+IDR 3M) for top-shelf spirits, champagne and a custom menu. Larger or more complex parties can add an extra bartender and barback (+IDR 1.8–3.2M), or add <Link to="/in-villa-service/bartenders" className="text-[#2C5F7C] hover:underline">cocktail packages</Link> from IDR 500,000++ per guest for smaller gatherings. Our bartenders are briefed on responsible service — pacing drinks rather than pushing an open bar blindly.
               </p>
               <div className="space-y-4">
                 {BAR_PACKAGE.map((bar) => (
@@ -524,7 +524,7 @@ export default function EventsVillaPartiesPage() {
               { to: '/experiences/private-cocktail-party', label: 'dedicated cocktail party experience' },
               { to: '/villa-bbq-catering-bali', label: 'villa BBQ catering' },
               { to: '/catering/bbq-catering', label: 'BBQ catering menus' },
-              { to: '/in-villa-service/bartenders', label: 'private bartender hire' },
+              { to: '/in-villa-service/bartenders', label: 'cocktail packages' },
               { to: '/events/birthdays', label: 'birthday catering' },
               { to: '/villa-event-packages', label: 'all-inclusive event packages' }
             ].map((link) => (

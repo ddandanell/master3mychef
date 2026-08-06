@@ -209,7 +209,7 @@ export default function RestaurantKitchenGuidePage() {
                 title="Quick answers"
                 subtitle="Short clarifications so you can decide the next step faster."
               />
-              <FAQAccordion items={guide.faqs.map((f) => ({ q: f.question, a: f.answer }))} />
+              <FAQAccordion items={guide.faqs.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
             </section>
 
             <section id="related-guides" className="scroll-mt-28">

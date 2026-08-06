@@ -6,6 +6,7 @@ import SeoHead, {
   faqPageSchema,
 } from '@/components/SeoHead'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WHATSAPP_URL = 'https://wa.me/6289674072020'
@@ -378,14 +379,7 @@ export default function CorporateCaseStudiesPage() {
       <section className="px-6 pb-16 md:pb-24">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-playfair text-3xl md:text-4xl mb-8">Corporate Catering FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((f) => (
-              <div key={f.q} className="rounded-2xl border border-[#E8E2CF] bg-white p-6 shadow-sm">
-                <p className="font-semibold text-[#1A1A1A] mb-2">{f.q}</p>
-                <p className="text-[#4A4745] leading-relaxed">{f.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

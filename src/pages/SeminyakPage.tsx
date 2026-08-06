@@ -3,12 +3,18 @@ import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Seminyak. Can you send a menu proposal?')
 
 const FAQS = [
+  { q: 'How much does private dining cost in Seminyak?', a: 'Published starts live on <a href="/pricing">pricing</a>. Seminyak is core coverage. For chef-led villa dinners see <a href="/private-chef/seminyak">private chef Seminyak</a>.' },
+  { q: 'Do you serve Petitenget and Oberoi-area villas?', a: 'Yes — Seminyak, Petitenget and nearby villa streets are standard service zones with no remote surcharge.' },
+  { q: 'Can you handle VIP and discreet villa dinners in Seminyak?', a: 'Yes — privacy-first service for high-profile guests is routine. Request a senior chef via WhatsApp and note discretion requirements.' },
+  { q: 'Fine dining vs casual villa dinner in Seminyak — which should I book?', a: 'Tasting menus via <a href="/fine-dining">fine dining</a>; relaxed grill or family-style via private chef or <a href="/catering">catering</a>. Tell us the occasion and guest mix.' },
+  { q: 'Can Seminyak villa parties add bar service?', a: 'Yes — bartenders and cocktail setups pair with chef service. See <a href="/in-villa-service/bartenders">bartenders</a>.' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
   { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
@@ -331,19 +337,7 @@ export default function SeminyakPage() {
       </section>
 
           <h2 className="font-playfair text-3xl mb-10">Seminyak Dining FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
-                  {faq.q}
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 text-[#C5A028] group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-[#4A4745] leading-relaxed border-t border-[#E8E6E3] pt-4 text-sm">
-                  {faq.a}
-                </div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ChevronRight, MessageCircle, CheckCircle, AlertCircle, DollarSign } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import { PHONE } from '@/data/siteArchitecture'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const CANONICAL = `${SITE}/blog/private-chef-cost-bali`
@@ -504,19 +505,7 @@ export default function PrivateChefCostBaliPageBlog() {
         {/* FAQ Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-light mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="border border-[#E8E8E0] rounded-xl overflow-hidden group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
-                  {faq.q}
-                  <ChevronRight size={18} className="flex-shrink-0 text-[#C5A028] group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-[#666] leading-relaxed border-t border-[#E8E8E0] pt-4">
-                  {faq.a}
-                </div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </section>
 
         {/* Related Pages */}

@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { MessageCircle, ChevronRight, Star, Award, Users, Flame } from 'lucide-react'
 import SeoHead, { localBusinessSchema, personSchema } from '@/components/SeoHead'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 import { PHONE } from '@/data/siteArchitecture'
 import { siteFacts } from '@/data/siteFacts'
 
@@ -114,6 +115,57 @@ const CHEFS_DATA: Record<string, ChefData> = {
         answer:
           'Yes. Adriano and the myCHEF team serve villas across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, and surrounding areas. Travel fees may apply for distant locations.',
       },
+      {
+        question: 'How far in advance should I book Adriano?',
+        answer:
+          'For peak season, anniversaries and proposals, book 2–4 weeks ahead. Off-peak dates can often be confirmed within a few days. <a href="/book">Book online</a> or WhatsApp your dates.',
+      },
+      {
+        question: 'What is included when Adriano cooks at my villa?',
+        answer:
+          'Menu planning, grocery shopping, full cook service, plating and kitchen cleanup are included. Alcohol, speciality ingredients and extra service staff are quoted separately when needed. See <a href="/pricing">pricing</a>.',
+      },
+      {
+        question: 'Can Adriano design a custom tasting menu for my occasion?',
+        answer:
+          'Yes — Adriano builds menus around your guests, dietary needs and occasion. Share preferences on WhatsApp and you receive a written proposal before confirming.',
+      },
+      {
+        question: 'Does Adriano cook Italian only?',
+        answer:
+          'Italian and Mediterranean fine dining are his signature, but he adapts courses for mixed groups and can collaborate with other myCHEF chefs for multi-cuisine evenings. Browse <a href="/fine-dining/menus">fine dining menus</a>.',
+      },
+      {
+        question: 'Can Adriano handle a proposal or anniversary setup?',
+        answer:
+          'Yes — timing, menu pacing and discretion are part of the brief. Coordinate flowers or photography separately; food and service run on a precise schedule. See <a href="/experiences/romantic-proposal-dinner">proposal dinners</a>.',
+      },
+      {
+        question: 'What areas of Bali does Adriano cover most often?',
+        answer:
+          'Seminyak, Canggu, Uluwatu, Nusa Dua, Jimbaran and Ubud are regular. Remote villas may include a travel fee quoted upfront. <a href="/locations">Locations</a>.',
+      },
+      {
+        question: 'How do payments and deposits work for Adriano bookings?',
+        answer:
+          'Typically 50% deposit to confirm, balance before service. Refund tiers follow our <a href="/cancellation">cancellation policy</a> unless otherwise agreed in writing.',
+      },
+      {
+        question: 'Can I combine Adriano with butler or bartender service?',
+        answer:
+          'Yes — pair with <a href="/in-villa-service">in-villa service</a> or <a href="/in-villa-service/bartenders">bartenders</a> for a full private dining team.',
+      },
+      {
+        question: 'Is grocery shopping included?',
+        answer:
+          'Yes for standard menus. Premium wine, rare ingredients or client-supplied alcohol are itemised. You approve the plan before shopping day.',
+      },
+      {
+        question: 'What if Adriano is unavailable on my dates?',
+        answer:
+          'We propose another senior myCHEF chef trained to the same standards, or alternate dates. You always confirm the named chef before deposit.',
+      }
+
     ],
     seoTitle: "Adriano — Private Chef Bali | Michelin-Trained Founder | myCHEF",
     seoDescription:
@@ -204,6 +256,57 @@ const CHEFS_DATA: Record<string, ChefData> = {
         answer:
           'Yes — gluten-free pasta alternatives, pescatarian menus, halal ingredients, and dairy-free adaptations are all handled. Let us know at booking and the menu is adjusted from the start.',
       },
+      {
+        question: 'How do I request Surya specifically?',
+        answer:
+          'Message WhatsApp with “request Surya” plus dates, guest count and villa area. We confirm availability and send a menu proposal.',
+      },
+      {
+        question: 'What cuisines does Surya cook best?',
+        answer:
+          'Mediterranean and Italian — handmade pasta, grilled proteins, seafood and villa-friendly set dinners. See <a href="/fine-dining">fine dining</a> formats.',
+      },
+      {
+        question: 'Can Surya cook for multi-day villa stays?',
+        answer:
+          'Yes — daily chef service and weekly meal plans are available. Start from day rates on <a href="/private-chef-bali">private chef Bali</a>.',
+      },
+      {
+        question: 'Does Surya handle kids menus?',
+        answer:
+          'Yes — parallel kids plates are common. Tell us ages and preferences at booking. <a href="/kids-menus">Kids menus</a>.',
+      },
+      {
+        question: 'What group size suits Surya best?',
+        answer:
+          'Typically 2–16 guests for villa dinners. Larger parties may add kitchen support — we scope that in the quote.',
+      },
+      {
+        question: 'Where does Surya usually cook in Bali?',
+        answer:
+          'Canggu, Seminyak, Pererenan, Ubud and South Bali villas. Travel outside core zones is quoted if needed.',
+      },
+      {
+        question: 'Can Surya do a pasta-focused workshop or interactive dinner?',
+        answer:
+          'Yes for small groups — interactive pasta nights pair well with villa stays. For formal classes see <a href="/experiences/private-cooking-class">private cooking class</a>.',
+      },
+      {
+        question: 'How are dietary needs handled?',
+        answer:
+          'Gluten-free, vegetarian, vegan and common allergies are designed into the menu when briefed early — no surprise substitutions on the night.',
+      },
+      {
+        question: 'What is included in Surya’s service?',
+        answer:
+          'Shopping, cooking, plating and cleanup. Service staff and bar are optional add-ons via <a href="/in-villa-service">in-villa service</a>.',
+      },
+      {
+        question: 'How do I see pricing before I book?',
+        answer:
+          'Published starts are on <a href="/pricing">pricing</a>; your WhatsApp proposal is fixed for the agreed menu and headcount.',
+      }
+
     ],
     seoTitle: "I Made Surya — Private Chef Bali | Mediterranean & Pasta | myCHEF",
     seoDescription:
@@ -294,6 +397,57 @@ const CHEFS_DATA: Record<string, ChefData> = {
         answer:
           "Yes. Bayu runs separate grill stations for vegetarian items and uses halal-certified meat suppliers when requested. A mixed group's dietary needs are planned into the menu from the start.",
       },
+      {
+        question: 'Can Bayu run a poolside BBQ for a villa party?',
+        answer:
+          'Yes — poolside and garden BBQs are his specialty for birthdays and group stays. See <a href="/catering/bbq-catering">BBQ catering</a>.',
+      },
+      {
+        question: 'What proteins and styles does Bayu offer?',
+        answer:
+          'Satay, grilled seafood, premium steaks, chicken and vegetable grills with Indonesian and international marinades.',
+      },
+      {
+        question: 'How large a BBQ can Bayu handle?',
+        answer:
+          'Typically 10–40 guests with standard setup; larger events add crew. Share guest count early for equipment planning.',
+      },
+      {
+        question: 'Does Bayu work inland or only coastal villas?',
+        answer:
+          'He covers coastal South Bali and can cook inland (including Ubud) with logistics quoted upfront.',
+      },
+      {
+        question: 'Can Bayu include vegetarian or halal BBQ options?',
+        answer:
+          'Yes — separate grills and prep when required. Flag requirements at booking.',
+      },
+      {
+        question: 'Can we add a bartender to Bayu’s BBQ?',
+        answer:
+          'Yes — combine with <a href="/in-villa-service/bartenders">bartender hire</a> or a <a href="/experiences/private-cocktail-party">cocktail party</a> add-on.',
+      },
+      {
+        question: 'Is equipment provided for outdoor BBQ?',
+        answer:
+          'Core grilling equipment and service tools are planned in the quote. Villa built-in BBQs can be used when suitable.',
+      },
+      {
+        question: 'How far ahead to book Bayu for peak weekends?',
+        answer:
+          '1–2 weeks is ideal for high season Saturdays; midweek is often faster.',
+      },
+      {
+        question: 'Does Bayu also do plated dinners?',
+        answer:
+          'His strength is live-fire and BBQ formats; for tasting menus we match you with Adriano or another fine-dining chef.',
+      },
+      {
+        question: 'What is included vs groceries?',
+        answer:
+          'Chef labour, setup and cleanup included; groceries and premium proteins at cost as listed in your proposal. <a href="/pricing">Pricing guide</a>.',
+      }
+
     ],
     seoTitle: "Bayu Pranata — BBQ Chef Bali | Live-Fire Grill Specialist | myCHEF",
     seoDescription:
@@ -385,6 +539,52 @@ const CHEFS_DATA: Record<string, ChefData> = {
         answer:
           'Asri regularly cooks for 4–20 guests. For larger groups (20–50), she leads a small team. Indonesian feast menus actually scale particularly well to larger groups — the shared-plate format is natural for big villa tables.',
       },
+      {
+        question: 'Can Asri cook a full Balinese or Indonesian feast?',
+        answer:
+          'Yes — authentic Balinese and Indonesian menus including rijsttafel-style spreads. Ideal for cultural villa dinners.',
+      },
+      {
+        question: 'What is a rijsttafel experience with Asri?',
+        answer:
+          'A multi-dish Indonesian rice table — many small plates for sharing. Guest count shapes the spread size.',
+      },
+      {
+        question: 'Is Asri’s food good for vegetarians?',
+        answer:
+          'Yes — many Indonesian classics adapt beautifully. Vegan options available when briefed.',
+      },
+      {
+        question: 'Can Asri explain dishes during service?',
+        answer:
+          'Yes — she often shares stories and ingredients for guests who want a cultural dining experience.',
+      },
+      {
+        question: 'Does Asri cover Ubud and South Bali?',
+        answer:
+          'Yes — Ubud is a natural fit, and South Bali villas are regularly covered. <a href="/locations/ubud">Ubud dining</a>.',
+      },
+      {
+        question: 'Can Asri cater a temple-style or ceremonial menu for guests?',
+        answer:
+          'She can design respectful cultural menus for villa guests. Religious ceremony catering is scoped case by case.',
+      },
+      {
+        question: 'How do spice levels work?',
+        answer:
+          'Menus are calibrated to your group — mild for visitors, authentic heat on request.',
+      },
+      {
+        question: 'Can Asri combine with a cooking class?',
+        answer:
+          'Yes for small groups — hands-on Indonesian cooking. See <a href="/experiences/private-cooking-class">private cooking class</a>.',
+      },
+      {
+        question: 'How do I book Asri?',
+        answer:
+          'WhatsApp dates, villa pin and guest count — request Asri by name. Or use <a href="/book">book</a>.',
+      }
+
     ],
     seoTitle: "Ni Putu Asri — Balinese Chef Bali | Indonesian Feast | myCHEF",
     seoDescription:
@@ -475,6 +675,57 @@ const CHEFS_DATA: Record<string, ChefData> = {
         answer:
           'Wayan serves villas across Seminyak, Canggu, Ubud, Uluwatu, and Nusa Dua. For villa locations outside central Bali, please message us and we will confirm logistics and any travel requirements.',
       },
+      {
+        question: 'Can Wayan bake a custom celebration cake?',
+        answer:
+          'Yes — birthday and villa celebration cakes are a signature. Share theme, servings and dietary needs early.',
+      },
+      {
+        question: 'What desserts is Wayan known for?',
+        answer:
+          'Plated fine-dining desserts, tropical fruit compositions and celebration cakes designed for villa service.',
+      },
+      {
+        question: 'Can Wayan work with another myCHEF savoury chef?',
+        answer:
+          'Yes — dessert-only or full sweet course support alongside a head chef is common for multi-course dinners.',
+      },
+      {
+        question: 'Does Wayan handle gluten-free or vegan desserts?',
+        answer:
+          'Yes when briefed at booking — separate prep for allergens when required.',
+      },
+      {
+        question: 'What areas does Wayan cover?',
+        answer:
+          'Major villa regions across South Bali and Ubud. Travel fees for remote sites quoted upfront.',
+      },
+      {
+        question: 'Can Wayan do a dessert tasting for a small group?',
+        answer:
+          'Yes for intimate villa evenings — multi-course sweet menus or dessert bars for parties.',
+      },
+      {
+        question: 'Is Wayan available for wedding dessert tables?',
+        answer:
+          'Yes as part of wedding catering coordination. See <a href="/events/weddings">wedding catering</a>.',
+      },
+      {
+        question: 'How far ahead for custom cakes?',
+        answer:
+          '5–10 days is ideal for custom designs; simple cakes can be faster depending on schedule.',
+      },
+      {
+        question: 'What is included in dessert-only bookings?',
+        answer:
+          'Dessert planning, shopping for pastry ingredients, prep, plating and cleanup for the sweet service.',
+      },
+      {
+        question: 'How do I request Wayan?',
+        answer:
+          'WhatsApp “request Wayan” with date, guest count and dessert brief. Pair with <a href="/fine-dining">fine dining</a> if you need a full menu.',
+      }
+
     ],
     seoTitle: "Wayan Suarjana — Pastry Chef Bali | Cakes & Desserts | myCHEF",
     seoDescription:
@@ -565,6 +816,57 @@ const CHEFS_DATA: Record<string, ChefData> = {
         answer:
           'Absolutely. Ketut regularly prepares sashimi sharing boards and raw seafood spreads for groups of 15–30 guests at villa parties. He coordinates volume and variety directly with Jimbaran suppliers.',
       },
+      {
+        question: 'Can Ketut run a sashimi or seafood-focused villa dinner?',
+        answer:
+          'Yes — fresh seafood and sashimi-forward menus are his specialty when supply is excellent that day.',
+      },
+      {
+        question: 'How fresh is the seafood?',
+        answer:
+          'Sourced the same day when possible from trusted suppliers; weather and catch can change the menu — flexibility is part of the craft.',
+      },
+      {
+        question: 'Can Ketut cook for mixed groups with non-seafood guests?',
+        answer:
+          'Yes — parallel land-protein or vegetarian courses are planned into the menu when briefed.',
+      },
+      {
+        question: 'What is an omakase-style evening with Ketut?',
+        answer:
+          'A chef-led multi-course seafood progression based on the best available product that day — guest count usually stays intimate.',
+      },
+      {
+        question: 'How large a sashimi spread can Ketut prepare?',
+        answer:
+          'From romantic dinners for 2 to villa parties — larger spreads need earlier notice for sourcing and prep space.',
+      },
+      {
+        question: 'Does Ketut cook beyond Japanese-inspired seafood?',
+        answer:
+          'Seafood technique is core; grilled and modern Asian preparations also fit villa service.',
+      },
+      {
+        question: 'Where does Ketut usually work?',
+        answer:
+          'Coastal South Bali (Jimbaran, Nusa Dua, Seminyak, Canggu, Uluwatu) is ideal for seafood logistics. <a href="/locations/jimbaran">Jimbaran</a>.',
+      },
+      {
+        question: 'Can we add wine or sake pairing guidance?',
+        answer:
+          'Beverage pairing notes can be suggested; alcohol supply is usually client-provided or sourced at cost.',
+      },
+      {
+        question: 'How do I book Ketut for a seafood night?',
+        answer:
+          'WhatsApp date, guest count, villa kitchen notes and any allergies. Request Ketut by name.',
+      },
+      {
+        question: 'Is sushi-making class available?',
+        answer:
+          'Interactive sushi sessions for small groups can be arranged — see also <a href="/experiences/sushi-masterclass">sushi masterclass</a>.',
+      }
+
     ],
     seoTitle: "Ketut Mahardika — Seafood & Japanese Chef Bali | Sashimi | myCHEF",
     seoDescription:
@@ -655,6 +957,57 @@ const CHEFS_DATA: Record<string, ChefData> = {
         answer:
           'Yes. Many of Sari\'s bookings are simply villa guests who want vibrant, health-focused food during their stay — not a formal retreat programme. She adapts her menus to any setting or occasion.',
       },
+      {
+        question: 'Can Sari cater multi-day yoga or wellness retreats?',
+        answer:
+          'Yes — multi-day plant-forward meal plans are her core specialty. See <a href="/catering/retreat-catering">retreat catering</a>.',
+      },
+      {
+        question: 'Which diets does Sari specialise in?',
+        answer:
+          'Vegan, raw-leaning, gluten-free, Ayurvedic-inspired and low-inflammatory menus — multiple requirements at once when briefed.',
+      },
+      {
+        question: 'Will non-vegan guests enjoy Sari’s food?',
+        answer:
+          'Yes — menus are built for flavour and satisfaction for mixed tables, not only dietary guests.',
+      },
+      {
+        question: 'Can Sari cook healthy food for a normal villa stay (not a retreat)?',
+        answer:
+          'Yes — many bookings are simply health-focused villa dining for a week or long stay.',
+      },
+      {
+        question: 'Does Sari work in Ubud and South Bali?',
+        answer:
+          'Ubud and wellness-focused villas are frequent; South Bali is covered too. <a href="/locations/ubud">Ubud guide</a>.',
+      },
+      {
+        question: 'Can Sari include jamu or wellness drinks?',
+        answer:
+          'Yes — traditional herbal tonics and fresh juices can be part of the meal plan.',
+      },
+      {
+        question: 'How do grocery and supplement ingredients work?',
+        answer:
+          'Core groceries are shopped for the menu; specialty powders or guest-supplied supplements can be integrated when discussed.',
+      },
+      {
+        question: 'What group sizes suit Sari best?',
+        answer:
+          'From couples to full retreat houses — larger retreats add kitchen support as needed.',
+      },
+      {
+        question: 'Can Sari coordinate with a retreat facilitator?',
+        answer:
+          'Yes — meal timing aligned to practice schedules is standard for retreat programmes.',
+      },
+      {
+        question: 'How do I request Sari?',
+        answer:
+          'WhatsApp dates, headcount, dietary matrix and villa location. Or start via <a href="/quote">quote</a>.',
+      }
+
     ],
     seoTitle: "Sari Dewi Kusuma — Wellness Chef Bali | Vegan Retreats | myCHEF",
     seoDescription:
@@ -745,6 +1098,57 @@ const CHEFS_DATA: Record<string, ChefData> = {
         answer:
           'Komang specialises in Indonesian and Balinese cuisine but has the experience to execute international formats — Mediterranean buffets, BBQ feasts, and mixed-cuisine corporate menus are all within his range. Tell us your brief and we will design around it.',
       },
+      {
+        question: 'Can Komang lead villa wedding catering?',
+        answer:
+          'Yes — ceremonies, canapés, receptions and large plated or buffet dinners. See <a href="/events/weddings">weddings</a>.',
+      },
+      {
+        question: 'What is the largest event size Komang handles?',
+        answer:
+          'Regularly 30–100+ guests; 200-guest events with expanded crew when planned early.',
+      },
+      {
+        question: 'Does Komang run multi-day corporate or retreat catering?',
+        answer:
+          'Yes — breakfast through dinner programmes for corporate and large villa groups. <a href="/catering/corporate-catering">Corporate catering</a>.',
+      },
+      {
+        question: 'How are dietary requirements handled at scale?',
+        answer:
+          'Collected at booking, built into prep plans, labelled on buffets, with separate allergen handling when required.',
+      },
+      {
+        question: 'Does Komang only cook Indonesian food?',
+        answer:
+          'Indonesian and large-format buffets are strengths; international corporate and wedding menus are also in range.',
+      },
+      {
+        question: 'Can Komang coordinate with planners and villa managers?',
+        answer:
+          'Yes — timeline lock-ins with planners and estate managers are standard for high-stakes events.',
+      },
+      {
+        question: 'What staffing does a 80-guest villa dinner need?',
+        answer:
+          'Head chef plus kitchen and FOH support sized to format (plated vs buffet). Your proposal lists the team.',
+      },
+      {
+        question: 'How far ahead should large events book?',
+        answer:
+          '4–8 weeks ideal for weddings and peak dates; complex multi-day programmes earlier. <a href="/book">Book</a>.',
+      },
+      {
+        question: 'Is equipment and rental handled?',
+        answer:
+          'Core service equipment is planned; specialty rentals can be coordinated and itemised.',
+      },
+      {
+        question: 'How do deposits work for large events?',
+        answer:
+          'Written proposal, typically 50% to confirm, balance on agreed schedule. See <a href="/cancellation">cancellation</a>.',
+      }
+
     ],
     seoTitle: "Komang Artha — Event Chef Bali | Villa Events & Weddings | myCHEF",
     seoDescription:
@@ -1031,19 +1435,13 @@ export default function ChefProfilePage() {
           <h2 className="text-2xl md:text-3xl font-serif text-white mb-10 text-center">
             Questions About Booking {chef.name.split(' ')[0]}
           </h2>
-          <div className="space-y-4">
-            {chef.faqs.map((f, i) => (
-              <details key={i} className="group border border-white/10 rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer text-white font-medium list-none hover:bg-white/5 transition-colors">
-                  {f.question}
-                  <ChevronRight className="w-4 h-4 text-[#C5A028] flex-shrink-0 group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-gray-400 leading-relaxed text-sm">
-                  {f.answer}
-                </div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion
+            items={chef.faqs.map((f) => ({ q: f.question, a: f.answer }))}
+            defaultOpenCount={2}
+            showToc
+            ctaEvery={5}
+            dark
+          />
         </div>
       </section>
 

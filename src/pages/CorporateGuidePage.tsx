@@ -2,6 +2,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import Breadcrumb from '@/components/shared/Breadcrumb'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 
@@ -200,14 +201,7 @@ export default function CorporateGuidePage() {
       <section className="bg-white border-t border-[#DDD] py-20">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-light mb-12">Corporate Questions</h2>
-          <div className="space-y-8">
-            {FAQS.map((item, i) => (
-              <div key={i}>
-                <h3 className="text-lg font-semibold mb-3">{item.q}</h3>
-                <p className="text-[#666] leading-relaxed">{item.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

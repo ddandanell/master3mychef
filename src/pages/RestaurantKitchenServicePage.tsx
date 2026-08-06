@@ -268,7 +268,7 @@ export default function RestaurantKitchenServicePage() {
                 title="Questions operators ask first"
                 subtitle="Scope, timing, documents, confidentiality, and implementation options."
               />
-              <FAQAccordion items={service.faqs.map((f) => ({ q: f.question, a: f.answer }))} />
+              <FAQAccordion items={service.faqs.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
             </section>
           </div>
         </div>

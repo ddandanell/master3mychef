@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ChevronRight, MessageCircle, CheckCircle, XCircle } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import { PHONE } from '@/data/siteArchitecture'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const CANONICAL = `${SITE}/blog/private-chef-vs-restaurant-bali`
@@ -410,14 +411,7 @@ export default function PrivateChefVsRestaurantPage() {
         {/* FAQ Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-6">
-            {FAQS.map((faq, i) => (
-              <div key={i} className="border-b border-[#E8E4DC] pb-6">
-                <h3 className="font-semibold text-[#1A1A1A] mb-2">{faq.q}</h3>
-                <p className="text-[#444] leading-relaxed">{faq.a}</p>
-              </div>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
         </section>
 
         {/* Related Articles */}

@@ -3,12 +3,18 @@ import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Kuta / Legian. Can you send a menu proposal?')
 
 const FAQS = [
+  { q: 'Do you offer private chefs in Kuta and Legian?', a: 'Yes for villas and suitable kitchens in Kuta, Legian and nearby streets. Share kitchen photos if the space is compact.' },
+  { q: 'Can hotel rooms book a private chef?', a: 'Private chefs need a real kitchen — pure hotel rooms usually do not work. Villas and apartment kitchens do.' },
+  { q: 'Is BBQ possible for Kuta group villas?', a: 'Yes when outdoor space and rules allow. <a href="/catering/bbq-catering">BBQ catering</a>.' },
+  { q: 'Can bachelor or group trips book chef + bartender packages?', a: 'Yes — popular for group villas. See <a href="/events/villa-parties">villa parties</a> and bartender hire.' },
+  { q: 'How last-minute can Kuta bookings be?', a: 'Often same-week; same-day depends on chef inventory. WhatsApp is the fastest path.' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
   { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
@@ -335,19 +341,7 @@ export default function KutaPage() {
         <div className="max-w-3xl mx-auto">
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Common Questions</p>
           <h2 className="font-playfair text-3xl mb-10">Kuta Dining FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
-                  {faq.q}
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 text-[#C5A028] group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-[#4A4745] leading-relaxed border-t border-[#E8E6E3] pt-4 text-sm">
-                  {faq.a}
-                </div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

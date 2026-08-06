@@ -3,12 +3,18 @@ import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
+import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Uluwatu. Can you send a menu proposal?')
 
 const FAQS = [
+  { q: 'Do you cook in Uluwatu and Bukit cliff villas?', a: 'Yes — Uluwatu, Pecatu and Bukit peninsula villas are covered. Share gate codes and steep-access notes. <a href="/locations/bukit-peninsula">Bukit guide</a>.' },
+  { q: 'Can you run sunset BBQ or clifftop villa dinners?', a: 'Yes when the villa layout is safe for service. Wind and power constraints are planned into the menu. <a href="/catering/bbq-catering">BBQ catering</a>.' },
+  { q: 'Is wedding catering available in Uluwatu villas?', a: 'Yes — larger events use our events chefs and full staffing plans. See <a href="/events/weddings">weddings</a>.' },
+  { q: 'How far ahead for Uluwatu high-season weekends?', a: 'Book early for July–August and holiday weekends — 2+ weeks recommended for larger groups.' },
+  { q: 'Do you combine chef service with airport-area logistics for Nusa Dua guests heading to Uluwatu?', a: 'We can coordinate multi-villa or multi-day plans across South Bali. Share the full itinerary for one proposal.' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
   { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
@@ -305,19 +311,7 @@ export default function UluwatuPage() {
       </section>
 
           <h2 className="font-playfair text-3xl mb-10">Uluwatu Dining FAQ</h2>
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <details key={i} className="border border-[#E8E6E3] rounded-xl overflow-hidden group">
-                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-[#1A1A1A] hover:bg-[#F9F9F6] transition-colors list-none">
-                  {faq.q}
-                  <ChevronRight className="w-4 h-4 flex-shrink-0 text-[#C5A028] group-open:rotate-90 transition-transform" />
-                </summary>
-                <div className="px-5 pb-5 text-[#4A4745] leading-relaxed border-t border-[#E8E6E3] pt-4 text-sm">
-                  {faq.a}
-                </div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

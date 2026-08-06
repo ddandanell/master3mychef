@@ -22,12 +22,14 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import CocktailPackageGrid from '@/components/cocktail/CocktailPackageGrid'
 import CocktailMenuBoard from '@/components/cocktail/CocktailMenuBoard'
+import CocktailClusterNav from '@/components/cocktail/CocktailClusterNav'
 import {
   COCKTAIL_IMAGE_PATHS,
   COCKTAIL_PRICE_FLOOR_DISPLAY,
   cocktailPackageWaUrl,
   cocktailServiceAggregateOfferSchema,
 } from '@/data/cocktailServicePackages'
+import { COCKTAIL_CLUSTER, MIXOLOGY_INGREDIENTS } from '@/data/cocktailSeoCluster'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -96,8 +98,24 @@ const FAQS = [
     a: 'Major villa regions island-wide. Remote travel may be quoted separately. <a href="/locations">Locations</a>.',
   },
   {
-    q: 'How do I book?',
+    q: 'How do I book private mixology in Bali?',
     a: 'WhatsApp date, villa area, guest count and whether you want craft-only, interactive, or full free-flow cocktail service.',
+  },
+  {
+    q: 'Is private mixology the same as a cocktail free-flow package?',
+    a: 'No. This page is craft and custom menus. Free-flow volume products live on <a href="/in-villa-service/bartenders">luxury cocktail service packages in Bali</a>. Many events use both: craft hour first, free flow after.',
+  },
+  {
+    q: 'Can mixology be part of a private cocktail party?',
+    a: 'Yes — signature development for the night, then service under the party plan. See <a href="/experiences/private-cocktail-party">private cocktail party at your Bali villa</a>.',
+  },
+  {
+    q: 'Can you design a couple signature for a wedding?',
+    a: 'Yes — two named signatures are a common mixology brief, then the reception free flow uses the package table on the cocktail service page.',
+  },
+  {
+    q: 'What about mocktail-only wellness groups?',
+    a: 'Zero-proof programmes are a core mixology brief — layered, garnish-forward drinks without alcohol.',
   },
 ]
 
@@ -193,13 +211,14 @@ export default function ServiceMixologyPage() {
             Craft &amp; Experience
           </p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[900px]">
-            Private Mixology Experiences and Custom Cocktails in Bali
+            {COCKTAIL_CLUSTER.mixology.h1}
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[640px] mb-8">
-            Signature drinks, Bali ingredients, interactive sessions and zero-proof craft — designed around
-            your guests. When you need full free-flow service for the party, step into our{' '}
+            Private mixology in Bali is craft-first: custom cocktail menus, Bali botanical signatures,
+            zero-proof programmes and interactive villa sessions. When you need full free-flow volume for the
+            party, use our{' '}
             <a href="/in-villa-service/bartenders" className="text-[#C5A028] underline underline-offset-4">
-              luxury cocktail &amp; bartender service packages
+              luxury cocktail service packages in Bali
             </a>
             .
           </p>
@@ -371,14 +390,97 @@ export default function ServiceMixologyPage() {
         </div>
       </section>
 
+      <section className="py-20 md:py-28 px-6 bg-white" id="bali-ingredients">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Bali flavour"
+            title="Ingredients that make private mixology taste like Bali"
+            subtitle="This is the craft page — botanical depth and custom builds, not free-flow pricing."
+          />
+          <div className="grid sm:grid-cols-2 gap-6 mt-12">
+            {MIXOLOGY_INGREDIENTS.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-6">
+                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                <p className="text-sm text-[#4A4745] leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6" id="when-to-choose">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeader
+            eyebrow="Choose the right page"
+            title="Mixology vs luxury cocktail packages vs cocktail party"
+            subtitle="Three URLs, three intents — so Google and guests are never confused."
+          />
+          <div className="mt-10 space-y-5 text-[#4A4745] leading-relaxed">
+            <p>
+              <strong className="text-[#1A1A1A]">Choose private mixology</strong> when the brief is
+              custom menus, interactive learning, zero-proof craft or wedding signatures. Pricing for
+              masterclasses is custom quotation.
+            </p>
+            <p>
+              <strong className="text-[#1A1A1A]">Choose luxury cocktail service packages</strong> when you
+              need BYO or free-flow bar operations priced per guest with full setup. That commercial table
+              lives on{' '}
+              <Link to="/in-villa-service/bartenders" className="text-[#C5A028] hover:underline font-medium">
+                luxury cocktail service packages in Bali
+              </Link>
+              .
+            </p>
+            <p>
+              <strong className="text-[#1A1A1A]">Choose a private cocktail party</strong> when the product is
+              the occasion — night timeline, canapés, entertainment and guest planning — still using the same
+              packages underneath. See{' '}
+              <Link
+                to="/experiences/private-cocktail-party"
+                className="text-[#C5A028] hover:underline font-medium"
+              >
+                private cocktail party at your Bali villa
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6 bg-white" id="interactive">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeader
+            eyebrow="Interactive"
+            title="Villa cocktail classes &amp; guided builds"
+            subtitle="Hands-on sessions by custom quote — never the old fixed session ladder."
+          />
+          <div className="mt-8 space-y-4 text-[#4A4745] leading-relaxed">
+            <p>
+              Small groups can learn technique, build two or three drinks with guidance, and leave with recipe
+              notes when included in scope. We size the session to kitchen space and guest count so it stays
+              safe and enjoyable — not a crowded demo.
+            </p>
+            <p>
+              Interactive craft is not a substitute for free-flow service at a 40-guest party. For volume, book
+              a package on the cocktail service page and add mixology for the signature menu design.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6" id="cluster">
+        <div className="max-w-[1280px] mx-auto">
+          <CocktailClusterNav current="mixology" />
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 px-6 bg-[#1A1A1A] text-white" id="book">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-playfair text-3xl md:text-4xl mb-4">
             Book private mixology in Bali
           </h2>
           <p className="text-white/70 mb-8">
-            Share date, villa, guest count and whether you want craft design, interactive session or full
-            free-flow packages.
+            Share date, villa, guest count and whether you want craft design, interactive session or a link
+            into free-flow packages (from {COCKTAIL_PRICE_FLOOR_DISPLAY}/guest).
           </p>
           <a
             href={WA_LINK}

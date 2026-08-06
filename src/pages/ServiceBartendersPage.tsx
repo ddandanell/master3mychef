@@ -160,8 +160,8 @@ export default function ServiceBartendersPage() {
             src={COCKTAIL_IMAGE_PATHS.hero}
             alt={COCKTAIL_IMAGE_PATHS.heroAlt}
             className="w-full h-full object-cover"
-            width={1280}
-            height={720}
+            width={1920}
+            height={1088}
             decoding="async"
             fetchPriority="high"
             loading="eager"

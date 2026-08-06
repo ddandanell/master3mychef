@@ -212,30 +212,29 @@ export const COCKTAIL_PRICE_FLOOR_DISPLAY = 'IDR 500,000++'
 export const COCKTAIL_PRICE_FLOOR_IDR = 500_000
 export const COCKTAIL_PRICE_CEILING_IDR = 1_700_000
 
+/**
+ * Prefer proven live cocktail-party assets for hero/proof (high-end villa style),
+ * plus style-matched package shots for the commercial grid.
+ */
 export const COCKTAIL_IMAGE_PATHS = {
-  hero: '/generated/bartender-cocktail-service-bali-villa.webp',
-  heroAlt:
-    'Professional bartender preparing cocktails at a private Bali villa beside the pool',
-  process: '/generated/mobile-bar-setup-bali.webp',
-  processAlt: 'Mobile cocktail bar preparation with ice, fruit and professional tools',
-  menu: '/generated/four-cocktail-menu-bali.webp',
-  menuAlt: 'Selection of four handcrafted cocktails for a private Bali event',
-  team: '/generated/mychef-bartender-team-bali.webp',
-  teamAlt: 'myCHEF professional cocktail service team in Bali',
-  crossSell: '/generated/cocktails-canapes-bali-event.webp',
-  crossSellAlt: 'Cocktail and canapé service at a private Bali event',
-} as const
-
-/** Fallback images if new generated assets are not yet on disk. */
-export const COCKTAIL_IMAGE_FALLBACKS = {
+  /** Live page hero — keep for brand consistency */
   hero: '/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp',
-  byo: '/generated/mychef-cocktail-party-mobile-bar-detail-bali-landscape.webp',
-  freeFlow: '/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp',
-  premium: '/generated/mychef-events-bali-weddings-bartender.webp',
-  process: '/generated/mychef-cocktail-party-bartenders-setup-bali-portrait.webp',
-  menu: '/generated/mychef-cocktail-party-cocktails-canapes-bali-landscape.webp',
-  team: '/generated/mychef-service-bali-bartenders-gallery-1.webp',
+  heroAlt:
+    'Professional bartender pouring a cocktail at a luxury Bali villa infinity pool at sunset',
+  /** Live page mobile bar detail */
+  process: '/generated/mychef-cocktail-party-mobile-bar-detail-bali-landscape.webp',
+  processAlt: 'Premium cocktail tools and spirit bottles on a candlelit villa bar cart',
+  menu: '/generated/four-cocktail-menu-bali.webp',
+  menuAlt: 'Selection of four handcrafted cocktails for a private Bali villa event',
+  /** Live page team/setup portrait */
+  team: '/generated/mychef-cocktail-party-bartenders-setup-bali-portrait.webp',
+  teamAlt: 'myCHEF bartenders preparing glassware and ice at a luxury Bali villa bar',
+  /** Live page cocktails + canapés */
   crossSell: '/generated/mychef-cocktail-party-cocktails-canapes-bali-landscape.webp',
+  crossSellAlt: 'Cocktails and canapés on a villa counter overlooking infinity pool and ocean',
+  /** OG / social */
+  og: '/generated/bartender-hire-bali-cocktail-party.webp',
+  ogAlt: 'Private cocktail party at a luxury Bali villa poolside bar at night',
 } as const
 
 export function getCocktailPackage(id: CocktailPackageId): CocktailPackage {

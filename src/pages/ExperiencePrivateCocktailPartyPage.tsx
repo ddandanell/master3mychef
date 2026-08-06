@@ -32,8 +32,9 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Private Cocktail Party Bali',
     title: 'Private Cocktail Party in Bali: Your Villa, Our Complete Bar',
-    image: COCKTAIL_IMAGE_PATHS.hero,
-    imageAlt: COCKTAIL_IMAGE_PATHS.heroAlt,
+    image: '/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp',
+    imageAlt:
+      'Professional bartender pouring a signature cocktail at a luxury Bali villa infinity pool at sunset',
     body: `<p>No queue at the bar. No closing time. No generic drinks list. A myCHEF private cocktail party turns your Bali villa into the only venue that matters: a complete cocktail service — bartender team, four chosen cocktails, glassware, ice, mixers and cleanup — with optional chef canapés, waiters and entertainment quoted separately when you want the full night.</p>
 
     <p>From twelve friends around a Seminyak pool to eighty guests on an Uluwatu clifftop, the scale changes; the standard does not. You host. We run the bar layer of the evening.</p>
@@ -54,8 +55,9 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'The bar layer — same packages sitewide',
     title: 'Cocktail Packages for Your Party',
-    image: COCKTAIL_PACKAGES[1].image,
-    imageAlt: COCKTAIL_PACKAGES[1].imageAlt,
+    image: '/generated/mychef-cocktail-party-cocktails-canapes-bali-landscape.webp',
+    imageAlt:
+      'Tropical cocktails and canapés on a villa bar overlooking infinity pool and ocean',
     body: `<p>Every private cocktail party uses the same three complete cocktail products as our commercial cocktail page. Choose the bar package first; food and entertainment stack on top.</p>
 
     <table class="w-full text-left border-collapse my-4 text-sm">
@@ -103,7 +105,18 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'The drinks',
     title: 'Four Cocktails, Classics & Zero-Proof',
+    image: '/generated/mychef-cocktail-party-mobile-bar-detail-bali-landscape.webp',
+    imageAlt: 'Premium cocktail tools and spirit bottles on a candlelit villa bar cart at dusk',
     body: `<p>Your menu is built before the party: choose four cocktails for speed and consistency. Classics, modern favourites, tropical serves, spirit-forward options, zero-proof and Bali signatures are all available. For deeper craft and interactive sessions see <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">private mixology &amp; custom cocktail design in Bali</a>.</p>`,
+  },
+  {
+    id: 'team-proof',
+    type: 'content' as const,
+    subtitle: 'The team',
+    title: 'Professional Bar Setup Before Guests Arrive',
+    image: '/generated/mychef-cocktail-party-bartenders-setup-bali-portrait.webp',
+    imageAlt: 'Two professional bartenders preparing glassware and ice at a luxury Bali villa outdoor bar',
+    body: `<p>Ice, glassware, garnishes and station layout are ready before the first guest. The same standards apply whether you book BYO, free flow or premium — only the spirit tier and service length change.</p>`,
   },
   {
     id: 'features',
@@ -258,9 +271,9 @@ export default function ExperiencePrivateCocktailPartyPage() {
       canonicalUrl={CANONICAL}
       h1="Private Cocktail Party in Bali: Your Villa, Our Complete Bar"
       subtitle={`Complete cocktail packages from ${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest — not bartender-only hire`}
-      heroImage={COCKTAIL_IMAGE_PATHS.hero}
-      heroImageAlt={COCKTAIL_IMAGE_PATHS.heroAlt}
-      ogImage={`https://mychef.id${COCKTAIL_IMAGE_PATHS.hero}`}
+      heroImage="/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp"
+      heroImageAlt="Professional bartender pouring a signature cocktail at a luxury Bali villa infinity pool at sunset"
+      ogImage="https://mychef.id/generated/bartender-hire-bali-cocktail-party.webp"
       keywords={[
         'private cocktail party bali',
         'villa cocktail party bali',

@@ -1546,7 +1546,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Book a complete villa cocktail service in Bali from IDR 500K++ per guest. BYO, 4-hour free flow or 6-hour premium free flow. Bar team, mixers, glassware, ice, setup and cleanup included.',
     canonical: `${SITE}/in-villa-service/bartenders`,
     h1: 'Luxury Cocktail & Bartender Service in Bali',
-    ogImage: `${SITE}/generated/bartender-cocktail-service-bali-villa.webp`,
+    ogImage: `${SITE}/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp`,
   },
 
       'in-villa-service-mixology': {
@@ -1556,7 +1556,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Private mixology in Bali: custom cocktail menus, Bali-inspired signatures, zero-proof craft and interactive sessions at your villa. Full cocktail packages from IDR 500K++/guest.',
     canonical: `${SITE}/in-villa-service/mixology`,
     h1: 'Private Mixology Experiences and Custom Cocktails in Bali',
-    ogImage: `${SITE}/generated/four-cocktail-menu-bali.webp`,
+    ogImage: `${SITE}/generated/mychef-cocktail-party-cocktails-canapes-bali-landscape.webp`,
   },
 
       'in-villa-service-sommelier': {
@@ -1797,7 +1797,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Private cocktail party at your Bali villa. Complete bar packages from IDR 500K++ per guest (BYO / free flow / premium). Optional canapés and entertainment quoted separately.',
     canonical: `${SITE}/experiences/private-cocktail-party`,
     h1: 'Private Cocktail Party in Bali: Your Villa, Our Complete Bar',
-    ogImage: `${SITE}/generated/bartender-cocktail-service-bali-villa.webp`,
+    ogImage: `${SITE}/generated/bartender-hire-bali-cocktail-party.webp`,
   },
 
       'experience-sushi-masterclass': {

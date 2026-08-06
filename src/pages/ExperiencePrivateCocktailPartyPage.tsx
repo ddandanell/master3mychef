@@ -174,7 +174,7 @@ const SECTIONS: PageSection[] = [
     type: 'cta' as const,
     subtitle: 'Plan Your Party',
     title: 'Ready to Host Your Bali Cocktail Party?',
-    body: `Tell us your date, villa and guest count — we reply with a package recommendation and optional upgrades. Start with <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">complete cocktail service packages</a>, craft menus on <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">mixology</a>, or full production on <a href="/events/villa-parties" class="text-[#7E6410] hover:underline font-medium">villa parties</a>.`,
+    body: `<p>Tell us your date, villa and guest count — we reply with a package recommendation and optional upgrades. Start with <a href="/in-villa-service/bartenders">complete cocktail service packages</a>, craft menus on <a href="/in-villa-service/mixology">mixology</a>, or full production on <a href="/events/villa-parties">villa parties</a>.</p>`,
     primaryAction: {
       label: 'Plan My Cocktail Party',
       href: WA_LINK,

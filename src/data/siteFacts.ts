@@ -111,11 +111,18 @@ export const siteFacts = {
    */
   geo: { latitude: -8.6832483, longitude: 115.2325315 },
 
-  /** In-villa private bartender rate (owner page /in-villa-service/bartenders). */
-  bartenderRate: 'IDR 350,000',
+  /**
+   * Consumer cocktail service floor (owner-approved retail = supplier × 2).
+   * Complete packages only — not hourly bartender-only hire.
+   * Source of truth: src/data/cocktailServicePackages.ts
+   */
+  bartenderRate: 'IDR 500,000++',
 
-  /** In-villa private bartender rate with hourly wording. */
-  bartenderRateHourly: 'IDR 350,000/hour',
+  /** Per-guest package floor wording for cocktail service. */
+  bartenderRateHourly: 'from IDR 500,000++ per guest',
+
+  /** @deprecated Hourly bartender-only hire is retired for consumer pages. */
+  bartenderRateLegacyHourly: 'IDR 350,000/hour',
 
   /** Direct Google Business Profile / Maps URL. */
   googleBusinessProfileUrl:

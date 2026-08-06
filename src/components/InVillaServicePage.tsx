@@ -31,16 +31,16 @@ const SERVICE_TYPES = [
   },
   {
     slug: 'bartenders',
-    label: 'Bartenders',
-    desc: 'Cocktail preparation and bar service for villa events. Classic cocktails, creative mixology, and professional presentation.',
-    price: 'From IDR 350,000/hour',
+    label: 'Cocktail & Bartender Service',
+    desc: 'Complete mobile cocktail packages — BYO, free flow or premium. Team, four cocktails, glassware, ice, setup and cleanup.',
+    price: 'From IDR 500,000++ / guest',
     icon: Wine,
   },
   {
     slug: 'mixology',
     label: 'Mixology Service',
-    desc: 'Signature cocktail creation, menu design, and bar consultancy for special events and villa parties.',
-    price: 'From IDR 1,500,000/session',
+    desc: 'Custom cocktail design, Bali-inspired signatures and interactive craft. Full free-flow packages available separately.',
+    price: 'Custom quote · packages from IDR 500K++/guest',
     icon: Wine,
   },
   {
@@ -94,7 +94,7 @@ const SERVICE_EXPLAINERS = [
 const FAQS = [
   {
     q: 'How much does it cost to hire villa service staff in Bali?',
-    a: 'Waiters from <strong>IDR 250,000/hour</strong>, hosts from IDR 300,000/hour, bartenders from <strong>IDR 350,000/hour</strong> (all 3-hour minimums). Butlers from IDR 1,200,000/day, sommelier from IDR 1,200,000/dinner, mixology from IDR 1,500,000/session. All rates ++ (11% tax + 10% service). Pair with food via <a href="/catering">catering</a> or <a href="/private-chef-bali">private chef</a>.',
+    a: 'Waiters from <strong>IDR 250,000/hour</strong>, hosts from IDR 300,000/hour (typical 3-hour minimums). Complete cocktail service packages from <strong>IDR 500,000++ per guest</strong> (not hourly bartender hire). Butlers from IDR 1,200,000/day, sommelier from IDR 1,200,000/dinner. Mixology craft sessions are custom quote. Rates ++ (11% tax + 10% service). Pair with food via <a href="/catering">catering</a> or <a href="/private-chef-bali">private chef</a>.',
   },
   {
     q: 'Is there a minimum booking for in-villa staff?',
@@ -130,7 +130,7 @@ const FAQS = [
   },
   {
     q: 'Can you provide a private bartender for a villa party in Bali?',
-    a: 'Yes — cocktail service, welcome drinks and full evening bars. Rates from IDR 350,000/hour (3-hour minimum). Details: <a href="/in-villa-service/bartenders">bartenders</a> and <a href="/bar-services/">bar services</a>.',
+    a: 'Yes — complete cocktail packages from IDR 500,000++ per guest (BYO / free flow / premium). Details: <a href="/in-villa-service/bartenders">luxury cocktail &amp; bartender service</a>. Venue operators: <a href="/bar-services/">bar services (B2B)</a>.',
   },
   {
     q: 'Do you offer butler service for luxury villa stays?',
@@ -192,7 +192,7 @@ export default function InVillaServicePage() {
       email: 'bali@mychef.id',
     },
     areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bali'],
-    description: 'Uniformed, English-speaking villa service staff in Bali — waiters, butlers, mixologists, sommeliers and hosts from IDR 250,000/hour; bartenders from IDR 350,000/hour.',
+    description: 'Uniformed, English-speaking villa service staff in Bali — waiters, butlers, sommeliers and hosts from IDR 250,000/hour; complete cocktail packages from IDR 500,000++ per guest.',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'IDR',
@@ -233,7 +233,7 @@ export default function InVillaServicePage() {
           <div className="max-w-[900px]">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
             <h1 className="font-playfair text-4xl md:text-6xl text-white leading-[1.1] mb-6">{pillar.h1}</h1>
-            <p className="text-lg md:text-xl text-white/[80%] max-w-[640px] mb-8">Waiters, butlers, mixologists, sommeliers and event hosts for Bali villas — booked by the hour, the shift or the day. Uniformed, English-speaking, background-checked, and briefed to your event before they arrive. Waiters and hosts from IDR 250,000 per hour; bartenders from IDR 350,000 per hour.</p>
+            <p className="text-lg md:text-xl text-white/[80%] max-w-[640px] mb-8">Waiters, butlers, sommeliers and event hosts for Bali villas — booked by the hour, the shift or the day. Uniformed, English-speaking, background-checked, and briefed to your event before they arrive. Waiters and hosts from IDR 250,000 per hour; complete cocktail packages from IDR 500,000++ per guest.</p>
             <div className="flex flex-wrap gap-3 mb-8">
               {['Uniformed Staff', 'Same-Day Booking', 'English-Speaking', 'Background-Checked'].map((h) => (
                 <span key={h} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">

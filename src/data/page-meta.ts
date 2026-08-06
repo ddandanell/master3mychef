@@ -1541,22 +1541,22 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'in-villa-service-bartenders': {
     path: '/in-villa-service/bartenders',
-    title: 'Bartender Hire Bali | Private Villa Bar Service',
+    title: 'Luxury Cocktail & Bartender Service Bali | myCHEF',
     description:
-      'Hire a private bartender for your Bali villa party or wedding — classic cocktails, full bar setup and premium service. Clear hourly rates. WhatsApp myCHEF.',
+      'Book a complete villa cocktail service in Bali from IDR 500K++ per guest. BYO, 4-hour free flow or 6-hour premium free flow. Bar team, mixers, glassware, ice, setup and cleanup included.',
     canonical: `${SITE}/in-villa-service/bartenders`,
-    h1: 'Bartender Hire Bali — Private Villa Bar Service',
-    ogImage: `${SITE}/generated/aura-bartender.webp`,
+    h1: 'Luxury Cocktail & Bartender Service in Bali',
+    ogImage: `${SITE}/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp`,
   },
 
       'in-villa-service-mixology': {
     path: '/in-villa-service/mixology',
-    title: 'Mixologist Hire Bali | Custom Cocktail Programs | myCHEF',
+    title: 'Private Mixology Bali | Custom Cocktails & Experiences | myCHEF',
     description:
-      'Hire a mixologist in Bali: signature cocktail creation and custom bar programs for villa events and weddings. Premium ingredients and full setup.',
+      'Private mixology in Bali: custom cocktail menus, Bali-inspired signatures, zero-proof craft and interactive sessions at your villa. Full cocktail packages from IDR 500K++/guest.',
     canonical: `${SITE}/in-villa-service/mixology`,
-    h1: 'Mixology in Bali — Custom Cocktail Programs',
-    ogImage: `${SITE}/bartender.webp`,
+    h1: 'Private Mixology Experiences and Custom Cocktails in Bali',
+    ogImage: `${SITE}/generated/mychef-cocktail-party-cocktails-canapes-bali-landscape.webp`,
   },
 
       'in-villa-service-sommelier': {
@@ -1792,11 +1792,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'experience-private-cocktail-party': {
     path: '/experiences/private-cocktail-party',
-    title: 'Private Cocktail Party Bali | Chef & Bartender at Your Villa',
+    title: 'Private Cocktail Party Bali | Villa Bar Packages | myCHEF',
     description:
-      'Host a private cocktail party at your Bali villa: chef, bartender, canapés, custom cocktails and full bar setup. Fixed package quotes.',
+      'Private cocktail party at your Bali villa. Complete bar packages from IDR 500K++ per guest (BYO / free flow / premium). Optional canapés and entertainment quoted separately.',
     canonical: `${SITE}/experiences/private-cocktail-party`,
-    h1: 'Private Cocktail Party Bali',
+    h1: 'Private Cocktail Party in Bali: Your Villa, Our Complete Bar',
     ogImage: `${SITE}/generated/bartender-hire-bali-cocktail-party.webp`,
   },
 

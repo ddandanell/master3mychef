@@ -210,7 +210,7 @@ export default function StaffingGuidePage() {
       <section className="bg-white py-20">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-light mb-12">Staffing Questions</h2>
-          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

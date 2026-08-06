@@ -340,7 +340,7 @@ export default function VillaEventPackagesPage() {
             title="Villa Event Packages — FAQ"
             subtitle="Everything hosts ask before booking a single-event package in a Bali villa."
           />
-          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
+          <FAQAccordion items={FAQS.map((f) => ({ q: f.question, a: f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
           <div className="text-center mt-10">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="villa-event-packages-faq-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
               <MessageCircle className="w-4 h-4" /> Request a Tailored Quotation

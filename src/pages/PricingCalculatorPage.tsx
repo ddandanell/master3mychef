@@ -555,7 +555,7 @@ export default function PricingCalculatorPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-bold text-stone-900 mb-8 text-center">What's included in the price?</h2>
-          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
 
           {/* Bottom CTA */}
           <div className="mt-12 text-center bg-stone-50 rounded-2xl p-8">

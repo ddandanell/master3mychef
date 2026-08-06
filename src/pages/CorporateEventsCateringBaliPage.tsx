@@ -496,7 +496,7 @@ export default function CorporateEventsCateringBaliPage() {
       {/* FAQ */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-light mb-10">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
+        <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
       </section>
 
       {/* Related pages */}

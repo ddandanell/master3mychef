@@ -379,7 +379,7 @@ export default function CorporateCaseStudiesPage() {
       <section className="px-6 pb-16 md:pb-24">
         <div className="max-w-[900px] mx-auto">
           <h2 className="font-playfair text-3xl md:text-4xl mb-8">Corporate Catering FAQ</h2>
-          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

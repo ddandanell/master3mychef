@@ -255,7 +255,7 @@ export default function GettingStartedPage() {
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-light mb-4">Frequently Asked Questions</h2>
           <p className="text-[#666] mb-12 text-lg">Everything you need to know before booking your first private chef in Bali.</p>
-          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </div>
       </section>
 

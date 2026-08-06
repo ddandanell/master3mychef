@@ -472,7 +472,7 @@ export default function FamilyKidsMenuPage() {
         {/* FAQ section */}
         <section className="mb-14">
           <h2 className="text-2xl md:text-3xl font-light mb-8 text-[#1A1A1A]">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </section>
 
         {/* Related links */}

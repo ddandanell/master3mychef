@@ -411,7 +411,7 @@ export default function PrivateChefVsRestaurantPage() {
         {/* FAQ Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-[#1A1A1A] mb-6">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS.map((f: any) => ({ q: f.q ?? f.question, a: f.a ?? f.answer }))} defaultOpenCount={2} showToc ctaEvery={5} />
+          <FAQAccordion items={FAQS} defaultOpenCount={2} showToc ctaEvery={5} />
         </section>
 
         {/* Related Articles */}

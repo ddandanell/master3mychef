@@ -233,7 +233,7 @@ export default function InVillaServicePage() {
           <div className="max-w-[900px]">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
             <h1 className="font-playfair text-4xl md:text-6xl text-white leading-[1.1] mb-6">{pillar.h1}</h1>
-            <p className="text-lg md:text-xl text-white/[80%] max-w-[640px] mb-8">Waiters, butlers, mixologists, sommeliers and event hosts for Bali villas — booked by the hour, the shift or the day. Uniformed, English-speaking, background-checked, and briefed to your event before they arrive. Waiters and hosts from IDR 250,000 per hour; bartenders from IDR 350,000 per hour.</p>
+            <p className="text-lg md:text-xl text-white/[80%] max-w-[640px] mb-8">Waiters, butlers, sommeliers and event hosts for Bali villas — booked by the hour, the shift or the day. Uniformed, English-speaking, background-checked, and briefed to your event before they arrive. Waiters and hosts from IDR 250,000 per hour; complete cocktail packages from IDR 500,000++ per guest.</p>
             <div className="flex flex-wrap gap-3 mb-8">
               {['Uniformed Staff', 'Same-Day Booking', 'English-Speaking', 'Background-Checked'].map((h) => (
                 <span key={h} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">

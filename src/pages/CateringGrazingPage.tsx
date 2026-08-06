@@ -577,7 +577,7 @@ export default function CateringGrazingPage() {
           </div>
           <div className="mt-8 p-6 rounded-2xl border border-[#E8E6E3] bg-white text-center">
             <p className="text-[#4A4745] text-sm">
-              <strong>Many events need both.</strong> Grazing tables work beautifully as a welcome display while canapés are passed during cocktails. For a full seated meal, pair grazing with our <Link to="/catering/plated-catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">plated dinner</Link> service. We can design a combined package — complete with a <Link to="/in-villa-service/bartenders" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">private bartender</Link> if you want drinks handled — that gives you the best of both worlds.
+              <strong>Many events need both.</strong> Grazing tables work beautifully as a welcome display while canapés are passed during cocktails. For a full seated meal, pair grazing with our <Link to="/catering/plated-catering" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">plated dinner</Link> service. We can design a combined package — complete with a <Link to="/in-villa-service/bartenders" className="underline decoration-[#C5A028]/50 hover:text-[#C5A028] transition-colors">cocktail packages</Link> if you want drinks handled — that gives you the best of both worlds.
             </p>
           </div>
         </div>
@@ -789,7 +789,7 @@ export default function CateringGrazingPage() {
               { label: 'plated dinner', href: '/catering/plated-catering', desc: 'Multi-course seated dinner service.' },
               { label: 'BBQ night', href: '/catering/bbq-catering', desc: 'Live-fire grilling at your villa.' },
               { label: 'wedding catering', href: '/events/weddings', desc: 'Ceremony to reception catering.' },
-              { label: 'private bartender', href: '/in-villa-service/bartenders', desc: 'Cocktails, pours and bar staff.' },
+              { label: 'cocktail packages', href: '/in-villa-service/bartenders', desc: 'Complete cocktail packages for villas.' },
               { label: 'drop-off catering', href: '/catering/drop-off-catering', desc: 'Fresh food delivered, no staff needed.' },
             ].map((item) => (
               <Link key={item.href} to={item.href} className="block p-5 rounded-2xl bg-white border border-[#E5E3E0] hover:border-[#C5A028]/50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]">

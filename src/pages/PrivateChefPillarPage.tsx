@@ -187,7 +187,7 @@ const NOT_INCLUDED = [
   {
     item: 'Alcohol',
     detail:
-      'Not included, but we will source it for you at cost like any other ingredient. Add a private bartender or sommelier if you want the service side handled too.',
+      'Not included, but we will source it for you at cost like any other ingredient. Add cocktail packages or a sommelier if you want the service side handled too.',
   },
 ] as const
 
@@ -371,11 +371,11 @@ const FAQS = [
   },
   {
     q: 'Can you add waiters, a bartender or a butler to our private chef booking?',
-    a: 'Yes. Waiters, hosts, bartenders, butlers and sommeliers can be added to any dinner or multi-day stay. Typical ratios start at one waiter per 10 guests; bartender rates from IDR 350,000/hour (3-hour minimum). See <a href="/in-villa-service">in-villa service</a> and <a href="/in-villa-service/bartenders">bartenders</a>.',
+    a: 'Yes. Waiters, hosts, bartenders, butlers and sommeliers can be added to any dinner or multi-day stay. Typical ratios start at one waiter per 10 guests; cocktail packages from IDR 500,000++ per guest. See <a href="/in-villa-service">in-villa service</a> and <a href="/in-villa-service/bartenders">bartenders</a>.',
   },
   {
     q: 'Is alcohol included with a private chef in Bali?',
-    a: 'No. You may bring your own wine and spirits (we open and serve) or ask us to source at cost. For full bar service add a <a href="/in-villa-service/bartenders">private bartender</a> or explore <a href="/bar-services/">bar services</a>. Fine-dining wine pairing is an optional add-on on tasting menus.',
+    a: 'No. You may bring your own wine and spirits (we open and serve) or ask us to source at cost. For full bar service add <a href="/in-villa-service/bartenders">cocktail packages</a> or explore <a href="/bar-services/">bar services</a>. Fine-dining wine pairing is an optional add-on on tasting menus.',
   },
   {
     q: 'How is myCHEF different from freelance marketplace private chefs?',

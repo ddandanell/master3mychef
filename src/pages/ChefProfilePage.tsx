@@ -425,7 +425,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
       {
         question: 'Can we add a bartender to Bayu’s BBQ?',
         answer:
-          'Yes — combine with <a href="/in-villa-service/bartenders">bartender hire</a> or a <a href="/experiences/private-cocktail-party">cocktail party</a> add-on.',
+          'Yes — combine with <a href="/in-villa-service/bartenders">cocktail packages</a> or a <a href="/experiences/private-cocktail-party">cocktail party</a> add-on.',
       },
       {
         question: 'Is equipment provided for outdoor BBQ?',

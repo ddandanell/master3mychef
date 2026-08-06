@@ -16,7 +16,7 @@ const GENERAL_FAQS = [
   { question: 'How do I get a quote?', answer: 'Share venue/shift details on WhatsApp or via <a href="/bar-services/contact">contact</a> for a written proposal.' },
   { question: 'Do you provide staff for events and weddings?', answer: 'Yes — event bar teams and wedding bars. Food via <a href="/events/weddings">wedding catering</a> if needed.' },
   { question: 'Can you help open a new bar from scratch?', answer: 'Yes — consulting, SOPs, menu development and opening teams under B2B bar services.' },
-  { question: 'Bartender rates for private villas?', answer: 'From about IDR 350K/hour (3-hour minimum). <a href="/in-villa-service/bartenders">Bartenders →</a>' },
+  { question: 'Bartender rates for private villas?', answer: 'Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service/bartenders">Bartenders →</a>' },
   { question: 'Alcohol supply?', answer: 'Usually client-supplied or sourced at cost.' },
   { question: 'Emergency staffing?', answer: 'Often same-day/next-day when inventory allows.' },
   { question: 'Training existing staff?', answer: 'Available on B2B programmes.' },

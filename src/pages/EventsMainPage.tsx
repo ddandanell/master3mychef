@@ -186,7 +186,7 @@ const RELATED_SERVICES = [
   },
   {
     title: 'In-Villa Service Teams',
-    desc: 'Waiters, bartenders, butlers and event staff for hire.',
+    desc: 'Waiters, butlers, event staff and complete cocktail packages.',
     href: '/in-villa-service',
   },
   {
@@ -275,7 +275,7 @@ const POPULAR_EVENT_TYPES: PopularEventType[] = [
 const WHATS_INCLUDED = [
   'A head chef and brigade sized to your event — sous chef added from 20 guests, dedicated kitchen team above 60',
   'Full mobile kitchen — prep stations, cooking equipment, cold storage and servingware brought to your villa, so no villa kitchen is required',
-  'Service staff — professional waiters at a standard 1 per 10 guests, sommeliers from IDR 250K/hour and bartenders from IDR 350K/hour',
+  'Service staff — professional waiters at a standard 1 per 10 guests, sommeliers from IDR 250K/hour and cocktail packages from IDR 500,000++ per guest',
   'Custom menu design — built around your brief, with halal, vegan, gluten-free, nut-free and kids\' options handled as standard',
   'Setup, service and complete cleanup — we pack up and leave; the villa is handed back the way we found it',
   'One point of contact — your coordinator, Sofia, from first WhatsApp message to final guest departure',
@@ -364,7 +364,7 @@ const FAQS = [
   },
   {
     q: 'Can you provide a bartender and full bar service for our event?',
-    a: 'Yes. Private bartenders from IDR 350K/hour (3-hour minimum) plus mixology packages. Explore <a href="/in-villa-service/bartenders">bartenders</a> and <a href="/bar-services/">bar services</a>.',
+    a: 'Yes. Private cocktail packages from IDR 500,000++ per guest (min 10) plus mixology packages. Explore <a href="/in-villa-service/bartenders">cocktail packages</a> and <a href="/bar-services/">bar services</a>.',
   },
   {
     q: 'Is event catering different from hiring a daily private chef?',

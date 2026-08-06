@@ -122,7 +122,7 @@ export const siteFacts = {
   bartenderRateHourly: 'from IDR 500,000++ per guest',
 
   /** @deprecated Hourly bartender-only hire is retired for consumer pages. */
-  bartenderRateLegacyHourly: 'IDR 350,000/hour',
+  bartenderRateLegacyHourly: 'RETIRED — cocktail packages from IDR 500,000++ per guest',
 
   /** Direct Google Business Profile / Maps URL. */
   googleBusinessProfileUrl:

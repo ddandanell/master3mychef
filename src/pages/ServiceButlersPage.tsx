@@ -109,7 +109,7 @@ const FAQS = [
   { q: 'How far in advance should I book?', a: '1–2 weeks for Day Butlers; 3–4 weeks for Residence Butlers in peak season (July–August, December–New Year). Shorter notice is often possible — ask on WhatsApp.' },
   { q: 'What areas do you cover?', a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
   { q: 'What is the difference between hiring a butler and booking a villa with butler service?', a: 'Villas advertising "butler service" typically include a shared staff member during fixed hours. A hired myCHEF butler is dedicated to your group alone, briefed to your preferences, and booked for exactly the days and hours you choose.' },
-  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
   { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },
@@ -381,7 +381,7 @@ export default function ServiceButlersPage() {
           <h2 className="text-2xl md:text-3xl text-center mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>Related Services</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { label: 'Bartender hire Bali', href: '/in-villa-service/bartenders', desc: 'Cocktail and bar service.' },
+              { label: 'Cocktail packages Bali', href: '/in-villa-service/bartenders', desc: 'Complete cocktail packages for villas.' },
               { label: 'Fine dining Bali villa', href: '/fine-dining', desc: 'In-villa tasting menus.' },
               { label: 'Sommelier', href: '/in-villa-service/sommelier', desc: 'Wine pairing and service.' },
               { label: 'Mixology', href: '/in-villa-service/mixology', desc: 'Signature cocktail programs.' },

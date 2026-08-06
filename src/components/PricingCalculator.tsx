@@ -111,7 +111,8 @@ export default function PricingCalculator({
       case 'fine-dining-experience':
         return (guestCount * 850_000 + 750_000) * multiplier
       case 'staffing':
-        return baseWaiters * 350_000 * multiplier
+        // Waiter shift estimate only — cocktail bar is packages, not hourly
+        return baseWaiters * 250_000 * multiplier
       default:
         return 0
     }
@@ -119,11 +120,14 @@ export default function PricingCalculator({
 
   const addOnsTotal = useMemo(() => {
     const guestCount = selectedGuests.minGuests
+    // Cocktail packages: BYO floor IDR 500,000++/guest, min 10 guests (SSoT cocktailServicePackages)
+    const cocktailGuestCount = Math.max(10, guestCount)
+    const cocktailPackageEstimate = cocktailGuestCount * 500_000
 
     return (
-      (includeWaiters ? waiterCount * 350_000 : 0) +
-      (includeBartender ? 450_000 : 0) +
-      (includeSommelier ? 650_000 : 0) +
+      (includeWaiters ? waiterCount * 250_000 : 0) +
+      (includeBartender ? cocktailPackageEstimate : 0) +
+      (includeSommelier ? 1_200_000 : 0) +
       (includeFloatingBreakfast ? guestCount * 150_000 : 0)
     )
   }, [includeBartender, includeFloatingBreakfast, includeSommelier, includeWaiters, selectedGuests.minGuests, waiterCount])
@@ -132,7 +136,9 @@ export default function PricingCalculator({
 
   const selectedAddOns = [
     includeWaiters ? `${waiterCount} waiter${waiterCount > 1 ? 's' : ''}` : null,
-    includeBartender ? 'bartender' : null,
+    includeBartender
+      ? `cocktail package (BYO from IDR 500K++/guest, min 10; estimate uses ${Math.max(10, selectedGuests.minGuests)} guests)`
+      : null,
     includeSommelier ? 'sommelier' : null,
     includeFloatingBreakfast ? 'floating breakfast' : null,
   ].filter(Boolean)
@@ -259,7 +265,7 @@ export default function PricingCalculator({
               <label className="flex items-center justify-between gap-4 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
                 <span className="flex items-center gap-3">
                   <input type="checkbox" checked={includeWaiters} onChange={(event) => setIncludeWaiters(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-2 focus:ring-[#C5A028] focus:outline-none" />
-                  + Waiters (+IDR 350K each)
+                  + Waiters (~IDR 250K/hour each)
                 </span>
                 {includeWaiters && (
                   <select
@@ -277,12 +283,12 @@ export default function PricingCalculator({
 
               <label className="flex items-center gap-3 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
                 <input type="checkbox" checked={includeBartender} onChange={(event) => setIncludeBartender(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-2 focus:ring-[#C5A028] focus:outline-none" />
-                + Bartender (+IDR 450K)
+                + Cocktail package (from IDR 500K++/guest, min 10 — not hourly hire)
               </label>
 
               <label className="flex items-center gap-3 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
                 <input type="checkbox" checked={includeSommelier} onChange={(event) => setIncludeSommelier(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-2 focus:ring-[#C5A028] focus:outline-none" />
-                + Sommelier (+IDR 650K)
+                + Sommelier (from IDR 1.2M/dinner)
               </label>
 
               <label className="flex items-center gap-3 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">

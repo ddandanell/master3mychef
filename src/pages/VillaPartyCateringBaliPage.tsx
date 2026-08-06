@@ -119,7 +119,7 @@ const faqs = [
 
 const relatedPages = [
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Professional bar staff for your party' },
+  { label: 'Cocktail Packages Bali', href: '/in-villa-service/bartenders', desc: 'Complete cocktail packages for your party' },
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and event crew hire' },
   { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Styled grazing boards for events' },
   { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Poolside and garden BBQ packages' },

@@ -61,7 +61,7 @@ const ADDONS = [
   { title: 'Additional sate', price: 'Quote based on quantity', description: 'Extra sate skewers' },
   { title: 'Service staff', price: 'Quote based on group', description: 'Staff to serve and carve' },
   { title: 'Bonfire setup', price: 'Selected locations', description: 'Evening villa garden fire' },
-  { title: 'Bartender + 3h open bar', price: 'IDR 4,000,000 flat', description: 'Cocktail station' },
+  { title: 'Cocktail packages', price: 'From IDR 500,000++/guest', description: 'Complete bar team package (min 10)' },
   { title: 'Out-of-area travel', price: 'IDR 250K – 700K', description: 'Depends on area and event size' },
 ]
 
@@ -127,7 +127,7 @@ const FAQS = [
   { q: "What is the minimum group size for babi guling?", a: "Six guests, with a minimum total of IDR 3,900,000. The format is at its best between 15 and 50 guests, but a smaller feast is absolutely possible — the per-person rate is simply higher." },
   { q: "What is the largest group you can cater babi guling for?", a: "We quote babi guling for groups well beyond 100 guests, including multi-pig setups for large celebrations. Above 100 guests pricing moves to a custom quote with a dedicated brigade plan, because roasting time, carving stations and service staffing all have to be scaled together." },
   { q: "Is travel or delivery included in the price?", a: "Delivery and serving setup are included across our standard coverage area in South Bali and Ubud. Out-of-area travel runs IDR 250,000–700,000 depending on the area, timing and event size, and is always quoted upfront rather than added later." },
-  { q: "Do you provide serving staff?", a: "Yes. Staffing scales with the group — roughly one chef per 50 guests and one assistant per 10 guests. Staff handle carving, the buffet or serving station, and cleanup. You can also add a bartender with a 3-hour open bar at IDR 4,000,000 flat." },
+  { q: "Do you provide serving staff?", a: "Yes. Staffing scales with the group — roughly one chef per 50 guests and one assistant per 10 guests. Staff handle carving, the buffet or serving station, and cleanup. You can also add complete cocktail packages from IDR 500,000++ per guest (min 10)." },
 
   // ── What it is ──
   { q: "What is babi guling?", a: "Babi guling is Bali's traditional whole roasted suckling pig — hand-stuffed with basa gede spice paste and slow-roasted over charcoal until the skin turns glassy and crisp. It is the island's great ceremonial and celebration dish, served at weddings, temple festivals and family milestones alongside lawar, nasi kuning, sate lilit and sambal matah." },

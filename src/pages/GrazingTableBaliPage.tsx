@@ -120,7 +120,7 @@ const relatedPages = [
   { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Poolside and garden BBQ packages' },
   { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and service staff for your event' },
   { label: 'Baby Shower Catering', href: '/events/baby-showers', desc: 'Relaxed catering for baby showers' },
-  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Professional bar staff for events' },
+  { label: 'Cocktail Packages Bali', href: '/in-villa-service/bartenders', desc: 'Complete cocktail packages for events' },
   { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering solutions for 30+ guests' },
 ]
 

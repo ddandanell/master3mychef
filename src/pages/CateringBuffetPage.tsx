@@ -99,7 +99,7 @@ const BUFFET_STYLING = [
 ]
 
 const ADDONS = [
-  { title: 'Bartender + 3h open bar', price: 'IDR 4,000,000 flat', desc: 'Professional cocktail station' },
+  { title: 'Cocktail packages', price: 'From IDR 500,000++/guest', desc: 'Complete bar team package (min 10)' },
   { title: 'Extra service staff', price: 'Quote based on guests', desc: 'Additional servers as needed' },
   { title: 'Live station upgrade', price: 'Quote based on type', desc: 'Sushi, pasta, carving, dim sum' },
   { title: 'Premium seafood upgrade', price: 'Quote based on menu', desc: 'Lobster, prawns, fresh catch' },

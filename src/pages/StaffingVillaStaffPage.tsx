@@ -164,7 +164,7 @@ export default function StaffingVillaStaffPage() {
             A well-run villa runs on the people behind it. myCHEF recruits and places long-term villa staff across Bali — villa managers, housekeepers, hosts, gardeners, pool attendants and security — as individual hires or complete teams. Salaries and team packages are tailored to your property and requirements; profiles are delivered within 48 hours, and every placement carries a 30-day replacement guarantee.
           </p>
           <p className="text-white/[70%] text-base max-w-[600px] mb-8">
-            Need staff for a single event or a guest's stay instead? That is our <Link to="/in-villa-service" className="underline hover:text-white">shift-based in-villa service</Link> — waiters, bartenders and butlers by the hour. This page is for permanent hires.
+            Need staff for a single event or a guest's stay instead? That is our <Link to="/in-villa-service" className="underline hover:text-white">shift-based in-villa service</Link> — waiters and butlers by the hour (cocktail packages are per guest, not hourly bartender hire). This page is for permanent hires.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="staffing-villa-staff-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">

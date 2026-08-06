@@ -59,7 +59,7 @@ const FAQS = [
   { q: 'How far in advance should I book?', a: '3–7 days for standard service; 2–4 weeks for premium events in peak season (July–August, December). Same-week and even same-day bookings are often possible — message us.' },
   { q: 'Can I request the same waiters again?', a: 'Yes. We keep records of your preferred team and do our best to reassign them for future bookings.' },
   { q: 'What areas do you cover?', a: 'All of Bali: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may incur a modest travel fee, quoted upfront.' },
-  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters from about IDR 250K/hour; bartenders from IDR 350K/hour (3-hour minimums). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
   { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },

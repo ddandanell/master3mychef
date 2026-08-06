@@ -227,7 +227,7 @@ export default function WhyMychefPage() {
                 <td className="py-4 pr-4 font-medium text-[#1A1916]">Staffing (waiters, bar, sommelier)</td>
                 <td className="py-4 px-4">No</td>
                 <td className="py-4 px-4">No</td>
-                <td className="py-4 pl-4 font-medium text-[#1A1916]">Waiters from IDR 250K/hr · bartenders from IDR 350K/hr</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">Waiters from IDR 250K/hr · cocktail packages from IDR 500K++/guest</td>
               </tr>
               <tr className="border-b border-black/5">
                 <td className="py-4 pr-4 font-medium text-[#1A1916]">Track record</td>

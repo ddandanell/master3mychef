@@ -106,7 +106,7 @@ export default function EventStaffBaliPage() {
       heroImage="https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80"
       heroImageAlt="Professional event waitstaff serving guests at an elegant Bali villa dinner party"
       ogImage="https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80"
-      keywords={['event staff bali', 'hire waiters bali', 'event waitstaff bali', 'villa event staff bali', 'bartender hire bali']}
+      keywords={['event staff bali', 'hire waiters bali', 'event waitstaff bali', 'villa event staff bali', 'cocktail packages bali']}
       highlights={['Full Event Teams', 'All Villa Areas', 'From 6 to 80 Guests', 'Briefed & Uniformed']}
       sections={SECTIONS}
       faqs={FAQS}

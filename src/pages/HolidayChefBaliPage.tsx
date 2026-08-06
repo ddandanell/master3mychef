@@ -117,7 +117,7 @@ const relatedPages = [
   { label: 'Christmas Dinner Bali', href: '/blog/holiday-chef-bali', desc: 'Christmas dinner at your Bali villa' },
   { label: 'New Year\'s Eve Bali Private Chef', href: '/blog/holiday-chef-bali', desc: 'NYE celebration dinner and catering' },
   { label: 'Villa Party Catering Bali', href: '/events/villa-parties', desc: 'Full villa party catering service' },
-  { label: 'Bartender Hire Bali', href: '/in-villa-service/bartenders', desc: 'Professional bartender service for events' },
+  { label: 'Cocktail Packages Bali', href: '/in-villa-service/bartenders', desc: 'Complete cocktail packages for villa events' },
   { label: 'Large Group Catering Bali', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests' },
   { label: 'Private Chef Cost Bali', href: '/blog/private-chef-cost-bali', desc: 'Complete pricing guide' },
 ]

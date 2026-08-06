@@ -134,7 +134,7 @@ const FAQS = [
   { q: 'Do you offer case studies?', a: 'Yes — <a href="/corporate-case-studies">corporate case studies</a>.' },
   { q: 'What if headcount changes mid-retreat?', a: 'We re-quote remaining days in writing; food waste and staffing are adjusted with notice.' },
   { q: 'Can one coordinator manage the whole F&B programme?', a: 'Yes — single account lead for multi-day run-of-show.' },
-  { q: 'Is alcohol included?', a: 'Usually BYO or sourced at cost with bartender hire.' },
+  { q: 'Is alcohol included?', a: 'Usually BYO or sourced at cost with cocktail packages (not hourly bartender hire).' },
   { q: 'How fast is a corporate proposal?', a: 'Often within 24 hours of a complete brief (dates, guests, venues, meal map).' },
   { q: 'How do we start?', a: 'WhatsApp dates, headcount, villa/venue list and meal requirements — or <a href="/quote">quote</a> / <a href="/contact">contact</a>.' },
   { q: 'What if a chef team cannot make a service?', a: 'Replacement cover or refund for that service — supervised teams. <a href="/why-mychef">Why myCHEF →</a>.' },

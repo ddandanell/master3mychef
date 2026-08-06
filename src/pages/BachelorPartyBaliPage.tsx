@@ -79,7 +79,7 @@ const SECTIONS = [
     title: 'Upgrade Your Bachelor Party Package',
     body: `<p>The core packages cover the food. These add-ons let you build the full experience around it.</p>
 
-    <p><strong>Dedicated Bartender (IDR 750,000 for 5 hours):</strong> A dedicated bar professional who sets up a full in-villa bar, mixes cocktails and mocktails to order throughout the evening, and keeps the drinks flowing without anyone needing to leave the pool deck. This is the single most popular add-on for bachelor parties and makes a significant difference to the quality of the evening.</p>
+    <p><strong>Cocktail packages (from IDR 500,000++ per guest, min 10):</strong> Complete in-villa bar service — team, four cocktails, glassware, ice, setup and cleanup. BYO or free-flow spirits options. The single most popular add-on for bachelor parties. Full details: <a href="/in-villa-service/bartenders">cocktail packages</a>.</p>
 
     <p><strong>Cocktail Masterclass (IDR 300,000/person):</strong> Before the party proper begins, the bartender runs a 45-minute cocktail class where the group learns to make two or three signature drinks. Works brilliantly as a late-afternoon warm-up activity before dinner. Minimum 8 participants.</p>
 

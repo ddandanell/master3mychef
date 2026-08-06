@@ -84,7 +84,7 @@ const SETUP_EQUIPMENT = [
 ]
 
 const ADDONS = [
-  { title: 'Bartender + 3h open bar', desc: 'Professional mixologist with cocktail setup and signature drinks.' },
+  { title: 'Cocktail packages', desc: 'Complete cocktail service from IDR 500,000++ per guest (min 10) — not hourly hire.' },
   { title: 'Wagyu upgrade', desc: 'Premium Wagyu beef replaces standard beef in any package.' },
   { title: 'Gluten-free upgrade', desc: 'Full gluten-free menu adaptation for adults and children.' },
   { title: 'Plated service', desc: 'Upgrade from self-serve buffet to full table service.' },
@@ -402,7 +402,7 @@ export default function CateringBBQPage() {
               Just a flat outdoor area and water access. If your villa restricts open flames, we bring gas grills or covered electric setups.
             </p>
             <p className="text-sm text-[#4A4745]">
-              <strong>Optional add-ons:</strong> bartender + 3h open bar (IDR 4,000,000 flat), Wagyu upgrade, gluten-free menu adaptation, plated table service, additional waiters from IDR 250,000/hour.
+              <strong>Optional add-ons:</strong> cocktail packages from IDR 500,000++ per guest (min 10), Wagyu upgrade, gluten-free menu adaptation, plated table service, additional waiters from IDR 250,000/hour.
             </p>
           </div>
         </div>

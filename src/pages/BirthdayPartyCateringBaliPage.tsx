@@ -83,7 +83,7 @@ const SECTIONS = [
     title: 'Elevate the Celebration with Birthday Add-Ons',
     body: `<p>The core catering package covers the food and service. These add-ons let you build the full birthday experience around it.</p>
 
-    <p><strong>Cocktail bartender service:</strong> A professional bartender at your villa for four hours, with a full cocktail setup. IDR 750,000 for the four-hour service, plus the cost of spirits (which we can advise on or help source). Works beautifully as a cocktail hour before dinner.</p>
+    <p><strong>Cocktail packages:</strong> Complete villa cocktail service from <strong>IDR 500,000++ per guest</strong> (min 10) — bar team, four cocktails, glassware, ice, setup and cleanup. BYO or free-flow options. See <a href="/in-villa-service/bartenders">cocktail packages</a>. Ideal before dinner or as the main bar for a birthday party.</p>
 
     <p><strong>Birthday cocktail menu:</strong> We design a personalised cocktail menu featuring two or three signature drinks named after the birthday person or themed around them. Printed menus are presented at each guest's seat. Popular for milestone birthdays where the detail matters.</p>
 

@@ -26,6 +26,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import CocktailPackageGrid from '@/components/cocktail/CocktailPackageGrid'
 import CocktailMenuBoard from '@/components/cocktail/CocktailMenuBoard'
+import CocktailClusterNav from '@/components/cocktail/CocktailClusterNav'
 import {
   COCKTAIL_IMAGE_PATHS,
   COCKTAIL_MIN_GUESTS,
@@ -35,6 +36,7 @@ import {
   cocktailPackageWaUrl,
   cocktailServiceAggregateOfferSchema,
 } from '@/data/cocktailServicePackages'
+import { BARTENDERS_AREAS, COCKTAIL_CLUSTER } from '@/data/cocktailSeoCluster'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,8 +85,32 @@ const FAQS = [
     a: 'Typically 50% deposit to confirm; balance before the event. <a href="/cancellation">Cancellation policy</a>.',
   },
   {
-    q: 'How do I get a quote?',
+    q: 'How do I get a quote for luxury cocktail service in Bali?',
     a: 'WhatsApp date, villa area, guest count, preferred package (BYO / free flow / premium) and event type. We reply with a fixed written proposal.',
+  },
+  {
+    q: 'What is the difference between this page and a private cocktail party?',
+    a: 'This page sells <strong>villa cocktail packages</strong> (the bar product). A <a href="/experiences/private-cocktail-party">private cocktail party at your Bali villa</a> is the occasion page — night timeline, food and entertainment add-ons layered on the same packages.',
+  },
+  {
+    q: 'When should I book private mixology instead?',
+    a: 'When you want custom signatures, botanical menus or an interactive craft session. That lives on <a href="/in-villa-service/mixology">private mixology and custom cocktail design in Bali</a>. Full free-flow volume still uses the packages on this page.',
+  },
+  {
+    q: 'How many bartenders for 20, 40 or 80 guests?',
+    a: 'We scale the team to headcount and service style so queues do not form. Intimate free flow may run one lead; larger villa parties and wedding receptions add staff on the quote.',
+  },
+  {
+    q: 'Can luxury cocktail service run with a private chef dinner?',
+    a: 'Yes — aperitivo hour into <a href="/fine-dining">fine dining</a> or <a href="/bbq-grill">BBQ</a> is a common stack. Food is quoted separately from the cocktail package.',
+  },
+  {
+    q: 'Do you offer mobile cocktail bar setup at Airbnb villas?',
+    a: 'Yes when the kitchen or terrace can host a safe station. Share listing photos; we confirm equipment footprint before deposit.',
+  },
+  {
+    q: 'What is not included in cocktail free flow?',
+    a: 'Named luxury spirit brands not written into the quote, decorative bar counters, food, DJ and overtime beyond the package window are separate unless listed.',
   },
 ]
 
@@ -188,12 +214,12 @@ export default function ServiceBartendersPage() {
             Luxury Cocktail Service
           </p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[900px]">
-            Luxury Cocktail &amp; Bartender Service in Bali
+            {COCKTAIL_CLUSTER.bartenders.h1}
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[640px] mb-4">
-            Turn your villa, wedding or private event into a professionally managed cocktail experience.
-            Choose four cocktails, select BYO or fully supplied free flow, and our team handles setup,
-            ingredients, glassware, ice, service and cleanup.
+            Luxury cocktail service in Bali means a complete mobile bar at your villa — not a person hired by
+            the hour with empty hands. Choose four cocktails, pick BYO or fully supplied free flow, and our
+            team handles setup, glassware, ice, mixers, service and cleanup.
           </p>
           <p className="text-white/[70%] text-base max-w-[640px] mb-8">
             Packages from <strong className="text-[#C5A028]">{COCKTAIL_PRICE_FLOOR_DISPLAY}</strong> per
@@ -429,10 +455,183 @@ export default function ServiceBartendersPage() {
         </div>
       </section>
 
+      {/* SEO depth: what this page owns */}
+      <section className="py-20 md:py-28 px-6 bg-white" id="what-is-luxury-cocktail-service">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeader
+            eyebrow="Product definition"
+            title="What luxury cocktail service in Bali actually includes"
+            subtitle="This page owns villa cocktail packages — the commercial bar product guests buy when they want a complete mobile bar."
+          />
+          <div className="mt-10 space-y-5 text-[#4A4745] leading-relaxed">
+            <p>
+              Searchers often type “bartender hire Bali” when they really need a <strong>complete cocktail
+              service</strong>: people, tools, glassware, ice, mixers, garnishes, menu planning, setup and
+              cleanup. myCHEF packages that into three fixed products priced per guest so hosts are not
+              comparing apples to hourly freelancers with empty kit bags.
+            </p>
+            <p>
+              <strong>BYO cocktail service</strong> is for hosts who already have spirits or prefer duty-free
+              bottles. <strong>Cocktail free flow</strong> supplies standard spirits for a four-hour window.
+              <strong> Premium cocktail free flow</strong> extends to six hours with a higher spirit tier and
+              elevated presentation. All three share the same operating bar standard; only duration and
+              alcohol rule change.
+            </p>
+            <p>
+              If you want botanical signatures or an interactive craft session first, open{' '}
+              <Link to="/in-villa-service/mixology" className="text-[#C5A028] hover:underline font-medium">
+                private mixology and custom cocktail design in Bali
+              </Link>
+              . If you are planning the whole social night with canapés and entertainment, open{' '}
+              <Link
+                to="/experiences/private-cocktail-party"
+                className="text-[#C5A028] hover:underline font-medium"
+              >
+                private cocktail party at your Bali villa
+              </Link>
+              . Both pages link back here for the package table — this is the money page for prices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6" id="package-comparison-detail">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Compare"
+            title="BYO vs free flow vs premium — side by side"
+            subtitle="Same minimum guests. Different alcohol rule and service length."
+          />
+          <div className="mt-12 overflow-x-auto">
+            <table className="w-full text-left border-collapse min-w-[720px] text-sm">
+              <thead>
+                <tr className="border-b-2 border-[#E8E6E3]">
+                  <th className="py-3 pr-4 font-semibold">Feature</th>
+                  {COCKTAIL_PACKAGES.map((p) => (
+                    <th key={p.id} className="py-3 px-3 font-semibold">
+                      {p.shortName}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="text-[#4A4745]">
+                <tr className="border-b border-[#E8E6E3]">
+                  <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Published price</td>
+                  {COCKTAIL_PACKAGES.map((p) => (
+                    <td key={p.id} className="py-3 px-3">
+                      {p.priceDisplay}/guest
+                    </td>
+                  ))}
+                </tr>
+                <tr className="border-b border-[#E8E6E3]">
+                  <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Duration</td>
+                  {COCKTAIL_PACKAGES.map((p) => (
+                    <td key={p.id} className="py-3 px-3">
+                      {p.durationLabel}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="border-b border-[#E8E6E3]">
+                  <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Alcohol</td>
+                  {COCKTAIL_PACKAGES.map((p) => (
+                    <td key={p.id} className="py-3 px-3">
+                      {p.alcoholShort}
+                    </td>
+                  ))}
+                </tr>
+                <tr className="border-b border-[#E8E6E3]">
+                  <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Best for</td>
+                  {COCKTAIL_PACKAGES.map((p) => (
+                    <td key={p.id} className="py-3 px-3">
+                      {p.bestFor}
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  <td className="py-3 pr-4 font-medium text-[#1A1A1A]">Minimum guests</td>
+                  {COCKTAIL_PACKAGES.map((p) => (
+                    <td key={p.id} className="py-3 px-3">
+                      {p.minGuests}
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <TaxFooter className="mt-8" />
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6 bg-white" id="service-areas">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Bali coverage"
+            title="Where we run mobile cocktail bars"
+            subtitle="Same three packages island-wide — logistics change by neighbourhood, not the product definition."
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            {BARTENDERS_AREAS.map((area) => (
+              <div key={area.name} className="rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-6">
+                <h3 className="font-semibold text-lg mb-2">{area.name}</h3>
+                <p className="text-sm text-[#4A4745] leading-relaxed">{area.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-[#4A4745] mt-8">
+            Area dining context:{' '}
+            <Link to="/locations/seminyak" className="text-[#C5A028] hover:underline">
+              Seminyak
+            </Link>
+            ,{' '}
+            <Link to="/locations/canggu" className="text-[#C5A028] hover:underline">
+              Canggu
+            </Link>
+            ,{' '}
+            <Link to="/locations/uluwatu" className="text-[#C5A028] hover:underline">
+              Uluwatu
+            </Link>
+            ,{' '}
+            <Link to="/locations/ubud" className="text-[#C5A028] hover:underline">
+              Ubud
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6" id="free-flow-policy">
+        <div className="max-w-4xl mx-auto">
+          <SectionHeader
+            eyebrow="Free flow explained"
+            title="How cocktail free flow works (and what it does not mean)"
+            subtitle="Unlimited preparation from the agreed four-cocktail menu during the booked window — with responsible service."
+          />
+          <div className="mt-10 space-y-4 text-[#4A4745] leading-relaxed">
+            <p>
+              Free flow is not an unsupervised open bar. Guests order from the four cocktails you chose;
+              the team paces pours, manages ice and garnish, and stops service for anyone who is intoxicated
+              or underage. Stock is planned from your guest count; rare mid-service menu swaps are not free
+              unless agreed in writing.
+            </p>
+            <p>
+              Premium free flow adds length and spirit tier — useful for wedding receptions and long villa
+              nights — but still uses the same four-cocktail discipline so quality stays consistent at peak
+              volume.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6 bg-white" id="cluster">
+        <div className="max-w-[1280px] mx-auto">
+          <CocktailClusterNav current="bartenders" />
+        </div>
+      </section>
+
       <section className="py-20 md:py-28 px-6 bg-[#1A1A1A] text-white" id="book">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-playfair text-3xl md:text-4xl mb-4">
-            Book luxury cocktail &amp; bartender service in Bali
+            Book luxury cocktail service in Bali
           </h2>
           <p className="text-white/70 mb-8">
             Send date, villa area, guest count, package preference and event type — we reply with a fixed
@@ -449,10 +648,10 @@ export default function ServiceBartendersPage() {
           </a>
           <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
             <Link to="/in-villa-service/mixology" className="text-[#C5A028] hover:underline">
-              Private mixology &amp; custom cocktails
+              Private mixology in Bali
             </Link>
             <Link to="/experiences/private-cocktail-party" className="text-[#C5A028] hover:underline">
-              Private cocktail party Bali
+              Private cocktail party at your Bali villa
             </Link>
             <Link to="/in-villa-service" className="text-[#C5A028] hover:underline">
               All in-villa service

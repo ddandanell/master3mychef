@@ -12,6 +12,11 @@ import {
   cocktailPackageWaUrl,
   cocktailServiceAggregateOfferSchema,
 } from '@/data/cocktailServicePackages'
+import {
+  COCKTAIL_CLUSTER,
+  COCKTAIL_PARTY_OCCASIONS,
+  COCKTAIL_PARTY_TIMELINE,
+} from '@/data/cocktailSeoCluster'
 
 const WA_LINK = cocktailPackageWaUrl('recommend')
 const CANONICAL = 'https://mychef.id/experiences/private-cocktail-party'
@@ -31,17 +36,38 @@ const SECTIONS: PageSection[] = [
     id: 'intro',
     type: 'content' as const,
     subtitle: 'Private Cocktail Party Bali',
-    title: 'Private Cocktail Party in Bali: Your Villa, Our Complete Bar',
+    title: 'Private Cocktail Party in Bali — Your Villa, One Complete Night',
     image: '/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp',
     imageAlt:
       'Professional bartender pouring a signature cocktail at a luxury Bali villa infinity pool at sunset',
-    body: `<p>No queue at the bar. No closing time. No generic drinks list. A myCHEF private cocktail party turns your Bali villa into the only venue that matters: a complete cocktail service — bartender team, four chosen cocktails, glassware, ice, mixers and cleanup — with optional chef canapés, waiters and entertainment quoted separately when you want the full night.</p>
+    body: `<p>A <strong>private cocktail party in Bali</strong> is an occasion — not just a bar invoice. Guests arrive to a villa that already feels like the only venue that matters: welcome pours, a four-cocktail menu, zero-proof options, and a team that runs ice, glassware and last call while you host.</p>
 
-    <p>From twelve friends around a Seminyak pool to eighty guests on an Uluwatu clifftop, the scale changes; the standard does not. You host. We run the bar layer of the evening.</p>
+    <p>From twelve friends around a Seminyak pool to eighty guests on an Uluwatu clifftop, the scale changes; the standard does not. The bar layer uses our three complete packages (from <strong>${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest</strong>, minimum ${COCKTAIL_MIN_GUESTS}). Food, waiters, DJ and styling stack on as optional upgrades.</p>
 
-    <p>Bar packages start from <strong>${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest</strong> (minimum ${COCKTAIL_MIN_GUESTS}). This is not bartender-only hire. See the full commercial detail on <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">complete cocktail service packages (BYO / free flow / premium)</a> and craft design on <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">custom cocktail menu &amp; mixology experience</a>.</p>
+    <p>Package prices and inclusions in full: <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">luxury cocktail service packages in Bali</a>. Custom signatures and craft: <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">private mixology and custom cocktail design in Bali</a>.</p>
 
     <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Plan My Cocktail Party — WhatsApp</a>. Send date, villa area, guest count and package preference.</p>`,
+  },
+  {
+    id: 'occasions',
+    type: 'content' as const,
+    subtitle: 'Occasion types',
+    title: 'What kind of private cocktail party are you hosting?',
+    body: COCKTAIL_PARTY_OCCASIONS.map(
+      (o) =>
+        `<h3 class="font-semibold text-lg mt-6 mb-2">${o.title}</h3><p>${o.body}</p>`,
+    ).join(''),
+  },
+  {
+    id: 'timeline',
+    type: 'content' as const,
+    subtitle: 'Run of show',
+    title: 'A private cocktail party timeline that actually works',
+    body: `<p>Great parties feel effortless because the bar ops are timed. A typical villa cocktail party runs like this:</p>
+    <ul class="list-none space-y-3 my-4">
+      ${COCKTAIL_PARTY_TIMELINE.map((row) => `<li><strong>${row.t}:</strong> ${row.d}</li>`).join('')}
+    </ul>
+    <p>We lock last call, zero-proof options and any canapé passes with you before the first guest arrives.</p>`,
   },
   {
     id: 'experience',
@@ -76,7 +102,7 @@ const SECTIONS: PageSection[] = [
 
     <p>${COCKTAIL_TAX_NOTE}</p>
     <p>${COCKTAIL_FREE_FLOW_NOTE}</p>
-    <p>Deep package comparison: <a href="/in-villa-service/bartenders#packages" class="text-[#7E6410] hover:underline font-medium">luxury cocktail &amp; bartender service packages</a>.</p>
+    <p>Deep package comparison: <a href="/in-villa-service/bartenders#packages" class="text-[#7E6410] hover:underline font-medium">luxury cocktail service packages in Bali</a>.</p>
 
     <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Get My Cocktail Party Quote — WhatsApp</a>.</p>`,
   },
@@ -161,7 +187,26 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Where parties land',
     title: 'Villa Cocktail Parties Across Bali',
-    body: `<p><strong>Uluwatu</strong> — clifftop sundowners and premium free flow. <strong>Seminyak</strong> — garden and poolside elegance. <strong>Canggu</strong> — contemporary social energy. <strong>Ubud</strong> — pavilion and jungle settings with a quieter rhythm. We confirm logistics for your exact villa on WhatsApp.</p>`,
+    body: `<p><strong>Uluwatu</strong> — clifftop sundowners and premium free flow for wedding welcomes. <strong>Seminyak</strong> — garden and poolside elegance for birthdays and hens nights. <strong>Canggu</strong> — contemporary social energy and longer parties. <strong>Ubud</strong> — pavilion and jungle settings with a quieter rhythm. We confirm logistics for your exact villa on WhatsApp.</p>
+    <p>Compare neighbourhood dining context on our <a href="/locations" class="text-[#7E6410] hover:underline font-medium">Bali locations hub</a>.</p>`,
+  },
+  {
+    id: 'guest-planning',
+    type: 'content' as const,
+    subtitle: 'Guest counts',
+    title: 'How many people for a villa cocktail party?',
+    body: `<p>Most private cocktail parties sit between <strong>10 and 60 guests</strong>. Under 10, we still quote the package minimum. Over 60, we plan multi-station bars and extra floor staff so queues never form.</p>
+    <p>Tell us mixed drinkers vs zero-proof needs early — it changes shopping lists for BYO and free-flow stock plans for supplied packages.</p>`,
+  },
+  {
+    id: 'keyword-split',
+    type: 'content' as const,
+    subtitle: 'Right page, right intent',
+    title: 'Cocktail party vs packages vs mixology',
+    body: `<p>This page owns <strong>private cocktail party Bali</strong> — the occasion, timeline and add-ons.</p>
+    <p>For the commercial package table and free-flow rules, go to <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">luxury cocktail service packages in Bali</a>.</p>
+    <p>For botanical signatures and interactive craft, go to <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">private mixology and custom cocktail design in Bali</a>.</p>
+    <p>For full food production without a cocktail-first brief, see <a href="/events/villa-parties" class="text-[#7E6410] hover:underline font-medium">villa party catering</a>.</p>`,
   },
   {
     id: 'faq',
@@ -173,15 +218,15 @@ const SECTIONS: PageSection[] = [
     id: 'cta',
     type: 'cta' as const,
     subtitle: 'Plan Your Party',
-    title: 'Ready to Host Your Bali Cocktail Party?',
-    body: `<p>Tell us your date, villa and guest count — we reply with a package recommendation and optional upgrades. Start with <a href="/in-villa-service/bartenders">complete cocktail service packages</a>, craft menus on <a href="/in-villa-service/mixology">mixology</a>, or full production on <a href="/events/villa-parties">villa parties</a>.</p>`,
+    title: 'Ready to Host Your Private Cocktail Party in Bali?',
+    body: `<p>Tell us your date, villa and guest count — we reply with a package recommendation and optional upgrades. Compare <a href="/in-villa-service/bartenders">luxury cocktail service packages in Bali</a>, craft menus via <a href="/in-villa-service/mixology">private mixology in Bali</a>, or full food production on <a href="/events/villa-parties">villa party catering</a>.</p>`,
     primaryAction: {
       label: 'Plan My Cocktail Party',
       href: WA_LINK,
       external: true,
     },
     secondaryAction: {
-      label: 'Cocktail Service Packages',
+      label: 'Luxury Cocktail Packages',
       href: '/in-villa-service/bartenders',
     },
   },
@@ -231,55 +276,78 @@ const FAQS = [
       'Yes — pair with <a href="/fine-dining">fine dining</a>, <a href="/bbq-grill">BBQ</a> or <a href="/catering">catering</a>.',
   },
   {
-    question: 'How do I get a quote?',
+    question: 'How do I get a quote for a private cocktail party in Bali?',
     answer:
       'WhatsApp date, villa area, guest count, package preference and any food/entertainment upgrades.',
+  },
+  {
+    question: 'What is the difference between this page and luxury cocktail packages?',
+    answer:
+      'This page plans the <strong>occasion</strong> (timeline, canapés, entertainment). Package prices and free-flow rules live on <a href="/in-villa-service/bartenders">luxury cocktail service packages in Bali</a>.',
+  },
+  {
+    question: 'Can we do a hens party cocktail night at a villa?',
+    answer:
+      'Yes — very common. Zero-proof options for mixed groups, clear package choice, optional canapés. Same island-wide coverage.',
+  },
+  {
+    question: 'Do you run wedding welcome cocktail parties?',
+    answer:
+      'Yes — premium packages for longer windows; couple signatures via <a href="/in-villa-service/mixology">private mixology in Bali</a>; coordination with planners on timing.',
+  },
+  {
+    question: 'What if it rains on a poolside cocktail party?',
+    answer:
+      'We plan covered bar positions during briefing so service continues under shelter whenever the villa allows.',
+  },
+  {
+    question: 'Is this for hotels and beach clubs too?',
+    answer:
+      'This page is private villa parties. Venue operators should use <a href="/bar-services/">B2B bar services</a>.',
   },
 ]
 
 const RELATED_PAGES = [
   {
-    label: 'Luxury Cocktail & Bartender Service',
-    href: '/in-villa-service/bartenders',
-    desc: 'Full package comparison for BYO, free flow and premium.',
+    label: COCKTAIL_CLUSTER.bartenders.inboundAnchor,
+    href: COCKTAIL_CLUSTER.bartenders.path,
+    desc: COCKTAIL_CLUSTER.bartenders.role,
   },
   {
-    label: 'Private Mixology & Custom Cocktails',
-    href: '/in-villa-service/mixology',
-    desc: 'Craft menus, signatures and interactive experiences.',
+    label: COCKTAIL_CLUSTER.mixology.inboundAnchor,
+    href: COCKTAIL_CLUSTER.mixology.path,
+    desc: COCKTAIL_CLUSTER.mixology.role,
   },
   {
     label: 'Villa Party Catering',
     href: '/events/villa-parties',
-    desc: 'Full villa party food and production.',
+    desc: 'Full villa party food and production when the brief is food-first.',
   },
   {
     label: 'Bar Services (B2B)',
     href: '/bar-services/',
-    desc: 'Venue consulting — separate from private parties.',
+    desc: 'Venue consulting — separate from private cocktail parties.',
   },
 ]
 
 export default function ExperiencePrivateCocktailPartyPage() {
+  const meta = COCKTAIL_CLUSTER['cocktail-party']
   return (
     <PremiumPage
       slug="experiences/private-cocktail-party"
-      title="Private Cocktail Party Bali | Villa Bar Packages | myCHEF"
-      description={`Private cocktail party at your Bali villa. Complete bar packages from ${COCKTAIL_PRICE_FLOOR_DISPLAY}/guest (BYO / free flow / premium). Optional canapés & entertainment. WhatsApp myCHEF.`}
-      seoTitle="Private Cocktail Party Bali | Villa Bar Packages | myCHEF"
-      seoDescription={`Private cocktail party at your Bali villa. Complete bar packages from ${COCKTAIL_PRICE_FLOOR_DISPLAY}/guest (BYO / free flow / premium). Optional canapés & entertainment. WhatsApp myCHEF.`}
+      title={meta.title}
+      description={meta.description}
+      seoTitle={meta.title}
+      seoDescription={meta.description}
       canonicalUrl={CANONICAL}
-      h1="Private Cocktail Party in Bali: Your Villa, Our Complete Bar"
-      subtitle={`Complete cocktail packages from ${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest — not bartender-only hire`}
+      h1={meta.h1}
+      subtitle={`Occasion page for private cocktail parties — bar packages from ${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest, food & entertainment optional`}
       heroImage="/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp"
       heroImageAlt="Professional bartender pouring a signature cocktail at a luxury Bali villa infinity pool at sunset"
       ogImage="https://mychef.id/generated/bartender-hire-bali-cocktail-party.webp"
       keywords={[
-        'private cocktail party bali',
-        'villa cocktail party bali',
-        'cocktail party at your villa',
-        'mobile cocktail party bali',
-        'hens party cocktails bali',
+        meta.primary,
+        ...meta.secondary,
       ]}
       highlights={[
         'Complete Bar Packages',

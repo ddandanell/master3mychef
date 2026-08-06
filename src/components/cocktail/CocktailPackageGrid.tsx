@@ -139,14 +139,14 @@ export default function CocktailPackageGrid({
             to="/in-villa-service/mixology"
             className="text-[#C5A028] hover:underline font-medium"
           >
-            private mixology &amp; custom cocktail design in Bali
+            private mixology and custom cocktail design in Bali
           </Link>
-          . Planning a full night?{' '}
+          . Planning a full social night with food and entertainment?{' '}
           <Link
             to="/experiences/private-cocktail-party"
             className="text-[#C5A028] hover:underline font-medium"
           >
-            private cocktail party at your villa
+            private cocktail party at your Bali villa
           </Link>
           .
         </p>

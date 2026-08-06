@@ -121,8 +121,39 @@ export const KEYWORD_OWNERSHIP: Record<string, KeywordOwner> = {
     note: 'Strong CTR opportunity @ pos ~6 for butler service.',
   },
   '/in-villa-service/bartenders': {
-    primary: 'bartender hire bali',
-    secondary: ['private bartender bali', 'bar service bali', 'hire bartender villa bali'],
+    primary: 'luxury cocktail service bali',
+    secondary: [
+      'villa cocktail packages bali',
+      'mobile cocktail bar bali',
+      'cocktail free flow bali',
+      'byo cocktail service bali',
+      'complete cocktail service bali',
+    ],
+    doNotTarget: ['/in-villa-service/mixology', '/experiences/private-cocktail-party'],
+    note: 'Commercial package page. Do not primary-target private cocktail party or mixology masterclass.',
+  },
+  '/in-villa-service/mixology': {
+    primary: 'private mixology bali',
+    secondary: [
+      'mixologist hire bali',
+      'custom cocktail menu bali',
+      'signature cocktails bali villa',
+      'cocktail class villa bali',
+      'zero proof cocktails bali',
+    ],
+    doNotTarget: ['/in-villa-service/bartenders', '/experiences/private-cocktail-party'],
+    note: 'Craft/expertise page. Packages linked down-page only; no free-flow as H1.',
+  },
+  '/experiences/private-cocktail-party': {
+    primary: 'private cocktail party bali',
+    secondary: [
+      'villa cocktail party bali',
+      'pool cocktail party bali',
+      'hens party cocktails bali',
+      'cocktail reception villa bali',
+    ],
+    doNotTarget: ['/in-villa-service/bartenders', '/in-villa-service/mixology'],
+    note: 'Occasion page. Bar packages shared but H1 stays cocktail party.',
   },
   '/locations/canggu': {
     primary: 'private dining canggu',

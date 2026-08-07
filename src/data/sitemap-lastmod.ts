@@ -2,7 +2,7 @@
 // Frozen lastmod dates for pages without a real content date (owner-requested spread).
 // New pages NOT listed here fall back to omitting <lastmod> (policy A).
 export const SITEMAP_LASTMOD: Record<string, string> = {
-  "/": "2026-08-06",
+  "/": "2026-08-07",
   "/locations/seminyak": "2026-05-13",
   "/locations/canggu": "2026-06-21",
   "/locations/uluwatu": "2026-05-28",
@@ -133,7 +133,7 @@ export const SITEMAP_LASTMOD: Record<string, string> = {
   "/why-mychef": "2026-08-06",
   "/calculator": "2026-06-25",
   "/help": "2026-05-28",
-  "/private-chef-bali": "2026-08-06",
+  "/private-chef-bali": "2026-08-07",
   "/recommended-services": "2026-05-19",
   "/join-our-team": "2026-06-19",
   "/help/getting-started": "2026-05-20",
@@ -165,4 +165,9 @@ export const SITEMAP_LASTMOD: Record<string, string> = {
   "/cancellation": "2026-06-27",
   "/experiences/private-cocktail-party": "2026-08-06",
   "/experiences": "2026-08-06",
+  "/experiences/sushi-masterclass": "2026-08-06",
+  "/experiences/private-cooking-class": "2026-08-06",
+  "/experiences/kids-birthday-chef-party": "2026-08-06",
+  "/experiences/champagne-oyster-experience": "2026-08-06",
+  "/experiences/romantic-proposal-dinner": "2026-08-06",
 }

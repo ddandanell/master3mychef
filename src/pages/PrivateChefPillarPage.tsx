@@ -479,10 +479,11 @@ export default function PrivateChefPillarPage() {
 
           <h1 className="text-white font-playfair font-normal leading-[1.05] text-[2.4rem] sm:text-6xl lg:text-7xl max-w-4xl">
             Private Chef in Bali
-            <span className="block italic text-[#C5A028] mt-2">
-              From {formatIDR(MEAL_PLANS[0].daily)} a day.
-            </span>
           </h1>
+          {/* Price kept outside H1 so crawlers never see “BaliFrom …” concatenation, and H1 stays the clean head term. */}
+          <p className="text-[#C5A028] italic font-playfair text-2xl sm:text-3xl mt-3 max-w-4xl">
+            From {formatIDR(MEAL_PLANS[0].daily)} a day.
+          </p>
 
           <p className="text-white/75 text-base sm:text-lg max-w-2xl mt-6 leading-relaxed">
             Hire a private chef for your Bali villa. A named head chef and a dedicated assistant

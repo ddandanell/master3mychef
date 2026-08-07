@@ -12,7 +12,6 @@ import SeoHead, {
 import { getPageMeta } from '@/data/page-meta'
 import { siteFacts } from '@/data/siteFacts'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
 import TrustStrip from '@/components/shared/TrustStrip'
@@ -191,25 +190,6 @@ const REVIEWS = [
 ]
 
 const HERO_STATS = ['560+ events served', '12,000+ happy guests', 'Same-day confirmation']
-
-const FEATURED_TESTIMONIALS = [
-  {
-    name: 'The Garcias',
-    location: 'Canggu',
-    eventType: 'Wedding Dinner',
-    date: 'January 2026',
-    quote: 'Our wedding dinner for 40 guests. Every plate came out perfect. Every server knew our names. It felt like a five-star restaurant in our garden.',
-    rating: 5,
-  },
-  {
-    name: 'The Wilson Family',
-    location: 'Singapore',
-    eventType: 'Fine Dining',
-    date: 'February 2026',
-    quote: 'We booked the Wagyu Experience for my father\'s 70th. He has eaten at three Michelin stars. He said this was better because it was ours.',
-    rating: 5,
-  },
-]
 
 export default function HubPage() {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -1148,18 +1128,12 @@ export default function HubPage() {
         </div>
       </section>
 
-      <TestimonialBlock
-        title="What Guests Say"
-        subtitle="Real guests, real villas — the moments that make a trip unforgettable."
-        testimonials={FEATURED_TESTIMONIALS}
-      />
-
-      {/* REVIEWS — compact sample; full set lives on /reviews (avoids homepage promo dilution) */}
+      {/* Single social-proof section (was dual: TestimonialBlock + review grid). Full set on /reviews. */}
       <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Guest Words</p>
-            <h2 className="u-heading text-4xl md:text-5xl mb-3">Featured Guest Words</h2>
+            <h2 className="u-heading text-4xl md:text-5xl mb-3">What Guests Say</h2>
             <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. 560+ events served · 12,000+ happy guests · Same-day confirmation.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

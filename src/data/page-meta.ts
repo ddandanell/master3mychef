@@ -1861,6 +1861,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/oyster-bar-bali-champagne.webp`,
   },
 
+  'experience-caviar-experience': {
+    path: '/experiences/caviar-experience',
+    title: 'Caviar Experience Bali | Luxury Villa Caviar & Champagne Service | myCHEF',
+    description:
+      'Caviar experience Bali at your villa or yacht — premium caviar, private chef, champagne service and butlers. Intimate tastings to VIP events. Contact for a custom quote.',
+    canonical: `${SITE}/experiences/caviar-experience`,
+    h1: 'Caviar Experience Bali — Luxury Caviar Service at Your Villa or Yacht',
+    ogImage: `${SITE}/generated/mychef-caviar-experience-bali-hero-villa.webp`,
+  },
+
       'experience-romantic-proposal-dinner': {
     path: '/experiences/romantic-proposal-dinner',
     title: 'Proposal Package Bali | Full-Service Villa Proposal | myCHEF',

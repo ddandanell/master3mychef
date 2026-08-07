@@ -41,6 +41,7 @@ const FLOOR_EXCEPTION_PATHS = [
   'experiences/private-cocktail-party', // Cocktail-party bar packages start below the standard catering floor.
   'experiences/cooking-class',
   'experiences/private-cooking-class', // Cooking classes are priced per participant, not per catering guest.
+  'experiences/caviar-experience', // Caviar experience is contact-quote only (no public list price).
   'catering/bbq-catering', // BBQ packages are entry-level catering with per-person pricing below the standard floor.
   'events/weddings', // Wedding pages may reference villa corkage and market context.
   'bali-wedding-catering-packages', // Dedicated package page displays published wedding catering tiers.

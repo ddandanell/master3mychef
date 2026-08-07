@@ -162,7 +162,7 @@ const RELATED_PAGES = [
   { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'Full night plan with the same mobile bar packages.' },
   { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Live grill packages for bucks nights.' },
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Multi-day chef hire if the squad stays the week.' },
-  { label: 'Bachelorette Catering', href: '/blog/bachelorette-party-bali-catering', desc: 'Hen party grazing and brunch formats.' },
+  { label: 'Villa Parties', href: '/events/villa-parties', desc: 'Hen parties, villa celebrations and private group events.' },
   { label: 'Pricing', href: '/pricing', desc: 'Chef, catering and mobile bar price tables.' },
 ]
 
@@ -193,7 +193,7 @@ export default function BachelorPartyBaliPage() {
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema('Bachelor Party Bali', 'https://mychef.id/blog/bachelor-party-bali-private-chef', 'Blog', 'https://mychef.id/blog'),
+        breadcrumbSchema('Bachelor Party Bali', 'https://mychef.id/blog/bachelor-party-bali-private-chef', 'Journal', 'https://mychef.id/journal'),
         faqPageSchema(FAQS.map(f => ({ question: f.question, answer: f.answer }))),
         {
           '@context': 'https://schema.org',

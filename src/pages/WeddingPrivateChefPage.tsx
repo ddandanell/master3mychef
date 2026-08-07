@@ -127,8 +127,8 @@ const RELATED_PAGES = [
   { label: 'Wedding packages & prices', href: '/bali-wedding-catering-packages', desc: 'Per-person package bands for guest-count planning.' },
   { label: 'Catering timeline', href: '/blog/bali-wedding-catering-private-chef-timeline', desc: '6-month planning timeline for destination couples.' },
   { label: 'Budget guide', href: '/blog/bali-wedding-catering-budget-guide', desc: 'How much wedding catering costs — F&B education.' },
+  { label: 'Rehearsal dinner planning', href: '/journal/rehearsal-dinner-planning-bali', desc: 'Welcome night and rehearsal dinner formats in Bali.' },
   { label: 'Villa logistics', href: '/journal/villa-wedding-catering-logistics-bali', desc: 'Kitchen, power and service flow at villas.' },
-  { label: 'Honeymoon chef', href: '/honeymoon-chef', desc: 'Private chef dining after the wedding weekend.' },
 ]
 
 export default function WeddingPrivateChefPage() {
@@ -159,7 +159,7 @@ export default function WeddingPrivateChefPage() {
       ctaText="Plan Wedding Catering"
       ctaSubtext="Share dates, guest count and villa — we route you to private chef or full reception production."
       extraJsonLd={[
-        breadcrumbSchema('Wedding Private Chef Bali', 'https://mychef.id/blog/wedding-private-chef-bali-planning-guide', 'Blog', 'https://mychef.id/blog'),
+        breadcrumbSchema('Wedding Private Chef Bali', 'https://mychef.id/blog/wedding-private-chef-bali-planning-guide', 'Journal', 'https://mychef.id/journal'),
         faqPageSchema(FAQS.map((f) => ({ question: f.question, answer: f.answer }))),
         {
           '@context': 'https://schema.org',

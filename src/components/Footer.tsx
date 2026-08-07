@@ -61,33 +61,46 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-3 font-semibold">Contact Us</p>
-              <a
-                href={buildWhatsAppUrl({ serviceName: 'private chef or catering service in Bali', intent: 'help choosing the right service and getting pricing' })}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-source="footer-top"
-                className="inline-flex items-center gap-2.5 text-sm font-semibold bg-[#C5A028] text-black px-6 py-3.5 rounded-full hover:bg-[#D4B033] transition-all shadow-lg shadow-[#C5A028]/20 hover:shadow-xl hover:shadow-[#C5A028]/30 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
-              >
-                <MessageCircle className="w-4 h-4" /> +62 896-7407-2020
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href={buildWhatsAppUrl({ serviceName: 'private chef or catering service in Bali', intent: 'help choosing the right service and getting pricing' })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-source="footer-top"
+                  className="inline-flex items-center gap-2.5 text-sm font-semibold bg-[#C5A028] text-black px-6 py-3.5 rounded-full hover:bg-[#D4B033] transition-all shadow-lg shadow-[#C5A028]/20 hover:shadow-xl hover:shadow-[#C5A028]/30 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+                >
+                  <MessageCircle className="w-4 h-4" /> WhatsApp {siteFacts.phoneDisplay}
+                </a>
+                <a
+                  href={`tel:${siteFacts.phoneHref}`}
+                  className="inline-flex items-center gap-2.5 text-sm font-semibold border border-white/20 text-white px-6 py-3.5 rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white"
+                  aria-label={`Call ${siteFacts.phoneDisplay}`}
+                >
+                  Call {siteFacts.phoneDisplay}
+                </a>
+              </div>
             </div>
             <div className="space-y-2">
               <a
-                href="mailto:bali@mychef.id"
+                href={`mailto:${siteFacts.email}`}
                 className="flex items-center gap-2 text-sm text-white/60 hover:text-[#C5A028] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                bali@mychef.id
+                {siteFacts.email}
               </a>
               <a
                 href={siteFacts.googleBusinessProfileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-[#C5A028] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
+                className="flex items-start gap-2 text-sm text-white/60 hover:text-[#C5A028] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
               >
-                <MapPin className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                Bali, Indonesia
-                <ExternalLink className="w-3 h-3 opacity-60" />
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span>
+                  <span className="block text-white/80">{siteFacts.addressDisplay}</span>
+                  <span className="inline-flex items-center gap-1 text-white/50 text-xs mt-0.5">
+                    Google Business Profile <ExternalLink className="w-3 h-3 opacity-60" />
+                  </span>
+                </span>
               </a>
             </div>
           </div>

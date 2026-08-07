@@ -14,7 +14,7 @@ const SECTIONS = [
 
     <p>The butler role in Bali exists across a wide spectrum. At the basic end, some villas assign a single multi-role staff member a "butler" title without formal training. At the premium end, a trained professional with a hotel background manages the full guest experience as a dedicated role. Understanding where a candidate sits on that spectrum — and what your villa stay actually requires — is what this guide is designed to help you navigate.</p>
 
-    <p>This guide covers exactly what a Bali villa butler does across a full day, what separates a good butler from a great one, how to vet candidates properly, what current market rates look like in IDR, and when to hire a butler versus a waiter or a full villa team. Whether you are a villa owner sourcing long-term staff or a guest planning a two-week luxury holiday, the information below will help you make the right decision.</p>`,
+    <p>This guide covers exactly what a Bali villa butler does across a full day, what separates a good butler from a great one, how to vet candidates properly, how to request a custom quote, and when to hire a butler versus a waiter or a full villa team. Whether you are a villa owner sourcing long-term staff or a guest planning a two-week luxury holiday, the information below will help you make the right decision.</p>`,
   },
   {
     id: 'what-butler-does',
@@ -65,16 +65,16 @@ const SECTIONS = [
     id: 'costs',
     type: 'content' as const,
     subtitle: 'Current Market Rates',
-    title: 'What a Villa Butler Costs in Bali (IDR 2026)',
+    title: 'What a Villa Butler Costs in Bali',
     body: `<p>Butler rates in Bali vary significantly based on the type of engagement, the butler's experience and training background, and whether the role is live-in or live-out. The following ranges reflect current market rates for vetted, professional candidates — not unverified freelancers found through informal channels.</p>
 
-    <p><strong>Short-term holiday butler (1–2 weeks):</strong> IDR 400,000–600,000 per day. This is the most common engagement for villa guests on a holiday stay. The butler works the full active day, typically 8–10 hours. Minimum engagement is usually 5 days. The range reflects English level (stronger English commands a premium) and whether the butler can also serve formally (waiter-butler hybrid).</p>
+    <p><strong>Short-term holiday butler (1–2 weeks):</strong> contact us for pricing. This is the most common engagement for villa guests on a holiday stay. The butler works the full active day, typically 8–10 hours. Minimum engagement is usually 5 days. The range reflects English level (stronger English commands a premium) and whether the butler can also serve formally (waiter-butler hybrid).</p>
 
     <p><strong>Monthly placement (live-out):</strong> For villa owners who want a dedicated butler on staff for regular occupancy periods. The butler lives in their own accommodation and commutes to the villa. Pricing reflects training background, English proficiency, and experience with villa management responsibilities beyond pure guest service — request a quote for current market guidance.</p>
 
     <p><strong>Live-in butler:</strong> A live-in butler is on the property and available outside standard working hours. The accommodation value is effectively part of the compensation package — total cost to the employer should be assessed against the live-out equivalent plus transport and availability premium. Request a quote for current market guidance.</p>
 
-    <p><strong>Event butler (specific dinner or party):</strong> IDR 750,000–1,200,000 for a 6-hour service. Suitable for a private dinner party, a birthday evening, or a celebration where professional table service is needed for one event without an ongoing placement. See our <a href="/blog/private-dinner-party-bali" class="text-[#7E6410] hover:underline font-medium">private dinner party guide</a> for how event butler service integrates with private chef bookings.</p>
+    <p><strong>Event butler (specific dinner or party):</strong> contact us for pricing for a 6-hour service. Suitable for a private dinner party, a birthday evening, or a celebration where professional table service is needed for one event without an ongoing placement. See our <a href="/blog/private-dinner-party-bali" class="text-[#7E6410] hover:underline font-medium">private dinner party guide</a> for how event butler service integrates with private chef bookings.</p>
 
     <p>What determines the price within these bands: English level is the largest single variable. A butler with hotel-trained, near-native English commands a significant premium over a candidate with functional but limited English. Training background (formal hotel vs. villa-trained vs. self-taught) is the second variable. Experience with high-end properties specifically — where discretion, anticipation, and standards of presentation are institutional, not improvised — justifies rates toward the upper end of each range.</p>`,
   },
@@ -114,7 +114,7 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
   { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
@@ -171,7 +171,7 @@ export default function VillaButlerBaliPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Villa Butler Bali: The Complete Hiring Guide',
-          description: 'Complete guide to hiring a villa butler in Bali. Roles, responsibilities, cost IDR, vetting standards, short vs long-term placement.',
+          description: 'Complete guide to hiring a villa butler in Bali. Roles, responsibilities, contact for pricing, vetting standards, short vs long-term placement.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: {
             '@type': 'Organization',

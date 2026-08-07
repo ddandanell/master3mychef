@@ -21,7 +21,7 @@ const SITE = 'https://mychef.id'
 const INCLUDED = [
   { icon: ChefHat, title: 'Event chef & kitchen team', desc: 'Menu designed for the occasion, cooked fresh on site; groceries at cost with receipts.' },
   { icon: Wine, title: 'Bar service', desc: 'Staffed open bar, with cocktail and premium upgrades available.' },
-  { icon: Users, title: 'Service staff', desc: 'Waiters and floor staff scaled to your guest count (from IDR 250K/hour for additional staff); cocktail packages from IDR 500,000++ per guest.' },
+  { icon: Users, title: 'Service staff', desc: 'Waiters and floor staff scaled to your guest count (contact us for pricing); cocktail packages from IDR 500,000++ per guest.' },
   { icon: Calendar, title: 'Event coordination', desc: 'A day-of coordinator running the timeline: arrivals, speeches, cake, music.' },
   { icon: Sparkles, title: 'Decor & entertainment coordination', desc: 'Styling, DJs, bands and photographers booked and managed on one timeline.' },
   { icon: PartyPopper, title: 'Setup & full cleanup', desc: 'Staged breakdown, kitchen reset, waste removal.' },

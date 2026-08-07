@@ -146,7 +146,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Can you add waiters, butlers or a bartender?',
-        a: 'Yes. Waiters, hosts, butlers and sommeliers from IDR 250K/hour; cocktail packages from IDR 500,000++ per guest. Standard ratio: one waiter per 10 guests. <a href="/in-villa-service">In-villa service →</a>',
+        a: 'Yes. Waiters, hosts and butlers: contact us for pricing; cocktail packages from IDR 500,000++ per guest. Sommelier quoted per event. Standard ratio: one waiter per 10 guests. <a href="/in-villa-service">In-villa service →</a>',
       },
       {
         q: 'What if it rains during outdoor service?',

@@ -16,7 +16,6 @@ import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { ArticleContentSection } from '@/components/shared'
 
 const PORTALS = [
   {
@@ -94,14 +93,14 @@ const HOW_IT_WORKS = [
 const COMPARISON_ROWS = [
   { feature: 'Vetted, background-checked team', freelance: 'Varies', marketplace: 'Varies', mychef: 'Always' },
   { feature: 'Backup if your chef falls ill', freelance: 'None', marketplace: 'Rebooking', mychef: 'Replacement within 2 hours or 100% refund' },
-  { feature: 'Full staffing (waiters, bar, sommelier)', freelance: 'Rarely', marketplace: 'No', mychef: 'From IDR 250K/hour; bartenders 500,000++ per guest' },
+  { feature: 'Full staffing (waiters, bar, sommelier)', freelance: 'Rarely', marketplace: 'No', mychef: 'Waiters/butlers: contact us for pricing; cocktail packages from IDR 500,000++ per guest' },
   { feature: 'Itemised fixed quote before you pay', freelance: 'Sometimes', marketplace: 'Platform estimate', mychef: 'Always, within 24 hours' },
   { feature: 'Kitchen left spotless', freelance: 'Hopefully', marketplace: '—', mychef: 'Guaranteed' },
 ]
 
 const FAQS = [
   { q: 'How much does a private chef in Bali cost?', a: 'Villa dinners start from IDR 700K per person and tasting menus from IDR 950K per person, ++ (11% government tax + 10% service charge). Your fixed quote depends on menu, guest count and staffing. <a href="/pricing">Full price tables →</a>' },
-  { q: 'What\'s included in the price?', a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters and sommeliers can be added from IDR 250K/hour; cocktail packages from IDR 500,000++ per guest.' },
+  { q: 'What\'s included in the price?', a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters and butlers: contact us for pricing; cocktail packages from IDR 500,000++ per guest. Sommelier quoted per event.' },
   { q: 'Do you offer a home chef service in Bali?', a: 'Yes — our private chefs work as your home chef for a single evening or on a daily or weekly basis: menu planning, market shopping, cooking and full clean-up at your villa or residence. See the <a href="/private-chef-bali">daily villa chef service</a>, or explore <a href="/private-dining-indonesia">private dining</a> for at-home fine dining.' },
   { q: 'How far in advance should I book?', a: 'A few days is ideal for dinners; weddings and large events deserve weeks. Same-day and next-day requests are often possible — message us and we\'ll tell you honestly.' },
   { q: 'Which areas do you serve?', a: 'All of Bali\'s main villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit. Remote-area travel is always quoted upfront.' },
@@ -522,7 +521,7 @@ export default function HubPage() {
                 </tr>
                 <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
                   <td className="px-5 py-3">Waiters &amp; sommeliers</td>
-                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 250K / hour</td>
+                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>Contact us for pricing</td>
                 </tr>
                 <tr>
                   <td className="px-5 py-3">Cocktail packages</td>
@@ -1491,7 +1490,7 @@ export default function HubPage() {
         serviceName="private chef in Bali"
         intent="quote and availability"
       />
-    <ArticleContentSection downgradeFirstH1 />
+    {/* SEO article body removed from homepage — it duplicated H2s/FAQs already in the UI and bloated the page. Deep copy lives on /private-chef-bali, /pricing and service pages. */}
     </div>
   )
 }

@@ -133,7 +133,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     label: 'In-Villa Service',
     url: '/in-villa-service',
     h1: 'Professional Villa Service Staff — Hired by the Shift',
-    description: 'Uniformed villa staff in Bali — waiters, butlers, sommeliers and hosts from IDR 250,000/hour; complete cocktail service packages from IDR 500,000++ per guest.',
+    description: 'Uniformed villa staff in Bali — waiters, butlers, sommeliers and hosts (contact us for pricing); complete cocktail service packages from IDR 500,000++ per guest.',
     title: 'Hire Villa Staff Bali | Professional Waiters & Butlers — myCHEF',
     intro: 'Uniformed, trained service staff for villa events. Waiters, butlers, complete cocktail service, sommeliers, and event coordinators.',
     navLabel: 'In-Villa Service',
@@ -141,7 +141,7 @@ export const PILLARS: Record<PillarSlug, Pillar> = {
     accent: '#D4A574',
     relatedPillars: ['catering', 'events', 'fine-dining'],
     subPages: [
-      { slug: 'waiters', label: 'Waiters', h1: 'Waiter Hire in Bali', title: 'Waiter Hire Bali | Professional Villa Servers | myCHEF', description: 'Hire waiters in Bali for villa dinners & events — uniformed, English-speaking, fine-dining trained. From IDR 250K/hour. WhatsApp myCHEF.' },
+      { slug: 'waiters', label: 'Waiters', h1: 'Waiter Hire in Bali', title: 'Waiter Hire Bali | Professional Villa Servers | myCHEF', description: 'Hire waiters in Bali for villa dinners & events — uniformed, English-speaking, fine-dining trained. Contact us for pricing. WhatsApp myCHEF.' },
       { slug: 'butlers', label: 'Butlers', h1: 'Hire a Butler in Bali', title: 'Hire a Butler in Bali | From IDR 1.2M/Day | myCHEF', description: 'Hire a professional butler in Bali by the day or shift — discreet, anticipatory guest service for villas & estates. WhatsApp myCHEF.' },
       { slug: 'bartenders', label: 'Bartenders', h1: 'Luxury Cocktail Service in Bali — Complete Villa Packages', title: 'Luxury Cocktail Service Bali | Villa Packages from IDR 500K++ | myCHEF', description: 'Luxury cocktail service in Bali: BYO, free-flow and premium packages from IDR 500K++ per guest. WhatsApp myCHEF.' },
       { slug: 'mixology', label: 'Mixology', h1: 'Private Mixology in Bali — Custom Cocktails & Craft Experiences', title: 'Private Mixology Bali | Custom Cocktails & Craft | myCHEF', description: 'Private mixology in Bali: custom menus, Bali botanicals, zero-proof craft. Packages linked separately.' },

@@ -325,7 +325,7 @@ export default function ThreeCoursePage() {
             <li>A 50% deposit secures your date; the balance is due the day before the event</li>
           </ul>
           <p className="mt-6 text-white/60 text-center">
-            Want a waiter or sommelier for a longer evening? Service staff can be added from IDR 250,000 per hour. Bartenders are from IDR 500,000++ per guest.
+            Want a waiter or sommelier for a longer evening? Service staff (waiters/butlers): contact us for pricing. Cocktail packages from IDR 500,000++ per guest.
           </p>
         </div>
       </section>

@@ -203,7 +203,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         url: canonical,
         lowPrice: '600000',
         highPrice: '1500000',
-        unitText: 'per day chef hire; event menus from IDR 700K–1.2M per person; service staff from IDR 250K/hour. Prices ++ (11% tax + 10% service)',
+        unitText: 'per day chef hire; event menus from IDR 700K–1.2M per person; service staff: contact us for pricing. Prices ++ (11% tax + 10% service)',
       })
       schema.provider = {
         '@type': 'Organization',

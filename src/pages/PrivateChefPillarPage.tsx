@@ -36,7 +36,7 @@ import SeoHead, {
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import OptimizedImage from '@/components/OptimizedImage'
-import { ArticleContentSection, Breadcrumb, TrustStrip } from '@/components/shared'
+import { Breadcrumb, TrustStrip } from '@/components/shared'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
 import { PUBLISHED_AREA_SLUGS } from '@/data/privateChefAreas'
@@ -1103,7 +1103,6 @@ export default function PrivateChefPillarPage() {
         </div>
       </section>
 
-      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="private-chef-bali"

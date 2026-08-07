@@ -72,18 +72,11 @@ We confirm the service level during your booking and brief the team accordingly.
     id: 'rates',
     type: 'content',
     title: 'Waiter Hire Rates in Bali',
-    body: `Service staff are quoted per person for the event duration:
+    body: `**Contact us for pricing** via WhatsApp. We do not publish a fixed waiter list rate while staffing packages are under review.
 
-**Standard Waiter -- Half Day (up to 5 hours)**: IDR 350,000/waiter
-**Standard Waiter -- Full Day (up to 9 hours)**: IDR 600,000/waiter
-**Senior Service Lead / Event Lead**: IDR 850,000/day
-**Butler-Style Service Specialist**: IDR 900,000/event (up to 5 hours)
+Share your event date, guest count, service style (plated, buffet, canapés) and villa area. We will recommend team size and send a written quote — usually the same day.
 
-Overtime (beyond the booked duration) is billed at IDR 80,000/hour/waiter.
-
-For full catering packages (chef + waiters + bar), the team is quoted together and bundled pricing applies. Minimum booking: 1 waiter for 3 hours.
-
-A 50% deposit confirms your booking. Balance is due the day before the event.`,
+For full catering packages (chef + waiters + bar), the team is quoted together. A 50% deposit typically confirms your booking once you approve the proposal.`,
   },
   {
     id: 'cta',
@@ -94,7 +87,7 @@ A 50% deposit confirms your booking. Balance is due the day before the event.`,
 ]
 
 const faqs = [
-  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
   { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
@@ -132,9 +125,9 @@ export default function WaiterHireBaliPage() {
       title="Waiter Hire Bali -- Professional Service Staff for Villa Events & Dinners"
       seoTitle="Waiter Hire Bali -- Table Service Staff | myCHEF"
       description="Hire professional waiters and service staff for villa events in Bali. Trained hospitality staff for dinner parties, wedding receptions, and private."
-      seoDescription="Waiter hire in Bali for villa events. Trained hospitality staff for dinner parties, weddings and private celebrations. From IDR 350K/waiter."
+      seoDescription="Waiter hire in Bali for villa events. Trained hospitality staff for dinner parties, weddings and private celebrations. Contact us for pricing via WhatsApp."
       h1="Waiter Hire Bali -- Professional Service Staff for Villa Events & Dinners"
-      subtitle="Trained hospitality waiters for villa dinner parties, weddings, and private celebrations -- from casual garden dinners to formal plated receptions."
+      subtitle="Trained hospitality waiters for villa dinner parties, weddings, and private celebrations -- from casual garden dinners to formal plated receptions. Contact us for pricing."
       heroImage="/images/blog/waiter-hire-bali.jpg"
       heroImageAlt="Uniformed professional Balinese waiter serving a course at an elegant villa dinner event in Bali"
       ogImage="/images/blog/waiter-hire-bali.jpg"
@@ -151,7 +144,7 @@ export default function WaiterHireBaliPage() {
         'event staff hire bali',
         'hospitality staff bali',
       ]}
-      highlights={['Trained Hospitality Staff', 'All Service Styles', 'Same-Day Replacement', 'From IDR 350K/waiter']}
+      highlights={['Trained Hospitality Staff', 'All Service Styles', 'Same-Day Replacement', 'Contact us for pricing']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

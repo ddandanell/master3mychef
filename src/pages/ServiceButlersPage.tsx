@@ -8,7 +8,7 @@ import { getPageMeta } from '@/data/page-meta'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { ArticleContentSection, Breadcrumb } from '@/components/shared'
+import { Breadcrumb } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -33,20 +33,18 @@ const serviceJsonLd: Record<string, unknown> = {
     email: 'bali@mychef.id',
   },
   areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Bali'],
-  description: 'Hire a professional private butler in Bali by the day, event or residence stay. Arrival service, household coordination and anticipatory guest care from IDR 1,200,000 per day.',
+  description: 'Hire a professional private butler in Bali by the day, event or residence stay. Arrival service, household coordination and anticipatory guest care. Contact us for pricing via WhatsApp.',
   offers: {
-    '@type': 'AggregateOffer',
+    '@type': 'Offer',
     priceCurrency: 'IDR',
-    lowPrice: '1200000',
-    highPrice: '2500000',
-    offerCount: '3',
-    description: 'Day Butler IDR 1,200,000/day; Event Butler IDR 1,800,000/event; Residence Butler IDR 2,500,000/day. Subject to 11% tax + 10% service charge.',
+    description: 'Butler service quoted per booking (day, event or residence). Contact us for pricing — rates depend on hours, scope and villa area. Subject to tax and service when quoted.',
+    availability: 'https://schema.org/InStock',
   },
   url: 'https://mychef.id/in-villa-service/butlers',
 }
 
 const faqJsonLd = faqPageSchema([
-  { question: 'How much does it cost to hire a butler in Bali?', answer: 'From IDR 1,200,000 per day for an 8-hour Day Butler; Event Butler IDR 1,800,000 per event (6 hours); Residence Butler IDR 2,500,000 per day (12 hours). Multi-day discounts apply. Rates are subject to 11% tax + 10% service charge.' },
+  { question: 'How much does it cost to hire a butler in Bali?', answer: 'Contact us for pricing via WhatsApp. We quote Day, Event and Residence butler options based on hours, guest profile and villa area.' },
   { question: 'Is the butler live-in?', answer: 'Day and Event Butlers are per-shift. Residence Butlers can be arranged as live-in for extended stays on request.' },
   { question: 'Can the butler manage other villa staff?', answer: 'Yes. Residence Butlers coordinate chefs, housekeepers, drivers and gardeners for seamless villa operations.' },
   { question: 'What languages do your butlers speak?', answer: 'All butlers speak fluent English; many also speak Mandarin, French or Japanese.' },
@@ -59,23 +57,23 @@ const faqJsonLd = faqPageSchema([
 const PRICING_TIERS = [
   {
     title: 'Day Butler',
-    price: 'IDR 1,200,000',
-    unit: '/day',
-    features: ['8-hour service', 'Arrival greeting', 'Table service', 'Beverage service', 'Luggage assistance', 'Guest orientation'],
+    price: 'Contact us for pricing',
+    unit: 'Custom quote',
+    features: ['Day-service coverage', 'Arrival greeting', 'Table service', 'Beverage service', 'Luggage assistance', 'Guest orientation'],
     bestFor: 'Villa stays, family holidays, small groups',
   },
   {
     title: 'Event Butler',
-    price: 'IDR 1,800,000',
-    unit: '/event',
-    features: ['6-hour service', 'Guest reception', 'Coat check', 'Cigar service', 'Personal attendant', 'VIP support'],
+    price: 'Contact us for pricing',
+    unit: 'Custom quote',
+    features: ['Event-service coverage', 'Guest reception', 'Coat check', 'Cigar service', 'Personal attendant', 'VIP support'],
     bestFor: 'Weddings, corporate events, gala dinners',
   },
   {
     title: 'Residence Butler',
-    price: 'IDR 2,500,000',
-    unit: '/day',
-    features: ['12-hour service', 'Full household management', 'Meal coordination', 'Vendor liaison', 'Inventory management', 'Event support'],
+    price: 'Contact us for pricing',
+    unit: 'Custom quote',
+    features: ['Extended-day coverage', 'Full household management', 'Meal coordination', 'Vendor liaison', 'Inventory management', 'Event support'],
     bestFor: 'Extended stays, private villas, high-net-worth guests',
     highlight: true,
   },
@@ -101,7 +99,7 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'How much does it cost to hire a butler in Bali?', a: 'From IDR 1,200,000 per day for an 8-hour Day Butler. Event Butlers start at IDR 1,800,000 per event (6 hours), and Residence Butlers at IDR 2,500,000 per day (12 hours, full household management). Multi-day bookings receive discounted daily rates. All rates ++ (11% tax + 10% service).' },
+  { q: 'How much does it cost to hire a butler in Bali?', a: 'Contact us for pricing via WhatsApp. We quote Day, Event and Residence butler options based on hours, guest profile and villa area — no fixed list rate is published while staffing packages are under review.' },
   { q: 'Is the butler live-in?', a: 'Day and Event Butlers are per-shift. Residence Butlers can be arranged as live-in for extended stays — please enquire for availability.' },
   { q: 'Can the butler manage other villa staff?', a: 'Yes. Residence Butlers are experienced in coordinating chefs, housekeepers, drivers and gardeners so the villa operates seamlessly.' },
   { q: 'What languages do your butlers speak?', a: 'All butlers speak fluent English; many also speak Mandarin, French or Japanese. Tell us your guest profile and we will match accordingly.' },
@@ -109,7 +107,7 @@ const FAQS = [
   { q: 'How far in advance should I book?', a: '1–2 weeks for Day Butlers; 3–4 weeks for Residence Butlers in peak season (July–August, December–New Year). Shorter notice is often possible — ask on WhatsApp.' },
   { q: 'What areas do you cover?', a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
   { q: 'What is the difference between hiring a butler and booking a villa with butler service?', a: 'Villas advertising "butler service" typically include a shared staff member during fixed hours. A hired myCHEF butler is dedicated to your group alone, briefed to your preferences, and booked for exactly the days and hours you choose.' },
-  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
   { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },
@@ -167,7 +165,7 @@ export default function ServiceButlersPage() {
             Butler Service Bali — Hire a Private Villa Butler
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Butler service Bali for villa stays, celebrations and events — hired by the day, not bundled into a hotel room. Discreet arrival service, household coordination and anticipatory guest care, from IDR 1,200,000 per day.
+            Butler service Bali for villa stays, celebrations and events — hired by the day, not bundled into a hotel room. Discreet arrival service, household coordination and anticipatory guest care. Contact us for pricing via WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-butlers-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -184,7 +182,7 @@ export default function ServiceButlersPage() {
 
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader eyebrow="Pricing" title="Butler Hire Rates" subtitle="Three tiers, matched to how you actually use your villa. Multi-day bookings receive discounted daily rates." />
+          <SectionHeader eyebrow="Pricing" title="Contact Us for Pricing" subtitle="Three butler tiers matched to how you use your villa. WhatsApp for a custom quote — no fixed list rate while packages are under review." />
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {PRICING_TIERS.map((tier) => (
               <div key={tier.title} className={`rounded-2xl p-8 ${tier.highlight ? 'bg-[#1A1A1A] text-white' : 'bg-white border border-[#E8E6E3]'}`}>
@@ -300,13 +298,13 @@ export default function ServiceButlersPage() {
 
           <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Butler Service Pricing in Bali</h2>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            Butler hire in Bali is priced per day, with rates reflecting the hours covered and scope of household responsibility. A Day Butler — covering 8 hours of active service — starts at <strong className="text-[#1A1A1A]">IDR 1,200,000 per day</strong>, suitable for villa stays, family holidays, and smaller groups needing dependable daily support.
+            Butler hire in Bali is quoted per booking — by day, event, or residence scope — not from a fixed public list rate. Share your dates, villa area and how you plan to use the butler, and we will send a clear written quote.
           </p>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            A Residence Butler — available for 12 hours per day and covering full household management including vendor coordination, inventory, and event support — is priced from <strong className="text-[#1A1A1A]">IDR 2,500,000 per day</strong>. This tier is recommended for extended stays, high-net-worth guests, and private villa weeks where quality of life depends on everything running invisibly well.
+            A <strong className="text-[#1A1A1A]">Day Butler</strong> suits villa stays and smaller groups needing dependable daily support. A <strong className="text-[#1A1A1A]">Residence Butler</strong> covers fuller household management for extended stays. An <strong className="text-[#1A1A1A]">Event Butler</strong> supports weddings and corporate villa celebrations.
           </p>
           <p className="text-[#4A4745] leading-relaxed">
-            For weddings and corporate events requiring a dedicated event butler, rates start at <strong className="text-[#1A1A1A]">IDR 1,800,000 per event</strong>. Multi-day bookings receive discounted daily rates. All prices are subject to 11% tax + 10% service charge (++). Contact us via WhatsApp for a same-day custom quote.
+            <strong className="text-[#1A1A1A]">Contact us for pricing</strong> via WhatsApp for a same-day custom quote. Confirmed proposals state tax and service treatment (++ when applicable).
           </p>
         </div>
       </section>
@@ -398,7 +396,6 @@ export default function ServiceButlersPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="in-villa-butlers"

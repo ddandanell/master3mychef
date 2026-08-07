@@ -423,7 +423,7 @@ export default function EventsBabyShowersPage() {
                 Add-Ons That Matter
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                For most showers, the extras are about preserving the day rather than scaling it. Extra <Link to="/in-villa-service" className="text-[#2C5F7C] underline hover:text-[#C5A028]">service staff</Link> are available from IDR 250K/hour. For bigger grazing-centrepiece events, see our dedicated <Link to="/catering/grazing-tables" className="text-[#2C5F7C] underline hover:text-[#C5A028]">grazing tables</Link> service.
+                For most showers, the extras are about preserving the day rather than scaling it. Extra <Link to="/in-villa-service" className="text-[#2C5F7C] underline hover:text-[#C5A028]">service staff</Link>: contact us for pricing. For bigger grazing-centrepiece events, see our dedicated <Link to="/catering/grazing-tables" className="text-[#2C5F7C] underline hover:text-[#C5A028]">grazing tables</Link> service.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {ADDONS.map((addon) => (

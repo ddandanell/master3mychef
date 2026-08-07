@@ -750,7 +750,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/butler-service-bali-daily-rate',
     title: 'Butler Service Bali Cost: Daily Rates & Inclusions | myCHEF',
     description:
-      'Butler service in Bali from IDR 1.2M per day — what is included, shift options, guest hosting duties and how booking works for villa stays. Transparent rates. WhatsApp myCHEF.',
+      'Butler service in Bali for villa stays — what is included, shift options, guest hosting duties and how booking works. Contact us for pricing via WhatsApp myCHEF.',
     canonical: `${SITE}/butler-service-bali-daily-rate`,
     h1: 'Butler Service in Bali — Daily Rates Explained',
   },
@@ -1523,7 +1523,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service/waiters',
     title: 'Waiter Hire Bali | Professional Villa Servers | myCHEF',
     description:
-      'Hire waiters in Bali for villa dinners and events — uniformed, English-speaking, fine-dining trained staff. From IDR 250K/hour. Transparent rates via WhatsApp.',
+      'Hire waiters in Bali for villa dinners and events — uniformed, English-speaking, fine-dining trained staff. Contact us for pricing via WhatsApp.',
     canonical: `${SITE}/in-villa-service/waiters`,
     h1: 'Waiter Hire in Bali',
     ogImage: `${SITE}/generated/aura-bartender.webp`,
@@ -1533,7 +1533,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service/butlers',
     title: 'Butler Service Bali | Hire Villa Butler | myCHEF',
     description:
-      'Hire a professional butler in Bali by the day or shift — discreet, anticipatory guest service for villas and estates. Clear daily rates via WhatsApp myCHEF.',
+      'Hire a professional butler in Bali by the day or shift — discreet, anticipatory guest service for villas and estates. Contact us for pricing via WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service/butlers`,
     h1: 'Butler Service Bali — Hire a Villa Butler',
     ogImage: `${SITE}/generated/hub-villa.webp`,
@@ -2064,7 +2064,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service',
     title: 'Villa Service Staff Bali | Waiters, Butlers & Bartenders',
     description:
-      'Uniformed, English-speaking villa staff in Bali — waiters, butlers and coordinators from IDR 250K/hour; cocktail packages from IDR 500,000++ per guest. Book via WhatsApp myCHEF.',
+      'Uniformed, English-speaking villa staff in Bali — waiters, butlers and coordinators (contact us for pricing); cocktail packages from IDR 500,000++ per guest. Book via WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service`,
     h1: 'Professional Villa Service Staff — Hired by the Shift',
     ogImage: `${SITE}/bartender.webp`,

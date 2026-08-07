@@ -2,7 +2,6 @@ import PremiumPage from '@/components/PremiumPage'
 import PricingCalculator from '@/components/PricingCalculator'
 import PriceDisclaimer from '@/components/PriceDisclaimer'
 import { siteFacts } from '@/data/siteFacts'
-import { ArticleContentSection } from '@/components/shared'
 
 const PRICING_SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
@@ -46,7 +45,7 @@ const SECTIONS = [
         ['Wedding catering', 'IDR 1.5M–3M+', 'per person'],
         ['Private chef half day (cook & serve one meal)', 'IDR 1,000K++', 'per day, chef + assistant'],
         ['Daily chef, weekly rate', 'From IDR 900K++/day', '10% off standard'],
-        ['Waiters & sommeliers', 'IDR 250K', 'per hour'],
+        ['Waiters & butlers', 'Contact us', 'for pricing'],
         ['Cocktail packages', 'From IDR 500K++', 'per guest (min 10)'],
       ])
     )}
@@ -127,7 +126,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'In-Villa Staff',
     title: 'Service Staff Rates',
-    body: `<p>Waiters and servers from IDR 250K/hour (minimum 3 hours) · Cocktail packages from IDR 500,000++ per guest · Butlers from IDR 400K/hour · Sommelier service quoted per event. One waiter per 10 guests is our standard ratio. For full-time or live-in arrangements, see <a href="/private-chef-bali" class="font-semibold hover:underline">monthly &amp; long-stay chef hire</a>.</p>`,
+    body: `<p>Waiters and butlers: contact us for pricing · Cocktail packages from IDR 500,000++ per guest · Sommelier service quoted per event. One waiter per 10 guests is our standard ratio. For full-time or live-in arrangements, see <a href="/private-chef-bali" class="font-semibold hover:underline">monthly &amp; long-stay chef hire</a>.</p>`,
   },
   {
     id: 'what-includes',
@@ -182,7 +181,7 @@ const FAQS = [
   { question: 'Cancellation tiers?', answer: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
   { question: 'Hidden fees?', answer: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
   { question: 'Wedding price band?', answer: 'Often IDR 1.5M–3M++ per person for full receptions.' },
-  { question: 'Staff hourly rates?', answer: 'Waiters ~IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10 guests).' },
+  { question: 'Staff hourly rates?', answer: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10 guests).' },
   { question: 'How to get an exact total?', answer: 'Share date, guests, area and format for a fixed quote.' },
   { question: 'Currency?', answer: 'IDR pricing; international transfers accepted as invoiced.' },
   { question: 'Compare formats?', answer: 'Use <a href="/dining-styles">dining styles</a> and <a href="/services">services</a>.' },
@@ -230,7 +229,6 @@ export default function PricingPage() {
         ctaText="Get My Fixed Quote"
         ctaSubtext="Send four details and receive an itemised proposal within 24 hours."
       />
-      <ArticleContentSection />
     </>
   )
 }

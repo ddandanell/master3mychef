@@ -115,7 +115,7 @@ export default function PillarSubPage() {
       { q: 'What do your staff wear?', a: 'Professional uniforms matched to formality — black/white formal or smart resort casual.' },
       { q: 'How far in advance should I book staff?', a: '3+ days small teams; 2+ weeks large events or peak season.' },
       { q: 'Bartender rates?', a: 'Complete cocktail packages from IDR 500,000++ per guest (min 10) — not hourly hire. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
-      { q: 'Waiter rates?', a: 'From about IDR 250,000/hour with minimums. Details on the service pages.' },
+      { q: 'Waiter rates?', a: 'Contact us for pricing via WhatsApp. Details on the service pages.' },
       { q: 'Alcohol included?', a: 'No — BYO or sourced at cost; hire covers the professional.' },
       { q: 'Butler service?', a: 'Yes — <a href="/in-villa-service/butlers">butlers</a>.' },
       { q: 'Mixology?', a: 'Yes — <a href="/in-villa-service/mixology">mixology</a>.' },

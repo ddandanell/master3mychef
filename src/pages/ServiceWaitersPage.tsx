@@ -8,7 +8,7 @@ import SeoHead, { howToSchema, faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { ArticleContentSection, Breadcrumb } from '@/components/shared'
+import { Breadcrumb } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -24,9 +24,9 @@ const WA_LINK = buildWhatsAppUrl({ serviceName: 'professional waiters in Bali', 
 const PRICING_TIERS = [
   {
     title: 'Waiter Service',
-    price: 'IDR 250,000',
-    unit: '/hour',
-    features: ['Minimum 3 hours', 'Uniformed, English-speaking', 'Table setting & course service', 'Wine & drink service', 'Setup & cleanup'],
+    price: 'Contact us for pricing',
+    unit: 'Custom quote via WhatsApp',
+    features: ['Team sized to your guest count', 'Uniformed, English-speaking', 'Table setting & course service', 'Wine & drink service', 'Setup & cleanup'],
     bestFor: 'Villa dinners, weddings, and events of any size',
   },
 ]
@@ -51,7 +51,7 @@ const HOW_IT_WORKS = [
 ]
 
 const FAQS = [
-  { q: 'How much does it cost to hire waiters in Bali?', a: 'IDR 250,000 per hour per waiter, with a 3-hour minimum and a two-waiter minimum per booking. Rates are ++ (plus 11% tax and 10% service charge).' },
+  { q: 'How much does it cost to hire waiters in Bali?', a: 'Contact us for pricing via WhatsApp. We quote based on guest count, hours, service style and villa area — no fixed list rate is published while we keep staffing packages under review.' },
   { q: 'How many waiters do I need for my event?', a: 'One per 8–10 guests for plated dinners, one per 15 for buffets, one per 15–20 for canapé service. Add a head waiter above 20 guests.' },
   { q: 'What do the waiters wear?', a: 'Standard uniform is black trousers, white shirt and black apron. White-glove service is available for formal occasions, and custom dress codes can be arranged.' },
   { q: 'Can waiters handle dietary restrictions and allergies?', a: 'Yes — dietary requirements are mapped per guest during briefing and handled discreetly at the table. Our teams operate within a HACCP-certified food-safety operation.' },
@@ -59,7 +59,7 @@ const FAQS = [
   { q: 'How far in advance should I book?', a: '3–7 days for standard service; 2–4 weeks for premium events in peak season (July–August, December). Same-week and even same-day bookings are often possible — message us.' },
   { q: 'Can I request the same waiters again?', a: 'Yes. We keep records of your preferred team and do our best to reassign them for future bookings.' },
   { q: 'What areas do you cover?', a: 'All of Bali: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may incur a modest travel fee, quoted upfront.' },
-  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters from about IDR 250K/hour; cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
   { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },
@@ -86,19 +86,18 @@ const serviceJsonLd = {
     'email': 'bali@mychef.id',
   },
   'areaServed': ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bali'],
-  'description': 'Professional, uniformed waiters for villa dinners, weddings and events in Bali. English-speaking, fine-dining trained, from IDR 250,000 per hour with a 3-hour minimum.',
+  'description': 'Professional, uniformed waiters for villa dinners, weddings and events in Bali. English-speaking, fine-dining trained. Contact us for pricing via WhatsApp.',
   'offers': {
     '@type': 'Offer',
     'priceCurrency': 'IDR',
-    'price': '250000',
-    'unitText': 'per hour',
-    'description': 'Waiter service, 3-hour minimum, two-waiter minimum per booking. Subject to 11% tax + 10% service charge.',
+    'description': 'Waiter service quoted per event. Contact us for pricing — rates depend on guest count, hours and villa area. Subject to 11% tax + 10% service charge when quoted.',
+    'availability': 'https://schema.org/InStock',
   },
   'url': 'https://mychef.id/in-villa-service/waiters',
 }
 
 const faqJsonLd = faqPageSchema([
-  { question: 'How much does it cost to hire waiters in Bali?', answer: 'IDR 250,000 per hour per waiter, with a 3-hour minimum and a two-waiter minimum per booking. Rates are subject to 11% tax + 10% service charge.' },
+  { question: 'How much does it cost to hire waiters in Bali?', answer: 'Contact us for pricing via WhatsApp. We quote based on guest count, hours, service style and villa area.' },
   { question: 'How many waiters do I need for my event?', answer: 'One waiter per 8–10 guests for plated dinners, one per 15 for buffets, one per 15–20 for canapé service. Add a head waiter above 20 guests.' },
   { question: 'What do the waiters wear?', answer: 'Black trousers, white shirt and black apron as standard; white-glove service for formal occasions and custom dress codes on request.' },
   { question: 'Can waiters handle dietary restrictions and allergies?', answer: 'Yes. Dietary requirements are mapped per guest during briefing and handled discreetly at the table within a HACCP-certified food-safety operation.' },
@@ -168,7 +167,7 @@ export default function ServiceWaitersPage() {
             {meta.h1}
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Uniformed, English-speaking waiters for villa dinners, weddings and events across Bali. Trained in fine-dining service, briefed on your menu before they arrive, and priced at one transparent rate: IDR 250,000 per hour, 3-hour minimum.
+            Uniformed, English-speaking waiters for villa dinners, weddings and events across Bali. Trained in fine-dining service and briefed on your menu before they arrive. Contact us for pricing — we quote to your guest count, hours and villa area.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-waiters-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">
@@ -186,7 +185,7 @@ export default function ServiceWaitersPage() {
       {/* Pricing Tiers */}
       <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto">
-          <SectionHeader eyebrow="Pricing" title="Simple Hourly Rate" subtitle="One transparent net rate — IDR 250,000 per hour, minimum 3 hours." />
+          <SectionHeader eyebrow="Pricing" title="Contact Us for Pricing" subtitle="We quote waiter teams per event — no published list rate while staffing packages are under review." />
           <div className="grid gap-6 mt-12 max-w-md mx-auto">
             {PRICING_TIERS.map((tier) => (
               <div key={tier.title} className="rounded-2xl p-8 bg-[#1A1A1A] text-white">
@@ -322,13 +321,13 @@ export default function ServiceWaitersPage() {
 
           <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Waiter Hire Pricing in Bali</h2>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            Waiter hire in Bali is priced simply: <strong className="text-[#1A1A1A]">IDR 250,000 per hour</strong>, with a <strong className="text-[#1A1A1A]">3-hour minimum</strong> per waiter. The same net rate covers everything — table setup, plated course service, wine and beverage pouring, course sequencing, and post-dinner clearance — whether you book a single waiter for an intimate dinner or a full team for a wedding.
+            Waiter hire in Bali is quoted per booking: <strong className="text-[#1A1A1A]">contact us for pricing</strong> via WhatsApp with your guest count, date and service style. Every quote covers the team you need — table setup, plated course service, wine and beverage pouring, course sequencing, and post-dinner clearance — whether you book for an intimate dinner or a full wedding floor.
           </p>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            For larger events — weddings, corporate receptions, milestone dinners with 30 or more guests — simply add more waiters at the same <strong className="text-[#1A1A1A]">IDR 250,000 per hour</strong> rate. A team of four delivers multi-station service, high-volume course management, and dedicated beverage service across the full event floor.
+            For larger events — weddings, corporate receptions, milestone dinners with 30 or more guests — we scale the team in the quote. A multi-waiter crew can deliver multi-station service, high-volume course management, and dedicated beverage service across the full event floor.
           </p>
           <p className="text-[#4A4745] leading-relaxed">
-            As a rule of thumb: one waiter per 8–10 guests for plated dinners, one per 15 guests for buffet or family-style events. All prices are net in IDR. WhatsApp us with your guest count, event date, and service style for a precise same-day quote.
+            As a rule of thumb: one waiter per 8–10 guests for plated dinners, one per 15 guests for buffet or family-style events. WhatsApp us with your guest count, event date, and service style for a same-day quote.
           </p>
         </div>
       </section>
@@ -421,7 +420,6 @@ export default function ServiceWaitersPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection downgradeFirstH1 />
 
       <StickyMobileCTA
         pageSource="in-villa-waiters"

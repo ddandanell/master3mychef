@@ -87,7 +87,7 @@ const faqs = [
   {
     question: 'How much do waiters cost?',
     answer:
-      'Waiters from about IDR 250K/hour (separate from cocktail packages). <a href="/in-villa-service/waiters">Waiters</a>.',
+      'Waiters: contact us for pricing (separate from cocktail packages). <a href="/in-villa-service/waiters">Waiters</a>.',
   },
   {
     question: 'Is alcohol included?',

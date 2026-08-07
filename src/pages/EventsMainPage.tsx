@@ -15,7 +15,6 @@ import { EventsRiskReversal } from '@/components/shared'
 
 import OptimizedImage from '@/components/OptimizedImage'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
-import { ArticleContentSection } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'an event in Bali', intent: 'help with catering, staff, and setup' })
@@ -275,7 +274,7 @@ const POPULAR_EVENT_TYPES: PopularEventType[] = [
 const WHATS_INCLUDED = [
   'A head chef and brigade sized to your event — sous chef added from 20 guests, dedicated kitchen team above 60',
   'Full mobile kitchen — prep stations, cooking equipment, cold storage and servingware brought to your villa, so no villa kitchen is required',
-  'Service staff — professional waiters at a standard 1 per 10 guests, sommeliers from IDR 250K/hour and cocktail packages from IDR 500,000++ per guest',
+  'Service staff — professional waiters at a standard 1 per 10 guests, sommeliers quoted per event; cocktail packages from IDR 500,000++ per guest',
   'Custom menu design — built around your brief, with halal, vegan, gluten-free, nut-free and kids\' options handled as standard',
   'Setup, service and complete cleanup — we pack up and leave; the villa is handed back the way we found it',
   'One point of contact — your coordinator, Sofia, from first WhatsApp message to final guest departure',
@@ -1319,7 +1318,6 @@ export default function EventsMainPage() {
         serviceName="an event in Bali"
         intent="help with catering, staff, and setup"
       />
-    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

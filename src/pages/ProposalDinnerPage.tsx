@@ -194,9 +194,9 @@ export default function ProposalDinnerPage() {
       canonicalUrl="https://mychef.id/blog/proposal-dinner-bali-private-chef"
       h1="Proposal Dinner Bali"
       subtitle="A Private Chef Experience for Your Perfect Moment"
-      heroImage="/generated/mychef-experience-bali-luna-gallery-1.webp"
+      heroImage="/generated/mychef-proposal-dinner-bali-villa-candles.webp"
       heroImageAlt="Candlelit proposal dinner setup at a Bali villa — private chef romantic dinner experience"
-      ogImage="https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp"
+      ogImage="https://mychef.id/generated/mychef-proposal-dinner-bali-villa-candles.webp"
       keywords={[
         'proposal dinner bali',
         'proposal dinner chef bali',
@@ -231,7 +231,7 @@ export default function ProposalDinnerPage() {
           },
           datePublished: '2026-06-29',
           dateModified: '2026-06-29',
-          image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
+          image: 'https://mychef.id/generated/mychef-proposal-dinner-bali-villa-candles.webp',
           mainEntityOfPage: {
             '@type': 'WebPage',
             '@id': 'https://mychef.id/blog/proposal-dinner-bali-private-chef',

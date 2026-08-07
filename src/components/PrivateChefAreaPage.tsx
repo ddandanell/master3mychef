@@ -480,6 +480,22 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
   const publishedSlugs = new Set(PRIVATE_CHEF_AREAS.filter((a) => a.published).map((a) => a.slug))
   const nearby = area.nearbyAreas.filter((n) => publishedSlugs.has(n.slug)).slice(0, 6)
 
+  // Unique long-form local guide: reduces template sameness for indexing value.
+  const landmarkList = area.landmarks.slice(0, 5).join(', ')
+  const nearbyNames = nearby.map((n) => n.name).join(', ')
+  const serviceLabels = availableServices.map((s) => s.label.toLowerCase()).join(', ')
+  const localGuideParagraphs = [
+    `Hiring a private chef in ${area.name} is different from booking the same team in another part of ${area.regency}. ${area.villaDensity} Guests here typically match this profile: ${area.guestProfile}`,
+    `Landmarks and villa corridors we regularly serve around ${area.name} include ${landmarkList}. Share your villa pin on WhatsApp so we plan travel, kitchen load-in and timing for the real property — not a generic Bali pin.`,
+    `Menus in ${area.name} follow the same published floors as the rest of the island, with formats that fit how people stay here: ${serviceLabels}. ${area.pricingNote}`,
+    area.services.includes('bbq') || area.services.includes('catering')
+      ? `For larger villa nights, many ${area.name} hosts stack private chef day rates with catering formats or a mobile cocktail bar so food and drinks run on one timeline. See island service hubs for <a href="/catering" class="text-[#C5A028] hover:underline font-medium">villa catering</a>, <a href="/in-villa-service/bartenders" class="text-[#C5A028] hover:underline font-medium">mobile cocktail bar packages</a>, and occasion experiences such as <a href="/experiences/caviar-experience" class="text-[#C5A028] hover:underline font-medium">caviar</a> or <a href="/experiences/whiskey-cigar-experience" class="text-[#C5A028] hover:underline font-medium">whiskey &amp; cigar</a> evenings.`
+      : `For special nights in ${area.name}, hosts often add a <a href="/fine-dining" class="text-[#C5A028] hover:underline font-medium">fine dining</a> tasting menu or a celebration experience without leaving the villa. Explore <a href="/experiences" class="text-[#C5A028] hover:underline font-medium">private experiences</a> and multi-day plans on <a href="/private-chef-bali" class="text-[#C5A028] hover:underline font-medium">private chef Bali day rates</a>.`,
+    nearbyNames
+      ? `If your group splits villas across neighbouring areas, we still cook with one plan — nearby coverage includes ${nearbyNames}. ${area.bookingNote}`
+      : area.bookingNote,
+  ]
+
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
@@ -897,8 +913,44 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* ── 7b. LOCAL GUIDE (unique per area — indexing differentiation) ───── */}
+      <section id="local-guide" className="px-6 py-20 md:px-10 bg-white scroll-mt-24">
+        <div className="max-w-[860px] mx-auto">
+          <p className="text-[#C5A028] text-sm uppercase tracking-[0.35em] font-semibold mb-3">
+            Local dining guide
+          </p>
+          <h2 className="font-playfair text-3xl md:text-4xl mb-6">
+            Private chef dining in {area.name}: what makes this area different
+          </h2>
+          <div className="space-y-5 text-[#4A4745] text-base md:text-lg leading-relaxed">
+            {localGuideParagraphs.map((html, i) => (
+              <p key={i} dangerouslySetInnerHTML={{ __html: html }} />
+            ))}
+          </div>
+          <div className="mt-10 grid sm:grid-cols-2 gap-3">
+            {[
+              { to: '/honeymoon-chef', label: 'Honeymoon private chef' },
+              { to: '/proposal-dinner', label: 'Proposal dinner planning' },
+              { to: '/seafood-bbq-catering-bali', label: 'Seafood BBQ catering' },
+              { to: '/experiences/cooking-class', label: 'Cooking class at the villa' },
+              { to: '/staffing', label: 'Villa staffing & placement' },
+              { to: '/experiences', label: 'All private experiences' },
+            ].map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="flex items-center justify-between rounded-xl border border-[#E5E3E0] px-4 py-3 text-sm font-medium hover:border-[#C5A028] hover:text-[#C5A028] transition-colors"
+              >
+                {link.label}
+                <ArrowRight className="w-4 h-4 text-[#C5A028]" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 8. FAQ ───────────────────────────────────────────────────────────── */}
-      <section id="faq" className="px-6 py-20 md:px-10 bg-white scroll-mt-24">
+      <section id="faq" className="px-6 py-20 md:px-10 bg-[#FAFAF8] scroll-mt-24">
         <div className="max-w-[860px] mx-auto">
           <p className="text-center text-[#C5A028] text-sm uppercase tracking-[0.35em] font-semibold mb-3">
             FAQ
@@ -957,8 +1009,12 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               { label: 'Villa Catering', href: '/catering', icon: Utensils },
               { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', icon: Users },
               { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', icon: Sparkles },
+              { label: 'Caviar Experience', href: '/experiences/caviar-experience', icon: Sparkles },
+              { label: 'Whiskey & Cigar', href: '/experiences/whiskey-cigar-experience', icon: Sparkles },
               { label: 'Events & Weddings', href: '/events', icon: Sparkles },
+              { label: 'Honeymoon Chef', href: '/honeymoon-chef', icon: ChefHat },
               { label: 'Private Chef Bali', href: '/private-chef-bali', icon: ChefHat },
+              { label: 'Staffing', href: '/staffing', icon: Users },
               { label: 'Pricing Guide', href: '/pricing', icon: Check },
               { label: 'Get a Quote', href: '/quote', icon: MessageCircle },
             ].map((link) => {

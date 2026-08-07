@@ -107,6 +107,8 @@ const OG_IMAGES: Record<string, string> = {
   '/experiences/champagne-oyster-experience': '/generated/oyster-bar-bali-champagne.webp',
   '/experiences/caviar-experience': '/generated/mychef-caviar-experience-bali-hero-villa.webp',
   '/experiences/whiskey-cigar-experience': '/generated/mychef-whiskey-cigar-experience-bali-hero-villa.webp',
+  '/honeymoon-chef': '/generated/mychef-honeymoon-chef-bali-villa-sunset.webp',
+  '/proposal-dinner': '/generated/mychef-proposal-dinner-bali-villa-candles.webp',
   '/experiences/romantic-proposal-dinner': '/generated/proposal-package-bali-dinner.webp',
   '/bar-services/': '/generated/mychef-bar-services-bali-og-hub.jpg',
   '/bar-services/bar-staff-training/': '/generated/mychef-bar-services-bali-og-bar-staff-training.jpg',

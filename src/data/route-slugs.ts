@@ -11,7 +11,7 @@ export const LANDING_PAGE_SLUGS: string[] = [
   // group-villa-dinner-packages-bali → dedicated GroupVillaDinnerPackagesBaliPage in App.tsx
   'corporate-retreat-catering-bali',
   'luxury-birthday-party-bali',
-  'villa-staff-bali-agency',
+  // villa-staff-bali-agency → 301 /staffing/villa-staff (redirects.ts); do not re-register.
   'butler-service-bali-daily-rate',
   'best-private-chef-indonesia',
   'private-chef-for-events',

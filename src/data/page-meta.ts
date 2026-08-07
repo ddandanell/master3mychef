@@ -1066,6 +1066,18 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Bali Wedding Catering with a Private Chef: Timeline & Planning Guide',
   },
 
+  // Cost-education owner for “how much does a wedding in Bali cost” (F&B slice).
+  // Commercial package tables stay on /bali-wedding-catering-packages.
+  'blog-bali-wedding-catering-budget-guide': {
+    path: '/blog/bali-wedding-catering-budget-guide',
+    title: 'Bali Wedding Catering Cost | Budget Guide 2026 | myCHEF',
+    description:
+      'Full breakdown of Bali wedding catering costs in 2026. Price per head, hidden costs, and how to save without cutting quality. Transparent F&B budget guide.',
+    canonical: `${SITE}/blog/bali-wedding-catering-budget-guide`,
+    h1: 'Bali Wedding Catering Cost: The Complete Budget Guide',
+    ogImage: `${SITE}/generated/mychef-experience-bali-luna-gallery-1.webp`,
+  },
+
       'blog-bali-catering-menu': {
     path: '/blog/bali-catering-menu',
     title: 'Bali Catering Menu Ideas: Traditional & Modern | myCHEF',

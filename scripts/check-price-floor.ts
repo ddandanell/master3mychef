@@ -47,6 +47,7 @@ const FLOOR_EXCEPTION_PATHS = [
   'events/weddings', // Wedding pages may reference villa corkage and market context.
   'bali-wedding-catering-packages', // Dedicated package page displays published wedding catering tiers.
   'wedding-catering-indonesia', // Indonesia-wide wedding catering page displays published tiers.
+  'blog/bali-wedding-catering-budget-guide', // Cost-education support page: market ranges + myCHEF floors.
 ]
 
 /**

@@ -107,7 +107,8 @@ For each keep-URL:
 - [x] Document GSC export + diagnosis (this file).  
 - [x] Confirm 5 redirect URLs are 308 + filtered from sitemap generation (do not re-list).  
 - [x] Keep bar-services **out** of sitemap.  
-- [ ] Optional later: strip remaining structured-data `@id` references in legacy content JSON that still name redirect paths.
+- [x] Strip/fix structured-data `@id` references in legacy landing JSON that named redirect paths (`hire-private-chef-bali-monthly` → `/private-chef-bali`, `villa-staff-bali-agency` → `/staffing/villa-staff`).  
+- [x] Unblock live wedding budget guide (`/blog/bali-wedding-catering-budget-guide`) — was wrongly 301 → packages while linked as cost-education owner.
 
 ### Wave 1 — Commercial money pages (high intent) — **done (implementation)**
 
@@ -173,4 +174,5 @@ For each keep-URL:
 | Date | Change |
 |---|---|
 | 2026-08-07 | Strategy created from Coverage Drilldown export; waves defined; bar-services sitemap exclusion affirmed |
+| 2026-08-07 | Hygiene: journal wedding guide URL fix; redirect schema `@id`s; restored budget-guide owner (removed bad 301); dead rehearsal SPA route removed |
 EOF

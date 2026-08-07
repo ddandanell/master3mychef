@@ -1,0 +1,61 @@
+# GSC Request Indexing — Wave 1 (post PR #72 deploy)
+# Property: sc-domain:mychef.id
+# Date: 2026-08-07
+# Context: After seo hygiene + wedding budget-guide unblock (#72) and GSC
+#          discovered-not-indexed uniqueness waves (#68–#71).
+# Strategy: docs/seo/GSC-DISCOVERED-NOT-INDEXED-STRATEGY-2026-08-07.md
+# Prior list: docs/GSC-REQUEST-INDEXING-TOP15-2026-08-02.txt (superseded for this wave)
+#
+# HOW (Google Search Console UI)
+# 1. Open https://search.google.com/search-console → property sc-domain:mychef.id
+# 2. URL Inspection (top search bar) → paste ONE URL from the list below
+# 3. Wait for inspection result → click "Request indexing"
+# 4. Repeat for each URL (daily quota is limited — do this list only, not all 130)
+# 5. Prefer order as listed (highest commercial intent first)
+# 6. After requests: optionally re-submit sitemap https://mychef.id/sitemap.xml
+#    (Sitemaps → sitemap.xml → Resubmit) if last fetch is stale
+#
+# DO NOT request indexing for:
+# - Redirect sources (308): /blog/how-to-hire-private-chef,
+#   /blog/romantic-dinner-at-home-bali-private-chef, /blog/corporate-events-catering-bali,
+#   /hire-private-chef-bali-monthly, /villa-staff-bali-agency
+# - /bar-services/* (out of sitemap by policy — crawl budget reserved for guest/area)
+# - noindex utilities: /404, /book, /calculator, /join-our-team, /quote
+# - Thin tier-3 remote areas (later wave only if still unindexed after 4–8 weeks)
+#
+# API STATUS (2026-08-07 agent check)
+# - GOOGLE_APPLICATION_CREDENTIALS path missing (/opt/hermes/secrets/google-service-account.json)
+# - ~/.config/claude-seo/google-api.json points at missing SA JSON + wrong default_site
+# - No GSC refresh token / seo-google MCP — URL Inspection + Indexing API unavailable
+# - Indexing API is JobPosting/BroadcastEvent-scoped anyway; use GSC UI Request indexing
+# Count: 22 URLs
+
+# --- A. Newly unblocked (PR #72) ---
+https://mychef.id/blog/bali-wedding-catering-budget-guide
+
+# --- B. Wedding commercial owners ---
+https://mychef.id/events/weddings
+https://mychef.id/bali-wedding-catering-packages
+https://mychef.id/wedding-catering-indonesia
+
+# --- C. Wave-1 high-intent money pages (unique heroes + body) ---
+https://mychef.id/honeymoon-chef
+https://mychef.id/proposal-dinner
+https://mychef.id/seafood-bbq-catering-bali
+https://mychef.id/butler-service-bali-daily-rate
+https://mychef.id/corporate-retreat-catering-bali
+https://mychef.id/healthy-meal-delivery-indonesia
+https://mychef.id/corporate-case-studies
+
+# --- D. Tier-1 private-chef villa belts (Wave-2 uniqueness shipped) ---
+https://mychef.id/private-chef/canggu
+https://mychef.id/private-chef/seminyak
+https://mychef.id/private-chef/ubud
+https://mychef.id/private-chef/uluwatu
+https://mychef.id/private-chef/jimbaran
+https://mychef.id/private-chef/nusa-dua
+https://mychef.id/private-chef/sanur
+https://mychef.id/private-chef/pererenan
+https://mychef.id/private-chef/berawa
+https://mychef.id/private-chef/petitenget
+https://mychef.id/private-chef/kerobokan

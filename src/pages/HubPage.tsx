@@ -850,12 +850,13 @@ export default function HubPage() {
                   </div>
                 ))}
               </div>
-              {/* CTA after Who We Are section */}
-              <div className="mt-8">
-                <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-who-we-are-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
-                  <MessageCircle className="w-4 h-4" /> Get Your Free Quote within 2 Hours
-                </a>
-              </div>
+              {/* Primary quote CTAs live after service portals and in the final section — avoid stacking identical WA buttons here. */}
+              <p className="mt-8 text-sm" style={{ color: 'var(--u-text-muted)' }}>
+                Prefer a structured form?{' '}
+                <Link to="/quote" className="font-semibold underline-offset-4 hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>
+                  Request a quote →
+                </Link>
+              </p>
             </div>
           </div>
         </div>
@@ -871,7 +872,7 @@ export default function HubPage() {
               myCHEF was founded by Adriano, trained under a Michelin-starred chef in {siteFacts.founderTrainingCity}, after he saw the gap between Bali&apos;s world-class villas and the dining served inside them. Today we are a 50+ person Indonesian hospitality team — not a freelancer, not a marketplace.
             </p>
           </div>
-          <div className="overflow-x-auto mb-10">
+          <div className="overflow-x-auto mb-6">
             <table className="w-full min-w-[640px] text-sm border rounded-2xl overflow-hidden" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
               <thead>
                 <tr className="border-b" style={{ borderColor: 'var(--u-border)', background: 'var(--u-bg)' }}>
@@ -894,9 +895,9 @@ export default function HubPage() {
             </table>
           </div>
           <div className="text-center">
-            <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-diff-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: 'var(--u-accent)', color: '#fff' }}>
-              <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours
-            </a>
+            <Link to="/why-mychef" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
+              Full comparison and guarantees <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -1153,7 +1154,7 @@ export default function HubPage() {
         testimonials={FEATURED_TESTIMONIALS}
       />
 
-      {/* REVIEWS */}
+      {/* REVIEWS — compact sample; full set lives on /reviews (avoids homepage promo dilution) */}
       <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
@@ -1162,7 +1163,7 @@ export default function HubPage() {
             <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. 560+ events served · 12,000+ happy guests · Same-day confirmation.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {REVIEWS.map((review, i) => (
+            {REVIEWS.slice(0, 6).map((review, i) => (
               <div key={i} className="p-6 rounded-2xl border transition-all hover:border-[#C5A028]/30" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
                 <div className="flex gap-1 mb-3">
                   {[1,2,3,4,5].map((s) => <Star key={s} className="w-3 h-3 fill-[#C5A028] text-[#C5A028]" />)}
@@ -1342,15 +1343,21 @@ export default function HubPage() {
             <h2 className="u-heading text-4xl md:text-5xl mb-3">Frequently Asked</h2>
             <p className="mb-2" style={{ color: 'var(--u-text-muted)' }}>Still unsure? Message us on WhatsApp — we respond within 2 hours.</p>
           </div>
-          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc ctaEvery={5} />
-          <div className="text-center mt-12">
-            <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="homepage-faq-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
-              <MessageCircle className="w-4 h-4" /> Get Your Private Chef Quote on WhatsApp
+          {/* No in-accordion WA CTAs (ctaEvery omitted) — one end CTA is enough on an already conversion-heavy homepage. */}
+          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc />
+          <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`https://wa.me/${siteFacts.whatsappNumber}?text=${encodeURIComponent('Hi myCHEF, I have a question about private chef service in Bali.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-source="homepage-faq-cta"
+              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+              style={{ background: '#C5A028', color: '#fff' }}
+            >
+              <MessageCircle className="w-4 h-4" /> Ask on WhatsApp
             </a>
-          </div>
-          <div className="text-center mt-4">
             <Link to="/faq" className="text-sm font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>
-              More questions answered →
+              Full FAQ →
             </Link>
           </div>
         </div>

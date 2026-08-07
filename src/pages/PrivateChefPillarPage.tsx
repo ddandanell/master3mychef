@@ -426,6 +426,10 @@ const FAQS = [
     q: 'Can I hire a private chef and a bartender together in Bali?',
     a: 'Yes — a very common stack. Book the chef (or catering) and add cocktail packages from IDR 500,000++ per guest (min 10). Waiters and butlers are quoted on request. <a href="/in-villa-service/bartenders">Cocktail packages →</a> · <a href="/in-villa-service">In-villa service →</a>',
   },
+  {
+    q: 'Can we book a cooking class with our private chef stay?',
+    a: 'Yes — many guests add a hands-on Balinese or Indonesian cooking class one afternoon, then keep daily chef meals for the rest of the stay. Classes are quoted for group size and cuisine (no public list price). <a href="/experiences/cooking-class">Cooking class Bali →</a> · <a href="/experiences/sushi-masterclass">Sushi masterclass →</a>',
+  },
 ] as const
 
 export default function PrivateChefPillarPage() {
@@ -731,8 +735,9 @@ export default function PrivateChefPillarPage() {
           <p className="text-[#1A1A1A]/65 mt-5 max-w-2xl leading-relaxed">
             Daily chef hire is this page. When you host a party night, stack{' '}
             <strong className="text-[#1A1A1A]/80">Bali catering</strong> for group formats and a{' '}
-            <strong className="text-[#1A1A1A]/80">mobile cocktail bar</strong> for drinks — same WhatsApp
-            thread, no freelance juggling.
+            <strong className="text-[#1A1A1A]/80">mobile cocktail bar</strong> for drinks — or book a{' '}
+            <strong className="text-[#1A1A1A]/80">private cooking class</strong> for a hands-on villa afternoon.
+            Same WhatsApp thread, no freelance juggling.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
             {[
@@ -752,6 +757,11 @@ export default function PrivateChefPillarPage() {
                 desc: 'Party bar packages from IDR 500K++ per guest — we come to the villa.',
               },
               {
+                title: 'Cooking class Bali',
+                href: '/experiences/cooking-class',
+                desc: 'Hands-on Balinese & Indonesian lessons in your villa kitchen — contact for a quote.',
+              },
+              {
                 title: 'Private cocktail party',
                 href: '/experiences/private-cocktail-party',
                 desc: 'Occasion plan: timeline, canapés and free-flow on the same bar products.',
@@ -765,6 +775,11 @@ export default function PrivateChefPillarPage() {
                 title: 'Fine dining dinner',
                 href: '/fine-dining',
                 desc: 'One celebration tasting menu — add aperitivo cocktails if you like.',
+              },
+              {
+                title: 'Sushi masterclass',
+                href: '/experiences/sushi-masterclass',
+                desc: 'Private sushi making class at the villa — rice, rolls and tasting.',
               },
             ].map((card) => (
               <Link

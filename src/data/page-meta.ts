@@ -1340,6 +1340,17 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-catering-bali-hero-babiguling.webp`,
   },
 
+  /** Support content for cooking class (commercial owner: /experiences/cooking-class). Live indexable — not a 301. */
+  'blog-bali-villa-cooking-class-private-chef': {
+    path: '/blog/bali-villa-cooking-class-private-chef',
+    title: 'Bali Villa Cooking Class Guide | Private Chef Lessons (Support) | myCHEF',
+    description:
+      'How a private villa cooking class works in Bali — formats, market trip and booking tips. Book commercial sessions on the Cooking Class Bali experience page.',
+    canonical: `${SITE}/blog/bali-villa-cooking-class-private-chef`,
+    h1: 'Private Cooking Classes at Your Bali Villa',
+    ogImage: `${SITE}/generated/mychef-experience-bali-luna-gallery-1.webp`,
+  },
+
       'pricing-calculator': {
     path: '/pricing-calculator',
     title: 'Private Chef Cost Calculator Bali | Instant Estimate',

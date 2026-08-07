@@ -318,7 +318,8 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/romantic-dinner-bali-private-chef', to: '/fine-dining/romantic-dinner', reason: 'Dead blog link → live romantic dinner page.' },
   { from: '/blog/buffet-vs-plated-service-bali', to: '/catering', reason: 'Dead blog link → catering (service styles).' },
   { from: '/blog/floating-breakfast-bali', to: '/catering/floating-breakfast', reason: 'Dead blog link → live floating breakfast page.' },
-  { from: '/blog/bali-villa-cooking-class-private-chef', to: '/experiences/cooking-class', reason: 'Villa cooking class content → cooking class experience.' },
+  // 2026-08 wave 5: keep /blog/bali-villa-cooking-class-private-chef live as support content
+  // (intent: guide/how-it-works). Commercial owner remains /experiences/cooking-class.
   { from: '/blog/food-allergies-dietary-requirements-bali', to: '/blog/dietary-specific-chef-bali', reason: 'Dead blog link → live dietary-specific guide.' },
   { from: '/blog/live-in-chef-bali-hiring-guide', to: '/staffing', reason: 'Dead blog link → staffing (live-in chef placement).' },
   { from: '/journal/bali-villa-dinner-party-guide', to: '/private-dining-indonesia', reason: 'Dead journal link → live private dining page.' },

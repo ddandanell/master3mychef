@@ -975,11 +975,6 @@
       "permanent": true
     },
     {
-      "source": "/blog/bali-villa-cooking-class-private-chef",
-      "destination": "/fine-dining",
-      "permanent": true
-    },
-    {
       "source": "/blog/food-allergies-dietary-requirements-bali",
       "destination": "/blog/dietary-specific-chef-bali",
       "permanent": true

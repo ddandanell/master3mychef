@@ -4,7 +4,8 @@ import { GraduationCap, Home, Users, UtensilsCrossed, ChefHat, ShoppingBasket } 
 import type { PageSection } from '@/components/PremiumPage'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20cooking%20class%20in%20my%20Bali%20villa.%20Please%20send%20class%20options%20and%20pricing.'
-const CANONICAL = 'https://mychef.id/experiences/private-cooking-class'
+/** Redirect target — commercial owner (this path 301s in App.tsx). */
+const CANONICAL = 'https://mychef.id/experiences/cooking-class'
 
 const SECTIONS: PageSection[] = [
   {
@@ -55,7 +56,7 @@ const SECTIONS: PageSection[] = [
     title: 'Optional Morning Market Trip with Your Chef',
     image: '/generated/luna-ingredients.webp',
     imageAlt: 'Fresh Balinese market ingredients and tropical produce selected for a private cooking class',
-    body: `<p>For IDR 250K per person, the class starts before sunrise. Your chef collects you at 6am and walks you through the local <em>pasar</em> the professionals use — choosing shallots by variety, judging turmeric, spotting the day's best fish, meeting ingredients that rarely leave the island. By 8am you're back at the villa with a basket you understand and a menu taking shape. It adds roughly two hours and is the single best upgrade for anyone curious about food culture, not just technique.</p>`,
+    body: `<p>As a quoted add-on, the class can start before sunrise. Your chef collects you at 6am and walks you through the local <em>pasar</em> the professionals use — choosing shallots by variety, judging turmeric, spotting the day's best fish, meeting ingredients that rarely leave the island. By 8am you're back at the villa with a basket you understand and a menu taking shape. It adds roughly two hours and is the single best upgrade for anyone curious about food culture, not just technique.</p>`,
   },
   {
     id: 'features',
@@ -99,12 +100,10 @@ const SECTIONS: PageSection[] = [
     id: 'pricing',
     type: 'content' as const,
     subtitle: 'Private Cooking Class Pricing',
-    title: 'From IDR 700K Per Person ++',
-    body: `<p>Classes start from <strong>IDR 700K per person ++</strong> (11% government tax + 10% service charge), minimum two guests, up to twelve. The sunrise market trip adds IDR 250K per person. Bespoke menus, premium proteins and extra courses are quoted individually — always itemised, always confirmed before you commit.</p>
+    title: 'Contact for a Written Class Quote',
+    body: `<p>This legacy URL redirects to our commercial <a href="/experiences/cooking-class" class="text-[#7E6410] hover:underline font-medium">Cooking Class Bali</a> page. Sessions are quoted for guest count, cuisine, duration and location — no public list price. Market trips, premium proteins and extra courses are itemised on the proposal.</p>
 
-    <p>For a group of four, that's a private chef, a hands-on class, a full meal and recipes to take home — often less per person than a tasting-menu dinner out, with far more of the day in it.</p>
-
-    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Get My Class Quote — WhatsApp +62 896-7407-2020</a>. See our <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">full pricing guide</a>.</p>`,
+    <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Get My Class Quote — WhatsApp +62 896-7407-2020</a>. Multi-day villa chef day rates (different product): <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef</a>.</p>`,
   },
   {
     id: 'occasions',
@@ -135,14 +134,14 @@ const SECTIONS: PageSection[] = [
       external: true,
     },
     secondaryAction: {
-      label: 'Full Pricing Guide',
-      href: '/pricing',
+      label: 'Cooking Class Bali',
+      href: '/experiences/cooking-class',
     },
   },
 ]
 
 const FAQS = [
-  { question: 'How much does a private cooking class at a Bali villa cost?', answer: 'From IDR 700K per person ++, including the chef, all ingredients, instruction, the meal and recipes. The optional sunrise market trip is IDR 250K per person.' },
+  { question: 'How much does a private cooking class at a Bali villa cost?', answer: 'We quote each class for group size, cuisine, duration and villa location — no public list price. Message WhatsApp for a written proposal. Commercial page: <a href="/experiences/cooking-class">Cooking Class Bali</a>.' },
   { question: 'How many people can join?', answer: 'Classes run for 2–12 guests. Larger groups or corporate sessions can be arranged with multiple chefs.' },
   { question: 'How long does a class take?', answer: 'Two to three hours depending on the class you choose, plus the meal. Add about two hours for the market trip.' },
   { question: 'Do I need cooking experience?', answer: 'None. Beginners get foundations; experienced cooks get deeper technique. Every class adapts to the group.' },
@@ -176,9 +175,9 @@ export default function ExperiencePrivateCookingClassPage() {
     <PremiumPage
       slug="experiences/private-cooking-class"
       title="Private Cooking Class Bali | Chef Comes to Your Villa"
-      description="A private cooking class at your Bali villa — your chef, your kitchen, your cuisine. From IDR 700K/person, ingredients & recipes included. WhatsApp myCHEF."
-      seoTitle="Private Cooking Class Bali | Chef Comes to Your Villa"
-      seoDescription="A private cooking class at your Bali villa — your chef, your kitchen, your cuisine. From IDR 700K/person, ingredients & recipes included. WhatsApp myCHEF."
+      description="Legacy private cooking class URL — redirects to Cooking Class Bali. Contact for a custom villa class quote."
+      seoTitle="Private Cooking Class Bali | Redirects to Cooking Class"
+      seoDescription="Legacy private cooking class URL — redirects to /experiences/cooking-class. Contact for a custom villa class quote."
       canonicalUrl={CANONICAL}
       h1="Private Cooking Class in Bali — The Chef Comes to Your Villa"
       subtitle="Learn Balinese & Indonesian Cuisine with a Private Chef at Your Villa"
@@ -192,7 +191,7 @@ export default function ExperiencePrivateCookingClassPage() {
         'balinese cooking class private',
         'chef cooking class bali',
       ]}
-      highlights={['Five Class Formats', 'Market Add-On', 'All Skill Levels', 'From IDR 700K/person']}
+      highlights={['Five Class Formats', 'Market Add-On', 'All Skill Levels', 'Contact for Quote']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
@@ -210,7 +209,7 @@ export default function ExperiencePrivateCookingClassPage() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'Private Cooking Class Bali',
-          description: 'A private cooking class at your Bali villa: five hands-on class formats from Balinese heritage to plant-based, led by a professional chef in your kitchen. From IDR 700K per person ++, 2–12 guests, ingredients, meal and recipes included. Optional sunrise market trip IDR 250K per person.',
+          description: 'A private cooking class at your Bali villa: five hands-on class formats from Balinese heritage to plant-based, led by a professional chef in your kitchen. Contact for a written quote. Redirects to /experiences/cooking-class.',
           provider: providerRef,
           areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
           serviceType: 'Private in-villa cooking class',
@@ -218,13 +217,9 @@ export default function ExperiencePrivateCookingClassPage() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'IDR',
-            price: '700000',
-            priceSpecification: {
-              '@type': 'UnitPriceSpecification',
-              price: '700000',
-              priceCurrency: 'IDR',
-              unitText: 'per person, before 11% tax and 10% service charge',
-            },
+            availability: 'https://schema.org/InStock',
+            url: CANONICAL,
+            description: 'Contact for a written cooking class quote',
           },
           url: CANONICAL,
         },

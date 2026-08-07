@@ -112,8 +112,9 @@ const FAQS = [
   { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
-  { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/catering">Catering →</a>' },
+  { q: 'Can this combine with other services?', a: 'Yes — private chef, catering, a mobile cocktail bar and experiences (cooking class, sushi) stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/catering">Catering →</a> · <a href="/experiences/cooking-class">Cooking class →</a>' },
   { q: 'Do you bring a mobile bar to villa parties in Bali?', a: 'Yes — complete cocktail packages from IDR 500,000++ per guest (min 10). We set up at your villa; not hourly bartender-only hire. <a href="/in-villa-service/bartenders">Packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
+  { q: 'Do you offer a private cooking class at our Bali villa?', a: 'Yes — hands-on Balinese and Indonesian cooking classes in your villa kitchen (not a tourist school). We quote each session for group size and cuisine — contact for a proposal. <a href="/experiences/cooking-class">Cooking class Bali →</a> · <a href="/experiences/sushi-masterclass">Sushi masterclass →</a>' },
   { q: 'Do you clean up?', a: 'Yes on serviced formats — kitchen left clean after service.' },
   { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
   { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/why-mychef">Why myCHEF</a> · <a href="/chefs">Chefs</a>.' },
@@ -729,6 +730,7 @@ export default function HubPage() {
               { title: 'Hire private chef Bali', desc: 'Breakfast, lunch and dinner across your whole stay, groceries at cost. Daily and monthly rates published.', href: '/private-chef-bali', cta: 'Hire a private chef in Bali →' },
               { title: "Chef's table Bali", desc: 'Counter seating with Adriano — 7-course market menu, max 6 guests, Friday & Saturday only.', href: '/fine-dining/chefs-table', cta: "Book chefs table Bali →" },
               { title: 'Mobile bar & villa staff', desc: 'Mobile cocktail bar packages from IDR 500K++ per guest for villa parties; waiters and butlers contact for pricing. Stack with chef or catering.', href: '/in-villa-service/bartenders', cta: 'Explore mobile cocktail bar packages →' },
+              { title: 'Cooking class Bali', desc: 'Private Balinese and Indonesian cooking lessons in your villa kitchen — contact for a quote. Sushi masterclass available too.', href: '/experiences/cooking-class', cta: 'Explore cooking class Bali →' },
             ].map((service) => (
               <div key={service.href} className="p-8 rounded-2xl border transition-all hover:shadow-lg" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{service.title}</h3>

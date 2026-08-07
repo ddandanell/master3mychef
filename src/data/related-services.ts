@@ -170,5 +170,51 @@ export const LOCATION_RELATED: RelatedService[] = [
     description: 'Full-service event catering for weddings, parties, and corporate gatherings.',
     path: '/events',
     category: 'Events'
+  },
+  {
+    title: 'Cooking Class Bali',
+    description: 'Private Balinese and Indonesian cooking lessons in your villa kitchen — contact for a quote.',
+    path: '/experiences/cooking-class',
+    category: 'Experiences'
+  }
+]
+
+/** Hands-on villa experiences (not daily chef hire or event catering). */
+export const EXPERIENCES_RELATED: RelatedService[] = [
+  {
+    title: 'Cooking Class Bali',
+    description: 'Balinese, Indonesian and multi-cuisine villa lessons. Chef comes to you — contact for a written proposal.',
+    path: '/experiences/cooking-class',
+    category: 'Experiences'
+  },
+  {
+    title: 'Sushi Masterclass',
+    description: 'Private sushi making class at your villa — rice, knife skills, maki, nigiri and tasting.',
+    path: '/experiences/sushi-masterclass',
+    category: 'Experiences'
+  },
+  {
+    title: 'Private Cocktail Party',
+    description: 'Mobile bar timeline, signature cocktails and canapés for a villa party night.',
+    path: '/experiences/private-cocktail-party',
+    category: 'Experiences'
+  },
+  {
+    title: 'Kids Birthday Chef Party',
+    description: 'Fully hosted kids cooking party at the villa with chef, activities and cleanup.',
+    path: '/experiences/kids-birthday-chef-party',
+    category: 'Experiences'
+  },
+  {
+    title: 'Champagne & Oyster Experience',
+    description: 'Private oyster bar and champagne reception at your villa or event.',
+    path: '/experiences/champagne-oyster-experience',
+    category: 'Experiences'
+  },
+  {
+    title: 'Romantic Proposal Dinner',
+    description: 'Confidential proposal dinner planning with private chef and setup.',
+    path: '/experiences/romantic-proposal-dinner',
+    category: 'Experiences'
   }
 ]

@@ -161,7 +161,7 @@ const RELATED_PAGES = [
   { label: 'Yoga Retreat Chef', href: '/journal/yoga-retreat-meal-planning-bali', desc: 'Dedicated meal planning guide for yoga retreat organisers in Bali.' },
   { label: 'Private Chef Ubud', href: '/private-chef/ubud', desc: 'Ubud private chef service — the heart of Bali\'s wellness scene.' },
   { label: 'Food Allergies Guide', href: '/blog/food-allergies-dietary-requirements-private-chef-bali', desc: 'How myCHEF handles dietary requirements and food allergies.' },
-  { label: 'Cooking Class Bali', href: '/fine-dining', desc: 'Add a Balinese cooking class experience to your retreat programme.' },
+  { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: 'Add a private Balinese or Indonesian cooking class to your retreat programme.' },
   { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all catering formats and programme types.' },
   { label: 'Floating Breakfast', href: '/catering/floating-breakfast', desc: 'The iconic Bali floating breakfast — add it to your retreat stay.' },
 ]

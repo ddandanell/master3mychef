@@ -277,6 +277,11 @@ const RELATED_PAGES = [
     desc: 'Dedicated private sushi class at your villa.',
   },
   {
+    label: 'Villa cooking class guide',
+    href: '/blog/bali-villa-cooking-class-private-chef',
+    desc: 'Support article: class formats, market trip and gift ideas.',
+  },
+  {
     label: 'Kids Birthday Chef Party',
     href: '/experiences/kids-birthday-chef-party',
     desc: 'Kids cooking parties and entertainment at the villa.',

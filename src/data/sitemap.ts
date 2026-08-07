@@ -376,6 +376,8 @@ export function buildSitemap(): SitemapEntry[] {
     metaInfo('blog-private-chef-seminyak-canggu-ubud-comparison', 'blog-post', 0.7, 'monthly'),
     metaInfo('blog-private-dinner-party-bali', 'blog-post', 0.7, 'monthly'),
     metaInfo('blog-wet-season-menu-bali', 'blog-post', 0.7, 'monthly'),
+    // Wave 5 (2026-08): support guide kept live (no 301). Commercial owner remains /experiences/cooking-class.
+    metaInfo('blog-bali-villa-cooking-class-private-chef', 'blog-post', 0.7, 'monthly', '2026-08-07'),
     // NOT /pricing-calculator — deliberately excluded, see below.
     //
     // Adding it here on 2026-08-05 broke the deploy (Actions runs #221 and #222 both

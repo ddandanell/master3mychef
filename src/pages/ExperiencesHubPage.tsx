@@ -220,6 +220,8 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
+  { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: 'Private Balinese and Indonesian villa cooking lessons — contact for a quote.' },
+  { label: 'Villa cooking class guide', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Support article: formats, market trip and how private villa classes work.' },
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Day rates, meal plans and how private chef hire works across Bali.' },
   { label: 'Villa Catering', href: '/catering/villa-catering', desc: 'Full-service catering for villa celebrations and group dining.' },
   { label: 'Event Catering', href: '/events', desc: 'Weddings, birthdays, corporate events and villa parties handled end-to-end.' },

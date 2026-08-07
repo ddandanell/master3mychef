@@ -222,7 +222,11 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Do you offer Bali bar catering and cocktail packages?',
-        a: 'Yes — complete cocktail packages from <strong>IDR 500,000++ per guest</strong> (BYO, min 10), free-flow and premium free-flow with spirits included. Not hourly bartender-only hire. <a href="/in-villa-service/bartenders">Cocktail packages →</a> · <a href="/experiences/private-cocktail-party">Private cocktail party →</a>',
+        a: 'Yes — a <strong>mobile cocktail bar</strong> for villa parties: packages from <strong>IDR 500,000++ per guest</strong> (BYO, min 10), free-flow and premium free-flow with spirits included. Not hourly bartender-only hire. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/experiences/private-cocktail-party">Private cocktail party →</a>',
+      },
+      {
+        q: 'Can I stack private chef, catering and a mobile bar?',
+        a: 'Yes — that is the full villa F&amp;B stack. Daily chef for the stay, catering for the party night, mobile bar for drinks. One WhatsApp thread. <a href="/private-chef-bali">Private chef →</a> · <a href="/catering">Catering →</a> · <a href="/in-villa-service/bartenders">Mobile bar →</a>',
       },
       {
         q: 'Catering vs private chef — which do I need?',

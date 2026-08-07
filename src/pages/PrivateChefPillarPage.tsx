@@ -709,6 +709,73 @@ export default function PrivateChefPillarPage() {
             <Link to="/fine-dining" className="text-[#C5A028] font-medium hover:underline">
               One-off fine dining dinner instead? →
             </Link>
+            <Link to="/in-villa-service/bartenders" className="text-[#C5A028] font-medium hover:underline">
+              Add a mobile cocktail bar →
+            </Link>
+            <Link to="/catering" className="text-[#C5A028] font-medium hover:underline">
+              One-night catering packages →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* -------------------------------------- STACK: chef + bar + catering */}
+      <section className="bg-[#FAF8F4] py-16 sm:py-20" id="stack-with-bar-and-catering">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">
+            Complete villa F&amp;B
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
+            Private chef, catering and mobile bar — related products, one team
+          </h2>
+          <p className="text-[#1A1A1A]/65 mt-5 max-w-2xl leading-relaxed">
+            Daily chef hire is this page. When you host a party night, stack{' '}
+            <strong className="text-[#1A1A1A]/80">Bali catering</strong> for group formats and a{' '}
+            <strong className="text-[#1A1A1A]/80">mobile cocktail bar</strong> for drinks — same WhatsApp
+            thread, no freelance juggling.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+            {[
+              {
+                title: 'Daily private chef',
+                href: '/private-chef-bali',
+                desc: '1–3 meals per day at published day rates — the stay backbone.',
+              },
+              {
+                title: 'Event catering',
+                href: '/catering',
+                desc: 'BBQ, buffet, plated and drop-off when one night needs production scale.',
+              },
+              {
+                title: 'Mobile cocktail bar',
+                href: '/in-villa-service/bartenders',
+                desc: 'Party bar packages from IDR 500K++ per guest — we come to the villa.',
+              },
+              {
+                title: 'Private cocktail party',
+                href: '/experiences/private-cocktail-party',
+                desc: 'Occasion plan: timeline, canapés and free-flow on the same bar products.',
+              },
+              {
+                title: 'Villa parties',
+                href: '/events/villa-parties',
+                desc: 'Pool and garden parties with food + bar catering stacked.',
+              },
+              {
+                title: 'Fine dining dinner',
+                href: '/fine-dining',
+                desc: 'One celebration tasting menu — add aperitivo cocktails if you like.',
+              },
+            ].map((card) => (
+              <Link
+                key={card.href + card.title}
+                to={card.href}
+                className="block rounded-xl border border-[#1A1A1A]/10 bg-white p-5 hover:border-[#C5A028] transition-colors"
+              >
+                <h3 className="font-semibold text-[#1A1A1A] mb-2">{card.title}</h3>
+                <p className="text-sm text-[#1A1A1A]/65 leading-relaxed">{card.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

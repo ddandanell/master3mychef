@@ -30,8 +30,8 @@ const SERVICE_TYPES = [
   },
   {
     slug: 'bartenders',
-    label: 'Cocktail & Bartender Service',
-    desc: 'Complete mobile cocktail packages — BYO, free flow or premium. Team, four cocktails, glassware, ice, setup and cleanup.',
+    label: 'Mobile Cocktail Bar',
+    desc: 'We come to your villa party with a complete mobile bar — BYO, free flow or premium. Team, four cocktails, glassware, ice, setup and cleanup.',
     price: 'From IDR 500,000++ / guest',
     icon: Wine,
   },
@@ -84,9 +84,9 @@ const SERVICE_EXPLAINERS = [
   },
   {
     icon: Wine,
-    title: 'Bartenders & Sommeliers',
-    body: 'For cocktail hours, sundowners, after-parties, and wine-led dinners. We match the right person to the tone of the event.',
-    detail: 'Best for sunset drinks, weddings, and chef-led dinners.',
+    title: 'Mobile bar & sommeliers',
+    body: 'For cocktail hours, sundowners, after-parties and wine-led dinners. Party bar service is sold as complete mobile cocktail packages — not bare hourly hire. Stack with catering or private chef for full F&B.',
+    detail: 'Best for villa parties, weddings, and chef-led dinners.',
   },
 ]
 
@@ -140,12 +140,16 @@ const FAQS = [
     a: 'Yes. We brief with your villa manager so roles do not collide — myCHEF staff handle guest-facing service while housekeepers keep rooms and common areas. Share SOPs when you book.',
   },
   {
-    q: 'Is alcohol included when I hire a bartender?',
-    a: 'No. Spirits, wine, beer, mixers and ice are usually client-supplied or sourced at cost. The hire covers the professional, tools and service. Confirm ice, glassware and garnish plan on the briefing call.',
+    q: 'Is alcohol included when I book cocktail packages?',
+    a: 'BYO packages: you supply spirits; we supply the mobile bar, mixers, ice and team. Free-flow and premium free-flow include spirits for the approved four-cocktail menu. Details: <a href="/in-villa-service/bartenders">mobile cocktail bar packages</a>.',
+  },
+  {
+    q: 'Do you bring a mobile bar to villa parties?',
+    a: 'Yes — complete mobile cocktail bar packages from IDR 500,000++ per guest (min 10). We set up at pool, garden or terrace parties island-wide. <a href="/in-villa-service/bartenders">Packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party plan →</a>',
   },
   {
     q: 'Can you staff a wedding or large event, not just a dinner?',
-    a: 'Yes — scaled FOH teams for weddings, corporate dinners and villa parties. For full food + staff production start at <a href="/events">events</a> or <a href="/events/weddings">wedding catering</a>.',
+    a: 'Yes — scaled FOH teams for weddings, corporate dinners and villa parties. For full food + staff production start at <a href="/events">events</a> or <a href="/events/weddings">wedding catering</a>. Add bar catering via <a href="/in-villa-service/bartenders">mobile cocktail packages</a>.',
   },
   {
     q: 'What if a staff member cannot arrive on the day?',
@@ -156,8 +160,8 @@ const FAQS = [
     a: 'Day-rate and event staffing is this page. For live-in chefs, managers and permanent teams use <a href="/staffing">staffing</a> and <a href="/staffing/live-in-chef">live-in chef</a>.',
   },
   {
-    q: 'Can I combine private chef and waiters for one evening?',
-    a: 'Yes — the most common luxury setup in Bali villas. Book the chef on <a href="/private-chef-bali">private chef</a> or a <a href="/fine-dining">fine dining</a> menu, then add waiters/bartender here so service matches the kitchen.',
+    q: 'Can I combine private chef, catering and a mobile bar for one evening?',
+    a: 'Yes — the strongest villa F&amp;B stack. Book the chef on <a href="/private-chef-bali">private chef</a> or event food on <a href="/catering">catering</a>, then add waiters and a <a href="/in-villa-service/bartenders">mobile cocktail bar</a> so kitchen and drinks run on one timeline.',
   },
   {
     q: 'What languages do your service staff speak?',

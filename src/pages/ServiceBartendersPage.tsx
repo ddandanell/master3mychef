@@ -129,6 +129,18 @@ const FAQS = [
     q: 'What is the average drink price in Bali for a private villa event?',
     a: `Restaurant and club drink prices vary widely. For a private villa, budget the package floor of about <strong>IDR 500,000++ per guest</strong> for BYO cocktail service, or IDR 1.3M–1.7M++ per guest when spirits are included free-flow. That usually beats open-bar restaurant mark-ups for groups of 10+. <a href="/pricing">Pricing overview →</a>`,
   },
+  {
+    q: 'Do you bring a mobile bar to villa parties in Bali?',
+    a: `Yes. That is the product: a <strong>mobile cocktail bar</strong> built at your villa — tools, glassware, ice, mixers, garnishes and the bartender team. We come out to pool parties, garden celebrations, wedding welcomes and birthday free-flow. Not a venue bar you travel to. <a href="/experiences/private-cocktail-party">Plan a private cocktail party →</a>`,
+  },
+  {
+    q: 'Can I book only the mobile bar without food catering?',
+    a: 'Yes. Cocktail packages stand alone when you self-cater, use another caterer, or only want drinks. Most hosts still stack food with us for one timeline — BBQ, grazing or plated via <a href="/catering">catering</a> or multi-day meals via <a href="/private-chef-bali">private chef</a>.',
+  },
+  {
+    q: 'Is this the same as myCHEF Bar Services for hotels?',
+    a: 'No. This page is <strong>private villa / party mobile bar</strong> packages for guests. Hotels, beach clubs and venues use <a href="/bar-services/">B2B bar services</a> (staffing, menus, consulting).',
+  },
 ]
 
 const HOW_IT_WORKS = [
@@ -140,7 +152,7 @@ const HOW_IT_WORKS = [
 ]
 
 const OCCASIONS = [
-  { title: 'Villa parties', href: '/events/villa-parties', desc: 'Pool, garden and social nights with a proper bar centre.' },
+  { title: 'Villa parties', href: '/events/villa-parties', desc: 'Pool, garden and social nights with a proper mobile bar centre.' },
   { title: 'Weddings', href: '/events/weddings', desc: 'Welcome drinks, reception free flow and premium long service.' },
   { title: 'Birthdays', href: '/events/birthdays', desc: 'Signature serves and free-flow packages for celebrations.' },
   { title: 'Corporate receptions', href: '/events/corporate', desc: 'Controlled free flow with professional pacing.' },
@@ -148,8 +160,42 @@ const OCCASIONS = [
   { title: 'Private dinners', href: '/fine-dining', desc: 'Aperitivo hour before chef-led dining.' },
 ]
 
+/** Cross-pillar stack — chef + catering + mobile bar (guest F&B). */
+const HOSPITALITY_STACK = [
+  {
+    title: 'Mobile cocktail bar',
+    href: '/in-villa-service/bartenders',
+    desc: 'This page — complete party bar packages from IDR 500K++ per guest. We come to your villa.',
+  },
+  {
+    title: 'Villa catering',
+    href: '/catering',
+    desc: 'BBQ, buffet, plated, grazing and drop-off for the same night as your free-flow bar.',
+  },
+  {
+    title: 'Private chef (multi-day)',
+    href: '/private-chef-bali',
+    desc: 'Daily chef hire for breakfast/lunch/dinner when the stay needs more than one party night.',
+  },
+  {
+    title: 'Private cocktail party plan',
+    href: '/experiences/private-cocktail-party',
+    desc: 'Occasion timeline, canapés and entertainment layered on the same bar packages.',
+  },
+  {
+    title: 'Villa party production',
+    href: '/events/villa-parties',
+    desc: 'Food-first villa parties that still stack our mobile bar for drinks catering.',
+  },
+  {
+    title: 'Wedding F&B',
+    href: '/events/weddings',
+    desc: 'Welcome cocktails into reception catering — one team for food and bar.',
+  },
+]
+
 const TRUST = [
-  { icon: GlassWater, label: 'Complete bar setup' },
+  { icon: GlassWater, label: 'Mobile bar setup' },
   { icon: Wine, label: 'Four cocktail choices' },
   { icon: Users, label: `Minimum ${COCKTAIL_MIN_GUESTS} guests` },
   { icon: Sparkles, label: 'Setup & cleanup included' },
@@ -178,8 +224,8 @@ export default function ServiceBartendersPage() {
   }, [])
 
   const serviceJsonLd = cocktailServiceAggregateOfferSchema({
-    name: 'Luxury Cocktail & Bartender Service Bali',
-    description: `Complete villa cocktail service in Bali from ${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest. BYO, free-flow and premium packages with bartender team, glassware, ice, mixers, setup and cleanup. Minimum ${COCKTAIL_MIN_GUESTS} guests.`,
+    name: 'Mobile Cocktail Bar & Luxury Cocktail Service Bali',
+    description: `Mobile cocktail bar for Bali villa parties from ${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest. BYO, free-flow and premium packages with bartender team, glassware, ice, mixers, setup and cleanup. Minimum ${COCKTAIL_MIN_GUESTS} guests. Stack with catering or private chef.`,
     url: CANONICAL,
   })
 
@@ -228,19 +274,31 @@ export default function ServiceBartendersPage() {
             className="px-0 pt-0 pb-8"
           />
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">
-            Luxury Cocktail Service
+            Mobile Bar · Villa Parties · Bali
           </p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[900px]">
             {COCKTAIL_CLUSTER.bartenders.h1}
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[640px] mb-4">
-            Luxury cocktail service in Bali means a complete mobile bar at your villa — not a person hired by
-            the hour with empty hands. Choose four cocktails, pick BYO or fully supplied free flow, and our
-            team handles setup, glassware, ice, mixers, service and cleanup.
+            We bring a complete <strong className="text-white">mobile cocktail bar</strong> to your Bali
+            villa party — not a person hired by the hour with empty hands. Choose four cocktails, pick BYO
+            or fully supplied free flow, and our team handles setup, glassware, ice, mixers, service and
+            cleanup. Stack with{' '}
+            <Link to="/catering" className="text-[#C5A028] underline underline-offset-4 hover:text-white">
+              catering
+            </Link>{' '}
+            or a{' '}
+            <Link
+              to="/private-chef-bali"
+              className="text-[#C5A028] underline underline-offset-4 hover:text-white"
+            >
+              private chef
+            </Link>{' '}
+            when you want full food &amp; drinks.
           </p>
           <p className="text-white/[70%] text-base max-w-[640px] mb-8">
             Packages from <strong className="text-[#C5A028]">{COCKTAIL_PRICE_FLOOR_DISPLAY}</strong> per
-            guest · Minimum {COCKTAIL_MIN_GUESTS} guests · Not bartender-only hire
+            guest · Minimum {COCKTAIL_MIN_GUESTS} guests · Party bar service, not bartender-only hire
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -407,7 +465,40 @@ export default function ServiceBartendersPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 px-6 bg-white">
+      {/* Hospitality stack: mobile bar + catering + private chef */}
+      <section className="py-20 md:py-28 px-6 bg-white" id="stack-with-chef-and-catering">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Food & drinks together"
+            title="Mobile bar, catering and private chef — one myCHEF plan"
+            subtitle="Strong parties need drinks and food. Book the mobile bar alone, or stack catering and multi-day chef service without juggling three vendors."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
+            {HOSPITALITY_STACK.map((item) => (
+              <Link
+                key={item.href + item.title}
+                to={item.href}
+                className="block rounded-2xl border border-[#E8E6E3] bg-[#FAFAF8] p-6 hover:border-[#C5A028] transition-colors"
+              >
+                <h3 className="font-semibold text-lg mb-2 text-[#1A1A1A]">{item.title}</h3>
+                <p className="text-sm text-[#4A4745] leading-relaxed">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+          <p className="text-center text-sm text-[#4A4745] mt-8 max-w-3xl mx-auto leading-relaxed">
+            Searching for <strong>Bali bar catering</strong>, <strong>drinks catering</strong> or a{' '}
+            <strong>mobile bar for a villa party</strong>? This is the guest product. Transparent prices also
+            sit on <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">pricing</Link>
+            . Venue operators needing B2B staffing or menu consulting should open{' '}
+            <Link to="/bar-services/" className="text-[#C5A028] hover:underline font-medium">
+              bar services
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-6">
         <div className="max-w-[1280px] mx-auto grid lg:grid-cols-2 gap-10 items-center">
           <OptimizedImage
             src={COCKTAIL_IMAGE_PATHS.team}
@@ -665,11 +756,12 @@ export default function ServiceBartendersPage() {
       <section className="py-20 md:py-28 px-6 bg-[#1A1A1A] text-white" id="book">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-playfair text-3xl md:text-4xl mb-4">
-            Book luxury cocktail service in Bali
+            Book a mobile cocktail bar for your Bali villa party
           </h2>
           <p className="text-white/70 mb-8">
             Send date, villa area, guest count, package preference and event type — we reply with a fixed
-            quote. Packages from {COCKTAIL_PRICE_FLOOR_DISPLAY} per guest.
+            quote. Packages from {COCKTAIL_PRICE_FLOOR_DISPLAY} per guest. Add catering or private chef on the
+            same thread.
           </p>
           <a
             href={WA_LINK}
@@ -686,6 +778,12 @@ export default function ServiceBartendersPage() {
             </Link>
             <Link to="/experiences/private-cocktail-party" className="text-[#C5A028] hover:underline">
               Private cocktail party at your Bali villa
+            </Link>
+            <Link to="/catering" className="text-[#C5A028] hover:underline">
+              Villa catering Bali
+            </Link>
+            <Link to="/private-chef-bali" className="text-[#C5A028] hover:underline">
+              Private chef Bali
             </Link>
             <Link to="/in-villa-service" className="text-[#C5A028] hover:underline">
               All in-villa service

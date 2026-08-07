@@ -112,7 +112,8 @@ const FAQS = [
   { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
-  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/catering">Catering →</a>' },
+  { q: 'Do you bring a mobile bar to villa parties in Bali?', a: 'Yes — complete cocktail packages from IDR 500,000++ per guest (min 10). We set up at your villa; not hourly bartender-only hire. <a href="/in-villa-service/bartenders">Packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
   { q: 'Do you clean up?', a: 'Yes on serviced formats — kitchen left clean after service.' },
   { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
   { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/why-mychef">Why myCHEF</a> · <a href="/chefs">Chefs</a>.' },
@@ -383,7 +384,7 @@ export default function HubPage() {
                   <Link to="/catering" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">catering Bali</Link>,{' '}
                   <Link to="/fine-dining/chefs-table" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">chefs table Bali</Link>,{' '}
                   <Link to="/in-villa-service/butlers" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">butler service Bali</Link>,{' '}
-                  <Link to="/in-villa-service/bartenders" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">cocktail packages Bali</Link>, or{' '}
+                  <Link to="/in-villa-service/bartenders" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">mobile cocktail bar Bali</Link>, or{' '}
                   <Link to="/faq" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">booking questions answered</Link>.
                 </p>
               </div>
@@ -727,7 +728,7 @@ export default function HubPage() {
               { title: 'Private dining', desc: 'At-home fine dining across Indonesia — chef, service team and cleanup at your table.', href: '/private-dining-indonesia', cta: 'Explore private dining →' },
               { title: 'Hire private chef Bali', desc: 'Breakfast, lunch and dinner across your whole stay, groceries at cost. Daily and monthly rates published.', href: '/private-chef-bali', cta: 'Hire a private chef in Bali →' },
               { title: "Chef's table Bali", desc: 'Counter seating with Adriano — 7-course market menu, max 6 guests, Friday & Saturday only.', href: '/fine-dining/chefs-table', cta: "Book chefs table Bali →" },
-              { title: 'Butler service & cocktail packages', desc: 'Waiters, butlers and sommeliers by the shift; complete cocktail packages per guest for villa stays and events.', href: '/in-villa-service', cta: 'Explore butler service & cocktail packages →' },
+              { title: 'Mobile bar & villa staff', desc: 'Mobile cocktail bar packages from IDR 500K++ per guest for villa parties; waiters and butlers contact for pricing. Stack with chef or catering.', href: '/in-villa-service/bartenders', cta: 'Explore mobile cocktail bar packages →' },
             ].map((service) => (
               <div key={service.href} className="p-8 rounded-2xl border transition-all hover:shadow-lg" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
                 <h3 className="text-xl mb-2" style={{ fontFamily: "'Playfair Display', serif", color: 'var(--u-text)' }}>{service.title}</h3>

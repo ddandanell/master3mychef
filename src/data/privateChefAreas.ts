@@ -60,7 +60,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Seminyak',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-seminyak.webp',
+    heroImage: '/generated/mychef-private-chef-area-seminyak-hero.webp',
     heroAlt: 'Private chef plating a fine dining course at a luxury Seminyak villa pool at sunset',
     intro:
       `Seminyak is where Bali's villa dining culture began — the Petitenget road, the Oberoi corridor, and a dense belt of five-star private estates a short walk from the beach. The people staying here know what they want: couples marking an anniversary or honeymoon, friends splitting a design villa for a long weekend, families who came for the restaurant scene but want one evening no restaurant can give them. That evening is what we cook. A myCHEF private chef in Seminyak shops that morning, cooks in your villa kitchen, serves at your table and leaves the kitchen spotless — whether it's a tasting menu for two beside the pool or a staffed dinner for thirty on the terrace.`,
@@ -267,7 +267,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Uluwatu',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-uluwatu.webp',
+    heroImage: '/generated/mychef-private-chef-area-uluwatu-hero.webp',
     heroAlt: 'Private chef serving a seafood platter at a clifftop villa in Uluwatu with Indian Ocean views',
     intro:
       `Uluwatu's villas hang on limestone cliffs above the Indian Ocean — the most dramatic dining setting in Bali, and the least forgiving of average food. The guests here know it: honeymooning couples who booked the cliff-edge pool villa precisely for the view, surf groups splitting a premium house above Bingin, wedding parties who want the ceremony and the dinner in the same golden light. A myCHEF private chef in Uluwatu brings cooking that matches the setting — freshly landed seafood, tasting menus paced to the sunset, and a team that has worked these clifftop kitchens hundreds of times.`,
@@ -336,7 +336,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Jimbaran',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-jimbaran.webp',
+    heroImage: '/generated/mychef-private-chef-area-jimbaran-hero.webp',
     heroAlt: 'Indonesian chef grilling fresh seafood at a Jimbaran villa with Jimbaran Bay in the background',
     intro:
       `Jimbaran is where Bali eats seafood. Every dawn, the Kedonganan fish landing takes in the night's catch — barramundi, prawns, lobster, snapper — and by evening the bay's famous grills are smoking. The guests who stay here come for exactly that: seafood-loving families, couples celebrating over a bay sunset, and resort-villa guests who want the catch without the crowds. A myCHEF private chef in Jimbaran shortens the supply chain to a single day: fish landed at dawn, shopped that morning, cooked at your villa at sunset. The same catch as the bay — at your own table.`,
@@ -405,7 +405,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Nusa Dua',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-nusa-dua.webp',
+    heroImage: '/generated/mychef-private-chef-area-nusa-dua-hero.webp',
     heroAlt: 'Private chef serving a formal plated course at a Nusa Dua luxury estate with pool and ocean view',
     intro:
       `The five-star enclave runs on precision — gated estates, manicured grounds, service that arrives exactly when promised. Guests here expect the same standard at a private table, whether they're a board of twelve flying in for an incentive week, a family occupying a six-bedroom estate, or honeymooners who want one evening above the resort restaurants. A myCHEF private chef in Nusa Dua delivers exactly that: the discipline of a five-star kitchen, at your own table, quoted to the rupiah before you commit.`,
@@ -474,7 +474,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Sanur',
     regency: 'Denpasar',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-sanur.webp',
+    heroImage: '/generated/mychef-private-chef-area-sanur-hero.webp',
     heroAlt: 'Private chef setting a multi-generational family dinner table at a Sanur villa with sunrise beach views',
     intro:
       `Sanur doesn't do spectacle, and that's why people love it. The east-coast beach town runs at a gentler pace: calmer water, morning walks on the promenade, and villas full of families — grandparents, parents, grandkids — staying a fortnight rather than a weekend. Alongside them, a settled expat community that treats Bali as home, not holiday. The cooking they want matches: consistent, generous, and considerate of everyone at the table. A myCHEF private chef in Sanur cooks gentle, classic menus — handmade pasta, fresh reef fish, traditional Balinese — and weekly meal plans that quietly handle three generations of dietary preferences at once.`,
@@ -601,7 +601,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Berawa',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-berawa.webp',
+    heroImage: '/generated/mychef-private-chef-area-berawa-hero.webp',
     heroAlt: 'Private chef setting up a poolside dinner at a modern Berawa villa with rice field horizon',
     intro:
       'Berawa is Canggu\'s quieter, more design-led neighbour — newer villas, better kitchens, and a guest profile that leans health-conscious and long-stay. myCHEF cooks villa birthday parties for 20–60 guests, weekly meal prep for surf families, and Saturday dinner experiences that feel worlds away from the beach club scene. myCHEF handles Berawa birthday parties, weekly meal prep, and design-villa fine dining with Canggu-side logistics.',
@@ -657,7 +657,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Pererenan',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-pererenan.webp',
+    heroImage: '/generated/mychef-private-chef-area-pererenan-hero.webp',
     heroAlt: 'Chef preparing a romantic dinner at a secluded design villa in Pererenan at dusk',
     intro:
       `Pererenan is what Canggu was before the beach clubs arrived. The surf breaks are quieter, the villas are newer and often architect-designed, and the people who book them chose this address precisely because it isn't busy. Couples on a month-long stay. Remote workers who want silence until dinner. Small groups sharing a design villa who'd rather cook in than queue anywhere. That's exactly the brief a private chef answers. A myCHEF private chef in Pererenan brings restaurant-calibre cooking to villas built for privacy — intimate dinners, small-group fine dining, and weekly service for the long-stayers who came here to escape the noise, not to find a restaurant.`,
@@ -725,7 +725,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Kerobokan',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-seminyak.webp',
+    heroImage: '/generated/mychef-private-chef-area-kerobokan-hero.webp',
     heroAlt: 'Private chef preparing a dinner at a Kerobokan villa with garden terrace',
     intro:
       'Kerobokan sits between Seminyak and Canggu — an easy-to-reach area with a dense mix of residential villas, long-stay rentals, and a resident expat community. myCHEF cooks here for recurring household meal prep, family dinner parties, and villa events in one of Bali\'s most lived-in neighbourhoods. myCHEF cooks recurring household meal prep, family dinner parties, and villa events here with no south-Bali travel drama.',
@@ -780,7 +780,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Petitenget',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-seminyak.webp',
+    heroImage: '/generated/mychef-private-chef-area-petitenget-hero.webp',
     heroAlt: 'Private chef serving fine dining at a beachfront Petitenget villa terrace, Bali',
     intro:
       'Petitenget is Seminyak\'s most prestigious corridor — the Oberoi strip, beachfront temple, and the road that birthed Bali\'s fine dining scene. myCHEF cooks intimate tasting menus and romantic dinners for couples staying in the high-end villas along Jl. Petitenget, where privacy and quality are the non-negotiables. myCHEF delivers intimate tasting menus and romantic villa dinners along Jl. Petitenget for guests who expect Seminyak-level polish.',
@@ -891,7 +891,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Legian',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-seminyak.webp',
+    heroImage: '/generated/mychef-private-chef-area-legian-hero.webp',
     heroAlt: 'Private chef catering a villa group dinner and poolside service in Legian, Bali',
     intro:
       'Legian sits between Kuta and Seminyak — a compact, easy-to-navigate strip with a good selection of villa rentals and a loyal returning visitor base. myCHEF cooks villa group dinners, pre-trip welcome dinners, and poolside lunches for travellers who pick Legian for its central convenience — fast deployment from our south-Bali network, clear packages, and kitchen reset included.',
@@ -1115,7 +1115,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Pecatu',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-uluwatu.webp',
+    heroImage: '/generated/mychef-private-chef-area-pecatu-hero.webp',
     heroAlt: 'Private chef setting a candlelit table at a Pecatu clifftop villa, Bukit Peninsula',
     intro:
       'Pecatu is the upscale neighbourhood at the heart of the Bukit Peninsula — home to Bali\'s most iconic resort belt (Karma Kandara, Alila Villas Uluwatu, The Edge) and some of the island\'s highest-perched private villas. myCHEF cooks here for honeymooners, milestone celebrations, and resort-adjacent villa events where the view is as important as the food.',
@@ -1172,7 +1172,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Ungasan',
     regency: 'Badung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-bukit.webp',
+    heroImage: '/generated/mychef-private-chef-area-ungasan-hero.webp',
     heroAlt: 'Private chef plating a fine-dining course at a clifftop villa in Ungasan, Bali',
     intro:
       'Ungasan is the high plateau village at the southernmost tip of the Bukit Peninsula — famous for the Six Senses Uluwatu and a cluster of ultra-luxury private villas that overlook the Indian Ocean. myCHEF cooks here for elopements, anniversary dinners, and exclusive villa events at some of Bali\'s most dramatic addresses. myCHEF cooks elopements, anniversary dinners, and exclusive villa events at Ungasan\'s dramatic clifftop addresses.',
@@ -1286,7 +1286,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Sayan',
     regency: 'Gianyar',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-babiguling-new.webp',
     heroAlt: 'Private chef serving a candlelit jungle dinner at a Sayan valley villa',
     intro:
       'Sayan is the steep forested ridge just west of Ubud — home to some of Bali\'s most extraordinary hideaways perched above the Ayung River gorge. Four Seasons Resort Sayan put the area on the map; since then a cluster of private villas and boutique retreats have followed. myCHEF cooks here for jungle fine dining experiences, intimate couples\' retreats, and multi-day chef packages at hilltop compounds.',
@@ -1341,7 +1341,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Tegallalang',
     regency: 'Gianyar',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-babiguling.webp',
     heroAlt: 'Private chef plating dishes with Tegallalang rice terrace views in the background',
     intro:
       'Tegallalang is the rice-terrace village north of Ubud — one of Bali\'s most photographed landscapes and a growing hub for luxury villas perched above the padi fields. myCHEF cooks here for immersive Balinese dining experiences, retreats, and villa celebration dinners where guests can eat in the terraces with panoramic views. myCHEF brings Balinese terrace dinners and retreat catering to Tegallalang villas with rice-field views and Ubud-zone logistics.',
@@ -1398,7 +1398,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Renon',
     regency: 'Denpasar',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-denpasar.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-bbq.webp',
     heroAlt: 'Private chef plating at a modern villa in the Renon district of Denpasar',
     intro:
       'Renon is the leafy administrative and diplomatic quarter of Denpasar — home to consulates, professional compounds, and a collection of well-equipped private villas popular with long-term residents and business travellers. myCHEF cooks here for corporate dinners, resident celebration events, and private chef sessions for expats and government guests.',
@@ -1512,7 +1512,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Nusa Lembongan',
     regency: 'Klungkung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-buffet-catering-new.webp',
     heroAlt: 'Private chef serving a fresh seafood dinner at a Nusa Lembongan villa with ocean views',
     intro:
       'Nusa Lembongan is Bali\'s most popular island escape — 30 minutes by fast boat from Sanur, with turquoise water, mangrove channels, and a relaxed village atmosphere that feels a world away from the mainland. myCHEF makes the trip here to cook for villa and bungalow guests who want a proper private dining experience — fresh Balinese seafood, sunset fine dining, and full villa catering for celebration groups.',
@@ -1569,7 +1569,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Nusa Penida',
     regency: 'Klungkung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-buffet-catering.webp',
     heroAlt: 'Private chef preparing a clifftop dinner at a Nusa Penida villa overlooking the ocean',
     intro:
       'Nusa Penida is Bali\'s wild and spectacular island — the largest of the three Nusa islands, famous for Kelingking Beach, Crystal Bay, and its dramatic limestone cliffs. A growing number of luxury villas have appeared on the clifftop ridges, attracting a new wave of high-end travellers who want Bali\'s most remote scenery with a world-class private dining experience to match. myCHEF travels here for clifftop fine dining, villa celebration events, and longer-stay chef packages.',
@@ -1629,7 +1629,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Mas',
     regency: 'Gianyar',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-buffet.webp',
     heroAlt: 'Private chef serving an intimate tasting dinner at a boutique villa in Mas, Bali',
     intro:
       'Mas sits on the Ubud–Denpasar corridor — famous for its master woodcarvers and a concentration of boutique villas tucked behind stone-walled compounds. The pace is quieter than central Ubud, the gardens are spectacular, and myCHEF cooks here for retreat groups, villa families, and couples who want full Balinese fine dining without the tourist centre hustle.',
@@ -1679,7 +1679,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Penestanan',
     regency: 'Gianyar',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-corporate.webp',
     heroAlt: 'Chef preparing a refined Balinese dinner at a Penestanan villa above the rice terraces',
     intro:
       "Penestanan perches on the ridge just west of Ubud — known to longtime Bali travellers as the artists' quarter, home to rice-terrace villas, creative residencies, and some of the most photogenic valley views on the island. myCHEF cooks here for long-stay villa guests and retreat facilitators who want unhurried, ingredients-led fine dining above the gorge.",
@@ -1729,7 +1729,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Nyanyi',
     regency: 'Tabanan',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-dropoff.webp',
     heroAlt: 'Private chef dinner on the beach terrace at a Nyanyi villa, Tabanan, Bali',
     intro:
       "Nyanyi is a quiet black-sand beach village on Tabanan's coast — uncrowded, dramatic, and increasingly popular with guests who want the feel of Canggu's surfside villas without the crowds. A cluster of high-end private villas faces the Indian Ocean here, and myCHEF cooks for the guests who book them: surfers, digital nomads, and families who want the coastline to themselves.",
@@ -1779,7 +1779,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Cemagi',
     regency: 'Tabanan',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-floating-breakfast.webp',
     heroAlt: 'Chef serving sunset dinner at an ocean-view villa in Cemagi, Tabanan, Bali',
     intro:
       "Cemagi stretches along the Tabanan coast between Canggu and Tanah Lot — a low-density strip of luxury villas with ocean-facing infinity pools and rice fields rolling to the horizon. It is the kind of place where guests book for a week, don't leave the property, and want a chef on call. myCHEF covers Cemagi for multi-day villa stays, wedding-party weekends, and private retreats.",
@@ -1829,7 +1829,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Seseh',
     regency: 'Tabanan',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-grazing.webp',
     heroAlt: 'Private chef preparing dinner at a cliffside villa in Seseh, Tabanan, Bali',
     intro:
       "Seseh is Bali's best-kept coastal secret — a black-sand stretch where a handful of architect-designed villas look out at the open Indian Ocean with no tourist infrastructure in sight. The guests who stay here know exactly what they want: complete privacy, no noise, and exceptional food. myCHEF has been cooking here since the first luxury villas opened and knows the area intimately.",
@@ -1879,7 +1879,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Nusa Ceningan',
     regency: 'Klungkung',
     tier: 1,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-plated.webp',
     heroAlt: 'Chef serving a sunset dinner at a clifftop boutique villa on Nusa Ceningan, Bali',
     intro:
       "Nusa Ceningan is the smallest of Bali's three sister islands — a 3 km² lagoon-ringed gem connected to Nusa Lembongan by the famous Yellow Bridge. It hosts a handful of boutique clifftop villas, surf bungalows, and a blue lagoon that defines the island's character. myCHEF travels here for guests who want a private chef experience as wild and beautiful as the island itself.",
@@ -1932,7 +1932,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Balangan',
     regency: 'Badung',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-city-bukit.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-retreat.webp',
     heroAlt: 'Private chef preparing a sunset dinner at a clifftop Balangan villa above the Indian Ocean',
     intro:
       "Balangan Beach sits on the southwestern tip of the Bukit Peninsula — a quiet clifftop enclave of boutique villas, reef surf breaks, and sweeping Indian Ocean views. myCHEF serves intimate couples' dinners and small group surf-trip feasts from the hillside properties here, with menus built around local seafood and service timed to the Balangan sunset.",
@@ -1988,7 +1988,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Bingin',
     regency: 'Badung',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-city-bukit.webp',
+    heroImage: '/generated/mychef-catering-bali-hero-villa.webp',
     heroAlt: 'Private chef serving a clifftop dinner at a Bingin villa above the reef break',
     intro:
       "Bingin is a clifftop surf village on the Bukit Peninsula with some of Bali's most dramatic ocean views. The boutique tiered villas built into the limestone cliffs are a spectacular setting for a private chef dinner above the break. Guests book here for sunset timing, small-group surf trips, and intimate cliff-edge tables — myCHEF arrives fully equipped and cooks to the villa kitchen, not a hotel template.",
@@ -2044,7 +2044,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Padang Padang',
     regency: 'Badung',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-city-bukit.webp',
+    heroImage: '/generated/mychef-caviar-experience-bali-champagne-service.webp',
     heroAlt: 'Private chef plating a fresh seafood dinner at a Padang Padang villa with ocean views',
     intro:
       "Padang Padang is one of Bali's most photographed surf beaches — a sheltered cove beneath the Bukit Peninsula cliffs. The villas around Padang Padang attract surfers, honeymooners, and guests seeking a quieter Bali. myCHEF serves them all with market-fresh menus, sunset-timed service, and full kitchen reset after dinner so the villa stays holiday-ready.",
@@ -2101,7 +2101,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Sukawati',
     regency: 'Gianyar',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroImage: '/generated/mychef-caviar-experience-bali-hero-villa.webp',
     heroAlt: 'Private chef preparing a traditional Balinese feast at a rice-field villa in Sukawati',
     intro:
       'Sukawati is a traditional Balinese town in Gianyar regency — known for its art markets, dance performances, and deeply rooted Hindu culture. Villas here are immersed in authentic Bali, and the food should match. myCHEF brings genuine Balinese cooking to Sukawati stays — market-led rijsttafel, ceremonial-inspired feasts, and private dinners that fit village villa compounds.',
@@ -2157,7 +2157,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Payangan',
     regency: 'Gianyar',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroImage: '/generated/mychef-caviar-experience-bali-service-station.webp',
     heroAlt: 'Private chef serving a healthy retreat dinner at an eco-villa in the Payangan jungle valley',
     intro:
       'Payangan is a highland retreat north of Ubud in Gianyar regency — jungle river valleys, eco-resorts, and some of the most secluded private villas in Bali. myCHEF serves retreat properties and private villa guests here with sessions designed for the highland setting — organic produce, wellness-friendly menus, and multi-day catering for quiet jungle compounds.',
@@ -2213,7 +2213,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Keramas',
     regency: 'Gianyar',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-city-ubud.webp',
+    heroImage: '/generated/mychef-cooking-class-bali-guests-dining.webp',
     heroAlt: 'Private chef grilling fresh seafood at a Keramas black sand beach villa in east Bali',
     intro:
       "Keramas is a black sand beach village on Bali's east Gianyar coast — a world-class surf break and home to genuinely private luxury villas. myCHEF serves Keramas villas for surfers, families, and anyone seeking a quieter corner of Bali — seafood-forward dinners, recovery brunches after dawn sessions, and multi-day chef packages with east-coast produce.",
@@ -2327,7 +2327,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Jatiluwih',
     regency: 'Tabanan',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroImage: '/generated/mychef-cooking-class-bali-hero-villa.webp',
     heroAlt: 'Private chef serving a Balinese feast at a villa overlooking the Jatiluwih UNESCO rice terraces',
     intro:
       "Jatiluwih means 'truly marvellous' in Balinese — and the landscape earns it. The UNESCO-listed rice terraces cascade down the Tabanan highlands in an extraordinary scene. myCHEF serves private stays and eco-retreats here with menus that honour the setting — highland vegetables, Balinese rice-based dishes, and terrace dinners timed to cooler mountain evenings.",
@@ -2383,7 +2383,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Tabanan',
     regency: 'Tabanan',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-cooking-class-bali-ingredients-spread.webp',
     heroAlt: 'Private chef cooking with fresh produce from Tabanan market at a villa in West Bali',
     intro:
       "Tabanan is the capital of Tabanan regency — surrounded by the most productive agricultural land in Bali. Villas and retreat properties in this area benefit from exceptional local produce and a myCHEF team that covers the full West Bali regency — farm-led menus, multi-day retreat catering, and private dinners that showcase Tabanan's rice fields and coastal villages.",
@@ -2440,7 +2440,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Amed',
     regency: 'Karangasem',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-cooking-class-balinese-ingredients-bali-landscape.webp',
     heroAlt: 'Private chef preparing fresh seafood at an Amed villa overlooking the black sand coast',
     intro:
       "Amed is a string of fishing villages on Bali's northeast coast in Karangasem regency — black sand beaches, world-class snorkelling and diving, and a relaxed pace that attracts long-stay visitors. myCHEF brings private chef sessions to Amed villas and dive resorts with boat-fresh fish, simple Balinese feasts, and flexible timing around dive schedules.",
@@ -2497,7 +2497,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Sidemen',
     regency: 'Karangasem',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroImage: '/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp',
     heroAlt: 'Private chef serving a Balinese feast at a Sidemen valley villa with Mount Agung views',
     intro:
       "Sidemen is one of Bali's most breathtaking valleys — a lush corridor of rice terraces running toward Mount Agung in Karangasem regency. The boutique guesthouses and private villas here have extraordinary views. myCHEF serves Sidemen with private chef sessions designed for this highland setting. myCHEF brings Balinese menus and highland produce to Sidemen valley terraces — private dining with Mount Agung on the horizon.",
@@ -2553,7 +2553,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Candidasa',
     regency: 'Karangasem',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-cooking-class-group-dining-bali-landscape.webp',
     heroAlt: 'Private chef serving a fresh seafood dinner at a Candidasa beachfront villa in East Bali',
     intro:
       "Candidasa is a quiet beach town on Bali's east coast in Karangasem — the gateway to East Bali's diving, snorkelling, and cultural attractions. myCHEF serves Candidasa villas and guesthouses with private chef sessions focused on East Bali's excellent seafood and produce, plus multi-day chef packages for longer cultural and dive stays. myCHEF times Candidasa service around dive days and cultural day trips — seafood dinners, flexible breakfasts, and multi-day chef packages.",
@@ -2609,7 +2609,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Tulamben',
     regency: 'Karangasem',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-cooking-class-market-produce-bali-portrait.webp',
     heroAlt: 'Private chef preparing a post-dive meal at a Tulamben dive resort on the northeast Bali coast',
     intro:
       "Tulamben is a small diving village on Bali's northeast coast — home of the USAT Liberty shipwreck, one of the most accessible wreck dives in the world. myCHEF caters to both resort groups and private villa guests here with menus designed for the dive-centred lifestyle — early fuel breakfasts, light lunches, and seafood dinners after afternoon dives.",
@@ -2666,7 +2666,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Lovina',
     regency: 'Buleleng',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-corporate-retreat-catering-bali-hero.webp',
     heroAlt: 'Private chef serving a relaxed seafood dinner at a Lovina beachfront villa in North Bali',
     intro:
       "Lovina is North Bali's main beach resort — a calm stretch of black sand, famous for dolphin watching at dawn and a pace far slower than the south. myCHEF serves Lovina villas and guesthouses with private chef sessions tailored to the relaxed North Bali character — early breakfasts before boat trips, seafood dinners, and multi-day chef packages for longer northern stays.",
@@ -2722,7 +2722,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Singaraja',
     regency: 'Buleleng',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-events-bali-hero-anniversaries.webp',
     heroAlt: 'Private chef hosting a Singaraja villa event with North Bali sea views and local produce',
     intro:
       "Singaraja is the capital of Buleleng regency and the historical port city of North Bali — a layered urban landscape of Dutch colonial architecture, Chinese quarter streets, and Balinese royal heritage. myCHEF serves private stays and event catering in the Singaraja area — family villa dinners, corporate hosting, and logistics for guests based in North Bali.",
@@ -2778,7 +2778,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Pemuteran',
     regency: 'Buleleng',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-water-sunset.webp',
+    heroImage: '/generated/mychef-events-bali-hero-baby-showers.webp',
     heroAlt: 'Private chef preparing an eco-conscious dinner at a Pemuteran dive resort villa in northwest Bali',
     intro:
       "Pemuteran is a small eco-dive village in northwest Bali — gateway to Menjangan Island and the West Bali National Park. myCHEF serves Pemuteran's dive resorts and eco-lodges with private chef sessions designed for the conservation-minded community here — fresh seafood, plant-forward recovery meals after dive days, and low-waste kitchen practice that fits the area's eco ethos.",
@@ -2834,7 +2834,7 @@ export const PRIVATE_CHEF_AREAS: PrivateChefArea[] = [
     name: 'Kintamani',
     regency: 'Bangli',
     tier: 2,
-    heroImage: '/generated/mychef-location-bali-locations-sunset.webp',
+    heroImage: '/generated/mychef-events-bali-hero-birthdays.webp',
     heroAlt: 'Private chef serving a highland caldera dinner at a Kintamani villa above Lake Batur',
     intro:
       "Kintamani sits on the rim of the ancient Batur caldera in Bangli regency — at 1,500 metres, with views across the volcanic lake and Mount Batur. myCHEF serves private villas and boutique properties on the caldera rim for high-altitude dining experiences unlike anywhere else in Bali. myCHEF cooks mountain dinners with volcanic views in mind — warming menus, highland produce, and logistics for cooler caldera villas.",

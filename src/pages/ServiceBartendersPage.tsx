@@ -112,6 +112,23 @@ const FAQS = [
     q: 'What is not included in cocktail free flow?',
     a: 'Named luxury spirit brands not written into the quote, decorative bar counters, food, DJ and overtime beyond the package window are separate unless listed.',
   },
+  // AnswerSocrates bar/cocktail guest intents (villa packages only — not B2B venue consultancy)
+  {
+    q: 'How much do Bali cocktails cost for a villa party (harga cocktail Bali)?',
+    a: `Complete cocktail packages start at <strong>${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest</strong> (BYO, 6 hours, min ${COCKTAIL_MIN_GUESTS}). Free-flow is IDR 1,300,000++ / guest (4h, spirits included). Premium free-flow IDR 1,700,000++ / guest (6h). That is the honest “harga cocktail Bali” band for professional villa service — not a single drink at a beach club. <a href="/experiences/private-cocktail-party">Private cocktail party →</a>`,
+  },
+  {
+    q: 'Do you offer Bali cocktail delivery?',
+    a: 'We do not run a bottle shop or courier-only cocktail drop. We deliver a <strong>full in-villa cocktail service</strong>: team, four-cocktail menu, glassware, ice, mixers, setup and cleanup at your property. For food-only delivery see <a href="/catering/drop-off-catering">drop-off catering</a>.',
+  },
+  {
+    q: 'Can you provide Bali bar catering or bar service with food catering?',
+    a: 'Yes — bar catering stacks with BBQ, buffet, plated or grazing. Book the cocktail package on this page and the food format on <a href="/catering">catering</a> or <a href="/events/villa-parties">villa parties</a>. One timeline, one WhatsApp thread.',
+  },
+  {
+    q: 'What is the average drink price in Bali for a private villa event?',
+    a: `Restaurant and club drink prices vary widely. For a private villa, budget the package floor of about <strong>IDR 500,000++ per guest</strong> for BYO cocktail service, or IDR 1.3M–1.7M++ per guest when spirits are included free-flow. That usually beats open-bar restaurant mark-ups for groups of 10+. <a href="/pricing">Pricing overview →</a>`,
+  },
 ]
 
 const HOW_IT_WORKS = [
@@ -490,6 +507,23 @@ export default function ServiceBartendersPage() {
                 private cocktail party at your Bali villa
               </Link>
               . Both pages link back here for the package table — this is the money page for prices.
+            </p>
+            <p>
+              Searching for <strong>Bali cocktails</strong>, <strong>harga cocktail Bali</strong>,{' '}
+              <strong>Bali bar catering</strong> or drinks catering for a villa event? This is the product page.
+              We do not sell courier-only cocktail delivery — we run the bar on site. Stack with food via{' '}
+              <Link to="/catering" className="text-[#C5A028] hover:underline font-medium">
+                villa catering
+              </Link>{' '}
+              or{' '}
+              <Link to="/events/villa-parties" className="text-[#C5A028] hover:underline font-medium">
+                villa party catering
+              </Link>
+              . Transparent bands also appear on{' '}
+              <Link to="/pricing" className="text-[#C5A028] hover:underline font-medium">
+                pricing
+              </Link>
+              .
             </p>
           </div>
         </div>

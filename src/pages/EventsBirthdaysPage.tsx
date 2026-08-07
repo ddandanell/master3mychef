@@ -90,6 +90,10 @@ const FAQS = [
   { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
   { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
   { q: 'What does "++" mean on prices?', a: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  // AnswerSocrates birthday + kids party catering intents
+  { q: 'Can I hire a private chef for a birthday party in Bali?', a: 'Yes — intimate dinners often use private chef or fine dining; larger villa parties use the packages on this page. <a href="/private-chef-bali">Private chef day rates →</a> · <a href="/catering">Catering formats →</a>' },
+  { q: 'Do you do catering for kids birthday parties?', a: 'Yes — milder kids plates, familiar favourites, early seating and adult menus in parallel. Foam parties and full kids-party production: <a href="/experiences/kids-party">kids party experience</a> · <a href="/kids-menus">kids menus</a>.' },
+  { q: 'Can we add cocktail packages for the adults at a birthday?', a: 'Yes — BYO or free-flow cocktail packages from IDR 500,000++ per guest (min 10) while kids menus run separately. <a href="/in-villa-service/bartenders">Cocktail packages →</a>' },
 ]
 
 const STAFFING_POINTS = [

@@ -125,6 +125,10 @@ const FAQS = [
   { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
   { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
   { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  // AnswerSocrates villa party + bar catering intents
+  { q: 'Do you offer Bali bar catering and drinks for villa parties?', a: 'Yes. Cocktail packages from IDR 500,000++ per guest (BYO, min 10) or free-flow with spirits included. Pair with BBQ, grazing or buffet food. <a href="/in-villa-service/bartenders">Bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
+  { q: 'Can we do alcohol catering and BYO at a villa party?', a: 'Yes — supply your own bottles (we serve) or book free-flow packages that include spirits for the four-cocktail menu. Corkage or package choice is confirmed on the quote.' },
+  { q: 'What food and drinks work best for a Bali villa party?', a: 'Popular stacks: Indonesian BBQ + free-flow cocktails, grazing boards + welcome drinks, or buffet for 30+ with a mobile bar. See <a href="/catering">catering formats</a> and the packages on this page.' },
 ]
 
 const VILLA_RULES_POINTS = [

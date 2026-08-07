@@ -67,6 +67,11 @@ const FAQS = [
   { q: 'Do you clean the villa after the wedding?', a: 'Yes on our catering scope — kitchen, service stations, plate clear and rubbish removal for a clean handback.' },
   { q: 'How do I get a wedding catering proposal?', a: 'WhatsApp date, guest estimate, villa/venue and style (plated/buffet/BBQ). <a href="/quote">Quote →</a> · <a href="/bali-wedding-catering-packages">packages →</a>' },
   { q: 'What if headcount changes close to the wedding?', a: 'Final numbers typically lock ~48–72 hours out. We adjust food and staff; large increases may change minimums — confirmed in writing.' },
+  // AnswerSocrates wedding catering cost / timing intents
+  { q: 'How much should wedding catering cost for 50, 100 or 150 guests in Bali?', a: 'Using published floors as a planning band only: food from ~IDR 700K–1.5M++ per person for many villa formats; full reception production often IDR 1.5M–3M++ per person. Example food-only floors: 50 guests ≈ IDR 35M–75M++; 100 guests ≈ IDR 70M–150M++ before bar and décor. Your written proposal is the real number. <a href="/bali-wedding-catering-packages">Packages →</a> · <a href="/pricing">Pricing →</a>' },
+  { q: 'When should I book catering for my Bali wedding?', a: 'As soon as villa/venue dates are fixed — ideally 3–10 months for peak season (Jul–Sep, Dec–Jan). That locks the kitchen team, tasting window and run-of-show with your planner.' },
+  { q: 'Can we hire a private chef for a micro-wedding or wedding dinner only?', a: 'Yes — intimate dinners often use <a href="/private-chef-bali">private chef</a> or <a href="/fine-dining">fine dining</a> formats instead of full buffet production. Larger receptions stay on this wedding catering page.' },
+  { q: 'Do you provide bar catering and cocktails for wedding welcome drinks?', a: 'Yes — cocktail hour and free-flow packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service/bartenders">Cocktail packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party planning →</a>' },
 ]
 
 const FLOW_STEPS = [

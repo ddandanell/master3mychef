@@ -216,6 +216,22 @@ const FAQ_CATEGORIES: FAQCategory[] = [
         q: 'Do you cater corporate retreats and team dinners?',
         a: 'Yes — offsites, gala dinners and multi-day retreat catering with NPWP-ready invoicing where needed. <a href="/events/corporate">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
       },
+      {
+        q: 'How much does catering in Bali cost per person?',
+        a: 'Most food packages start around <strong>IDR 700,000++ per person</strong> (BBQ, buffet, drop-off). Plated from ~IDR 800K++. Wedding receptions often IDR 1.5M–3M++ with full production. <a href="/catering">Catering Bali →</a> · <a href="/pricing">Pricing →</a>',
+      },
+      {
+        q: 'Do you offer Bali bar catering and cocktail packages?',
+        a: 'Yes — complete cocktail packages from <strong>IDR 500,000++ per guest</strong> (BYO, min 10), free-flow and premium free-flow with spirits included. Not hourly bartender-only hire. <a href="/in-villa-service/bartenders">Cocktail packages →</a> · <a href="/experiences/private-cocktail-party">Private cocktail party →</a>',
+      },
+      {
+        q: 'Catering vs private chef — which do I need?',
+        a: '<a href="/private-chef-bali">Private chef</a> day rates for multi-meal villa stays. <a href="/catering">Catering</a> for one celebration night (BBQ, buffet, plated, wedding). Many guests book both. WhatsApp us if you are unsure.',
+      },
+      {
+        q: 'Is food in Bali halal — can you cater pork-free?',
+        a: 'Yes. We run pork-free and Muslim-friendly menus on request. Babi guling contains pork and is not for halal groups. Tell us at enquiry. <a href="/catering">Catering options →</a>',
+      },
     ],
   },
 ]

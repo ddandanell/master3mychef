@@ -825,6 +825,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Plan the perfect proposal with a private chef dinner in your Bali villa — intimate, styled and unforgettable. Confidential planning. WhatsApp myCHEF today.',
     canonical: `${SITE}/proposal-dinner`,
     h1: 'Proposal Dinner Bali — The Yes Starts at Dinner',
+    ogImage: `${SITE}/generated/mychef-proposal-dinner-bali-villa-candles.webp`,
   },
 
       'honeymoon-chef': {
@@ -834,6 +835,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Private chef experiences for honeymooners in Bali: romantic breakfasts, sunset dinners and intimate in-villa hosting. Custom menus and transparent rates. WhatsApp myCHEF.',
     canonical: `${SITE}/honeymoon-chef`,
     h1: 'Honeymoon Chef Bali — Private Villa Dining for Two',
+    ogImage: `${SITE}/generated/mychef-honeymoon-chef-bali-villa-sunset.webp`,
   },
 
       'guide-private-chef-bali': {

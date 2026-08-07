@@ -791,6 +791,26 @@ export default function PrivateChefPillarPage() {
                 href: '/experiences/whiskey-cigar-experience',
                 desc: 'Guided whiskey tasting and premium cigar lounge with chef pairings.',
               },
+              {
+                title: 'Honeymoon chef',
+                href: '/honeymoon-chef',
+                desc: 'Couples villa dining plans for honeymoons — owner of honeymoon chef intent.',
+              },
+              {
+                title: 'Proposal dinner',
+                href: '/proposal-dinner',
+                desc: 'Planning guide for villa proposals with private chef and setup.',
+              },
+              {
+                title: 'Seafood BBQ catering',
+                href: '/seafood-bbq-catering-bali',
+                desc: 'Jimbaran-style seafood BBQ packages for villa nights.',
+              },
+              {
+                title: 'Staffing & placement',
+                href: '/staffing',
+                desc: 'Long-term chef and villa staff placement across Bali.',
+              },
             ].map((card) => (
               <Link
                 key={card.href + card.title}

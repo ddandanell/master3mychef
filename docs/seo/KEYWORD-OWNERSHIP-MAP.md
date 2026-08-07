@@ -143,4 +143,5 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | 2026-08-07 | Wave 5: cooking class commercial owner `/experiences/cooking-class`; blog support URL kept live (no 301); sushi/kids ownership rows; experiences cluster table |
 | 2026-08-07 | Caviar experience owner `/experiences/caviar-experience` (contact-quote; sibling to champagne-oyster) |
 | 2026-08-07 | Whiskey & cigar experience owner `/experiences/whiskey-cigar-experience` (contact-quote) |
+| 2026-08-07 | GSC Discovered-not-indexed strategy: `GSC-DISCOVERED-NOT-INDEXED-STRATEGY-2026-08-07.md` (130 URLs; area uniqueness + commercial mesh) |
 

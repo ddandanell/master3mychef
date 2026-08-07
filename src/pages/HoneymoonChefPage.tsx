@@ -153,7 +153,7 @@ export default function HoneymoonChefPage() {
         title="Honeymoon Private Chef Bali | Romantic Villa Dining | myCHEF"
         description="A private chef for your Bali honeymoon. Sunset dinners, breakfast in bed, custom romantic menus. specialist chef team. From IDR 2.5M++ per person. WhatsApp us."
         canonical={`${SITE}/blog/honeymoon-private-chef-bali`}
-        ogImage={`${SITE}/generated/mychef-experience-bali-luna-gallery-1.webp`}
+        ogImage={`${SITE}/generated/mychef-honeymoon-chef-bali-villa-sunset.webp`}
         jsonLd={[
           detailedServiceSchema(
             'Honeymoon Private Chef Bali',
@@ -171,7 +171,7 @@ export default function HoneymoonChefPage() {
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/generated/mychef-experience-bali-luna-gallery-1.webp"
+            src="/generated/mychef-honeymoon-chef-bali-villa-sunset.webp"
             alt="Private chef serving a romantic candlelit dinner for two at a Bali villa poolside"
             width={1920} height={1080}
             decoding="async" fetchPriority="high"
@@ -252,7 +252,7 @@ export default function HoneymoonChefPage() {
             </div>
             <div className="rounded-[24px] overflow-hidden shadow-xl">
               <img
-                src="/generated/mychef-experience-bali-luna-gallery-1.webp"
+                src="/generated/mychef-honeymoon-chef-bali-villa-sunset.webp"
                 alt="Romantic poolside dinner table set for two at a Bali villa with candles and tropical flowers"
                 width={700} height={800}
                 loading="lazy" decoding="async"

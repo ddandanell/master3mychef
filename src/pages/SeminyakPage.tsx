@@ -14,7 +14,7 @@ const FAQS = [
   { q: 'Do you serve Petitenget and Oberoi-area villas?', a: 'Yes — Seminyak, Petitenget and nearby villa streets are standard service zones with no remote surcharge.' },
   { q: 'Can you handle VIP and discreet villa dinners in Seminyak?', a: 'Yes — privacy-first service for high-profile guests is routine. Request a senior chef via WhatsApp and note discretion requirements.' },
   { q: 'Fine dining vs casual villa dinner in Seminyak — which should I book?', a: 'Tasting menus via <a href="/fine-dining">fine dining</a>; relaxed grill or family-style via private chef or <a href="/catering">catering</a>. Tell us the occasion and guest mix.' },
-  { q: 'Can Seminyak villa parties add bar service?', a: 'Yes — bartenders and cocktail setups pair with chef service. See <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { q: 'Can Seminyak villa parties add a mobile cocktail bar?', a: 'Yes — complete mobile bar packages from IDR 500,000++ per guest (min 10). Stack with catering or private chef. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
   { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },
@@ -22,7 +22,7 @@ const FAQS = [
   { q: 'Fine dining available here?', a: 'Yes — <a href="/fine-dining">fine dining</a>.' },
   { q: 'BBQ and parties?', a: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
   { q: 'Daily chef for a week?', a: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
-  { q: 'Staff and bartenders?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'Staff and mobile bar?', a: 'Waiters/butlers: contact for pricing. Mobile cocktail bar packages from IDR 500K++/guest (min 10). <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   { q: 'How far ahead to book here?', a: 'A few days typical; peak season longer.' },
   { q: 'Last-minute possible?', a: 'Often yes — WhatsApp the area and date.' },
   { q: 'Kids-friendly service?', a: 'Yes — <a href="/kids-menus">kids menus</a>.' },
@@ -34,7 +34,7 @@ const FAQS = [
   { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
-  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
 ]
 
 const SCENE = [
@@ -60,16 +60,22 @@ const SERVICES = [
     detail: 'Multi-course menus that rival the strip\'s best tables, for 2–10 guests.',
   },
   {
-    name: 'Cocktail receptions and villa parties',
+    name: 'Catering & villa parties',
     range: 'From IDR 700K / person',
-    for: '20–60 guests',
-    detail: 'With waiters and bartenders available.',
+    for: '10–80 guests',
+    detail: 'BBQ, buffet and receptions — stack a mobile cocktail bar for drinks.',
   },
   {
-    name: 'Weekly chef service',
-    range: 'Custom daily package',
+    name: 'Mobile cocktail bar',
+    range: 'From IDR 500K++ / guest',
+    for: 'Min 10 guests',
+    detail: 'We bring a complete bar to Seminyak villas — BYO or free-flow packages.',
+  },
+  {
+    name: 'Weekly private chef',
+    range: 'From IDR 1M++ / day',
     for: '7+ day stays',
-    detail: 'A dedicated chef for stays of 7+ days, from breakfast through dinner.',
+    detail: 'A dedicated chef for multi-day stays — meal plans on private chef Bali.',
   },
 ]
 

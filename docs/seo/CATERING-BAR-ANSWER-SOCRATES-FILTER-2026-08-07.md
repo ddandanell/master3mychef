@@ -193,6 +193,22 @@ Goal: rank and convert as **mobile bar / party bar service that comes to villas*
 - Food event → `/catering` / `/events/*`
 - Multi-day meals → `/private-chef-bali`
 - Hotels/venues B2B → `/bar-services/` only
+
+---
+
+## Wave 2 — area + party page distribution (2026-08-07)
+
+| Surface | Change |
+|---------|--------|
+| `/private-chef/[slug]` (all area landings) | Service grid “Staffing” → **Mobile Cocktail Bar**; always inject bar card; all-services grid links; FAQs via `privateChefAreaFaqs` stack |
+| Area template (`AreaPage`) | Mobile bar + private chef + cocktail party cards |
+| Location landing data | Seminyak, Canggu, Ubud, Uluwatu `serviceAvailability` include mobile bar |
+| City deep-dives | Seminyak / Canggu / Ubud SERVICES list include mobile bar + catering stack |
+| Pool / birthday / villa party SEO blogs | Body stack sections, related pages, keywords, package honesty |
+| 100+ long-tail pages | FAQ boilerplate upgraded to mobile bar + chef + catering deep links |
+| Pillar sub-pages | Catering/events alcohol FAQs aligned with packages |
+
+Still never invent hourly guest bartender hire or waiter list rates.
 - private chef bali for birthday party
 
 ### `/private-chef/canggu` (1)

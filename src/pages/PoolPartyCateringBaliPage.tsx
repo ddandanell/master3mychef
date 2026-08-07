@@ -78,13 +78,28 @@ For birthday parties and milestone celebrations: premium sharing platters elevat
 
 **Premium Birthday or Celebration Party (any size)**: From IDR 700,000/person -- elevated menu, centrepiece dishes, dessert service, full service team, and event coordination support.
 
-All pricing includes chef, ingredients, and service staff. Alcohol and cocktail bar are additional. Add a mixologist for IDR 1,500,000 flat (client supplies alcohol). Minimum booking: 8 guests.`,
+All pricing includes chef, ingredients, and service staff. Alcohol and cocktail bar are additional. Minimum booking: 8 guests.
+
+**Mobile cocktail bar add-on (recommended):** Complete packages from **IDR 500,000++ per guest** (min 10) — team, four cocktails, glassware, ice, setup and cleanup. BYO or free-flow with spirits included. Not hourly bartender hire. Full tables: <a href="/in-villa-service/bartenders">mobile cocktail bar packages</a>. Occasion plan: <a href="/experiences/private-cocktail-party">private cocktail party</a>.`,
+  },
+  {
+    id: 'stack-fnb',
+    type: 'content',
+    title: 'Pool Party Food + Mobile Bar + Private Chef',
+    body: `Strong pool parties need **food and drinks** from one team:
+
+- **Pool party catering** (this page) — finger food, grazing, BBQ stations and service staff.
+- **Mobile cocktail bar** — we come to your villa with free-flow or BYO packages. <a href="/in-villa-service/bartenders">Mobile bar packages →</a>
+- **Private chef** — multi-day meals around the party night. <a href="/private-chef-bali">Private chef Bali →</a>
+- **Villa party production** — larger social formats. <a href="/events/villa-parties">Villa parties →</a>
+
+One WhatsApp thread, one timeline, no freelance juggling.`,
   },
   {
     id: 'cta',
     type: 'content',
     title: 'Book Pool Party Catering in Bali',
-    body: `Tell us your villa location, date, guest count, party type, and approximate budget. We will design a menu and service format and send a proposal within 24 hours.`,
+    body: `Tell us your villa location, date, guest count, party type, and approximate budget. Mention if you want a mobile bar or multi-day private chef. We will design a menu and service format and send a proposal within 24 hours.`,
   },
 ]
 
@@ -97,7 +112,7 @@ const faqs = [
   { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
   { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
   { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
-  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Can we add a mobile cocktail bar?', answer: 'Yes — complete packages from IDR 500,000++ per guest (min 10), not hourly hire. Stack with chef or catering. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
   { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
   { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
   { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
@@ -108,16 +123,16 @@ const faqs = [
   { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
-  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
 ]
 
 const relatedPages = [
+  { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Party bar packages from IDR 500K++ per guest — we come to you' },
+  { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'Full night plan with the same mobile bar packages' },
   { label: 'Villa Party Catering', href: '/events/villa-parties', desc: 'Full-service villa event catering' },
-  { label: 'Brunch Catering Bali', href: '/catering', desc: 'Private chef morning brunches' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Multi-day chef hire around the party' },
   { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Artisan sharing boards for events' },
-  { label: 'Mixologist Hire Bali', href: '/in-villa-service/mixology', desc: 'Cocktail bar for pool parties' },
-  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests' },
-  { label: 'Barbeque Catering Bali', href: '/catering/bbq-catering', desc: 'BBQ catering for villa events' },
+  { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Live grill for pool parties' },
 ]
 
 export default function PoolPartyCateringBaliPage() {
@@ -138,15 +153,15 @@ export default function PoolPartyCateringBaliPage() {
         'pool party catering bali',
         'villa pool party bali',
         'pool party food bali',
-        'pool party chef bali',
+        'mobile bar pool party bali',
+        'pool party cocktail bar bali',
         'catering for pool party bali',
         'bali villa pool party catering',
         'birthday pool party bali',
-        'pool party catering service bali',
-        'bali pool party food',
+        'drinks catering pool party bali',
         'villa party catering bali',
       ]}
-      highlights={['8 to 100 Guests', 'Live BBQ Stations', 'Cocktail Bar Add-on', 'From IDR 700K/person']}
+      highlights={['8 to 100 Guests', 'Live BBQ Stations', 'Mobile Bar from 500K++', 'From IDR 700K/person']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

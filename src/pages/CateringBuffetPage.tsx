@@ -162,7 +162,7 @@ const FAQS = [
   { q: 'Minimum guest counts?', a: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
   { q: 'Can menus be customised?', a: 'Yes — proteins, spice, diets locked before shopping.' },
   { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront.' },
-  { q: 'Can we add bartenders?', a: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { q: 'Can we add a mobile cocktail bar?', a: 'Yes — complete packages from IDR 500,000++ per guest (min 10), not hourly hire. Stack with chef or catering. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
   { q: 'Kids and allergies?', a: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
   { q: 'How do I book catering?', a: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
   { q: 'Rain plan?', a: 'Covered setups and indoor pivots planned ahead.' },

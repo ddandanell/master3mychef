@@ -192,7 +192,7 @@ const FAQS = [
   { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
-  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   // AnswerSocrates guest cost questions (not chef-salary career queries)
   { question: 'How much does it cost to hire a chef in Bali?', answer: 'Two common models: (1) daily villa chef hire from IDR 1,000,000++/day for one meal with chef + assistant, groceries at cost; (2) event dinners from about IDR 700K per person ++ and fine dining from about IDR 950K–1.25M++ depending on menu. Your quote states which model applies. <a href="/private-chef-bali">Day rates →</a>' },
   { question: 'How much does a private chef cost per day?', answer: 'Published day rates: IDR 1M++ / 1.8M++ / 2.7M++ for 1 / 2 / 3 meals (chef + assistant). Food is separate at cost with receipts on daily hire.' },

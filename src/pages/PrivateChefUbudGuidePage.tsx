@@ -92,7 +92,7 @@ const FAQS = [
   { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
   { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
   { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
-  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'Staff and mobile bar?', answer: 'Waiters/butlers: contact for pricing. Mobile cocktail bar packages from IDR 500K++/guest (min 10). <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
 ]
 
 export default function PrivateChefUbudGuidePage() {
@@ -111,10 +111,10 @@ export default function PrivateChefUbudGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Canggu Guide', href: '/private-chef/canggu', desc: 'Surf culture dining, villa parties, and casual chef experiences in Canggu.' },
-        { label: 'Private Chef Seminyak Guide', href: '/private-chef/seminyak', desc: 'Luxury villa dining and fine dining experiences in Seminyak.' },
-        { label: 'Bali Villa Cooking Class', href: '/fine-dining', desc: 'Learn to cook Balinese dishes with a private chef in your villa.' },
-        { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef costs across all Bali areas.' },
+        { label: 'Private Chef Ubud', href: '/private-chef/ubud', desc: 'Book a private chef in Ubud — day rates and menus.' },
+        { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Mobile bar packages for Ubud pavilion parties.' },
+        { label: 'Retreat Catering', href: '/catering/retreat-catering', desc: 'Multi-day plant-forward catering for Ubud retreats.' },
+        { label: 'Villa Catering', href: '/catering', desc: 'Event catering formats for Ubud celebrations.' },
       ]}
       extraJsonLd={[
         breadcrumbSchema('Private Chef Ubud Guide', 'https://mychef.id/blog/private-chef-ubud-guide', 'Blog', 'https://mychef.id/blog'),

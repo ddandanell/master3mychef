@@ -83,7 +83,7 @@ const SECTIONS = [
     title: 'Elevate the Celebration with Birthday Add-Ons',
     body: `<p>The core catering package covers the food and service. These add-ons let you build the full birthday experience around it.</p>
 
-    <p><strong>Cocktail packages:</strong> Complete villa cocktail service from <strong>IDR 500,000++ per guest</strong> (min 10) — bar team, four cocktails, glassware, ice, setup and cleanup. BYO or free-flow options. See <a href="/in-villa-service/bartenders">cocktail packages</a>. Ideal before dinner or as the main bar for a birthday party.</p>
+    <p><strong>Mobile cocktail bar:</strong> We bring a complete bar to your birthday villa from <strong>IDR 500,000++ per guest</strong> (min 10) — team, four cocktails, glassware, ice, setup and cleanup. BYO or free-flow options. See <a href="/in-villa-service/bartenders">mobile cocktail bar packages</a> and <a href="/experiences/private-cocktail-party">private cocktail party</a>. Stack with multi-day <a href="/private-chef-bali">private chef</a> if guests stay the week.</p>
 
     <p><strong>Birthday cocktail menu:</strong> We design a personalised cocktail menu featuring two or three signature drinks named after the birthday person or themed around them. Printed menus are presented at each guest's seat. Popular for milestone birthdays where the detail matters.</p>
 
@@ -121,7 +121,7 @@ const FAQS = [
   { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
   { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
   { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
-  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Can we add a mobile cocktail bar?', answer: 'Yes — complete packages from IDR 500,000++ per guest (min 10), not hourly hire. Stack with chef or catering. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
   { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
   { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
   { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
@@ -132,16 +132,16 @@ const FAQS = [
   { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
-  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
 ]
 
 const RELATED_PAGES = [
-  { label: 'Bachelorette Party Catering', href: '/events/villa-parties', desc: 'Private chef catering for bachelorette parties at Bali villas.' },
-  { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Bachelor party catering with private chef and bartender service.' },
-  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for groups of 20–100+ at Bali villas and venues.' },
-  { label: 'Villa Dinner Party', href: '/blog/private-dinner-party-bali', desc: 'Private dinner party catering at Bali villas.' },
-  { label: 'Kids Menu Guide', href: '/blog/family-kids-menu-private-chef-bali', desc: 'Family-friendly and kids menu options for Bali villa stays.' },
-  { label: 'Pricing', href: '/pricing', desc: 'Full pricing guide for all myCHEF services.' },
+  { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Party bar packages from IDR 500K++ per guest — we come to the villa.' },
+  { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'Full birthday night plan with mobile bar + food add-ons.' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Multi-day chef hire around the birthday celebration.' },
+  { label: 'Villa Parties', href: '/events/villa-parties', desc: 'Pool and garden party catering formats.' },
+  { label: 'Birthday Events Hub', href: '/events/birthdays', desc: 'Birthday catering packages and formats.' },
+  { label: 'Pricing', href: '/pricing', desc: 'Full pricing guide for chef, catering and bar.' },
 ]
 
 export default function BirthdayPartyCateringBaliPage() {
@@ -158,8 +158,15 @@ export default function BirthdayPartyCateringBaliPage() {
       heroImage="/generated/mychef-experience-bali-luna-gallery-1.webp"
       heroImageAlt="Birthday party catering at a Bali villa — private chef service by myCHEF"
       ogImage="https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp"
-      keywords={['birthday catering bali', 'birthday party bali villa', 'private chef birthday bali', 'birthday catering bali villa', 'bali birthday dinner party']}
-      highlights={['Experiences', 'Menu Ideas', 'Add-Ons', 'FAQ']}
+      keywords={[
+        'birthday catering bali',
+        'birthday party bali villa',
+        'private chef birthday bali',
+        'mobile bar birthday party bali',
+        'birthday cocktail bar bali villa',
+        'bali birthday dinner party',
+      ]}
+      highlights={['Catering', 'Mobile Bar', 'Private Chef Stack', 'FAQ']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}

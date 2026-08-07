@@ -22,7 +22,7 @@ const FAQS = [
   { q: 'Fine dining available here?', a: 'Yes — <a href="/fine-dining">fine dining</a>.' },
   { q: 'BBQ and parties?', a: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
   { q: 'Daily chef for a week?', a: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
-  { q: 'Staff and bartenders?', a: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { q: 'Staff and mobile bar?', a: 'Waiters/butlers: contact for pricing. Mobile cocktail bar packages from IDR 500K++/guest (min 10). <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   { q: 'How far ahead to book here?', a: 'A few days typical; peak season longer.' },
   { q: 'Last-minute possible?', a: 'Often yes — WhatsApp the area and date.' },
   { q: 'Kids-friendly service?', a: 'Yes — <a href="/kids-menus">kids menus</a>.' },
@@ -34,7 +34,7 @@ const FAQS = [
   { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
-  { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
 ]
 
 const SCENE = [

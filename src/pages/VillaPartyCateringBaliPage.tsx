@@ -103,7 +103,7 @@ const faqs = [
   { question: 'Minimum guest counts?', answer: 'Vary by format (drop-off lower, buffet higher). We route you correctly.' },
   { question: 'Can menus be customised?', answer: 'Yes — proteins, spice, diets locked before shopping.' },
   { question: 'Travel fees?', answer: 'Remote areas may add a fee quoted upfront.' },
-  { question: 'Can we add bartenders?', answer: 'Yes — <a href="/in-villa-service/bartenders">bartenders</a>.' },
+  { question: 'Can we add a mobile cocktail bar?', answer: 'Yes — complete packages from IDR 500,000++ per guest (min 10), not hourly hire. Stack with chef or catering. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
   { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
   { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
   { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
@@ -114,16 +114,16 @@ const faqs = [
   { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
-  { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
 ]
 
 const relatedPages = [
-  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'In-villa private chef service' },
-  { label: 'Cocktail Packages Bali', href: '/in-villa-service/bartenders', desc: 'Complete cocktail packages for your party' },
-  { label: 'Event Staff Bali', href: '/in-villa-service', desc: 'Waiters and event crew hire' },
-  { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Styled grazing boards for events' },
+  { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Mobile bar packages from IDR 500K++ per guest — we come to you' },
+  { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'Occasion plan with the same bar packages' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Multi-day chef hire around the party night' },
+  { label: 'Pool Party Catering', href: '/blog/pool-party-catering-bali', desc: 'Finger food and BBQ for poolside parties' },
   { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Poolside and garden BBQ packages' },
-  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for 30+ guests' },
+  { label: 'Villa Parties Hub', href: '/events/villa-parties', desc: 'All villa party formats' },
 ]
 
 export default function VillaPartyCateringBaliPage() {
@@ -131,11 +131,11 @@ export default function VillaPartyCateringBaliPage() {
     <PremiumPage
       slug="blog/villa-party-catering-bali"
       title="Villa Party Catering Bali — Food and Staff for Private Celebrations"
-      seoTitle="Villa Party Catering Bali — Chef, Bar Staff & Waiters | myCHEF"
-      description="Full villa party catering in Bali — private chef, bartender, and event staff for poolside parties, birthdays, and celebrations."
-      seoDescription="Villa party catering in Bali for 10–200+ guests. Private chef, bar staff, waiters. BBQ, buffet, sit-down dinner & cocktails. From IDR 700K/person."
-      h1="Villa Party Catering Bali — Private Chef, Bar Staff & Waiters for Your Celebration"
-      subtitle="End-to-end catering for villa parties across Bali — poolside BBQs, birthday dinners, cocktail receptions, and full event packages."
+      seoTitle="Villa Party Catering Bali — Chef, Mobile Bar & Staff | myCHEF"
+      description="Full villa party catering in Bali — private chef, mobile cocktail bar, and event staff for poolside parties, birthdays, and celebrations."
+      seoDescription="Villa party catering in Bali for 10–200+ guests. Private chef, mobile bar packages, waiters. BBQ, buffet, sit-down & cocktails. From IDR 700K/person."
+      h1="Villa Party Catering Bali — Private Chef, Mobile Bar & Staff"
+      subtitle="End-to-end food and drinks for villa parties across Bali — poolside BBQs, birthday dinners, mobile cocktail bars, and full event packages."
       heroImage="/images/blog/villa-party-catering-bali.jpg"
       heroImageAlt="Catering team setting up an outdoor buffet and BBQ at a luxury villa pool party in Bali"
       ogImage="/images/blog/villa-party-catering-bali.jpg"

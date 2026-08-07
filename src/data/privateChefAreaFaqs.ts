@@ -48,7 +48,7 @@ function sharedFaqs(area: PrivateChefArea): AreaFaq[] {
     },
     {
       q: `What is included in a private chef booking in ${n}?`,
-      a: `Menu planning, market shopping, cooking in your villa kitchen, plating/table service and full cleanup. Optional waiters, bartenders and butlers via ${link('/in-villa-service', 'in-villa service')}. ${siteFacts.groceryPolicy}.`,
+      a: `Menu planning, market shopping, cooking in your villa kitchen, plating/table service and full cleanup. Optional waiters and butlers via ${link('/in-villa-service', 'in-villa service')}; party drinks via ${link('/in-villa-service/bartenders', 'mobile cocktail bar packages')}. ${siteFacts.groceryPolicy}.`,
     },
     {
       q: `Do you cook for kids, allergies and special diets in ${n}?`,
@@ -68,7 +68,11 @@ function sharedFaqs(area: PrivateChefArea): AreaFaq[] {
     },
     {
       q: `Can you cater a villa party or large group in ${n}?`,
-      a: `Yes — groups from 8 to 100+ with chef, sous, waiters and bar as needed. Formats: ${link('/catering/villa-catering', 'villa catering')}, ${link('/catering/bbq-catering', 'BBQ catering')}, ${link('/events/villa-parties', 'villa parties')} and ${link('/group-villa-dinner-packages-bali', 'group dinner packages')}.`,
+      a: `Yes — groups from 8 to 100+ with chef, sous, waiters and a mobile bar as needed. Formats: ${link('/catering/villa-catering', 'villa catering')}, ${link('/catering/bbq-catering', 'BBQ catering')}, ${link('/events/villa-parties', 'villa parties')}, ${link('/in-villa-service/bartenders', 'mobile cocktail bar')} and ${link('/group-villa-dinner-packages-bali', 'group dinner packages')}.`,
+    },
+    {
+      q: `Can we add a mobile cocktail bar with private chef in ${n}?`,
+      a: `Yes — the strongest F&amp;B stack: daily chef or party catering plus a mobile bar we bring to the villa (packages from IDR 500,000++ per guest, min 10). ${link('/in-villa-service/bartenders', 'Mobile cocktail bar packages')} · ${link('/experiences/private-cocktail-party', 'private cocktail party')} · ${link('/catering', 'catering')}.`,
     },
     {
       q: `Can we book multi-day or weekly private chef service in ${n}?`,
@@ -129,8 +133,8 @@ function clusterFaqs(area: PrivateChefArea): AreaFaq[] {
   }
   if (area.services.includes('staffing') || area.services.includes('fine-dining')) {
     out.push({
-      q: `Can we add a bartender or butler in ${n}?`,
-      a: `Yes — waiters, bartenders, butlers and hosts scale to your guest count. ${link('/in-villa-service', 'In-villa service')} · ${link('/in-villa-service/bartenders', 'bartenders')}.`,
+      q: `Can we add a mobile bar or butler in ${n}?`,
+      a: `Yes — waiters and butlers contact for pricing; party drinks use complete ${link('/in-villa-service/bartenders', 'mobile cocktail bar packages')} from IDR 500,000++ per guest (min 10), not hourly bartender-only hire. ${link('/in-villa-service', 'In-villa service')} · ${link('/experiences/private-cocktail-party', 'cocktail party plan')}.`,
     })
   }
 

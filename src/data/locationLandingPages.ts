@@ -68,16 +68,16 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Daily breakfast, lunch, and dinner coverage.',
       },
       {
-        title: 'Villa parties & events',
+        title: 'Villa parties & catering',
         href: '/events/villa-parties',
-        summary: 'Cocktail receptions, BBQ nights, and milestone celebrations with full staffing and bar service.',
+        summary: 'BBQ nights, buffet parties and milestone celebrations — stack with private chef for multi-day stays.',
         availability: 'Best for 10-80 guests in Seminyak estates.',
       },
       {
-        title: 'Weekly chef service',
-        href: '/staffing/live-in-chef',
-        summary: 'Dedicated chefs for your full stay, handling all grocery shopping, cooking, and kitchen management.',
-        availability: 'Recommended for 7+ day villa bookings.',
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'We bring a complete mobile bar to Seminyak villa parties — BYO or free-flow packages from IDR 500K++ per guest.',
+        availability: 'Pool, garden and welcome-drink service island-wide.',
       },
     ],
     travelFees: [
@@ -119,8 +119,8 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     ],
     serviceAvailability: [
       {
-        title: 'Weekly meal prep & hosting',
-        href: '/catering',
+        title: 'Weekly meal prep & private chef',
+        href: '/private-chef-bali',
         summary: 'Daily healthy lunches, family dinners, and breakfast service for long-stay nomads and families.',
         availability: 'Flexible daily and multi-day packages.',
       },
@@ -131,10 +131,10 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Best for villas of 8–30 guests.',
       },
       {
-        title: 'In-villa fine dining',
-        href: '/fine-dining',
-        summary: 'Casual-luxury tasting menus and private chef dinners that bridge restaurant quality with villa comfort.',
-        availability: 'Daily dinner coverage across all Canggu zones.',
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'Canggu villa parties get a complete mobile bar — free-flow or BYO packages from IDR 500K++ per guest.',
+        availability: 'Pool parties, birthdays and sunset free-flow.',
       },
     ],
     travelFees: [
@@ -182,16 +182,16 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Full-board and half-board retreat support.',
       },
       {
-        title: 'Balinese cultural dining',
-        href: '/catering/babi-guling',
-        summary: 'Traditional feasts, whole-roasted pig (Babi Guling), and market-led Balinese tasting menus.',
-        availability: 'Authentic local cuisine with Michelin standards.',
-      },
-      {
         title: 'Private jungle dinners',
         href: '/fine-dining/romantic-dinner',
         summary: 'Intimate fine dining for couples and small groups set against the Ubud jungle backdrop.',
         availability: 'Daily dinner coverage in Sayan and Tegalalang.',
+      },
+      {
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'Pavilion and jungle villa celebrations with a complete mobile bar — packages from IDR 500K++ per guest.',
+        availability: 'Welcome drinks, receptions and private parties.',
       },
     ],
     travelFees: [
@@ -245,10 +245,10 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Popular for villa groups of 10–40 guests.',
       },
       {
-        title: 'Wedding & event support',
-        href: '/events/weddings',
-        summary: 'Rehearsal dinners, post-wedding brunches, and intimate villa ceremonies with full staffing.',
-        availability: 'Best fit for event weekends and elopements.',
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'Clifftop welcome drinks and reception free-flow — mobile bar packages from IDR 500K++ per guest.',
+        availability: 'Weddings, villa parties and sunset service.',
       },
     ],
     travelFees: [

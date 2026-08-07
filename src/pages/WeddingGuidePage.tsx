@@ -59,7 +59,8 @@ const NOT_INCLUDED = [
 ]
 
 const FAQS = [
-  { q: 'How much does wedding catering in Bali cost?', a: 'Wedding reception catering is quoted per guest based on menu and guest count. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/pricing">pricing</a> for published guidance.' },
+  { q: 'How much does wedding catering in Bali cost?', a: 'Quoted per guest based on menu and headcount. See <a href="/events/weddings">wedding catering</a>, published bands on <a href="/bali-wedding-catering-packages">packages</a>, and the <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>.' },
+  { q: 'How much does a wedding in Bali cost overall?', a: 'Total spend varies (villa, planner, photo, travel). myCHEF quotes cover food, kitchen, service and bar only — not the whole wedding. F&amp;B education: <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>.' },
   { q: 'Do you offer menu tastings for weddings?', a: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
   { q: 'Can you handle banjar fees and villa permissions?', a: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
   { q: 'Can guests bring their own alcohol?', a: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },

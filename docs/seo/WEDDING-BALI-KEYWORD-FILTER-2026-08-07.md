@@ -49,4 +49,7 @@
 - Budget guide FAQs aligned to cost/per-person searches
 - Meta title/description for weddings hub refreshed with search language
 - F&B-only add-ons (removed non-myCHEF film/band add-on claims)
+- Timeline + private-chef wedding guide FAQs/related links aligned to owners
+- Packages + Indonesia landing articles: foreign-couple package Qs sections
+- Help wedding guide cost FAQs linked to budget owner
 EOF

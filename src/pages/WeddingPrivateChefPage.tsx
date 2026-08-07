@@ -9,7 +9,8 @@ const SECTIONS = [
     subtitle: 'Wedding Catering in Bali',
     title: 'Why a Private Chef Makes Your Bali Villa Wedding',
     body: `<p>A villa wedding in Bali offers intimacy, privacy, and beauty that hotels and event venues can't match. But catering logistics — kitchen access, group dietary needs, service timing, and staff coordination — require professional management. A private chef handles all of it, allowing you to focus entirely on celebrating.</p>
-    <p>Unlike hotel packages with rigid menus, a private chef adapts your catering to your vision. Balinese-inspired courses for the rehearsal dinner, a Mediterranean spread for the welcome lunch, a formal <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">fine dining reception</a> — all possible in your villa kitchen, on your timeline. Every wedding is quoted individually with a detailed, itemised proposal.</p>`,
+    <p>Unlike hotel packages with rigid menus, a private chef adapts your catering to your vision. Balinese-inspired courses for the rehearsal dinner, a Mediterranean spread for the welcome lunch, a formal <a href="/fine-dining" class="text-[#7E6410] hover:underline font-medium">fine dining reception</a> — all possible in your villa kitchen, on your timeline. Every wedding is quoted individually with a detailed, itemised proposal.</p>
+    <p><strong>How this page fits the wedding cluster:</strong> commercial reception production lives on <a href="/events/weddings" class="text-[#7E6410] hover:underline font-medium">wedding catering Bali</a>; per-person package bands on <a href="/bali-wedding-catering-packages" class="text-[#7E6410] hover:underline font-medium">wedding catering packages</a>; month-by-month timing on the <a href="/blog/bali-wedding-catering-private-chef-timeline" class="text-[#7E6410] hover:underline font-medium">catering timeline</a>. This guide owns <em>private chef wedding planning</em> — how to scope chefs, service styles and villa kitchens for foreign couples.</p>`,
   },
   {
     id: 'event-types',
@@ -101,34 +102,33 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  { question: 'How much does wedding catering in Bali cost?', answer: 'Wedding reception catering is quoted per guest based on menu and guest count. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/pricing">pricing</a> for published guidance.' },
+  { question: 'How much does wedding catering in Bali cost?', answer: 'Quoted per guest based on menu and headcount. See published bands on <a href="/bali-wedding-catering-packages">packages</a>, education on the <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>, and book via <a href="/events/weddings">wedding catering</a>.' },
+  { question: 'When do we use a private chef vs full wedding catering?', answer: 'Micro-weddings and plated dinners for smaller lists often use private chef or fine dining formats. Full buffet/live-station receptions for 50–200+ stay on <a href="/events/weddings">wedding catering Bali</a>.' },
   { question: 'Do you offer menu tastings for weddings?', answer: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
   { question: 'Can you handle banjar fees and villa permissions?', answer: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
-  { question: 'Can guests bring their own alcohol?', answer: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
+  { question: 'Can guests bring their own alcohol?', answer: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Cocktail packages →</a>' },
   { question: 'What is the rain plan for outdoor receptions?', answer: 'Every outdoor wedding has a covered fallback (marquee/indoor) confirmed before the day.' },
-  { question: 'Do you cater rehearsal and welcome dinners?', answer: 'Yes — BBQ, family-style or plated formats via <a href="/events">events</a> and <a href="/catering">catering</a>.' },
+  { question: 'Do you cater rehearsal and welcome dinners?', answer: 'Yes — BBQ, family-style or plated. See <a href="/events/weddings">wedding catering</a> multi-day F&amp;B plans.' },
   { question: 'What staffing ratio do you use?', answer: 'About one waiter per 8–10 seated guests, plus kitchen lead; cocktail hours add tray staff.' },
   { question: 'Can you work with our wedding planner?', answer: 'Yes — daily collaboration with planners and villa managers.' },
-  { question: 'Do you offer halal-friendly wedding menus?', answer: 'Yes — pork-free and halal-sensitive lines when specified at planning.' },
-  { question: 'How is this different from a private chef dinner?', answer: 'Weddings are multi-guest production. Couples dinners: <a href="/fine-dining/romantic-dinner">romantic dinner</a>.' },
+  { question: 'Do you offer halal-friendly or multicultural wedding menus?', answer: 'Yes — pork-free/halal-sensitive lines and multi-cuisine service when specified at planning.' },
+  { question: 'How is this different from a private chef dinner for two?', answer: 'Weddings are multi-guest production. Couples-only: <a href="/fine-dining/romantic-dinner">romantic dinner</a> or <a href="/experiences/romantic-proposal-dinner">proposal dinner</a>.' },
   { question: 'Which areas host most villa weddings?', answer: 'Uluwatu, Canggu, Seminyak, Ubud, Nusa Dua and Jimbaran are common — we cover island-wide.' },
   { question: 'Can kids and elderly dietary needs be managed?', answer: 'Yes — labelled plates and briefed service for mixed multi-gen guest lists.' },
-  { question: 'How much is a private chef in Bali per day?', answer: 'from published rates for one meal (chef + assistant). Two meals published rates, three published rates. Weekly −10%, monthly −20%. <a href="/private-chef-bali">Private chef Bali</a>.' },
-  { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
-  { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
-  { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
-  { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
-  { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
-  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'How much is a private chef in Bali per day for wedding week?', answer: 'Day rates for multi-day villa hire are published on <a href="/private-chef-bali">private chef Bali</a>. Reception day is usually event catering pricing, not a simple day rate.' },
+  { question: 'Are groceries included on multi-day chef hire?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
+  { question: 'Can the chef cook in our villa kitchen for the reception?', answer: 'Yes for intimate formats; larger receptions often need mobile prep stations. Logistics: <a href="/journal/villa-wedding-catering-logistics-bali">villa wedding logistics</a>.' },
   { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
+  { question: 'How do I get a wedding catering proposal?', answer: 'WhatsApp date, guest estimate, villa and style. <a href="/events/weddings">Weddings →</a> · <a href="/quote">Quote →</a>' },
 ]
 
 const RELATED_PAGES = [
-  { label: 'Browse Chefs', href: '/chefs', desc: 'Meet our event-experienced private chefs.' },
-  { label: 'Event Planning Guide', href: '/blog/event-planning-bali', desc: 'Full logistics guide for weddings and celebrations.' },
-  { label: 'Catering Menus', href: '/blog/bali-catering-menu', desc: 'Explore menu styles and cuisine options.' },
-  { label: 'Corporate Events', href: '/corporate-case-studies', desc: 'Catering for corporate retreats and executive dinners.' },
-  { label: 'Contact Us', href: '/contact', desc: 'Discuss your wedding dates and vision with our team.' },
+  { label: 'Wedding Catering Bali', href: '/events/weddings', desc: 'Commercial owner — villa reception catering service.' },
+  { label: 'Wedding packages & prices', href: '/bali-wedding-catering-packages', desc: 'Per-person package bands for guest-count planning.' },
+  { label: 'Catering timeline', href: '/blog/bali-wedding-catering-private-chef-timeline', desc: '6-month planning timeline for destination couples.' },
+  { label: 'Budget guide', href: '/blog/bali-wedding-catering-budget-guide', desc: 'How much wedding catering costs — F&B education.' },
+  { label: 'Villa logistics', href: '/journal/villa-wedding-catering-logistics-bali', desc: 'Kitchen, power and service flow at villas.' },
+  { label: 'Honeymoon chef', href: '/honeymoon-chef', desc: 'Private chef dining after the wedding weekend.' },
 ]
 
 export default function WeddingPrivateChefPage() {
@@ -145,14 +145,22 @@ export default function WeddingPrivateChefPage() {
       heroImage="/generated/mychef-blog-wedding-private-chef.webp"
       heroImageAlt="Private chef elegantly serving a multi-course wedding dinner at a luxury Bali villa"
       ogImage="https://mychef.id/generated/mychef-blog-wedding-private-chef.webp"
-      keywords={['wedding private chef bali', 'bali villa wedding catering', 'private chef wedding bali']}
+      keywords={[
+        'wedding private chef bali',
+        'bali villa wedding catering',
+        'private chef wedding bali',
+        'intimate wedding bali catering',
+        'villa wedding chef planning',
+      ]}
       highlights={['Wedding Events', 'Planning Timeline', 'Service Styles', 'Scoping & Quotes']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
+      ctaText="Plan Wedding Catering"
+      ctaSubtext="Share dates, guest count and villa — we route you to private chef or full reception production."
       extraJsonLd={[
         breadcrumbSchema('Wedding Private Chef Bali', 'https://mychef.id/blog/wedding-private-chef-bali-planning-guide', 'Blog', 'https://mychef.id/blog'),
-        faqPageSchema(FAQS),
+        faqPageSchema(FAQS.map((f) => ({ question: f.question, answer: f.answer }))),
         {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
@@ -167,8 +175,6 @@ export default function WeddingPrivateChefPage() {
           url: 'https://mychef.id/blog/wedding-private-chef-bali-planning-guide',
         },
       ]}
-      ctaText="Plan Your Wedding Catering"
-      ctaSubtext="Share your dates, guest count, and vision — we match you with the right chef."
     />
   )
 }

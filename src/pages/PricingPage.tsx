@@ -200,6 +200,10 @@ const FAQS = [
   { question: 'How much does a private chef cost per hour?', answer: 'We do not sell a simple “chef hourly” product for villa guests. We sell day rates (by meal count) or per-person event menus. That keeps shopping, cooking, service and cleanup in one clear package.' },
   { question: 'Are private chefs expensive / is a private chef worth it?', answer: 'For groups and multi-meal villa days, cost per person often competes with restaurants once transport and time are counted. For a single couple’s dinner it is a premium experience — prices are published so you can decide before deposit. <a href="/blog/private-chef-cost-bali">Cost guide →</a>' },
   { question: 'What does a private chef cost for a year?', answer: 'Year-round households usually need a custom monthly or live-in plan, not a one-night menu price. Contact us with how many meals per week and we will model a 12-month budget. <a href="/staffing/live-in-chef">Live-in chef →</a>' },
+  // AnswerSocrates guest F&B cost questions (not career salary)
+  { question: 'What is the cost of food and drink in Bali for a villa event?', answer: 'Food catering floors from about IDR 700K++ per person (BBQ/buffet/drop-off). Cocktail packages from IDR 500K++ per guest (BYO, min 10) or IDR 1.3M–1.7M++ free-flow with spirits. Private chef day rates are separate (from IDR 1M++/day for one meal). <a href="/catering">Catering →</a> · <a href="/in-villa-service/bartenders">Drinks packages →</a>' },
+  { question: 'What is the average drink price in Bali for private cocktail service?', answer: 'For villa free-flow, budget about IDR 1,300,000–1,700,000++ per guest when spirits are included, or from IDR 500,000++ per guest if you supply the alcohol (BYO package). That is package pricing — not a single beach-club cocktail. <a href="/in-villa-service/bartenders">Cocktail packages →</a>' },
+  { question: 'How much does Bali drinks catering cost?', answer: 'Complete bar catering packages from IDR 500,000++ per guest (min 10). Not hourly bartender-only hire. Stack with food on <a href="/catering">catering</a> or plan a full night on <a href="/experiences/private-cocktail-party">private cocktail party</a>.' },
 ]
 
 const RELATED_PAGES = [
@@ -227,7 +231,14 @@ export default function PricingPage() {
       heroImage="/generated/mychef-catering-bali-catering-hero.webp"
       heroImageAlt="Elegant fine dining dish"
       ogImage="https://mychef.id/generated/mychef-catering-bali-catering-hero.webp"
-      keywords={['private chef bali price', 'bali catering cost', 'villa chef rates bali']}
+      keywords={[
+        'private chef bali price',
+        'bali catering cost',
+        'villa chef rates bali',
+        'bali drinks catering price',
+        'cost of food and drink in bali',
+        'average drink price in bali',
+      ]}
       highlights={['No Hidden Fees', 'Grocery Receipts Provided', '50% Deposit to Book', '24-Hour Quote Delivery']}
       sections={SECTIONS}
       faqs={FAQS}

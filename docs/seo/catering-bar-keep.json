@@ -1,0 +1,2381 @@
+{
+  "keep": [
+    {
+      "text": "Bali cocktails",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 40,
+      "pages": [
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "book private chef bali for villa stay",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali price per day",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "hire private chef bali for wedding",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/events/weddings",
+        "/bali-wedding-catering-packages",
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali cost for 10 guests",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali last minute booking",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "cost of food and drink in bali",
+      "type": "keyword",
+      "label": "cost of food and drink in bali",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "average drink price in bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much does a private chef cost in bali",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali for villa guests",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how to book a private chef in bali",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "best private chef bali for couples",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "top rated private chef bali 2024",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali vs restaurant dining",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali reviews and testimonials",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "affordable private chef bali for families",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali for vegan diets",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "luxury private chef bali for events",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali for romantic dinner",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali for large groups",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali with local cuisine",
+      "type": "long-tail",
+      "label": "MOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali package deals",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali for honeymoon",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali for birthday party",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/events/birthdays",
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali with grocery shopping",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali for weekly service",
+      "type": "long-tail",
+      "label": "BOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali catering company",
+      "type": "keyword",
+      "label": "bali catering menu",
+      "src": "xlsx",
+      "volume": 20,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Bali drinks catering price",
+      "type": "keyword",
+      "label": "Bali drinks catering price",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Bali drinks catering cost",
+      "type": "keyword",
+      "label": "Bali drinks catering price",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "average cost of food and drink in bali",
+      "type": "keyword",
+      "label": "cost of food and drink in bali",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "is food in bali halal",
+      "type": "keyword",
+      "label": "what food do they eat in bali",
+      "src": "xlsx",
+      "volume": 20,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali cocktail delivery",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering bali indah price list",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "d bali cocktail",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "harga cocktail bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Bali Catering",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 20,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali bar catering",
+      "type": "keyword",
+      "label": "bali bar catering",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bar catering bali",
+      "type": "keyword",
+      "label": "bali bar catering",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali catering menu",
+      "type": "keyword",
+      "label": "bali catering menu",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali catering company seminyak",
+      "type": "keyword",
+      "label": "bali catering menu",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/private-chef/seminyak"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali food & drinks menu",
+      "type": "keyword",
+      "label": "bali food & drinks menu",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali food & drinks",
+      "type": "keyword",
+      "label": "bali food & drinks menu",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "what food do they eat in bali",
+      "type": "keyword",
+      "label": "what food do they eat in bali",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "what do they drink in bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali catering company reviews",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering bali indah",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "menu bali indah catering",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "menu catering bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "23 Bar Bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "what is a private chef in bali",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "benefits of hiring a private chef in bali",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how to find a private chef in bali",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "what does a private chef do in bali",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "is a private chef worth it in bali",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "private chef bali for special occasions",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "what to expect from a private chef in bali",
+      "type": "long-tail",
+      "label": "TOFU",
+      "src": "lt",
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali catering company menu",
+      "type": "keyword",
+      "label": "bali catering menu",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering bali seminyak",
+      "type": "keyword",
+      "label": "bali catering menu",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/private-chef/seminyak"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali food & drinks photos",
+      "type": "keyword",
+      "label": "bali food & drinks photos",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali food & drinks fotos",
+      "type": "keyword",
+      "label": "bali food & drinks photos",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "food and beverage bali",
+      "type": "keyword",
+      "label": "food and beverage bali",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "f&b bali",
+      "type": "keyword",
+      "label": "food and beverage bali",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "rekomendasi catering bali",
+      "type": "keyword",
+      "label": "rekomendasi catering bali",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "rekomendasi catering di bali",
+      "type": "keyword",
+      "label": "rekomendasi catering bali",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali food & drinks reviews",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali food & drinks leiria",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali food & drinks críticas",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali drinks with ice",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "bali bar service",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering event bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "x bali menu",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "alcohol catering bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering bali jakarta",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering bali nusa dua",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering di bali halal",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "food catering bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "juice bar di bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering bali kuta",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "nasi bali catering",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "snack catering bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "special drink bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Best bali drinks catering",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Bali drinks catering menu",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/in-villa-service/bartenders",
+        "/experiences/private-cocktail-party"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Catering Ubud Bali",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/private-chef/ubud"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "when should i book catering for my wedding",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "tips catering wedding",
+      "type": "questions",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "when should catering arrive for wedding",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost for 50 people",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost for 100 people",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost for 30 people",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost per person",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost for 150 people",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost for 20 people",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost for 40 people",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost for 60 people",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost for a wedding",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much should catering cost for 200 people",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "who's catering taylor swift's wedding",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "who did catering for ambani wedding",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Catering bali price",
+      "type": "paa",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "should i tip on a catering pickup order",
+      "type": "questions",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "when to order catering",
+      "type": "questions",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "which buffet catering is the best in singapore",
+      "type": "questions",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/catering/buffet-catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Catering bali wedding",
+      "type": "paa",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "what does catering include",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "how's catering menu",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "how's catering halal",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how's catering mini buffet",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/catering/buffet-catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how's catering buffet",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/catering/buffet-catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "should i tip catering",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "should i tip catering orders",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "is catering worth it",
+      "type": "questions",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "should you tip catering pickup",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "should you tip catering delivery",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "should you tip catering",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "when catering for a party how much food",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "when catering how much per person",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "what is buffet catering",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/catering/buffet-catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "which wich catering menu",
+      "type": "questions",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "x bar canggu menu",
+      "type": "keyword",
+      "label": "Unclustered Keywords",
+      "src": "xlsx",
+      "volume": 10,
+      "pages": [
+        "/private-chef/canggu"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering terbaik di indonesia",
+      "type": "comparisons",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering ternama di indonesia",
+      "type": "comparisons",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering price list",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering price for 100 people",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering price for 50 people",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering price list template",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering price utah",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering price for 30 people",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering price chopper",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering price for 60 people",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost for 100 people",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost for 50 people",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost for 200 people",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost for 30 people",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost for 150 people",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost per person wedding",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost for 60 people",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "average catering cost per person",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "average cost of catering for 300 guests",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "average cost of catering for 30 guests",
+      "type": "comparisons",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering for 100 people cost",
+      "type": "prepositions",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering enak di bali",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering king bali reviews",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "olive garden catering menu with prices",
+      "type": "letters",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "Catering bali menu",
+      "type": "paa",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Catering bali harian",
+      "type": "paa",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Catering prasmanan Bali",
+      "type": "paa",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Catering bali reviews",
+      "type": "paa",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Catering Bali murah",
+      "type": "paa",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "Catering bali packages",
+      "type": "paa",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering prices for wedding",
+      "type": "comparisons",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost per person",
+      "type": "comparisons",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost for wedding",
+      "type": "comparisons",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost calculator",
+      "type": "comparisons",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cost per plate",
+      "type": "comparisons",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering cheap for wedding",
+      "type": "comparisons",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering without chaos book",
+      "type": "prepositions",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much is catering for a wedding",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/weddings",
+        "/bali-wedding-catering-packages",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering order",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "catering order meaning",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "catering order form",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "catering order online",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "catering vs buffet",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/catering/buffet-catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering vs private chef",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/private-chef-bali"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "best catering for kids birthday party",
+      "type": "comparisons",
+      "label": "BOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/birthdays"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering for kids birthday party",
+      "type": "prepositions",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/events/birthdays"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "gw's bbq catering co menu",
+      "type": "letters",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/catering/bbq-catering",
+        "/bbq-grill"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much is texas roadhouse catering",
+      "type": "letters",
+      "label": "Location",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "r & o restaurant and catering menu",
+      "type": "letters",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "texas roadhouse catering menu",
+      "type": "letters",
+      "label": "Location",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "this is it catering menu",
+      "type": "letters",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "the olive garden catering menu",
+      "type": "letters",
+      "label": "Long Tail",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "recommended buffet catering singapore",
+      "type": "comparisons",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/catering/buffet-catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "catering with vegan options",
+      "type": "prepositions",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "aga's restaurant & catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "daniel's restaurant & catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "giant eagle catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "how much is in n out catering",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "how much is canes catering",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "how much is jimmy john's catering",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "how much is mission bbq catering",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/catering/bbq-catering",
+        "/bbq-grill",
+        "/pricing"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "how much are catering services",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "how much is food catering",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "how much is kfc catering",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "jersey mike's catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "jimmy john's catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "jason's deli catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "catering ny hendrawan harga",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "olive garden catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "panda express catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "queens take out & catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "uncle giuseppe's catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "uncle bub's bbq & catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/catering/bbq-catering",
+        "/bbq-grill"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "varalakshmi vegetarian takeout & catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "what is catering services",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering",
+        "/faq"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "what is a catering menu",
+      "type": "letters",
+      "label": "TOFU",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    },
+    {
+      "text": "catering yellow fit harga",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "guest"
+    },
+    {
+      "text": "zareen's restaurant & catering menu",
+      "type": "letters",
+      "label": "",
+      "src": "catering-as",
+      "pages": [
+        "/catering"
+      ],
+      "reason": "generic-guest-catering"
+    }
+  ],
+  "by_page": {
+    "/in-villa-service/bartenders": [
+      "Bali cocktails",
+      "bali cocktail delivery",
+      "d bali cocktail",
+      "harga cocktail bali"
+    ],
+    "/private-chef-bali": [
+      "book private chef bali for villa stay",
+      "private chef bali price per day",
+      "private chef bali cost for 10 guests",
+      "private chef bali last minute booking",
+      "how much does a private chef cost in bali",
+      "private chef bali for villa guests",
+      "how to book a private chef in bali",
+      "best private chef bali for couples",
+      "top rated private chef bali 2024",
+      "private chef bali vs restaurant dining",
+      "private chef bali reviews and testimonials",
+      "affordable private chef bali for families",
+      "private chef bali for vegan diets",
+      "luxury private chef bali for events",
+      "private chef bali for romantic dinner",
+      "private chef bali for large groups",
+      "private chef bali with local cuisine",
+      "private chef bali package deals",
+      "private chef bali for honeymoon",
+      "private chef bali with grocery shopping",
+      "private chef bali for weekly service",
+      "what is a private chef in bali",
+      "benefits of hiring a private chef in bali",
+      "how to find a private chef in bali",
+      "what does a private chef do in bali",
+      "is a private chef worth it in bali",
+      "private chef bali for special occasions",
+      "what to expect from a private chef in bali"
+    ],
+    "/events/weddings": [
+      "hire private chef bali for wedding"
+    ],
+    "/pricing": [
+      "cost of food and drink in bali",
+      "average drink price in bali",
+      "average cost of food and drink in bali"
+    ],
+    "/events/birthdays": [
+      "private chef bali for birthday party"
+    ],
+    "/catering": [
+      "bali catering company",
+      "Bali drinks catering price",
+      "Bali drinks catering cost",
+      "is food in bali halal",
+      "catering bali indah price list",
+      "Bali Catering",
+      "bali bar catering",
+      "bar catering bali",
+      "bali catering menu",
+      "bali catering company seminyak",
+      "bali food & drinks menu",
+      "bali food & drinks",
+      "what food do they eat in bali",
+      "what do they drink in bali",
+      "bali catering company reviews",
+      "catering bali indah",
+      "menu bali indah catering",
+      "menu catering bali",
+      "23 Bar Bali",
+      "bali catering company menu",
+      "catering bali seminyak",
+      "bali food & drinks photos",
+      "bali food & drinks fotos",
+      "food and beverage bali",
+      "f&b bali",
+      "rekomendasi catering bali",
+      "rekomendasi catering di bali",
+      "bali food & drinks reviews",
+      "bali food & drinks leiria",
+      "bali food & drinks críticas",
+      "bali drinks with ice",
+      "bali bar service",
+      "catering event bali",
+      "x bali menu",
+      "alcohol catering bali",
+      "catering bali jakarta",
+      "catering bali nusa dua",
+      "catering di bali halal",
+      "food catering bali",
+      "juice bar di bali",
+      "catering bali kuta",
+      "nasi bali catering",
+      "snack catering bali",
+      "special drink bali",
+      "Best bali drinks catering",
+      "Bali drinks catering menu",
+      "Catering Ubud Bali",
+      "when should i book catering for my wedding",
+      "tips catering wedding",
+      "when should catering arrive for wedding",
+      "how much should catering cost for 50 people",
+      "how much should catering cost for 100 people",
+      "how much should catering cost for 30 people",
+      "how much should catering cost per person",
+      "how much should catering cost for 150 people",
+      "how much should catering cost for 20 people",
+      "how much should catering cost",
+      "how much should catering cost for 40 people",
+      "how much should catering cost for 60 people",
+      "how much should catering cost for a wedding",
+      "how much should catering cost for 200 people",
+      "who's catering taylor swift's wedding",
+      "who did catering for ambani wedding",
+      "Catering bali price",
+      "should i tip on a catering pickup order",
+      "when to order catering",
+      "which buffet catering is the best in singapore",
+      "Catering bali wedding",
+      "what does catering include",
+      "how's catering menu",
+      "how's catering halal",
+      "how's catering mini buffet",
+      "how's catering buffet",
+      "should i tip catering",
+      "should i tip catering orders",
+      "is catering worth it",
+      "should you tip catering pickup",
+      "should you tip catering delivery",
+      "should you tip catering",
+      "when catering for a party how much food",
+      "when catering how much per person",
+      "what is buffet catering",
+      "which wich catering menu",
+      "catering terbaik di indonesia",
+      "catering ternama di indonesia",
+      "catering price list",
+      "catering price for 100 people",
+      "catering price for 50 people",
+      "catering price list template",
+      "catering price utah",
+      "catering price for 30 people",
+      "catering price chopper",
+      "catering price for 60 people",
+      "catering cost for 100 people",
+      "catering cost for 50 people",
+      "catering cost for 200 people",
+      "catering cost for 30 people",
+      "catering cost for 150 people",
+      "catering cost per person wedding",
+      "catering cost for 60 people",
+      "average catering cost per person",
+      "average cost of catering for 300 guests",
+      "average cost of catering for 30 guests",
+      "catering for 100 people cost",
+      "catering enak di bali",
+      "catering king bali reviews",
+      "olive garden catering menu with prices",
+      "Catering bali menu",
+      "Catering bali harian",
+      "Catering prasmanan Bali",
+      "Catering bali reviews",
+      "Catering Bali murah",
+      "Catering bali packages",
+      "catering prices for wedding",
+      "catering cost per person",
+      "catering cost for wedding",
+      "catering cost calculator",
+      "catering cost per plate",
+      "catering cheap for wedding",
+      "catering without chaos book",
+      "how much is catering for a wedding",
+      "catering order",
+      "catering order meaning",
+      "catering order form",
+      "catering order online",
+      "catering vs buffet",
+      "catering vs private chef",
+      "best catering for kids birthday party",
+      "catering for kids birthday party",
+      "gw's bbq catering co menu",
+      "how much is texas roadhouse catering",
+      "r & o restaurant and catering menu",
+      "texas roadhouse catering menu",
+      "this is it catering menu",
+      "the olive garden catering menu",
+      "recommended buffet catering singapore",
+      "catering with vegan options",
+      "aga's restaurant & catering menu",
+      "daniel's restaurant & catering menu",
+      "giant eagle catering menu",
+      "how much is in n out catering",
+      "how much is canes catering",
+      "how much is jimmy john's catering",
+      "how much is mission bbq catering",
+      "how much are catering services",
+      "how much is food catering",
+      "how much is kfc catering",
+      "jersey mike's catering menu",
+      "jimmy john's catering menu",
+      "jason's deli catering menu",
+      "catering ny hendrawan harga",
+      "olive garden catering menu",
+      "panda express catering menu",
+      "queens take out & catering menu",
+      "uncle giuseppe's catering menu",
+      "uncle bub's bbq & catering menu",
+      "varalakshmi vegetarian takeout & catering menu",
+      "what is catering services",
+      "what is a catering menu",
+      "catering yellow fit harga",
+      "zareen's restaurant & catering menu"
+    ],
+    "/private-chef/canggu": [
+      "x bar canggu menu"
+    ]
+  }
+}

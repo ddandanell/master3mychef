@@ -720,6 +720,51 @@ export default function CateringMainPage() {
               buffets, multi-station events, and Ubud or Uluwatu venues need more lead time for staffing and logistics.
               Message us with date and guest count — we will tell you honestly if the date is free.
             </p>
+
+            <h3 className="text-xl text-[#1A1A1A] pt-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Bali catering menu, areas and bar catering
+            </h3>
+            <p>
+              Looking for a clear <strong>Bali catering menu</strong> and price list? Use the packages on this page as
+              the baseline, then request a written proposal for your guest count. We regularly deliver{' '}
+              <strong>catering Bali Seminyak</strong>, Canggu, Ubud, Uluwatu, Nusa Dua and the Kuta corridor — see{' '}
+              <Link to="/locations" className="text-[#6B8E5A] font-semibold hover:underline">
+                locations
+              </Link>{' '}
+              for area guides. Halal-friendly and pork-free menus are available on request; traditional{' '}
+              <Link to="/catering/babi-guling" className="text-[#6B8E5A] font-semibold hover:underline">
+                babi guling
+              </Link>{' '}
+              is pork and not for Muslim-sensitive groups.
+            </p>
+            <p>
+              Need <strong>Bali drinks catering</strong>, <strong>bar catering Bali</strong> or alcohol service with
+              dinner? Stack food with{' '}
+              <Link to="/in-villa-service/bartenders" className="text-[#6B8E5A] font-semibold hover:underline">
+                luxury cocktail packages from IDR 500,000++ per guest
+              </Link>{' '}
+              (minimum 10 guests) or plan the full night on a{' '}
+              <Link to="/experiences/private-cocktail-party" className="text-[#6B8E5A] font-semibold hover:underline">
+                private cocktail party
+              </Link>
+              . For multi-day villa stays rather than one event, compare{' '}
+              <Link to="/private-chef-bali" className="text-[#6B8E5A] font-semibold hover:underline">
+                private chef day rates
+              </Link>{' '}
+              vs one-time catering. Weddings:{' '}
+              <Link to="/events/weddings" className="text-[#6B8E5A] font-semibold hover:underline">
+                wedding catering Bali
+              </Link>{' '}
+              ·{' '}
+              <Link to="/bali-wedding-catering-packages" className="text-[#6B8E5A] font-semibold hover:underline">
+                packages
+              </Link>
+              . Villa parties:{' '}
+              <Link to="/events/villa-parties" className="text-[#6B8E5A] font-semibold hover:underline">
+                villa party catering
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

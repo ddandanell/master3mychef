@@ -305,6 +305,20 @@ const FAQS = [
     answer:
       'This page is private villa parties. Venue operators should use <a href="/bar-services/">B2B bar services</a>.',
   },
+  {
+    question: 'How much are Bali cocktails for a private party?',
+    answer: `Bar packages from <strong>${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest</strong> (BYO). Free-flow and premium free-flow are higher when spirits are included. Full package rules: <a href="/in-villa-service/bartenders">luxury cocktail service</a>.`,
+  },
+  {
+    question: 'Is this the same as Bali cocktail delivery?',
+    answer:
+      'No bottle delivery. We bring the bar team and run service at your villa. Food can be added via catering packages rather than courier-only drinks.',
+  },
+  {
+    question: 'Can we combine cocktails with Bali bar catering and dinner?',
+    answer:
+      'Yes — welcome drinks into BBQ, buffet or plated dinner is the most common stack. <a href="/catering">Catering →</a> · <a href="/events/villa-parties">Villa parties →</a>',
+  },
 ]
 
 const RELATED_PAGES = [

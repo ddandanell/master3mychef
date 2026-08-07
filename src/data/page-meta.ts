@@ -1543,7 +1543,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/in-villa-service/bartenders',
     title: 'Luxury Cocktail Service Bali | Villa Packages from IDR 500K++ | myCHEF',
     description:
-      'Luxury cocktail service in Bali for villas: BYO, free-flow and premium packages from IDR 500,000++ per guest. Full bar team, glassware, ice, setup and cleanup — not hourly bartender hire.',
+      'Bali cocktails & bar catering for villas: BYO, free-flow and premium packages from IDR 500,000++ per guest. Full bar team, glassware, ice, setup — not hourly hire.',
     canonical: `${SITE}/in-villa-service/bartenders`,
     h1: 'Luxury Cocktail Service in Bali — Complete Villa Packages',
     ogImage: `${SITE}/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp`,
@@ -2042,9 +2042,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       catering: {
     path: '/catering',
-    title: 'Catering Bali | Villa, BBQ, Buffet & Events | myCHEF',
+    title: 'Catering Bali | Villa, BBQ, Buffet, Bar & Events | myCHEF',
     description:
-      'Full-service catering in Bali: BBQ nights, buffets, plated dinners, babi guling and grazing tables for groups of 10–150. Transparent per-person pricing.',
+      'Bali catering company for villas: BBQ, buffet, plated, drop-off from IDR 700K++/person. Menus, bar catering packages, Seminyak to Uluwatu. Transparent quotes.',
     canonical: `${SITE}/catering`,
     h1: 'Catering Bali for Groups, Parties & Hosted Dinners',
     ogImage: `${SITE}/generated/mychef-catering-bali-catering-hero.webp`,

@@ -925,4 +925,69 @@ export const CATERING_FAQS: CateringFAQ[] = [
     q: 'What information do you need for a quote?',
     a: `Date, location, number of guests, event type, preferred cuisine, dietary needs, and whether you want full service or drop-off. Request a <a href="/quote">quote here</a>.`,
   },
+  // AnswerSocrates guest catering + bar intents (Bali villa/events only — not US chains, equipment retail, or jobs)
+  {
+    q: 'Is myCHEF a Bali catering company?',
+    a: `Yes. myCHEF is a chef-led <strong>Bali catering company</strong> focused on villas and private events island-wide — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Kuta corridor and beyond. We employ our own chefs and service team (not last-minute freelancers). <a href="/catering">Catering Bali →</a> · <a href="/about">About →</a>`,
+  },
+  {
+    q: 'What is on a Bali catering menu?',
+    a: `Menus match the format: Indonesian or international BBQ, multi-dish buffet, plated courses, drop-off trays, grazing boards, babi guling feasts, or multi-day retreat plans. Sample dishes and price bands sit on this page and on each format page. We send a full written menu proposal before deposit. Browse <a href="/blog/bali-catering-menu">Bali catering menu ideas</a> or request a custom menu on WhatsApp.`,
+  },
+  {
+    q: 'How much does catering cost per person in Bali?',
+    a: `Published floors: BBQ, buffet and drop-off from about <strong>IDR 700,000++ per person</strong>; plated from about IDR 800,000++; live-station buffets around IDR 950,000++. Wedding receptions often land higher with production. “++” is 11% tax + 10% service. See the price table on this page and <a href="/pricing">full pricing</a>.`,
+  },
+  {
+    q: 'How much should catering cost for 20, 30, 50 or 100 people?',
+    a: `Rough guide using published per-person floors (food service only, ++ extra): <strong>20 guests</strong> BBQ ≈ IDR 14M++; <strong>30 guests</strong> BBQ/buffet ≈ IDR 21M–28.5M++; <strong>50 guests</strong> buffet ≈ IDR 35M–47.5M++; <strong>100 guests</strong> buffet ≈ IDR 70M–95M++. Exact totals depend on menu tier, area travel, bar packages and staffing. <a href="/quote">Get a fixed quote →</a>`,
+  },
+  {
+    q: 'How much does Bali drinks catering or bar catering cost?',
+    a: `<strong>Bali drinks / bar catering</strong> is sold as complete cocktail packages — not bare hourly bartender hire. From <strong>IDR 500,000++ per guest</strong> (BYO, min 10 guests); free-flow IDR 1,300,000++ and premium free-flow IDR 1,700,000++ per guest. You can also BYO alcohol with service only. Details: <a href="/in-villa-service/bartenders">luxury cocktail packages</a> · <a href="/experiences/private-cocktail-party">private cocktail party</a>.`,
+  },
+  {
+    q: 'Do you offer bar catering, alcohol catering and Bali bar service?',
+    a: `Yes for private villas and events. We run mobile bar setups, four-cocktail menus, free-flow windows, zero-proof options, ice, glassware and cleanup. Pair bar service with any food catering package. Waiters/butlers: contact for pricing. <a href="/in-villa-service/bartenders">Bar & cocktail packages →</a> · B2B venues use <a href="/bar-services/">bar services</a>.`,
+  },
+  {
+    q: 'What do people eat and drink in Bali — and can catering match that?',
+    a: `Local favourites guests often request: sate, ikan bakar, nasi campur, lawar, babi guling (pork), fresh seafood, tropical fruit and Indonesian BBQ. Drinks range from fresh juices and coconut water to arak-based cocktails, beer and wine (you may BYO). We build menus around your group’s preferences — Indonesian, international or mixed. <a href="/catering/bbq-catering">BBQ</a> · <a href="/catering/babi-guling">Babi guling</a> · <a href="/in-villa-service/bartenders">Cocktails</a>.`,
+  },
+  {
+    q: 'Is food in Bali halal — and do you offer catering di Bali halal?',
+    a: `Bali has both pork-forward Balinese dishes and widely available pork-free / Muslim-friendly options. For <strong>halal-friendly catering</strong> we run pork-free BBQ, buffet and plated menus (e.g. Indonesian BBQ, nasi campur, ayam betutu). Babi guling contains pork and is not suitable for halal groups. Tell us at enquiry so sourcing and prep stay clean. <a href="/catering">Catering options →</a>`,
+  },
+  {
+    q: 'Do you cater in Seminyak, Canggu, Ubud, Nusa Dua and Kuta?',
+    a: `Yes. <strong>Catering Bali Seminyak / Canggu</strong> is our core zone (often no travel fee). We also regularly serve Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Kuta/Legian corridor and further — travel fees quoted upfront. Area guides: <a href="/private-chef/seminyak">Seminyak</a> · <a href="/private-chef/canggu">Canggu</a> · <a href="/locations">all locations</a>.`,
+  },
+  {
+    q: 'Catering vs private chef in Bali — which should I book?',
+    a: `Choose <a href="/catering">catering</a> for one celebration (BBQ, buffet, plated party, wedding reception) with a full production team. Choose <a href="/private-chef-bali">private chef</a> day rates when you want the same chef for meals across a multi-day villa stay. Many groups do both: daily chef mid-week + one big catering night.`,
+  },
+  {
+    q: 'What does catering include — and is catering worth it?',
+    a: `Serviced packages typically include chef, service staff, menu ingredients, equipment, setup, service and cleanup. Alcohol and decorative rentals are usually add-ons unless listed. For groups of 10+, villa catering is often simpler and more private than restaurants once taxis, split tables and timing are counted — published prices let you decide before deposit.`,
+  },
+  {
+    q: 'Should I tip catering staff in Bali?',
+    a: `Tips are optional and appreciated for exceptional service, never required. When prices show “++”, government tax and service charge are already modelled into the all-in total on your written quote. Follow whatever feels right for your group.`,
+  },
+  {
+    q: 'When should I book catering for a wedding or large party?',
+    a: `Weddings and 50+ guest events: as early as villa dates are fixed — ideally 3–10 months in peak season. BBQ and buffet villa parties: 3–7+ days. Drop-off can often be next-day if ordered by 4pm. <a href="/events/weddings">Wedding catering →</a> · <a href="/bali-wedding-catering-packages">Wedding packages →</a>`,
+  },
+  {
+    q: 'Do you offer snack catering, nasi Bali catering or kids party catering?',
+    a: `Yes. We can design snack stations, canapé/grazing formats, Indonesian rice-based menus (nasi campur style), and milder kids plates alongside adult food. Birthdays: <a href="/events/birthdays">birthday catering</a>. Grazing: <a href="/catering/grazing-tables">grazing tables</a>. Kids: <a href="/kids-menus">kids menus</a>.`,
+  },
+  {
+    q: 'Apa rekomendasi catering di Bali untuk villa?',
+    a: `Untuk villa di Bali, pilih format yang cocok: BBQ untuk 10–60 tamu, buffet untuk 30+ (wedding/corporate), plated untuk dinner formal, atau drop-off jika tanpa staf di villa. myCHEF melayani Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua dan area lain dengan harga transparan per orang. <a href="/quote">Minta penawaran →</a>`,
+  },
+  {
+    q: 'Can I combine food catering with cocktails and F&B for one event?',
+    a: `Yes — one plan for food & beverage: catering menu + cocktail package (or BYO bar service) + waiters on request. Common stacks: grazing + welcome cocktails, BBQ + free-flow bar, plated wedding dinner after cocktail hour. <a href="/events/villa-parties">Villa parties →</a> · <a href="/in-villa-service/bartenders">Drinks catering packages →</a>`,
+  },
 ]

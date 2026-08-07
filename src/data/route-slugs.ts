@@ -21,8 +21,8 @@ export const LANDING_PAGE_SLUGS: string[] = [
   'healthy-meal-delivery-indonesia',
   'private-chef-booking-indonesia',
   'chef-for-hire-indonesia',
-  'proposal-dinner',
-  'honeymoon-chef',
+  // proposal-dinner → dedicated ProposalDinnerPage in App.tsx
+  // honeymoon-chef → dedicated HoneymoonChefPage in App.tsx
   'private-chef-breakfast-bali',
   'private-chef-cost-per-day-bali',
   'private-chef-cost-bali',

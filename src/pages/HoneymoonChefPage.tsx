@@ -152,18 +152,18 @@ export default function HoneymoonChefPage() {
       <SeoHead
         title="Honeymoon Private Chef Bali | Romantic Villa Dining | myCHEF"
         description="A private chef for your Bali honeymoon. Sunset dinners, breakfast in bed, custom romantic menus. specialist chef team. From IDR 2.5M++ per person. WhatsApp us."
-        canonical={`${SITE}/blog/honeymoon-private-chef-bali`}
+        canonical={`${SITE}/honeymoon-chef`}
         ogImage={`${SITE}/generated/mychef-honeymoon-chef-bali-villa-sunset.webp`}
         jsonLd={[
           detailedServiceSchema(
             'Honeymoon Private Chef Bali',
             'A private chef for your Bali honeymoon — specialist Balinese team, sunrise breakfasts, rotating romantic dinner menus, and full-stay villa packages. Serving Uluwatu, Seminyak, Ubud, Jimbaran and all Bali villa areas.',
-            `${SITE}/blog/honeymoon-private-chef-bali`
+            `${SITE}/honeymoon-chef`
           ),
-          offerSchema('Honeymoon Dinner — per person', 2500000, 'IDR', `${SITE}/blog/honeymoon-private-chef-bali`),
-          offerSchema('7-Night Full-Stay Honeymoon Package', 18000000, 'IDR', `${SITE}/blog/honeymoon-private-chef-bali`),
+          offerSchema('Honeymoon Dinner — per person', 2500000, 'IDR', `${SITE}/honeymoon-chef`),
+          offerSchema('7-Night Full-Stay Honeymoon Package', 18000000, 'IDR', `${SITE}/honeymoon-chef`),
           faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-          breadcrumbSchema('Honeymoon Private Chef Bali', `${SITE}/blog/honeymoon-private-chef-bali`, 'Blog', `${SITE}/blog`),
+          breadcrumbSchema('Honeymoon Private Chef Bali', `${SITE}/honeymoon-chef`),
         ]}
       />
 
@@ -185,7 +185,7 @@ export default function HoneymoonChefPage() {
           <div className="absolute inset-0 bg-black/20 md:hidden" />
         </div>
         <div className="absolute top-0 left-0 z-10 w-full">
-          <Breadcrumb items={[{ label: 'Blog', href: '/journal' }, { label: 'Honeymoon Private Chef Bali' }]} theme="dark" className="py-6" />
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Honeymoon Private Chef Bali' }]} theme="dark" className="py-6" />
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24">
           <p className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>

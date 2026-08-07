@@ -312,6 +312,9 @@ export default function App() {
           <Route path="/vip-transport-bali" element={<VipTransportBaliPage />} />
           <Route path="/complete-villa-experience" element={<CompleteVillaExperiencePage />} />
           <Route path="/group-villa-dinner-packages-bali" element={<GroupVillaDinnerPackagesBaliPage />} />
+          {/* Commercial owners (rich PremiumPages) — blog aliases 301 via redirects.ts */}
+          <Route path="/proposal-dinner" element={<ProposalDinnerPage />} />
+          <Route path="/honeymoon-chef" element={<HoneymoonChefPage />} />
           <Route path="/in-villa-service" element={<InVillaServicePage />} />
           <Route path="/in-villa-service/waiters" element={<ServiceWaitersPage />} />
           <Route path="/in-villa-service/butlers" element={<ServiceButlersPage />} />
@@ -455,8 +458,6 @@ export default function App() {
           <Route path="/blog/private-chef-seminyak-canggu-ubud-comparison" element={<SeminyakVsCangguVsUbudPage />} />
           <Route path="/blog/anniversary-dinner-villa-bali" element={<AnniversaryDinnerPage />} />
           <Route path="/blog/floating-breakfast-bali" element={<FloatingBreakfastBaliPage />} />
-          <Route path="/blog/proposal-dinner-bali-private-chef" element={<ProposalDinnerPage />} />
-          <Route path="/blog/honeymoon-private-chef-bali" element={<HoneymoonChefPage />} />
           <Route path="/blog/dry-season-menu-bali" element={<DrySeasonMenuPage />} />
           <Route path="/blog/wet-season-menu-bali" element={<WetSeasonMenuPage />} />
           <Route path="/blog/festive-season-menu-bali" element={<FestiveSeasonMenuPage />} />

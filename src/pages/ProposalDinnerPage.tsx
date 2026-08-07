@@ -186,12 +186,12 @@ const RELATED_PAGES = [
 export default function ProposalDinnerPage() {
   return (
     <PremiumPage
-      slug="blog/proposal-dinner-bali-private-chef"
+      slug="proposal-dinner"
       title="Proposal Dinner Bali: Private Chef for Your Perfect Moment"
       description="Plan the perfect proposal dinner in Bali. Private chef, candlelit villa setup, custom menu. specialist chef team. From IDR 3,500,000++. Message us on WhatsApp."
       seoTitle="Proposal Dinner Bali | Private Chef for Your Perfect Moment | myCHEF"
       seoDescription="Plan the perfect proposal dinner in Bali. Private chef, candlelit villa setup, custom menu. specialist chef team. From IDR 3,500,000++. Message us on WhatsApp."
-      canonicalUrl="https://mychef.id/blog/proposal-dinner-bali-private-chef"
+      canonicalUrl="https://mychef.id/proposal-dinner"
       h1="Proposal Dinner Bali"
       subtitle="A Private Chef Experience for Your Perfect Moment"
       heroImage="/generated/mychef-proposal-dinner-bali-villa-candles.webp"
@@ -210,52 +210,32 @@ export default function ProposalDinnerPage() {
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       extraJsonLd={[
-        breadcrumbSchema(
-          'Proposal Dinner Bali',
-          'https://mychef.id/blog/proposal-dinner-bali-private-chef',
-          'Journal',
-          'https://mychef.id/journal'
-        ),
+        breadcrumbSchema('Proposal Dinner Bali', 'https://mychef.id/proposal-dinner'),
         faqPageSchema(FAQS),
         {
           '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
-          headline: 'Proposal Dinner Bali: Private Chef for Your Perfect Moment',
+          '@type': 'Service',
+          name: 'Proposal Dinner Bali — Private Chef',
           description:
             'Plan the perfect proposal dinner in Bali. Private chef, candlelit villa setup, custom tasting menu. specialist chef team. From IDR 3,500,000++.',
-          author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
-          publisher: {
-            '@type': 'Organization',
-            name: 'myCHEF.id',
-            logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' },
-          },
-          datePublished: '2026-06-29',
-          dateModified: '2026-06-29',
+          provider: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           image: 'https://mychef.id/generated/mychef-proposal-dinner-bali-villa-candles.webp',
           mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': 'https://mychef.id/blog/proposal-dinner-bali-private-chef',
+            '@id': 'https://mychef.id/proposal-dinner',
           },
-          url: 'https://mychef.id/blog/proposal-dinner-bali-private-chef',
-          wordCount: 1600,
-          keywords:
-            'proposal dinner bali, proposal dinner chef bali, private chef proposal bali, romantic dinner proposal bali',
-          about: {
-            '@type': 'Service',
-            name: 'Proposal Dinner Bali — Private Chef',
-            provider: { '@type': 'Organization', name: 'myCHEF', url: 'https://mychef.id' },
-            areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
-            offers: {
-              '@type': 'Offer',
-              priceCurrency: 'IDR',
+          url: 'https://mychef.id/proposal-dinner',
+          areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'IDR',
+            price: '3500000',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
               price: '3500000',
-              priceSpecification: {
-                '@type': 'UnitPriceSpecification',
-                price: '3500000',
-                priceCurrency: 'IDR',
-                unitText: 'per person',
-                description: 'Starting price per person, minimum 2 persons',
-              },
+              priceCurrency: 'IDR',
+              unitText: 'per person',
+              description: 'Starting price per person, minimum 2 persons',
             },
           },
         },

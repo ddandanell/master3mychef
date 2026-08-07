@@ -1,0 +1,1638 @@
+{
+  "source": "/Users/openclaw/Downloads/output (2).xlsx",
+  "keep_count": 155,
+  "drop_note": "Refined: dropped US grocery/chain menus, brand names, noise. Guest + Bali villa catering intent only.",
+  "keep": [
+    {
+      "text": "catering for wedding",
+      "volume": 18100,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering wedding",
+      "volume": 18100,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "wedding catering",
+      "volume": 18100,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "food catering",
+      "volume": 18100,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering service",
+      "volume": 14800,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "bbq catering",
+      "volume": 9900,
+      "pages": [
+        "/catering/bbq-catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "Catering bali wedding",
+      "volume": 10,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "Catering bali menu",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "Catering bali packages",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "Catering bali price",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering bali",
+      "volume": 20,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering in bali",
+      "volume": 20,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "Catering Bali murah",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering enak di bali",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering indonesia",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "Catering prasmanan Bali",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/catering/buffet"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "Catering bali harian",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "Catering bali reviews",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering terbaik di indonesia",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering ternama di indonesia",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cost for wedding",
+      "volume": 4400,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering prices for wedding",
+      "volume": 4400,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "event catering",
+      "volume": 2900,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "party catering",
+      "volume": 2900,
+      "pages": [
+        "/catering",
+        "/events/birthdays",
+        "/events/villa-parties"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering event",
+      "volume": 2400,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "buffet catering",
+      "volume": 1900,
+      "pages": [
+        "/catering/buffet"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering for birthday party",
+      "volume": 1900,
+      "pages": [
+        "/catering",
+        "/events/birthdays",
+        "/events/villa-parties"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "what does catering mean",
+      "volume": 1900,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "catering and event services",
+      "volume": 1600,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering for graduation party",
+      "volume": 1600,
+      "pages": [
+        "/catering",
+        "/events/birthdays",
+        "/events/villa-parties"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering for 50 people",
+      "volume": 1600,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "finger food catering",
+      "volume": 1600,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering order",
+      "volume": 1000,
+      "pages": [
+        "/catering",
+        "/quote"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "order catering",
+      "volume": 1000,
+      "pages": [
+        "/catering",
+        "/quote"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "catering for 100 people",
+      "volume": 1000,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "grazing table catering",
+      "volume": 1000,
+      "pages": [
+        "/catering/grazing-tables"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cost per person wedding",
+      "volume": 720,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost for a wedding",
+      "volume": 720,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering for 20 people",
+      "volume": 720,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "catering for 30 people",
+      "volume": 720,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "catering order online",
+      "volume": 590,
+      "pages": [
+        "/catering",
+        "/catering/drop-off-catering",
+        "/quote"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "average catering cost per person",
+      "volume": 480,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cost for 100 people",
+      "volume": 480,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cost for 50 people",
+      "volume": 480,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering for 100 people cost",
+      "volume": 480,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering price for 100 people",
+      "volume": 480,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering price for 50 people",
+      "volume": 480,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much is catering for a wedding",
+      "volume": 480,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cost per person",
+      "volume": 390,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering prices per person",
+      "volume": 390,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost",
+      "volume": 320,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering for 10 people",
+      "volume": 390,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "catering for 40 people",
+      "volume": 390,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "catering cost for 200 people",
+      "volume": 170,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering for 15 people",
+      "volume": 260,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "what is catering services",
+      "volume": 260,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "catering and event planning",
+      "volume": 140,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cost for 150 people",
+      "volume": 140,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cost for 30 people",
+      "volume": 140,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "average cost of catering for 30 guests",
+      "volume": 110,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering with vegan options",
+      "volume": 110,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "menu catering",
+      "volume": 110,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cost for 60 people",
+      "volume": 90,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vegan",
+      "volume": 90,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "vegan catering",
+      "volume": 90,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering and event management",
+      "volume": 30,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cost per plate",
+      "volume": 20,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost for 50 people",
+      "volume": 20,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "what is a catering menu",
+      "volume": 20,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "when catering how much per person",
+      "volume": 20,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "a&a catering menu",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "average cost of catering for 300 guests",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering price for 30 people",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vs buffet",
+      "volume": 10,
+      "pages": [
+        "/catering/buffet"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering wedding jogja",
+      "volume": 10,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering wedding malang",
+      "volume": 10,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering wedding semarang",
+      "volume": 10,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering wedding surabaya",
+      "volume": 10,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering wedding tangerang",
+      "volume": 10,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering with vegetarian options",
+      "volume": 110,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much are catering services",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much is food catering",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost for 100 people",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost per person",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how's catering buffet",
+      "volume": 10,
+      "pages": [
+        "/catering/buffet"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how's catering halal",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how's catering mini buffet",
+      "volume": 10,
+      "pages": [
+        "/catering/buffet"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "queens take out & catering menu",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "varalakshmi vegetarian takeout & catering menu",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "what is buffet catering",
+      "volume": 10,
+      "pages": [
+        "/catering/buffet"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "what is food catering",
+      "volume": 110,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "when catering for a party how much food",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/events/birthdays",
+        "/events/villa-parties",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "why is catering important for an event organiser",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "best catering for kids birthday party",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/events/birthdays",
+        "/events/villa-parties"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering cheap for wedding",
+      "volume": 0,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering for kids birthday party",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/events/birthdays",
+        "/events/villa-parties"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering price for 60 people",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vs cooking for a party",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/events/birthdays",
+        "/events/villa-parties"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering without chaos book",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/quote"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost for 150 people",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost for 20 people",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost for 200 people",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost for 30 people",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost for 40 people",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "how much should catering cost for 60 people",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "kids party catering",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/events/birthdays",
+        "/events/villa-parties"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "should i tip catering orders",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/quote"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "should i tip on a catering pickup order",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/quote"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "tips catering wedding",
+      "volume": 0,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "when catering an event",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "when should catering arrive for wedding",
+      "volume": 0,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "when should i book catering for my wedding",
+      "volume": 0,
+      "pages": [
+        "/bali-wedding-catering-packages",
+        "/catering",
+        "/events/weddings",
+        "/quote"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "when to order catering",
+      "volume": 0,
+      "pages": [
+        "/catering",
+        "/quote"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "why catering is important for an event",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vegetarian",
+      "volume": 90,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "what does catering mean in food",
+      "volume": 40,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "catering nasi box",
+      "volume": 20,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering prasmanan",
+      "volume": 20,
+      "pages": [
+        "/catering",
+        "/catering/buffet"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vs delivery",
+      "volume": 20,
+      "pages": [
+        "/catering/drop-off-catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vs restaurant",
+      "volume": 20,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "should i tip for catering pick up",
+      "volume": 20,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "average catering per person",
+      "volume": 10,
+      "pages": [
+        "/catering",
+        "/pricing"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering jimbaran",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering nasi kotak",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering nasi kuning",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering nasi liwet",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering ubud",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vegetarian surabaya",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vs banquet",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vs food truck",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vs hospitality",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vs private chef",
+      "volume": 10,
+      "pages": [
+        "/private-chef-bali"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "in food catering",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "the food catering",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "what does catering include",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "what's catering service",
+      "volume": 10,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "a food catering",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "apa itu catering service",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "catering rekomendasi",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vegetarian batam",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vegetarian medan",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "catering vs takeout",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "is catering worth it",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "la food catering",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "nasi lemak was catering",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "rekomendasi catering",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "rekomendasi catering enak",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "rekomendasi catering harian",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "rekomendasi catering murah",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "rekomendasi catering sehat",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "should i tip catering",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "should i tip for catering delivery",
+      "volume": 0,
+      "pages": [
+        "/catering/drop-off-catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "should i tip for takeout catering",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    },
+    {
+      "text": "which catering service",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "soft-guest-intent"
+    },
+    {
+      "text": "why food catering",
+      "volume": 0,
+      "pages": [
+        "/catering"
+      ],
+      "reason": "keep-related"
+    }
+  ],
+  "by_page": {
+    "/catering": [
+      "catering for wedding",
+      "catering wedding",
+      "wedding catering",
+      "food catering",
+      "catering service",
+      "Catering bali wedding",
+      "Catering bali menu",
+      "Catering bali packages",
+      "Catering bali price",
+      "catering bali",
+      "catering in bali",
+      "Catering Bali murah",
+      "catering enak di bali",
+      "catering indonesia",
+      "Catering prasmanan Bali",
+      "Catering bali harian",
+      "Catering bali reviews",
+      "catering terbaik di indonesia",
+      "catering ternama di indonesia",
+      "catering cost for wedding",
+      "catering prices for wedding",
+      "event catering",
+      "party catering",
+      "catering event",
+      "catering for birthday party",
+      "what does catering mean",
+      "catering and event services",
+      "catering for graduation party",
+      "catering for 50 people",
+      "finger food catering",
+      "catering order",
+      "order catering",
+      "catering for 100 people",
+      "catering cost per person wedding",
+      "how much should catering cost for a wedding",
+      "catering for 20 people",
+      "catering for 30 people",
+      "catering order online",
+      "average catering cost per person",
+      "catering cost for 100 people",
+      "catering cost for 50 people",
+      "catering for 100 people cost",
+      "catering price for 100 people",
+      "catering price for 50 people",
+      "how much is catering for a wedding",
+      "catering cost per person",
+      "catering prices per person",
+      "how much should catering cost",
+      "catering for 10 people",
+      "catering for 40 people",
+      "catering cost for 200 people",
+      "catering for 15 people",
+      "what is catering services",
+      "catering and event planning",
+      "catering cost for 150 people",
+      "catering cost for 30 people",
+      "average cost of catering for 30 guests",
+      "catering with vegan options",
+      "menu catering",
+      "catering cost for 60 people",
+      "catering vegan",
+      "vegan catering",
+      "catering and event management",
+      "catering cost per plate",
+      "how much should catering cost for 50 people",
+      "what is a catering menu",
+      "when catering how much per person",
+      "a&a catering menu",
+      "average cost of catering for 300 guests",
+      "catering price for 30 people",
+      "catering wedding jogja",
+      "catering wedding malang",
+      "catering wedding semarang",
+      "catering wedding surabaya",
+      "catering wedding tangerang",
+      "catering with vegetarian options",
+      "how much are catering services",
+      "how much is food catering",
+      "how much should catering cost for 100 people",
+      "how much should catering cost per person",
+      "how's catering halal",
+      "queens take out & catering menu",
+      "varalakshmi vegetarian takeout & catering menu",
+      "what is food catering",
+      "when catering for a party how much food",
+      "why is catering important for an event organiser",
+      "best catering for kids birthday party",
+      "catering cheap for wedding",
+      "catering for kids birthday party",
+      "catering price for 60 people",
+      "catering vs cooking for a party",
+      "catering without chaos book",
+      "how much should catering cost for 150 people",
+      "how much should catering cost for 20 people",
+      "how much should catering cost for 200 people",
+      "how much should catering cost for 30 people",
+      "how much should catering cost for 40 people",
+      "how much should catering cost for 60 people",
+      "kids party catering",
+      "should i tip catering orders",
+      "should i tip on a catering pickup order",
+      "tips catering wedding",
+      "when catering an event",
+      "when should catering arrive for wedding",
+      "when should i book catering for my wedding",
+      "when to order catering",
+      "why catering is important for an event",
+      "catering vegetarian",
+      "what does catering mean in food",
+      "catering nasi box",
+      "catering prasmanan",
+      "catering vs restaurant",
+      "should i tip for catering pick up",
+      "average catering per person",
+      "catering jimbaran",
+      "catering nasi kotak",
+      "catering nasi kuning",
+      "catering nasi liwet",
+      "catering ubud",
+      "catering vegetarian surabaya",
+      "catering vs banquet",
+      "catering vs food truck",
+      "catering vs hospitality",
+      "in food catering",
+      "the food catering",
+      "what does catering include",
+      "what's catering service",
+      "a food catering",
+      "apa itu catering service",
+      "catering rekomendasi",
+      "catering vegetarian batam",
+      "catering vegetarian medan",
+      "catering vs takeout",
+      "is catering worth it",
+      "la food catering",
+      "nasi lemak was catering",
+      "rekomendasi catering",
+      "rekomendasi catering enak",
+      "rekomendasi catering harian",
+      "rekomendasi catering murah",
+      "rekomendasi catering sehat",
+      "should i tip catering",
+      "should i tip for takeout catering",
+      "which catering service",
+      "why food catering"
+    ],
+    "/pricing": [
+      "Catering bali price",
+      "catering cost for wedding",
+      "catering prices for wedding",
+      "catering for 50 people",
+      "catering for 100 people",
+      "catering cost per person wedding",
+      "how much should catering cost for a wedding",
+      "catering for 20 people",
+      "catering for 30 people",
+      "average catering cost per person",
+      "catering cost for 100 people",
+      "catering cost for 50 people",
+      "catering for 100 people cost",
+      "catering price for 100 people",
+      "catering price for 50 people",
+      "how much is catering for a wedding",
+      "catering cost per person",
+      "catering prices per person",
+      "how much should catering cost",
+      "catering cost for 200 people",
+      "catering cost for 150 people",
+      "catering cost for 30 people",
+      "average cost of catering for 30 guests",
+      "catering cost for 60 people",
+      "catering cost per plate",
+      "how much should catering cost for 50 people",
+      "when catering how much per person",
+      "average cost of catering for 300 guests",
+      "catering price for 30 people",
+      "how much are catering services",
+      "how much is food catering",
+      "how much should catering cost for 100 people",
+      "how much should catering cost per person",
+      "when catering for a party how much food",
+      "catering price for 60 people",
+      "how much should catering cost for 150 people",
+      "how much should catering cost for 20 people",
+      "how much should catering cost for 200 people",
+      "how much should catering cost for 30 people",
+      "how much should catering cost for 40 people",
+      "how much should catering cost for 60 people",
+      "average catering per person"
+    ],
+    "/bali-wedding-catering-packages": [
+      "catering for wedding",
+      "catering wedding",
+      "wedding catering",
+      "Catering bali wedding",
+      "catering cost for wedding",
+      "catering prices for wedding",
+      "catering cost per person wedding",
+      "how much should catering cost for a wedding",
+      "how much is catering for a wedding",
+      "catering wedding jogja",
+      "catering wedding malang",
+      "catering wedding semarang",
+      "catering wedding surabaya",
+      "catering wedding tangerang",
+      "catering cheap for wedding",
+      "tips catering wedding",
+      "when should catering arrive for wedding",
+      "when should i book catering for my wedding"
+    ],
+    "/events/weddings": [
+      "catering for wedding",
+      "catering wedding",
+      "wedding catering",
+      "Catering bali wedding",
+      "catering cost for wedding",
+      "catering prices for wedding",
+      "catering cost per person wedding",
+      "how much should catering cost for a wedding",
+      "how much is catering for a wedding",
+      "catering wedding jogja",
+      "catering wedding malang",
+      "catering wedding semarang",
+      "catering wedding surabaya",
+      "catering wedding tangerang",
+      "catering cheap for wedding",
+      "tips catering wedding",
+      "when should catering arrive for wedding",
+      "when should i book catering for my wedding"
+    ],
+    "/events/birthdays": [
+      "party catering",
+      "catering for birthday party",
+      "catering for graduation party",
+      "when catering for a party how much food",
+      "best catering for kids birthday party",
+      "catering for kids birthday party",
+      "catering vs cooking for a party",
+      "kids party catering"
+    ],
+    "/events/villa-parties": [
+      "party catering",
+      "catering for birthday party",
+      "catering for graduation party",
+      "when catering for a party how much food",
+      "best catering for kids birthday party",
+      "catering for kids birthday party",
+      "catering vs cooking for a party",
+      "kids party catering"
+    ],
+    "/quote": [
+      "catering order",
+      "order catering",
+      "catering order online",
+      "catering without chaos book",
+      "should i tip catering orders",
+      "should i tip on a catering pickup order",
+      "when should i book catering for my wedding",
+      "when to order catering"
+    ],
+    "/catering/buffet": [
+      "Catering prasmanan Bali",
+      "buffet catering",
+      "catering vs buffet",
+      "how's catering buffet",
+      "how's catering mini buffet",
+      "what is buffet catering",
+      "catering prasmanan"
+    ],
+    "/catering/drop-off-catering": [
+      "catering order online",
+      "catering vs delivery",
+      "should i tip for catering delivery"
+    ],
+    "/catering/bbq-catering": [
+      "bbq catering"
+    ],
+    "/catering/grazing-tables": [
+      "grazing table catering"
+    ],
+    "/private-chef-bali": [
+      "catering vs private chef"
+    ]
+  }
+}

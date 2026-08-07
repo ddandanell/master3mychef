@@ -204,6 +204,10 @@ const FAQS = [
   { question: 'What is the cost of food and drink in Bali for a villa event?', answer: 'Food catering floors from about IDR 700K++ per person (BBQ/buffet/drop-off). Cocktail packages from IDR 500K++ per guest (BYO, min 10) or IDR 1.3M–1.7M++ free-flow with spirits. Private chef day rates are separate (from IDR 1M++/day for one meal). <a href="/catering">Catering →</a> · <a href="/in-villa-service/bartenders">Drinks packages →</a>' },
   { question: 'What is the average drink price in Bali for private cocktail service?', answer: 'For villa free-flow, budget about IDR 1,300,000–1,700,000++ per guest when spirits are included, or from IDR 500,000++ per guest if you supply the alcohol (BYO package). That is package pricing — not a single beach-club cocktail. <a href="/in-villa-service/bartenders">Cocktail packages →</a>' },
   { question: 'How much does Bali drinks catering cost?', answer: 'Complete bar catering packages from IDR 500,000++ per guest (min 10). Not hourly bartender-only hire. Stack with food on <a href="/catering">catering</a> or plan a full night on <a href="/experiences/private-cocktail-party">private cocktail party</a>.' },
+  // Long-tail catering cost keywords (guest intent)
+  { question: 'What is the average catering cost per person in Bali?', answer: 'Food catering floors from about IDR 700K++ per person (BBQ/buffet/drop-off); plated from ~IDR 800K++. Wedding reception production often IDR 1.5M–3M++ per person. Your fixed quote is the real number. <a href="/catering">Catering packages →</a>' },
+  { question: 'How much does catering cost for 50 or 100 people?', answer: 'Using published food floors: ~50 guests ≈ IDR 35M–47.5M++ (buffet band); ~100 guests ≈ IDR 70M–95M++ before bar, travel and upgrades. <a href="/catering">Catering →</a> · <a href="/quote">Quote →</a>' },
+  { question: 'How much is catering for a wedding in Bali?', answer: 'Intimate formats near food floors from ~IDR 700K++ per person; full villa receptions often IDR 1.5M–3M++ with production. <a href="/events/weddings">Wedding catering →</a> · <a href="/bali-wedding-catering-packages">Packages →</a>' },
 ]
 
 const RELATED_PAGES = [

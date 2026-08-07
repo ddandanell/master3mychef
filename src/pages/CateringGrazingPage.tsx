@@ -202,6 +202,7 @@ const FAQS = [
   { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront.' },
   { q: 'Can we add a mobile cocktail bar?', a: 'Yes — complete packages from IDR 500,000++ per guest (min 10), not hourly hire. Stack with chef or catering. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
   { q: 'Kids and allergies?', a: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
+  { q: 'Is this grazing table catering or finger food catering?', a: 'Both can apply: a styled grazing table is the main product; we also design finger-food / canapé trays for cocktail hours. Stack with dinner formats on <a href="/catering">catering Bali</a> when the table is welcome food only.' },
 ]
 
 /* ═══════════════════════════════════════════════════════════════

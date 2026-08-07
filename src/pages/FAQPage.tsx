@@ -236,6 +236,18 @@ const FAQ_CATEGORIES: FAQCategory[] = [
         q: 'Is food in Bali halal — can you cater pork-free?',
         a: 'Yes. We run pork-free and Muslim-friendly menus on request. Babi guling contains pork and is not for halal groups. Tell us at enquiry. <a href="/catering">Catering options →</a>',
       },
+      {
+        q: 'How do I order catering or book a catering service in Bali?',
+        a: 'WhatsApp date, villa area, guest count and format — or use <a href="/quote">quote</a> / <a href="/book">book</a>. We send a menu proposal and fixed price. That is how food catering is ordered with myCHEF (no anonymous cart). <a href="/catering">Catering Bali →</a>',
+      },
+      {
+        q: 'Do you offer wedding catering, party catering and BBQ catering?',
+        a: 'Yes. <a href="/events/weddings">Wedding catering</a> · <a href="/events/villa-parties">party catering</a> · <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/catering/buffet">buffet catering</a>. Full formats on <a href="/catering">catering</a>.',
+      },
+      {
+        q: 'What does catering include with myCHEF?',
+        a: 'Serviced packages include chef, service staff, menu ingredients, equipment, setup, service and cleanup. Bar packages and waiters/butlers are add-ons when listed. Details: <a href="/catering">catering FAQ on the catering page</a>.',
+      },
     ],
   },
 ]

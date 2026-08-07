@@ -72,6 +72,9 @@ const FAQS = [
   { q: 'When should I book catering for my Bali wedding?', a: 'As soon as villa/venue dates are fixed — ideally 3–10 months for peak season (Jul–Sep, Dec–Jan). That locks the kitchen team, tasting window and run-of-show with your planner.' },
   { q: 'Can we hire a private chef for a micro-wedding or wedding dinner only?', a: 'Yes — intimate dinners often use <a href="/private-chef-bali">private chef</a> or <a href="/fine-dining">fine dining</a> formats instead of full buffet production. Larger receptions stay on this wedding catering page.' },
   { q: 'Do you provide bar catering and cocktails for wedding welcome drinks?', a: 'Yes — cocktail hour and free-flow packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service/bartenders">Cocktail packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party planning →</a>' },
+  // Long-tail wedding catering keywords
+  { q: 'Do you offer wedding catering packages and a catering price list for Bali villas?', a: 'Yes — published package bands and inclusions on <a href="/bali-wedding-catering-packages">Bali wedding catering packages</a>. Food formats also on <a href="/catering">catering Bali</a>. Your written proposal is the fixed price list for your guest count.' },
+  { q: 'How do I order wedding catering for a villa reception?', a: 'WhatsApp date, guest estimate, villa/venue and style (plated/buffet/BBQ). We send a menu proposal and all-in total. <a href="/quote">Quote →</a> · <a href="/book">Book →</a>' },
 ]
 
 const FLOW_STEPS = [

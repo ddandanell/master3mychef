@@ -167,6 +167,9 @@ const FAQS = [
   { q: 'How do I book catering?', a: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
   { q: 'Rain plan?', a: 'Covered setups and indoor pivots planned ahead.' },
   { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  // Long-tail: buffet catering / prasmanan / wedding buffet
+  { q: 'What is buffet catering (prasmanan) and when should I choose it?', a: 'Buffet / prasmanan-style catering is self-serve variety with chafing stations — best for 30+ guests, weddings and mixed dietary groups. Smaller parties often fit BBQ or plated better. Hub: <a href="/catering">catering Bali</a> · weddings: <a href="/events/weddings">wedding catering</a>.' },
+  { q: 'Is buffet catering good for wedding catering in Bali?', a: 'Yes — the default for many villa receptions when guest counts climb. Pair welcome canapés or a <a href="/in-villa-service/bartenders">mobile cocktail bar</a> for drinks. Packages: <a href="/bali-wedding-catering-packages">wedding catering packages</a>.' },
 ]
 
 const BUFFET_SERVICE_SCHEMA = (() => {

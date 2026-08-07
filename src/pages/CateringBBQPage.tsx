@@ -128,6 +128,9 @@ const FAQS = [
   { q: 'What if guest count changes?', a: 'Final numbers usually due ~48 hours before. We adjust food and staff; large jumps may affect minimums.' },
   { q: 'How do I book BBQ catering with myCHEF?', a: 'WhatsApp date, guests, villa area and package preference. <a href="/quote">Quote →</a> · <a href="/catering">all catering →</a>' },
   { q: 'What if the team cannot make it?', a: 'Verified replacement or refund — supervised teams. <a href="/why-mychef">Why myCHEF →</a>' },
+  // Long-tail: BBQ catering / food catering / party catering
+  { q: 'Is BBQ catering the same as food catering or party catering?', a: 'BBQ is one food-catering format — live grill for villa parties, birthdays and casual wedding welcome nights. Other formats (buffet, plated, drop-off) live on <a href="/catering">catering Bali</a>. For full party production see <a href="/events/villa-parties">villa parties</a>.' },
+  { q: 'Can we order BBQ catering online for a Bali villa?', a: 'Yes via WhatsApp or <a href="/quote">quote</a> — share date, guest count and area. We send a fixed package proposal (no supermarket tray cart). Stack a <a href="/in-villa-service/bartenders">mobile cocktail bar</a> when drinks matter.' },
 ]
 
 export default function CateringBBQPage() {

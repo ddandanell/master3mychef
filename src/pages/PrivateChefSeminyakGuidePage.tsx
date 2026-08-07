@@ -88,7 +88,7 @@ const FAQS = [
   { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
   { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
   { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
-  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'Staff and mobile bar?', answer: 'Waiters/butlers: contact for pricing. Mobile cocktail bar packages from IDR 500K++/guest (min 10). <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
 ]
 
 export default function PrivateChefSeminyakGuidePage() {
@@ -107,10 +107,10 @@ export default function PrivateChefSeminyakGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Canggu Guide', href: '/private-chef/canggu', desc: 'Surf culture dining and group parties in Canggu.' },
-        { label: 'Honeymoon Private Chef', href: '/honeymoon-chef', desc: 'Private chef experience guide for Bali honeymoons.' },
-        { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Arrange a private chef proposal dinner at your villa.' },
-        { label: 'Anniversary Dinner Bali', href: '/events/anniversaries', desc: 'Private chef anniversary dinner at a Bali villa.' },
+        { label: 'Private Chef Seminyak', href: '/private-chef/seminyak', desc: 'Book a private chef in Seminyak — day rates and menus.' },
+        { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Party bar packages from IDR 500K++ for Seminyak villas.' },
+        { label: 'Villa Catering Bali', href: '/catering', desc: 'BBQ, buffet and plated for Seminyak celebrations.' },
+        { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'Full night plan with mobile bar + food.' },
       ]}
       extraJsonLd={[
         breadcrumbSchema('Private Chef Seminyak Guide', 'https://mychef.id/blog/private-chef-seminyak-guide', 'Blog', 'https://mychef.id/blog'),

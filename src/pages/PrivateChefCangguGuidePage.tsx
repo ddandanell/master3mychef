@@ -91,7 +91,7 @@ const FAQS = [
   { question: 'Fine dining available here?', answer: 'Yes — <a href="/fine-dining">fine dining</a>.' },
   { question: 'BBQ and parties?', answer: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a> · <a href="/events/villa-parties">villa parties</a>.' },
   { question: 'Daily chef for a week?', answer: 'Yes — meal plans on <a href="/private-chef-bali">private chef Bali</a>.' },
-  { question: 'Staff and bartenders?', answer: 'Yes — <a href="/in-villa-service">in-villa service</a>.' },
+  { question: 'Staff and mobile bar?', answer: 'Waiters/butlers: contact for pricing. Mobile cocktail bar packages from IDR 500K++/guest (min 10). <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
 ]
 
 export default function PrivateChefCangguGuidePage() {
@@ -110,11 +110,10 @@ export default function PrivateChefCangguGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Ubud Guide', href: '/private-chef/ubud', desc: 'Farm-to-table dining and wellness menus in Ubud.' },
-        { label: 'Private Chef Seminyak Guide', href: '/private-chef/seminyak', desc: 'Luxury villa dining and fine dining in Seminyak.' },
-        { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef for bachelor party villa nights in Canggu.' },
-        { label: 'Bali BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire BBQ catering for villa groups across Bali.' },
-        { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'Private chef floating breakfast for your Canggu villa pool.' },
+        { label: 'Private Chef Canggu', href: '/private-chef/canggu', desc: 'Book a private chef in Canggu — day rates and menus.' },
+        { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Party bar packages for Canggu villa free-flow.' },
+        { label: 'BBQ Catering', href: '/catering/bbq-catering', desc: 'Poolside BBQ — stack with mobile bar for drinks.' },
+        { label: 'Pool Party Catering', href: '/blog/pool-party-catering-bali', desc: 'Finger food and stations for Canggu pool parties.' },
       ]}
       extraJsonLd={[
         breadcrumbSchema('Private Chef Canggu Guide', 'https://mychef.id/blog/private-chef-canggu-guide', 'Blog', 'https://mychef.id/blog'),

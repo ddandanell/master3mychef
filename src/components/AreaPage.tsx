@@ -225,29 +225,36 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
                 </div>
               </div>
 
-              {/* In-Villa Service */}
-              <Link to="/in-villa-service" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#8B5A2B] transition-all group">
+              {/* Mobile cocktail bar */}
+              <Link to="/in-villa-service/bartenders" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#8B5A2B] transition-all group">
                 <Users className="w-6 h-6 text-[#8B5A2B] mb-3" />
-                <h3 className="font-playfair text-xl mb-2">In-Villa Service</h3>
-                <p className="text-sm text-[#4A4745] flex-grow">Waiters, butlers, bartenders, mixologists, sommeliers.</p>
+                <h3 className="font-playfair text-xl mb-2">Mobile Cocktail Bar</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">We bring a complete bar to villa parties from IDR 500K++ per guest — stack with chef or catering.</p>
                 <span className="text-xs uppercase tracking-[2px] font-semibold text-[#8B5A2B] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
               </Link>
             </div>
 
-            {/* Second row: staffing + services */}
-            <div className="grid md:grid-cols-2 gap-4 mt-4">
-              <Link to="/staffing" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#C5A028] transition-all group">
+            {/* Second row: private chef + cocktail party + staffing */}
+            <div className="grid md:grid-cols-3 gap-4 mt-4">
+              <Link to="/private-chef-bali" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#C5A028] transition-all group">
                 <ChefHat className="w-6 h-6 text-[#C5A028] mb-3" />
-                <h3 className="font-playfair text-xl mb-2">Staffing & Placement</h3>
-                <p className="text-sm text-[#4A4745] flex-grow">Full-time private chefs, villa staff, household staff, hotel recruitment.</p>
+                <h3 className="font-playfair text-xl mb-2">Private Chef Bali</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">Daily villa chef hire for multi-day stays — stack a party night with catering and bar.</p>
                 <span className="text-xs uppercase tracking-[2px] font-semibold text-[#C5A028] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
               </Link>
 
-              <Link to="/services" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#2C5F7C] transition-all group">
+              <Link to="/experiences/private-cocktail-party" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#2C5F7C] transition-all group">
                 <PartyPopper className="w-6 h-6 text-[#2C5F7C] mb-3" />
-                <h3 className="font-playfair text-xl mb-2">All Experiences</h3>
-                <p className="text-sm text-[#4A4745] flex-grow">Villa parties, romantic dinners, cooking classes, weekly meal prep.</p>
+                <h3 className="font-playfair text-xl mb-2">Private Cocktail Party</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">Occasion plan for pool and villa nights with the same mobile bar packages.</p>
                 <span className="text-xs uppercase tracking-[2px] font-semibold text-[#2C5F7C] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
+              </Link>
+
+              <Link to="/in-villa-service" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#8B5A2B] transition-all group">
+                <Users className="w-6 h-6 text-[#8B5A2B] mb-3" />
+                <h3 className="font-playfair text-xl mb-2">Waiters &amp; Butlers</h3>
+                <p className="text-sm text-[#4A4745] flex-grow">FOH staff for dinners and events — contact us for pricing; bar is packaged separately.</p>
+                <span className="text-xs uppercase tracking-[2px] font-semibold text-[#8B5A2B] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
               </Link>
             </div>
           </div>

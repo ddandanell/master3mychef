@@ -64,11 +64,11 @@ const SERVICE_CARDS = [
   },
   {
     id: 'staffing' as const,
-    label: 'Staffing',
+    label: 'Mobile Cocktail Bar',
     icon: Users,
     color: '#8B5A2B',
-    desc: 'Waiters, butlers, bartenders, sommeliers, and household staff placement.',
-    href: '/staffing',
+    desc: 'Mobile bar for villa parties from IDR 500K++/guest — stack with chef or catering.',
+    href: '/in-villa-service/bartenders',
   },
 ]
 
@@ -465,7 +465,16 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
     breadcrumbSchema(area.name, canonical, 'Private Chef Bali', `${SITE}/`),
   ]
 
-  const availableServices = SERVICE_CARDS.filter((s) => area.services.includes(s.id))
+  // Always surface mobile bar (maps from staffing id for areas that list staffing;
+  // still inject for areas that only list food services).
+  const availableServices = (() => {
+    const cards = SERVICE_CARDS.filter((s) => area.services.includes(s.id))
+    const barCard = SERVICE_CARDS.find((s) => s.id === 'staffing')
+    if (barCard && !cards.some((s) => s.href === '/in-villa-service/bartenders')) {
+      return [...cards, barCard]
+    }
+    return cards
+  })()
 
   // Nearby areas — up to 6, filtered to published
   const publishedSlugs = new Set(PRIVATE_CHEF_AREAS.filter((a) => a.published).map((a) => a.slug))
@@ -946,11 +955,11 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             {[
               { label: 'Fine Dining', href: '/fine-dining', icon: Flame },
               { label: 'Villa Catering', href: '/catering', icon: Utensils },
+              { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', icon: Users },
+              { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', icon: Sparkles },
               { label: 'Events & Weddings', href: '/events', icon: Sparkles },
-              { label: 'Staffing', href: '/staffing', icon: Users },
               { label: 'Private Chef Bali', href: '/private-chef-bali', icon: ChefHat },
               { label: 'Pricing Guide', href: '/pricing', icon: Check },
-              { label: 'Book myCHEF', href: '/book', icon: CalendarCheck },
               { label: 'Get a Quote', href: '/quote', icon: MessageCircle },
             ].map((link) => {
               const Icon = link.icon

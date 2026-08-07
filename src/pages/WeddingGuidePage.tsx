@@ -59,7 +59,8 @@ const NOT_INCLUDED = [
 ]
 
 const FAQS = [
-  { q: 'How much does wedding catering in Bali cost?', a: 'Wedding reception catering is quoted per guest based on menu and guest count. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/pricing">pricing</a> for published guidance.' },
+  { q: 'How much does wedding catering in Bali cost?', a: 'Full receptions often IDR 1.5M–3M++ per person; intimate from ~IDR 700K++. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>.' },
+  { q: 'How much does a wedding in Bali cost overall?', a: 'Total spend varies (villa, planner, photo, travel). myCHEF quotes cover food, kitchen, service and bar only. F&amp;B education: <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>.' },
   { q: 'Do you offer menu tastings for weddings?', a: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
   { q: 'Can you handle banjar fees and villa permissions?', a: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
   { q: 'Can guests bring their own alcohol?', a: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },

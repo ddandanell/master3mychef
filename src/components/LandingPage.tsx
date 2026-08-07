@@ -47,7 +47,44 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   // read through a narrow cast rather than `as any` — this keeps the rest of
   // `entry` type-checked instead of silently opting the whole object out.
   const pageH1 = mappedMeta?.h1 ?? (entry as { h1?: string }).h1 ?? entry.title
-  const heroImage = kind === 'landing' ? '/generated/hero-how-it-works.webp' : '/generated/luna-hero-v3.webp'
+  // Prefer per-URL OG/hero from page-meta (indexing uniqueness). Shared defaults only as fallback.
+  const LANDING_HEROES: Record<string, string> = {
+    'seafood-bbq-catering-bali': '/generated/mychef-seafood-bbq-catering-bali-hero.webp',
+    'wedding-catering-indonesia': '/generated/mychef-wedding-catering-indonesia-hero.webp',
+    'healthy-meal-delivery-indonesia': '/generated/mychef-healthy-meal-delivery-indonesia-hero.webp',
+    'butler-service-bali-daily-rate': '/generated/mychef-butler-service-bali-daily-rate-hero.webp',
+    'corporate-retreat-catering-bali': '/generated/mychef-corporate-retreat-catering-bali-hero.webp',
+    'honeymoon-chef': '/generated/mychef-honeymoon-chef-bali-villa-sunset.webp',
+    'proposal-dinner': '/generated/mychef-proposal-dinner-bali-villa-candles.webp',
+    'villa-bbq-catering-bali': '/generated/mychef-catering-bali-hero-bbq.webp',
+    'group-villa-dinner-packages-bali': '/generated/mychef-catering-bali-hero-buffet.webp',
+    'bali-wedding-catering-packages': '/generated/mychef-events-bali-hero-weddings.webp',
+  }
+  const BLOG_HEROES: Record<string, string> = {
+    'blog/bali-catering-menu': '/generated/mychef-catering-bali-hero-villa.webp',
+    'blog/bali-wedding-catering-private-chef-timeline': '/generated/mychef-blog-wedding-private-chef.webp',
+    'blog/dietary-specific-chef-bali': '/generated/mychef-blog-yoga-retreat-chef.webp',
+    'blog/event-planning-bali': '/generated/mychef-events-bali-hub-events.webp',
+    'blog/family-kids-menu-private-chef-bali': '/generated/kids-birthday-party-bali-chef.webp',
+    'blog/food-allergies-dietary-requirements-private-chef-bali': '/generated/mychef-blog-yoga-retreat-chef.webp',
+    'blog/holiday-chef-bali': '/generated/mychef-events-bali-hero-birthdays.webp',
+    'blog/hostess-hire-bali': '/generated/mychef-service-bali-hero-butlers.webp',
+    'blog/how-to-plan-villa-birthday-party-bali': '/generated/mychef-blog-villa-birthday-party.webp',
+    'blog/indonesian-street-food-private-chef-bali': '/generated/mychef-catering-bali-bbq-grill-satay.webp',
+    'blog/luxury-dining-bali': '/generated/mychef-misc-bali-hub-fine-dining.webp',
+    'blog/private-chef-roles-responsibilities-explained': '/generated/mychef-staffing-bali-staffing-hero.webp',
+    'blog/private-chef-romantic-dinners-bali': '/generated/mychef-events-bali-anniversary-romantic.webp',
+    'blog/private-chef-vs-restaurant-bali': '/generated/mychef-experience-bali-luna-table.webp',
+    'blog/seasonal-ingredients-bali-cooking-guide': '/generated/luna-ingredients.webp',
+    'blog/seminyak-canggu-ubud-uluwatu-private-chef-night': '/generated/mychef-blog-dining-by-location.webp',
+    'blog/tasting-menu-bali': '/generated/mychef-finedining-bali-chefs-hero.webp',
+  }
+  const metaOgPath = mappedMeta?.ogImage?.replace(/^https?:\/\/mychef\.id/, '') || ''
+  const heroImage =
+    (metaOgPath.startsWith('/generated/') ? metaOgPath : '') ||
+    (kind === 'landing' ? LANDING_HEROES[entry.slug] : '') ||
+    (kind === 'blog' ? BLOG_HEROES[entry.slug] : '') ||
+    (kind === 'landing' ? '/generated/hero-how-it-works.webp' : '/generated/luna-hero-v3.webp')
   const hubPath = kind === 'blog' ? '/journal' : kind === 'guide' ? '/help' : '/'
   const hubLabel = kind === 'blog' ? 'Journal' : kind === 'guide' ? 'Help' : 'Home'
   const hubCtaLabel = kind === 'blog' ? 'View All Journal Entries' : kind === 'guide' ? 'View All Help Guides' : 'View All Pages'

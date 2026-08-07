@@ -716,6 +716,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Fresh seafood BBQs for Bali villas: snapper, prawns and lobster grilled live poolside, sourced direct from Jimbaran market. Clear packages via WhatsApp myCHEF.',
     canonical: `${SITE}/seafood-bbq-catering-bali`,
     h1: 'Seafood BBQ Catering Bali — Direct-from-Market Freshness',
+    ogImage: `${SITE}/generated/mychef-seafood-bbq-catering-bali-hero.webp`,
   },
 
       'group-villa-dinner-packages-bali': {
@@ -734,6 +735,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Multi-day catering for corporate retreats and offsites in Bali: full-day meal structures, NPWP invoices and executive service. Clear quotes via WhatsApp myCHEF.',
     canonical: `${SITE}/corporate-retreat-catering-bali`,
     h1: 'Corporate Retreat Catering Bali — Professional Event Hospitality',
+    ogImage: `${SITE}/generated/mychef-corporate-retreat-catering-bali-hero.webp`,
   },
 
       'luxury-birthday-party-bali': {
@@ -753,6 +755,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Butler service in Bali for villa stays — what is included, shift options, guest hosting duties and how booking works. Contact us for pricing via WhatsApp myCHEF.',
     canonical: `${SITE}/butler-service-bali-daily-rate`,
     h1: 'Butler Service in Bali — Daily Rates Explained',
+    ogImage: `${SITE}/generated/mychef-butler-service-bali-daily-rate-hero.webp`,
   },
 
       'best-private-chef-indonesia': {
@@ -789,6 +792,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Premium wedding catering across Indonesia — Bali and beyond. Custom menus, full service teams and event coordination for multi-city couples. WhatsApp myCHEF.',
     canonical: `${SITE}/wedding-catering-indonesia`,
     h1: 'Wedding Catering Indonesia — Villa Wedding Specialists',
+    ogImage: `${SITE}/generated/mychef-wedding-catering-indonesia-hero.webp`,
   },
 
       'private-dining-indonesia': {
@@ -807,6 +811,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Healthy meal delivery in Bali: chef-prepared, organic and nutrient-dense menus for villas and residences. Multi-day plans available. WhatsApp myCHEF today.',
     canonical: `${SITE}/healthy-meal-delivery-indonesia`,
     h1: 'Healthy Meal Delivery — Chef-Prepared, Delivered',
+    ogImage: `${SITE}/generated/mychef-healthy-meal-delivery-indonesia-hero.webp`,
   },
 
       'chef-for-hire-indonesia': {
@@ -2429,7 +2434,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Real corporate event case studies in Bali — executive dinners, offsites, retreats and conference catering with outcomes, menus and budgets. Case studies by myCHEF.',
     canonical: `${SITE}/corporate-case-studies`,
     h1: 'How Companies Run Flawless Corporate Events in Bali',
-    ogImage: `${SITE}/generated/corp-hero.webp`,
+    ogImage: `${SITE}/generated/mychef-catering-bali-hero-corporate.webp`,
   },
 
       journal: {

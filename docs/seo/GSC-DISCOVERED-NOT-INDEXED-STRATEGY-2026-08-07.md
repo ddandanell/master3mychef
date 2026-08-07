@@ -109,52 +109,41 @@ For each keep-URL:
 - [x] Keep bar-services **out** of sitemap.  
 - [ ] Optional later: strip remaining structured-data `@id` references in legacy content JSON that still name redirect paths.
 
-### Wave 1 — Commercial money pages (high intent) — **in progress**
+### Wave 1 — Commercial money pages (high intent) — **done (implementation)**
 
-Enrich + unique media + hub/pillar links:
+- [x] `/honeymoon-chef`, `/proposal-dinner` unique heroes  
+- [x] Mesh from pillar + area local-guide  
+- [x] `/seafood-bbq-catering-bali` — expanded body (~700+ words) + unique hero  
+- [x] `/wedding-catering-indonesia`, `/healthy-meal-delivery-indonesia`, `/butler-service-bali-daily-rate`, `/corporate-retreat-catering-bali` — unique heroes + page-meta OG  
+- [x] `/corporate-case-studies` — fixed OG to existing corporate hero  
+- [x] `LandingPage` no longer uses one shared hero for all landings/blogs — per-slug maps + page-meta OG  
+- [x] Locations denpasar/kuta already have dedicated city heroes  
 
-- [x] `/honeymoon-chef` — unique hero WebP + page-meta/inject-meta  
-- [x] `/proposal-dinner` — unique hero WebP + page-meta/inject-meta  
-- [x] Mesh from `/private-chef-bali` stack to honeymoon, proposal, seafood BBQ, staffing  
-- [x] Mesh from every `/private-chef/{area}` local-guide + services grid → commercial + experiences  
-- [ ] `/seafood-bbq-catering-bali` content uniqueness pass  
-- [ ] `/staffing` content uniqueness pass  
-- [ ] `/wedding-catering-indonesia`  
-- [ ] `/corporate-case-studies`  
-- [ ] `/corporate-retreat-catering-bali`  
-- [ ] `/healthy-meal-delivery-indonesia`  
-- [ ] `/butler-service-bali-daily-rate`  
-- [ ] `/locations/denpasar`, `/locations/kuta`
+### Wave 2 — `/private-chef/*` uniqueness — **done (implementation)**
 
-### Wave 2 — Tier-1 `/private-chef/*` still unindexed — **partial**
+- [x] Local dining guide on all area pages  
+- [x] Expanded services grid deep links  
+- [x] **49/49 unique `heroImage` assignments** (12 dedicated new area heroes for tier-1 belts; remaining diversified off shared sunset/seminyak/bukit stacks)
 
-Includes: seminyak, uluwatu, nusa-dua, jimbaran, sanur, pererenan, berawa, kuta, legian, petitenget, pecatu, ungasan (canggu/ubud may already be indexed — not in this export).
+### Wave 3 — Chef profiles (8) — **ready**
 
-- [x] Extra **Local dining guide** section (template-driven uniqueness from area data) on **all** area pages.  
-- [x] Expanded services grid deep links (experiences, honeymoon, staffing).  
-- [ ] Unique hero per slug where currently shared (batch image gen).  
-- [ ] Mesh from `/locations/{slug}` where missing.
+- [x] Portraits already exist on profile pages.  
+- [x] Hub `/chefs` lists all 8 with images and links.  
+- Optional later: secondary lifestyle images per chef.
 
-### Wave 3 — Chef profiles (8)
+### Wave 4 — Blog + journal support — **done (heroes)**
 
-- Portraits already exist; add plating/lifestyle secondary images if missing.  
-- Link from `/chefs` hub + area pages (chef “available in region” blocks).
+- [x] Per-slug `BLOG_HEROES` map on `LandingPage` for GSC blog URLs (no more single shared luna hero for those posts).  
+- [x] Redirect blogs remain 308 (not enriched).  
+- Journal posts already use dedicated content system; keep bar-services out of sitemap.
 
-### Wave 4 — Blog + journal support
+### Wave 5 — Remaining areas — **covered under Wave 2**
 
-- Ensure each post has: unique angle, hero image, outbound links to **one** commercial owner.  
-- No competing H1s with pillars.
+- Unique heroes + local guide for full private-chef set.
 
-### Wave 5 — Remaining `/private-chef/*` (tier 2–3)
+### Wave 6 — Bar-services (B2B) — **intentionally not re-admitted**
 
-- Unique heroes batch.  
-- Local guide section.  
-- Optional: noindex lowest-demand after review.
-
-### Wave 6 — Bar-services (B2B)
-
-- Only after guest crawl improves.  
-- Then: re-admit **hub + top 3 services** to sitemap with strong B2B nav, not all 21 at once.
+- Stay **out of sitemap** until guest/area crawl demand improves (existing policy).
 
 ---
 

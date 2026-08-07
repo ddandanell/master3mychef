@@ -284,6 +284,11 @@ const RELATED_PAGES = [
     desc: 'Live oyster shucking and champagne reception — ideal stack with caviar.',
   },
   {
+    label: 'Whiskey & Cigar Experience',
+    href: '/experiences/whiskey-cigar-experience',
+    desc: 'Private whiskey tasting and premium cigar lounge with chef pairings.',
+  },
+  {
     label: 'Private Cocktail Party',
     href: '/experiences/private-cocktail-party',
     desc: 'Mobile bar packages for villa parties and VIP nights.',
@@ -297,11 +302,6 @@ const RELATED_PAGES = [
     label: 'Fine Dining Bali',
     href: '/fine-dining',
     desc: 'Tasting menus and luxury villa dining formats.',
-  },
-  {
-    label: 'Wedding Catering',
-    href: '/events/weddings',
-    desc: 'Wedding receptions and cocktail-hour production.',
   },
   {
     label: 'In-Villa Service',

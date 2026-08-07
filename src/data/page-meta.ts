@@ -1871,6 +1871,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/mychef-caviar-experience-bali-hero-villa.webp`,
   },
 
+  'experience-whiskey-cigar-experience': {
+    path: '/experiences/whiskey-cigar-experience',
+    title: 'Whiskey & Cigar Experience Bali | Private Tasting & Lounge | myCHEF',
+    description:
+      'Whiskey tasting Bali with premium cigars, private chef dinner and butler service at your villa or yacht. Scotch, Japanese whisky, bourbon. Contact for a custom quote.',
+    canonical: `${SITE}/experiences/whiskey-cigar-experience`,
+    h1: 'Whiskey & Cigar Experience Bali — Private Tastings, Premium Cigars & Chef Pairings',
+    ogImage: `${SITE}/generated/mychef-whiskey-cigar-experience-bali-hero-villa.webp`,
+  },
+
       'experience-romantic-proposal-dinner': {
     path: '/experiences/romantic-proposal-dinner',
     title: 'Proposal Package Bali | Full-Service Villa Proposal | myCHEF',

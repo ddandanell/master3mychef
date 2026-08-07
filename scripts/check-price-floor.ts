@@ -42,6 +42,7 @@ const FLOOR_EXCEPTION_PATHS = [
   'experiences/cooking-class',
   'experiences/private-cooking-class', // Cooking classes are priced per participant, not per catering guest.
   'experiences/caviar-experience', // Caviar experience is contact-quote only (no public list price).
+  'experiences/whiskey-cigar-experience', // Whiskey & cigar experience is contact-quote only.
   'catering/bbq-catering', // BBQ packages are entry-level catering with per-person pricing below the standard floor.
   'events/weddings', // Wedding pages may reference villa corkage and market context.
   'bali-wedding-catering-packages', // Dedicated package page displays published wedding catering tiers.

@@ -120,6 +120,7 @@ NAV_SUBPAGES['/experiences'] = [
   { label: 'Kids Birthday Chef Party', href: '/experiences/kids-birthday-chef-party', icon: 'Baby' },
   { label: 'Champagne & Oyster Experience', href: '/experiences/champagne-oyster-experience', icon: 'Crown' },
   { label: 'Caviar Experience', href: '/experiences/caviar-experience', icon: 'Sparkles' },
+  { label: 'Whiskey & Cigar Experience', href: '/experiences/whiskey-cigar-experience', icon: 'Wine' },
   { label: 'Romantic Proposal Dinner', href: '/experiences/romantic-proposal-dinner', icon: 'Heart' },
 ]
 
@@ -170,6 +171,7 @@ const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
   '/experiences/kids-birthday-chef-party': '/generated/mychef-events-bali-party-birthday.webp',
   '/experiences/champagne-oyster-experience': '/generated/mychef-experience-bali-aura-toast.webp',
   '/experiences/caviar-experience': '/generated/mychef-caviar-experience-bali-hero-villa.webp',
+  '/experiences/whiskey-cigar-experience': '/generated/mychef-whiskey-cigar-experience-bali-hero-villa.webp',
   '/experiences/romantic-proposal-dinner': '/generated/mychef-misc-bali-section-romantic-dinner.webp',
 }
 

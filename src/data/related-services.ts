@@ -218,6 +218,12 @@ export const EXPERIENCES_RELATED: RelatedService[] = [
     category: 'Experiences'
   },
   {
+    title: 'Whiskey & Cigar Experience',
+    description: 'Private whiskey tasting and premium cigar lounge with chef pairings — villa or yacht. Contact for quote.',
+    path: '/experiences/whiskey-cigar-experience',
+    category: 'Experiences'
+  },
+  {
     title: 'Romantic Proposal Dinner',
     description: 'Confidential proposal dinner planning with private chef and setup.',
     path: '/experiences/romantic-proposal-dinner',

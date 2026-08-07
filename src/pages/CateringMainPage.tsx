@@ -247,10 +247,12 @@ export default function CateringMainPage() {
             Catering Bali for Groups, Parties &amp; Hosted Dinners
           </h1>
           <p className="text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-3 leading-relaxed">
-            Catering Bali means BBQ, buffet, plated dinners, drop-off and more — cooked at your villa. Chef, staff, ingredients and cleanup included.
+            <strong className="text-white">Food catering</strong> in Bali for villas: wedding catering, party
+            catering, BBQ, buffet, plated dinners and drop-off — chef, staff, menu and cleanup included. Order a
+            fixed quote on WhatsApp.
           </p>
           <p className="text-[#C5A028] text-sm md:text-base font-semibold tracking-wide mb-8">
-            From IDR 700,000++ per person · Min. 5–10 guests by format · Quote in 1 hour
+            From IDR 700,000++ per person · Transparent catering packages · Quote in 1 hour
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6">
             <a
@@ -779,36 +781,43 @@ export default function CateringMainPage() {
             </p>
 
             <h3 className="text-xl text-[#1A1A1A] pt-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Bali catering menu, areas and bar catering
+              Bali catering menu, packages, areas and bar catering
             </h3>
             <p>
-              Looking for a clear <strong>Bali catering menu</strong> and price list? Use the packages on this page as
-              the baseline, then request a written proposal for your guest count. We regularly deliver{' '}
-              <strong>catering Bali Seminyak</strong>, Canggu, Ubud, Uluwatu, Nusa Dua and the Kuta corridor — see{' '}
+              Looking for a clear <strong>Bali catering menu</strong>, <strong>catering packages</strong> and price
+              list? Use the packages on this page as the baseline, then request a written proposal for your guest count.
+              We regularly deliver <strong>catering in Bali</strong> across Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua
+              and the Kuta corridor — see{' '}
               <Link to="/locations" className="text-[#6B8E5A] font-semibold hover:underline">
                 locations
-              </Link>{' '}
-              for area guides. Halal-friendly and pork-free menus are available on request; traditional{' '}
+              </Link>
+              . Halal-friendly and pork-free menus are available on request; traditional{' '}
               <Link to="/catering/babi-guling" className="text-[#6B8E5A] font-semibold hover:underline">
                 babi guling
               </Link>{' '}
-              is pork and not for Muslim-sensitive groups.
+              is pork and not for Muslim-sensitive groups. Indonesian <strong>prasmanan</strong> (buffet) lives on our{' '}
+              <Link to="/catering/buffet" className="text-[#6B8E5A] font-semibold hover:underline">
+                buffet catering
+              </Link>{' '}
+              page; multi-day “harian” meals are usually{' '}
+              <Link to="/private-chef-bali" className="text-[#6B8E5A] font-semibold hover:underline">
+                private chef day rates
+              </Link>
+              .
             </p>
             <p>
-              Need <strong>Bali drinks catering</strong>, <strong>bar catering Bali</strong> or alcohol service with
-              dinner? Stack food with{' '}
+              High-intent hosts also search <strong>wedding catering</strong>, <strong>party catering</strong>,{' '}
+              <strong>event catering</strong>, <strong>BBQ catering</strong>, <strong>buffet catering</strong> and how
+              to <strong>order catering</strong> online. With myCHEF you WhatsApp date, guests and villa area — we send a
+              fixed quote (no anonymous cart). Stack{' '}
               <Link to="/in-villa-service/bartenders" className="text-[#6B8E5A] font-semibold hover:underline">
-                luxury cocktail packages from IDR 500,000++ per guest
+                mobile cocktail bar packages from IDR 500,000++ per guest
               </Link>{' '}
-              (minimum 10 guests) or plan the full night on a{' '}
+              for drinks catering, or plan the night on a{' '}
               <Link to="/experiences/private-cocktail-party" className="text-[#6B8E5A] font-semibold hover:underline">
                 private cocktail party
               </Link>
-              . For multi-day villa stays rather than one event, compare{' '}
-              <Link to="/private-chef-bali" className="text-[#6B8E5A] font-semibold hover:underline">
-                private chef day rates
-              </Link>{' '}
-              vs one-time catering. Weddings:{' '}
+              . Weddings:{' '}
               <Link to="/events/weddings" className="text-[#6B8E5A] font-semibold hover:underline">
                 wedding catering Bali
               </Link>{' '}
@@ -819,6 +828,10 @@ export default function CateringMainPage() {
               . Villa parties:{' '}
               <Link to="/events/villa-parties" className="text-[#6B8E5A] font-semibold hover:underline">
                 villa party catering
+              </Link>
+              . Birthdays:{' '}
+              <Link to="/events/birthdays" className="text-[#6B8E5A] font-semibold hover:underline">
+                birthday catering
               </Link>
               .
             </p>

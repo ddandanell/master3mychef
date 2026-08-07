@@ -990,4 +990,53 @@ export const CATERING_FAQS: CateringFAQ[] = [
     q: 'Can I combine food catering with cocktails and F&B for one event?',
     a: `Yes — one plan for food & beverage: catering menu + cocktail package (or BYO bar service) + waiters on request. Common stacks: grazing + welcome cocktails, BBQ + free-flow bar, plated wedding dinner after cocktail hour. <a href="/events/villa-parties">Villa parties →</a> · <a href="/in-villa-service/bartenders">Drinks catering packages →</a>`,
   },
+  // Long-tail catering keywords (output (2).xlsx) — guest intent only, Bali villa business model
+  {
+    q: 'What does catering mean — and what is a catering service?',
+    a: `<strong>Food catering</strong> means a professional team plans the menu, shops, cooks, serves and cleans so you host without kitchen work. A myCHEF <strong>catering service</strong> in Bali is chef-led villa or event production — not a restaurant takeaway tray alone. Formats: <a href="/catering/bbq-catering">BBQ</a>, <a href="/catering/buffet">buffet</a>, <a href="/catering/plated-catering">plated</a>, <a href="/catering/drop-off-catering">drop-off</a> and specialties on this page.`,
+  },
+  {
+    q: 'How do I order catering or book catering online in Bali?',
+    a: `Message WhatsApp with date, villa area, guest count and format (or use <a href="/quote">quote</a> / <a href="/book">book</a>). We reply with a menu proposal and fixed price — that is how you “order catering” with myCHEF. There is no anonymous cart checkout; every villa event needs headcount, access and dietary notes. 50% deposit confirms the date.`,
+  },
+  {
+    q: 'Do you offer wedding catering and catering for a wedding in Bali?',
+    a: `Yes — welcome dinners, ceremony canapés, reception buffets or plated service, and post-wedding brunch. Full receptions often land about IDR 1.5M–3M++ per person with production; intimate formats can start near food floors from ~IDR 700K++. Packages: <a href="/bali-wedding-catering-packages">Bali wedding catering packages</a> · hub: <a href="/events/weddings">wedding catering Bali</a>.`,
+  },
+  {
+    q: 'How much is catering for a wedding — and average catering cost per person?',
+    a: `For Bali villa weddings, plan food from roughly <strong>IDR 700K–1.5M++ per person</strong> for many formats and <strong>IDR 1.5M–3M++</strong> for full reception production. “Average catering cost per person” online is often a global figure — your written myCHEF quote is the real number for guest count, menu and bar. <a href="/pricing">Pricing →</a> · <a href="/events/weddings">Weddings →</a>`,
+  },
+  {
+    q: 'Do you do BBQ catering, buffet catering and grazing table catering?',
+    a: `Yes. <a href="/catering/bbq-catering">BBQ catering</a> is the villa crowd-pleaser (from ~IDR 700K++/person, min ~10). <a href="/catering/buffet">Buffet catering</a> (prasmanan-style variety) suits 30+ guests. <a href="/catering/grazing-tables">Grazing table catering</a> works for welcome drinks and cocktail hours. All are food catering packages with chef and cleanup on serviced formats.`,
+  },
+  {
+    q: 'Do you offer party catering, event catering and birthday catering?',
+    a: `Yes — villa <strong>party catering</strong> and <strong>event catering</strong> for birthdays, pool parties, corporate nights and celebrations. Birthdays: <a href="/events/birthdays">birthday catering</a> · social formats: <a href="/events/villa-parties">villa parties</a> · full events hub: <a href="/events">events</a>. Stack a <a href="/in-villa-service/bartenders">mobile cocktail bar</a> when drinks matter.`,
+  },
+  {
+    q: 'What is finger food catering — and can you do canapés?',
+    a: `Finger food / canapé catering is tray-pass or station bites for standing guests — ideal for cocktail hours and pool parties. We design canapé menus or pair grazing boards with free-flow bar packages. See <a href="/catering/grazing-tables">grazing tables</a> and <a href="/events/villa-parties">villa parties</a>.`,
+  },
+  {
+    q: 'What are Bali catering packages and the catering price list?',
+    a: `Published package floors live on this page and each format page (BBQ, buffet, plated, drop-off, specialties). That is our transparent <strong>catering price list</strong> for Bali villas — not a supermarket tray menu. Final written quotes add travel, bar packages and any upgrades before deposit. <a href="/pricing">Full pricing overview →</a>`,
+  },
+  {
+    q: 'Catering Bali murah, harian, or prasmanan — what can myCHEF do?',
+    a: `<strong>Prasmanan</strong> (buffet) is available via <a href="/catering/buffet">buffet catering</a>. <strong>Harian</strong> (daily) multi-meal stays are usually <a href="/private-chef-bali">private chef day rates</a>, not one-night catering. “Murah” depends on guest count and menu tier — we publish honest floors from ~IDR 700K++ per person rather than bait prices. WhatsApp for a fixed quote.`,
+  },
+  {
+    q: 'Catering vs buffet — is buffet the same as full catering?',
+    a: `Buffet is one <strong>service style</strong> inside catering. Full catering can also mean BBQ, plated dinner, drop-off or grazing. Choose buffet when you want variety and self-serve flow for larger groups; choose BBQ or plated for other atmospheres. Compare on <a href="/catering/buffet">buffet</a> and the formats above.`,
+  },
+  {
+    q: 'How much does catering cost for 10 or 15 people?',
+    a: `Small groups often use BBQ or plated (min ~10) or drop-off (from ~4). Example food-only floors: <strong>10 guests</strong> BBQ ≈ IDR 7M++; <strong>15 guests</strong> ≈ IDR 10.5M++ before ++ tax/service, travel and bar. For under ~8 guests, daily private chef or drop-off may fit better. <a href="/quote">Quote →</a>`,
+  },
+  {
+    q: 'When should I order catering — and when does catering arrive for a wedding?',
+    a: `Order as soon as dates are firm. BBQ/buffet villa parties: often 3–7+ days. Weddings: weeks to months. Kitchen teams typically arrive 2–3 hours before guest service for setup; ceremony canapés may start earlier on the run sheet. We lock arrival time on your booking summary. <a href="/events/weddings">Wedding catering →</a>`,
+  },
 ]

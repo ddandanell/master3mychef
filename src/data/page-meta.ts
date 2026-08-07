@@ -2042,9 +2042,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       catering: {
     path: '/catering',
-    title: 'Catering Bali | Villa, BBQ, Buffet, Bar & Events | myCHEF',
+    title: 'Catering Bali | Food, Wedding, BBQ, Buffet & Party Packages | myCHEF',
     description:
-      'Bali catering company for villas: BBQ, buffet, plated, drop-off from IDR 700K++/person. Menus, bar catering packages, Seminyak to Uluwatu. Transparent quotes.',
+      'Food catering in Bali for villas: wedding, party & event packages. BBQ, buffet, plated, drop-off from IDR 700K++/person. Order via WhatsApp — transparent menus & prices.',
     canonical: `${SITE}/catering`,
     h1: 'Catering Bali for Groups, Parties & Hosted Dinners',
     ogImage: `${SITE}/generated/mychef-catering-bali-catering-hero.webp`,

@@ -33,14 +33,14 @@ const breadcrumbs = breadcrumbSchema(
 )
 
 const faqs = [
-  { q: 'How much does wedding catering in Bali cost?', a: 'Full receptions often IDR 1.5M–3M++ per person; intimate formats from ~IDR 700K++. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>.' },
+  { q: 'How much does wedding catering in Bali cost?', a: 'Quoted per guest based on menu and headcount. Published package bands live on <a href="/bali-wedding-catering-packages">wedding catering packages</a>; education on the <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>; book via <a href="/events/weddings">wedding catering</a>.' },
   { q: 'When should foreigners book catering for a destination wedding in Bali?', a: 'As soon as villa dates lock — ideally 3–10 months for peak (Jul–Sep, Dec–Jan). This timeline page is the month-by-month plan; commercial booking lives on <a href="/events/weddings">weddings</a>.' },
   { q: 'Do you offer menu tastings for weddings?', a: 'Yes — tastings are part of wedding planning for full receptions, usually 2–4 weeks before the day.' },
   { q: 'Can you handle banjar fees and villa permissions?', a: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
   { q: 'Can guests bring their own alcohol?', a: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Cocktail packages →</a>' },
   { q: 'What is the rain plan for outdoor receptions?', a: 'Every outdoor wedding has a covered fallback (marquee/indoor) confirmed before the day.' },
   { q: 'Do you cater rehearsal and welcome dinners?', a: 'Yes — BBQ, family-style or plated. Part of the multi-day F&amp;B plan on <a href="/events/weddings">wedding catering</a>.' },
-  { q: 'What staffing ratio do you use?', a: 'About one waiter per 8–10 seated guests, plus kitchen lead; cocktail hours add tray staff. Butlers: <a href="/butler-service-bali-daily-rate">butler service</a>.' },
+  { q: 'What staffing ratio do you use?', a: 'About one waiter per 8–10 seated guests, plus kitchen lead; cocktail hours add tray staff. Butlers: <a href="/butler-service-bali-daily-rate">butler service</a> (contact for pricing).' },
   { q: 'Can you work with our wedding planner?', a: 'Yes — daily collaboration with planners and villa managers on one run-sheet.' },
   { q: 'Do you offer halal-friendly or Indian/multicultural wedding menus?', a: 'Yes — pork-free/halal-sensitive lines, multi-cuisine service and high vegetarian volume when specified at planning.' },
   { q: 'How is this different from a private chef dinner?', a: 'Weddings are multi-guest production. Couples dinners: <a href="/fine-dining/romantic-dinner">romantic dinner</a>. Planning guide: <a href="/blog/wedding-private-chef-bali-planning-guide">private chef wedding planning</a>.' },
@@ -50,7 +50,7 @@ const faqs = [
   { q: 'Is catering the same as private chef hire?', a: 'No. Catering is usually one reception event; multi-day stays use <a href="/private-chef-bali">private chef</a> day rates.' },
   { q: 'Do prices include staff and cleanup?', a: 'Serviced wedding packages include chef/staff and cleanup for our scope.' },
   { q: 'Can you cook in an Airbnb or holiday villa?', a: 'Yes with a workable kitchen — share the listing when booking. Logistics: <a href="/journal/villa-wedding-catering-logistics-bali">villa logistics</a>.' },
-  { q: 'How do packages scale for 50 guests?', a: 'Use guest count × per-person band on <a href="/bali-wedding-catering-packages">packages</a>; confirm staffing and stations for that headcount on the proposal.' },
+  { q: 'How do packages scale for 50 guests?', a: 'Use guest count and the published per-person package bands on <a href="/bali-wedding-catering-packages">packages</a>; confirm staffing and stations for that headcount on the written proposal.' },
   { q: 'Can menus be customised?', a: 'Yes — proteins, spice, diets locked before shopping and tasting.' },
   { q: 'Travel fees?', a: 'Remote areas may add a fee quoted upfront on the proposal.' },
 ]

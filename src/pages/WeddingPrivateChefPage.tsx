@@ -102,7 +102,7 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  { question: 'How much does wedding catering in Bali cost?', answer: 'Full receptions often IDR 1.5M–3M++ per person; intimate formats from ~IDR 700K++. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>.' },
+  { question: 'How much does wedding catering in Bali cost?', answer: 'Quoted per guest based on menu and headcount. See published bands on <a href="/bali-wedding-catering-packages">packages</a>, education on the <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>, and book via <a href="/events/weddings">wedding catering</a>.' },
   { question: 'When do we use a private chef vs full wedding catering?', answer: 'Micro-weddings and plated dinners for smaller lists often use private chef or fine dining formats. Full buffet/live-station receptions for 50–200+ stay on <a href="/events/weddings">wedding catering Bali</a>.' },
   { question: 'Do you offer menu tastings for weddings?', answer: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
   { question: 'Can you handle banjar fees and villa permissions?', answer: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },

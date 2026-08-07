@@ -1541,11 +1541,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'in-villa-service-bartenders': {
     path: '/in-villa-service/bartenders',
-    title: 'Luxury Cocktail Service Bali | Villa Packages from IDR 500K++ | myCHEF',
+    title: 'Mobile Cocktail Bar Bali | Villa Party Packages from IDR 500K++ | myCHEF',
     description:
-      'Bali cocktails & bar catering for villas: BYO, free-flow and premium packages from IDR 500,000++ per guest. Full bar team, glassware, ice, setup — not hourly hire.',
+      'Mobile bar & Bali drinks catering for villa parties: BYO, free-flow and premium cocktails from IDR 500,000++ per guest. Team, glassware, ice, setup — not hourly hire.',
     canonical: `${SITE}/in-villa-service/bartenders`,
-    h1: 'Luxury Cocktail Service in Bali — Complete Villa Packages',
+    h1: 'Mobile Cocktail Bar in Bali — Complete Packages for Villa Parties',
     ogImage: `${SITE}/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp`,
   },
 
@@ -1792,11 +1792,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'experience-private-cocktail-party': {
     path: '/experiences/private-cocktail-party',
-    title: 'Private Cocktail Party Bali | Villa Pool Parties & Receptions | myCHEF',
+    title: 'Private Cocktail Party Bali | Mobile Bar at Your Villa | myCHEF',
     description:
-      'Private cocktail party at your Bali villa: complete bar packages from IDR 500K++ per guest, optional canapés, waiters and entertainment. Pool parties, hens nights, wedding welcomes and birthdays.',
+      'Private cocktail party with a mobile bar at your Bali villa: packages from IDR 500K++ per guest, optional catering & entertainment. Pool, hens, wedding welcomes, birthdays.',
     canonical: `${SITE}/experiences/private-cocktail-party`,
-    h1: 'Private Cocktail Party in Bali — Your Villa, One Complete Night',
+    h1: 'Private Cocktail Party in Bali — Mobile Bar at Your Villa',
     ogImage: `${SITE}/generated/bartender-hire-bali-cocktail-party.webp`,
   },
 
@@ -2062,9 +2062,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'in-villa-service': {
     path: '/in-villa-service',
-    title: 'Villa Service Staff Bali | Waiters, Butlers & Bartenders',
+    title: 'Villa Service Staff Bali | Waiters, Butlers & Mobile Bar',
     description:
-      'Uniformed, English-speaking villa staff in Bali — waiters, butlers and coordinators (contact us for pricing); cocktail packages from IDR 500,000++ per guest. Book via WhatsApp myCHEF.',
+      'Villa staff in Bali: waiters & butlers (contact for pricing) plus mobile cocktail bar packages from IDR 500,000++ per guest. Stack with private chef or catering. WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service`,
     h1: 'Professional Villa Service Staff — Hired by the Shift',
     ogImage: `${SITE}/bartender.webp`,

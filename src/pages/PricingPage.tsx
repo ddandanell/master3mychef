@@ -209,8 +209,10 @@ const FAQS = [
 const RELATED_PAGES = [
   { label: 'Fine Dining', href: '/fine-dining', desc: 'In-villa tasting menus and private chef experiences.' },
   { label: 'Catering', href: '/catering', desc: 'Full-service villa catering for any occasion.' },
+  { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Party bar packages from IDR 500K++ per guest — we come to your villa.' },
+  { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'Occasion plan for villa parties with the same bar packages.' },
   { label: 'Events', href: '/events', desc: 'Weddings, retreats, and celebrations across Bali.' },
-  { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, butlers, bartenders, and sommeliers per shift.' },
+  { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, butlers, mobile bar and sommeliers.' },
   { label: 'Private Chef Bali Day Rates', href: '/private-chef-bali', desc: 'Daily chef hire: one meal, two meals or full-day plans with chef + assistant.' },
   { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Step-by-step guide to finding, vetting, and booking a chef.' },
   { label: 'Get a Quote', href: '/quote', desc: 'Receive a detailed proposal within 24 hours.' },

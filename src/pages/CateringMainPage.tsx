@@ -116,6 +116,34 @@ const SPECIALTY_LINKS = [
   { title: 'Corporate & retreats', price: 'Custom quote', href: '/catering/corporate-catering', blurb: 'Offsites, teams, multi-day' },
 ]
 
+/** Cross-links: food catering + mobile bar + daily chef (same guest journey). */
+const FNB_STACK_LINKS = [
+  {
+    title: 'Mobile cocktail bar',
+    price: 'From IDR 500K++/guest',
+    href: '/in-villa-service/bartenders',
+    blurb: 'Bar catering for villa parties — free-flow or BYO packages we bring to you',
+  },
+  {
+    title: 'Private cocktail party',
+    price: 'Occasion plan',
+    href: '/experiences/private-cocktail-party',
+    blurb: 'Full party night: mobile bar timeline, canapés and entertainment add-ons',
+  },
+  {
+    title: 'Private chef (daily)',
+    price: 'From IDR 1M++/day',
+    href: '/private-chef-bali',
+    blurb: 'Multi-day villa meals when you need more than one catering night',
+  },
+  {
+    title: 'Villa parties',
+    price: 'Event production',
+    href: '/events/villa-parties',
+    blurb: 'Pool and garden parties with food + bar stacked in one plan',
+  },
+]
+
 const PRICING_TABLE = [
   { name: 'Indonesian BBQ', price: 'IDR 700,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
   { name: 'International BBQ', price: 'IDR 700,000/person', min: '10 guests', bestFor: 'Villa BBQ' },
@@ -347,6 +375,35 @@ export default function CateringMainPage() {
                 key={item.title}
                 to={item.href}
                 className="group bg-white rounded-2xl border border-[#E8E6E3] p-5 md:p-6 hover:border-[#6B8E5A] hover:shadow-md transition-all"
+              >
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <h3 className="text-lg text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    {item.title}
+                  </h3>
+                  <ArrowRight className="w-4 h-4 text-[#6B8E5A] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 mt-1" />
+                </div>
+                <p className="text-[#6B8E5A] text-sm font-semibold mb-1">{item.price}</p>
+                <p className="text-sm text-[#4A4745]">{item.blurb}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ F&B STACK ═══════ */}
+      <section className="py-12 md:py-16 px-6 bg-white" id="food-and-drinks">
+        <div className="max-w-[1280px] mx-auto">
+          <SectionHeader
+            eyebrow="Food & drinks"
+            title="Pair Bali catering with a mobile bar or private chef"
+            subtitle="One company for F&B: event catering, party drinks catering, and multi-day villa chef hire — deep-linked so guests never guess which product fits."
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {FNB_STACK_LINKS.map((item) => (
+              <Link
+                key={item.title}
+                to={item.href}
+                className="group bg-[#FAFAF8] rounded-2xl border border-[#E8E6E3] p-5 md:p-6 hover:border-[#6B8E5A] hover:shadow-md transition-all"
               >
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <h3 className="text-lg text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>

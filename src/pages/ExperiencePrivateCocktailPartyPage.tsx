@@ -42,11 +42,25 @@ const SECTIONS: PageSection[] = [
       'Professional bartender pouring a signature cocktail at a luxury Bali villa infinity pool at sunset',
     body: `<p>A <strong>private cocktail party in Bali</strong> is an occasion — not just a bar invoice. Guests arrive to a villa that already feels like the only venue that matters: welcome pours, a four-cocktail menu, zero-proof options, and a team that runs ice, glassware and last call while you host.</p>
 
-    <p>From twelve friends around a Seminyak pool to eighty guests on an Uluwatu clifftop, the scale changes; the standard does not. The bar layer uses our three complete packages (from <strong>${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest</strong>, minimum ${COCKTAIL_MIN_GUESTS}). Food, waiters, DJ and styling stack on as optional upgrades.</p>
+    <p>From twelve friends around a Seminyak pool to eighty guests on an Uluwatu clifftop, the scale changes; the standard does not. We bring a <strong>mobile cocktail bar</strong> to your villa — three complete packages (from <strong>${COCKTAIL_PRICE_FLOOR_DISPLAY} per guest</strong>, minimum ${COCKTAIL_MIN_GUESTS}). Food, waiters, DJ and styling stack on as optional upgrades.</p>
 
-    <p>Package prices and inclusions in full: <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">luxury cocktail service packages in Bali</a>. Custom signatures and craft: <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">private mixology and custom cocktail design in Bali</a>.</p>
+    <p>Package prices and inclusions in full: <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">mobile cocktail bar packages in Bali</a>. Custom signatures and craft: <a href="/in-villa-service/mixology" class="text-[#7E6410] hover:underline font-medium">private mixology and custom cocktail design in Bali</a>. Food for the same night: <a href="/catering" class="text-[#7E6410] hover:underline font-medium">villa catering</a> or multi-day <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef</a>.</p>
 
     <p><a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium">Plan My Cocktail Party — WhatsApp</a>. Send date, villa area, guest count and package preference.</p>`,
+  },
+  {
+    id: 'stack-fnb',
+    type: 'content' as const,
+    subtitle: 'Food & drinks',
+    title: 'Mobile bar + catering + private chef for one party plan',
+    body: `<p>Strong villa nights usually need both sides of F&amp;B. Book the <strong>mobile bar</strong> for Bali cocktails and drinks catering, then add food without a second vendor:</p>
+    <ul class="list-disc pl-5 space-y-2 my-4">
+      <li><a href="/catering" class="text-[#7E6410] hover:underline font-medium">Catering Bali</a> — BBQ, buffet, plated, grazing or drop-off for the party menu.</li>
+      <li><a href="/events/villa-parties" class="text-[#7E6410] hover:underline font-medium">Villa party catering</a> — food-first production with the same bar packages available.</li>
+      <li><a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">Private chef Bali</a> — multi-day meals around the celebration night.</li>
+      <li><a href="/events/weddings" class="text-[#7E6410] hover:underline font-medium">Wedding catering</a> — welcome cocktails into reception dinner.</li>
+    </ul>
+    <p>Commercial bar prices always live on <a href="/in-villa-service/bartenders" class="text-[#7E6410] hover:underline font-medium">mobile cocktail bar packages</a> so this page can stay occasion-led.</p>`,
   },
   {
     id: 'occasions',

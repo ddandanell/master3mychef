@@ -62,7 +62,7 @@ export const CATERING_RELATED: RelatedService[] = [
 export const EVENTS_RELATED: RelatedService[] = [
   {
     title: 'Villa Parties',
-    description: 'Full-service villa party catering. BBQ, cocktails, bartenders, and cleanup.',
+    description: 'Full-service villa party catering with optional mobile cocktail bar. BBQ, free-flow drinks, and cleanup.',
     path: '/events/villa-parties',
     category: 'Events'
   },
@@ -100,8 +100,8 @@ export const IN_VILLA_SERVICE_RELATED: RelatedService[] = [
     category: 'In-Villa Service'
   },
   {
-    title: 'Private bartender for your villa',
-    description: 'Skilled bartenders for villa parties and events. Cocktail creation, bar setup, and service.',
+    title: 'Mobile cocktail bar for villa parties',
+    description: 'Complete mobile bar packages from IDR 500K++ per guest — team, four cocktails, glassware, ice, setup and cleanup. Stack with catering or private chef.',
     path: '/in-villa-service/bartenders',
     category: 'In-Villa Service'
   },

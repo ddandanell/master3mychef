@@ -12,9 +12,9 @@ const sections: PageSection[] = [
     id: 'intro',
     type: 'content',
     title: 'Luxury Cocktail Service in Bali — Packages, Not Hourly Hire',
-    body: `Searching for “bartender hire Bali” usually means you want a full bar for a villa party, wedding or private dinner — not a lone person on an hourly timesheet. myCHEF sells **complete cocktail packages**: professional bar team, four chosen cocktails, glassware, ice, garnishes, setup and cleanup, priced **per guest** (minimum 10).
+    body: `Searching for “bartender hire Bali” usually means you want a **mobile bar** for a villa party, wedding or private dinner — not a lone person on an hourly timesheet. myCHEF sells **complete mobile cocktail bar packages**: professional bar team, four chosen cocktails, glassware, ice, garnishes, setup and cleanup, priced **per guest** (minimum 10). We come out to your villa; you do not travel to a venue bar.
 
-We do **not** sell bartender-only hourly hire for private villas. Packages run from **IDR 500,000++ per guest** (BYO) through free-flow and premium free-flow options. Full commercial tables live on our <a href="/in-villa-service/bartenders">luxury cocktail & bartender service</a> page; craft menus live under <a href="/in-villa-service/mixology">private mixology</a>; occasion planning under <a href="/experiences/private-cocktail-party">private cocktail party</a>.
+We do **not** sell bartender-only hourly hire for private villas. Packages run from **IDR 500,000++ per guest** (BYO) through free-flow and premium free-flow options. Full commercial tables live on our <a href="/in-villa-service/bartenders">mobile cocktail bar packages</a> page; craft menus live under <a href="/in-villa-service/mixology">private mixology</a>; occasion planning under <a href="/experiences/private-cocktail-party">private cocktail party</a>. Stack food with <a href="/catering">villa catering</a> or multi-day <a href="/private-chef-bali">private chef</a> hire.
 
 Coverage: Seminyak, Canggu, Uluwatu, Ubud, Jimbaran, Nusa Dua, Sanur, Pererenan and villa areas island-wide.`,
   },
@@ -69,7 +69,7 @@ Last-minute package availability is sometimes possible under 48 hours — messag
     id: 'cta',
     type: 'content',
     title: 'Book Cocktail Packages for Your Bali Villa',
-    body: `Tell us your date, villa area, guest count and whether you prefer BYO or free-flow. We reply with a package recommendation and fixed quote — complete cocktail service, not hourly bartender hire.`,
+    body: `Tell us your date, villa area, guest count and whether you prefer BYO or free-flow. We reply with a package recommendation and fixed quote — complete mobile cocktail bar service, not hourly bartender hire. Mention if you also need catering or a private chef so we build one F&B plan.`,
   },
 ]
 

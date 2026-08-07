@@ -169,6 +169,30 @@ Guest-intent FAQs + deep links shipped on existing hubs (no new URLs, no job/sal
 **Still dropped (do not publish):** Costco/Chipotle/Olive Garden menus, catering equipment retail, startup profit, chef jobs/salary, celebrity wedding gossip, pure foreign-market queries.
 
 **Product honesty locks:** cocktail packages SSoT from IDR 500K++/guest min 10; waiters/butlers contact-for-pricing; food catering ~700K++ floors; no hourly bartender hire for guests.
+
+---
+
+## Deep optimisation wave (mobile bar + F&B stack)
+
+Goal: rank and convert as **mobile bar / party bar service that comes to villas**, while tightly linking **private chef** and **catering** as related products (not separate brands).
+
+| Surface | Optimisation |
+|---------|----------------|
+| Cluster SSoT (`cocktailSeoCluster`) | Primary H1/title/description shifted to **mobile cocktail bar**; secondaries: mobile bar, bar catering, drinks catering, Bali cocktails, harga cocktail, party bar service |
+| `/in-villa-service/bartenders` | Hero + trust + JSON-LD + CTA; **stack section** (chef/catering/party/wedding); FAQs for mobile bar, bar-only, B2B split |
+| `/experiences/private-cocktail-party` | Mobile bar language; F&B stack section with deep links |
+| `/catering` | New **Food & drinks** card strip → mobile bar, cocktail party, private chef, villa parties |
+| `/private-chef-bali` | Stack section + price-table deep links to mobile bar & catering |
+| `/in-villa-service` | Card label **Mobile Cocktail Bar**; FAQs alcohol accuracy + stack; explainer body |
+| `/`, `/faq`, `/pricing`, blog bartender hire, villa parties | Mobile bar anchors + combine FAQs |
+
+**Keyword ownership (no cannibalisation):**
+- Packages/prices → `/in-villa-service/bartenders`
+- Occasion night → `/experiences/private-cocktail-party`
+- Craft/signatures → `/in-villa-service/mixology`
+- Food event → `/catering` / `/events/*`
+- Multi-day meals → `/private-chef-bali`
+- Hotels/venues B2B → `/bar-services/` only
 - private chef bali for birthday party
 
 ### `/private-chef/canggu` (1)

@@ -100,7 +100,7 @@ function PackageCard({
 
 export default function CocktailPackageGrid({
   title = 'Cocktail service packages',
-  subtitle = 'Complete mobile cocktail service — not bartender-only hire. Choose four cocktails, then pick BYO, free flow or premium.',
+  subtitle = 'Complete mobile cocktail bar for villa parties — not bartender-only hire. Choose four cocktails, then pick BYO, free flow or premium. Stack with catering or private chef when you need full food & drinks.',
   showInclusions = true,
   compact = false,
   dark = false,

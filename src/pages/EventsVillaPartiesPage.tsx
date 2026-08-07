@@ -129,6 +129,7 @@ const FAQS = [
   { q: 'Do you offer Bali bar catering and drinks for villa parties?', a: 'Yes. Cocktail packages from IDR 500,000++ per guest (BYO, min 10) or free-flow with spirits included. Pair with BBQ, grazing or buffet food. <a href="/in-villa-service/bartenders">Bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
   { q: 'Can we do alcohol catering and BYO at a villa party?', a: 'Yes — supply your own bottles (we serve) or book free-flow packages that include spirits for the four-cocktail menu. Corkage or package choice is confirmed on the quote.' },
   { q: 'What food and drinks work best for a Bali villa party?', a: 'Popular stacks: Indonesian BBQ + free-flow cocktails, grazing boards + welcome drinks, or buffet for 30+ with a mobile bar. See <a href="/catering">catering formats</a> and the packages on this page.' },
+  { q: 'Do you bring a mobile bar to the villa for parties?', a: 'Yes — complete mobile cocktail bar packages from IDR 500,000++ per guest (min 10). We set up poolside or garden; not a venue you travel to. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party plan →</a>' },
 ]
 
 const VILLA_RULES_POINTS = [

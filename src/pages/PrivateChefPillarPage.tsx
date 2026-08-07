@@ -385,6 +385,47 @@ const FAQS = [
     q: 'Can you cook Indonesian and Balinese food as well as Western cuisines?',
     a: 'Yes. Head Chef Ni Putu Asri leads ceremonial Balinese and Indonesian menus (bebek betutu, lawar, nasi goreng kampung and feast formats) alongside Italian, Mediterranean, Japanese, BBQ and plant-based specialists. Request the cuisine when you book — or rotate day by day on weekly stays.',
   },
+  // AnswerSocrates / SEO guest questions (customer intent only — not chef job/salary queries)
+  {
+    q: 'How much does it cost to hire a private chef in Bali per day?',
+    a: 'Daily villa chef hire (chef + assistant) is published as three plans: one meal from IDR 1,000,000++/day, two meals IDR 1,800,000++/day, three meals IDR 2,700,000++/day. Groceries are at cost with receipts. Single celebration dinners are often quoted per person instead — see the tables on this page and <a href="/pricing">pricing</a>.',
+  },
+  {
+    q: 'How much does a private chef cost per month in Bali?',
+    a: 'Longer stays use the same day rates with monthly discount (−20% from 28+ days) or a live-in placement for full-time households. Message dates and meal pattern for a fixed monthly proposal. <a href="/private-chef-bali">Day rates →</a> · <a href="/staffing/live-in-chef">Live-in chef →</a>',
+  },
+  {
+    q: 'Does a private chef live with you?',
+    a: 'Usually no for holiday villa bookings — the team arrives, cooks, serves, cleans and leaves. Live-in chef placement is a separate long-term staffing option for households that want a chef on-site. <a href="/staffing/live-in-chef">Live-in chef →</a>',
+  },
+  {
+    q: 'Do private chefs buy the food and wash the dishes?',
+    a: 'Yes on myCHEF villa bookings: we shop (groceries at cost with receipts on daily hire), cook, serve and leave the kitchen clean. You do not need to market-shop or do the washing-up after service.',
+  },
+  {
+    q: 'Do I tip a private chef in Bali?',
+    a: 'Tips are optional and appreciated for exceptional service, but never required. Service charge may already appear as “++” on quoted prices (11% tax + 10% service). Your written quote states what is included.',
+  },
+  {
+    q: 'What is a private chef — and what is jasa private chef?',
+    a: 'A private chef is a professional cook who works for your group only — typically in a villa or home — not in a public restaurant. In Indonesian, “jasa private chef” means private-chef service: we plan the menu, shop, cook and clean so you host without kitchen work. That is myCHEF’s core offer across Bali.',
+  },
+  {
+    q: 'What is the difference between a personal chef and a private chef?',
+    a: 'People use both terms loosely. On this site: a private chef booking is often one occasion or a short stay; a personal / daily chef arrangement covers recurring meals across days or weeks (our meal-count day rates). Both are available. <a href="/private-chef-bali">Daily plans →</a> · <a href="/fine-dining">Occasion fine dining →</a>',
+  },
+  {
+    q: 'Is hiring a private chef worth it in Bali?',
+    a: 'For villa groups it is often the easiest way to eat well without taxis, queues or “where shall we go?” debate — and for six-plus people on multi-meal days the per-person maths frequently beats restaurants. For a couple’s single celebration dinner it is a luxury choice; published prices let you decide before you book. <a href="/blog/private-chef-cost-bali">Cost guide →</a>',
+  },
+  {
+    q: 'Can I hire a private chef for my villa in Bali?',
+    a: 'Yes. Message WhatsApp with date, area, guest count and whether you want one dinner or multi-meal days. We reply within about two hours with availability and a clear quote. <a href="/book">Book →</a> · <a href="/quote">Quote →</a>',
+  },
+  {
+    q: 'Can I hire a private chef and a bartender together in Bali?',
+    a: 'Yes — a very common stack. Book the chef (or catering) and add cocktail packages from IDR 500,000++ per guest (min 10). Waiters and butlers are quoted on request. <a href="/in-villa-service/bartenders">Cocktail packages →</a> · <a href="/in-villa-service">In-villa service →</a>',
+  },
 ] as const
 
 export default function PrivateChefPillarPage() {

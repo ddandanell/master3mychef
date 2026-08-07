@@ -119,7 +119,10 @@ const SECTIONS = [
 ]
 
 const FAQS = [
-  { question: 'How much does wedding catering in Bali cost?', answer: 'Wedding reception catering is quoted per guest based on menu and guest count. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and <a href="/pricing">pricing</a> for published guidance.' },
+  { question: 'How much does wedding catering in Bali cost?', answer: 'Full receptions often land around IDR 1.5M–3M++ per person; intimate villa formats from about IDR 700K++. ++ is tax + service. See <a href="/events/weddings">wedding catering</a>, <a href="/bali-wedding-catering-packages">packages</a> and this budget guide for line items foreigners usually miss.' },
+  { question: 'How much does a wedding in Bali cost overall vs catering only?', answer: 'Total wedding spend (villa, planner, photo, legal, flights) is separate. This guide and myCHEF quotes cover <strong>food, kitchen, service staff and bar</strong> only — the F&B slice of a destination wedding budget.' },
+  { question: 'What is a typical Bali wedding cost per person for food?', answer: 'Planning bands: IDR 700K–1.5M++ per person for many villa food formats; IDR 1.5M–3M++ when you want full reception production (brigade, synchronised service, stations). Bar packages are extra. Your written proposal is authoritative.' },
+  { question: 'How should we budget catering for 50 guests in Bali?', answer: 'Example food-only floor math: 50 × IDR 1.5M++ ≈ IDR 75M++ before bar, cake and last-minute headcount. Add cocktail packages from IDR 500K++ per guest (min 10) if you want free-flow drinks. <a href="/bali-wedding-catering-packages">Packages →</a>' },
   { question: 'Do you offer menu tastings for weddings?', answer: 'Yes — tastings are part of wedding planning for full receptions, scheduled before the day.' },
   { question: 'Can you handle banjar fees and villa permissions?', answer: 'We coordinate with villa managers on access, noise and banjar requirements and list third-party fees in the proposal.' },
   { question: 'Can guests bring their own alcohol?', answer: 'Yes — BYO with service staff, or full bar packages. <a href="/in-villa-service/bartenders">Bartenders</a>.' },
@@ -164,7 +167,16 @@ export default function BaliWeddingCateringBudgetPage() {
       heroImage="/generated/mychef-experience-bali-luna-gallery-1.webp"
       heroImageAlt="Elegant wedding catering spread at a Bali villa — myCHEF wedding service"
       ogImage="https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp"
-      keywords={['bali wedding catering cost', 'bali wedding catering budget', 'wedding catering price bali', 'how much does wedding catering cost bali', 'bali wedding food cost per head']}
+      keywords={[
+        'bali wedding catering cost',
+        'bali wedding catering budget',
+        'wedding catering price bali',
+        'how much does a wedding in bali cost',
+        'bali wedding cost per person',
+        'destination wedding bali cost',
+        'bali wedding food cost per head',
+        'wedding budget bali catering',
+      ]}
       highlights={['Price Breakdown', 'Hidden Costs', 'How to Save', 'FAQ']}
       sections={SECTIONS}
       faqs={FAQS}

@@ -47,6 +47,8 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | **caviar experience bali / caviar service bali / luxury caviar bali** | `/experiences/caviar-experience` | Contact-quote only; no public list price |
 | **oyster and caviar bali** (combined intent) | Prefer `/experiences/caviar-experience` when caviar-led; `/experiences/champagne-oyster-experience` when oyster/shucking-led | Cross-link; do not duplicate H1s |
 | **champagne service bali** (with oysters) | `/experiences/champagne-oyster-experience` | Caviar page may mention champagne as pairing |
+| **whiskey experience bali / whiskey tasting bali / whisky tasting bali** | `/experiences/whiskey-cigar-experience` | Contact-quote only; no public list price |
+| **cigar experience bali / cigar lounge bali / whiskey and cigar pairing** | `/experiences/whiskey-cigar-experience` | Cocktail-party page owns cocktail packages, not cigar lounge H1 |
 
 ---
 
@@ -60,6 +62,7 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | `/experiences/private-cooking-class` | **Redirect only** → cooking-class | Do not republish as competitor |
 | `/experiences/caviar-experience` | Caviar experience / luxury caviar service Bali; villa & yacht; contact-quote only | Oyster-bar-first H1 (sibling page) |
 | `/experiences/champagne-oyster-experience` | Oyster bar / champagne brunch / live shucking | “Caviar Experience Bali” as primary H1 |
+| `/experiences/whiskey-cigar-experience` | Whiskey tasting + cigar lounge Bali; villa & yacht; contact-quote only | Generic “private cocktail party” ownership |
 
 ---
 
@@ -139,4 +142,5 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | 2026-08-01 | Retargeted 22 supporting pages' “Private Chef Bali” related links from `/` to `/private-chef-bali` |
 | 2026-08-07 | Wave 5: cooking class commercial owner `/experiences/cooking-class`; blog support URL kept live (no 301); sushi/kids ownership rows; experiences cluster table |
 | 2026-08-07 | Caviar experience owner `/experiences/caviar-experience` (contact-quote; sibling to champagne-oyster) |
+| 2026-08-07 | Whiskey & cigar experience owner `/experiences/whiskey-cigar-experience` (contact-quote) |
 

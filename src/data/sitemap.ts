@@ -280,6 +280,14 @@ export function buildSitemap(): SitemapEntry[] {
       changefreq: 'monthly',
     },
     {
+      path: PAGE_META['experience-whiskey-cigar-experience'].path,
+      type: 'service',
+      title: PAGE_META['experience-whiskey-cigar-experience'].title,
+      description: PAGE_META['experience-whiskey-cigar-experience'].description,
+      priority: 0.85,
+      changefreq: 'monthly',
+    },
+    {
       path: PAGE_META['experience-romantic-proposal-dinner'].path,
       type: 'service',
       title: PAGE_META['experience-romantic-proposal-dinner'].title,

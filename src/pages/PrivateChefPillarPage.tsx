@@ -786,6 +786,11 @@ export default function PrivateChefPillarPage() {
                 href: '/experiences/caviar-experience',
                 desc: 'Premium caviar with champagne service — villa or yacht, contact for quote.',
               },
+              {
+                title: 'Whiskey & cigar experience',
+                href: '/experiences/whiskey-cigar-experience',
+                desc: 'Guided whiskey tasting and premium cigar lounge with chef pairings.',
+              },
             ].map((card) => (
               <Link
                 key={card.href + card.title}

@@ -1469,12 +1469,12 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'events-weddings': {
     path: '/events/weddings',
-    title: 'Wedding Catering Bali | Villa Wedding Chefs | myCHEF',
+    title: 'Wedding Catering Bali | Best Villa Wedding Catering & Receptions | myCHEF',
     description:
-      'Bali wedding catering for 20–250 guests at private villas: chefs, waiters, bar and coordination from one team, with a tasting before you commit.',
+      'Bali wedding catering for villa receptions: cost bands per person, plated or buffet, cocktail hour, butlers & bar. Intimate to 200+ guests. Transparent packages — WhatsApp myCHEF.',
     canonical: `${SITE}/events/weddings`,
     h1: 'Wedding Catering Bali — Villa Weddings, One Team',
-    ogImage: `${SITE}/events-event-wedding-xl.webp`,
+    ogImage: `${SITE}/generated/mychef-events-bali-hero-weddings.webp`,
   },
 
       'events-birthdays': {

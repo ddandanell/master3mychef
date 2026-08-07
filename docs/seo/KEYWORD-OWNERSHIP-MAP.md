@@ -107,12 +107,17 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 
 | Page | Owns |
 |---|---|
-| `/events/weddings` | Wedding catering service |
-| `/bali-wedding-catering-packages` | Packages & prices |
+| `/events/weddings` | **Wedding catering Bali** service (best wedding catering Bali, villa reception F&B, reception formats) |
+| `/bali-wedding-catering-packages` | Packages & **per-person prices** / 50–150 guest package math |
+| `/blog/bali-wedding-catering-budget-guide` | “How much does a wedding in Bali cost” **F&B education** (not full wedding all-in) |
 | `/blog/bali-wedding-catering-private-chef-timeline` | Planning timeline |
+| `/blog/wedding-private-chef-bali-planning-guide` | Private chef wedding planning support |
 | `/journal/villa-wedding-catering-logistics-bali` | Logistics |
 | `/journal/bali-wedding-catering-complete-guide` | Comprehensive guide |
 | `/wedding-catering-indonesia` | Indonesia-wide (not Bali-first) |
+| `/honeymoon-chef` | Post-wedding honeymoon dining (not reception catering) |
+
+**Do not** claim hotel all-inclusive packages, legal marriage, dress, or photography ownership on catering pages.
 
 ---
 
@@ -144,4 +149,5 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | 2026-08-07 | Caviar experience owner `/experiences/caviar-experience` (contact-quote; sibling to champagne-oyster) |
 | 2026-08-07 | Whiskey & cigar experience owner `/experiences/whiskey-cigar-experience` (contact-quote) |
 | 2026-08-07 | GSC Discovered-not-indexed strategy: `GSC-DISCOVERED-NOT-INDEXED-STRATEGY-2026-08-07.md` (130 URLs; area uniqueness + commercial mesh) |
+| 2026-08-07 | Wedding Bali AnswerSocrates filter → keep F&B intents; `/events/weddings` + budget/packages owners clarified |
 

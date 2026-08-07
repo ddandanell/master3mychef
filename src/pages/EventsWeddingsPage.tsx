@@ -38,12 +38,12 @@ const FORMAT_CARDS = [
 ]
 
 const ADDONS = [
-  { icon: Calendar, title: 'Wedding Cake', desc: 'Custom 3-tier cake' },
-  { icon: Newspaper, title: 'Cinematography', desc: 'Full-day film' },
-  { icon: Heart, title: 'Drone Footage', desc: 'Aerial coverage' },
-  { icon: MessageCircle, title: 'Live Band 4h', desc: 'Jazz, acoustic, or DJ' },
-  { icon: Check, title: 'Ceremony Florals', desc: 'Arch + aisle + table' },
-  { icon: Clock, title: 'Guest Transport', desc: 'Per 50-guest coach' },
+  { icon: Calendar, title: 'Wedding cake & dessert', desc: 'Celebration cake and dessert stations' },
+  { icon: Heart, title: 'Champagne & oysters', desc: 'Cocktail-hour luxury station' },
+  { icon: Check, title: 'Caviar experience', desc: 'Premium tin service for VIP tables' },
+  { icon: MessageCircle, title: 'Mobile cocktail bar', desc: 'Packages from IDR 500K++/guest (min 10)' },
+  { icon: Clock, title: 'Welcome / rehearsal dinner', desc: 'BBQ, family-style or plated night-before' },
+  { icon: Newspaper, title: 'Recovery brunch', desc: 'Next-morning soft service for villa guests' },
 ]
 
 const FAQS = [
@@ -75,6 +75,16 @@ const FAQS = [
   // Long-tail wedding catering keywords
   { q: 'Do you offer wedding catering packages and a catering price list for Bali villas?', a: 'Yes — published package bands and inclusions on <a href="/bali-wedding-catering-packages">Bali wedding catering packages</a>. Food formats also on <a href="/catering">catering Bali</a>. Your written proposal is the fixed price list for your guest count.' },
   { q: 'How do I order wedding catering for a villa reception?', a: 'WhatsApp date, guest estimate, villa/venue and style (plated/buffet/BBQ). We send a menu proposal and all-in total. <a href="/quote">Quote →</a> · <a href="/book">Book →</a>' },
+  // AnswerSocrates wedding Bali 2026-08-07 — guest F&B intents only
+  { q: 'How much does a wedding in Bali cost?', a: 'Total wedding spend varies widely (villa, planner, photo, travel). <strong>myCHEF covers food, kitchen, service staff and bar</strong> — not the whole wedding. Catering planning bands: intimate from ~IDR 700K++ per person; full receptions often IDR 1.5M–3M++ per person. For a full cost breakdown of catering lines, see <a href="/blog/bali-wedding-catering-budget-guide">wedding catering budget guide</a> and <a href="/bali-wedding-catering-packages">packages</a>.' },
+  { q: 'What is the average Bali wedding cost per person for catering?', a: 'Plan food from about IDR 700K–1.5M++ per person for many villa formats; fuller reception production commonly IDR 1.5M–3M++ per person depending on menu, service style and staffing. Bar is usually separate. Your written proposal is the fixed number. <a href="/bali-wedding-catering-packages">Packages →</a>' },
+  { q: 'Do you offer Bali wedding villa catering (not a hotel package)?', a: 'Yes — that is our core: private villa weddings with chefs, waiters, bar and cleanup at your property. We coordinate with villa managers on access, power and noise rules. <a href="/journal/villa-wedding-catering-logistics-bali">Villa logistics guide →</a>' },
+  { q: 'Can you cater an intimate wedding or micro-wedding in Bali?', a: 'Yes — from roughly 10 guests. Intimate dinners often use plated <a href="/fine-dining">fine dining</a> or <a href="/private-chef-bali">private chef</a> formats; larger guest lists use buffet or live stations on this page.' },
+  { q: 'Do you handle Bali wedding reception food only, or full “all-inclusive” packages?', a: 'We deliver F&amp;B production: menu, kitchen brigade, service, optional bar, setup and cleanup. We do not replace photographers, planners or legal marriage packages — we work with them. For transparent food package bands see <a href="/bali-wedding-catering-packages">wedding catering packages</a>.' },
+  { q: 'Can we book a Bali wedding butler and waiters with the catering?', a: 'Yes — waiters are sized to guest count; butlers and hosts are available via <a href="/in-villa-service">in-villa service</a> and <a href="/butler-service-bali-daily-rate">butler service</a>. Pricing for waiters/butlers is contact-quote; cocktail packages have published floors.' },
+  { q: 'Do you cater Indian, multicultural or beach-style villa weddings in Bali?', a: 'Yes — multi-cuisine lines, spice-forward and milder options, vegetarian/vegan volume, and formats from beach-adjacent villas to jungle estates. Ceremony seating can face the view while the kitchen runs out of sight. Share cuisine mix at enquiry.' },
+  { q: 'What is a sensible Bali wedding budget just for food and bar?', a: 'Use guest count × per-person food band + bar packages + cake/dessert. Example planning math for 50 guests at IDR 1.5M++ food ≈ IDR 75M++ before tax/service framing in the proposal; bar often from IDR 500K++ per guest (min 10). Full guide: <a href="/blog/bali-wedding-catering-budget-guide">budget guide</a>.' },
+  { q: 'Is destination wedding catering in Bali different from a local celebration?', a: 'Logistically yes — international guest lists, jet-lag meal timing, welcome dinners and recovery brunch matter more. Food standards stay the same. We build a multi-day F&amp;B plan when the villa hosts a long weekend.' },
 ]
 
 const FLOW_STEPS = [
@@ -146,8 +156,8 @@ export default function EventsWeddingsPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Wedding Catering Bali | Villa Wedding Specialists | myCHEF"
-        description="Wedding catering for Bali villa weddings: plated dinners, buffets & cocktail receptions with full team, tastings & transparent packages. WhatsApp myCHEF."
+        title="Wedding Catering Bali | Best Villa Wedding Catering & Receptions | myCHEF"
+        description="Bali wedding catering for villa receptions: cost bands per person, plated or buffet, cocktail hour, butlers & bar. Intimate to 200+ guests. Transparent packages — WhatsApp myCHEF."
         canonical={`${SITE}/events/weddings`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-weddings.webp`}
         jsonLd={[
@@ -202,7 +212,7 @@ export default function EventsWeddingsPage() {
             Wedding Catering in Bali — Villa Weddings, Run by One Team
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
-            One contract covering menu design, the chef brigade, service staff, bar, setup, coordination with your planner and vendors — and a kitchen that leaves no trace behind.
+            Foreign couples searching for a Bali wedding villa reception need clear catering: menu design, chef brigade, waiters, cocktail bar, setup and cleanup — one contract, itemised costs, and a kitchen that leaves no trace behind.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-weddings-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
@@ -260,8 +270,29 @@ export default function EventsWeddingsPage() {
             ))}
           </div>
           <p className="text-[#4A4745] text-center max-w-4xl mx-auto leading-relaxed mt-10">
-            For per-guest prices and guest-count scenarios: <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">see wedding catering packages & per-person prices</Link>. Marrying outside Bali? See <Link to="/wedding-catering-indonesia" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding catering across Indonesia</Link>.
+            Searching “how much does a wedding in Bali cost” or “Bali wedding cost per person”? For per-guest food bands and 50–150 guest scenarios: <Link to="/bali-wedding-catering-packages" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding catering packages & per-person prices</Link>. Full budget education: <Link to="/blog/bali-wedding-catering-budget-guide" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">catering budget guide</Link>. Outside Bali: <Link to="/wedding-catering-indonesia" className="text-[#C5A028] underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wedding catering Indonesia</Link>.
           </p>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-white wedding-reveal">
+        <div className="max-w-4xl mx-auto px-6">
+          <SectionHeader
+            eyebrow="For destination couples"
+            title="What foreigners usually need from Bali wedding catering"
+            subtitle="Search demand clusters around cost, villa receptions, packages and food — not legal marriage paperwork. We answer the F&B side clearly."
+          />
+          <div className="space-y-4 text-[#4A4745] leading-relaxed">
+            <p>
+              Most international couples comparing <strong>Bali wedding packages</strong> are really comparing several vendors. myCHEF is the <strong>best wedding catering Bali</strong> partner when you want villa-grade food production: tasting, run-of-show with your planner, and transparent ++ pricing — not a hotel ballroom plate drop.
+            </p>
+            <p>
+              Common villa patterns we cater: Canggu–Seminyak estates, Uluwatu clifftop lawns, Ubud jungle decks and Nusa Dua beach villas. Stack luxury moments with <Link to="/experiences/champagne-oyster-experience" className="text-[#C5A028] underline underline-offset-4">champagne &amp; oysters</Link>, <Link to="/experiences/caviar-experience" className="text-[#C5A028] underline underline-offset-4">caviar</Link>, or a post-wedding <Link to="/honeymoon-chef" className="text-[#C5A028] underline underline-offset-4">honeymoon chef</Link> stay.
+            </p>
+            <p>
+              Planning timeline and logistics live in our guides: <Link to="/blog/bali-wedding-catering-private-chef-timeline" className="text-[#C5A028] underline underline-offset-4">6-month catering timeline</Link>, <Link to="/blog/wedding-private-chef-bali-planning-guide" className="text-[#C5A028] underline underline-offset-4">private chef wedding planning</Link>, and <Link to="/journal/villa-wedding-catering-logistics-bali" className="text-[#C5A028] underline underline-offset-4">villa kitchen logistics</Link>.
+            </p>
+          </div>
         </div>
       </section>
 

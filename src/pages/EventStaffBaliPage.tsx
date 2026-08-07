@@ -114,7 +114,8 @@ export default function EventStaffBaliPage() {
         { label: 'Large Group Catering Bali', href: '/group-villa-dinner-packages-bali', desc: 'Private chef catering for groups of 20+ guests in Bali.' },
         { label: 'Corporate Catering Bali', href: '/blog/corporate-events-catering-bali-team-dining', desc: 'Full catering and staffing for corporate events in Bali.' },
         { label: 'Villa Staff Bali Guide', href: '/staffing/villa-staff', desc: 'Hiring all villa staff categories in Bali.' },
-        { label: 'Wedding Catering Bali', href: '/bali-wedding-catering-packages', desc: 'Full catering and staffing for Bali weddings.' },
+        { label: 'Wedding Catering Bali', href: '/events/weddings', desc: 'Full catering and staffing for Bali weddings.' },
+        { label: 'Wedding Catering Packages', href: '/bali-wedding-catering-packages', desc: 'Per-person package bands for guest-count planning.' },
         { label: 'Pricing Guide', href: '/pricing', desc: 'Full cost breakdown for private chefs and event staffing.' },
         { label: 'Book Event Staff', href: '/contact', desc: 'Get a quote for your event.' },
       ]}

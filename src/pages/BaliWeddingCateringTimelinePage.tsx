@@ -212,7 +212,7 @@ export default function BaliWeddingCateringTimelinePage() {
           <nav className="flex items-center gap-2 text-sm text-[#999] mb-6">
             <Link to="/" className="hover:text-[#C5A028] transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <Link to="/journal" className="hover:text-[#C5A028] transition-colors">Blog</Link>
+            <Link to="/journal" className="hover:text-[#C5A028] transition-colors">Journal</Link>
             <ChevronRight className="w-3 h-3" />
             <span className="text-[#C5A028]">Bali Wedding Catering Timeline</span>
           </nav>
@@ -486,19 +486,19 @@ export default function BaliWeddingCateringTimelinePage() {
           <div className="grid md:grid-cols-3 gap-4">
             {[
               {
-                to: '/blog/private-chef-cost-bali',
-                label: 'Private Chef Cost in Bali',
-                desc: 'Full pricing guide: villa dinners, events, daily hire, and staffing.',
+                to: '/blog/bali-wedding-catering-budget-guide',
+                label: 'Wedding Catering Budget Guide',
+                desc: 'Transparent F&B budget education for Bali villa weddings — what to plan before you quote.',
               },
               {
-                to: '/blog/food-allergies-dietary-requirements-private-chef-bali',
-                label: 'Food Allergies & Dietary Requirements',
-                desc: 'How myCHEF handles allergies, intolerances, halal, vegan, and gluten-free.',
+                to: '/bali-wedding-catering-packages',
+                label: 'Wedding Catering Packages',
+                desc: 'Published package bands and inclusions for intimate dinners through full receptions.',
               },
               {
-                to: '/events',
-                label: 'Wedding & Event Catering',
-                desc: 'Full overview of myCHEF event services for weddings, parties, and corporate events.',
+                to: '/journal/villa-wedding-catering-logistics-bali',
+                label: 'Villa Wedding Logistics',
+                desc: 'Kitchen, power, access and service flow for villa receptions across Bali.',
               },
             ].map((link, i) => (
               <Link

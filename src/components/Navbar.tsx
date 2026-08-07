@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, type LucideIcon } from 'lucide-react'
+import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, Sparkles, type LucideIcon } from 'lucide-react'
 import { PILLARS, LOCATIONS, hasLocationPage } from '@/data/siteArchitecture'
 
 
@@ -22,6 +22,7 @@ const iconMap: Record<string, LucideIcon> = {
   Baby,
   Wine,
   Cake,
+  Sparkles,
 }
 
 function getIconComponent(iconName?: string): LucideIcon | null {
@@ -118,6 +119,7 @@ NAV_SUBPAGES['/experiences'] = [
   { label: 'Cooking Class', href: '/experiences/cooking-class', icon: 'ChefHat' },
   { label: 'Kids Birthday Chef Party', href: '/experiences/kids-birthday-chef-party', icon: 'Baby' },
   { label: 'Champagne & Oyster Experience', href: '/experiences/champagne-oyster-experience', icon: 'Crown' },
+  { label: 'Caviar Experience', href: '/experiences/caviar-experience', icon: 'Sparkles' },
   { label: 'Romantic Proposal Dinner', href: '/experiences/romantic-proposal-dinner', icon: 'Heart' },
 ]
 
@@ -167,6 +169,7 @@ const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
   '/experiences/cooking-class': '/generated/mychef-cooking-class-bali-hero-villa.webp',
   '/experiences/kids-birthday-chef-party': '/generated/mychef-events-bali-party-birthday.webp',
   '/experiences/champagne-oyster-experience': '/generated/mychef-experience-bali-aura-toast.webp',
+  '/experiences/caviar-experience': '/generated/mychef-caviar-experience-bali-hero-villa.webp',
   '/experiences/romantic-proposal-dinner': '/generated/mychef-misc-bali-section-romantic-dinner.webp',
 }
 

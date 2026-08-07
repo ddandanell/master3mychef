@@ -1,6 +1,6 @@
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
-import { Wine, ChefHat, UtensilsCrossed, PartyPopper, Shell, Heart } from 'lucide-react'
+import { Wine, ChefHat, UtensilsCrossed, PartyPopper, Shell, Heart, Sparkles } from 'lucide-react'
 import type { PageSection } from '@/components/PremiumPage'
 import { ArticleContentSection } from '@/components/shared'
 
@@ -57,6 +57,16 @@ const EXPERIENCES = [
     href: '/experiences/champagne-oyster-experience',
     image: '/generated/mychef-oyster-champagne-station-pour-bali-landscape.webp',
     imageAlt: 'Oyster bar Bali with champagne service at an elegant private villa',
+  },
+  {
+    slug: 'caviar-experience',
+    title: 'Caviar Experience',
+    keyword: 'caviar experience Bali',
+    desc: 'Luxury caviar service at your Bali villa or yacht — premium tins, private chef, champagne pairings and butlers. Contact for a custom quote.',
+    icon: Sparkles,
+    href: '/experiences/caviar-experience',
+    image: '/generated/mychef-caviar-experience-bali-hero-villa.webp',
+    imageAlt: 'Caviar experience Bali with champagne service at a private villa',
   },
   {
     slug: 'romantic-proposal-dinner',
@@ -197,7 +207,7 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  { question: 'What private experiences do you offer in Bali?', answer: 'Six curated villa experiences: <a href="/experiences/private-cocktail-party">Private Cocktail Party</a>, <a href="/experiences/sushi-masterclass">Sushi Masterclass</a>, <a href="/experiences/cooking-class">Cooking Class</a>, <a href="/experiences/kids-birthday-chef-party">Kids Birthday Chef Party</a>, <a href="/experiences/champagne-oyster-experience">Champagne &amp; Oyster</a>, and <a href="/experiences/romantic-proposal-dinner">Romantic Proposal Dinner</a>.' },
+  { question: 'What private experiences do you offer in Bali?', answer: 'Curated villa experiences include <a href="/experiences/private-cocktail-party">Private Cocktail Party</a>, <a href="/experiences/sushi-masterclass">Sushi Masterclass</a>, <a href="/experiences/cooking-class">Cooking Class</a>, <a href="/experiences/kids-birthday-chef-party">Kids Birthday Chef Party</a>, <a href="/experiences/champagne-oyster-experience">Champagne &amp; Oyster</a>, <a href="/experiences/caviar-experience">Caviar Experience</a>, and <a href="/experiences/romantic-proposal-dinner">Romantic Proposal Dinner</a>.' },
   { question: 'How much do private experiences cost in Bali?', answer: 'Pricing depends on experience, guest count and add-ons. You receive a fixed quote before deposit — never a vague range after the fact. Compare related dining on <a href="/pricing">pricing</a> and <a href="/dining-styles">dining styles</a>.' },
   { question: 'Can experiences be combined or customised?', answer: 'Yes. Popular stacks: cocktail party + canapés, sushi class + dinner, proposal dinner + champagne &amp; oysters. We design one run-of-show for the evening.' },
   { question: 'Do you bring all ingredients and equipment?', answer: 'Yes — ingredients, tools and station equipment. Cooking and sushi classes include aprons, knives, boards and teaching kit.' },
@@ -220,12 +230,12 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
+  { label: 'Caviar Experience Bali', href: '/experiences/caviar-experience', desc: 'Premium caviar with private chef and champagne — villa or yacht, contact for quote.' },
   { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: 'Private Balinese and Indonesian villa cooking lessons — contact for a quote.' },
   { label: 'Villa cooking class guide', href: '/blog/bali-villa-cooking-class-private-chef', desc: 'Support article: formats, market trip and how private villa classes work.' },
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Day rates, meal plans and how private chef hire works across Bali.' },
   { label: 'Villa Catering', href: '/catering/villa-catering', desc: 'Full-service catering for villa celebrations and group dining.' },
   { label: 'Event Catering', href: '/events', desc: 'Weddings, birthdays, corporate events and villa parties handled end-to-end.' },
-  { label: 'Pricing', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and event types.' },
 ]
 
 export default function ExperiencesHubPage() {
@@ -234,9 +244,9 @@ export default function ExperiencesHubPage() {
       <PremiumPage
         slug="experiences"
       title="Private Experiences Bali | Culinary & Celebration Experiences | myCHEF"
-      description="Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, kids’ parties, oyster bars and proposal dinners at your villa."
+      description="Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, caviar service, oyster bars, kids’ parties and proposal dinners at your villa."
       seoTitle="Private Experiences Bali | Culinary & Celebration Experiences | myCHEF"
-      seoDescription="Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, kids’ parties, oyster bars and proposal dinners at your villa."
+      seoDescription="Discover private culinary and celebration experiences in Bali. Cocktail parties, sushi classes, cooking classes, caviar service, oyster bars, kids’ parties and proposal dinners at your villa."
       canonicalUrl={CANONICAL}
       h1="Private Experiences in Bali"
       subtitle="Curated Culinary & Celebration Experiences at Your Villa"

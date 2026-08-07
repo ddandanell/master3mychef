@@ -44,6 +44,9 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | **sushi making class / sushi masterclass bali** | `/experiences/sushi-masterclass` | Sibling of cooking class; not the same page |
 | **kids cooking party / kids birthday chef** | `/experiences/kids-birthday-chef-party` | Family cooking class still owned by cooking-class when adult-led |
 | **private experiences bali (hub)** | `/experiences` | Children own specific experience keywords |
+| **caviar experience bali / caviar service bali / luxury caviar bali** | `/experiences/caviar-experience` | Contact-quote only; no public list price |
+| **oyster and caviar bali** (combined intent) | Prefer `/experiences/caviar-experience` when caviar-led; `/experiences/champagne-oyster-experience` when oyster/shucking-led | Cross-link; do not duplicate H1s |
+| **champagne service bali** (with oysters) | `/experiences/champagne-oyster-experience` | Caviar page may mention champagne as pairing |
 
 ---
 
@@ -55,6 +58,8 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | `/blog/bali-villa-cooking-class-private-chef` | Informational villa class guide (formats, market trip, gift angle) | Exact commercial H1 “Cooking Class Bali”; list prices |
 | `/experiences/sushi-masterclass` | Sushi making class / Japanese workshop | Generic “cooking class bali” |
 | `/experiences/private-cooking-class` | **Redirect only** → cooking-class | Do not republish as competitor |
+| `/experiences/caviar-experience` | Caviar experience / luxury caviar service Bali; villa & yacht; contact-quote only | Oyster-bar-first H1 (sibling page) |
+| `/experiences/champagne-oyster-experience` | Oyster bar / champagne brunch / live shucking | “Caviar Experience Bali” as primary H1 |
 
 ---
 
@@ -133,4 +138,5 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | 2026-08-01 | Map created; first differentiation pass applied on guide + cost/premium titles |
 | 2026-08-01 | Retargeted 22 supporting pages' “Private Chef Bali” related links from `/` to `/private-chef-bali` |
 | 2026-08-07 | Wave 5: cooking class commercial owner `/experiences/cooking-class`; blog support URL kept live (no 301); sushi/kids ownership rows; experiences cluster table |
+| 2026-08-07 | Caviar experience owner `/experiences/caviar-experience` (contact-quote; sibling to champagne-oyster) |
 

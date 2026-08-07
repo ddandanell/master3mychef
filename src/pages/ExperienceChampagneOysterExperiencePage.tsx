@@ -114,7 +114,7 @@ const SECTIONS: PageSection[] = [
     imageAlt: 'Seafood and oyster station setup at a Bali villa brunch event',
     body: `<p><strong>Chilled seafood:</strong> king prawns, crab, lobster, scallops, ceviche, tuna or salmon tartare, and full seafood towers.</p>
 
-    <p><strong>Luxury additions:</strong> caviar with blinis and crème fraîche, smoked salmon, truffle canapés, wagyu bites, premium cheeses and charcuterie — or <a href="/catering/grazing-tables" class="text-[#7E6410] hover:underline font-medium">a luxury grazing table in Bali</a> running alongside the oyster station.</p>
+    <p><strong>Luxury additions:</strong> <a href="/experiences/caviar-experience" class="text-[#7E6410] hover:underline font-medium">caviar experience</a> with blinis and crème fraîche, smoked salmon, truffle canapés, wagyu bites, premium cheeses and charcuterie — or <a href="/catering/grazing-tables" class="text-[#7E6410] hover:underline font-medium">a luxury grazing table in Bali</a> running alongside the oyster station.</p>
 
     <p><strong>Brunch food:</strong> eggs Benedict, an omelette station, brioche and pastries, avocado toast, salads, tropical fruit, pancakes and desserts — see also our <a href="/catering/villa-catering" class="text-[#7E6410] hover:underline font-medium">private villa brunch catering</a> for larger spreads.</p>
 
@@ -255,7 +255,7 @@ const FAQS = [
   { question: 'Do you provide champagne, or can we supply our own?', answer: 'Either. You can supply your own bottles, have myCHEF source champagne at an agreed bottle cost, or choose a standard sparkling-wine, premium champagne or rosé package. The champagne cost is always shown separately from the service package.' },
   { question: 'Can you offer free-flow champagne?', answer: 'Yes, for a defined service period. The duration, package and responsible-service limits are agreed in writing before the event.' },
   { question: 'What oyster varieties are available?', answer: 'Availability depends on the season and the market; we confirm the exact varieties when we quote. Premium imported varieties can be arranged where supply allows, and grilled, baked or dressed preparations are available.' },
-  { question: 'Can you provide caviar and seafood towers?', answer: 'Yes. Caviar with blinis and crème fraîche, seafood towers, king prawns, crab, lobster, scallops, ceviche and tartares can all be added to the station.' },
+  { question: 'Can you provide caviar and seafood towers?', answer: 'Yes. Caviar with blinis and crème fraîche can be added to the oyster station, or book a full <a href="/experiences/caviar-experience">caviar experience Bali</a> as the luxury centrepiece. Seafood towers, king prawns, crab, lobster, scallops, ceviche and tartares are available too.' },
   { question: 'Can you add bartenders and cocktails?', answer: 'Yes. Brunch cocktails — Bloody Marys, Mimosas, Bellinis, Aperol Spritz, French 75s — or a full bar team for parties and receptions.' },
   { question: 'Can you provide non-seafood options?', answer: 'Yes. Vegetarian canapés, a cheese and fruit station, meat canapés, vegan bites and non-seafood brunch dishes can be included for guests who prefer them.' },
   { question: 'Is the service suitable for guests with shellfish allergies?', answer: 'Guests with shellfish allergies must inform us before the event. We can prepare suitable non-shellfish alternatives, but because shellfish is handled on site, we cannot guarantee a completely shellfish-free environment.' },
@@ -266,6 +266,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
+  { label: 'Caviar Experience Bali', href: '/experiences/caviar-experience', desc: 'Premium caviar with private chef and champagne — villa or yacht, contact for quote.' },
   { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'A villa cocktail party in Bali with professional bartenders and bar setup.' },
   { label: 'Villa Parties', href: '/events/villa-parties', desc: 'Full-service villa party planning for private pool party catering and events.' },
   { label: 'Wedding Catering', href: '/events/weddings', desc: 'Wedding receptions, cocktail hours and pre-dinner wedding catering.' },

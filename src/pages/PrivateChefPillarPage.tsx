@@ -781,6 +781,11 @@ export default function PrivateChefPillarPage() {
                 href: '/experiences/sushi-masterclass',
                 desc: 'Private sushi making class at the villa — rice, rolls and tasting.',
               },
+              {
+                title: 'Caviar experience',
+                href: '/experiences/caviar-experience',
+                desc: 'Premium caviar with champagne service — villa or yacht, contact for quote.',
+              },
             ].map((card) => (
               <Link
                 key={card.href + card.title}

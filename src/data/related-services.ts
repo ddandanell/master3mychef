@@ -212,6 +212,12 @@ export const EXPERIENCES_RELATED: RelatedService[] = [
     category: 'Experiences'
   },
   {
+    title: 'Caviar Experience Bali',
+    description: 'Premium caviar with private chef, champagne service and butlers — villa or yacht. Contact for quote.',
+    path: '/experiences/caviar-experience',
+    category: 'Experiences'
+  },
+  {
     title: 'Romantic Proposal Dinner',
     description: 'Confidential proposal dinner planning with private chef and setup.',
     path: '/experiences/romantic-proposal-dinner',

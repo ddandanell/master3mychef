@@ -149,6 +149,7 @@ const ExperienceSushiMasterclassPage = lazy(() => import('./pages/ExperienceSush
 const ExperienceCookingClassPage = lazy(() => import('./pages/ExperienceCookingClassPage'))
 const ExperienceKidsBirthdayChefPartyPage = lazy(() => import('./pages/ExperienceKidsBirthdayChefPartyPage'))
 const ExperienceChampagneOysterExperiencePage = lazy(() => import('./pages/ExperienceChampagneOysterExperiencePage'))
+const ExperienceCaviarExperiencePage = lazy(() => import('./pages/ExperienceCaviarExperiencePage'))
 const ExperienceRomanticProposalDinnerPage = lazy(() => import('./pages/ExperienceRomanticProposalDinnerPage'))
 const BaliVillaCookingClassPage = lazy(() => import('./pages/BaliVillaCookingClassPage'))
 const LargeGroupCateringBaliPage = lazy(() => import('./pages/LargeGroupCateringBaliPage'))
@@ -294,6 +295,7 @@ export default function App() {
           <Route path="/experiences/private-cooking-class" element={<Navigate to="/experiences/cooking-class" replace />} />
           <Route path="/experiences/kids-birthday-chef-party" element={<ExperienceKidsBirthdayChefPartyPage />} />
           <Route path="/experiences/champagne-oyster-experience" element={<ExperienceChampagneOysterExperiencePage />} />
+          <Route path="/experiences/caviar-experience" element={<ExperienceCaviarExperiencePage />} />
           <Route path="/experiences/romantic-proposal-dinner" element={<ExperienceRomanticProposalDinnerPage />} />
 
           <Route path="/events/weddings" element={<EventsWeddingsPage />} />

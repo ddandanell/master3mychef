@@ -83,7 +83,7 @@ const SECTIONS = [
 
     <p><strong>Private mixology warm-up:</strong> Before free-flow starts, book a craft session for signature serves and zero-proof options. See <a href="/in-villa-service/mixology">private mixology</a>. Minimum guests and pricing confirmed on quote.</p>
 
-    <p><strong>Midnight Snack Drop (IDR 200,000/person):</strong> A tray of late-night party food delivered to the villa at midnight — sliders, fried snacks, cheese, and fresh items to extend the evening. Ordered at booking; the chef prepares and delivers without disrupting the night.</p>
+    <p><strong>Midnight Snack Drop:</strong> A tray of late-night party food delivered to the villa at midnight — sliders, fried snacks, cheese, and fresh items to extend the evening. Quoted as an add-on on your proposal (not a food-menu per-person package). Ordered at booking; the chef prepares and delivers without disrupting the night.</p>
 
     <p><strong>Fire Pit Setup:</strong> A dedicated fire pit area arranged for the villa's outdoor space, with seating and lighting. Creates a natural gathering point for the post-dinner part of the evening. Availability depends on villa layout — ask us at booking.</p>
 

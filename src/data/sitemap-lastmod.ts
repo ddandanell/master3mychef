@@ -167,6 +167,7 @@ export const SITEMAP_LASTMOD: Record<string, string> = {
   "/experiences": "2026-08-06",
   "/experiences/sushi-masterclass": "2026-08-06",
   "/experiences/cooking-class": "2026-08-06",
+  "/blog/bali-villa-cooking-class-private-chef": "2026-08-07",
   "/experiences/kids-birthday-chef-party": "2026-08-06",
   "/experiences/champagne-oyster-experience": "2026-08-06",
   "/experiences/romantic-proposal-dinner": "2026-08-06",

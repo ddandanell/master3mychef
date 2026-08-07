@@ -109,12 +109,10 @@ export default function PrivateChefJimbaranGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Private Chef Nusa Dua Guide', href: '/private-chef/nusa-dua', desc: 'Private chef for Nusa Dua villas and resort properties.' },
-        { label: 'Bali BBQ Catering', href: '/catering/bbq-catering', desc: 'Live-fire BBQ catering for villa groups across Bali.' },
-        { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Private chef romantic dinners for couples in Bali.' },
-        { label: 'Honeymoon Private Chef', href: '/honeymoon-chef', desc: 'Private chef experience for Bali honeymoons.' },
-        { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef costs across all Bali areas.' },
-        { label: 'Book a Chef', href: '/contact', desc: 'Check availability for your Jimbaran dates.' },
+        { label: 'Private Chef Jimbaran', href: '/private-chef/jimbaran', desc: 'Book a private chef in Jimbaran — day rates and menus.' },
+        { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Sunset free-flow packages for Jimbaran villas.' },
+        { label: 'Seafood BBQ Catering', href: '/catering/bbq-catering', desc: 'Bayfront BBQ — stack with mobile bar for drinks.' },
+        { label: 'Villa Catering', href: '/catering', desc: 'Event catering formats for Jimbaran celebrations.' },
       ]}
       extraJsonLd={[
         breadcrumbSchema('Private Chef Jimbaran Guide', 'https://mychef.id/blog/private-chef-jimbaran-guide', 'Blog', 'https://mychef.id/blog'),

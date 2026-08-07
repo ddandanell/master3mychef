@@ -79,11 +79,11 @@ const SECTIONS = [
     title: 'Upgrade Your Bachelor Party Package',
     body: `<p>The core packages cover the food. These add-ons let you build the full experience around it.</p>
 
-    <p><strong>Cocktail packages (from IDR 500,000++ per guest, min 10):</strong> Complete in-villa bar service — team, four cocktails, glassware, ice, setup and cleanup. BYO or free-flow spirits options. The single most popular add-on for bachelor parties. Full details: <a href="/in-villa-service/bartenders">cocktail packages</a>.</p>
+    <p><strong>Mobile cocktail bar (from IDR 500,000++ per guest, min 10):</strong> We bring a complete mobile bar to the villa — team, four cocktails, glassware, ice, setup and cleanup. BYO or free-flow spirits options. Not hourly bartender hire. The single most popular add-on for bachelor parties. Full tables: <a href="/in-villa-service/bartenders">mobile cocktail bar packages</a> · occasion plan: <a href="/experiences/private-cocktail-party">private cocktail party</a>. Stack multi-day meals with <a href="/private-chef-bali">private chef</a> if the squad stays the week.</p>
 
-    <p><strong>Cocktail Masterclass (IDR 300,000/person):</strong> Before the party proper begins, the bartender runs a 45-minute cocktail class where the group learns to make two or three signature drinks. Works brilliantly as a late-afternoon warm-up activity before dinner. Minimum 8 participants.</p>
+    <p><strong>Private mixology warm-up:</strong> Before free-flow starts, book a craft session for signature serves and zero-proof options. See <a href="/in-villa-service/mixology">private mixology</a>. Minimum guests and pricing confirmed on quote.</p>
 
-    <p><strong>Midnight Snack Drop (IDR 200,000/person):</strong> A tray of late-night party food delivered to the villa at midnight — sliders, fried snacks, cheese, and fresh items to extend the evening. Ordered at booking; the chef prepares and delivers without disrupting the night.</p>
+    <p><strong>Midnight Snack Drop:</strong> A tray of late-night party food delivered to the villa at midnight — sliders, fried snacks, cheese, and fresh items to extend the evening. Quoted as an add-on on your proposal (not a food-menu per-person package). Ordered at booking; the chef prepares and delivers without disrupting the night.</p>
 
     <p><strong>Fire Pit Setup:</strong> A dedicated fire pit area arranged for the villa's outdoor space, with seating and lighting. Creates a natural gathering point for the post-dinner part of the evening. Availability depends on villa layout — ask us at booking.</p>
 
@@ -158,12 +158,12 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Bachelorette Party Bali', href: '/events/villa-parties', desc: 'Hen\'s night catering and private chef packages for Bali villas.' },
-  { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Full BBQ catering options for villa events and group celebrations.' },
-  { label: 'Large Group Catering', href: '/group-villa-dinner-packages-bali', desc: 'Catering for groups of 20–100+ at Bali villas and venues.' },
-  { label: 'Villa Dinner Party', href: '/blog/private-dinner-party-bali', desc: 'How to host the perfect private dinner party at your Bali villa.' },
-  { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF packages and add-on services.' },
-  { label: 'Event Planning Bali', href: '/blog/event-planning-bali', desc: 'Complete logistics guide for planning events at Bali villas.' },
+  { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Free-flow packages from IDR 500K++ per guest — we come to the villa.' },
+  { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'Full night plan with the same mobile bar packages.' },
+  { label: 'BBQ Catering Bali', href: '/catering/bbq-catering', desc: 'Live grill packages for bucks nights.' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Multi-day chef hire if the squad stays the week.' },
+  { label: 'Bachelorette Catering', href: '/blog/bachelorette-party-bali-catering', desc: 'Hen party grazing and brunch formats.' },
+  { label: 'Pricing', href: '/pricing', desc: 'Chef, catering and mobile bar price tables.' },
 ]
 
 export default function BachelorPartyBaliPage() {
@@ -180,8 +180,15 @@ export default function BachelorPartyBaliPage() {
       heroImage="/generated/mychef-experience-bali-luna-gallery-1.webp"
       heroImageAlt="Bachelor party BBQ setup at a Bali villa with private chef service by myCHEF"
       ogImage="https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp"
-      keywords={['bachelor party bali', 'bucks night bali chef', 'bachelor party catering bali', 'bali villa bachelor party food', 'private chef bachelor party bali']}
-      highlights={['Packages', 'Menu Ideas', 'Add-Ons', 'FAQ']}
+      keywords={[
+        'bachelor party bali',
+        'bucks night bali chef',
+        'bachelor party catering bali',
+        'mobile bar bachelor party bali',
+        'bali villa bachelor party food',
+        'private chef bachelor party bali',
+      ]}
+      highlights={['BBQ Catering', 'Mobile Bar', 'Private Chef', 'FAQ']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}

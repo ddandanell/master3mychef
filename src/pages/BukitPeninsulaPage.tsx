@@ -63,13 +63,19 @@ const SERVICES = [
     name: 'Villa weddings and event dining',
     range: 'Custom event quote',
     for: '10–80 guests',
-    detail: 'Full F&B production for estate weddings and celebrations — chefs, waitstaff and bar service.',
+    detail: 'Full F&B production — chefs, catering, mobile bar and waitstaff.',
   },
   {
-    name: 'Weekly chef service',
-    range: 'Custom daily package',
+    name: 'Mobile cocktail bar',
+    range: 'From IDR 500K++ / guest',
+    for: 'Min 10 guests',
+    detail: 'Clifftop welcome drinks and reception free-flow — packages we bring to the estate.',
+  },
+  {
+    name: 'Weekly private chef',
+    range: 'From IDR 1M++ / day',
     for: '7+ day stays',
-    detail: 'A dedicated chef for longer peninsula stays, from breakfast through dinner.',
+    detail: 'A dedicated chef for longer peninsula stays — published meal-plan rates.',
   },
 ]
 

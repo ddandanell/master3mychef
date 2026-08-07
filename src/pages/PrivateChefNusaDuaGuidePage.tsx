@@ -117,12 +117,10 @@ export default function PrivateChefNusaDuaGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Nusa Dua Location Page', href: '/locations/nusa-dua', desc: "Overview of myCHEF's private chef services in Nusa Dua." },
-        { label: 'Browse Our Chefs', href: '/chefs', desc: 'Meet the myCHEF team and find the right chef for your stay.' },
-        { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef costs in Bali.' },
-        { label: 'Fine Dining Guide', href: '/blog/fine-dining-guide', desc: 'Everything you need to know about private chef tasting menus.' },
-        { label: 'Jimbaran Private Chef', href: '/locations/jimbaran', desc: 'Private chef services for the neighbouring Jimbaran area.' },
-        { label: 'Contact Us', href: '/contact', desc: 'Check availability and get a quote for your Nusa Dua dates.' },
+        { label: 'Private Chef Nusa Dua', href: '/private-chef/nusa-dua', desc: 'Book a private chef in Nusa Dua — day rates and menus.' },
+        { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Estate reception free-flow packages.' },
+        { label: 'Corporate Catering', href: '/catering/corporate-catering', desc: 'Offsite meals with NPWP-ready invoicing.' },
+        { label: 'Villa Catering', href: '/catering', desc: 'Buffet and plated for estate celebrations.' },
       ]}
       extraJsonLd={[
         breadcrumbSchema('Private Chef Nusa Dua Guide', 'https://mychef.id/blog/private-chef-nusa-dua-guide', 'Blog', 'https://mychef.id/blog'),

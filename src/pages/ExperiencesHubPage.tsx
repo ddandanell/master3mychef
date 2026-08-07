@@ -12,7 +12,7 @@ const EXPERIENCES = [
     slug: 'private-cocktail-party',
     title: 'Private Cocktail Party',
     keyword: 'private cocktail party Bali',
-    desc: 'Complete cocktail packages for your Bali villa, wedding, birthday or private event — bar team, four cocktails, glassware, ice, setup and cleanup from IDR 500,000++ per guest.',
+    desc: 'Mobile cocktail bar at your Bali villa — complete packages from IDR 500,000++ per guest with team, four cocktails, glassware, ice, setup and cleanup. Stack catering or private chef for full F&B.',
     icon: Wine,
     href: '/experiences/private-cocktail-party',
     image: '/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp',
@@ -82,7 +82,7 @@ const SECTIONS: PageSection[] = [
 
     <p>Every experience is designed around the setting you already have: your villa, your pool, your kitchen, your view. You choose the occasion and the mood, and we build the rest — ingredients, equipment, service staff, styling and cleanup. The result feels personal, seamless and unmistakably Bali.</p>
 
-    <p>Whether you want a hands-on sushi class with friends, a floating cocktail bar by the pool, a stress-free kids’ cooking party, or a confidential proposal dinner planned down to the last candle, these experiences are built for guests who expect privacy, quality and attention to detail.</p>`,
+    <p>Whether you want a hands-on sushi class with friends, a <strong>mobile cocktail bar</strong> by the pool, a stress-free kids’ cooking party, or a confidential proposal dinner planned down to the last candle, these experiences are built for guests who expect privacy, quality and attention to detail. Stack any experience with <a href="/catering" class="text-[#7E6410] hover:underline font-medium">villa catering</a> or multi-day <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef</a> service when the stay needs more than one night of production.</p>`,
   },
   {
     id: 'collection',

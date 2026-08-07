@@ -110,6 +110,15 @@ const SECTIONS = [
     <p>All grazing tables are built on-site at your villa on the morning of the event. We bring all equipment, serving boards, and props. You supply the table surface; we supply everything else.</p>`,
   },
   {
+    id: 'drinks-stack',
+    type: 'content' as const,
+    subtitle: 'Drinks',
+    title: 'Mobile Cocktail Bar for Your Hen Party',
+    body: `<p>Food is only half the villa F&amp;B story. myCHEF brings a <strong>mobile cocktail bar</strong> to bachelorette villas so you are not juggling a separate drinks vendor.</p>
+    <p><strong>Packages from IDR 500,000++ per guest</strong> (minimum 10): bartender team, four cocktails, glassware, ice, mixers, garnishes, setup and cleanup. Choose BYO spirits or free-flow with spirits included. Not hourly bartender-only hire.</p>
+    <p>Pair grazing brunch or dinner catering with free-flow welcome drinks, or plan the whole social night on our <a href="/experiences/private-cocktail-party">private cocktail party</a> page. Multi-day stays use <a href="/private-chef-bali">private chef</a> day rates around the celebration. Full commercial tables: <a href="/in-villa-service/bartenders">mobile cocktail bar packages</a>.</p>`,
+  },
+  {
     id: 'photography',
     type: 'content' as const,
     subtitle: 'Food Presentation',
@@ -178,12 +187,12 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Private chef and catering options for bachelor parties at Bali villas.' },
-  { label: 'Proposal Dinner Bali', href: '/proposal-dinner', desc: 'Romantic proposal dinner setup with private chef at your Bali villa.' },
-  { label: 'Anniversary Dinner', href: '/events/anniversaries', desc: 'Intimate anniversary dinner catering for couples at Bali villas.' },
-  { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Full details on myCHEF grazing tables — sizing, pricing, and styling options.' },
-  { label: 'Pricing Guide', href: '/pricing', desc: 'Transparent pricing for all myCHEF packages and group sizes.' },
-  { label: 'Event Planning Bali', href: '/blog/event-planning-bali', desc: 'Complete logistics guide for planning a villa event in Bali.' },
+  { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Free-flow packages from IDR 500K++ for hen party villas.' },
+  { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'Full night plan with mobile bar + food add-ons.' },
+  { label: 'Grazing Table Bali', href: '/catering/grazing-tables', desc: 'Styled grazing tables for hen parties.' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Multi-day chef hire around the celebration.' },
+  { label: 'Bachelor Party Bali', href: '/blog/bachelor-party-bali-private-chef', desc: 'Bucks night BBQ and mobile bar stack.' },
+  { label: 'Pricing Guide', href: '/pricing', desc: 'Chef, catering and mobile bar price tables.' },
 ]
 
 export default function BachelorettePartyCateringPage() {
@@ -200,8 +209,15 @@ export default function BachelorettePartyCateringPage() {
       heroImage="/generated/mychef-experience-bali-luna-gallery-1.webp"
       heroImageAlt="Beautiful grazing table setup for a bachelorette party at a Bali villa by myCHEF"
       ogImage="https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp"
-      keywords={['bachelorette party bali', 'hen party bali catering', 'hens night bali chef', 'bachelorette catering bali villa', 'bridal party bali food']}
-      highlights={['Experiences', 'Menu Ideas', 'Grazing Tables', 'FAQ']}
+      keywords={[
+        'bachelorette party bali',
+        'hen party bali catering',
+        'hens night bali chef',
+        'mobile bar hen party bali',
+        'bachelorette catering bali villa',
+        'bridal party bali food',
+      ]}
+      highlights={['Grazing', 'Mobile Bar', 'Private Chef', 'FAQ']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}

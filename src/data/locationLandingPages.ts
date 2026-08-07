@@ -291,7 +291,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     serviceAvailability: [
       {
         title: 'Private chef villa dining',
-        href: '/fine-dining',
+        href: '/private-chef-bali',
         summary: 'Plated dinners, breakfast service, and chef-led family meals designed for beachfront villas and quieter evening schedules.',
         availability: 'Daily breakfast, lunch, and dinner coverage.',
       },
@@ -302,10 +302,10 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Best fit for villa compounds of 8–40 guests.',
       },
       {
-        title: 'Private events',
-        href: '/events',
-        summary: 'Birthday lunches, anniversary dinners, and smaller family celebrations with staffing and setup handled by one team.',
-        availability: 'Ideal for intimate celebrations and villa events.',
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'Sanur birthdays and family celebrations with a complete mobile bar — packages from IDR 500K++ per guest (min 10).',
+        availability: 'Welcome drinks, poolside free-flow and cocktail hour.',
       },
     ],
     travelFees: [
@@ -359,10 +359,10 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Strong for offsites, retreats, and family compounds.',
       },
       {
-        title: 'Events & celebrations',
-        href: '/events',
-        summary: 'Anniversaries, proposal dinners, and corporate receptions with chefs, waiters, and event pacing under one roof.',
-        availability: 'Recommended for milestone dinners and executive gatherings.',
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'Nusa Dua reception free-flow and estate welcome drinks — complete mobile bar packages from IDR 500K++ per guest.',
+        availability: 'Corporate receptions, anniversaries and villa parties.',
       },
     ],
     travelFees: [
@@ -416,10 +416,10 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Most-booked for villas of 8–30 guests.',
       },
       {
-        title: 'Celebration events',
-        href: '/events/villa-parties',
-        summary: 'Proposal dinners, birthdays, and sunset events with chefs, service staff, and pacing timed around the view.',
-        availability: 'Strong for milestone dinners and informal villa parties.',
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'Sunset free-flow and bay-view welcome drinks — mobile bar packages from IDR 500K++ per guest (min 10).',
+        availability: 'BBQ parties, proposals and villa celebrations.',
       },
     ],
     travelFees: [
@@ -462,7 +462,7 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
     serviceAvailability: [
       {
         title: 'Private chef home dining',
-        href: '/',
+        href: '/private-chef-bali',
         summary: 'Chef-led lunches and dinners for residences, compound hosting, and refined home entertaining across Denpasar.',
         availability: 'Excellent for weekday and repeat bookings.',
       },
@@ -473,10 +473,10 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Fast deployment for 10-60 guest formats.',
       },
       {
-        title: 'Events support',
-        href: '/events/corporate-events',
-        summary: 'Corporate receptions, family milestones, and service-led gatherings with chefs, staffing, and cleanup included.',
-        availability: 'Strong for shorter-format central Bali events.',
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'Reception free-flow for residences and compounds — mobile bar packages from IDR 500K++ per guest.',
+        availability: 'Corporate receptions and family milestones.',
       },
     ],
     travelFees: [
@@ -530,10 +530,10 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Popular for villas of 8–40 guests across Pecatu and Ungasan.',
       },
       {
-        title: 'Celebrations & events',
-        href: '/events/weddings',
-        summary: 'Elopements, rehearsal dinners, birthdays, and oceanfront villa events with full staffing and production support.',
-        availability: 'Best fit for milestone nights and event weekends.',
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'Clifftop welcome drinks and wedding free-flow — complete mobile bar packages from IDR 500K++ per guest.',
+        availability: 'Elopements, birthdays and oceanfront villa parties.',
       },
     ],
     travelFees: [
@@ -581,16 +581,16 @@ export const LOCATION_LANDING_PAGES: Record<CustomLocationPageSlug, LocationLand
         availability: 'Excellent for couples and design-led stays.',
       },
       {
-        title: 'Weekly chef service',
-        href: '/catering',
+        title: 'Weekly private chef',
+        href: '/private-chef-bali',
         summary: 'Breakfast prep, healthy lunches, kids\' meals, and recurring villa cooking for longer bookings north of Canggu.',
         availability: 'Best for multi-day and family stays.',
       },
       {
-        title: 'Private catering & events',
-        href: '/events/birthdays',
-        summary: 'Birthday dinners, arrival feasts, and small-group events with chef, service, and cleanup fully handled.',
-        availability: 'Works well for villas of 6–24 guests.',
+        title: 'Mobile cocktail bar',
+        href: '/in-villa-service/bartenders',
+        summary: 'Design-villa parties and birthdays with a complete mobile bar — packages from IDR 500K++ per guest.',
+        availability: 'Arrival drinks, free-flow and small celebrations.',
       },
     ],
     travelFees: [

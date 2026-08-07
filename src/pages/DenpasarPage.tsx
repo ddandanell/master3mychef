@@ -63,13 +63,19 @@ const SERVICES = [
     name: 'Residence & embassy hosting',
     range: 'Custom event quote',
     for: '10–60 guests',
-    detail: 'Plated dinners and receptions at private residences, with full service staff.',
+    detail: 'Plated dinners and receptions — stack mobile bar for free-flow receptions.',
   },
   {
-    name: 'Weekly chef service',
-    range: 'Custom daily package',
+    name: 'Mobile cocktail bar',
+    range: 'From IDR 500K++ / guest',
+    for: 'Min 10 guests',
+    detail: 'Reception free-flow for residences and compounds — complete packages.',
+  },
+  {
+    name: 'Weekly private chef',
+    range: 'From IDR 1M++ / day',
     for: 'Households & expats',
-    detail: 'A recurring chef for busy households — planned menus, shopping and cooking handled.',
+    detail: 'A recurring chef for busy households — published day rates.',
   },
 ]
 

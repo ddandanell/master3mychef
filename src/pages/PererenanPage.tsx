@@ -60,22 +60,22 @@ const SERVICES = [
     detail: 'Clean, precise tasting menus and intimate chef-table evenings.',
   },
   {
+    name: 'Weekly private chef',
+    range: 'From IDR 1M++ / day',
+    for: 'Long stays · 1–15 guests',
+    detail: 'A consistent chef who learns your household — published meal-plan rates.',
+  },
+  {
+    name: 'Mobile cocktail bar',
+    range: 'From IDR 500K++ / guest',
+    for: 'Min 10 guests',
+    detail: 'Design-villa parties and birthdays — complete mobile bar packages.',
+  },
+  {
     name: 'Relaxed group feasts',
     range: 'IDR 700K–800K / person',
     for: '8–30 guests',
-    detail: 'Arrival dinners, birthdays, shared-plate celebrations.',
-  },
-  {
-    name: 'Weekly chef service',
-    range: 'Custom daily rate',
-    for: 'Long stays · 1–15 guests',
-    detail: 'A consistent chef who learns your household.',
-  },
-  {
-    name: 'Healthy retreat catering',
-    range: 'From IDR 700K / person',
-    for: '6–20 guests',
-    detail: 'For wellness and remote-work groups.',
+    detail: 'Arrival dinners and shared-plate celebrations with catering formats.',
   },
 ]
 

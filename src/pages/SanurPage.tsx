@@ -60,22 +60,22 @@ const SERVICES = [
     detail: 'Indonesian sharing plates and fresh seafood that work for every age.',
   },
   {
-    name: 'Sunrise breakfast service',
-    range: 'From IDR 700K / person',
-    for: '2–15 guests',
-    detail: 'The chef arrives before dawn; breakfast is ready as the sun comes up.',
+    name: 'Sunrise breakfast & private chef',
+    range: 'From IDR 1M++ / day',
+    for: 'Multi-day stays',
+    detail: 'Daily chef meal plans for family holidays — published day rates.',
+  },
+  {
+    name: 'Mobile cocktail bar',
+    range: 'From IDR 500K++ / guest',
+    for: 'Min 10 guests',
+    detail: 'Birthday free-flow and family celebrations — mobile bar packages at the villa.',
   },
   {
     name: 'Seafood & Indonesian feasts',
     range: 'IDR 700K–800K / person',
     for: '6–30 guests',
-    detail: 'For celebrations and reunions.',
-  },
-  {
-    name: 'Weekly chef service',
-    range: 'From IDR 900,000++ / day',
-    for: '2–4 people',
-    detail: 'Breakfasts, lunches and dinners handled across the stay (weekly rate, 10% off standard).',
+    detail: 'Catering formats for reunions and compound dinners.',
   },
 ]
 

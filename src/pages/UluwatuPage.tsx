@@ -63,19 +63,19 @@ const SERVICES = [
     name: 'Live-fire seafood BBQs',
     range: 'IDR 700K–900K / person',
     for: '8–40 guests',
-    detail: 'Lobster, whole snapper and jumbo prawns from the local landings.',
+    detail: 'Lobster, whole snapper and jumbo prawns — stack mobile bar for free-flow.',
+  },
+  {
+    name: 'Mobile cocktail bar',
+    range: 'From IDR 500K++ / guest',
+    for: 'Min 10 guests',
+    detail: 'Clifftop welcome drinks and wedding free-flow — packages we bring to the estate.',
   },
   {
     name: 'Wedding and rehearsal dinners',
     range: 'From IDR 700K / person',
     for: 'Large clifftop events',
-    detail: 'With full service brigades.',
-  },
-  {
-    name: 'Surf retreat catering',
-    range: 'From IDR 700K / person',
-    for: '6–30 guests',
-    detail: 'Multi-day packages for active groups.',
+    detail: 'Full F&B production: catering + mobile bar + waiters.',
   },
 ]
 

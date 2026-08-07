@@ -503,7 +503,7 @@ export default function EventsRetreatsPage() {
           <p className="text-[#4A4745] text-center max-w-3xl mx-auto mt-8 leading-relaxed">
             Explore <Link to="/catering/retreat-catering" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">retreat meal plans (catering-only)</Link>,{' '}
             <Link to="/corporate-retreat-catering-bali" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">corporate retreat catering</Link>,{' '}
-            <Link to="/experiences/private-cooking-class" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">private cooking class</Link>,{' '}
+            <Link to="/experiences/cooking-class" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">private cooking class</Link>,{' '}
             <Link to="/healthy-meal-delivery-indonesia" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">chef-prepared meal plans</Link>, and{' '}
             <Link to="/private-chef/ubud" className="text-[#2C5F7C] underline hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">private chef in Ubud</Link>.
           </p>

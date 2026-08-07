@@ -1,0 +1,2050 @@
+{
+  "keep_keywords": [
+    {
+      "text": "japanese cooking classes",
+      "volume": 880,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "paon bali cooking class bali",
+      "volume": 390,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "paon bali cooking class ubud",
+      "volume": 390,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "paon cooking class bali",
+      "volume": 390,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "cooking class baking",
+      "volume": 210,
+      "src": "xlsx",
+      "cluster": "cooking baking class near me"
+    },
+    {
+      "text": "cooking class in ubud",
+      "volume": 170,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "ketut's bali cooking class",
+      "volume": 70,
+      "src": "xlsx",
+      "cluster": "cooking class by ketut's bali"
+    },
+    {
+      "text": "bali cooking classes",
+      "volume": 50,
+      "src": "xlsx",
+      "cluster": "bali cooking classes"
+    },
+    {
+      "text": "cooking class bali",
+      "volume": 50,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class in bali",
+      "volume": 50,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "Are cooking classes worth it",
+      "volume": 40,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking course in bali",
+      "volume": 40,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking lessons in bali",
+      "volume": 40,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class bali seminyak",
+      "volume": 20,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class in bali seminyak",
+      "volume": 20,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class in seminyak",
+      "volume": 20,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "seminyak cooking class bali",
+      "volume": 20,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "amala cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "amala cooking class bali"
+    },
+    {
+      "text": "anika cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "services offered by anika cooking class bali"
+    },
+    {
+      "text": "anika cooking class bali reviews",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "services offered by anika cooking class bali"
+    },
+    {
+      "text": "bali asli cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "bali cooking class canggu",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "bali cooking class legian",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in legian bali"
+    },
+    {
+      "text": "bali cooking class nusa dua",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class bali nusa dua"
+    },
+    {
+      "text": "bali lucky cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "bali lucky cooking class & luwak coffee",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "bali lucky cooking class & luwak coffee"
+    },
+    {
+      "text": "bali manggang cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "bali manggang cooking class reviews"
+    },
+    {
+      "text": "bali manggang cooking class reviews",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "bali manggang cooking class reviews"
+    },
+    {
+      "text": "best cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking class canggu",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "best cooking class in bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking class seminyak",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking class ubud",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking class ubud bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "bumbu bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "canting bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "canting bali cooking class photos"
+    },
+    {
+      "text": "caraway cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "casa luna cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "ceraki bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "ceraki bali cooking class reviews"
+    },
+    {
+      "text": "chef bagus cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "chef dean cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cobek bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cobek bali cooking class"
+    },
+    {
+      "text": "cooking class amed bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking class bali canggu",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class bali kuta",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class bali nusa dua",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class bali nusa dua"
+    },
+    {
+      "text": "cooking class bali ubud",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class balikpapan",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking class bumbu bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class in ubud bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class jimbaran bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class ubud vegetarian",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "cooking class uluwatu bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "dapur bali nusa dua cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class bali nusa dua"
+    },
+    {
+      "text": "garlic bali cooking class ubud bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "garlic bali cooking class ubud bali"
+    },
+    {
+      "text": "green kitchen cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "hotel tugu bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "indonesian cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "bali cooking classes"
+    },
+    {
+      "text": "jambangan bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "jambangan bali cooking class ubud"
+    },
+    {
+      "text": "jambangan bali cooking class ubud",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "jambangan bali cooking class ubud"
+    },
+    {
+      "text": "jeding bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "jeding bali cooking class"
+    },
+    {
+      "text": "ketut's bali cooking class photos",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class by ketut's bali"
+    },
+    {
+      "text": "ketut's bali cooking class reviews",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class by ketut's bali"
+    },
+    {
+      "text": "ketut's bali cooking class ubud",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class by ketut's bali"
+    },
+    {
+      "text": "kikian bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "kubu bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "lesung bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "lesung bali cooking class"
+    },
+    {
+      "text": "lobong bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "lobong bali cooking class prices"
+    },
+    {
+      "text": "mexx cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "nia bali cooking class seminyak",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "nia bali cooking class seminyak"
+    },
+    {
+      "text": "nia cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "paon bali cooking class menu",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "paon bali cooking class petulu bali indonesia",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "paon bali cooking class photos",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "paon bali cooking class prices",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "paon bali cooking class reviews",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "private chef bali cost",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "private cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "pulu bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "putu cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "raja bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "raja bali cooking class prices"
+    },
+    {
+      "text": "rendang cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "rendang cooking class bali"
+    },
+    {
+      "text": "subak cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "taste of bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "taste of bali cooking class uluwatu"
+    },
+    {
+      "text": "tumang bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "ubad ubud bali cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "ubud cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "ubud cooking class bali with balinese chef",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "ubud cooking class bali with balinese chef"
+    },
+    {
+      "text": "vegan cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "vegetarian cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "villa coco cooking class bali",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "warung taste of bali and cooking class",
+      "volume": 10,
+      "src": "xlsx",
+      "cluster": "warung taste of bali and cooking class"
+    },
+    {
+      "text": "What do you do in a Bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "What is the best cooking class in Ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "advanced cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "afternoon cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud afternoon"
+    },
+    {
+      "text": "amici bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "anika cooking class bali photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "services offered by anika cooking class bali"
+    },
+    {
+      "text": "anika guest house bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "services offered by anika cooking class bali"
+    },
+    {
+      "text": "art cafe bumbu bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "authentic cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "ayurvedic cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "babi guling cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "bagus cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "baking class bali price",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud price"
+    },
+    {
+      "text": "baking class di bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "baking class in bali"
+    },
+    {
+      "text": "baking class in bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "baking class in bali"
+    },
+    {
+      "text": "baking cooking class for kids",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking baking class near me"
+    },
+    {
+      "text": "bali canggu culinary cooking class experience",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "bali cooking class denpasar",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali denpasar"
+    },
+    {
+      "text": "bali cooking class lecce",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "bali cooking class nasi goreng",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "nasi goreng cooking class bali"
+    },
+    {
+      "text": "bali cooking class near me",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali near me"
+    },
+    {
+      "text": "bali cooking class reddit",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali reddit"
+    },
+    {
+      "text": "bali cooking class with kids",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "bali cooking.class with market tour",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "bali dynasty cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "bali farm cooking class ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud farm"
+    },
+    {
+      "text": "bali food cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bali cooking classes"
+    },
+    {
+      "text": "bali garden beach resort cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bali garden cooking class"
+    },
+    {
+      "text": "bali garden cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bali garden cooking class"
+    },
+    {
+      "text": "bali indonesia cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bali cooking classes"
+    },
+    {
+      "text": "bali lucky cooking class & luwak coffee photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bali lucky cooking class & luwak coffee"
+    },
+    {
+      "text": "bali lucky cooking class & luwak coffee reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bali lucky cooking class & luwak coffee"
+    },
+    {
+      "text": "bali mandira cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "bali manggang cooking class photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bali manggang cooking class reviews"
+    },
+    {
+      "text": "balinese cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "balinese cooking class in bali"
+    },
+    {
+      "text": "balinese cooking class in bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "balinese cooking class in bali"
+    },
+    {
+      "text": "balinese farm cooking class by pemulan bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "bamboo cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bamboo cooking class bali"
+    },
+    {
+      "text": "bamboo shoots cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bamboo cooking class bali"
+    },
+    {
+      "text": "beef rendang cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "rendang cooking class bali"
+    },
+    {
+      "text": "beras bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "best bali cooking class kuta",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "best bali cooking class legian",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "best bali cooking class seminyak",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best balinese cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best balinese cooking class ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking class bali seminyak",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking class bali ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking class in ubud bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking class sanur bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking class uluwatu",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "best cooking school bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking school in bali"
+    },
+    {
+      "text": "best cooking.course bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "best place to do a cooking class in bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "best vegetarian cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "best vegetarian cooking class ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "canggu cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "canna bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "canting bali cooking class photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "canting bali cooking class photos"
+    },
+    {
+      "text": "canting bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "canting bali cooking class photos"
+    },
+    {
+      "text": "ceraki bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "ceraki bali cooking class reviews"
+    },
+    {
+      "text": "cheap cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "club med bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cobek bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cobek bali cooking class"
+    },
+    {
+      "text": "conrad bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cookery classes in bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class anak di bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking class at bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class at paon bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "cooking class at ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class bali denpasar",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali denpasar"
+    },
+    {
+      "text": "cooking class bali for kids",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking class bali jimbaran",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class bali kids",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking class bali legian",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in legian bali"
+    },
+    {
+      "text": "cooking class bali near me",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali near me"
+    },
+    {
+      "text": "cooking class bali price",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud price"
+    },
+    {
+      "text": "cooking class bali reddit",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali reddit"
+    },
+    {
+      "text": "cooking class bali sanur",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class bali seminyak price",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud price"
+    },
+    {
+      "text": "cooking class bali sidemen",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class sideman bali"
+    },
+    {
+      "text": "cooking class bali uluwatu",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class bali vegan",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "cooking class bali vegetarian",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "cooking class bali with kids",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking class balinese",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class balinese"
+    },
+    {
+      "text": "cooking class balinese food",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class balinese"
+    },
+    {
+      "text": "cooking class benoa bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class bingin bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class by ketut's bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class by ketut's bali"
+    },
+    {
+      "text": "cooking class candidasa bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking class di bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class di bali ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class di ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class east bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking class for kids bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking class for kids in bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking class grand hyatt bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class grand hyatt bali"
+    },
+    {
+      "text": "cooking class in bali for kids",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking class in bali kuta",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class in canggu bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class in kuta bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class in legian bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in legian bali"
+    },
+    {
+      "text": "cooking class in sanur bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class in villa bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "in villa cooking class bali"
+    },
+    {
+      "text": "cooking class lovina bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking class near ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class north bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking class paon bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "cooking class sideman bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class sideman bali"
+    },
+    {
+      "text": "cooking class south bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "cooking class ubud afternoon",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud afternoon"
+    },
+    {
+      "text": "cooking class ubud evening",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud evening"
+    },
+    {
+      "text": "cooking class ubud farm",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud farm"
+    },
+    {
+      "text": "cooking class ubud for kids",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking class ubud gluten free",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud gluten free"
+    },
+    {
+      "text": "cooking class ubud ketut",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class by ketut's bali"
+    },
+    {
+      "text": "cooking class ubud kids",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking class ubud organic farm",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud farm"
+    },
+    {
+      "text": "cooking class ubud paon",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "cooking class ubud pemulan",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking class ubud price",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud price"
+    },
+    {
+      "text": "cooking class ubud today",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "cooking class ubud vegan",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "cooking class ubud with kids",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "cooking school in bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking school in bali"
+    },
+    {
+      "text": "dapur bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali nusa dua"
+    },
+    {
+      "text": "dapur bali nusa dua cooking class badung regency",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "dapur bali nusa dua cooking class by kayumanis",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali nusa dua"
+    },
+    {
+      "text": "dapur bali nusa dua cooking class photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "deepa's baking & cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "evening cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud evening"
+    },
+    {
+      "text": "family cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "family friendly cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "farm cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud farm"
+    },
+    {
+      "text": "farm to table cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "four seasons cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "gambar canting bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "gambar jambangan bali warung and cooking class kabupaten gianyar",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "gambar paon bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "garlic bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "garlic bali cooking class ubud bali"
+    },
+    {
+      "text": "get your guide cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "ginger moon bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "gluten free cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud gluten free"
+    },
+    {
+      "text": "grand hyatt bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class grand hyatt bali"
+    },
+    {
+      "text": "halal cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "hard rock bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "harga cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "harga cooking class di bali"
+    },
+    {
+      "text": "harga cooking class di bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "harga cooking class di bali"
+    },
+    {
+      "text": "hilton bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "how much is a cooking class in bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class ubud price"
+    },
+    {
+      "text": "hyatt regency bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class grand hyatt bali"
+    },
+    {
+      "text": "in villa cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "in villa cooking class bali"
+    },
+    {
+      "text": "italian cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "japanese cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "jeding bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "jeding bali cooking class"
+    },
+    {
+      "text": "kekeb cooking.class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "ketut's bali cooking class prices",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "kid friendly cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "kids cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class for kids bali"
+    },
+    {
+      "text": "king bali cooking class photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "klook cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "kts cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "kuna bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "kuta cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "lemongrass cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "lemongrass cooking class bali"
+    },
+    {
+      "text": "lemongrass cooking class ubud reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "lemongrass cooking class bali"
+    },
+    {
+      "text": "lesung bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "lesung bali cooking class"
+    },
+    {
+      "text": "lobong bali cooking class photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "lobong bali cooking class prices"
+    },
+    {
+      "text": "lobong bali cooking class prices",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "lobong bali cooking class prices"
+    },
+    {
+      "text": "lobong bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "lobong bali cooking class prices"
+    },
+    {
+      "text": "mai organic cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "mai organic farm cooking class bali"
+    },
+    {
+      "text": "mai organic farm cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "mai organic farm cooking class bali"
+    },
+    {
+      "text": "menu cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "mufu bali cooking class badung regency reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "mufu bali cooking class photos"
+    },
+    {
+      "text": "mufu bali cooking class photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "mufu bali cooking class photos"
+    },
+    {
+      "text": "mufu bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "mufu bali cooking class photos"
+    },
+    {
+      "text": "mufu cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "mufu bali cooking class photos"
+    },
+    {
+      "text": "nasi goreng cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "nasi goreng cooking class bali"
+    },
+    {
+      "text": "nia bali cooking class seminyak kabupaten badung",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "nia bali cooking class seminyak"
+    },
+    {
+      "text": "nia bali cooking class seminyak photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "nia bali cooking class seminyak"
+    },
+    {
+      "text": "nia bali cooking class seminyak reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "nia bali cooking class seminyak"
+    },
+    {
+      "text": "nusantara cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "organic cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "mai organic farm cooking class bali"
+    },
+    {
+      "text": "organic farm cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "mai organic farm cooking class bali"
+    },
+    {
+      "text": "our bali your bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "paon bali cooking class photo",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "pastry cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "pemulan bali farm cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "pemulan cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "periuk bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "periuk cooking class bali"
+    },
+    {
+      "text": "periuk cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "periuk cooking class bali"
+    },
+    {
+      "text": "photos de paon bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "paon bali cooking class photos"
+    },
+    {
+      "text": "pizza cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "private cooking class ubud bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "raja bali cooking class prices",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "raja bali cooking class prices"
+    },
+    {
+      "text": "raja bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "raja bali cooking class prices"
+    },
+    {
+      "text": "raja bali nusa dua cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "raja bali cooking class prices"
+    },
+    {
+      "text": "raw vegan cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "rendang bali cooking class badung regency reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "rendang cooking class bali"
+    },
+    {
+      "text": "reviews voor ketuts bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "reviews voor paon bali cooking class"
+    },
+    {
+      "text": "reviews voor paon bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "reviews voor paon bali cooking class"
+    },
+    {
+      "text": "sambal cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "sanur cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "seafood cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "services offered by anika cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "services offered by anika cooking class bali"
+    },
+    {
+      "text": "services offered by bali lucky cooking class & luwak coffee",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "bali lucky cooking class & luwak coffee"
+    },
+    {
+      "text": "services offered by paon bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "sidemen cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "sofitel bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "taman dukuh cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "taste of bali cooking class uluwatu",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "taste of bali cooking class uluwatu"
+    },
+    {
+      "text": "thai cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "the amala bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "amala cooking class bali"
+    },
+    {
+      "text": "the best cooking class in bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "top rated cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "top rated cooking class bali"
+    },
+    {
+      "text": "top rated cooking class ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "top rated cooking class bali"
+    },
+    {
+      "text": "traditional cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "tresna bali cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "tripadvisor cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "turis cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "ubad ubud bali cooking class photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "ubad ubud bali cooking class prices",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "ubad ubud bali cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class in bali"
+    },
+    {
+      "text": "ubud cooking class with balinese chef",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "ubud cooking class bali with balinese chef"
+    },
+    {
+      "text": "vegan cooking class bali ubud",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "vegan cooking class in bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "vegetarian cooking class ubud bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "cooking class bali vegetarian"
+    },
+    {
+      "text": "viator cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "w bali food",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "warung cooking class",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "warung nia cooking class bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    },
+    {
+      "text": "warung taste of bali and cooking class photos",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "warung taste of bali and cooking class"
+    },
+    {
+      "text": "warung taste of bali and cooking class reviews",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "warung taste of bali and cooking class"
+    },
+    {
+      "text": "xo cuisine bali",
+      "volume": 0,
+      "src": "xlsx",
+      "cluster": "Unclustered Keywords"
+    }
+  ],
+  "keep_questions": [
+    "are cooking classes worth it",
+    "is cooking class for kids",
+    "what are cookery classes",
+    "kids can cook class",
+    "how do cooking classes work",
+    "how does cooking class benefit students",
+    "how to cooking class",
+    "what are cooking classes called",
+    "what are cooking classes called in high school",
+    "how to do cooking class in goat simulator 3",
+    "how long do cooking classes take",
+    "what are cooking classes called in school",
+    "what are cooking classes called in college",
+    "how long do cooking classes last",
+    "what's cooking class",
+    "how much are cooking classes for kids",
+    "how much are cooking classes in bali",
+    "what should i wear to a cooking class",
+    "what is cooking class in spanish",
+    "what is cooking class in chinese",
+    "what is cooking class 2",
+    "what is cookery class",
+    "what is the best cooking class in chiang mai",
+    "what are the best cooking classes",
+    "what is cooking class called",
+    "cooking class for kids",
+    "cooking class as a gift",
+    "cooking class as team building",
+    "cooking class as a birthday gift",
+    "what is a cooking class like",
+    "cooking class orlando for couples",
+    "cooking class villa coco",
+    "best cooking class bali",
+    "cooking class canggu bali",
+    "cooking class for couples",
+    "cooking class for beginners",
+    "cooking class for kids singapore",
+    "cooking class with kids",
+    "cooking class north bali",
+    "anezina village cooking class",
+    "cooking class bali",
+    "cooking class bali ubud",
+    "cooking class bali seminyak",
+    "cooking class balikpapan",
+    "cooking class bali canggu",
+    "bali cooking class",
+    "couples cooking class",
+    "ella spice garden cooking class",
+    "cooking class gift",
+    "cooking class groupon",
+    "group cooking class",
+    "groupon cooking class",
+    "cooking class in bali",
+    "cooking class in sanur bali",
+    "ikea kids cooking class",
+    "cooking class jakarta for kids",
+    "cooking class kids",
+    "cooking class kids jakarta",
+    "cooking class kuta bali",
+    "kids cooking class",
+    "kids cooking class singapore",
+    "kids cooking class birthday party",
+    "ketut's bali cooking class",
+    "cooking class legian bali",
+    "nia balinese cooking class",
+    "paon bali cooking class",
+    "positano cooking class party",
+    "cooking class sanur bali",
+    "cooking class seminyak bali",
+    "cooking class sidemen bali",
+    "cooking class team building",
+    "cooking class ubud bali",
+    "cooking class uluwatu bali",
+    "ubud cooking class bali",
+    "ubud cooking class bali with balinese chef",
+    "what is cooking class 3 evs",
+    "what to wear to a cooking class",
+    "what is cooking class",
+    "ymca kids cooking class",
+    "What does cooking class mean?",
+    "What do you learn in a cooking class?"
+  ],
+  "drop_policy": "Exclude near me, foreign destinations, retail chains, games, career/teach, pure online school"
+}

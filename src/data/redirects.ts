@@ -24,6 +24,13 @@ export interface Redirect {
 }
 
 export const REDIRECTS: Redirect[] = [
+  // --- Experiences renames ---
+  {
+    from: '/experiences/private-cooking-class',
+    to: '/experiences/cooking-class',
+    reason: '2026-08: private cooking class consolidated into SEO pillar /experiences/cooking-class',
+  },
+
   // --- Renames ---
   { from: '/families', to: '/dining-styles', reason: 'Page renamed 2026-07: menu families hub → /dining-styles (same content, new canonical URL)' },
 
@@ -97,7 +104,7 @@ export const REDIRECTS: Redirect[] = [
   // --- Services / menus we don't lead with ---
   { from: '/services/romantic-dinners', to: '/fine-dining/romantic-dinner', reason: 'Romantic dinners now under fine-dining pillar.' },
   { from: '/services/family-reunions', to: '/catering', reason: 'Family reunions = catering multi-day.' },
-  { from: '/services/cooking-classes', to: '/contact', reason: 'Niche request — drive to contact.' },
+  { from: '/services/cooking-classes', to: '/experiences/cooking-class', reason: 'Cooking class experience page.' },
   { from: '/services/corporate-events', to: '/events/corporate-events', reason: 'Consolidate into events pillar.' },
   { from: '/services/villa-parties', to: '/events/villa-parties', reason: 'Consolidate into events pillar.' },
   { from: '/services/wedding-celebrations', to: '/events/weddings', reason: 'Consolidate into events pillar.' },
@@ -178,7 +185,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/events/proposals', to: '/events', reason: 'Crawl 404: no dedicated proposals page; redirect to events hub.' },
   { from: '/in-villa-service/villa-chef', to: '/private-chef-bali', reason: 'Crawl 404: alias for villa chef service.' },
   { from: '/in-villa-service/breakfast-service', to: '/catering/floating-breakfast', reason: 'Crawl 404: breakfast service → floating breakfast page.' },
-  { from: '/in-villa-service/cooking-class', to: '/contact', reason: 'Crawl 404: cooking classes not offered; redirect to contact.' },
+  { from: '/in-villa-service/cooking-class', to: '/experiences/cooking-class', reason: 'Cooking classes offered as villa experience — not contact dead-end.' },
   { from: '/in-villa-service/meal-prep', to: '/private-chef-bali', reason: 'Crawl 404: meal prep → villa chef service.' },
   { from: '/staffing/chef-recruitment', to: '/staffing/private-chef-placement', reason: 'Crawl 404: chef recruitment → canonical placement page.' },
   { from: '/staffing/event-staff', to: '/staffing/villa-staff', reason: 'Crawl 404: event staff → villa staff page.' },
@@ -311,7 +318,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/romantic-dinner-bali-private-chef', to: '/fine-dining/romantic-dinner', reason: 'Dead blog link → live romantic dinner page.' },
   { from: '/blog/buffet-vs-plated-service-bali', to: '/catering', reason: 'Dead blog link → catering (service styles).' },
   { from: '/blog/floating-breakfast-bali', to: '/catering/floating-breakfast', reason: 'Dead blog link → live floating breakfast page.' },
-  { from: '/blog/bali-villa-cooking-class-private-chef', to: '/fine-dining', reason: 'Dead blog link → fine-dining (chef experience).' },
+  { from: '/blog/bali-villa-cooking-class-private-chef', to: '/experiences/cooking-class', reason: 'Villa cooking class content → cooking class experience.' },
   { from: '/blog/food-allergies-dietary-requirements-bali', to: '/blog/dietary-specific-chef-bali', reason: 'Dead blog link → live dietary-specific guide.' },
   { from: '/blog/live-in-chef-bali-hiring-guide', to: '/staffing', reason: 'Dead blog link → staffing (live-in chef placement).' },
   { from: '/journal/bali-villa-dinner-party-guide', to: '/private-dining-indonesia', reason: 'Dead journal link → live private dining page.' },

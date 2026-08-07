@@ -361,7 +361,7 @@ const FAQS = [
   },
   {
     question: 'Can chefs run a cooking class or sushi masterclass?',
-    answer: 'Yes as curated experiences: <a href="/experiences/private-cooking-class">cooking class</a> and <a href="/experiences/sushi-masterclass">sushi masterclass</a>.',
+    answer: 'Yes as curated experiences: <a href="/experiences/cooking-class">cooking class</a> and <a href="/experiences/sushi-masterclass">sushi masterclass</a>.',
   },
   {
     question: 'Do chefs bring equipment for villa kitchens?',

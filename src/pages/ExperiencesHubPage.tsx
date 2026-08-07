@@ -29,14 +29,14 @@ const EXPERIENCES = [
     imageAlt: 'Sushi making class Bali with a chef teaching in a private villa kitchen',
   },
   {
-    slug: 'private-cooking-class',
-    title: 'Private Cooking Class',
-    keyword: 'private cooking class Bali',
-    desc: 'Choose your cuisine and learn from a private chef in your own villa. Italian, Indonesian, Japanese, French, healthy or kids’ cooking classes with ingredients included.',
+    slug: 'cooking-class',
+    title: 'Cooking Class',
+    keyword: 'cooking class Bali',
+    desc: 'Private cooking class at your Bali villa — Balinese, Indonesian and multi-cuisine lessons with a chef. Couples, kids, parties and weddings. Contact for a custom quote.',
     icon: ChefHat,
-    href: '/experiences/private-cooking-class',
-    image: '/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp',
-    imageAlt: 'Private cooking class Bali at a villa with a chef teaching fresh recipes',
+    href: '/experiences/cooking-class',
+    image: '/generated/mychef-cooking-class-bali-hero-villa.webp',
+    imageAlt: 'Cooking class Bali at a villa with a private chef teaching Balinese recipes',
   },
   {
     slug: 'kids-birthday-chef-party',
@@ -197,7 +197,7 @@ const SECTIONS: PageSection[] = [
 ]
 
 const FAQS = [
-  { question: 'What private experiences do you offer in Bali?', answer: 'Six curated villa experiences: <a href="/experiences/private-cocktail-party">Private Cocktail Party</a>, <a href="/experiences/sushi-masterclass">Sushi Masterclass</a>, <a href="/experiences/private-cooking-class">Private Cooking Class</a>, <a href="/experiences/kids-birthday-chef-party">Kids Birthday Chef Party</a>, <a href="/experiences/champagne-oyster-experience">Champagne &amp; Oyster</a>, and <a href="/experiences/romantic-proposal-dinner">Romantic Proposal Dinner</a>.' },
+  { question: 'What private experiences do you offer in Bali?', answer: 'Six curated villa experiences: <a href="/experiences/private-cocktail-party">Private Cocktail Party</a>, <a href="/experiences/sushi-masterclass">Sushi Masterclass</a>, <a href="/experiences/cooking-class">Cooking Class</a>, <a href="/experiences/kids-birthday-chef-party">Kids Birthday Chef Party</a>, <a href="/experiences/champagne-oyster-experience">Champagne &amp; Oyster</a>, and <a href="/experiences/romantic-proposal-dinner">Romantic Proposal Dinner</a>.' },
   { question: 'How much do private experiences cost in Bali?', answer: 'Pricing depends on experience, guest count and add-ons. You receive a fixed quote before deposit — never a vague range after the fact. Compare related dining on <a href="/pricing">pricing</a> and <a href="/dining-styles">dining styles</a>.' },
   { question: 'Can experiences be combined or customised?', answer: 'Yes. Popular stacks: cocktail party + canapés, sushi class + dinner, proposal dinner + champagne &amp; oysters. We design one run-of-show for the evening.' },
   { question: 'Do you bring all ingredients and equipment?', answer: 'Yes — ingredients, tools and station equipment. Cooking and sushi classes include aprons, knives, boards and teaching kit.' },

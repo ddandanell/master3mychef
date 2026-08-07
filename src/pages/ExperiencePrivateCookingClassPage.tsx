@@ -4,7 +4,8 @@ import { GraduationCap, Home, Users, UtensilsCrossed, ChefHat, ShoppingBasket } 
 import type { PageSection } from '@/components/PremiumPage'
 
 const WA_LINK = 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27m%20interested%20in%20a%20private%20cooking%20class%20in%20my%20Bali%20villa.%20Please%20send%20class%20options%20and%20pricing.'
-const CANONICAL = 'https://mychef.id/experiences/private-cooking-class'
+/** Redirect target — commercial owner (this path 301s in App.tsx). */
+const CANONICAL = 'https://mychef.id/experiences/cooking-class'
 
 const SECTIONS: PageSection[] = [
   {
@@ -177,7 +178,7 @@ export default function ExperiencePrivateCookingClassPage() {
       description="Legacy private cooking class URL — redirects to Cooking Class Bali. Contact for a custom villa class quote."
       seoTitle="Private Cooking Class Bali | Redirects to Cooking Class"
       seoDescription="Legacy private cooking class URL — redirects to /experiences/cooking-class. Contact for a custom villa class quote."
-      canonicalUrl="https://mychef.id/experiences/cooking-class"
+      canonicalUrl={CANONICAL}
       h1="Private Cooking Class in Bali — The Chef Comes to Your Villa"
       subtitle="Learn Balinese & Indonesian Cuisine with a Private Chef at Your Villa"
       heroImage="/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp"
@@ -199,7 +200,7 @@ export default function ExperiencePrivateCookingClassPage() {
       extraJsonLd={[
         breadcrumbSchema(
           'Private Cooking Class Bali',
-          'https://mychef.id/experiences/cooking-class',
+          CANONICAL,
           'Experiences',
           'https://mychef.id/experiences'
         ),
@@ -217,10 +218,10 @@ export default function ExperiencePrivateCookingClassPage() {
             '@type': 'Offer',
             priceCurrency: 'IDR',
             availability: 'https://schema.org/InStock',
-            url: 'https://mychef.id/experiences/cooking-class',
+            url: CANONICAL,
             description: 'Contact for a written cooking class quote',
           },
-          url: 'https://mychef.id/experiences/cooking-class',
+          url: CANONICAL,
         },
       ]}
     />

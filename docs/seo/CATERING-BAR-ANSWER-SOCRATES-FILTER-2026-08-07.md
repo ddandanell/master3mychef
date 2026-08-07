@@ -209,6 +209,21 @@ Goal: rank and convert as **mobile bar / party bar service that comes to villas*
 | Pillar sub-pages | Catering/events alcohol FAQs aligned with packages |
 
 Still never invent hourly guest bartender hire or waiter list rates.
+
+---
+
+## Wave 3 — remaining cities + party/experience pages (2026-08-07)
+
+| Surface | Change |
+|---------|--------|
+| Location landing data | Sanur, Nusa Dua, Jimbaran, Denpasar, Bukit, Pererenan — mobile bar in `serviceAvailability` |
+| City deep-dives | Jimbaran, Nusa Dua, Sanur, Uluwatu, Pererenan, Kuta, Bukit, Denpasar — SERVICES lists include mobile bar + chef/catering stack |
+| `CityDeepDive` shared grid | Mobile Cocktail Bar card; private chef href fixed to `/private-chef-bali` |
+| Bachelor / bachelorette blogs | Mobile bar product language, related pages, keywords |
+| Experiences hub | Mobile bar + stack with catering/chef |
+| Area guides (Jimbaran / Nusa Dua / Sanur) | Related pages rewired to mobile bar + catering |
+
+**Lastmod:** frozen map policy unchanged (no bulk lastmod lies). Content edits only; sitemap regenerates on deploy from real entry dates.
 - private chef bali for birthday party
 
 ### `/private-chef/canggu` (1)

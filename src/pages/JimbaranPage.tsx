@@ -57,25 +57,25 @@ const SERVICES = [
     name: 'Seafood villa dinners',
     range: 'IDR 700K–750K / person',
     for: '2–12 guests',
-    detail: "Multi-course menus built on the morning's catch.",
+    detail: "Multi-course menus built on the morning's catch — private chef day rates for multi-day stays.",
   },
   {
     name: 'Bayfront seafood BBQs',
     range: 'IDR 700K–850K / person',
     for: '8–40 guests',
-    detail: 'Lobster, whole fish and shellfish over live fire.',
+    detail: 'Lobster, whole fish and shellfish over live fire — stack free-flow mobile bar for drinks.',
+  },
+  {
+    name: 'Mobile cocktail bar',
+    range: 'From IDR 500K++ / guest',
+    for: 'Min 10 guests',
+    detail: 'Sunset free-flow and welcome drinks — complete mobile bar packages we bring to the villa.',
   },
   {
     name: 'Celebration & proposal dinners',
     range: 'IDR 700K–1.5M / person',
     for: '2–30 guests',
-    detail: 'Paced to the sunset.',
-  },
-  {
-    name: 'Family arrival feasts',
-    range: 'From IDR 700K / person',
-    for: '6–25 guests',
-    detail: 'The generous first-night dinner after a long flight.',
+    detail: 'Paced to the sunset — chef, catering or fine dining formats.',
   },
 ]
 

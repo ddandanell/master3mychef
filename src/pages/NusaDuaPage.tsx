@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
-import { siteFacts } from '@/data/siteFacts'
 import CityDeepDive from '@/components/CityDeepDive'
 import { ArticleContentSection } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
@@ -23,6 +22,7 @@ const FAQS = [
   { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
+  { q: 'Can Nusa Dua estates add a mobile cocktail bar?', a: 'Yes — complete packages from IDR 500,000++ per guest (min 10). Stack with catering or private chef. <a href="/in-villa-service/bartenders">Mobile bar packages →</a> · <a href="/experiences/private-cocktail-party">Cocktail party →</a>' },
   { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
   { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
@@ -64,19 +64,19 @@ const SERVICES = [
     name: 'Corporate & executive catering',
     range: 'IDR 700K–800K / person',
     for: '10–60 guests',
-    detail: `With precise run sheets. Minimum spend ${siteFacts.corporateMinSpend} for corporate programmes.`,
+    detail: 'Structured run sheets for offsites — stack mobile bar for reception free-flow.',
+  },
+  {
+    name: 'Mobile cocktail bar',
+    range: 'From IDR 500K++ / guest',
+    for: 'Min 10 guests',
+    detail: 'Estate welcome drinks and corporate reception free-flow — complete packages.',
   },
   {
     name: 'Celebration events',
     range: 'IDR 700K–2M / person',
     for: '10–100 guests',
-    detail: 'Anniversaries, milestone birthdays, receptions.',
-  },
-  {
-    name: 'Brunch & breakfast service',
-    range: 'From IDR 700K / person',
-    for: '2–30 guests',
-    detail: 'Recovery brunches, team breakfasts, family mornings.',
+    detail: 'Anniversaries, milestone birthdays, receptions with full F&B stack.',
   },
 ]
 

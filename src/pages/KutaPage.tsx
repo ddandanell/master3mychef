@@ -63,13 +63,19 @@ const SERVICES = [
     name: 'Party dinners and celebrations',
     range: 'From IDR 700K / person',
     for: '10–50 guests',
-    detail: 'Birthdays, bucks and hens nights — with waiters and bartenders available.',
+    detail: 'Birthdays, bucks and hens nights — stack a mobile cocktail bar for free-flow.',
   },
   {
-    name: 'Weekly chef service',
-    range: 'Custom daily package',
+    name: 'Mobile cocktail bar',
+    range: 'From IDR 500K++ / guest',
+    for: 'Min 10 guests',
+    detail: 'Poolside free-flow for bucks and hens parties — complete packages, not hourly hire.',
+  },
+  {
+    name: 'Weekly private chef',
+    range: 'From IDR 1M++ / day',
     for: '7+ day stays',
-    detail: 'A dedicated chef for the whole holiday week, from breakfast through dinner.',
+    detail: 'A dedicated chef for the whole holiday week — published day rates.',
   },
 ]
 

@@ -108,12 +108,10 @@ export default function PrivateChefSanurGuidePage() {
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[
-        { label: 'Family Dining Guide', href: '/blog/family-kids-menu-private-chef-bali', desc: 'How private chefs cook for families with children in Bali.' },
-        { label: 'Household Chef Guide', href: '/staffing/household-staff', desc: 'Hiring a live-in or long-term household chef in Bali.' },
-        { label: 'Expat Private Chef Guide', href: '/private-chef-bali', desc: 'Regular private chef service for Bali expats and long-stay residents.' },
-        { label: 'Private Chef Denpasar', href: '/private-chef/denpasar', desc: 'Private chef services in Denpasar and Sanur\'s city neighbours.' },
-        { label: 'Pricing Guide', href: '/pricing', desc: 'Full breakdown of private chef costs across Bali.' },
-        { label: 'Book a Chef', href: '/contact', desc: 'Check availability for your Sanur dates.' },
+        { label: 'Private Chef Sanur', href: '/private-chef/sanur', desc: 'Book a private chef in Sanur — day rates and menus.' },
+        { label: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', desc: 'Family celebration free-flow packages.' },
+        { label: 'Villa Catering', href: '/catering', desc: 'Birthday and reunion catering formats.' },
+        { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Published multi-day meal plans.' },
       ]}
       extraJsonLd={[
         breadcrumbSchema('Private Chef Sanur Guide', 'https://mychef.id/blog/private-chef-sanur-guide', 'Blog', 'https://mychef.id/blog'),

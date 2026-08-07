@@ -10,12 +10,12 @@ interface CityDeepDiveProps {
 }
 
 const SERVICES: { name: string; href: string; img: string; desc: (c: string) => string }[] = [
-  { name: 'Private Chef', href: '/', img: '/generated/mychef-experience-bali-aura-tablescape.webp', desc: (c) => `A dedicated chef cooking fresh in your ${c} villa — one dinner or your whole stay.` },
+  { name: 'Private Chef', href: '/private-chef-bali', img: '/generated/mychef-experience-bali-aura-tablescape.webp', desc: (c) => `A dedicated chef cooking fresh in your ${c} villa — one dinner or multi-day meal plans.` },
   { name: 'Fine Dining', href: '/fine-dining', img: '/generated/mychef-finedining-bali-luna-plating.webp', desc: () => `Multi-course tasting menus and wine pairings, plated to restaurant standard.` },
   { name: 'Catering', href: '/catering', img: '/generated/mychef-catering-bali-hero-buffet-catering.webp', desc: () => `Villa, buffet, plated, grazing, drop-off, babi guling and floating breakfast.` },
   { name: 'BBQ', href: '/catering/bbq-catering', img: '/generated/mychef-catering-bali-bbq-grill-satay.webp', desc: () => `Live grill stations — seafood, premium meats and Balinese favourites, poolside.` },
+  { name: 'Mobile Cocktail Bar', href: '/in-villa-service/bartenders', img: '/generated/mychef-cocktail-party-bartender-pour-bali-landscape.webp', desc: (c) => `We bring a complete mobile bar to ${c} villa parties from IDR 500K++ per guest — stack with chef or catering.` },
   { name: 'Events', href: '/events', img: '/generated/mychef-events-bali-wedding-reception.webp', desc: (c) => `Weddings, birthdays, villa parties, corporate dinners and retreats in ${c}.` },
-  { name: 'In-Villa Staff', href: '/in-villa-service', img: '/generated/mychef-staffing-bali-staffing-hero.webp', desc: () => `Professional waiters, bartenders, butlers, hosts and sommeliers.` },
 ]
 
 /**
@@ -35,8 +35,8 @@ export default function CityDeepDive({ slug, cityName }: CityDeepDiveProps) {
           <p className="font-cormorant text-[#C5A028] text-xs uppercase tracking-[4px] mb-4">Everything in one place</p>
           <h2 className="font-playfair text-3xl md:text-4xl mb-4">Everything myCHEF does in {cityName}</h2>
           <p className="text-[#4A4745] mb-10 max-w-2xl leading-relaxed">
-            One company for every dining experience in {cityName} — private chefs, fine dining, full catering,
-            events and in-villa staff. Choose any service below; we handle it end to end.
+            One company for every dining experience in {cityName} — private chef, catering, mobile cocktail bar,
+            fine dining and events. Choose any service below; we handle it end to end.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SERVICES.map((svc) => (

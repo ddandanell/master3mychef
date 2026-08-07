@@ -248,11 +248,11 @@ export function buildSitemap(): SitemapEntry[] {
       changefreq: 'monthly',
     },
     {
-      path: PAGE_META['experience-private-cooking-class'].path,
+      path: PAGE_META['experience-cooking-class'].path,
       type: 'service',
-      title: PAGE_META['experience-private-cooking-class'].title,
-      description: PAGE_META['experience-private-cooking-class'].description,
-      priority: 0.8,
+      title: PAGE_META['experience-cooking-class'].title,
+      description: PAGE_META['experience-cooking-class'].description,
+      priority: 0.85,
       changefreq: 'monthly',
     },
     {

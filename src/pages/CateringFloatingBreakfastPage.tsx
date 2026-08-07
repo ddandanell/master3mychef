@@ -65,9 +65,9 @@ const PAIRING_SERVICES = [
   },
   {
     icon: Utensils,
-    title: 'Private Cooking Class',
+    title: 'Cooking Class',
     desc: 'Make it a full culinary day — learn Balinese dishes with our chefs in the afternoon after your pool morning.',
-    href: '/experiences/private-cooking-class',
+    href: '/experiences/cooking-class',
     anchor: 'private cooking class',
   },
   {
@@ -686,7 +686,7 @@ export default function CateringFloatingBreakfastPage() {
               { label: 'Private Chef Breakfast', href: '/blog/private-chef-breakfast-bali-villas', desc: 'A chef cooking breakfast at your villa — the most natural pairing for larger groups.' },
               { label: 'Villa Catering', href: '/catering/villa-catering', desc: 'Villa catering for the rest of your stay.' },
               { label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner', desc: 'A romantic private dinner that evening — the full honeymoon day.' },
-              { label: 'Private Cooking Class', href: '/experiences/private-cooking-class', desc: 'Learn Balinese dishes with our chefs later the same day.' },
+              { label: 'Cooking Class', href: '/experiences/cooking-class', desc: 'Learn Balinese dishes with our chefs later the same day.' },
               { label: 'Retreat Catering', href: '/catering/retreat-catering', desc: 'A special retreat breakfast experience for group programs.' },
               { label: 'Birthday Catering', href: '/events/birthdays', desc: 'A birthday breakfast experience at your villa.' },
             ].map((item) => (

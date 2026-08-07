@@ -187,7 +187,7 @@ const SECTIONS: PageSection[] = [
     imageAlt: 'Guests enjoying a private sushi making class at a Bali villa',
     body: `<p>Couples book it as a memorable afternoon before a private dinner. Families use it as a hands-on activity that keeps adults, teenagers and children engaged — with cooked-seafood and vegetarian ingredients where needed. Groups of friends, birthday groups and bridal parties treat it as a relaxed prelude to a villa evening.</p>
 
-    <p>It also works as a <a href="/catering/corporate-catering" class="text-[#7E6410] hover:underline font-medium">corporate sushi team-building activity</a>, a <a href="/catering/retreat-catering" class="text-[#7E6410] hover:underline font-medium">culinary workshop inside a Bali retreat schedule</a>, or a training session for villa and hospitality teams. Want to keep cooking? See our <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">private cooking classes in more cuisines</a>, or browse <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">all private experiences</a>.</p>`,
+    <p>It also works as a <a href="/catering/corporate-catering" class="text-[#7E6410] hover:underline font-medium">corporate sushi team-building activity</a>, a <a href="/catering/retreat-catering" class="text-[#7E6410] hover:underline font-medium">culinary workshop inside a Bali retreat schedule</a>, or a training session for villa and hospitality teams. Want to keep cooking? See our <a href="/experiences/cooking-class" class="text-[#7E6410] hover:underline font-medium">private cooking classes in more cuisines</a>, or browse <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">all private experiences</a>.</p>`,
   },
   {
     id: 'dietary',
@@ -255,7 +255,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Private Cooking Class', href: '/experiences/private-cooking-class', desc: 'Balinese, Indonesian and international cooking classes at your villa.' },
+  { label: 'Cooking Class', href: '/experiences/cooking-class', desc: 'Balinese, Indonesian and international cooking classes at your villa.' },
   { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Add a chef-prepared Japanese dinner after your sushi class.' },
   { label: 'Fine Dining Bali', href: '/fine-dining', desc: 'Private Japanese-inspired fine dining after the workshop.' },
   { label: 'Retreat Catering', href: '/catering/retreat-catering', desc: 'A sushi workshop as a culinary activity for retreat groups.' },

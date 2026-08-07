@@ -289,7 +289,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
       {
         question: 'Can Surya do a pasta-focused workshop or interactive dinner?',
         answer:
-          'Yes for small groups — interactive pasta nights pair well with villa stays. For formal classes see <a href="/experiences/private-cooking-class">private cooking class</a>.',
+          'Yes for small groups — interactive pasta nights pair well with villa stays. For formal classes see <a href="/experiences/cooking-class">private cooking class</a>.',
       },
       {
         question: 'How are dietary needs handled?',
@@ -577,7 +577,7 @@ const CHEFS_DATA: Record<string, ChefData> = {
       {
         question: 'Can Asri combine with a cooking class?',
         answer:
-          'Yes for small groups — hands-on Indonesian cooking. See <a href="/experiences/private-cooking-class">private cooking class</a>.',
+          'Yes for small groups — hands-on Indonesian cooking. See <a href="/experiences/cooking-class">private cooking class</a>.',
       },
       {
         question: 'How do I book Asri?',

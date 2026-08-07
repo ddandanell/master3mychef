@@ -1810,14 +1810,24 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/generated/sushi-making-class-bali-masterclass.webp`,
   },
 
+      'experience-cooking-class': {
+    path: '/experiences/cooking-class',
+    title: 'Cooking Class Bali | Private Villa Balinese & Indonesian Lessons | myCHEF',
+    description:
+      'Cooking class in Bali at your villa — private Balinese & Indonesian lessons with a chef. Couples, kids, parties & weddings. WhatsApp for a custom quote.',
+    canonical: `${SITE}/experiences/cooking-class`,
+    h1: 'Cooking Class Bali — Private Lessons in Your Villa Kitchen',
+    ogImage: `${SITE}/generated/mychef-cooking-class-bali-hero-villa.webp`,
+  },
+
       'experience-private-cooking-class': {
     path: '/experiences/private-cooking-class',
-    title: 'Private Cooking Class Bali | Chef Comes to Your Villa',
+    title: 'Private Cooking Class Bali | Redirects to Cooking Class',
     description:
-      'Book a private cooking class at your Bali villa — Italian, Indonesian, Japanese, French, healthy or kids menus. Ingredients included. WhatsApp myCHEF today.',
-    canonical: `${SITE}/experiences/private-cooking-class`,
+      'This URL redirects to /experiences/cooking-class — private villa cooking class Bali.',
+    canonical: `${SITE}/experiences/cooking-class`,
     h1: 'Private Cooking Class Bali',
-    ogImage: `${SITE}/generated/private-cooking-class-bali-villa.webp`,
+    ogImage: `${SITE}/generated/mychef-cooking-class-bali-hero-villa.webp`,
   },
 
       'experience-kids-birthday-chef-party': {

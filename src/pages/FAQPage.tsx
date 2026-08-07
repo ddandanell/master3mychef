@@ -64,6 +64,18 @@ const FAQ_CATEGORIES: FAQCategory[] = [
         q: 'Is a private chef cheaper than restaurants for a villa group?',
         a: 'For six or more people on two meals a day, the chef day rate split per person is often less than one mid-range Seminyak dinner — plus no taxis or table waits. Couples booking one special dinner are choosing luxury and convenience more than pure savings. <a href="/blog/private-chef-cost-bali">Cost guide →</a>',
       },
+      {
+        q: 'How much does a private chef cost per day, per month or per hour?',
+        a: '<strong>Per day:</strong> IDR 1M++ / 1.8M++ / 2.7M++ for 1 / 2 / 3 meals (chef + assistant; groceries at cost). <strong>Per month:</strong> same day rates with −20% from 28+ days, or a live-in proposal. <strong>Per hour:</strong> we do not sell a bare chef hourly rate — day rates and per-person event menus keep shopping, cooking and cleanup in one package. <a href="/private-chef-bali">Day rates →</a> · <a href="/pricing">All pricing →</a>',
+      },
+      {
+        q: 'Is a private chef worth it in Bali?',
+        a: 'For villa groups who want restaurant-level food without leaving home, yes — especially multi-meal days. Prices are published so you can compare before deposit. <a href="/blog/private-chef-cost-bali">Cost guide →</a>',
+      },
+      {
+        q: 'Do I tip a private chef in Bali?',
+        a: 'Optional and appreciated for exceptional service, never required. “++” on quotes already adds government tax and service charge when stated. Your proposal lists what is included.',
+      },
     ],
   },
   {
@@ -96,6 +108,14 @@ const FAQ_CATEGORIES: FAQCategory[] = [
         q: 'Do you work in Airbnb and rental villas?',
         a: 'Yes. Most guests are renting. We only need a working kitchen and villa access instructions. Share your Airbnb or villa manager contact when you book so arrival is smooth.',
       },
+      {
+        q: 'Can I hire a private chef in Bali — and how do I book?',
+        a: 'Yes. WhatsApp date, villa area, guest count and meal type (one dinner vs multi-meal days). We reply within about two hours and send a written proposal. <a href="/book">Book →</a> · <a href="/quote">Quote form →</a>',
+      },
+      {
+        q: 'Does a private chef live with you?',
+        a: 'For typical holiday villa bookings: no. The team works your meal windows and leaves after cleanup. Live-in chef is a separate long-term staffing product. <a href="/staffing/live-in-chef">Live-in chef →</a>',
+      },
     ],
   },
   {
@@ -126,7 +146,15 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Is alcohol included?',
-        a: 'No. Bring your own wine and spirits (we serve) or ask us to source at cost. Add a <a href="/in-villa-service/bartenders">bartender</a> for full bar service.',
+        a: 'No. Bring your own wine and spirits (we serve) or ask us to source at cost. Add <a href="/in-villa-service/bartenders">cocktail packages</a> for full bar service.',
+      },
+      {
+        q: 'What is a private chef (jasa private chef)?',
+        a: 'A private chef cooks only for your group — usually in a villa — planning the menu, shopping, cooking and cleaning. “Jasa private chef” is the Indonesian phrase for that service. myCHEF provides it island-wide in Bali. <a href="/private-chef-bali">Private chef Bali →</a>',
+      },
+      {
+        q: 'What is the difference between a personal chef and a private chef?',
+        a: 'Both mean a chef for your group, not a restaurant. We use private chef for occasion and short-stay bookings, and daily/personal chef language for multi-meal stays on published day rates. Both are available.',
       },
     ],
   },

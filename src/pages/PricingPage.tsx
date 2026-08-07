@@ -193,6 +193,13 @@ const FAQS = [
   { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
   { question: 'Can this combine with other services?', answer: 'Yes — chef, catering, staff and transport can stack in one plan.' },
+  // AnswerSocrates guest cost questions (not chef-salary career queries)
+  { question: 'How much does it cost to hire a chef in Bali?', answer: 'Two common models: (1) daily villa chef hire from IDR 1,000,000++/day for one meal with chef + assistant, groceries at cost; (2) event dinners from about IDR 700K per person ++ and fine dining from about IDR 950K–1.25M++ depending on menu. Your quote states which model applies. <a href="/private-chef-bali">Day rates →</a>' },
+  { question: 'How much does a private chef cost per day?', answer: 'Published day rates: IDR 1M++ / 1.8M++ / 2.7M++ for 1 / 2 / 3 meals (chef + assistant). Food is separate at cost with receipts on daily hire.' },
+  { question: 'How much does a private chef cost per month?', answer: 'Use daily rates with monthly discount (−20% from 28+ days), or request a live-in / household proposal. Share meal pattern and villa area for a fixed monthly figure.' },
+  { question: 'How much does a private chef cost per hour?', answer: 'We do not sell a simple “chef hourly” product for villa guests. We sell day rates (by meal count) or per-person event menus. That keeps shopping, cooking, service and cleanup in one clear package.' },
+  { question: 'Are private chefs expensive / is a private chef worth it?', answer: 'For groups and multi-meal villa days, cost per person often competes with restaurants once transport and time are counted. For a single couple’s dinner it is a premium experience — prices are published so you can decide before deposit. <a href="/blog/private-chef-cost-bali">Cost guide →</a>' },
+  { question: 'What does a private chef cost for a year?', answer: 'Year-round households usually need a custom monthly or live-in plan, not a one-night menu price. Contact us with how many meals per week and we will model a 12-month budget. <a href="/staffing/live-in-chef">Live-in chef →</a>' },
 ]
 
 const RELATED_PAGES = [

@@ -109,16 +109,22 @@ const FAQS = [
   { q: 'How do I book this with myCHEF in Bali?', a: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
   { q: 'Where can I see prices?', a: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
   { q: 'Is service available island-wide?', a: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
-  { q: 'Can you handle dietary requirements?', a: 'Yes when briefed early — no extra charge for standard adaptations.' },
   { q: 'What is included vs extra?', a: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
   { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
   { q: 'Can this combine with other services?', a: 'Yes — chef, catering, staff and transport can stack in one plan.' },
-  { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
+  { q: 'Do you clean up?', a: 'Yes on serviced formats — kitchen left clean after service.' },
   { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
-  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/why-mychef">Why myCHEF</a> · <a href="/chefs">Chefs</a>.' },
   { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
   { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  // AnswerSocrates customer intents (not chef job/salary)
+  { q: 'How much does it cost to hire a chef in Bali?', a: 'Event dinners from about IDR 700K per person ++; tasting menus from about IDR 950K++; daily villa chef hire from IDR 1,000,000++/day for one meal (chef + assistant, groceries at cost). <a href="/pricing">Pricing →</a> · <a href="/private-chef-bali">Day rates →</a>' },
+  { q: 'Can I hire a private chef for my villa?', a: 'Yes. WhatsApp date, area and guest count — we reply within about two hours. <a href="/book">Book →</a>' },
+  { q: 'Does a private chef live at the villa?', a: 'For most holiday bookings, no — the team works your meal windows and leaves after cleanup. Live-in is a separate long-term option. <a href="/staffing/live-in-chef">Live-in chef →</a>' },
+  { q: 'Do you buy the food and clean the kitchen?', a: 'Yes. We shop, cook, serve and clean. On daily chef hire, groceries are billed at cost with receipts.' },
+  { q: 'What is the difference between a private chef and a personal chef?', a: 'Occasion / short-stay bookings vs recurring multi-day meal service — both available. See <a href="/private-chef-bali">private chef Bali</a>.' },
+  { q: 'Is a private chef worth it?', a: 'For villa groups and multi-meal days, often yes on convenience and per-person cost vs restaurants. Published prices help you decide before you book. <a href="/blog/private-chef-cost-bali">Cost guide →</a>' },
 ]
 
 

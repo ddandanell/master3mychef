@@ -1,0 +1,2652 @@
+{
+  "keep_questions": [
+    {
+      "type": "paa",
+      "modifier": "paa",
+      "text": "How much does it cost to hire a chef in Bali?",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can I",
+      "text": "can i hire a private chef",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/faq",
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "what do private chefs cost",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "how much do private chefs cost a year",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how much private chef cost",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how much private chef cost per month",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how much private chef cost per hour",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how much private chef cost per day",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how much do private chefs cost",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how to hire private chef",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/faq",
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what does private chef cost",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what does a private chef cost per month",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what does a private chef cost per day",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where are",
+      "text": "how much does it cost to hire a private chef",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing",
+        "/faq",
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where",
+      "text": "where to hire private chef",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/faq",
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where",
+      "text": "where to book private chef",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/faq",
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Why",
+      "text": "why hire a private chef",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/faq",
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where are",
+      "text": "private chef indonesia",
+      "label": "",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Versus",
+      "text": "private chef and bartender bali",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/in-villa-service",
+        "/in-villa-service/bartenders"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs buy the food",
+      "label": "BOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef price per hour",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef price per month",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef price per day",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef price per person",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef price range",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef price list",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef price per head",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef price per year",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef.price.reddit",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef price per meal",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cheap",
+      "text": "price of a private chef",
+      "label": "BOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "paa",
+      "modifier": "paa",
+      "text": "How much does a private chef cost for a meal?",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Are",
+      "text": "is a private chef worth it",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Are",
+      "text": "does a private chef live with you",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Are",
+      "text": "do private chefs live with you",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Are",
+      "text": "jasa private chef",
+      "label": "",
+      "reason": "id-customer",
+      "pages": [
+        "/",
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can I",
+      "text": "do i tip private chef",
+      "label": "Long Tail",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs make a lot of money",
+      "label": "Long Tail",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs wash dishes",
+      "label": "Long Tail",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs need a license",
+      "label": "Long Tail",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs pay for the groceries",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs pay for ingredients",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs live with their clients",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs eat with you",
+      "label": "Long Tail",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs get days off",
+      "label": "Long Tail",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs work everyday",
+      "label": "Long Tail",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs have multiple clients",
+      "label": "Long Tail",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can",
+      "text": "do private chefs live in the house",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where are",
+      "text": "berapa harga private chef",
+      "label": "",
+      "reason": "id-customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where is",
+      "text": "private chef in jakarta",
+      "label": "Location",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where is",
+      "text": "private chef di jakarta",
+      "label": "Location",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef prices uk",
+      "label": "Location",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cost",
+      "text": "private chef cost per day",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cost",
+      "text": "private chef cost per month",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cost",
+      "text": "private chef cost per hour",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cost",
+      "text": "private chef cost uk",
+      "label": "Location",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cost",
+      "text": "private chef cost per year",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cost",
+      "text": "private chef costa rica tamarindo",
+      "label": "Long Tail",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cost",
+      "text": "private chef costa rica cost",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cost",
+      "text": "private chef cost in india",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cheap",
+      "text": "private chef uk cost",
+      "label": "Location",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Cheap",
+      "text": "private chef jakarta cost",
+      "label": "Location",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "letters",
+      "modifier": "v",
+      "text": "villas in bali with private chef",
+      "label": "Long Tail",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where are",
+      "text": "private dining chef near me",
+      "label": "Local",
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where is",
+      "text": "private chef dinner near me",
+      "label": "Local",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "comparisons",
+      "modifier": "Price",
+      "text": "private chef prices near me",
+      "label": "Local",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Are",
+      "text": "are private chefs in demand",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Are",
+      "text": "are private chefs expensive",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Are",
+      "text": "what is the difference between a personal chef and a private chef",
+      "label": "TOFU",
+      "reason": "customer",
+      "pages": [
+        "/",
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can I",
+      "text": "can i afford a private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can I",
+      "text": "can a private chef serve alcohol",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can I",
+      "text": "can a private chef get a michelin star",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/fine-dining"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Can I",
+      "text": "where can i find a private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "how do private chefs work",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "how do private chefs charge",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "how do private chefs find clients",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "how do private chefs keep food warm",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "what do private chefs charge per hour",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "what do private chefs wear",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "what do private chefs eat",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "what does private chef mean",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How do",
+      "text": "what are private chefs",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how much private chefs make",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how become private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how do private chefs make money",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "How",
+      "text": "how do private chefs make",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Should I",
+      "text": "should i tip private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Should I",
+      "text": "should i tip a private chef in italy",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Should I",
+      "text": "how much should i pay a private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Should I",
+      "text": "how much should i charge for private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Should",
+      "text": "should you tip private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what's private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what do private chefs do",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what do private chefs make",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what do private chefs charge",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what do private chefs get paid",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what do private chefs make a year",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what to tip private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "What",
+      "text": "what does a private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where are",
+      "text": "where do private chefs work",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Where",
+      "text": "where to find private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who do private chefs work for",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who's a private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is diggs private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who's adam sandler's private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is the private chef for stefon diggs",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is the private chef for the ny jets",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who does jane olivia private chef for",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is stephanyvicx a private chef for",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is kevin love private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is ruben dias private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is jane olivia private chef for",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is jayson tatum's private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is kylie jenner's private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who is klay thompson's private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Who",
+      "text": "who was obama's private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "type": "questions",
+      "modifier": "Why",
+      "text": "what is private chef",
+      "label": "TOFU",
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali",
+      "volume": 50,
+      "cpc": 1.88,
+      "comp": 27,
+      "cluster_volume": 130,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali seminyak",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef/seminyak"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali canggu",
+      "volume": 10,
+      "cpc": 1.35,
+      "comp": 43,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef/canggu"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali uluwatu",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef/uluwatu"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali ubud",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 29,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef/ubud"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali villa",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali indonesia",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali hire",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali sanur",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali kuta",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "best private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef in bali",
+      "volume": 20,
+      "cpc": 1.96,
+      "comp": 24,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef in bali ubud",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef/ubud"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "hire a private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "book private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef catering bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/catering"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef di bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef experience bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef for hire bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "home private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "hire private chef bali",
+      "volume": 10,
+      "cpc": 2.49,
+      "comp": 21,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "hire private chef in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "best private chef in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef in canggu bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef/canggu"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef in ubud bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef/ubud"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef service bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef sanur bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef ubud bali",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 26,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef/ubud"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef bali airbnb",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef to villa bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "bali private chef for villa",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "private chef indonesia",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "personal chef hire. bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "hire a private chef in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "how to hire a private chef in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "book private chef in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "book a private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "can you hire a private chef in. bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali",
+      "keyword": "how to book a private chef in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef bali cost",
+      "keyword": "private chef bali cost",
+      "volume": 10,
+      "cpc": 0.02,
+      "comp": 29,
+      "cluster_volume": 20,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "private chef bali cost",
+      "keyword": "private chef bali price",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "private chef bali cost",
+      "keyword": "personal chef bali cost",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "private chef bali cost",
+      "keyword": "private chef in bali cost",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "private chef bali cost",
+      "keyword": "how much is a private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "private chef bali cost",
+      "keyword": "cost of private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "private chef bali cost",
+      "keyword": "how much does a private chef cost in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "private chef bali cost",
+      "keyword": "how much for a private chef in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "private chef bali cost",
+      "keyword": "How much does a private chef cost in Bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "harga private chef bali",
+      "keyword": "harga private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": 0,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "harga private chef bali",
+      "keyword": "harga private chef di bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "id-customer",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "bali private chef home catering",
+      "keyword": "bali private chef home catering",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": 0,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/catering"
+      ]
+    },
+    {
+      "cluster": "bali private chef home catering",
+      "keyword": "bali private chef and home catering",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/catering"
+      ]
+    },
+    {
+      "cluster": "villa with private chef bali",
+      "keyword": "villa with private chef bali",
+      "volume": 10,
+      "cpc": 1.99,
+      "comp": 86,
+      "cluster_volume": 40,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "villa with private chef bali",
+      "keyword": "villas with private chef in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "villa with private chef bali",
+      "keyword": "luxury villas with private chef bali",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "villa with private chef bali",
+      "keyword": "villas in bali with private chef",
+      "volume": 10,
+      "cpc": 5.32,
+      "comp": 76,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "villa with private chef bali",
+      "keyword": "villas in bali with private pool and chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "villa with private chef bali",
+      "keyword": "bali private villa with pool and chef",
+      "volume": 10,
+      "cpc": 1.9,
+      "comp": 71,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "villa with private chef bali",
+      "keyword": "luxury bali villa with private pool and chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "airbnb bali villa private chef",
+      "keyword": "airbnb bali villa private chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": 0,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "airbnb bali villa private chef",
+      "keyword": "airbnb with private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "airbnb bali villa private chef",
+      "keyword": "airbnb in bali with private chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "bali with private chef",
+      "keyword": "bali with private chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": 0,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "bali with private chef",
+      "keyword": "bali resort with private chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "bali with private chef",
+      "keyword": "bali house with private chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "bali with private chef",
+      "keyword": "bali accommodation with private chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "bali chef",
+      "keyword": "bali chef",
+      "volume": 20,
+      "cpc": 2.99,
+      "comp": 46,
+      "cluster_volume": 40,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "bali chef",
+      "keyword": "chef bali",
+      "volume": 20,
+      "cpc": 2.99,
+      "comp": 46,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef in jakarta",
+      "keyword": "private chef in jakarta",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": 0,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef in jakarta",
+      "keyword": "private chef di jakarta",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef jogja",
+      "keyword": "private chef jogja",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": 10,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef jogja",
+      "keyword": "private chef bandung",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private cooking class ubud",
+      "keyword": "private cooking class ubud",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": 10,
+      "reason": "customer",
+      "pages": [
+        "/private-chef/ubud"
+      ]
+    },
+    {
+      "cluster": "private cooking class ubud",
+      "keyword": "private cooking class canggu",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef/canggu"
+      ]
+    },
+    {
+      "cluster": "private cooking class ubud",
+      "keyword": "private balinese cooking class",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "unrelated",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef charges",
+      "keyword": "private chef charges",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": 3780,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "private chef charges",
+      "keyword": "how much do private chef cost",
+      "volume": 3600,
+      "cpc": 3.91,
+      "comp": 13,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "private chef charges",
+      "keyword": "how much does it cost to hire a private chef",
+      "volume": 170,
+      "cpc": 2.15,
+      "comp": 16,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/pricing",
+        "/faq",
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "private chef charges",
+      "keyword": "How much does a private chef cost for a meal",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef bali breakfast",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": 40,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "bali private chef reddit",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef bali seminyak reviews",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef/seminyak"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef bbq bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/catering/bbq-catering"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "best chef in bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef solo",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef gili t",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef maui cost",
+      "volume": 10,
+      "cpc": 5.39,
+      "comp": 45,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/pricing"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef batam",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef gaji",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "canggu private chef",
+      "volume": 10,
+      "cpc": 3.12,
+      "comp": 43,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef/canggu"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef asana bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef and bartender bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/in-villa-service",
+        "/in-villa-service/bartenders"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private villa and chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "bali private bbq chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/catering/bbq-catering"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef dinner bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "bali private chef fine dining",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/fine-dining"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private dining di bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "lowongan private chef bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "core-bali",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef lombok",
+      "volume": 10,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "private chef medan",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "private-chef-generic",
+      "pages": [
+        "/private-chef-bali",
+        "/faq"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "bali superhost private chef",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "Who is the private chef in Bali Indonesia",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali"
+      ]
+    },
+    {
+      "cluster": "Unclustered Keywords",
+      "keyword": "How much to tip a private chef in Bali",
+      "volume": 0,
+      "cpc": 0,
+      "comp": 0,
+      "cluster_volume": null,
+      "reason": "customer",
+      "pages": [
+        "/private-chef-bali",
+        "/pricing"
+      ]
+    }
+  ],
+  "by_page": {
+    "/private-chef-bali": [
+      "How much does it cost to hire a chef in Bali?",
+      "Who is the best chef in Indonesia?",
+      "private chef indonesia",
+      "private chef and bartender bali",
+      "do private chefs buy the food",
+      "does a private chef live with you",
+      "do private chefs live with you",
+      "do i tip private chef",
+      "do private chefs make a lot of money",
+      "do private chefs wash dishes",
+      "do private chefs need a license",
+      "do private chefs pay for the groceries",
+      "do private chefs pay for ingredients",
+      "do private chefs live with their clients",
+      "do private chefs eat with you",
+      "do private chefs get days off",
+      "do private chefs work everyday",
+      "do private chefs have multiple clients",
+      "do private chefs live in the house",
+      "private chef in jakarta"
+    ],
+    "/pricing": [
+      "what do private chefs cost",
+      "how much do private chefs cost a year",
+      "how much private chef cost",
+      "how much private chef cost per month",
+      "how much private chef cost per hour",
+      "how much private chef cost per day",
+      "how much do private chefs cost",
+      "what does private chef cost",
+      "what does a private chef cost per month",
+      "what does a private chef cost per day",
+      "how much does it cost to hire a private chef",
+      "private chef price per hour",
+      "private chef price per month",
+      "private chef price per day",
+      "private chef price per person",
+      "private chef price range",
+      "private chef price list",
+      "private chef price per head",
+      "private chef price per year",
+      "private chef.price.reddit"
+    ],
+    "/": [
+      "jasa private chef",
+      "what is the difference between a personal chef and a private chef",
+      "private chef vs restaurant",
+      "private chef vs",
+      "private chef vs eating out",
+      "personal chef vs private chef",
+      "private chef vs personal chef",
+      "apa itu private chef",
+      "what is a private chef vs personal chef",
+      "what is a private chef"
+    ],
+    "/faq": [
+      "can i hire a private chef",
+      "how do private chefs get hired",
+      "how to hire private chef",
+      "where to hire private chef",
+      "where to book private chef",
+      "why hire a private chef",
+      "private chef for hire near me",
+      "private chef hire near me",
+      "where to hire a private chef",
+      "private chef for hire",
+      "private chef to hire",
+      "book a private chef",
+      "private chef hire",
+      "private chef hertfordshire",
+      "hire a private chef",
+      "the private chef book",
+      "private chef yorkshire",
+      "yorkshire private chef",
+      "vegan private chef near me"
+    ],
+    "/fine-dining": [
+      "can a private chef get a michelin star",
+      "private chef and wine tasting"
+    ],
+    "/in-villa-service": [
+      "private chef and bartender",
+      "private chef and sommelier"
+    ],
+    "/catering": [
+      "private chef vs catering",
+      "private chef and catering services",
+      "private chef and catering",
+      "private chef or catering",
+      "your private chef catering"
+    ],
+    "/in-villa-service/bartenders": [
+      "private chef and cocktails"
+    ],
+    "/private-chef/canggu": [
+      "private chef canggu",
+      "canggu private chef reviews",
+      "private chef canggu bali"
+    ],
+    "/kids-menus": [
+      "family meal private chef to go",
+      "private chef for family"
+    ],
+    "/events/weddings": [
+      "private chef for wedding"
+    ],
+    "/private-chef/uluwatu": [
+      "private chef uluwatu",
+      "private chef uluwatu bali"
+    ],
+    "/private-chef/ubud": [
+      "ubud villa with private chef",
+      "private chef ubud",
+      "private chef ubud bali"
+    ],
+    "/private-chef/seminyak": [
+      "private chef seminyak"
+    ]
+  }
+}

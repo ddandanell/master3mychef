@@ -5,7 +5,7 @@
 **Rule for all future title/H1/meta work:**  
 If a phrase is already owned below, **do not** put that exact phrase first in another page’s title or H1. Use a modifier or a different intent.
 
-**Last updated:** 2026-08-01  
+**Last updated:** 2026-08-07  
 **Source of truth for live meta:** `src/data/page-meta.ts`  
 **Online / production base:** `origin/main` (plus this SEO branch)
 
@@ -37,6 +37,24 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 | **romantic dinner bali villa** | `/fine-dining/romantic-dinner` | — |
 | **complete villa experience** | `/complete-villa-experience` | End-to-end stay hospitality |
 | **staffing / chef placement** | `/staffing` | Live-in, hotels, villa managers as children |
+| **cooking class bali / cooking class in bali / bali cooking classes** (commercial) | `/experiences/cooking-class` | Support guide: `/blog/bali-villa-cooking-class-private-chef` (how-it-works modifiers only; contact-led, no public list price) |
+| **private cooking class bali / in-villa cooking class** | `/experiences/cooking-class` | Legacy `/experiences/private-cooking-class` 301s here |
+| **balinese cooking class / indonesian cooking class** (private villa) | `/experiences/cooking-class` | Do not lead area pages with bare “cooking class bali” |
+| **cooking class in ubud** (area modifier on commercial intent) | `/experiences/cooking-class` + Ubud FAQ/support on area pages | Not a separate thin URL |
+| **sushi making class / sushi masterclass bali** | `/experiences/sushi-masterclass` | Sibling of cooking class; not the same page |
+| **kids cooking party / kids birthday chef** | `/experiences/kids-birthday-chef-party` | Family cooking class still owned by cooking-class when adult-led |
+| **private experiences bali (hub)** | `/experiences` | Children own specific experience keywords |
+
+---
+
+## Experiences cluster (strict split)
+
+| Page | Owns | Must not lead with |
+|---|---|---|
+| `/experiences/cooking-class` | Transactional cooking class Bali / private villa lessons; contact-quote only (no public list price) | Sushi class, kids birthday party production |
+| `/blog/bali-villa-cooking-class-private-chef` | Informational villa class guide (formats, market trip, gift angle) | Exact commercial H1 “Cooking Class Bali”; list prices |
+| `/experiences/sushi-masterclass` | Sushi making class / Japanese workshop | Generic “cooking class bali” |
+| `/experiences/private-cooking-class` | **Redirect only** → cooking-class | Do not republish as competitor |
 
 ---
 
@@ -114,4 +132,5 @@ If a phrase is already owned below, **do not** put that exact phrase first in an
 |---|---|
 | 2026-08-01 | Map created; first differentiation pass applied on guide + cost/premium titles |
 | 2026-08-01 | Retargeted 22 supporting pages' “Private Chef Bali” related links from `/` to `/private-chef-bali` |
+| 2026-08-07 | Wave 5: cooking class commercial owner `/experiences/cooking-class`; blog support URL kept live (no 301); sushi/kids ownership rows; experiences cluster table |
 

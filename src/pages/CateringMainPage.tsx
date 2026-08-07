@@ -142,6 +142,12 @@ const FNB_STACK_LINKS = [
     href: '/events/villa-parties',
     blurb: 'Pool and garden parties with food + bar stacked in one plan',
   },
+  {
+    title: 'Cooking class Bali',
+    price: 'Contact for quote',
+    href: '/experiences/cooking-class',
+    blurb: 'Hands-on Balinese & Indonesian villa lessons when guests want to cook with the chef',
+  },
 ]
 
 const PRICING_TABLE = [

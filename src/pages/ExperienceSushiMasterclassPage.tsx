@@ -255,8 +255,8 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Cooking Class', href: '/experiences/cooking-class', desc: 'Balinese, Indonesian and international cooking classes at your villa.' },
-  { label: 'Private Chef Bali', href: '/fine-dining/private-chef-bali', desc: 'Add a chef-prepared Japanese dinner after your sushi class.' },
+  { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: 'Balinese, Indonesian and multi-cuisine cooking classes at your villa.' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Add multi-day villa chef meals around your sushi class.' },
   { label: 'Fine Dining Bali', href: '/fine-dining', desc: 'Private Japanese-inspired fine dining after the workshop.' },
   { label: 'Retreat Catering', href: '/catering/retreat-catering', desc: 'A sushi workshop as a culinary activity for retreat groups.' },
   { label: 'Corporate Catering', href: '/catering/corporate-catering', desc: 'Corporate sushi team-building and company group workshops.' },

@@ -527,6 +527,7 @@ export default function EventsVillaPartiesPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
               { to: '/experiences/private-cocktail-party', label: 'dedicated cocktail party experience' },
+              { to: '/experiences/cooking-class', label: 'private cooking class Bali' },
               { to: '/villa-bbq-catering-bali', label: 'villa BBQ catering' },
               { to: '/catering/bbq-catering', label: 'BBQ catering menus' },
               { to: '/in-villa-service/bartenders', label: 'cocktail packages' },

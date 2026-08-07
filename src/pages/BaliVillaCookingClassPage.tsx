@@ -14,14 +14,16 @@ const SECTIONS = [
 
     <p>Bali is one of the finest places on earth to learn to cook. The wet markets open before sunrise with an extraordinary abundance of tropical produce, fresh fish, coconut in every form, and spice combinations that have been refined over centuries. The Balinese food tradition — built around ceremonial offerings, communal feasting, and layered spice pastes called <em>base</em> — is one of the most sophisticated culinary cultures in Southeast Asia. Indonesian cuisine more broadly draws from hundreds of regional traditions across an archipelago of 17,000 islands, each with its own flavour logic. Learning to cook here, with access to fresh ingredients at their source and a chef who has grown up with these flavours, gives you something a cookbook never can.</p>
 
-    <p>After the class, you sit down and eat the meal you cooked — at your own villa table, with your own group, in comfort. No rush, no strangers, no performance. Just excellent food you made yourself and the satisfaction of knowing how it was done.</p>`,
+    <p>After the class, you sit down and eat the meal you cooked — at your own villa table, with your own group, in comfort. No rush, no strangers, no performance. Just excellent food you made yourself and the satisfaction of knowing how it was done.</p>
+
+    <p>Ready to book? The commercial owner page is <a href="/experiences/cooking-class" class="text-[#7E6410] hover:underline font-medium">Cooking Class Bali</a> — contact for a written quote. This article is the how-it-works guide.</p>`,
   },
   {
     id: 'classes',
     type: 'content' as const,
     subtitle: 'Class Menu',
     title: 'Private Cooking Class Experiences',
-    body: `<p>Each class is led by a professional myCHEF chef and held at your villa. All classes include ingredient sourcing, hands-on instruction, and a full sit-down meal of what you cooked. Starting from IDR 700,000 per person.</p>
+    body: `<p>Each class is led by a professional myCHEF chef and held at your villa. All classes include ingredient sourcing, hands-on instruction, and a full sit-down meal of what you cooked. Pricing is quoted for group size, cuisine and duration — see our commercial <a href="/experiences/cooking-class" class="text-[#7E6410] hover:underline font-medium">Cooking Class Bali</a> page and WhatsApp for a written proposal (no public list price on this guide).</p>
 
     <p><strong>Balinese Heritage Class — 3 hours</strong><br/>
     The heart of Balinese cooking: learning to make the foundational spice pastes by hand. Your chef will guide you through <em>base gede</em> (the great paste — shallots, garlic, galangal, lemongrass, turmeric, ginger, candlenuts, shrimp paste) and <em>base wangi</em> (the aromatic paste used in lighter preparations). From there you build dishes: a mock-up of the ceremonial <em>babi guling</em> (slow-roasted spiced pork), <em>lawar</em> (the finely chopped vegetable, coconut, and spice salad central to Balinese ceremonial cuisine), and hand-rolled <em>sate lilit</em> on lemongrass skewers. This class teaches the underlying logic of Balinese flavour — understand the pastes and you can build any dish.</p>
@@ -38,7 +40,7 @@ const SECTIONS = [
     <p><strong>Plant-Based Bali — 2.5 hours</strong><br/>
     Indonesian and Balinese cuisine has a rich tradition of vegetable-forward cooking — this class explores it fully. Proper <em>tempeh</em> techniques (tempeh goreng, tempeh manis, tempeh as a protein-forward main), jackfruit preparations both green and ripe, coconut-based vegetable curries, and vegan sambal. All dishes are naturally plant-based — no substitution required. Ideal for vegan or vegetarian groups, and eye-opening for omnivores who assume plant-based cooking means compromise.</p>
 
-    <p>All classes: from <strong>IDR 700,000 per person</strong>. Groups 2–12. Book via WhatsApp and your chef will confirm ingredients and timing within 2 hours.</p>`,
+    <p>Groups typically 2–12. Book via WhatsApp and your chef will confirm ingredients, timing and a written quote within about 2 hours. For sushi-only sessions see the <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a>.</p>`,
   },
   {
     id: 'market-trip',
@@ -49,7 +51,7 @@ const SECTIONS = [
 
     <p>Walking through the market with a professional chef who shops there regularly is genuinely different from going alone. Your chef explains each ingredient as it appears: why this variety of shallot and not that one, what a good turmeric rhizome looks like versus an old one, how to judge freshness in tropical fish without the cold chain cues you'd use at home. You'll see ingredients you may never have encountered — <em>kecombrang</em> (torch ginger flower), <em>daun salam</em> (Indonesian bay leaf), young coconut in every stage of development, fresh <em>tempeh</em> still warm from the maker nearby. Your chef negotiates directly with vendors in Bahasa Indonesia and selects the specific ingredients for your class that morning.</p>
 
-    <p>By the time you return to the villa around 8am, you have a basket of ingredients you understand, a chef who has started prepping, and a significantly deeper connection to the food you're about to cook. The market trip adds approximately 2 hours to the total experience and is available as a supplement of <strong>IDR 250,000 per person</strong>. Highly recommended for anyone seriously interested in food culture, not just cooking technique.</p>`,
+    <p>By the time you return to the villa around 8am, you have a basket of ingredients you understand, a chef who has started prepping, and a significantly deeper connection to the food you're about to cook. The market trip adds roughly two hours and is quoted as a supplement on your proposal — highly recommended for anyone seriously interested in food culture, not just cooking technique.</p>`,
   },
   {
     id: 'features',
@@ -103,45 +105,45 @@ const SECTIONS = [
     type: 'cta' as const,
     subtitle: 'Book Your Class',
     title: 'Private Cooking Class at Your Bali Villa',
-    body: 'Tell us your villa, preferred class type, and group size — we\'ll confirm your chef and date within 2 hours.',
+    body: 'Tell us your villa, preferred class type, and group size — we\'ll confirm your chef, date and a written quote within about 2 hours. Full commercial details on the <a href="/experiences/cooking-class" class="text-[#7E6410] hover:underline font-medium">Cooking Class Bali</a> page.',
     primaryAction: {
       label: 'Book a Cooking Class',
       href: 'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20private%20cooking%20class%20at%20my%20Bali%20villa.'
     },
-    secondaryAction: { label: 'View Pricing', href: '/pricing' },
+    secondaryAction: { label: 'Cooking Class Bali page', href: '/experiences/cooking-class' },
   },
 ]
 
 const FAQS = [
-  { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
-  { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
-  { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
-  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — no extra charge for standard adaptations.' },
-  { question: 'What is included vs extra?', answer: 'Quotes list inclusions; premium ingredients, alcohol and extra staff are itemised when needed.' },
+  { question: 'How do I book a villa cooking class with myCHEF?', answer: 'WhatsApp date, guest count, villa area and cuisine preference. Commercial owner page: <a href="/experiences/cooking-class">Cooking Class Bali</a>. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
+  { question: 'How much does a private cooking class cost?', answer: 'We quote each class for group size, cuisine, duration and location — no public list price on this guide. Message WhatsApp for a written proposal. Day-rate chef meals (different product) are on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a>.' },
+  { question: 'Is the class available island-wide?', answer: 'Yes across major villa regions including Seminyak, Canggu, Ubud, Uluwatu and more. <a href="/locations">Locations</a> · <a href="/experiences/cooking-class">Cooking class</a>.' },
+  { question: 'Can you handle dietary requirements?', answer: 'Yes when briefed early — vegan, vegetarian, gluten-free, pork-free and allergy-safe menus when requested.' },
+  { question: 'What is included vs extra?', answer: 'Quotes list chef instruction, ingredients for the class dishes, the meal and recipes. Market trips, premium proteins and multi-day programmes are itemised when needed.' },
   { question: 'Deposit and cancellation?', answer: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
-  { question: 'Can this combine with other services?', answer: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
-  { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
-  { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
+  { question: 'Can this combine with other services?', answer: 'Yes — stack with multi-day <a href="/private-chef-bali">private chef</a>, <a href="/catering">catering</a> and a <a href="/in-villa-service/bartenders">mobile cocktail bar</a>. Sushi-only: <a href="/experiences/sushi-masterclass">sushi masterclass</a>.' },
+  { question: 'Do you clean up?', answer: 'Yes — kitchen tidy-down after the class and meal is included on serviced formats.' },
+  { question: 'Kids welcome?', answer: 'Yes with age-appropriate tasks. Full kids party production: <a href="/experiences/kids-birthday-chef-party">kids birthday chef party</a>.' },
   { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
-  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
-  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
-  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
+  { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a> and the commercial <a href="/experiences/cooking-class">cooking class</a> page.' },
+  { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due before the class. Full terms: <a href="/cancellation">cancellation policy</a>.' },
+  { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge may apply to quoted amounts. Written quotes show the all-in total before you pay.' },
   { question: 'Which areas of Bali do you cover?', answer: 'Island-wide villa coverage including Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Browse <a href="/locations">locations</a>.' },
-  { question: 'How far in advance should I book?', answer: 'A few days for most dinners; one to two weeks for larger events; longer for peak season and weddings. Last-minute is often possible — ask on WhatsApp.' },
-  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance, at no extra charge. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
-  { question: 'Do you clean up after service?', answer: 'Yes on serviced chef, catering and fine-dining formats — kitchen and service areas restored before we leave.' },
-  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and what you want. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/faq">FAQ</a>.' },
-  { question: 'What if a chef or staff member cannot make it?', answer: 'We send a verified replacement of equivalent role or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
+  { question: 'How far in advance should I book?', answer: 'A few days is often enough off-peak; one week or more for bespoke menus and peak season. Last-minute is often possible — ask on WhatsApp.' },
+  { question: 'Can you accommodate allergies and special diets?', answer: 'Yes — vegan, vegetarian, gluten-free, nut-free, shellfish allergy, pregnancy-safe and halal-sensitive menus when briefed in advance. Guide: <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">food allergies</a>.' },
+  { question: 'Do you clean up after the class?', answer: 'Yes — kitchen and service areas restored before we leave on serviced class formats.' },
+  { question: 'How do I get a quote?', answer: 'WhatsApp date, guest count, villa area and cuisine. Or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/experiences/cooking-class">cooking class</a>.' },
+  { question: 'What if a chef cannot make it?', answer: 'We send a verified replacement of equivalent skill or refund that service. Details: <a href="/why-mychef">why myCHEF</a>.' },
 ]
 
 const RELATED_PAGES = [
-  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Full private chef dinner service at your Bali villa.' },
+  { label: 'Cooking Class Bali (book)', href: '/experiences/cooking-class', desc: 'Commercial owner page — private villa cooking class, contact for quote.' },
+  { label: 'Sushi Masterclass', href: '/experiences/sushi-masterclass', desc: 'Dedicated private sushi making class at your villa.' },
+  { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Multi-day villa chef hire around your cooking class day.' },
   { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'The iconic Bali villa floating breakfast — how to book it.' },
   { label: 'Honeymoon Chef Bali', href: '/honeymoon-chef', desc: 'Private chef experiences for honeymoon couples in Bali.' },
-  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Candlelit private chef dinner at your villa — full romantic dining experience.' },
-  { label: 'Pricing', href: '/pricing', desc: 'Full pricing for all myCHEF services and group sizes.' },
-  { label: 'Event Planning Bali', href: '/blog/event-planning-bali', desc: 'Complete logistics guide for Bali villa events and activities.' },
+  { label: 'Romantic Dinner Bali', href: '/fine-dining/romantic-dinner', desc: 'Candlelit private chef dinner at your villa.' },
 ]
 
 export default function BaliVillaCookingClassPage() {
@@ -150,21 +152,21 @@ export default function BaliVillaCookingClassPage() {
       slug="blog/bali-villa-cooking-class-private-chef"
       title="Private Cooking Classes at Your Bali Villa"
       description="Skip the tourist cooking school. A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12."
-      seoTitle="Bali Villa Cooking Class | Private Chef Lessons at Your Villa | myCHEF"
-      seoDescription="Skip the tourist cooking school. A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12."
+      seoTitle="Bali Villa Cooking Class Guide | Private Chef Lessons (Support Article) | myCHEF"
+      seoDescription="How a private villa cooking class works in Bali — formats, market trip and booking tips. Commercial booking: /experiences/cooking-class. Groups 2–12."
       canonicalUrl="https://mychef.id/blog/bali-villa-cooking-class-private-chef"
       h1="Private Cooking Classes at Your Bali Villa"
-      subtitle="Learn Balinese & Indonesian Cuisine with a Professional Private Chef"
+      subtitle="Learn Balinese & Indonesian Cuisine with a Professional Private Chef — booking on Cooking Class Bali"
       heroImage="/generated/mychef-experience-bali-luna-gallery-1.webp"
       heroImageAlt="Private chef teaching Balinese cooking class at a villa in Bali"
       ogImage="https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp"
-      keywords={['cooking class bali villa', 'private cooking class bali', 'bali cooking class private chef', 'in villa cooking class bali', 'balinese cooking class private']}
+      keywords={['villa cooking class guide bali', 'private chef cooking class villa bali', 'in villa cooking class bali guide', 'balinese cooking class villa experience']}
       highlights={['Class Types', 'Market Trip', 'As a Gift', 'FAQ']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}
       ctaText="Book a Cooking Class"
-      ctaSubtext="Tell us your villa, preferred class type, and group size — we'll confirm your chef and date within 2 hours."
+      ctaSubtext="Tell us your villa, preferred class type, and group size — we'll confirm your chef and a written quote. Commercial page: /experiences/cooking-class."
       extraJsonLd={[
         breadcrumbSchema('Bali Villa Cooking Class', 'https://mychef.id/blog/bali-villa-cooking-class-private-chef', 'Blog', 'https://mychef.id/blog'),
         faqPageSchema(FAQS.map(f => ({ question: f.question, answer: f.answer }))),
@@ -172,7 +174,7 @@ export default function BaliVillaCookingClassPage() {
           '@context': 'https://schema.org',
           '@type': 'BlogPosting',
           headline: 'Private Cooking Classes at Your Bali Villa',
-          description: 'Skip the tourist cooking school. Have a professional myCHEF chef come to your Bali villa and teach you authentic Indonesian and Balinese cuisine. Groups 2–12.',
+          description: 'Support guide: how a private villa cooking class works in Bali. Book commercial sessions on the Cooking Class Bali experience page.',
           author: { '@type': 'Organization', name: 'myCHEF.id', url: 'https://mychef.id' },
           publisher: { '@type': 'Organization', name: 'myCHEF.id', logo: { '@type': 'ImageObject', url: 'https://mychef.id/og-image.webp' } },
           datePublished: '2026-06-29',
@@ -181,38 +183,7 @@ export default function BaliVillaCookingClassPage() {
           mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://mychef.id/blog/bali-villa-cooking-class-private-chef' },
           url: 'https://mychef.id/blog/bali-villa-cooking-class-private-chef',
           wordCount: 1400,
-          keywords: 'cooking class bali villa, private cooking class bali, bali cooking class private chef',
-        },
-        {
-          '@context': 'https://schema.org',
-          '@type': 'Event',
-          name: 'Private Cooking Class at Your Bali Villa',
-          description: 'A professional myCHEF chef comes to your Bali villa to teach authentic Indonesian and Balinese cuisine. Groups 2–12. From IDR 700,000/person.',
-          url: 'https://mychef.id/blog/bali-villa-cooking-class-private-chef',
-          image: 'https://mychef.id/generated/mychef-experience-bali-luna-gallery-1.webp',
-          eventStatus: 'https://schema.org/EventScheduled',
-          eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-          location: {
-            '@type': 'Place',
-            name: 'Your Bali Villa',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Bali',
-              addressCountry: 'ID',
-            },
-          },
-          organizer: {
-            '@type': 'Organization',
-            name: 'myCHEF.id',
-            url: 'https://mychef.id',
-          },
-          offers: {
-            '@type': 'Offer',
-            price: '600000',
-            priceCurrency: 'IDR',
-            availability: 'https://schema.org/InStock',
-            url: 'https://mychef.id/blog/bali-villa-cooking-class-private-chef',
-          },
+          keywords: 'villa cooking class guide bali, private chef cooking class villa bali',
         },
       ]}
     />

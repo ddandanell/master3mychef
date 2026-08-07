@@ -6,7 +6,7 @@ import { PILLARS } from '@/data/siteArchitecture'
 import FAQAccordion from './catering/FAQAccordion'
 import LocationChips from './LocationChips'
 import RelatedServices from '@/components/shared/RelatedServices'
-import { IN_VILLA_SERVICE_RELATED } from '@/data/related-services'
+import { EXPERIENCES_RELATED, IN_VILLA_SERVICE_RELATED } from '@/data/related-services'
 import OptimizedImage from '@/components/OptimizedImage'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
@@ -476,6 +476,7 @@ export default function InVillaServicePage() {
       </section>
 
       <RelatedServices services={IN_VILLA_SERVICE_RELATED} title="Explore In-Villa Service Options" />
+      <RelatedServices services={EXPERIENCES_RELATED} title="Villa Experiences to Stack" />
 
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-white">

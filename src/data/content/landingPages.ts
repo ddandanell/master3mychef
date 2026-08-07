@@ -162,8 +162,8 @@ export const LANDING_PAGES: ContentEntry[] = [
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Hire a Private Chef Monthly",
-              "item": "https://mychef.id/hire-private-chef-bali-monthly"
+              "name": "Private Chef Bali",
+              "item": "https://mychef.id/private-chef-bali"
             }
           ]
         }
@@ -182,8 +182,8 @@ export const LANDING_PAGES: ContentEntry[] = [
         "@graph": [
           {
             "@type": "WebPage",
-            "@id": "https://mychef.id/villa-staff-bali-agency",
-            "name": "Villa Staff Placement Has Moved | myCHEF Bali",
+            "@id": "https://mychef.id/staffing/villa-staff",
+            "name": "Villa Staff Placement | myCHEF Bali",
             "description": "The villa staff agency Bali owners trust: we source, vet and place housekeepers, butlers & villa managers. Replacement guarantee. WhatsApp myCHEF.",
             "isPartOf": { "@type": "WebSite", "name": "myCHEF", "url": "https://mychef.id" },
             "about": {
@@ -198,7 +198,7 @@ export const LANDING_PAGES: ContentEntry[] = [
             "@type": "BreadcrumbList",
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mychef.id/" },
-              { "@type": "ListItem", "position": 2, "name": "Villa Staff Bali Agency", "item": "https://mychef.id/villa-staff-bali-agency" }
+              { "@type": "ListItem", "position": 2, "name": "Villa Staff Bali", "item": "https://mychef.id/staffing/villa-staff" }
             ]
           }
         ]

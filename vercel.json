@@ -25,6 +25,11 @@
       "permanent": true
     },
     {
+      "source": "/experiences/private-cooking-class",
+      "destination": "/experiences/cooking-class",
+      "permanent": true
+    },
+    {
       "source": "/families",
       "destination": "/dining-styles",
       "permanent": true
@@ -271,7 +276,7 @@
     },
     {
       "source": "/services/cooking-classes",
-      "destination": "/contact",
+      "destination": "/experiences/cooking-class",
       "permanent": true
     },
     {
@@ -351,7 +356,7 @@
     },
     {
       "source": "/private-chef-booking-indonesia",
-      "destination": "/quote",
+      "destination": "/chef-for-hire-indonesia",
       "permanent": true
     },
     {
@@ -491,7 +496,7 @@
     },
     {
       "source": "/in-villa-service/cooking-class",
-      "destination": "/contact",
+      "destination": "/experiences/cooking-class",
       "permanent": true
     },
     {
@@ -862,11 +867,6 @@
     {
       "source": "/blog/brunch-catering-bali",
       "destination": "/catering",
-      "permanent": true
-    },
-    {
-      "source": "/blog/bali-wedding-catering-budget-guide",
-      "destination": "/bali-wedding-catering-packages",
       "permanent": true
     },
     {

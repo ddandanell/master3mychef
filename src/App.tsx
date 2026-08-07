@@ -191,7 +191,7 @@ const BabiGulingCateringBaliPage = lazy(() => import('./pages/BabiGulingCatering
 const PlatedDinnerCateringBaliPage = lazy(() => import('./pages/PlatedDinnerCateringBaliPage'))
 const MixologistHireBaliPage = lazy(() => import('./pages/MixologistHireBaliPage'))
 const SommelierHireBaliPage = lazy(() => import('./pages/SommelierHireBaliPage'))
-const RehearsalDinnerBaliPage = lazy(() => import('./pages/RehearsalDinnerBaliPage'))
+// RehearsalDinnerBaliPage removed — /blog/rehearsal-dinner-bali 301s to journal owner.
 const WaiterHireBaliPage = lazy(() => import('./pages/WaiterHireBaliPage'))
 const PrivateDiningBaliPage = lazy(() => import('./pages/PrivateDiningBaliPage'))
 const ChefsTableBaliPage = lazy(() => import('./pages/ChefsTableBaliPage'))
@@ -498,7 +498,7 @@ export default function App() {
           <Route path="/blog/plated-dinner-catering-bali" element={<PlatedDinnerCateringBaliPage />} />
           <Route path="/blog/mixologist-hire-bali" element={<MixologistHireBaliPage />} />
           <Route path="/blog/sommelier-hire-bali" element={<SommelierHireBaliPage />} />
-          <Route path="/blog/rehearsal-dinner-bali" element={<RehearsalDinnerBaliPage />} />
+          {/* /blog/rehearsal-dinner-bali → journal via REDIRECTS */}
           <Route path="/blog/waiter-hire-bali" element={<WaiterHireBaliPage />} />
           <Route path="/blog/private-dining-bali" element={<PrivateDiningBaliPage />} />
           <Route path="/blog/chefs-table-bali" element={<ChefsTableBaliPage />} />

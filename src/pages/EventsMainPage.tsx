@@ -355,7 +355,7 @@ const FAQS = [
   },
   {
     q: 'How far in advance should I book wedding catering in Bali?',
-    a: 'Ideally 4–8+ weeks for peak wedding months; shorter windows are sometimes possible for weekday or smaller guest counts. Timeline guide: <a href="/blog/bali-wedding-catering-complete-guide">wedding catering guide</a>.',
+    a: 'Ideally 4–8+ weeks for peak wedding months; shorter windows are sometimes possible for weekday or smaller guest counts. Timeline guide: <a href="/journal/bali-wedding-catering-complete-guide">wedding catering guide</a>.',
   },
   {
     q: 'What if guest count changes close to the event?',

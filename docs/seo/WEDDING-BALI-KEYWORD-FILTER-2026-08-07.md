@@ -52,4 +52,5 @@
 - Timeline + private-chef wedding guide FAQs/related links aligned to owners
 - Packages + Indonesia landing articles: foreign-couple package Qs sections
 - Help wedding guide cost FAQs linked to budget owner
+- **Hygiene fix:** removed erroneous 301 `/blog/bali-wedding-catering-budget-guide` → packages so the budget education page is reachable; PAGE_META + sitemap entry restored; Events hub FAQ points at journal complete guide
 EOF

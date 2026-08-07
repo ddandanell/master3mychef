@@ -1,6 +1,7 @@
 # 301 redirects generated from src/data/redirects.ts
 # Do not edit by hand — edit the source and re-run `pnpm redirects`.
 
+/experiences/private-cooking-class  /experiences/cooking-class  301
 /families  /dining-styles  301
 /experience  /fine-dining  301
 /story  /chefs  301
@@ -50,7 +51,7 @@
 /sanur-beach-private-chef  /private-chef/sanur  301
 /services/romantic-dinners  /fine-dining/romantic-dinner  301
 /services/family-reunions  /catering  301
-/services/cooking-classes  /contact  301
+/services/cooking-classes  /experiences/cooking-class  301
 /services/corporate-events  /events/corporate-events  301
 /services/villa-parties  /events/villa-parties  301
 /services/wedding-celebrations  /events/weddings  301
@@ -66,7 +67,7 @@
 /blog/private-chef-bali-cost-breakdown-2026  /pricing  301
 /blog/private-chef-bali-cost-breakdown-detailed-2026  /blog/private-chef-cost-bali  301
 /blog/wedding-rehearsal-dinner-bali  /events/weddings  301
-/private-chef-booking-indonesia  /quote  301
+/private-chef-booking-indonesia  /chef-for-hire-indonesia  301
 /private-chef-breakfast-bali  /catering  301
 /private-chef-cost-per-day-bali  /pricing  301
 /private-chef-cost-bali  /pricing  301
@@ -94,7 +95,7 @@
 /events/proposals  /events  301
 /in-villa-service/villa-chef  /private-chef-bali  301
 /in-villa-service/breakfast-service  /catering/floating-breakfast  301
-/in-villa-service/cooking-class  /contact  301
+/in-villa-service/cooking-class  /experiences/cooking-class  301
 /in-villa-service/meal-prep  /private-chef-bali  301
 /staffing/chef-recruitment  /staffing/private-chef-placement  301
 /staffing/event-staff  /staffing/villa-staff  301
@@ -169,7 +170,6 @@
 /blog/plated-dinner-catering-bali  /catering/plated-catering  301
 /blog/babi-guling-catering-bali  /catering/babi-guling  301
 /blog/brunch-catering-bali  /catering  301
-/blog/bali-wedding-catering-budget-guide  /bali-wedding-catering-packages  301
 /blog/rehearsal-dinner-bali  /journal/rehearsal-dinner-planning-bali  301
 /blog/private-dining-bali  /private-dining-indonesia  301
 /blog/chefs-table-bali  /fine-dining/chefs-table  301
@@ -191,7 +191,6 @@
 /blog/romantic-dinner-bali-private-chef  /fine-dining/romantic-dinner  301
 /blog/buffet-vs-plated-service-bali  /catering  301
 /blog/floating-breakfast-bali  /catering/floating-breakfast  301
-/blog/bali-villa-cooking-class-private-chef  /fine-dining  301
 /blog/food-allergies-dietary-requirements-bali  /blog/dietary-specific-chef-bali  301
 /blog/live-in-chef-bali-hiring-guide  /staffing  301
 /journal/bali-villa-dinner-party-guide  /private-dining-indonesia  301

@@ -291,7 +291,8 @@ export const REDIRECTS: Redirect[] = [
   { from: '/blog/plated-dinner-catering-bali', to: '/catering/plated-catering', reason: 'Duplicate of live plated-catering page.' },
   { from: '/blog/babi-guling-catering-bali', to: '/catering/babi-guling', reason: 'Duplicate of live babi-guling catering page.' },
   { from: '/blog/brunch-catering-bali', to: '/catering', reason: 'Brunch catering → catering hub (breakfast page itself redirects to /catering; link direct, no chain).' },
-  { from: '/blog/bali-wedding-catering-budget-guide', to: '/bali-wedding-catering-packages', reason: 'Duplicate of live wedding catering packages page.' },
+  // /blog/bali-wedding-catering-budget-guide is a live support owner (cost education) —
+  // dedicated BaliWeddingCateringBudgetPage. Do NOT redirect to packages (commercial prices).
   { from: '/blog/rehearsal-dinner-bali', to: '/journal/rehearsal-dinner-planning-bali', reason: 'Duplicate of live rehearsal-dinner journal guide.' },
   { from: '/blog/private-dining-bali', to: '/private-dining-indonesia', reason: 'Duplicate of live private-dining page.' },
   { from: '/blog/chefs-table-bali', to: '/fine-dining/chefs-table', reason: "Duplicate of live chef's-table experience page." },

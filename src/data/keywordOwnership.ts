@@ -54,10 +54,19 @@ export const KEYWORD_OWNERSHIP: Record<string, KeywordOwner> = {
     note: 'Alias /chef-table-experience-bali already 301s here. Own the query.',
   },
   '/fine-dining/romantic-dinner': {
-    primary: 'romantic dinner bali',
-    secondary: ['private romantic dinner bali', 'bali romantic dinner', 'bali private dinner for two'],
+    primary: 'private chef romantic dinner bali',
+    secondary: [
+      'romantic private dinner villa bali',
+      'private romantic dinner bali villa',
+      'anniversary dinner bali private chef',
+      'honeymoon private chef bali',
+      'proposal dinner bali private chef',
+      'candlelit dinner bali villa',
+      'fine dining private chef bali',
+      'multi-course tasting menu private chef bali',
+    ],
     doNotTarget: ['/private-dining-indonesia', '/services/romantic-dinners'],
-    note: 'Do not target “private dining bali” — that belongs to private-dining-indonesia.',
+    note: 'Do not target “private dining bali” — that belongs to private-dining-indonesia. Hero product: 7- & 9-course villa tasting production.',
   },
   '/fine-dining/tasting-menu': {
     primary: 'tasting menu bali',

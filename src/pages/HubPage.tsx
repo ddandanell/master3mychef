@@ -203,8 +203,6 @@ const REVIEWS = [
   { name: 'Yuki & Kenji', location: 'Osaka', dept: 'Events', text: 'Traditional Japanese wedding ceremony followed by a Western-style reception. The team respected every ritual while delivering world-class cuisine.' },
 ]
 
-const HERO_STATS = ['560+ events served', '12,000+ happy guests', 'Same-day confirmation']
-
 export default function HubPage() {
   const heroRef = useRef<HTMLDivElement>(null)
   const portalsRef = useRef<HTMLDivElement>(null)

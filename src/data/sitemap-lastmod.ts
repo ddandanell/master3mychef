@@ -89,7 +89,7 @@ export const SITEMAP_LASTMOD: Record<string, string> = {
   "/private-chef/ketewel": "2026-06-06",
   "/private-chef/abiansemal": "2026-06-28",
   "/private-chef/cepaka": "2026-05-14",
-  "/fine-dining/romantic-dinner": "2026-05-19",
+  "/fine-dining/romantic-dinner": "2026-08-09",
   "/fine-dining/tasting-menu": "2026-06-03",
   "/fine-dining/chefs-table": "2026-05-27",
   "/fine-dining/menus": "2026-06-17",

@@ -1219,12 +1219,12 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'fine-dining-romantic-dinner': {
     path: '/fine-dining/romantic-dinner',
-    title: 'Romantic Dinner Bali | Private Villa Chef for Two',
+    title: 'Private Chef Romantic Dinner Bali | 7 & 9 Course Villa',
     description:
-      'Intimate five-course romantic dinners for two in your Bali villa: candlelight, flowers, sommelier pairing and fine-dining service. Book via WhatsApp myCHEF.',
+      'Private chef romantic dinner in your Bali villa. 7- & 9-course tasting, Indonesian or Western, candlelit styling. From IDR 3.8M++ pp. WhatsApp quote.',
     canonical: `${SITE}/fine-dining/romantic-dinner`,
-    h1: 'Romantic Dinner Bali — A Private Dinner Built for Two',
-    ogImage: `${SITE}/generated/section-romantic-dinner.webp`,
+    h1: 'Romantic Private Dinner in Your Bali Villa with a Private Chef',
+    ogImage: `${SITE}/generated/private-chef-romantic-dinner-bali-villa-hero.webp`,
   },
 
       'fine-dining-tasting-menu': {

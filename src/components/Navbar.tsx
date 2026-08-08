@@ -158,7 +158,7 @@ const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
   '/kids-menus': '/generated/mychef-families-bali-kids-menus.webp',
   '/fine-dining/our-chefs': '/generated/chef-made-surya-portrait-bw.webp',
   '/fine-dining/chefs-table': '/generated/mychef-experience-bali-luna-gallery-2.webp',
-  '/fine-dining/romantic-dinner': '/generated/mychef-events-bali-anniversary-romantic.webp',
+  '/fine-dining/romantic-dinner': '/generated/private-chef-romantic-dinner-bali-villa-hero.webp',
   '/fine-dining/tasting-menu': '/generated/mychef-experience-bali-luna-collage.webp',
   '/fine-dining/private-chef-bali': '/generated/mychef-finedining-bali-luna-plating.webp',
   '/complete-villa-experience': '/generated/mychef-catering-bali-catering-hero.webp',

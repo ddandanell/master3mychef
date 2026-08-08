@@ -28,10 +28,10 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/',
     title: 'Private Chef Bali | Villa Dining, BBQ & Events | myCHEF',
     description:
-      'Private chef Bali for villa dining, BBQs, weddings & events. Chef day rates from IDR 1,000,000++, catering from IDR 700K per guest. WhatsApp within 1 hour.',
+      'Private chef Bali for villa dining, BBQs, weddings & events. Chef day rates from IDR 1,000,000++, catering from IDR 700K++ per guest. WhatsApp reply within 2 hours.',
     canonical: `${SITE}/`,
     h1: 'Private Chef Bali — Your Villa. Our Kitchen.',
-    ogImage: `${SITE}/hero-home.webp`,
+    ogImage: `${SITE}/generated/mychef-location-bali-hub-hero.webp`,
   },
 
       'locations-seminyak': {

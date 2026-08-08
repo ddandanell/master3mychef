@@ -351,7 +351,7 @@ export default function HubPage() {
               src="/generated/mychef-location-bali-hub-hero-800.webp"
               srcSet="/generated/mychef-location-bali-hub-hero-800.webp 800w, /generated/mychef-location-bali-hub-hero.webp 1440w"
               sizes="100vw"
-              alt="Elegant private dining table set at sunset in a luxury Bali villa by myCHEF"
+              alt="Private chef Bali villa dining — sunset terrace table set for in-villa fine dining by myCHEF"
               width={800}
               height={444}
               className="absolute inset-0 h-full w-full object-cover object-[center_52%]"
@@ -369,17 +369,20 @@ export default function HubPage() {
             <div className="relative z-10 mx-auto flex min-h-[85svh] max-w-[1280px] items-end px-5 pb-8 pt-24 sm:px-6 md:min-h-screen md:items-center md:pb-14 md:pt-24">
               <div className="w-full max-w-2xl md:max-w-[46%]">
                 <p className="hub-hero-label mb-3 text-xs uppercase tracking-[0.28em] text-[#C5A028] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  Bali villa dining
+                  Private Chef Bali
                 </p>
-                <h1 className="hub-hero-title mb-3 text-[1.75rem] leading-[1.1] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h1 className="hub-hero-title mb-2 text-[1.75rem] leading-[1.1] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
                   Your villa. Our kitchen.
                 </h1>
+                <p className="hub-hero-subtitle mb-3 text-sm font-medium leading-snug text-white/90 sm:text-base md:text-lg">
+                  Private Chef Bali — restaurant-level dining in your villa
+                </p>
                 <div className="gold-arc mb-4 md:mb-6" />
-                <p className="hub-hero-subtitle mb-3 max-w-[36ch] text-[15px] leading-relaxed text-white/90 sm:max-w-xl sm:text-lg">
-                  Restaurant-level dining in your villa. We shop, cook, serve, and leave the kitchen spotless.
+                <p className="hub-hero-subtitle mb-3 max-w-[40ch] text-[15px] leading-relaxed text-white/90 sm:max-w-xl sm:text-lg">
+                  Hire a private villa chef in Bali for in-villa fine dining, daily chef service, BBQ catering, or events. We shop, cook, serve, and leave the kitchen spotless — from dinner for two to celebrations for 200.
                 </p>
                 <p className="hub-hero-subtitle mb-5 text-sm text-white/75 sm:text-[15px]">
-                  From IDR 1,000,000++ / day · Groceries at cost · 560+ events
+                  From IDR 1,000,000++ / day · Groceries at cost · 560+ events served
                 </p>
                 <div className="hub-hero-cta mb-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                   <a
@@ -934,7 +937,7 @@ export default function HubPage() {
               className="text-sm uppercase tracking-[0.1em]"
               style={{ color: '#9d8d78' }}
             >
-              ✓ 560+ events served · 12,000+ happy guests · Same-day confirmation
+              Trusted island-wide for villa hosts who want published rates and a real backup plan.
             </p>
           </div>
 
@@ -1004,7 +1007,7 @@ export default function HubPage() {
           <div className="text-center mb-16">
             <p className="u-label mb-4">Guest Words</p>
             <h2 className="u-heading text-4xl md:text-5xl mb-3">What Guests Say</h2>
-            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. 560+ events served · 12,000+ happy guests · Same-day confirmation.</p>
+            <p className="max-w-xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>Real guests. Real villas. Named reviews from stays across Seminyak, Canggu, Ubud and beyond.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {REVIEWS.slice(0, 6).map((review, i) => (

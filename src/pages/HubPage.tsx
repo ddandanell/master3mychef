@@ -16,6 +16,9 @@ import { RiskReversal } from '@/components/shared'
 import TrustSection from '@/components/trust/TrustSection'
 import TrustStrip from '@/components/shared/TrustStrip'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import PriceCards from '@/components/shared/PriceCards'
+import AvailabilitySheet from '@/components/shared/AvailabilitySheet'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 const PORTALS = [
   {
@@ -130,6 +133,10 @@ const FAQS = [
 ]
 
 
+/** Mobile home: 6 high-intent FAQs only; full set lives on /faq (schema uses this short list). */
+const HOME_FAQS = FAQS.filter((_, idx) => [0, 1, 3, 4, 5, 6].includes(idx))
+
+
 const JOURNAL_LINKS = [
   {
     title: 'How to Host a Villa Dinner Party in Bali (Complete Guide)',
@@ -204,6 +211,7 @@ export default function HubPage() {
   const trustRef = useRef<HTMLDivElement>(null)
   const statsAnimationStartedRef = useRef(false)
   const [hoveredStep, setHoveredStep] = useState<string | null>(null)
+  const [availabilityOpen, setAvailabilityOpen] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -219,11 +227,13 @@ export default function HubPage() {
 
       gsap.registerPlugin(ScrollTrigger)
       const ctx = gsap.context(() => {
-        const tl = gsap.timeline({ delay: 0.3 })
-        tl.fromTo('.hub-hero-label', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
-        tl.fromTo('.hub-hero-title', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.5')
-        tl.fromTo('.hub-hero-subtitle', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-        tl.fromTo('.hub-hero-cta', { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+        // Hero stays fully visible for LCP — never animate from opacity 0
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        if (!prefersReduced && window.innerWidth >= 768) {
+          const tl = gsap.timeline({ delay: 0.2 })
+          tl.fromTo('.hub-hero-label', { y: 16 }, { y: 0, duration: 0.6, ease: 'power3.out', clearProps: 'transform' })
+          tl.fromTo('.hub-hero-title', { y: 20 }, { y: 0, duration: 0.7, ease: 'power3.out', clearProps: 'transform' }, '-=0.4')
+        }
 
         gsap.fromTo('.portal-card', { y: 60, opacity: 0 }, {
           y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out',
@@ -323,7 +333,7 @@ export default function HubPage() {
       'https://mychef.id/staffing',
       '$$$'
     ),
-    faqPageSchema(FAQS.map((f) => ({ question: f.q, answer: f.a }))),
+    faqPageSchema(HOME_FAQS.map((f) => ({ question: f.q, answer: f.a }))),
   ]
 
   return (
@@ -335,58 +345,71 @@ export default function HubPage() {
         ogImage={getPageMeta('home').ogImage}
         jsonLd={homeSchemas}
       />
-      {/* HERO — premium brand identity with Milan-trained founder story front and centre */}
-      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-20 md:pb-32" style={{ background: 'var(--u-bg)' }}>
-        <div className="mb-10 md:mb-14">
-          <div className="relative min-h-screen overflow-hidden">
+      {/* HERO — mobile-first conversion shell */}
+      <section ref={(node) => { heroRef.current = node as HTMLDivElement | null; portalsRef.current = node as HTMLDivElement | null }} className="pb-12 md:pb-24" style={{ background: 'var(--u-bg)' }}>
+        <div className="mb-8 md:mb-12">
+          <div className="relative min-h-[85svh] overflow-hidden md:min-h-screen">
             <img
-              src="/generated/mychef-location-bali-hub-hero.webp"
+              src="/generated/mychef-location-bali-hub-hero-800.webp"
+              srcSet="/generated/mychef-location-bali-hub-hero-800.webp 800w, /generated/mychef-location-bali-hub-hero.webp 1440w"
+              sizes="100vw"
               alt="Elegant private dining table set at sunset in a luxury Bali villa by myCHEF"
-              width={1536}
-              height={1024}
+              width={800}
+              height={444}
               className="absolute inset-0 h-full w-full object-cover object-[center_52%]"
               fetchPriority="high"
               loading="eager"
               decoding="async"
               onError={(e) => {
                 const img = e.target as HTMLImageElement
-                img.style.opacity = '0.3'
+                if (!img.src.includes('mychef-location-bali-hub-hero.webp')) {
+                  img.src = '/generated/mychef-location-bali-hub-hero.webp'
+                }
               }} />
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)' }} />
-            <div className="absolute inset-0 bg-black/20 md:hidden" />
-            <div className="relative z-10 mx-auto flex min-h-screen max-w-[1280px] items-center px-5 pb-10 pt-20 sm:px-6 md:pb-14 md:pt-24">
-              <div className="max-w-2xl md:max-w-[46%]">
-                <p className="hub-hero-label mb-4 text-xs uppercase tracking-[0.34em] text-[#C5A028] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  Private Chef in Bali
+            <div className="absolute inset-0 md:hidden" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.35) 100%)' }} />
+            <div className="absolute inset-0 hidden md:block" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)' }} />
+            <div className="relative z-10 mx-auto flex min-h-[85svh] max-w-[1280px] items-end px-5 pb-8 pt-24 sm:px-6 md:min-h-screen md:items-center md:pb-14 md:pt-24">
+              <div className="w-full max-w-2xl md:max-w-[46%]">
+                <p className="hub-hero-label mb-3 text-xs uppercase tracking-[0.28em] text-[#C5A028] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  Bali villa dining
                 </p>
-                <h1 className="hub-hero-title mb-4 text-[2rem] leading-[1.08] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Private Chef in Bali — Your Villa. Our Kitchen.
+                <h1 className="hub-hero-title mb-3 text-[1.75rem] leading-[1.1] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  Your villa. Our kitchen.
                 </h1>
-                <div className="gold-arc mb-6" />
-                <p className="hub-hero-subtitle mb-7 max-w-xl text-[15px] leading-relaxed sm:text-lg" style={{ color: 'rgba(255,255,255,0.85)' }}>
-                  Restaurant-level dining, cooked fresh in your villa by a specialist chef team. We shop, we cook, we serve, we clean — you just enjoy. From intimate dinners for two to weddings for 200, across Seminyak, Canggu, Ubud, Uluwatu and beyond.
+                <div className="gold-arc mb-4 md:mb-6" />
+                <p className="hub-hero-subtitle mb-3 max-w-[36ch] text-[15px] leading-relaxed text-white/90 sm:max-w-xl sm:text-lg">
+                  Restaurant-level dining in your villa. We shop, cook, serve, and leave the kitchen spotless.
                 </p>
-                <div className="hub-hero-cta mb-4 flex flex-col flex-wrap items-stretch gap-3 sm:flex-row sm:items-center">
-                  <a href="https://wa.me/6289674072020?text=Hi%2C%20I%27d%20like%20to%20book%20a%20private%20chef%20for%20my%20Bali%20villa." target="_blank" rel="noopener noreferrer" data-source="homepage-hero" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#111' }}>
-                    <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours <span aria-hidden="true">→</span>
+                <p className="hub-hero-subtitle mb-5 text-sm text-white/75 sm:text-[15px]">
+                  From IDR 1,000,000++ / day · Groceries at cost · 560+ events
+                </p>
+                <div className="hub-hero-cta mb-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                  <a
+                    href={buildWhatsAppUrl({ serviceName: 'a private chef for my Bali villa', intent: 'a quote within 2 hours' })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-source="homepage-hero"
+                    className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3.5 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-[1.02] sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-white"
+                    style={{ background: '#C5A028', color: '#111' }}
+                  >
+                    <MessageCircle className="w-5 h-5" /> WhatsApp quote in 2 hours
                   </a>
-                  <Link to="/pricing" className="inline-flex min-h-[46px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border px-6 py-3 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
-                    see transparent pricing <ArrowRight className="w-4 h-4" />
+                  <button
+                    type="button"
+                    onClick={() => setAvailabilityOpen(true)}
+                    className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/45 px-6 py-3.5 text-sm font-semibold uppercase tracking-widest text-white transition-all hover:bg-white/10 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                  >
+                    Check availability
+                  </button>
+                  <Link
+                    to="/pricing"
+                    className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 text-sm font-medium text-white/85 underline-offset-4 hover:text-white hover:underline sm:w-auto focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+                  >
+                    See transparent prices <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-                <p className="text-sm uppercase tracking-[0.18em] text-white/60" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  560+ events served · 12,000+ happy guests · Same-day confirmation
-                </p>
-                <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70">
-                  <Link to="/services" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">explore all private chef services in Bali</Link>,{' '}
-                  <Link to="/fine-dining" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">fine dining Bali villa menus</Link>,{' '}
-                  <Link to="/private-chef-bali" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">hire private chef Bali rates</Link>,{' '}
-                  <Link to="/private-dining-indonesia" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">private dining</Link>,{' '}
-                  <Link to="/catering" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">catering Bali</Link>,{' '}
-                  <Link to="/fine-dining/chefs-table" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">chefs table Bali</Link>,{' '}
-                  <Link to="/in-villa-service/butlers" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">butler service Bali</Link>,{' '}
-                  <Link to="/in-villa-service/bartenders" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">mobile cocktail bar Bali</Link>, or{' '}
-                  <Link to="/faq" className="underline underline-offset-4 hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">booking questions answered</Link>.
+                <p className="text-xs uppercase tracking-[0.16em] text-white/55 sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+                  Same-day confirmation · Chef replacement guarantee
                 </p>
               </div>
             </div>
@@ -394,12 +417,8 @@ export default function HubPage() {
         </div>
 
         <div className="mx-auto max-w-[1280px] px-5 sm:px-6">
-          <div className="mb-8 md:mb-12">
-            <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed sm:text-[15px] md:text-base" style={{ color: 'var(--u-text-muted)' }}>
-              Founded by Adriano — trained under a Michelin-starred chef in {siteFacts.founderTrainingCity} — myCHEF.id delivers restaurant-level dining to Bali&apos;s finest villas. From intimate fine dining for 6 to catering for 200, our 50+ person hospitality team handles every detail.
-            </p>
-
-            <div className="mx-auto mb-8 max-w-2xl">
+          <div className="mb-6 md:mb-10">
+            <div className="mx-auto mb-6 max-w-2xl">
               <RiskReversal
                 items={[
                   { icon: ShieldCheck, label: 'Same-day confirmation or your money back', desc: 'If your chef can\'t make it, we send a replacement within 2 hours or refund 100%' },
@@ -407,93 +426,43 @@ export default function HubPage() {
                 ]}
               />
             </div>
-            <div className="mx-auto mb-6 grid max-w-3xl grid-cols-3 gap-3">
-              {HERO_STATS.map((stat) => (
-                <div
-                  key={stat}
-                  className="rounded-2xl border px-4 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.16em]"
-                  style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)', color: 'var(--u-text-muted)' }}
-                >
-                  {stat}
-                </div>
-              ))}
-            </div>
-            <div className="mx-auto mb-12 text-center">
-              <a
-                href="https://wa.me/6289674072020"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-source="homepage-pricing-strip"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1916] transition-colors hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
-              >
-                Message us with date, guest count, and villa area <ArrowRight className="h-4 w-4" />
-              </a>
-            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {PORTALS.map((portal, idx) => (
-              <div key={portal.id} className="portal-card group relative w-full overflow-hidden rounded-2xl min-h-[420px] sm:min-h-[480px]" style={{ aspectRatio: '3/4' }}>
-                {/* Anchor text lives in an sr-only span rather than aria-label: it gives
-                    crawlers real anchor text (Semrush flagged these 3 as "links with no
-                    anchor text") while still naming the link for screen readers. */}
-                <Link to={portal.path} className="absolute inset-0 z-10 focus:outline-none focus:ring-2 focus:ring-[#C5A028]">
-                  <span className="sr-only">{portal.title} in Bali</span>
-                </Link>
+
+          {/* Intent portals — horizontal snap on mobile, grid on desktop */}
+          <div className="mobile-snap-row md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-8 md:overflow-visible">
+            {PORTALS.map((portal) => (
+              <Link
+                key={portal.id}
+                to={portal.path}
+                className="portal-card mobile-snap-card group relative min-h-[280px] w-full overflow-hidden rounded-2xl md:aspect-[3/4] md:min-h-[360px] md:max-w-none md:flex-none md:w-auto"
+                style={{ aspectRatio: undefined }}
+              >
                 <img
                   src={portal.image}
                   alt={portal.imageAlt}
                   width={600}
                   height={800}
-                  fetchPriority={idx === 0 ? 'high' : undefined}
-                  loading={idx === 0 ? 'eager' : 'lazy'}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
                   decoding="async"
-                  className="absolute inset-0 h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
-                  style={{ background: '#1a1a1a' }}
-                  onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0.4' }}
                 />
-                <div className="absolute inset-0 bg-black/55" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="pointer-events-none absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-                  <h2 className="text-3xl md:text-4xl text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h2>
-                  <p className="text-sm text-white/[70%] mb-5 leading-relaxed">{portal.subtitle}</p>
-                  <span className="flex items-center gap-2 text-sm font-medium transition-all group-hover:gap-4" style={{ color: portal.accent }}>
-                    Explore <ArrowRight className="w-4 h-4" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                  <h2 className="mb-2 text-2xl md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{portal.title}</h2>
+                  <p className="text-sm leading-relaxed text-white/85 line-clamp-3">{portal.subtitle}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[#C5A028]">
+                    Explore <ArrowRight className="h-3.5 w-3.5" />
                   </span>
                 </div>
-                <div className="absolute inset-0 rounded-2xl border-2 border-transparent transition-colors duration-500 group-hover:border-opacity-100 pointer-events-none" style={{ borderColor: portal.accent }} />
-              </div>
+                <span className="sr-only">{portal.title}</span>
+              </Link>
             ))}
-          </div>
-
-          {/* MID-PAGE CTA: After service portals */}
-          <div className="mt-12 md:mt-16 rounded-2xl border border-black/5 bg-[#FAFAF8] p-8 md:p-10 text-center">
-            <p className="u-label mb-3">Not Sure What You Need?</p>
-            <h3 className="u-heading text-2xl md:text-3xl mb-4">Private Dining, Catering, or Full Event Production?</h3>
-            <p className="max-w-2xl mx-auto mb-6 text-sm" style={{ color: 'var(--u-text-muted)' }}>
-              Tell us your dates, villa, and guest count. We will match you to the right service and send a clear quote within 2 hours — no pressure, no deposit required to enquire.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa" target="_blank" rel="noopener noreferrer" data-source="homepage-mid-cta" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#fff' }}>
-                <MessageCircle className="w-4 h-4" /> Get Your Quote within 2 Hours
-              </a>
-              <Link to="/quote" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium tracking-widest uppercase rounded-full border transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', color: 'var(--u-text)' }}>
-                Get a Structured Quote
-              </Link>
-            </div>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm" style={{ color: 'var(--u-text-muted)' }}>
-              <Link to="/recommended-services" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-                Not sure? Let us recommend →
-              </Link>
-              <Link to="/contact" className="underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-                View contact options
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
       {/* PRICE STRIP */}
-      <section className="py-16 md:py-20 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-16" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[900px] mx-auto">
           <div className="text-center mb-10">
             <p className="u-label mb-4">Transparent Pricing</p>
@@ -502,47 +471,9 @@ export default function HubPage() {
               Most private chef sites in Bali hide their prices. We publish ours.
             </p>
           </div>
-          <div className="overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b" style={{ borderColor: 'var(--u-border)', background: 'var(--u-bg)' }}>
-                  <th className="px-5 py-3 text-left font-semibold" style={{ color: 'var(--u-text)' }}>Experience</th>
-                  <th className="px-5 py-3 text-right font-semibold" style={{ color: 'var(--u-text)' }}>From</th>
-                </tr>
-              </thead>
-              <tbody style={{ color: 'var(--u-text-muted)' }}>
-                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
-                  <td className="px-5 py-3">Villa dinner (3–4 courses, 2–10 guests)</td>
-                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 700K / person</td>
-                </tr>
-                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
-                  <td className="px-5 py-3">Fine-dining tasting menu</td>
-                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 950K / person</td>
-                </tr>
-                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
-                  <td className="px-5 py-3">BBQ &amp; group catering</td>
-                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 700K / person</td>
-                </tr>
-                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
-                  <td className="px-5 py-3">Wedding catering</td>
-                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>IDR 1.5M / person</td>
-                </tr>
-                <tr className="border-b" style={{ borderColor: 'var(--u-border)' }}>
-                  <td className="px-5 py-3">Waiters &amp; sommeliers</td>
-                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>Contact us for pricing</td>
-                </tr>
-                <tr>
-                  <td className="px-5 py-3">Cocktail packages</td>
-                  <td className="px-5 py-3 text-right font-medium" style={{ color: 'var(--u-text)' }}>From IDR 500K++ / guest (min 10)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-4 text-sm text-center" style={{ color: 'var(--u-text-muted)' }}>
-            All prices ++ (11% government tax + 10% service charge). Every quote is fixed and itemised before you commit — a {siteFacts.depositPercent}% deposit confirms your date, and groceries for daily chef service are billed at cost with receipts.{' '}
-            <Link to="/pricing" className="font-semibold underline-offset-4 hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-              See the full price tables →
-            </Link>
+          <PriceCards />
+          <p className="mt-3 text-center text-xs sm:text-sm" style={{ color: 'var(--u-text-muted)' }}>
+            Fixed quotes before you deposit. {siteFacts.depositPercent}% confirms your date.
           </p>
         </div>
       </section>
@@ -557,12 +488,12 @@ export default function HubPage() {
 
       {/* HOW IT WORKS */}
       <section
-        className="cv-auto relative min-h-[900px] flex flex-col items-center justify-center overflow-hidden py-20 md:py-32 px-5 md:px-12"
+        className="hiw-section cv-auto relative flex min-h-0 flex-col items-center justify-center overflow-hidden py-12 md:min-h-[700px] md:py-32 px-5 md:px-12 mobile-bg-scroll"
         style={{
           backgroundImage: 'url(/generated/mychef-misc-bali-hero-how-it-works.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
+          backgroundAttachment: 'scroll',
         }}
       >
         {/* Warm overlay */}
@@ -586,7 +517,7 @@ export default function HubPage() {
               <div style={{ width: '60px', height: '1px', background: '#C5A028' }} />
             </div>
             <h2
-              className="text-5xl md:text-7xl leading-tight mb-6"
+              className="mb-4 text-3xl leading-tight sm:text-5xl md:mb-6 md:text-7xl"
               style={{ fontFamily: "'Playfair Display', serif", fontWeight: 400, color: '#1E1E1E', lineHeight: 0.95 }}
             >
               How It Works
@@ -682,7 +613,7 @@ export default function HubPage() {
           {/* CTA Button and trust line */}
           <div className="flex flex-col items-center">
             <a
-              href="https://wa.me/6289674072020?text=Hi%20myCHEF,%20I%20would%20like%20to%20arrange%20dining%20at%20my%20villa"
+              href={buildWhatsAppUrl({ serviceName: 'villa dining in Bali', intent: 'a quote within 2 hours' })}
               target="_blank"
               rel="noopener noreferrer"
               data-source="homepage-hiw-cta"
@@ -713,7 +644,7 @@ export default function HubPage() {
       </section>
 
       {/* OUR PRIVATE CHEF SERVICES IN BALI */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14">
             <p className="u-label mb-4">Services</p>
@@ -749,8 +680,8 @@ export default function HubPage() {
         </div>
       </section>
 
-      {/* PRIVATE CHEF OR PERSONAL CHEF? */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      {/* PRIVATE CHEF OR PERSONAL CHEF? — desktop/tablet; home spine keeps mobile shorter */}
+      <section className="hidden md:block px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[800px] mx-auto text-center">
           <p className="u-label mb-4">The Difference</p>
           <h2 className="u-heading text-4xl md:text-5xl mb-6">Private Chef or Personal Chef?</h2>
@@ -764,7 +695,7 @@ export default function HubPage() {
       </section>
 
       {/* MEET THE CHEFS */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14">
             <p className="u-label mb-4">The Team</p>
@@ -799,7 +730,7 @@ export default function HubPage() {
       </section>
 
       {/* WHO WE ARE */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
@@ -851,7 +782,7 @@ export default function HubPage() {
       </section>
 
       {/* WHY BOOK myCHEF */}
-      <section className="cv-auto diff-section py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="cv-auto diff-section px-5 py-12 sm:px-6 md:py-24" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-10">
             <p className="u-label mb-4">Why Book myCHEF</p>
@@ -860,7 +791,16 @@ export default function HubPage() {
               myCHEF was founded by Adriano, trained under a Michelin-starred chef in {siteFacts.founderTrainingCity}, after he saw the gap between Bali&apos;s world-class villas and the dining served inside them. Today we are a 50+ person Indonesian hospitality team — not a freelancer, not a marketplace.
             </p>
           </div>
-          <div className="overflow-x-auto mb-6">
+          <div className="mb-6 space-y-3 md:hidden">
+            {COMPARISON_ROWS.map((row) => (
+              <div key={row.feature} className="rounded-2xl border p-4" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+                <p className="mb-2 text-sm font-semibold" style={{ color: 'var(--u-text)' }}>{row.feature}</p>
+                <p className="text-sm font-semibold" style={{ color: 'var(--u-accent)' }}>myCHEF: {row.mychef}</p>
+                <p className="mt-1 text-xs" style={{ color: 'var(--u-text-muted)' }}>Freelance: {row.freelance} · Marketplace: {row.marketplace}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mb-6 hidden overflow-x-auto md:block">
             <table className="w-full min-w-[640px] text-sm border rounded-2xl overflow-hidden" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
               <thead>
                 <tr className="border-b" style={{ borderColor: 'var(--u-border)', background: 'var(--u-bg)' }}>
@@ -893,8 +833,8 @@ export default function HubPage() {
       {/* PRIVATE CHEF SERVICE IN BALI — TRUST SECTION */}
       <section ref={trustRef} style={{ background: '#faf8f3' }} className="cv-auto py-0">
         <div
-          className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-0 items-center min-h-[calc(100vh-82px)]"
-          style={{ padding: '96px 7vw 72px' }}
+          className="grid grid-cols-1 items-center gap-0 lg:grid-cols-[0.9fr_1.1fr] min-h-0 lg:min-h-[calc(100vh-82px)]"
+          style={{ padding: '48px 5vw 40px' }}
         >
           {/* Left: Content */}
           <div className="flex flex-col justify-center pr-0 lg:pr-12">
@@ -908,7 +848,7 @@ export default function HubPage() {
 
             {/* Main Heading */}
             <h2
-              className="mb-8 text-5xl lg:text-6xl leading-tight"
+              className="mb-4 text-3xl leading-tight sm:mb-8 sm:text-5xl lg:text-6xl"
               style={{ fontFamily: "'Playfair Display', serif", color: '#1a1714', fontWeight: 400 }}
             >
               Private Chef Service in Bali
@@ -1041,7 +981,7 @@ export default function HubPage() {
       </section>
 
       {/* Photo gallery */}
-      <section className="py-16 md:py-24 px-6 bg-white">
+      <section className="bg-white px-5 py-12 sm:px-6 md:py-20">
         <div className="max-w-[1280px] mx-auto">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Gallery</p>
           <h2 className="font-playfair text-3xl md:text-4xl mb-8">Private dining moments in Bali</h2>
@@ -1060,84 +1000,8 @@ export default function HubPage() {
         </div>
       </section>
 
-      {/* BAR SERVICES FOR VENUES */}
-      <section className="py-16 md:py-24 px-6 bg-[#FAFAF8]">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">New: Bar Services for Venues</p>
-              <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1A1A1A] mb-6">
-                Bar Services for Venues
-              </h2>
-              <div className="space-y-4 text-[#4A4745] max-w-xl">
-                <p className="text-lg leading-relaxed">
-                  The same team Bali's villa owners trust with their kitchens now fixes, staffs and manages bars. From a leaking pour cost to a full pre-opening build, we bring the same discipline to the other side of the pass.
-                </p>
-                <p className="leading-relaxed">
-                  Audit first. Numbers in writing. One accountable partner.
-                </p>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-8">
-                <div>
-                  <p className="font-playfair text-3xl text-[#1A1A1A]">560+</p>
-                  <p className="text-sm text-[#4A4745]">events served</p>
-                </div>
-                <div>
-                  <p className="font-playfair text-3xl text-[#1A1A1A]">500+</p>
-                  <p className="text-sm text-[#4A4745]">villa bookings</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { title: 'Consulting', href: '/bar-services/#consulting', description: 'Audit, costing, menu development, signatures and new bar setup.' },
-                { title: 'Staffing', href: '/bar-services/#staffing', description: 'Temporary bartenders, permanent recruitment and equipment rental.' },
-                { title: 'Management', href: '/bar-services/#management', description: 'Training and monthly fractional bar management support.' },
-                { title: 'Flagship', href: '/bar-services/complete-bar-performance-programme/', description: 'The complete annual bar performance programme.' },
-              ].map((card) => (
-                <Link
-                  key={card.title}
-                  to={card.href}
-                  className="group block bg-white p-6 rounded-2xl border border-black/5 shadow-sm transition-all hover:border-[#C5A028]/30 hover:shadow-lg"
-                >
-                  <h3 className="font-playfair text-xl text-[#1A1A1A] mb-2 group-hover:text-[#C5A028] transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-[#4A4745] mb-4 leading-relaxed">
-                    {card.description}
-                  </p>
-                  <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-[#C5A028]">
-                    Learn more <ArrowRight className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://wa.me/6289674072020?text=Hi%20MyChef%2C%20I%20manage%20a%20venue%20in%20Bali%20and%20saw%20your%20new%20bar%20services.%20Can%20we%20talk%3F"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-source="homepage-bar-services-cta"
-              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
-              style={{ background: '#C5A028', color: '#fff' }}
-            >
-              <MessageCircle className="w-4 h-4" /> Talk to Our Bar Team on WhatsApp
-            </a>
-            <Link
-              to="/bar-services/"
-              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full border border-[#1A1A1A]/10 text-[#1A1A1A] transition-all hover:bg-black/5"
-            >
-              See All Bar Services <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Single social-proof section (was dual: TestimonialBlock + review grid). Full set on /reviews. */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Guest Words</p>
@@ -1168,7 +1032,7 @@ export default function HubPage() {
           </div>
         </div>
       </section>
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14 md:mb-20">
             <p className="u-label mb-4">Where We Serve</p>
@@ -1245,7 +1109,7 @@ export default function HubPage() {
       </section>
 
       {/* VILLA & AIRBNB OWNERS */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="hidden md:block px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
@@ -1291,7 +1155,7 @@ export default function HubPage() {
       </section>
 
       {/* BOOKING WITH CONFIDENCE */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-14">
             <p className="u-label mb-4">Guarantees</p>
@@ -1318,7 +1182,7 @@ export default function HubPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Questions</p>
@@ -1326,7 +1190,10 @@ export default function HubPage() {
             <p className="mb-2" style={{ color: 'var(--u-text-muted)' }}>Still unsure? Message us on WhatsApp — we respond within 2 hours.</p>
           </div>
           {/* No in-accordion WA CTAs (ctaEvery omitted) — one end CTA is enough on an already conversion-heavy homepage. */}
-          <FAQAccordion items={FAQS} defaultOpenCount={4} showToc />
+          <FAQAccordion items={HOME_FAQS} defaultOpenCount={2} showToc={false} />
+          <p className="mt-6 text-center text-sm" style={{ color: 'var(--u-text-muted)' }}>
+            {FAQS.length - HOME_FAQS.length}+ more answers on the full FAQ.
+          </p>
           <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={`https://wa.me/${siteFacts.whatsappNumber}?text=${encodeURIComponent('Hi myCHEF, I have a question about private chef service in Bali.')}`}
@@ -1345,7 +1212,7 @@ export default function HubPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 px-6" style={{ background: 'var(--u-bg-alt)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-16" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[1100px] mx-auto rounded-[28px] border border-black/5 bg-white p-8 md:p-10">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div className="max-w-[560px]">
@@ -1374,7 +1241,7 @@ export default function HubPage() {
       </section>
 
       {/* BLOG POSTS */}
-      <section className="py-24 md:py-32 px-6" style={{ background: 'var(--u-bg)' }}>
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-16">
             <p className="u-label mb-4">Blog & Guides</p>
@@ -1417,39 +1284,7 @@ export default function HubPage() {
               </div>
             </Link>
 
-            <Link to="/blog/chef-qualifications-credentials-bali-hiring" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
-                <span className="text-[#C5A028] font-serif text-3xl">⭐</span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Chef Qualifications & Training</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>What credentials matter when hiring a private chef for your villa experience.</p>
-                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
-              </div>
-            </Link>
-
-            <Link to="/blog/private-chef-cost-bali" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
-                <span className="text-[#C5A028] font-serif text-3xl">💰</span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Private Chef Pricing Breakdown</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Understand costs: from ingredients and team size to seasonal pricing and minimums.</p>
-                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
-              </div>
-            </Link>
-
-            <Link to="/blog/fine-dining-trends-bali-2026-innovations" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
-                <span className="text-[#C5A028] font-serif text-3xl">🍽️</span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Fine Dining Trends 2026</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Discover what's trending in luxury villa dining, from plating to ingredients.</p>
-                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
-              </div>
-            </Link>
-          </div>
+            </div>
           <div className="text-center mt-12">
             <Link to="/journal" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#1A1A1A' }}>
               View All Articles <ArrowRight className="w-4 h-4" />
@@ -1459,7 +1294,7 @@ export default function HubPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-24 md:py-32 px-6 relative overflow-hidden">
+      <section className="relative overflow-hidden px-5 py-16 sm:px-6 md:py-28">
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-hub-bali.webp"
@@ -1483,7 +1318,7 @@ export default function HubPage() {
             Most inquiries are answered within 2 hours. No deposit required to start planning.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/6289674072020" target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
+            <a href={buildWhatsAppUrl({ serviceName: 'a private chef in Bali', intent: 'a quote within 2 hours' })} target="_blank" rel="noopener noreferrer" data-source="homepage-final-cta" className="inline-flex items-center gap-2 px-10 py-5 bg-[#C5A028] text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white">
               <Phone className="w-4 h-4" /> Get Your Private Chef Quote within 2 Hours <span aria-hidden="true">→</span>
             </a>
             <Link to="/contact" className="inline-block px-10 py-5 border border-white/40 text-white text-sm font-medium tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white">
@@ -1495,11 +1330,15 @@ export default function HubPage() {
       <StickyMobileCTA
         pageSource="home"
         serviceType="hub"
-        label="Get a Private Chef Quote via WhatsApp"
-        serviceName="private chef in Bali"
-        intent="quote and availability"
+        label="WhatsApp quote · reply in 2h"
+        serviceName="a private chef in Bali"
+        intent="a quote within 2 hours"
       />
-    {/* SEO article body removed from homepage — it duplicated H2s/FAQs already in the UI and bloated the page. Deep copy lives on /private-chef-bali, /pricing and service pages. */}
+      <AvailabilitySheet
+        open={availabilityOpen}
+        onClose={() => setAvailabilityOpen(false)}
+        pageSource="home"
+      />
     </div>
   )
 }

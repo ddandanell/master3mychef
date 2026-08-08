@@ -23,10 +23,10 @@ interface StickyMobileCTAProps {
  * so the message is qualified (service + date + guests + area + intent) via the shared helper.
  */
 export default function StickyMobileCTA({
-  label = 'Get a Free Quote via WhatsApp',
+  label = 'WhatsApp quote · reply in 2h',
   serviceName,
-  intent,
-  message = 'Hi! I found you on your website and would like a quote.',
+  intent = 'pricing and availability',
+  message = 'Hi myCHEF, I found you on your website and would like a quote.',
   pageSource,
   serviceType: _serviceType = '',
 }: StickyMobileCTAProps) {
@@ -35,16 +35,20 @@ export default function StickyMobileCTA({
     : `https://wa.me/${PHONE.digits}?text=${encodeURIComponent(message)}`
 
   return (
-    <div data-sticky-mobile-cta className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+    <div
+      data-sticky-mobile-cta
+      className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+    >
       <a
         href={waUrl}
         target="_blank"
         rel="noopener noreferrer"
         data-source={`${pageSource}--sticky-mobile-cta`}
-        className="flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[1.5px] h-14 w-full hover:bg-[#B08F20] active:bg-[#9A7E1C] transition-colors"
+        className="flex h-14 min-h-[52px] w-full items-center justify-center gap-2 bg-[#C5A028] text-sm font-semibold uppercase tracking-[1.5px] text-[#1A1A1A] transition-colors hover:bg-[#B08F20] active:bg-[#9A7E1C]"
         aria-label={label}
       >
-        <MessageCircle className="w-5 h-5 flex-shrink-0" aria-hidden="true" />
+        <MessageCircle className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
         <span>{label}</span>
       </a>
     </div>

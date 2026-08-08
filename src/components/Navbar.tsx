@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, Sparkles, type LucideIcon } from 'lucide-react'
-import { PILLARS, LOCATIONS, hasLocationPage } from '@/data/siteArchitecture'
+import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, Sparkles, MessageCircle, type LucideIcon } from 'lucide-react'
+import { PILLARS, LOCATIONS, hasLocationPage, PHONE } from '@/data/siteArchitecture'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 
 // Map icon names to Lucide React icon components
@@ -52,6 +53,25 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Experience', href: '/experiences', icon: Heart, accent: '#C5A028' },
   { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
   { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
+  { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
+]
+
+const MOBILE_PRIMARY: NavItem[] = [
+  { label: 'Private Chef', href: '/private-chef-bali', icon: ChefHat, accent: '#C5A028' },
+  { label: 'Pricing', href: '/pricing', icon: BookOpen, accent: '#C5A028' },
+  { label: 'Catering', href: '/catering', icon: Users, accent: '#C5A028' },
+  { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
+  { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
+]
+
+const MOBILE_MORE: NavItem[] = [
+  { label: 'Locations', href: '/locations', icon: MapPin, accent: '#C5A028' },
+  { label: 'Dining Styles', href: '/dining-styles', icon: BookOpen, accent: '#C5A028' },
+  { label: 'Experience', href: '/experiences', icon: Heart, accent: '#C5A028' },
+  { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
+  { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
+  { label: 'Journal', href: '/journal', icon: BookOpen, accent: '#C5A028' },
+  { label: 'FAQ', href: '/faq', icon: BookOpen, accent: '#C5A028' },
   { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
 ]
 
@@ -500,23 +520,23 @@ export default function Navbar() {
           <p className="text-[11px] uppercase tracking-[0.34em] text-[#C5A028] mb-6">Private Dining in Bali</p>
           <div className="h-px bg-gradient-to-r from-[#C5A028]/55 via-[#C5A028]/18 to-transparent mb-6" />
 
-          {/* Mobile nav items — accordion style (scrollable so long menus + expanded accordions never get cut off) */}
-          <div className="space-y-2 flex-1 min-h-0 overflow-y-auto overscroll-contain pr-1">
-            {NAV_ITEMS.map((item) => {
+          {/* Mobile nav: Primary 5 first, then More — reduces decision fatigue */}
+          <div className="space-y-2 flex-1 min-h-0 overflow-y-auto overscroll-contain pr-1 pb-4">
+            <p className="px-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#C5A028]/90">Primary</p>
+            {MOBILE_PRIMARY.map((item) => {
               const Icon = item.icon
               const active = isActivePath(location.pathname, item.href)
               const subpages = NAV_SUBPAGES[item.href] ?? []
               const isExpanded = expandedItems.has(item.href)
 
               return (
-                <div key={item.href}>
+                <div key={`primary-${item.href}`}>
                   {subpages.length > 0 ? (
                     <>
-                      {/* Accordion trigger — no navigation, just expand */}
                       <button
                         type="button"
                         onClick={() => toggleExpanded(item.href)}
-                        className={`w-full flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
+                        className={`w-full flex items-center gap-4 rounded-2xl px-4 py-3.5 min-h-[48px] transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
                           active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
                         }`}
                       >
@@ -586,7 +606,7 @@ export default function Navbar() {
                         setExpandedItems(new Set())
                       }}
                       aria-current={active ? 'page' : undefined}
-                      className={`flex items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
+                      className={`flex min-h-[48px] items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
                         active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
                       }`}
                     >
@@ -602,12 +622,110 @@ export default function Navbar() {
                 </div>
               )
             })}
+
+            <p className="mt-4 px-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400">More</p>
+            {MOBILE_MORE.map((item) => {
+              const Icon = item.icon
+              const active = isActivePath(location.pathname, item.href)
+              const subpages = NAV_SUBPAGES[item.href] ?? []
+              const isExpanded = expandedItems.has(item.href)
+
+              return (
+                <div key={`more-${item.href}`}>
+                  {subpages.length > 0 ? (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() => toggleExpanded(item.href)}
+                        className={`flex min-h-[48px] w-full items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C5A028] ${
+                          active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
+                        }`}
+                      >
+                        <Icon className="h-5 w-5 flex-shrink-0 text-[#C5A028]" strokeWidth={1.6} />
+                        <span
+                          className={`flex-1 text-left text-[16px] ${active ? 'text-[#C5A028]' : 'text-gray-900'}`}
+                          style={{ fontFamily: "'Playfair Display', serif" }}
+                        >
+                          {item.label}
+                        </span>
+                        <ChevronDown
+                          className={`h-4 w-4 flex-shrink-0 text-gray-600 transition-transform ${
+                            isExpanded ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      {isExpanded && (
+                        <div className="ml-6 mt-2 space-y-2 border-l border-[#C5A028]/20 pl-4">
+                          {subpages.map((subpage) => {
+                            const subpageActive = isActivePath(location.pathname, subpage.href)
+                            return (
+                              <Link
+                                key={subpage.href}
+                                to={subpage.href}
+                                onClick={() => {
+                                  setMenuOpen(false)
+                                  setExpandedItems(new Set())
+                                }}
+                                aria-current={subpageActive ? 'page' : undefined}
+                                className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm transition-colors ${
+                                  subpageActive
+                                    ? 'bg-[#C5A028]/10 text-[#C5A028]'
+                                    : 'text-gray-600 hover:bg-gray-100 hover:text-[#C5A028]'
+                                }`}
+                                style={{ fontFamily: "'Playfair Display', serif" }}
+                              >
+                                {subpage.label}
+                              </Link>
+                            )
+                          })}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      onClick={() => {
+                        setMenuOpen(false)
+                        setExpandedItems(new Set())
+                      }}
+                      aria-current={active ? 'page' : undefined}
+                      className={`flex min-h-[48px] items-center gap-4 rounded-2xl px-4 py-3.5 transition-colors ${
+                        active ? 'bg-[#C5A028]/10 border border-[#C5A028]/20' : 'hover:bg-gray-100'
+                      }`}
+                    >
+                      <Icon className="h-5 w-5 flex-shrink-0 text-[#C5A028]" strokeWidth={1.6} />
+                      <span
+                        className={`text-[16px] ${active ? 'text-[#C5A028]' : 'text-gray-900'}`}
+                        style={{ fontFamily: "'Playfair Display', serif" }}
+                      >
+                        {item.label}
+                      </span>
+                    </Link>
+                  )}
+                </div>
+              )
+            })}
           </div>
 
+          <div className="sticky bottom-0 border-t border-black/5 bg-white pt-3">
+            <a
+              href={buildWhatsAppUrl({
+                serviceName: 'a private chef in Bali',
+                intent: 'pricing and availability',
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-source="mobile-nav-whatsapp"
+              onClick={() => setMenuOpen(false)}
+              className="flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#C5A028] px-6 py-3.5 text-sm font-semibold uppercase tracking-widest text-[#111]"
+            >
+              <MessageCircle className="h-5 w-5" aria-hidden="true" />
+              WhatsApp quote · reply in 2h
+            </a>
+            <p className="mt-2 text-center text-[11px] text-gray-400">or call {PHONE.display}</p>
+          </div>
         </div>
       </div>
-
-      {/* ── Top padding spacer (height of navbar) ── */}
     </>
   )
 }

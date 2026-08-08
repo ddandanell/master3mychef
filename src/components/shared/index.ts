@@ -10,3 +10,7 @@ export { FineDiningRiskReversal, CateringRiskReversal, EventsRiskReversal, Staff
 export { default as StrategicLinksSection } from './StrategicLinksSection'
 export { default as CateringDiscoverySection } from './CateringDiscoverySection'
 export { ArticleContentSection } from './ArticleContentSection'
+
+export { default as PriceCards } from './PriceCards'
+export { default as AvailabilitySheet } from './AvailabilitySheet'
+export { default as StickyMobileCTA } from './StickyMobileCTA'

@@ -9,6 +9,7 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-experience-bali-aura-toast.webp": { width: 1024, height: 576 },
   "/generated/mychef-misc-bali-avatar-ai.webp": { width: 1024, height: 1024 },
   "/generated/mychef-location-bali-hub-hero.webp": { width: 1440, height: 800 },
+  "/generated/mychef-location-bali-hub-hero-800.webp": { width: 800, height: 444 },
   "/generated/mychef-location-bali-locations-sunset.webp": { width: 1920, height: 1080 },
   "/generated/mychef-misc-bali-about-best-partner-2026.webp": { width: 612, height: 408 },
   "/generated/mychef-misc-bali-book-hero.webp": { width: 1440, height: 800 },

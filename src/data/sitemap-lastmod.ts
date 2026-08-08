@@ -133,7 +133,7 @@ export const SITEMAP_LASTMOD: Record<string, string> = {
   "/why-mychef": "2026-08-06",
   "/calculator": "2026-06-25",
   "/help": "2026-05-28",
-  "/private-chef-bali": "2026-08-07",
+  "/private-chef-bali": "2026-08-09",
   "/recommended-services": "2026-05-19",
   "/join-our-team": "2026-06-19",
   "/help/getting-started": "2026-05-20",

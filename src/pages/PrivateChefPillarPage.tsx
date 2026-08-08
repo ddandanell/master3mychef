@@ -56,8 +56,31 @@ const SITE = 'https://mychef.id'
 const CANONICAL = `${SITE}/private-chef-bali`
 
 const WA = buildWhatsAppUrl({
-  serviceName: 'a private chef in Bali',
-  intent: 'prices and availability',
+  serviceName: 'a private chef in Bali for my villa',
+  intent: 'availability and a fixed all-in price',
+  date: 'not sure yet',
+  guests: 'not sure yet',
+  area: 'not sure yet',
+  extraContext: 'Meals per day: not sure yet (1, 2 or 3).',
+})
+
+const waForPlan = (planName: string) =>
+  buildWhatsAppUrl({
+    serviceName: `the ${planName} private chef package in Bali`,
+    intent: 'availability and a fixed all-in price',
+    date: 'not sure yet',
+    guests: 'not sure yet',
+    area: 'not sure yet',
+    extraContext: `Interested in ${planName}.`,
+  })
+
+const WA_ROTATION = buildWhatsAppUrl({
+  serviceName: 'a 7+ day private chef stay with Chef Rotation in Bali',
+  intent: 'availability and a fixed all-in price',
+  date: 'not sure yet',
+  guests: 'not sure yet',
+  area: 'not sure yet',
+  extraContext: 'Preferred cuisines: not sure yet.',
 })
 
 /* ------------------------------------------------------------------ *
@@ -223,34 +246,91 @@ const HOW_IT_WORKS = [
 const AREAS = PUBLISHED_AREA_SLUGS
 
 /**
- * Gallery. Four different moments of one chef day, so it reads as a service
- * rather than a menu: breakfast, the grill, a plated dinner, the table.
- * Dimensions are taken from src/lib/imageDimensions.ts to avoid layout shift.
+ * Experience story campaign — hospitality sequence, not food close-ups.
+ * Sells trust + luxury villa service: arrival → prep → service → atmosphere → cleanup.
  */
-const GALLERY = [
+const EXPERIENCE_STORY = [
   {
-    src: '/generated/mychef-catering-bali-floating-breakfast.webp',
-    alt: 'Floating breakfast prepared by a private chef at a Bali villa pool',
-    w: 1200,
-    h: 1500,
+    when: '01 · Arrival',
+    title: 'The team arrives at your villa',
+    body: 'Chef and assistants in uniform, insulated boxes, flowers, SUV at the gate. Villa staff welcome them in. Guests are not managing logistics — the five-star kitchen is coming to you.',
+    src: '/generated/pcb-story-01-arrival.webp',
+    alt: 'Private chef Bali team arriving at a luxury villa entrance with ingredient boxes and flowers',
   },
   {
-    src: '/generated/mychef-finedining-bali-sol-bbq.webp',
-    alt: 'Private chef grilling seafood and meat poolside at a villa in Bali',
-    w: 1200,
-    h: 1500,
+    when: '02 · Preparation',
+    title: 'Your kitchen becomes a restaurant pass',
+    body: 'Marble counters, mise en place, polished plates, calm focus. No chaos. The same discipline you would expect behind a hotel kitchen door — inside your villa.',
+    src: '/generated/pcb-story-02-kitchen-prep.webp',
+    alt: 'Private chef and kitchen team preparing mise en place in a luxury Bali villa kitchen',
   },
   {
-    src: '/generated/mychef-experience-bali-luna-gallery-3.webp',
-    alt: 'Plated dinner course served by a private chef inside a Bali villa',
-    w: 1200,
-    h: 1500,
+    when: '03 · Service',
+    title: 'Restaurant service at your table',
+    body: 'Courses placed, wine poured, guests talking to each other — not posing for a photo. Hospitality is the product; the plate is only part of it.',
+    src: '/generated/pcb-story-03-restaurant-service.webp',
+    alt: 'Private chef and waiters serving dinner and wine to guests at a luxury Bali villa table',
   },
   {
-    src: '/generated/mychef-experience-bali-luna-table.webp',
-    alt: 'Villa dining table set for a group before private chef dinner service in Bali',
-    w: 1200,
-    h: 1500,
+    when: '04 · Authority',
+    title: 'The chef presents the evening',
+    body: 'Menu explained at the table. Guests engaged. Human interaction builds trust more than any food close-up can.',
+    src: '/generated/pcb-story-04-menu-presentation.webp',
+    alt: 'Private chef explaining the menu to guests at an open-air Bali villa dining table',
+  },
+  {
+    when: '05 · Atmosphere',
+    title: 'Blue-hour villa dining',
+    body: 'Infinity pool, horizon light, candles, conversation. The chef works quietly in the background. You bought the evening — not only the food.',
+    src: '/generated/pcb-story-05-outdoor-dinner.webp',
+    alt: 'Luxury outdoor villa dinner at blue hour with private chef service in the background',
+  },
+  {
+    when: '06 · Process',
+    title: 'Calm behind the scenes',
+    body: 'Plating, polished cutlery, folded napkins. Restaurant standards without restaurant stress.',
+    src: '/generated/pcb-story-06-behind-scenes.webp',
+    alt: 'Private chef team plating and polishing cutlery in a luxury Bali villa kitchen',
+  },
+  {
+    when: '07 · Cleanup',
+    title: 'Kitchen left spotless',
+    body: 'Team leaves with their bags. Counters clean, flowers still on the island. One of the strongest reasons families rebook.',
+    src: '/generated/pcb-story-07-spotless-kitchen.webp',
+    alt: 'Spotless luxury villa kitchen as private chef team leaves after service',
+  },
+] as const
+
+const CROSS_SELL = [
+  {
+    title: 'Daily private chef',
+    href: '/private-chef-bali#prices',
+    desc: '1–3 meals per day at published day rates — the stay backbone.',
+  },
+  {
+    title: 'Event catering',
+    href: '/catering',
+    desc: 'BBQ, buffet, plated and drop-off when one night needs production scale.',
+  },
+  {
+    title: 'Mobile cocktail bar',
+    href: '/in-villa-service/bartenders',
+    desc: 'Party bar packages from IDR 500K++ per guest — we come to the villa.',
+  },
+  {
+    title: 'Fine dining dinner',
+    href: '/fine-dining',
+    desc: 'One celebration tasting menu with a larger brigade.',
+  },
+  {
+    title: 'Cooking class',
+    href: '/experiences/cooking-class',
+    desc: 'Hands-on Balinese or Indonesian lesson one afternoon of your stay.',
+  },
+  {
+    title: 'BBQ / villa parties',
+    href: '/catering/bbq-catering',
+    desc: 'Open-flame nights and garden parties stacked on the same team.',
   },
 ] as const
 
@@ -268,6 +348,18 @@ const FAQS = [
   {
     q: 'How much does a private chef cost in Bali?',
     a: `${privateChefPricing.headline} That is a day rate for one professional chef plus a dedicated assistant at your villa — not a per-person marketplace fee. Weekly bookings take ${STAY_DISCOUNTS.weekly.off * 100}% off; monthly take ${STAY_DISCOUNTS.monthly.off * 100}% off. Groceries are billed separately at cost with receipts. See the full table on our <a href="/pricing">pricing page</a> or this page’s <a href="#prices">meal plans</a>.`,
+  },
+  {
+    q: 'How much does it cost to hire a private chef in Bali per day?',
+    a: 'Daily villa chef hire (chef + assistant) is published as three plans: one meal from IDR 1,000,000++/day (IDR 1,210,000 all-in), two meals IDR 1,800,000++/day (IDR 2,178,000 all-in), three meals IDR 2,700,000++/day (IDR 3,267,000 all-in). Groceries are at cost with receipts. See <a href="#prices">meal plans</a>.',
+  },
+  {
+    q: 'How much does a private chef cost in Bali for a couple?',
+    a: 'For two people, most bookings use One Meal a Day at IDR 1,000,000++ (IDR 1,210,000 all-in) for dinner, or Two Meals if you want breakfast plus dinner. That is a luxury choice versus a restaurant for couples — published rates let you decide before you message. Groceries are extra at cost. Compare romantic formats on <a href="/fine-dining/romantic-dinner">romantic dinner</a>.',
+  },
+  {
+    q: 'How much does a private chef cost in Bali for a family of 6?',
+    a: 'Six people on Two Meals a Day is IDR 1,800,000++ for the chef team (about IDR 300,000 each before food), or IDR 1,620,000++ per day at the weekly rate for 7+ days. All-in chef team for a week of two meals is roughly IDR 13.7M before groceries. Worked example is on this page; full maths: <a href="/blog/private-chef-cost-bali">private chef cost guide</a>.',
   },
   {
     q: 'What is included in the private chef day rate?',
@@ -387,10 +479,6 @@ const FAQS = [
   },
   // AnswerSocrates / SEO guest questions (customer intent only — not chef job/salary queries)
   {
-    q: 'How much does it cost to hire a private chef in Bali per day?',
-    a: 'Daily villa chef hire (chef + assistant) is published as three plans: one meal from IDR 1,000,000++/day, two meals IDR 1,800,000++/day, three meals IDR 2,700,000++/day. Groceries are at cost with receipts. Single celebration dinners are often quoted per person instead — see the tables on this page and <a href="/pricing">pricing</a>.',
-  },
-  {
     q: 'How much does a private chef cost per month in Bali?',
     a: 'Longer stays use the same day rates with monthly discount (−20% from 28+ days) or a live-in placement for full-time households. Message dates and meal pattern for a fixed monthly proposal. <a href="/private-chef-bali">Day rates →</a> · <a href="/staffing/live-in-chef">Live-in chef →</a>',
   },
@@ -498,22 +586,24 @@ export default function PrivateChefPillarPage() {
           'Hire a private chef in Bali. One meal IDR 1M++, two meals IDR 1.8M++, three meals IDR 2.7M++ per day. Chef + assistant, groceries at cost. WhatsApp myCHEF.'
         }
         canonical={CANONICAL}
-        ogImage={`${SITE}/generated/mychef-experience-bali-home-hero-ivory-villa.webp`}
+        ogImage={`${SITE}/generated/pcb-story-03-restaurant-service.webp`}
         jsonLd={schemas}
       />
 
       {/* ---------------------------------------------------------- HERO */}
       <section className="relative min-h-[86vh] flex items-end overflow-hidden bg-[#0E0E0E]">
         <OptimizedImage
-          src="/generated/mychef-experience-bali-home-hero-ivory-villa.webp"
-          alt="Private chef cooking and serving dinner in a Bali villa for a group of guests"
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.72]"
-          width={1600}
-          height={1067}
+          src="/generated/pcb-story-03-restaurant-service.webp"
+          alt="Private chef and waiters serving a luxury villa dinner in Bali at golden hour"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          width={1344}
+          height={768}
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] via-[#0E0E0E]/55 to-[#0E0E0E]/10" />
+        {/* Photo must stay visible — only enough dark for white type */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0E0E0E]/88 via-[#0E0E0E]/45 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E]/75 via-transparent to-[#0E0E0E]/30" />
 
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pb-16 pt-32 w-full">
           <Breadcrumb items={[{ label: 'Private Chef Bali' }]} theme="dark" />
@@ -525,17 +615,42 @@ export default function PrivateChefPillarPage() {
           <h1 className="text-white font-playfair font-normal leading-[1.05] text-[2.4rem] sm:text-6xl lg:text-7xl max-w-4xl">
             Private Chef in Bali
           </h1>
-          {/* Price kept outside H1 so crawlers never see “BaliFrom …” concatenation, and H1 stays the clean head term. */}
+          {/* Price kept outside H1 so crawlers never see “BaliFrom …” concatenation. */}
           <p className="text-[#C5A028] italic font-playfair text-2xl sm:text-3xl mt-3 max-w-4xl">
-            From {formatIDR(MEAL_PLANS[0].daily)} a day.
+            From {formatIDR(MEAL_PLANS[0].daily)}++ a day ({formatIDR(Math.round(MEAL_PLANS[0].daily * 1.21))} all-in)
+          </p>
+          <p className="text-white/70 text-sm sm:text-base mt-2 max-w-2xl">
+            Published rates — no enquiry required to see what it costs.
           </p>
 
           <p className="text-white/75 text-base sm:text-lg max-w-2xl mt-6 leading-relaxed">
             Hire a private chef for your Bali villa. A named head chef and a dedicated assistant
-            arrive at your villa, source the ingredients fresh, cook, serve at your table and clean
-            the kitchen. You choose one, two or three meals a day. Every rate is published below —
-            you do not have to send an enquiry to find out what it costs.
+            arrive, source ingredients fresh, cook, serve at your table, and leave the kitchen clean.
+            Choose one, two or three meals a day. Every rate is published below.
           </p>
+
+          <div className="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-white/55 text-xs sm:text-sm">
+            <span>560+ events served</span>
+            <span className="text-white/25">·</span>
+            <span>12,000+ guests</span>
+            <span className="text-white/25">·</span>
+            <span>500+ villa bookings</span>
+            <span className="text-white/25">·</span>
+            <span>Reply within 2 hours</span>
+          </div>
+
+          <div className="flex flex-wrap gap-2 mt-5">
+            {['Same-day WhatsApp', 'Confirmation within the hour', '50% deposit', 'Full cleanup', 'Chef + assistant'].map(
+              (chip) => (
+                <span
+                  key={chip}
+                  className="border border-white/20 bg-white/5 text-white/70 text-[11px] sm:text-xs px-3 py-1.5"
+                >
+                  {chip}
+                </span>
+              ),
+            )}
+          </div>
 
           <div className="flex flex-wrap gap-3 mt-8">
             <a
@@ -544,18 +659,18 @@ export default function PrivateChefPillarPage() {
               className="inline-flex items-center gap-2 bg-[#C5A028] text-[#0E0E0E] px-7 py-4 text-sm font-semibold tracking-wide hover:bg-[#d4af37] transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              Check Your Dates on WhatsApp
+              Check availability &amp; all-in price
             </a>
             <a
               href="#prices"
               className="inline-flex items-center gap-2 border border-white/30 text-white px-7 py-4 text-sm font-semibold tracking-wide hover:bg-white/10 transition-colors"
             >
-              See All Prices
+              See published prices
             </a>
           </div>
 
           <p className="text-white/45 text-xs sm:text-sm mt-6">
-            {siteFacts.reviewFraming} · Reply within 2 hours
+            Fixed quote before any deposit · Chef + assistant on every booking · Reply within 2 hours
           </p>
         </div>
       </section>
@@ -629,7 +744,7 @@ export default function PrivateChefPillarPage() {
                 <p className="text-[#1A1A1A]/50 text-xs mt-5 italic">Best for: {plan.bestFor}</p>
 
                 <a
-                  href={WA}
+                  href={waForPlan(plan.name)}
                   data-source={`private-chef-pillar-plan-${plan.key}`}
                   className={`mt-6 text-center py-3.5 text-sm font-semibold tracking-wide transition-colors ${
                     i === 1
@@ -637,7 +752,7 @@ export default function PrivateChefPillarPage() {
                       : 'border border-[#1A1A1A]/20 text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white'
                   }`}
                 >
-                  Book {plan.name}
+                  Check {plan.name} availability
                 </a>
               </div>
             ))}
@@ -706,6 +821,106 @@ export default function PrivateChefPillarPage() {
             the balance is due {siteFacts.balanceTiming}.
           </p>
 
+          {/* Grocery cost reality + staffing — guest-facing only */}
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
+            <div className="border border-[#1A1A1A]/12 bg-white p-7">
+              <h3 className="text-xl font-playfair text-[#1A1A1A]">What will food actually cost?</h3>
+              <p className="text-[#1A1A1A]/70 text-sm mt-3 leading-relaxed">
+                Groceries are billed separately at cost with every receipt handed over. Before your
+                stay we build a written food estimate from your meal count, cuisine and guests. Typical
+                market-ingredient ranges guests see (before premium items):
+              </p>
+              <ul className="mt-4 space-y-2.5 text-sm text-[#1A1A1A]/75 leading-relaxed">
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="text-[#1A1A1A]">Couple · one dinner</strong> — often about IDR
+                    400,000–800,000 in groceries for two (mixed Western/Asian, local markets).
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="text-[#1A1A1A]">Family of six · two meals</strong> — often about
+                    IDR 1,200,000–2,500,000 in groceries that day, depending on protein and kids’
+                    plates.
+                  </span>
+                </li>
+                <li className="flex gap-2">
+                  <Check className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="text-[#1A1A1A]">Longer stays</strong> — we plan a weekly food
+                    budget up front so you are not surprised mid-week. Imported wagyu, lobster,
+                    oysters and truffle are quoted and approved first (often +IDR 100,000–500,000+ per
+                    person when chosen).
+                  </span>
+                </li>
+              </ul>
+              <p className="text-[#1A1A1A]/55 text-xs mt-4 leading-relaxed">
+                Full cost breakdown:{' '}
+                <Link to="/blog/private-chef-cost-bali" className="text-[#C5A028] hover:underline">
+                  private chef cost guide
+                </Link>
+                .
+              </p>
+            </div>
+            <div className="border border-[#1A1A1A]/12 bg-white p-7">
+              <h3 className="text-xl font-playfair text-[#1A1A1A]">Who does the standard team cover?</h3>
+              <p className="text-[#1A1A1A]/70 text-sm mt-3 leading-relaxed">
+                Every day rate includes one professional chef plus a dedicated assistant — so service
+                and cleanup can run together and you stay at the table. That pair is built for
+                intimate villa dining: typically couples through tables of about 8 guests on daily
+                hire, with menus planned for how you actually eat.
+              </p>
+              <p className="text-[#1A1A1A]/70 text-sm mt-3 leading-relaxed">
+                For larger tables, formal plated service, or party nights, we add waiters before you
+                commit — usually one waiter per 10 guests. Extra staff is quoted in writing (not
+                sprung on the night). Cocktail packages and butlers are available on the same
+                booking thread via{' '}
+                <Link to="/in-villa-service" className="text-[#C5A028] hover:underline">
+                  in-villa service
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 border border-[#C5A028]/35 bg-white p-7">
+            <h3 className="text-xl font-playfair text-[#1A1A1A]">Chef Rotation — free on 7+ day stays</h3>
+            <p className="text-[#1A1A1A]/70 text-sm mt-3 leading-relaxed max-w-3xl">
+              Chef Rotation is reserved for stays of 7 days or longer. On weekly and longer bookings
+              you can change specialist chefs day by day — Japanese, Balinese, Mediterranean,
+              plant-based — at no extra day-rate charge. Each cuisine has a dedicated head chef; when
+              you request a style we check that specialist’s real availability for your dates.
+            </p>
+            <a
+              href={WA_ROTATION}
+              data-source="private-chef-pillar-rotation"
+              className="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-[#C5A028] hover:underline"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Check 7+ day Chef Rotation availability →
+            </a>
+          </div>
+
+          <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 border border-[#1A1A1A]/10 bg-[#1A1A1A] p-7">
+            <div>
+              <p className="text-white font-playfair text-xl">Ready for a fixed all-in quote?</p>
+              <p className="text-white/55 text-sm mt-2 max-w-xl leading-relaxed">
+                Send dates, guest count, villa area and meals per day. Reply within 2 hours. Replacement
+                chef within 2 hours or 100% refund for that service · 50% deposit only.
+              </p>
+            </div>
+            <a
+              href={WA}
+              data-source="private-chef-pillar-pricing-cta"
+              className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#0E0E0E] px-7 py-4 text-sm font-semibold tracking-wide hover:bg-[#d4af37] transition-colors shrink-0"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Get a fixed quote on WhatsApp
+            </a>
+          </div>
+
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <Link to="/pricing" className="text-[#C5A028] font-medium hover:underline">
               Full price list for events and catering →
@@ -713,119 +928,14 @@ export default function PrivateChefPillarPage() {
             <Link to="/fine-dining" className="text-[#C5A028] font-medium hover:underline">
               One-off fine dining dinner instead? →
             </Link>
-            <Link to="/in-villa-service/bartenders" className="text-[#C5A028] font-medium hover:underline">
-              Add a mobile cocktail bar →
-            </Link>
-            <Link to="/catering" className="text-[#C5A028] font-medium hover:underline">
-              One-night catering packages →
+            <Link to="/blog/private-chef-cost-bali" className="text-[#C5A028] font-medium hover:underline">
+              Private chef cost guide →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* -------------------------------------- STACK: chef + bar + catering */}
-      <section className="bg-[#FAF8F4] py-16 sm:py-20" id="stack-with-bar-and-catering">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">
-            Complete villa F&amp;B
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
-            Private chef, catering and mobile bar — related products, one team
-          </h2>
-          <p className="text-[#1A1A1A]/65 mt-5 max-w-2xl leading-relaxed">
-            Daily chef hire is this page. When you host a party night, stack{' '}
-            <strong className="text-[#1A1A1A]/80">Bali catering</strong> for group formats and a{' '}
-            <strong className="text-[#1A1A1A]/80">mobile cocktail bar</strong> for drinks — or book a{' '}
-            <strong className="text-[#1A1A1A]/80">private cooking class</strong> for a hands-on villa afternoon.
-            Same WhatsApp thread, no freelance juggling.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
-            {[
-              {
-                title: 'Daily private chef',
-                href: '/private-chef-bali',
-                desc: '1–3 meals per day at published day rates — the stay backbone.',
-              },
-              {
-                title: 'Event catering',
-                href: '/catering',
-                desc: 'BBQ, buffet, plated and drop-off when one night needs production scale.',
-              },
-              {
-                title: 'Mobile cocktail bar',
-                href: '/in-villa-service/bartenders',
-                desc: 'Party bar packages from IDR 500K++ per guest — we come to the villa.',
-              },
-              {
-                title: 'Cooking class Bali',
-                href: '/experiences/cooking-class',
-                desc: 'Hands-on Balinese & Indonesian lessons in your villa kitchen — contact for a quote.',
-              },
-              {
-                title: 'Private cocktail party',
-                href: '/experiences/private-cocktail-party',
-                desc: 'Occasion plan: timeline, canapés and free-flow on the same bar products.',
-              },
-              {
-                title: 'Villa parties',
-                href: '/events/villa-parties',
-                desc: 'Pool and garden parties with food + bar catering stacked.',
-              },
-              {
-                title: 'Fine dining dinner',
-                href: '/fine-dining',
-                desc: 'One celebration tasting menu — add aperitivo cocktails if you like.',
-              },
-              {
-                title: 'Sushi masterclass',
-                href: '/experiences/sushi-masterclass',
-                desc: 'Private sushi making class at the villa — rice, rolls and tasting.',
-              },
-              {
-                title: 'Caviar experience',
-                href: '/experiences/caviar-experience',
-                desc: 'Premium caviar with champagne service — villa or yacht, contact for quote.',
-              },
-              {
-                title: 'Whiskey & cigar experience',
-                href: '/experiences/whiskey-cigar-experience',
-                desc: 'Guided whiskey tasting and premium cigar lounge with chef pairings.',
-              },
-              {
-                title: 'Honeymoon chef',
-                href: '/honeymoon-chef',
-                desc: 'Couples villa dining plans for honeymoons — owner of honeymoon chef intent.',
-              },
-              {
-                title: 'Proposal dinner',
-                href: '/proposal-dinner',
-                desc: 'Planning guide for villa proposals with private chef and setup.',
-              },
-              {
-                title: 'Seafood BBQ catering',
-                href: '/seafood-bbq-catering-bali',
-                desc: 'Jimbaran-style seafood BBQ packages for villa nights.',
-              },
-              {
-                title: 'Staffing & placement',
-                href: '/staffing',
-                desc: 'Long-term chef and villa staff placement across Bali.',
-              },
-            ].map((card) => (
-              <Link
-                key={card.href + card.title}
-                to={card.href}
-                className="block rounded-xl border border-[#1A1A1A]/10 bg-white p-5 hover:border-[#C5A028] transition-colors"
-              >
-                <h3 className="font-semibold text-[#1A1A1A] mb-2">{card.title}</h3>
-                <p className="text-sm text-[#1A1A1A]/65 leading-relaxed">{card.desc}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* -------------------------------------------------------- REVIEWS */}
+      {/* -------------------------------------------------------- REVIEWS (after price) */}
       <section className="bg-white py-20 sm:py-24">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">
@@ -834,8 +944,21 @@ export default function PrivateChefPillarPage() {
           <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
             Rated five stars by the guests we cook for
           </h2>
+          <p className="text-[#1A1A1A]/55 text-sm mt-3 max-w-2xl">
+            560+ events · 12,000+ guests · 500+ villa bookings — outcome-led feedback, not generic praise.
+          </p>
+          <div className="mt-10 mb-12 overflow-hidden rounded-sm">
+            <OptimizedImage
+              src="/generated/pcb-story-03-restaurant-service.webp"
+              alt="Restaurant-level private chef service and wine service at a luxury Bali villa dinner"
+              className="w-full aspect-[21/9] object-cover"
+              width={1344}
+              height={768}
+            />
+          </div>
           <div className="grid gap-8 md:grid-cols-3 mt-10">
             <blockquote className="border border-[#1A1A1A]/10 bg-[#FAF8F4] p-6">
+              <p className="text-[#C5A028] text-[11px] tracking-[0.18em] uppercase mb-2">Food quality · team</p>
               <p className="text-[#C5A028] text-sm tracking-[0.2em]" aria-label="5 out of 5 stars">
                 ★★★★★
               </p>
@@ -846,6 +969,7 @@ export default function PrivateChefPillarPage() {
               <footer className="text-sm text-[#1A1A1A]/55 mt-4">Luke Walker · Google review</footer>
             </blockquote>
             <blockquote className="border border-[#1A1A1A]/10 bg-[#FAF8F4] p-6">
+              <p className="text-[#C5A028] text-[11px] tracking-[0.18em] uppercase mb-2">Reliability · service</p>
               <p className="text-[#C5A028] text-sm tracking-[0.2em]" aria-label="5 out of 5 stars">
                 ★★★★★
               </p>
@@ -855,6 +979,7 @@ export default function PrivateChefPillarPage() {
               <footer className="text-sm text-[#1A1A1A]/55 mt-4">Mátyás · Google review</footer>
             </blockquote>
             <blockquote className="border border-[#1A1A1A]/10 bg-[#FAF8F4] p-6">
+              <p className="text-[#C5A028] text-[11px] tracking-[0.18em] uppercase mb-2">Allergies · rebooking</p>
               <p className="text-[#C5A028] text-sm tracking-[0.2em]" aria-label="5 out of 5 stars">
                 ★★★★★
               </p>
@@ -947,15 +1072,15 @@ export default function PrivateChefPillarPage() {
 
             <figure className="lg:sticky lg:top-24">
               <OptimizedImage
-                src="/generated/mychef-finedining-bali-sol-produce.webp"
-                alt="Fresh Balinese market produce sourced that morning by a myCHEF private chef"
-                className="w-full aspect-square object-cover"
-                width={900}
-                height={900}
+                src="/generated/pcb-story-02-kitchen-prep.webp"
+                alt="Professional private chef kitchen preparation in a luxury Bali villa"
+                className="w-full aspect-[16/10] object-cover"
+                width={1344}
+                height={768}
               />
               <figcaption className="text-[#1A1A1A]/50 text-xs mt-3 leading-relaxed">
-                A normal morning shop. Sourced to the menu, not to a shopping list you had to
-                write.
+                Mise en place in your villa kitchen. Shopping work included; groceries billed at cost
+                with receipts.
               </figcaption>
             </figure>
           </div>
@@ -1075,6 +1200,19 @@ export default function PrivateChefPillarPage() {
               </div>
             ))}
           </div>
+          <div className="mt-12 text-center">
+            <a
+              href={WA}
+              data-source="private-chef-pillar-howto-cta"
+              className="inline-flex items-center gap-2 bg-[#C5A028] text-[#0E0E0E] px-8 py-4 text-sm font-semibold tracking-wide hover:bg-[#d4af37] transition-colors"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Check your dates on WhatsApp
+            </a>
+            <p className="text-[#1A1A1A]/45 text-xs mt-4">
+              Fixed quote before any deposit · Reply within 2 hours · Peak Jul–Aug &amp; Christmas/NY often 2–4 weeks ahead
+            </p>
+          </div>
         </div>
       </section>
 
@@ -1181,24 +1319,103 @@ export default function PrivateChefPillarPage() {
         </div>
       </section>
 
-      {/* ------------------------------------------------------- GALLERY */}
-      <section className="bg-white pb-20 sm:pb-24">
+      {/* ------------------------------------------------ EXPERIENCE STORY */}
+      <section id="day-in-the-life" className="bg-white py-20 sm:py-28">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
+          <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">
+            The full experience
+          </p>
+          <h2 className="text-3xl sm:text-5xl font-playfair text-[#1A1A1A] leading-tight max-w-3xl">
             What a private chef day in a Bali villa looks like
           </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-10">
-            {GALLERY.map(({ src, alt, w, h }) => (
-              <OptimizedImage
-                key={src}
-                src={src}
-                alt={alt}
-                className="w-full aspect-[4/5] object-cover"
-                width={w}
-                height={h}
-              />
+          <p className="text-[#1A1A1A]/65 mt-5 max-w-2xl leading-relaxed">
+            You are not buying plates. You are buying a five-star restaurant that temporarily moves
+            into your villa — arrival, prep, hospitality, service, atmosphere, and a spotless kitchen
+            when we leave.
+          </p>
+
+          <div className="mt-14 space-y-16">
+            {EXPERIENCE_STORY.map((step, i) => (
+              <div
+                key={step.src}
+                className={`grid gap-8 lg:grid-cols-2 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}
+              >
+                <OptimizedImage
+                  src={step.src}
+                  alt={step.alt}
+                  className="w-full aspect-[16/10] object-cover"
+                  width={1344}
+                  height={768}
+                />
+                <div>
+                  <p className="text-[#C5A028] text-[11px] tracking-[0.18em] uppercase">{step.when}</p>
+                  <h3 className="text-2xl sm:text-3xl font-playfair text-[#1A1A1A] mt-3">{step.title}</h3>
+                  <p className="text-[#1A1A1A]/70 text-base mt-4 leading-relaxed">{step.body}</p>
+                </div>
+              </div>
             ))}
           </div>
+
+          <div className="mt-16 text-center">
+            <a
+              href={WA}
+              data-source="private-chef-pillar-day-cta"
+              className="inline-flex items-center gap-2 bg-[#C5A028] text-[#0E0E0E] px-8 py-4 text-sm font-semibold tracking-wide hover:bg-[#d4af37] transition-colors"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Check availability &amp; all-in price
+            </a>
+            <p className="text-[#1A1A1A]/45 text-xs mt-4">
+              Replacement within 2 hours or 100% refund for that service · Fixed quote before deposit
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------ COMPLETE VILLA F&B (compact, late) */}
+      <section className="bg-[#FAF8F4] py-16 sm:py-20" id="stack-with-bar-and-catering">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">
+            Complete villa F&amp;B
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight">
+            Stack catering or a bar when you host a party night
+          </h2>
+          <p className="text-[#1A1A1A]/65 mt-5 max-w-2xl leading-relaxed">
+            Daily private chef hire is the stay backbone. When you need production scale for one
+            night — BBQ, cocktail bar, cooking class — same WhatsApp thread, one team.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+            {CROSS_SELL.map((card) => (
+              <Link
+                key={card.href + card.title}
+                to={card.href}
+                className="block rounded-xl border border-[#1A1A1A]/10 bg-white p-5 hover:border-[#C5A028] transition-colors"
+              >
+                <h3 className="font-semibold text-[#1A1A1A] mb-2">{card.title}</h3>
+                <p className="text-sm text-[#1A1A1A]/65 leading-relaxed">{card.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pre-FAQ CTA band */}
+      <section className="bg-white py-14">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center border border-[#C5A028]/30 bg-[#FAF8F4] p-8 sm:p-10">
+          <h2 className="text-2xl sm:text-3xl font-playfair text-[#1A1A1A]">Still deciding?</h2>
+          <p className="text-[#1A1A1A]/65 text-sm mt-3 leading-relaxed max-w-xl mx-auto">
+            Send date, guest count, villa area and meals per day — fixed quote within 2 hours.
+            Replacement chef within 2 hours or 100% refund for that service · 50% deposit only.
+          </p>
+          <a
+            href={WA}
+            data-source="private-chef-pillar-prefaq-cta"
+            className="inline-flex items-center gap-2 mt-6 bg-[#C5A028] text-[#0E0E0E] px-8 py-4 text-sm font-semibold tracking-wide hover:bg-[#d4af37] transition-colors"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Get availability &amp; all-in price
+          </a>
         </div>
       </section>
 
@@ -1211,7 +1428,7 @@ export default function PrivateChefPillarPage() {
           <p className="text-[#4A4745] text-sm md:text-base leading-relaxed mb-10">
             Pricing, groceries, villa kitchens, allergies, kids, deposits and long-stay chef hire — the questions guests ask before booking a private chef in Bali.
           </p>
-          <FAQAccordion items={FAQS.map(({ q, a }) => ({ q, a }))} defaultOpenCount={2} showToc ctaEvery={5} />
+          <FAQAccordion items={FAQS.map(({ q, a }) => ({ q, a }))} defaultOpenCount={3} showToc ctaEvery={6} />
         </div>
       </section>
 
@@ -1222,11 +1439,12 @@ export default function PrivateChefPillarPage() {
             Book your chef
           </p>
           <h2 className="text-3xl sm:text-5xl font-playfair text-white leading-tight text-center">
-            Tell us your dates.
+            Hire a private chef for your Bali villa
           </h2>
           <p className="text-white/60 text-center mt-5 max-w-xl mx-auto leading-relaxed">
-            {privateChefPricing.headline} We reply within two hours with your chef, a sample menu and
-            the all-in total.
+            From {formatIDR(MEAL_PLANS[0].daily)}++ a day ({formatIDR(Math.round(MEAL_PLANS[0].daily * 1.21))} all-in) —
+            chef + assistant, groceries at cost with receipts, full cleanup. We reply within two hours
+            with availability and a fixed all-in total.
           </p>
 
           {/*
@@ -1246,11 +1464,11 @@ export default function PrivateChefPillarPage() {
               className="inline-flex items-center gap-2 bg-[#C5A028] text-[#0E0E0E] px-8 py-4 text-sm font-semibold tracking-wide hover:bg-[#d4af37] transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-              Or message us on WhatsApp
+              Check availability &amp; all-in price
             </a>
             <p className="text-white/40 text-xs mt-5 flex items-center justify-center gap-2">
               <Clock className="w-3.5 h-3.5" />
-              Replies within 2 hours · {siteFacts.phoneDisplay}
+              Replies within 2 hours · 560+ events · Replacement within 2h or full refund · {siteFacts.phoneDisplay}
             </p>
           </div>
         </div>
@@ -1260,9 +1478,9 @@ export default function PrivateChefPillarPage() {
       <StickyMobileCTA
         pageSource="private-chef-bali"
         serviceType="private-chef"
-        serviceName="a private chef in Bali"
-        intent="prices and availability"
-        label="Get Private Chef Prices"
+        serviceName="a private chef in Bali for my villa"
+        intent="availability and a fixed all-in price"
+        label="Get all-in price & availability"
       />
     </>
   )

@@ -2259,12 +2259,12 @@ export const PAGE_META: Record<string, PageMeta> = {
   // now 301s here. This is the only page that publishes private chef day rates.
   'private-chef-bali': {
     path: '/private-chef-bali',
-    title: 'Hire Private Chef Bali | Daily Rates From IDR 1M++',
+    title: 'Hire Private Chef Bali | Daily Rates From IDR 1M++ | myCHEF',
     description:
-      'Hire a private chef in Bali with clear daily rates: one meal IDR 1M++, two meals IDR 1.8M++, three meals IDR 2.7M++. Chef + assistant, groceries at cost.',
+      'Hire a private chef in Bali from IDR 1,000,000++/day. Chef + assistant, groceries at cost with receipts, full cleanup. Published rates. Reply in 2 hours.',
     canonical: `${SITE}/private-chef-bali`,
-    h1: 'Hire a Private Chef in Bali — Daily Rates & Packages',
-    ogImage: `${SITE}/generated/mychef-experience-bali-home-hero-ivory-villa.webp`,
+    h1: 'Private Chef in Bali',
+    ogImage: `${SITE}/generated/pcb-story-03-restaurant-service.webp`,
   },
 
       'recommended-services': {

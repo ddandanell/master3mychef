@@ -601,9 +601,10 @@ export default function PrivateChefPillarPage() {
           loading="eager"
           fetchPriority="high"
         />
-        {/* Photo must stay visible — only enough dark for white type */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0E0E0E]/88 via-[#0E0E0E]/45 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E]/75 via-transparent to-[#0E0E0E]/30" />
+        {/* Darken enough for white type on bright service photography (esp. mobile) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0E0E0E]/95 via-[#0E0E0E]/72 to-[#0E0E0E]/45 sm:via-[#0E0E0E]/55 sm:to-[#0E0E0E]/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E]/92 via-[#0E0E0E]/45 to-[#0E0E0E]/40" />
+        <div className="absolute inset-0 bg-black/25 sm:bg-black/15" aria-hidden="true" />
 
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pb-16 pt-32 w-full">
           <Breadcrumb items={[{ label: 'Private Chef Bali' }]} theme="dark" />

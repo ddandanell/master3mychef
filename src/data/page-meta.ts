@@ -1094,7 +1094,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'How Milan-trained Italian technique shapes private chef dining in Bali — sauces, plating, and five-star villa service. Read the myCHEF journal.',
     canonical: `${SITE}/journal/michelin-training-bali`,
     h1: 'Michelin Training in Bali: How Our Chefs Master Italian Technique',
-    ogImage: `${SITE}/generated/mychef-journal-michelin-training-bali.webp`,
+    ogImage: `${SITE}/generated/journal-michelin-hero.webp`,
   },
 
       'journal-sustainable-sourcing': {
@@ -1104,7 +1104,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Learn how myCHEF sources local and organic ingredients across Bali — markets, producers and freshness practices behind villa dining and catering menus. Guide.',
     canonical: `${SITE}/journal/sustainable-sourcing`,
     h1: 'Sustainable Sourcing: Our Farm-to-Villa Philosophy',
-    ogImage: `${SITE}/generated/mychef-journal-sustainable-sourcing.webp`,
+    ogImage: `${SITE}/generated/journal-sourcing-hero.webp`,
   },
 
       'journal-private-chef-vs-villa-staff-bali': {
@@ -1114,7 +1114,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Why hiring a specialized private chef beats relying on general villa staff for milestone dinners in Bali — quality, pacing, risk and guest experience compared.',
     canonical: `${SITE}/journal/private-chef-vs-villa-staff-bali`,
     h1: 'Private Chef vs. Villa Staff — Understanding the Difference',
-    ogImage: `${SITE}/generated/mychef-journal-private-chef-vs-villa-staff.webp`,
+    ogImage: `${SITE}/generated/journal-staff-hero.webp`,
   },
 
       'journal-bali-private-chef-cost-guide-2026': {
@@ -1124,7 +1124,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'The hidden line items of a Bali private chef booking — groceries at cost, the ++ (tax and service charge), and tipping norms explained. Updated 2026.',
     canonical: `${SITE}/journal/bali-private-chef-cost-guide-2026`,
     h1: 'Bali Private Chef Costs: Groceries, Tax & Tipping Explained',
-    ogImage: `${SITE}/generated/mychef-journal-private-chef-cost-guide.webp`,
+    ogImage: `${SITE}/generated/journal-cost-hero.webp`,
   },
 
       'journal-villa-wedding-catering-logistics-bali': {
@@ -1134,7 +1134,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Villa wedding catering logistics in Bali: kitchen access, power, staffing ratios, service flow, and timelines for a smooth wedding meal. myCHEF guide.',
     canonical: `${SITE}/journal/villa-wedding-catering-logistics-bali`,
     h1: 'Villa Wedding Catering Logistics Guide for Bali',
-    ogImage: `${SITE}/generated/mychef-journal-villa-wedding-catering.webp`,
+    ogImage: `${SITE}/generated/journal-vlogistics-hero.webp`,
   },
 
       'journal-yoga-retreat-meal-planning-bali': {
@@ -1144,7 +1144,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Yoga retreat meal planning in Bali: plant-forward menus, energy timing, allergens, and multi-day catering for wellness groups. myCHEF guide.',
     canonical: `${SITE}/journal/yoga-retreat-meal-planning-bali`,
     h1: 'Yoga Retreat Meal Planning: Nutritional Integrity for Bali Retreats',
-    ogImage: `${SITE}/generated/mychef-journal-yoga-retreat-meals.webp`,
+    ogImage: `${SITE}/generated/journal-yoga-hero.webp`,
   },
 
       'journal-private-chef-seminyak-guide': {
@@ -1154,7 +1154,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Everything you need to know about booking a private chef for a Seminyak villa stay — pricing, menus, logistics and what makes Seminyak dining different. Practical myCHEF guide.',
     canonical: `${SITE}/journal/private-chef-seminyak-guide`,
     h1: 'Hiring a Private Chef in Seminyak: The 2026 Local\'s Guide',
-    ogImage: `${SITE}/generated/mychef-journal-private-chef-seminyak.webp`,
+    ogImage: `${SITE}/generated/journal-seminyak-hero.webp`,
   },
 
       'journal-private-chef-canggu-guide': {
@@ -1164,7 +1164,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Private chef Canggu guide: flexible villa dining, BBQ nights, family-style service, and logistics for Canggu and Berawa stays. myCHEF.',
     canonical: `${SITE}/journal/private-chef-canggu-guide`,
     h1: 'Private Chef Services in Canggu: What Makes It Different',
-    ogImage: `${SITE}/generated/mychef-journal-private-chef-canggu.webp`,
+    ogImage: `${SITE}/generated/journal-canggu-hero.webp`,
   },
 
       'journal-private-chef-ubud-villa-dining': {
@@ -1174,7 +1174,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'The complete guide to hiring a private chef for your Ubud villa — jungle logistics, cultural dining experiences, menus and practical booking tips from myCHEF.',
     canonical: `${SITE}/journal/private-chef-ubud-villa-dining`,
     h1: 'Private Chef Services in Ubud: Logistics, Pricing & What to Expect',
-    ogImage: `${SITE}/generated/mychef-journal-private-chef-ubud.webp`,
+    ogImage: `${SITE}/generated/journal-ubud-hero.webp`,
   },
 
       'journal-bali-wedding-catering-complete-guide': {
@@ -1184,7 +1184,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Bali wedding catering guide: realistic budgets, menu styles, vendor coordination, and cultural considerations for destination weddings. myCHEF.',
     canonical: `${SITE}/journal/bali-wedding-catering-complete-guide`,
     h1: 'Bali Wedding Catering Guide: Budgets, Logistics & Vendors',
-    ogImage: `${SITE}/generated/mychef-journal-bali-wedding-catering.webp`,
+    ogImage: `${SITE}/generated/journal-wedding-hero.webp`,
   },
 
       'journal-rehearsal-dinner-planning-bali': {
@@ -1194,7 +1194,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Plan an unforgettable rehearsal or welcome dinner in Bali — villa selection, menu design, staffing and private chef options. Practical planning tips from myCHEF.',
     canonical: `${SITE}/journal/rehearsal-dinner-planning-bali`,
     h1: 'Planning Your Bali Rehearsal Dinner: The Complete Guide',
-    ogImage: `${SITE}/generated/mychef-journal-rehearsal-dinner-bali.webp`,
+    ogImage: `${SITE}/generated/journal-rehearsal-hero.webp`,
   },
 
       'journal-live-in-chef-vs-daily-service': {
@@ -1204,7 +1204,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Live-in chef vs daily private chef service in Bali: costs, lifestyle fit, grocery handling and when each model works best for long-stay villas and residences.',
     canonical: `${SITE}/journal/live-in-chef-vs-daily-service`,
     h1: 'Live-In Chef vs. Daily Service — Which Is Right for You?',
-    ogImage: `${SITE}/generated/mychef-journal-live-in-vs-daily-chef.webp`,
+    ogImage: `${SITE}/generated/journal-livein-hero.webp`,
   },
 
       'journal-bbq-catering-cost-breakdown-bali': {
@@ -1214,7 +1214,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'BBQ catering cost in Bali: Indonesian, International, and Surf & Turf packages with per-person pricing, staffing, and what drives the quote. myCHEF.',
     canonical: `${SITE}/journal/bbq-catering-cost-breakdown-bali`,
     h1: 'BBQ Catering in Bali: The Complete Cost Breakdown',
-    ogImage: `${SITE}/generated/mychef-journal-bbq-catering-cost.webp`,
+    ogImage: `${SITE}/generated/journal-bbq-hero.webp`,
   },
 
       'fine-dining-romantic-dinner': {
@@ -2456,7 +2456,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Guides for hosting in Bali: private chef costs for 2026, Seminyak, Canggu and Ubud dining, villa wedding catering, BBQ prices and retreat menus.',
     canonical: `${SITE}/journal`,
     h1: 'Bali Private Chef Guides & Hosting Tips',
-    ogImage: `${SITE}/generated/mychef-journal-private-chef-cost-guide.webp`,
+    ogImage: `${SITE}/generated/journal-cost-hero.webp`,
   },
 
       pricing: {

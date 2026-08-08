@@ -8,10 +8,10 @@ export const JOURNAL_POSTS: JournalPost[] = [
     category: 'recipes',
     author: 'Adriano',
     date: '2026-05-10',
-    readTime: 7,
+    readTime: 8,
     excerpt:
       'How Milan-trained Italian technique shows up at a Bali villa dinner — plating, sauces, and service standards that guests notice.',
-    image: '/generated/mychef-journal-michelin-training-bali.webp',
+    image: '/generated/journal-michelin-hero.webp',
     focusKeyword: 'Michelin training Bali private chef',
   },
   {
@@ -20,10 +20,10 @@ export const JOURNAL_POSTS: JournalPost[] = [
     category: 'wellness',
     author: 'myCHEF Team',
     date: '2026-05-05',
-    readTime: 6,
+    readTime: 7,
     excerpt:
       'How myCHEF sources produce, seafood, and proteins in Bali — local farms, market mornings, and transparent grocery receipts.',
-    image: '/generated/mychef-journal-sustainable-sourcing.webp',
+    image: '/generated/journal-sourcing-hero.webp',
     focusKeyword: 'farm to villa Bali private chef',
   },
   {
@@ -35,7 +35,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     readTime: 6,
     excerpt:
       'Villa staff keep the house running. A private chef owns the meal. Here is when you need each — and when you need both.',
-    image: '/generated/mychef-journal-private-chef-vs-villa-staff.webp',
+    image: '/generated/journal-staff-hero.webp',
     focusKeyword: 'private chef vs villa staff Bali',
   },
   {
@@ -46,8 +46,8 @@ export const JOURNAL_POSTS: JournalPost[] = [
     date: '2026-05-17',
     readTime: 8,
     excerpt:
-      'Clear 2026 pricing for private chef Bali: daily hire, per-person dinners, groceries at cost, tax (++), and tipping norms.',
-    image: '/generated/mychef-journal-private-chef-cost-guide.webp',
+      'Clear 2026 pricing for private chef hire in Bali: daily rates, per-person dinners, groceries at cost, tax (++), and tipping norms.',
+    image: '/generated/journal-cost-hero.webp',
     focusKeyword: 'private chef cost Bali 2026',
   },
   {
@@ -56,10 +56,10 @@ export const JOURNAL_POSTS: JournalPost[] = [
     category: 'events',
     author: 'myCHEF Team',
     date: '2026-05-17',
-    readTime: 10,
+    readTime: 9,
     excerpt:
       'Kitchen access, power, service flow, staffing ratios, and timelines for villa wedding catering across Bali.',
-    image: '/generated/mychef-journal-villa-wedding-catering.webp',
+    image: '/generated/journal-vlogistics-hero.webp',
     focusKeyword: 'villa wedding catering Bali logistics',
   },
   {
@@ -68,10 +68,10 @@ export const JOURNAL_POSTS: JournalPost[] = [
     category: 'wellness',
     author: 'myCHEF Team',
     date: '2026-05-17',
-    readTime: 7,
+    readTime: 8,
     excerpt:
       'How we plan multi-day yoga retreat menus in Bali — plant-forward plates, energy timing, and allergen control.',
-    image: '/generated/mychef-journal-yoga-retreat-meals.webp',
+    image: '/generated/journal-yoga-hero.webp',
     focusKeyword: 'yoga retreat meal planning Bali',
   },
   {
@@ -83,7 +83,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     readTime: 8,
     excerpt:
       'Seminyak private chef logistics for 2026: pricing, travel, villa kitchens, and the formats that work best near the beach.',
-    image: '/generated/mychef-journal-private-chef-seminyak.webp',
+    image: '/generated/journal-seminyak-hero.webp',
     focusKeyword: 'private chef Seminyak Bali',
   },
   {
@@ -95,7 +95,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     readTime: 7,
     excerpt:
       'Why Canggu villa dining leans BBQ, family-style, and flexible timing — and how private chef service fits surf-town life.',
-    image: '/generated/mychef-journal-private-chef-canggu.webp',
+    image: '/generated/journal-canggu-hero.webp',
     focusKeyword: 'private chef Canggu Bali',
   },
   {
@@ -107,7 +107,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     readTime: 8,
     excerpt:
       'Ubud private chef guide: jungle villa logistics, travel fees, cultural menus, and what to plan before you book.',
-    image: '/generated/mychef-journal-private-chef-ubud.webp',
+    image: '/generated/journal-ubud-hero.webp',
     focusKeyword: 'private chef Ubud villa dining',
   },
   {
@@ -119,7 +119,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     readTime: 10,
     excerpt:
       'Destination wedding catering in Bali — realistic budgets, menu styles, vendor coordination, and cultural considerations.',
-    image: '/generated/mychef-journal-bali-wedding-catering.webp',
+    image: '/generated/journal-wedding-hero.webp',
     focusKeyword: 'Bali wedding catering guide',
   },
   {
@@ -130,8 +130,8 @@ export const JOURNAL_POSTS: JournalPost[] = [
     date: '2026-05-20',
     readTime: 7,
     excerpt:
-      'Plan a Bali rehearsal or welcome dinner: villa setup, guest flow, menus, and private chef options that keep the night relaxed.',
-    image: '/generated/mychef-journal-rehearsal-dinner-bali.webp',
+      'Villa vs restaurant, guest count, menus, timeline and realistic catering costs for a Bali rehearsal or welcome dinner.',
+    image: '/generated/journal-rehearsal-hero.webp',
     focusKeyword: 'Bali rehearsal dinner planning',
   },
   {
@@ -143,7 +143,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     readTime: 8,
     excerpt:
       'Compare live-in chef hire vs daily villa chef service for long stays — cost, privacy, meal coverage, and who each model fits.',
-    image: '/generated/mychef-journal-live-in-vs-daily-chef.webp',
+    image: '/generated/journal-livein-hero.webp',
     focusKeyword: 'live-in chef vs daily service Bali',
   },
   {
@@ -155,7 +155,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     readTime: 7,
     excerpt:
       'Villa BBQ catering prices in Bali from Indonesian packages to Surf & Turf — per-person tables, staffing, and what drives cost.',
-    image: '/generated/mychef-journal-bbq-catering-cost.webp',
+    image: '/generated/journal-bbq-hero.webp',
     focusKeyword: 'BBQ catering cost Bali',
   },
 ]

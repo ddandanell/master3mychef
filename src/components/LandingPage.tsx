@@ -9,10 +9,13 @@ import { downgradeArticleH1 } from '@/lib/utils'
 import { getPageMetaByPath } from '@/data/page-meta'
 import { CHEF_FOR_HIRE_INDONESIA_CONTENT } from '@/data/content/chefForHireIndonesia'
 import Breadcrumb from './shared/Breadcrumb'
+import StickyMobileCTA from './shared/StickyMobileCTA'
 import { type EnrichedPost, enrichPost, formatBlogDate, getRelatedPosts, injectContentEnhancements, sortPostsByDate } from '@/lib/blog'
+import { enhanceSupportingLandingHtml } from '@/lib/supportingLandingEnhance'
+import { getSupportingLandingVisual } from '@/data/supportingLandingVisuals'
+import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 const SITE = 'https://mychef.id'
-const WA = '6289674072020'
 
 /** Canonical overrides for legacy SEO landing pages that consolidate onto pillar pages. */
 const CANONICAL_OVERRIDES: Record<string, string> = {
@@ -48,9 +51,17 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   // `entry` type-checked instead of silently opting the whole object out.
   const pageH1 = mappedMeta?.h1 ?? (entry as { h1?: string }).h1 ?? entry.title
   // Prefer per-URL OG/hero from page-meta (indexing uniqueness). Shared defaults only as fallback.
+  const supportingVisual = kind === 'landing' ? getSupportingLandingVisual(entry.slug) : null
   const LANDING_HEROES: Record<string, string> = {
     'seafood-bbq-catering-bali': '/generated/mychef-seafood-bbq-catering-bali-hero.webp',
-    'wedding-catering-indonesia': '/generated/mychef-wedding-catering-indonesia-hero.webp',
+    'wedding-catering-indonesia':
+      supportingVisual?.hero ?? '/generated/support-wedding-indo-hero.webp',
+    'private-dining-indonesia':
+      supportingVisual?.hero ?? '/generated/support-private-dining-hero.webp',
+    'best-private-chef-indonesia':
+      supportingVisual?.hero ?? '/generated/support-best-chef-hero.webp',
+    'luxury-chef-indonesia': supportingVisual?.hero ?? '/generated/support-luxury-chef-hero.webp',
+    'chef-for-hire-indonesia': supportingVisual?.hero ?? '/generated/support-chef-hire-hero.webp',
     'healthy-meal-delivery-indonesia': '/generated/mychef-healthy-meal-delivery-indonesia-hero.webp',
     'butler-service-bali-daily-rate': '/generated/mychef-butler-service-bali-daily-rate-hero.webp',
     'corporate-retreat-catering-bali': '/generated/mychef-corporate-retreat-catering-bali-hero.webp',
@@ -90,7 +101,6 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const hubCtaLabel = kind === 'blog' ? 'View All Journal Entries' : kind === 'guide' ? 'View All Help Guides' : 'View All Pages'
   const backLabel = kind === 'blog' ? 'Back to Blog' : kind === 'guide' ? 'Back to Help' : 'Back to Home'
   const shareText = `Reading ${pageTitle} on myCHEF`
-  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(`Hi myCHEF, I'm reading "${pageTitle}" and have a question.`)}`
   const shareLinks = articleEntry
     ? {
         whatsapp: `https://wa.me/?text=${encodeURIComponent(`${pageTitle} — ${canonical}`)}`,
@@ -103,11 +113,21 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
   const previousEntry = currentIndex > 0 ? orderedEntries[currentIndex - 1] : null
   const nextEntry = currentIndex >= 0 && currentIndex < orderedEntries.length - 1 ? orderedEntries[currentIndex + 1] : null
   const relatedEntries = articleEntry ? getRelatedPosts(RELATED_ENTRIES, articleEntry, 3) : []
-  const enhancedContent = isChefForHireIndonesia
+  const rawBody = isChefForHireIndonesia
     ? CHEF_FOR_HIRE_INDONESIA_CONTENT
     : articleEntry?.content
       ? injectContentEnhancements(articleEntry.content, articleEntry.headings)
       : (ARTICLE_CONTENT[`/${entry.slug}`] ?? entry.content)
+  // Supporting SEO landings: section cards + mid-images so pages feel designed, not text walls.
+  const enhancedContent =
+    kind === 'landing' && rawBody
+      ? enhanceSupportingLandingHtml(rawBody, entry.slug)
+      : rawBody
+  const heroAlt = supportingVisual?.heroAlt ?? pageTitle
+  const structuredWa = buildWhatsAppUrl({
+    serviceName: pageH1,
+    intent: 'pricing and availability',
+  })
 
   const articleSchema =
     articleEntry
@@ -468,28 +488,36 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
         extraMeta={extraMeta}
       />
 
-      <section className="relative flex items-center overflow-hidden" style={{ minHeight: '65vh' }}>
+      <section className="relative flex min-h-[70svh] items-end overflow-hidden md:min-h-[65vh] md:items-center">
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt={pageTitle}
-            width={1920}
-            height={1080}
-            className="h-full w-full object-cover"
+            alt={heroAlt}
+            width={1344}
+            height={768}
+            className="h-full w-full object-cover object-center"
             fetchPriority="high"
             decoding="async"
           />
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 md:hidden"
             style={{
-              background: 'linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.20) 100%)',
+              background:
+                'linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.62) 48%, rgba(0,0,0,0.4) 100%)',
             }}
           />
-          <div className="absolute inset-0 bg-black/20 md:hidden" />
+          <div
+            className="absolute inset-0 hidden md:block"
+            style={{
+              background:
+                'linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.62) 48%, rgba(0,0,0,0.28) 100%)',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/20" aria-hidden="true" />
         </div>
-        <div className="relative z-10 mx-auto w-full max-w-4xl px-6 py-20 text-left text-white md:px-12">
+        <div className="relative z-10 mx-auto w-full max-w-4xl px-5 py-14 text-left text-white sm:px-6 md:px-12 md:py-20">
           <div className="max-w-[760px]">
-            <Link to={hubPath} className="mb-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[3px] text-white/75 transition-colors hover:text-[#C5A028]">
+            <Link to={hubPath} className="mb-5 inline-flex min-h-[44px] items-center gap-2 text-xs font-bold uppercase tracking-[3px] text-white/75 transition-colors hover:text-[#C5A028]">
               <ArrowLeft size={14} /> {backLabel}
             </Link>
             <Breadcrumb
@@ -498,11 +526,11 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                 { label: pageTitle },
               ]}
               theme="dark"
-              className="px-0 pb-8 pt-0"
+              className="px-0 pb-6 pt-0"
             />
-            <div className="mb-6 flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[3px] text-white/70">
+            <div className="mb-4 flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[3px] text-white/70">
               <span className="font-cormorant text-sm font-semibold text-[#C5A028]">
-                {kind === 'guide' ? 'Help Guide' : kind === 'blog' ? 'Journal Entry' : 'myCHEF Experience'}
+                {kind === 'guide' ? 'Help Guide' : kind === 'blog' ? 'Journal Entry' : 'Supporting Guide'}
               </span>
               {articleEntry?.date && (
                 <span className="inline-flex items-center gap-1.5">
@@ -518,37 +546,37 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
                 </>
               )}
             </div>
-            <h1 className="mb-8 font-playfair text-4xl leading-[1.1] md:text-6xl">{pageH1}</h1>
-            <p className="mb-8 max-w-[640px] text-lg leading-relaxed text-white/85 md:text-xl">{entry.description}</p>
+            <h1 className="mb-5 font-playfair text-[1.85rem] leading-[1.12] sm:text-4xl md:mb-8 md:text-6xl">{pageH1}</h1>
+            <p className="mb-7 max-w-[36ch] text-[15px] leading-relaxed text-white/90 sm:max-w-[640px] sm:text-lg md:mb-8 md:text-xl">{entry.description}</p>
 
             {articleEntry && shareLinks && (
-              <div className="mb-10 flex flex-wrap items-center gap-3 text-sm text-white/80">
+              <div className="mb-8 flex flex-wrap items-center gap-3 text-sm text-white/80">
                 <span className="font-medium text-white">Share:</span>
-                <a href={shareLinks.whatsapp} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
+                <a href={shareLinks.whatsapp} target="_blank" rel="noopener noreferrer" className="min-h-11 rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
                   WhatsApp
                 </a>
-                <a href={shareLinks.facebook} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
+                <a href={shareLinks.facebook} target="_blank" rel="noopener noreferrer" className="min-h-11 rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
                   Facebook
                 </a>
-                <a href={shareLinks.twitter} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
+                <a href={shareLinks.twitter} target="_blank" rel="noopener noreferrer" className="min-h-11 rounded-full border border-white/20 px-4 py-2 transition-colors hover:bg-white/10">
                   X / Twitter
                 </a>
               </div>
             )}
 
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <a href={waLink} target="_blank" rel="noopener noreferrer" data-source={`landing-${entry.slug}-cta`} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-4 text-sm font-semibold uppercase tracking-[2px] text-black transition-all hover:bg-[#D4B43A]">
-                <MessageCircle className="h-4 w-4" /> Message our Team
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <a href={structuredWa} target="_blank" rel="noopener noreferrer" data-source={`landing-${entry.slug}-cta`} className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#C5A028] px-8 py-3.5 text-sm font-semibold uppercase tracking-[2px] text-black transition-all hover:bg-[#D4B43A]">
+                <MessageCircle className="h-4 w-4" /> WhatsApp quote in 2 hours
               </a>
-              <Link to="/pricing" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-4 text-sm font-semibold uppercase tracking-[2px] text-white transition-all hover:bg-white/10">
-                View Pricing Guide <ArrowRight className="h-4 w-4" />
+              <Link to="/pricing" className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-white/35 px-8 py-3.5 text-sm font-semibold uppercase tracking-[2px] text-white transition-all hover:bg-white/10">
+                See transparent prices <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-20">
+      <section className="mx-auto max-w-6xl px-5 py-12 sm:px-6 md:px-8 md:py-20">
         <div className={`gap-12 ${articleEntry && articleEntry.headings.length >= 3 ? 'lg:grid lg:grid-cols-[250px_minmax(0,1fr)]' : ''}`}>
           {articleEntry && articleEntry.headings.length >= 3 && (
             <aside className="mb-10 self-start rounded-[28px] border border-black/5 bg-white p-6 shadow-sm lg:sticky lg:top-24 lg:mb-0">
@@ -571,7 +599,7 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           <div>
             {enhancedContent ? (
               <article
-                className="prose prose-stone max-w-none text-[#4A4745] prose-headings:font-playfair prose-headings:text-[#1A1A1A] prose-h2:mb-6 prose-h2:mt-16 prose-h2:text-3xl prose-h3:mt-10 prose-h3:text-2xl prose-p:mb-6 prose-p:text-lg prose-p:leading-relaxed prose-li:text-lg prose-li:leading-relaxed prose-strong:text-[#1A1A1A] prose-a:font-medium prose-a:text-[#7E6410] prose-a:no-underline hover:prose-a:underline prose-blockquote:rounded-r-2xl prose-blockquote:border-l-[#C5A028] prose-blockquote:bg-[#FAFAF8] prose-blockquote:p-6 [&_h2]:scroll-mt-28 [&_h3]:scroll-mt-28"
+                className="supporting-article prose prose-stone max-w-none text-[#4A4745] prose-headings:font-playfair prose-headings:text-[#1A1A1A] prose-h2:mb-4 prose-h2:mt-0 prose-h2:text-2xl sm:prose-h2:text-3xl prose-h3:mt-6 prose-h3:text-xl prose-p:mb-4 prose-p:text-base prose-p:leading-relaxed sm:prose-p:text-lg prose-li:text-base prose-li:leading-relaxed sm:prose-li:text-lg prose-strong:text-[#1A1A1A] prose-a:font-medium prose-a:text-[#7E6410] prose-a:no-underline hover:prose-a:underline prose-blockquote:rounded-r-2xl prose-blockquote:border-l-[#C5A028] prose-blockquote:bg-[#FAFAF8] prose-blockquote:p-5 prose-table:text-sm [&_h2]:scroll-mt-28 [&_h3]:scroll-mt-28"
                 dangerouslySetInnerHTML={{ __html: downgradeArticleH1(enhancedContent) }}
               />
             ) : (
@@ -662,6 +690,13 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
           </div>
         </div>
       </section>
+
+      <StickyMobileCTA
+        pageSource={`landing-${entry.slug}`}
+        serviceName={pageH1}
+        intent="pricing and availability"
+        label="WhatsApp quote · reply in 2h"
+      />
     </div>
   )
 }

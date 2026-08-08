@@ -531,3 +531,52 @@
     max-width: none;
   }
 }
+
+/* ── Supporting SEO landings: sectioned long-form (not text walls) ─────────── */
+.supporting-article .supporting-lead {
+  margin-bottom: 1.25rem;
+}
+.supporting-article .supporting-lead > h1 {
+  display: none; /* page H1 lives in hero */
+}
+.supporting-article .supporting-section {
+  margin: 1rem 0 1.25rem;
+}
+.supporting-article .supporting-section-inner {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1.25rem 1.15rem 1.35rem;
+  box-shadow: 0 10px 30px rgba(26, 26, 26, 0.04);
+}
+@media (min-width: 640px) {
+  .supporting-article .supporting-section-inner {
+    padding: 1.75rem 1.75rem 1.85rem;
+  }
+}
+.supporting-article .supporting-section-inner > h2:first-child {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(197, 160, 40, 0.28);
+}
+.supporting-article .supporting-section-inner > *:last-child {
+  margin-bottom: 0;
+}
+.supporting-article .supporting-figure {
+  margin: 0.5rem 0 1.5rem;
+}
+.supporting-article .supporting-figure-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 40px rgba(26, 26, 26, 0.08);
+}
+.supporting-article table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

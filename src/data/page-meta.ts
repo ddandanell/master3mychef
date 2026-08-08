@@ -764,6 +764,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     description:
       'Why myCHEF is trusted for private chef service in Indonesia: Milan-trained leadership, 560+ events served, world-class villa standards. WhatsApp myCHEF.',
     canonical: `${SITE}/best-private-chef-indonesia`,
+    ogImage: `${SITE}/generated/support-best-chef-hero.webp`,
     h1: 'The Best Private Chef Service in Indonesia',
   },
 
@@ -782,6 +783,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     description:
       'Luxury private chef services for high-end residences and estates across Indonesia — discreet, professional and refined service. Enquire via WhatsApp myCHEF.',
     canonical: `${SITE}/luxury-chef-indonesia`,
+    ogImage: `${SITE}/generated/support-luxury-chef-hero.webp`,
     h1: 'Luxury Chef Indonesia — Premium Private Dining',
   },
 
@@ -792,7 +794,7 @@ export const PAGE_META: Record<string, PageMeta> = {
       'Premium wedding catering across Indonesia — Bali and beyond. Custom menus, full service teams and event coordination for multi-city couples. WhatsApp myCHEF.',
     canonical: `${SITE}/wedding-catering-indonesia`,
     h1: 'Wedding Catering Indonesia — Villa Wedding Specialists',
-    ogImage: `${SITE}/generated/mychef-wedding-catering-indonesia-hero.webp`,
+    ogImage: `${SITE}/generated/support-wedding-indo-hero.webp`,
   },
 
       'private-dining-indonesia': {
@@ -801,6 +803,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     description:
       'At-home fine dining across Indonesia: specialist head chefs, premium ingredients and professional service in your villa. Transparent quotes.',
     canonical: `${SITE}/private-dining-indonesia`,
+    ogImage: `${SITE}/generated/support-private-dining-hero.webp`,
     h1: 'Private Dining Bali & Indonesia — At-Home Fine Dining',
   },
 
@@ -820,6 +823,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     description:
       'Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali. Clear quotes via WhatsApp myCHEF.',
     canonical: `${SITE}/chef-for-hire-indonesia`,
+    ogImage: `${SITE}/generated/support-chef-hire-hero.webp`,
     h1: 'Chef for Hire Indonesia — Private Chef Services',
   },
 

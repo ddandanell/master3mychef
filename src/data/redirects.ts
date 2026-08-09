@@ -340,6 +340,17 @@ export const REDIRECTS: Redirect[] = [
   { from: '/private-chef-kemang', to: '/private-dining-indonesia', reason: 'GSC 404: Kemang → private dining Indonesia.' },
   { from: '/private-chef-scbd', to: '/private-dining-indonesia', reason: 'GSC 404: SCBD → private dining Indonesia.' },
   { from: '/kemang', to: '/private-dining-indonesia', reason: 'Jakarta Kemang residual → private dining Indonesia.' },
+  { from: '/private-chef-puri-indah', to: '/private-dining-indonesia', reason: 'GSC 404 page-2: Puri Indah Jakarta → private dining Indonesia.' },
+  { from: '/private-chef-jakarta', to: '/private-dining-indonesia', reason: 'Jakarta root private-chef slug → private dining Indonesia.' },
+  { from: '/private-chef-jakarta-selatan', to: '/private-dining-indonesia', reason: 'Jakarta Selatan residual → private dining Indonesia.' },
+  { from: '/private-chef-jakarta-barat', to: '/private-dining-indonesia', reason: 'Jakarta Barat residual → private dining Indonesia.' },
+  { from: '/private-chef-jakarta-utara', to: '/private-dining-indonesia', reason: 'Jakarta Utara residual → private dining Indonesia.' },
+  { from: '/private-chef-jakarta-timur', to: '/private-dining-indonesia', reason: 'Jakarta Timur residual → private dining Indonesia.' },
+  { from: '/private-chef-jakarta-pusat', to: '/private-dining-indonesia', reason: 'Jakarta Pusat residual → private dining Indonesia.' },
+  // Canonical careers URL is /join-our-team (JobPosting schema lives there).
+  { from: '/join-team', to: '/join-our-team', reason: 'Legacy/short careers path → join-our-team (JobPosting).' },
+  { from: '/careers', to: '/join-our-team', reason: 'Careers alias → join-our-team.' },
+  { from: '/jobs', to: '/join-our-team', reason: 'Jobs alias → join-our-team.' },
 ]
 
 /** Lookup map for the React Router fallback. */

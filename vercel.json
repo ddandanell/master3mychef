@@ -1053,6 +1053,56 @@
       "source": "/kemang",
       "destination": "/private-dining-indonesia",
       "permanent": true
+    },
+    {
+      "source": "/private-chef-puri-indah",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-jakarta",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-jakarta-selatan",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-jakarta-barat",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-jakarta-utara",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-jakarta-timur",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef-jakarta-pusat",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
+      "source": "/join-team",
+      "destination": "/join-our-team",
+      "permanent": true
+    },
+    {
+      "source": "/careers",
+      "destination": "/join-our-team",
+      "permanent": true
+    },
+    {
+      "source": "/jobs",
+      "destination": "/join-our-team",
+      "permanent": true
     }
   ],
   "headers": [

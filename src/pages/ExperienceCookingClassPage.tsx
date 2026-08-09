@@ -4,7 +4,6 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import {
   GraduationCap,
   Home,
-  Users,
   UtensilsCrossed,
   ChefHat,
   MapPin,

@@ -10,7 +10,22 @@ const sections: PageSection[] = [
 
 myCHEF provides complete private dining experiences across Bali's villa areas. From an intimate dinner for two beside the pool to a 60-guest formal reception in an open-air pavilion, we design every element of the dining experience -- menu, service, timing, and atmosphere -- around the occasion and the people at the table.
 
-We operate across Seminyak, Canggu, Uluwatu, Jimbaran, Sanur, Nusa Dua, Ubud, and Pererenan.`,
+We operate across Seminyak, Canggu, Uluwatu, Jimbaran, Sanur, Nusa Dua, Ubud, and Pererenan.
+
+**Private dining vs villa catering (decision guide):** If guests sit as one table and the evening is about a designed menu, book private dining or fine dining. If guests circulate, need free-flow stations, BBQ volume, or 20–150 covers, book villa catering. Many villa weeks use both — daily private chef for the stay, then catering on the party night.`,
+  },
+  {
+    id: 'private-dining-vs-catering',
+    type: 'content',
+    title: 'Private Dining vs Villa Catering — Which Should You Book?',
+    body: `| | Private dining | Villa catering |
+|---|---|---|
+| Best for | 2–20 guests, one table, paced courses | 10–150+ guests, parties, buffets, BBQ |
+| Kitchen model | Chef brigade focused on tasting quality | Production kitchen + stations + service team |
+| Atmosphere | Restaurant pacing at the villa | Social, free-flow or plated large format |
+| Start looking at | [Fine dining](/fine-dining), [romantic dinner](/fine-dining/romantic-dinner) | [Catering hub](/catering), [BBQ](/catering/bbq-catering), [weddings](/events/weddings) |
+
+HACCP food safety and fixed ++ quotes apply on both paths. WhatsApp guest count and occasion and we will recommend the lighter, cheaper option that still matches the brief.`,
   },
   {
     id: 'what-private-dining',
@@ -91,6 +106,7 @@ All pricing includes fresh ingredients, chef, and basic service. Add-ons include
 ]
 
 const faqs = [
+  { question: 'Private dining vs villa catering — what is the difference?', answer: '<strong>Private dining</strong> is chef-led, menu-designed service for a defined table (often 2–20) with courses paced like a restaurant. <strong>Villa catering</strong> is production for larger groups: BBQ, buffet, plated lines, canapés and staff scaled to guest count. Choose private dining for couples and small gatherings; choose catering for parties of ~10+ when volume and stations matter. <a href="/fine-dining">Fine dining</a> · <a href="/catering">Villa catering</a> · <a href="/private-chef-bali">Private chef day rates</a>.' },
   { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
   { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
   { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
@@ -127,11 +143,11 @@ export default function PrivateDiningBaliPage() {
     <PremiumPage
       slug="blog/private-dining-bali"
       title="Private Dining Bali -- In-Villa Dining Experiences for Every Occasion"
-      seoTitle="Private Dining Bali -- In-Villa Chef Experiences | myCHEF"
-      description="Private dining experiences in Bali villas. From intimate dinners for two to formal group receptions -- a private chef, tailored menu, and complete in-villa."
-      seoDescription="Private dining in Bali. In-villa chef experiences for couples, families and events. Custom menus, professional service, full cleanup. From IDR 700K/person."
-      h1="Private Dining Bali -- In-Villa Chef Experiences for Every Occasion"
-      subtitle="A private chef, a menu designed for you, and a setting that is entirely yours -- the finest way to dine in Bali."
+      seoTitle="Private Dining vs Villa Catering Bali | In-Villa Chef | myCHEF"
+      description="Private dining vs villa catering in Bali — when to book a chef-led table vs BBQ/buffet production. HACCP-certified teams, from IDR 700K++/person."
+      seoDescription="Private dining vs villa catering in Bali. Intimate chef-led dinners or group production — HACCP-certified, fixed quotes. From IDR 700K++/person."
+      h1="Private Dining Bali — In-Villa Chef Experiences for Every Occasion"
+      subtitle="A private chef, a menu designed for you, and a clear path when villa catering is the better format."
       heroImage="/images/blog/private-dining-bali.jpg"
       heroImageAlt="Elegantly set outdoor dining table at a Bali villa with candles and tropical flowers, ready for an intimate private dinner"
       ogImage="/images/blog/private-dining-bali.jpg"

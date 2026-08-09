@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection } from '@/components/shared'
+import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -95,7 +95,7 @@ export default function UluwatuPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Dining Uluwatu Bali | Cliff Villa Chef Guide"
-        description="Private dining Uluwatu: sunset villa chef dinners, seafood BBQ and clifftop hosting tips. myCHEF cooks in Uluwatu & Bukit villas."
+        description="Private dining Uluwatu: sunset villa dinners with HACCP-certified chefs, seafood BBQ and clifftop hosting tips. myCHEF cooks in Uluwatu & Bukit villas."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-uluwatu.webp"
         jsonLd={[
@@ -143,6 +143,10 @@ export default function UluwatuPage() {
               Private Chef in Uluwatu
             </Link>
           </div>
+          <div className="mt-8 flex justify-center">
+            <HaccpTrustLine dark />
+          </div>
+
         </div>
       </section>
 

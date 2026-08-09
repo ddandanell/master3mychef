@@ -642,6 +642,18 @@ export default function PrivateChefPillarPage() {
             {formatIDR(MEAL_PLANS[2]?.daily ?? 2_700_000)}++ per day. Groceries at cost with receipts. WhatsApp for
             availability — every rate is published below.
           </p>
+          <p className="text-white/70 text-sm sm:text-base mt-4 max-w-2xl leading-relaxed">
+            <strong className="text-white">Short answer:</strong> HACCP-certified private chef + assistant, groceries at
+            cost, fixed day rates, full cleanup. Intimate dinners for two →{' '}
+            <a href="/fine-dining/romantic-dinner" className="text-[#C5A028] hover:underline">
+              romantic villa dinner
+            </a>
+            . Groups &amp; parties →{' '}
+            <a href="/catering" className="text-[#C5A028] hover:underline">
+              villa catering
+            </a>
+            .
+          </p>
 
           <div className="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-white/55 text-xs sm:text-sm">
             <span>560+ events served</span>
@@ -650,11 +662,13 @@ export default function PrivateChefPillarPage() {
             <span className="text-white/25">·</span>
             <span>500+ villa bookings</span>
             <span className="text-white/25">·</span>
+            <span>HACCP-certified chefs</span>
+            <span className="text-white/25">·</span>
             <span>Reply within 2 hours</span>
           </div>
 
           <div className="flex flex-wrap gap-2 mt-5">
-            {['Same-day WhatsApp', 'Confirmation within the hour', '50% deposit', 'Full cleanup', 'Chef + assistant'].map(
+            {['HACCP-certified', 'Same-day WhatsApp', '50% deposit', 'Full cleanup', 'Chef + assistant'].map(
               (chip) => (
                 <span
                   key={chip}

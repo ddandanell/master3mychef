@@ -306,6 +306,10 @@ const EVENTS_TESTIMONIALS = [
 
 const FAQS = [
   {
+    q: 'How should I rank villa event catering companies in Bali?',
+    a: 'Score operators on: (1) published pricing transparency, (2) HACCP / food safety, (3) written staffing ratios, (4) backup cover if a chef is ill, (5) villa logistics experience (power, banjar, wet weather), (6) cleanup included, (7) real reviews with dates. myCHEF publishes floors on <a href="/pricing">pricing</a>, runs HACCP-certified teams, and quotes fixed ++ before deposit. Compare formats on this page, <a href="/catering">catering</a>, and <a href="/events/weddings">wedding catering</a> — not Instagram alone.',
+  },
+  {
     q: 'How much does event catering cost in Bali?',
     a: 'Dinners typically start from <strong>IDR 700K per person ++</strong>. Corporate tiers often run IDR 700K–1.2M/person; weddings roughly IDR 1.5M–3M+ per person depending on menu, production and staffing. Your quote is fixed before deposit. <a href="/pricing">Pricing →</a> · <a href="/quote">Request a quote →</a>',
   },

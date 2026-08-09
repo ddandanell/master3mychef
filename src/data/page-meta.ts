@@ -38,7 +38,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/seminyak',
     title: 'Seminyak Bali Dining Guide | Restaurants, Villas & Chef Options',
     description:
-      'Seminyak dining guide — restaurants, villa hosting tips and when to hire in-villa service. For a dedicated chef see private chef Seminyak.',
+      'Seminyak dining guide — restaurants, villa hosting tips and when to hire HACCP-certified chefs. For a dedicated chef see private chef Seminyak.',
     canonical: `${SITE}/locations/seminyak`,
     h1: 'Seminyak Dining Guide — Restaurants, Villas & When to Book a Chef',
   },
@@ -47,7 +47,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/canggu',
     title: 'Canggu Bali Dining Guide | Restaurants, Villas & When to Book a Chef',
     description:
-      'Canggu dining guide — Batu Bolong spots, villa hosting and when to book in-villa service. For a dedicated chef see private chef Canggu.',
+      'Canggu dining guide — Batu Bolong spots, villa hosting and HACCP-certified private chefs. For a dedicated chef see private chef Canggu.',
     canonical: `${SITE}/locations/canggu`,
     h1: 'Canggu Dining Guide — Restaurants, Villas & When to Book a Chef',
   },
@@ -56,7 +56,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/uluwatu',
     title: 'Private Dining Uluwatu Bali | Cliff Villa Chef Guide',
     description:
-      'Private dining Uluwatu: sunset villa chef dinners, seafood BBQ and clifftop hosting tips. myCHEF cooks in Uluwatu & Bukit villas.',
+      'Private dining Uluwatu: sunset villa dinners with HACCP-certified chefs, seafood BBQ and clifftop hosting tips. myCHEF cooks in Uluwatu & Bukit villas.',
     canonical: `${SITE}/locations/uluwatu`,
     h1: 'Private Dining in Uluwatu — Villa Chef Options & Local Guide',
   },
@@ -65,7 +65,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/ubud',
     title: 'Ubud Bali Dining Guide | Jungle Villas, Restaurants & Chef Options',
     description:
-      'Ubud area dining guide — jungle villas, farm-to-table restaurants and when to book in-villa service. For a dedicated chef see private chef Ubud.',
+      'Ubud dining guide — jungle villas, restaurants and HACCP-certified in-villa chefs. For a dedicated chef see private chef Ubud.',
     canonical: `${SITE}/locations/ubud`,
     h1: 'Ubud Dining Guide — Jungle Villas, Restaurants & When to Book a Chef',
   },
@@ -74,7 +74,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/nusa-dua',
     title: 'Private Dining Nusa Dua Bali | Villa & Corporate Hosting',
     description:
-      'Private dining Nusa Dua for resort villas and corporate dinners. In-villa chef service, company events and polished hosting with myCHEF.',
+      'Private dining Nusa Dua for resort villas and corporate dinners. HACCP-certified in-villa chefs, company events and polished hosting with myCHEF.',
     canonical: `${SITE}/locations/nusa-dua`,
     h1: 'Private Dining in Nusa Dua — Villa Chef & Corporate Options',
   },
@@ -83,7 +83,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/jimbaran',
     title: 'Private Dining in Jimbaran | Dining Guide & Chef Services',
     description:
-      'Jimbaran dining guide: bay seafood restaurants, beach BBQs, private dining rooms, and in-villa chef options for bayfront villa stays. Local picks by myCHEF.',
+      'Jimbaran dining guide: bay seafood, beach BBQs and HACCP-certified in-villa chefs for bayfront villa stays. Local picks by myCHEF.',
     canonical: `${SITE}/locations/jimbaran`,
     h1: 'Private Dining in Jimbaran: Where to Eat & In-Villa Chef Options',
   },
@@ -92,7 +92,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/sanur',
     title: 'Sanur Bali Dining Guide | Villas, Restaurants & Chef Options',
     description:
-      'Sanur area dining guide for beach villas — restaurants, hosting tips and when to book in-villa service. For a dedicated chef see private chef Sanur.',
+      'Sanur dining guide for beach villas — restaurants, hosting tips and HACCP-certified chef service. For a dedicated chef see private chef Sanur.',
     canonical: `${SITE}/locations/sanur`,
     h1: 'Sanur Dining Guide — Villas, Restaurants & When to Book a Chef',
   },
@@ -101,7 +101,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/pererenan',
     title: 'Private Dining in Pererenan | Dining Guide & Chef Services',
     description:
-      'Pererenan dining guide: design cafes, quiet beach clubs, private dining, and in-villa chef options for west-coast villa stays north of Canggu. By myCHEF today.',
+      'Pererenan dining guide: design cafés, private dining and HACCP-certified in-villa chefs for west-coast villa stays north of Canggu. By myCHEF.',
     canonical: `${SITE}/locations/pererenan`,
     h1: 'Private Dining in Pererenan: Where to Eat & In-Villa Chef Options',
   },
@@ -110,7 +110,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/bukit',
     title: 'Private Dining in Bukit | Dining Guide & Chef Services',
     description:
-      'Bukit Peninsula dining guide: Bingin to Uluwatu restaurants, clifftop private dining, and in-villa chef options for surf and sunset villas. Written by myCHEF.',
+      'Bukit Peninsula dining guide: Bingin to Uluwatu, clifftop private dining and HACCP-certified in-villa chefs for surf and sunset villas. Written by myCHEF.',
     canonical: `${SITE}/locations/bukit`,
     h1: 'Private Dining in Bukit: Where to Eat & In-Villa Chef Options',
   },
@@ -119,7 +119,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/kuta',
     title: 'Private Dining in Kuta | Dining Guide & Chef Services',
     description:
-      'Kuta dining guide: central Bali restaurants, beach clubs, private dining rooms, and in-villa chef options for group villas near the airport. Guide from myCHEF.',
+      'Kuta dining guide: central Bali restaurants, beach clubs and HACCP-certified in-villa chefs for group villas near the airport. Guide from myCHEF.',
     canonical: `${SITE}/locations/kuta`,
     h1: 'Private Dining in Kuta: Where to Eat & In-Villa Chef Options',
   },
@@ -128,7 +128,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/locations/denpasar',
     title: 'Private Dining in Denpasar | Dining Guide & Chef Services',
     description:
-      'Denpasar dining guide: local restaurants, business lunch spots, private dining, and in-villa chef options for city stays and residential compounds. By myCHEF.',
+      'Denpasar dining guide: local restaurants, business lunch spots and HACCP-certified private chefs for city stays and residential compounds. By myCHEF.',
     canonical: `${SITE}/locations/denpasar`,
     h1: 'Private Dining in Denpasar: Where to Eat & In-Villa Chef Options',
   },
@@ -1223,11 +1223,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'fine-dining-romantic-dinner': {
     path: '/fine-dining/romantic-dinner',
-    title: 'Romantic Dinner Bali | Private Villa Chef for Two',
+    title: 'Intimate Villa Dinner Bali | Romantic Private Chef for Two — myCHEF',
     description:
-      'Intimate five-course romantic dinners for two in your Bali villa: candlelight, flowers, sommelier pairing and fine-dining service. Book via WhatsApp myCHEF.',
+      'Intimate dinner services for Bali villas: HACCP-certified private chef, candlelit setup, 5-course tasting for two. From IDR 2.2M++/pp. WhatsApp myCHEF.',
     canonical: `${SITE}/fine-dining/romantic-dinner`,
-    h1: 'Romantic Dinner Bali — A Private Dinner Built for Two',
+    h1: 'Intimate Dinner Services for Bali Villas',
     ogImage: `${SITE}/generated/section-romantic-dinner.webp`,
   },
 

@@ -542,7 +542,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
                 <Star className="w-4 h-4 text-[#C5A028] fill-[#C5A028]" /> {siteFacts.eventsServed}
               </span>
               <span className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#C5A028]" /> HACCP certified
+                <ShieldCheck className="w-4 h-4 text-[#C5A028]" /> HACCP-certified
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-[#C5A028]" /> Same-day response

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection } from '@/components/shared'
+import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -95,7 +95,7 @@ export default function CangguPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Canggu Bali Dining Guide | Restaurants, Villas & When to Book a Chef"
-        description="Canggu area dining guide — Batu Bolong spots, villa hosting and when to book in-villa service. For a dedicated chef see private chef Canggu."
+        description="Canggu dining guide — Batu Bolong spots, villa hosting and HACCP-certified private chefs. For a dedicated chef see private chef Canggu."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-canggu.webp"
         jsonLd={[
@@ -144,6 +144,10 @@ export default function CangguPage() {
               Private Chef in Canggu
             </Link>
           </div>
+          <div className="mt-8 flex justify-center">
+            <HaccpTrustLine dark />
+          </div>
+
         </div>
       </section>
 

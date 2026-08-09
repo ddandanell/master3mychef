@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection } from '@/components/shared'
+import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -96,7 +96,7 @@ export default function NusaDuaPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Dining Nusa Dua Bali | Villa & Corporate Hosting"
-        description="Private dining Nusa Dua for resort villas and corporate dinners. In-villa chef service, company events and polished hosting with myCHEF."
+        description="Private dining Nusa Dua for resort villas and corporate dinners. HACCP-certified in-villa chefs, company events and polished hosting with myCHEF."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-nusa-dua.webp"
         jsonLd={[
@@ -136,6 +136,10 @@ export default function NusaDuaPage() {
               Private Chef in Nusa Dua
             </Link>
           </div>
+          <div className="mt-8 flex justify-center">
+            <HaccpTrustLine dark />
+          </div>
+
         </div>
       </section>
 

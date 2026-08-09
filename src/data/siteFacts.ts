@@ -76,6 +76,15 @@ export const siteFacts = {
   legalName: 'myCHEF Indonesia',
 
   /**
+   * Food-safety claim used on city pages, pillars and trust strips.
+   * Keep wording consistent site-wide for E-E-A-T and schema alignment.
+   */
+  haccpLabel: 'HACCP-certified',
+  haccpShort: 'HACCP-certified chefs',
+  haccpSentence:
+    'All myCHEF culinary teams are HACCP-certified for professional food safety — temperature control, allergen handling and clean kitchen standards in every villa.',
+
+  /**
    * Name variants used across the site and third-party profiles.
    * Declared as schema `alternateName` so Google resolves them to one entity.
    */

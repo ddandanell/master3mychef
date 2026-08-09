@@ -1,13 +1,14 @@
-import { MessageCircle, Wallet, Users, Sparkles } from 'lucide-react'
+import { MessageCircle, Wallet, Sparkles, ShieldCheck } from 'lucide-react'
+import { siteFacts } from '@/data/siteFacts'
 
 interface TrustStripProps {
   dark?: boolean
 }
 
 const items = [
+  { icon: ShieldCheck, label: siteFacts.haccpShort, desc: 'Food safety on every booking' },
   { icon: MessageCircle, label: 'Same-day WhatsApp', desc: 'Confirmation within the hour' },
   { icon: Wallet, label: '50% deposit only', desc: 'Balance due before event' },
-  { icon: Users, label: '1 waiter per 10 guests', desc: 'Industry-standard service' },
   { icon: Sparkles, label: 'Full cleanup', desc: 'We pack up and leave' },
 ]
 
@@ -23,6 +24,7 @@ export default function TrustStrip({ dark = false }: TrustStripProps) {
     <div className={`${bgClass} border-y ${borderClass}`}>
       <div className="max-w-7xl mx-auto px-6 py-8 md:py-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          {/* HACCP first for E-E-A-T on city + commercial pages using TrustStrip */}
           {items.map(({ icon: Icon, label, desc }) => (
             <div key={label} className="flex items-start gap-3">
               <div className={`${iconBg} rounded-xl p-2.5 shrink-0`}>

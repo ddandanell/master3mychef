@@ -6,6 +6,7 @@ const CANONICAL = 'https://mychef.id/blog/how-to-hire-private-chef-bali-complete
 const WA_LINK = 'https://wa.me/6289674072020?text=' + encodeURIComponent('Hi myCHEF, I\'d like to hire a private chef in Bali. Can you help me?')
 
 const FAQS = [
+  { question: 'Private chef vs personal chef — what is the difference?', answer: 'In Bali villa language they are often used interchangeably, but <strong>private chef</strong> usually means a booked professional service (day rate or event menu, HACCP, cleanup, backup cover). <strong>Personal chef</strong> often implies a longer household relationship (weekly meal prep, live-in, or retainer). myCHEF covers both: holiday day rates on <a href="/private-chef-bali">private chef Bali</a> and longer placements via <a href="/staffing/live-in-chef">live-in chef</a> / <a href="/staffing/household-chef">household chef</a>.' },
   { question: 'How much is a private chef in Bali per day?', answer: 'Daily rates depend on meals per day, with weekly and monthly discounts on longer stays. See <a href="/private-chef-bali">private chef Bali</a> and <a href="/pricing">pricing</a>. <a href="/private-chef-bali">Private chef Bali</a>.' },
   { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
   { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
@@ -38,7 +39,17 @@ const SECTIONS = [
     imageAlt: 'fine-dining private chef plating a fine dining course in a Bali villa',
     body: `<p>The private chef market in Bali is growing rapidly — and almost completely unregulated. On any given week, you'll find a wide spectrum of operators: Michelin-trained professionals with verified food safety certification at one end, and informal "home cooks" offering villa meals at the other. The quality gap between them is enormous, and most guests don't know how to tell the difference until something goes wrong.</p>
     <p>This guide gives you a working framework for hiring a private chef in Bali with confidence. You'll learn what credentials actually matter, what six steps to follow from first contact to the dinner table, what questions every client should ask, and what fair pricing looks like in 2026. Whether you're planning a romantic villa dinner for two, a group celebration, or a week of daily private cooking, use this guide before you book.</p>
-    <p>myCHEF has served 12,000+ guests across 560+ events and 500+ villa bookings in Bali since 2019. This is the framework we'd give our own family.</p>`,
+    <p>myCHEF has served 12,000+ guests across 560+ events and 500+ villa bookings in Bali since 2019. This is the framework we'd give our own family.</p>
+    <h3 style="font-family: var(--font-playfair, serif); font-size: 1.25rem; margin: 1.5rem 0 0.5rem; color: #1A1A1A;">Private chef vs personal chef (plain English)</h3>
+    <p><strong>Private chef</strong> in Bali usually means a professional booking: day rates for one–three meals, groceries at cost, HACCP standards, and cleanup. <strong>Personal chef</strong> often means an ongoing household cook — weekly meal prep, multi-week stays, or live-in placement. Guests searching either phrase want the same outcomes: safer food, clearer pricing, and a team that shows up. Use <a href="/private-chef-bali">private chef day rates</a> for holidays and dinners; use <a href="/staffing/live-in-chef">live-in chef</a> when you need a longer household relationship.</p>
+    <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem">
+      <thead><tr style="background:#f5f5f4"><th style="text-align:left;padding:0.5rem;border-bottom:1px solid #e7e5e4">Need</th><th style="text-align:left;padding:0.5rem;border-bottom:1px solid #e7e5e4">Best label</th><th style="text-align:left;padding:0.5rem;border-bottom:1px solid #e7e5e4">myCHEF path</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:0.5rem;border-bottom:1px solid #f5f5f4">One special dinner / tasting</td><td style="padding:0.5rem;border-bottom:1px solid #f5f5f4">Private chef / fine dining</td><td style="padding:0.5rem;border-bottom:1px solid #f5f5f4"><a href="/fine-dining">Fine dining</a> · <a href="/fine-dining/romantic-dinner">Romantic dinner</a></td></tr>
+        <tr><td style="padding:0.5rem;border-bottom:1px solid #f5f5f4">Daily meals on a villa holiday</td><td style="padding:0.5rem;border-bottom:1px solid #f5f5f4">Private chef day rate</td><td style="padding:0.5rem;border-bottom:1px solid #f5f5f4"><a href="/private-chef-bali">Private chef Bali</a></td></tr>
+        <tr><td style="padding:0.5rem;border-bottom:1px solid #f5f5f4">Ongoing household cook</td><td style="padding:0.5rem;border-bottom:1px solid #f5f5f4">Personal / live-in chef</td><td style="padding:0.5rem;border-bottom:1px solid #f5f5f4"><a href="/staffing/live-in-chef">Live-in chef</a></td></tr>
+      </tbody>
+    </table>`,
   },
   {
     id: 'six-steps',
@@ -254,18 +265,19 @@ export default function HowToHirePrivateChefPage() {
   return (
     <PremiumPage
       slug="blog/how-to-hire-private-chef-bali-complete-guide"
-      title="How to Hire a Private Chef in Bali (2026) | Complete Guide"
-      description="Step-by-step guide to hiring a private chef in Bali. What to ask, what to expect, how pricing works, how to book. specialist head chefs from IDR 1,500,000++."
-      seoTitle="How to Hire a Private Chef in Bali (2026) | Complete Guide | myCHEF"
-      seoDescription="Step-by-step guide to hiring a private chef in Bali. What to ask, what to expect, how pricing works, how to book. specialist head chefs from IDR 1,500,000++."
+      title="How to Hire a Private Chef in Bali (2026) | vs Personal Chef"
+      description="How to hire a private chef in Bali — private chef vs personal chef, HACCP, pricing, questions to ask. Day rates and live-in options. WhatsApp myCHEF."
+      seoTitle="How to Hire a Private Chef in Bali (2026) | vs Personal Chef | myCHEF"
+      seoDescription="How to hire a private chef in Bali — private chef vs personal chef, HACCP, pricing, questions to ask. Day rates and live-in options. WhatsApp myCHEF."
       canonicalUrl={CANONICAL}
-      h1="How to Hire a Private Chef in Bali"
-      subtitle="Step-by-step guide: what to look for, what to ask, how pricing works, and how to book with confidence."
+      h1="How to Hire a Private Chef in Bali (vs Personal Chef)"
+      subtitle="Step-by-step guide: private chef vs personal chef, what to look for, what to ask, and how pricing works."
       heroImage="/generated/mychef-experience-bali-fine-dining-4.webp"
       heroImageAlt="fine-dining private chef presenting a fine dining course in a Bali villa"
       ogImage="https://mychef.id/generated/mychef-experience-bali-fine-dining-4.webp"
       keywords={[
         'how to hire private chef bali',
+        'private chef vs personal chef',
         'hire private chef bali guide',
         'private chef bali booking',
         'private chef bali cost',

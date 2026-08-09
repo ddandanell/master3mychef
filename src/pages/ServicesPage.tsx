@@ -3,7 +3,7 @@ import { MessageCircle, ArrowRight, PartyPopper, Heart, Flame, Users, Briefcase,
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
-import { ArticleContentSection } from '@/components/shared'
+import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const WA = 6289674072020
@@ -226,7 +226,7 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-[#050505] text-white">
       <SeoHead
         title="Private Chef Services in Bali | Compare Every myCHEF Service"
-        description="Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. specialist chef team. WhatsApp us to find the right fit."
+        description="Compare all private chef services in Bali: fine dining, catering, events, staffing & classes. HACCP-certified chefs. WhatsApp us to find the right fit."
         canonical={`${SITE}/services`}
         ogImage={`${SITE}/generated/mychef-location-bali-hub-hero.webp`}
         jsonLd={[collectionPageSchema, breadcrumbSchema('Services', `${SITE}/services`), faqPageSchema(FAQS.map(f => ({ question: f.q, answer: f.a })))]}
@@ -259,7 +259,7 @@ export default function ServicesPage() {
             {"Our Services"}
           </h1>
           <p className="text-base md:text-xl text-white/[75%] mb-10 max-w-[640px] leading-relaxed">
-            Eight services, one standard: extraordinary food in your villa, with zero stress. Every service includes menu planning, fresh shopping, on-site cooking and a spotless kitchen afterwards — and every one starts with a clear price.
+            Eight services, one standard: extraordinary food in your villa, with zero stress. Every service includes menu planning, fresh shopping, on-site cooking and a spotless kitchen afterwards — and every one starts with a clear price. All culinary teams are HACCP-certified.
           </p>
           <div className="flex flex-col sm:flex-row items-start gap-4">
             <a
@@ -276,6 +276,9 @@ export default function ServicesPage() {
             >
               full pricing <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+          <div className="mt-8">
+            <HaccpTrustLine dark />
           </div>
         </div>
       </section>

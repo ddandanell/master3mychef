@@ -157,7 +157,7 @@ export default function EventsWeddingsPage() {
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
         title="Wedding Catering Bali | Villa Reception Production | myCHEF"
-        description="Wedding catering Bali for villa receptions: kitchen brigade, service staff and bar production. For fixed Bali wedding catering packages & prices, see the packages page. WhatsApp myCHEF."
+        description="Wedding catering Bali for villa receptions: HACCP-certified kitchen brigade, service staff and bar production. For fixed packages & prices, see the packages page. WhatsApp myCHEF."
         canonical={`${SITE}/events/weddings`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-weddings.webp`}
         jsonLd={[

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection } from '@/components/shared'
+import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -95,7 +95,7 @@ export default function PererenanPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Private Dining in Pererenan | Dining Guide & Chef Services"
-        description="Where to eat in Pererenan: the area dining guide — restaurants, private dining and in-villa chef services for your Pererenan stay. By myCHEF."
+        description="Where to eat in Pererenan: the area dining guide — restaurants, private dining and HACCP-certified in-villa chef services for your Pererenan stay. By myCHEF."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-pererenan.webp"
         jsonLd={[
@@ -131,6 +131,10 @@ export default function PererenanPage() {
               View Pricing Guide
             </Link>
           </div>
+          <div className="mt-8 flex justify-center">
+            <HaccpTrustLine dark />
+          </div>
+
         </div>
       </section>
 

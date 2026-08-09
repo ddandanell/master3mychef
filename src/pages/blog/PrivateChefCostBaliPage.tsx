@@ -62,7 +62,8 @@ const WHAT_AFFECTS_PRICE = [
 ]
 
 const FAQS = [
-  { q: 'How much is a private chef in Bali per day?', a: 'Daily private chef rates are published by meal count with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { q: 'How much is a private chef in Bali per day?', a: 'Daily private chef rates are published by meal count with weekly/monthly discounts — typically from <strong>IDR 1,000,000++</strong> for one meal (chef + assistant), higher for two- and three-meal days. <a href="/private-chef-bali">Private chef Bali</a> · <a href="/pricing">Pricing</a>.' },
+  { q: 'Are myCHEF chefs HACCP-certified?', a: 'Yes. Culinary teams are HACCP-certified for professional food safety — temperature control, allergen handling and clean kitchen standards on every booking.' },
   { q: 'Are groceries included?', a: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
   { q: 'What is Chef Rotation?', a: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
   { q: 'Can the chef cook in our villa kitchen?', a: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
@@ -153,6 +154,9 @@ export default function PrivateChefCostBaliPageBlog() {
           <h1 className="text-4xl md:text-5xl font-light leading-tight mb-6">
             How Much Does a Private Chef in Bali Cost?
           </h1>
+          <p className="text-base md:text-lg text-white/90 max-w-2xl leading-relaxed border border-white/15 bg-white/5 rounded-xl px-4 py-3 mb-4">
+            <strong className="text-white">Short answer:</strong> private chef day rates start around <strong className="text-[#C5A028]">IDR 1M++</strong> (one meal, chef + assistant); fine dining and events are per-person. Groceries at cost with receipts. HACCP-certified teams. Full tables below and on <Link to="/pricing" className="text-[#C5A028] hover:underline">pricing</Link>.
+          </p>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
             Real 2026 pricing from IDR 1,000,000++ per day for a daily villa chef to IDR 20,000,000+ for large events and weddings. What is included, what affects the price, and how to get your quote.
           </p>

@@ -32,6 +32,12 @@ const TRUST_PILLARS = [
     desc: 'Chef replacement guarantee — if your chef can\'t make it, a verified replacement arrives within 2 hours or you receive a 100% refund. Transparent terms — a 50% deposit confirms your booking, prices always quoted ++ (11% government tax + 10% service charge), groceries at cost with receipts.',
     link: { label: 'transparent pricing', href: '/pricing' },
   },
+  {
+    emoji: '✅',
+    title: 'HACCP-certified food safety',
+    desc: 'Every culinary team is HACCP-certified for professional food safety — temperature control, allergen handling and clean kitchen standards on every villa booking. Required for serious group events; applied as standard on every dinner.',
+    link: { label: 'allergy & dietary guide', href: '/blog/food-allergies-dietary-requirements-private-chef-bali' },
+  },
 ]
 
 const STATS = [
@@ -84,7 +90,11 @@ const FAQS = [
   },
   {
     question: 'Can you handle allergies and mixed dietary needs?',
-    answer: 'Yes, at no extra charge when briefed in advance — vegan, gluten-free, nut-free, shellfish allergy, pregnancy-safe, halal-sensitive and kids plates. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide →</a>',
+    answer: 'Yes, at no extra charge when briefed in advance — vegan, gluten-free, nut-free, shellfish allergy, pregnancy-safe, halal-sensitive and kids plates. All culinary teams are HACCP-certified. <a href="/blog/food-allergies-dietary-requirements-private-chef-bali">Allergy guide →</a>',
+  },
+  {
+    question: 'Are myCHEF chefs HACCP-certified?',
+    answer: 'Yes. HACCP (Hazard Analysis Critical Control Points) is the professional food-safety standard we use on every booking — temperature control, allergen handling and clean kitchen protocols. Documentation is available for corporate and large-event procurement.',
   },
   {
     question: 'Which areas of Bali do you cover?',
@@ -161,10 +171,10 @@ export default function WhyMychefPage() {
       id: 'pillars',
       type: 'custom',
       subtitle: 'Why myCHEF',
-      title: 'Five Pillars — With Evidence',
-      body: 'Premium villa service is not just about food. It is about speed, standards, calm communication, and a team that makes your stay easier from the first message to the last plate.',
+      title: 'Six Pillars — With Evidence',
+      body: 'Premium villa service is not just about food. It is about speed, standards, HACCP-certified food safety, calm communication, and a team that makes your stay easier from the first message to the last plate.',
       render: (
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {TRUST_PILLARS.map((pillar) => (
             <article
               key={pillar.title}
@@ -210,6 +220,12 @@ export default function WhyMychefPage() {
                 <td className="py-4 px-4">One person</td>
                 <td className="py-4 px-4">Rotating listings</td>
                 <td className="py-4 pl-4 font-medium text-[#1A1916]">8 named chefs, 50+ staff</td>
+              </tr>
+              <tr className="border-b border-black/5">
+                <td className="py-4 pr-4 font-medium text-[#1A1916]">HACCP-certified food safety</td>
+                <td className="py-4 px-4">Varies / rarely verified</td>
+                <td className="py-4 px-4">Self-declared</td>
+                <td className="py-4 pl-4 font-medium text-[#1A1916]">Standard on every booking</td>
               </tr>
               <tr className="border-b border-black/5">
                 <td className="py-4 pr-4 font-medium text-[#1A1916]">Illness/no-show backup</td>
@@ -289,16 +305,16 @@ export default function WhyMychefPage() {
       <PremiumPage
         slug="why-mychef"
       title="Why Bali Villas Choose myCHEF"
-      description="Why 560+ Bali villas choose myCHEF: Milan-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence."
+      description="Why 560+ Bali villas choose myCHEF: HACCP-certified chefs, Milan-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing."
       seoTitle="Why myCHEF | The Private Chef Company 560+ Bali Villas Trust"
-      seoDescription="Why 560+ Bali villas choose myCHEF: Milan-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing. See the evidence."
+      seoDescription="Why 560+ Bali villas choose myCHEF: HACCP-certified chefs, Milan-trained leadership, a 50+ local team, chef-replacement guarantee and transparent pricing."
       h1="Why Bali Villas Choose myCHEF"
       subtitle="Anyone can say they're the best private chef service in Bali. We'd rather show you the evidence: named chefs, published prices, guarantees in writing, and a repeat-booking rate that does the talking."
       heroImage="/generated/mychef-location-bali-hub-bali.webp"
       heroImageAlt="Luxury myCHEF dinner setup inside a Bali villa"
       ogImage="https://mychef.id/generated/mychef-location-bali-hub-bali.webp"
       keywords={['best private chef service bali', 'why mychef', 'trusted private chef bali', 'top rated private chef bali', 'mychef vs other chefs']}
-      highlights={['560+ Events Served', '12,000+ Guests Hosted', '500+ Villa Bookings', '98% Repeat or Referred']}
+      highlights={['HACCP-Certified Chefs', '560+ Events Served', '12,000+ Guests Hosted', '98% Repeat or Referred']}
       sections={sections}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}

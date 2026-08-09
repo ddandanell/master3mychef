@@ -35,7 +35,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'The Short Answer',
     title: 'Transparent Pricing at a Glance',
-    body: `<p>This page publishes our real prices. The figure you see here is the figure your quote is built from — fixed, itemised, and confirmed before you pay anything. All prices are ++ (11% government tax + 10% service charge) unless marked otherwise.</p>
+    body: `<p>This page publishes our real prices. The figure you see here is the figure your quote is built from — fixed, itemised, and confirmed before you pay anything. All prices are ++ (11% government tax + 10% service charge) unless marked otherwise. Every culinary team is <strong>HACCP-certified</strong> for professional food safety.</p>
     ${tableWrap(
       thead(['Service', 'Price from', 'Basis']) +
       tbody([
@@ -228,9 +228,9 @@ export default function PricingPage() {
       <PremiumPage
         slug="pricing"
       title="Pricing"
-      description="Transparent myCHEF pricing: private chef rates, menu prices, catering & event packages in Bali. No hidden fees. Get a quote within 2 hours."
+      description="Transparent myCHEF pricing: private chef rates, menu prices, catering & event packages in Bali. HACCP-certified chefs. No hidden fees. Get a quote within 2 hours."
       seoTitle="Private Chef Bali Prices | Catering & Event Pricing | myCHEF"
-      seoDescription="Transparent myCHEF pricing: private chef rates, menu prices, catering &amp; event packages in Bali. No hidden fees. Get a quote within 2 hours."
+      seoDescription="Transparent myCHEF pricing: private chef rates, menu prices, catering &amp; event packages in Bali. HACCP-certified chefs. No hidden fees. Get a quote within 2 hours."
       canonicalUrl="https://mychef.id/pricing"
       h1="Transparent Pricing for Every Experience"
       subtitle="This page publishes our real prices. The figure you see here is the figure your quote is built from — fixed, itemised, and confirmed before you pay anything."
@@ -245,7 +245,7 @@ export default function PricingPage() {
         'cost of food and drink in bali',
         'average drink price in bali',
       ]}
-      highlights={['No Hidden Fees', 'Grocery Receipts Provided', '50% Deposit to Book', '24-Hour Quote Delivery']}
+      highlights={['HACCP-Certified Chefs', 'No Hidden Fees', 'Grocery Receipts Provided', '50% Deposit to Book']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={RELATED_PAGES}

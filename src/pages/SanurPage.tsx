@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection } from '@/components/shared'
+import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -95,7 +95,7 @@ export default function SanurPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Sanur Bali Dining Guide | Villas, Restaurants & Chef Options"
-        description="Sanur area dining guide for beach villas — restaurants, hosting tips and when to book in-villa service. For a dedicated chef see private chef Sanur."
+        description="Sanur area dining guide for beach villas — restaurants, hosting tips and HACCP-certified chefs — when to book in-villa service. For a dedicated chef see private chef Sanur."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-sanur.webp"
         jsonLd={[
@@ -134,6 +134,10 @@ export default function SanurPage() {
               Private Chef in Sanur
             </Link>
           </div>
+          <div className="mt-8 flex justify-center">
+            <HaccpTrustLine dark />
+          </div>
+
         </div>
       </section>
 

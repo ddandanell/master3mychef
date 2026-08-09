@@ -382,7 +382,7 @@ export default function HubPage() {
                   myCHEF runs villa hospitality across Bali: multi-day chef service, fine dining nights, BBQ catering and full event teams. We shop, cook, serve and leave the kitchen spotless — from dinner for two to celebrations for 200.
                 </p>
                 <p className="hub-hero-subtitle mb-5 text-sm text-white/75 sm:text-[15px]">
-                  Day rates from IDR 1,000,000++ · Groceries at cost · 560+ events served
+                  Day rates from IDR 1,000,000++ · HACCP-certified chefs · Groceries at cost · 560+ events served
                 </p>
                 <div className="hub-hero-cta mb-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                   <Link

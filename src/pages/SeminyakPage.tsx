@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection } from '@/components/shared'
+import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -114,7 +114,7 @@ export default function SeminyakPage() {
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="Seminyak Bali Dining Guide | Restaurants, Villas & Chef Options"
-        description="Seminyak dining guide — restaurants, villa hosting tips and when to hire in-villa service. For a dedicated chef see private chef Seminyak."
+        description="Seminyak dining guide — restaurants, villa hosting tips and when to hire HACCP-certified chefs. For a dedicated chef see private chef Seminyak."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-seminyak.webp"
         jsonLd={[
@@ -160,6 +160,10 @@ export default function SeminyakPage() {
               Private Chef in Seminyak
             </Link>
           </div>
+          <div className="mt-8 flex justify-center">
+            <HaccpTrustLine dark />
+          </div>
+
         </div>
       </section>
 

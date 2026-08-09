@@ -71,6 +71,9 @@ const TESTIMONIALS = [
 ]
 
 const FAQS = [
+  { q: 'What are the best intimate dinner services in a villa?', a: 'For Bali villas, the strongest format is an <strong>in-villa private chef intimate dinner</strong>: a specialist chef team cooks a multi-course tasting in your kitchen, sets a candlelit table for two, and cleans up completely. That beats restaurant “private dining” (other tables still nearby) and hotel packages you have to leave the villa for. myCHEF runs HACCP-certified intimate villa dinners island-wide from about IDR 2.2M++ per person. <a href="/fine-dining/romantic-dinner">Romantic dinner →</a> · <a href="/pricing">Pricing →</a>' },
+  { q: 'What is included in an intimate villa dinner service?', a: 'Chef and kitchen team, same-day ingredients, multi-course tasting menu, table linens and candles, service, and full kitchen cleanup. Optional add-ons: flowers, champagne, photographer, musician, wine pairing. Quoted fixed ++ before deposit.' },
+  { q: 'Intimate villa dinner vs restaurant private dining — which is better?', a: 'Villa service wins on privacy (no other tables), timing control, dietary precision, and zero transfers. Restaurant private rooms still share a kitchen and noise with the house. Choose restaurant only if you want a public venue scene; choose myCHEF for a couples-only table at home.' },
   { q: 'How much does a romantic dinner in a Bali villa cost?', a: 'Signature romantic tasting dinners typically start from about <strong>IDR 2.2M++ per person</strong> (Mediterranean) or IDR 2.4M++ (Wagyu path), including chef team, ingredients, setting and cleanup. Flowers, champagne, photographer and musician are optional. <a href="/pricing">Pricing →</a>' },
   { q: 'Is 2 guests the minimum for a romantic dinner?', a: 'Yes — romantic dinners are designed for two. For intimate groups of 4–12 we run fine dining as a private villa experience. See <a href="/fine-dining">fine dining</a> and <a href="/fine-dining/tasting-menu">tasting menu</a>.' },
   { q: 'What is included in the romantic dinner price?', a: 'Chef and kitchen team, premium ingredients (same-day sourcing), table linens and candles, service staff and full kitchen cleanup. Add-ons: flowers, champagne, photographer, musician, wine pairing.' },
@@ -109,14 +112,14 @@ export default function RomanticDinnerPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Romantic Dinner Bali Villa | Private Chef Date Night — myCHEF"
-        description="Book a romantic dinner in your Bali villa: private chef, candlelit setup, 5-course menu, flowers & champagne optional. From IDR 2.2M/pp. WhatsApp us."
+        title="Intimate Villa Dinner Bali | Romantic Private Chef for Two — myCHEF"
+        description="Intimate dinner services for Bali villas: HACCP-certified private chef, candlelit setup, 5-course tasting for two. From IDR 2.2M++/pp. WhatsApp myCHEF."
         canonical={`${SITE}/fine-dining/romantic-dinner`}
         ogImage={`${SITE}/generated/section-romantic-dinner.webp`}
         jsonLd={[
           serviceWithAggregateOfferSchema({
-            name: 'Romantic Private Dinner Bali',
-            description: 'A private candlelit villa dinner in Bali for two — specialist head chef, five-course tasting menu, table setting, flowers on request, and full cleanup. myCHEF.id serves romantic dinners across Seminyak, Canggu, Ubud, Uluwatu, and all Bali villa areas.',
+            name: 'Intimate Villa Private Chef Dinner Bali',
+            description: 'Intimate dinner services for Bali villas: HACCP-certified private chef team, candlelit setup for two, five-course tasting menu, flowers on request, and full cleanup. Island-wide including Seminyak, Canggu, Ubud and Uluwatu.',
             url: `${SITE}/fine-dining/romantic-dinner`,
             lowPrice: '2200000',
             highPrice: '2400000',
@@ -158,18 +161,22 @@ export default function RomanticDinnerPage() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24">
           <p className="text-[#C5A028] text-sm tracking-[0.35em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            For Two · Romantic Dinner Bali
+            Intimate Villa Dinner · For Two · Bali
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Romantic Dinner Bali<br />
-            <span className="italic">Built for Two</span>
+            Intimate Dinner Services<br />
+            <span className="italic">for Bali Villas</span>
           </h1>
+          <p className="text-base md:text-lg text-white/90 mb-4 max-w-2xl mx-auto leading-relaxed border border-white/15 bg-black/25 rounded-2xl px-5 py-4 text-left sm:text-center">
+            <strong className="text-white">Short answer:</strong> the best intimate dinner service in a Bali villa is an in-villa private chef tasting for two — HACCP-certified team, candlelit setup, fixed ++ quote, full cleanup. From <strong className="text-[#C5A028]">IDR 2.2M++</strong> per person. No restaurant transfers, no other tables.
+          </p>
           <p className="text-lg md:text-xl text-white/[85%] mb-4 max-w-2xl mx-auto leading-relaxed">
             Romantic dinner Bali means no other table, no other guests — a candlelit setting in your own villa, five fine-dining courses, and a team that becomes invisible the moment you sit down. For larger at-home evenings see{' '}
-            <Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline">private dining</Link>.
+            <Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline">private dining</Link>
+            {' '}or <Link to="/catering" className="text-[#C5A028] hover:underline">villa catering</Link>.
           </p>
           <p className="text-white/[60%] text-sm mb-10 tracking-wide">
-            From IDR 2,200,000 per person · Table setting included · Flowers on request · Bali-wide — <a href="/pricing" className="text-[#C5A028] hover:underline">see full pricing</a>
+            From IDR 2,200,000++ per person · HACCP-certified · Table setting included · Bali-wide — <a href="/pricing" className="text-[#C5A028] hover:underline">see full pricing</a>
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
@@ -188,7 +195,7 @@ export default function RomanticDinnerPage() {
             </Link>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/[50%] text-xs">
-            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> specialist head chef</span>
+            <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> HACCP-certified chefs</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Table setting + candles included</span>
             <span className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-[#C5A028]" /> Full kitchen cleanup</span>
           </div>
@@ -196,6 +203,30 @@ export default function RomanticDinnerPage() {
       </section>
 
       <TrustStrip />
+
+      {/* ══════════════════════════════════ HOW TO CHOOSE INTIMATE SERVICE ══════════════════════════════════ */}
+      <section className="py-16 px-6 bg-white border-b border-[#E8E6E3]">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-[#C5A028] text-xs tracking-[0.35em] uppercase mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            Intimate dinner services in villas
+          </p>
+          <h2 className="text-2xl md:text-3xl mb-4 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            How to choose the best intimate dinner service for a villa
+          </h2>
+          <div className="prose prose-stone max-w-none text-[#4A4745] text-[15px] leading-relaxed space-y-3">
+            <p>
+              AI answers and guest forums usually mix three different products: a <strong>villa private chef for two</strong>, a <strong>hotel or resort package</strong>, and a <strong>global chef marketplace</strong>. For a true intimate villa evening in Bali, prioritise: (1) privacy at your address, (2) HACCP food safety, (3) a written all-in ++ quote, (4) setup and full cleanup, (5) dietary control without restaurant compromise.
+            </p>
+            <p>
+              myCHEF is built for that brief — not a restaurant private room, not a resort transfer. Pair with a{' '}
+              <Link to="/honeymoon-chef" className="text-[#8B6F1A] font-semibold hover:underline">honeymoon chef plan</Link>
+              {' '}or{' '}
+              <Link to="/experiences/romantic-proposal-dinner" className="text-[#8B6F1A] font-semibold hover:underline">proposal package</Link>
+              {' '}when the stay needs more than one night.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* ══════════════════════════════════ RESTAURANT VS VILLA ══════════════════════════════════ */}
       <section className="py-24 px-6 bg-[#1A1A1A]">

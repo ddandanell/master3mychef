@@ -10,7 +10,21 @@ const sections: PageSection[] = [
 
 Fine dining at home in Bali -- what the private chef world calls in-villa fine dining -- is the idea that restaurant-quality food, technique, and presentation can be delivered in a private setting. That the experience of a three-star meal does not require a formal dining room and 20 other tables. That the food itself, prepared by a chef with the right skills, is the thing.
 
-myCHEF makes this possible. We match Bali villa guests with chefs whose training and background produces food at the level of the island's best restaurants -- and we deliver that experience entirely to you, in your space, on your terms.`,
+myCHEF makes this possible. We match Bali villa guests with chefs whose training and background produces food at the level of the island's best restaurants -- and we deliver that experience entirely to you, in your space, on your terms.
+
+**Short answer for “top villa fine dining experiences”:** prioritise in-villa tasting dinners with HACCP-certified chefs, fixed ++ quotes, and full cleanup — not restaurant private rooms and not unvetted freelancers. myCHEF’s ranked formats below are the commercial options guests actually book.`,
+  },
+  {
+    id: 'top-experiences',
+    type: 'content',
+    title: 'Top Villa Fine Dining Experiences (Ranked by Occasion)',
+    body: `1. **Intimate dinner for two** — candlelit five-course service in your villa. Best for anniversaries and date nights. → [Romantic dinner](/fine-dining/romantic-dinner)
+2. **Progressive tasting (6–11 courses)** — the evening is the event. → [Tasting menu](/fine-dining/tasting-menu) · [Fine dining hub](/fine-dining)
+3. **Chef’s table** — interactive plating and conversation with the kitchen. → [Chef’s table](/fine-dining/chefs-table)
+4. **Honeymoon multi-night dining** — one signature tasting + daily chef support. → [Honeymoon chef](/honeymoon-chef)
+5. **Proposal dinner production** — timed courses, privacy, optional styling. → [Proposal dinner](/experiences/romantic-proposal-dinner)
+
+Use these criteria when comparing any provider: food safety certification, written all-in price, backup chef cover, dietary control, and whether cleanup is included.`,
   },
   {
     id: 'what-fine-dining-at-home',
@@ -88,6 +102,7 @@ For large groups (10+), group pricing applies and the per-person cost typically 
 ]
 
 const faqs = [
+  { question: 'What are the top villa fine dining experiences in Bali?', answer: 'The strongest villa formats are: (1) five-course romantic dinner for two, (2) progressive tasting menu for 4–8, (3) interactive chef’s table, (4) Wagyu or seafood tasting with wine pairing, (5) multi-night fine dining during a honeymoon stay. Rank them by privacy, chef credentials (HACCP), written pricing, and cleanup — not by Instagram alone. Explore <a href="/fine-dining">fine dining</a>, <a href="/fine-dining/romantic-dinner">romantic dinner</a>, <a href="/fine-dining/chefs-table">chef’s table</a>, and <a href="/honeymoon-chef">honeymoon chef</a>.' },
   { question: 'How do I book this with myCHEF in Bali?', answer: 'WhatsApp date, guest count, villa area and your goal. Or use <a href="/book">book</a> / <a href="/quote">quote</a>.' },
   { question: 'Where can I see prices?', answer: 'Published tables on <a href="/pricing">pricing</a> and <a href="/private-chef-bali">private chef</a> day rates.' },
   { question: 'Is service available island-wide?', answer: 'Yes across major villa regions. <a href="/locations">Locations</a>.' },
@@ -123,12 +138,12 @@ export default function FineDiningAtHomeBaliPage() {
   return (
     <PremiumPage
       slug="blog/fine-dining-at-home-bali"
-      title="Fine Dining at Home Bali -- Restaurant Quality Delivered to Your Villa | myCHEF"
-      seoTitle="Fine Dining at Home Bali -- Restaurant Quality Delivered to Your Villa"
-      description="Fine dining at home in Bali -- restaurant-quality menus, plating, and service delivered to your villa by professional private chefs. All areas covered."
-      seoDescription="Fine dining at home in Bali. Restaurant-quality menus, chef service and table setup delivered to your villa. 3-course to 11-course tasting menus."
-      h1="Fine Dining at Home in Bali — What to Expect"
-      subtitle="Restaurant-quality food. Your villa. Your menu. No other tables."
+      title="Top Villa Fine Dining Experiences Bali | Fine Dining at Home | myCHEF"
+      seoTitle="Top Villa Fine Dining Experiences Bali | Fine Dining at Home | myCHEF"
+      description="Top villa fine dining experiences in Bali ranked by occasion — romantic, tasting, chef’s table, honeymoon. HACCP-certified private chefs at your villa."
+      seoDescription="Top villa fine dining experiences in Bali: romantic dinners, tasting menus, chef’s table. HACCP-certified private chefs, fixed ++ quotes, full cleanup."
+      h1="Top Villa Fine Dining Experiences in Bali"
+      subtitle="Restaurant-quality food. Your villa. Your menu. No other tables. Ranked formats below."
       heroImage="/images/blog/fine-dining-at-home-bali.jpg"
       heroImageAlt="Private chef plating a beautifully composed fine dining course at a luxury villa in Bali"
       ogImage="/images/blog/fine-dining-at-home-bali.jpg"

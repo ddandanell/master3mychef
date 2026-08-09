@@ -156,8 +156,8 @@ export default function EventsWeddingsPage() {
   return (
     <div ref={ref} className="min-h-screen" style={{ background: '#FAFAF8', color: '#1A1A1A' }}>
       <SeoHead
-        title="Wedding Catering Bali | Best Villa Wedding Catering & Receptions | myCHEF"
-        description="Bali wedding catering for villa receptions: cost bands per person, plated or buffet, cocktail hour, butlers & bar. Intimate to 200+ guests. Transparent packages — WhatsApp myCHEF."
+        title="Wedding Catering Bali | Villa Reception Production | myCHEF"
+        description="Wedding catering Bali for villa receptions: kitchen brigade, service staff and bar production. For fixed Bali wedding catering packages & prices, see the packages page. WhatsApp myCHEF."
         canonical={`${SITE}/events/weddings`}
         ogImage={`${SITE}/generated/mychef-events-bali-hero-weddings.webp`}
         jsonLd={[
@@ -206,10 +206,10 @@ export default function EventsWeddingsPage() {
         <div className="relative z-10 px-6 md:px-8 py-12 md:py-20 max-w-2xl mx-auto md:mx-0 md:ml-auto md:mr-auto md:flex md:flex-col md:justify-center h-full w-full">
           <Breadcrumb items={[{ label: 'Events', href: '/events' }, { label: 'Weddings' }]} theme="dark" className="mb-8" />
           <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>
-            Wedding Catering Bali
+            Villa wedding production
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Wedding Catering in Bali — Villa Weddings, Run by One Team
+            Wedding Catering Bali — Kitchen, Service &amp; Bar for Villa Receptions
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-8 max-w-xl">
             Foreign couples searching for a Bali wedding villa reception need clear catering: menu design, chef brigade, waiters, cocktail bar, setup and cleanup — one contract, itemised costs, and a kitchen that leaves no trace behind.
@@ -218,8 +218,8 @@ export default function EventsWeddingsPage() {
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="events-weddings-cta" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C5A028] text-[#1A1A1A] text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-[#D4B43A] transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
               <MessageCircle className="w-4 h-4" /> Request a Wedding Consult
             </a>
-            <a href="/book" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
-              <Calendar className="w-4 h-4" /> Open Wedding Inquiry Form
+            <a href="/bali-wedding-catering-packages" className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white text-sm font-semibold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-white rounded">
+              <Calendar className="w-4 h-4" /> Wedding catering packages &amp; prices
             </a>
           </div>
           <p className="text-sm md:text-base text-white/60 uppercase tracking-[0.2em] text-left">

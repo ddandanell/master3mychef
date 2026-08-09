@@ -369,39 +369,39 @@ export default function HubPage() {
             <div className="relative z-10 mx-auto flex min-h-[85svh] max-w-[1280px] items-end px-5 pb-8 pt-24 sm:px-6 md:min-h-screen md:items-center md:pb-14 md:pt-24">
               <div className="w-full max-w-2xl md:max-w-[46%]">
                 <p className="hub-hero-label mb-3 text-xs uppercase tracking-[0.28em] text-[#C5A028] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                  Private Chef Bali
+                  myCHEF · Bali hospitality
                 </p>
                 <h1 className="hub-hero-title mb-2 text-[1.75rem] leading-[1.1] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
                   Your villa. Our kitchen.
                 </h1>
                 <p className="hub-hero-subtitle mb-3 text-sm font-medium leading-snug text-white/90 sm:text-base md:text-lg">
-                  Private Chef Bali — restaurant-level dining in your villa
+                  Restaurant-level dining, catering and events — delivered in your villa
                 </p>
                 <div className="gold-arc mb-4 md:mb-6" />
                 <p className="hub-hero-subtitle mb-3 max-w-[40ch] text-[15px] leading-relaxed text-white/90 sm:max-w-xl sm:text-lg">
-                  Hire a private villa chef in Bali for in-villa fine dining, daily chef service, BBQ catering, or events. We shop, cook, serve, and leave the kitchen spotless — from dinner for two to celebrations for 200.
+                  myCHEF runs villa hospitality across Bali: multi-day chef service, fine dining nights, BBQ catering and full event teams. We shop, cook, serve and leave the kitchen spotless — from dinner for two to celebrations for 200.
                 </p>
                 <p className="hub-hero-subtitle mb-5 text-sm text-white/75 sm:text-[15px]">
-                  From IDR 1,000,000++ / day · Groceries at cost · 560+ events served
+                  Day rates from IDR 1,000,000++ · Groceries at cost · 560+ events served
                 </p>
                 <div className="hub-hero-cta mb-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                  <a
-                    href={buildWhatsAppUrl({ serviceName: 'a private chef for my Bali villa', intent: 'a quote within 2 hours' })}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-source="homepage-hero"
+                  <Link
+                    to="/private-chef-bali"
+                    data-source="homepage-hero-pillar"
                     className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3.5 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-[1.02] sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-white"
                     style={{ background: '#C5A028', color: '#111' }}
                   >
-                    <MessageCircle className="w-5 h-5" /> WhatsApp quote in 2 hours
-                  </a>
-                  <button
-                    type="button"
-                    onClick={() => setAvailabilityOpen(true)}
+                    Private chef day rates <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <a
+                    href={buildWhatsAppUrl({ serviceName: 'a villa hospitality plan with myCHEF', intent: 'a quote within 2 hours' })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-source="homepage-hero"
                     className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-white/45 px-6 py-3.5 text-sm font-semibold uppercase tracking-widest text-white transition-all hover:bg-white/10 sm:w-auto sm:px-7 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
                   >
-                    Check availability
-                  </button>
+                    <MessageCircle className="w-5 h-5" /> WhatsApp in 2 hours
+                  </a>
                   <Link
                     to="/pricing"
                     className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 text-sm font-medium text-white/85 underline-offset-4 hover:text-white hover:underline sm:w-auto focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"

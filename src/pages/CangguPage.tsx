@@ -94,8 +94,8 @@ export default function CangguPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Dining Canggu Bali | Villa Chef & Area Guide"
-        description="Private dining Canggu for villa groups: in-villa chef service, casual BBQ nights and where locals eat. myCHEF covers Canggu & Berawa."
+        title="Canggu Bali Dining Guide | Restaurants, Villas & When to Book a Chef"
+        description="Canggu area dining guide — Batu Bolong spots, villa hosting and when to book in-villa service. For a dedicated chef see private chef Canggu."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-canggu.webp"
         jsonLd={[
@@ -110,7 +110,7 @@ export default function CangguPage() {
         <div className="absolute inset-0">
           <img
             src="/generated/mychef-location-bali-city-canggu.webp"
-            alt="Private dining in Canggu, Bali — in-villa chef dinner by myCHEF"
+            alt="Canggu Bali dining guide — villa terrace and neighbourhood food scene by myCHEF"
             width={1920}
             height={1080}
             className="w-full h-full object-cover"
@@ -122,10 +122,11 @@ export default function CangguPage() {
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Canggu Dining Guide</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Dining in Canggu — Villa Chef Options & Local Guide
+            Canggu Dining Guide — Restaurants, Villas &amp; When to Book a Chef
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Private dining Canggu is our busiest villa format after Seminyak — chef-cooked meals at your pool, no Batu Bolong queues. Canggu eats the way it lives: early, healthy and outdoors. This guide maps where to eat out in Canggu, what "private dining" actually means here, and when the smartest table in the neighbourhood is the one already inside your villa.
+            Canggu eats the way it lives: early, healthy and outdoors. This guide maps where to eat out, how villa hosting works, and when the smartest table is already inside your villa. Need a dedicated cook? Use our{' '}
+            <Link to="/private-chef/canggu" className="text-[#C5A028] hover:underline font-medium">private chef in Canggu</Link> page for rates and meal plans.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

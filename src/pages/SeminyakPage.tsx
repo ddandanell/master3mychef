@@ -113,8 +113,8 @@ export default function SeminyakPage() {
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
-        title="Private Dining Seminyak Bali | Villa Chef & Local Guide"
-        description="Private dining Seminyak: villa chef options, area restaurants and how in-villa service works for your stay. Book myCHEF for Seminyak villas."
+        title="Seminyak Bali Dining Guide | Restaurants, Villas & Chef Options"
+        description="Seminyak dining guide — restaurants, villa hosting tips and when to hire in-villa service. For a dedicated chef see private chef Seminyak."
         canonical={canonical}
         ogImage="/generated/mychef-location-bali-city-seminyak.webp"
         jsonLd={[
@@ -140,9 +140,7 @@ export default function SeminyakPage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Seminyak Dining Guide</p>
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Dining in Seminyak — Villa Chef Options & Local Guide
-          </h1>
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Seminyak Dining Guide — Restaurants, Villas &amp; When to Book a Chef</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Private dining Seminyak means restaurant-level food at your villa table — the format most of our Petitenget and Oberoi guests choose. Seminyak is where Bali learned to dress for dinner. The island's original luxury villa district packs more restaurants per square kilometre than anywhere else in Bali. This guide covers the Seminyak dining scene by category, the private dining options beyond a restaurant booking, and when an in-villa chef dinner is the better table.
           </p>

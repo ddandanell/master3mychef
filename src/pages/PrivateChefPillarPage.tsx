@@ -346,6 +346,18 @@ const areaLabel = (slug: string) =>
  * ------------------------------------------------------------------ */
 const FAQS = [
   {
+    q: 'How do I hire a private chef in Bali?',
+    a: 'Message myCHEF on WhatsApp with dates, villa or Airbnb location, guest count and meals per day. We reply within two hours with an available chef, sample menu and all-in total. A 50% deposit confirms. Start on this page’s rates or <a href="/book">book</a>.',
+  },
+  {
+    q: 'What is a private chef in Bali?',
+    a: 'A private chef Bali booking means a professional cook works only for your group — usually in a villa kitchen — planning menus, shopping, cooking, serving and cleaning. myCHEF’s standard is chef + assistant on a transparent day rate, not a single freelance marketplace cook.',
+  },
+  {
+    q: 'Can I hire a private chef for a Bali villa with a cook / Airbnb stay?',
+    a: 'Yes. Most bookings are for short-stay villas and Airbnbs (you do not need to own the property). Share the listing link so we plan kitchen access. Multi-day stays use the meal-count day rates on this page; larger parties can add <a href="/catering">catering</a>.',
+  },
+  {
     q: 'How much does a private chef cost in Bali?',
     a: `${privateChefPricing.headline} That is a day rate for one professional chef plus a dedicated assistant at your villa — not a per-person marketplace fee. Weekly bookings take ${STAY_DISCOUNTS.weekly.off * 100}% off; monthly take ${STAY_DISCOUNTS.monthly.off * 100}% off. Groceries are billed separately at cost with receipts. See the full table on our <a href="/pricing">pricing page</a> or this page’s <a href="#prices">meal plans</a>.`,
   },
@@ -610,24 +622,25 @@ export default function PrivateChefPillarPage() {
           <Breadcrumb items={[{ label: 'Private Chef Bali' }]} theme="dark" />
 
           <p className="text-[#C5A028] tracking-[0.28em] text-[11px] sm:text-xs uppercase mt-6 mb-4">
-            Private Chef Hire · Villas Across All of Bali
+            Private Chef Hire · Villas &amp; Airbnb Across Bali
           </p>
 
           <h1 className="text-white font-playfair font-normal leading-[1.05] text-[2.4rem] sm:text-6xl lg:text-7xl max-w-4xl">
-            Private Chef in Bali
+            Private Chef Bali
           </h1>
           {/* Price kept outside H1 so crawlers never see “BaliFrom …” concatenation. */}
           <p className="text-[#C5A028] italic font-playfair text-2xl sm:text-3xl mt-3 max-w-4xl">
             From {formatIDR(MEAL_PLANS[0].daily)}++ a day ({formatIDR(Math.round(MEAL_PLANS[0].daily * 1.21))} all-in)
           </p>
           <p className="text-white/70 text-sm sm:text-base mt-2 max-w-2xl">
-            Published rates — no enquiry required to see what it costs.
+            Published day rates — hire a private chef in Bali without waiting for a quote.
           </p>
 
           <p className="text-white/75 text-base sm:text-lg max-w-2xl mt-6 leading-relaxed">
-            Hire a private chef for your Bali villa. A named head chef and a dedicated assistant
-            arrive, source ingredients fresh, cook, serve at your table, and leave the kitchen clean.
-            Choose one, two or three meals a day. Every rate is published below.
+            Hire a private chef Bali team for your villa or Airbnb stay: chef + assistant, one meal from{' '}
+            {formatIDR(MEAL_PLANS[0].daily)}++, two meals {formatIDR(MEAL_PLANS[1]?.daily ?? 1_800_000)}++, three meals{' '}
+            {formatIDR(MEAL_PLANS[2]?.daily ?? 2_700_000)}++ per day. Groceries at cost with receipts. WhatsApp for
+            availability — every rate is published below.
           </p>
 
           <div className="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-white/55 text-xs sm:text-sm">
@@ -931,6 +944,67 @@ export default function PrivateChefPillarPage() {
             </Link>
             <Link to="/blog/private-chef-cost-bali" className="text-[#C5A028] font-medium hover:underline">
               Private chef cost guide →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* -------------------------------- Villa / Airbnb with private chef (money cluster) */}
+      <section id="villa-airbnb-chef" className="bg-[#FAF8F4] py-16 sm:py-20 border-y border-[#1A1A1A]/08">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <p className="text-[#C5A028] tracking-[0.28em] text-[11px] uppercase mb-4">
+            Villa &amp; short-stay dining
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-playfair text-[#1A1A1A] leading-tight max-w-3xl">
+            Bali villa with private chef — including Airbnb &amp; short stays
+          </h2>
+          <p className="text-[#1A1A1A]/70 text-base sm:text-lg mt-5 max-w-3xl leading-relaxed">
+            Looking for a <strong>Bali villa with chef</strong>, an <strong>Airbnb with chef</strong>, or to{' '}
+            <strong>hire a chef Bali</strong> for a few nights? You do not need a long-term rental or a permanent cook
+            on staff. Share your listing link, dates and guest count — we cook in the villa kitchen you already booked.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
+            <div className="bg-white border border-[#1A1A1A]/10 p-6">
+              <h3 className="font-playfair text-xl text-[#1A1A1A] mb-2">One meal vs multi-day</h3>
+              <p className="text-sm text-[#1A1A1A]/65 leading-relaxed">
+                One celebration dinner, or breakfast + dinner across the week. Meal-count day rates stay published —
+                switch day-parts as your plans change.
+              </p>
+            </div>
+            <div className="bg-white border border-[#1A1A1A]/10 p-6">
+              <h3 className="font-playfair text-xl text-[#1A1A1A] mb-2">Villa private chef logistics</h3>
+              <p className="text-sm text-[#1A1A1A]/65 leading-relaxed">
+                We plan load-in, shopping and cleanup around your check-in. South Bali cores (Seminyak, Canggu, Ubud,
+                Uluwatu, Sanur, Nusa Dua, Jimbaran) run without a surprise travel surcharge.
+              </p>
+            </div>
+            <div className="bg-white border border-[#1A1A1A]/10 p-6">
+              <h3 className="font-playfair text-xl text-[#1A1A1A] mb-2">Stack staff or bar</h3>
+              <p className="text-sm text-[#1A1A1A]/65 leading-relaxed">
+                Add waiters,{' '}
+                <Link to="/in-villa-service/butlers" className="text-[#C5A028] hover:underline">
+                  Bali butler service
+                </Link>{' '}
+                or a{' '}
+                <Link to="/in-villa-service/bartenders" className="text-[#C5A028] hover:underline">
+                  mobile cocktail bar
+                </Link>{' '}
+                for villa parties — one timeline with the chef team.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-4 text-sm">
+            <Link to="/locations" className="text-[#C5A028] font-medium hover:underline">
+              Browse areas we cover →
+            </Link>
+            <Link to="/private-chef/canggu" className="text-[#C5A028] font-medium hover:underline">
+              Private chef Canggu →
+            </Link>
+            <Link to="/private-chef/seminyak" className="text-[#C5A028] font-medium hover:underline">
+              Private chef Seminyak →
+            </Link>
+            <Link to="/private-chef/ubud" className="text-[#C5A028] font-medium hover:underline">
+              Private chef Ubud →
             </Link>
           </div>
         </div>

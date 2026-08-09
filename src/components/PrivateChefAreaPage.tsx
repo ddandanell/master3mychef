@@ -486,6 +486,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
   const serviceLabels = availableServices.map((s) => s.label.toLowerCase()).join(', ')
   const localGuideParagraphs = [
     `Hiring a private chef in ${area.name} is different from booking the same team in another part of ${area.regency}. ${area.villaDensity} Guests here typically match this profile: ${area.guestProfile}`,
+    `Short-stay villas and Airbnbs in ${area.name} are the most common booking type — you do not need a permanent cook on staff. Share the listing link so we plan kitchen access, shopping runs and cleanup around your check-in.`,
     `Landmarks and villa corridors we regularly serve around ${area.name} include ${landmarkList}. Share your villa pin on WhatsApp so we plan travel, kitchen load-in and timing for the real property — not a generic Bali pin.`,
     `Menus in ${area.name} follow the same published floors as the rest of the island, with formats that fit how people stay here: ${serviceLabels}. ${area.pricingNote}`,
     area.services.includes('bbq') || area.services.includes('catering')

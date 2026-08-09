@@ -162,10 +162,11 @@ export default function ServiceButlersPage() {
     ]} theme="dark" className="px-0 pt-0 pb-8" />
     <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[0.3em] mb-4">In-Villa Service</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 max-w-[800px]">
-            Butler Service Bali — Hire a Private Villa Butler
+            Bali Butler Service — Hire a Villa Butler by the Day
           </h1>
           <p className="text-white/[80%] text-lg md:text-xl max-w-[600px] mb-8">
-            Butler service Bali for villa stays, celebrations and events — hired by the day, not bundled into a hotel room. Discreet arrival service, household coordination and anticipatory guest care. Contact us for pricing via WhatsApp.
+            Bali butler service for villa stays, celebrations and events — hired by the day, not bundled into a hotel room. Discreet arrival service, household coordination and anticipatory guest care. Stack with a{' '}
+            <a href="/private-chef-bali" className="text-[#C5A028] hover:underline">private chef Bali</a> booking. Contact us for pricing via WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={WA_LINK} target="_blank" rel="noopener noreferrer" data-source="service-butlers-cta" className="inline-flex items-center justify-center gap-2 bg-[#C5A028] text-[#1A1A1A] font-semibold text-sm uppercase tracking-[2px] px-8 py-4 rounded-full hover:bg-[#D4B43A] transition-colors focus:outline-none focus:ring-2 focus:ring-white">

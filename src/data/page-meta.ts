@@ -26,30 +26,30 @@ const SITE = 'https://mychef.id'
 export const PAGE_META: Record<string, PageMeta> = {
       home: {
     path: '/',
-    title: 'Private Chef Bali | Villa Dining, BBQ & Events | myCHEF',
+    title: 'myCHEF Bali | Villa Chef, Catering, Weddings & Events',
     description:
-      'Private chef Bali for villa dining, BBQs, weddings & events. Chef day rates from IDR 1,000,000++, catering from IDR 700K++ per guest. WhatsApp reply within 2 hours.',
+      'myCHEF is a Bali hospitality company: villa private chef day rates, catering, weddings and in-villa staff. Transparent prices. WhatsApp reply within 2 hours.',
     canonical: `${SITE}/`,
-    h1: 'Private Chef Bali — Your Villa. Our Kitchen.',
+    h1: 'Your villa. Our kitchen.',
     ogImage: `${SITE}/generated/mychef-location-bali-hub-hero.webp`,
   },
 
       'locations-seminyak': {
     path: '/locations/seminyak',
-    title: 'Private Dining Seminyak Bali | Villa Chef & Local Guide',
+    title: 'Seminyak Bali Dining Guide | Restaurants, Villas & Chef Options',
     description:
-      'Private dining Seminyak: villa chef options, area restaurants and how in-villa service works for your stay. Book myCHEF for Seminyak villas.',
+      'Seminyak dining guide — restaurants, villa hosting tips and when to hire in-villa service. For a dedicated chef see private chef Seminyak.',
     canonical: `${SITE}/locations/seminyak`,
-    h1: 'Private Dining in Seminyak — Villa Chef Options & Local Guide',
+    h1: 'Seminyak Dining Guide — Restaurants, Villas & When to Book a Chef',
   },
 
       'locations-canggu': {
     path: '/locations/canggu',
-    title: 'Private Dining Canggu Bali | Villa Chef & Area Guide',
+    title: 'Canggu Bali Dining Guide | Restaurants, Villas & When to Book a Chef',
     description:
-      'Private dining Canggu for villa groups: in-villa chef service, casual BBQ nights and where locals eat. myCHEF covers Canggu & Berawa.',
+      'Canggu dining guide — Batu Bolong spots, villa hosting and when to book in-villa service. For a dedicated chef see private chef Canggu.',
     canonical: `${SITE}/locations/canggu`,
-    h1: 'Private Dining in Canggu — Villa Chef Options & Local Guide',
+    h1: 'Canggu Dining Guide — Restaurants, Villas & When to Book a Chef',
   },
 
       'locations-uluwatu': {
@@ -63,11 +63,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'locations-ubud': {
     path: '/locations/ubud',
-    title: 'Private Dining Ubud Bali | Villa Chef & Jungle Guide',
+    title: 'Ubud Bali Dining Guide | Jungle Villas, Restaurants & Chef Options',
     description:
-      'Private dining Ubud for jungle villas: farm-to-table chef menus, wellness stays and chef’s table nights. Book myCHEF in Ubud.',
+      'Ubud area dining guide — jungle villas, farm-to-table restaurants and when to book in-villa service. For a dedicated chef see private chef Ubud.',
     canonical: `${SITE}/locations/ubud`,
-    h1: 'Private Dining in Ubud — Villa Chef Options & Local Guide',
+    h1: 'Ubud Dining Guide — Jungle Villas, Restaurants & When to Book a Chef',
   },
 
       'locations-nusa-dua': {
@@ -90,11 +90,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'locations-sanur': {
     path: '/locations/sanur',
-    title: 'Private Dining Sanur Bali | Villa Chef & Local Guide',
+    title: 'Sanur Bali Dining Guide | Villas, Restaurants & Chef Options',
     description:
-      'Private dining Sanur for beach villas: in-villa chef service, family dinners and relaxed hosting. myCHEF covers Sanur & east Bali.',
+      'Sanur area dining guide for beach villas — restaurants, hosting tips and when to book in-villa service. For a dedicated chef see private chef Sanur.',
     canonical: `${SITE}/locations/sanur`,
-    h1: 'Private Dining in Sanur — Villa Chef Options & Local Guide',
+    h1: 'Sanur Dining Guide — Villas, Restaurants & When to Book a Chef',
   },
 
       'locations-pererenan': {
@@ -695,9 +695,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/bali-wedding-catering-packages',
     title: 'Bali Wedding Catering Packages & Prices 2026 | myCHEF',
     description:
-      'Bali wedding catering packages with per-guest prices by headcount — plated, buffet and grazing. See inclusions, staffing and what changes the total.',
+      'Bali wedding catering packages with clear per-guest prices (plated, buffet, grazing). Inclusions, staffing & what changes the total — WhatsApp for a fixed proposal.',
     canonical: `${SITE}/bali-wedding-catering-packages`,
-    h1: 'Bali Wedding Catering Packages — Transparent Pricing',
+    h1: 'Bali Wedding Catering Packages — Prices by Guest Count',
   },
 
       'michelin-private-chef-bali-prices': {
@@ -1385,9 +1385,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'catering-bbq': {
     path: '/catering/bbq-catering',
-    title: 'BBQ Catering Bali | Live Grill for Villas & Parties',
+    title: 'BBQ Catering Bali | Live Grill Packages for Villas & Parties',
     description:
-      'Bali BBQ catering for villas, parties and events: fresh seafood, Wagyu and organic sides grilled live at your pool. Transparent per-person pricing.',
+      'BBQ catering Bali for villas, parties and events: fresh seafood, Wagyu and organic sides grilled live at your pool. Transparent per-person pricing.',
     canonical: `${SITE}/catering/bbq-catering`,
     h1: 'BBQ Catering Bali — Live Grill at Your Villa',
     ogImage: `${SITE}/bbq-poolside.webp`,
@@ -1485,9 +1485,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'events-weddings': {
     path: '/events/weddings',
-    title: 'Wedding Catering Bali | Best Villa Wedding Catering & Receptions | myCHEF',
+    title: 'Wedding Catering Bali | Villa Reception Production | myCHEF',
     description:
-      'Bali wedding catering for villa receptions: cost bands per person, plated or buffet, cocktail hour, butlers & bar. Intimate to 200+ guests. Transparent packages — WhatsApp myCHEF.',
+      'Wedding catering Bali for villa receptions: kitchen, service and bar production. For fixed package menus & prices see packages. Intimate to 200+ guests. Transparent packages — WhatsApp myCHEF.',
     canonical: `${SITE}/events/weddings`,
     h1: 'Wedding Catering Bali — Villa Weddings, One Team',
     ogImage: `${SITE}/generated/mychef-events-bali-hero-weddings.webp`,
@@ -1565,9 +1565,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'in-villa-service-butlers': {
     path: '/in-villa-service/butlers',
-    title: 'Butler Service Bali | Hire Villa Butler | myCHEF',
+    title: 'Bali Butler Service | Hire Villa Butler Daily | myCHEF',
     description:
-      'Hire a professional butler in Bali by the day or shift — discreet, anticipatory guest service for villas and estates. Contact us for pricing via WhatsApp myCHEF.',
+      'Bali butler service for villas and estates — hire a professional butler by the day or shift. Discreet guest service. Contact us for pricing via WhatsApp myCHEF.',
     canonical: `${SITE}/in-villa-service/butlers`,
     h1: 'Butler Service Bali — Hire a Villa Butler',
     ogImage: `${SITE}/generated/hub-villa.webp`,
@@ -2106,9 +2106,9 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       catering: {
     path: '/catering',
-    title: 'Catering Bali | Food, Wedding, BBQ, Buffet & Party Packages | myCHEF',
+    title: 'Catering Bali | BBQ, Buffet, Plated & Villa Party Packages | myCHEF',
     description:
-      'Food catering in Bali for villas: wedding, party & event packages. BBQ, buffet, plated, drop-off from IDR 700K++/person. Order via WhatsApp — transparent menus & prices.',
+      'Catering Bali for villas and events: BBQ, buffet, plated and drop-off from IDR 700K++ per person. Transparent menus vs restaurants — WhatsApp for an itemised quote.',
     canonical: `${SITE}/catering`,
     h1: 'Catering Bali for Groups, Parties & Hosted Dinners',
     ogImage: `${SITE}/generated/mychef-catering-bali-catering-hero.webp`,
@@ -2263,11 +2263,11 @@ export const PAGE_META: Record<string, PageMeta> = {
   // now 301s here. This is the only page that publishes private chef day rates.
   'private-chef-bali': {
     path: '/private-chef-bali',
-    title: 'Hire Private Chef Bali | Daily Rates From IDR 1M++ | myCHEF',
+    title: 'Private Chef Bali | Hire a Villa Chef From IDR 1M++/Day | myCHEF',
     description:
-      'Hire a private chef in Bali from IDR 1,000,000++/day. Chef + assistant, groceries at cost with receipts, full cleanup. Published rates. Reply in 2 hours.',
+      'Private chef Bali for villas & Airbnb stays. One meal IDR 1M++, two 1.8M++, three 2.7M++ per day (chef + assistant). Groceries at cost. Hire a private chef in Bali — WhatsApp in 2 hours.',
     canonical: `${SITE}/private-chef-bali`,
-    h1: 'Private Chef in Bali',
+    h1: 'Private Chef Bali',
     ogImage: `${SITE}/generated/pcb-story-03-restaurant-service.webp`,
   },
 

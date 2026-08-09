@@ -3,25 +3,57 @@ import PremiumPage, { type PageSection } from '@/components/PremiumPage'
 import { breadcrumbSchema } from '@/components/SeoHead'
 import { Button } from '@/components/ui/button'
 
+// Valid through ~90 days out — Google JobPosting requires datePosted + validThrough.
+const JOB_DATE_POSTED = '2026-07-01'
+const JOB_VALID_THROUGH = '2026-10-31'
+
 const JOB_POSTING_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'JobPosting',
   title: 'Private Chef & Hospitality Staff — Bali',
-  description: 'myCHEF.id is hiring private chefs, bartenders, waiters and event coordinators for villa hospitality in Bali.',
+  description:
+    'myCHEF.id is hiring private chefs, bartenders, waiters and event coordinators for villa hospitality across Bali. Competitive contractor rates, flexible event-based scheduling, and professional growth with a Milan-trained leadership team.',
+  datePosted: JOB_DATE_POSTED,
+  validThrough: JOB_VALID_THROUGH,
+  employmentType: 'CONTRACTOR',
   hiringOrganization: {
     '@type': 'Organization',
     name: 'myCHEF.id',
-    url: 'https://mychef.id',
+    sameAs: 'https://mychef.id',
+    logo: 'https://mychef.id/mychef-logo-512.png',
   },
   jobLocation: {
     '@type': 'Place',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Bali',
+      streetAddress: 'Jl. Tukad Barito Timur III No.16, Panjer',
+      addressLocality: 'Denpasar Selatan',
+      addressRegion: 'Bali',
+      postalCode: '80226',
       addressCountry: 'ID',
     },
   },
-  employmentType: 'CONTRACTOR',
+  applicantLocationRequirements: {
+    '@type': 'Country',
+    name: 'Indonesia',
+  },
+  // Google expects baseSalary for richer results; contractor day rates vary by role.
+  baseSalary: {
+    '@type': 'MonetaryAmount',
+    currency: 'IDR',
+    value: {
+      '@type': 'QuantitativeValue',
+      minValue: 350000,
+      maxValue: 1500000,
+      unitText: 'DAY',
+    },
+  },
+  directApply: false,
+  identifier: {
+    '@type': 'PropertyValue',
+    name: 'myCHEF.id',
+    value: 'hospitality-staff-bali-2026',
+  },
 }
 
 const WA = 6289674072020

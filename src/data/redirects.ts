@@ -327,18 +327,19 @@ export const REDIRECTS: Redirect[] = [
   { from: '/journal/floating-breakfast-bali', to: '/catering/floating-breakfast', reason: 'Dead journal link → live floating breakfast page.' },
   { from: '/journal/wedding-catering-bali-cost', to: '/bali-wedding-catering-packages', reason: 'Dead journal link → live wedding catering packages page.' },
 
-  // --- 2026-07-25: Jakarta focus removed; old city guides → homepage ---
-  { from: '/private-chef-menteng', to: '/', reason: 'Jakarta focus removed; redirect to homepage.' },
-  { from: '/journal/private-chef-jakarta-guide', to: '/', reason: 'Jakarta no longer a focus; redirect to homepage.' },
-  { from: '/blog/private-chef-surabaya-guide', to: '/', reason: 'Surabaya/Jakarta no longer a focus; redirect to homepage.' },
-  { from: '/locations/jakarta', to: '/', reason: 'Jakarta location focus removed; redirect to homepage.' },
-  // --- 2026-07-28: remaining Jakarta URLs still earning clicks into 404s (GSC 28d) ---
-  { from: '/private-chef-senayan', to: '/', reason: 'Jakarta focus removed; still earned 47 clicks/28d into a 404.' },
-  { from: '/jakarta', to: '/', reason: 'Jakarta focus removed; still earned 16 clicks/28d into a 404.' },
-  { from: '/private-chef-kelapa-gading', to: '/', reason: 'Jakarta focus removed; 6 clicks/28d into a 404.' },
-  { from: '/private-chef-kemang', to: '/', reason: 'Jakarta focus removed; 4 clicks/28d into a 404.' },
-  { from: '/private-chef-scbd', to: '/', reason: 'Jakarta focus removed; 1 click/28d into a 404.' },
-  { from: '/kemang', to: '/', reason: 'Jakarta focus removed; residual indexed URL.' },
+  // --- Jakarta/Surabaya legacy: related-page 301s (not soft-404 homepage dumps) ---
+  // GSC 2026-08: hard 404 for PIK; other Jakarta paths already redirected to / but failed validation.
+  { from: '/private-chef-pantai-indah-kapuk', to: '/private-dining-indonesia', reason: 'GSC hard 404: Jakarta PIK → private dining Indonesia (Bali-first related service).' },
+  { from: '/private-chef-menteng', to: '/private-dining-indonesia', reason: 'Jakarta Menteng → private dining Indonesia.' },
+  { from: '/journal/private-chef-jakarta-guide', to: '/private-dining-indonesia', reason: 'Jakarta journal guide → private dining Indonesia.' },
+  { from: '/blog/private-chef-surabaya-guide', to: '/private-dining-indonesia', reason: 'Surabaya guide → private dining Indonesia.' },
+  { from: '/locations/jakarta', to: '/locations', reason: 'Jakarta location removed → locations hub.' },
+  { from: '/private-chef-senayan', to: '/private-dining-indonesia', reason: 'GSC 404: Jakarta Senayan → private dining Indonesia.' },
+  { from: '/jakarta', to: '/private-dining-indonesia', reason: 'Jakarta root → private dining Indonesia.' },
+  { from: '/private-chef-kelapa-gading', to: '/private-dining-indonesia', reason: 'GSC 404: Kelapa Gading → private dining Indonesia.' },
+  { from: '/private-chef-kemang', to: '/private-dining-indonesia', reason: 'GSC 404: Kemang → private dining Indonesia.' },
+  { from: '/private-chef-scbd', to: '/private-dining-indonesia', reason: 'GSC 404: SCBD → private dining Indonesia.' },
+  { from: '/kemang', to: '/private-dining-indonesia', reason: 'Jakarta Kemang residual → private dining Indonesia.' },
 ]
 
 /** Lookup map for the React Router fallback. */

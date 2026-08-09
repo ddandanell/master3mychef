@@ -1000,53 +1000,58 @@
       "permanent": true
     },
     {
+      "source": "/private-chef-pantai-indah-kapuk",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
       "source": "/private-chef-menteng",
-      "destination": "/",
+      "destination": "/private-dining-indonesia",
       "permanent": true
     },
     {
       "source": "/journal/private-chef-jakarta-guide",
-      "destination": "/",
+      "destination": "/private-dining-indonesia",
       "permanent": true
     },
     {
       "source": "/blog/private-chef-surabaya-guide",
-      "destination": "/",
+      "destination": "/private-dining-indonesia",
       "permanent": true
     },
     {
       "source": "/locations/jakarta",
-      "destination": "/",
+      "destination": "/locations",
       "permanent": true
     },
     {
       "source": "/private-chef-senayan",
-      "destination": "/",
+      "destination": "/private-dining-indonesia",
       "permanent": true
     },
     {
       "source": "/jakarta",
-      "destination": "/",
+      "destination": "/private-dining-indonesia",
       "permanent": true
     },
     {
       "source": "/private-chef-kelapa-gading",
-      "destination": "/",
+      "destination": "/private-dining-indonesia",
       "permanent": true
     },
     {
       "source": "/private-chef-kemang",
-      "destination": "/",
+      "destination": "/private-dining-indonesia",
       "permanent": true
     },
     {
       "source": "/private-chef-scbd",
-      "destination": "/",
+      "destination": "/private-dining-indonesia",
       "permanent": true
     },
     {
       "source": "/kemang",
-      "destination": "/",
+      "destination": "/private-dining-indonesia",
       "permanent": true
     }
   ],

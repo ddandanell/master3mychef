@@ -1846,11 +1846,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'experience-cooking-class': {
     path: '/experiences/cooking-class',
-    title: 'Cooking Class Bali | Private Villa Balinese & Indonesian Lessons | myCHEF',
+    title: 'Cooking Class Bali | 3-Hour Private Villa Indonesian Class | myCHEF',
     description:
-      'Cooking class in Bali at your villa — private Balinese & Indonesian lessons with a chef. Couples, kids, parties & weddings. WhatsApp for a custom quote.',
+      '3-hour private Indonesian cooking class in your Bali villa — intro, hands-on cooking, eat everything, diploma. From IDR 700K/person. WhatsApp myCHEF.',
     canonical: `${SITE}/experiences/cooking-class`,
-    h1: 'Cooking Class Bali — Private Lessons in Your Villa Kitchen',
+    h1: 'Cooking Class Bali — 3-Hour Private Indonesian Class in Your Villa',
     ogImage: `${SITE}/generated/mychef-cooking-class-bali-hero-villa.webp`,
   },
 

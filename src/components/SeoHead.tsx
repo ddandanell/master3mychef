@@ -49,7 +49,7 @@ export const localBusinessSchema = {
   url: 'https://mychef.id',
   telephone: siteFacts.phoneDisplay,
   email: siteFacts.email,
-  sameAs: [siteFacts.googleBusinessProfileUrl],
+  sameAs: [...siteFacts.sameAs],
   hasMap: siteFacts.googleBusinessProfileUrl,
   address: postalAddressSchema,
   geo: {

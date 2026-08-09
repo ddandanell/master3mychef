@@ -127,6 +127,17 @@ export const siteFacts = {
   /** Direct Google Business Profile / Maps URL. */
   googleBusinessProfileUrl:
     'https://www.google.com/maps/place/myCHEF.+-+Private+Chef+and+Catering/data=!4m2!3m1!1s0x0:0x84318764e9490ac2?sa=X',
+
+  /**
+   * Entity graph sameAs — used in Organization / LocalBusiness JSON-LD.
+   * Keep Instagram/Facebook/Maps/WhatsApp stable so Google can merge brand signals.
+   */
+  sameAs: [
+    'https://www.instagram.com/mychef.id',
+    'https://www.facebook.com/mychef.id',
+    'https://wa.me/6289674072020',
+    'https://www.google.com/maps/place/myCHEF.+-+Private+Chef+and+Catering/data=!4m2!3m1!1s0x0:0x84318764e9490ac2?sa=X',
+  ],
 } as const
 
 /* ------------------------------------------------------------------ *

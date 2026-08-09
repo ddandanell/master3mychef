@@ -46,5 +46,7 @@ User-agent: *
 Allow: /
 Disallow: /404
 
-# Sitemap
+# Sitemap + AI/GEO discovery
 Sitemap: https://mychef.id/sitemap.xml
+# Explicit llms.txt for AI assistants (ChatGPT, Perplexity, Claude, Gemini)
+# https://mychef.id/llms.txt

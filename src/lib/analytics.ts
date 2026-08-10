@@ -257,7 +257,29 @@ export function trackEvent(event: string, params?: AnalyticsParams) {
     : params
 
   // Fire to GA4 via gtag (works when VITE_GA_ID is set in .env)
-  window.gtag?.('event', event, enriched)
+  //
+  // Conversions are sent with transport_type: 'beacon'. This is not a
+  // micro-optimisation — it fixes silent, large-scale conversion loss.
+  //
+  // gtag.js defaults to delivering hits as a GET image pixel. When a visitor taps
+  // a wa.me link the browser hands off to the WhatsApp app and any in-flight
+  // pixel is cancelled before it reaches Google, so the generate_lead never
+  // lands. Mobile is where almost all of this traffic is, which is why it went
+  // unnoticed: on desktop, and in any test that blocks the navigation, the pixel
+  // has time to complete and everything looks fine.
+  //
+  // Measured 10 Aug 2026 by joining the HighLevel WhatsApp inbox to GA4 by
+  // lead_ref: only 2 of 14 real enquiries had a matching generate_lead in GA4.
+  // Google Ads bids on that signal, so it was optimising on ~14% of reality.
+  //
+  // navigator.sendBeacon (what transport_type: 'beacon' selects) is queued by the
+  // browser and delivered even after the page is backgrounded, suspended or
+  // unloaded — precisely this failure mode.
+  window.gtag?.(
+    'event',
+    event,
+    CONVERSION_EVENTS.has(event) ? { ...enriched, transport_type: 'beacon' } : enriched
+  )
 
   // GTM dataLayer fallback — always fires, even without GA_ID
   if (!window.dataLayer) window.dataLayer = []

@@ -108,7 +108,17 @@ export function appendLeadRef(url: string): string {
     // neutral opener so the ref is always attached to an actual sentence.
     const body = existing || DEFAULT_ENQUIRY_MESSAGE
 
-    parsed.searchParams.set('text', `${body} (Ref: ${ref})`)
+    // The ref goes at the FRONT of the message, not the end.
+    //
+    // It used to be appended. The prefilled text is editable in WhatsApp before
+    // sending, and visitors routinely fill in their real date, guest count and
+    // area — typing at the end, which is precisely where a trailing ref sits.
+    // Observed 10 Aug 2026: an enquiry arrived with the standard template
+    // hand-edited, line-broken and extended with the guest's own sentence, and
+    // the ref gone entirely; another guest who edited mid-message kept theirs.
+    // Leading the message costs a little elegance and buys attribution that
+    // survives the guest making the message their own.
+    parsed.searchParams.set('text', `(Ref: ${ref}) ${body}`)
     return parsed.toString()
   } catch {
     return url

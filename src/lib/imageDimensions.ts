@@ -155,6 +155,13 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-events-bali-birthdays-poolside.webp": { width: 1536, height: 1024 },
   "/generated/mychef-events-bali-birthdays-festival.webp": { width: 1536, height: 1024 },
   "/generated/mychef-events-bali-birthdays-glam.webp": { width: 1536, height: 1024 },
+  "/generated/birthday-food-indonesian-bbq-bali-villa.webp": { width: 1248, height: 832 },
+  "/generated/birthday-food-international-bbq-bali-villa.webp": { width: 1248, height: 832 },
+  "/generated/birthday-food-surf-turf-seafood-bali-villa.webp": { width: 1248, height: 832 },
+  "/generated/birthday-dj-package-villa-pool-party-bali.webp": { width: 1248, height: 832 },
+  "/generated/birthday-decoration-standard-villa-bali.webp": { width: 1248, height: 832 },
+  "/generated/birthday-open-bar-villa-party-bali.webp": { width: 1248, height: 832 },
+
   "/generated/mychef-events-bali-hero-anniversaries.webp": { width: 1536, height: 1024 },
   "/generated/mychef-events-bali-anniversaries-chef.webp": { width: 1536, height: 1024 },
   "/generated/mychef-events-bali-anniversaries-plated.webp": { width: 1536, height: 1024 },

@@ -106,7 +106,7 @@ export const SITEMAP_LASTMOD: Record<string, string> = {
   "/catering/retreat-catering": "2026-06-21",
   "/catering/floating-breakfast": "2026-06-16",
   "/events/weddings": "2026-06-20",
-  "/events/birthdays": "2026-08-06",
+  "/events/birthdays": "2026-08-09",
   "/events/anniversaries": "2026-06-25",
   "/events/corporate-events": "2026-06-12",
   "/events/retreats": "2026-06-12",

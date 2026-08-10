@@ -44,6 +44,7 @@ const FLOOR_EXCEPTION_PATHS = [
   'experiences/caviar-experience', // Caviar experience is contact-quote only (no public list price).
   'experiences/whiskey-cigar-experience', // Whiskey & cigar experience is contact-quote only.
   'catering/bbq-catering', // BBQ packages are entry-level catering with per-person pricing below the standard floor.
+  'events/birthdays', // Food-first model: Indonesian from IDR 650K/person + open bar IDR 550K/person (add-on, not full catering).
   'events/weddings', // Wedding pages may reference villa corkage and market context.
   'bali-wedding-catering-packages', // Dedicated package page displays published wedding catering tiers.
   'wedding-catering-indonesia', // Indonesia-wide wedding catering page displays published tiers.
@@ -55,7 +56,7 @@ const FLOOR_EXCEPTION_PATHS = [
  * the figure belongs to a leave category and is allowed below the floor.
  */
 const LEAVE_CONTEXT =
-  /add[- ]?on|\badd\b|additional|supplement|upgrade|pairing|extra|child|kid|per hour|\/\s?hour|hourly|per day|\/\s?day|daily|per session|\/\s?session|travel|groc|flat|per couple|\/\s?couple|staff|waiter|bartender|sommelier|mixologist|drinks|beverage|champagne|wine|ranging|quotes/i
+  /add[- ]?on|\badd\b|additional|supplement|upgrade|pairing|extra|child|kid|per hour|\/\s?hour|hourly|per day|\/\s?day|daily|per session|\/\s?session|travel|groc|flat|per couple|\/\s?couple|staff|waiter|bartender|sommelier|mixologist|drinks|beverage|open bar|champagne|wine|ranging|quotes/i
 
 /** Leave words that typically appear AFTER the figure (rate qualifiers). */
 const LEAVE_AFTER = /per\s+(evening|day|hour|session|shift)|supplement|add[- ]?on/i

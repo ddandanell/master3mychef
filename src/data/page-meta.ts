@@ -1495,12 +1495,12 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'events-birthdays': {
     path: '/events/birthdays',
-    title: 'Birthday Catering Bali | Private Villa Celebrations | myCHEF',
+    title: 'Birthday Catering Bali | Food-First Villa Parties from IDR 650K | myCHEF',
     description:
-      'Birthday catering for Bali villas: live chef BBQs or fine-dining menus with food, drinks, cake and styling handled end to end. Clear packages. WhatsApp myCHEF.',
+      'Birthday catering Bali: Indonesian, International or Surf & Turf food from IDR 650K++/person (min 10). Add DJ, decor, bar & photo. Live calculator. WhatsApp fixed quote.',
     canonical: `${SITE}/events/birthdays`,
-    h1: 'Birthday Parties in Bali — Villa Catering & Events',
-    ogImage: `${SITE}/hero-events.webp`,
+    h1: 'Birthday Catering in Bali — Choose Your Food, Build Your Night',
+    ogImage: `${SITE}/generated/mychef-events-bali-hero-birthdays.webp`,
   },
 
       'events-anniversaries': {

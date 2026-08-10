@@ -46,16 +46,52 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   //     Version 4 onwards — un-pausing them reintroduces the double count)
   //   - the two GA4 event-modification rules were DELETED
   // See reports/GA4-WHATSAPP-TRACKING-AUDIT-2026-07-29.md
+  // Conversions fire on POINTERDOWN, not click.
+  //
+  // GA4 delivers events with fetch(), and a fetch without keepalive is cancelled
+  // the moment the page is backgrounded — which is precisely what happens when a
+  // tap on a wa.me link hands off to the WhatsApp app. Mobile is ~86% of these
+  // clicks, so the loss was invisible on desktop and invisible in any test that
+  // blocked the navigation. Joining the HighLevel WhatsApp inbox to GA4 by
+  // lead_ref on 2026-08-10 found only 2 of 14 real enquiries had been recorded.
+  //
+  // pointerdown fires when the finger goes DOWN, buying the ~100-300ms before it
+  // lifts and navigation begins. This is mitigation, not a guarantee — a slow
+  // network can still outlast the handoff. See
+  // reports/GA4-WHATSAPP-TRACKING-AUDIT-2026-07-29.md and the analytics.ts note
+  // about transport_type, which does NOT work and must not be re-added.
+  //
+  // click is kept as a fallback: keyboard activation (Enter on a focused anchor)
+  // dispatches click with no preceding pointerdown, and dropping it would lose
+  // the accessibility path entirely. trackedAt dedupes the pointerdown -> click
+  // pair so one press stays one conversion.
   useEffect(() => {
-    const handleConversionClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement
-      
+    const trackedAt = new WeakMap<HTMLAnchorElement, number>()
+    const DEDUPE_MS = 1500
+
+    const isDuplicate = (anchor: HTMLAnchorElement) => {
+      const now = Date.now()
+      const last = trackedAt.get(anchor)
+      if (last !== undefined && now - last < DEDUPE_MS) return true
+      trackedAt.set(anchor, now)
+      return false
+    }
+
+    const handleConversion = (e: Event) => {
+      // Secondary buttons and long-press context menus are not enquiries.
+      // PointerEvent extends MouseEvent, so this covers both listeners.
+      if (e instanceof MouseEvent && e.button !== 0) return
+
+      const target = e.target
+      if (!(target instanceof Element)) return
+
       // WhatsApp Tracking
       const waAnchor = target.closest<HTMLAnchorElement>('a[href*="wa.me"]')
       if (waAnchor) {
         // Opt-out: anchors that fire their own, more specific key event (e.g. the quote
         // funnel's quote_submitted) set data-skip-lead-track so one action = one conversion.
         if (waAnchor.dataset.skipLeadTrack === 'true') return
+        if (isDuplicate(waAnchor)) return
         const source = waAnchor.dataset.source || location.pathname.replace(/^\/+|\/+$/g, '').replace(/\//g, '_') || 'home'
         trackWhatsAppClick(source)
         return
@@ -64,12 +100,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       // Phone Tracking (Push a number)
       const phoneAnchor = target.closest<HTMLAnchorElement>('a[href^="tel:"]')
       if (phoneAnchor) {
+        if (isDuplicate(phoneAnchor)) return
         const source = phoneAnchor.dataset.source || location.pathname.replace(/^\/+|\/+$/g, '').replace(/\//g, '_') || 'home'
         trackPhoneClick(source)
       }
     }
-    document.addEventListener('click', handleConversionClick)
-    return () => document.removeEventListener('click', handleConversionClick)
+
+    document.addEventListener('pointerdown', handleConversion)
+    document.addEventListener('click', handleConversion)
+    return () => {
+      document.removeEventListener('pointerdown', handleConversion)
+      document.removeEventListener('click', handleConversion)
+    }
   }, [location.pathname])
 
   return (

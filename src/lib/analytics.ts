@@ -258,28 +258,22 @@ export function trackEvent(event: string, params?: AnalyticsParams) {
 
   // Fire to GA4 via gtag (works when VITE_GA_ID is set in .env)
   //
-  // Conversions are sent with transport_type: 'beacon'. This is not a
-  // micro-optimisation — it fixes silent, large-scale conversion loss.
+  // DO NOT add transport_type: 'beacon' here. It was tried on 10 Aug 2026 and it
+  // does nothing — transport_type is a Universal Analytics setting and GA4 has no
+  // equivalent, so gtag silently ignores it. Verified against production: the
+  // parameter was being passed and generate_lead still left the page as
+  // initiatorType "fetch". (Read initiatorType off
+  // performance.getEntriesByType('resource') to check this — hooking
+  // navigator.sendBeacon or window.fetch from the console gives false negatives,
+  // because gtag.js captures its own references before any hook is installed.)
   //
-  // gtag.js defaults to delivering hits as a GET image pixel. When a visitor taps
-  // a wa.me link the browser hands off to the WhatsApp app and any in-flight
-  // pixel is cancelled before it reaches Google, so the generate_lead never
-  // lands. Mobile is where almost all of this traffic is, which is why it went
-  // unnoticed: on desktop, and in any test that blocks the navigation, the pixel
-  // has time to complete and everything looks fine.
-  //
-  // Measured 10 Aug 2026 by joining the HighLevel WhatsApp inbox to GA4 by
-  // lead_ref: only 2 of 14 real enquiries had a matching generate_lead in GA4.
-  // Google Ads bids on that signal, so it was optimising on ~14% of reality.
-  //
-  // navigator.sendBeacon (what transport_type: 'beacon' selects) is queued by the
-  // browser and delivered even after the page is backgrounded, suspended or
-  // unloaded — precisely this failure mode.
-  window.gtag?.(
-    'event',
-    event,
-    CONVERSION_EVENTS.has(event) ? { ...enriched, transport_type: 'beacon' } : enriched
-  )
+  // The delivery problem is real: GA4 sends via fetch(), and a fetch without
+  // keepalive is cancelled when the page is backgrounded — exactly what happens
+  // when a tap on a wa.me link hands off to the WhatsApp app. Joining the
+  // HighLevel inbox to GA4 by lead_ref showed only 2 of 14 real enquiries were
+  // recorded. The mitigation lives in Layout.tsx, which fires the conversion on
+  // pointerdown so the request starts before the handoff.
+  window.gtag?.('event', event, enriched)
 
   // GTM dataLayer fallback — always fires, even without GA_ID
   if (!window.dataLayer) window.dataLayer = []

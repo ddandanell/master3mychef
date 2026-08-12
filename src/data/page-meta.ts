@@ -691,13 +691,18 @@ export const PAGE_META: Record<string, PageMeta> = {
     h1: 'Villa BBQ Party Bali — Poolside Grill Nights',
   },
 
-      'bali-wedding-catering-packages': {
+  // Sole owner of commercial "wedding catering" intent as of 2026-08-10 (PB-001).
+  // /events/weddings was re-targeted to multi-day production so this page can hold
+  // the head term "bali wedding catering" / "wedding catering bali" unopposed.
+  // It already carried the cluster's best commercial position and 7 of its 10
+  // clicks, so it wins the query on evidence rather than preference.
+  'bali-wedding-catering-packages': {
     path: '/bali-wedding-catering-packages',
-    title: 'Bali Wedding Catering Packages & Prices 2026 | myCHEF',
+    title: 'Bali Wedding Catering | Packages & Prices 2026 | myCHEF',
     description:
-      'Bali wedding catering packages with clear per-guest prices (plated, buffet, grazing). Inclusions, staffing & what changes the total — WhatsApp for a fixed proposal.',
+      'Bali wedding catering with clear per-guest prices: plated, buffet and grazing. Inclusions, staffing and what changes the total. WhatsApp for a fixed quote.',
     canonical: `${SITE}/bali-wedding-catering-packages`,
-    h1: 'Bali Wedding Catering Packages — Prices by Guest Count',
+    h1: 'Bali Wedding Catering — Packages & Prices by Guest Count',
   },
 
       'michelin-private-chef-bali-prices': {
@@ -1483,13 +1488,26 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/breakfast-spread.webp`,
   },
 
-      'events-weddings': {
+  // Re-targeted 2026-08-10 (PB-001, wedding cluster consolidation).
+  //
+  // This page previously led with "Wedding Catering Bali" in both title and H1,
+  // competing head-on with /bali-wedding-catering-packages for the same query.
+  // GSC 1 Jun–8 Aug 2026: for "bali wedding catering" the packages page took 180
+  // impressions at position 28.4 and this page 171 at position 42.5 — 351
+  // impressions, 1 click, neither ranking. Classic cannibalisation.
+  //
+  // The two pages already cover genuinely different ground, so the split is real
+  // rather than invented: packages = per-guest price bands, tiers and inclusions;
+  // this page = the multi-day event (welcome dinner, ceremony day, recovery
+  // brunch) and its logistics (mobile kitchens, power, villa access, rain plan).
+  // Metadata now reflects that. Price/package intent belongs to the packages page.
+  'events-weddings': {
     path: '/events/weddings',
-    title: 'Wedding Catering Bali | Villa Reception Production | myCHEF',
+    title: 'Bali Villa Wedding Production | Multi-Day F&B | myCHEF',
     description:
-      'Wedding catering Bali for villa receptions: kitchen, service and bar production. For fixed package menus & prices see packages. Intimate to 200+ guests. Transparent packages — WhatsApp myCHEF.',
+      'Villa wedding production in Bali: welcome dinner, ceremony day and recovery brunch. Mobile kitchens, power, staffing and a rain plan. WhatsApp myCHEF.',
     canonical: `${SITE}/events/weddings`,
-    h1: 'Wedding Catering Bali — Villa Weddings, One Team',
+    h1: 'Villa Wedding Production — Welcome Dinner to Recovery Brunch',
     ogImage: `${SITE}/generated/mychef-events-bali-hero-weddings.webp`,
   },
 

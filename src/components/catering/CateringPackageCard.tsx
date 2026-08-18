@@ -3,7 +3,7 @@ import { Check, ArrowRight } from 'lucide-react'
 
 import OptimizedImage from '@/components/OptimizedImage'
 interface CateringPackageCardProps {
-  image: string
+  image?: string
   title: string
   price: string
   description: string
@@ -37,23 +37,33 @@ export default function CateringPackageCard({
 
   const inner = (
     <>
-      <div className="relative aspect-[4/3] overflow-hidden">
-        <OptimizedImage
-          src={image}
-          alt={`${title} catering setup at a Bali villa by myCHEF`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
-        />
-        {minGuests && (
+      {image && (
+        <div className="relative aspect-[4/3] overflow-hidden">
+          <OptimizedImage
+            src={image}
+            alt={`${title} catering setup at a Bali villa by myCHEF`}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+          {minGuests && (
+            <span
+              className="absolute top-3 left-3 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full"
+              style={{ background: badgeBg }}
+            >
+              {minGuests}
+            </span>
+          )}
+        </div>
+      )}
+      <div className="p-5 md:p-6">
+        {!image && minGuests && (
           <span
-            className="absolute top-3 left-3 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full"
+            className="inline-block text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full mb-3"
             style={{ background: badgeBg }}
           >
             {minGuests}
           </span>
         )}
-      </div>
-      <div className="p-5 md:p-6">
         <h3
           className="text-xl md:text-2xl mb-2 text-[#1A1A1A]"
           style={{ fontFamily: "'Playfair Display', serif" }}

@@ -55,7 +55,6 @@ const STYLE_BLURBS: Record<string, string> = {
 
 const BBQ_PACKAGES = [
   {
-    image: '/generated/mychef-catering-bbq-package-indonesian.webp',
     title: 'Indonesian BBQ',
     price: 'IDR 700,000/person',
     description: 'Sate, ikan bakar, jagung bakar, sambal matah, nasi kuning, gado-gado.',
@@ -63,7 +62,6 @@ const BBQ_PACKAGES = [
     minGuests: 'Min. 10 guests',
   },
   {
-    image: '/generated/mychef-catering-bbq-package-international.webp',
     title: 'International BBQ',
     price: 'IDR 700,000/person',
     description: 'Beef tenderloin, lamb chops, prawns, salmon, chicken, gourmet salads, garlic bread.',
@@ -71,7 +69,6 @@ const BBQ_PACKAGES = [
     minGuests: 'Min. 10 guests',
   },
   {
-    image: '/generated/mychef-catering-bbq-package-surf-turf.webp',
     title: 'Surf & Turf BBQ',
     price: 'IDR 850,000/person',
     description: 'Wagyu, lobster, king prawns, salmon, Mahi-mahi, premium sides, dessert station.',

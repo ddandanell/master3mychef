@@ -9,7 +9,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
@@ -597,8 +597,6 @@ export default function EventsVillaPartiesPage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection downgradeFirstH1 />
-
       <StickyMobileCTA
         pageSource="events-villa-parties"
         serviceName="villa party catering in Bali"

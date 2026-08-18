@@ -3,7 +3,7 @@ import { MessageCircle, ArrowRight, PartyPopper, Heart, Flame, Users, Briefcase,
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
-import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
+import { HaccpTrustLine } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const WA = 6289674072020
@@ -485,7 +485,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

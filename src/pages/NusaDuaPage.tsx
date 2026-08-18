@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
+import { HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -119,7 +119,7 @@ export default function NusaDuaPage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Nusa Dua Dining Guide</p>
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Dining in Nusa Dua — Villa Chef & Corporate Options</h1>
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Nusa Dua Dining Guide — Where to Eat & When to Book a Chef</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Private dining Nusa Dua suits resort villas and corporate dinners that need hotel polish without the hotel dining room. Nusa Dua runs to a different standard from the rest of Bali — and dining here follows suit. The peninsula is a purpose-built enclave of five-star resorts, gated residential estates and manicured beachfront, twenty minutes from the airport and a world away from the island's usual happy chaos. This guide maps where to eat out in the enclave, what private dining looks like behind those gates, and when an in-villa chef dinner outclasses even the resort restaurants.
           </p>
@@ -327,7 +327,6 @@ export default function NusaDuaPage() {
       </section>
 
       <CityDeepDive slug="nusa-dua" cityName="Nusa Dua" />
-    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

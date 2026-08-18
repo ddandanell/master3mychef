@@ -10,7 +10,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -548,8 +548,6 @@ export default function EventsBabyShowersPage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection downgradeFirstH1 />
-
       <StickyMobileCTA
         pageSource="events-baby-showers"
         serviceName="baby shower catering in Bali"

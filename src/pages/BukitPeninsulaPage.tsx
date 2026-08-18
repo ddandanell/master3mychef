@@ -141,7 +141,7 @@ export default function BukitPeninsulaPage() {
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Bukit Dining Guide</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Dining in Bukit: Where to Eat & In-Villa Chef Options
+            Bukit Peninsula Dining Guide — Bingin to Balangan
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             The Bukit is Bali&apos;s dramatic southern peninsula — limestone cliffs, estate villas and the island&apos;s biggest sunsets. This guide covers dining across Ungasan, Pecatu, Balangan and Dreamland, the private dining options beyond a restaurant booking, and why the Bukit is the island&apos;s villa-event capital.

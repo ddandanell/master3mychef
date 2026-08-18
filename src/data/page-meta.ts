@@ -54,11 +54,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'locations-uluwatu': {
     path: '/locations/uluwatu',
-    title: 'Private Dining Uluwatu Bali | Cliff Villa Chef Guide',
+    title: 'Uluwatu Dining Guide: Clifftop Villas & Chefs | myCHEF',
     description:
       'Private dining Uluwatu: sunset villa dinners with HACCP-certified chefs, seafood BBQ and clifftop hosting tips. myCHEF cooks in Uluwatu & Bukit villas.',
     canonical: `${SITE}/locations/uluwatu`,
-    h1: 'Private Dining in Uluwatu — Villa Chef Options & Local Guide',
+    h1: 'Uluwatu Dining Guide — Where to Eat & When to Book a Chef',
   },
 
       'locations-ubud': {
@@ -72,20 +72,20 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'locations-nusa-dua': {
     path: '/locations/nusa-dua',
-    title: 'Private Dining Nusa Dua Bali | Villa & Corporate Hosting',
+    title: 'Nusa Dua Dining Guide: Resorts & Villa Chefs | myCHEF',
     description:
       'Private dining Nusa Dua for resort villas and corporate dinners. HACCP-certified in-villa chefs, company events and polished hosting with myCHEF.',
     canonical: `${SITE}/locations/nusa-dua`,
-    h1: 'Private Dining in Nusa Dua — Villa Chef & Corporate Options',
+    h1: 'Nusa Dua Dining Guide — Where to Eat & When to Book a Chef',
   },
 
       'locations-jimbaran': {
     path: '/locations/jimbaran',
-    title: 'Private Dining in Jimbaran | Dining Guide & Chef Services',
+    title: 'Jimbaran Dining Guide: Bay Seafood & Villa Chefs | myCHEF',
     description:
       'Jimbaran dining guide: bay seafood, beach BBQs and HACCP-certified in-villa chefs for bayfront villa stays. Local picks by myCHEF.',
     canonical: `${SITE}/locations/jimbaran`,
-    h1: 'Private Dining in Jimbaran: Where to Eat & In-Villa Chef Options',
+    h1: 'Jimbaran Dining Guide — Where to Eat & When to Book a Chef',
   },
 
       'locations-sanur': {
@@ -99,38 +99,38 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'locations-pererenan': {
     path: '/locations/pererenan',
-    title: 'Private Dining in Pererenan | Dining Guide & Chef Services',
+    title: 'Pererenan Dining Guide: Cafés & Villa Chefs | myCHEF',
     description:
       'Pererenan dining guide: design cafés, private dining and HACCP-certified in-villa chefs for west-coast villa stays north of Canggu. By myCHEF.',
     canonical: `${SITE}/locations/pererenan`,
-    h1: 'Private Dining in Pererenan: Where to Eat & In-Villa Chef Options',
+    h1: 'Pererenan Dining Guide — Where to Eat & When to Book a Chef',
   },
 
       'locations-bukit': {
     path: '/locations/bukit',
-    title: 'Private Dining in Bukit | Dining Guide & Chef Services',
+    title: 'Bukit Peninsula Dining Guide: Eat & Villa Chefs | myCHEF',
     description:
       'Bukit Peninsula dining guide: Bingin to Uluwatu, clifftop private dining and HACCP-certified in-villa chefs for surf and sunset villas. Written by myCHEF.',
     canonical: `${SITE}/locations/bukit`,
-    h1: 'Private Dining in Bukit: Where to Eat & In-Villa Chef Options',
+    h1: 'Bukit Peninsula Dining Guide — Bingin to Balangan',
   },
 
       'locations-kuta': {
     path: '/locations/kuta',
-    title: 'Private Dining in Kuta | Dining Guide & Chef Services',
+    title: 'Kuta Dining Guide: Restaurants, Bars & Villa Chefs | myCHEF',
     description:
       'Kuta dining guide: central Bali restaurants, beach clubs and HACCP-certified in-villa chefs for group villas near the airport. Guide from myCHEF.',
     canonical: `${SITE}/locations/kuta`,
-    h1: 'Private Dining in Kuta: Where to Eat & In-Villa Chef Options',
+    h1: 'Kuta Dining Guide — Where to Eat & When to Book a Chef',
   },
 
       'locations-denpasar': {
     path: '/locations/denpasar',
-    title: 'Private Dining in Denpasar | Dining Guide & Chef Services',
+    title: 'Denpasar Dining Guide: Restaurants & In-Home Chefs | myCHEF',
     description:
       'Denpasar dining guide: local restaurants, business lunch spots and HACCP-certified private chefs for city stays and residential compounds. By myCHEF.',
     canonical: `${SITE}/locations/denpasar`,
-    h1: 'Private Dining in Denpasar: Where to Eat & In-Villa Chef Options',
+    h1: 'Denpasar Dining Guide — Where to Eat & When to Book a Chef',
   },
 
       'private-chef-seminyak': {
@@ -2371,11 +2371,11 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       locations: {
     path: '/locations',
-    title: 'Private Chef Locations Bali | All Areas We Serve | myCHEF',
+    title: 'Private Chef Locations in Bali | 60+ Areas Served | myCHEF',
     description:
       'Private chef coverage across Bali — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua and 60+ villa areas. Find your area and get a quote on WhatsApp.',
     canonical: `${SITE}/locations`,
-    h1: 'Private Chef & Hospitality Across Bali',
+    h1: 'Where We Cook: Private Chef & Dining Across Bali',
     ogImage: `${SITE}/generated/hub-villa.webp`,
   },
 

@@ -34,7 +34,7 @@ const FAQS = [
   { q: 'What are your business hours?', a: 'We are open daily from 08:00 to 22:00 WITA (Bali time). WhatsApp messages outside these hours are answered first thing the next morning.' },
   { q: 'Best way to book?', a: 'WhatsApp with date, guests, area and service — or <a href="/book">book</a> / <a href="/quote">quote</a>.' },
   { q: 'Where can I see prices before messaging?', a: 'Published tables on <a href="/pricing">pricing</a> and day rates on <a href="/private-chef-bali">private chef Bali</a>.' },
-  { q: 'Do you handle corporate enquiries?', a: 'Yes — mention multi-day schedule and NPWP invoice needs. <a href="/events/corporate">Corporate events →</a>' },
+  { q: 'Do you handle corporate enquiries?', a: 'Yes — mention multi-day schedule and NPWP invoice needs. <a href="/events/corporate-events">Corporate events →</a>' },
   { q: 'Partner or villa manager enquiries?', a: 'Yes — see <a href="/partner">partner</a> pathways.' },
   { q: 'Urgent same-day requests?', a: 'Often possible — message ASAP with location and guest count.' },
   { q: 'Languages spoken?', a: 'English and Indonesian service.' },

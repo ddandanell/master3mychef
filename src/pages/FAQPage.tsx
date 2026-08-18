@@ -214,7 +214,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Do you cater corporate retreats and team dinners?',
-        a: 'Yes — offsites, gala dinners and multi-day retreat catering with NPWP-ready invoicing where needed. <a href="/events/corporate">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
+        a: 'Yes — offsites, gala dinners and multi-day retreat catering with NPWP-ready invoicing where needed. <a href="/events/corporate-events">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
       },
       {
         q: 'How much does catering in Bali cost per person?',

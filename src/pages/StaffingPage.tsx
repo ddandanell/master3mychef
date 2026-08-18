@@ -122,7 +122,7 @@ const FAQS = [
   },
   {
     q: 'Household staff vs villa staff — what is the difference?',
-    a: 'Household staff serve a private residence with long-term, family-focused roles. Villa staff run hospitality property operations — guest turnovers, SOPs, and higher volume service expectations. Profiles, English level and roster design differ. See <a href="/staffing/household">household</a> and <a href="/staffing/villa-staff">villa staff</a>.',
+    a: 'Household staff serve a private residence with long-term, family-focused roles. Villa staff run hospitality property operations — guest turnovers, SOPs, and higher volume service expectations. Profiles, English level and roster design differ. See <a href="/staffing/household-staff">household</a> and <a href="/staffing/villa-staff">villa staff</a>.',
   },
   {
     q: 'How fast can you place a private chef or villa staff in Bali?',
@@ -134,7 +134,7 @@ const FAQS = [
   },
   {
     q: 'What roles can myCHEF place in Bali?',
-    a: 'Private chefs, live-in chefs, villa managers, butlers, housekeepers, service teams and hotel/restaurant kitchen placements. Explore <a href="/staffing/placement">placement</a>, <a href="/staffing/villa-managers">villa managers</a> and <a href="/staffing/hotels">hotel staffing</a>.',
+    a: 'Private chefs, live-in chefs, villa managers, butlers, housekeepers, service teams and hotel/restaurant kitchen placements. Explore <a href="/staffing/private-chef-placement">placement</a>, <a href="/staffing/for-villa-managers">villa managers</a> and <a href="/staffing/for-hotels-restaurants">hotel staffing</a>.',
   },
   {
     q: 'Are candidates vetted and background-checked?',
@@ -154,7 +154,7 @@ const FAQS = [
   },
   {
     q: 'Do you place staff for hotels and restaurants as well as villas?',
-    a: 'Yes — kitchen and F&amp;B roles for hotels, restaurants and beach clubs, plus consulting via our B2B kitchen solutions. See <a href="/staffing/hotels">hotel staffing</a> and <a href="/restaurant-kitchen-solutions">restaurant kitchen solutions</a>.',
+    a: 'Yes — kitchen and F&amp;B roles for hotels, restaurants and beach clubs, plus consulting via our B2B kitchen solutions. See <a href="/staffing/for-hotels-restaurants">hotel staffing</a> and <a href="/restaurant-kitchen-solutions">restaurant kitchen solutions</a>.',
   },
   {
     q: 'Can you replace a chef who leaves mid-contract?',

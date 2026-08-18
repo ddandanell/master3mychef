@@ -315,7 +315,7 @@ const FAQS = [
   },
   {
     q: 'What types of events do you cater in Bali?',
-    a: 'Weddings, birthdays, anniversaries, villa parties, corporate retreats, baby showers, bachelor/bachelorette nights and multi-day programmes. Browse formats on this page or jump to <a href="/events/weddings">weddings</a>, <a href="/events/corporate">corporate</a> or <a href="/events/villa-parties">villa parties</a>.',
+    a: 'Weddings, birthdays, anniversaries, villa parties, corporate retreats, baby showers, bachelor/bachelorette nights and multi-day programmes. Browse formats on this page or jump to <a href="/events/weddings">weddings</a>, <a href="/events/corporate-events">corporate</a> or <a href="/events/villa-parties">villa parties</a>.',
   },
   {
     q: 'Can you cater events for 100+ guests in Bali?',
@@ -355,7 +355,7 @@ const FAQS = [
   },
   {
     q: 'Do you offer corporate event catering with invoices in Bali?',
-    a: 'Yes — team dinners, offsites and multi-day retreats with NPWP-ready documentation on request. Minimums and tiers are on <a href="/events/corporate">corporate events</a> and <a href="/catering/corporate-catering">corporate catering</a>.',
+    a: 'Yes — team dinners, offsites and multi-day retreats with NPWP-ready documentation on request. Minimums and tiers are on <a href="/events/corporate-events">corporate events</a> and <a href="/catering/corporate-catering">corporate catering</a>.',
   },
   {
     q: 'How far in advance should I book wedding catering in Bali?',

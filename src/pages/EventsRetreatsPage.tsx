@@ -104,7 +104,7 @@ const FAQS = [
   { q: 'Can catering work around retreat schedules and excursions?', a: 'Yes. Meals are energy-timed around sessions and excursions, and menus are co-designed with facilitators.' },
   { q: 'Do you cater retreats in Sidemen / Amed / East Bali?', a: 'Yes. East Bali retreats are served with distance logistics quoted upfront. We have experience in Sidemen and other remote retreat locations.' },
   { q: 'Can your team work with a retreat venue\'s kitchen?', a: 'Yes. We assess the kitchen before the programme, bring missing equipment, and plan service around the venue layout and schedule.' },
-  { q: 'Corporate catering price range?', a: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { q: 'Corporate catering price range?', a: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate-events">Corporate events</a>.' },
   { q: 'NPWP invoices?', a: 'Yes on request.' },
   { q: 'Multi-day retreats?', a: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
   { q: 'Guest counts?', a: 'From leadership dinners to 100–200+ programmes.' },

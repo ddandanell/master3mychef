@@ -138,7 +138,7 @@ const FAQS = [
   },
   {
     q: 'Who is myCHEF?',
-    a: 'Bali villa hospitality company — HACCP-certified operations, chefs, catering, events and staffing since 2019. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.',
+    a: 'Bali villa hospitality company — HACCP-certified operations, chefs, catering, events and staffing since 2019. <a href="/chefs">About</a> · <a href="/why-mychef">Why myCHEF</a>.',
   },
 ]
 

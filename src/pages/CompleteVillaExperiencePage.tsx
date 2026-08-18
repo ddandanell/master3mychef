@@ -95,7 +95,7 @@ const FAQS = [
   { q: 'What deposit and cancellation apply?', a: 'Typically 50% deposit to confirm the package; balance schedule stated on the quote. Cancellation tiers follow <a href="/cancellation">policy</a> unless a custom event contract says otherwise.' },
   { q: 'Can wedding weeks use Complete Villa Experience?', a: 'Yes — welcome dinners, rehearsal, ceremony catering and guest breakfasts can sit under one operations team. <a href="/events/weddings">Wedding catering →</a>' },
   { q: 'Do you coordinate with our villa manager?', a: 'Daily. Share manager contacts early for access, inventory and quiet hours.' },
-  { q: 'Is this available for corporate offsites?', a: 'Yes — multi-day retreats with meals, coffee stations and gala dinners. <a href="/events/corporate">Corporate events →</a> · <a href="/catering/retreat-catering">Retreat catering →</a>' },
+  { q: 'Is this available for corporate offsites?', a: 'Yes — multi-day retreats with meals, coffee stations and gala dinners. <a href="/events/corporate-events">Corporate events →</a> · <a href="/catering/retreat-catering">Retreat catering →</a>' },
   { q: 'What if headcount changes during the stay?', a: 'Tell us early. Meal prep and staffing adjust; large last-minute jumps may change the quote for remaining days.' },
   { q: 'Can we request Chef Rotation during a long stay?', a: 'On 7+ day chef scopes, Chef Rotation is included so cuisine can change day by day. See <a href="/private-chef-bali">private chef</a>.' },
   { q: 'How do I get a Complete Villa Experience proposal?', a: 'WhatsApp arrival date, nights, guest count, villa area and must-have services. We reply with a scoped proposal. <a href="/quote">Quote →</a> · <a href="/contact">Contact →</a>' },

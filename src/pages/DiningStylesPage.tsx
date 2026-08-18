@@ -80,7 +80,7 @@ const DINING_STYLES_FAQS = [
   },
   {
     q: 'Can dining styles be used for corporate villa dinners?',
-    a: 'Yes — three-course, set menus and BBQ are popular for offsites. Larger programmes: <a href="/events/corporate">corporate events</a>.',
+    a: 'Yes — three-course, set menus and BBQ are popular for offsites. Larger programmes: <a href="/events/corporate-events">corporate events</a>.',
   },
   {
     q: 'What if our guest count changes after we book?',

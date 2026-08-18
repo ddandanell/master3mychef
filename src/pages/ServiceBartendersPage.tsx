@@ -155,7 +155,7 @@ const OCCASIONS = [
   { title: 'Villa parties', href: '/events/villa-parties', desc: 'Pool, garden and social nights with a proper mobile bar centre.' },
   { title: 'Weddings', href: '/events/weddings', desc: 'Welcome drinks, reception free flow and premium long service.' },
   { title: 'Birthdays', href: '/events/birthdays', desc: 'Signature serves and free-flow packages for celebrations.' },
-  { title: 'Corporate receptions', href: '/events/corporate', desc: 'Controlled free flow with professional pacing.' },
+  { title: 'Corporate receptions', href: '/events/corporate-events', desc: 'Controlled free flow with professional pacing.' },
   { title: 'Sunset & pool parties', href: '/experiences/private-cocktail-party', desc: 'Occasion planning with optional food and entertainment.' },
   { title: 'Private dinners', href: '/fine-dining', desc: 'Aperitivo hour before chef-led dining.' },
 ]

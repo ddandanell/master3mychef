@@ -154,7 +154,7 @@ const FAQS = [
   { question: 'Kids and allergies?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and allergy protocols.' },
   { question: 'How do I book catering?', answer: 'WhatsApp date, guests, area and format — or <a href="/quote">quote</a>.' },
   { question: 'Rain plan?', answer: 'Covered setups and indoor pivots planned ahead.' },
-  { question: 'Corporate catering price range?', answer: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { question: 'Corporate catering price range?', answer: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate-events">Corporate events</a>.' },
   { question: 'NPWP invoices?', answer: 'Yes on request.' },
   { question: 'Multi-day retreats?', answer: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
   { question: 'Guest counts?', answer: 'From leadership dinners to 100–200+ programmes.' },

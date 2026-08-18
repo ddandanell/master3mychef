@@ -10,7 +10,7 @@ const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Uluwatu. Can you send a menu proposal?')
 
 const FAQS = [
-  { q: 'Do you cook in Uluwatu and Bukit cliff villas?', a: 'Yes — Uluwatu, Pecatu and Bukit peninsula villas are covered. Share gate codes and steep-access notes. <a href="/locations/bukit-peninsula">Bukit guide</a>.' },
+  { q: 'Do you cook in Uluwatu and Bukit cliff villas?', a: 'Yes — Uluwatu, Pecatu and Bukit peninsula villas are covered. Share gate codes and steep-access notes. <a href="/locations/bukit">Bukit guide</a>.' },
   { q: 'Can you run sunset BBQ or clifftop villa dinners?', a: 'Yes when the villa layout is safe for service. Wind and power constraints are planned into the menu. <a href="/catering/bbq-catering">BBQ catering</a>.' },
   { q: 'Is wedding catering available in Uluwatu villas?', a: 'Yes — larger events use our events chefs and full staffing plans. See <a href="/events/weddings">weddings</a>.' },
   { q: 'How far ahead for Uluwatu high-season weekends?', a: 'Book early for July–August and holiday weekends — 2+ weeks recommended for larger groups.' },

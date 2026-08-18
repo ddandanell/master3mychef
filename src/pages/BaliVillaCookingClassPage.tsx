@@ -125,7 +125,7 @@ const FAQS = [
   { question: 'Can this combine with other services?', answer: 'Yes — stack with multi-day <a href="/private-chef-bali">private chef</a>, <a href="/catering">catering</a> and a <a href="/in-villa-service/bartenders">mobile cocktail bar</a>. Sushi-only: <a href="/experiences/sushi-masterclass">sushi masterclass</a>.' },
   { question: 'Do you clean up?', answer: 'Yes — kitchen tidy-down after the class and meal is included on serviced formats.' },
   { question: 'Kids welcome?', answer: 'Yes with age-appropriate tasks. Full kids party production: <a href="/experiences/kids-birthday-chef-party">kids birthday chef party</a>.' },
-  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/chefs">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
   { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a> and the commercial <a href="/experiences/cooking-class">cooking class</a> page.' },
   { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due before the class. Full terms: <a href="/cancellation">cancellation policy</a>.' },
   { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge may apply to quoted amounts. Written quotes show the all-in total before you pay.' },

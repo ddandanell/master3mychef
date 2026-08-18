@@ -483,7 +483,7 @@ const FAQS = [
 const RETREAT_AREA_HREF: Record<string, string> = {
   sidemen: '/private-chef/sidemen',
   munduk: '/private-chef/munduk',
-  'north-bali': '/locations/lovina', // North Bali section describes Lovina and its coast
+  'north-bali': '/private-chef/lovina', // North Bali → live Lovina service page (/locations/lovina 308-redirects to Sanur, wrong geography — SEO audit 2026-08)
 }
 
 function retreatAreaHref(slug: string): string {

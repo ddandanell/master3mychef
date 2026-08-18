@@ -89,7 +89,7 @@ const SECTIONS: PageSection[] = [
     <ul class="list-disc pl-6 space-y-1">
       <li>Luxury villa evenings and <strong>luxury villa experiences Bali</strong></li>
       <li>Birthday celebrations and milestone nights</li>
-      <li><a href="/events/corporate" class="text-[#7E6410] hover:underline font-medium">Corporate events Bali</a> and executive dinners</li>
+      <li><a href="/events/corporate-events" class="text-[#7E6410] hover:underline font-medium">Corporate events Bali</a> and executive dinners</li>
       <li>Business networking and client entertainment</li>
       <li><a href="/blog/bachelor-party-bali-private-chef" class="text-[#7E6410] hover:underline font-medium">Bachelor party Bali</a> villa weekends</li>
       <li>Golf groups after a day on the course</li>
@@ -283,7 +283,7 @@ const FAQS = [
   {
     question: 'Is this suitable for bachelor parties and corporate events?',
     answer:
-      'Yes. Bachelor villa weekends and corporate client entertainment are common briefs. We adjust energy, duration and menu formality to the group. <a href="/blog/bachelor-party-bali-private-chef">Bachelor catering →</a> · <a href="/events/corporate">Corporate events →</a>',
+      'Yes. Bachelor villa weekends and corporate client entertainment are common briefs. We adjust energy, duration and menu formality to the group. <a href="/blog/bachelor-party-bali-private-chef">Bachelor catering →</a> · <a href="/events/corporate-events">Corporate events →</a>',
   },
   {
     question: 'Do you travel across Bali and on yachts?',
@@ -340,7 +340,7 @@ const RELATED_PAGES = [
   },
   {
     label: 'Corporate Events',
-    href: '/events/corporate',
+    href: '/events/corporate-events',
     desc: 'Executive dinners and client entertainment.',
   },
 ]

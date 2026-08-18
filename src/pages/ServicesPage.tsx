@@ -150,7 +150,7 @@ const FAQS = [
   },
   {
     q: 'Can corporate teams book myCHEF?',
-    a: 'Yes — dinners, offsites and multi-day programmes. <a href="/events/corporate">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
+    a: 'Yes — dinners, offsites and multi-day programmes. <a href="/events/corporate-events">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
   },
   {
     q: 'Is there a complete villa hospitality package?',

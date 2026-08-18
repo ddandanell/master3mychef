@@ -14,7 +14,7 @@ const FAQS = [
   { q: 'Can you cater yoga and wellness retreats in Ubud?', a: 'Yes — plant-forward and multi-day retreat menus are a strength. See <a href="/catering/retreat-catering">retreat catering</a> and our wellness chefs.' },
   { q: 'Is there a travel fee for Ubud from South Bali?', a: 'Ubud is a regular service zone. Exact logistics depend on villa location; any travel component is quoted upfront on your proposal.' },
   { q: 'Can we book a Balinese feast for guests new to Ubud?', a: 'Yes — cultural Indonesian and Balinese villa dinners are popular. Ask for an Indonesian specialist chef on WhatsApp.' },
-  { q: 'How does Ubud dining at the villa compare to restaurant reservations?', a: 'In-villa service skips traffic and queues, with a menu built for your group. Compare styles in our <a href="/blog/seminyak-vs-canggu-vs-ubud">area comparison</a> when relevant.' },
+  { q: 'How does Ubud dining at the villa compare to restaurant reservations?', a: 'In-villa service skips traffic and queues, with a menu built for your group. Compare styles in our <a href="/blog/private-chef-seminyak-canggu-ubud-comparison">area comparison</a> when relevant.' },
   { q: 'Do you serve this Bali area?', a: 'Yes — private chef, catering and events operate across major villa regions. Hub: <a href="/locations">locations</a> · <a href="/private-chef-bali">private chef</a>.' },
   { q: 'Is there a travel fee?', a: 'Core South Bali is usually included; remote spots may add a distance fee quoted upfront.' },
   { q: 'Can you cook in Airbnb villas here?', a: 'Yes with a workable kitchen — share the listing.' },

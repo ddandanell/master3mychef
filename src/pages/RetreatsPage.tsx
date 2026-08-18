@@ -66,7 +66,7 @@ const FAQS = [
   { question: 'Do you provide service staff for retreats?', answer: 'Yes. We provide chefs, kitchen assistants, and service staff as needed. For larger retreats, we can also provide bartenders and event coordinators.' },
   { question: 'Can you set up a juice or smoothie bar?', answer: 'Yes. Fresh-pressed juice bars, smoothie stations, and specialty coffee service are popular additions to retreat catering. We source local tropical fruits and organic ingredients.' },
   { question: 'What is the pricing for retreat catering?', answer: 'Retreat programmes are priced per group, length and menu. Contact us for a tailored proposal with a fixed quote.' },
-  { question: 'Corporate catering price range?', answer: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { question: 'Corporate catering price range?', answer: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate-events">Corporate events</a>.' },
   { question: 'NPWP invoices?', answer: 'Yes on request.' },
   { question: 'Multi-day retreats?', answer: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
   { question: 'Guest counts?', answer: 'From leadership dinners to 100–200+ programmes.' },

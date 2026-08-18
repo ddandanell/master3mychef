@@ -131,7 +131,7 @@ const FAQS = [
   { q: 'Can international teams book while still overseas?', a: 'Yes — WhatsApp/email planning is normal; deposits lock dates before arrival.' },
   { q: 'What areas of Bali do you cover for corporate events?', a: 'Island-wide. <a href="/locations">Locations →</a>' },
   { q: 'Can you run team BBQs and plated client dinners?', a: 'Yes — <a href="/catering/bbq-catering">BBQ catering</a>, <a href="/fine-dining">fine dining</a> and plated formats.' },
-  { q: 'Do you offer case studies?', a: 'Yes — <a href="/corporate-case-studies">corporate case studies</a>.' },
+  { q: 'Do you offer case studies?', a: 'Yes — <a href="/corporate-case-studies">corporate case studies</a>, plus <a href="/blog/corporate-catering-bali-case-studies">recent corporate catering case studies</a>.' },
   { q: 'What if headcount changes mid-retreat?', a: 'We re-quote remaining days in writing; food waste and staffing are adjusted with notice.' },
   { q: 'Can one coordinator manage the whole F&B programme?', a: 'Yes — single account lead for multi-day run-of-show.' },
   { q: 'Is alcohol included?', a: 'Usually BYO or sourced at cost with cocktail packages (not hourly bartender hire).' },

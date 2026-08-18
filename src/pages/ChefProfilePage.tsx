@@ -1177,6 +1177,13 @@ function WhatsAppButton({ label, message }: { label: string; message: string }) 
 
 // ── Main page ─────────────────────────────────────────────────────────────────
 
+// Sibling chef cross-links (SEO audit §9.3.2) — build the /chefs profile mesh so
+// individual Person-schema pages gain contextual inbound links from each other.
+const SIBLING_CHEF_LINK: Record<string, { label: string; href: string; desc: string }> = {
+  adriano: { label: 'Chef Made Surya', href: '/chefs/made-surya', desc: 'Meet another myCHEF private chef.' },
+  'bayu-pranata': { label: 'Chef Komang Artha', href: '/chefs/komang-artha', desc: 'Meet another myCHEF private chef.' },
+}
+
 export default function ChefProfilePage() {
   const { slug } = useParams<{ slug: string }>()
   const chef = slug ? CHEFS_DATA[slug] : null
@@ -1184,6 +1191,8 @@ export default function ChefProfilePage() {
   if (!chef) {
     return <Navigate to="/chefs" replace />
   }
+
+  const siblingChefLink = SIBLING_CHEF_LINK[chef.slug]
 
   const chefPersonSchema = personSchema({
     name: chef.name,
@@ -1451,6 +1460,7 @@ export default function ChefProfilePage() {
           <h2 className="text-lg font-medium text-white mb-6">Explore More</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {[
+              ...(siblingChefLink ? [siblingChefLink] : []),
               { label: 'Meet All Chefs', href: '/chefs', desc: 'See the full myCHEF culinary team.' },
               { label: 'View Menus', href: '/fine-dining/menus', desc: 'Browse menu styles for every occasion.' },
               { label: 'Pricing Guide', href: '/help/pricing', desc: 'Understand what a private chef costs in Bali.' },

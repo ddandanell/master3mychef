@@ -433,6 +433,7 @@ export default function LunaPage() {
               { href: '/fine-dining/menus', label: 'Our Menus', sub: '24 Signature Set Menus', icon: '📋' },
               { href: '/fine-dining/our-chefs', label: 'Our Chefs', sub: 'Adriano & the team', icon: '⭐' },
               { href: '/chefs', label: 'All Chefs', sub: 'Meet the full team', icon: '🌟' },
+              { href: '/blog/fine-dining-at-home-bali', label: 'top villa fine dining experiences', sub: 'Fine dining at home', icon: '🥂' },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -487,7 +488,7 @@ export default function LunaPage() {
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Built For</p>
             <h2 className="text-4xl md:text-5xl mb-3 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>Who Villa Fine Dining Is For</h2>
-            <p className="text-[#1A1A1A]/60 max-w-2xl mx-auto">If you want more than a restaurant reservation — a private evening designed around you — this is it.</p>
+            <p className="text-[#1A1A1A]/60 max-w-2xl mx-auto">If you want more than a restaurant reservation — a private evening designed around you — this is it. See what defines <Link to="/blog/luxury-dining-bali" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">luxury private dining in Bali</Link>.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[

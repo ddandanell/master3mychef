@@ -292,7 +292,7 @@ export default function CangguPage() {
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Ready to Book?</p>
           <h2 className="font-playfair text-3xl mb-4">Plan Your Canggu Table</h2>
           <p className="text-white/60 mb-8 leading-relaxed">
-            Skip the Batu Bolong queue once this trip. Read <Link to="/journal/private-chef-canggu-guide" className="text-[#C5A028] hover:underline font-medium">our Canggu local</Link> for more area detail — or message +62 896-7407-2020 on WhatsApp with your date and headcount, and we'll send a menu proposal within 24 hours.
+            Skip the Batu Bolong queue once this trip. Read <Link to="/journal/private-chef-canggu-guide" className="text-[#C5A028] hover:underline font-medium">our Canggu local</Link> for more area detail, or — <Link to="/blog/private-chef-seminyak-canggu-ubud-comparison" className="text-[#C5A028] hover:underline font-medium">still deciding between Canggu, Seminyak and Ubud?</Link> — message +62 896-7407-2020 on WhatsApp with your date and headcount, and we'll send a menu proposal within 24 hours.
           </p>
           <a
             href={`https://wa.me/${WA}?text=${WA_MSG}`}

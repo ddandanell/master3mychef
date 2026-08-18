@@ -399,6 +399,9 @@ export default function RestaurantKitchenSolutionsHubPage() {
               )
             })}
           </div>
+          <p className="mt-8 text-center text-sm text-[#4A4745] max-w-2xl mx-auto">
+            Also read our <Link to="/blog/hotel-restaurant-chef-staffing" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">hotel &amp; restaurant chef staffing guide</Link>.
+          </p>
         </div>
       </section>
 

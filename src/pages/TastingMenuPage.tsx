@@ -148,7 +148,7 @@ const FAQS = [
   { q: 'Which areas of Bali do you serve for tasting menus?', a: 'All major villa regions — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and more. <a href="/locations">Locations →</a>' },
   { q: 'Can we customise courses or add a chef’s table format?', a: 'Course swaps are normal. For counter-side commentary see <a href="/fine-dining/chefs-table">chef’s table</a>.' },
   { q: 'Do you clean up after the tasting menu?', a: 'Yes — full cleanup included.' },
-  { q: 'How do I book a tasting menu with myCHEF?', a: 'WhatsApp date, guests, villa area and menu path. Fixed quote, then 50% deposit. <a href="/quote">Quote →</a> · <a href="/book">Book →</a>' },
+  { q: 'How do I book a tasting menu with myCHEF?', a: 'WhatsApp date, guests, villa area and menu path. Fixed quote, then 50% deposit. Before you book, see <a href="/blog/fine-dining-at-home-bali">fine dining at home: what the experience looks like</a>. <a href="/quote">Quote →</a> · <a href="/book">Book →</a>' },
   { q: 'What if someone on the team cannot make it?', a: 'Verified replacement within our guarantee window or refund. <a href="/why-mychef">Why myCHEF →</a>' },
   { q: 'Can we add waiters or a bartender?', a: 'Yes — scale FOH for larger tables. <a href="/in-villa-service">In-villa service →</a>' },
 ]

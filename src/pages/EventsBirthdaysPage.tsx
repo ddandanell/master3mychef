@@ -588,7 +588,7 @@ export default function EventsBirthdaysPage() {
               Staffing, Setup & Cleanup
             </h2>
             <p className="text-sm sm:text-base text-[#4A4745] leading-relaxed mb-4">
-              Enough people, on time, with a plan: that is what separates a relaxed birthday from a stressful one. Service staff scale with guest count; pool parties add bar and floor coverage; cleanup is always part of the plan.
+              Enough people, on time, with a plan: that is what separates a relaxed birthday from a stressful one. Service staff scale with guest count; pool parties add bar and floor coverage; cleanup is always part of the plan. Planning a hosted event? See our guide to <Link to="/blog/hostess-hire-bali" className="text-[#C5A028] hover:underline font-medium">hiring event hostesses in Bali</Link>.
             </p>
             <ul className="space-y-2.5">
               {[

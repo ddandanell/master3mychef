@@ -315,7 +315,7 @@ export default function SeminyakPage() {
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Ready to Book?</p>
           <h2 className="font-playfair text-3xl mb-4">Plan Your Seminyak Evening</h2>
           <p className="text-white/60 mb-8 leading-relaxed">
-            Whether your best night in Seminyak is out on the strip or around your own pool, plan it before the sunset slots fill. Browse <Link to="/locations" className="text-[#C5A028] hover:underline font-medium">all Bali dining areas</Link> or read <Link to="/journal/private-chef-seminyak-guide" className="text-[#C5A028] hover:underline font-medium">our Seminyak local</Link> — then message +62 896-7407-2020 on WhatsApp and we'll have a menu proposal with you within 24 hours.
+            Whether your best night in Seminyak is out on the strip or around your own pool, plan it before the sunset slots fill. Browse <Link to="/locations" className="text-[#C5A028] hover:underline font-medium">all Bali dining areas</Link>, read <Link to="/journal/private-chef-seminyak-guide" className="text-[#C5A028] hover:underline font-medium">our Seminyak local</Link>, or compare <Link to="/blog/private-chef-seminyak-canggu-ubud-comparison" className="text-[#C5A028] hover:underline font-medium">Seminyak vs Canggu vs Ubud — which area fits your chef dinner</Link> — then message +62 896-7407-2020 on WhatsApp and we'll have a menu proposal with you within 24 hours.
           </p>
           <a
             href={`https://wa.me/${WA}?text=${WA_MSG}`}

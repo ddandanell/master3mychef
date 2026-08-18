@@ -383,6 +383,24 @@ const AREA_RELATED_LINKS: Record<string, { to: string; label: string }[]> = {
   ],
 }
 
+// Reciprocity links (SEO audit §9.5 / Top-30 #7–16): big-neighbour area pages
+// return equity to long-tail area pages that already link up to them. Rendered
+// inside the "We also cook near {area}" section with descriptive, varied anchors.
+const RECIPROCITY_LINKS: Record<string, { to: string; label: string }[]> = {
+  canggu: [{ to: '/private-chef/umalas', label: 'neighbouring Umalas' }],
+  seminyak: [
+    { to: '/private-chef/umalas', label: 'Umalas villa chef service' },
+    { to: '/private-chef/batu-belig', label: 'Batu Belig beachside dinners' },
+  ],
+  kerobokan: [{ to: '/private-chef/batu-belig', label: 'private chef in Batu Belig' }],
+  'nusa-dua': [{ to: '/private-chef/tanjung-benoa', label: 'Tanjung Benoa chef service' }],
+  jimbaran: [{ to: '/private-chef/tanjung-benoa', label: 'across the bay in Tanjung Benoa' }],
+  sanur: [{ to: '/private-chef/padang-bai', label: 'chef service for Padang Bai harbour stays' }],
+  'nusa-lembongan': [{ to: '/private-chef/nusa-ceningan', label: 'neighbouring Nusa Ceningan' }],
+  uluwatu: [{ to: '/private-chef/padang-padang', label: 'Padang Padang surf-villa chef' }],
+  bingin: [{ to: '/private-chef/padang-padang', label: 'Padang Padang' }],
+}
+
 const OCCASIONS = [
   { key: 'romantic', label: 'Romantic Dinner', href: '/fine-dining/romantic-dinner' },
   { key: 'birthday', label: 'Birthday Party', href: '/events/birthdays' },
@@ -479,6 +497,13 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
   // Nearby areas — up to 6, filtered to published
   const publishedSlugs = new Set(PRIVATE_CHEF_AREAS.filter((a) => a.published).map((a) => a.slug))
   const nearby = area.nearbyAreas.filter((n) => publishedSlugs.has(n.slug)).slice(0, 6)
+
+  // Reciprocity links (SEO audit §9.5) — surface published targets not already in `nearby`.
+  const nearbySlugSet = new Set(nearby.map((n) => n.slug))
+  const reciprocity = (RECIPROCITY_LINKS[area.slug] ?? []).filter((r) => {
+    const targetSlug = r.to.replace('/private-chef/', '')
+    return publishedSlugs.has(targetSlug) && !nearbySlugSet.has(targetSlug)
+  })
 
   // Unique long-form local guide: reduces template sameness for indexing value.
   const landmarkList = area.landmarks.slice(0, 5).join(', ')
@@ -967,7 +992,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       </section>
 
       {/* ── 9. NEARBY AREAS ──────────────────────────────────────────────────── */}
-      {nearby.length > 0 && (
+      {(nearby.length > 0 || reciprocity.length > 0) && (
         <section className="px-6 py-16 md:px-10 bg-[#FAFAF8]">
           <div className="max-w-[1160px] mx-auto">
             <p className="text-[#C5A028] text-sm uppercase tracking-[0.35em] font-semibold mb-3">
@@ -989,6 +1014,16 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
                 >
                   <MapPin className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
                   private chef in {n.name}
+                </Link>
+              ))}
+              {reciprocity.map((r) => (
+                <Link
+                  key={r.to}
+                  to={r.to}
+                  className="flex items-center gap-3 bg-white border border-[#E5E3E0] rounded-xl px-4 py-3 hover:border-[#C5A028] hover:text-[#C5A028] transition-all text-sm font-medium"
+                >
+                  <MapPin className="w-4 h-4 text-[#C5A028] flex-shrink-0" />
+                  {r.label}
                 </Link>
               ))}
             </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { appendLeadRef } from '@/lib/whatsapp'
 import { MessageCircle, Mail, MapPin, ArrowRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
@@ -352,7 +353,7 @@ export default function ContactPage() {
             <p className="font-cormorant text-[#2C5F7C] text-sm uppercase tracking-[0.35em] mb-4">Need to send more detail?</p>
             <h2 className="font-playfair text-3xl md:text-4xl leading-tight mb-4">Send a detailed note</h2>
             <p className="text-[#4A4745] mb-8">
-              We route it to the right person and reply on WhatsApp — usually within the hour.
+              We route it to the right person and reply on WhatsApp — usually within the hour. Already booked? <Link to="/help/managing-booking" className="text-[#C5A028] hover:underline font-medium">Manage an existing booking</Link>.
             </p>
 
             {submitted ? (

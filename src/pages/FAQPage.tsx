@@ -86,7 +86,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     items: [
       {
         q: 'How do I book a private chef or catering in Bali?',
-        a: 'Message WhatsApp with date, villa area, guest count and the service you want. We reply within 2 hours and send a menu proposal within 24 hours. Confirm with a 50% deposit. <a href="/book">Book →</a> · <a href="/quote">Request a quote →</a>',
+        a: 'Message WhatsApp with date, villa area, guest count and the service you want. We reply within 2 hours and send a menu proposal within 24 hours. Confirm with a 50% deposit. <a href="/book">Book →</a> · <a href="/quote">Request a quote →</a> · <a href="/help/managing-booking">managing or changing your booking</a>',
       },
       {
         q: 'How far in advance should I book?',

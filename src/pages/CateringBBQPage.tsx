@@ -120,7 +120,7 @@ const FAQS = [
   { q: 'Do you clean up after the BBQ?', a: 'Yes — grill station, service areas and kitchen restored on serviced packages.' },
   { q: 'Can kids eat at a BBQ catering event?', a: 'Yes — milder items or parallel <a href="/kids-menus">kids menus</a>.' },
   { q: 'Which areas of Bali do you cover?', a: 'Island-wide villa BBQ. <a href="/locations">Locations →</a>' },
-  { q: 'Can we combine BBQ with a wedding or birthday?', a: 'Yes — welcome BBQs and casual receptions are common. <a href="/events/weddings">Weddings</a> · <a href="/events/birthdays">Birthdays</a> · <a href="/events/villa-parties">Villa parties</a>.' },
+  { q: 'Can we combine BBQ with a wedding or birthday?', a: 'Yes — welcome BBQs and casual receptions are common. <a href="/events/weddings">Weddings</a> · <a href="/events/birthdays">Birthdays</a> · <a href="/events/villa-parties">Villa parties</a>. See also <a href="/blog/bachelor-party-bali-private-chef">BBQ and chef packages for a Bali bachelor party</a>.' },
   { q: 'Is pork available / can you run pork-free BBQ?', a: 'Both. Pork-free and halal-friendly grills are available. Traditional <a href="/catering/babi-guling">babi guling</a> is a separate pork feast.' },
   { q: 'What does "++" mean?', a: '11% government tax + 10% service charge. Quotes show all-in totals before deposit.' },
   { q: 'How many staff come with BBQ catering?', a: 'Chef plus service support scaled to headcount. Extra waiters/bartenders available via <a href="/in-villa-service">in-villa service</a>.' },

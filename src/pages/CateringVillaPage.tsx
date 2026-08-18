@@ -445,7 +445,7 @@ export default function CateringVillaPage() {
             Villa catering packages are designed for groups of eight or more. For smaller groups, explore our <Link to="/private-chef-bali" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">private chef</Link> and <Link to="/fine-dining" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">fine dining</Link> services.
           </p>
           <p className="mt-4 text-center text-sm text-[#4A4745] max-w-3xl mx-auto">
-            <strong>Example villa catering budget:</strong> a villa dinner for 14 guests starts from approximately IDR 9.1 million++ before premium upgrades or additional services. Your quotation will show the complete total before booking. See our full <Link to="/pricing" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">pricing</Link> page for more detail.
+            <strong>Example villa catering budget:</strong> a villa dinner for 14 guests starts from approximately IDR 9.1 million++ before premium upgrades or additional services. Your quotation will show the complete total before booking. See our full <Link to="/pricing" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">pricing</Link> page for more detail, or go <Link to="/blog/private-chef-bali-preparation-12-guest-villa-dinner" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">behind the scenes of a 12-guest villa dinner</Link>.
           </p>
           <TaxFooter className="mt-8" />
         </div>
@@ -525,7 +525,7 @@ export default function CateringVillaPage() {
             ))}
           </div>
           <p className="mt-8 text-center text-sm text-[#4A4745] max-w-2xl mx-auto">
-            Bartenders, cocktail service, table styling, cakes, additional waiters, and live cooking stations can be added to your quotation.
+            Bartenders, cocktail service, table styling, cakes, additional waiters, and live cooking stations can be added to your quotation. Want to learn the dishes yourself? <Link to="/blog/bali-villa-cooking-class-private-chef" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Cook it yourself next time: villa cooking classes</Link>.
           </p>
           <div className="mt-8 text-center">
             <Link to="/in-villa-service/bartenders" className="inline-flex items-center gap-2 text-sm text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">

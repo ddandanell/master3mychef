@@ -488,6 +488,10 @@ export default function CateringCorporatePage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-center text-[#4A4745] text-sm md:text-base">
+            See the numbers behind these events:{' '}
+            <Link to="/blog/corporate-catering-bali-case-studies" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">three real corporate catering case studies</Link>.
+          </p>
         </div>
       </section>
 

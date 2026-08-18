@@ -203,7 +203,7 @@ const SECTIONS: PageSection[] = [
     type: 'cta' as const,
     subtitle: 'Start Planning',
     title: 'Which Experience Are You Planning?',
-    body: 'Tell us the experience, date, villa location and guest count — we will reply within the hour with availability and a tailored plan.',
+    body: 'Tell us the experience, date, villa location and guest count — we will reply within the hour with availability and a tailored plan. Curious about our most-booked class? See <a href="/blog/bali-villa-cooking-class-private-chef" class="text-[#7E6410] hover:underline font-medium">private cooking classes at your villa</a>.',
     primaryAction: {
       label: 'Message Us on WhatsApp',
       href: WA_LINK,

@@ -1285,6 +1285,17 @@ export default function HubPage() {
               </div>
             </Link>
 
+            <Link to="/blog/private-dinner-party-bali" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">🍷</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Planning a Private Dinner Party in Bali</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>How to plan an intimate at-villa dinner party — menu, staffing, timing and budget.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
             </div>
           <div className="text-center mt-12">
             <Link to="/journal" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#1A1A1A' }}>

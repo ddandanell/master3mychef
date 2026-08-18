@@ -432,6 +432,12 @@ export default function FineDiningChefsPage() {
               </article>
             ))}
           </div>
+          <p className="reveal mt-10 text-center text-sm text-[#4A4745]">
+            Read full chef profiles:{' '}
+            <Link to="/chefs/made-surya" className="font-semibold text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">I Made Surya — chef profile</Link>
+            {' · '}
+            <Link to="/chefs/komang-artha" className="font-semibold text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Komang Artha — chef profile</Link>.
+          </p>
         </div>
       </section>
 

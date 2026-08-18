@@ -854,7 +854,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'guide-private-chef-bali': {
     path: '/guide/private-chef-bali',
-    title: 'How to Hire a Private Chef in Bali | Step-by-Step Guide',
+    title: 'Private Chef Coverage Across Bali | Areas We Cook',
     description:
       'Everything you need to know about hiring a private chef in Bali — costs, what to expect, areas covered and how booking works.',
     canonical: `${SITE}/guide/private-chef-bali`,
@@ -1673,7 +1673,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'staffing-for-villa-managers': {
     path: '/staffing/for-villa-managers',
-    title: 'Villa Manager Partnership Bali | myCHEF Partner Program',
+    title: 'Staffing for Villa Managers Bali | Chef & Staff Pools',
     description:
       'Villa managers in Bali: on-demand chef placement, service staff pools & full hospitality packages for your portfolio. Partner terms via WhatsApp.',
     canonical: `${SITE}/staffing/for-villa-managers`,

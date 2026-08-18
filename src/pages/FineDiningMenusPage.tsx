@@ -308,6 +308,9 @@ export default function FineDiningMenusPage() {
             <p className="text-lg leading-relaxed text-[#4A4745]">
               The menus move with the season and the market — read our <Link to="/blog/seasonal-ingredients-bali-cooking-guide" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">seasonal ingredients Bali cooking guide</Link>. No frozen centrepieces, no tired luxury shortcuts, no fixed script when a better ingredient is available that day.
             </p>
+            <p className="mt-4 text-lg leading-relaxed text-[#4A4745]">
+              Season by season: <Link to="/blog/dry-season-menu-bali" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">what's in season: dry-season menu guide</Link>, <Link to="/blog/festive-season-menu-bali" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">festive season menus (Christmas &amp; New Year)</Link>, and <Link to="/blog/wet-season-menu-bali" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">wet-season produce and menu guide</Link>.
+            </p>
           </div>
 
           <div className="mt-16 grid gap-6 md:grid-cols-3">

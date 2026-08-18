@@ -309,7 +309,7 @@ const FAQS = [
   },
   {
     question: 'Who is Adriano?',
-    answer: 'Adriano is the founder and executive chef, trained to fine-dining standards in Milan. He leads technique standards for the team and still cooks select villa evenings. More on <a href="/about">about myCHEF</a>.',
+    answer: 'Adriano is the founder and executive chef, trained to fine-dining standards in Milan. He leads technique standards for the team and still cooks select villa evenings. More on <a href="/chefs">about myCHEF</a>.',
   },
   {
     question: 'Do head chefs cook every booking personally?',

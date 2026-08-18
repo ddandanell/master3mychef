@@ -3,7 +3,7 @@ import { MessageCircle, ArrowRight, PartyPopper, Heart, Flame, Users, Briefcase,
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import SectionHeader from '@/components/catering/SectionHeader'
-import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
+import { HaccpTrustLine } from '@/components/shared'
 
 const SITE = 'https://mychef.id'
 const WA = 6289674072020
@@ -67,7 +67,7 @@ const SERVICES = [
     slug: 'in-villa-service-staff',
     label: 'In-Villa Service Staff',
     description: 'Waiters, bartenders, butlers and sommeliers by the shift — restaurant-grade front-of-house in your villa.',
-    price: 'Contact us for pricing.',
+    price: 'Pricing on request.',
     url: '/in-villa-service',
     cta: 'in-villa service staff',
     icon: Heart,
@@ -150,7 +150,7 @@ const FAQS = [
   },
   {
     q: 'Can corporate teams book myCHEF?',
-    a: 'Yes — dinners, offsites and multi-day programmes. <a href="/events/corporate">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
+    a: 'Yes — dinners, offsites and multi-day programmes. <a href="/events/corporate-events">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
   },
   {
     q: 'Is there a complete villa hospitality package?',
@@ -485,7 +485,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

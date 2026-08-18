@@ -141,7 +141,7 @@ export default function KutaPage() {
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Kuta Dining Guide</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Dining in Kuta: Where to Eat & In-Villa Chef Options
+            Kuta Dining Guide — Where to Eat & When to Book a Chef
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Kuta is where Bali trips begin — and Legian is where the villas actually are. This guide covers eating out across Kuta, Legian, Double Six and Tuban, the private dining options beyond a restaurant booking, and how party groups get fed properly without leaving the villa.

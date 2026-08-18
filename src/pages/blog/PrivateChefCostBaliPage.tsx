@@ -441,7 +441,7 @@ export default function PrivateChefCostBaliPageBlog() {
         {/* Mid-Article CTA */}
         <section className="mb-16 bg-[#1A1A1A] text-white rounded-xl p-8 text-center">
           <h2 className="text-2xl font-light mb-3">Ready to Get a Quote?</h2>
-          <p className="text-white/60 mb-6">Tell us your date, villa, guest count, and preferred cuisine. We send a personalised proposal via WhatsApp within 2 hours.</p>
+          <p className="text-white/60 mb-6">Tell us your date, villa, guest count, and preferred cuisine. We send a personalised proposal via WhatsApp within 2 hours. New to this? Start with <Link to="/guide/private-chef-bali" className="text-[#C5A028] hover:underline font-medium">the complete private chef Bali guide</Link>.</p>
           <a
             href={`https://wa.me/${PHONE.digits}?text=${WA_MSG}`}
             target="_blank"

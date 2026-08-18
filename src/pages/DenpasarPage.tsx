@@ -141,7 +141,7 @@ export default function DenpasarPage() {
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Denpasar Dining Guide</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Dining in Denpasar: Where to Eat & In-Villa Chef Options
+            Denpasar Dining Guide — Where to Eat & When to Book a Chef
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Denpasar is where Bali actually lives — the expat tables of Renon, the local institutions residents queue for, and a residential private-dining scene the villa districts never see. myCHEF is based in Panjer: this is our home turf. This guide covers where to eat and how private dining works in the city.

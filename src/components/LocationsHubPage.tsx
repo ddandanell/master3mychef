@@ -76,7 +76,7 @@ const LOCATION_FAQS = [
   },
   {
     q: 'Can corporate offsites book chefs across multiple Bali locations?',
-    a: 'Yes — one account manager, multiple villa or venue drops. <a href="/events/corporate">Corporate events →</a>',
+    a: 'Yes — one account manager, multiple villa or venue drops. <a href="/events/corporate-events">Corporate events →</a>',
   },
   {
     q: 'How do I book for my exact villa pin?',

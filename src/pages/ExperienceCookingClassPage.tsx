@@ -383,7 +383,7 @@ const FAQS = [
   {
     question: 'Do you run cooking classes for team building or retreats?',
     answer:
-      'Yes for villa groups. Larger teams get extra staff and stations. Multi-day food programmes can connect with <a href="/events/retreats">retreat catering</a> and <a href="/events/corporate">corporate events</a>.',
+      'Yes for villa groups. Larger teams get extra staff and stations. Multi-day food programmes can connect with <a href="/events/retreats">retreat catering</a> and <a href="/events/corporate-events">corporate events</a>.',
   },
   {
     question: 'What should I wear to a cooking class?',

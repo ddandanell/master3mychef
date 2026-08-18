@@ -180,8 +180,8 @@ export default function PrivateChefBaliPage() {
             myCHEF.id · Private Chef Service · Bali
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Hire a Private Chef in Bali<br />
-            <span className="italic">Michelin-Trained. In Your Villa.</span>
+            Michelin-Trained Tasting Menus<br />
+            <span className="italic">Served in Your Bali Villa</span>
           </h1>
           <p className="text-lg md:text-xl text-white/[85%] mb-3 max-w-2xl mx-auto leading-relaxed">
             Hire private chef Bali service for tasting menus at your villa — we arrive 3 hours early, cook and serve every course, and leave your kitchen spotless. Daily rates and multi-day options are quoted on WhatsApp.

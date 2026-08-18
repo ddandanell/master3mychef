@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
+import { HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -328,7 +328,6 @@ export default function SanurPage() {
       </section>
 
       <CityDeepDive slug="sanur" cityName="Sanur" />
-    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

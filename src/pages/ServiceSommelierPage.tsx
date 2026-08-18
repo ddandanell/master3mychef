@@ -8,7 +8,7 @@ import SeoHead, { faqPageSchema } from '@/components/SeoHead'
 import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { ArticleContentSection, Breadcrumb } from '@/components/shared'
+import { Breadcrumb } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -109,7 +109,7 @@ const FAQS = [
   { q: 'Can non-drinkers join a pairing dinner?', a: 'Yes. The sommelier designs a parallel zero-proof pairing — juices, teas, shrubs and ferments — matched to the same courses.' },
   { q: 'How far in advance should I book?', a: '1–2 weeks for standard dinners; 3–4 weeks when rare or allocated wines are involved, especially in peak season.' },
   { q: 'Which areas do you cover?', a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
-  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters and butlers priced on request. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
   { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },
@@ -411,8 +411,6 @@ export default function ServiceSommelierPage() {
       </section>
 
       <TaxFooter className="py-6" />
-      <ArticleContentSection downgradeFirstH1 />
-
       <StickyMobileCTA
         pageSource="in-villa-sommelier"
         serviceName="sommelier service in Bali"

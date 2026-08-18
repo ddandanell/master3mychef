@@ -96,14 +96,14 @@ const HOW_IT_WORKS = [
 const COMPARISON_ROWS = [
   { feature: 'Vetted, background-checked team', freelance: 'Varies', marketplace: 'Varies', mychef: 'Always' },
   { feature: 'Backup if your chef falls ill', freelance: 'None', marketplace: 'Rebooking', mychef: 'Replacement within 2 hours or 100% refund' },
-  { feature: 'Full staffing (waiters, bar, sommelier)', freelance: 'Rarely', marketplace: 'No', mychef: 'Waiters/butlers: contact us for pricing; cocktail packages from IDR 500,000++ per guest' },
+  { feature: 'Full staffing (waiters, bar, sommelier)', freelance: 'Rarely', marketplace: 'No', mychef: 'Waiters/butlers priced on request; cocktail packages from IDR 500,000++ per guest' },
   { feature: 'Itemised fixed quote before you pay', freelance: 'Sometimes', marketplace: 'Platform estimate', mychef: 'Always, within 24 hours' },
   { feature: 'Kitchen left spotless', freelance: 'Hopefully', marketplace: '—', mychef: 'Guaranteed' },
 ]
 
 const FAQS = [
   { q: 'How much does a private chef in Bali cost?', a: 'Villa dinners start from IDR 700K per person and tasting menus from IDR 950K per person, ++ (11% government tax + 10% service charge). Your fixed quote depends on menu, guest count and staffing. <a href="/pricing">Full price tables →</a>' },
-  { q: 'What\'s included in the price?', a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters and butlers: contact us for pricing; cocktail packages from IDR 500,000++ per guest. Sommelier quoted per event.' },
+  { q: 'What\'s included in the price?', a: 'Menu planning, fresh ingredient shopping, cooking, serving and a full kitchen clean-up. Daily villa chef service bills groceries at cost with receipts. Waiters and butlers priced on request; cocktail packages from IDR 500,000++ per guest. Sommelier quoted per event.' },
   { q: 'Do you offer a home chef service in Bali?', a: 'Yes — our private chefs work as your home chef for a single evening or on a daily or weekly basis: menu planning, market shopping, cooking and full clean-up at your villa or residence. See the <a href="/private-chef-bali">daily villa chef service</a>, or explore <a href="/private-dining-indonesia">private dining</a> for at-home fine dining.' },
   { q: 'How far in advance should I book?', a: 'A few days is ideal for dinners; weddings and large events deserve weeks. Same-day and next-day requests are often possible — message us and we\'ll tell you honestly.' },
   { q: 'Which areas do you serve?', a: 'All of Bali\'s main villa areas — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua, Jimbaran, Berawa, Pererenan and the Bukit. Remote-area travel is always quoted upfront.' },
@@ -372,10 +372,10 @@ export default function HubPage() {
                   myCHEF · Bali hospitality
                 </p>
                 <h1 className="hub-hero-title mb-2 text-[1.75rem] leading-[1.1] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Your villa. Our kitchen.
+                  Private Chef, Catering &amp; Villa Hospitality in Bali
                 </h1>
                 <p className="hub-hero-subtitle mb-3 text-sm font-medium leading-snug text-white/90 sm:text-base md:text-lg">
-                  Restaurant-level dining, catering and events — delivered in your villa
+                  Your villa. Our kitchen. — restaurant-level dining, catering and events, delivered across Bali
                 </p>
                 <div className="gold-arc mb-4 md:mb-6" />
                 <p className="hub-hero-subtitle mb-3 max-w-[40ch] text-[15px] leading-relaxed text-white/90 sm:max-w-xl sm:text-lg">
@@ -1281,6 +1281,17 @@ export default function HubPage() {
               <div className="p-6">
                 <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Corporate Events & Team Dining</h3>
                 <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Run executive dinners and off-sites with military precision and memorable food.</p>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+              </div>
+            </Link>
+
+            <Link to="/blog/private-dinner-party-bali" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
+              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                <span className="text-[#C5A028] font-serif text-3xl">🍷</span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Planning a Private Dinner Party in Bali</h3>
+                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>How to plan an intimate at-villa dinner party — menu, staffing, timing and budget.</p>
                 <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
               </div>
             </Link>

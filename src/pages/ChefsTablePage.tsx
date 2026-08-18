@@ -11,7 +11,7 @@ import SeoHead, {
 } from '@/components/SeoHead'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import TrustStrip from '@/components/shared/TrustStrip'
-import { ArticleContentSection, Breadcrumb } from '@/components/shared'
+import { Breadcrumb } from '@/components/shared'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 
@@ -90,7 +90,7 @@ const FAQS = [
   { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
   { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
-  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/chefs">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
   { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
 ]
 
@@ -459,8 +459,6 @@ export default function ChefsTablePage() {
           ))}
         </div>
       </section>
-      <ArticleContentSection downgradeFirstH1 />
-
       <StickyMobileCTA
         pageSource="chefs-table"
         serviceName="chef's table in Bali"

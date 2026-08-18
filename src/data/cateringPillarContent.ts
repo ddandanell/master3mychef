@@ -928,7 +928,7 @@ export const CATERING_FAQS: CateringFAQ[] = [
   // AnswerSocrates guest catering + bar intents (Bali villa/events only — not US chains, equipment retail, or jobs)
   {
     q: 'Is myCHEF a Bali catering company?',
-    a: `Yes. myCHEF is a chef-led <strong>Bali catering company</strong> focused on villas and private events island-wide — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Kuta corridor and beyond. We employ our own chefs and service team (not last-minute freelancers). <a href="/catering">Catering Bali →</a> · <a href="/about">About →</a>`,
+    a: `Yes. myCHEF is a chef-led <strong>Bali catering company</strong> focused on villas and private events island-wide — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Kuta corridor and beyond. We employ our own chefs and service team (not last-minute freelancers). <a href="/catering">Catering Bali →</a> · <a href="/chefs">About →</a>`,
   },
   {
     q: 'What is on a Bali catering menu?',

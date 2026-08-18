@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
+import { HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -118,7 +118,7 @@ export default function PererenanPage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Pererenan Dining Guide</p>
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Dining in Pererenan: Where to Eat & In-Villa Chef Options</h1>
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Pererenan Dining Guide — Where to Eat & When to Book a Chef</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Pererenan is what Canggu was before the beach clubs arrived — and the people who stay here like it that way. On the quiet north-west edge of the Canggu orbit, this is Bali's emerging design-villa enclave. This guide maps where to eat in and around Pererenan, explains the private dining formats that suit the area's villa-first character, and shows why a chef in your own kitchen is often the natural answer here.
           </p>
@@ -313,7 +313,6 @@ export default function PererenanPage() {
       </section>
 
       <CityDeepDive slug="pererenan" cityName="Pererenan" />
-    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

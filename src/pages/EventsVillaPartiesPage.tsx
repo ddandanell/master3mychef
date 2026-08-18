@@ -9,7 +9,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
@@ -122,7 +122,7 @@ const FAQS = [
   { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
   { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
-  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/chefs">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
   { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
   { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
   // AnswerSocrates villa party + bar catering intents
@@ -408,7 +408,7 @@ export default function EventsVillaPartiesPage() {
                 Themes & Occasions
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                One strong identity beats endless decoration: Tropicana, Gatsby, Surfer, Disco or fully custom — guiding colour, music, bar styling and pool floats. We regularly run <strong>hens parties</strong>, <strong>bucks parties</strong>, milestone birthdays (see <Link to="/events/birthdays" className="text-[#2C5F7C] hover:underline">birthday catering</Link>) and corporate socials. Want the whole thing bundled with transport and staffing under one contract? See our <Link to="/villa-event-packages" className="text-[#2C5F7C] hover:underline">all-inclusive event packages</Link>.
+                One strong identity beats endless decoration: Tropicana, Gatsby, Surfer, Disco or fully custom — guiding colour, music, bar styling and pool floats. We regularly run <strong>hens parties</strong>, <strong>bucks parties</strong> (read up on <Link to="/blog/bachelor-party-bali-private-chef" className="text-[#2C5F7C] hover:underline">bachelor party catering in Bali</Link>), milestone birthdays (see <Link to="/events/birthdays" className="text-[#2C5F7C] hover:underline">birthday catering</Link>) and corporate socials. For a more intimate evening, learn <Link to="/blog/private-dinner-party-bali" className="text-[#2C5F7C] hover:underline">how to plan a private dinner party in Bali</Link>. Want the whole thing bundled with transport and staffing under one contract? See our <Link to="/villa-event-packages" className="text-[#2C5F7C] hover:underline">all-inclusive event packages</Link>.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 {ADDONS.map((addon) => (
@@ -597,8 +597,6 @@ export default function EventsVillaPartiesPage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection downgradeFirstH1 />
-
       <StickyMobileCTA
         pageSource="events-villa-parties"
         serviceName="villa party catering in Bali"

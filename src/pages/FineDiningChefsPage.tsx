@@ -118,7 +118,7 @@ const FAQS = [
   { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
   { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
-  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/chefs">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
   { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
   { q: 'What deposit do you require?', a: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
   { q: 'What does "++" mean on prices?', a: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },
@@ -432,6 +432,12 @@ export default function FineDiningChefsPage() {
               </article>
             ))}
           </div>
+          <p className="reveal mt-10 text-center text-sm text-[#4A4745]">
+            Read full chef profiles:{' '}
+            <Link to="/chefs/made-surya" className="font-semibold text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">I Made Surya — chef profile</Link>
+            {' · '}
+            <Link to="/chefs/komang-artha" className="font-semibold text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">Komang Artha — chef profile</Link>.
+          </p>
         </div>
       </section>
 

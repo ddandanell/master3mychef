@@ -57,21 +57,21 @@ const faqJsonLd = faqPageSchema([
 const PRICING_TIERS = [
   {
     title: 'Day Butler',
-    price: 'Contact us for pricing',
+    price: 'On request',
     unit: 'Custom quote',
     features: ['Day-service coverage', 'Arrival greeting', 'Table service', 'Beverage service', 'Luggage assistance', 'Guest orientation'],
     bestFor: 'Villa stays, family holidays, small groups',
   },
   {
     title: 'Event Butler',
-    price: 'Contact us for pricing',
+    price: 'On request',
     unit: 'Custom quote',
     features: ['Event-service coverage', 'Guest reception', 'Coat check', 'Cigar service', 'Personal attendant', 'VIP support'],
     bestFor: 'Weddings, corporate events, gala dinners',
   },
   {
     title: 'Residence Butler',
-    price: 'Contact us for pricing',
+    price: 'On request',
     unit: 'Custom quote',
     features: ['Extended-day coverage', 'Full household management', 'Meal coordination', 'Vendor liaison', 'Inventory management', 'Event support'],
     bestFor: 'Extended stays, private villas, high-net-worth guests',
@@ -107,7 +107,7 @@ const FAQS = [
   { q: 'How far in advance should I book?', a: '1–2 weeks for Day Butlers; 3–4 weeks for Residence Butlers in peak season (July–August, December–New Year). Shorter notice is often possible — ask on WhatsApp.' },
   { q: 'What areas do you cover?', a: 'All of Bali — Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur and surrounding regions.' },
   { q: 'What is the difference between hiring a butler and booking a villa with butler service?', a: 'Villas advertising "butler service" typically include a shared staff member during fixed hours. A hired myCHEF butler is dedicated to your group alone, briefed to your preferences, and booked for exactly the days and hours you choose.' },
-  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters and butlers priced on request. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
   { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },

@@ -71,7 +71,7 @@ const FAQS = [
   },
   {
     question: 'Do you recommend services for corporate retreats?',
-    answer: 'Yes — multi-day meals and gala nights. <a href="/events/corporate">Corporate events</a> · <a href="/catering/retreat-catering">Retreat catering</a>.',
+    answer: 'Yes — multi-day meals and gala nights. <a href="/events/corporate-events">Corporate events</a> · <a href="/catering/retreat-catering">Retreat catering</a>.',
   },
   {
     question: 'How fast will I get a recommendation?',

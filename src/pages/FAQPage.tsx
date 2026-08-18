@@ -86,7 +86,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     items: [
       {
         q: 'How do I book a private chef or catering in Bali?',
-        a: 'Message WhatsApp with date, villa area, guest count and the service you want. We reply within 2 hours and send a menu proposal within 24 hours. Confirm with a 50% deposit. <a href="/book">Book →</a> · <a href="/quote">Request a quote →</a>',
+        a: 'Message WhatsApp with date, villa area, guest count and the service you want. We reply within 2 hours and send a menu proposal within 24 hours. Confirm with a 50% deposit. <a href="/book">Book →</a> · <a href="/quote">Request a quote →</a> · <a href="/help/managing-booking">managing or changing your booking</a>',
       },
       {
         q: 'How far in advance should I book?',
@@ -174,7 +174,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Can you add waiters, butlers or a bartender?',
-        a: 'Yes. Waiters, hosts and butlers: contact us for pricing; cocktail packages from IDR 500,000++ per guest. Sommelier quoted per event. Standard ratio: one waiter per 10 guests. <a href="/in-villa-service">In-villa service →</a>',
+        a: 'Yes. Waiters, hosts and butlers priced on request; cocktail packages from IDR 500,000++ per guest. Sommelier quoted per event. Standard ratio: one waiter per 10 guests. <a href="/in-villa-service">In-villa service →</a>',
       },
       {
         q: 'What if it rains during outdoor service?',
@@ -214,7 +214,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Do you cater corporate retreats and team dinners?',
-        a: 'Yes — offsites, gala dinners and multi-day retreat catering with NPWP-ready invoicing where needed. <a href="/events/corporate">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
+        a: 'Yes — offsites, gala dinners and multi-day retreat catering with NPWP-ready invoicing where needed. <a href="/events/corporate-events">Corporate events →</a> · <a href="/catering/corporate-catering">Corporate catering →</a>',
       },
       {
         q: 'How much does catering in Bali cost per person?',

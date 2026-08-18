@@ -10,7 +10,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -128,7 +128,7 @@ const FAQS = [
   { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
   { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
-  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/chefs">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
   { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
 ]
 
@@ -423,7 +423,7 @@ export default function EventsBabyShowersPage() {
                 Add-Ons That Matter
               </h2>
               <p className="text-[#4A4745] leading-relaxed mb-6">
-                For most showers, the extras are about preserving the day rather than scaling it. Extra <Link to="/in-villa-service" className="text-[#2C5F7C] underline hover:text-[#C5A028]">service staff</Link>: contact us for pricing. For bigger grazing-centrepiece events, see our dedicated <Link to="/catering/grazing-tables" className="text-[#2C5F7C] underline hover:text-[#C5A028]">grazing tables</Link> service.
+                For most showers, the extras are about preserving the day rather than scaling it. Extra <Link to="/in-villa-service" className="text-[#2C5F7C] underline hover:text-[#C5A028]">service staff</Link> priced on request. For bigger grazing-centrepiece events, see our dedicated <Link to="/catering/grazing-tables" className="text-[#2C5F7C] underline hover:text-[#C5A028]">grazing tables</Link> service.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {ADDONS.map((addon) => (
@@ -548,8 +548,6 @@ export default function EventsBabyShowersPage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection downgradeFirstH1 />
-
       <StickyMobileCTA
         pageSource="events-baby-showers"
         serviceName="baby shower catering in Bali"

@@ -100,14 +100,31 @@ export const KEYWORD_OWNERSHIP: Record<string, KeywordOwner> = {
     secondary: ['villa meal plan bali', 'multi day villa catering bali'],
     doNotTarget: ['/catering'],
   },
+  // Head term reassigned 2026-08-10 (PB-001). This registry previously gave
+  // 'wedding catering bali' to /events/weddings and left the packages page on
+  // long-tail only — the reverse of what the data supports, and the root cause of
+  // the cluster's cannibalisation. GSC 1 Jun–8 Aug 2026 for "bali wedding
+  // catering": packages 180 impressions @ position 28.4 vs weddings 171 @ 42.5;
+  // across the whole cluster the packages page took 7 of 10 clicks. The head term
+  // now sits with the page already winning it.
+  //
+  // /events/weddings keeps 'villa wedding catering bali' on evidence, not
+  // preference: it ranks position 1.85 for that query. Its other terms move to the
+  // multi-day production intent its content actually covers (welcome dinner,
+  // ceremony day, recovery brunch, mobile kitchens, power, rain plan).
   '/events/weddings': {
-    primary: 'wedding catering bali',
-    secondary: ['bali wedding caterer', 'villa wedding catering bali'],
+    primary: 'villa wedding catering bali',
+    secondary: ['bali villa wedding production', 'wedding welcome dinner bali', 'wedding recovery brunch bali'],
     doNotTarget: ['/bali-wedding-catering-packages'],
   },
   '/bali-wedding-catering-packages': {
-    primary: 'bali wedding catering packages',
-    secondary: ['bali wedding catering prices', 'wedding catering cost bali'],
+    primary: 'bali wedding catering',
+    secondary: [
+      'wedding catering bali',
+      'bali wedding catering packages',
+      'bali wedding catering prices',
+      'wedding catering cost bali',
+    ],
     doNotTarget: ['/events/weddings'],
   },
   '/events/corporate-events': {

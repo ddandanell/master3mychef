@@ -157,7 +157,7 @@ const FAQS = [
   { q: 'How do days off and overtime work?', a: 'Defined in the employment contract before start — roster, overtime and public holidays should never be verbal only.' },
   { q: 'Can expats and long-stay renters use live-in placement?', a: 'Yes when accommodation and legal employment structure are clear. Short villa holidays should use <a href="/private-chef-bali">daily chef</a> instead.' },
   { q: 'What documents do you need from us to start?', a: 'Property type, location, cuisine, household size, kids/pets, accommodation photos, salary band and start date.' },
-  { q: 'How do I start a live-in chef search?', a: 'WhatsApp the brief above or use <a href="/contact">contact</a>. Related: <a href="/staffing/placement">placement</a> · <a href="/staffing">all staffing</a>.' },
+  { q: 'How do I start a live-in chef search?', a: 'WhatsApp the brief above or use <a href="/contact">contact</a>. Related: <a href="/staffing/private-chef-placement">placement</a> · <a href="/staffing">all staffing</a>.' },
   { q: 'Is there a placement fee?', a: 'Yes — fees depend on seniority and exclusivity of the search. Quoted after the brief, before candidates are released.' },
 ]
 

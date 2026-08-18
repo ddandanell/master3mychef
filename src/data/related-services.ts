@@ -88,7 +88,7 @@ export const EVENTS_RELATED: RelatedService[] = [
 
 export const IN_VILLA_SERVICE_RELATED: RelatedService[] = [
   {
-    title: 'Waiter hire — contact us for pricing',
+    title: 'Waiter hire, priced on request',
     description: 'Professional waiters for your villa dinner or event. English-speaking, uniformed, and experienced.',
     path: '/in-villa-service/waiters',
     category: 'In-Villa Service'

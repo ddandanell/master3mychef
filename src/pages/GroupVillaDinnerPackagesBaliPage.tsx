@@ -604,7 +604,7 @@ export default function GroupVillaDinnerPackagesBaliPage() {
               Perfect for every occasion
             </h2>
             <p className="text-lg text-[#4A4745] leading-relaxed">
-              The same operational standard adapts to the emotion of the night — whether you are hosting three generations, a wedding welcome dinner, a corporate retreat or a friends’ holiday BBQ under the palms.
+              The same operational standard adapts to the emotion of the night — whether you are hosting three generations, a wedding welcome dinner, a corporate retreat or a friends’ holiday BBQ under the palms. For a smaller gathering, start with our <Link to="/blog/private-dinner-party-bali" className="text-[#7E6410] hover:underline font-medium">private dinner party planning guide</Link>.
             </p>
           </div>
 

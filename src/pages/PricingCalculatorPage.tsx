@@ -17,7 +17,7 @@ const FAQS = [
   { q: 'Cancellation tiers?', a: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
   { q: 'Hidden fees?', a: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
   { q: 'Wedding price band?', a: 'Often IDR 1.5M–3M++ per person for full receptions.' },
-  { q: 'Staff hourly rates?', a: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10 guests).' },
+  { q: 'Staff hourly rates?', a: 'Waiters and butlers priced on request. Cocktail packages from IDR 500,000++ per guest (min 10 guests).' },
   { q: 'How to get an exact total?', a: 'Share date, guests, area and format for a fixed quote.' },
   { q: 'Currency?', a: 'IDR pricing; international transfers accepted as invoiced.' },
   { q: 'Compare formats?', a: 'Use <a href="/dining-styles">dining styles</a> and <a href="/services">services</a>.' },

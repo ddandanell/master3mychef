@@ -149,7 +149,7 @@ const FAQS = [
   },
   {
     question: 'Do you cater weddings and corporate retreats?',
-    answer: 'Yes. <a href="/events/weddings">Weddings</a>, <a href="/events/corporate">corporate events</a> and <a href="/catering/retreat-catering">retreat catering</a>.',
+    answer: 'Yes. <a href="/events/weddings">Weddings</a>, <a href="/events/corporate-events">corporate events</a> and <a href="/catering/retreat-catering">retreat catering</a>.',
   },
   {
     question: 'What should I send in my first message?',

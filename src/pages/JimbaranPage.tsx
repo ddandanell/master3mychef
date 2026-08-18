@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
+import { HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -118,7 +118,7 @@ export default function JimbaranPage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Jimbaran Dining Guide</p>
-          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Private Dining in Jimbaran: Where to Eat & In-Villa Chef Options</h1>
+          <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">Jimbaran Dining Guide — Where to Eat & When to Book a Chef</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Jimbaran is the one address in Bali where the meal and the map are the same thing. A calm crescent bay fifteen minutes from the airport, the island's busiest fish landing at its northern end, and a shoreline famous for sunset seafood dinners. This guide covers the bay's dining scene honestly, explains the private dining formats beyond a beach table, and shows how the same morning's fish can end up on your own villa terrace instead.
           </p>
@@ -316,7 +316,6 @@ export default function JimbaranPage() {
       </section>
 
       <CityDeepDive slug="jimbaran" cityName="Jimbaran" />
-    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

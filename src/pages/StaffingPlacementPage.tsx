@@ -79,7 +79,7 @@ const FAQS = [
   { q: 'Live-in vs live-out?', a: 'Live-in resides on property; live-out works set shifts. We help you choose.' },
   { q: 'Background checks?', a: 'Candidates are interviewed, reference-checked and supervised through myCHEF systems.' },
   { q: 'Can we hire staff without catering?', a: 'Yes for event staff. <a href="/in-villa-service">In-villa service</a>.' },
-  { q: 'Hotel and restaurant staffing?', a: 'Yes — <a href="/staffing/hotels">hotel staffing</a> and B2B kitchen solutions.' },
+  { q: 'Hotel and restaurant staffing?', a: 'Yes — <a href="/staffing/for-hotels-restaurants">hotel staffing</a> and B2B kitchen solutions.' },
   { q: 'Trial days?', a: 'Paid trials before long-term placement are common.' },
   { q: 'English-speaking staff?', a: 'Guest-facing roles are English-capable; we match language needs.' },
   { q: 'What info starts a search?', a: 'Role, location, live-in/out, languages, salary band, start date.' },
@@ -364,7 +364,7 @@ export default function StaffingPlacementPage() {
             ✅ Background-checked chefs · ✅ Trial cooking session included · ✅ 30-day replacement guarantee · ✅ Profiles within 48 hours
           </p>
           <p className="text-white/[60%] text-sm mt-4 italic">
-            Part of the myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link> network — 50+ active staff, 560+ events served. Managing multiple properties? See <Link to="/staffing/for-villa-managers" className="text-[#C5A028] hover:underline">portfolio staffing for villa managers</Link>.
+            Part of the myCHEF <Link to="/staffing" className="text-[#C5A028] hover:underline">staffing & placement</Link> network — 50+ active staff, 560+ events served. Managing multiple properties? See <Link to="/staffing/for-villa-managers" className="text-[#C5A028] hover:underline">portfolio staffing for villa managers</Link>. Not sure what the job covers? Read <Link to="/blog/private-chef-roles-responsibilities-explained" className="text-[#C5A028] hover:underline">private chef roles and responsibilities explained</Link>.
           </p>
         </div>
       </section>

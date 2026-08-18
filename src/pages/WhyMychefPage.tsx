@@ -118,7 +118,7 @@ const FAQS = [
   },
   {
     question: 'How do I verify you are a real company in Bali?',
-    answer: 'Public chef profiles, published pricing, cancellation policy, NAP on site, Google Business Profile and hundreds of dated guest reviews. Start at <a href="/about">about</a> and <a href="/reviews">reviews</a>.',
+    answer: 'Public chef profiles, published pricing, cancellation policy, NAP on site, Google Business Profile and hundreds of dated guest reviews. Start at <a href="/chefs">about</a> and <a href="/reviews">reviews</a>.',
   },
   {
     question: 'What if my plans change mid-stay?',

@@ -87,7 +87,7 @@ const faqs = [
   {
     question: 'How much do waiters cost?',
     answer:
-      'Waiters: contact us for pricing (separate from cocktail packages). <a href="/in-villa-service/waiters">Waiters</a>.',
+      'Waiters priced on request (separate from cocktail packages). <a href="/in-villa-service/waiters">Waiters</a>.',
   },
   {
     question: 'Is alcohol included?',

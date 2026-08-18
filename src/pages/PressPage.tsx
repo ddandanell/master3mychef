@@ -37,7 +37,7 @@ export default function PressPage() {
           { question: 'How do I request a press kit for myCHEF?', answer: 'Press kits, high-resolution imagery and interview requests via WhatsApp +62 896-7407-2020 or bali@mychef.id. We respond within 24 hours.' },
           { question: 'How can media cover myCHEF?', answer: 'We provide press materials, interviews and villa dining previews or chef demonstrations in Bali. Contact communications via WhatsApp or email.' },
           { question: 'Can myCHEF arrange chef demonstrations for media?', answer: 'Yes — live cooking demos, villa dining previews and media experiences. WhatsApp to arrange.' },
-          { question: 'Where is myCHEF based?', answer: 'Bali, Indonesia — Denpasar operations serving island-wide villas. <a href="/about">About →</a>' },
+          { question: 'Where is myCHEF based?', answer: 'Bali, Indonesia — Denpasar operations serving island-wide villas. <a href="/chefs">About →</a>' },
           { question: 'Can we photograph a private chef service?', answer: 'With guest consent and advance planning — coordinate through the press contact so privacy is protected.' },
           { question: 'Do you have brand assets and logos?', answer: 'Yes in the press kit.' },
           { question: 'Founder interviews?', answer: 'Possible with notice — Adriano and chef leadership. <a href="/chefs">Chefs →</a>' },
@@ -53,7 +53,7 @@ export default function PressPage() {
           { question: 'Awards or certifications claims?', answer: 'Only use statements published on mychef.id to avoid outdated claims.' },
           { question: 'Crisis or correction contact?', answer: 'Same press channels for urgent corrections.' },
           { question: 'Can we quote pricing in articles?', answer: 'Use published ranges on <a href="/pricing">pricing</a> and note ++ tax/service.' },
-          { question: 'More brand context?', answer: '<a href="/why-mychef">Why myCHEF</a> · <a href="/about">About</a>.' }
+          { question: 'More brand context?', answer: '<a href="/why-mychef">Why myCHEF</a> · <a href="/chefs">About</a>.' }
         ])]}
       />
 

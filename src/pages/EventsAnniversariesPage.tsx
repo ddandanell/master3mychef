@@ -9,7 +9,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 import EventFormatCard from '@/components/events/EventFormatCard'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import BookingFormCatering from '@/components/catering/BookingFormCatering'
-import { ArticleContentSection, Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
+import { Breadcrumb, PressStrip, AllInPrice, GroupTotalCalculator } from '@/components/shared'
 import TrustStrip from '@/components/shared/TrustStrip'
 import TaxFooter from '@/components/shared/TaxFooter'
 import TestimonialBlock from '@/components/shared/TestimonialBlock'
@@ -89,7 +89,7 @@ const FAQS = [
   { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   { q: 'Do you clean up?', a: 'Yes on serviced formats.' },
   { q: 'Kids welcome?', a: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
-  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { q: 'Who is myCHEF?', a: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/chefs">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
   { q: 'More questions?', a: 'See the central <a href="/faq">FAQ</a>.' },
 ]
 
@@ -260,7 +260,7 @@ export default function EventsAnniversariesPage() {
                 For most couples the magic starts before the first plate. The chef arrives to prep quietly in your villa kitchen, the floor team lays candles and glassware, and the table is styled so the reveal lands the moment you walk in. A welcome drink and a small canapé course open the evening; then a five- or six-course dinner unfolds at the pace of your conversation — not a restaurant's turnover schedule.
               </p>
               <p className="text-[#4A4745] leading-relaxed">
-                Service is attentive but unobtrusive. Courses are fired to order, wine is managed for you, and if there's a toast, a speech or a surprise reveal, the evening slows down around it.
+                Service is attentive but unobtrusive. Courses are fired to order, wine is managed for you, and if there's a toast, a speech or a surprise reveal, the evening slows down around it. For larger celebrations, our <Link to="/blog/hostess-hire-bali" className="text-[#2C5F7C] hover:underline font-medium">event hostess hire guide</Link> covers front-of-house staffing.
               </p>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3]">
@@ -514,8 +514,6 @@ export default function EventsAnniversariesPage() {
       </section>
 
       <TaxFooter />
-      <ArticleContentSection downgradeFirstH1 />
-
       <StickyMobileCTA
         pageSource="events-anniversaries"
         serviceName="anniversary dinner in Bali"

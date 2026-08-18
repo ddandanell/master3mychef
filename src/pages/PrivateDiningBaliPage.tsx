@@ -95,7 +95,7 @@ myCHEF delivers both -- and everything in between.
 
 **Large Group Private Dining (20+ guests)** -- Quoted on enquiry based on guest count, format, and service requirements.
 
-All pricing includes fresh ingredients, chef, and basic service. Add-ons include sommelier hire (from IDR 1,500,000), additional service staff (contact us for pricing), and specialty ingredients.`,
+All pricing includes fresh ingredients, chef, and basic service. Add-ons include sommelier hire (from IDR 1,500,000), additional service staff (priced on request), and specialty ingredients.`,
   },
   {
     id: 'cta',
@@ -117,7 +117,7 @@ const faqs = [
   { question: 'Can this combine with other services?', answer: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   { question: 'Do you clean up?', answer: 'Yes on serviced formats.' },
   { question: 'Kids welcome?', answer: 'Yes with adapted menus when needed. <a href="/kids-menus">Kids menus</a>.' },
-  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/about">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
+  { question: 'Who is myCHEF?', answer: 'Bali villa hospitality company — chefs, catering, events and staffing. <a href="/chefs">About</a> · <a href="/why-mychef">Why myCHEF</a>.' },
   { question: 'More questions?', answer: 'See the central <a href="/faq">FAQ</a>.' },
   { question: 'What deposit do you require?', answer: 'A 50% deposit confirms your booking and locks the date. The balance is typically due the day before service. Full terms: <a href="/cancellation">cancellation policy</a>.' },
   { question: 'What does "++" mean on prices?', answer: '"++" means 11% government tax and 10% service charge are added to the listed price. Written quotes show the all-in total before you pay.' },

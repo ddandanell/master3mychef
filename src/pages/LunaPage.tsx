@@ -74,7 +74,7 @@ const FAQS = [
   { question: 'Can children join a fine dining evening?', answer: 'Yes with adapted plates and milder courses. For parties built around kids, pair with <a href="/kids-menus">kids menus</a> or book a more relaxed <a href="/three-course">three-course</a> format.' },
   { question: 'Can I customise courses on the tasting menu?', answer: 'Yes. Signature paths (Mediterranean Sea, Wagyu Experience and classic sets) are starting points — proteins, spice and dietary swaps are locked before service day.' },
   { question: 'How long does a fine dining villa evening last?', answer: 'Plan roughly 3–4 hours door to dessert for a five-course tasting with pauses. Arrival of the team is typically 2–3 hours before first course.' },
-  { question: 'Is this suitable for client dinners and small corporate hosting?', answer: 'Yes — privacy, pacing and consistency are why teams book villa fine dining instead of restaurants. For larger corporate production see <a href="/events/corporate">corporate events</a>.' },
+  { question: 'Is this suitable for client dinners and small corporate hosting?', answer: 'Yes — privacy, pacing and consistency are why teams book villa fine dining instead of restaurants. For larger corporate production see <a href="/events/corporate-events">corporate events</a>.' },
   { question: 'What if the chef or team cannot make it?', answer: 'We send a verified replacement of equivalent calibre or refund that service. Your evening is protected. <a href="/why-mychef">Why myCHEF →</a>' },
   { question: 'How do I book fine dining with myCHEF?', answer: 'WhatsApp date, guest count, villa area and menu preference. We reply with availability and a fixed quote; 50% deposit confirms. Or use <a href="/quote">request a quote</a> / <a href="/book">book</a>.' },
   { question: 'Can I add waiters or a bartender to fine dining?', answer: 'Yes. Full-service packages already include service staff; extra waiters and bartenders scale for larger tables. <a href="/in-villa-service">In-villa service →</a>' },
@@ -433,6 +433,7 @@ export default function LunaPage() {
               { href: '/fine-dining/menus', label: 'Our Menus', sub: '24 Signature Set Menus', icon: '📋' },
               { href: '/fine-dining/our-chefs', label: 'Our Chefs', sub: 'Adriano & the team', icon: '⭐' },
               { href: '/chefs', label: 'All Chefs', sub: 'Meet the full team', icon: '🌟' },
+              { href: '/blog/fine-dining-at-home-bali', label: 'top villa fine dining experiences', sub: 'Fine dining at home', icon: '🥂' },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -487,7 +488,7 @@ export default function LunaPage() {
           <div className="text-center mb-16">
             <p className="text-[#C5A028] text-sm tracking-[0.3em] uppercase mb-4" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Built For</p>
             <h2 className="text-4xl md:text-5xl mb-3 text-[#1A1A1A]" style={{ fontFamily: "'Playfair Display', serif" }}>Who Villa Fine Dining Is For</h2>
-            <p className="text-[#1A1A1A]/60 max-w-2xl mx-auto">If you want more than a restaurant reservation — a private evening designed around you — this is it.</p>
+            <p className="text-[#1A1A1A]/60 max-w-2xl mx-auto">If you want more than a restaurant reservation — a private evening designed around you — this is it. See what defines <Link to="/blog/luxury-dining-bali" className="text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-0.5">luxury private dining in Bali</Link>.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[

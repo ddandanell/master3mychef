@@ -168,7 +168,7 @@ const SERVICES = [
 ]
 
 const FAQS = [
-  { q: 'Corporate catering price range?', a: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { q: 'Corporate catering price range?', a: 'Dinners often IDR 700K–1.2M++ per person; multi-day programmes quoted. <a href="/events/corporate-events">Corporate events</a>.' },
   { q: 'NPWP invoices?', a: 'Yes on request.' },
   { q: 'Multi-day retreats?', a: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
   { q: 'Guest counts?', a: 'From leadership dinners to 100–200+ programmes.' },
@@ -287,6 +287,10 @@ export default function CorporateCaseStudiesPage() {
               Case studies
             </p>
             <h2 className="font-playfair text-3xl md:text-4xl">Real corporate events in Bali</h2>
+            <p className="mt-4 text-[#4A4745] leading-relaxed">
+              For the food side of these events, read{' '}
+              <Link to="/blog/corporate-catering-bali-case-studies" className="text-[#C5A028] underline underline-offset-2 hover:text-[#2C5F7C] transition-colors">the catering breakdown of these events</Link>.
+            </p>
           </div>
           {CASE_STUDIES.map((cs) => (
             <article

@@ -95,7 +95,7 @@ const faqs = [
   { question: 'Live-in vs live-out?', answer: 'Live-in resides on property; live-out works set shifts. We help you choose.' },
   { question: 'Background checks?', answer: 'Candidates are interviewed, reference-checked and supervised through myCHEF systems.' },
   { question: 'Can we hire staff without catering?', answer: 'Yes for event staff. <a href="/in-villa-service">In-villa service</a>.' },
-  { question: 'Hotel and restaurant staffing?', answer: 'Yes — <a href="/staffing/hotels">hotel staffing</a> and B2B kitchen solutions.' },
+  { question: 'Hotel and restaurant staffing?', answer: 'Yes — <a href="/staffing/for-hotels-restaurants">hotel staffing</a> and B2B kitchen solutions.' },
   { question: 'Trial days?', answer: 'Paid trials before long-term placement are common.' },
   { question: 'English-speaking staff?', answer: 'Guest-facing roles are English-capable; we match language needs.' },
   { question: 'What info starts a search?', answer: 'Role, location, live-in/out, languages, salary band, start date.' },

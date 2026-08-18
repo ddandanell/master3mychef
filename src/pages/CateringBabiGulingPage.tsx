@@ -464,7 +464,7 @@ export default function CateringBabiGulingPage() {
             ))}
           </div>
           <p className="text-sm text-[#4A4745] mt-8 max-w-3xl mx-auto text-center">
-            Popular pairings: a grilled seafood station, chicken satay for non-pork eaters, an arak-cocktail bar, or a full Indonesian buffet extension.
+            Popular pairings: a grilled seafood station, chicken satay for non-pork eaters, an arak-cocktail bar, or a full Indonesian buffet extension. Go further with <Link to="/blog/indonesian-street-food-private-chef-bali" className="text-[#C5A028] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">Indonesian street food menus, cooked in your villa</Link>.
           </p>
         </div>
       </section>

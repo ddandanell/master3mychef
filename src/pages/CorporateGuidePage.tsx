@@ -56,7 +56,7 @@ const RETREAT_SAMPLES = [
 ]
 
 const FAQS = [
-  { q: 'Corporate catering price range?', a: 'Corporate dinners and multi-day programmes are custom-quoted. <a href="/events/corporate">Corporate events</a>.' },
+  { q: 'Corporate catering price range?', a: 'Corporate dinners and multi-day programmes are custom-quoted. <a href="/events/corporate-events">Corporate events</a>.' },
   { q: 'NPWP invoices?', a: 'Yes on request.' },
   { q: 'Multi-day retreats?', a: 'Yes — <a href="/catering/retreat-catering">retreat catering</a>.' },
   { q: 'Guest counts?', a: 'From leadership dinners to 100–200+ programmes.' },

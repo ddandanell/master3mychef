@@ -173,7 +173,7 @@ function clusterFaqs(area: PrivateChefArea): AreaFaq[] {
   if (['denpasar', 'renon', 'sanur'].includes(belt)) {
     out.push({
       q: `Can you invoice companies for ${n} dinners?`,
-      a: `Yes — corporate dinners and offsites can receive NPWP-ready documentation on request. ${link('/events/corporate', 'Corporate events')} · ${link('/catering/corporate-catering', 'corporate catering')}.`,
+      a: `Yes — corporate dinners and offsites can receive NPWP-ready documentation on request. ${link('/events/corporate-events', 'Corporate events')} · ${link('/catering/corporate-catering', 'corporate catering')}.`,
     })
   }
 

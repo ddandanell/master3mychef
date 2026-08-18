@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { MessageCircle, CheckCircle, ChevronRight } from 'lucide-react'
 import SeoHead, { breadcrumbSchema, faqPageSchema, localBusinessSchema } from '@/components/SeoHead'
 import CityDeepDive from '@/components/CityDeepDive'
-import { ArticleContentSection, HaccpTrustLine } from '@/components/shared'
+import { HaccpTrustLine } from '@/components/shared'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
 const SITE = 'https://mychef.id'
@@ -10,7 +10,7 @@ const WA = '6289674072020'
 const WA_MSG = encodeURIComponent('Hi myCHEF, I\'m planning an in-villa dinner in Uluwatu. Can you send a menu proposal?')
 
 const FAQS = [
-  { q: 'Do you cook in Uluwatu and Bukit cliff villas?', a: 'Yes — Uluwatu, Pecatu and Bukit peninsula villas are covered. Share gate codes and steep-access notes. <a href="/locations/bukit-peninsula">Bukit guide</a>.' },
+  { q: 'Do you cook in Uluwatu and Bukit cliff villas?', a: 'Yes — Uluwatu, Pecatu and Bukit peninsula villas are covered. Share gate codes and steep-access notes. <a href="/locations/bukit">Bukit guide</a>.' },
   { q: 'Can you run sunset BBQ or clifftop villa dinners?', a: 'Yes when the villa layout is safe for service. Wind and power constraints are planned into the menu. <a href="/catering/bbq-catering">BBQ catering</a>.' },
   { q: 'Is wedding catering available in Uluwatu villas?', a: 'Yes — larger events use our events chefs and full staffing plans. See <a href="/events/weddings">weddings</a>.' },
   { q: 'How far ahead for Uluwatu high-season weekends?', a: 'Book early for July–August and holiday weekends — 2+ weeks recommended for larger groups.' },
@@ -122,7 +122,7 @@ export default function UluwatuPage() {
         <div className="relative z-10 w-full px-6 md:px-12 py-24 max-w-4xl mx-auto text-center text-white">
           <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF · Uluwatu Dining Guide</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Private Dining in Uluwatu — Villa Chef Options & Local Guide
+            Uluwatu Dining Guide — Where to Eat & When to Book a Chef
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Private dining Uluwatu is cliff-terrace dining timed to sunset — seafood BBQ or tasting menus on your own headland. Uluwatu does drama better than anywhere else in Bali. The Bukit Peninsula's southern edge is all sheer limestone cliffs, world-famous surf breaks and estates perched above the Indian Ocean. Below: where to eat out across the cliffs, what private dining means in an area with this much sky, and why the best sunset table in Uluwatu might be the one on your own terrace.
@@ -354,7 +354,6 @@ export default function UluwatuPage() {
       </section>
 
       <CityDeepDive slug="uluwatu" cityName="Uluwatu" />
-    <ArticleContentSection downgradeFirstH1 />
     </div>
   )
 }

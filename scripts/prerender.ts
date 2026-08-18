@@ -407,7 +407,22 @@ function mergeRenderedJsonLd(shell: string, renderedScripts: string[]): string {
   const scriptsToAdd: string[] = []
   for (const scriptText of renderedScripts) {
     try {
-      const types = extractSchemaTypes(JSON.parse(scriptText))
+      const parsed = JSON.parse(scriptText)
+      // @graph container: prune only the nodes whose @type already exists in the
+      // shell (e.g. BreadcrumbList from inject-meta) and keep the rest. Dropping
+      // the whole script — the old behaviour — silently discarded React-emitted
+      // Service/FAQPage schema just because the same @graph also carried a
+      // duplicate BreadcrumbList.
+      if (parsed && typeof parsed === 'object' && !Array.isArray(parsed) && Array.isArray((parsed as Record<string, unknown>)['@graph'])) {
+        const graph = (parsed as Record<string, unknown>)['@graph'] as unknown[]
+        const keptNodes = graph.filter((node) => !extractSchemaTypes(node).some((t) => shellTypes.has(t)))
+        if (!keptNodes.length) continue
+        const pruned = { ...(parsed as Record<string, unknown>), '@graph': keptNodes }
+        scriptsToAdd.push(`<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(pruned)}</script>`)
+        keptNodes.forEach((node) => extractSchemaTypes(node).forEach((t) => shellTypes.add(t)))
+        continue
+      }
+      const types = extractSchemaTypes(parsed)
       // Skip scripts whose schema types are already present in the shell.
       // This prevents duplicates while allowing React-emitted Service, FAQPage,
       // Event, HowTo, Menu, etc. that inject-meta.ts did not already write.

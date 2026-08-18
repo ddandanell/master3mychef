@@ -119,7 +119,7 @@ export default function Footer() {
                     to={pillar.url}
                     className="text-sm text-white/80 hover:text-white hover:translate-x-1 inline-block transition-all font-medium focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded px-1"
                   >
-                    Overview
+                    {pillar.navLabel} overview
                   </Link>
                 </li>
                 {pillar.subPages.map((sub) => (

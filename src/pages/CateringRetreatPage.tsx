@@ -931,7 +931,7 @@ export default function CateringRetreatPage() {
                       <p className="text-sm text-[#4A4745] mb-3">{item.desc}</p>
                       {item.href && (
                         <a href={item.href} className="inline-flex items-center gap-1 text-xs font-medium text-[#1A1A1A] hover:text-[#C5A028] transition-colors">
-                          Learn more <ArrowRight className="w-3 h-3" />
+                          About {item.name} <ArrowRight className="w-3 h-3" />
                         </a>
                       )}
                     </div>
@@ -1083,7 +1083,7 @@ export default function CateringRetreatPage() {
                 <p className="text-sm text-[#4A4745] mb-3 leading-relaxed">{item.desc}</p>
                 {item.href && (
                   <a href={item.href} className="inline-flex items-center gap-1 text-xs font-medium text-[#1A1A1A] hover:text-[#C5A028] transition-colors">
-                    Learn more <ArrowRight className="w-3 h-3" />
+                    About {item.title} <ArrowRight className="w-3 h-3" />
                   </a>
                 )}
               </div>

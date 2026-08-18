@@ -261,7 +261,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'private-chef-bukit': {
     path: '/private-chef/bukit',
-    title: 'Private Chef Bukit Peninsula Bali | Clifftop Villa Dining',
+    title: 'Private Chef on the Bukit Peninsula, Bali | Villa & Events',
     description:
       'Book a private chef on the Bukit Peninsula, Bali. Clifftop fine dining, elopement dinners and villa events in Bingin, Padang Padang and Dreamland. WhatsApp myCHEF.',
     canonical: `${SITE}/private-chef/bukit`,
@@ -288,7 +288,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'private-chef-pecatu': {
     path: '/private-chef/pecatu',
-    title: 'Private Chef in Pecatu, Bali | Clifftop Villa Dining',
+    title: 'Private Chef in Pecatu, Bali | Estate & Wedding Villa Dining',
     description:
       'Book a private chef in Pecatu, Bali. Clifftop villa dinners, honeymoon fine dining and events on the Bukit Peninsula. Transparent rates via WhatsApp myCHEF.',
     canonical: `${SITE}/private-chef/pecatu`,
@@ -297,7 +297,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'private-chef-ungasan': {
     path: '/private-chef/ungasan',
-    title: 'Private Chef in Ungasan, Bali | Clifftop Villa Dining',
+    title: 'Private Chef in Ungasan, Bali | Estate & Elopement Dining',
     description:
       'Book a private chef in Ungasan, Bali. Luxury villa dinners and elopement fine dining at the southernmost tip of the Bukit Peninsula. Clear rates via WhatsApp.',
     canonical: `${SITE}/private-chef/ungasan`,
@@ -353,7 +353,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/private-chef/nusa-lembongan',
     title: 'Private Chef on Nusa Lembongan | myCHEF Bali',
     description:
-      'Book a private chef on Nusa Lembongan, Bali. Fresh seafood, sunset fine dining, and villa catering on Bali\'s favourite island escape. myCHEF travels to.',
+      'Book a private chef on Nusa Lembongan, Bali. Fresh seafood, sunset dinners and villa catering — myCHEF handles the island logistics. WhatsApp us.',
     canonical: `${SITE}/private-chef/nusa-lembongan`,
     h1: 'Private Chef in Nusa Lembongan, Bali',
   },
@@ -423,7 +423,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'private-chef-balangan': {
     path: '/private-chef/balangan',
-    title: 'Private Chef Balangan Bali | Clifftop Villa Dining | myCHEF',
+    title: 'Private Chef in Balangan, Bali | Surf-View Villa Dining',
     description:
       'Book a private chef in Balangan, Bali. myCHEF serves clifftop villas on the Bukit Peninsula — seafood dinners, Balinese menus and surf-trip catering packages.',
     canonical: `${SITE}/private-chef/balangan`,
@@ -432,7 +432,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'private-chef-bingin': {
     path: '/private-chef/bingin',
-    title: 'Private Chef Bingin Bali | Clifftop Villa Dining | myCHEF',
+    title: 'Private Chef in Bingin, Bali | Surf Villa Dining',
     description:
       'Private chef in Bingin, Bali. myCHEF cooks in cliff villas above the break — sunset dinners, seafood feasts, and surf-trip catering on the Bukit Peninsula.',
     canonical: `${SITE}/private-chef/bingin`,
@@ -587,7 +587,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/private-chef/nyuh-kuning',
     title: 'Private Chef Nyuh Kuning Bali | Monkey Forest Villa Dining',
     description:
-      'Hire a private chef in Nyuh Kuning. myCHEF serves boutique villas beside Ubud\'s Sacred Monkey Forest — intimate dinners, Balinese menus, and villa.',
+      'Hire a private chef in Nyuh Kuning, Ubud. myCHEF serves boutique villas by the Sacred Monkey Forest — intimate dinners and Balinese menus. WhatsApp us.',
     canonical: `${SITE}/private-chef/nyuh-kuning`,
     h1: 'Private Chef in Nyuh Kuning, Bali',
   },
@@ -623,7 +623,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/private-chef/gianyar',
     title: 'Private Chef Gianyar Bali | Gianyar Villa, Event Catering',
     description:
-      'Hire a private chef in Gianyar. myCHEF serves villas and events in Bali\'s cultural capital — babi guling feasts, Balinese menus, and villa catering near.',
+      'Hire a private chef in Gianyar, Bali\'s cultural capital. Babi guling feasts, Balinese menus and in-villa catering. Transparent rates — WhatsApp myCHEF.',
     canonical: `${SITE}/private-chef/gianyar`,
     h1: 'Private Chef in Gianyar, Bali',
   },
@@ -1128,7 +1128,7 @@ export const PAGE_META: Record<string, PageMeta> = {
 
       'journal-bali-private-chef-cost-guide-2026': {
     path: '/journal/bali-private-chef-cost-guide-2026',
-    title: 'Private Chef Cost Bali 2026 | Menus, Groceries & Tax',
+    title: 'Bali Private Chef Costs: Groceries, ++ Tax & Tipping (2026)',
     description:
       'The hidden line items of a Bali private chef booking — groceries at cost, the ++ (tax and service charge), and tipping norms explained. Updated 2026.',
     canonical: `${SITE}/journal/bali-private-chef-cost-guide-2026`,

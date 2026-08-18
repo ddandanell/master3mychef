@@ -18,14 +18,14 @@ const SERVICE_TYPES = [
     slug: 'waiters',
     label: 'Waiters & Servers',
     desc: 'Professional table service for villa dinners and events. Uniformed, English-speaking, and trained in fine dining service.',
-    price: 'Contact us for pricing',
+    price: 'On request',
     icon: Users,
   },
   {
     slug: 'butlers',
     label: 'Butlers',
     desc: 'Discreet, professional villa service for luxury estates. Anticipatory service, etiquette-trained, and detail-oriented.',
-    price: 'Contact us for pricing',
+    price: 'On request',
     icon: Award,
   },
   {
@@ -93,7 +93,7 @@ const SERVICE_EXPLAINERS = [
 const FAQS = [
   {
     q: 'How much does it cost to hire villa service staff in Bali?',
-    a: 'Waiters and butlers: <strong>contact us for pricing</strong> via WhatsApp (quoted per event). Hosts and sommelier are also custom-quoted. Complete cocktail service packages from <strong>IDR 500,000++ per guest</strong> (not hourly bartender hire). Mixology craft sessions are custom quote. Pair with food via <a href="/catering">catering</a> or <a href="/private-chef-bali">private chef</a>.',
+    a: 'Waiters and butlers are <strong>priced on request</strong> via WhatsApp (quoted per event). Hosts and sommelier are also custom-quoted. Complete cocktail service packages from <strong>IDR 500,000++ per guest</strong> (not hourly bartender hire). Mixology craft sessions are custom quote. Pair with food via <a href="/catering">catering</a> or <a href="/private-chef-bali">private chef</a>.',
   },
   {
     q: 'Is there a minimum booking for in-villa staff?',
@@ -195,13 +195,13 @@ export default function InVillaServicePage() {
       email: 'bali@mychef.id',
     },
     areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Nusa Dua', 'Jimbaran', 'Sanur', 'Berawa', 'Pererenan', 'Bali'],
-    description: 'Uniformed, English-speaking villa service staff in Bali — waiters, butlers, sommeliers and hosts (contact us for pricing); complete cocktail packages from IDR 500,000++ per guest.',
+    description: 'Uniformed, English-speaking villa service staff in Bali — waiters, butlers, sommeliers and hosts (priced on request); complete cocktail packages from IDR 500,000++ per guest.',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'IDR',
       lowPrice: '500000',
       offerCount: '6',
-      description: 'Cocktail packages from IDR 500,000++ per guest. Waiters, butlers, hosts and sommelier: contact us for pricing.',
+      description: 'Cocktail packages from IDR 500,000++ per guest. Waiters, butlers, hosts and sommelier priced on request.',
     },
     url: canonical,
   }
@@ -237,7 +237,7 @@ export default function InVillaServicePage() {
           <div className="max-w-[900px]">
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF</p>
             <h1 className="font-playfair text-4xl md:text-6xl text-white leading-[1.1] mb-6">{pillar.h1}</h1>
-            <p className="text-lg md:text-xl text-white/[80%] max-w-[640px] mb-8">Waiters, butlers, sommeliers and event hosts for Bali villas — booked by the hour, the shift or the day. Uniformed, English-speaking, background-checked, and briefed to your event before they arrive. Waiters, hosts and butlers: contact us for pricing; complete cocktail packages from IDR 500,000++ per guest.</p>
+            <p className="text-lg md:text-xl text-white/[80%] max-w-[640px] mb-8">Waiters, butlers, sommeliers and event hosts for Bali villas — booked by the hour, the shift or the day. Uniformed, English-speaking, background-checked, and briefed to your event before they arrive. Waiters, hosts and butlers priced on request; complete cocktail packages from IDR 500,000++ per guest.</p>
             <div className="flex flex-wrap gap-3 mb-8">
               {['Uniformed Staff', 'Same-Day Booking', 'English-Speaking', 'Background-Checked'].map((h) => (
                 <span key={h} className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">

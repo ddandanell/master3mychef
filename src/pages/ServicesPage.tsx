@@ -67,7 +67,7 @@ const SERVICES = [
     slug: 'in-villa-service-staff',
     label: 'In-Villa Service Staff',
     description: 'Waiters, bartenders, butlers and sommeliers by the shift — restaurant-grade front-of-house in your villa.',
-    price: 'Contact us for pricing.',
+    price: 'Pricing on request.',
     url: '/in-villa-service',
     cta: 'in-villa service staff',
     icon: Heart,

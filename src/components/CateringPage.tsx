@@ -148,7 +148,7 @@ export default function CateringPage() {
               </thead>
               <tbody>
                 <tr className="border-b border-[#E8E6E3]"><td className="py-3 font-medium">BBQ</td><td className="py-3">Villa parties, birthdays, poolside</td><td className="py-3">10–80</td><td className="py-3">IDR 700K/person</td></tr>
-                <tr className="border-b border-[#E8E6E3]"><td className="py-3 font-medium">Buffet</td><td className="py-3">Weddings, retreats, 30+ groups</td><td className="py-3">30–200+</td><td className="py-3">Contact us for pricing</td></tr>
+                <tr className="border-b border-[#E8E6E3]"><td className="py-3 font-medium">Buffet</td><td className="py-3">Weddings, retreats, 30+ groups</td><td className="py-3">30–200+</td><td className="py-3">On request</td></tr>
                 <tr className="border-b border-[#E8E6E3]"><td className="py-3 font-medium">Plated</td><td className="py-3">Formal dinners, milestones</td><td className="py-3">10–60</td><td className="py-3">IDR 800K++/person</td></tr>
                 <tr><td className="py-3 font-medium">Drop-Off</td><td className="py-3">Private nights in, no staff</td><td className="py-3">4–40</td><td className="py-3">IDR 700K/person</td></tr>
               </tbody>

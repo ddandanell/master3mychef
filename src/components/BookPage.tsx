@@ -41,7 +41,7 @@ const BOOKING_CARDS = [
     icon: Wine,
     accent: '#8B5A2B',
     waText: 'Hi myCHEF, I would like to hire service staff.',
-    features: ['Uniformed staff', 'English-speaking', 'Per-shift pricing', 'Contact us for pricing'],
+    features: ['Uniformed staff', 'English-speaking', 'Per-shift pricing', 'Pricing on request'],
   },
   {
     label: 'Staffing',

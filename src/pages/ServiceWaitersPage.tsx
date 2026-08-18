@@ -24,7 +24,7 @@ const WA_LINK = buildWhatsAppUrl({ serviceName: 'professional waiters in Bali', 
 const PRICING_TIERS = [
   {
     title: 'Waiter Service',
-    price: 'Contact us for pricing',
+    price: 'On request',
     unit: 'Custom quote via WhatsApp',
     features: ['Team sized to your guest count', 'Uniformed, English-speaking', 'Table setting & course service', 'Wine & drink service', 'Setup & cleanup'],
     bestFor: 'Villa dinners, weddings, and events of any size',
@@ -59,7 +59,7 @@ const FAQS = [
   { q: 'How far in advance should I book?', a: '3–7 days for standard service; 2–4 weeks for premium events in peak season (July–August, December). Same-week and even same-day bookings are often possible — message us.' },
   { q: 'Can I request the same waiters again?', a: 'Yes. We keep records of your preferred team and do our best to reassign them for future bookings.' },
   { q: 'What areas do you cover?', a: 'All of Bali: Seminyak, Canggu, Ubud, Uluwatu, Nusa Dua, Jimbaran, Sanur, Berawa and Pererenan. Remote areas may incur a modest travel fee, quoted upfront.' },
-  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
+  { q: 'How much do waiters and bartenders cost in Bali?', a: 'Waiters and butlers priced on request. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { q: 'Minimum booking?', a: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { q: 'Can we hire staff without food?', a: 'Yes — self-catered or third-party caterer support is normal.' },
   { q: 'What do staff wear?', a: 'Professional uniforms matched to event formality.' },
@@ -321,7 +321,7 @@ export default function ServiceWaitersPage() {
 
           <h2 className="font-playfair text-3xl md:text-4xl text-[#1A1A1A] mt-10 mb-6">Waiter Hire Pricing in Bali</h2>
           <p className="text-[#4A4745] leading-relaxed mb-4">
-            Waiter hire in Bali is quoted per booking: <strong className="text-[#1A1A1A]">contact us for pricing</strong> via WhatsApp with your guest count, date and service style. Every quote covers the team you need — table setup, plated course service, wine and beverage pouring, course sequencing, and post-dinner clearance — whether you book for an intimate dinner or a full wedding floor.
+            Waiter hire in Bali is <strong className="text-[#1A1A1A]">priced on request</strong> — quoted per booking via WhatsApp with your guest count, date and service style. Every quote covers the team you need — table setup, plated course service, wine and beverage pouring, course sequencing, and post-dinner clearance — whether you book for an intimate dinner or a full wedding floor.
           </p>
           <p className="text-[#4A4745] leading-relaxed mb-4">
             For larger events — weddings, corporate receptions, milestone dinners with 30 or more guests — we scale the team in the quote. A multi-waiter crew can deliver multi-station service, high-volume course management, and dedicated beverage service across the full event floor.

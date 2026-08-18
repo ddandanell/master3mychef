@@ -125,7 +125,7 @@ export default function PricingCalculator({
     const cocktailPackageEstimate = cocktailGuestCount * 500_000
 
     return (
-      (includeWaiters ? 0 : 0) + // waiters: contact us for pricing (not estimated)
+      (includeWaiters ? 0 : 0) + // waiters: priced on request (not estimated)
       (includeBartender ? cocktailPackageEstimate : 0) +
       (includeSommelier ? 1_200_000 : 0) +
       (includeFloatingBreakfast ? guestCount * 150_000 : 0)
@@ -135,7 +135,7 @@ export default function PricingCalculator({
   const estimatedTotal = Math.round(serviceSubtotal + addOnsTotal)
 
   const selectedAddOns = [
-    includeWaiters ? `${waiterCount} waiter${waiterCount > 1 ? 's' : ''} (contact us for pricing)` : null,
+    includeWaiters ? `${waiterCount} waiter${waiterCount > 1 ? 's' : ''} (priced on request)` : null,
     includeBartender
       ? `cocktail package (BYO from IDR 500K++/guest, min 10; estimate uses ${Math.max(10, selectedGuests.minGuests)} guests)`
       : null,
@@ -265,7 +265,7 @@ export default function PricingCalculator({
               <label className="flex items-center justify-between gap-4 rounded-2xl border border-[#E5DED0] bg-[#FAFAF8] px-4 py-3 text-sm text-[#1A1A1A]">
                 <span className="flex items-center gap-3">
                   <input type="checkbox" checked={includeWaiters} onChange={(event) => setIncludeWaiters(event.target.checked)} className="h-4 w-4 rounded border-[#C5A028] text-[#C5A028] focus:ring-2 focus:ring-[#C5A028] focus:outline-none" />
-                  + Waiters (contact us for pricing)
+                  + Waiters (priced on request)
                 </span>
                 {includeWaiters && (
                   <select
@@ -374,7 +374,7 @@ export default function PricingCalculator({
           </p>
           {serviceType === 'staffing' && (
             <p className="mt-3 text-sm leading-relaxed text-white/[75%]">
-              Staffing (waiters/butlers): contact us for pricing — not estimated in this calculator. Suggested crew size for this guest range: {baseWaiters} waiter{baseWaiters > 1 ? 's' : ''}.
+              Staffing (waiters/butlers) priced on request — not estimated in this calculator. Suggested crew size for this guest range: {baseWaiters} waiter{baseWaiters > 1 ? 's' : ''}.
             </p>
           )}
           {serviceType === 'private-chef-dinner' && (

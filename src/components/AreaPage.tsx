@@ -253,7 +253,7 @@ export default function AreaPage({ kind = 'area' }: { kind?: 'area' | 'micro-are
               <Link to="/in-villa-service" className="bg-[#FAFAF8] border border-[#E5E3E0] rounded-2xl p-6 flex flex-col hover:border-[#8B5A2B] transition-all group">
                 <Users className="w-6 h-6 text-[#8B5A2B] mb-3" />
                 <h3 className="font-playfair text-xl mb-2">Waiters &amp; Butlers</h3>
-                <p className="text-sm text-[#4A4745] flex-grow">FOH staff for dinners and events — contact us for pricing; bar is packaged separately.</p>
+                <p className="text-sm text-[#4A4745] flex-grow">FOH staff for dinners and events — priced on request; bar is packaged separately.</p>
                 <span className="text-xs uppercase tracking-[2px] font-semibold text-[#8B5A2B] mt-4 group-hover:text-[#1A1A1A]">Explore →</span>
               </Link>
             </div>

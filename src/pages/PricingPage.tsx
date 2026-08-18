@@ -126,7 +126,7 @@ const SECTIONS = [
     type: 'content' as const,
     subtitle: 'In-Villa Staff',
     title: 'Service Staff Rates',
-    body: `<p>Waiters and butlers: contact us for pricing · Cocktail packages from IDR 500,000++ per guest · Sommelier service quoted per event. One waiter per 10 guests is our standard ratio. For full-time or live-in arrangements, see <a href="/private-chef-bali" class="font-semibold hover:underline">monthly &amp; long-stay chef hire</a>.</p>`,
+    body: `<p>Waiters and butlers priced on request · Cocktail packages from IDR 500,000++ per guest · Sommelier service quoted per event. One waiter per 10 guests is our standard ratio. For full-time or live-in arrangements, see <a href="/private-chef-bali" class="font-semibold hover:underline">monthly &amp; long-stay chef hire</a>.</p>`,
   },
   {
     id: 'what-includes',
@@ -181,7 +181,7 @@ const FAQS = [
   { question: 'Cancellation tiers?', answer: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
   { question: 'Hidden fees?', answer: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
   { question: 'Wedding price band?', answer: 'Often IDR 1.5M–3M++ per person for full receptions.' },
-  { question: 'Staff hourly rates?', answer: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10 guests).' },
+  { question: 'Staff hourly rates?', answer: 'Waiters and butlers priced on request. Cocktail packages from IDR 500,000++ per guest (min 10 guests).' },
   { question: 'How to get an exact total?', answer: 'Share date, guests, area and format for a fixed quote.' },
   { question: 'Currency?', answer: 'IDR pricing; international transfers accepted as invoiced.' },
   { question: 'Compare formats?', answer: 'Use <a href="/dining-styles">dining styles</a> and <a href="/services">services</a>.' },

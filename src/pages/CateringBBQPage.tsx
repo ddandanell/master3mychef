@@ -405,7 +405,7 @@ export default function CateringBBQPage() {
               Just a flat outdoor area and water access. If your villa restricts open flames, we bring gas grills or covered electric setups.
             </p>
             <p className="text-sm text-[#4A4745]">
-              <strong>Optional add-ons:</strong> cocktail packages from IDR 500,000++ per guest (min 10), Wagyu upgrade, gluten-free menu adaptation, plated table service, additional waiters (contact us for pricing).
+              <strong>Optional add-ons:</strong> cocktail packages from IDR 500,000++ per guest (min 10), Wagyu upgrade, gluten-free menu adaptation, plated table service, additional waiters (priced on request).
             </p>
           </div>
         </div>

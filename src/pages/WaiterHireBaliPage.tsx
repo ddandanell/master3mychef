@@ -87,7 +87,7 @@ For full catering packages (chef + waiters + bar), the team is quoted together. 
 ]
 
 const faqs = [
-  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters and butlers: contact us for pricing. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
+  { question: 'How much do waiters and bartenders cost in Bali?', answer: 'Waiters and butlers priced on request. Cocktail packages from IDR 500,000++ per guest (min 10). <a href="/in-villa-service">In-villa service</a>.' },
   { question: 'Minimum booking?', answer: 'Hourly roles usually 3-hour minimum; waiter bookings often start at two waiters.' },
   { question: 'Can we hire staff without food?', answer: 'Yes — self-catered or third-party caterer support is normal.' },
   { question: 'What do staff wear?', answer: 'Professional uniforms matched to event formality.' },
@@ -144,7 +144,7 @@ export default function WaiterHireBaliPage() {
         'event staff hire bali',
         'hospitality staff bali',
       ]}
-      highlights={['Trained Hospitality Staff', 'All Service Styles', 'Same-Day Replacement', 'Contact us for pricing']}
+      highlights={['Trained Hospitality Staff', 'All Service Styles', 'Same-Day Replacement', 'Pricing on request']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

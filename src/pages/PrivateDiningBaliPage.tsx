@@ -95,7 +95,7 @@ myCHEF delivers both -- and everything in between.
 
 **Large Group Private Dining (20+ guests)** -- Quoted on enquiry based on guest count, format, and service requirements.
 
-All pricing includes fresh ingredients, chef, and basic service. Add-ons include sommelier hire (from IDR 1,500,000), additional service staff (contact us for pricing), and specialty ingredients.`,
+All pricing includes fresh ingredients, chef, and basic service. Add-ons include sommelier hire (from IDR 1,500,000), additional service staff (priced on request), and specialty ingredients.`,
   },
   {
     id: 'cta',

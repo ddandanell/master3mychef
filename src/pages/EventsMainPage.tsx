@@ -493,7 +493,7 @@ export default function EventsMainPage() {
           <h1
             className="hero-fade font-playfair text-5xl md:text-7xl lg:text-8xl leading-[1.05] max-w-2xl mb-8"
           >
-            {"Events in Bali, Run by One Team. You Just Host."}
+            {"Event Catering in Bali — One Team for Food, Bar & Staff"}
           </h1>
           <p className="hero-fade text-base md:text-xl max-w-lg leading-relaxed text-white/[80%] mb-8">
             Weddings, birthdays, anniversaries, corporate retreats, villa parties — every great Bali event runs on the

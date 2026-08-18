@@ -372,10 +372,10 @@ export default function HubPage() {
                   myCHEF · Bali hospitality
                 </p>
                 <h1 className="hub-hero-title mb-2 text-[1.75rem] leading-[1.1] text-white sm:text-5xl md:text-6xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Your villa. Our kitchen.
+                  Private Chef, Catering &amp; Villa Hospitality in Bali
                 </h1>
                 <p className="hub-hero-subtitle mb-3 text-sm font-medium leading-snug text-white/90 sm:text-base md:text-lg">
-                  Restaurant-level dining, catering and events — delivered in your villa
+                  Your villa. Our kitchen. — restaurant-level dining, catering and events, delivered across Bali
                 </p>
                 <div className="gold-arc mb-4 md:mb-6" />
                 <p className="hub-hero-subtitle mb-3 max-w-[40ch] text-[15px] leading-relaxed text-white/90 sm:max-w-xl sm:text-lg">

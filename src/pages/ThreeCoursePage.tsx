@@ -259,9 +259,9 @@ export default function ThreeCoursePage() {
         </div>
         <div className="relative z-10 w-full px-6 md:px-12 pt-28 pb-24 max-w-[1280px] mx-auto text-white">
           <Breadcrumb items={[{ label: 'Three-Course' }]} theme="dark" className="px-0 pt-0 pb-8" />
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Three-Course Dining</p>
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Three Perfect Courses</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Three Perfect Courses
+            Three-Course Villa Dining in Bali
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-4 leading-relaxed">
             Starter. Main. Dessert. No fuss, all flavour — cooked fresh in your villa kitchen by a myCHEF chef, served at your table, and cleaned up completely afterwards.

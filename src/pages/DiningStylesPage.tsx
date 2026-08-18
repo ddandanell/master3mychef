@@ -237,9 +237,9 @@ export default function DiningStylesPage() {
             theme="dark"
             className="px-0 pt-0 pb-8 flex justify-center"
           />
-          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">myCHEF &middot; Dining Styles</p>
+          <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">Find Your Perfect Menu</p>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-6">
-            Find Your Perfect Menu
+            Private Chef Menus &amp; Dining Styles in Bali
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4 leading-relaxed">
             Fifty menus across six collections — from six-course fine dining to poolside BBQs and nut-free kids' favourites. Every menu is cooked fresh in your villa by our own chefs, with starting prices shown up front.

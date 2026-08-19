@@ -364,6 +364,7 @@ export default function DenpasarPage() {
               { label: 'Sanur dining guide', path: '/locations/sanur', desc: 'Family villa dining on the calm east coast, minutes away' },
               { label: 'Seminyak dining guide', path: '/locations/seminyak', desc: 'Bali\'s densest restaurant strip and villa district' },
               { label: 'Ubud dining guide', path: '/locations/ubud', desc: 'Jungle villa dinners and wellness retreat tables' },
+              { label: 'Kuta & Legian dining guide', path: '/locations/kuta', desc: 'Beachfront dining, sunset BBQs and lively group catering near the airport' },
             ].map((link) => (
               <Link
                 key={link.path}

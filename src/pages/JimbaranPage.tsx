@@ -295,6 +295,8 @@ export default function JimbaranPage() {
               { label: 'Uluwatu dining guide', path: '/locations/uluwatu', desc: 'Clifftop drama, Indian Ocean views, seafood BBQs at the edge' },
               { label: 'Seminyak dining guide', path: '/locations/seminyak', desc: "Beachfront fine dining, villa parties, Bali's most vibrant scene" },
               { label: 'Nusa Dua dining guide', path: '/locations/nusa-dua', desc: 'Resort villas, corporate dining, polished estate service' },
+              { label: 'Kuta & Legian dining guide', path: '/locations/kuta', desc: 'Beachfront dining, sunset BBQs and lively group catering near the airport' },
+              { label: 'Denpasar dining guide', path: '/locations/denpasar', desc: 'City villa dining, authentic Balinese feasts and family events' },
             ].map((link) => (
               <Link key={link.path} to={link.path} className="group block bg-white border border-[#E8E6E3] rounded-xl p-5 hover:border-[#C5A028] transition-colors">
                 <div className="font-semibold text-[#1A1A1A] group-hover:text-[#C5A028] transition-colors mb-1">{link.label}</div>

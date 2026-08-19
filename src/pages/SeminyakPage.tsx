@@ -358,6 +358,8 @@ export default function SeminyakPage() {
               { label: 'Canggu dining guide', path: '/locations/canggu', desc: 'Surf culture, healthy menus, poolside BBQs and retreat catering' },
               { label: 'Uluwatu dining guide', path: '/locations/uluwatu', desc: 'Clifftop seafood BBQs, weddings, and sunset tasting menus' },
               { label: 'Ubud dining guide', path: '/locations/ubud', desc: 'Jungle villa dinners, wellness retreats, Balinese feasts' },
+              { label: 'Kuta & Legian dining guide', path: '/locations/kuta', desc: 'Beachfront dining, sunset BBQs and lively group catering near the airport' },
+              { label: 'Denpasar dining guide', path: '/locations/denpasar', desc: 'City villa dining, authentic Balinese feasts and family events' },
             ].map((link) => (
               <Link
                 key={link.path}

@@ -364,6 +364,7 @@ export default function KutaPage() {
               { label: 'Seminyak dining guide', path: '/locations/seminyak', desc: 'Bali\'s densest restaurant strip, ten minutes north' },
               { label: 'Canggu dining guide', path: '/locations/canggu', desc: 'Surf culture, healthy menus and poolside BBQs' },
               { label: 'Jimbaran dining guide', path: '/locations/jimbaran', desc: 'Bay seafood and welcome dinners near the airport' },
+              { label: 'Denpasar dining guide', path: '/locations/denpasar', desc: 'City villa dining, authentic Balinese feasts and family events' },
             ].map((link) => (
               <Link
                 key={link.path}

@@ -364,6 +364,8 @@ export default function BukitPeninsulaPage() {
               { label: 'Uluwatu dining guide', path: '/locations/uluwatu', desc: 'Sunset and clifftop dining on the Bukit\'s western rim' },
               { label: 'Jimbaran dining guide', path: '/locations/jimbaran', desc: 'Bay seafood, Kedonganan market sourcing, welcome dinners' },
               { label: 'Seminyak dining guide', path: '/locations/seminyak', desc: 'Bali\'s densest restaurant strip and villa district' },
+              { label: 'Kuta & Legian dining guide', path: '/locations/kuta', desc: 'Beachfront dining, sunset BBQs and lively group catering near the airport' },
+              { label: 'Denpasar dining guide', path: '/locations/denpasar', desc: 'City villa dining, authentic Balinese feasts and family events' },
             ].map((link) => (
               <Link
                 key={link.path}

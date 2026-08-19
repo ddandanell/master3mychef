@@ -328,6 +328,8 @@ export default function UluwatuPage() {
               { label: 'Jimbaran dining guide', path: '/locations/jimbaran', desc: 'Bayfront seafood BBQs, fresh Kedonganan catch, sunset bay dinners' },
               { label: 'Seminyak dining guide', path: '/locations/seminyak', desc: 'Beach clubs, luxury villas, Bali\'s most vibrant dining scene' },
               { label: 'Ubud dining guide', path: '/locations/ubud', desc: 'Jungle villa dining, wellness retreats, Balinese feasts' },
+              { label: 'Kuta & Legian dining guide', path: '/locations/kuta', desc: 'Beachfront dining, sunset BBQs and lively group catering near the airport' },
+              { label: 'Denpasar dining guide', path: '/locations/denpasar', desc: 'City villa dining, authentic Balinese feasts and family events' },
             ].map((link) => (
               <Link
                 key={link.path}

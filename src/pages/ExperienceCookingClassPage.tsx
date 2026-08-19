@@ -27,6 +27,8 @@ const CANONICAL = 'https://mychef.id/experiences/cooking-class'
 const HERO = '/generated/mychef-cooking-class-bali-hero-villa.webp'
 const IMG_ING = '/generated/mychef-cooking-class-bali-ingredients-spread.webp'
 const IMG_DINE = '/generated/mychef-cooking-class-bali-guests-dining.webp'
+const IMG_BALINESE = '/generated/mychef-cooking-class-balinese-ingredients-bali-landscape.webp'
+const IMG_TEACH = '/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp'
 
 const CTA_HTML = (label: string, href = WA_LINK) =>
   `<p style="margin:1.5rem 0 0"><a href="${href}" class="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[#1A1A1A] hover:bg-[#D4B43A]" target="_blank" rel="noopener noreferrer">${label}</a> <a href="${WA_QUOTE}" class="ml-2 text-sm font-semibold text-[#7E6410] hover:underline" target="_blank" rel="noopener noreferrer">Get quote + sample menu →</a></p>`
@@ -122,6 +124,8 @@ const SECTIONS: PageSection[] = [
     title: 'Why a Private Cooking Class Beats a Tourist Kitchen School',
     body: `<p>Traditional cooking schools in Bali can be excellent — and they can also mean fixed menus, large groups and a pace set by whoever is slowest in the room. A <strong>private cooking class Bali</strong> flips that model. Your villa kitchen becomes the classroom. Your dietary needs shape the menu. Your skill level sets the depth.</p>
 
+    <p><strong>The practical difference is bigger than it sounds.</strong> Many group cooking schools run classes of 15–24 guests and a five-hour day built around hotel pickups, a shared bench and a supervised market walk. A myCHEF class is <strong>100% private</strong> — only your group, no strangers, no shuttle. There is <strong>zero transfer time</strong>: the chef comes to you, shops the market ingredients beforehand, and every minute is spent cooking, eating and learning rather than waiting on a minibus. It is the single most common complaint about big cooking schools — crowding and pace — removed by design.</p>
+
     <p>That is why guests searching for the <strong>best cooking class in Bali</strong> often choose a villa format when they want privacy, flexibility and a real meal at the end. Honeymoon couples treat it as an anti-restaurant date. Families turn it into a holiday memory. Wedding parties use a class as a welcome activity. Corporate and retreat groups use it as team-building that does not feel like a conference icebreaker.</p>
 
     <p>myCHEF is a chef-led hospitality company for villa dining and catering across the island. Cooking classes sit in the same family as <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef hire</a> and <a href="/catering" class="text-[#7E6410] hover:underline font-medium">villa catering</a> — HACCP-minded food safety, WhatsApp booking, cleanup before we leave.</p>`,
@@ -161,6 +165,50 @@ const SECTIONS: PageSection[] = [
 
     <p>Special requests are normal: more meat, seafood-focused, regional Indonesian dishes, zero chilli, high-protein, halal, allergies. We design around what the group actually wants. Sushi-only stays on the <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a> page.</p>
     ${CTA_HTML('WhatsApp us for a sample menu for your group', WA_QUOTE)}`,
+  },
+  {
+    id: 'cuisine-base-genep',
+    type: 'content' as const,
+    subtitle: 'The flavour engine of the island',
+    title: 'Base Genep — Bali’s Master Spice Paste',
+    image: IMG_BALINESE,
+    imageAlt:
+      'Balinese base genep spice paste ingredients — turmeric, galangal, lemongrass, shallots and chilli — on a stone mortar',
+    body: `<p>Ask a Balinese cook what makes the island’s food taste like Bali and the answer is one thing: <strong>base genep</strong> (also written <em>base gede</em> or <em>bumbu Bali</em>) — the “complete spice paste” that sits under almost every savoury dish. It is not a jarred shortcut. It is a built-from-scratch blend of roughly fifteen aromatics — shallots, garlic, ginger, <em>galangal</em> (lengkuas), fresh <em>turmeric</em>, <em>kencur</em> (aromatic ginger), candlenut, lemongrass, bird’s-eye chilli, coriander seed, a little <em>terasi</em> shrimp paste and palm sugar — pounded until it becomes a fragrant, oily paste.</p>
+
+    <p>The logic behind it is <strong>sad rasa</strong>, the six-flavour idea: sweet, sour, salty, bitter, spicy and astringent, balanced in a single paste. In your class you don’t just measure base genep — you <em>build</em> it, pounding it by hand in a <em>cobek</em> and <em>ulekan</em> (the Balinese stone mortar and pestle) and learning the difference between <em>rajang</em> (finely chopped) and <em>ulek</em> (pounded) aromatics. Once you understand base genep, you can rebuild half of Balinese cooking at home — which is exactly what your recipe cards are for.</p>
+
+    <p>Want the full breakdown before you cook? Read our chef’s guide: <a href="/blog/base-genep-balinese-spice-paste" class="text-[#7E6410] hover:underline font-medium">Base genep, explained ingredient by ingredient</a>.</p>
+    ${CTA_HTML('Cook base genep from scratch — book your class')}`,
+  },
+  {
+    id: 'signature-dishes',
+    type: 'content' as const,
+    subtitle: 'What the dishes actually are',
+    title: 'Balinese vs Indonesian — Your Menu, Labelled Honestly',
+    image: IMG_TEACH,
+    imageAlt:
+      'Balinese chef teaching guests to prepare sate lilit and sambal matah during a private villa cooking class',
+    body: `<p>Most guests arrive expecting <strong>nasi goreng</strong> and are surprised by how different truly <em>Balinese</em> food is. Both belong on your table — and we are clear about which is which, because that honesty is the difference between a tourist demo and understanding a cuisine.</p>
+
+    <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Distinctly Balinese</h3>
+    <ul>
+      <li><strong>Sate lilit</strong> — minced fish or chicken blended with base genep and grated coconut, moulded onto lemongrass stalks and grilled.</li>
+      <li><strong>Lawar</strong> — a ceremonial salad of finely chopped vegetables (or meat), fresh coconut and spice.</li>
+      <li><strong>Sambal matah</strong> — a raw sambal of thinly sliced shallots, lemongrass, chilli and lime; no cooking, all freshness.</li>
+      <li><strong>Betutu</strong> — chicken or duck slow-cooked in banana leaf with base genep; the ceremonial dish of Bali.</li>
+      <li><strong>Pepes ikan</strong> — spiced fish steamed and grilled in banana-leaf parcels.</li>
+    </ul>
+
+    <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Pan-Indonesian (on the menu because guests love them)</h3>
+    <ul>
+      <li><strong>Nasi goreng</strong> &amp; <strong>mie goreng</strong> — the fried rice and noodles found right across Indonesia.</li>
+      <li><strong>Gado-gado</strong> — blanched vegetables with a warm peanut sauce.</li>
+    </ul>
+
+    <p>Balinese food is Hindu, pork-friendly and shaped by ceremony; much of Indonesia’s best-known food is neither. Our chefs explain the distinction as you cook. The full story: <a href="/blog/balinese-food-vs-indonesian-food" class="text-[#7E6410] hover:underline font-medium">Balinese food is not Indonesian food — a chef’s guide</a>.</p>
+
+    <p style="margin-top:1.25rem;border-left:3px solid #C5A028;padding-left:1.25rem;color:#4A4A4A"><em>Balinese cooking is inseparable from ceremony — the daily <strong>canang sari</strong> offerings, the communal <strong>megibung</strong> feast, and <strong>Tri Hita Karana</strong>, the idea that food connects people, nature and the divine. We touch on this while we cook; it is why the food means something beyond the plate.</em></p>`,
   },
   {
     id: 'variations',
@@ -356,6 +404,21 @@ const FAQS = [
       'Yes. Classes are held in your villa kitchen island-wide (Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua, Kuta corridor and more).',
   },
   {
+    question: 'How many people will be in our class? Will it be crowded?',
+    answer:
+      'Only your group — the class is <strong>100% private</strong>. Unlike large cooking schools that can run 15–24 guests on a shared bench, you never cook alongside strangers. That privacy is why couples, families and villa groups choose the in-villa format.',
+  },
+  {
+    question: 'Do we visit a local market as part of the class?',
+    answer:
+      'Our standard class is held entirely in your villa, so there is no transfer time or minibus waiting. We shop fresh market ingredients beforehand and bring them to you. If a hands-on market visit matters to your group, tell us at enquiry and we’ll advise honestly on what’s possible.',
+  },
+  {
+    question: 'How is a myCHEF class different from a Bali cooking school?',
+    answer:
+      'A cooking school means a fixed menu, a set time slot, a group of strangers and often a five-hour day with hotel pickups. A myCHEF class is private, in your own kitchen, built around your menu, pace and dietary needs — and you eat everything you cook. See our honest take: <a href="/blog/is-a-cooking-class-in-bali-worth-it">is a cooking class in Bali worth it?</a>',
+  },
+  {
     question: 'How long do cooking classes take?',
     answer:
       'The standard private Indonesian class is a complete <strong>3-hour experience</strong> (intro + cooking + meal + diploma). Longer half-day formats and optional market-style intros are available on request.',
@@ -432,6 +495,21 @@ const RELATED_PAGES = [
     label: 'Villa cooking class guide',
     href: '/blog/bali-villa-cooking-class-private-chef',
     desc: 'Support article: class formats, market trip and gift ideas.',
+  },
+  {
+    label: 'Base Genep explained',
+    href: '/blog/base-genep-balinese-spice-paste',
+    desc: 'The 15-ingredient Balinese master spice paste, ingredient by ingredient.',
+  },
+  {
+    label: 'Balinese vs Indonesian food',
+    href: '/blog/balinese-food-vs-indonesian-food',
+    desc: 'What is truly Balinese, what is pan-Indonesian, and why it matters.',
+  },
+  {
+    label: 'Is a Bali cooking class worth it?',
+    href: '/blog/is-a-cooking-class-in-bali-worth-it',
+    desc: 'An honest answer — who it’s worth it for, and who should skip it.',
   },
   {
     label: 'Kids Birthday Chef Party',

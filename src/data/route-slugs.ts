@@ -53,6 +53,10 @@ export const BLOG_POST_SLUGS: string[] = [
   'blog/birthday-dinner-bali-villa-without-planner',
   'blog/seminyak-canggu-ubud-uluwatu-private-chef-night',
   'blog/private-chef-bali-preparation-12-guest-villa-dinner',
+  // Cooking-class cluster (support articles for /experiences/cooking-class)
+  'blog/base-genep-balinese-spice-paste',
+  'blog/balinese-food-vs-indonesian-food',
+  'blog/is-a-cooking-class-in-bali-worth-it',
 ]
 
 export const SERVICE_SLUGS: string[] = [

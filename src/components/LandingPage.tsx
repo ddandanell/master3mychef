@@ -75,6 +75,8 @@ export default function LandingPage({ kind = 'landing' }: { kind?: 'landing' | '
     'blog/base-genep-balinese-spice-paste': '/generated/mychef-cooking-class-balinese-ingredients-bali-landscape.webp',
     'blog/balinese-food-vs-indonesian-food': '/generated/mychef-cooking-class-market-produce-bali-portrait.webp',
     'blog/is-a-cooking-class-in-bali-worth-it': '/generated/mychef-cooking-class-group-dining-bali-landscape.webp',
+    'blog/cooking-class-bali-cost': '/generated/mychef-cooking-class-bali-ingredients-spread.webp',
+    'blog/vegan-vegetarian-balinese-cooking': '/generated/mychef-cooking-class-bali-guests-dining.webp',
     'blog/bali-catering-menu': '/generated/mychef-catering-bali-hero-villa.webp',
     'blog/bali-wedding-catering-private-chef-timeline': '/generated/mychef-blog-wedding-private-chef.webp',
     'blog/dietary-specific-chef-bali': '/generated/mychef-blog-yoga-retreat-chef.webp',

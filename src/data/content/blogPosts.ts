@@ -199,5 +199,17 @@ export const BLOG_POSTS: ContentEntry[] = [
     "title": "Is a Cooking Class in Bali Worth It? An Honest Answer",
     "description": "An honest look at whether a Bali cooking class is worth it — who gets the most from it, group schools vs private in-villa classes, what you take home, and how to choose.",
     "date": "2026-08-19"
+  },
+  {
+    "slug": "blog/cooking-class-bali-cost",
+    "title": "How Much Does a Cooking Class in Bali Cost? (2026 Guide)",
+    "description": "What a cooking class in Bali actually costs in 2026 — group schools vs private in-villa classes, what drives the price, what's included, and how to tell if a quote is fair.",
+    "date": "2026-08-19"
+  },
+  {
+    "slug": "blog/vegan-vegetarian-balinese-cooking",
+    "title": "Vegan & Vegetarian Balinese Cooking: What You'll Actually Cook",
+    "description": "Balinese food is surprisingly plant-friendly. A chef's guide to vegan and vegetarian Balinese cooking — tempeh, tofu, gado-gado, lawar sayur and base genep without shrimp paste.",
+    "date": "2026-08-19"
   }
 ]

@@ -97,6 +97,8 @@ const SECTIONS: PageSection[] = [
     </ul>
 
     <p>Larger groups receive additional staff so everyone stays active. Longer sessions, extra dishes, special cuisines and complex dietary maps are quoted accordingly. All prices ++ (11% government tax + 10% service) unless your written proposal states otherwise.</p>
+
+    <p style="font-size:0.95rem;color:#4A4A4A">New to booking a class? Our <a href="/blog/cooking-class-bali-cost" class="text-[#7E6410] hover:underline font-medium">2026 cooking class cost guide</a> explains group-school vs private pricing and how to tell if a quote is fair.</p>
     ${CTA_HTML('Get your personalised quote + sample menu', WA_QUOTE)}`,
   },
   {
@@ -154,6 +156,7 @@ const SECTIONS: PageSection[] = [
     <ul>
       <li>Base gede · gado-gado with peanut sauce · tempeh or tofu sate · lawar sayur · nasi kuning · fruit + coconut dessert</li>
     </ul>
+    <p style="font-size:0.95rem;color:#4A4A4A">Balinese food is more plant-friendly than most guests expect — see <a href="/blog/vegan-vegetarian-balinese-cooking" class="text-[#7E6410] hover:underline font-medium">vegan &amp; vegetarian Balinese cooking</a> for the full plant-based menu.</p>
 
     <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Gluten-free focused</h3>
     <ul>
@@ -510,6 +513,16 @@ const RELATED_PAGES = [
     label: 'Is a Bali cooking class worth it?',
     href: '/blog/is-a-cooking-class-in-bali-worth-it',
     desc: 'An honest answer — who it’s worth it for, and who should skip it.',
+  },
+  {
+    label: 'What does a cooking class cost?',
+    href: '/blog/cooking-class-bali-cost',
+    desc: '2026 price guide — group schools vs private, and what drives the price.',
+  },
+  {
+    label: 'Vegan & vegetarian Balinese cooking',
+    href: '/blog/vegan-vegetarian-balinese-cooking',
+    desc: 'Why Balinese food is naturally plant-friendly, and what you’ll cook.',
   },
   {
     label: 'Kids Birthday Chef Party',

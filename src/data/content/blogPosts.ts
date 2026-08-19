@@ -181,5 +181,23 @@ export const BLOG_POSTS: ContentEntry[] = [
     "title": "Bali Catering Menus: Traditional & Modern Options for Your",
     "description": "Explore Bali catering menus — traditional Indonesian, modern fusion, plated dinners, buffets, and grazing boards for villa events.",
     "date": "2026-05-18"
+  },
+  {
+    "slug": "blog/base-genep-balinese-spice-paste",
+    "title": "Base Genep: Bali's Master Spice Paste, Explained",
+    "description": "Base genep (base gede) is the complete Balinese spice paste beneath almost every island dish. A chef's guide to its ~15 ingredients, the sad rasa six-flavour idea, and how to build it at home.",
+    "date": "2026-08-19"
+  },
+  {
+    "slug": "blog/balinese-food-vs-indonesian-food",
+    "title": "Balinese Food Is Not Indonesian Food: A Chef's Guide",
+    "description": "Nasi goreng is Indonesian; betutu, lawar and sate lilit are Balinese. A chef's guide to the real difference — Hindu ceremony, pork, base genep and raw sambals — and what to order in Bali.",
+    "date": "2026-08-19"
+  },
+  {
+    "slug": "blog/is-a-cooking-class-in-bali-worth-it",
+    "title": "Is a Cooking Class in Bali Worth It? An Honest Answer",
+    "description": "An honest look at whether a Bali cooking class is worth it — who gets the most from it, group schools vs private in-villa classes, what you take home, and how to choose.",
+    "date": "2026-08-19"
   }
 ]

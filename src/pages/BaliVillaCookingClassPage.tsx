@@ -139,6 +139,11 @@ const FAQS = [
 
 const RELATED_PAGES = [
   { label: 'Cooking Class Bali (book)', href: '/experiences/cooking-class', desc: 'Commercial owner page — private villa cooking class, contact for quote.' },
+  { label: 'Base Genep Explained', href: '/blog/base-genep-balinese-spice-paste', desc: 'The Balinese master spice paste, ingredient by ingredient.' },
+  { label: 'Balinese vs Indonesian Food', href: '/blog/balinese-food-vs-indonesian-food', desc: 'What is truly Balinese versus pan-Indonesian, and why it matters.' },
+  { label: 'Is a Cooking Class Worth It?', href: '/blog/is-a-cooking-class-in-bali-worth-it', desc: 'An honest answer — who it is worth it for, and who should skip it.' },
+  { label: 'Cooking Class Cost Guide', href: '/blog/cooking-class-bali-cost', desc: '2026 pricing — group schools vs private in-villa classes.' },
+  { label: 'Vegan & Vegetarian Balinese', href: '/blog/vegan-vegetarian-balinese-cooking', desc: 'Why Balinese food is naturally plant-friendly, and what you cook.' },
   { label: 'Sushi Masterclass', href: '/experiences/sushi-masterclass', desc: 'Dedicated private sushi making class at your villa.' },
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Multi-day villa chef hire around your cooking class day.' },
   { label: 'Floating Breakfast Bali', href: '/catering/floating-breakfast', desc: 'The iconic Bali villa floating breakfast — how to book it.' },

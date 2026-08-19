@@ -1928,7 +1928,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     description:
       'Complete Bali proposal packages: private chef dinner, flowers, candles, styling, photographer and musician — fully coordinated and confidential. WhatsApp.',
     canonical: `${SITE}/experiences/romantic-proposal-dinner`,
-    h1: 'Romantic Proposal Dinner Bali — Everything Arranged',
+    h1: 'Full-Service Proposal Package Bali — Everything Arranged',
     ogImage: `${SITE}/generated/proposal-package-bali-dinner.webp`,
   },
 

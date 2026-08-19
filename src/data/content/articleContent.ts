@@ -3,6 +3,44 @@
 /** Full article HTML bodies, keyed by route path. Imported ONLY by the lazy
  *  article renderer and the build-time inject-meta step — never the eager nav bundle. */
 export const ARTICLE_CONTENT: Record<string, string> = {
+  '/blog/cooking-class-bali-cost': `<p>Cooking-class prices in Bali cover a wide range, and the number you are quoted depends almost entirely on one thing: whether you join a group or book privately. Here is an honest 2026 guide to what a cooking class in Bali actually costs, what drives the price, and how to tell whether a quote is fair.</p>
+<h2>The two price tiers</h2>
+<p>Almost every cooking class in Bali fits one of two models:</p>
+<ul>
+<li><strong>Group cooking schools</strong> are the budget end. You join a scheduled class with other guests — often ten to twenty-four people — at a fixed venue. Per head, this is the cheapest way to take a class, which is exactly why it suits solo travellers and backpackers.</li>
+<li><strong>Private and in-villa classes</strong> cost more per person because you are booking a chef's time exclusively for your group. In exchange you get a custom menu, your own pace, no strangers, and — in the in-villa format — no travel at all.</li>
+</ul>
+<p>Neither is "better." They are priced differently because they are different products: a group class is a shared activity; a private class is an exclusive experience.</p>
+<h2>What drives the price</h2>
+<ul>
+<li><strong>Group size and privacy</strong> — the single biggest factor. Exclusive use of a chef always costs more per head than a shared bench.</li>
+<li><strong>Length and number of dishes</strong> — a 3-hour class costs less than a full half-day of six to eight dishes.</li>
+<li><strong>Location and travel</strong> — a fixed school includes its venue; an in-villa class includes the chef travelling to you and shopping beforehand.</li>
+<li><strong>What is actually included</strong> — ingredients, a full sit-down meal, recipes, uniforms, a diploma and clean-up all add real value. A cheap "class" that is really a demonstration with a small tasting is cheap for a reason.</li>
+<li><strong>Dietary complexity</strong> — full vegan, gluten-free or allergy-safe menus can involve extra sourcing.</li>
+</ul>
+<h2>What a myCHEF private class costs</h2>
+<p>Our standard experience is a <strong>3-hour private Indonesian cooking class in your villa, from IDR 700,000 per person (minimum 4 guests)</strong>. That includes a professional chef, all ingredients, hands-on cooking of four to six dishes, the full sit-down meal of everything you cook, uniforms and hats, a personalised diploma, recipe cards and full clean-up. Prices are quoted ++ (11% government tax + 10% service) on your written proposal, with no line items added afterwards. Longer sessions, extra dishes and special cuisines are quoted on top.</p>
+<h2>How to tell if a quote is fair</h2>
+<p>Before comparing two prices, make sure you are comparing the same thing. Ask: Is it hands-on or a demonstration? Do you eat a full meal or just taste? How many people share the class? Is it at a venue or in your villa? Are ingredients, recipes and clean-up included? A private in-villa class will almost always cost more than a group school — the honest question is whether the privacy, custom menu and convenience are worth it to you. We wrote a straight answer here: <a href="/blog/is-a-cooking-class-in-bali-worth-it">is a cooking class in Bali worth it?</a></p>
+<h2>Get an exact quote</h2>
+<p>Because pricing depends on your group size, villa area and menu, the fastest way to a real number is to ask. See the full <a href="/experiences/cooking-class">private cooking class</a> details, or <a href="https://wa.me/6289674072020">message us on WhatsApp</a> with your group size and dates and we will send a fixed, itemised quote and a sample menu.</p>`,
+  '/blog/vegan-vegetarian-balinese-cooking': `<p>Here is something most visitors do not expect: Balinese food is one of the most naturally plant-friendly cuisines in Southeast Asia. Long before "plant-based" was a menu category, Balinese kitchens were building whole meals around tempeh, tofu, vegetables, coconut and spice. A vegan or vegetarian cooking class in Bali is not a compromise menu — it is a genuine part of the tradition.</p>
+<h2>Why Balinese food adapts so well</h2>
+<p>The backbone of Balinese cooking is <a href="/blog/base-genep-balinese-spice-paste">base genep</a>, the island's master spice paste — and it is built almost entirely from aromatics: shallots, garlic, ginger, galangal, turmeric, lemongrass, chilli and candlenut. The only non-vegan element is a small amount of <em>terasi</em> (shrimp paste), which is easily left out or replaced. Take that one step and most of the Balinese repertoire opens up to a plant-based table.</p>
+<h2>What you'll actually cook</h2>
+<ul>
+<li><strong>Gado-gado</strong> — blanched vegetables with a warm peanut sauce; a complete vegan meal on its own.</li>
+<li><strong>Tempeh and tofu, done properly</strong> — <em>tempe manis</em> (sweet-glazed tempeh), crisp fried tofu, and spiced tempeh sate moulded onto lemongrass instead of meat.</li>
+<li><strong>Lawar sayur</strong> — the vegetable version of Bali's ceremonial chopped salad, with green beans, grated coconut and spice.</li>
+<li><strong>Sambal matah and other raw sambals</strong> — naturally vegan, and the freshest thing on any Balinese table.</li>
+<li><strong>Nasi kuning or coconut rice</strong>, finished with a coconut-and-palm-sugar dessert.</li>
+</ul>
+<p>Everything is built on the same vegan base genep, so you learn one foundation and can rebuild the whole menu at home.</p>
+<h2>Vegetarian, vegan and gluten-free</h2>
+<p>Vegetarian is straightforward — dairy and egg barely feature in traditional Balinese cooking, so most dishes are already suitable. Full <strong>vegan</strong> simply means leaving out terasi and honey. Many Balinese dishes are also naturally <strong>gluten-free</strong>, since rice rather than wheat is the staple — soy sauce (kecap) is the main thing to watch, and we swap it out on request. Tell us your exact needs when you enquire and the whole menu is designed around them.</p>
+<h2>Cook a plant-based Balinese feast</h2>
+<p>Our <a href="/experiences/cooking-class">private cooking classes</a> run a dedicated vegan or vegetarian menu whenever you ask — hands-on, in your own villa kitchen, with every dish explained as you cook. From IDR 700,000 per person (minimum 4 guests). <a href="https://wa.me/6289674072020">Message myCHEF on WhatsApp</a> with your dietary needs and we will send a plant-based sample menu.</p>`,
   '/blog/base-genep-balinese-spice-paste': `<p>If there is one thing to understand about Balinese cooking before you ever pick up a knife, it is <strong>base genep</strong> — the "complete spice paste" that sits beneath almost every savoury dish on the island. Learn base genep and you have not learned a recipe; you have learned the grammar of a cuisine. This is the paste our chefs build by hand in every <a href="/experiences/cooking-class">private cooking class</a>, and the one thing guests message us about long after they have flown home.</p>
 <h2>What is base genep?</h2>
 <p>Base genep (also written <em>base gede</em>, and known more broadly as <em>bumbu Bali</em>) means, roughly, "complete seasoning." It is a wet spice paste of around fifteen fresh aromatics, ground together and gently fried until the raw edge cooks off and the kitchen fills with a smell that is unmistakably Balinese. Where a Thai curry leans on its paste and an Indian dish on its garam masala, Balinese food leans on base genep. It goes into betutu, into lawar, into soups, sautés, grilled fish and vegetable dishes — the same foundation, seasoned and stretched a hundred ways.</p>

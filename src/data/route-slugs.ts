@@ -57,6 +57,8 @@ export const BLOG_POST_SLUGS: string[] = [
   'blog/base-genep-balinese-spice-paste',
   'blog/balinese-food-vs-indonesian-food',
   'blog/is-a-cooking-class-in-bali-worth-it',
+  'blog/cooking-class-bali-cost',
+  'blog/vegan-vegetarian-balinese-cooking',
 ]
 
 export const SERVICE_SLUGS: string[] = [

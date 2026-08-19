@@ -226,16 +226,16 @@ export default function Navbar() {
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
   const location = useLocation()
 
-  // Desktop dropdown hover-intent — short open/close delays stop the panel
-  // flickering when the cursor travels between the trigger and the panel
+  // Desktop dropdown hover-intent. The panel opens immediately on hover so the
+  // menu feels responsive when the cursor moves over an item; only the close is
+  // delayed, which keeps the panel open while the cursor travels from the
+  // trigger down into the panel (and across to an adjacent item).
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [dropdownPreviews, setDropdownPreviews] = useState<Record<string, DropdownPreview>>({})
   const [openedOnce, setOpenedOnce] = useState<Set<string>>(new Set())
-  const openTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const clearDropdownTimers = () => {
-    if (openTimer.current) clearTimeout(openTimer.current)
     if (closeTimer.current) clearTimeout(closeTimer.current)
   }
 
@@ -250,14 +250,9 @@ export default function Navbar() {
     setOpenDropdown(href)
   }
 
-  const scheduleOpen = (href: string) => {
-    clearDropdownTimers()
-    openTimer.current = setTimeout(() => openDropdownNow(href), 100)
-  }
-
   const scheduleClose = () => {
     clearDropdownTimers()
-    closeTimer.current = setTimeout(() => setOpenDropdown(null), 250)
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), 220)
   }
 
   const setPreviewFor = (item: NavItem, subpage: { label: string; href: string }) => {
@@ -341,7 +336,7 @@ export default function Navbar() {
                 <div
                   key={item.href}
                   className="relative group"
-                  onMouseEnter={() => hasDropdown && scheduleOpen(item.href)}
+                  onMouseEnter={() => hasDropdown && openDropdownNow(item.href)}
                   onMouseLeave={() => hasDropdown && scheduleClose()}
                   onFocus={(e) => {
                     if (hasDropdown && !e.currentTarget.contains(e.relatedTarget as Node | null)) {

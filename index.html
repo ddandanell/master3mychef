@@ -109,14 +109,14 @@
     <meta name="twitter:description" content="Private chef in Bali for luxury villa dining, Bali villa catering, events, parties, and fine dining experiences." />
     <meta name="twitter:image" content="https://mychef.id/og-image.webp" />
 
-    <!-- Performance: preconnect to fonts + WhatsApp + Vercel CDN, preload critical resources -->
+    <!-- Performance: preconnect only to render-critical origins (fonts + GTM below).
+         WhatsApp and Vercel-vitals are needed only after load, so they use the lighter
+         dns-prefetch instead — keeps preconnects <=4 per Lighthouse guidance. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://wa.me" />
     <link rel="dns-prefetch" href="https://wa.me" />
     <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
     <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
-    <link rel="preconnect" href="https://vitals.vercel-insights.com" />
 
     <!-- Preload critical font stylesheet (non-blocking via media trick) -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,[...]

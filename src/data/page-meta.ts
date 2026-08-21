@@ -826,7 +826,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/chef-for-hire-indonesia',
     title: 'Chef for Hire Indonesia | Private & Personal Chefs | myCHEF',
     description:
-      'Hire a vetted private chef in Indonesia — one dinner, daily villa service, recurring meals or full-time placement in Bali. Clear quotes via WhatsApp.',
+      'Hire a vetted private chef in Indonesia — dinners, daily villa service or full-time placement in Bali. Rated 4.9★ from 560+ events. Fast WhatsApp quotes.',
     canonical: `${SITE}/chef-for-hire-indonesia`,
     ogImage: `${SITE}/generated/support-chef-hire-hero.webp`,
     h1: 'Chef for Hire Indonesia — Private Chef Services',
@@ -1392,7 +1392,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering/bbq-catering',
     title: 'BBQ Catering Bali | Live Grill Packages for Villas & Parties',
     description:
-      'BBQ catering in Bali for villas, parties & events: seafood, Wagyu & Indonesian grills cooked live at your pool. Per-person packages — WhatsApp myCHEF.',
+      'Live BBQ catering in Bali for villas & parties: seafood, Wagyu & Indonesian grills at your pool. Rated 4.9★ from 560+ events. Per-person packages, WhatsApp myCHEF.',
     canonical: `${SITE}/catering/bbq-catering`,
     h1: 'BBQ Catering Bali — Live Grill at Your Villa',
     ogImage: `${SITE}/bbq-poolside.webp`,
@@ -1452,7 +1452,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/catering/villa-catering',
     title: 'Bali Villa Catering | Multi-Day Meal Plans | myCHEF',
     description:
-      'Reliable in-villa catering for multi-day Bali stays: breakfast, lunch and dinner plans for families and groups of 10–150. From per-guest pricing.',
+      'In-villa catering for multi-day Bali stays: breakfast, lunch & dinner for families and groups of 10–150. Rated 4.9★ from 560+ events. Per-guest pricing, WhatsApp myCHEF.',
     canonical: `${SITE}/catering/villa-catering`,
     h1: 'Bali Villa Catering — Multi-Day Meal Plans',
     ogImage: `${SITE}/hero-catering.webp`,

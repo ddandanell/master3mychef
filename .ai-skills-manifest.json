@@ -1,52 +1,28 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "project": "mychef.id",
-  "description": "Approved AI skill library for mychef.id Vercel project",
+  "description": "Approved AI skill library for mychef.id",
   "master_prompt": "AI_INSTRUCTIONS.md",
+  "system_map": "AI_MAP.md",
   "skills_directory": "ai-skills",
   "required_files": [
-    {
-      "path": "ai-skills/00-master-rules.md",
-      "purpose": "Production safety and main operating rules"
-    },
-    {
-      "path": "ai-skills/01-vercel-deployment-safety.md",
-      "purpose": "Build, config, and deployment checks"
-    },
-    {
-      "path": "ai-skills/02-nextjs-build-debugging.md",
-      "purpose": "Common Vercel/Next.js build failures and fixes"
-    },
-    {
-      "path": "ai-skills/03-github-pr-rules.md",
-      "purpose": "Branch and pull request rules"
-    },
-    {
-      "path": "ai-skills/04-seo-protection.md",
-      "purpose": "Routes, metadata, sitemap, CTAs protection"
-    },
-    {
-      "path": "ai-skills/05-env-vars.md",
-      "purpose": "Environment variable handling rules"
-    },
-    {
-      "path": "ai-skills/06-route-checking.md",
-      "purpose": "Pre-approval route checks"
-    },
-    {
-      "path": "ai-skills/07-error-log-debugging.md",
-      "purpose": "Error log root-cause analysis"
-    },
-    {
-      "path": "ai-skills/08-agent-swarm-roles.md",
-      "purpose": "Multi-agent role definitions"
-    }
+    { "path": "AI_MAP.md", "purpose": "Connected system map" },
+    { "path": "ai-skills/00-master-rules.md", "purpose": "Production safety" },
+    { "path": "ai-skills/01-vercel-deployment-safety.md", "purpose": "Deploy checks" },
+    { "path": "ai-skills/02-nextjs-build-debugging.md", "purpose": "Vite/Vercel build failures (filename historical)" },
+    { "path": "ai-skills/03-github-pr-rules.md", "purpose": "PR rules" },
+    { "path": "ai-skills/04-seo-protection.md", "purpose": "SEO/route protection" },
+    { "path": "ai-skills/05-env-vars.md", "purpose": "Env var rules" },
+    { "path": "ai-skills/06-route-checking.md", "purpose": "Route smoke checks" },
+    { "path": "ai-skills/07-error-log-debugging.md", "purpose": "Error diagnosis" },
+    { "path": "ai-skills/08-agent-swarm-roles.md", "purpose": "Swarm roles" },
+    { "path": "ai-skills/09-source-of-truth.md", "purpose": "Production tree" },
+    { "path": "ai-skills/10-content-reuse.md", "purpose": "Reuse shells and data files" },
+    { "path": "ai-skills/11-conversion-whatsapp.md", "purpose": "WhatsApp conversion" }
   ],
-  "agent_entry_points": [
-    ".kimi/AGENT_ONBOARDING.md",
-    ".ai/AGENT_ONBOARDING.md",
-    ".claude/AGENT_ONBOARDING.md",
-    ".cursorrules"
+  "knowledge": [
+    "mychef-ai-agent/knowledge-base/",
+    "seo-department/"
   ],
   "verification_script": "scripts/verify-ai-skills.ts",
   "github_workflow": ".github/workflows/ai-skills-check.yml",

@@ -4,6 +4,7 @@
 # AI skill library — any change requires human review
 /ai-skills/              @ddandanell
 AI_INSTRUCTIONS.md       @ddandanell
+AI_MAP.md                @ddandanell
 .ai-skills-manifest.json @ddandanell
 
 # Verification scripts

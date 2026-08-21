@@ -3,6 +3,7 @@ import type { FormEvent } from 'react'
 import { Send, MessageCircle, Mail, CheckCircle, AlertCircle } from 'lucide-react'
 import { BAR_SERVICES } from '@/data/bar-services'
 import { trackFormStart, trackFormComplete } from '@/lib/analytics'
+import { formLeadFields } from '@/lib/collect'
 
 const VENUE_TYPES = ['Hotel', 'Restaurant', 'Villa', 'Beach club', 'Café', 'Event company', 'Other']
 
@@ -56,6 +57,7 @@ export function BarServiceEnquiryForm({ preselectedService }: { preselectedServi
             Services: formData.services.join(', '),
             'Preferred reply channel': formData.preferredChannel,
           },
+          ...formLeadFields(),
         }),
       })
 

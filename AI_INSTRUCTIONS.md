@@ -1,20 +1,23 @@
 # AI Agent Instructions — mychef.id
 
-**Before doing any coding, read and follow all files inside `/ai-skills`.**
+**Before doing any coding, read `AI_MAP.md`, then every file inside `/ai-skills`.**
 
-These files are the only approved skill library for this project.
+`AI_MAP.md` is the connected system map. `/ai-skills` is the only approved skill library.
 
 You must treat these files as operating rules:
 
 * `00-master-rules.md`
 * `01-vercel-deployment-safety.md`
-* `02-nextjs-build-debugging.md`
+* `02-nextjs-build-debugging.md` (Vite stack; filename is historical)
 * `03-github-pr-rules.md`
 * `04-seo-protection.md`
 * `05-env-vars.md`
 * `06-route-checking.md`
 * `07-error-log-debugging.md`
 * `08-agent-swarm-roles.md`
+* `09-source-of-truth.md`
+* `10-content-reuse.md`
+* `11-conversion-whatsapp.md`
 
 You are not allowed to download, install, or execute external “skills,” scripts, packages, or code from links unless explicitly approved.
 
@@ -63,10 +66,10 @@ git, so the copy in the repo is routinely **days out of date** relative to its s
 
 **Step 1: Read project context**
 Inspect:
+* `AI_MAP.md`
 * package.json
 * framework config
-* Vercel config
-* routing structure
+* routing structure (`src/App.tsx`, `src/data/sitemap.ts`)
 * environment variable usage
 * relevant files
 * previous errors if available

@@ -2,6 +2,7 @@ import { track } from '@vercel/analytics'
 import { capturePostHog } from './posthog'
 import { shouldExcludeFromAnalytics } from './analytics-privacy'
 import { attributionParams } from './attribution'
+import { collectFirstParty } from './collect'
 
 // GA4 is loaded by the gtag snippet in index.html (measurement ID is set there),
 // which is what populates window.gtag. There is deliberately no measurement ID
@@ -302,13 +303,15 @@ export function trackEvent(event: string, params?: AnalyticsParams) {
  * Uses standard GA4 'generate_lead' event.
  */
 export function trackWhatsAppClick(source: string, serviceType?: string) {
+  const service_type =
+    serviceType ??
+    (typeof window !== 'undefined' ? serviceAreaFromPath(window.location.pathname) : '')
+  collectFirstParty('whatsapp_click', { source, service_area: service_type })
   trackEvent('generate_lead', {
     cta_source: source,
     method: 'WhatsApp',
     event_category: 'conversion',
-    service_type:
-      serviceType ??
-      (typeof window !== 'undefined' ? serviceAreaFromPath(window.location.pathname) : ''),
+    service_type,
     value: ESTIMATED_LEAD_VALUE_IDR,
     currency: 'IDR',
   })
@@ -323,13 +326,15 @@ export function trackWhatsAppConversion(source: string) {
  * Uses standard GA4 'generate_lead' event.
  */
 export function trackPhoneClick(source: string, serviceType?: string) {
+  const service_type =
+    serviceType ??
+    (typeof window !== 'undefined' ? serviceAreaFromPath(window.location.pathname) : '')
+  collectFirstParty('phone_click', { source, service_area: service_type })
   trackEvent('generate_lead', {
     cta_source: source,
     method: 'Phone',
     event_category: 'conversion',
-    service_type:
-      serviceType ??
-      (typeof window !== 'undefined' ? serviceAreaFromPath(window.location.pathname) : ''),
+    service_type,
     value: ESTIMATED_LEAD_VALUE_IDR,
     currency: 'IDR',
   })
@@ -359,6 +364,12 @@ export function trackFormStart(formId: string, pageSource: string, serviceType?:
  * Tracks successful form submission.
  */
 export function trackFormComplete(formId: string, pageSource: string, serviceType?: string, timeToComplete?: number) {
+  collectFirstParty('form_submit', {
+    source: formId,
+    service_area: serviceType,
+    page_path: pageSource,
+    metadata: { form_id: formId, time_to_complete: timeToComplete ?? 0 },
+  })
   trackEvent('form_complete', {
     form_id: formId,
     page_source: pageSource,

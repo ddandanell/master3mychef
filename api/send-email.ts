@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import nodemailer from 'nodemailer'
+import { insertLead } from '../lib/leads.js'
 
 interface EmailPayload {
   form: 'bar-services' | 'contact'
@@ -9,6 +10,9 @@ interface EmailPayload {
   subject?: string
   message: string
   metadata?: Record<string, string | string[] | undefined>
+  lead_ref?: string
+  page_path?: string
+  channel?: string
 }
 
 const ALLOWED_ORIGINS = [
@@ -109,6 +113,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   `
 
   try {
+    try {
+      await insertLead({
+        source: payload.form,
+        name: payload.name,
+        email: payload.email,
+        phone: payload.phone,
+        subject: payload.subject,
+        message: payload.message,
+        metadata: payload.metadata,
+        leadRef: payload.lead_ref,
+        pagePath: payload.page_path,
+        channel: payload.channel,
+      })
+    } catch (error) {
+      console.error('Failed to save lead:', error)
+    }
+
     await transporter.sendMail({
       from: `"MyChef Website" <${smtpUser}>`,
       to: smtpTo,

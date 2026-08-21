@@ -12,6 +12,7 @@ import { resolve } from "path";
 
 const REQUIRED_FILES = [
   "AI_INSTRUCTIONS.md",
+  "AI_MAP.md",
   "ai-skills/00-master-rules.md",
   "ai-skills/01-vercel-deployment-safety.md",
   "ai-skills/02-nextjs-build-debugging.md",
@@ -21,6 +22,9 @@ const REQUIRED_FILES = [
   "ai-skills/06-route-checking.md",
   "ai-skills/07-error-log-debugging.md",
   "ai-skills/08-agent-swarm-roles.md",
+  "ai-skills/09-source-of-truth.md",
+  "ai-skills/10-content-reuse.md",
+  "ai-skills/11-conversion-whatsapp.md",
 ];
 
 function main() {

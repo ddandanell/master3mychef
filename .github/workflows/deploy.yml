@@ -17,7 +17,9 @@ on:
     branches: [main]      # push to main → PRODUCTION prebuilt deploy
     paths-ignore:         # docs/tooling-only commits don't need a rebuild+deploy
       - '**.md'
-      - 'project-skills/**'
+      - 'ai-skills/**'
+      - 'mychef-ai-agent/**'
+      - 'seo-department/**'
       - 'docs/**'
       - 'reports/**'
       - '.claude/**'

@@ -4,7 +4,7 @@ Welcome to the mychef.id project. This is a Vite + React app deployed on Vercel.
 
 ## For AI Agents
 
-1. **Read first:** `AI_INSTRUCTIONS.md` and every file in `/ai-skills/`.
+1. **Read first:** `AI_INSTRUCTIONS.md`, `AI_MAP.md`, and every file in `/ai-skills/`.
 2. **Follow the 8-step work process** defined in `AI_INSTRUCTIONS.md`.
 3. **Never download external skills** without explicit approval.
 4. **Run verification** before claiming work is done:
@@ -36,7 +36,7 @@ pnpm preview      # preview production build
 
 ### AI Skills Verification
 ```bash
-pnpm verify:ai-skills   # check all 10 required skill files
+pnpm verify:ai-skills   # check required AI map + skill files
 pnpm verify:all         # comprehensive check (lint + build + ai-skills)
 pnpm pre-commit        # run pre-commit checks manually
 ```
@@ -59,6 +59,7 @@ pnpm pre-commit        # run pre-commit checks manually
 The following files require human review via CODEOWNERS:
 - `/ai-skills/` — the approved AI skill library
 - `AI_INSTRUCTIONS.md` — master agent prompt
+- `AI_MAP.md` — connected system map
 - `.github/workflows/ai-skills-check.yml` — enforcement workflow
 - `.github/CODEOWNERS` — ownership rules
 - `scripts/verify-ai-skills.ts` — verification script
@@ -75,17 +76,20 @@ The following files require human review via CODEOWNERS:
 
 ## Project Structure
 ```
-/ai-skills/         — approved AI skill library (9 files)
+/ai-skills/         — approved AI skill library
 AI_INSTRUCTIONS.md — master agent prompt
+AI_MAP.md           — connected system map
+mychef-ai-agent/    — WhatsApp booking knowledge
+seo-department/     — SEO ops process
 .github/            — PR templates, issue templates, workflows, CODEOWNERS
-.kimi/              — Kimi agent onboarding
-.ai/                — generic AI agent onboarding
-.claude/            — Claude Code agent onboarding
+.kimi/              — Kimi onboarding pointer only
+.ai/                — generic AI onboarding pointer
+.claude/            — Claude Code onboarding pointer
 .vscode/            — shared IDE settings and tasks
 scripts/            — build, audit, and verification scripts
 src/                — source code
-public/             — static assets
-vercel.json         — Vercel deployment config
+public/             — static assets (sitemap generated)
+vercel.json         — generated Vercel config
 ```
 
 ## Need Help?

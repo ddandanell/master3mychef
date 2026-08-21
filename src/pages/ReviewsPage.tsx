@@ -184,24 +184,28 @@ function reviewIsoDate(d: string): string {
   const m = d.match(/([A-Za-z]+)\s+(\d{4})/)
   return m && REVIEW_MONTHS[m[1]] ? `${m[2]}-${REVIEW_MONTHS[m[1]]}` : d
 }
-// Standalone Review nodes. Type "Review" (with nested Person/Rating) survives the
-// prerender's @type dedup, which drops any second "LocalBusiness" (or any node that
-// nests a shell type like Place). Each review references the business by @id; the
-// business-level aggregateRating lives on the shell LocalBusiness in index.html.
-const reviewSchemas = REVIEWS.map((r) => ({
+// All reviews in ONE @graph script. Reasons: (1) "Review" survives the prerender's
+// @type dedup (not a shell type); (2) emitting them as 15 separate scripts fails —
+// the dedup adds "Review" to its seen-set after the first and drops the rest, whereas
+// a single @graph is kept whole (its nodes are filtered in one pass). Each review
+// references the business by @id; the business-level aggregateRating lives on the
+// shell LocalBusiness in index.html.
+const reviewGraphSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Review',
-  itemReviewed: { '@id': `${SITE}/#business` },
-  author: { '@type': 'Person', name: r.name },
-  datePublished: reviewIsoDate(r.date),
-  reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
-  reviewBody: r.review,
-}))
+  '@graph': REVIEWS.map((r) => ({
+    '@type': 'Review',
+    itemReviewed: { '@id': `${SITE}/#business` },
+    author: { '@type': 'Person', name: r.name },
+    datePublished: reviewIsoDate(r.date),
+    reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
+    reviewBody: r.review,
+  })),
+}
 
 const REVIEWS_SCHEMAS = [
   breadcrumbSchema('Reviews', `${SITE}/reviews`),
   faqPageSchema(REVIEWS_FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-  ...reviewSchemas,
+  reviewGraphSchema,
 ]
 
 export default function ReviewsPage() {

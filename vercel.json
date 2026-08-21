@@ -910,6 +910,11 @@
       "permanent": true
     },
     {
+      "source": "/catering/",
+      "destination": "/catering",
+      "permanent": true
+    },
+    {
       "source": "/services/events",
       "destination": "/events",
       "permanent": true

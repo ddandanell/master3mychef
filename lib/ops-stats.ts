@@ -223,6 +223,7 @@ export async function getOpsSnapshot(): Promise<OpsSnapshot> {
     pages,
     recentEvents,
     recentLeads,
+    quoteSentRows,
     bookingAgg,
     leadPeriods,
     lastEvent,
@@ -274,6 +275,7 @@ export async function getOpsSnapshot(): Promise<OpsSnapshot> {
              assigned_to, next_action, city, country, guest_count, estimated_value_idr
       FROM leads ORDER BY id DESC LIMIT 80
     `,
+    sql`SELECT COUNT(*)::int AS n FROM leads WHERE stage = 'quote_sent'`,
     safe(
       () => sql`SELECT COUNT(*)::int AS n, COALESCE(SUM(value_idr), 0)::float AS revenue FROM bookings`,
       [{ n: 0, revenue: 0 }]
@@ -311,6 +313,7 @@ export async function getOpsSnapshot(): Promise<OpsSnapshot> {
   const wa = pick('whatsapp_click')
   const forms = pick('form_submit')
   const leadsTotal = n(leadTotalRows as Array<{ n: number }>)
+  const quoteSent = n(quoteSentRows as Array<{ n: number }>)
   const bookings = Number((bookingAgg as Array<{ n: number; revenue?: number }>)[0]?.n ?? 0)
   const revenue = Number((bookingAgg as Array<{ n: number; revenue?: number }>)[0]?.revenue ?? 0)
   const p = (period[0] || {}) as Record<string, number>
@@ -363,7 +366,7 @@ export async function getOpsSnapshot(): Promise<OpsSnapshot> {
       { step: 'Quote page', n: (pages as Array<{ page_path: string | null; events: number }>).find((r) => r.page_path === '/quote')?.events ?? 0, connected: true },
       { step: 'WhatsApp / form', n: wa + forms, connected: true },
       { step: 'Lead', n: leadsTotal, connected: true },
-      { step: 'Quote sent', n: (recentLeads as RecentLead[]).filter((l) => l.stage === 'quote_sent').length, connected: true },
+      { step: 'Quote sent', n: quoteSent, connected: true },
       { step: 'Booking', n: bookings, connected: bookings > 0 },
       { step: 'Revenue', n: revenue, connected: revenue > 0 },
     ],

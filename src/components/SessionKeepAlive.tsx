@@ -1,6 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { collectFirstParty } from '@/lib/collect'
 import { serviceAreaFromPath } from '@/lib/analytics'
+import {
+  FORM_STARTED_PREFIX,
+  shouldFlushFormAbandon,
+  unfinishedFormIds,
+} from '@/lib/form-abandon'
 
 const START_KEY = 'mychef-session-start'
 const HEARTBEAT_MS = 15_000
@@ -19,16 +24,16 @@ function sessionStartMs(): number {
 
 function flushFormAbandons() {
   try {
-    for (let i = 0; i < sessionStorage.length; i++) {
-      const key = sessionStorage.key(i)
-      if (!key || !key.startsWith('form_started_')) continue
-      const formId = key.slice('form_started_'.length)
-      if (sessionStorage.getItem(`form_completed_${formId}`)) continue
+    const keys: Array<string | null> = []
+    for (let i = 0; i < sessionStorage.length; i++) keys.push(sessionStorage.key(i))
+    const formIds = unfinishedFormIds(keys, (key) => sessionStorage.getItem(key))
+    for (const formId of formIds) {
       collectFirstParty('form_abandon', {
         source: formId,
         service_area: serviceAreaFromPath(window.location.pathname),
         metadata: { form_id: formId },
       })
+      sessionStorage.removeItem(`${FORM_STARTED_PREFIX}${formId}`)
     }
   } catch {
     /* private mode */
@@ -46,7 +51,6 @@ export default function SessionKeepAlive(): null {
     startRef.current = sessionStartMs()
 
     const ping = (eventName: 'page_heartbeat' | 'session_end') => {
-      if (eventName === 'session_end') flushFormAbandons()
       collectFirstParty(eventName, {
         service_area: serviceAreaFromPath(window.location.pathname),
         metadata: { elapsed_ms: Date.now() - startRef.current },
@@ -61,12 +65,19 @@ export default function SessionKeepAlive(): null {
     const onHide = () => {
       if (document.visibilityState === 'hidden') ping('session_end')
     }
+    const onPageHide = (event: PageTransitionEvent) => {
+      ping('session_end')
+      if (shouldFlushFormAbandon({ reason: 'pagehide', persisted: event.persisted })) {
+        flushFormAbandons()
+      }
+    }
     document.addEventListener('visibilitychange', onHide)
-    window.addEventListener('pagehide', () => ping('session_end'))
+    window.addEventListener('pagehide', onPageHide)
 
     return () => {
       window.clearInterval(beat)
       document.removeEventListener('visibilitychange', onHide)
+      window.removeEventListener('pagehide', onPageHide)
       ping('session_end')
     }
   }, [])

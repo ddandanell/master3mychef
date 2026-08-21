@@ -21,10 +21,13 @@ export async function buildDiagnoseContext(): Promise<{
   const [pulseRows, changeRows, deviceRows] = await Promise.all([
     sql`
       SELECT
-        COUNT(DISTINCT visitor_id) FILTER (WHERE started_at >= date_trunc('day', now()))::int AS today_visitors,
+        COUNT(DISTINCT visitor_id) FILTER (
+          WHERE started_at >= date_trunc('day', now())
+            AND started_at < now()
+        )::int AS today_visitors,
         COUNT(DISTINCT visitor_id) FILTER (
           WHERE started_at >= date_trunc('day', now()) - interval '1 day'
-            AND started_at < date_trunc('day', now())
+            AND started_at < now() - interval '1 day'
         )::int AS yesterday_visitors
       FROM sessions
     `,
@@ -44,12 +47,17 @@ export async function buildDiagnoseContext(): Promise<{
   ])
 
   const [waToday, waYday] = await Promise.all([
-    sql`SELECT COUNT(*)::int AS n FROM events WHERE event_name = 'whatsapp_click' AND occurred_at >= date_trunc('day', now())`,
+    sql`
+      SELECT COUNT(*)::int AS n FROM events
+      WHERE event_name = 'whatsapp_click'
+        AND occurred_at >= date_trunc('day', now())
+        AND occurred_at < now()
+    `,
     sql`
       SELECT COUNT(*)::int AS n FROM events
       WHERE event_name = 'whatsapp_click'
         AND occurred_at >= date_trunc('day', now()) - interval '1 day'
-        AND occurred_at < date_trunc('day', now())
+        AND occurred_at < now() - interval '1 day'
     `,
   ])
 
@@ -60,11 +68,12 @@ export async function buildDiagnoseContext(): Promise<{
 
   const alerts: DiagnoseAlert[] = []
 
+  // Same elapsed clock window, not full-yesterday vs partial-today.
   if (yesterdayVisitors > 0 && todayVisitors / yesterdayVisitors < 0.7) {
     alerts.push({
       severity: 'high',
       title: 'Visitors down vs yesterday',
-      detail: `Today ${todayVisitors} vs yesterday ${yesterdayVisitors} (${Math.round((1 - todayVisitors / yesterdayVisitors) * 100)}% drop).`,
+      detail: `Today ${todayVisitors} vs yesterday ${yesterdayVisitors} same elapsed window (${Math.round((1 - todayVisitors / yesterdayVisitors) * 100)}% drop).`,
     })
   }
 
@@ -72,7 +81,7 @@ export async function buildDiagnoseContext(): Promise<{
     alerts.push({
       severity: 'critical',
       title: 'WhatsApp clicks down vs yesterday',
-      detail: `Today ${todayWa} vs yesterday ${yesterdayWa}.`,
+      detail: `Today ${todayWa} vs yesterday ${yesterdayWa} same elapsed window.`,
     })
   }
 

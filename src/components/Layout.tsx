@@ -1,7 +1,8 @@
 import { useEffect, lazy, Suspense } from 'react'
 import { useLocation } from 'react-router-dom'
 import { UniverseProvider } from '@/contexts/UniverseContext'
-import { trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
+import { serviceAreaFromPath, trackWhatsAppClick, trackPhoneClick } from '@/lib/analytics'
+import { collectFirstParty } from '@/lib/collect'
 import { siteFacts } from '@/data/siteFacts'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -25,8 +26,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [location.pathname, location.hash])
 
-  // Page views are tracked by GA4 (via GTM-KCBNZBL9) + GA4 Enhanced Measurement
-  // history events. The manual trackPageView call was removed to prevent duplicate page views.
+  // GA4 page views stay on GTM Enhanced Measurement (do not call trackPageView).
+  // First-party Postgres page_views are recorded here so the command center has a journey.
+  useEffect(() => {
+    collectFirstParty('page_view', { service_area: serviceAreaFromPath(location.pathname) })
+  }, [location.pathname])
 
   // Universal Conversion Tracking — catches every WA and Phone click sitewide.
   //

@@ -9,6 +9,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
 import { BAR_SERVICES } from '@/data/bar-services'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { formLeadFields } from '@/lib/collect'
 
 const SITE = 'https://mychef.id'
 const WA_LINK = buildWhatsAppUrl({ serviceName: 'bar services in Bali', intent: 'a consultation' })
@@ -180,6 +181,7 @@ export default function BarServicesContactPage() {
             Services: formData.services.join(', '),
             'Preferred reply channel': formData.preferredChannel,
           },
+          ...formLeadFields(),
         }),
       })
 

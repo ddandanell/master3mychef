@@ -8,6 +8,7 @@ import SectionHeader from '@/components/catering/SectionHeader'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 import { ContactRiskReversal } from '@/components/shared'
 import { trackWhatsAppClick, trackFormStart, trackFormComplete } from '@/lib/analytics'
+import { formLeadFields } from '@/lib/collect'
 import { siteFacts } from '@/data/siteFacts'
 
 const WA = 6289674072020
@@ -164,6 +165,7 @@ export default function ContactPage() {
             'Stay Length / Event Duration': form.duration,
             'Dietary / Cuisine Notes': form.dietary,
           },
+          ...formLeadFields(),
         }),
       })
       setEmailStatus('sent')

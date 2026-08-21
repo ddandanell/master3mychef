@@ -2,6 +2,8 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import EngagementTracker from './components/EngagementTracker'
+import SessionKeepAlive from './components/SessionKeepAlive'
+import GaParityTracker from './components/GaParityTracker'
 
 import { LANDING_PAGE_SLUGS, GUIDE_SLUGS, BLOG_POST_SLUGS, SERVICE_SLUGS, MENU_SLUGS, AREA_SLUGS, MICRO_AREA_SLUGS } from './data/route-slugs'
 import { PUBLISHED_AREA_SLUGS } from './data/privateChefAreas'
@@ -242,13 +244,33 @@ function PageLoader() {
   )
 }
 
+const CommandCenterApp = lazy(() => import('./pages/ops/CommandCenterApp'))
+
 export default function App() {
+  return (
+    <Routes>
+      <Route
+        path="/ops"
+        element={
+          <Suspense fallback={<PageLoader />}>
+            <CommandCenterApp />
+          </Suspense>
+        }
+      />
+      <Route path="*" element={<MarketingApp />} />
+    </Routes>
+  )
+}
+
+function MarketingApp() {
   const subPages = getAllSubPages()
   const locationPaths = getAllLocationPaths()
   const customLocationSlugs = new Set<string>(CUSTOM_LOCATION_PAGE_SLUGS)
 
   return (
     <Layout>
+      <SessionKeepAlive />
+      <GaParityTracker />
       <EngagementTracker />
       <Suspense fallback={<PageLoader />}>
         <Routes>

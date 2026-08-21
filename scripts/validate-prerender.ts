@@ -12,9 +12,9 @@ if (process.env.SKIP_PRERENDER === '1') {
 
 const DIST = './dist'
 
-// Routes that are intentionally client-only (forms). They will stay as SPA shells
-// and are not expected to carry prerendered body content.
-const CLIENT_ONLY_ROUTES = new Set(['book/index.html', 'quote/index.html'])
+// Routes that are intentionally client-only (forms and authenticated tools).
+// They stay as SPA shells and are not expected to carry prerendered body content.
+const CLIENT_ONLY_ROUTES = new Set(['book/index.html', 'quote/index.html', 'ops/index.html'])
 
 // SEO-critical routes that must have a real <h1> and rendered body text.
 const CRITICAL_ROUTES = new Set([

@@ -357,6 +357,12 @@ export function trackFormStart(formId: string, pageSource: string, serviceType?:
   const key = `form_started_${formId}`
   if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem(key)) return
   if (typeof sessionStorage !== 'undefined') sessionStorage.setItem(key, '1')
+  collectFirstParty('form_start', {
+    source: formId,
+    service_area: serviceType ?? serviceAreaFromPath(pageSource),
+    page_path: pageSource,
+    metadata: { form_id: formId },
+  })
   trackEvent('form_start', { form_id: formId, page_source: pageSource, service_type: serviceType ?? '' })
 }
 
@@ -364,6 +370,11 @@ export function trackFormStart(formId: string, pageSource: string, serviceType?:
  * Tracks successful form submission.
  */
 export function trackFormComplete(formId: string, pageSource: string, serviceType?: string, timeToComplete?: number) {
+  try {
+    if (typeof sessionStorage !== 'undefined') sessionStorage.setItem(`form_completed_${formId}`, '1')
+  } catch {
+    /* ignore */
+  }
   collectFirstParty('form_submit', {
     source: formId,
     service_area: serviceType,
@@ -382,6 +393,11 @@ export function trackFormComplete(formId: string, pageSource: string, serviceTyp
  * Tracks CTA button clicks (non-WhatsApp).
  */
 export function trackCTAClick(ctaText: string, pageSource: string, serviceType?: string, destinationUrl?: string) {
+  collectFirstParty('cta_click', {
+    service_area: serviceType ?? serviceAreaFromPath(pageSource),
+    page_path: pageSource,
+    metadata: { cta_text: ctaText, destination_url: destinationUrl ?? '' },
+  })
   trackEvent('cta_click', {
     cta_text: ctaText,
     page_source: pageSource,
@@ -394,6 +410,11 @@ export function trackCTAClick(ctaText: string, pageSource: string, serviceType?:
  * Tracks scroll depth milestones (25, 50, 75, 90).
  */
 export function trackScrollDepth(depth: number, pageSource: string) {
+  collectFirstParty('scroll_depth', {
+    service_area: serviceAreaFromPath(pageSource),
+    page_path: pageSource,
+    metadata: { scroll_depth: depth },
+  })
   trackEvent('scroll_depth', { scroll_depth: depth, page_source: pageSource })
 }
 
@@ -401,5 +422,39 @@ export function trackScrollDepth(depth: number, pageSource: string) {
  * Tracks time-on-page milestones (30, 60, 120, 180 seconds).
  */
 export function trackTimeOnPage(seconds: number, pageSource: string) {
+  collectFirstParty('time_on_page', {
+    service_area: serviceAreaFromPath(pageSource),
+    page_path: pageSource,
+    metadata: { time_on_page: seconds, elapsed_ms: seconds * 1000 },
+  })
   trackEvent('time_on_page', { time_on_page: seconds, page_source: pageSource })
+}
+
+export function trackQuoteAddonSelected(addon: string, serviceType: string, pageSource = '/quote') {
+  collectFirstParty('quote_addon_selected', {
+    service_area: serviceType || 'quote',
+    page_path: pageSource,
+    metadata: { addon },
+  })
+  trackEvent('quote_addon_selected', {
+    addon,
+    service_type: serviceType,
+    page_source: pageSource,
+  })
+}
+
+export function trackExitIntentShown(pageSource: string) {
+  collectFirstParty('exit_intent_shown', {
+    service_area: serviceAreaFromPath(pageSource),
+    page_path: pageSource,
+  })
+  trackEvent('exit_intent_shown', { page_source: pageSource })
+}
+
+export function trackConciergeOpened(pageSource: string) {
+  collectFirstParty('concierge_opened', {
+    service_area: serviceAreaFromPath(pageSource),
+    page_path: pageSource,
+  })
+  trackEvent('concierge_opened', { page_source: pageSource })
 }

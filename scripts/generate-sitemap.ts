@@ -42,7 +42,7 @@ const URLS: { path: string; priority: number; changefreq: string; lastmod?: stri
 // They are still served (inject-meta) with a noindex tag; they just don't belong here.
 // Must stay in sync with `noindexFollowPaths` / `noindexNoFollowPaths` in scripts/inject-meta.ts.
 // A URL that is noindex must never appear here — that contradiction is what D-022 fixed for /calculator.
-const NOINDEX_PATHS = new Set(['/404', '/book', '/calculator', '/join-our-team', '/quote']);
+const NOINDEX_PATHS = new Set(['/404', '/book', '/calculator', '/join-our-team', '/quote', '/ops']);
 
 // Bar-services is an unproven test line with no clients (owner, 2026-07-28). All 21 of
 // its URLs sat in GSC "Discovered - currently not indexed", consuming crawl budget the

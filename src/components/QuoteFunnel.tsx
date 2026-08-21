@@ -11,7 +11,8 @@ import {
   Plus,
 } from 'lucide-react'
 import SeoHead, { breadcrumbSchema } from './SeoHead'
-import { trackEvent, trackFormStart, trackFormComplete, ESTIMATED_LEAD_VALUE_IDR } from '@/lib/analytics'
+import { trackEvent, trackFormStart, trackFormComplete, trackQuoteAddonSelected, ESTIMATED_LEAD_VALUE_IDR } from '@/lib/analytics'
+import { collectFirstParty } from '@/lib/collect'
 import { WHATSAPP_NUMBER } from '@/lib/whatsapp'
 
 /**
@@ -557,6 +558,15 @@ export default function QuoteFunnel() {
       page_source: '/quote',
       total_steps: totalSteps,
     })
+    collectFirstParty('quote_step_viewed', {
+      service_area: form.service || 'quote',
+      page_path: '/quote',
+      metadata: {
+        step_number: step + 1,
+        step_title: titles[step] ?? '',
+        total_steps: totalSteps,
+      },
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step, submitted])
 
@@ -600,6 +610,15 @@ export default function QuoteFunnel() {
       currency: 'IDR',
       guests: form.guestsFlexible ? 'flexible' : form.guests,
       area: form.area || form.villaName || '',
+    })
+    collectFirstParty('quote_submitted', {
+      service_area: form.service || 'quote',
+      page_path: '/quote',
+      metadata: {
+        guests: form.guestsFlexible ? 'flexible' : form.guests,
+        area: form.area || form.villaName || '',
+        value: ESTIMATED_LEAD_VALUE_IDR,
+      },
     })
     trackFormComplete('quote_funnel', '/quote', form.service ?? '')
     setSubmitted(true)
@@ -869,12 +888,7 @@ export default function QuoteFunnel() {
                 onToggle={(label) => {
                   const next = toggleInList(form.addOns, label)
                   update('addOns', next)
-                  trackEvent('quote_addon_selected', {
-                    addon_title: label,
-                    selected: next.includes(label),
-                    service_type: form.service ?? '',
-                    page_source: '/quote',
-                  })
+                  trackQuoteAddonSelected(label, form.service ?? '')
                 }}
               />
             )}
@@ -906,12 +920,7 @@ export default function QuoteFunnel() {
                 onToggle={(label) => {
                   const next = toggleInList(form.addOns, label)
                   update('addOns', next)
-                  trackEvent('quote_addon_selected', {
-                    addon_title: label,
-                    selected: next.includes(label),
-                    service_type: form.service ?? '',
-                    page_source: '/quote',
-                  })
+                  trackQuoteAddonSelected(label, form.service ?? '')
                 }}
               />
             )}
@@ -955,12 +964,7 @@ export default function QuoteFunnel() {
                 onToggle={(label) => {
                   const next = toggleInList(form.addOns, label)
                   update('addOns', next)
-                  trackEvent('quote_addon_selected', {
-                    addon_title: label,
-                    selected: next.includes(label),
-                    service_type: form.service ?? '',
-                    page_source: '/quote',
-                  })
+                  trackQuoteAddonSelected(label, form.service ?? '')
                 }}
               />
             )}

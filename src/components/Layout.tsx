@@ -29,7 +29,28 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   // GA4 page views stay on GTM Enhanced Measurement (do not call trackPageView).
   // First-party Postgres page_views are recorded here so the command center has a journey.
   useEffect(() => {
-    collectFirstParty('page_view', { service_area: serviceAreaFromPath(location.pathname) })
+    const area = serviceAreaFromPath(location.pathname)
+    collectFirstParty('page_view', { service_area: area })
+
+    const path = location.pathname.toLowerCase()
+    const servicePaths = new Set([
+      'homepage', 'catering', 'private-dining', 'events', 'experiences',
+      'in-villa-staff', 'private-chef', 'location',
+    ])
+    if (servicePaths.has(area) && area !== 'homepage') {
+      collectFirstParty('service_view', { service_area: area, metadata: { path } })
+    }
+    if (path === '/pricing' || path.startsWith('/pricing/')) {
+      collectFirstParty('pricing_view', { service_area: area })
+    }
+    if (
+      path === '/menus' ||
+      path.startsWith('/menus/') ||
+      path === '/fine-dining/menus' ||
+      path.startsWith('/fine-dining/menus/')
+    ) {
+      collectFirstParty('menu_view', { service_area: area })
+    }
   }, [location.pathname])
 
   // Universal Conversion Tracking — catches every WA and Phone click sitewide.

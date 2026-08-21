@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { MessageCircle, X, Gift } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 import { PHONE } from '@/data/siteArchitecture'
-import { trackEvent } from '@/lib/analytics'
+import { trackExitIntentShown } from '@/lib/analytics'
 
 const SESSION_KEY = 'mychef_exit_popup_shown'
 
@@ -32,7 +32,7 @@ export default function ExitIntentPopup() {
     if (shouldSkip()) return
     setVisible(true)
     sessionStorage.setItem(SESSION_KEY, '1')
-    trackEvent('exit_intent_shown', { page_source: location.pathname })
+    trackExitIntentShown(location.pathname)
   }, [shouldSkip, location.pathname])
 
   useEffect(() => {

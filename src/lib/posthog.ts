@@ -248,6 +248,32 @@ export function capturePostHog(event: string, params?: Record<string, unknown>):
 }
 
 /**
+ * Join key for Neon ↔ PostHog ↔ WhatsApp. Uses lead_ref (MC-XXXXXX), not email.
+ * person_profiles is identified_only, so this also enables person profiles for replay linking.
+ */
+export function identifyLeadRef(leadRef: string): void {
+  if (!initialised || !leadRef) return
+  try {
+    if (shouldExcludeFromAnalytics()) return
+    posthog.identify(leadRef, { lead_ref: leadRef })
+  } catch {
+    /* never break the page */
+  }
+}
+
+export function getPostHogIds(): { distinctId?: string; sessionId?: string } {
+  if (!initialised) return {}
+  try {
+    return {
+      distinctId: posthog.get_distinct_id?.() || undefined,
+      sessionId: posthog.get_session_id?.() || undefined,
+    }
+  } catch {
+    return {}
+  }
+}
+
+/**
  * Playback URL for the current session, for pasting into a bug report or a
  * WhatsApp thread with a customer who hit a problem.
  */

@@ -1,11 +1,14 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { ingestCollectEvent, parseCollectBody } from '../lib/ingest.js'
+import { ingestCollectEvent, parseCollectBody, requestContextFromHeaders } from '../lib/ingest.js'
 
 const ALLOWED_ORIGINS = [
   'https://mychef.id',
   'https://www.mychef.id',
   'http://localhost:5173',
   'http://localhost:4173',
+  'http://localhost:3210',
+  'http://localhost:3000',
+  'http://127.0.0.1:3210',
 ]
 
 const MAX_BODY_CHARS = 16_384
@@ -52,7 +55,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (!payload) {
       return res.status(204).end()
     }
-    await ingestCollectEvent(payload)
+    await ingestCollectEvent(payload, requestContextFromHeaders(req.headers as Record<string, string | string[] | undefined>))
   } catch (error) {
     console.error('Failed to ingest collect event:', error)
   }

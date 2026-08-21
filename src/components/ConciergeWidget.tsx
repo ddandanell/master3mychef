@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ChefHat, X, UtensilsCrossed, Users, Cake, Briefcase, MessageCircle, Sparkles } from 'lucide-react'
-import { trackWhatsAppConversion, trackEvent } from '@/lib/analytics'
+import { trackWhatsAppConversion, trackConciergeOpened } from '@/lib/analytics'
 
 const WHATSAPP_NUMBER = '6289674072020'
 
@@ -172,7 +172,7 @@ export default function ConciergeWidget() {
         onClick={() => {
           const next = !isOpen
           setIsOpen(next)
-          if (next) trackEvent('concierge_opened', { page_source: location.pathname })
+          if (next) trackConciergeOpened(location.pathname)
         }}
         aria-label="Open myCHEF Concierge"
         aria-expanded={isOpen}

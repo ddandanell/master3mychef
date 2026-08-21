@@ -383,7 +383,7 @@ function injectMeta(html: string, path: string, title: string, description: stri
   // no stated benefit — the same reasoning already applied to /join-our-team.
   // Screaming Frog flagged this as "Directives: Nofollow" (High, 2 URLs).
   // /404 keeps nofollow: it should neither be indexed nor pass equity onwards.
-  const noindexNoFollowPaths = ['/404']
+  const noindexNoFollowPaths = ['/404', '/ops']
   const noindexFollowPaths = ['/quote', '/book', '/calculator']
   if (noindexNoFollowPaths.includes(path)) {
     html = html.replace(
@@ -481,6 +481,7 @@ for (const entry of SITEMAP) {
 const EXTRA_NOINDEX_PAGES = [
   { path: '/book', title: 'Book myCHEF | Private Chef & Catering Bali', description: 'Book your private chef, villa catering, or event in Bali. Send your date, villa, and guest count for a fast quote.' },
   { path: '/quote', title: 'Get a Custom Quote — Private Chef in Bali | myCHEF', description: 'Get a fast, itemised quote for private chef, villa catering or event staffing in Bali. Tell us your occasion, guests and location — we reply in 24 hours.' },
+  { path: '/ops', title: 'MyChef Command Center', description: 'Internal MyChef operations dashboard. Not for public indexing.' },
 ]
 for (const p of EXTRA_NOINDEX_PAGES) {
   try {

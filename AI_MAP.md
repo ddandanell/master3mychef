@@ -63,7 +63,7 @@ Production tree is **repo root** `src/`, `public/`, `api/`, `index.html`. Do not
 
 Most pages → WhatsApp (`wa.me`). `/book` and `/quote` are funnels into WhatsApp. Bar/contact forms POST `/api/send-email`.
 
-First-party journey data lives in Neon: `page_view` / `whatsapp_click` / `form_submit` / `phone_click` via `POST /api/collect` (`src/lib/collect.ts`, `lib/ingest.ts`). Visitors are keyed by `lead_ref` (`MC-XXXXXX` from `src/lib/attribution.ts`). Form rows also write `leads`. Bookings and revenue are not in Postgres yet. GA4 and PostHog stay as parallel analytics.
+First-party journey data lives in Neon (source of truth). PostHog is the behavioral engine (replay/heatmaps); GA4 is a parallel benchmark. Events include GA-parity plus MyChef taxonomy: `service_view`, `pricing_view`, `menu_view`, `form_start`, `form_abandon`, `quote_*`, `exit_intent_shown`, `concierge_opened`. Visitors store `posthog_distinct_id` (identify by `lead_ref`). Named funnel + dropoffs on ops-stats. GSC → `seo_page_query_daily` via `scripts/sync-gsc-daily.ts`. Experiments → `ops_experiments` + `/api/ops-experiments`. Alerts → `/api/ops-alerts`.
 
 ---
 
@@ -79,7 +79,7 @@ First-party journey data lives in Neon: `page_view` / `whatsapp_click` / `form_s
 | Bing | Cursor MCP `user-bing-webmaster` | Site verified; keys are user MCP env, not repo |
 | SMTP | `api/send-email.ts` | `SMTP_*` must exist on Vercel |
 | Neon Postgres | `lib/leads.ts`, `lib/ingest.ts`, `api/collect.ts` | `DATABASE_URL` (pooled). Journey events + form leads. |
-| Ops dashboard | `api/ops.ts` | HTML at `/api/ops`. JSON at `/api/ops-stats`. Gate: `OPS_DASHBOARD_KEY`. |
+| Ops dashboard | `/ops` → `CommandCenterApp.tsx` (Pulse / Analyse / Funnel / People / Money / Experiments / Alerts / Ask / System), `api/ops-*.ts` | Neon SoT. Flexible periods/comparisons use `/api/ops-analytics` (maximum 730 days). Local login defaults to `admin` / `admin`; production requires `OPS_DASHBOARD_USER` + `OPS_DASHBOARD_PASSWORD`. Taxonomy SoT: `docs/event-taxonomy.md` + `lib/ingest.ts` allowlist. |
 
 Local `.env.local` is gitignored. Do not commit `CREDENTIALS-MOVE-GUIDE.md` or service-account JSON.
 

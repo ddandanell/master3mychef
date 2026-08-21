@@ -79,6 +79,7 @@ First-party journey data lives in Neon: `page_view` / `whatsapp_click` / `form_s
 | Bing | Cursor MCP `user-bing-webmaster` | Site verified; keys are user MCP env, not repo |
 | SMTP | `api/send-email.ts` | `SMTP_*` must exist on Vercel |
 | Neon Postgres | `lib/leads.ts`, `lib/ingest.ts`, `api/collect.ts` | `DATABASE_URL` (pooled). Journey events + form leads. |
+| Ops dashboard | `api/ops.ts` | HTML at `/api/ops`. JSON at `/api/ops-stats`. Gate: `OPS_DASHBOARD_KEY`. |
 
 Local `.env.local` is gitignored. Do not commit `CREDENTIALS-MOVE-GUIDE.md` or service-account JSON.
 

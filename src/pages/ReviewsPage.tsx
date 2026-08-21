@@ -184,35 +184,24 @@ function reviewIsoDate(d: string): string {
   const m = d.match(/([A-Za-z]+)\s+(\d{4})/)
   return m && REVIEW_MONTHS[m[1]] ? `${m[2]}-${REVIEW_MONTHS[m[1]]}` : d
 }
-const REVIEW_AVG = (REVIEWS.reduce((sum, r) => sum + r.rating, 0) / REVIEWS.length).toFixed(1)
-const reviewAggregateSchema = {
+// Standalone Review nodes. Type "Review" (with nested Person/Rating) survives the
+// prerender's @type dedup, which drops any second "LocalBusiness" (or any node that
+// nests a shell type like Place). Each review references the business by @id; the
+// business-level aggregateRating lives on the shell LocalBusiness in index.html.
+const reviewSchemas = REVIEWS.map((r) => ({
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  '@id': `${SITE}/#business`,
-  name: 'myCHEF',
-  url: SITE,
-  image: `${SITE}/generated/mychef-ui-bali-testimonials-bg.webp`,
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: REVIEW_AVG,
-    reviewCount: REVIEWS.length,
-    bestRating: '5',
-    worstRating: '1',
-  },
-  review: REVIEWS.map((r) => ({
-    '@type': 'Review',
-    author: { '@type': 'Person', name: r.name },
-    datePublished: reviewIsoDate(r.date),
-    reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
-    reviewBody: r.review,
-    ...(r.location ? { locationCreated: { '@type': 'Place', name: r.location } } : {}),
-  })),
-}
+  '@type': 'Review',
+  itemReviewed: { '@id': `${SITE}/#business` },
+  author: { '@type': 'Person', name: r.name },
+  datePublished: reviewIsoDate(r.date),
+  reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5, worstRating: 1 },
+  reviewBody: r.review,
+}))
 
 const REVIEWS_SCHEMAS = [
   breadcrumbSchema('Reviews', `${SITE}/reviews`),
   faqPageSchema(REVIEWS_FAQS.map((f) => ({ question: f.q, answer: f.a }))),
-  reviewAggregateSchema,
+  ...reviewSchemas,
 ]
 
 export default function ReviewsPage() {

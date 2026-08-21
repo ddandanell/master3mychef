@@ -50,11 +50,14 @@ const NOINDEX_PATHS = new Set(['/404', '/book', '/calculator', '/join-our-team',
 // Excluded from sitemap.xml ONLY. The pages stay in SITEMAP so inject-meta and prerender
 // still generate their static HTML — removing them there made every bar URL 404.
 // Reverse by deleting this filter.
-const isBarServices = (path: string) => path === '/bar-services/' || path.startsWith('/bar-services/');
+// 2026-08-21: bar-services re-included in the sitemap. The pages are a live revenue
+// service line, are already crawled via nav links, and were sitting in GSC
+// "crawled - currently not indexed" partly for lacking a sitemap signal. Owner wants
+// them indexed. (To re-exclude for crawl budget, restore the isBarServices filter.)
 
 // Fjern redirects fra sitemap
 const REDIRECT_PATHS = new Set(REDIRECTS.map(r => r.from));
-const FILTERED_URLS = URLS.filter(url => !REDIRECT_PATHS.has(url.path) && !NOINDEX_PATHS.has(url.path) && !isBarServices(url.path));
+const FILTERED_URLS = URLS.filter(url => !REDIRECT_PATHS.has(url.path) && !NOINDEX_PATHS.has(url.path));
 
 // Deduplicate by path (sitemap already includes journal posts, but this ensures no duplicates)
 const seen = new Set<string>();

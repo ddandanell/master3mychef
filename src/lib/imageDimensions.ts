@@ -153,7 +153,6 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-ui-bali-guide-wedding.webp": { width: 1344, height: 768 },
   "/generated/mychef-misc-bali-help-hero.webp": { width: 1344, height: 768 },
   "/generated/mychef-catering-bali-hero-babiguling.webp": { width: 1440, height: 800 },
-  "/generated/mychef-catering-bali-hero-buffet-catering.webp": { width: 1440, height: 800 },
   "/generated/mychef-events-bali-corporate-events.webp": { width: 1440, height: 800 },
   "/generated/mychef-misc-bali-hero-how-it-works.webp": { width: 1216, height: 832 },
   "/generated/mychef-experience-bali-hero-retreats.webp": { width: 1440, height: 800 },

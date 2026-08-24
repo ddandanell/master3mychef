@@ -62,6 +62,7 @@
 /menus/vegan  /fine-dining/menus  301
 /menus/modern-european  /fine-dining/menus  301
 /menus/halal  /fine-dining/menus  301
+/menus/balinese  /fine-dining/menus  301
 /guide/bali-cuisine-glossary  /fine-dining/menus  301
 /blog  /journal  301
 /blog/private-chef-bali-cost-breakdown-2026  /pricing  301
@@ -205,6 +206,7 @@
 /jakarta  /private-dining-indonesia  301
 /private-chef-kelapa-gading  /private-dining-indonesia  301
 /private-chef-kemang  /private-dining-indonesia  301
+/private-chef-pondok-indah  /private-dining-indonesia  301
 /private-chef-scbd  /private-dining-indonesia  301
 /kemang  /private-dining-indonesia  301
 /private-chef-puri-indah  /private-dining-indonesia  301
@@ -217,3 +219,7 @@
 /join-team  /join-our-team  301
 /careers  /join-our-team  301
 /jobs  /join-our-team  301
+/bar-services  /bar-services/  301
+/bar-services/contact  /bar-services/contact/  301
+/bar-services/faq  /bar-services/faq/  301
+/bar-services/resources  /bar-services/resources/  301

@@ -330,6 +330,11 @@
       "permanent": true
     },
     {
+      "source": "/menus/balinese",
+      "destination": "/fine-dining/menus",
+      "permanent": true
+    },
+    {
       "source": "/guide/bali-cuisine-glossary",
       "destination": "/fine-dining/menus",
       "permanent": true
@@ -1045,6 +1050,11 @@
       "permanent": true
     },
     {
+      "source": "/private-chef-pondok-indah",
+      "destination": "/private-dining-indonesia",
+      "permanent": true
+    },
+    {
       "source": "/private-chef-scbd",
       "destination": "/private-dining-indonesia",
       "permanent": true
@@ -1102,6 +1112,26 @@
     {
       "source": "/jobs",
       "destination": "/join-our-team",
+      "permanent": true
+    },
+    {
+      "source": "/bar-services",
+      "destination": "/bar-services/",
+      "permanent": true
+    },
+    {
+      "source": "/bar-services/contact",
+      "destination": "/bar-services/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/bar-services/faq",
+      "destination": "/bar-services/faq/",
+      "permanent": true
+    },
+    {
+      "source": "/bar-services/resources",
+      "destination": "/bar-services/resources/",
       "permanent": true
     }
   ],

@@ -96,6 +96,8 @@ export default function PressPage() {
             <img
               src="/generated/mychef-misc-bali-partner-platform-dashboard.webp"
               alt="myCHEF media kit dashboard and press-ready brand assets"
+              width={1440}
+              height={800}
               className="h-56 w-full rounded-[24px] object-cover"
               loading="eager"
             />

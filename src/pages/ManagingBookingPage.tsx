@@ -139,6 +139,8 @@ export default function ManagingBookingPage() {
             <img
               src="/generated/mychef-misc-bali-contact-concierge.webp"
               alt="myCHEF concierge coordinating a booking for a Bali villa"
+              width={1200}
+              height={1044}
               className="h-full min-h-[280px] w-full object-cover"
               loading="eager"
             />

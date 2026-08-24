@@ -117,6 +117,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/menus/vegan', to: '/fine-dining/menus', reason: 'Consolidate menu pages.' },
   { from: '/menus/modern-european', to: '/fine-dining/menus', reason: 'Consolidate menu pages.' },
   { from: '/menus/halal', to: '/fine-dining/menus', reason: 'Consolidate menu pages.' },
+  { from: '/menus/balinese', to: '/fine-dining/menus', reason: 'GSC orphan: Balinese menu page → consolidated fine-dining menus.' },
   { from: '/guide/bali-cuisine-glossary', to: '/fine-dining/menus', reason: 'Old cuisine guide → fine-dining menus.' },
 
   // --- Blog posts & journal ---
@@ -338,6 +339,7 @@ export const REDIRECTS: Redirect[] = [
   { from: '/jakarta', to: '/private-dining-indonesia', reason: 'Jakarta root → private dining Indonesia.' },
   { from: '/private-chef-kelapa-gading', to: '/private-dining-indonesia', reason: 'GSC 404: Kelapa Gading → private dining Indonesia.' },
   { from: '/private-chef-kemang', to: '/private-dining-indonesia', reason: 'GSC 404: Kemang → private dining Indonesia.' },
+  { from: '/private-chef-pondok-indah', to: '/private-dining-indonesia', reason: 'GSC orphan: Jakarta Pondok Indah → private dining Indonesia.' },
   { from: '/private-chef-scbd', to: '/private-dining-indonesia', reason: 'GSC 404: SCBD → private dining Indonesia.' },
   { from: '/kemang', to: '/private-dining-indonesia', reason: 'Jakarta Kemang residual → private dining Indonesia.' },
   { from: '/private-chef-puri-indah', to: '/private-dining-indonesia', reason: 'GSC 404 page-2: Puri Indah Jakarta → private dining Indonesia.' },
@@ -351,6 +353,15 @@ export const REDIRECTS: Redirect[] = [
   { from: '/join-team', to: '/join-our-team', reason: 'Legacy/short careers path → join-our-team (JobPosting).' },
   { from: '/careers', to: '/join-our-team', reason: 'Careers alias → join-our-team.' },
   { from: '/jobs', to: '/join-our-team', reason: 'Jobs alias → join-our-team.' },
+
+  // --- Bar-services trailing-slash normalization ---
+  // SF crawl: no-slash variants are live (200) and self-canonicalize to the slash
+  // version already — canonical tag was doing its job. Hardening to a real 301
+  // removes the duplicate live URL entirely instead of relying on the tag.
+  { from: '/bar-services', to: '/bar-services/', reason: 'SF: non-slash variant live + self-canonicalized → enforce with real 301.' },
+  { from: '/bar-services/contact', to: '/bar-services/contact/', reason: 'SF: non-slash variant live + self-canonicalized → enforce with real 301.' },
+  { from: '/bar-services/faq', to: '/bar-services/faq/', reason: 'SF: non-slash variant live + self-canonicalized → enforce with real 301.' },
+  { from: '/bar-services/resources', to: '/bar-services/resources/', reason: 'SF: non-slash variant live + self-canonicalized → enforce with real 301.' },
 ]
 
 /** Lookup map for the React Router fallback. */

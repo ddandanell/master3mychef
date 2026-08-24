@@ -253,6 +253,8 @@ export default function ReviewsPage() {
             <img
               src="/generated/mychef-ui-bali-testimonials-bg.webp"
               alt="myCHEF Bali guest testimonials and social proof"
+              width={1600}
+              height={1066}
               className="h-56 w-full object-cover"
               loading="eager"
             />

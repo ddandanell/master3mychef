@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ChefHat, X, UtensilsCrossed, Users, Cake, Briefcase, MessageCircle, Sparkles } from 'lucide-react'
 import { trackWhatsAppConversion, trackEvent } from '@/lib/analytics'
+import OptimizedImage from '@/components/OptimizedImage'
 
 const WHATSAPP_NUMBER = '6289674072020'
 
@@ -200,7 +201,7 @@ export default function ConciergeWidget() {
         <div className="sticky top-0 bg-[#0A0908] px-4 pt-4 pb-3 flex items-center justify-between border-b border-[#C5A028]/15">
           <div className="flex items-center gap-2">
             <div className="flex items-center justify-center h-9 w-9 rounded-full bg-[#C5A028]/10 overflow-hidden border border-[#C5A028]/20">
-              <img
+              <OptimizedImage
                 src={persona === 'ai' ? '/generated/mychef-misc-bali-avatar-ai.webp' : '/generated/mychef-finedining-bali-luna-chef-portrait.webp'}
                 alt={persona === 'ai' ? 'myCHEF AI' : 'Adriano'}
                 className="h-full w-full object-cover"

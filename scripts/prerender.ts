@@ -475,7 +475,7 @@ async function renderRoute(browser: Browser, route: Route): Promise<{ ok: boolea
       const type = r.request().resourceType()
       const url = r.request().url()
       if (type === 'image' || type === 'media' || type === 'font') return r.abort()
-      if (/googletagmanager|google-analytics|analytics\.google|vercel-scripts|vercel-insights|fonts\.googleapis|fonts\.gstatic|doubleclick|facebook|hotjar/i.test(url)) return r.abort()
+      if (/googletagmanager|google-analytics|analytics\.google|vercel-scripts|vercel-insights|fonts\.googleapis|fonts\.gstatic|doubleclick|facebook|hotjar|web-grower/i.test(url)) return r.abort()
       return r.continue()
     })
 

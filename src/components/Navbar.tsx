@@ -43,14 +43,15 @@ interface NavItem {
 // and the pillar page at /private-chef-bali is where that demand should land.
 // Contact and Help are merged into a single item to make room without losing
 // either page — both remain live and are reachable from the merged dropdown.
-const NAV_ITEMS: NavItem[] = [
+const DESKTOP_CORE_ITEMS: NavItem[] = [
   { label: 'Private Chef', href: '/private-chef-bali', icon: ChefHat, accent: '#C5A028' },
   { label: 'Catering', href: '/catering', icon: Users, accent: '#C5A028' },
   { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
   { label: 'Locations', href: '/locations', icon: MapPin, accent: '#C5A028' },
   { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
-  { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
 ]
+
+const CONTACT_ITEM: NavItem = { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' }
 
 const MOBILE_PRIMARY: NavItem[] = [
   { label: 'Private Chef', href: '/private-chef-bali', icon: ChefHat, accent: '#C5A028' },
@@ -223,6 +224,159 @@ function groupSubpages(subpages: NavSubpage[]): { group: string; items: NavSubpa
   return Array.from(map.entries()).map(([group, items]) => ({ group, items }))
 }
 
+interface DesktopNavItemProps {
+  item: NavItem
+  align: 'left' | 'center' | 'right'
+  pathname: string
+  openDropdown: string | null
+  preview: DropdownPreview | null
+  openedOnce: boolean
+  onOpen: (href: string) => void
+  onScheduleClose: () => void
+  onNavigate: () => void
+  onPreview: (item: NavItem, subpage: { label: string; href: string }) => void
+}
+
+function DesktopNavItem({
+  item,
+  align,
+  pathname,
+  openDropdown,
+  preview,
+  openedOnce,
+  onOpen,
+  onScheduleClose,
+  onNavigate,
+  onPreview,
+}: DesktopNavItemProps) {
+  const Icon = item.icon
+  const active = isActivePath(pathname, item.href)
+  const subpages = NAV_SUBPAGES[item.href] ?? []
+  const hasDropdown = subpages.length > 0
+  const isOpen = openDropdown === item.href
+  const alignClass = align === 'left' ? 'left-0' : align === 'right' ? 'right-0' : 'left-1/2 -translate-x-1/2'
+
+  return (
+    <div
+      className="relative group shrink-0"
+      onMouseEnter={() => hasDropdown && onOpen(item.href)}
+      onMouseLeave={() => hasDropdown && onScheduleClose()}
+      onFocus={(e) => {
+        if (hasDropdown && !e.currentTarget.contains(e.relatedTarget as Node | null)) {
+          onOpen(item.href)
+        }
+      }}
+      onBlur={(e) => {
+        if (hasDropdown && !e.currentTarget.contains(e.relatedTarget as Node | null)) {
+          onScheduleClose()
+        }
+      }}
+    >
+      <Link
+        to={item.href}
+        onClick={onNavigate}
+        aria-haspopup={hasDropdown || undefined}
+        aria-expanded={hasDropdown ? isOpen : undefined}
+        aria-current={active ? 'page' : undefined}
+        className={`relative flex items-center gap-1 2xl:gap-1.5 py-1 whitespace-nowrap transition-colors duration-200 ${
+          active || isOpen ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
+        }`}
+      >
+        <Icon
+          className="hidden 2xl:block 2xl:w-4 2xl:h-4 transition-transform duration-300 group-hover:scale-110"
+          strokeWidth={1.5}
+        />
+        <span
+          className="text-[10.5px] xl:text-[11px] 2xl:text-[12px] uppercase tracking-[0.06em] 2xl:tracking-[0.12em] font-medium"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
+          {item.label}
+        </span>
+        {hasDropdown && (
+          <ChevronDown
+            className={`w-2.5 h-2.5 xl:w-3 xl:h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+            strokeWidth={1.5}
+          />
+        )}
+        <span className={`absolute -bottom-0.5 left-0 right-0 h-px bg-[#C5A028] transition-all duration-300 origin-left ${
+          active || isOpen ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+        }`} />
+      </Link>
+
+      {hasDropdown && (
+        <div
+          className={`absolute top-full z-20 pt-3 transition-all duration-200 ease-out ${alignClass} ${
+            isOpen
+              ? 'pointer-events-auto translate-y-0 opacity-100'
+              : 'pointer-events-none invisible -translate-y-1 opacity-0'
+          }`}
+        >
+          <div className="flex overflow-hidden rounded-2xl border border-[#C5A028]/20 bg-[#0F0E0C]/95 shadow-2xl shadow-black/50 backdrop-blur-xl">
+            <div className="w-64 p-3">
+              <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-1">
+                {groupSubpages(subpages).map(({ group, items }) => (
+                  <div key={group}>
+                    <p
+                      className="px-3 pb-1.5 pt-1 text-[10px] uppercase tracking-[0.22em] text-[#C5A028]/80"
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                    >
+                      {group === '' ? `${item.label} Pages` : group}
+                    </p>
+                    <div className="space-y-0.5">
+                      {items.map((subpage) => {
+                        const subpageActive = isActivePath(pathname, subpage.href)
+                        return (
+                          <Link
+                            key={subpage.href}
+                            to={subpage.href}
+                            onClick={onNavigate}
+                            onMouseEnter={() => onPreview(item, subpage)}
+                            onFocus={() => onPreview(item, subpage)}
+                            className={`flex items-center gap-2.5 rounded-xl px-3 py-2 text-sm transition-all duration-200 ${
+                              subpageActive
+                                ? 'bg-[#C5A028]/15 text-[#C5A028]'
+                                : 'text-white/70 hover:bg-white/5 hover:text-[#C5A028] hover:translate-x-0.5'
+                            }`}
+                            style={{ fontFamily: "'Playfair Display', serif" }}
+                          >
+                            {subpage.icon && getIconComponent(subpage.icon) &&
+                              (() => {
+                                const SubIcon = getIconComponent(subpage.icon)
+                                return SubIcon ? <SubIcon className="w-4 h-4 flex-shrink-0 opacity-70" strokeWidth={1.5} /> : null
+                              })()
+                            }
+                            {subpage.label}
+                          </Link>
+                        )
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {preview && openedOnce && (
+              <div className="relative w-52 overflow-hidden">
+                <img
+                  key={preview.src}
+                  src={preview.src}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover animate-[nav-image-fade_0.4s_ease]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
+                <p className="absolute inset-x-3 bottom-3 text-[10px] font-medium uppercase tracking-[0.2em] text-white/85">
+                  {preview.caption}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
@@ -325,145 +479,40 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop nav — hidden on mobile/tablet */}
-          <div className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-6 flex-1 justify-center min-w-0">
-            {NAV_ITEMS.map((item, index) => {
-              const Icon = item.icon
-              const active = isActivePath(location.pathname, item.href)
-              const subpages = NAV_SUBPAGES[item.href] ?? []
-              const hasDropdown = subpages.length > 0
-              const isOpen = openDropdown === item.href
-              const preview = dropdownPreviews[item.href] ?? defaultPreviewFor(item)
-              return (
-                <div
-                  key={item.href}
-                  className="relative group shrink-0"
-                  onMouseEnter={() => hasDropdown && openDropdownNow(item.href)}
-                  onMouseLeave={() => hasDropdown && scheduleClose()}
-                  onFocus={(e) => {
-                    if (hasDropdown && !e.currentTarget.contains(e.relatedTarget as Node | null)) {
-                      openDropdownNow(item.href)
-                    }
-                  }}
-                  onBlur={(e) => {
-                    if (hasDropdown && !e.currentTarget.contains(e.relatedTarget as Node | null)) {
-                      scheduleClose()
-                    }
-                  }}
-                >
-                  <Link
-                    to={item.href}
-                    onClick={() => setOpenDropdown(null)}
-                    aria-haspopup={hasDropdown || undefined}
-                    aria-expanded={hasDropdown ? isOpen : undefined}
-                    aria-current={active ? 'page' : undefined}
-                    className={`relative flex items-center gap-1 xl:gap-1.5 py-1 whitespace-nowrap transition-colors duration-200 ${
-                      active || isOpen ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
-                    }`}
-                  >
-                    <Icon
-                      className="hidden xl:block xl:w-3.5 xl:h-3.5 2xl:w-4 2xl:h-4 transition-transform duration-300 group-hover:scale-110"
-                      strokeWidth={1.5}
-                    />
-                    <span
-                      className="text-[10.5px] xl:text-[11px] 2xl:text-[12px] uppercase tracking-[0.06em] 2xl:tracking-[0.12em] font-medium"
-                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                    >
-                      {item.label}
-                    </span>
-                    {hasDropdown && (
-                      <ChevronDown
-                        className={`w-2.5 h-2.5 xl:w-3 xl:h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-                        strokeWidth={1.5}
-                      />
-                    )}
-                    {/* Animated underline */}
-                    <span className={`absolute -bottom-0.5 left-0 right-0 h-px bg-[#C5A028] transition-all duration-300 origin-left ${
-                      active || isOpen ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                    }`} />
-                  </Link>
-
-                  {hasDropdown && (
-                    <div
-                      className={`absolute top-full z-20 pt-3 transition-all duration-200 ease-out ${
-                        index === 0 ? 'left-0' : index >= 4 ? 'right-0' : 'left-1/2 -translate-x-1/2'
-                      } ${
-                        isOpen
-                          ? 'pointer-events-auto translate-y-0 opacity-100'
-                          : 'pointer-events-none invisible -translate-y-1 opacity-0'
-                      }`}
-                    >
-                      <div className="flex overflow-hidden rounded-2xl border border-[#C5A028]/20 bg-[#0F0E0C]/95 shadow-2xl shadow-black/50 backdrop-blur-xl">
-                        {/* Links column */}
-                        <div className="w-64 p-3">
-                          <div className="max-h-[70vh] space-y-3 overflow-y-auto pr-1">
-                            {groupSubpages(subpages).map(({ group, items }) => (
-                              <div key={group}>
-                                <p
-                                  className="px-3 pb-1.5 pt-1 text-[10px] uppercase tracking-[0.22em] text-[#C5A028]/80"
-                                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                                >
-                                  {group === '' ? `${item.label} Pages` : group}
-                                </p>
-                                <div className="space-y-0.5">
-                                  {items.map((subpage) => {
-                                    const subpageActive = isActivePath(location.pathname, subpage.href)
-                                    return (
-                                      <Link
-                                        key={subpage.href}
-                                        to={subpage.href}
-                                        onClick={() => setOpenDropdown(null)}
-                                        onMouseEnter={() => setPreviewFor(item, subpage)}
-                                        onFocus={() => setPreviewFor(item, subpage)}
-                                        className={`flex items-center gap-2.5 rounded-xl px-3 py-2 text-sm transition-all duration-200 ${
-                                          subpageActive
-                                            ? 'bg-[#C5A028]/15 text-[#C5A028]'
-                                            : 'text-white/70 hover:bg-white/5 hover:text-[#C5A028] hover:translate-x-0.5'
-                                        }`}
-                                        style={{ fontFamily: "'Playfair Display', serif" }}
-                                      >
-                                        {subpage.icon && getIconComponent(subpage.icon) &&
-                                          (() => {
-                                            const SubIcon = getIconComponent(subpage.icon)
-                                            return SubIcon ? <SubIcon className="w-4 h-4 flex-shrink-0 opacity-70" strokeWidth={1.5} /> : null
-                                          })()
-                                        }
-                                        {subpage.label}
-                                      </Link>
-                                    )
-                                  })}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Preview image — mounted lazily after first open so initial page load stays light */}
-                        {preview && openedOnce.has(item.href) && (
-                          <div className="relative w-52 overflow-hidden">
-                            <img
-                              key={preview.src}
-                              src={preview.src}
-                              alt=""
-                              aria-hidden="true"
-                              loading="lazy"
-                              className="absolute inset-0 h-full w-full object-cover animate-[nav-image-fade_0.4s_ease]"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
-                            <p className="absolute inset-x-3 bottom-3 text-[10px] font-medium uppercase tracking-[0.2em] text-white/85">
-                              {preview.caption}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )
-            })}
+          {/* Desktop core links — Experience/class is not a peer of Private Chef + Catering */}
+          <div className="hidden lg:flex items-center gap-3 2xl:gap-6 flex-1 justify-center min-w-0">
+            {DESKTOP_CORE_ITEMS.map((item, index) => (
+              <DesktopNavItem
+                key={item.href}
+                item={item}
+                align={index === 0 ? 'left' : index >= 4 ? 'right' : 'center'}
+                pathname={location.pathname}
+                openDropdown={openDropdown}
+                preview={dropdownPreviews[item.href] ?? defaultPreviewFor(item)}
+                openedOnce={openedOnce.has(item.href)}
+                onOpen={openDropdownNow}
+                onScheduleClose={scheduleClose}
+                onNavigate={() => setOpenDropdown(null)}
+                onPreview={setPreviewFor}
+              />
+            ))}
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center shrink-0 gap-1">
+            <div className="hidden lg:block">
+              <DesktopNavItem
+                item={CONTACT_ITEM}
+                align="right"
+                pathname={location.pathname}
+                openDropdown={openDropdown}
+                preview={dropdownPreviews[CONTACT_ITEM.href] ?? defaultPreviewFor(CONTACT_ITEM)}
+                openedOnce={openedOnce.has(CONTACT_ITEM.href)}
+                onOpen={openDropdownNow}
+                onScheduleClose={scheduleClose}
+                onNavigate={() => setOpenDropdown(null)}
+                onPreview={setPreviewFor}
+              />
+            </div>
             {/* Hamburger — mobile/tablet (hidden on lg+) */}
             <button
               type="button"

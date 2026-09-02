@@ -35,6 +35,16 @@
       "statusCode": 301
     },
     {
+      "source": "/private-chef",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/private-chef/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
       "source": "/families",
       "destination": "/dining-styles",
       "permanent": true

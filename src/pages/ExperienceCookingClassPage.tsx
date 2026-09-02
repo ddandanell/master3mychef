@@ -23,6 +23,8 @@ import type { PageSection } from '@/components/PremiumPage'
  * Sushi → /experiences/sushi-masterclass. Do not cannibalize private-cooking-class.
  * Do not invent WhatsApp-history FAQs, star ratings, kids ages, or extra prices.
  * Corpus is thin (Aug 2026 class invoices + one wedding-stay thread) — do not pad FAQs.
+ * Never embed the French-guest phone video (paper toques, chopping chilli). Stills only
+ * when binaries exist in public/generated — do not wire 404 paths.
  */
 
 const meta = getPageMeta('experience-cooking-class')

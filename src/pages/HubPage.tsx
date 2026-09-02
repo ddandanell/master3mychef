@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getLocationCanonical } from '@/data/siteArchitecture'
 import {
   ArrowRight,
   Star,
@@ -233,19 +232,6 @@ const REVIEWS = [
   { name: 'The Garcias', location: 'Barcelona', dept: 'Catering', text: 'Our wedding dinner for 40 guests. Every plate came out perfect. Every server knew our names. It felt like a five-star restaurant in our garden.' },
   { name: 'Rebecca & Sam', location: 'Melbourne', dept: 'Catering', text: 'We hosted a retreat for 25 executives. The myCHEF team handled everything — dietary restrictions, timing, presentation. Flawless.' },
   { name: 'Sophie & Pierre', location: 'Paris', dept: 'Stay chef', text: 'Ten days in Ubud with a private chef. We never went to a restaurant. Why would we? The best food in Bali was in our villa.' },
-]
-
-const CITIES = [
-  { name: 'Seminyak', slug: 'seminyak', image: '/generated/mychef-location-bali-city-seminyak.webp' },
-  { name: 'Canggu', slug: 'canggu', image: '/generated/mychef-location-bali-city-canggu.webp' },
-  { name: 'Ubud', slug: 'ubud', image: '/generated/mychef-location-bali-city-ubud.webp' },
-  { name: 'Uluwatu', slug: 'uluwatu', image: '/generated/mychef-location-bali-city-uluwatu.webp' },
-  { name: 'Sanur', slug: 'sanur', image: '/generated/mychef-location-bali-city-sanur.webp' },
-  { name: 'Nusa Dua', slug: 'nusa-dua', image: '/generated/mychef-location-bali-city-nusa-dua.webp' },
-  { name: 'Jimbaran', slug: 'jimbaran', image: '/generated/mychef-location-bali-city-jimbaran.webp' },
-  { name: 'Berawa', slug: 'berawa', image: '/generated/mychef-location-bali-city-berawa.webp' },
-  { name: 'Pererenan', slug: 'pererenan', image: '/generated/mychef-location-bali-city-pererenan.webp' },
-  { name: 'Bukit', slug: 'bukit', image: '/generated/mychef-location-bali-city-bukit.webp' },
 ]
 
 export default function HubPage() {
@@ -989,49 +975,6 @@ export default function HubPage() {
           <div className="text-center mt-10">
             <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               read guest reviews <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-14 md:mb-20">
-            <p className="u-label mb-4">Where We Serve</p>
-            <h2 className="u-heading text-3xl md:text-5xl mb-4">Where We Serve</h2>
-            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
-              Chefs based across the island — no travel games, no surprise fees.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            {CITIES.map((city) => (
-              <Link
-                key={city.slug}
-                to={getLocationCanonical(city.slug)}
-                className="group relative rounded-2xl overflow-hidden aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
-              >
-                <img
-                  src={city.image}
-                  alt={`Private chef service in ${city.name}, Bali by myCHEF`}
-                  width={800}
-                  height={600}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute inset-0 flex items-end p-4">
-                  <div>
-                    <p className="text-white font-medium text-sm">{city.name}</p>
-                    <p className="text-white/[60%] text-xs">Private Chef</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center mt-6">
-            <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
-              View All Locations <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

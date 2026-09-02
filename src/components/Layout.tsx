@@ -120,19 +120,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <UniverseProvider>
-      <div className="min-h-screen flex flex-col overflow-x-hidden pb-0 transition-colors duration-700" style={{ background: 'var(--u-bg)', color: 'var(--u-text)' }}>
+      <div className="min-h-screen flex flex-col pb-0 transition-colors duration-700" style={{ background: 'var(--u-bg)', color: 'var(--u-text)' }}>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
+        {/* Fixed nav must not sit inside overflow-x-hidden — that clips CONTACT at 1280px. */}
         <Navbar />
-        <main id="main-content" className="flex-1">{children}</main>
-        <div aria-label="myCHEF highlights" className="bg-[#1A1916] text-[#C5A028] text-xs py-2 text-center">
-          ⭐ {siteFacts.reviewFraming}
+        <div className="flex min-h-0 flex-1 flex-col overflow-x-hidden">
+          <main id="main-content" className="flex-1">{children}</main>
+          <div aria-label="myCHEF highlights" className="bg-[#1A1916] text-[#C5A028] text-xs py-2 text-center">
+            ⭐ {siteFacts.reviewFraming}
+          </div>
+          <div className="bg-[#F5F5F3] border-t border-black/5 py-3 px-6 text-center">
+            <PriceDisclaimer className="max-w-[900px] mx-auto" showIcon={false} />
+          </div>
+          <Footer />
         </div>
-        <div className="bg-[#F5F5F3] border-t border-black/5 py-3 px-6 text-center">
-          <PriceDisclaimer className="max-w-[900px] mx-auto" showIcon={false} />
-        </div>
-        <Footer />
         {location.pathname !== '/experiences/cooking-class' &&
           location.pathname !== '/experiences/private-cooking-class' && (
           <Suspense fallback={null}><ConciergeWidget /></Suspense>

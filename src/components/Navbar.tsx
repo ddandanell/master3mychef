@@ -287,7 +287,7 @@ function DesktopNavItem({
           strokeWidth={1.5}
         />
         <span
-          className="text-[10.5px] xl:text-[11px] 2xl:text-[12px] uppercase tracking-[0.06em] 2xl:tracking-[0.12em] font-medium"
+          className="overflow-visible text-[10.5px] xl:text-[11px] 2xl:text-[12px] uppercase tracking-[0.06em] 2xl:tracking-[0.12em] font-medium"
           style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           {item.label}
@@ -464,7 +464,7 @@ export default function Navbar() {
       {/* ── Full-width luxury navbar at top ── */}
       <nav
         aria-label="Main navigation"
-        className="fixed top-0 left-0 right-0 z-[70] bg-[#0D0C0A]/95 border-b border-[#C5A028]/15"
+        className="fixed top-0 left-0 right-0 z-[70] overflow-visible bg-[#0D0C0A]/95 border-b border-[#C5A028]/15"
         style={{ backdropFilter: 'blur(12px)' }}
       >
         <div className="mx-auto px-8 py-2 h-14 flex items-center justify-between gap-8 lg:px-4 lg:gap-3 xl:gap-4 2xl:px-8 2xl:gap-8">
@@ -498,7 +498,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center shrink-0 gap-1">
+          <div className="flex shrink-0 items-center justify-end gap-1 min-w-[5.75rem]">
             <div className="hidden lg:block">
               <DesktopNavItem
                 item={CONTACT_ITEM}

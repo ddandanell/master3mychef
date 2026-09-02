@@ -34,6 +34,8 @@ const WA_QUOTE = WA_LINK
 const CANONICAL = 'https://mychef.id/experiences/cooking-class'
 const HERO_ALT =
   'Private chef teaching a couple to cook in a Bali villa kitchen, with tropical garden, bougainvillea and pool beyond'
+/** Social alt — in-villa class, not the site-wide plating fallback. Hero <img> keeps HERO_ALT. */
+const OG_IMAGE_ALT = 'myCHEF private in-villa cooking class in Bali — chef comes to you'
 
 function schemaPlainText(html: string): string {
   return html
@@ -625,6 +627,7 @@ export default function ExperienceCookingClassPage() {
         heroImageAlt={HERO_ALT}
         heroImageClassName="object-[68%_center] md:object-[center_38%]"
         ogImage={`https://mychef.id${HERO}`}
+        ogImageAlt={OG_IMAGE_ALT}
         keywords={[
           'cooking class bali',
           'private cooking class bali',

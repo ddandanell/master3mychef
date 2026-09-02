@@ -3,7 +3,7 @@ import OptimizedImage from '@/components/OptimizedImage'
 import { breadcrumbSchema, faqPageSchema, providerRef } from '@/components/SeoHead'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
-import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { buildWhatsAppUrl, COOKING_CLASS_ENQUIRY } from '@/lib/whatsapp'
 import {
   GraduationCap,
   Home,
@@ -29,14 +29,8 @@ import type { PageSection } from '@/components/PremiumPage'
 
 const meta = getPageMeta('experience-cooking-class')
 
-const WA_LINK = buildWhatsAppUrl({
-  serviceName: 'a private Indonesian cooking class at my Bali villa',
-  intent: 'to book a 2.5 or 3-hour class with a sample menu and the all-in total',
-})
-const WA_QUOTE = buildWhatsAppUrl({
-  serviceName: 'a private Indonesian cooking class at my Bali villa',
-  intent: 'a cooking class quote and sample menu outline',
-})
+const WA_LINK = buildWhatsAppUrl(COOKING_CLASS_ENQUIRY)
+const WA_QUOTE = WA_LINK
 const CANONICAL = 'https://mychef.id/experiences/cooking-class'
 
 const HERO = '/generated/mychef-cooking-class-bali-hero-villa.webp'
@@ -392,7 +386,7 @@ const SECTIONS: PageSection[] = [
   {
     id: 'diploma',
     type: 'custom' as const,
-    subtitle: 'Name + date on the day — not a blank template',
+    subtitle: 'Name + date printed for each guest',
     title: 'Diploma, Uniforms & Recipe Cards',
     body: `<p>Every guest leaves with a personalised <strong>myCHEF Indonesian Cooking Diploma</strong> (name + date), printed recipe cards written for a normal home kitchen, and the uniforms and chef hats worn during the class. The certificate below is a <strong>filled guest diploma</strong> — Cristina Goldin, Balinese cooking class, 8 August 2026 — not a blank mock-up.</p>
     <p>The handshake photo is the same villa class: chef and guest, diploma in hand, kitchen island behind them. Instruction is professional; the atmosphere is the villa you rented.</p>`,
@@ -517,84 +511,19 @@ const RELATED_PAGES = [
     desc: 'Dedicated private sushi class — not this Indonesian class.',
   },
   {
-    label: 'All experiences',
-    href: '/experiences',
-    desc: 'Cocktail parties, kids parties, oysters and more.',
-  },
-  {
     label: 'Kids Birthday Chef Party',
     href: '/experiences/kids-birthday-chef-party',
-    desc: 'Kids cooking parties at the villa.',
+    desc: 'Kids cooking party at the villa — a different booking.',
   },
   {
     label: 'Private Cocktail Party',
     href: '/experiences/private-cocktail-party',
-    desc: 'Mobile bar at the villa — a different night from the class.',
+    desc: 'Mobile bar at the villa — add-on night after the class.',
   },
   {
-    label: 'Kids menus',
-    href: '/kids-menus',
-    desc: 'Kids-friendly dining at the villa.',
-  },
-  {
-    label: 'Pricing',
-    href: '/pricing',
-    desc: 'Published rates across myCHEF services.',
-  },
-  {
-    label: 'Homepage — chef hire',
-    href: '/',
-    desc: 'Chef cooks for you — not a cooking class.',
-  },
-  {
-    label: 'Canggu dining guide',
-    href: '/locations/canggu',
-    desc: 'Area context for a Canggu villa class.',
-  },
-  {
-    label: 'Seminyak dining guide',
-    href: '/locations/seminyak',
-    desc: 'Area context for a Seminyak villa class.',
-  },
-  {
-    label: 'Ubud dining guide',
-    href: '/locations/ubud',
-    desc: 'Jungle villas — class is still in your kitchen.',
-  },
-  {
-    label: 'Uluwatu dining guide',
-    href: '/locations/uluwatu',
-    desc: 'Coverage — same in-villa class.',
-  },
-  {
-    label: 'Sanur dining',
-    href: '/locations/sanur',
-    desc: 'East-coast villa class.',
-  },
-  {
-    label: 'Is a Bali cooking class worth it?',
-    href: '/blog/is-a-cooking-class-in-bali-worth-it',
-    desc: 'Honest take — villa class vs a school day.',
-  },
-  {
-    label: 'What does a cooking class cost?',
-    href: '/blog/cooking-class-bali-cost',
-    desc: 'Group schools vs private villa classes.',
-  },
-  {
-    label: 'Base Genep explained',
-    href: '/blog/base-genep-balinese-spice-paste',
-    desc: 'The Balinese master spice paste.',
-  },
-  {
-    label: 'Balinese vs Indonesian food',
-    href: '/blog/balinese-food-vs-indonesian-food',
-    desc: 'What is Balinese, what is pan-Indonesian.',
-  },
-  {
-    label: 'Vegan Balinese cooking',
-    href: '/blog/vegan-vegetarian-balinese-cooking',
-    desc: 'Plant-forward menus on request.',
+    label: 'All experiences',
+    href: '/experiences',
+    desc: 'Oysters, caviar, proposal dinners and more villa add-ons.',
   },
 ]
 
@@ -635,6 +564,9 @@ export default function ExperienceCookingClassPage() {
         relatedPages={RELATED_PAGES}
         ctaText="Book Your Villa Class"
         ctaSubtext="WhatsApp villa area, guest count, date, and 2.5-hour or 3-hour. We reply with a sample menu and the all-in total."
+        whatsAppUrl={WA_LINK}
+        heroCtaFirst
+        heroCompact
         extraJsonLd={[
           breadcrumbSchema('Cooking Class Bali', CANONICAL, 'Experiences', 'https://mychef.id/experiences'),
           faqPageSchema(FAQS.map((f) => ({ question: f.question, answer: f.answer }))),
@@ -698,10 +630,11 @@ export default function ExperienceCookingClassPage() {
       />
       <StickyMobileCTA
         label="Book a cooking class"
-        serviceName="a private Indonesian cooking class at my Bali villa"
-        intent="a 2.5 or 3-hour class quote with diploma"
+        serviceName={COOKING_CLASS_ENQUIRY.serviceName}
+        intent={COOKING_CLASS_ENQUIRY.intent}
         pageSource="experiences-cooking-class"
         serviceType="cooking-class"
+        pinOnDesktop
       />
     </>
   )

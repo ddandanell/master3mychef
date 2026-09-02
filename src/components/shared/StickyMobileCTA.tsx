@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { MessageCircle } from 'lucide-react'
 import { PHONE } from '@/data/siteArchitecture'
 import { buildWhatsAppUrl } from '@/lib/whatsapp'
@@ -15,10 +16,12 @@ interface StickyMobileCTAProps {
   pageSource: string
   /** GA4 service_type value */
   serviceType?: string
+  /** Also pin on desktop after the hero has scrolled away. Mobile stays always-on. */
+  pinOnDesktop?: boolean
 }
 
 /**
- * Fixed 56 px bottom bar visible only on mobile (< md breakpoint).
+ * Fixed 56 px bottom bar visible only on mobile (< md breakpoint) by default.
  * Taps open WhatsApp with a pre-filled message. Prefer passing serviceName/intent
  * so the message is qualified (service + date + guests + area + intent) via the shared helper.
  */
@@ -29,15 +32,33 @@ export default function StickyMobileCTA({
   message = 'Hi myCHEF, I found you on your website and would like a quote.',
   pageSource,
   serviceType: _serviceType = '',
+  pinOnDesktop = false,
 }: StickyMobileCTAProps) {
+  const [desktopPinned, setDesktopPinned] = useState(false)
   const waUrl = serviceName
     ? buildWhatsAppUrl({ serviceName, intent })
     : `https://wa.me/${PHONE.digits}?text=${encodeURIComponent(message)}`
 
+  useEffect(() => {
+    if (!pinOnDesktop) return
+    const onScroll = () => {
+      setDesktopPinned(window.scrollY > Math.min(window.innerHeight * 0.55, 520))
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [pinOnDesktop])
+
+  const desktopClass = pinOnDesktop
+    ? desktopPinned
+      ? ''
+      : 'md:hidden'
+    : 'md:hidden'
+
   return (
     <div
       data-sticky-mobile-cta
-      className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
+      className={`fixed bottom-0 left-0 right-0 z-50 ${desktopClass}`}
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
       <a

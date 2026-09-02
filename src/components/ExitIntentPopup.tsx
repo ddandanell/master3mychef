@@ -16,6 +16,8 @@ const EXCLUDED_PATHS = new Set([
   '/cancellation',
   '/contact',
   '/404',
+  '/experiences/cooking-class',
+  '/experiences/private-cooking-class',
 ])
 
 export default function ExitIntentPopup() {

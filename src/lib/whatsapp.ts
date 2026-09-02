@@ -44,6 +44,27 @@ export function buildWhatsAppUrl(enquiry: WhatsAppEnquiry): string {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsAppMessage(enquiry))}`
 }
 
+/** In-villa cooking class — never a chef/catering generic prefill. */
+export const COOKING_CLASS_ENQUIRY: WhatsAppEnquiry = {
+  serviceName: 'a private Indonesian cooking class at my Bali villa',
+  intent: 'a 2.5 or 3-hour class quote with diploma',
+}
+
+const COOKING_CLASS_PATHS = new Set([
+  '/experiences/cooking-class',
+  '/experiences/private-cooking-class',
+])
+
+export function isCookingClassPath(pathname: string): boolean {
+  const clean = pathname.replace(/\/$/, '') || '/'
+  return COOKING_CLASS_PATHS.has(clean)
+}
+
+export function buildWhatsAppUrlForPath(pathname: string, fallback: WhatsAppEnquiry): string {
+  if (isCookingClassPath(pathname)) return buildWhatsAppUrl(COOKING_CLASS_ENQUIRY)
+  return buildWhatsAppUrl(fallback)
+}
+
 // ── Campaign attribution stamping ────────────────────────────────────────────
 //
 // WHY THIS IS NOT DONE INSIDE buildWhatsAppUrl()

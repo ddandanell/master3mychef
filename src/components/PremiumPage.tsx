@@ -16,7 +16,7 @@ import OptimizedImage from '@/components/OptimizedImage'
  */
 import type { ReactNode, ElementType } from 'react'
 import { Link } from 'react-router-dom'
-import { MessageCircle, Check, ArrowRight, Star, Clock, Shield, Users, Phone, Mail, Calendar } from 'lucide-react'
+import { MessageCircle, Check, ArrowRight, Star, Clock, Shield, Users, Phone, Mail } from 'lucide-react'
 import SeoHead, {
   breadcrumbSchema,
   serviceSchema,
@@ -110,6 +110,16 @@ export interface PremiumPageProps {
   seoDescription?: string
   canonicalUrl?: string
   extraJsonLd?: Record<string, unknown>[]
+  /** Override the default “Hi myCHEF, I’m interested in {title}” WhatsApp URL. */
+  whatsAppUrl?: string
+  /** Override the hero secondary button (defaults to /quote). */
+  heroSecondaryAction?: PageAction
+  /** Override the closing “Book Online” button (defaults to /book). */
+  finalSecondaryAction?: PageAction
+  /** Put hero CTAs before highlight pills so Book is on the first mobile screen. */
+  heroCtaFirst?: boolean
+  /** Tighter mobile hero so the Book button stays above the fold. */
+  heroCompact?: boolean
 }
 
 export default function PremiumPage({
@@ -134,13 +144,20 @@ export default function PremiumPage({
   seoDescription,
   canonicalUrl,
   extraJsonLd,
+  whatsAppUrl,
+  heroSecondaryAction,
+  finalSecondaryAction,
+  heroCtaFirst = false,
+  heroCompact = false,
 }: PremiumPageProps) {
   const canonical = canonicalUrl || `${SITE}/${slug}`
   const metaTitle = seoTitle || `${title} | myCHEF`
   const metaDescription = seoDescription || description
-  const waLink = `https://wa.me/${WA}?text=${encodeURIComponent(
-    `Hi myCHEF, I'm interested in ${title}. Can you help me?`
-  )}`
+  const waLink =
+    whatsAppUrl ||
+    `https://wa.me/${WA}?text=${encodeURIComponent(
+      `Hi myCHEF, I'm interested in ${title}. Can you help me?`
+    )}`
 
   // Avoid duplicate Service / FAQPage schemas when the page supplies richer
   // versions through extraJsonLd. We keep the custom ones and skip the defaults.
@@ -213,6 +230,30 @@ export default function PremiumPage({
     )
   }
 
+  const quoteAction: PageAction =
+    heroSecondaryAction ||
+    (whatsAppUrl
+      ? { label: 'Get a Quote', href: whatsAppUrl, external: true }
+      : { label: 'Get a Quote', href: '/quote' })
+
+  const closeSecondary: PageAction =
+    finalSecondaryAction ||
+    (whatsAppUrl
+      ? { label: 'Get a Quote', href: whatsAppUrl, external: true }
+      : { label: 'Book Online', href: '/book' })
+
+  const heroActions = (
+    <div className={`flex flex-col sm:flex-row gap-3 md:gap-4 ${heroCtaFirst ? 'mb-2 md:mb-8' : ''}`}>
+      <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto min-h-[48px]">
+        <a href={waLink} target="_blank" rel="noopener noreferrer" data-source={`premium-${slug}-hero-cta`}>
+          <MessageCircle className="w-4 h-4" />
+          {ctaText}
+        </a>
+      </Button>
+      {renderAction(quoteAction, 'secondary')}
+    </div>
+  )
+
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
@@ -225,7 +266,10 @@ export default function PremiumPage({
       />
 
       {/* ── HERO ── */}
-      <section className="relative flex items-center overflow-hidden" style={{ minHeight: '88vh' }}>
+      <section
+        className={`relative flex items-center overflow-hidden ${heroCompact ? 'min-h-0 md:min-h-[88vh]' : ''}`}
+        style={heroCompact ? undefined : { minHeight: '88vh' }}
+      >
         {heroImage && (
           <div className="absolute inset-0">
             <img
@@ -246,26 +290,29 @@ export default function PremiumPage({
             <div className="absolute inset-0 bg-black/20 md:hidden" />
           </div>
         )}
-        <div className="relative z-10 w-full px-6 md:px-12 py-16 md:py-24 pt-32">
+        <div className={`relative z-10 w-full px-6 md:px-12 ${heroCompact ? 'py-10 md:py-24 pt-24 md:pt-32' : 'py-16 md:py-24 pt-32'}`}>
           <div className="max-w-[900px]">
-            <Breadcrumb items={[{ label: title }]} theme="dark" className="px-0 pt-0 pb-8" />
+            <Breadcrumb items={[{ label: title }]} theme="dark" className={`px-0 pt-0 ${heroCompact ? 'pb-4 md:pb-8' : 'pb-8'}`} />
             <p className="font-cormorant text-[#C5A028] text-sm uppercase tracking-[4px] mb-4">
               myCHEF — {keywords[0] || 'Bali'}
             </p>
-            <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6">
+            <h1 className={`font-playfair text-white leading-[1.1] ${heroCompact ? 'text-3xl md:text-6xl lg:text-7xl mb-4 md:mb-6' : 'text-4xl md:text-6xl lg:text-7xl mb-6'}`}>
               {h1}
             </h1>
             {subtitle && (
-              <p className="text-lg md:text-xl text-white/[80%] max-w-[600px] mb-8">
+              <p className={`text-white/[80%] max-w-[600px] ${heroCompact ? 'text-base md:text-xl mb-5 md:mb-8' : 'text-lg md:text-xl mb-8'}`}>
                 {subtitle}
               </p>
             )}
+            {heroCtaFirst && heroActions}
             {highlights && highlights.length > 0 && (
-              <ul className="flex flex-wrap gap-3 mb-8">
-                {highlights.map((h) => (
+              <ul className={`flex flex-wrap gap-3 ${heroCtaFirst ? 'mt-6 mb-0 md:mb-0' : 'mb-8'}`}>
+                {highlights.map((h, i) => (
                   <li
                     key={h}
-                    className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full"
+                    className={`inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full ${
+                      heroCompact && i >= 3 ? 'hidden sm:inline-flex' : ''
+                    }`}
                   >
                     <Check className="w-3.5 h-3.5 text-[#C5A028]" />
                     {h}
@@ -273,21 +320,8 @@ export default function PremiumPage({
                 ))}
               </ul>
             )}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild variant="whatsapp" size="brand" className="w-full sm:w-auto">
-                <a href={waLink} target="_blank" rel="noopener noreferrer" data-source={`premium-${slug}-section-cta`}>
-                  <MessageCircle className="w-4 h-4" />
-                  {ctaText}
-                </a>
-              </Button>
-              <Button asChild variant="secondary" size="brand" className="w-full sm:w-auto">
-                <Link to="/quote">
-                  Get a Quote
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
-            <div className="mt-6">
+            {!heroCtaFirst && heroActions}
+            <div className={heroCompact ? 'mt-4 md:mt-6' : 'mt-6'}>
               <PriceDisclaimer />
             </div>
           </div>
@@ -562,7 +596,8 @@ export default function PremiumPage({
                     {renderAction(
                       section.secondaryAction || {
                         label: 'Get a Quote',
-                        href: '/quote',
+                        href: whatsAppUrl || '/quote',
+                        external: Boolean(whatsAppUrl),
                       },
                       'secondary'
                     )}
@@ -685,18 +720,13 @@ export default function PremiumPage({
                 {ctaText}
               </a>
             </Button>
-            <Button asChild variant="secondary" size="brand" className="w-full sm:w-auto">
-              <Link to="/book">
-                <Calendar className="w-4 h-4" />
-                Book Online
-              </Link>
-            </Button>
+            {renderAction(closeSecondary, 'secondary')}
           </div>
           <div className="mt-6 flex justify-center">
             <PriceDisclaimer className="text-white/[60%]" />
           </div>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/[40%]">
-            <a href={`https://wa.me/${WA}`} className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
+            <a href={waLink} target="_blank" rel="noopener noreferrer" data-source={`premium-${slug}-footer-phone`} className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">
               <Phone className="w-4 h-4" /> +62 896-7407-2020
             </a>
             <a href="mailto:bali@mychef.id" className="flex items-center gap-2 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">

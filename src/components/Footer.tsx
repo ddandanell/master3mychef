@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { buildWhatsAppUrl } from '@/lib/whatsapp'
-import { Link } from 'react-router-dom'
+import { buildWhatsAppUrlForPath } from '@/lib/whatsapp'
+import { Link, useLocation } from 'react-router-dom'
 import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat, ChevronDown, ExternalLink } from 'lucide-react'
 import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA, hasLocationPage } from '@/data/siteArchitecture'
 import { siteFacts } from '@/data/siteFacts'
@@ -9,6 +9,11 @@ import { siteFacts } from '@/data/siteFacts'
 const TOP_LOCATION_SLUGS = ['seminyak', 'canggu', 'uluwatu', 'ubud', 'nusa-dua']
 
 export default function Footer() {
+  const { pathname } = useLocation()
+  const waHref = buildWhatsAppUrlForPath(pathname, {
+    serviceName: 'private chef or catering service in Bali',
+    intent: 'help choosing the right service and getting pricing',
+  })
   const pillars = Object.values(PILLARS)
   const allLocations = Object.values(LOCATIONS)
   const topLocations = TOP_LOCATION_SLUGS.map(s => allLocations.find(l => l.slug === s)).filter(Boolean)
@@ -46,7 +51,7 @@ export default function Footer() {
                 <Instagram className="w-5 h-5 text-white/70 hover:text-[#C5A028]" />
               </a>
               <a
-                href={buildWhatsAppUrl({ serviceName: 'private chef or catering service in Bali', intent: 'help choosing the right service and getting pricing' })}
+                href={waHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-source="footer-social"
@@ -63,7 +68,7 @@ export default function Footer() {
               <p className="text-xs uppercase tracking-[0.2em] text-[#C5A028] mb-3 font-semibold">Contact Us</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href={buildWhatsAppUrl({ serviceName: 'private chef or catering service in Bali', intent: 'help choosing the right service and getting pricing' })}
+                  href={waHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-source="footer-top"

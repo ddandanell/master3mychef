@@ -133,7 +133,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <PriceDisclaimer className="max-w-[900px] mx-auto" showIcon={false} />
         </div>
         <Footer />
-        <Suspense fallback={null}><ConciergeWidget /></Suspense>
+        {location.pathname !== '/experiences/cooking-class' &&
+          location.pathname !== '/experiences/private-cooking-class' && (
+          <Suspense fallback={null}><ConciergeWidget /></Suspense>
+        )}
         <Suspense fallback={null}><ExitIntentPopup /></Suspense>
       </div>
     </UniverseProvider>

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChefHat, UtensilsCrossed, Users, MapPin, Home, Briefcase, CalendarDays, ChevronDown, User, Heart, Crown, BookOpen, Flame, Truck, Leaf, Coffee, Mountain, Music, Baby, Wine, Cake, Mail, Sparkles, MessageCircle, type LucideIcon } from 'lucide-react'
 import { PILLARS, LOCATIONS, hasLocationPage, PHONE } from '@/data/siteArchitecture'
-import { buildWhatsAppUrl } from '@/lib/whatsapp'
+import { buildWhatsAppUrlForPath } from '@/lib/whatsapp'
 
 
 // Map icon names to Lucide React icon components
@@ -704,7 +704,7 @@ export default function Navbar() {
 
           <div className="sticky bottom-0 border-t border-black/5 bg-white pt-3">
             <a
-              href={buildWhatsAppUrl({
+              href={buildWhatsAppUrlForPath(location.pathname, {
                 serviceName: 'a private chef in Bali',
                 intent: 'pricing and availability',
               })}

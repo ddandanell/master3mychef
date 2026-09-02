@@ -46,6 +46,7 @@ import { Button } from '@/components/ui/button'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import PriceDisclaimer from './PriceDisclaimer'
 import { downgradeArticleH1 } from '@/lib/utils'
+import { getImageDimensions } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -261,6 +262,8 @@ export default function PremiumPage({
         description={metaDescription}
         canonical={canonical}
         ogImage={ogImage}
+        ogImageAlt={heroImageAlt}
+        twitterImageAlt={heroImageAlt}
         noindex={noindex}
         jsonLd={schemas}
       />
@@ -275,9 +278,10 @@ export default function PremiumPage({
             <img
               src={heroImage}
               alt={heroImageAlt || h1}
-              width={1920}
-              height={1080}
+              width={getImageDimensions(heroImage)?.width ?? 1920}
+              height={getImageDimensions(heroImage)?.height ?? 1080}
               fetchPriority="high"
+              loading="eager"
               decoding="async"
               className={['w-full h-full object-cover', heroImageClassName].filter(Boolean).join(' ')}
             />

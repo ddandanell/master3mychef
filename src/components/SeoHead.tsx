@@ -21,6 +21,7 @@ interface SeoHeadProps {
   articleTags?: string[]
   articlePublishedTime?: string
   twitterImageAlt?: string
+  ogImageAlt?: string
 }
 
 /**
@@ -586,7 +587,7 @@ export function menuSchema(
 // Sets per-route document.title, meta description, canonical, OG tags, and an
 // optional robots noindex directive. Works for a Vite SPA — Google executes JS.
 // For first-contentful-html SEO add vite-plugin-ssg later (see SEO-PAGES-PLAN.md).
-export default function SeoHead({ title, description, canonical, ogImage, ogType = 'website', noindex, jsonLd, extraMeta = [], articleAuthor, articleSection, articleTags, articlePublishedTime, twitterImageAlt }: SeoHeadProps) {
+export default function SeoHead({ title, description, canonical, ogImage, ogType = 'website', noindex, jsonLd, extraMeta = [], articleAuthor, articleSection, articleTags, articlePublishedTime, twitterImageAlt, ogImageAlt }: SeoHeadProps) {
   // Serialize array/object props so inline arrays created during render don't
   // trigger the effect on every re-render. This stops the head from being
   // cleared and re-injected mid-render, which was causing prerender snapshots
@@ -628,8 +629,10 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
     if (ogImage) {
       setMeta(`meta[property="og:image"]`, 'property', 'og:image', ogImage)
       setMeta(`meta[name="twitter:image"]`, 'name', 'twitter:image', ogImage)
-      if (twitterImageAlt) {
-        setMeta(`meta[name="twitter:image:alt"]`, 'name', 'twitter:image:alt', twitterImageAlt)
+      const imageAlt = ogImageAlt || twitterImageAlt
+      if (imageAlt) {
+        setMeta(`meta[property="og:image:alt"]`, 'property', 'og:image:alt', imageAlt)
+        setMeta(`meta[name="twitter:image:alt"]`, 'name', 'twitter:image:alt', imageAlt)
       }
     }
 
@@ -714,7 +717,7 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
       document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
       document.head.querySelectorAll('link[data-seohead="hreflang"]').forEach((el) => el.remove())
     }
-  }, [title, description, canonical, ogImage, ogType, noindex, jsonLdKey, extraMetaKey, articleAuthor, articleSection, articleTagsKey, articlePublishedTime, twitterImageAlt])
+  }, [title, description, canonical, ogImage, ogType, noindex, jsonLdKey, extraMetaKey, articleAuthor, articleSection, articleTagsKey, articlePublishedTime, twitterImageAlt, ogImageAlt])
 
   return null
 }

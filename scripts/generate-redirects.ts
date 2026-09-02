@@ -16,7 +16,7 @@ const netlifyLines = [
   '# 301 redirects generated from src/data/redirects.ts',
   '# Do not edit by hand — edit the source and re-run `pnpm redirects`.',
   '',
-  ...REDIRECTS.map((r) => `${r.from}  ${r.to}  301`),
+  ...REDIRECTS.map((r) => `${r.from}  ${r.to}  ${r.statusCode ?? 301}`),
 ]
 writeFileSync(join(__dirname, '..', 'public', '_redirects'), netlifyLines.join('\n') + '\n')
 
@@ -83,11 +83,11 @@ const vercelConfig = {
   redirects: [
     // Force www → apex as a permanent 308 (was 307 temporary — §2.3.3 canonicalization).
     { source: '/(.*)', has: [{ type: 'host', value: 'www.mychef.id' }], destination: 'https://mychef.id/$1', permanent: true },
-    ...REDIRECTS.map((r) => ({
-      source: r.from,
-      destination: r.to,
-      permanent: true,
-    })),
+    ...REDIRECTS.map((r) =>
+      r.statusCode
+        ? { source: r.from, destination: r.to, statusCode: r.statusCode }
+        : { source: r.from, destination: r.to, permanent: true }
+    ),
   ],
   headers: [
     {

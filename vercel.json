@@ -27,7 +27,12 @@
     {
       "source": "/experiences/private-cooking-class",
       "destination": "/experiences/cooking-class",
-      "permanent": true
+      "statusCode": 301
+    },
+    {
+      "source": "/experiences/private-cooking-class/",
+      "destination": "/experiences/cooking-class",
+      "statusCode": 301
     },
     {
       "source": "/families",

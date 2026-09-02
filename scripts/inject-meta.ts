@@ -102,7 +102,6 @@ const OG_IMAGES: Record<string, string> = {
   '/experiences/private-cocktail-party': '/generated/bartender-hire-bali-cocktail-party.webp',
   '/experiences/sushi-masterclass': '/generated/sushi-making-class-bali-masterclass.webp',
   '/experiences/cooking-class': '/generated/mychef-cooking-class-bali-hero-villa.webp',
-  '/experiences/private-cooking-class': '/generated/mychef-cooking-class-bali-hero-villa.webp',
   '/experiences/kids-birthday-chef-party': '/generated/kids-birthday-party-bali-chef.webp',
   '/experiences/champagne-oyster-experience': '/generated/oyster-bar-bali-champagne.webp',
   '/experiences/caviar-experience': '/generated/mychef-caviar-experience-bali-hero-villa.webp',
@@ -210,6 +209,9 @@ function getOgImageAlt(path: string): string {
   }
   if (path.startsWith('/blog/') || path.startsWith('/journal/')) {
     return 'myCHEF private chef and villa dining experience in Bali'
+  }
+  if (path === '/experiences/cooking-class' || path.startsWith('/experiences/cooking-class')) {
+    return 'Private chef teaching a couple to cook in a Bali villa kitchen, with tropical garden, bougainvillea and pool beyond'
   }
   return 'myCHEF — private chef plating a fine dining course in a Bali villa'
 }
@@ -412,6 +414,15 @@ function injectMeta(html: string, path: string, title: string, description: stri
     buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
   ].filter(Boolean).join('\n  ')
   html = html.replace('</head>', `${structuredData}\n  </head>`)
+
+  // Cooking-class LCP: preload the villa-class WEBP (1280×720), not a 1.9MB PNG.
+  if (path === '/experiences/cooking-class') {
+    const heroPreload = '/generated/mychef-cooking-class-bali-hero-villa.webp'
+    html = html.replace(
+      '</head>',
+      `<link rel="preload" as="image" href="${heroPreload}" fetchpriority="high" />\n  </head>`
+    )
+  }
 
   // OG locale (all content is in English)
   html = html.replace(

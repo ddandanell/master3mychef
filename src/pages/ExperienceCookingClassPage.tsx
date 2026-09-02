@@ -32,6 +32,18 @@ const meta = getPageMeta('experience-cooking-class')
 const WA_LINK = buildWhatsAppUrl(COOKING_CLASS_ENQUIRY)
 const WA_QUOTE = WA_LINK
 const CANONICAL = 'https://mychef.id/experiences/cooking-class'
+const HERO_ALT =
+  'Private chef teaching a couple to cook in a Bali villa kitchen, with tropical garden, bougainvillea and pool beyond'
+
+function schemaPlainText(html: string): string {
+  return html
+    .replace(/<a\b[^>]*>(.*?)<\/a>/gi, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
 
 const HERO = '/generated/mychef-cooking-class-bali-hero-villa.webp'
 const IMG_FAMILY = '/generated/mychef-cooking-class-family-group.webp'
@@ -594,7 +606,7 @@ export default function ExperienceCookingClassPage() {
         h1={meta.h1}
         subtitle="Private 2.5–3 hour Indonesian / Balinese class in your villa. Chef comes to you. Eat everything you cook. Diploma + recipes. Full clean-up. No hotel pickup."
         heroImage={HERO}
-        heroImageAlt="Private chef teaching a couple to cook in a Bali villa kitchen, with tropical garden, bougainvillea and pool beyond"
+        heroImageAlt={HERO_ALT}
         heroImageClassName="object-[68%_center] md:object-[center_38%]"
         ogImage={`https://mychef.id${HERO}`}
         keywords={[
@@ -623,61 +635,56 @@ export default function ExperienceCookingClassPage() {
         heroCompact
         extraJsonLd={[
           breadcrumbSchema('Cooking Class Bali', CANONICAL, 'Experiences', 'https://mychef.id/experiences'),
-          faqPageSchema(FAQS.map((f) => ({ question: f.question, answer: f.answer }))),
+          faqPageSchema(
+            FAQS.map((f) => ({ question: f.question, answer: schemaPlainText(f.answer) })).filter(
+              (f) => f.question && f.answer
+            )
+          ),
           {
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: 'Private Indonesian Cooking Class Bali',
+            name: 'Private Cooking Class Bali',
+            serviceType: 'In-villa Indonesian/Balinese cooking class',
             description:
-              'Private 2.5–3 hour Indonesian/Balinese cooking class in your Bali villa. Chef comes to you. Cook 4–6 dishes, eat everything, diploma and recipes, full clean-up. No hotel pickup. From IDR 700,000++ per person, minimum 4 guests (all-in IDR 847,000 pp).',
-            provider: providerRef,
-            areaServed: [
-              { '@type': 'Place', name: 'Bali, Indonesia' },
-              { '@type': 'Place', name: 'Seminyak, Bali' },
-              { '@type': 'Place', name: 'Canggu, Bali' },
-              { '@type': 'Place', name: 'Sanur, Bali' },
-              { '@type': 'Place', name: 'Ubud, Bali' },
-              { '@type': 'Place', name: 'Uluwatu, Bali' },
-              { '@type': 'Place', name: 'Jimbaran, Bali' },
-              { '@type': 'Place', name: 'Nusa Dua, Bali' },
-              { '@type': 'Place', name: 'Kuta, Bali' },
-            ],
-            serviceType: 'Private in-villa cooking class',
+              'Private villa cooking class in Bali. Chef comes to you. Cook 4–6 dishes, eat everything, diploma and recipes. No hotel pickup. From IDR 700,000++ per person, minimum 4 guests.',
+            provider: { '@type': 'Organization', name: 'myCHEF.id', ...providerRef },
+            areaServed: {
+              '@type': 'Place',
+              name: 'Bali, Indonesia',
+              description: 'Villa; chef comes to guest',
+            },
+            additionalProperty: {
+              '@type': 'PropertyValue',
+              name: 'duration',
+              value: '2.5 or 3 hours',
+            },
             image: `https://mychef.id${HERO}`,
             url: CANONICAL,
             offers: {
               '@type': 'Offer',
+              name: 'From IDR 700,000++ per person',
               priceCurrency: 'IDR',
               price: '700000',
+              url: CANONICAL,
+              description:
+                'From IDR 700,000++ per person (11% tax + 10% service). Unit: person. Minimum 4 guests.',
+              eligibleQuantity: {
+                '@type': 'QuantitativeValue',
+                minValue: 4,
+                unitText: 'person',
+              },
               priceSpecification: {
                 '@type': 'UnitPriceSpecification',
                 price: '700000',
                 priceCurrency: 'IDR',
-                unitText: 'per person ++',
-                referenceQuantity: {
+                unitText: 'person ++',
+                eligibleQuantity: {
                   '@type': 'QuantitativeValue',
-                  value: 4,
-                  unitText: 'minimum guests',
+                  minValue: 4,
+                  unitText: 'person',
                 },
               },
               availability: 'https://schema.org/InStock',
-              url: CANONICAL,
-              description:
-                'IDR 700,000++ per person, minimum 4 guests. All-in IDR 847,000 per person (base × 1.21). 4-guest floor IDR 3,388,000 all-in. Couples IDR 1,400,000++ per person.',
-            },
-          },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Course',
-            name: 'Private 2.5–3 Hour Indonesian Cooking Class at Your Bali Villa',
-            description:
-              'Hands-on private cooking class in your villa kitchen. 2.5 or 3 hours. Cook 4–6 Indonesian/Balinese dishes, eat everything you prepared, diploma and recipes. Chef comes to you.',
-            provider: providerRef,
-            hasCourseInstance: {
-              '@type': 'CourseInstance',
-              courseMode: 'onsite',
-              courseWorkload: 'PT2H30M',
-              location: { '@type': 'Place', name: 'Guest villa kitchen, Bali' },
             },
           },
         ]}

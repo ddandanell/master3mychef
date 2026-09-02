@@ -316,6 +316,12 @@ export const REDIRECTS: Redirect[] = [
   // --- 2026-07-01 (pass 2): remaining broken internal links found by link crawl → 301 to nearest live page.
   //     /services/<pillar> came from ServicePage related-links using pillar slugs (no such /services page). ---
   { from: '/services/catering', to: '/catering', reason: 'Pillar link used /services/ prefix; real page is /catering.' },
+  // GSC last 28 days (23 Jul–19 Aug 2026): https://mychef.id/catering and
+  // https://mychef.id/catering/ both 200 with the same HTML (identical etag).
+  // Slash variant: 791 impressions at avg position 49.3 vs 922 / pos 23.7 on the
+  // canonical. Do NOT set sitewide trailingSlash:false — PostHog /ingest/e/ and
+  // /ingest/s/ require the trailing slash (see generate-redirects.ts).
+  { from: '/catering/', to: '/catering', reason: 'GSC duplicate: trailing-slash hub 200s as a second page; 308 onto the canonical /catering.' },
   { from: '/services/events', to: '/events', reason: 'Pillar link used /services/ prefix; real page is /events.' },
   { from: '/services/fine-dining', to: '/fine-dining', reason: 'Pillar link used /services/ prefix; real page is /fine-dining.' },
   { from: '/services/in-villa-service', to: '/in-villa-service', reason: 'Pillar link used /services/ prefix; real page is /in-villa-service.' },

@@ -28,13 +28,13 @@ export const KEYWORD_OWNERSHIP: Record<string, KeywordOwner> = {
     primary: 'private chef bali',
     secondary: ['bali private chef', 'my chef', 'mychef', 'chef bali', 'home chef'],
     doNotTarget: ['/private-chef-bali', '/private-dining-indonesia', '/fine-dining/private-chef-bali'],
-    note: 'Home owns brand + head term. Highest impressions in report (1,158).',
+    note: 'Home owns brand + head term. GSC+SERP: homepage ranks for private chef bali; do not retarget /private-chef-bali as this exact head.',
   },
   '/private-chef-bali': {
     primary: 'hire private chef bali',
     secondary: ['private chef bali price', 'private chef daily rate bali', 'villa chef bali'],
     doNotTarget: ['/'],
-    note: 'Pricing / hire intent — differentiates from homepage brand page.',
+    note: 'Stay-hire service page (day rates). Must not use exact title/H1 "Private Chef Bali" — that head stays on /.',
   },
   '/private-dining-indonesia': {
     primary: 'private dining',

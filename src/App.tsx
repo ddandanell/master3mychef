@@ -399,10 +399,11 @@ export default function App() {
             <Route key={m.slug} path={`/${m.slug}`} element={<AreaPage kind="micro-area" />} />
           ))}
 
-          {/* Private Chef pillar (2026-07-30). Owns the "private chef bali" term and is the
-              single published home of the day rates. /villa-chef and
-              /hire-private-chef-bali-monthly 301 here — see src/data/redirects.ts.
-              Area redirects (/private-chef-bali/[slug]) are handled by REDIRECTS.map above. */}
+          {/* Stay-hire service page (day rates). Homepage owns "private chef bali"
+              as title/H1; this URL must not compete for that exact head.
+              /villa-chef and /hire-private-chef-bali-monthly 301 here — see
+              src/data/redirects.ts. Area redirects (/private-chef-bali/[slug])
+              are handled by REDIRECTS.map above. */}
           <Route path="/private-chef-bali" element={<PrivateChefPillarPage />} />
 
           {/* /private-chef/[slug] — Bali Domination Blueprint area landing pages */}

@@ -26,11 +26,13 @@ const SITE = 'https://mychef.id'
 export const PAGE_META: Record<string, PageMeta> = {
       home: {
     path: '/',
+    // GSC+SERP: homepage already ranks for "private chef bali". Keep that exact
+    // head on title + H1. Do not move it to /private-chef-bali (not in the top 20).
     title: 'myCHEF Bali | Private Chef Bali & Catering',
     description:
       'Bali private chef for villa stays: IDR 1,210,000 / 2,178,000 / 3,267,000 all-in a day, groceries extra. Catering Bali for one meal or party, food included.',
     canonical: `${SITE}/`,
-    h1: 'Private Chef for a Stay — Catering for One Meal in Bali',
+    h1: 'Private Chef Bali for a Stay — Catering for One Meal',
     ogImage: `${SITE}/generated/mychef-location-bali-hub-hero.webp`,
   },
 
@@ -2277,15 +2279,15 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogImage: `${SITE}/og-image.webp`,
   },
 
-  // Private Chef pillar (2026-07-30). Replaces the 'villa-chef' entry — /villa-chef
-  // now 301s here. This is the only page that publishes private chef day rates.
+  // Stay-hire service page. Homepage owns the exact head "private chef bali"
+  // (title + H1). This URL publishes day rates and must not compete for that head.
   'private-chef-bali': {
     path: '/private-chef-bali',
-    title: 'Private Chef Bali | Villa Chef Hire from IDR 1M++/Day',
+    title: 'Hire a Private Chef in Bali | Stay Rates from IDR 1M++',
     description:
-      'Hire a private chef in Bali for your villa or Airbnb: from IDR 1M++/day, groceries at cost, HACCP-certified team. Fixed quote on WhatsApp in 2 hours.',
+      'Hire a private chef in Bali for a villa stay: from IDR 1M++/day, groceries at cost, HACCP-certified team. Fixed quote on WhatsApp in 2 hours.',
     canonical: `${SITE}/private-chef-bali`,
-    h1: 'Private Chef Bali',
+    h1: 'Hire a Private Chef for Your Bali Stay',
     ogImage: `${SITE}/generated/pcb-story-03-restaurant-service.webp`,
   },
 

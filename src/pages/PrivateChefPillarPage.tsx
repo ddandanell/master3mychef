@@ -537,7 +537,7 @@ export default function PrivateChefPillarPage() {
 
   const schemas = [
     serviceWithAggregateOfferSchema({
-      name: 'Private Chef Bali',
+      name: 'Hire a Private Chef in Bali',
       description:
         'Hire a private chef in Bali for your villa. One, two or three meals a day cooked and served by a named head chef and a dedicated assistant. Transparent day rates, groceries at cost.',
       url: CANONICAL,
@@ -586,13 +586,13 @@ export default function PrivateChefPillarPage() {
       }),
     ),
     faqPageSchema(FAQS.map(({ q, a }) => ({ question: q, answer: a }))),
-    breadcrumbSchema('Private Chef Bali', CANONICAL),
+    breadcrumbSchema('Hire a Private Chef', CANONICAL),
   ]
 
   return (
     <>
       <SeoHead
-        title={meta?.title ?? 'Private Chef Bali | Prices From IDR 1,000,000++ Per Day | myCHEF'}
+        title={meta?.title ?? 'Hire a Private Chef in Bali | Stay Rates from IDR 1M++'}
         description={
           meta?.description ??
           'Hire a private chef in Bali. One meal IDR 1M++, two meals IDR 1.8M++, three meals IDR 2.7M++ per day. Chef + assistant, groceries at cost. WhatsApp myCHEF.'
@@ -619,14 +619,14 @@ export default function PrivateChefPillarPage() {
         <div className="absolute inset-0 bg-black/25 sm:bg-black/15" aria-hidden="true" />
 
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 pb-16 pt-32 w-full">
-          <Breadcrumb items={[{ label: 'Private Chef Bali' }]} theme="dark" />
+          <Breadcrumb items={[{ label: 'Hire a Private Chef' }]} theme="dark" />
 
           <p className="text-[#C5A028] tracking-[0.28em] text-[11px] sm:text-xs uppercase mt-6 mb-4">
-            Private Chef Hire · Villas &amp; Airbnb Across Bali
+            Villa Chef Hire · Stay Day Rates Across Bali
           </p>
 
           <h1 className="text-white font-playfair font-normal leading-[1.05] text-[2.4rem] sm:text-6xl lg:text-7xl max-w-4xl">
-            Private Chef Bali
+            {meta.h1}
           </h1>
           {/* Price kept outside H1 so crawlers never see “BaliFrom …” concatenation. */}
           <p className="text-[#C5A028] italic font-playfair text-2xl sm:text-3xl mt-3 max-w-4xl">

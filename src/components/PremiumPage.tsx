@@ -46,6 +46,7 @@ import { Button } from '@/components/ui/button'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import PriceDisclaimer from './PriceDisclaimer'
 import { downgradeArticleH1 } from '@/lib/utils'
+import { getImageDimensions } from '@/lib/imageDimensions'
 
 const SITE = 'https://mychef.id'
 const WA = '6289674072020'
@@ -110,6 +111,8 @@ export interface PremiumPageProps {
   seoDescription?: string
   canonicalUrl?: string
   extraJsonLd?: Record<string, unknown>[]
+  /** When true, emit only extraJsonLd — no default BreadcrumbList / Service / FAQPage. */
+  jsonLdExtraOnly?: boolean
   /** Override the default “Hi myCHEF, I’m interested in {title}” WhatsApp URL. */
   whatsAppUrl?: string
   /** Override the hero secondary button (defaults to /quote). */
@@ -144,6 +147,7 @@ export default function PremiumPage({
   seoDescription,
   canonicalUrl,
   extraJsonLd,
+  jsonLdExtraOnly = false,
   whatsAppUrl,
   heroSecondaryAction,
   finalSecondaryAction,
@@ -167,16 +171,18 @@ export default function PremiumPage({
   }
 
   const schemas: Record<string, unknown>[] = []
-  // Pages that supply their own BreadcrumbList (usually with a parent level)
-  // win — emitting both produced two BreadcrumbList nodes on 85 pages.
-  if (!extraTypes.has('BreadcrumbList')) {
-    schemas.push(breadcrumbSchema(title, canonical))
-  }
-  if (!extraTypes.has('Service')) {
-    schemas.push(serviceSchema(title, metaDescription, canonical))
-  }
-  if (faqs && faqs.length > 0 && !extraTypes.has('FAQPage')) {
-    schemas.push(faqPageSchema(faqs))
+  if (!jsonLdExtraOnly) {
+    // Pages that supply their own BreadcrumbList (usually with a parent level)
+    // win — emitting both produced two BreadcrumbList nodes on 85 pages.
+    if (!extraTypes.has('BreadcrumbList')) {
+      schemas.push(breadcrumbSchema(title, canonical))
+    }
+    if (!extraTypes.has('Service')) {
+      schemas.push(serviceSchema(title, metaDescription, canonical))
+    }
+    if (faqs && faqs.length > 0 && !extraTypes.has('FAQPage')) {
+      schemas.push(faqPageSchema(faqs))
+    }
   }
   if (extraJsonLd && extraJsonLd.length > 0) {
     schemas.push(...extraJsonLd)
@@ -261,6 +267,8 @@ export default function PremiumPage({
         description={metaDescription}
         canonical={canonical}
         ogImage={ogImage}
+        ogImageAlt={heroImageAlt}
+        twitterImageAlt={heroImageAlt}
         noindex={noindex}
         jsonLd={schemas}
       />
@@ -275,9 +283,10 @@ export default function PremiumPage({
             <img
               src={heroImage}
               alt={heroImageAlt || h1}
-              width={1920}
-              height={1080}
+              width={getImageDimensions(heroImage)?.width ?? 1920}
+              height={getImageDimensions(heroImage)?.height ?? 1080}
               fetchPriority="high"
+              loading="eager"
               decoding="async"
               className={['w-full h-full object-cover', heroImageClassName].filter(Boolean).join(' ')}
             />
@@ -675,6 +684,24 @@ export default function PremiumPage({
               defaultOpenCount={2}
               showToc={faqs.length >= 8}
               ctaEvery={faqs.length >= 8 ? 5 : 0}
+              ctaHtml={
+                whatsAppUrl
+                  ? `<p class="font-medium text-[#1A1A1A] mb-1">Still deciding?</p>
+  <p class="text-sm text-[#4A4745] mb-3 leading-relaxed">
+    WhatsApp villa area, guest count and date — we reply with a sample menu and the all-in total.
+  </p>
+  <div class="flex flex-wrap gap-2">
+    <a href="${whatsAppUrl}"
+       target="_blank" rel="noopener noreferrer" data-source="faq-inline-cta"
+       class="inline-flex min-h-[40px] items-center rounded-full bg-[#C5A028] px-4 py-2 text-sm font-semibold text-[#1A1A1A] hover:bg-[#D4B43A] transition-colors">
+      Chat with our chef
+    </a>
+    <a href="/pricing" class="inline-flex min-h-[40px] items-center rounded-full border border-[#E8E2CF] bg-white px-4 py-2 text-sm font-semibold text-[#1A1A1A] hover:border-[#C5A028] transition-colors">
+      View pricing
+    </a>
+  </div>`
+                  : undefined
+              }
             />
           </div>
         </section>

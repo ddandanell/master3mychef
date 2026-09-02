@@ -21,6 +21,8 @@ export interface Redirect {
   to: string
   /** Why this redirect exists — keep the reasoning so future-you doesn't undo it. */
   reason: string
+  /** Host status. Omit to keep the default Vercel 308 (`permanent: true`). */
+  statusCode?: 301 | 302 | 307 | 308
 }
 
 export const REDIRECTS: Redirect[] = [
@@ -28,7 +30,14 @@ export const REDIRECTS: Redirect[] = [
   {
     from: '/experiences/private-cooking-class',
     to: '/experiences/cooking-class',
-    reason: '2026-08: private cooking class consolidated into SEO pillar /experiences/cooking-class',
+    reason: '2026-08: private cooking class consolidated into SEO pillar /experiences/cooking-class. Host 301 — same document must not 200 on both slugs.',
+    statusCode: 301,
+  },
+  {
+    from: '/experiences/private-cooking-class/',
+    to: '/experiences/cooking-class',
+    reason: 'Trailing-slash twin of the private-cooking-class 301 (live slash variant 404s).',
+    statusCode: 301,
   },
 
   // --- Renames ---

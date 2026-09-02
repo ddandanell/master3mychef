@@ -102,7 +102,6 @@ const OG_IMAGES: Record<string, string> = {
   '/experiences/private-cocktail-party': '/generated/bartender-hire-bali-cocktail-party.webp',
   '/experiences/sushi-masterclass': '/generated/sushi-making-class-bali-masterclass.webp',
   '/experiences/cooking-class': '/generated/mychef-cooking-class-bali-hero-villa.webp',
-  '/experiences/private-cooking-class': '/generated/mychef-cooking-class-bali-hero-villa.webp',
   '/experiences/kids-birthday-chef-party': '/generated/kids-birthday-party-bali-chef.webp',
   '/experiences/champagne-oyster-experience': '/generated/oyster-bar-bali-champagne.webp',
   '/experiences/caviar-experience': '/generated/mychef-caviar-experience-bali-hero-villa.webp',
@@ -210,6 +209,9 @@ function getOgImageAlt(path: string): string {
   }
   if (path.startsWith('/blog/') || path.startsWith('/journal/')) {
     return 'myCHEF private chef and villa dining experience in Bali'
+  }
+  if (path === '/experiences/cooking-class' || path.startsWith('/experiences/cooking-class')) {
+    return 'Private chef teaching a couple to cook in a Bali villa kitchen, with tropical garden, bougainvillea and pool beyond'
   }
   return 'myCHEF — private chef plating a fine dining course in a Bali villa'
 }
@@ -406,12 +408,39 @@ function injectMeta(html: string, path: string, title: string, description: stri
   // The static FAQPage block was removed from index.html to prevent duplicate field errors.
 
   // Inject structured data before closing </head>
-  const structuredData = [
-    buildBreadcrumbJsonLd(path, title.split('|')[0].trim()),
-    buildArticleJsonLd(path, title, description, ogImage),
-    buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
-  ].filter(Boolean).join('\n  ')
-  html = html.replace('</head>', `${structuredData}\n  </head>`)
+  // Cooking-class schema lock: FAQPage + Service only (runtime SeoHead). Do not
+  // inject BreadcrumbList / WebPage / homepage Organization here.
+  const structuredData =
+    path === '/experiences/cooking-class'
+      ? ''
+      : [
+          buildBreadcrumbJsonLd(path, title.split('|')[0].trim()),
+          buildArticleJsonLd(path, title, description, ogImage),
+          buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
+        ].filter(Boolean).join('\n  ')
+  if (structuredData) {
+    html = html.replace('</head>', `${structuredData}\n  </head>`)
+  }
+
+  // Cooking-class LCP + schema isolation:
+  // 1) Drop the homepage hub-hero preload (copied from index.html into every
+  //    route). Shipping both as fetchpriority=high made this URL's LCP worse.
+  // 2) Drop every copied homepage JSON-LD node (Organization, LocalBusiness
+  //    + aggregateRating, WebSite). This URL ships FAQPage + Service only.
+  if (path === '/experiences/cooking-class') {
+    html = html.replace(
+      /\s*<!-- Preload the actual homepage LCP image[\s\S]*?<link rel="preload" as="image" href="\/generated\/mychef-location-bali-hub-hero-800\.webp"[\s\S]*?\/>/,
+      ''
+    )
+    html = html.replace(
+      /(?:<!--[\s\S]*?-->\s*)?<script type="application\/ld\+json">[\s\S]*?<\/script>/g,
+      ''
+    )
+    html = html.replace(
+      '</head>',
+      `  <link rel="preload" as="image" href="/generated/mychef-cooking-class-bali-hero-villa.webp" fetchpriority="high" />\n  </head>`
+    )
+  }
 
   // OG locale (all content is in English)
   html = html.replace(

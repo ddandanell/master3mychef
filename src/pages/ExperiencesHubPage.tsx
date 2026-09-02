@@ -32,7 +32,7 @@ const EXPERIENCES = [
     slug: 'cooking-class',
     title: 'Cooking Class',
     keyword: 'cooking class Bali',
-    desc: 'Private Indonesian/Balinese cooking class at your Bali villa. About 2.5–3 hours. Chef comes to you. Diploma included. From IDR 700,000++/pp min 4.',
+    desc: '3-hour private Indonesian cooking class at your Bali villa. Chef comes to you. Diploma included. From IDR 700,000++/pp min 4.',
     icon: ChefHat,
     href: '/experiences/cooking-class',
     image: '/generated/mychef-cooking-class-bali-hero-villa.webp',
@@ -242,7 +242,7 @@ const FAQS = [
 const RELATED_PAGES = [
   { label: 'Whiskey & Cigar Experience', href: '/experiences/whiskey-cigar-experience', desc: 'Private whiskey tasting and premium cigar lounge — contact for quote.' },
   { label: 'Caviar Experience Bali', href: '/experiences/caviar-experience', desc: 'Premium caviar with private chef and champagne — villa or yacht, contact for quote.' },
-  { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: 'Private Indonesian/Balinese villa class — about 2.5–3 hours, diploma included. From IDR 700,000++/pp min 4.' },
+  { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: '3-hour private Indonesian villa class — diploma included. From IDR 700,000++/pp min 4.' },
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Day rates, meal plans and how private chef hire works across Bali.' },
   { label: 'Villa Catering', href: '/catering/villa-catering', desc: 'Full-service catering for villa celebrations and group dining.' },
   { label: 'Event Catering', href: '/events', desc: 'Weddings, birthdays, corporate events and villa parties handled end-to-end.' },

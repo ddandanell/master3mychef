@@ -415,13 +415,29 @@ function injectMeta(html: string, path: string, title: string, description: stri
   ].filter(Boolean).join('\n  ')
   html = html.replace('</head>', `${structuredData}\n  </head>`)
 
-  // Cooking-class LCP: drop the homepage hub-hero preload (copied from index.html
-  // into every route) and preload the villa-class WEBP instead. Shipping both
-  // as fetchpriority=high made this URL's LCP worse.
+  // Cooking-class LCP + schema isolation:
+  // 1) Drop the homepage hub-hero preload (copied from index.html into every
+  //    route). Shipping both as fetchpriority=high made this URL's LCP worse.
+  // 2) Drop homepage Organization / LocalBusiness (includes aggregateRating).
+  //    This URL ships FAQPage + Service only via SeoHead — do not copy
+  //    homepage JSON-LD here.
   if (path === '/experiences/cooking-class') {
     html = html.replace(
       /\s*<!-- Preload the actual homepage LCP image[\s\S]*?<link rel="preload" as="image" href="\/generated\/mychef-location-bali-hub-hero-800\.webp"[\s\S]*?\/>/,
       ''
+    )
+    html = html.replace(
+      /(?:<!--[\s\S]*?-->\s*)?<script type="application\/ld\+json">[\s\S]*?<\/script>/g,
+      (block) => {
+        if (
+          block.includes('"@type": "LocalBusiness"') ||
+          block.includes('"@type": "Organization"') ||
+          block.includes('"aggregateRating"')
+        ) {
+          return ''
+        }
+        return block
+      }
     )
     html = html.replace(
       '</head>',

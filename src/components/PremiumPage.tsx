@@ -111,6 +111,8 @@ export interface PremiumPageProps {
   seoDescription?: string
   canonicalUrl?: string
   extraJsonLd?: Record<string, unknown>[]
+  /** When true, emit only extraJsonLd — no default BreadcrumbList / Service / FAQPage. */
+  jsonLdExtraOnly?: boolean
   /** Override the default “Hi myCHEF, I’m interested in {title}” WhatsApp URL. */
   whatsAppUrl?: string
   /** Override the hero secondary button (defaults to /quote). */
@@ -145,6 +147,7 @@ export default function PremiumPage({
   seoDescription,
   canonicalUrl,
   extraJsonLd,
+  jsonLdExtraOnly = false,
   whatsAppUrl,
   heroSecondaryAction,
   finalSecondaryAction,
@@ -168,16 +171,18 @@ export default function PremiumPage({
   }
 
   const schemas: Record<string, unknown>[] = []
-  // Pages that supply their own BreadcrumbList (usually with a parent level)
-  // win — emitting both produced two BreadcrumbList nodes on 85 pages.
-  if (!extraTypes.has('BreadcrumbList')) {
-    schemas.push(breadcrumbSchema(title, canonical))
-  }
-  if (!extraTypes.has('Service')) {
-    schemas.push(serviceSchema(title, metaDescription, canonical))
-  }
-  if (faqs && faqs.length > 0 && !extraTypes.has('FAQPage')) {
-    schemas.push(faqPageSchema(faqs))
+  if (!jsonLdExtraOnly) {
+    // Pages that supply their own BreadcrumbList (usually with a parent level)
+    // win — emitting both produced two BreadcrumbList nodes on 85 pages.
+    if (!extraTypes.has('BreadcrumbList')) {
+      schemas.push(breadcrumbSchema(title, canonical))
+    }
+    if (!extraTypes.has('Service')) {
+      schemas.push(serviceSchema(title, metaDescription, canonical))
+    }
+    if (faqs && faqs.length > 0 && !extraTypes.has('FAQPage')) {
+      schemas.push(faqPageSchema(faqs))
+    }
   }
   if (extraJsonLd && extraJsonLd.length > 0) {
     schemas.push(...extraJsonLd)

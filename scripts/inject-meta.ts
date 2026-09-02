@@ -408,19 +408,25 @@ function injectMeta(html: string, path: string, title: string, description: stri
   // The static FAQPage block was removed from index.html to prevent duplicate field errors.
 
   // Inject structured data before closing </head>
-  const structuredData = [
-    buildBreadcrumbJsonLd(path, title.split('|')[0].trim()),
-    buildArticleJsonLd(path, title, description, ogImage),
-    buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
-  ].filter(Boolean).join('\n  ')
-  html = html.replace('</head>', `${structuredData}\n  </head>`)
+  // Cooking-class schema lock: FAQPage + Service only (runtime SeoHead). Do not
+  // inject BreadcrumbList / WebPage / homepage Organization here.
+  const structuredData =
+    path === '/experiences/cooking-class'
+      ? ''
+      : [
+          buildBreadcrumbJsonLd(path, title.split('|')[0].trim()),
+          buildArticleJsonLd(path, title, description, ogImage),
+          buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
+        ].filter(Boolean).join('\n  ')
+  if (structuredData) {
+    html = html.replace('</head>', `${structuredData}\n  </head>`)
+  }
 
   // Cooking-class LCP + schema isolation:
   // 1) Drop the homepage hub-hero preload (copied from index.html into every
   //    route). Shipping both as fetchpriority=high made this URL's LCP worse.
-  // 2) Drop homepage Organization / LocalBusiness (includes aggregateRating).
-  //    This URL ships FAQPage + Service only via SeoHead — do not copy
-  //    homepage JSON-LD here.
+  // 2) Drop every copied homepage JSON-LD node (Organization, LocalBusiness
+  //    + aggregateRating, WebSite). This URL ships FAQPage + Service only.
   if (path === '/experiences/cooking-class') {
     html = html.replace(
       /\s*<!-- Preload the actual homepage LCP image[\s\S]*?<link rel="preload" as="image" href="\/generated\/mychef-location-bali-hub-hero-800\.webp"[\s\S]*?\/>/,
@@ -428,16 +434,7 @@ function injectMeta(html: string, path: string, title: string, description: stri
     )
     html = html.replace(
       /(?:<!--[\s\S]*?-->\s*)?<script type="application\/ld\+json">[\s\S]*?<\/script>/g,
-      (block) => {
-        if (
-          block.includes('"@type": "LocalBusiness"') ||
-          block.includes('"@type": "Organization"') ||
-          block.includes('"aggregateRating"')
-        ) {
-          return ''
-        }
-        return block
-      }
+      ''
     )
     html = html.replace(
       '</head>',

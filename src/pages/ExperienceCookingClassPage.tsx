@@ -1,6 +1,6 @@
 import PremiumPage from '@/components/PremiumPage'
 import OptimizedImage from '@/components/OptimizedImage'
-import { breadcrumbSchema, faqPageSchema, providerRef } from '@/components/SeoHead'
+import { faqPageSchema, providerRef } from '@/components/SeoHead'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
 import { buildWhatsAppUrl, COOKING_CLASS_ENQUIRY } from '@/lib/whatsapp'
@@ -560,6 +560,22 @@ const FAQS = [
   },
 ]
 
+/** Schema lock: FAQPage may only emit these published questions. Visible FAQs stay complete. */
+const SCHEMA_FAQ_QUESTIONS = new Set([
+  'How much are cooking classes in Bali with myCHEF?',
+  'What does a couple pay for a private cooking class?',
+  'How long is the cooking class?',
+  'What is included in the private Indonesian cooking class?',
+  'Do we eat the food we cook?',
+  'Is this a cooking class or a private chef?',
+  'Do you offer a Balinese, Javanese, or Indonesian cooking class?',
+  'How far in advance should we book a cooking class in Bali?',
+  'Is this different from the sushi masterclass?',
+  'How many people will be in our class?',
+  'Do we visit a local market as part of the class?',
+  'What should I wear to a cooking class?',
+])
+
 const RELATED_PAGES = [
   {
     label: 'Sushi Masterclass Bali',
@@ -633,12 +649,12 @@ export default function ExperienceCookingClassPage() {
         whatsAppUrl={WA_LINK}
         heroCtaFirst
         heroCompact
+        jsonLdExtraOnly
         extraJsonLd={[
-          breadcrumbSchema('Cooking Class Bali', CANONICAL, 'Experiences', 'https://mychef.id/experiences'),
           faqPageSchema(
-            FAQS.map((f) => ({ question: f.question, answer: schemaPlainText(f.answer) })).filter(
-              (f) => f.question && f.answer
-            )
+            FAQS.filter((f) => SCHEMA_FAQ_QUESTIONS.has(f.question))
+              .map((f) => ({ question: f.question, answer: schemaPlainText(f.answer) }))
+              .filter((f) => f.question && f.answer)
           ),
           {
             '@context': 'https://schema.org',

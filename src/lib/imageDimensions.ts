@@ -207,7 +207,7 @@ export const IMAGE_DIMENSIONS = {
   "/generated/mychef-staffing-bali-staffing-hero.webp": { width: 1440, height: 800 },
   "/generated/mychef-staffing-bali-staffing-kitchen.webp": { width: 1440, height: 800 },
   "/generated/mychef-staffing-bali-staffing-table.webp": { width: 1440, height: 800 },
-  "/generated/mychef-misc-bali-about-team-photo.webp": { width: 1440, height: 800 },
+  "/generated/mychef-misc-bali-about-team-photo.webp": { width: 896, height: 1200 },
   "/generated/mychef-ui-bali-testimonials-bg.webp": { width: 1600, height: 1066 },
   "/generated/mychef-misc-bali-trust-hosts.webp": { width: 1440, height: 800 },
   "/generated/were-awards.png": { width: 1536, height: 1024 },

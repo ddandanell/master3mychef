@@ -6,8 +6,16 @@ import { trackEvent } from '@/lib/analytics'
 
 const SESSION_KEY = 'mychef_exit_popup_shown'
 
-// Pages where the popup should NOT fire (booking flow, legal, utility)
+function isHomepagePath(pathname: string): boolean {
+  const path = (pathname || '/').replace(/\/+$/, '') || '/'
+  return path === '/'
+}
+
+// Pages where the popup should NOT fire (booking flow, legal, utility).
+// Homepage is listed here AND gated in trigger/effect/render: never auto-open
+// on `/` — not first paint, not the 25s delay, not returning visitors.
 const EXCLUDED_PATHS = new Set([
+  '/',
   '/quote',
   '/book',
   '/calculator',
@@ -23,10 +31,12 @@ const EXCLUDED_PATHS = new Set([
 export default function ExitIntentPopup() {
   const [visible, setVisible] = useState(false)
   const location = useLocation()
+  const onHomepage = isHomepagePath(location.pathname)
 
   const shouldSkip = useCallback(() => {
+    if (isHomepagePath(location.pathname)) return true
     if (typeof window !== 'undefined' && sessionStorage.getItem(SESSION_KEY)) return true
-    if (EXCLUDED_PATHS.has(location.pathname)) return true
+    if (EXCLUDED_PATHS.has(location.pathname) || EXCLUDED_PATHS.has(location.pathname.replace(/\/+$/, '') || '/')) return true
     return false
   }, [location.pathname])
 
@@ -38,7 +48,7 @@ export default function ExitIntentPopup() {
   }, [shouldSkip, location.pathname])
 
   useEffect(() => {
-    if (shouldSkip()) return
+    if (onHomepage || shouldSkip()) return
 
     // Desktop: fire when mouse exits viewport from the top
     const handleMouseLeave = (e: MouseEvent) => {
@@ -47,7 +57,7 @@ export default function ExitIntentPopup() {
       }
     }
 
-    // Mobile / fallback: fire after 25 seconds on page
+    // Other routes only — homepage must never get this timer.
     const timer = setTimeout(trigger, 25_000)
 
     document.addEventListener('mouseleave', handleMouseLeave)
@@ -56,9 +66,9 @@ export default function ExitIntentPopup() {
       document.removeEventListener('mouseleave', handleMouseLeave)
       clearTimeout(timer)
     }
-  }, [shouldSkip, trigger])
+  }, [onHomepage, shouldSkip, trigger])
 
-  if (!visible) return null
+  if (onHomepage || !visible) return null
 
   const waUrl = `https://wa.me/${PHONE.digits}?text=${encodeURIComponent(
     "Hi myCHEF! I'd love to get the free Bali Private Chef Price Guide and learn about your services."
@@ -70,7 +80,7 @@ export default function ExitIntentPopup() {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center px-4"
+      className="exit-intent-popup fixed inset-0 z-[9999] flex items-center justify-center px-4"
       role="dialog"
       aria-modal="true"
       aria-label="Free Bali Private Chef Price Guide"

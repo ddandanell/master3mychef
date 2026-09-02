@@ -243,6 +243,9 @@ export const REDIRECTS: Redirect[] = [
   // src/pages/PrivateChefPillarPage.tsx). It must NOT be a redirect source or the route
   // is shadowed — REDIRECTS.map renders before the page routes in src/App.tsx.
   //
+  // Bare /private-chef → / (exact path + trailing-slash twin) is declared with the
+  // cooking-class 301s at the top of this file. Do not retarget /private-chef-bali.
+  //
   // --- Private Chef consolidation 2026-07-30 ---
   // Eight Bali-wide pages competed for "private chef bali" while publishing six different
   // price floors. These three carried no measurable traffic and are folded into the pillar.

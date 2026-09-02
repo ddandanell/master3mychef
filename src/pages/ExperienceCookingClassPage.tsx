@@ -22,6 +22,7 @@ import type { PageSection } from '@/components/PremiumPage'
  * Ubud is a villa location, not the primary keyword (Paon-cluster SERP).
  * Sushi → /experiences/sushi-masterclass. Do not cannibalize private-cooking-class.
  * Do not invent WhatsApp-history FAQs, star ratings, kids ages, or extra prices.
+ * Corpus is thin (Aug 2026 class invoices + one wedding-stay thread) — do not pad FAQs.
  */
 
 const meta = getPageMeta('experience-cooking-class')
@@ -134,7 +135,7 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Why IDR 700,000++ min 4 is not a IDR 350,000 school ticket',
     title: 'Cooking Class Cost — From IDR 700,000++ per Person',
-    body: `<p style="font-size:1.15rem;line-height:1.6"><strong>From IDR 700,000++ per person.</strong> Minimum <strong>4 guests</strong>. All-in is <strong>IDR 847,000 per person</strong> (base × 1.21). ++ is 11% government tax + 10% service — your written proposal shows the all-in total.</p>
+    body: `<p style="font-size:1.15rem;line-height:1.6"><strong>From IDR 700,000++ per person.</strong> Minimum <strong>4 guests</strong>. All-in is <strong>IDR 847,000 per person</strong> (base × 1.21). The 4-guest floor is <strong>IDR 3,388,000 all-in</strong>. ++ is 11% government tax + 10% service — your written proposal shows the all-in total.</p>
     <p><strong>Couples (2 guests):</strong> billed at <strong>IDR 1,400,000++ per person</strong> — the same 4-guest floor. The class is not a half-price couple ticket.</p>
     <p>Typical shared-school tickets sit around <strong>IDR 350,000–530,000</strong> per person. That price buys a place on a bench of 10–18, a set menu, pickup and often a morning market. The 700k villa rate buys a <strong>private</strong> chef in <em>your</em> kitchen, ingredients for your group, 4–6 dishes you actually eat, a diploma and a clean kitchen — with no transfer time. You are not paying double for the same product. You are paying for a different one. We do not try to undercut a 350k school ticket.</p>
     <p>See published tables on <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing</a>. This class is not a private-chef day rate.</p>
@@ -149,7 +150,7 @@ const SECTIONS: PageSection[] = [
       <li>Recipe cards for a normal home kitchen</li>
       <li>Full kitchen clean-up</li>
     </ul>
-    <p>Larger groups receive additional staff so everyone stays active. Dietary needs — vegan, gluten-free, allergies, milder spice — are taken at enquiry. Children who join are extra guests on the same class. For kids menus see <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">kids menus</a>; for a kids party production see <a href="/experiences/kids-birthday-chef-party" class="text-[#7E6410] hover:underline font-medium">kids birthday chef party</a>.</p>
+    <p>Tell us the headcount when you enquire. Larger groups are staffed so everyone stays active. Dietary needs — vegan, gluten-free, allergies, milder spice — are taken at enquiry. Children who join are extra guests on the same class — there is no kids tariff. For kids menus see <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">kids menus</a>; for a kids party production see <a href="/experiences/kids-birthday-chef-party" class="text-[#7E6410] hover:underline font-medium">kids birthday chef party</a>.</p>
     <p>If you also want a chef to cook <em>for</em> you on other days, that is a separate booking: <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef Bali</a>.</p>
     <p style="font-size:0.95rem;color:#4A4A4A"><a href="/blog/cooking-class-bali-cost" class="text-[#7E6410] hover:underline font-medium">Cooking class cost guide</a> · <a href="/blog/is-a-cooking-class-in-bali-worth-it" class="text-[#7E6410] hover:underline font-medium">Is a cooking class in Bali worth it?</a></p>
     ${CTA_HTML('Get your personalised quote + sample menu', WA_QUOTE)}`,
@@ -391,8 +392,8 @@ const SECTIONS: PageSection[] = [
   {
     id: 'faq',
     type: 'faq' as const,
-    subtitle: 'Cooking Class Bali — FAQ',
-    title: 'Common Questions About Cooking Classes',
+    subtitle: 'Price, length, what’s included',
+    title: 'Cooking Class Questions',
   },
   {
     id: 'cta',
@@ -416,92 +417,42 @@ const FAQS = [
   {
     question: 'How much are cooking classes in Bali with myCHEF?',
     answer:
-      'From <strong>IDR 700,000++ per person</strong>, minimum 4 guests. All-in is <strong>IDR 847,000 per person</strong> (10% service + 11% VAT; base × 1.21). Ingredients are included. Your written proposal shows the all-in total.',
+      'From <strong>IDR 700,000++ per person</strong>, minimum 4 guests. All-in is <strong>IDR 847,000 per person</strong> (10% service + 11% VAT; base × 1.21). The 4-guest floor is <strong>IDR 3,388,000 all-in</strong>. Ingredients are included — not groceries at cost. Your written proposal shows the all-in total.',
   },
   {
     question: 'What does a couple pay for a private cooking class?',
     answer:
-      'Couples of 2 are quoted at <strong>IDR 1,400,000++ per person</strong> — the same 4-guest minimum. The class is not half-price for two people.',
+      'Two guests are billed at <strong>IDR 1,400,000++ per person</strong> — the same 4-guest floor (all-in IDR 3,388,000). The class is not half-price for two people.',
   },
   {
     question: 'How long is the cooking class?',
     answer:
-      '<strong>2.5 or 3 hours</strong>, at your start time (lunch or dinner). We ask which length you prefer when you enquire. It is not a 5–6.5 hour school day with transfers — the session stays at the villa. No minibus.',
+      '<strong>2.5 or 3 hours</strong>. We ask which length you prefer, and your start time (lunch or dinner), when you enquire. The session stays at the villa.',
   },
   {
     question: 'What is included in the private Indonesian cooking class?',
     answer:
-      'Chef instructor, all ingredients, uniforms &amp; hats, intro + hands-on cooking of 4–6 dishes, sit-down meal of everything prepared, personalised myCHEF Indonesian Cooking Diploma, recipe cards, and full kitchen clean-up.',
-  },
-  {
-    question: 'Do you give a diploma or certificate after the cooking class?',
-    answer:
-      'Yes. Every participant receives a personalised <strong>myCHEF Indonesian Cooking Diploma</strong> with their name and the date — a real take-home souvenir of the day.',
+      'The chef, all ingredients, and the meal of everything you cook. The class is 2.5 or 3 hours: intro, hands-on cooking of 4–6 dishes, then you eat. Diploma, recipe cards, uniforms and chef hats, and kitchen clean-up are part of the published villa program.',
   },
   {
     question: 'Do we eat the food we cook?',
     answer:
-      'Yes. You cook 4–6 dishes, then sit down and eat every dish you prepared. That meal is the centrepiece of the experience.',
+      'Yes. You cook 4–6 dishes, then sit down and eat every dish you prepared.',
   },
   {
     question: 'Is this a cooking class or a private chef?',
     answer:
-      'A <strong>cooking class</strong> means you cook with the chef and eat what you cooked. A <strong>private chef</strong> cooks for you. Different products, different quotes. See <a href="/private-chef-bali">private chef Bali</a> for chef hire.',
+      'A <strong>cooking class</strong> means you cook with the chef and eat what you cooked. A <strong>private chef</strong> cooks for you. Different products, different quotes — this page is the class, not a chef day-rate. See <a href="/private-chef-bali">private chef Bali</a> for chef hire.',
   },
   {
-    question: 'I\'m in Seminyak or Canggu — where do I find a Balinese cooking class?',
+    question: 'Do you offer a Balinese, Javanese or Indonesian cooking class?',
     answer:
-      'In your villa. The chef comes to you in <a href="/experiences/cooking-class#seminyak">Seminyak</a> and <a href="/experiences/cooking-class#canggu">Canggu</a> — also <a href="/experiences/cooking-class#sanur">Sanur</a>, <a href="/locations/uluwatu">Uluwatu</a>, <a href="/locations/jimbaran">Jimbaran</a>, Nusa Dua, Kuta, and if your villa is in Ubud see <a href="/experiences/cooking-class#ubud">villa in Ubud</a>. Also <a href="/private-chef/berawa">Berawa</a>. Ubud is coverage, not a school campus. You do not need a hotel pickup.',
-  },
-  {
-    question: 'How many people will be in our class? Will it be crowded?',
-    answer:
-      'Only your group — the class is <strong>100% private</strong>. Unlike large cooking schools that can run 10–18 guests on a shared bench, you never cook alongside strangers.',
-  },
-  {
-    question: 'Do we visit a local market as part of the class?',
-    answer:
-      'No market tour is promised on this class. The chef shops ingredients beforehand and brings them to the villa. Class time is cooking and eating at home. If a hands-on market visit matters, enquire — it is not a packaged SKU on this URL.',
-  },
-  {
-    question: 'Is a cooking class in Bali worth it?',
-    answer:
-      'A group school can be worth it if you want pickup, a morning market and a shared bench at IDR 350,000–530,000. A myCHEF class is a different product: 100% private, in your villa, 2.5 or 3 hours, diploma, you eat everything you cook. From IDR 700,000++ per person, min 4 (all-in IDR 847,000 pp). Honest take: <a href="/blog/is-a-cooking-class-in-bali-worth-it">is a cooking class in Bali worth it?</a>',
+      'Yes. Tell us Balinese, Javanese or Indonesian when you enquire. The standard villa class is Indonesian / Balinese; Javanese when you brief it.',
   },
   {
     question: 'How far in advance should we book a cooking class in Bali?',
     answer:
-      'At least <strong>two days</strong>. Ingredients, materials, diploma and setup need that lead time. Last-minute bookings need full payment to confirm.',
-  },
-  {
-    question: 'What deposit is required?',
-    answer:
-      'Book at least two days ahead. Short-lead / last-minute classes need <strong>full payment to confirm</strong> the chef and date. Your written proposal states the payment terms. <a href="/cancellation">Cancellation policy</a>.',
-  },
-  {
-    question: 'Do you offer a cooking class for kids or with kids?',
-    answer:
-      'Yes — children who join are extra guests on the same class. There is no separate kids tariff. For a full kids party see <a href="/experiences/kids-birthday-chef-party">kids birthday chef party</a>.',
-  },
-  {
-    question: 'Can couples book a private cooking class?',
-    answer:
-      'Yes. Note the 4-guest minimum: couples pay <strong>IDR 1,400,000++ per person</strong>.',
-  },
-  {
-    question: 'Do you offer a Balinese or Indonesian class — and can it be vegetarian, vegan, or gluten-free?',
-    answer:
-      'Yes. The standard program is Indonesian / Balinese (base gede, sambals, sate lilit, lawar/urap, nasi goreng, dessert); Javanese when you ask. Vegetarian, vegan, gluten-free, allergies and milder spice are taken at enquiry, like any job. Beginners are welcome — the chef sets the pace to the group.',
-  },
-  {
-    question: 'What should I wear to a cooking class?',
-    answer:
-      'Comfortable clothes you can cook in and secure shoes. We provide uniforms and chef hats for every guest.',
-  },
-  {
-    question: 'What does our villa kitchen need?',
-    answer:
-      'A working stove and basic prep space is usually enough. We bring specialist tools, uniforms and hats. Share a kitchen photo or listing link when you enquire.',
+      'At least <strong>two days</strong>. Last-minute / short-lead bookings need <strong>full payment to confirm</strong> the chef and date. Your written proposal states the payment terms.',
   },
   {
     question: 'Is this different from the sushi masterclass?',
@@ -509,9 +460,19 @@ const FAQS = [
       'Yes. This page is the Indonesian / Balinese in-villa cooking class. Sushi has its own page: <a href="/experiences/sushi-masterclass">sushi masterclass</a>.',
   },
   {
-    question: 'How do I contact you to book?',
+    question: 'How many people will be in our class? Will it be crowded?',
     answer:
-      'WhatsApp +62 896-7407-2020 with villa area, guest count, 2.5-hour or 3-hour, start time and date — or use <a href="/quote">quote</a> / <a href="/book">book</a> / <a href="/pricing">pricing</a>. At least two days’ notice.',
+      'Only your group — the class is private. You do not share the kitchen with another party.',
+  },
+  {
+    question: 'Do we visit a local market as part of the class?',
+    answer:
+      'No market tour is packaged on this class. The chef shops beforehand and brings ingredients to the villa. If a hands-on market visit matters, enquire.',
+  },
+  {
+    question: 'What should I wear to a cooking class?',
+    answer:
+      'Comfortable clothes you can cook in and secure shoes. Uniforms and chef hats are provided.',
   },
 ]
 
@@ -701,7 +662,7 @@ export default function ExperienceCookingClassPage() {
               availability: 'https://schema.org/InStock',
               url: CANONICAL,
               description:
-                'IDR 700,000++ per person, minimum 4 guests. All-in IDR 847,000 per person including 10% service and 11% VAT. Couples IDR 1,400,000++ per person.',
+                'IDR 700,000++ per person, minimum 4 guests. All-in IDR 847,000 per person (base × 1.21). 4-guest floor IDR 3,388,000 all-in. Couples IDR 1,400,000++ per person.',
             },
           },
           {

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { buildWhatsAppUrlForPath } from '@/lib/whatsapp'
+import { buildWhatsAppUrlForPath, isCookingClassPath } from '@/lib/whatsapp'
 import { Link, useLocation } from 'react-router-dom'
 import { Instagram, MessageCircle, LogIn, MapPin, Mail, ChefHat, ChevronDown, ExternalLink } from 'lucide-react'
 import { PILLARS, LOCATIONS, PRIMARY_NAV, PRIMARY_CTA, hasLocationPage } from '@/data/siteArchitecture'
@@ -460,12 +460,24 @@ export default function Footer() {
           <Link to="/certified-partner" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Certified Partner</Link>
           <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Journal</Link>
           <Link to="/journal" className="hover:text-[#C5A028] transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded px-0.5">Blog & Guides</Link>
-          <Link
-            to={PRIMARY_CTA.href}
-            className="px-4 py-1.5 bg-[#C5A028]/10 text-[#C5A028] font-semibold rounded-full hover:bg-[#C5A028] hover:text-black transition-all focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            Book Now
-          </Link>
+          {isCookingClassPath(pathname) ? (
+            <a
+              href={waHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-source="footer-book-now-cooking-class"
+              className="px-4 py-1.5 bg-[#C5A028]/10 text-[#C5A028] font-semibold rounded-full hover:bg-[#C5A028] hover:text-black transition-all focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              Book Now
+            </a>
+          ) : (
+            <Link
+              to={PRIMARY_CTA.href}
+              className="px-4 py-1.5 bg-[#C5A028]/10 text-[#C5A028] font-semibold rounded-full hover:bg-[#C5A028] hover:text-black transition-all focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              Book Now
+            </Link>
+          )}
         </div>
 
         {/* Staff login + legal - Enhanced layout */}

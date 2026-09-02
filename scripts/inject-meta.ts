@@ -211,7 +211,8 @@ function getOgImageAlt(path: string): string {
     return 'myCHEF private chef and villa dining experience in Bali'
   }
   if (path === '/experiences/cooking-class' || path.startsWith('/experiences/cooking-class')) {
-    return 'Private chef teaching a couple to cook in a Bali villa kitchen, with tropical garden, bougainvillea and pool beyond'
+    // Product OG alt (chef comes to you). Visible hero photo alt stays the villa-kitchen description.
+    return 'myCHEF private in-villa cooking class in Bali — chef comes to you'
   }
   return 'myCHEF — private chef plating a fine dining course in a Bali villa'
 }

@@ -40,6 +40,20 @@ export const REDIRECTS: Redirect[] = [
     statusCode: 301,
   },
 
+  {
+    from: '/private-chef',
+    to: '/',
+    reason:
+      'Bare /private-chef 404s. Homepage is the private-chef product (2026-09 two-cores). Exact path only — must not catch /private-chef/{area}.',
+    statusCode: 301,
+  },
+  {
+    from: '/private-chef/',
+    to: '/',
+    reason: 'Trailing-slash twin of /private-chef → homepage.',
+    statusCode: 301,
+  },
+
   // --- Renames ---
   { from: '/families', to: '/dining-styles', reason: 'Page renamed 2026-07: menu families hub → /dining-styles (same content, new canonical URL)' },
 

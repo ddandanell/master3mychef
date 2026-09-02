@@ -99,6 +99,8 @@ export interface PremiumPageProps {
   /** Extra classes on the hero <img> (e.g. object-position). Always composed with object-cover. */
   heroImageClassName?: string
   ogImage?: string
+  /** OG/Twitter image alt. Defaults to heroImageAlt. Use when social copy must differ from the visible hero photo. */
+  ogImageAlt?: string
   keywords: string[]
   highlights?: string[]
   sections: PageSection[]
@@ -135,6 +137,7 @@ export default function PremiumPage({
   heroImageAlt,
   heroImageClassName,
   ogImage,
+  ogImageAlt,
   keywords,
   highlights,
   sections,
@@ -267,8 +270,8 @@ export default function PremiumPage({
         description={metaDescription}
         canonical={canonical}
         ogImage={ogImage}
-        ogImageAlt={heroImageAlt}
-        twitterImageAlt={heroImageAlt}
+        ogImageAlt={ogImageAlt ?? heroImageAlt}
+        twitterImageAlt={ogImageAlt ?? heroImageAlt}
         noindex={noindex}
         jsonLd={schemas}
       />

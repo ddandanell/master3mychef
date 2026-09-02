@@ -610,11 +610,6 @@
       "permanent": true
     },
     {
-      "source": "/private-chef",
-      "destination": "/",
-      "permanent": true
-    },
-    {
       "source": "/villa-chef",
       "destination": "/private-chef-bali",
       "permanent": true

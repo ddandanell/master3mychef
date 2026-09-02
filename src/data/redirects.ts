@@ -243,10 +243,8 @@ export const REDIRECTS: Redirect[] = [
   // src/pages/PrivateChefPillarPage.tsx). It must NOT be a redirect source or the route
   // is shadowed — REDIRECTS.map renders before the page routes in src/App.tsx.
   //
-  // Bare /private-chef has no page (live 404). Exact source only — Vercel will not
-  // match /private-chef-bali or /private-chef/:area. Homepage already sells stay chef
-  // vs catering, so / is the related destination (not a soft-404 dump).
-  { from: '/private-chef', to: '/', reason: 'Live 404: bare /private-chef has no page. Homepage is the stay-chef vs catering split. Do not retarget /private-chef-bali.' },
+  // Bare /private-chef → / (exact path + trailing-slash twin) is declared with the
+  // cooking-class 301s at the top of this file. Do not retarget /private-chef-bali.
   //
   // --- Private Chef consolidation 2026-07-30 ---
   // Eight Bali-wide pages competed for "private chef bali" while publishing six different

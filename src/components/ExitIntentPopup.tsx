@@ -59,41 +59,38 @@ export default function ExitIntentPopup() {
     }
 
     const handleMouseLeave = (e: MouseEvent) => {
-      // Homepage: never cover the hero. Wait until we have scrolled past the
-      // first screen or the stay-rate / two-cores block is in view.
       if (e.clientY <= 0 && armed) trigger()
     }
 
     if (!isHome) {
       startTimer()
-    } else {
-      const onScroll = () => {
-        if (window.scrollY >= window.innerHeight * 0.8) arm()
-      }
-      const pricing = document.getElementById('two-cores')
-      let io: IntersectionObserver | undefined
-      if (pricing && typeof IntersectionObserver !== 'undefined') {
-        io = new IntersectionObserver(
-          (entries) => {
-            if (entries.some((entry) => entry.isIntersecting)) arm()
-          },
-          { threshold: 0.12 },
-        )
-        io.observe(pricing)
-      }
-      window.addEventListener('scroll', onScroll, { passive: true })
-      onScroll()
       document.addEventListener('mouseleave', handleMouseLeave)
       return () => {
-        window.removeEventListener('scroll', onScroll)
-        io?.disconnect()
         document.removeEventListener('mouseleave', handleMouseLeave)
         if (timer) clearTimeout(timer)
       }
     }
 
+    // Homepage: never cover the hero or the first-screen chef vs catering cards.
+    // Arm only after those cards have been scrolled past, then allow the 25s
+    // timer and top-edge exit intent.
+    const pastFirstScreen = () => {
+      const cores = document.getElementById('two-cores')
+      if (cores) {
+        const rect = cores.getBoundingClientRect()
+        return rect.bottom < 48
+      }
+      return window.scrollY >= window.innerHeight
+    }
+
+    const onScroll = () => {
+      if (pastFirstScreen()) arm()
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
     document.addEventListener('mouseleave', handleMouseLeave)
     return () => {
+      window.removeEventListener('scroll', onScroll)
       document.removeEventListener('mouseleave', handleMouseLeave)
       if (timer) clearTimeout(timer)
     }

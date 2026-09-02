@@ -25,6 +25,7 @@
 import { readFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 import { REDIRECT_MAP } from '../src/data/redirects'
+import { siteFacts } from '../src/data/siteFacts'
 
 const DIST = join(process.cwd(), 'dist')
 const SITE = 'https://mychef.id'
@@ -160,6 +161,64 @@ for (const [target, sources] of brokenLinks) {
 
 if (missingFiles.length) {
   warnings.push(`${missingFiles.length} sitemap URL(s) had no prerendered file: ${missingFiles.slice(0, 5).join(', ')}`)
+}
+
+// Homepage LocalBusiness JSON-LD — NAP from siteFacts, never invent ratings.
+{
+  const homeFile = distFileFor('/')
+  if (!homeFile) {
+    errors.push('Homepage dist/index.html missing — cannot verify LocalBusiness JSON-LD')
+  } else {
+    const html = readFileSync(homeFile, 'utf8')
+    const nodes: Record<string, unknown>[] = []
+    for (const match of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+      try {
+        const parsed = JSON.parse(match[1]) as unknown
+        if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+          nodes.push(parsed as Record<string, unknown>)
+        }
+      } catch {
+        // ignore unparseable JSON-LD
+      }
+    }
+    const local = nodes.find((node) => {
+      const type = node['@type']
+      return type === 'LocalBusiness' || (Array.isArray(type) && type.includes('LocalBusiness'))
+    })
+    if (!local) {
+      errors.push('Homepage is missing LocalBusiness JSON-LD')
+    } else {
+      if (local.aggregateRating) {
+        errors.push('Homepage LocalBusiness must not invent aggregateRating')
+      }
+      if (local.review) {
+        errors.push('Homepage LocalBusiness must not invent review markup')
+      }
+      if (local.name !== siteFacts.businessName) {
+        errors.push(`Homepage LocalBusiness name must match siteFacts (${siteFacts.businessName})`)
+      }
+      if (local.telephone !== siteFacts.phoneDisplay) {
+        errors.push(`Homepage LocalBusiness telephone must match footer NAP (${siteFacts.phoneDisplay})`)
+      }
+      if (local.email !== siteFacts.email) {
+        errors.push(`Homepage LocalBusiness email must match footer NAP (${siteFacts.email})`)
+      }
+      const address = local.address as Record<string, unknown> | undefined
+      if (!address || address.streetAddress !== siteFacts.address.streetAddress) {
+        errors.push('Homepage LocalBusiness address.streetAddress must match footer NAP')
+      }
+      if (!address || address.addressLocality !== siteFacts.address.addressLocality) {
+        errors.push('Homepage LocalBusiness address.addressLocality must match footer NAP')
+      }
+      if (!address || address.postalCode !== siteFacts.address.postalCode) {
+        errors.push('Homepage LocalBusiness address.postalCode must match footer NAP')
+      }
+      const geo = local.geo as Record<string, unknown> | undefined
+      if (!geo || Number(geo.latitude) !== siteFacts.geo.latitude || Number(geo.longitude) !== siteFacts.geo.longitude) {
+        errors.push('Homepage LocalBusiness geo must match siteFacts (GBP pin)')
+      }
+    }
+  }
 }
 
 // ── Report ────────────────────────────────────────────────────────────────────

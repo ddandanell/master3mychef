@@ -331,11 +331,19 @@ export default function HubPage() {
     telephone: siteFacts.phoneDisplay,
     email: siteFacts.email,
     address: postalAddressSchema,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: siteFacts.geo.latitude,
+      longitude: siteFacts.geo.longitude,
+    },
     areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Sanur', 'Nusa Dua', 'Jimbaran', 'Berawa', 'Pererenan', 'Bukit'],
     priceRange: `${CHEF_ONE} - ${CHEF_THREE} per day`,
     founder: { '@type': 'Person', name: 'Adriano' },
     servesCuisine: ['Indonesian', 'Italian', 'Mediterranean', 'Japanese', 'International'],
+    openingHours: 'Mo-Su 07:00-22:00',
   }
+  delete homeLocalBusinessSchema.aggregateRating
+  delete homeLocalBusinessSchema.review
 
   const websiteSchema: Record<string, unknown> = {
     '@context': 'https://schema.org',

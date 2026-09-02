@@ -172,11 +172,14 @@
     </script>
 
     <!--
-      Structured data: LocalBusiness
-      WARNING: this static node shares its @id with the runtime node built in
-      src/components/SeoHead.tsx (localBusinessSchema). Both appear in the same
-      document on most pages, so name / telephone / address MUST stay byte-identical
-      to src/data/siteFacts.ts. Divergence splits the entity in Google's graph.
+      Structured data: LocalBusiness (NAP matches footer / src/data/siteFacts.ts).
+      WARNING: this static node shares @id with src/components/SeoHead.tsx
+      (localBusinessSchema). name / telephone / email / address / geo MUST stay
+      byte-identical to siteFacts. Divergence splits the entity in Google's graph.
+
+      Do not add aggregateRating or review arrays. Self-serving ratings are
+      ineligible for rich results and were flagged invalid in Search Console.
+      Stars belong on the Google Business Profile, linked via sameAs / hasMap.
     -->
     <script type="application/ld+json">
       {
@@ -187,20 +190,14 @@
         "alternateName": ["myCHEF.id", "myCHEF", "myCHEF Bali"],
         "legalName": "myCHEF Indonesia",
         "description": "Private chef, catering, events, and staffing services in Bali",
-        "url": "https://mychef.id",
+        "url": "https://mychef.id/",
         "telephone": "+62 896-7407-2020",
         "email": "bali@mychef.id",
         "image": "https://mychef.id/generated/hub-hero-v3.webp",
         "priceRange": "$$$$",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "13",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
         "foundingDate": "2019",
         "currenciesAccepted": "IDR",
+        "hasMap": "https://www.google.com/maps/place/myCHEF.+-+Private+Chef+and+Catering/data=!4m2!3m1!1s0x0:0x84318764e9490ac2?sa=X",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan",
@@ -235,11 +232,12 @@
           { "@type": "Place", "name": "Nusa Lembongan, Bali" },
           { "@type": "Place", "name": "Amed, Bali" }
         ],
+        "openingHours": "Mo-Su 07:00-22:00",
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
           "opens": "07:00",
-          "closes": "23:00"
+          "closes": "22:00"
         },
         "hasCredential": {
           "@type": "EducationalOccupationalCredential",

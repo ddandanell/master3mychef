@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url'
 import { BLOG_POSTS, GUIDES, SITEMAP } from '../src/data/sitemap'
 import { JOURNAL_POSTS } from '../src/data/content/journalPosts'
 import { ARTICLE_CONTENT } from '../src/data/content/articleContent'
+import { siteFacts } from '../src/data/siteFacts'
 import type { ContentEntry } from '../src/lib/blog'
 import type { JournalPost } from '../src/data/siteArchitecture'
 
@@ -287,6 +288,94 @@ function buildWebPageJsonLd(path: string, name: string, description: string): st
   return `<script type="application/ld+json" data-seohead="jsonld">${JSON.stringify(schema)}</script>`
 }
 
+function isLocalBusinessNode(node: unknown): node is Record<string, unknown> {
+  if (!node || typeof node !== 'object' || Array.isArray(node)) return false
+  const type = (node as Record<string, unknown>)['@type']
+  return type === 'LocalBusiness' || (Array.isArray(type) && type.includes('LocalBusiness'))
+}
+
+/**
+ * Homepage LocalBusiness JSON-LD from siteFacts NAP (same as the footer).
+ * Never emit aggregateRating or review — self-serving ratings are ineligible.
+ */
+function homepageLocalBusinessFromNap(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${SITE}/#business`,
+    name: siteFacts.businessName,
+    alternateName: [...siteFacts.alternateNames],
+    legalName: siteFacts.legalName,
+    description: 'Private chef, catering, events, and staffing services in Bali',
+    url: `${SITE}/`,
+    telephone: siteFacts.phoneDisplay,
+    email: siteFacts.email,
+    image: `${SITE}/generated/hub-hero-v3.webp`,
+    priceRange: '$$$$',
+    foundingDate: String(siteFacts.foundingYear),
+    currenciesAccepted: 'IDR',
+    hasMap: siteFacts.googleBusinessProfileUrl,
+    address: {
+      '@type': 'PostalAddress',
+      ...siteFacts.address,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: siteFacts.geo.latitude,
+      longitude: siteFacts.geo.longitude,
+    },
+    openingHours: 'Mo-Su 07:00-22:00',
+    sameAs: [...siteFacts.sameAs],
+  }
+}
+
+function applyNapToLocalBusiness(node: Record<string, unknown>): Record<string, unknown> {
+  const next = { ...node }
+  delete next.aggregateRating
+  delete next.review
+  next['@type'] = next['@type'] ?? 'LocalBusiness'
+  next['@id'] = `${SITE}/#business`
+  next.name = siteFacts.businessName
+  next.telephone = siteFacts.phoneDisplay
+  next.email = siteFacts.email
+  next.address = {
+    '@type': 'PostalAddress',
+    ...siteFacts.address,
+  }
+  next.geo = {
+    '@type': 'GeoCoordinates',
+    latitude: siteFacts.geo.latitude,
+    longitude: siteFacts.geo.longitude,
+  }
+  next.hasMap = siteFacts.googleBusinessProfileUrl
+  next.url = `${SITE}/`
+  return next
+}
+
+function ensureHomepageLocalBusiness(html: string, path: string): string {
+  if (path !== '/') return html
+
+  let found = false
+  const next = html.replace(
+    /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g,
+    (full, body: string) => {
+      try {
+        const parsed = JSON.parse(body) as unknown
+        if (!isLocalBusinessNode(parsed)) return full
+        found = true
+        return `<script type="application/ld+json">${JSON.stringify(applyNapToLocalBusiness(parsed))}</script>`
+      } catch {
+        return full
+      }
+    },
+  )
+
+  if (found) return next
+
+  const script = `<script type="application/ld+json">${JSON.stringify(homepageLocalBusinessFromNap())}</script>`
+  return html.replace('</head>', `  ${script}\n  </head>`)
+}
+
 function injectMeta(html: string, path: string, title: string, description: string): string {
   const canonical = `${SITE}${path}`
   const ogImage = `${SITE}${getOgImage(path)}`
@@ -412,6 +501,9 @@ function injectMeta(html: string, path: string, title: string, description: stri
     buildWebPageJsonLd(path, title.split('|')[0].trim(), description),
   ].filter(Boolean).join('\n  ')
   html = html.replace('</head>', `${structuredData}\n  </head>`)
+
+  // Homepage LocalBusiness JSON-LD from footer NAP. No reviews or ratings.
+  html = ensureHomepageLocalBusiness(html, path)
 
   // OG locale (all content is in English)
   html = html.replace(

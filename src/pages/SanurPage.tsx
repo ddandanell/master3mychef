@@ -288,6 +288,7 @@ export default function SanurPage() {
         <h2 className="font-playfair text-2xl md:text-3xl mb-4">Related myCHEF Services in Sanur</h2>
         <ul className="space-y-2 text-[#4A4745]">
           <li><Link to="/private-chef/sanur" className="text-[#C5A028] hover:underline font-medium">Private chef sanur</Link> — hire a chef for villa dinners and multi-day cooking.</li>
+          <li><Link to="/experiences/cooking-class#sanur" className="text-[#C5A028] hover:underline font-medium">Cooking class in Sanur</Link> — private Balinese cooking class in your villa; chef comes to you.</li>
           <li><Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Catering Bali</Link> — BBQ, buffet and group menus for larger villa parties.</li>
           <li><Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">Fine dining at your villa</Link> — tasting menus and chef’s table formats.</li>
           <li><Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline font-medium">Private dining Bali</Link> — how at-home fine dining works island-wide.</li>

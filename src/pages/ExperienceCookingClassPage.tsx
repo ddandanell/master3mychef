@@ -1,6 +1,7 @@
 import PremiumPage from '@/components/PremiumPage'
 import { breadcrumbSchema, faqPageSchema, providerRef } from '@/components/SeoHead'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
+import { getPageMeta } from '@/data/page-meta'
 import {
   GraduationCap,
   Home,
@@ -14,79 +15,136 @@ import {
 import type { PageSection } from '@/components/PremiumPage'
 
 /**
- * /experiences/cooking-class — primary SEO pillar for "cooking class bali"
- * Standard offer: 3-hour private Indonesian cooking class in your villa
- * (intro → cook → eat everything → diploma). From IDR 700K/person, min 4.
+ * /experiences/cooking-class — commercial pillar for PRIMARY "cooking class bali".
+ * Private in-villa Indonesian/Balinese class. Chef comes to you. 2.5 or 3 hours.
+ * From IDR 700,000++/person min 4 (all-in ×1.21). Couples pay the 4-guest floor.
+ * Diploma. Eat what you cook. Recipes. Clean-up.
+ * Ubud is a villa location, not the primary keyword (Paon-cluster SERP).
+ * Sushi → /experiences/sushi-masterclass. Do not cannibalize private-cooking-class.
+ * Do not invent WhatsApp-history FAQs, star ratings, kids ages, or extra prices.
+ * Corpus is thin (Aug 2026 class invoices + one wedding-stay thread) — do not pad FAQs.
+ * Never embed the French-guest phone video (paper toques, chopping chilli). Stills only
+ * when binaries exist in public/generated — do not wire 404 paths.
  */
 
+const meta = getPageMeta('experience-cooking-class')
+
 const WA_LINK =
-  'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%203-hour%20private%20Indonesian%20cooking%20class%20at%20my%20Bali%20villa.%20Group%20size%3A%20%20Villa%20area%3A%20%20Date%3A'
+  'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20I%27d%20like%20to%20book%20a%20private%20Indonesian%20cooking%20class%20at%20my%20Bali%20villa.%202.5-hour%20or%203-hour%3A%20%20Start%20time%3A%20%20Group%20size%3A%20%20Villa%20area%3A%20%20Date%3A'
 const WA_QUOTE =
-  'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20please%20send%20a%20cooking%20class%20quote%20%2B%20sample%20menu.%20Guests%3A%20%20Area%3A%20%20Date%3A'
+  'https://wa.me/6289674072020?text=Hi%20myCHEF%2C%20please%20send%20a%20cooking%20class%20quote%20%2B%20sample%20menu.%20Guests%3A%20%20Area%3A%20%20Date%3A%20Preferred%20length%20(2.5%20or%203%20hours)%3A'
 const CANONICAL = 'https://mychef.id/experiences/cooking-class'
+
 const HERO = '/generated/mychef-cooking-class-bali-hero-villa.webp'
-const IMG_ING = '/generated/mychef-cooking-class-bali-ingredients-spread.webp'
-const IMG_DINE = '/generated/mychef-cooking-class-bali-guests-dining.webp'
-const IMG_BALINESE = '/generated/mychef-cooking-class-balinese-ingredients-bali-landscape.webp'
 const IMG_TEACH = '/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp'
+/** Villa cobek + base genep paste. Do not swap for a generated cobek close-up — same beat, no villa cue. */
+const IMG_BALINESE = '/generated/mychef-cooking-class-balinese-ingredients-bali-landscape.webp'
+const IMG_DINE = '/generated/mychef-cooking-class-bali-guests-dining.webp'
 
 const CTA_HTML = (label: string, href = WA_LINK) =>
   `<p style="margin:1.5rem 0 0"><a href="${href}" class="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[#1A1A1A] hover:bg-[#D4B43A]" target="_blank" rel="noopener noreferrer">${label}</a> <a href="${WA_QUOTE}" class="ml-2 text-sm font-semibold text-[#7E6410] hover:underline" target="_blank" rel="noopener noreferrer">Get quote + sample menu →</a></p>`
 
+const COMPARE_TABLE = `
+<div style="overflow-x:auto;margin:1.5rem 0 0">
+<table style="width:100%;border-collapse:collapse;font-size:0.95rem;line-height:1.45">
+  <thead>
+    <tr>
+      <th style="text-align:left;padding:0.75rem 0.85rem;border-bottom:2px solid #C5A028;width:28%"></th>
+      <th style="text-align:left;padding:0.75rem 0.85rem;border-bottom:2px solid #C5A028;background:#FAFAF8">Typical group kitchen school</th>
+      <th style="text-align:left;padding:0.75rem 0.85rem;border-bottom:2px solid #C5A028;background:#F7F0D8"><strong>myCHEF — chef comes to your villa</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Where</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">Hotel pickup, then a shared school kitchen. You leave the villa.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>Your villa.</strong> The chef comes to you — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua, Kuta. No shuttle.</td>
+    </tr>
+    <tr>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Time</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">Often <strong>5–6.5 hours</strong> once pickups and a market walk are counted.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>2.5 or 3 hours</strong> at the villa. No minibus.</td>
+    </tr>
+    <tr>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Who cooks</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>10–18 strangers</strong> on a shared bench. Pace set by the room.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>100% private.</strong> Only your group. You cook together.</td>
+    </tr>
+    <tr>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Market / pickup</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">Morning market walk + free hotel pickup is the usual school day.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">No hotel pickup. No market minibus. The chef shops beforehand. Class time is cooking and eating.</td>
+    </tr>
+    <tr>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Price shape</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">Shared-class tickets often about <strong>IDR 350,000–530,000</strong> per person — you share the bench.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>From IDR 700,000++ per person</strong>, minimum 4 (all-in IDR 847,000 pp). Private session, ingredients included.</td>
+    </tr>
+    <tr>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">What you eat</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">A set school menu, shared with the group.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">You cook <strong>4–6 dishes</strong>, then eat everything at your table.</td>
+    </tr>
+    <tr>
+      <td style="padding:0.7rem 0.85rem;font-weight:600">Take-home</td>
+      <td style="padding:0.7rem 0.85rem">Usually a recipe PDF.</td>
+      <td style="padding:0.7rem 0.85rem">Personalised <strong>diploma</strong> (name + date), recipe cards, uniforms and chef hats, kitchen left clean.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+`
+
 const PROGRAM_HTML = `
-<p><strong>A complete 3-hour private Indonesian cooking experience</strong> — introduction to the food, hands-on cooking, and the full meal of everything you prepared. Every guest finishes with a personalised <strong>myCHEF Indonesian Cooking Diploma</strong>, recipe cards and a spotless kitchen.</p>
+<p>A complete private Indonesian / Balinese cooking class in your villa — <strong>2.5 or 3 hours</strong>, timed to the start you choose. Introduction to the food, hands-on cooking of <strong>4–6 dishes</strong>, then the meal of everything you prepared. Every guest finishes with a personalised <strong>myCHEF Indonesian Cooking Diploma</strong>, recipe cards and a spotless kitchen.</p>
 
 <div style="margin:1.75rem 0;border-left:3px solid #C5A028;padding-left:1.25rem">
   <p style="margin:0 0 1.25rem"><strong style="color:#C5A028">1 · Welcome &amp; introduction to the food</strong> <em>(15–20 min)</em><br/>
-  Chef arrives with a short welcome drink. Hands-on intro to key Indonesian and Balinese ingredients and spice pastes — base gede, base wangi, fresh sambals, coconut, lemongrass and more. You smell, taste and learn the flavour logic and cultural context <em>before</em> any cooking starts.</p>
+  Chef arrives with a short welcome drink. Hands-on intro to key Indonesian and Balinese ingredients and spice pastes — base gede, base wangi, fresh sambals, coconut, lemongrass and more.</p>
   <p style="margin:0 0 1.25rem"><strong style="color:#C5A028">2 · Hands-on cooking</strong> <em>(about 1h 45m – 2h)</em><br/>
-  You actively cook 4–6 dishes under the chef’s guidance — beginner-friendly or more advanced depending on the group. You don’t just watch: you cook the full menu.</p>
+  You cook 4–6 dishes with the chef — beginner-friendly or more advanced depending on the group. You don’t just watch.</p>
   <p style="margin:0 0 1.25rem"><strong style="color:#C5A028">3 · Sit-down meal</strong><br/>
-  Everything you cooked is plated and eaten together at your villa table. <strong>You cooked it — now you eat every dish.</strong> This is the emotional payoff of the day.</p>
+  Everything you cooked is plated and eaten together at your villa table. <strong>You cooked it — now you eat every dish.</strong></p>
   <p style="margin:0"><strong style="color:#C5A028">4 · Diploma + recipes + clean-up</strong><br/>
-  Presentation of a personalised <strong>myCHEF Indonesian Cooking Diploma</strong> (name + date). Printed recipe cards adapted for a normal home kitchen. Full kitchen clean-up.</p>
+  Presentation of a personalised <strong>myCHEF Indonesian Cooking Diploma</strong> (name + date). Printed recipe cards for a normal home kitchen. Full kitchen clean-up.</p>
 </div>
-
-<p><strong>Popular with villa groups</strong> — early booking recommended in high season (July–August, December–January).</p>
-${CTA_HTML('Reserve your private 3-hour class')}
+${CTA_HTML('Reserve your private villa class')}
 `
 
 const SECTIONS: PageSection[] = [
   {
     id: 'intro',
     type: 'content' as const,
-    subtitle: '3-hour private Indonesian cooking class',
-    title: 'Cooking Class Bali — Private Lessons in Your Villa Kitchen',
-    image: HERO,
+    subtitle: 'Private · in your villa · chef comes to you',
+    title: 'Best Cooking Class Bali — If You Mean Private, Not a Shared School',
+    image: IMG_TEACH,
     imageAlt:
-      'Private chef teaching a hands-on cooking class in a luxury Bali villa kitchen with tropical light',
-    body: `<p>A <strong>cooking class in Bali</strong> should taste like the island — spice pastes pounded by hand, coconut milk simmered patiently, sambal balanced until it sings — not a rushed tourist demo with twenty strangers and a fixed script. myCHEF runs a <strong>private cooking class</strong> in the kitchen of <em>your</em> villa: a professional chef, ingredients for your session, instruction at your pace, and a full meal of every dish you cook together.</p>
-
-    <p><strong>Standard offer: a complete 3-hour private Indonesian cooking experience</strong> — introduction to the food, hands-on cooking, sit-down meal of everything you prepared, personalised diploma, recipe cards and full clean-up. From <strong>IDR 700,000 per person</strong> (minimum 4 guests; smaller groups pay the 4-person rate).</p>
-
-    <p>Whether you searched for a <strong>cooking class Bali</strong>, <strong>Balinese cooking class</strong>, <strong>Indonesian cooking class Bali</strong>, or an <strong>in-villa cooking class Bali</strong>, the product is the same: the chef comes to you. No shuttle. No shared bench. No “watch from the back.” Couples, families, birthday groups, wedding parties and villa friends book it as the centrepiece of a day that ends around your own table — diploma in hand.</p>
-
-    <p>We specialise in <strong>Indonesian / Balinese</strong> formats and also design vegan, gluten-free, family, couples, team-building and multi-cuisine sessions on request. Prefer sushi only? See our dedicated <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a>.</p>
-    ${CTA_HTML('Book your 3-hour class — WhatsApp')}`,
+      'Private chef teaching a couple to pound Balinese spice paste in a villa kitchen opening onto a tropical garden',
+    body: `<p>A <strong>cooking class Bali</strong> search usually shows group kitchen schools: free hotel pickup, a morning market, a shared bench of <strong>10–18 strangers</strong>, <strong>5–6.5 hours</strong> door-to-door. myCHEF is the other product. <strong>The chef comes to your villa</strong> — Seminyak, Canggu, Ubud, Nusa Dua, island-wide. <strong>100% private.</strong> <strong>2.5 or 3 hours.</strong> You cook 4–6 Indonesian / Balinese dishes. You eat everything at your table. Diploma + recipes. Full clean-up. Zero shuttle. Zero Ubud-only pickup. No minibus.</p>
+    <p>From <strong>IDR 700,000++ per person</strong>, minimum 4 (all-in <strong>IDR 847,000</strong> pp). myCHEF has hosted <strong>12,000+ guests</strong> across villa dining — this class sits in that same in-villa team. Sushi is a different URL: <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a>. This page is the Indonesian / Balinese villa class, not a multi-cuisine or market-tour product — see <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">private cooking class</a> for that split.</p>
+    ${COMPARE_TABLE}
+    ${CTA_HTML('Book the villa class — WhatsApp')}`,
   },
   {
-    id: 'program-3h',
+    id: 'no-minibus',
     type: 'content' as const,
-    subtitle: 'The standard experience',
-    title: 'The 3-Hour Indonesian Cooking Class Program',
-    body: PROGRAM_HTML,
+    subtitle: '2.5–3 hours at the villa vs 5–6.5 hours with transfers',
+    title: 'No Minibus',
+    body: `<p>Group schools build the day around a pickup, often a morning market, then a shared kitchen. Once the road time is in, guests are looking at <strong>5–6.5 hours</strong> away from the villa. A myCHEF class stays where you already are. <strong>2.5 or 3 hours.</strong> No school shuttle. No minibus. The chef shops beforehand so class time is cooking, eating and the diploma. If a hands-on market visit matters, enquire — it is not packaged on this URL.</p>
+    <p>That is the duration USP: a private <strong>cooking class in Bali</strong> that does not take the whole day. Tell us your start time — lunch or dinner — when you enquire. We do not publish a school timetable.</p>`,
   },
   {
     id: 'pricing',
     type: 'content' as const,
-    subtitle: 'Transparent pricing',
-    title: 'Cooking Class Pricing — From IDR 700,000 per Person',
-    body: `<p style="font-size:1.15rem;line-height:1.6"><strong>From IDR 700,000 per person.</strong><br/>
-    Minimum <strong>4 people</strong>. If your group is smaller than 4, the price remains the same as for 4 people (you still pay the minimum).</p>
-
+    subtitle: 'Why IDR 700,000++ min 4 is not a IDR 350,000 school ticket',
+    title: 'Cooking Class Cost — From IDR 700,000++ per Person',
+    body: `<p style="font-size:1.15rem;line-height:1.6"><strong>From IDR 700,000++ per person.</strong> Minimum <strong>4 guests</strong>. All-in is <strong>IDR 847,000 per person</strong> (base × 1.21). The 4-guest floor is <strong>IDR 3,388,000 all-in</strong>. ++ is 11% government tax + 10% service — your written proposal shows the all-in total.</p>
+    <p><strong>Couples (2 guests):</strong> billed at <strong>IDR 1,400,000++ per person</strong> — the same 4-guest floor. The class is not a half-price couple ticket.</p>
+    <p>Typical shared-school tickets sit around <strong>IDR 350,000–530,000</strong> per person. That price buys a place on a bench of 10–18, a set menu, pickup and often a morning market. The 700k villa rate buys a <strong>private</strong> chef in <em>your</em> kitchen, ingredients for your group, 4–6 dishes you actually eat, a diploma and a clean kitchen — with no transfer time. You are not paying double for the same product. You are paying for a different one. We do not try to undercut a 350k school ticket.</p>
+    <p>See published tables on <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing</a>. This class is not a private-chef day rate.</p>
     <p>This covers:</p>
     <ul>
-      <li>Professional chef instructor</li>
+      <li>Professional chef instructor at your villa</li>
       <li>All ingredients</li>
       <li>Full set of <strong>uniforms + chef hats</strong> for every guest</li>
       <li>Hands-on instruction (intro + cooking + meal)</li>
@@ -95,18 +153,24 @@ const SECTIONS: PageSection[] = [
       <li>Recipe cards for a normal home kitchen</li>
       <li>Full kitchen clean-up</li>
     </ul>
-
-    <p>Larger groups receive additional staff so everyone stays active. Longer sessions, extra dishes, special cuisines and complex dietary maps are quoted accordingly. All prices ++ (11% government tax + 10% service) unless your written proposal states otherwise.</p>
-
-    <p style="font-size:0.95rem;color:#4A4A4A">New to booking a class? Our <a href="/blog/cooking-class-bali-cost" class="text-[#7E6410] hover:underline font-medium">2026 cooking class cost guide</a> explains group-school vs private pricing and how to tell if a quote is fair.</p>
+    <p>Tell us the headcount when you enquire. Larger groups are staffed so everyone stays active. Dietary needs — vegan, gluten-free, allergies, milder spice — are taken at enquiry. Children who join are extra guests on the same class — there is no kids tariff. For kids menus see <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">kids menus</a>; for a kids party production see <a href="/experiences/kids-birthday-chef-party" class="text-[#7E6410] hover:underline font-medium">kids birthday chef party</a>.</p>
+    <p>If you also want a chef to cook <em>for</em> you on other days, that is a separate booking: <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef Bali</a>.</p>
+    <p style="font-size:0.95rem;color:#4A4A4A"><a href="/blog/cooking-class-bali-cost" class="text-[#7E6410] hover:underline font-medium">Cooking class cost guide</a> · <a href="/blog/is-a-cooking-class-in-bali-worth-it" class="text-[#7E6410] hover:underline font-medium">Is a cooking class in Bali worth it?</a></p>
     ${CTA_HTML('Get your personalised quote + sample menu', WA_QUOTE)}`,
+  },
+  {
+    id: 'program',
+    type: 'content' as const,
+    subtitle: 'The 2.5 or 3-hour villa program',
+    title: 'What Happens in the Class',
+    body: PROGRAM_HTML,
   },
   {
     id: 'cta-mid-1',
     type: 'cta' as const,
-    subtitle: 'Peak season fills fast',
-    title: 'Message us your villa location & group size',
-    body: 'We reply within about 2 hours with options, a sample menu outline and availability. Limited chef days in high season.',
+    subtitle: 'Chef comes to you',
+    title: 'Message us your villa, group size and date',
+    body: 'We need at least two days (ingredients, materials, diploma, setup). WhatsApp villa area, guest count, 2.5-hour or 3-hour, start time and date. We reply with options, a sample menu outline and availability.',
     bg: 'dark' as const,
     primaryAction: {
       label: 'WhatsApp for availability & quote',
@@ -120,29 +184,30 @@ const SECTIONS: PageSection[] = [
     },
   },
   {
+    id: 'vegan',
+    type: 'content' as const,
+    subtitle: 'On request — not a separate title product',
+    title: 'Vegan Cooking Class Bali',
+    body: `<p>A <strong>vegan cooking class Bali</strong> with myCHEF is the same private villa class (2.5 or 3 hours), with a plant-forward menu when you brief it at enquiry — not a different published program. Typical request menu: base gede, gado-gado with peanut sauce, tempeh or tofu sate, lawar sayur, nasi kuning, fruit and coconut dessert.</p>
+    <p>Vegetarian, gluten-free, allergy notes and milder spice are taken the same way at enquiry. Read <a href="/blog/vegan-vegetarian-balinese-cooking" class="text-[#7E6410] hover:underline font-medium">vegan &amp; vegetarian Balinese cooking</a>.</p>
+    ${CTA_HTML('WhatsApp a vegan or vegetarian brief', WA_QUOTE)}`,
+  },
+  {
     id: 'why-villa',
     type: 'content' as const,
-    subtitle: 'Private villa, not a crowded school',
-    title: 'Why a Private Cooking Class Beats a Tourist Kitchen School',
-    body: `<p>Traditional cooking schools in Bali can be excellent — and they can also mean fixed menus, large groups and a pace set by whoever is slowest in the room. A <strong>private cooking class Bali</strong> flips that model. Your villa kitchen becomes the classroom. Your dietary needs shape the menu. Your skill level sets the depth.</p>
-
-    <p><strong>The practical difference is bigger than it sounds.</strong> Many group cooking schools run classes of 15–24 guests and a five-hour day built around hotel pickups, a shared bench and a supervised market walk. A myCHEF class is <strong>100% private</strong> — only your group, no strangers, no shuttle. There is <strong>zero transfer time</strong>: the chef comes to you, shops the market ingredients beforehand, and every minute is spent cooking, eating and learning rather than waiting on a minibus. It is the single most common complaint about big cooking schools — crowding and pace — removed by design.</p>
-
-    <p>That is why guests searching for the <strong>best cooking class in Bali</strong> often choose a villa format when they want privacy, flexibility and a real meal at the end. Honeymoon couples treat it as an anti-restaurant date. Families turn it into a holiday memory. Wedding parties use a class as a welcome activity. Corporate and retreat groups use it as team-building that does not feel like a conference icebreaker.</p>
-
-    <p>myCHEF is a chef-led hospitality company for villa dining and catering across the island. Cooking classes sit in the same family as <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef hire</a> and <a href="/catering" class="text-[#7E6410] hover:underline font-medium">villa catering</a> — HACCP-minded food safety, WhatsApp booking, cleanup before we leave.</p>`,
+    subtitle: 'Private villa vs a group school',
+    title: 'Why a Private Class Beats a Tourist Kitchen School',
+    body: `<p>Group schools can be a good day trip if you want pickup, a morning market and a shared bench. They are not this product. A myCHEF <strong>cooking class Bali</strong> stays in the villa you already rented. 2.5 or 3 hours. No school shuttle. No 10–18 strangers.</p>
+    <p>We come to <em>your</em> kitchen — not a shared flea-market classroom, not someone else’s poolside villa, not an on-property hotel class. Professional chef, island coverage, personalised diploma. We do not bid on school brand names in title or meta. If you want the famous group-school morning with market + pickup, book a school. If you want a private Indonesian class in your own kitchen, this page is the booking.</p>
+    <p>A <strong>cooking class</strong> means you cook with the chef and eat what you cooked. A <strong>private chef</strong> cooks for you. Same company, different quotes — never a chef day-rate on this page.</p>`,
   },
   {
     id: 'sample-menus',
     type: 'content' as const,
     subtitle: 'What you actually cook',
-    title: 'Sample 3-Hour Menus (Customisable)',
-    image: IMG_ING,
-    imageAlt:
-      'Balinese cooking class ingredients including turmeric, lemongrass, chili and coconut on a teak villa table',
-    body: `<p>Menus are designed around your group — but a clear sample helps you picture the afternoon. You cook everything, then sit down and eat the full menu together.</p>
-
-    <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Standard Indonesian / Balinese (our lead menu)</h3>
+    title: 'Sample Indonesian / Balinese Menus (Customisable)',
+    body: `<p>Menus are designed around your group. The standard class is Indonesian / Balinese. You cook 4–6 dishes, then sit down and eat the full menu together.</p>
+    <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Standard Indonesian / Balinese</h3>
     <ul>
       <li>Introduction to key spices &amp; ingredients + pounding <em>base gede</em></li>
       <li>Sambal matah (fresh raw shallot-chilli salsa)</li>
@@ -151,22 +216,7 @@ const SECTIONS: PageSection[] = [
       <li>Nasi goreng or fragrant coconut rice</li>
       <li>Palm-sugar dessert or fresh fruit finish</li>
     </ul>
-
-    <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Vegan / plant-forward</h3>
-    <ul>
-      <li>Base gede · gado-gado with peanut sauce · tempeh or tofu sate · lawar sayur · nasi kuning · fruit + coconut dessert</li>
-    </ul>
-    <p style="font-size:0.95rem;color:#4A4A4A">Balinese food is more plant-friendly than most guests expect — see <a href="/blog/vegan-vegetarian-balinese-cooking" class="text-[#7E6410] hover:underline font-medium">vegan &amp; vegetarian Balinese cooking</a> for the full plant-based menu.</p>
-
-    <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Gluten-free focused</h3>
-    <ul>
-      <li>Base gede / base wangi · grilled fish or chicken pepes · fresh sambal and vegetable sides · coconut curry or soup · rice · coconut &amp; palm sugar dessert (no wheat)</li>
-    </ul>
-
-    <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Family / kids-friendly</h3>
-    <p>Milder spices, interactive tasks (rolling satay, mixing pastes, simple plating), fun uniforms &amp; hats, dishes kids actually want to eat — mild chicken sate, fried rice, sambal on the side.</p>
-
-    <p>Special requests are normal: more meat, seafood-focused, regional Indonesian dishes, zero chilli, high-protein, halal, allergies. We design around what the group actually wants. Sushi-only stays on the <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a> page.</p>
+    <p>Sushi-only stays on the <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a> page. More experiences: <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">private experiences</a>.</p>
     ${CTA_HTML('WhatsApp us for a sample menu for your group', WA_QUOTE)}`,
   },
   {
@@ -177,11 +227,8 @@ const SECTIONS: PageSection[] = [
     image: IMG_BALINESE,
     imageAlt:
       'Balinese base genep spice paste ingredients — turmeric, galangal, lemongrass, shallots and chilli — on a stone mortar',
-    body: `<p>Ask a Balinese cook what makes the island’s food taste like Bali and the answer is one thing: <strong>base genep</strong> (also written <em>base gede</em> or <em>bumbu Bali</em>) — the “complete spice paste” that sits under almost every savoury dish. It is not a jarred shortcut. It is a built-from-scratch blend of roughly fifteen aromatics — shallots, garlic, ginger, <em>galangal</em> (lengkuas), fresh <em>turmeric</em>, <em>kencur</em> (aromatic ginger), candlenut, lemongrass, bird’s-eye chilli, coriander seed, a little <em>terasi</em> shrimp paste and palm sugar — pounded until it becomes a fragrant, oily paste.</p>
-
-    <p>The logic behind it is <strong>sad rasa</strong>, the six-flavour idea: sweet, sour, salty, bitter, spicy and astringent, balanced in a single paste. In your class you don’t just measure base genep — you <em>build</em> it, pounding it by hand in a <em>cobek</em> and <em>ulekan</em> (the Balinese stone mortar and pestle) and learning the difference between <em>rajang</em> (finely chopped) and <em>ulek</em> (pounded) aromatics. Once you understand base genep, you can rebuild half of Balinese cooking at home — which is exactly what your recipe cards are for.</p>
-
-    <p>Want the full breakdown before you cook? Read our chef’s guide: <a href="/blog/base-genep-balinese-spice-paste" class="text-[#7E6410] hover:underline font-medium">Base genep, explained ingredient by ingredient</a>.</p>
+    body: `<p>Ask a Balinese cook what makes the island’s food taste like Bali and the answer is one thing: <strong>base genep</strong> (also written <em>base gede</em>) — the “complete spice paste” that sits under almost every savoury dish. In your class you don’t just measure it — you <em>build</em> it, pounding it by hand in a <em>cobek</em> and <em>ulekan</em>. That is what the recipe cards are for.</p>
+    <p>Full breakdown: <a href="/blog/base-genep-balinese-spice-paste" class="text-[#7E6410] hover:underline font-medium">Base genep, explained ingredient by ingredient</a>.</p>
     ${CTA_HTML('Cook base genep from scratch — book your class')}`,
   },
   {
@@ -189,47 +236,21 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'What the dishes actually are',
     title: 'Balinese vs Indonesian — Your Menu, Labelled Honestly',
-    image: IMG_TEACH,
-    imageAlt:
-      'Balinese chef teaching guests to prepare sate lilit and sambal matah during a private villa cooking class',
-    body: `<p>Most guests arrive expecting <strong>nasi goreng</strong> and are surprised by how different truly <em>Balinese</em> food is. Both belong on your table — and we are clear about which is which, because that honesty is the difference between a tourist demo and understanding a cuisine.</p>
-
+    body: `<p>Most guests arrive expecting <strong>nasi goreng</strong> and are surprised by how different truly <em>Balinese</em> food is. Both belong on your table — and we are clear about which is which.</p>
     <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Distinctly Balinese</h3>
     <ul>
       <li><strong>Sate lilit</strong> — minced fish or chicken blended with base genep and grated coconut, moulded onto lemongrass stalks and grilled.</li>
       <li><strong>Lawar</strong> — a ceremonial salad of finely chopped vegetables (or meat), fresh coconut and spice.</li>
-      <li><strong>Sambal matah</strong> — a raw sambal of thinly sliced shallots, lemongrass, chilli and lime; no cooking, all freshness.</li>
-      <li><strong>Betutu</strong> — chicken or duck slow-cooked in banana leaf with base genep; the ceremonial dish of Bali.</li>
+      <li><strong>Sambal matah</strong> — a raw sambal of thinly sliced shallots, lemongrass, chilli and lime.</li>
+      <li><strong>Betutu</strong> — chicken or duck slow-cooked in banana leaf with base genep.</li>
       <li><strong>Pepes ikan</strong> — spiced fish steamed and grilled in banana-leaf parcels.</li>
     </ul>
-
-    <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Pan-Indonesian (on the menu because guests love them)</h3>
+    <h3 style="font-family:var(--font-playfair,serif);font-size:1.2rem;margin:1.5rem 0 0.5rem;color:#1A1A1A">Pan-Indonesian</h3>
     <ul>
-      <li><strong>Nasi goreng</strong> &amp; <strong>mie goreng</strong> — the fried rice and noodles found right across Indonesia.</li>
+      <li><strong>Nasi goreng</strong> &amp; <strong>mie goreng</strong> — fried rice and noodles found right across Indonesia.</li>
       <li><strong>Gado-gado</strong> — blanched vegetables with a warm peanut sauce.</li>
     </ul>
-
-    <p>Balinese food is Hindu, pork-friendly and shaped by ceremony; much of Indonesia’s best-known food is neither. Our chefs explain the distinction as you cook. The full story: <a href="/blog/balinese-food-vs-indonesian-food" class="text-[#7E6410] hover:underline font-medium">Balinese food is not Indonesian food — a chef’s guide</a>.</p>
-
-    <p style="margin-top:1.25rem;border-left:3px solid #C5A028;padding-left:1.25rem;color:#4A4A4A"><em>Balinese cooking is inseparable from ceremony — the daily <strong>canang sari</strong> offerings, the communal <strong>megibung</strong> feast, and <strong>Tri Hita Karana</strong>, the idea that food connects people, nature and the divine. We touch on this while we cook; it is why the food means something beyond the plate.</em></p>`,
-  },
-  {
-    id: 'variations',
-    type: 'content' as const,
-    subtitle: 'Choose your style',
-    title: 'Different Formats — Same Private Villa Standard',
-    body: `<p>The core is always hands-on, private, in your villa kitchen. Flavour, length and intensity shift with the group:</p>
-    <ul>
-      <li><strong>Classic 3-hour Indonesian / Balinese</strong> — the standard we promote on this page</li>
-      <li><strong>Longer half-day</strong> — more dishes (6–8), deeper technique, slower social meal</li>
-      <li><strong>Vegan / plant-forward only</strong> or <strong>gluten-free focused</strong></li>
-      <li><strong>Family &amp; kids</strong> — simpler tasks, milder spice, more fun elements</li>
-      <li><strong>Couples romantic</strong> — slower pace; optional wine notes</li>
-      <li><strong>Team-building / larger groups</strong> — extra staff, stations, optional challenges</li>
-      <li><strong>Multi-cuisine</strong> — Mediterranean, modern Asian, seafood &amp; grill, healthy bowls and more</li>
-    </ul>
-    <p>Tell us group size, preferences, dietary needs and vibe — we design the session around it.</p>
-    ${CTA_HTML('Reserve your private cooking class')}`,
+    <p>The full story: <a href="/blog/balinese-food-vs-indonesian-food" class="text-[#7E6410] hover:underline font-medium">Balinese food is not Indonesian food — a chef’s guide</a>.</p>`,
   },
   {
     id: 'features',
@@ -239,43 +260,43 @@ const SECTIONS: PageSection[] = [
     features: [
       {
         icon: Clock,
-        title: 'Full 3-hour program',
-        desc: 'Introduction to the food, hands-on cooking, sit-down meal of everything you cooked.',
+        title: '2.5 or 3 hours at the villa',
+        desc: 'Introduction, hands-on cooking of 4–6 dishes, sit-down meal of everything you cooked. No 5–6.5 hour school day.',
       },
       {
         icon: Award,
         title: 'Personalised diploma',
-        desc: 'Every guest receives a myCHEF Indonesian Cooking Diploma — name + date, a real take-home memory.',
+        desc: 'Every guest receives a myCHEF Indonesian Cooking Diploma — name + date.',
       },
       {
         icon: ChefHat,
         title: 'Uniforms & chef hats',
-        desc: 'Full sets for every guest — fun, photogenic “chef for a day” energy.',
+        desc: 'Full sets for every guest.',
       },
       {
         icon: UtensilsCrossed,
         title: 'You eat every dish',
-        desc: 'Nothing is for show only. You cook the menu, then eat the full meal together.',
+        desc: 'You cook the menu, then eat the full meal together.',
       },
       {
         icon: GraduationCap,
-        title: 'Professional chef instructor',
-        desc: 'Trained chef adapts to beginners or advanced cooks. Extra staff for larger groups.',
+        title: 'Recipe cards',
+        desc: 'Printed cards written for a normal home kitchen.',
       },
       {
         icon: Home,
-        title: 'Your villa kitchen',
-        desc: 'In-villa cooking class Bali: no transport, no strangers, full privacy.',
+        title: 'Chef comes to you',
+        desc: 'Your villa kitchen. No school shuttle, no shared bench.',
       },
       {
         icon: Sparkles,
-        title: 'Recipes + full clean-up',
-        desc: 'Cards written for a home kitchen. Kitchen left spotless before we leave.',
+        title: 'Ingredients included',
+        desc: 'Groceries are in the class price. Kitchen left spotless.',
       },
       {
         icon: MapPin,
-        title: 'Island-wide coverage',
-        desc: 'Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua, Kuta corridor and more.',
+        title: 'Island-wide at the villa',
+        desc: 'Canggu, Seminyak, Sanur, Ubud (your villa), Uluwatu, Jimbaran, Nusa Dua, Kuta — always your kitchen.',
       },
     ],
   },
@@ -284,51 +305,93 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'What makes the day special',
     title: 'Uniforms, Diploma Moment & a Happy Villa Kitchen',
-    body: `<p>Instruction is professional — the atmosphere is relaxed, social and celebratory. Guests leave smiling, full, and with a diploma in hand. Uniforms and chef hats turn the afternoon into a proper memory (and excellent photos). For bigger groups we add staff automatically so nobody is stuck watching from the side.</p>
-    <p>At the end of the class every guest receives a personalised <strong>myCHEF Indonesian Cooking Diploma</strong> — a genuine take-home souvenir of the day. Combine that with recipe cards and the meal of everything you cooked, and the class becomes more than a tourist activity: it is a complete villa experience.</p>
-    ${CTA_HTML('Message us now — limited chef availability in peak season')}`,
+    body: `<p>Instruction is professional — the atmosphere is relaxed. Guests leave with a diploma, recipe cards and a kitchen that has been cleaned. Uniforms and chef hats are included. For bigger groups we add staff so nobody watches from the side.</p>
+    <div style="max-width:22rem;margin:1.75rem auto 0;padding:1.75rem 1.5rem 1.5rem;background:#FFFEFB;border:1px solid #C5A028;box-shadow:0 8px 24px rgba(0,0,0,.06);text-align:center">
+      <p style="margin:0;font-size:0.7rem;letter-spacing:0.28em;text-transform:uppercase;color:#C5A028">myCHEF</p>
+      <p style="margin:0.85rem 0 0;font-family:var(--font-playfair,serif);font-size:1.35rem;color:#1A1A1A;line-height:1.2">Indonesian Cooking Diploma</p>
+      <div style="width:3rem;height:1px;background:#C5A028;margin:0.9rem auto"></div>
+      <p style="margin:0;font-size:0.8rem;color:#4A4745">This certifies that</p>
+      <p style="margin:0.65rem 1.25rem 0;border-bottom:1px solid #1A1A1A;min-height:1.6rem"></p>
+      <p style="margin:0.85rem 0 0;font-size:0.85rem;line-height:1.45;color:#4A4745">completed a private Balinese / Indonesian cooking class in their villa kitchen</p>
+      <p style="margin:1.1rem 0 0;font-size:0.8rem;color:#4A4745">Date <span style="display:inline-block;min-width:7rem;border-bottom:1px solid #1A1A1A;vertical-align:bottom"></span></p>
+    </div>
+    <p style="margin:0.85rem 0 0;text-align:center;font-size:0.9rem;color:#4A4745">Blank template — name and date filled in on the day. Not a guest photo.</p>
+    ${CTA_HTML('Message us now — at least two days’ notice')}`,
   },
   {
     id: 'occasions',
     type: 'content' as const,
     subtitle: 'Who books a cooking class',
-    title: 'Cooking Classes for Couples, Kids, Parties, Weddings and Teams',
+    title: 'Couples, Families, Wedding Stays and Villa Groups',
     image: IMG_DINE,
     imageAlt:
-      'Guests dining at a Bali villa after a private cooking class, sharing dishes they prepared with their chef',
-    body: `<p><strong>Cooking class for couples.</strong> More memorable than another restaurant booking — and more relaxed than a large group school. Perfect for honeymoons and anniversaries.</p>
-    <p><strong>Cooking class for kids and families.</strong> Age-appropriate tasks, flexible spice, fun uniforms. For a full kids party production see <a href="/experiences/kids-birthday-chef-party" class="text-[#7E6410] hover:underline font-medium">kids birthday chef party</a>.</p>
-    <p><strong>Birthday &amp; celebration class.</strong> Social, useful and photographable for villa holiday groups.</p>
-    <p><strong>Wedding party cooking class.</strong> Welcome the bridal party the day before the ceremony. Pair later with <a href="/events/weddings" class="text-[#7E6410] hover:underline font-medium">wedding catering</a>.</p>
-    <p><strong>Team building cooking class.</strong> Collaborative activity that ends in a shared meal. Multi-day food programmes connect with <a href="/events/retreats" class="text-[#7E6410] hover:underline font-medium">retreat catering</a>.</p>
-    <p><strong>Dietary &amp; special requests.</strong> Meat, no meat, gluten-free, vegan, halal, allergies, zero chilli, high-protein — just tell us when you enquire.</p>`,
+      'Guests sitting down to the meal they cooked in a Bali villa after a private cooking class — not a private-chef dinner',
+    imageCaption:
+      'The meal after the class — you eat everything you cooked at the villa table. This is not a private-chef dinner.',
+    body: `<p><strong>Couples.</strong> Popular for honeymoons and date nights. Pricing is the 4-guest minimum: <strong>IDR 1,400,000++ per person</strong>.</p>
+    <p><strong>Families.</strong> Kids who join are extra guests on the same class — no separate kids tariff. See <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">kids menus</a> and <a href="/experiences/kids-birthday-chef-party" class="text-[#7E6410] hover:underline font-medium">kids birthday chef party</a>.</p>
+    <p><strong>Birthday &amp; villa groups.</strong> Same 2.5 or 3-hour class, same inclusions.</p>
+    <p><strong>Wedding stays.</strong> The class can be a separate day — quoted on its own. Pair later with <a href="/events/weddings" class="text-[#7E6410] hover:underline font-medium">wedding catering</a>.</p>
+    <p><strong>Already hiring a chef?</strong> Add the class as a separately quoted session on another day.</p>`,
   },
   {
     id: 'how-it-works',
     type: 'content' as const,
     subtitle: 'How booking works',
     title: 'From First Message to Diploma',
-    body: `<p><strong>1. Contact us.</strong> WhatsApp villa area, guest count, ages if kids join, dietary needs, date and cuisine preference.</p>
-    <p><strong>2. We propose the class.</strong> Written outline: dishes, 3-hour (or longer) structure, kitchen needs, all-in quote. No hidden line items after approval.</p>
-    <p><strong>3. We shop and set up.</strong> Ingredients for your session. Chef brings knives, spice kit, uniforms, hats and any missing tools.</p>
-    <p><strong>4. You cook — then you eat.</strong> Intro → hands-on cooking → sit-down meal of everything prepared.</p>
-    <p><strong>5. Diploma + clean-up.</strong> Personalised diploma, recipe cards, kitchen restored.</p>
-    ${CTA_HTML('WhatsApp us your villa location & group size — we reply within 2 hours')}`,
+    body: `<p><strong>1. Contact us at least two days ahead.</strong> WhatsApp villa area, guest count (including any children as extra guests), dietary needs, date, 2.5-hour or 3-hour, and start time.</p>
+    <p><strong>2. We propose the class.</strong> Written outline: dishes, 2.5 or 3-hour structure, kitchen needs, all-in quote (++ shown). Ingredients are in the class price.</p>
+    <p><strong>3. Confirm.</strong> Book at least two days ahead. Last-minute / short-lead bookings need full payment to confirm the chef and date.</p>
+    <p><strong>4. We shop and set up.</strong> The chef shops first, then comes to your villa.</p>
+    <p><strong>5. You cook — then you eat — then diploma + clean-up.</strong></p>
+    ${CTA_HTML('WhatsApp us your villa, group size and date')}`,
+  },
+  {
+    id: 'canggu',
+    type: 'content' as const,
+    subtitle: 'Cooking class Canggu',
+    title: 'Cooking Class Canggu — Berawa, Pererenan, Villa Not School',
+    body: `<p>A <strong>cooking class Canggu</strong> is the same private Indonesian class in your Berawa, Batu Bolong, Echo Beach or Pererenan villa. The chef comes to you. No drive to a school kitchen. 2.5 or 3 hours. From IDR 700,000++ per person, min 4 (all-in IDR 847,000 pp).</p>
+    <p><a href="/private-chef/canggu" class="text-[#7E6410] hover:underline font-medium">Private chef Canggu</a> · <a href="/private-chef/berawa" class="text-[#7E6410] hover:underline font-medium">private chef Berawa</a> · <a href="/locations/canggu" class="text-[#7E6410] hover:underline font-medium">Canggu dining guide</a>.</p>`,
+  },
+  {
+    id: 'seminyak',
+    type: 'content' as const,
+    subtitle: 'Cooking class Seminyak',
+    title: 'Cooking Class Seminyak — Design Villas, Chef Comes to You',
+    body: `<p>A <strong>cooking class Seminyak</strong> runs in your Petitenget, Oberoi, Batu Belig or beach-strip villa. Same private class, 2.5 or 3 hours. No hotel pickup. From IDR 700,000++ per person, min 4 (all-in IDR 847,000 pp). Couples: IDR 1,400,000++ per person.</p>
+    <p><a href="/private-chef/seminyak" class="text-[#7E6410] hover:underline font-medium">Private chef Seminyak</a> · <a href="/locations/seminyak" class="text-[#7E6410] hover:underline font-medium">Seminyak dining guide</a>.</p>`,
+  },
+  {
+    id: 'sanur',
+    type: 'content' as const,
+    subtitle: 'Cooking class Sanur',
+    title: 'Cooking Class Sanur — East-Coast Villas',
+    body: `<p>A <strong>cooking class Sanur</strong> is the same in-villa product: chef comes to you, 2.5 or 3 hours, 4–6 dishes, eat what you cooked, diploma. From IDR 700,000++ per person, min 4.</p>
+    <p><a href="/private-chef/sanur" class="text-[#7E6410] hover:underline font-medium">Private chef Sanur</a> · <a href="/locations/sanur" class="text-[#7E6410] hover:underline font-medium">Sanur dining</a>.</p>`,
+  },
+  {
+    id: 'ubud',
+    type: 'content' as const,
+    subtitle: 'If your villa is in Ubud — not a group school',
+    title: 'Villa in Ubud — Same Private Class, Chef Comes to You',
+    body: `<p>Ubud is where most visitors first meet the idea of a Bali cooking class, and where the well-known group schools sit (market walk, free pickup, shared bench, a 5–6.5 hour day). That SERP is not this product. We do not compete as a cooking school.</p>
+    <p>If your <strong>villa is in Ubud</strong> — Sayan, Penestanan, Campuhan, Tegallalang or Ubud central — the chef comes to that kitchen. Same private Indonesian / Balinese class, 2.5 or 3 hours. Only your guests. From IDR 700,000++ per person, min 4 (all-in IDR 847,000 pp).</p>
+    <p><a href="/private-chef/ubud" class="text-[#7E6410] hover:underline font-medium">Private chef Ubud</a> · <a href="/locations/ubud" class="text-[#7E6410] hover:underline font-medium">Ubud dining guide</a>.</p>`,
   },
   {
     id: 'areas',
     type: 'content' as const,
-    subtitle: 'Where we teach',
-    title: 'Cooking Class Bali Across Seminyak, Canggu, Ubud, Uluwatu and Beyond',
-    body: `<p>We travel to your villa kitchen island-wide — <strong>cooking class Ubud</strong>, <strong>Seminyak</strong>, <strong>Canggu</strong>, <strong>Uluwatu</strong>, Jimbaran, Sanur, Kuta corridor and Nusa Dua included. Ubud suits heritage menus; Seminyak and Canggu suit design villas and groups; Uluwatu and Jimbaran suit seafood-leaning sessions; Sanur and Nusa Dua suit families.</p>
-    <p>Browse <a href="/locations" class="text-[#7E6410] hover:underline font-medium">locations</a> and multi-day dining on <a href="/private-chef/ubud" class="text-[#7E6410] hover:underline font-medium">private chef Ubud</a> or <a href="/private-chef/seminyak" class="text-[#7E6410] hover:underline font-medium">private chef Seminyak</a>.</p>`,
+    subtitle: 'Coverage, not extra title keywords',
+    title: 'Island-Wide — Always Your Villa',
+    body: `<p>Same private class in <a href="/locations/uluwatu" class="text-[#7E6410] hover:underline font-medium">Uluwatu</a>, <a href="/locations/jimbaran" class="text-[#7E6410] hover:underline font-medium">Jimbaran</a>, Kuta, <a href="/locations/nusa-dua" class="text-[#7E6410] hover:underline font-medium">Nusa Dua</a> and the rest of our villa coverage. Ubud is coverage too — not the product identity. Tell us the villa pin. Browse <a href="/locations" class="text-[#7E6410] hover:underline font-medium">locations</a> and <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">experiences</a>.</p>`,
   },
   {
     id: 'cta-pre-faq',
     type: 'cta' as const,
     subtitle: 'Still deciding?',
-    title: 'Get a clear quote before you deposit',
-    body: 'Share group size, villa area and preferred date. We send options, sample menu direction and chef availability — usually the same day.',
+    title: 'Get a clear quote before you book',
+    body: 'Share group size, villa area, date, and 2.5-hour or 3-hour. We send options, sample menu direction and chef availability. At least two days’ notice.',
     bg: 'accent' as const,
     primaryAction: {
       label: 'Get quote + sample menu',
@@ -336,7 +399,7 @@ const SECTIONS: PageSection[] = [
       external: true,
     },
     secondaryAction: {
-      label: 'Book the 3-hour class',
+      label: 'Book the villa class',
       href: WA_LINK,
       external: true,
     },
@@ -344,17 +407,17 @@ const SECTIONS: PageSection[] = [
   {
     id: 'faq',
     type: 'faq' as const,
-    subtitle: 'Cooking Class Bali — FAQ',
-    title: 'Common Questions About Cooking Classes',
+    subtitle: 'Price, length, what’s included',
+    title: 'Cooking Class Questions',
   },
   {
     id: 'cta',
     type: 'cta' as const,
     subtitle: 'Book your class',
-    title: 'Ready for a 3-Hour Private Indonesian Cooking Class?',
-    body: `Tell us your villa area, group size, cuisine preference and date. We confirm chef availability and send a tailored proposal — diploma, uniforms, recipes and the meal of everything you cook included in the standard offer. Explore more on <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">private experiences</a>, <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a> and <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef</a> day rates.`,
+    title: 'Ready for a Private Cooking Class in Your Villa?',
+    body: `WhatsApp villa area, group size, 2.5-hour or 3-hour, start time and date. More: <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">experiences</a> · <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a> · <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">private cooking class</a> · <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing</a> · <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef</a>.`,
     primaryAction: {
-      label: 'Book Your 3-Hour Class',
+      label: 'Book Your Villa Class',
       href: WA_LINK,
       external: true,
     },
@@ -369,122 +432,62 @@ const FAQS = [
   {
     question: 'How much are cooking classes in Bali with myCHEF?',
     answer:
-      'From <strong>IDR 700,000 per person</strong>, minimum 4 guests (smaller groups still pay the 4-person rate). Includes chef instructor, ingredients, uniforms &amp; hats, full 3-hour program, meal of everything you cook, personalised diploma, recipe cards and clean-up. Longer sessions and special requests are quoted separately. Prices typically ++ (11% tax + 10% service) — your written proposal shows the all-in total.',
+      'From <strong>IDR 700,000++ per person</strong>, minimum 4 guests. All-in is <strong>IDR 847,000 per person</strong> (10% service + 11% VAT; base × 1.21). The 4-guest floor is <strong>IDR 3,388,000 all-in</strong>. Ingredients are included — not groceries at cost. Your written proposal shows the all-in total.',
   },
   {
-    question: 'What is included in the 3-hour private Indonesian cooking class?',
+    question: 'What does a couple pay for a private cooking class?',
     answer:
-      'Welcome &amp; introduction to ingredients and spice pastes (15–20 min), hands-on cooking of 4–6 dishes (~2 hours), sit-down meal of everything prepared, personalised myCHEF Indonesian Cooking Diploma, recipe cards, uniforms &amp; chef hats, and full kitchen clean-up.',
+      'Two guests are billed at <strong>IDR 1,400,000++ per person</strong> — the same 4-guest floor (all-in IDR 3,388,000). The class is not half-price for two people.',
   },
   {
-    question: 'Do you give a diploma or certificate after the cooking class?',
+    question: 'How long is the cooking class?',
     answer:
-      'Yes. Every participant receives a personalised <strong>myCHEF Indonesian Cooking Diploma</strong> with their name and the date — a real take-home souvenir of the day.',
+      '<strong>2.5 or 3 hours</strong>. We ask which length you prefer, and your start time (lunch or dinner), when you enquire. The session stays at the villa.',
+  },
+  {
+    question: 'What is included in the private Indonesian cooking class?',
+    answer:
+      'The chef, all ingredients, and the meal of everything you cook. The class is 2.5 or 3 hours: intro, hands-on cooking of 4–6 dishes, then you eat. Diploma, recipe cards, uniforms and chef hats, and kitchen clean-up are part of the published villa program.',
   },
   {
     question: 'Do we eat the food we cook?',
     answer:
-      'Yes. You cook the full menu, then sit down and eat every dish you prepared. That meal is the centrepiece of the experience — not a side note.',
+      'Yes. You cook 4–6 dishes, then sit down and eat every dish you prepared.',
   },
   {
-    question: 'Are cooking classes worth it at a private villa?',
+    question: 'Is this a cooking class or a private chef?',
     answer:
-      'For guests who want privacy, a custom menu, a real meal and a diploma, a private villa cooking class is often more valuable than a large tourist demo. You leave with skills, recipes and memories — not only photos.',
+      'A <strong>cooking class</strong> means you cook with the chef and eat what you cooked. A <strong>private chef</strong> cooks for you. Different products, different quotes — this page is the class, not a chef day-rate. See <a href="/private-chef-bali">private chef Bali</a> for chef hire.',
   },
   {
-    question: 'What is a cookery class — and how does a cooking class work?',
+    question: 'Do you offer a Balinese, Javanese or Indonesian cooking class?',
     answer:
-      'Hands-on instruction where you prepare dishes with a chef. With myCHEF the chef comes to your villa: intro to the food → you cook together → you eat what you made → diploma + clean-up.',
-  },
-  {
-    question: 'Do you offer a Balinese cooking class and Indonesian cooking class?',
-    answer:
-      'Yes — the standard 3-hour program is Indonesian / Balinese focused (base gede, sambals, sate lilit, lawar/urap, nasi goreng, dessert). Vegan, gluten-free, family and multi-cuisine formats available on request.',
-  },
-  {
-    question: 'Is this an in-villa cooking class in Bali?',
-    answer:
-      'Yes. Classes are held in your villa kitchen island-wide (Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua, Kuta corridor and more).',
-  },
-  {
-    question: 'How many people will be in our class? Will it be crowded?',
-    answer:
-      'Only your group — the class is <strong>100% private</strong>. Unlike large cooking schools that can run 15–24 guests on a shared bench, you never cook alongside strangers. That privacy is why couples, families and villa groups choose the in-villa format.',
-  },
-  {
-    question: 'Do we visit a local market as part of the class?',
-    answer:
-      'Our standard class is held entirely in your villa, so there is no transfer time or minibus waiting. We shop fresh market ingredients beforehand and bring them to you. If a hands-on market visit matters to your group, tell us at enquiry and we’ll advise honestly on what’s possible.',
-  },
-  {
-    question: 'How is a myCHEF class different from a Bali cooking school?',
-    answer:
-      'A cooking school means a fixed menu, a set time slot, a group of strangers and often a five-hour day with hotel pickups. A myCHEF class is private, in your own kitchen, built around your menu, pace and dietary needs — and you eat everything you cook. See our honest take: <a href="/blog/is-a-cooking-class-in-bali-worth-it">is a cooking class in Bali worth it?</a>',
-  },
-  {
-    question: 'How long do cooking classes take?',
-    answer:
-      'The standard private Indonesian class is a complete <strong>3-hour experience</strong> (intro + cooking + meal + diploma). Longer half-day formats and optional market-style intros are available on request.',
-  },
-  {
-    question: 'Is there a cooking class for beginners?',
-    answer:
-      'Yes. Beginners are welcome — that is our default. Experienced cooks can request deeper technique.',
-  },
-  {
-    question: 'Do you offer a cooking class for kids or with kids?',
-    answer:
-      'Yes — family formats with age-appropriate tasks, milder spices and fun uniforms. For a full kids party production see <a href="/experiences/kids-birthday-chef-party">kids birthday chef party</a>.',
-  },
-  {
-    question: 'Can couples book a private cooking class?',
-    answer:
-      'Yes — couples classes are popular for honeymoons and date nights. Note the 4-guest minimum pricing: couples still pay the 4-person rate.',
-  },
-  {
-    question: 'Can we book a cooking class as a gift or for a birthday?',
-    answer:
-      'Yes. Share the recipient’s villa details and dietary notes. We coordinate discreetly for birthday and gift experiences.',
-  },
-  {
-    question: 'Do you run cooking classes for team building or retreats?',
-    answer:
-      'Yes for villa groups. Larger teams get extra staff and stations. Multi-day food programmes can connect with <a href="/events/retreats">retreat catering</a> and <a href="/events/corporate-events">corporate events</a>.',
-  },
-  {
-    question: 'What should I wear to a cooking class?',
-    answer:
-      'Comfortable clothes you can cook in and secure shoes. We provide uniforms and chef hats for every guest — great for photos.',
-  },
-  {
-    question: 'What does our villa kitchen need?',
-    answer:
-      'A working stove and basic prep space is usually enough. We bring specialist tools, uniforms and hats. Share a kitchen photo or listing link when you enquire.',
-  },
-  {
-    question: 'Can you handle vegan, vegetarian, gluten-free or halal menus?',
-    answer:
-      'Yes when briefed at enquiry. We have dedicated vegan and gluten-free sample menus; pork-free and allergy-safe options are routine.',
+      'Yes. Tell us Balinese, Javanese or Indonesian when you enquire. The standard villa class is Indonesian / Balinese; Javanese when you brief it.',
   },
   {
     question: 'How far in advance should we book a cooking class in Bali?',
     answer:
-      'A few days is often enough off-peak; one week or more for peak season (July–August, December). Last-minute sometimes possible — ask on WhatsApp. Popular with villa groups in high season.',
-  },
-  {
-    question: 'What deposit is required?',
-    answer:
-      'Typically 50% to confirm the chef and date; balance before the class. <a href="/cancellation">Cancellation policy</a>.',
+      'At least <strong>two days</strong>. Last-minute / short-lead bookings need <strong>full payment to confirm</strong> the chef and date. Your written proposal states the payment terms.',
   },
   {
     question: 'Is this different from the sushi masterclass?',
     answer:
-      'Yes. This page covers Balinese, Indonesian and multi-cuisine villa cooking classes (standard 3-hour Indonesian program). Sushi has its own page: <a href="/experiences/sushi-masterclass">sushi masterclass</a>.',
+      'Yes. This page is the Indonesian / Balinese in-villa cooking class. Sushi has its own page: <a href="/experiences/sushi-masterclass">sushi masterclass</a>.',
   },
   {
-    question: 'How do I contact you to book?',
+    question: 'How many people will be in our class? Will it be crowded?',
     answer:
-      'WhatsApp +62 896-7407-2020 with villa area, guest count, cuisine and date — or use <a href="/quote">quote</a> / <a href="/book">book</a>.',
+      'Only your group — the class is private. You do not share the kitchen with another party.',
+  },
+  {
+    question: 'Do we visit a local market as part of the class?',
+    answer:
+      'No market tour is packaged on this class. The chef shops beforehand and brings ingredients to the villa. If a hands-on market visit matters, enquire.',
+  },
+  {
+    question: 'What should I wear to a cooking class?',
+    answer:
+      'Comfortable clothes you can cook in and secure shoes. Uniforms and chef hats are provided.',
   },
 ]
 
@@ -492,62 +495,107 @@ const RELATED_PAGES = [
   {
     label: 'Sushi Masterclass Bali',
     href: '/experiences/sushi-masterclass',
-    desc: 'Dedicated private sushi class at your villa.',
+    desc: 'Dedicated private sushi class — not this Indonesian class.',
   },
   {
-    label: 'Villa cooking class guide',
-    href: '/blog/bali-villa-cooking-class-private-chef',
-    desc: 'Support article: class formats, market trip and gift ideas.',
+    label: 'Private cooking class',
+    href: '/experiences/private-cooking-class',
+    desc: 'Same commercial owner URL — this page is the Indonesian/Balinese villa class (2.5 or 3 hours).',
   },
   {
-    label: 'Base Genep explained',
-    href: '/blog/base-genep-balinese-spice-paste',
-    desc: 'The 15-ingredient Balinese master spice paste, ingredient by ingredient.',
+    label: 'All experiences',
+    href: '/experiences',
+    desc: 'Cocktail parties, kids parties, oysters and more.',
   },
   {
-    label: 'Balinese vs Indonesian food',
-    href: '/blog/balinese-food-vs-indonesian-food',
-    desc: 'What is truly Balinese, what is pan-Indonesian, and why it matters.',
-  },
-  {
-    label: 'Is a Bali cooking class worth it?',
-    href: '/blog/is-a-cooking-class-in-bali-worth-it',
-    desc: 'An honest answer — who it’s worth it for, and who should skip it.',
-  },
-  {
-    label: 'What does a cooking class cost?',
-    href: '/blog/cooking-class-bali-cost',
-    desc: '2026 price guide — group schools vs private, and what drives the price.',
-  },
-  {
-    label: 'Vegan & vegetarian Balinese cooking',
-    href: '/blog/vegan-vegetarian-balinese-cooking',
-    desc: 'Why Balinese food is naturally plant-friendly, and what you’ll cook.',
+    label: 'Kids menus',
+    href: '/kids-menus',
+    desc: 'Kids-friendly dining at the villa.',
   },
   {
     label: 'Kids Birthday Chef Party',
     href: '/experiences/kids-birthday-chef-party',
-    desc: 'Kids cooking parties and entertainment at the villa.',
+    desc: 'Kids cooking parties at the villa.',
+  },
+  {
+    label: 'Pricing',
+    href: '/pricing',
+    desc: 'Published rates across myCHEF services.',
   },
   {
     label: 'Private Chef Bali',
     href: '/private-chef-bali',
-    desc: 'Multi-day villa chef hire around your holiday.',
+    desc: 'Chef cooks for you — not a cooking class.',
   },
   {
-    label: 'Villa Catering',
-    href: '/catering',
-    desc: 'BBQ, buffet and event catering when you want us to cook for you.',
+    label: 'Private chef Canggu',
+    href: '/private-chef/canggu',
+    desc: 'Villa chef hire in Canggu.',
   },
   {
-    label: 'All Experiences',
-    href: '/experiences',
-    desc: 'Cocktail parties, oysters, proposals and more.',
+    label: 'Private chef Berawa',
+    href: '/private-chef/berawa',
+    desc: 'Villa chef hire in Berawa.',
   },
   {
-    label: 'Locations',
-    href: '/locations',
-    desc: 'Seminyak, Canggu, Ubud, Uluwatu and island-wide coverage.',
+    label: 'Private chef Seminyak',
+    href: '/private-chef/seminyak',
+    desc: 'Villa chef hire in Seminyak.',
+  },
+  {
+    label: 'Private chef Ubud',
+    href: '/private-chef/ubud',
+    desc: 'Jungle-villa chef hire — meals cooked for you.',
+  },
+  {
+    label: 'Canggu dining guide',
+    href: '/locations/canggu',
+    desc: 'Area context for a Canggu villa class.',
+  },
+  {
+    label: 'Seminyak dining guide',
+    href: '/locations/seminyak',
+    desc: 'Area context for a Seminyak villa class.',
+  },
+  {
+    label: 'Ubud dining guide',
+    href: '/locations/ubud',
+    desc: 'Jungle villas — class is still in your kitchen.',
+  },
+  {
+    label: 'Uluwatu dining guide',
+    href: '/locations/uluwatu',
+    desc: 'Coverage — same in-villa class.',
+  },
+  {
+    label: 'Sanur dining',
+    href: '/locations/sanur',
+    desc: 'East-coast villa class.',
+  },
+  {
+    label: 'Is a Bali cooking class worth it?',
+    href: '/blog/is-a-cooking-class-in-bali-worth-it',
+    desc: 'Honest take — villa class vs a school day.',
+  },
+  {
+    label: 'What does a cooking class cost?',
+    href: '/blog/cooking-class-bali-cost',
+    desc: 'Group schools vs private villa classes.',
+  },
+  {
+    label: 'Base Genep explained',
+    href: '/blog/base-genep-balinese-spice-paste',
+    desc: 'The Balinese master spice paste.',
+  },
+  {
+    label: 'Balinese vs Indonesian food',
+    href: '/blog/balinese-food-vs-indonesian-food',
+    desc: 'What is Balinese, what is pan-Indonesian.',
+  },
+  {
+    label: 'Vegan Balinese cooking',
+    href: '/blog/vegan-vegetarian-balinese-cooking',
+    desc: 'Plant-forward menus on request.',
   },
 ]
 
@@ -556,58 +604,59 @@ export default function ExperienceCookingClassPage() {
     <>
       <PremiumPage
         slug="experiences/cooking-class"
-        title="Cooking Class Bali | 3-Hour Private Villa Indonesian Class | myCHEF"
-        description="3-hour private Indonesian cooking class in your Bali villa — intro, hands-on cooking, eat everything, diploma. From IDR 700K/person. WhatsApp myCHEF."
-        seoTitle="Cooking Class Bali | 3-Hour Private Villa Indonesian Class | myCHEF"
-        seoDescription="3-hour private Indonesian cooking class in your Bali villa — ingredient intro, hands-on cooking, meal of everything you cook, personalised diploma. From IDR 700K/pp min 4. WhatsApp myCHEF."
+        title="Cooking Class Bali"
+        description={meta.description}
+        seoTitle={meta.title}
+        seoDescription={meta.description}
         canonicalUrl={CANONICAL}
-        h1="Cooking Class Bali — 3-Hour Private Indonesian Class in Your Villa"
-        subtitle="Introduction to the food · hands-on cooking · eat everything you prepare · personalised diploma. From IDR 700,000 per person (min 4)."
+        h1={meta.h1}
+        subtitle="Private 2.5–3 hour Indonesian/Balinese class in your villa. Chef comes to you. Eat everything, diploma + recipes, full clean-up. No hotel pickup. From IDR 700,000++/person (min 4). 12,000+ guests hosted."
         heroImage={HERO}
-        heroImageAlt="Private chef teaching a cooking class in a Bali villa kitchen"
+        heroImageAlt="Private chef teaching a couple to cook in a Bali villa kitchen, with tropical garden, bougainvillea and pool beyond"
+        heroImageClassName="object-[68%_center] md:object-[center_38%]"
         ogImage={`https://mychef.id${HERO}`}
         keywords={[
           'cooking class bali',
           'cooking class in bali',
           'private cooking class bali',
           'balinese cooking class',
-          'indonesian cooking class bali',
-          'in villa cooking class bali',
-          '3 hour cooking class bali',
-          'cooking class with diploma bali',
-          'cooking class ubud',
-          'cooking class seminyak',
           'cooking class canggu',
-          'best cooking class bali',
-          'cooking lessons in bali',
-          'cookery classes in bali',
-          'cooking class for couples',
-          'cooking class for beginners',
-          'vegan cooking class bali',
-          'family cooking class bali villa',
+          'cooking class seminyak',
+          'cooking class sanur',
+          'indonesian cooking class bali',
         ]}
         highlights={[
-          '3-Hour Program',
-          'Diploma Included',
-          'From IDR 700K/person',
-          'Eat Everything You Cook',
+          '2.5 or 3 Hours at the Villa',
+          'No Minibus · No Hotel Pickup',
+          'Diploma + Recipes',
+          'From IDR 700K++ / person (min 4)',
         ]}
         sections={SECTIONS}
         faqs={FAQS}
         relatedPages={RELATED_PAGES}
-        ctaText="Book Your 3-Hour Class"
-        ctaSubtext="WhatsApp villa area, group size and date — we reply within about 2 hours with options and a clear quote."
+        ctaText="Book Your Villa Class"
+        ctaSubtext="WhatsApp villa area, group size, 2.5 or 3 hours, start time and date — chef comes to you. At least two days’ notice."
         extraJsonLd={[
           breadcrumbSchema('Cooking Class Bali', CANONICAL, 'Experiences', 'https://mychef.id/experiences'),
           faqPageSchema(FAQS.map((f) => ({ question: f.question, answer: f.answer }))),
           {
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: '3-Hour Private Indonesian Cooking Class Bali',
+            name: 'Private Indonesian Cooking Class Bali',
             description:
-              'Private 3-hour Indonesian cooking class in your Bali villa: ingredient introduction, hands-on cooking of 4–6 dishes, sit-down meal of everything prepared, personalised diploma, uniforms, recipes and clean-up. From IDR 700,000 per person, minimum 4 guests.',
+              'Private 2.5–3 hour Indonesian/Balinese cooking class in your Bali villa. Chef comes to you. Cook 4–6 dishes, eat everything, diploma and recipes, full clean-up. No hotel pickup. From IDR 700,000++ per person, minimum 4 guests (all-in IDR 847,000 pp).',
             provider: providerRef,
-            areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+            areaServed: [
+              { '@type': 'Place', name: 'Bali, Indonesia' },
+              { '@type': 'Place', name: 'Seminyak, Bali' },
+              { '@type': 'Place', name: 'Canggu, Bali' },
+              { '@type': 'Place', name: 'Sanur, Bali' },
+              { '@type': 'Place', name: 'Ubud, Bali' },
+              { '@type': 'Place', name: 'Uluwatu, Bali' },
+              { '@type': 'Place', name: 'Jimbaran, Bali' },
+              { '@type': 'Place', name: 'Nusa Dua, Bali' },
+              { '@type': 'Place', name: 'Kuta, Bali' },
+            ],
             serviceType: 'Private in-villa cooking class',
             image: `https://mychef.id${HERO}`,
             url: CANONICAL,
@@ -619,7 +668,7 @@ export default function ExperienceCookingClassPage() {
                 '@type': 'UnitPriceSpecification',
                 price: '700000',
                 priceCurrency: 'IDR',
-                unitText: 'per person',
+                unitText: 'per person ++',
                 referenceQuantity: {
                   '@type': 'QuantitativeValue',
                   value: 4,
@@ -628,28 +677,30 @@ export default function ExperienceCookingClassPage() {
               },
               availability: 'https://schema.org/InStock',
               url: CANONICAL,
+              description:
+                'IDR 700,000++ per person, minimum 4 guests. All-in IDR 847,000 per person (base × 1.21). 4-guest floor IDR 3,388,000 all-in. Couples IDR 1,400,000++ per person.',
             },
           },
           {
             '@context': 'https://schema.org',
             '@type': 'Course',
-            name: 'Private 3-Hour Indonesian Cooking Class at Your Bali Villa',
+            name: 'Private 2.5–3 Hour Indonesian Cooking Class at Your Bali Villa',
             description:
-              'Hands-on private cooking class taught by a myCHEF chef in your villa kitchen. Ingredient introduction, cook 4–6 Indonesian/Balinese dishes, eat everything you prepared, receive a personalised diploma and recipes.',
+              'Hands-on private cooking class in your villa kitchen. 2.5 or 3 hours. Cook 4–6 Indonesian/Balinese dishes, eat everything you prepared, diploma and recipes. Chef comes to you.',
             provider: providerRef,
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'onsite',
-              courseWorkload: 'PT3H',
+              courseWorkload: 'PT2H30M',
               location: { '@type': 'Place', name: 'Guest villa kitchen, Bali' },
             },
           },
         ]}
       />
       <StickyMobileCTA
-        label="Book 3-hour cooking class"
+        label="Book a cooking class"
         serviceName="a private Indonesian cooking class at my Bali villa"
-        intent="a 3-hour class quote with diploma"
+        intent="a 2.5 or 3-hour class quote with diploma"
         pageSource="experiences-cooking-class"
         serviceType="cooking-class"
       />

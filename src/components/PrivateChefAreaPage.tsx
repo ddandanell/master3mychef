@@ -20,6 +20,14 @@ const SITE = 'https://mychef.id'
 const WA = '6289674072020'
 const wa = (msg: string) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`
 
+/** Descriptive cooking-class anchors only for the four area terms with real class demand. */
+const COOKING_CLASS_AREA_LINKS: Record<string, { to: string; label: string }> = {
+  ubud: { to: '/experiences/cooking-class#ubud', label: 'Cooking class Ubud' },
+  seminyak: { to: '/experiences/cooking-class#seminyak', label: 'Cooking class Seminyak' },
+  canggu: { to: '/experiences/cooking-class#canggu', label: 'Cooking class Canggu' },
+  sanur: { to: '/experiences/cooking-class#sanur', label: 'Cooking class Sanur' },
+}
+
 // ── Service grid data ─────────────────────────────────────────────────────────
 const SERVICE_CARDS = [
   {
@@ -958,7 +966,10 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
               { to: '/honeymoon-chef', label: 'Honeymoon private chef' },
               { to: '/proposal-dinner', label: 'Proposal dinner planning' },
               { to: '/seafood-bbq-catering-bali', label: 'Seafood BBQ catering' },
-              { to: '/experiences/cooking-class', label: 'Cooking class at the villa' },
+              COOKING_CLASS_AREA_LINKS[area.slug] ?? {
+                to: '/experiences/cooking-class',
+                label: 'Cooking class at the villa',
+              },
               { to: '/staffing', label: 'Villa staffing & placement' },
               { to: '/experiences', label: 'All private experiences' },
             ].map((link) => (

@@ -76,6 +76,7 @@ export interface PageSection {
   body?: string
   image?: string
   imageAlt?: string
+  imageCaption?: string
   features?: { icon: ElementType; title: string; desc: string }[]
   profiles?: PageProfile[]
   testimonials?: { name: string; location: string; text: string; rating?: number }[]
@@ -94,6 +95,8 @@ export interface PremiumPageProps {
   subtitle?: string
   heroImage?: string
   heroImageAlt?: string
+  /** Extra classes on the hero <img> (e.g. object-position). Always composed with object-cover. */
+  heroImageClassName?: string
   ogImage?: string
   keywords: string[]
   highlights?: string[]
@@ -117,6 +120,7 @@ export default function PremiumPage({
   subtitle,
   heroImage,
   heroImageAlt,
+  heroImageClassName,
   ogImage,
   keywords,
   highlights,
@@ -231,7 +235,7 @@ export default function PremiumPage({
               height={1080}
               fetchPriority="high"
               decoding="async"
-              className="w-full h-full object-cover"
+              className={['w-full h-full object-cover', heroImageClassName].filter(Boolean).join(' ')}
             />
             <div
               className="absolute inset-0"
@@ -346,12 +350,19 @@ export default function PremiumPage({
                     )}
                   </div>
                   <div className={idx % 2 === 0 ? 'order-2' : 'order-1'}>
-                    <OptimizedImage
-                      src={section.image}
-                      alt={section.imageAlt || section.title}
-                      className="w-full rounded-2xl shadow-xl"
-                      loading="lazy"
-                    />
+                    <figure className="m-0">
+                      <OptimizedImage
+                        src={section.image}
+                        alt={section.imageAlt || section.title}
+                        className="w-full rounded-2xl shadow-xl"
+                        loading="lazy"
+                      />
+                      {section.imageCaption && (
+                        <figcaption className="mt-3 text-sm leading-snug text-[#4A4745]">
+                          {section.imageCaption}
+                        </figcaption>
+                      )}
+                    </figure>
                   </div>
                 </div>
               )}

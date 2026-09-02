@@ -341,7 +341,7 @@ export default function SeminyakPage() {
           <li><Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Catering Bali</Link> — BBQ, buffet and group menus for larger villa parties.</li>
           <li><Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">Fine dining at your villa</Link> — tasting menus and chef’s table formats.</li>
           <li><Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline font-medium">Private dining Bali</Link> — how at-home fine dining works island-wide.</li>
-          <li><Link to="/experiences/cooking-class" className="text-[#C5A028] hover:underline font-medium">Cooking class in Seminyak</Link> — private Balinese cooking classes in your design villa; a popular pre-dinner activity for groups, hen parties and couples.</li>
+          <li><Link to="/experiences/cooking-class#seminyak" className="text-[#C5A028] hover:underline font-medium">Cooking class in Seminyak</Link> — private Balinese cooking classes in your design villa; a popular pre-dinner activity for groups, hen parties and couples.</li>
         </ul>
       </section>
 

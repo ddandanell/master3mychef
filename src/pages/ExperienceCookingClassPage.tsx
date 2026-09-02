@@ -1,5 +1,4 @@
 import PremiumPage from '@/components/PremiumPage'
-import OptimizedImage from '@/components/OptimizedImage'
 import { breadcrumbSchema, faqPageSchema, providerRef } from '@/components/SeoHead'
 import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
@@ -37,11 +36,6 @@ const HERO = '/generated/mychef-cooking-class-bali-hero-villa.webp'
 const IMG_TEACH = '/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp'
 const IMG_BALINESE = '/generated/mychef-cooking-class-balinese-ingredients-bali-landscape.webp'
 const IMG_DINE = '/generated/mychef-cooking-class-bali-guests-dining.webp'
-const IMG_HANDSHAKE = '/generated/mychef-cooking-class-bali-diploma-handshake.webp'
-const IMG_ISLAND = '/generated/mychef-cooking-class-bali-chef-teaching-island.webp'
-const IMG_FAMILY = '/generated/mychef-cooking-class-bali-family-group.webp'
-const IMG_BUMBU = '/generated/mychef-cooking-class-bali-bumbu-genep-mise.webp'
-const IMG_DIPLOMA = '/generated/mychef-balinese-cooking-class-diploma.webp'
 
 const CTA_HTML = (label: string, href = WA_LINK) =>
   `<p style="margin:1.5rem 0 0"><a href="${href}" class="inline-flex items-center gap-2 rounded-full bg-[#C5A028] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-[#1A1A1A] hover:bg-[#D4B43A]" target="_blank" rel="noopener noreferrer">${label}</a> <a href="${WA_QUOTE}" class="ml-2 text-sm font-semibold text-[#7E6410] hover:underline" target="_blank" rel="noopener noreferrer">Get quote + sample menu →</a></p>`
@@ -60,7 +54,7 @@ const COMPARE_TABLE = `
     <tr>
       <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Where</td>
       <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">Hotel pickup, then a shared school kitchen. You leave the villa.</td>
-      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>Your villa.</strong> The chef comes to you — Canggu, Seminyak, Ubud, Sanur, island-wide.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>Your villa.</strong> The chef comes to you — Seminyak, Canggu, Ubud, Uluwatu, Jimbaran, Sanur, Nusa Dua, Kuta. No shuttle.</td>
     </tr>
     <tr>
       <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Time</td>
@@ -69,13 +63,13 @@ const COMPARE_TABLE = `
     </tr>
     <tr>
       <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Who cooks</td>
-      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">15–24 guests on a shared bench. Pace set by the room.</td>
-      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>Only your guests.</strong> Private. You cook together.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>10–18 strangers</strong> on a shared bench. Pace set by the room.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3"><strong>100% private.</strong> Only your group. You cook together.</td>
     </tr>
     <tr>
       <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Market / pickup</td>
-      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">Supervised group market walk + free hotel pickup is the usual school day.</td>
-      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">No hotel pickup. The chef shops beforehand. Class time is cooking and eating.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">Morning market walk + free hotel pickup is the usual school day.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">No hotel pickup. No market minibus. The chef shops beforehand. Class time is cooking and eating.</td>
     </tr>
     <tr>
       <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">Price shape</td>
@@ -85,12 +79,12 @@ const COMPARE_TABLE = `
     <tr>
       <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3;font-weight:600">What you eat</td>
       <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">A set school menu, shared with the group.</td>
-      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">You cook <strong>4–6 dishes</strong>, then eat what you cooked.</td>
+      <td style="padding:0.7rem 0.85rem;border-bottom:1px solid #E8E6E3">You cook <strong>4–6 dishes</strong>, then eat everything at your table.</td>
     </tr>
     <tr>
       <td style="padding:0.7rem 0.85rem;font-weight:600">Take-home</td>
-      <td style="padding:0.7rem 0.85rem">Recipes vary by school.</td>
-      <td style="padding:0.7rem 0.85rem">Personalised <strong>diploma</strong>, recipe cards, uniforms and chef hats, kitchen left clean.</td>
+      <td style="padding:0.7rem 0.85rem">Usually a recipe PDF.</td>
+      <td style="padding:0.7rem 0.85rem">Personalised <strong>diploma</strong> (name + date), recipe cards, uniforms and chef hats, kitchen left clean.</td>
     </tr>
   </tbody>
 </table>
@@ -122,78 +116,18 @@ const SECTIONS: PageSection[] = [
     image: IMG_TEACH,
     imageAlt:
       'Private chef teaching a couple to pound Balinese spice paste in a villa kitchen opening onto a tropical garden',
-    body: `<p>A <strong>cooking class Bali</strong> search usually shows group kitchen schools: free hotel pickup, a market walk, a shared bench, <strong>5–6.5 hours</strong> on the road. myCHEF is the other product. <strong>The chef comes to your villa.</strong> Private. <strong>2.5 or 3 hours.</strong> You cook 4–6 Indonesian / Balinese dishes. You eat everything. Diploma + recipes. Full clean-up. No hotel pickup.</p>
+    body: `<p>A <strong>cooking class Bali</strong> search usually shows group kitchen schools: free hotel pickup, a morning market, a shared bench of <strong>10–18 strangers</strong>, <strong>5–6.5 hours</strong> door-to-door. myCHEF is the other product. <strong>The chef comes to your villa</strong> — Seminyak, Canggu, Ubud, Nusa Dua, island-wide. <strong>100% private.</strong> <strong>2.5 or 3 hours.</strong> You cook 4–6 Indonesian / Balinese dishes. You eat everything at your table. Diploma + recipes. Full clean-up. Zero shuttle. Zero Ubud-only pickup. No minibus.</p>
     <p>From <strong>IDR 700,000++ per person</strong>, minimum 4 (all-in <strong>IDR 847,000</strong> pp). myCHEF has hosted <strong>12,000+ guests</strong> across villa dining — this class sits in that same in-villa team. Sushi is a different URL: <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a>. This page is the Indonesian / Balinese villa class, not a multi-cuisine or market-tour product — see <a href="/experiences/private-cooking-class" class="text-[#7E6410] hover:underline font-medium">private cooking class</a> for that split.</p>
     ${COMPARE_TABLE}
     ${CTA_HTML('Book the villa class — WhatsApp')}`,
-  },
-  {
-    id: 'how-it-looks',
-    type: 'custom' as const,
-    subtitle: 'From a real villa class',
-    title: 'How a Class with Us Looks',
-    body: 'Compact documentary shots — not a school bench, not a second hero. Chef in your kitchen, you cook together, families join as extra guests, and you leave with a personalised diploma.',
-    render: (
-      <div className="mx-auto max-w-[980px]">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-          {[
-            {
-              src: IMG_HANDSHAKE,
-              alt: 'Chef shaking hands with a guest holding a personalised myCHEF cooking class diploma in a Bali villa kitchen',
-              caption: 'You leave with a personalised diploma.',
-            },
-            {
-              src: IMG_ISLAND,
-              alt: 'Private chef teaching a family around a marble villa kitchen island with mise en place bowls and white chef hats',
-              caption: 'Chef comes to your kitchen; you cook together.',
-            },
-            {
-              src: IMG_FAMILY,
-              alt: 'Family wearing chef hats and black aprons with two myCHEF chefs in a Bali villa kitchen after a private cooking class',
-              caption: 'Families join as extra guests — no separate kids tariff.',
-            },
-            {
-              src: IMG_BUMBU,
-              alt: 'Bumbu genep spice paste mise en place in small bowls on a marble villa kitchen island',
-              caption: 'Base genep, prepped in your villa kitchen.',
-            },
-          ].map((shot) => (
-            <figure key={shot.src} className="m-0">
-              <div className="aspect-[3/4] overflow-hidden rounded-xl bg-[#F4F1EA]">
-                <OptimizedImage
-                  src={shot.src}
-                  alt={shot.alt}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption className="mt-2 text-left text-sm leading-snug text-[#4A4745]">
-                {shot.caption}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <figure className="mx-auto mt-10 max-w-[360px]">
-          <OptimizedImage
-            src={IMG_DIPLOMA}
-            alt="myCHEF Balinese Cooking Class diploma of achievement"
-            className="w-full rounded-lg border border-black/10 bg-white shadow-md"
-            loading="lazy"
-          />
-          <figcaption className="mt-3 text-center text-sm text-[#4A4745]">
-            The certificate every guest receives — name filled in on the day. Blank line shown.
-          </figcaption>
-        </figure>
-      </div>
-    ),
   },
   {
     id: 'no-minibus',
     type: 'content' as const,
     subtitle: '2.5–3 hours at the villa vs 5–6.5 hours with transfers',
     title: 'No Minibus',
-    body: `<p>Group schools build the day around a pickup, often a market, then a shared kitchen. Once the road time is in, guests are looking at <strong>5–6.5 hours</strong> away from the villa. A myCHEF class stays where you already are. <strong>2.5 or 3 hours.</strong> No school shuttle. No minibus. The chef shops beforehand so class time is cooking, eating and the diploma. If a hands-on market visit matters, enquire — it is not packaged on this URL.</p>
-    <p>That is the duration USP: a private <strong>cooking class in Bali</strong> that does not take the whole day. Tell us your start time (lunch or dinner) when you enquire — we do not publish fixed 10:00 / 16:00 school slots.</p>`,
+    body: `<p>Group schools build the day around a pickup, often a morning market, then a shared kitchen. Once the road time is in, guests are looking at <strong>5–6.5 hours</strong> away from the villa. A myCHEF class stays where you already are. <strong>2.5 or 3 hours.</strong> No school shuttle. No minibus. The chef shops beforehand so class time is cooking, eating and the diploma. If a hands-on market visit matters, enquire — it is not packaged on this URL.</p>
+    <p>That is the duration USP: a private <strong>cooking class in Bali</strong> that does not take the whole day. Tell us your start time — lunch or dinner — when you enquire. We do not publish a school timetable.</p>`,
   },
   {
     id: 'pricing',
@@ -202,7 +136,7 @@ const SECTIONS: PageSection[] = [
     title: 'Cooking Class Cost — From IDR 700,000++ per Person',
     body: `<p style="font-size:1.15rem;line-height:1.6"><strong>From IDR 700,000++ per person.</strong> Minimum <strong>4 guests</strong>. All-in is <strong>IDR 847,000 per person</strong> (base × 1.21). ++ is 11% government tax + 10% service — your written proposal shows the all-in total.</p>
     <p><strong>Couples (2 guests):</strong> billed at <strong>IDR 1,400,000++ per person</strong> — the same 4-guest floor. The class is not a half-price couple ticket.</p>
-    <p>Typical shared-school tickets sit around <strong>IDR 350,000–530,000</strong> per person. That price buys a place on a bench of 10–18, a set menu, pickup and often a market walk. The 700k villa rate buys a <strong>private</strong> chef in <em>your</em> kitchen, ingredients for your group, 4–6 dishes you actually eat, a diploma and a clean kitchen — with no transfer time. You are not paying double for the same product. You are paying for a different one.</p>
+    <p>Typical shared-school tickets sit around <strong>IDR 350,000–530,000</strong> per person. That price buys a place on a bench of 10–18, a set menu, pickup and often a morning market. The 700k villa rate buys a <strong>private</strong> chef in <em>your</em> kitchen, ingredients for your group, 4–6 dishes you actually eat, a diploma and a clean kitchen — with no transfer time. You are not paying double for the same product. You are paying for a different one. We do not try to undercut a 350k school ticket.</p>
     <p>See published tables on <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing</a>. This class is not a private-chef day rate.</p>
     <p>This covers:</p>
     <ul>
@@ -215,7 +149,7 @@ const SECTIONS: PageSection[] = [
       <li>Recipe cards for a normal home kitchen</li>
       <li>Full kitchen clean-up</li>
     </ul>
-    <p>Larger groups receive additional staff so everyone stays active. Dietary needs are taken at enquiry. Children who join are extra guests on the same class. For kids menus see <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">kids menus</a>; for a kids party production see <a href="/experiences/kids-birthday-chef-party" class="text-[#7E6410] hover:underline font-medium">kids birthday chef party</a>.</p>
+    <p>Larger groups receive additional staff so everyone stays active. Dietary needs — vegan, gluten-free, allergies, milder spice — are taken at enquiry. Children who join are extra guests on the same class. For kids menus see <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">kids menus</a>; for a kids party production see <a href="/experiences/kids-birthday-chef-party" class="text-[#7E6410] hover:underline font-medium">kids birthday chef party</a>.</p>
     <p>If you also want a chef to cook <em>for</em> you on other days, that is a separate booking: <a href="/private-chef-bali" class="text-[#7E6410] hover:underline font-medium">private chef Bali</a>.</p>
     <p style="font-size:0.95rem;color:#4A4A4A"><a href="/blog/cooking-class-bali-cost" class="text-[#7E6410] hover:underline font-medium">Cooking class cost guide</a> · <a href="/blog/is-a-cooking-class-in-bali-worth-it" class="text-[#7E6410] hover:underline font-medium">Is a cooking class in Bali worth it?</a></p>
     ${CTA_HTML('Get your personalised quote + sample menu', WA_QUOTE)}`,
@@ -251,7 +185,7 @@ const SECTIONS: PageSection[] = [
     subtitle: 'On request — not a separate title product',
     title: 'Vegan Cooking Class Bali',
     body: `<p>A <strong>vegan cooking class Bali</strong> with myCHEF is the same private villa class (2.5 or 3 hours), with a plant-forward menu when you brief it at enquiry — not a different published program. Typical request menu: base gede, gado-gado with peanut sauce, tempeh or tofu sate, lawar sayur, nasi kuning, fruit and coconut dessert.</p>
-    <p>Vegetarian, gluten-free and allergy notes are taken the same way. Read <a href="/blog/vegan-vegetarian-balinese-cooking" class="text-[#7E6410] hover:underline font-medium">vegan &amp; vegetarian Balinese cooking</a>.</p>
+    <p>Vegetarian, gluten-free, allergy notes and milder spice are taken the same way at enquiry. Read <a href="/blog/vegan-vegetarian-balinese-cooking" class="text-[#7E6410] hover:underline font-medium">vegan &amp; vegetarian Balinese cooking</a>.</p>
     ${CTA_HTML('WhatsApp a vegan or vegetarian brief', WA_QUOTE)}`,
   },
   {
@@ -259,9 +193,9 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Private villa vs a group school',
     title: 'Why a Private Class Beats a Tourist Kitchen School',
-    body: `<p>Group schools can be a good day trip if you want pickup, a market walk and a shared bench. They are not this product. A myCHEF <strong>cooking class Bali</strong> stays in the villa you already rented. 2.5 or 3 hours. No school shuttle. No 10–18 strangers.</p>
-    <p>We do not bid on school brand names. If you want a famous group-school morning with market + pickup, book a school. If you want a private Indonesian class in your own kitchen, this page is the booking.</p>
-    <p>A <strong>cooking class</strong> means you cook with the chef and eat what you cooked. A <strong>private chef</strong> cooks for you. Same company, different quotes.</p>`,
+    body: `<p>Group schools can be a good day trip if you want pickup, a morning market and a shared bench. They are not this product. A myCHEF <strong>cooking class Bali</strong> stays in the villa you already rented. 2.5 or 3 hours. No school shuttle. No 10–18 strangers.</p>
+    <p>We come to <em>your</em> kitchen — not a shared flea-market classroom, not someone else’s poolside villa, not an on-property hotel class. Professional chef, island coverage, personalised diploma. We do not bid on school brand names in title or meta. If you want the famous group-school morning with market + pickup, book a school. If you want a private Indonesian class in your own kitchen, this page is the booking.</p>
+    <p>A <strong>cooking class</strong> means you cook with the chef and eat what you cooked. A <strong>private chef</strong> cooks for you. Same company, different quotes — never a chef day-rate on this page.</p>`,
   },
   {
     id: 'sample-menus',
@@ -358,7 +292,7 @@ const SECTIONS: PageSection[] = [
       {
         icon: MapPin,
         title: 'Island-wide at the villa',
-        desc: 'Canggu, Seminyak, Sanur, Ubud (your villa), Uluwatu and the rest of our coverage.',
+        desc: 'Canggu, Seminyak, Sanur, Ubud (your villa), Uluwatu, Jimbaran, Nusa Dua, Kuta — always your kitchen.',
       },
     ],
   },
@@ -434,13 +368,13 @@ const SECTIONS: PageSection[] = [
     type: 'content' as const,
     subtitle: 'Coverage, not extra title keywords',
     title: 'Island-Wide — Always Your Villa',
-    body: `<p>Same private class in <a href="/locations/uluwatu" class="text-[#7E6410] hover:underline font-medium">Uluwatu</a>, Kuta, <a href="/locations/nusa-dua" class="text-[#7E6410] hover:underline font-medium">Nusa Dua</a> and the rest of our villa coverage. Tell us the villa pin. Browse <a href="/locations" class="text-[#7E6410] hover:underline font-medium">locations</a> and <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">experiences</a>.</p>`,
+    body: `<p>Same private class in <a href="/locations/uluwatu" class="text-[#7E6410] hover:underline font-medium">Uluwatu</a>, <a href="/locations/jimbaran" class="text-[#7E6410] hover:underline font-medium">Jimbaran</a>, Kuta, <a href="/locations/nusa-dua" class="text-[#7E6410] hover:underline font-medium">Nusa Dua</a> and the rest of our villa coverage. Ubud is coverage too — not the product identity. Tell us the villa pin. Browse <a href="/locations" class="text-[#7E6410] hover:underline font-medium">locations</a> and <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">experiences</a>.</p>`,
   },
   {
     id: 'cta-pre-faq',
     type: 'cta' as const,
     subtitle: 'Still deciding?',
-    title: 'Get a clear quote before you deposit',
+    title: 'Get a clear quote before you book',
     body: 'Share group size, villa area, date, and 2.5-hour or 3-hour. We send options, sample menu direction and chef availability. At least two days’ notice.',
     bg: 'accent' as const,
     primaryAction: {
@@ -515,9 +449,9 @@ const FAQS = [
       'A <strong>cooking class</strong> means you cook with the chef and eat what you cooked. A <strong>private chef</strong> cooks for you. Different products, different quotes. See <a href="/private-chef-bali">private chef Bali</a> for chef hire.',
   },
   {
-    question: 'Is this an in-villa cooking class in Bali?',
+    question: 'I\'m in Seminyak or Canggu — where do I find a Balinese cooking class?',
     answer:
-      'Yes. The chef comes to your villa — <a href="/experiences/cooking-class#canggu">Canggu</a>, <a href="/experiences/cooking-class#seminyak">Seminyak</a>, <a href="/experiences/cooking-class#sanur">Sanur</a>, <a href="/locations/uluwatu">Uluwatu</a>, and if your villa is in Ubud see <a href="/experiences/cooking-class#ubud">villa in Ubud</a>. Also <a href="/private-chef/berawa">Berawa</a>.',
+      'In your villa. The chef comes to you in <a href="/experiences/cooking-class#seminyak">Seminyak</a> and <a href="/experiences/cooking-class#canggu">Canggu</a> — also <a href="/experiences/cooking-class#sanur">Sanur</a>, <a href="/locations/uluwatu">Uluwatu</a>, <a href="/locations/jimbaran">Jimbaran</a>, Nusa Dua, Kuta, and if your villa is in Ubud see <a href="/experiences/cooking-class#ubud">villa in Ubud</a>. Also <a href="/private-chef/berawa">Berawa</a>. Ubud is coverage, not a school campus. You do not need a hotel pickup.',
   },
   {
     question: 'How many people will be in our class? Will it be crowded?',
@@ -530,9 +464,9 @@ const FAQS = [
       'No market tour is promised on this class. The chef shops ingredients beforehand and brings them to the villa. Class time is cooking and eating at home. If a hands-on market visit matters, enquire — it is not a packaged SKU on this URL.',
   },
   {
-    question: 'How is a myCHEF class different from a Bali cooking school?',
+    question: 'Is a cooking class in Bali worth it?',
     answer:
-      'A cooking school means a fixed menu, a set time slot, a group of strangers and often a five-hour-plus day with hotel pickups. A myCHEF class is private, in your own kitchen, 2.5 or 3 hours — and you eat everything you cook. Honest take: <a href="/blog/is-a-cooking-class-in-bali-worth-it">is a cooking class in Bali worth it?</a>',
+      'A group school can be worth it if you want pickup, a morning market and a shared bench at IDR 350,000–530,000. A myCHEF class is a different product: 100% private, in your villa, 2.5 or 3 hours, diploma, you eat everything you cook. From IDR 700,000++ per person, min 4 (all-in IDR 847,000 pp). Honest take: <a href="/blog/is-a-cooking-class-in-bali-worth-it">is a cooking class in Bali worth it?</a>',
   },
   {
     question: 'How far in advance should we book a cooking class in Bali?',
@@ -555,9 +489,9 @@ const FAQS = [
       'Yes. Note the 4-guest minimum: couples pay <strong>IDR 1,400,000++ per person</strong>.',
   },
   {
-    question: 'Do you offer a Balinese cooking class and Indonesian cooking class?',
+    question: 'Do you offer a Balinese or Indonesian class — and can it be vegetarian, vegan, or gluten-free?',
     answer:
-      'Yes — the standard program is Indonesian / Balinese focused (base gede, sambals, sate lilit, lawar/urap, nasi goreng, dessert). Vegetarian, vegan, gluten-free and allergy menus when briefed at enquiry.',
+      'Yes. The standard program is Indonesian / Balinese (base gede, sambals, sate lilit, lawar/urap, nasi goreng, dessert); Javanese when you ask. Vegetarian, vegan, gluten-free, allergies and milder spice are taken at enquiry, like any job. Beginners are welcome — the chef sets the pace to the group.',
   },
   {
     question: 'What should I wear to a cooking class?',
@@ -737,10 +671,14 @@ export default function ExperienceCookingClassPage() {
             provider: providerRef,
             areaServed: [
               { '@type': 'Place', name: 'Bali, Indonesia' },
-              { '@type': 'Place', name: 'Canggu, Bali' },
               { '@type': 'Place', name: 'Seminyak, Bali' },
+              { '@type': 'Place', name: 'Canggu, Bali' },
               { '@type': 'Place', name: 'Sanur, Bali' },
               { '@type': 'Place', name: 'Ubud, Bali' },
+              { '@type': 'Place', name: 'Uluwatu, Bali' },
+              { '@type': 'Place', name: 'Jimbaran, Bali' },
+              { '@type': 'Place', name: 'Nusa Dua, Bali' },
+              { '@type': 'Place', name: 'Kuta, Bali' },
             ],
             serviceType: 'Private in-villa cooking class',
             image: `https://mychef.id${HERO}`,

@@ -582,7 +582,7 @@ export default function HubPage() {
             {HOW_IT_WORKS.map((item, idx) => (
               <div key={item.step} className="hiw-step relative overflow-visible">
                 <div
-                  className="absolute flex items-center justify-center transition-all duration-300"
+                  className="hiw-disc absolute flex items-center justify-center transition-all duration-300"
                   style={{
                     top: 0,
                     left: '50%',

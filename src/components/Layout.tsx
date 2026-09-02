@@ -140,7 +140,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           location.pathname !== '/experiences/private-cooking-class' && (
           <Suspense fallback={null}><ConciergeWidget /></Suspense>
         )}
-        {location.pathname !== '/' && (
+        {(location.pathname.replace(/\/+$/, '') || '/') !== '/' && (
           <Suspense fallback={null}><ExitIntentPopup /></Suspense>
         )}
       </div>

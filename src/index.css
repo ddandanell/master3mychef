@@ -580,3 +580,13 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+/* Homepage How It Works — every step disc is gold/ink. Do not rainbow by nth-child. */
+.hiw-disc {
+  background: #C5A028 !important;
+  color: #1A1A1A !important;
+}
+.hiw-disc svg {
+  color: #1A1A1A !important;
+  stroke: #1A1A1A;
+}

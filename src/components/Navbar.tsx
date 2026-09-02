@@ -37,22 +37,29 @@ interface NavItem {
   href: string
   icon: LucideIcon
   accent: string
+  /** Dropdown-only trigger — not a top-level destination. */
+  menuOnly?: boolean
 }
 
-// Private Chef leads the navigation: it is the highest-intent term we compete on
-// and the pillar page at /private-chef-bali is where that demand should land.
-// Contact and Help are merged into a single item to make room without losing
-// either page — both remain live and are reachable from the merged dropdown.
+const MORE_NAV_HREF = '__more__'
+const MORE_ACTIVE_PREFIXES = [
+  '/dining-styles',
+  '/experiences',
+  '/in-villa-service',
+  '/staffing',
+  '/journal',
+  '/faq',
+]
+
+// Private Chef and Catering stay as peers. Experience / cooking class is not.
+// Contact must remain fully visible at 1280px — keep this list short.
 const NAV_ITEMS: NavItem[] = [
   { label: 'Private Chef', href: '/private-chef-bali', icon: ChefHat, accent: '#C5A028' },
   { label: 'Catering', href: '/catering', icon: Users, accent: '#C5A028' },
   { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
   { label: 'Locations', href: '/locations', icon: MapPin, accent: '#C5A028' },
-  { label: 'Dining Styles', href: '/dining-styles', icon: BookOpen, accent: '#C5A028' },
   { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
-  { label: 'Experience', href: '/experiences', icon: Heart, accent: '#C5A028' },
-  { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
-  { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
+  { label: 'More', href: MORE_NAV_HREF, icon: Sparkles, accent: '#C5A028', menuOnly: true },
   { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
 ]
 
@@ -94,12 +101,21 @@ const NAV_SUBPAGES: Record<string, NavSubpage[]> = Object.values(PILLARS).reduce
   {},
 )
 
-// SEO rebuild 2026-07-30: supersedes the 2026-07-24 decision to point "Private Chef
-// Bali" at the homepage. The pillar now lives at /private-chef-bali and owns the term,
-// so the Fine Dining dropdown entry points there instead of at "/".
+// Homepage owns the exact head "private chef bali". The Fine Dining dropdown
+// still points at the stay-hire pillar (/private-chef-bali), not at "/".
 NAV_SUBPAGES['/fine-dining'] = (NAV_SUBPAGES['/fine-dining'] ?? []).map((page) =>
   page.href === '/fine-dining/private-chef-bali' ? { ...page, href: '/private-chef-bali' } : page
 )
+
+NAV_SUBPAGES[MORE_NAV_HREF] = [
+  { label: 'Dining Styles', href: '/dining-styles', icon: 'BookOpen' },
+  { label: 'Experiences', href: '/experiences', icon: 'Heart' },
+  { label: 'Cooking Class', href: '/experiences/cooking-class', icon: 'ChefHat' },
+  { label: 'In-Villa', href: '/in-villa-service', icon: 'Home' },
+  { label: 'Staffing', href: '/staffing', icon: 'Briefcase' },
+  { label: 'Journal', href: '/journal', icon: 'BookOpen' },
+  { label: 'FAQ', href: '/faq', icon: 'BookOpen' },
+]
 
 // Private Chef dropdown — the pillar plus the paths people actually ask for.
 NAV_SUBPAGES['/private-chef-bali'] = [
@@ -169,6 +185,7 @@ const PILLAR_PREVIEW_IMAGES: Record<string, string> = {
   '/complete-villa-experience': '/generated/mychef-catering-bali-catering-hero.webp',
   '/in-villa-service': '/generated/in-villa-service-hero.webp',
   '/staffing': '/generated/mychef-butlers-1.webp',
+  [MORE_NAV_HREF]: '/generated/in-villa-service-hero.webp',
 }
 
 const SUBPAGE_PREVIEW_IMAGES: Record<string, string> = {
@@ -324,14 +341,19 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav — hidden on mobile/tablet */}
-          <div className="hidden lg:flex items-center gap-3 xl:gap-4 2xl:gap-6 flex-1 justify-center">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 2xl:gap-6 flex-1 justify-center min-w-0">
             {NAV_ITEMS.map((item, index) => {
               const Icon = item.icon
-              const active = isActivePath(location.pathname, item.href)
               const subpages = NAV_SUBPAGES[item.href] ?? []
-              const hasDropdown = subpages.length > 0
+              const hasDropdown = subpages.length > 0 || Boolean(item.menuOnly)
               const isOpen = openDropdown === item.href
               const preview = dropdownPreviews[item.href] ?? defaultPreviewFor(item)
+              const active = item.menuOnly
+                ? MORE_ACTIVE_PREFIXES.some((prefix) => isActivePath(location.pathname, prefix))
+                : isActivePath(location.pathname, item.href)
+              const triggerClass = `relative flex items-center gap-1 xl:gap-1.5 py-1 whitespace-nowrap transition-colors duration-200 ${
+                active || isOpen ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
+              }`
               return (
                 <div
                   key={item.href}
@@ -349,18 +371,43 @@ export default function Navbar() {
                     }
                   }}
                 >
+                  {item.menuOnly ? (
+                    <button
+                      type="button"
+                      aria-haspopup="true"
+                      aria-expanded={isOpen}
+                      className={triggerClass}
+                      onClick={() => (isOpen ? setOpenDropdown(null) : openDropdownNow(item.href))}
+                    >
+                      <Icon
+                        className="hidden 2xl:block 2xl:w-4 2xl:h-4 transition-transform duration-300 group-hover:scale-110"
+                        strokeWidth={1.5}
+                      />
+                      <span
+                        className="text-[10.5px] xl:text-[11px] 2xl:text-[12px] uppercase tracking-[0.06em] 2xl:tracking-[0.12em] font-medium"
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                      >
+                        {item.label}
+                      </span>
+                      <ChevronDown
+                        className={`w-2.5 h-2.5 xl:w-3 xl:h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                        strokeWidth={1.5}
+                      />
+                      <span className={`absolute -bottom-0.5 left-0 right-0 h-px bg-[#C5A028] transition-all duration-300 origin-left ${
+                        active || isOpen ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                      }`} />
+                    </button>
+                  ) : (
                   <Link
                     to={item.href}
                     onClick={() => setOpenDropdown(null)}
                     aria-haspopup={hasDropdown || undefined}
                     aria-expanded={hasDropdown ? isOpen : undefined}
                     aria-current={active ? 'page' : undefined}
-                    className={`relative flex items-center gap-1 xl:gap-1.5 py-1 whitespace-nowrap transition-colors duration-200 ${
-                      active || isOpen ? 'text-[#C5A028]' : 'text-white/70 hover:text-[#C5A028]'
-                    }`}
+                    className={triggerClass}
                   >
                     <Icon
-                      className="hidden xl:block xl:w-3.5 xl:h-3.5 2xl:w-4 2xl:h-4 transition-transform duration-300 group-hover:scale-110"
+                      className="hidden 2xl:block 2xl:w-4 2xl:h-4 transition-transform duration-300 group-hover:scale-110"
                       strokeWidth={1.5}
                     />
                     <span
@@ -380,6 +427,7 @@ export default function Navbar() {
                       active || isOpen ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                     }`} />
                   </Link>
+                  )}
 
                   {hasDropdown && (
                     <div

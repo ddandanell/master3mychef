@@ -20,6 +20,9 @@ const EXCLUDED_PATHS = new Set([
   '/experiences/private-cooking-class',
 ])
 
+const HOME_TIMER_MS = 25_000
+const OTHER_TIMER_MS = 25_000
+
 export default function ExitIntentPopup() {
   const [visible, setVisible] = useState(false)
   const location = useLocation()
@@ -40,23 +43,61 @@ export default function ExitIntentPopup() {
   useEffect(() => {
     if (shouldSkip()) return
 
-    // Desktop: fire when mouse exits viewport from the top
+    const isHome = location.pathname === '/'
+    let armed = !isHome
+    let timer: ReturnType<typeof setTimeout> | undefined
+
+    const startTimer = () => {
+      if (timer) return
+      timer = setTimeout(trigger, isHome ? HOME_TIMER_MS : OTHER_TIMER_MS)
+    }
+
+    const arm = () => {
+      if (armed) return
+      armed = true
+      startTimer()
+    }
+
     const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0) {
-        trigger()
+      // Homepage: never cover the hero. Wait until we have scrolled past the
+      // first screen or the stay-rate / two-cores block is in view.
+      if (e.clientY <= 0 && armed) trigger()
+    }
+
+    if (!isHome) {
+      startTimer()
+    } else {
+      const onScroll = () => {
+        if (window.scrollY >= window.innerHeight * 0.8) arm()
+      }
+      const pricing = document.getElementById('two-cores')
+      let io: IntersectionObserver | undefined
+      if (pricing && typeof IntersectionObserver !== 'undefined') {
+        io = new IntersectionObserver(
+          (entries) => {
+            if (entries.some((entry) => entry.isIntersecting)) arm()
+          },
+          { threshold: 0.12 },
+        )
+        io.observe(pricing)
+      }
+      window.addEventListener('scroll', onScroll, { passive: true })
+      onScroll()
+      document.addEventListener('mouseleave', handleMouseLeave)
+      return () => {
+        window.removeEventListener('scroll', onScroll)
+        io?.disconnect()
+        document.removeEventListener('mouseleave', handleMouseLeave)
+        if (timer) clearTimeout(timer)
       }
     }
 
-    // Mobile / fallback: fire after 25 seconds on page
-    const timer = setTimeout(trigger, 25_000)
-
     document.addEventListener('mouseleave', handleMouseLeave)
-
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave)
-      clearTimeout(timer)
+      if (timer) clearTimeout(timer)
     }
-  }, [shouldSkip, trigger])
+  }, [shouldSkip, trigger, location.pathname])
 
   if (!visible) return null
 

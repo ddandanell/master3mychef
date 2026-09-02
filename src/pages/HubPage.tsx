@@ -127,28 +127,24 @@ const HOW_IT_WORKS = [
     title: 'Message Us',
     desc: 'Stay or one meal, dates, villa, guest count. We reply within 2 hours.',
     icon: MessageCircle,
-    color: '#C5A028',
   },
   {
     step: '02',
     title: 'We Send Menus',
     desc: 'Stay chef: menus for the days you booked. Catering: two menus with dishes.',
     icon: Utensils,
-    color: '#6B8E5A',
   },
   {
     step: '03',
     title: 'We Shop & Cook',
     desc: 'Stay: groceries at cost with receipts. Catering: food included in the quote.',
     icon: ChefHat,
-    color: '#2C5F7C',
   },
   {
     step: '04',
     title: 'You Eat. We Clear.',
     desc: 'Service, then a spotless kitchen. You bring wine if you want it — we pour.',
     icon: Sparkles,
-    color: '#C5734D',
   },
 ]
 
@@ -203,41 +199,6 @@ const FAQS = [
   },
 ]
 
-const JOURNAL_LINKS = [
-  {
-    title: 'How to Host a Villa Dinner Party in Bali (Complete Guide)',
-    path: '/private-dining-indonesia',
-  },
-  {
-    title: 'Bali Wedding Catering Cost: What to Budget in 2026',
-    path: '/bali-wedding-catering-packages',
-  },
-  {
-    title: 'The Bali Floating Breakfast: History, Recipes & How to Order One',
-    path: '/catering/floating-breakfast',
-  },
-  {
-    title: 'Holiday Chef Bali: Christmas, New Year & Festive Season Dining',
-    path: '/blog/holiday-chef-bali',
-  },
-  {
-    title: 'Wedding Private Chef in Bali: Planning & Logistics Guide',
-    path: '/blog/wedding-private-chef-bali-planning-guide',
-  },
-  {
-    title: 'Corporate Events & Team Dining in Bali: Private Chef',
-    path: '/blog/corporate-events-catering-bali-team-dining',
-  },
-  {
-    title: 'Fine Dining Trends in Bali 2026: Modern Innovations',
-    path: '/blog/fine-dining-trends-bali-2026-innovations',
-  },
-  {
-    title: 'Chef Qualifications & Credentials: Hiring Guide for Bali',
-    path: '/blog/chef-qualifications-credentials-bali-hiring',
-  },
-]
-
 const REVIEWS = [
   { name: 'The O\'Briens', location: 'Dublin', dept: 'Stay chef', text: 'Seven breakfasts, five lunches, four dinners across ten days. Never the same dish twice. The kids asked if the chef could move in.' },
   { name: 'Lisa & Tom', location: 'Amsterdam', dept: 'Stay chef', text: 'We hired a villa chef for our honeymoon. Waking up to fresh croissants and Balinese coffee every morning — that is the definition of luxury.' },
@@ -248,17 +209,48 @@ const REVIEWS = [
 ]
 
 const CITIES = [
-  { name: 'Seminyak', slug: 'seminyak', image: '/generated/mychef-location-bali-city-seminyak.webp' },
-  { name: 'Canggu', slug: 'canggu', image: '/generated/mychef-location-bali-city-canggu.webp' },
-  { name: 'Ubud', slug: 'ubud', image: '/generated/mychef-location-bali-city-ubud.webp' },
-  { name: 'Uluwatu', slug: 'uluwatu', image: '/generated/mychef-location-bali-city-uluwatu.webp' },
-  { name: 'Sanur', slug: 'sanur', image: '/generated/mychef-location-bali-city-sanur.webp' },
-  { name: 'Nusa Dua', slug: 'nusa-dua', image: '/generated/mychef-location-bali-city-nusa-dua.webp' },
-  { name: 'Jimbaran', slug: 'jimbaran', image: '/generated/mychef-location-bali-city-jimbaran.webp' },
-  { name: 'Berawa', slug: 'berawa', image: '/generated/mychef-location-bali-city-berawa.webp' },
-  { name: 'Pererenan', slug: 'pererenan', image: '/generated/mychef-location-bali-city-pererenan.webp' },
-  { name: 'Bukit', slug: 'bukit', image: '/generated/mychef-location-bali-city-bukit.webp' },
+  { name: 'Seminyak', slug: 'seminyak', label: 'Stay chef', image: '/generated/mychef-experience-bali-luna-hero-v2.webp' },
+  { name: 'Canggu', slug: 'canggu', label: 'Catering', image: '/generated/mychef-catering-bali-hub-catering.webp' },
+  { name: 'Ubud', slug: 'ubud', label: 'Villa dinners', image: '/generated/luna-table.webp' },
+  { name: 'Uluwatu', slug: 'uluwatu', label: 'Fine dining', image: '/generated/fine-dining-plating.webp' },
+  { name: 'Sanur', slug: 'sanur', label: 'Family stays', image: '/generated/mychef-families-bali-fine-dining-experience.webp' },
+  { name: 'Nusa Dua', slug: 'nusa-dua', label: 'Events', image: '/generated/mychef-events-bali-hero-events-new.webp' },
+  { name: 'Jimbaran', slug: 'jimbaran', label: 'Seafood catering', image: '/generated/birthday-food-surf-turf-seafood-bali-villa.webp' },
+  { name: 'Berawa', slug: 'berawa', label: 'Stay chef', image: '/generated/journal-michelin-plating.webp' },
+  { name: 'Pererenan', slug: 'pererenan', label: 'Villa dinners', image: '/generated/mychef-families-bali-bbq-grill.webp' },
+  { name: 'Bukit', slug: 'bukit', label: 'Fine dining', image: '/generated/mychef-finedining-bali-luna-plating.webp' },
 ]
+
+const HOME_CHEFS = [
+  { name: 'Adriano', specialty: `Founder, fine-dining trained in ${siteFacts.founderTrainingCity}`, image: '/generated/chef-adriano-portrait.webp' },
+  { name: 'I Made Surya', specialty: 'Mediterranean & handmade pasta', image: '/generated/chef-made-surya-portrait.webp' },
+  { name: 'Bayu Pranata', specialty: 'BBQ & live-fire', image: '/generated/chef-bayu-pranata-portrait.webp' },
+  { name: 'Ni Putu Asri', specialty: 'Balinese & Indonesian feasts', image: '/generated/chef-ni-putu-asri-portrait.webp' },
+  { name: 'Wayan Suarjana', specialty: 'Pastry, cakes & desserts', image: '/generated/chef-wayan-suarjana-portrait.webp' },
+  { name: 'Ketut Mahardika', specialty: 'Seafood & Japanese', image: '/generated/chef-ketut-mahardika-portrait.webp' },
+  { name: 'Sari Dewi Kusuma', specialty: 'Wellness & vegan retreat menus', image: '/generated/chef-sari-dewi-portrait.webp' },
+  { name: 'Komang Artha', specialty: 'Large events & weddings', image: '/generated/chef-komang-artha-portrait.webp' },
+]
+
+function GeneratedPortrait({ src, alt }: { src: string; alt: string }) {
+  const [show, setShow] = useState(true)
+  if (!show) return <div className="aspect-[3/4] w-full bg-[#F4EFE6]" aria-hidden="true" />
+  return (
+    <img
+      src={src}
+      alt={alt}
+      width={400}
+      height={533}
+      className="aspect-[3/4] w-full object-cover"
+      loading="lazy"
+      decoding="async"
+      onLoad={(e) => {
+        if (e.currentTarget.naturalWidth === 0) setShow(false)
+      }}
+      onError={() => setShow(false)}
+    />
+  )
+}
 
 export default function HubPage() {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -453,7 +445,7 @@ export default function HubPage() {
           </div>
 
           {/* TWO CORES — not four equal heroes */}
-          <div ref={portalsRef} className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+          <div ref={portalsRef} id="two-cores" className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
             {CORES.map((core) => (
               <article
                 key={core.id}
@@ -588,14 +580,15 @@ export default function HubPage() {
                     width: '80px',
                     height: '80px',
                     borderRadius: '50%',
-                    background: item.color,
+                    background: '#F7F1E3',
+                    border: '1px solid #C5A028',
                     boxShadow: hoveredStep === item.step
-                      ? `0 20px 40px ${item.color}40, inset 0 -2px 8px rgba(0, 0, 0, 0.1)`
-                      : `0 12px 28px ${item.color}40`,
+                      ? '0 16px 32px rgba(197, 160, 40, 0.22)'
+                      : '0 10px 22px rgba(40, 30, 20, 0.08)',
                     zIndex: 10,
                   }}
                 >
-                  <item.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
+                  <item.icon className="w-8 h-8" strokeWidth={1.5} style={{ color: '#1E1E1E' }} />
                 </div>
 
                 <div
@@ -723,8 +716,8 @@ export default function HubPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <img
-                src="/generated/mychef-misc-bali-about-team-photo.webp"
-                alt="myCHEF hospitality team gathered for villa service across Bali"
+                src="/generated/journal-staff-chef.webp"
+                alt="myCHEF chef plating a villa dinner in Bali — a 50+ person hospitality kitchen that travels"
                 width={800}
                 height={1000}
                 className="w-full h-full object-cover"
@@ -762,6 +755,47 @@ export default function HubPage() {
                 </Link>
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the chefs — portraits only. We do not take named-chef bookings. */}
+      <section className="px-5 py-12 sm:px-6 md:py-24" style={{ background: 'var(--u-bg-alt)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-12">
+            <p className="u-label mb-4">The Team</p>
+            <h2 className="u-heading text-3xl md:text-5xl mb-4">Meet the Chefs</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              Every booking is cooked by our in-house team — matched to cuisine and occasion. We do not assign a named chef.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:gap-6">
+            {HOME_CHEFS.map((chef) => (
+              <article
+                key={chef.name}
+                className="overflow-hidden rounded-2xl border"
+                style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}
+              >
+                <GeneratedPortrait src={chef.image} alt={`${chef.name}, myCHEF ${chef.specialty}`} />
+                <div className="px-3 py-4 text-center">
+                  <p className="text-sm font-semibold" style={{ color: 'var(--u-text)', fontFamily: "'Playfair Display', serif" }}>
+                    {chef.name}
+                  </p>
+                  <p className="mt-1 text-xs leading-snug" style={{ color: 'var(--u-text-muted)' }}>
+                    {chef.specialty}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              to="/chefs"
+              className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              style={{ color: 'var(--u-accent)' }}
+            >
+              Meet the full team <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -965,18 +999,19 @@ export default function HubPage() {
               >
                 <img
                   src={city.image}
-                  alt={`Private chef service in ${city.name}, Bali by myCHEF`}
+                  alt={`${city.label} in ${city.name}, Bali by myCHEF`}
                   width={800}
                   height={600}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                   decoding="async"
+                  onError={(e) => { (e.target as HTMLImageElement).style.opacity = '0' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute inset-0 flex items-end p-4">
                   <div>
                     <p className="text-white font-medium text-sm">{city.name}</p>
-                    <p className="text-white/[60%] text-xs">Private Chef</p>
+                    <p className="text-white/[60%] text-xs">{city.label}</p>
                   </div>
                 </div>
               </Link>
@@ -1093,83 +1128,6 @@ export default function HubPage() {
             </a>
             <Link to="/faq" className="text-sm font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>
               Full FAQ →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-12 sm:px-6 md:py-16" style={{ background: 'var(--u-bg-alt)' }}>
-        <div className="max-w-[1100px] mx-auto rounded-[28px] border border-black/5 bg-white p-8 md:p-10">
-          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-[560px]">
-              <p className="u-label mb-3">Journal</p>
-              <h2 className="u-heading text-3xl md:text-4xl mb-4">Explore Our Journal</h2>
-              <p style={{ color: 'var(--u-text-muted)' }}>
-                Planning a villa dinner, wedding weekend, or Bali breakfast setup? Browse our latest guides for practical hosting tips.
-              </p>
-            </div>
-            <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
-              Visit the Journal <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {JOURNAL_LINKS.map((article) => (
-              <Link
-                key={article.path}
-                to={article.path}
-                className="rounded-2xl border border-black/5 bg-[#FAFAF8] px-5 py-5 text-sm font-medium transition-colors hover:border-[#C5A028] hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
-              >
-                {article.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
-            <p className="u-label mb-4">Blog & Guides</p>
-            <h2 className="u-heading text-4xl md:text-5xl mb-4">Expert Guides for Your Bali Event</h2>
-            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
-              From hiring your first private chef to planning a villa wedding, our guides cover the logistics.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link to="/blog/how-to-hire-private-chef-bali-complete-guide" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
-                <span className="text-[#C5A028] font-serif text-3xl">👨‍🍳</span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>How to Hire a Private Chef in Bali</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>A step-by-step guide to finding, vetting, and booking the right chef for your villa.</p>
-                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
-              </div>
-            </Link>
-            <Link to="/blog/wedding-private-chef-bali-planning-guide" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
-                <span className="text-[#C5A028] font-serif text-3xl">💍</span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Planning a Wedding with a Private Chef</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Coordinate your celebration menu, timeline, and service flow for the perfect villa wedding.</p>
-                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
-              </div>
-            </Link>
-            <Link to="/blog/corporate-events-catering-bali-team-dining" className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}>
-              <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
-                <span className="text-[#C5A028] font-serif text-3xl">👔</span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>Corporate Events & Team Dining</h3>
-                <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>Run executive dinners and off-sites with military precision and memorable food.</p>
-                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
-              </div>
-            </Link>
-          </div>
-          <div className="text-center mt-12">
-            <Link to="/journal" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#1A1A1A' }}>
-              View All Articles <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

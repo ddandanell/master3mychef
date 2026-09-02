@@ -701,6 +701,11 @@ export default function SeoHead({ title, description, canonical, ogImage, ogType
 
     // Inject JSON-LD schemas
     document.head.querySelectorAll('script[data-seohead="jsonld"]').forEach((el) => el.remove())
+    // Cooking-class schema lock: FAQPage + Service only. Drop homepage
+    // Organization / LocalBusiness / aggregateRating copied from index.html.
+    if (canonical === 'https://mychef.id/experiences/cooking-class') {
+      document.head.querySelectorAll('script[type="application/ld+json"]').forEach((el) => el.remove())
+    }
 
     if (jsonLd) {
       const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd]

@@ -528,7 +528,7 @@ const FAQS = [
   },
   {
     q: 'Can we book a cooking class with our private chef stay?',
-    a: 'Yes — many guests add a hands-on Balinese or Indonesian cooking class one afternoon, then keep daily chef meals for the rest of the stay. Classes are quoted for group size and cuisine (no public list price). <a href="/experiences/cooking-class">Cooking class Bali →</a> · <a href="/experiences/sushi-masterclass">Sushi masterclass →</a>',
+    a: 'Yes — many guests add a hands-on Balinese or Indonesian cooking class one afternoon, then keep daily chef meals for the rest of the stay. The class is a separately quoted session (from IDR 700,000++ per person, min 4). <a href="/experiences/cooking-class">Cooking class Bali →</a> · <a href="/experiences/sushi-masterclass">Sushi masterclass →</a>',
   },
 ] as const
 

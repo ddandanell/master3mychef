@@ -173,7 +173,7 @@ export const LOCATION_RELATED: RelatedService[] = [
   },
   {
     title: 'Cooking Class Bali',
-    description: 'Private Balinese and Indonesian cooking lessons in your villa kitchen — contact for a quote.',
+    description: 'Private Indonesian/Balinese villa class. About 2.5–3 hours. From IDR 700,000++/pp min 4.',
     path: '/experiences/cooking-class',
     category: 'Experiences'
   }
@@ -183,7 +183,7 @@ export const LOCATION_RELATED: RelatedService[] = [
 export const EXPERIENCES_RELATED: RelatedService[] = [
   {
     title: 'Cooking Class Bali',
-    description: 'Balinese, Indonesian and multi-cuisine villa lessons. Chef comes to you — contact for a written proposal.',
+    description: 'Indonesian/Balinese in-villa class. Chef comes to you. About 2.5–3 hours. From IDR 700,000++/pp min 4.',
     path: '/experiences/cooking-class',
     category: 'Experiences'
   },

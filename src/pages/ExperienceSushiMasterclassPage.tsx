@@ -255,7 +255,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: 'Balinese, Indonesian and multi-cuisine cooking classes at your villa.' },
+  { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: 'Private Indonesian/Balinese villa class — chef comes to you. About 2.5–3 hours.' },
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Add multi-day villa chef meals around your sushi class.' },
   { label: 'Fine Dining Bali', href: '/fine-dining', desc: 'Private Japanese-inspired fine dining after the workshop.' },
   { label: 'Retreat Catering', href: '/catering/retreat-catering', desc: 'A sushi workshop as a culinary activity for retreat groups.' },

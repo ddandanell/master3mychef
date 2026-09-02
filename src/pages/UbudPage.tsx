@@ -35,6 +35,7 @@ const FAQS = [
   { q: 'Deposit and cancellation?', a: 'Usually 50% deposit; refund tiers on <a href="/cancellation">cancellation</a>.' },
   { q: 'How fast is a proposal?', a: 'Often within 2–24 hours of a complete brief.' },
   { q: 'Can this combine with other services?', a: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
+  { q: 'Do you offer a cooking class in Ubud?', a: 'Yes — a private 2.5–3 hour Indonesian / Balinese class in your villa kitchen, not a group school with pickup. From IDR 700,000++ per person (min 4; all-in IDR 847,000). <a href="/experiences/cooking-class#ubud">Cooking class Ubud</a>.' },
 ]
 
 const SCENE = [
@@ -309,6 +310,7 @@ export default function UbudPage() {
         <h2 className="font-playfair text-2xl md:text-3xl mb-4">Related myCHEF Services in Ubud</h2>
         <ul className="space-y-2 text-[#4A4745]">
           <li><Link to="/private-chef/ubud" className="text-[#C5A028] hover:underline font-medium">Private chef ubud</Link> — hire a chef for villa dinners and multi-day cooking.</li>
+          <li><Link to="/experiences/cooking-class#ubud" className="text-[#C5A028] hover:underline font-medium">Cooking class Ubud</Link> — private 2.5–3 hour Indonesian class in your villa kitchen, not a group school. Chef comes to you.</li>
           <li><Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Catering Bali</Link> — BBQ, buffet and group menus for larger villa parties.</li>
           <li><Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">Fine dining at your villa</Link> — tasting menus and chef’s table formats.</li>
           <li><Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline font-medium">Private dining Bali</Link> — how at-home fine dining works island-wide.</li>

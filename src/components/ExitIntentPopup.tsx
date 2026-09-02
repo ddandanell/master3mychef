@@ -80,7 +80,7 @@ export default function ExitIntentPopup() {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center px-4"
+      className="exit-intent-popup fixed inset-0 z-[9999] flex items-center justify-center px-4"
       role="dialog"
       aria-modal="true"
       aria-label="Free Bali Private Chef Price Guide"

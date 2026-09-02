@@ -590,3 +590,11 @@
   color: #1A1A1A !important;
   stroke: #1A1A1A;
 }
+
+/* Homepage must never show the Price Guide overlay over the two-core CTAs. */
+html[data-mychef-page="home"] .exit-intent-popup,
+html[data-mychef-page="home"] [aria-label="Free Bali Private Chef Price Guide"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

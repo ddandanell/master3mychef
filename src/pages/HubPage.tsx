@@ -241,6 +241,14 @@ export default function HubPage() {
   const [hoveredStep, setHoveredStep] = useState<string | null>(null)
 
   useEffect(() => {
+    const root = document.documentElement
+    root.dataset.mychefPage = 'home'
+    return () => {
+      if (root.dataset.mychefPage === 'home') delete root.dataset.mychefPage
+    }
+  }, [])
+
+  useEffect(() => {
     let cancelled = false
     let cleanup: (() => void) | undefined
 

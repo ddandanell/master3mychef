@@ -405,7 +405,7 @@ export default function HubPage() {
               </h1>
               <div className="gold-arc mb-4 md:mb-5" />
               <p className="hub-hero-subtitle mb-3 max-w-[46ch] text-[15px] leading-relaxed text-white/90 sm:max-w-xl sm:text-lg">
-                Hire a <strong className="font-semibold text-white">private chef in Bali</strong> for a stay — villa chef hire at {CHEF_ONE} / {CHEF_TWO} / {CHEF_THREE} all-in a day, groceries extra. Then <strong className="font-semibold text-white">catering</strong> for one lunch, dinner or party — food included.
+                Hire a <strong className="font-semibold text-white">private chef in Bali</strong> for a stay — groceries extra at cost with receipts. Then <strong className="font-semibold text-white">catering</strong> for one lunch, dinner or party — food included.
               </p>
               <p className="hub-hero-subtitle mb-5 text-sm text-white/75 sm:text-[15px]">
                 HACCP-certified · Normal notice 3–5 days · Same-day dinner usually cannot

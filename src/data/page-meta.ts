@@ -28,7 +28,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/',
     title: 'myCHEF Bali | Private Chef Bali & Catering',
     description:
-      'Bali private chef for villa stays: IDR 1,210,000 / 2,178,000 / 3,267,000 all-in a day, groceries extra. Catering Bali for one meal or party, food included.',
+      'Bali private chef for villa stays — groceries extra at cost with receipts. Catering Bali for one meal or party, food included.',
     canonical: `${SITE}/`,
     h1: 'Private Chef for a Stay — Catering for One Meal in Bali',
     ogImage: `${SITE}/generated/mychef-location-bali-hub-hero.webp`,

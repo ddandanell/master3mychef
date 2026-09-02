@@ -228,6 +228,7 @@ export const REDIRECTS: Redirect[] = [
   // /fine-dining/private-chef-bali (retitled to lead on tasting menus instead).
   { from: '/villa-chef', to: '/private-chef-bali', reason: 'Private Chef consolidation 2026-07-30: SolPage day rates now live on the pillar at /private-chef-bali.' },
   { from: '/hire-private-chef-bali-monthly', to: '/private-chef-bali', reason: 'Private Chef consolidation 2026-07-30: landing page had jsonLd but no visible content; monthly rate is a column on the pillar table.' },
+  { from: '/private-chef', to: '/private-chef-bali', reason: 'Live 404: bare /private-chef leaks path equity; stay-hire page is /private-chef-bali. Exact path only — does not touch /private-chef/[area].' },
   // TASK-030 (2026-06-27): /private-chef-bali/[slug] → /private-chef/[slug]
   // New canonical URL pattern per Bali Domination Blueprint.
   // Main areas — redirect to richer /private-chef/[slug] pages

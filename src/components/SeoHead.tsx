@@ -73,6 +73,12 @@ export const localBusinessSchema = {
   ],
   priceRange: '$$$$',
   openingHours: 'Mo-Su 07:00-22:00',
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    opens: '07:00',
+    closes: '22:00',
+  },
   foundingDate: '2019',
   currenciesAccepted: 'IDR',
   image: 'https://mychef.id/generated/hub-hero-v3.webp',
@@ -338,10 +344,17 @@ export function professionalServiceSchema(
 }
 
 export function faqPageSchema(questions: { question: string; answer: string }[]) {
+  const items = questions
+    .map((q) => ({
+      question: q.question.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
+      answer: q.answer.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
+    }))
+    .filter((q) => q.question && q.answer)
+
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: questions.map((q) => ({
+    mainEntity: items.map((q) => ({
       '@type': 'Question',
       name: q.question,
       acceptedAnswer: {

@@ -188,8 +188,8 @@ function reviewIsoDate(d: string): string {
 // @type dedup (not a shell type); (2) emitting them as 15 separate scripts fails —
 // the dedup adds "Review" to its seen-set after the first and drops the rest, whereas
 // a single @graph is kept whole (its nodes are filtered in one pass). Each review
-// references the business by @id; the business-level aggregateRating lives on the
-// shell LocalBusiness in index.html.
+// references the business by @id. Do not add aggregateRating on LocalBusiness —
+// self-serving ratings are ineligible; stars belong on the Google Business Profile.
 const reviewGraphSchema = {
   '@context': 'https://schema.org',
   '@graph': REVIEWS.map((r) => ({

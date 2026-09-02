@@ -605,6 +605,11 @@
       "permanent": true
     },
     {
+      "source": "/private-chef",
+      "destination": "/private-chef-bali",
+      "permanent": true
+    },
+    {
       "source": "/private-chef-bali/seminyak",
       "destination": "/private-chef/seminyak",
       "permanent": true

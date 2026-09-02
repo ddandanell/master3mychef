@@ -20,9 +20,6 @@ import {
 import SeoHead, {
   serviceSchema,
   faqPageSchema,
-  organizationSchema,
-  localBusinessSchema,
-  postalAddressSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
 import {
@@ -320,40 +317,18 @@ export default function HubPage() {
     }
   }, [])
 
-  const homeLocalBusinessSchema: Record<string, unknown> = {
-    ...localBusinessSchema,
-    '@type': ['LocalBusiness', 'FoodEstablishment'],
-    '@id': 'https://mychef.id/#business',
-    name: siteFacts.businessName,
-    description:
-      'Bali private chef for villa stays and catering for one lunch, dinner or party. HACCP-certified team. Groceries extra on stay chef; food included on catering.',
-    url: 'https://mychef.id/',
-    telephone: siteFacts.phoneDisplay,
-    email: siteFacts.email,
-    address: postalAddressSchema,
-    areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Sanur', 'Nusa Dua', 'Jimbaran', 'Berawa', 'Pererenan', 'Bukit'],
-    priceRange: `${CHEF_ONE} - ${CHEF_THREE} per day`,
-    founder: { '@type': 'Person', name: 'Adriano' },
-    servesCuisine: ['Indonesian', 'Italian', 'Mediterranean', 'Japanese', 'International'],
-  }
-
-  const websiteSchema: Record<string, unknown> = {
+  const homeBreadcrumbSchema: Record<string, unknown> = {
     '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': 'https://mychef.id/#website',
-    name: 'myCHEF.id',
-    url: 'https://mychef.id/',
-    inLanguage: 'en',
-    publisher: { '@id': 'https://mychef.id/#organization' },
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mychef.id/' },
+    ],
   }
 
+  // LocalBusiness / Organization / WebSite already ship in index.html. Do not
+  // emit them again here — prerender keeps the shell node and JS would duplicate.
   const homeSchemas: Record<string, unknown>[] = [
-    homeLocalBusinessSchema,
-    websiteSchema,
-    organizationSchema('https://mychef.id/mychef-logo-512.png', [
-      'https://www.instagram.com/mychef.id',
-      'https://www.facebook.com/mychef.id',
-    ]),
+    homeBreadcrumbSchema,
     serviceSchema(
       'Private Chef Bali — Villa Stay',
       `A chef and assistant at your villa for a stay. All-in day rates: 1 meal ${CHEF_ONE}, 2 meals ${CHEF_TWO}, 3 meals ${CHEF_THREE}. Groceries extra at cost with receipts.`,

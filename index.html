@@ -172,11 +172,9 @@
     </script>
 
     <!--
-      Structured data: LocalBusiness
-      WARNING: this static node shares its @id with the runtime node built in
-      src/components/SeoHead.tsx (localBusinessSchema). Both appear in the same
-      document on most pages, so name / telephone / address MUST stay byte-identical
-      to src/data/siteFacts.ts. Divergence splits the entity in Google's graph.
+      Structured data: LocalBusiness (NAP matches footer / siteFacts).
+      Do not add a second LocalBusiness in page jsonLd — this shell node is the
+      homepage entity. Do not add aggregateRating or review arrays.
     -->
     <script type="application/ld+json">
       {
@@ -187,20 +185,14 @@
         "alternateName": ["myCHEF.id", "myCHEF", "myCHEF Bali"],
         "legalName": "myCHEF Indonesia",
         "description": "Private chef, catering, events, and staffing services in Bali",
-        "url": "https://mychef.id",
+        "url": "https://mychef.id/",
         "telephone": "+62 896-7407-2020",
         "email": "bali@mychef.id",
         "image": "https://mychef.id/generated/hub-hero-v3.webp",
         "priceRange": "$$$$",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "13",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
         "foundingDate": "2019",
         "currenciesAccepted": "IDR",
+        "openingHours": "Mo-Su 07:00-22:00",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Jl. Tukad Barito Timur III No.16, Panjer, Denpasar Selatan",
@@ -239,7 +231,7 @@
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
           "opens": "07:00",
-          "closes": "23:00"
+          "closes": "22:00"
         },
         "hasCredential": {
           "@type": "EducationalOccupationalCredential",

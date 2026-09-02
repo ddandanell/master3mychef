@@ -458,7 +458,7 @@ const SECTIONS: PageSection[] = [
     type: 'cta' as const,
     subtitle: 'Book your class',
     title: 'Ready for a Private Cooking Class in Your Villa?',
-    body: `WhatsApp villa area, guest count, date, and 2.5-hour or 3-hour. We reply with a sample menu and the all-in total. More: <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">experiences</a> · <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a> · <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing</a> · <a href="/" class="text-[#7E6410] hover:underline font-medium">homepage</a>.`,
+    body: `WhatsApp villa area, guest count, date, and 2.5-hour or 3-hour. We reply with a sample menu and the all-in total. WhatsApp <a href="${WA_LINK}" class="text-[#7E6410] hover:underline font-medium" target="_blank" rel="noopener noreferrer">+62 896-7407-2020</a> · <a href="mailto:bali@mychef.id" class="text-[#7E6410] hover:underline font-medium">bali@mychef.id</a>. More: <a href="/experiences" class="text-[#7E6410] hover:underline font-medium">experiences</a> · <a href="/experiences/sushi-masterclass" class="text-[#7E6410] hover:underline font-medium">sushi masterclass</a> · <a href="/pricing" class="text-[#7E6410] hover:underline font-medium">pricing</a> · <a href="/" class="text-[#7E6410] hover:underline font-medium">homepage</a>.`,
     primaryAction: {
       label: 'Book Your Villa Class',
       href: WA_LINK,
@@ -502,6 +502,50 @@ const FAQS = [
     answer:
       'A <strong>cooking class</strong> means you cook with the chef and eat what you cooked. A <strong>private chef</strong> cooks for you. Different products, different quotes — this page is the class, never a chef day-rate. Chef hire for other days is a <a href="/">homepage</a> booking.',
   },
+  {
+    question: 'Do you offer a Balinese, Javanese, or Indonesian cooking class?',
+    answer:
+      'Yes. Tell us Balinese, Javanese or Indonesian when you enquire. The standard villa class is Indonesian / Balinese; Javanese when you brief it.',
+  },
+  {
+    question: 'How far in advance should we book a cooking class in Bali?',
+    answer:
+      'At least <strong>two days</strong>. Last-minute / short-lead bookings need <strong>full payment to confirm</strong> the chef and date.',
+  },
+  {
+    question: 'Is this different from the sushi masterclass?',
+    answer:
+      'Yes. This URL is the Indonesian / Balinese in-villa cooking class. Sushi has its own page: <a href="/experiences/sushi-masterclass">sushi masterclass</a>.',
+  },
+  {
+    question: 'How many people will be in our class?',
+    answer:
+      'Only your group — the class is private. You do not share the kitchen with another party.',
+  },
+  {
+    question: 'Do we visit a local market as part of the class?',
+    answer:
+      'No market tour is packaged on this class. The chef shops beforehand and brings ingredients to the villa. If a hands-on market visit matters, enquire.',
+  },
+  {
+    question: 'Can children join the cooking class?',
+    answer:
+      'Yes. Children who join are extra guests on the same class. There is no kids tariff.',
+  },
+  {
+    question: 'Is wine included?',
+    answer: 'No. Wine is not included.',
+  },
+  {
+    question: 'Can we request a named chef?',
+    answer:
+      'No. We do not take named-chef requests. We confirm a professional instructor for your villa and date.',
+  },
+  {
+    question: 'What should I wear to a cooking class?',
+    answer:
+      'Clothes you can cook in and secure shoes. Uniforms and chef hats are provided.',
+  },
 ]
 
 const RELATED_PAGES = [
@@ -511,19 +555,29 @@ const RELATED_PAGES = [
     desc: 'Dedicated private sushi class — not this Indonesian class.',
   },
   {
+    label: 'Homepage — private chef',
+    href: '/',
+    desc: 'Chef cooks for you on other days — never a day-rate on this page.',
+  },
+  {
+    label: 'Wedding catering',
+    href: '/events/weddings',
+    desc: 'Wedding dinner is a separate day from this class.',
+  },
+  {
     label: 'Kids Birthday Chef Party',
     href: '/experiences/kids-birthday-chef-party',
     desc: 'Kids cooking party at the villa — a different booking.',
   },
   {
-    label: 'Private Cocktail Party',
-    href: '/experiences/private-cocktail-party',
-    desc: 'Mobile bar at the villa — add-on night after the class.',
-  },
-  {
     label: 'All experiences',
     href: '/experiences',
-    desc: 'Oysters, caviar, proposal dinners and more villa add-ons.',
+    desc: 'Villa add-ons — oysters, cocktail nights, proposal dinners.',
+  },
+  {
+    label: 'Pricing',
+    href: '/pricing',
+    desc: 'Published rates across myCHEF services.',
   },
 ]
 

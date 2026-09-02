@@ -8,6 +8,7 @@ const SESSION_KEY = 'mychef_exit_popup_shown'
 
 // Pages where the popup should NOT fire (booking flow, legal, utility)
 const EXCLUDED_PATHS = new Set([
+  '/',
   '/quote',
   '/book',
   '/calculator',

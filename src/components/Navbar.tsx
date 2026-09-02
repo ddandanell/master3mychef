@@ -48,11 +48,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Catering', href: '/catering', icon: Users, accent: '#C5A028' },
   { label: 'Fine Dining', href: '/fine-dining', icon: UtensilsCrossed, accent: '#C5A028' },
   { label: 'Locations', href: '/locations', icon: MapPin, accent: '#C5A028' },
-  { label: 'Dining Styles', href: '/dining-styles', icon: BookOpen, accent: '#C5A028' },
   { label: 'Events', href: '/events', icon: CalendarDays, accent: '#C5A028' },
-  { label: 'Experience', href: '/experiences', icon: Heart, accent: '#C5A028' },
-  { label: 'In-Villa', href: '/in-villa-service', icon: Home, accent: '#C5A028' },
-  { label: 'Staffing', href: '/staffing', icon: Briefcase, accent: '#C5A028' },
   { label: 'Contact', href: '/contact', icon: Mail, accent: '#C5A028' },
 ]
 
@@ -142,6 +138,12 @@ NAV_SUBPAGES['/experiences'] = [
   { label: 'Caviar Experience', href: '/experiences/caviar-experience', icon: 'Sparkles' },
   { label: 'Whiskey & Cigar Experience', href: '/experiences/whiskey-cigar-experience', icon: 'Wine' },
   { label: 'Romantic Proposal Dinner', href: '/experiences/romantic-proposal-dinner', icon: 'Heart' },
+]
+
+NAV_SUBPAGES['/events'] = [
+  ...(NAV_SUBPAGES['/events'] ?? []),
+  { label: 'Cooking Class', href: '/experiences/cooking-class', icon: 'ChefHat' },
+  { label: 'All Experiences', href: '/experiences', icon: 'Heart' },
 ]
 
 // Locations dropdown — compact view of main areas + link to full directory.
@@ -324,7 +326,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav — hidden on mobile/tablet */}
-          <div className="hidden lg:flex items-center gap-3 xl:gap-4 2xl:gap-6 flex-1 justify-center">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-6 flex-1 justify-center min-w-0">
             {NAV_ITEMS.map((item, index) => {
               const Icon = item.icon
               const active = isActivePath(location.pathname, item.href)
@@ -335,7 +337,7 @@ export default function Navbar() {
               return (
                 <div
                   key={item.href}
-                  className="relative group"
+                  className="relative group shrink-0"
                   onMouseEnter={() => hasDropdown && openDropdownNow(item.href)}
                   onMouseLeave={() => hasDropdown && scheduleClose()}
                   onFocus={(e) => {

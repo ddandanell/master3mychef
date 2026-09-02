@@ -124,34 +124,33 @@ const ADD_ONS = [
   },
 ]
 
+const HIW_GOLD = '#C5A028'
+const HIW_INK = '#1A1A1A'
+
 const HOW_IT_WORKS = [
   {
     step: '01',
     title: 'Message Us',
     desc: 'Stay or one meal, dates, villa, guest count. We reply within 2 hours.',
     icon: MessageCircle,
-    color: '#C5A028',
   },
   {
     step: '02',
     title: 'We Send Menus',
     desc: 'Stay chef: menus for the days you booked. Catering: two menus with dishes.',
     icon: Utensils,
-    color: '#6B8E5A',
   },
   {
     step: '03',
     title: 'We Shop & Cook',
     desc: 'Stay: groceries at cost with receipts. Catering: food included in the quote.',
     icon: ChefHat,
-    color: '#2C5F7C',
   },
   {
     step: '04',
     title: 'You Eat. We Clear.',
     desc: 'Service, then a spotless kitchen. You bring wine if you want it — we pour.',
     icon: Sparkles,
-    color: '#C5734D',
   },
 ]
 
@@ -226,41 +225,6 @@ const IN_HOUSE_TEAM = [
     alt: 'myCHEF in-house chef preparing Balinese spice paste in a villa kitchen',
   },
 ] as const
-
-const JOURNAL_LINKS = [
-  {
-    title: 'How to Host a Villa Dinner Party in Bali (Complete Guide)',
-    path: '/private-dining-indonesia',
-  },
-  {
-    title: 'Bali Wedding Catering Cost: What to Budget in 2026',
-    path: '/bali-wedding-catering-packages',
-  },
-  {
-    title: 'The Bali Floating Breakfast: History, Recipes & How to Order One',
-    path: '/catering/floating-breakfast',
-  },
-  {
-    title: 'Holiday Chef Bali: Christmas, New Year & Festive Season Dining',
-    path: '/blog/holiday-chef-bali',
-  },
-  {
-    title: 'Wedding Private Chef in Bali: Planning & Logistics Guide',
-    path: '/blog/wedding-private-chef-bali-planning-guide',
-  },
-  {
-    title: 'Corporate Events & Team Dining in Bali: Private Chef',
-    path: '/blog/corporate-events-catering-bali-team-dining',
-  },
-  {
-    title: 'Fine Dining Trends in Bali 2026: Modern Innovations',
-    path: '/blog/fine-dining-trends-bali-2026-innovations',
-  },
-  {
-    title: 'Chef Qualifications & Credentials: Hiring Guide for Bali',
-    path: '/blog/chef-qualifications-credentials-bali-hiring',
-  },
-]
 
 const REVIEWS = [
   { name: 'The O\'Briens', location: 'Dublin', dept: 'Stay chef', text: 'Seven breakfasts, five lunches, four dinners across ten days. Never the same dish twice. The kids asked if the chef could move in.' },
@@ -642,14 +606,14 @@ export default function HubPage() {
                     width: '80px',
                     height: '80px',
                     borderRadius: '50%',
-                    background: item.color,
+                    background: HIW_GOLD,
                     boxShadow: hoveredStep === item.step
-                      ? `0 20px 40px ${item.color}40, inset 0 -2px 8px rgba(0, 0, 0, 0.1)`
-                      : `0 12px 28px ${item.color}40`,
+                      ? `0 20px 40px ${HIW_GOLD}40, inset 0 -2px 8px rgba(0, 0, 0, 0.1)`
+                      : `0 12px 28px ${HIW_GOLD}40`,
                     zIndex: 10,
                   }}
                 >
-                  <item.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
+                  <item.icon className="w-8 h-8" style={{ color: HIW_INK }} strokeWidth={1.5} />
                 </div>
 
                 <div
@@ -1065,17 +1029,6 @@ export default function HubPage() {
               </Link>
             ))}
           </div>
-          <p className="text-center mt-10 text-sm" style={{ color: 'var(--u-text-muted)' }}>
-            Hire a private chef in{' '}
-            {CITIES.map((city, idx, arr) => (
-              <span key={city.slug}>
-                <Link to={getLocationCanonical(city.slug)} className="hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
-                  {city.name === 'Bukit' ? 'Bukit Peninsula' : city.name}
-                </Link>
-                {idx < arr.length - 1 ? ' · ' : ''}
-              </span>
-            ))}
-          </p>
           <div className="text-center mt-6">
             <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               View All Locations <ArrowRight className="w-4 h-4" />
@@ -1177,34 +1130,6 @@ export default function HubPage() {
             <Link to="/faq" className="text-sm font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>
               Full FAQ →
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-12 sm:px-6 md:py-16" style={{ background: 'var(--u-bg-alt)' }}>
-        <div className="max-w-[1100px] mx-auto rounded-[28px] border border-black/5 bg-white p-8 md:p-10">
-          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-[560px]">
-              <p className="u-label mb-3">Journal</p>
-              <h2 className="u-heading text-3xl md:text-4xl mb-4">Explore Our Journal</h2>
-              <p style={{ color: 'var(--u-text-muted)' }}>
-                Planning a villa dinner, wedding weekend, or Bali breakfast setup? Browse our latest guides for practical hosting tips.
-              </p>
-            </div>
-            <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
-              Visit the Journal <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {JOURNAL_LINKS.map((article) => (
-              <Link
-                key={article.path}
-                to={article.path}
-                className="rounded-2xl border border-black/5 bg-[#FAFAF8] px-5 py-5 text-sm font-medium transition-colors hover:border-[#C5A028] hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
-              >
-                {article.title}
-              </Link>
-            ))}
           </div>
         </div>
       </section>

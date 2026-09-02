@@ -137,7 +137,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           location.pathname !== '/experiences/private-cooking-class' && (
           <Suspense fallback={null}><ConciergeWidget /></Suspense>
         )}
-        <Suspense fallback={null}><ExitIntentPopup /></Suspense>
+        {location.pathname !== '/' && (
+          <Suspense fallback={null}><ExitIntentPopup /></Suspense>
+        )}
       </div>
     </UniverseProvider>
   )

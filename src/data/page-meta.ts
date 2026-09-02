@@ -26,11 +26,11 @@ const SITE = 'https://mychef.id'
 export const PAGE_META: Record<string, PageMeta> = {
       home: {
     path: '/',
-    title: 'myCHEF Bali | Private Villa Chef, Catering & Events',
+    title: 'Private Chef Bali | Stay Chef & Catering | myCHEF',
     description:
-      'Bali private chef, catering, weddings & in-villa staff from one HACCP-certified team. Transparent day rates. WhatsApp reply within 2 hours.',
+      'Bali private chef for villa stays: IDR 1,210,000 / 2,178,000 / 3,267,000 all-in a day, groceries extra. One lunch, dinner or party is catering, food included.',
     canonical: `${SITE}/`,
-    h1: 'Private Chef, Catering & Villa Hospitality in Bali',
+    h1: 'Private Chef Bali for Your Stay — Catering for One Meal',
     ogImage: `${SITE}/generated/mychef-location-bali-hub-hero.webp`,
   },
 

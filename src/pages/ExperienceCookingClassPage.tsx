@@ -304,6 +304,16 @@ const SECTIONS: PageSection[] = [
     subtitle: 'What makes the day special',
     title: 'Uniforms, Diploma Moment & a Happy Villa Kitchen',
     body: `<p>Instruction is professional — the atmosphere is relaxed. Guests leave with a diploma, recipe cards and a kitchen that has been cleaned. Uniforms and chef hats are included. For bigger groups we add staff so nobody watches from the side.</p>
+    <div style="max-width:22rem;margin:1.75rem auto 0;padding:1.75rem 1.5rem 1.5rem;background:#FFFEFB;border:1px solid #C5A028;box-shadow:0 8px 24px rgba(0,0,0,.06);text-align:center">
+      <p style="margin:0;font-size:0.7rem;letter-spacing:0.28em;text-transform:uppercase;color:#C5A028">myCHEF</p>
+      <p style="margin:0.85rem 0 0;font-family:var(--font-playfair,serif);font-size:1.35rem;color:#1A1A1A;line-height:1.2">Indonesian Cooking Diploma</p>
+      <div style="width:3rem;height:1px;background:#C5A028;margin:0.9rem auto"></div>
+      <p style="margin:0;font-size:0.8rem;color:#4A4745">This certifies that</p>
+      <p style="margin:0.65rem 1.25rem 0;border-bottom:1px solid #1A1A1A;min-height:1.6rem"></p>
+      <p style="margin:0.85rem 0 0;font-size:0.85rem;line-height:1.45;color:#4A4745">completed a private Balinese / Indonesian cooking class in their villa kitchen</p>
+      <p style="margin:1.1rem 0 0;font-size:0.8rem;color:#4A4745">Date <span style="display:inline-block;min-width:7rem;border-bottom:1px solid #1A1A1A;vertical-align:bottom"></span></p>
+    </div>
+    <p style="margin:0.85rem 0 0;text-align:center;font-size:0.9rem;color:#4A4745">Blank template — name and date filled in on the day. Not a guest photo.</p>
     ${CTA_HTML('Message us now — at least two days’ notice')}`,
   },
   {
@@ -314,6 +324,8 @@ const SECTIONS: PageSection[] = [
     image: IMG_DINE,
     imageAlt:
       'Guests sitting down to the meal they cooked in a Bali villa after a private cooking class — not a private-chef dinner',
+    imageCaption:
+      'The meal after the class — you eat everything you cooked at the villa table. This is not a private-chef dinner.',
     body: `<p><strong>Couples.</strong> Popular for honeymoons and date nights. Pricing is the 4-guest minimum: <strong>IDR 1,400,000++ per person</strong>.</p>
     <p><strong>Families.</strong> Kids who join are extra guests on the same class — no separate kids tariff. See <a href="/kids-menus" class="text-[#7E6410] hover:underline font-medium">kids menus</a> and <a href="/experiences/kids-birthday-chef-party" class="text-[#7E6410] hover:underline font-medium">kids birthday chef party</a>.</p>
     <p><strong>Birthday &amp; villa groups.</strong> Same 2.5 or 3-hour class, same inclusions.</p>
@@ -598,7 +610,8 @@ export default function ExperienceCookingClassPage() {
         h1={meta.h1}
         subtitle="Private 2.5–3 hour Indonesian/Balinese class in your villa. Chef comes to you. Eat everything, diploma + recipes, full clean-up. No hotel pickup. From IDR 700,000++/person (min 4). 12,000+ guests hosted."
         heroImage={HERO}
-        heroImageAlt="Private chef teaching a couple to cook in a Bali villa kitchen with tropical garden and pool beyond"
+        heroImageAlt="Private chef teaching a couple to cook in a Bali villa kitchen, with tropical garden, bougainvillea and pool beyond"
+        heroImageClassName="object-[68%_center] md:object-[center_38%]"
         ogImage={`https://mychef.id${HERO}`}
         keywords={[
           'cooking class bali',

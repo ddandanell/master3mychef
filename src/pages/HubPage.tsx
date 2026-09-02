@@ -60,7 +60,7 @@ const WA_HOME = buildWhatsAppUrl({
 const CORES = [
   {
     id: 'private-chef',
-    kicker: 'A stay',
+    kicker: 'Villa chef hire · a stay',
     title: 'Private Chef',
     oneLiner: `${CHEF_ONE} · ${CHEF_TWO} · ${CHEF_THREE} all-in a day. Groceries extra at cost with receipts.`,
     points: [
@@ -81,7 +81,7 @@ const CORES = [
     kicker: 'One meal / one party',
     title: 'Catering',
     oneLiner:
-      'One lunch, dinner or party. Groceries included. Quote shows per person, group total and all-in.',
+      'Bali catering for one lunch, dinner or party. Groceries included. Quote shows per person, group total and all-in.',
     points: [
       'Two menus with dishes — you pick, we cook at the villa.',
       '50% deposit. No tasting. No named chef. Wine is BYO — you bring, we pour.',
@@ -99,12 +99,6 @@ const CORES = [
 
 const ADD_ONS = [
   {
-    title: 'Cooking class',
-    desc: 'A private Balinese and Indonesian class in your villa kitchen — not a tourist school.',
-    href: '/experiences/cooking-class',
-    cta: 'Cooking class Bali →',
-  },
-  {
     title: 'Weddings',
     desc: 'Food, staff and service for a villa wedding — stacked on catering, not a separate hero.',
     href: '/events/weddings',
@@ -115,12 +109,6 @@ const ADD_ONS = [
     desc: 'Hands-on sushi at the villa. An add-on to a stay or a one-off session.',
     href: '/experiences/sushi-masterclass',
     cta: 'Sushi masterclass →',
-  },
-  {
-    title: 'Fine dining night',
-    desc: 'A plated tasting at the villa when the occasion is one special dinner.',
-    href: '/fine-dining',
-    cta: 'Fine dining →',
   },
   {
     title: 'Mobile bar',
@@ -423,17 +411,17 @@ export default function HubPage() {
           <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-[1280px] items-end px-5 pb-8 pt-24 sm:px-6 md:min-h-[78vh] md:items-center md:pb-14 md:pt-24">
             <div className="w-full max-w-2xl md:max-w-[52%]">
               <p className="hub-hero-label mb-3 text-xs uppercase tracking-[0.28em] text-[#C5A028] sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                myCHEF · Bali private chef
+                myCHEF Bali · Bali private chef
               </p>
               <h1 className="hub-hero-title mb-3 text-[1.7rem] leading-[1.12] text-white sm:text-5xl md:text-[3.25rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
                 {homeMeta.h1}
               </h1>
               <div className="gold-arc mb-4 md:mb-5" />
-              <p className="hub-hero-subtitle mb-3 max-w-[42ch] text-[15px] leading-relaxed text-white/90 sm:max-w-xl sm:text-lg">
-                Two products. A <strong className="font-semibold text-white">stay</strong> is a private chef — all-in day rates, groceries extra. <strong className="font-semibold text-white">One lunch, dinner or party</strong> is catering — food included.
+              <p className="hub-hero-subtitle mb-3 max-w-[46ch] text-[15px] leading-relaxed text-white/90 sm:max-w-xl sm:text-lg">
+                Hire a <strong className="font-semibold text-white">private chef in Bali</strong> for a stay — villa chef hire at {CHEF_ONE} / {CHEF_TWO} / {CHEF_THREE} all-in a day, groceries extra. Then <strong className="font-semibold text-white">catering</strong> for one lunch, dinner or party — food included.
               </p>
               <p className="hub-hero-subtitle mb-5 text-sm text-white/75 sm:text-[15px]">
-                Stay: {CHEF_ONE} / {CHEF_TWO} / {CHEF_THREE} all-in a day · HACCP-certified · 3–5 days notice
+                HACCP-certified · Normal notice 3–5 days · Same-day dinner usually cannot
               </p>
               <div className="hub-hero-cta mb-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <Link
@@ -462,7 +450,15 @@ export default function HubPage() {
                 </a>
               </div>
               <p className="text-xs uppercase tracking-[0.16em] text-white/55 sm:text-sm" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                Normal notice 3–5 days · Chef replacement guarantee
+                Chef replacement guarantee
+              </p>
+              <p className="mt-3 text-xs text-white/50">
+                <Link
+                  to="/experiences/cooking-class"
+                  className="underline-offset-4 hover:text-white/80 hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded"
+                >
+                  Private class at the villa →
+                </Link>
               </p>
             </div>
           </div>
@@ -714,7 +710,7 @@ export default function HubPage() {
             <p className="u-label mb-4">Add-ons</p>
             <h2 className="u-heading text-3xl md:text-5xl mb-4">Around the Two Cores</h2>
             <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
-              Cooking class, weddings, sushi and a fine-dining night sit under a stay chef or catering — they are not a third product on the homepage.
+              Weddings, sushi, a bar and events sit under a stay chef or catering — not equal heroes on this page.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -735,16 +731,13 @@ export default function HubPage() {
       <section className="px-5 py-12 sm:px-6 md:py-24" style={{ background: 'var(--u-bg-alt)' }}>
         <div className="max-w-[800px] mx-auto text-center">
           <p className="u-label mb-4">The Split</p>
-          <h2 className="u-heading text-3xl md:text-5xl mb-6">Stay Chef, One Meal, or a Class</h2>
+          <h2 className="u-heading text-3xl md:text-5xl mb-6">Private Chef or Catering</h2>
           <p className="leading-relaxed mb-8" style={{ color: 'var(--u-text-muted)' }}>
-            A <strong style={{ color: 'var(--u-text)' }}>private chef</strong> is for a stay — meals across the days you are in the villa, groceries at cost.{' '}
-            <strong style={{ color: 'var(--u-text)' }}>Catering</strong> is one lunch, dinner or party, food included.{' '}
-            A <strong style={{ color: 'var(--u-text)' }}>cooking class</strong> is you cooking with the chef, then eating what you made.{' '}
+            A <strong style={{ color: 'var(--u-text)' }}>private chef in Bali</strong> is for a stay — meals across the days you are in the villa, groceries at cost.{' '}
+            <strong style={{ color: 'var(--u-text)' }}>Catering Bali</strong> is one lunch, dinner or party, food included.{' '}
             <Link to="/private-chef-bali" className="font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>Stay rates →</Link>
             {' · '}
             <Link to="/catering" className="font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>Catering →</Link>
-            {' · '}
-            <Link to="/experiences/cooking-class" className="font-semibold hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded" style={{ color: 'var(--u-accent)' }}>Cooking class →</Link>
           </p>
         </div>
       </section>

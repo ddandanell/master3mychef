@@ -606,7 +606,7 @@
     },
     {
       "source": "/private-chef",
-      "destination": "/private-chef-bali",
+      "destination": "/",
       "permanent": true
     },
     {

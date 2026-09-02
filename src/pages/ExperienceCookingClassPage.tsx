@@ -35,6 +35,7 @@ const CANONICAL = 'https://mychef.id/experiences/cooking-class'
 
 const HERO = '/generated/mychef-cooking-class-bali-hero-villa.webp'
 const IMG_TEACH = '/generated/mychef-cooking-class-chef-teaching-bali-landscape.webp'
+/** Villa cobek + base genep paste. Do not swap for a generated cobek close-up — same beat, no villa cue. */
 const IMG_BALINESE = '/generated/mychef-cooking-class-balinese-ingredients-bali-landscape.webp'
 const IMG_DINE = '/generated/mychef-cooking-class-bali-guests-dining.webp'
 

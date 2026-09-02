@@ -1866,9 +1866,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/experiences/cooking-class',
     title: 'Private Cooking Class Bali | In-Villa Balinese Class, Chef Comes to You',
     description:
-      '3-hour private Indonesian cooking class in your Bali villa. Chef comes to you. Diploma. Eat what you cook. From IDR 700,000++/person min 4.',
+      'Private cooking class Bali in your villa. Chef comes to you. 2.5 or 3 hours, 4–6 dishes, diploma. From IDR 700,000++/pp min 4 (all-in IDR 847,000).',
     canonical: `${SITE}/experiences/cooking-class`,
-    h1: 'Cooking Class Bali — Private 3-Hour Indonesian Class in Your Villa',
+    h1: 'Cooking Class Bali — Private 2.5–3 Hour Balinese Class in Your Villa',
     ogImage: `${SITE}/generated/mychef-cooking-class-bali-hero-villa.webp`,
   },
 

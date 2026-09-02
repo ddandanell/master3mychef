@@ -318,7 +318,7 @@ export default function CangguPage() {
           <li><Link to="/catering" className="text-[#C5A028] hover:underline font-medium">Catering Bali</Link> — BBQ, buffet and group menus for larger villa parties.</li>
           <li><Link to="/fine-dining" className="text-[#C5A028] hover:underline font-medium">Fine dining at your villa</Link> — tasting menus and chef’s table formats.</li>
           <li><Link to="/private-dining-indonesia" className="text-[#C5A028] hover:underline font-medium">Private dining Bali</Link> — how at-home fine dining works island-wide.</li>
-          <li><Link to="/experiences/cooking-class#canggu" className="text-[#C5A028] hover:underline font-medium">Cooking class Canggu</Link> — 3-hour private Indonesian class in your Berawa or Pererenan villa; chef comes to you. Favourite with surf-trip groups and long-stay nomads.</li>
+          <li><Link to="/experiences/cooking-class#canggu" className="text-[#C5A028] hover:underline font-medium">Cooking class in Canggu</Link> — hands-on private Balinese cooking classes in your Berawa or Pererenan villa; a favourite with surf-trip groups and long-stay nomads.</li>
         </ul>
       </section>
 

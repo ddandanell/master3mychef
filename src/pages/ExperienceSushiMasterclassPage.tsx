@@ -255,7 +255,7 @@ const FAQS = [
 ]
 
 const RELATED_PAGES = [
-  { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: '3-hour private Indonesian villa class — chef comes to you. Diploma. From IDR 700,000++/pp min 4.' },
+  { label: 'Cooking Class Bali', href: '/experiences/cooking-class', desc: 'Balinese, Indonesian and multi-cuisine cooking classes at your villa.' },
   { label: 'Private Chef Bali', href: '/private-chef-bali', desc: 'Add multi-day villa chef meals around your sushi class.' },
   { label: 'Fine Dining Bali', href: '/fine-dining', desc: 'Private Japanese-inspired fine dining after the workshop.' },
   { label: 'Retreat Catering', href: '/catering/retreat-catering', desc: 'A sushi workshop as a culinary activity for retreat groups.' },

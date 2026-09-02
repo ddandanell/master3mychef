@@ -679,6 +679,24 @@ export default function PremiumPage({
               defaultOpenCount={2}
               showToc={faqs.length >= 8}
               ctaEvery={faqs.length >= 8 ? 5 : 0}
+              ctaHtml={
+                whatsAppUrl
+                  ? `<p class="font-medium text-[#1A1A1A] mb-1">Still deciding?</p>
+  <p class="text-sm text-[#4A4745] mb-3 leading-relaxed">
+    WhatsApp villa area, guest count and date — we reply with a sample menu and the all-in total.
+  </p>
+  <div class="flex flex-wrap gap-2">
+    <a href="${whatsAppUrl}"
+       target="_blank" rel="noopener noreferrer" data-source="faq-inline-cta"
+       class="inline-flex min-h-[40px] items-center rounded-full bg-[#C5A028] px-4 py-2 text-sm font-semibold text-[#1A1A1A] hover:bg-[#D4B43A] transition-colors">
+      Chat with our chef
+    </a>
+    <a href="/pricing" class="inline-flex min-h-[40px] items-center rounded-full border border-[#E8E2CF] bg-white px-4 py-2 text-sm font-semibold text-[#1A1A1A] hover:border-[#C5A028] transition-colors">
+      View pricing
+    </a>
+  </div>`
+                  : undefined
+              }
             />
           </div>
         </section>

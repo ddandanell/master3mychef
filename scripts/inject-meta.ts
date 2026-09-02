@@ -415,12 +415,17 @@ function injectMeta(html: string, path: string, title: string, description: stri
   ].filter(Boolean).join('\n  ')
   html = html.replace('</head>', `${structuredData}\n  </head>`)
 
-  // Cooking-class LCP: preload the villa-class WEBP (1280×720), not a 1.9MB PNG.
+  // Cooking-class LCP: drop the homepage hub-hero preload (copied from index.html
+  // into every route) and preload the villa-class WEBP instead. Shipping both
+  // as fetchpriority=high made this URL's LCP worse.
   if (path === '/experiences/cooking-class') {
-    const heroPreload = '/generated/mychef-cooking-class-bali-hero-villa.webp'
+    html = html.replace(
+      /\s*<!-- Preload the actual homepage LCP image[\s\S]*?<link rel="preload" as="image" href="\/generated\/mychef-location-bali-hub-hero-800\.webp"[\s\S]*?\/>/,
+      ''
+    )
     html = html.replace(
       '</head>',
-      `<link rel="preload" as="image" href="${heroPreload}" fetchpriority="high" />\n  </head>`
+      `  <link rel="preload" as="image" href="/generated/mychef-cooking-class-bali-hero-villa.webp" fetchpriority="high" />\n  </head>`
     )
   }
 

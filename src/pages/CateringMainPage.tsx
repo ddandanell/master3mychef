@@ -129,9 +129,9 @@ const FNB_STACK_LINKS = [
   },
   {
     title: 'Private chef (daily)',
-    price: 'From IDR 1M++/day',
+    price: 'From IDR 2.7M++/day',
     href: '/private-chef-bali',
-    blurb: 'Multi-day villa meals when you need more than one catering night',
+    blurb: 'Stay chef: full day of staff, three flexible meals, when you need more than one catering night',
   },
   {
     title: 'Villa parties',

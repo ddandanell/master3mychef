@@ -43,8 +43,8 @@ const SECTIONS = [
         ['Fine-dining tasting menu', 'IDR 950K–980K', 'per person'],
         ['BBQ &amp; buffet catering', 'IDR 700K', 'per person, groups 8+'],
         ['Wedding catering', 'IDR 1.5M–3M+', 'per person'],
-        ['Private chef half day (cook & serve one meal)', 'IDR 1,000K++', 'per day, chef + assistant'],
-        ['Daily chef, weekly rate', 'From IDR 900K++/day', '10% off standard'],
+        ['Private chef stay (full day of staff)', 'IDR 2,700,000++', 'per day, chef + assistant, three flexible meals'],
+        ['Stay chef, weekly rate', 'IDR 2,430,000++/day', '10% off the full-day rate'],
         ['Waiters & butlers', 'Contact us', 'for pricing'],
         ['Cocktail packages', 'From IDR 500K++', 'per guest (min 10)'],
       ])
@@ -174,7 +174,7 @@ const SECTIONS = [
 
 const FAQS = [
   { question: 'Where are full prices listed?', answer: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
-  { question: 'Daily chef rates?', answer: 'IDR 1M++ / 1.8M++ / 2.7M++ for 1/2/3 meals per day.' },
+  { question: 'Daily chef rates?', answer: 'Stay chef is a full day of staff: IDR 2,700,000++ (IDR 3,267,000 all-in). Three flexible meals. One meal is catering.' },
   { question: 'What is included vs groceries?', answer: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
   { question: 'Weekly and monthly discounts?', answer: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
   { question: 'Deposit?', answer: 'Usually 50%.' },
@@ -194,14 +194,14 @@ const FAQS = [
   { question: 'How fast is a proposal?', answer: 'Often within 2–24 hours of a complete brief.' },
   { question: 'Can this combine with other services?', answer: 'Yes — private chef, catering and a mobile cocktail bar stack in one plan. <a href="/in-villa-service/bartenders">Mobile bar →</a> · <a href="/catering">Catering →</a> · <a href="/private-chef-bali">Private chef →</a>' },
   // AnswerSocrates guest cost questions (not chef-salary career queries)
-  { question: 'How much does it cost to hire a chef in Bali?', answer: 'Two common models: (1) daily villa chef hire from IDR 1,000,000++/day for one meal with chef + assistant, groceries at cost; (2) event dinners from about IDR 700K per person ++ and fine dining from about IDR 950K–1.25M++ depending on menu. Your quote states which model applies. <a href="/private-chef-bali">Day rates →</a>' },
-  { question: 'How much does a private chef cost per day?', answer: 'Published day rates: IDR 1M++ / 1.8M++ / 2.7M++ for 1 / 2 / 3 meals (chef + assistant). Food is separate at cost with receipts on daily hire.' },
+  { question: 'How much does it cost to hire a chef in Bali?', answer: 'Two common models: (1) stay chef — a full day of staff at IDR 2,700,000++/day (IDR 3,267,000 all-in) with chef + assistant and three flexible meals, groceries at cost; (2) one lunch, dinner or party is catering, from about IDR 700K per person ++, food included. Fine dining from about IDR 950K–1.25M++ depending on menu. <a href="/private-chef-bali">Stay chef →</a>' },
+  { question: 'How much does a private chef cost per day?', answer: 'Stay chef is a full day of staff: IDR 2,700,000++ (IDR 3,267,000 all-in) for chef + assistant, about 10 guests. Three meals, each breakfast, lunch or dinner as you choose. Food is separate at cost with receipts. One meal is catering.' },
   { question: 'How much does a private chef cost per month?', answer: 'Use daily rates with monthly discount (−20% from 28+ days), or request a live-in / household proposal. Share meal pattern and villa area for a fixed monthly figure.' },
-  { question: 'How much does a private chef cost per hour?', answer: 'We do not sell a simple “chef hourly” product for villa guests. We sell day rates (by meal count) or per-person event menus. That keeps shopping, cooking, service and cleanup in one clear package.' },
+  { question: 'How much does a private chef cost per hour?', answer: 'We do not sell a simple “chef hourly” product for villa guests. Stay chef is a full day of staff; one meal is catering (food included). That keeps shopping, cooking, service and cleanup in one clear package.' },
   { question: 'Are private chefs expensive / is a private chef worth it?', answer: 'For groups and multi-meal villa days, cost per person often competes with restaurants once transport and time are counted. For a single couple’s dinner it is a premium experience — prices are published so you can decide before deposit. <a href="/blog/private-chef-cost-bali">Cost guide →</a>' },
   { question: 'What does a private chef cost for a year?', answer: 'Year-round households usually need a custom monthly or live-in plan, not a one-night menu price. Contact us with how many meals per week and we will model a 12-month budget. <a href="/staffing/live-in-chef">Live-in chef →</a>' },
   // AnswerSocrates guest F&B cost questions (not career salary)
-  { question: 'What is the cost of food and drink in Bali for a villa event?', answer: 'Food catering floors from about IDR 700K++ per person (BBQ/buffet/drop-off). Cocktail packages from IDR 500K++ per guest (BYO, min 10) or IDR 1.3M–1.7M++ free-flow with spirits. Private chef day rates are separate (from IDR 1M++/day for one meal). <a href="/catering">Catering →</a> · <a href="/in-villa-service/bartenders">Drinks packages →</a>' },
+  { question: 'What is the cost of food and drink in Bali for a villa event?', answer: 'Food catering floors from about IDR 700K++ per person (BBQ/buffet/drop-off). Cocktail packages from IDR 500K++ per guest (BYO, min 10) or IDR 1.3M–1.7M++ free-flow with spirits. Stay chef is a separate full-day staff rate (IDR 2,700,000++/day). <a href="/catering">Catering →</a> · <a href="/in-villa-service/bartenders">Drinks packages →</a>' },
   { question: 'What is the average drink price in Bali for private cocktail service?', answer: 'For villa free-flow, budget about IDR 1,300,000–1,700,000++ per guest when spirits are included, or from IDR 500,000++ per guest if you supply the alcohol (BYO package). That is package pricing — not a single beach-club cocktail. <a href="/in-villa-service/bartenders">Cocktail packages →</a>' },
   { question: 'How much does Bali drinks catering cost?', answer: 'Complete bar catering packages from IDR 500,000++ per guest (min 10). Not hourly bartender-only hire. Stack with food on <a href="/catering">catering</a> or plan a full night on <a href="/experiences/private-cocktail-party">private cocktail party</a>.' },
   // Long-tail catering cost keywords (guest intent)
@@ -217,7 +217,7 @@ const RELATED_PAGES = [
   { label: 'Private Cocktail Party', href: '/experiences/private-cocktail-party', desc: 'Occasion plan for villa parties with the same bar packages.' },
   { label: 'Events', href: '/events', desc: 'Weddings, retreats, and celebrations across Bali.' },
   { label: 'In-Villa Service', href: '/in-villa-service', desc: 'Waiters, butlers, mobile bar and sommeliers.' },
-  { label: 'Private Chef Bali Day Rates', href: '/private-chef-bali', desc: 'Daily chef hire: one meal, two meals or full-day plans with chef + assistant.' },
+  { label: 'Private Chef Bali Day Rates', href: '/private-chef-bali', desc: 'Stay chef: full-day staff, three flexible meals, chef + assistant.' },
   { label: 'How to Hire a Private Chef', href: '/blog/how-to-hire-private-chef-bali-complete-guide', desc: 'Step-by-step guide to finding, vetting, and booking a chef.' },
   { label: 'Get a Quote', href: '/quote', desc: 'Receive a detailed proposal within 24 hours.' },
 ]

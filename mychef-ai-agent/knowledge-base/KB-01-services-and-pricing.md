@@ -15,11 +15,18 @@ All prices are Indonesian Rupiah (IDR). `++` = service charge + tax added on top
 
 ### 1.1 Private chef hire — day rates (1 head chef + 1 assistant)
 
-| Tier | `++` price | Tax-inclusive price quoted |
+> **Owner ruling 3 Sep 2026 (David):** Private chef is for a **stay**. Catering is one lunch / dinner / party (food and kit included). Stay chef: we come with **staff only**; groceries extra at cost with receipts. Because a stay chef needs villa inspection and a full kitchen walkthrough to our standard, the guest **cannot buy a single meal of private chef**. **MINIMUM: one full day of staff = the existing three-meal day rate** `IDR 2,700,000++` / `IDR 3,267,000` all-in (chef + assistant, ~10 guests). Those three meals are **flexible credits** — each can be breakfast, lunch or dinner (including three breakfasts). Weekly −10% and monthly −20% apply to that full-day rate only. One meal / one party remains **catering** (food included). Do not sell 1-meal or 2-meal as stay-chef SKUs.
+
+| Stay product (book this) | `++` price | Tax-inclusive |
+|---|---|---|
+| Full day of staff / three flexible meals | `IDR 2,700,000++` per day | `IDR 3,267,000` |
+
+Historic 1-meal / 2-meal figures (kept so numbers never drift — **not** stay-chef SKUs):
+
+| Retired as stay SKU | `++` price | Tax-inclusive |
 |---|---|---|
 | One meal / Breakfast only / Dinner only | `IDR 1,000,000++` per day | `IDR 1,210,000` |
 | Two meals (Breakfast + Dinner, or Lunch + Dinner) | `IDR 1,800,000++` per day | `IDR 2,178,000` |
-| Three meals / full day (Breakfast, Lunch & Dinner) | `IDR 2,700,000++` per day | `IDR 3,267,000` |
 
 **Multi-day totals actually quoted:**
 
@@ -143,15 +150,15 @@ All prices are Indonesian Rupiah (IDR). `++` = service charge + tax added on top
 
 ### 2.1 Private Chef Hire (day rate)
 
-**What it is:** You hire the chef team for a period — usually several meals or most of the day. Verbatim explainer: *"Private Chef Hire is different. You hire the chef for a longer period, usually for several meals or most of the day. You pay for the chef service, and groceries are purchased separately at cost with the original receipts. This normally becomes the more economical option if you want breakfast, lunch and/or dinner rather than just one meal."*
+**What it is:** You hire the chef team for a stay. **Minimum is a full day of staff** (the existing three-meal rate). You get three meals; assign each as breakfast, lunch or dinner however you want. Groceries are purchased separately at cost with the original receipts. One lunch, dinner or party is **catering** (food included) — not a stay-chef SKU. We inspect the villa and kitchen first so the kitchen meets our standard; we arrive with the team, not a full catering kit.
 
-**Who it suits:** Families and groups staying multiple days; anyone wanting more than one meal; guests below the 6-guest dinner minimum (the full-day package is the recommended alternative — see KB-04).
+**Who it suits:** Families and groups staying in a villa; anyone who wants a chef for the stay, not one sitting.
 
 **Team:** 1 professional head chef + 1 kitchen assistant. Every private chef booking includes an assistant.
 
-**Guest minimum:** None on the day rate — it is priced by meals per day, not guest count. One quote states the rate covers `up to 10 guests`.
+**Guest coverage:** The published full-day rate covers about `10 guests`. Over 10: extra assistant per +10 and +40% of the base day rate per step.
 
-**Prices:** `IDR 1,000,000++` / `IDR 1,800,000++` / `IDR 2,700,000++` per day (1 / 2 / 3 meals). Tax-inclusive: `IDR 1,210,000` / `IDR 2,178,000` / `IDR 3,267,000`.
+**Prices:** Stay minimum `IDR 2,700,000++` per day (`IDR 3,267,000` all-in). Weekly −10% / monthly −20% on that full-day rate only. Do not quote `IDR 1,000,000++` / `IDR 1,210,000` as a stay-chef entry.
 
 **Included:** menu planning, food preparation, cooking, serving, and cleaning the kitchen after each meal. Verbatim: *"They will take care of the menu planning, food preparation, cooking, serving, and cleaning the kitchen after each meal."*
 

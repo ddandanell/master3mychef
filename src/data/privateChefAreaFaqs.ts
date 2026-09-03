@@ -5,7 +5,7 @@
  */
 
 import type { AreaFaq, PrivateChefArea } from './privateChefAreas'
-import { MEAL_PLANS, formatIDRPlusPlus, siteFacts } from './siteFacts'
+import { STAY_CHEF_PLAN, formatIDRPlusPlus, siteFacts } from './siteFacts'
 
 function norm(q: string): string {
   return q
@@ -37,14 +37,12 @@ function link(href: string, label: string): string {
 
 function sharedFaqs(area: PrivateChefArea): AreaFaq[] {
   const n = escName(area.name)
-  const one = formatIDRPlusPlus(MEAL_PLANS[0].daily)
-  const two = formatIDRPlusPlus(MEAL_PLANS[1].daily)
-  const three = formatIDRPlusPlus(MEAL_PLANS[2].daily)
+  const stay = formatIDRPlusPlus(STAY_CHEF_PLAN.daily)
 
   return [
     {
       q: `How much does a private chef cost in ${n}?`,
-      a: `One meal a day starts from <strong>${one}</strong> (chef + dedicated assistant); two meals from ${two}; three meals from ${three}. Groceries are billed at cost with receipts. Villa catering often from IDR 700,000 per person; tasting menus from IDR 980,000 per person. Prices are ++ (11% tax + 10% service). Your itemised quote is fixed before you commit. ${link('/pricing', 'Pricing guide')} · ${link('/quote', 'Request a quote')}.`,
+      a: `Stay chef starts at a full day of staff from <strong>${stay}</strong> (chef + dedicated assistant, about 10 guests). You get three meals; use each as breakfast, lunch or dinner however you want. Groceries are billed at cost with receipts. Weekly −10%, monthly −20% on that full-day rate only. One lunch, dinner or party is catering (food included). Villa catering often from IDR 700,000 per person; tasting menus from IDR 980,000 per person. Prices are ++ (11% tax + 10% service). ${link('/pricing', 'Pricing guide')} · ${link('/quote', 'Request a quote')}.`,
     },
     {
       q: `What is included in a private chef booking in ${n}?`,
@@ -76,7 +74,7 @@ function sharedFaqs(area: PrivateChefArea): AreaFaq[] {
     },
     {
       q: `Can we book multi-day or weekly private chef service in ${n}?`,
-      a: `Yes. Weekly bookings take 10% off the daily rate; monthly 20% off. Meal plans cover one, two or three meals a day. For long-term households see ${link('/staffing/live-in-chef', 'live-in chef placement')}. Rates: ${link('/private-chef-bali', 'private chef Bali')}.`,
+      a: `Yes. Weekly bookings take 10% off the full-day stay rate; monthly 20% off. Stay chef is a full day of staff — three flexible meals. One meal is catering. For long-term households see ${link('/staffing/live-in-chef', 'live-in chef placement')}. Rates: ${link('/private-chef-bali', 'private chef Bali')}.`,
     },
     {
       q: `How do I get a fixed quote for ${n}?`,
@@ -149,7 +147,7 @@ function clusterFaqs(area: PrivateChefArea): AreaFaq[] {
   if (['canggu', 'berawa', 'pererenan', 'umalas', 'echo-beach'].includes(belt)) {
     out.push({
       q: `Can a private chef cover our whole ${n} villa stay?`,
-      a: `Yes — multi-day meal prep is one of the most booked formats here for surf families and remote workers. Weekly rates discount 10%. ${link('/private-chef-bali', 'Meal plans')} · ${link('/staffing/live-in-chef', 'live-in options')}.`,
+      a: `Yes — multi-day stay chef is a full day of staff with three flexible meals. Weekly rates discount 10% on that full-day rate. ${link('/private-chef-bali', 'Stay chef rates')} · ${link('/staffing/live-in-chef', 'live-in options')}.`,
     })
   }
   if (['ubud', 'sayan', 'penestanan', 'tegallalang', 'mas', 'payangan'].includes(belt)) {

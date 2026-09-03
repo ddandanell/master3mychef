@@ -224,61 +224,36 @@ myCHEF
 
 ---
 
-## T7c — Day-rate card, VAT-inclusive version (used when quoting 2 guests / below minimum)
+## T7c — Day-rate card (stay chef = full day of staff)
 
 ```
-Our minimum is six people if we're doing fine dinner at peoples home but what we could offer was for two guests, these are our private chef options:
+Stay chef is a full day of staff — not a single meal. We inspect the villa kitchen first and arrive with the team, not a full catering kit.
 
-• One meal: IDR 1,000,000++
-IDR 1,210,000 including service charge and VAT
-
-• Lunch and dinner: IDR 1,800,000++
-IDR 2,178,000 including service charge and VAT
-
-• Breakfast, lunch, and dinner: IDR 2,700,000++
+• Full day of staff (three meals — each breakfast, lunch or dinner as you choose): IDR 2,700,000++
 IDR 3,267,000 including service charge and VAT
 
-Each option includes a specialist head chef and an assistant. They handle the menu planning, preparation, cooking, restaurant-style serving, and complete cleanup.
+Chef + assistant, about 10 guests. Groceries extra at cost with original receipts. Weekly −10% and monthly −20% on that full-day rate only.
 
-We can provide a Japanese specialist, Indonesian specialist, or another chef depending on your preferred cuisine.
-
-Groceries are separate and purchased fresh at the actual cost. You will receive all original receipts, so you only pay the exact amount spent.
-
-For the full-day service, we recommend a villa visit the day before. The chef will sit down with you, discuss exactly what you would like for every meal, and plan everything. The additional fee for this visit is IDR 200,000. The following morning, the team will arrive with the fresh groceries and prepare breakfast, lunch, and dinner.
-
-If you choose lunch and dinner, the chef can meet you in the morning, plan both meals with you, purchase the fresh groceries, and then prepare and serve lunch and a special dinner.
-
-Which cuisine would you prefer: Japanese, Indonesian, or something else?
+One lunch, dinner or party is catering (food included). Send guest count, date and villa for that quote.
 ```
 
-**Variables:** `two guests` → `[N] guests`.
-**⚠️ Flagged internally as the worst opener in the corpus** — broken grammar in the first line, leads with the minimum, and left the customer's actual question unanswered. **Prefer T17 for below-minimum situations.** Kept here because the price structure and the villa-visit paragraph are correct and reusable.
+**Variables:** none. Owner ruling 3 Sep 2026: do not quote 1-meal or 2-meal as stay-chef SKUs.
 
 ---
 
 ## T7d — Day-rate card, multi-day maths version
 
 ```
-Perfect, for a family-style private chef we have a few different options depending on how many meals you would like each day:
+Stay chef is a full day of staff at IDR 2,700,000++ per day (IDR 3,267,000 all-in) — chef + assistant, three meals you place as breakfast, lunch or dinner as you like.
 
-• Breakfast only: IDR 1,000,000++ per day
-• Breakfast + Dinner: IDR 1,800,000++ per day
-• Full-day service (Breakfast, Lunch & Dinner): IDR 2,700,000++ per day
+For three days, the service fee is IDR 8,100,000++. Groceries extra at cost with receipts. Weekly −10% from 7 days; monthly −20% from 28 days, on that full-day rate only.
 
-For three days, the total service fee would be:
+One lunch, dinner or party is catering (food included).
 
-• Breakfast only: IDR 3,000,000++
-• Breakfast + Dinner: IDR 5,400,000++
-• Full-day service: IDR 8,100,000++
-
-All options include one professional private chef and one kitchen assistant. They will take care of the menu planning, food preparation, cooking, serving, and cleaning the kitchen after each meal.
-
-Groceries are charged separately at cost, depending on the menu you choose, so you only pay for the ingredients you would like us to buy.
-
-Before I can confirm the booking, I just need to know the exact dates, as we already have several bookings and I need to check which chef team is available. I also need to know which cuisine you would like, such as Chinese, Indonesian, Western, Japanese, or another style, so I can match you with the most suitable chef.
+Before I can confirm the booking, I just need the exact dates and which cuisine you would like — Chinese, Indonesian, Western, Japanese, or another style — so I can match you with the most suitable chef.
 ```
 
-**Variables:** `three days` → `[N] days`, and the three multiplied totals must be recomputed for the actual number of days.
+**Variables:** `three days` → `[N] days`, and the multiplied total must be recomputed for the actual number of days at IDR 2,700,000++ per day.
 
 ---
 
@@ -316,20 +291,12 @@ For the groceries, we would usually request a deposit of around IDR 500,000–1,
 ## T9 — COST BREAKDOWN FOR A SMALL BOOKING
 
 ```
-For one meal for two guests:
+One meal for two guests is catering (food included) — not a stay-chef booking. Stay chef starts at a full day of staff: IDR 2,700,000++ / IDR 3,267,000 all-in for chef + assistant, three flexible meals, groceries extra at cost.
 
-• Private head chef and assistant: IDR 1,210,000, including service charge and VAT
-• Transport: IDR 200,000
-• Estimated groceries: IDR 500,000 to IDR 800,000
-
-Estimated total: IDR 1,910,000 to IDR 2,210,000
-
-The chef will arrive before the meal, sit down with you, and discuss exactly what you would like. The team will then purchase the fresh groceries, prepare and cook the meal, serve it restaurant-style, and clean everything afterward.
-
-Groceries are charged at the actual purchase cost, and you will receive all original receipts.
+Send guest count, date and villa and we will quote catering with per-person, group total and all-in.
 ```
 
-**Variables:** guest count, transport figure (area-dependent — see KB-01 Section 4, conflict 3), grocery estimate, and the recomputed total.
+**Variables:** none for stay vs catering split. Do not quote IDR 1,210,000 as a stay-chef entry.
 
 ---
 

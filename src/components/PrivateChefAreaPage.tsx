@@ -896,9 +896,8 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
-              { label: 'One Meal a Day', price: 'From IDR 1,000,000++', note: 'Per day · breakfast, lunch or dinner · chef + assistant' },
-              { label: 'Two Meals a Day', price: 'From IDR 1,800,000++', note: 'Per day · any two meals · chef + assistant' },
-              { label: 'Three Meals a Day', price: 'From IDR 2,700,000++', note: 'Per day · breakfast, lunch and dinner · chef + assistant' },
+              { label: 'Full-day stay chef', price: 'IDR 2,700,000++', note: 'Per day · three meals, each breakfast, lunch or dinner as you choose · chef + assistant' },
+              { label: 'One lunch, dinner or party', price: 'Catering', note: 'Food included. Not a stay-chef booking — we inspect the villa kitchen first.' },
               { label: 'Villa Catering', price: 'From IDR 700,000 pp', note: 'Per person · 8–30 guests · buffet or plated' },
               { label: 'Fine Dining Tasting Menu', price: 'From IDR 980,000 pp', note: 'Per person · 5–7 courses · wine pairing available' },
               { label: 'Events & Weddings', price: 'Custom quote', note: 'Group size, menu, staffing level — quoted per event' },
@@ -917,7 +916,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
             /private-chef-bali with consistent intent is the whole point of the cluster.
           */}
           <p className="text-center text-white/70 text-sm mb-10">
-            These are the same rates everywhere we operate. Full meal plans, weekly and
+            These are the same rates everywhere we operate. Full-day stay chef, weekly and
             monthly discounts and what is included are on the{' '}
             <Link
               to="/private-chef-bali#prices"

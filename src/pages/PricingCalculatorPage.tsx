@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import SeoHead, { breadcrumbSchema, faqPageSchema } from '@/components/SeoHead'
-import { MEAL_PLANS, formatIDR as formatIDRFull, planDailyRate } from '@/data/siteFacts'
+import { STAY_CHEF_PLAN, formatIDR as formatIDRFull, planDailyRate } from '@/data/siteFacts'
 import { Link } from 'react-router-dom'
 import FAQAccordion from '@/components/catering/FAQAccordion'
 
@@ -10,9 +10,9 @@ import FAQAccordion from '@/components/catering/FAQAccordion'
  */
 const FAQS = [
   { q: 'Where are full prices listed?', a: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
-  { q: 'Daily chef rates?', a: 'IDR 1M++ / 1.8M++ / 2.7M++ for 1/2/3 meals per day.' },
+  { q: 'Daily chef rates?', a: 'Stay chef is a full day of staff: IDR 2,700,000++ (IDR 3,267,000 all-in). Three meals, each breakfast, lunch or dinner as you choose. One meal is catering.' },
   { q: 'What is included vs groceries?', a: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
-  { q: 'Weekly and monthly discounts?', a: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
+  { q: 'Weekly and monthly discounts?', a: '−10% at 7+ days, −20% at 28+ days on the full-day stay-chef rate only.' },
   { q: 'Deposit?', a: 'Usually 50%.' },
   { q: 'Cancellation tiers?', a: 'Full refund 14+ days, 50% at 7–13, none under 7. <a href="/cancellation">Policy</a>.' },
   { q: 'Hidden fees?', a: 'Quotes itemise travel, premium ingredients and add-ons before deposit.' },
@@ -304,7 +304,7 @@ export default function PricingCalculatorPage() {
                   This calculator prices one-off events per guest. Hiring a chef for a
                   stay is a different product with a different unit (per day, not per
                   person), so rather than fake it we publish the real rental rates here
-                  and hand off to the pillar. Figures come from MEAL_PLANS — never
+                  and hand off to the pillar. Figures come from STAY_CHEF_PLAN — never
                   hardcode them.
                 */}
                 <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50/60 p-5">
@@ -312,26 +312,23 @@ export default function PricingCalculatorPage() {
                     Renting a chef for your whole stay?
                   </p>
                   <p className="mt-1 text-sm text-stone-600">
-                    That is priced per day, not per guest — one chef plus a dedicated
-                    assistant, however many people you are.
+                    That is a full day of staff, priced per day — one chef plus a dedicated
+                    assistant, however many people you are (about 10 guests on the published rate).
+                    Three meals; use each as breakfast, lunch or dinner as you like.
                   </p>
-                  <dl className="mt-4 grid gap-2 sm:grid-cols-3">
-                    {MEAL_PLANS.map((plan) => (
-                      <div key={plan.key} className="rounded-xl bg-white px-4 py-3">
-                        <dt className="text-xs text-stone-500">
-                          {plan.meals} {plan.meals === 1 ? 'meal' : 'meals'} a day
-                        </dt>
-                        <dd className="text-sm font-semibold text-stone-800">
-                          {formatIDRFull(plan.daily)}++
-                          <span className="font-normal text-stone-400"> /day</span>
-                        </dd>
-                      </div>
-                    ))}
+                  <dl className="mt-4 grid gap-2">
+                    <div className="rounded-xl bg-white px-4 py-3">
+                      <dt className="text-xs text-stone-500">Full-day stay chef</dt>
+                      <dd className="text-sm font-semibold text-stone-800">
+                        {formatIDRFull(STAY_CHEF_PLAN.daily)}++
+                        <span className="font-normal text-stone-400"> /day</span>
+                      </dd>
+                    </div>
                   </dl>
                   <p className="mt-3 text-xs text-stone-500">
-                    Weekly rate from {formatIDRFull(planDailyRate(MEAL_PLANS[0], 'weekly'))}++/day ·
-                    monthly from {formatIDRFull(planDailyRate(MEAL_PLANS[0], 'monthly'))}++/day ·
-                    groceries sourced by us and billed at cost.
+                    Weekly rate {formatIDRFull(planDailyRate(STAY_CHEF_PLAN, 'weekly'))}++/day ·
+                    monthly {formatIDRFull(planDailyRate(STAY_CHEF_PLAN, 'monthly'))}++/day ·
+                    groceries sourced by us and billed at cost. One meal is catering.
                   </p>
                   <Link
                     to="/private-chef-bali#prices"

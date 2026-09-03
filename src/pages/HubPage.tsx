@@ -26,7 +26,7 @@ import SeoHead, {
 import { getPageMeta } from '@/data/page-meta'
 import {
   siteFacts,
-  MEAL_PLANS,
+  STAY_CHEF_PLAN,
   formatIDR,
   planDailyRateAllIn,
 } from '@/data/siteFacts'
@@ -39,9 +39,7 @@ import { buildWhatsAppUrl } from '@/lib/whatsapp'
 
 const homeMeta = getPageMeta('home')
 
-const CHEF_ONE = formatIDR(planDailyRateAllIn(MEAL_PLANS[0], 'daily'))
-const CHEF_TWO = formatIDR(planDailyRateAllIn(MEAL_PLANS[1], 'daily'))
-const CHEF_THREE = formatIDR(planDailyRateAllIn(MEAL_PLANS[2], 'daily'))
+const CHEF_THREE = formatIDR(planDailyRateAllIn(STAY_CHEF_PLAN, 'daily'))
 
 const WA_STAY = buildWhatsAppUrl({
   serviceName: 'a private chef in Bali for a villa stay',
@@ -61,11 +59,11 @@ const CORES = [
     id: 'private-chef',
     kicker: 'Villa chef hire · a stay',
     title: 'Private Chef',
-    oneLiner: `${CHEF_ONE} · ${CHEF_TWO} · ${CHEF_THREE} all-in a day. Groceries extra at cost with receipts.`,
+    oneLiner: `Full-day staff minimum ${CHEF_THREE} all-in a day. Groceries extra at cost with receipts.`,
     points: [
-      'One, two or three meals a day for the days you are in the villa.',
-      'Team: 1 chef + 1 assistant, about 10 guests. One meal ~4 hours, two ~8, three ~12.',
-      'Over 10 guests: extra assistant per +10 and +40% of the base day rate per step.',
+      'Stay chef starts at a full day of staff. Three meals — use each as breakfast, lunch or dinner however you want.',
+      'Team: 1 chef + 1 assistant, about 10 guests. A full day is about 12 hours on site.',
+      'One lunch, dinner or party is catering (food included). Over 10 guests: extra assistant per +10 and +40% of the base day rate per step.',
     ],
     path: '/private-chef-bali',
     cta: 'Private chef day rates',
@@ -172,11 +170,11 @@ const FAQS = [
   },
   {
     q: 'Private chef vs catering vs cooking class — which do I book?',
-    a: 'A <strong>stay</strong> is <a href="/private-chef-bali">private chef</a> — one, two or three meals a day, groceries extra. <strong>One lunch, dinner or party</strong> is <a href="/catering">catering</a> — food included. A <a href="/experiences/cooking-class">cooking class</a> is you cooking with the chef, not a meal service. Cooking class, weddings and sushi sit under the two cores, not beside them.',
+    a: 'A <strong>stay</strong> is <a href="/private-chef-bali">private chef</a> — a full day of staff, three meals you place as breakfast, lunch or dinner as you like, groceries extra. <strong>One lunch, dinner or party</strong> is <a href="/catering">catering</a> — food included. A <a href="/experiences/cooking-class">cooking class</a> is you cooking with the chef, not a meal service. Cooking class, weddings and sushi sit under the two cores, not beside them.',
   },
   {
     q: 'How much is a private chef in Bali for a stay?',
-    a: `All-in day rates already include tax and service: 1 meal ${CHEF_ONE}; 2 meals ${CHEF_TWO}; 3 meals ${CHEF_THREE}. Groceries extra at cost with receipts. Team is 1 chef + 1 assistant for about 10 guests. <a href="/private-chef-bali">Private chef Bali →</a>`,
+    a: `Stay chef is a full day of staff: ${CHEF_THREE} all-in (IDR 2,700,000++) for chef + assistant, about 10 guests. You get three meals; assign each as breakfast, lunch or dinner — including three breakfasts. Groceries extra at cost with receipts. Weekly −10% and monthly −20% on that full-day rate only. One meal is catering. <a href="/private-chef-bali">Private chef Bali →</a>`,
   },
   {
     q: 'How much is catering for one lunch, dinner or party?',
@@ -200,7 +198,7 @@ const FAQS = [
   },
   {
     q: 'How many guests does the stay chef cover?',
-    a: 'The published stay rate is 1 chef + 1 assistant for about 10 guests. Over 10: an extra assistant per +10 guests and +40% of the base day rate per step. One meal is about 4 hours on site, two about 8, three about 12.',
+    a: 'The published stay rate is 1 chef + 1 assistant for about 10 guests, for a full day (about 12 hours on site). Over 10: an extra assistant per +10 guests and +40% of the base day rate per step. One meal is catering, not a stay-chef booking.',
   },
 ]
 
@@ -316,7 +314,7 @@ export default function HubPage() {
       longitude: siteFacts.geo.longitude,
     },
     areaServed: ['Seminyak', 'Canggu', 'Ubud', 'Uluwatu', 'Sanur', 'Nusa Dua', 'Jimbaran', 'Berawa', 'Pererenan', 'Bukit'],
-    priceRange: `${CHEF_ONE} - ${CHEF_THREE} per day`,
+    priceRange: `${CHEF_THREE} per day`,
     founder: { '@type': 'Person', name: 'Adriano' },
     servesCuisine: ['Indonesian', 'Italian', 'Mediterranean', 'Japanese', 'International'],
     openingHours: 'Mo-Su 07:00-22:00',
@@ -343,7 +341,7 @@ export default function HubPage() {
     ]),
     serviceSchema(
       'Private Chef Bali — Villa Stay',
-      `A chef and assistant at your villa for a stay. All-in day rates: 1 meal ${CHEF_ONE}, 2 meals ${CHEF_TWO}, 3 meals ${CHEF_THREE}. Groceries extra at cost with receipts.`,
+      `A chef and assistant at your villa for a stay. Full-day staff minimum ${CHEF_THREE} all-in. Three meals, each breakfast, lunch or dinner as you choose. Groceries extra at cost with receipts. One meal is catering.`,
       'https://mychef.id/private-chef-bali',
       '$$$',
     ),

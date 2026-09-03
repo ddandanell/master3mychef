@@ -31,7 +31,7 @@ export default function BaliHubPage() {
         jsonLd={[
           breadcrumbSchema('Bali Coverage', canonical),
           faqPageSchema([
-          { question: 'How much does a private chef in Bali cost?', answer: 'Daily private chef from IDR 1,000,000++/day for one meal (chef+assistant). Event dinners and fine dining are quoted per person. <a href="/private-chef-bali">Private chef</a> · <a href="/pricing">pricing</a>.' },
+          { question: 'How much does a private chef in Bali cost?', answer: 'Stay chef is a full day of staff from IDR 2,700,000++/day (IDR 3,267,000 all-in). Three flexible meals. One meal is catering. Event dinners and fine dining are quoted per person. <a href="/private-chef-bali">Private chef</a> · <a href="/pricing">pricing</a>.' },
           { question: 'What areas in Bali does myCHEF serve?', answer: 'All major villa areas island-wide — Seminyak, Canggu, Ubud, Uluwatu, Sanur, Nusa Dua and more. <a href="/locations">Locations →</a>' },
           { question: 'What services does myCHEF offer in Bali?', answer: 'Private chef, fine dining, catering, weddings, corporate, experiences, in-villa staff and long-term staffing. <a href="/services">Services →</a>' },
           { question: 'Is same-day booking possible?', answer: 'Often outside peak — WhatsApp to check. A few days notice is ideal.' },

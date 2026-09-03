@@ -156,13 +156,20 @@ export const siteFacts = {
  * half-day / full-day / complete-full-day ladder
  * (IDR 2,500,000 / 3,500,000 / 4,200,000 per day), which is retired.
  *
- * The model is now MEAL-COUNT based, not day-part based:
- *   1 meal  (breakfast OR lunch OR dinner) = IDR 1,000,000++ per day
- *   2 meals                                = IDR 1,800,000++ per day
- *   3 meals (breakfast, lunch AND dinner)  = IDR 2,700,000++ per day
+ * Owner ruling 3 Sep 2026 (David): stay chef is a FULL-DAY STAFF MINIMUM.
+ * The bookable stay product is the existing THREE-MEAL day rate only.
+ *   Full day of staff (3 flexible meals) = IDR 2,700,000++ per day
+ *     (IDR 3,267,000 all-in). Chef + assistant, ~10 guests.
+ *   Those three meals are credits: each can be breakfast, lunch or dinner
+ *     (including three breakfasts). Not locked to B+L+D.
+ *   Weekly −10% and monthly −20% apply to that full-day rate only.
+ *
+ * One lunch / dinner / party is CATERING (food included) — not a stay-chef SKU.
+ * Historic 1-meal (IDR 1,000,000++ / IDR 1,210,000) and 2-meal
+ * (IDR 1,800,000++ / IDR 2,178,000) figures stay in this file so numbers
+ * never drift, but they are not sold as stay-chef plans.
  *
  * All figures are ++ (11% government tax + 10% service charge, ×1.21).
- * Weekly (7+ days) = −10%. Monthly (28+ days) = −20%.
  * Groceries are billed separately at cost with receipts, never marked up.
  *
  * Never hardcode these numbers in a component. Import from here.
@@ -198,32 +205,38 @@ export interface MealPlan {
 export const MEAL_PLANS: readonly MealPlan[] = [
   {
     key: 'one-meal',
-    name: 'One Meal a Day',
+    name: 'One Meal',
     meals: 1,
-    summary: 'Your chef cooks and serves one meal each day — you choose which one.',
-    covers: 'Breakfast, lunch or dinner',
+    summary:
+      'Not a stay-chef booking. One lunch, dinner or party is catering — food included.',
+    covers: 'Catering — food included',
     daily: 1_000_000,
-    bestFor: 'Couples and small groups who are out exploring most of the day',
+    bestFor: 'One meal or party — book catering, not a stay chef',
   },
   {
     key: 'two-meals',
-    name: 'Two Meals a Day',
+    name: 'Two Meals',
     meals: 2,
-    summary: 'Two full meals cooked and served daily, in whatever combination suits your schedule.',
-    covers: 'Any two of breakfast, lunch or dinner',
+    summary:
+      'Not a stay-chef product. Stay chef starts at a full day of staff — three flexible meals at the three-meal rate.',
+    covers: 'Not the stay minimum',
     daily: 1_800_000,
-    bestFor: 'Families and groups who eat at the villa most days',
+    bestFor: 'If you want two sittings, you still book the full-day stay chef',
   },
   {
     key: 'three-meals',
-    name: 'Three Meals a Day',
+    name: 'Full-day stay chef',
     meals: 3,
-    summary: 'Breakfast, lunch and dinner — every meal of your stay handled.',
-    covers: 'Breakfast, lunch and dinner',
+    summary:
+      'A full day of staff. You get three meals; use each as breakfast, lunch or dinner however you want — including three breakfasts.',
+    covers: 'Three flexible meals — breakfast, lunch or dinner as you choose',
     daily: 2_700_000,
-    bestFor: 'Long stays, retreats, and anyone who wants to stop thinking about food',
+    bestFor: 'Villa stays. We inspect the kitchen first so it meets our standard.',
   },
 ] as const
+
+/** The only bookable stay-chef SKU — existing three-meal / full-day rate. */
+export const STAY_CHEF_PLAN: MealPlan = MEAL_PLANS[2]
 
 /** Rounds to the nearest rupiah. All our rates divide cleanly, so no cents appear. */
 const idr = (n: number) => Math.round(n)
@@ -255,27 +268,27 @@ export function formatIDRPlusPlus(value: number): string {
  * Derived, so they can never drift from MEAL_PLANS.
  */
 export const privateChefPricing = {
-  /** Cheapest published private chef day rate, ++. */
-  fromDaily: MEAL_PLANS[0].daily,
-  /** Most expensive standard day rate, ++. */
-  toDaily: MEAL_PLANS[MEAL_PLANS.length - 1].daily,
-  /** Cheapest rate available at all (three meals is never cheapest — one meal, monthly). */
-  lowestAnyRate: planDailyRate(MEAL_PLANS[0], 'monthly'),
-  /** "IDR 1,000,000++" */
-  fromDailyLabel: formatIDRPlusPlus(MEAL_PLANS[0].daily),
-  /** "IDR 1M++" — for meta descriptions where characters are scarce. */
-  fromDailyShort: 'IDR 1M++',
+  /** Stay-chef published day rate, ++ (full day of staff). */
+  fromDaily: STAY_CHEF_PLAN.daily,
+  /** Same as fromDaily — stay chef has one published day rate. */
+  toDaily: STAY_CHEF_PLAN.daily,
+  /** Cheapest stay-chef rate (full-day, monthly). */
+  lowestAnyRate: planDailyRate(STAY_CHEF_PLAN, 'monthly'),
+  /** "IDR 2,700,000++" */
+  fromDailyLabel: formatIDRPlusPlus(STAY_CHEF_PLAN.daily),
+  /** "IDR 2.7M++" — for meta descriptions where characters are scarce. */
+  fromDailyShort: 'IDR 2.7M++',
   /** Standard sentence used across the site. Keep wording identical everywhere. */
   headline:
-    'From IDR 1,000,000++ per day for one meal, IDR 1,800,000++ for two, IDR 2,700,000++ for three.',
+    'Stay chef starts at a full day of staff: IDR 2,700,000++ per day (IDR 3,267,000 all-in) for chef + assistant, about 10 guests. Three meals — each breakfast, lunch or dinner as you choose. One lunch, dinner or party is catering.',
   /** The qualifier that must accompany every published rate. */
   qualifier:
-    'Per day, ++ (11% government tax + 10% service charge). Groceries billed separately at cost with receipts. Weekly rate 10% off, monthly rate 20% off.',
+    'Per day, ++ (11% government tax + 10% service charge). Groceries billed separately at cost with receipts. Weekly −10% and monthly −20% on the full-day rate only.',
   /** Short qualifier for cards and strips. */
-  qualifierShort: 'Per day ++ · groceries at cost · weekly −10% · monthly −20%',
+  qualifierShort: 'Full-day ++ · groceries at cost · weekly −10% · monthly −20%',
   /** Worked example proving the ++ maths, reused in FAQs. */
   taxExample:
-    'IDR 1,000,000++ is IDR 1,210,000 all-in — 11% government tax and 10% service charge added to the listed price.',
+    'IDR 2,700,000++ is IDR 3,267,000 all-in — 11% government tax and 10% service charge added to the listed price.',
 } as const
 
 export default siteFacts

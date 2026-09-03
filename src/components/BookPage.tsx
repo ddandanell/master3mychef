@@ -84,7 +84,7 @@ export default function BookPage() {
           { question: 'Catering booking?', answer: '<a href="/catering">Catering hub</a>.' },
           { question: 'Events and weddings?', answer: '<a href="/events">Events</a> · <a href="/events/weddings">weddings</a>.' },
           { question: 'Staff only?', answer: '<a href="/in-villa-service">In-villa service</a> · <a href="/staffing">staffing</a>.' },
-          { question: 'Daily chef rates?', answer: 'From IDR 1M++/day — <a href="/private-chef-bali">private chef Bali</a>.' },
+          { question: 'Daily chef rates?', answer: 'Stay chef is a full day of staff from IDR 2.7M++/day — <a href="/private-chef-bali">private chef Bali</a>.' },
           { question: 'Payment methods?', answer: 'Bank transfer and cards as invoiced.' },
           { question: 'Response time?', answer: 'Usually within 2 hours on WhatsApp.' },
           { question: 'Business hours?', answer: 'Typically 08:00–22:00 WITA.' },

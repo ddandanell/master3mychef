@@ -96,7 +96,7 @@ export default function HouseholdChefBaliGuidePage() {
       heroImageAlt="Household chef preparing a family meal in a Bali villa kitchen"
       ogImage="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=80"
       keywords={['household chef bali', 'personal chef bali', 'bali household chef hire', 'private chef bali monthly', 'expat chef bali']}
-      highlights={['Monthly Arrangements', 'Groceries at Cost', 'All Bali Areas', 'From IDR 1,000,000++/day']}
+      highlights={['Monthly Arrangements', 'Groceries at Cost', 'All Bali Areas', 'From IDR 2,700,000++/day']}
       sections={SECTIONS}
       faqs={FAQS}
       relatedPages={[

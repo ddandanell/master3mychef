@@ -11,8 +11,8 @@ const PRICING_TABLE = [
   {
     service: 'Daily Villa Chef Hire',
     guests: '2–10 guests',
-    priceRange: 'IDR 1,000,000++ – 2,700,000++ / day',
-    includes: 'Chef + assistant working as a pair, equipment, service. Groceries billed separately at cost with receipts. Weekly rate 10% off, monthly rate 20% off the daily rate.',
+    priceRange: 'IDR 2,700,000++ / day',
+    includes: 'Full-day staff: chef + assistant, three flexible meals (each breakfast, lunch or dinner as you choose). Groceries billed separately at cost with receipts. Weekly rate 10% off, monthly rate 20% off the full-day rate only. One meal is catering.',
   },
   {
     service: 'Private Dinner Experience',
@@ -62,14 +62,14 @@ const WHAT_AFFECTS_PRICE = [
 ]
 
 const FAQS = [
-  { q: 'How much is a private chef in Bali per day?', a: 'Daily private chef rates are published by meal count with weekly/monthly discounts — typically from <strong>IDR 1,000,000++</strong> for one meal (chef + assistant), higher for two- and three-meal days. <a href="/private-chef-bali">Private chef Bali</a> · <a href="/pricing">Pricing</a>.' },
+  { q: 'How much is a private chef in Bali per day?', a: 'Stay chef is a full day of staff at <strong>IDR 2,700,000++</strong> (IDR 3,267,000 all-in) for chef + assistant, about 10 guests. Three meals, each breakfast, lunch or dinner as you choose. One meal is catering. <a href="/private-chef-bali">Private chef Bali</a> · <a href="/pricing">Pricing</a>.' },
   { q: 'Are myCHEF chefs HACCP-certified?', a: 'Yes. Culinary teams are HACCP-certified for professional food safety — temperature control, allergen handling and clean kitchen standards on every booking.' },
   { q: 'Are groceries included?', a: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
   { q: 'What is Chef Rotation?', a: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
   { q: 'Can the chef cook in our villa kitchen?', a: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
   { q: 'Is this cheaper than restaurants for groups?', a: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
   { q: 'Can I request a specific chef?', a: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
-  { q: 'Fine dining vs daily chef?', a: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { q: 'Fine dining vs daily chef?', a: 'Fine dining is multi-course event pricing; daily chef is a full-day staff stay rate. One meal is catering. <a href="/fine-dining">Fine dining</a>.' },
   { q: 'Do you cover my area?', a: 'Island-wide. <a href="/locations">Locations</a>.' },
   { q: 'Kids menus with daily chef?', a: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
   { q: 'Live-in vs daily chef?', a: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },
@@ -155,10 +155,10 @@ export default function PrivateChefCostBaliPageBlog() {
             How Much Does a Private Chef in Bali Cost?
           </h1>
           <p className="text-base md:text-lg text-white/90 max-w-2xl leading-relaxed border border-white/15 bg-white/5 rounded-xl px-4 py-3 mb-4">
-            <strong className="text-white">Short answer:</strong> private chef day rates start around <strong className="text-[#C5A028]">IDR 1M++</strong> (one meal, chef + assistant); fine dining and events are per-person. Groceries at cost with receipts. HACCP-certified teams. Full tables below and on <Link to="/pricing" className="text-[#C5A028] hover:underline">pricing</Link>.
+            <strong className="text-white">Short answer:</strong> stay chef is a full day of staff at <strong className="text-[#C5A028]">IDR 2,700,000++</strong> (IDR 3,267,000 all-in) — three meals, each breakfast, lunch or dinner as you choose. One meal is catering (food included). Fine dining and events are per-person. Groceries at cost with receipts on stay hire. HACCP-certified teams. Full tables below and on <Link to="/pricing" className="text-[#C5A028] hover:underline">pricing</Link>.
           </p>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
-            Real 2026 pricing from IDR 1,000,000++ per day for a daily villa chef to IDR 20,000,000+ for large events and weddings. What is included, what affects the price, and how to get your quote.
+            Real 2026 pricing from IDR 2,700,000++ per day for a stay chef (full day of staff) to IDR 20,000,000+ for large events and weddings. What is included, what affects the price, and how to get your quote.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -193,8 +193,8 @@ export default function PrivateChefCostBaliPageBlog() {
           <h2 className="text-xl font-semibold mb-4">2026 Private Chef Cost Summary — Bali</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white/10 rounded p-4">
-              <div className="text-xl font-bold">From IDR 1M++ /day</div>
-              <div className="text-white/80 text-sm mt-1">Daily villa chef + assistant pair (half day; weekly −10%, monthly −20%)</div>
+              <div className="text-xl font-bold">IDR 2.7M++ /day</div>
+              <div className="text-white/80 text-sm mt-1">Full-day stay chef + assistant (three flexible meals; weekly −10%, monthly −20%)</div>
             </div>
             <div className="bg-white/10 rounded p-4">
               <div className="text-xl font-bold">IDR 1.5M – 5M</div>

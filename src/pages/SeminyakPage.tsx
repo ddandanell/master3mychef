@@ -73,9 +73,9 @@ const SERVICES = [
   },
   {
     name: 'Weekly private chef',
-    range: 'From IDR 1M++ / day',
+    range: 'From IDR 2.7M++ / day',
     for: '7+ day stays',
-    detail: 'A dedicated chef for multi-day stays — meal plans on private chef Bali.',
+    detail: 'A dedicated chef for multi-day stays — full-day staff, three flexible meals.',
   },
 ]
 

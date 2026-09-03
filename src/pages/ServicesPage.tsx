@@ -110,7 +110,7 @@ const FAQS = [
   },
   {
     q: 'Which service is right for a family villa week?',
-    a: 'Daily <a href="/private-chef-bali">private chef</a> meal plans, optionally plus one BBQ or fine dining night. Kids: <a href="/kids-menus">kids menus</a>.',
+    a: 'Daily <a href="/private-chef-bali">private chef</a> for a stay — full-day staff, three flexible meals — optionally plus one BBQ or fine dining night. One meal is catering. Kids: <a href="/kids-menus">kids menus</a>.',
   },
   {
     q: 'Which service is right for a wedding?',

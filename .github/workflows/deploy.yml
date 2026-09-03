@@ -1,5 +1,7 @@
 name: Build, Prerender & Deploy (Vercel prebuilt)
 
+# Empty commits do not run this workflow (paths-ignore sees no files).
+
 # Why this exists:
 #   This is a Vite SPA. Vercel's own build container cannot run headless Chromium,
 #   so the Playwright prerender (scripts/prerender.ts) is skipped there and the site

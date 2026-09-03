@@ -145,7 +145,7 @@ const FAQS = [
   },
   {
     question: 'Can you support multi-day family villa stays?',
-    answer: 'Yes — meal plans from one to three meals per day with weekly/monthly discounts. <a href="/private-chef-bali">Private chef Bali →</a>',
+    answer: 'Yes — stay chef is a full day of staff with three flexible meals and weekly/monthly discounts. One meal is catering. <a href="/private-chef-bali">Private chef Bali →</a>',
   },
   {
     question: 'Do you cater weddings and corporate retreats?',

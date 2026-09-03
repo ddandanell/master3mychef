@@ -29,7 +29,7 @@ const CONFIG = {
       { name: 'checkout', label: 'Check-out Date', type: 'date', icon: 'Calendar' },
       { name: 'guests', label: 'Number of Guests', type: 'number', icon: 'Users', placeholder: 'e.g. 6' },
       { name: 'villa', label: 'Villa Location', type: 'text', icon: 'MapPin', placeholder: 'Seminyak, Canggu, Ubud...' },
-      { name: 'meals', label: 'Meal Plan', type: 'select', icon: 'Utensils', options: ['One Meal a Day (breakfast, lunch or dinner)', 'Two Meals a Day', 'Three Meals a Day', 'Not sure yet'] },
+      { name: 'meals', label: 'Meal Plan', type: 'select', icon: 'Utensils', options: ['Full-day stay chef (three meals — breakfast, lunch or dinner as we choose)', 'One meal / party — catering (food included)', 'Not sure yet'] },
     ],
     whatsappNumber: 6289674072020,
   },

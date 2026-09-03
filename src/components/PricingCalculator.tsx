@@ -3,7 +3,7 @@ import { Calculator, ChevronDown, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { Link } from 'react-router-dom'
-import { MEAL_PLANS, STAY_DISCOUNTS, formatIDR } from '@/data/siteFacts'
+import { STAY_CHEF_PLAN, STAY_DISCOUNTS, formatIDR } from '@/data/siteFacts'
 
 type ServiceType = 'private-chef-dinner' | 'catering-event' | 'fine-dining-experience' | 'staffing'
 type GuestRange = '2-4' | '5-10' | '11-20' | '20+'
@@ -386,16 +386,10 @@ export default function PricingCalculator({
             <div className="mt-4 rounded-2xl border border-[#C5A028]/30 bg-[#C5A028]/10 p-4">
               <p className="text-sm font-semibold text-[#C5A028]">Renting a chef for several days?</p>
               <p className="mt-1 text-sm leading-relaxed text-white/[75%]">
-                Priced per day, not per guest:{' '}
-                {MEAL_PLANS.map((plan, i) => (
-                  <span key={plan.key}>
-                    {i > 0 ? ' · ' : ''}
-                    {plan.meals} {plan.meals === 1 ? 'meal' : 'meals'}{' '}
-                    <strong className="text-white">{formatIDR(plan.daily)}++</strong>
-                  </span>
-                ))}
-                . Weekly −{STAY_DISCOUNTS.weekly.off * 100}%, monthly −
-                {STAY_DISCOUNTS.monthly.off * 100}%.
+                Priced per day, not per guest: full-day stay chef{' '}
+                <strong className="text-white">{formatIDR(STAY_CHEF_PLAN.daily)}++</strong> (three
+                flexible meals). Weekly −{STAY_DISCOUNTS.weekly.off * 100}%, monthly −
+                {STAY_DISCOUNTS.monthly.off * 100}% on that full-day rate only. One meal is catering.
               </p>
               <Link
                 to="/private-chef-bali#prices"

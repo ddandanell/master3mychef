@@ -5,13 +5,11 @@
  * old /villa-chef page (301) and is the single place where private chef day
  * rates are published.
  *
- * Pricing rule: every number on this page comes from MEAL_PLANS in
- * src/data/siteFacts.ts. Do not hardcode a rate here — if a price changes,
- * it changes in siteFacts and this page follows.
+ * Pricing rule: stay-chef numbers come from STAY_CHEF_PLAN in
+ * src/data/siteFacts.ts (the existing three-meal / full-day rate).
+ * Do not hardcode a rate here — if a price changes, it changes in siteFacts.
  *
- * Deliberately has NO calculator. Owner decision 2026-07-30: the three rates
- * are simple enough to read directly, and the two calculators on the site
- * disagreed with each other and with the published table.
+ * Owner ruling 3 Sep 2026: stay chef is a full-day staff minimum. One meal is catering.
  */
 
 import { Link } from 'react-router-dom'
@@ -41,7 +39,7 @@ import StickyMobileCTA from '@/components/shared/StickyMobileCTA'
 import { getPageMeta } from '@/data/page-meta'
 import { PUBLISHED_AREA_SLUGS } from '@/data/privateChefAreas'
 import {
-  MEAL_PLANS,
+  STAY_CHEF_PLAN,
   STAY_DISCOUNTS,
   formatIDR,
   formatIDRPlusPlus,
@@ -61,7 +59,7 @@ const WA = buildWhatsAppUrl({
   date: 'not sure yet',
   guests: 'not sure yet',
   area: 'not sure yet',
-  extraContext: 'Meals per day: not sure yet (1, 2 or 3).',
+  extraContext: 'Full-day stay chef — three flexible meals (breakfast, lunch or dinner as we choose).',
 })
 
 const waForPlan = (planName: string) =>
@@ -223,20 +221,20 @@ const HOW_IT_WORKS = [
   },
   {
     step: '02',
-    title: 'Pick your meals and your chef',
-    desc: 'One, two or three meals a day. Tell us the cuisine you want and we match the head chef who specialises in it.',
-    icon: ChefHat,
+    title: 'We inspect the villa kitchen',
+    desc: 'A stay chef needs a villa inspection and a full kitchen walkthrough to our standard. That setup is not done for one meal — one lunch, dinner or party is catering.',
+    icon: MapPin,
   },
   {
     step: '03',
-    title: 'We shop and cook, every day',
-    desc: 'Your chef and assistant arrive, cook fresh from that morning’s market run, and serve at the table.',
-    icon: ShoppingBasket,
+    title: 'Place your three meals',
+    desc: 'You buy a full day of staff. Use each of the three meals as breakfast, lunch or dinner however you want — including three breakfasts.',
+    icon: ChefHat,
   },
   {
     step: '04',
-    title: 'You eat. We clean and leave.',
-    desc: 'Kitchen spotless, dishes done. No planning, no supermarket trips, no washing up for the whole stay.',
+    title: 'We shop, cook, serve and leave',
+    desc: 'We arrive with the team, not a full catering kit. Groceries at cost with receipts. Kitchen spotless after every meal.',
     icon: Sparkles,
   },
 ] as const
@@ -305,7 +303,7 @@ const CROSS_SELL = [
   {
     title: 'Daily private chef',
     href: '/private-chef-bali#prices',
-    desc: '1–3 meals per day at published day rates — the stay backbone.',
+    desc: 'Full-day staff minimum — three flexible meals at the published stay rate.',
   },
   {
     title: 'Event catering',
@@ -347,7 +345,7 @@ const areaLabel = (slug: string) =>
 const FAQS = [
   {
     q: 'How do I hire a private chef in Bali?',
-    a: 'Message myCHEF on WhatsApp with dates, villa or Airbnb location, guest count and meals per day. We reply within two hours with an available chef, sample menu and all-in total. A 50% deposit confirms. Start on this page’s rates or <a href="/book">book</a>.',
+    a: 'Message myCHEF on WhatsApp with dates, villa or Airbnb location, guest count and that you want a stay chef. Stay chef starts at a full day of staff. We reply within two hours with an available chef, sample menu and all-in total. A 50% deposit confirms. One lunch, dinner or party is <a href="/catering">catering</a>.',
   },
   {
     q: 'What is a private chef in Bali?',
@@ -355,27 +353,27 @@ const FAQS = [
   },
   {
     q: 'Can I hire a private chef for a Bali villa with a cook / Airbnb stay?',
-    a: 'Yes. Most bookings are for short-stay villas and Airbnbs (you do not need to own the property). Share the listing link so we plan kitchen access. Multi-day stays use the meal-count day rates on this page; larger parties can add <a href="/catering">catering</a>.',
+    a: 'Yes. Most bookings are for short-stay villas and Airbnbs (you do not need to own the property). Share the listing link so we can inspect the kitchen. Stay chef is a full day of staff; larger parties and one meal can add <a href="/catering">catering</a>.',
   },
   {
     q: 'How much does a private chef cost in Bali?',
-    a: `${privateChefPricing.headline} That is a day rate for one professional chef plus a dedicated assistant at your villa — not a per-person marketplace fee. Weekly bookings take ${STAY_DISCOUNTS.weekly.off * 100}% off; monthly take ${STAY_DISCOUNTS.monthly.off * 100}% off. Groceries are billed separately at cost with receipts. See the full table on our <a href="/pricing">pricing page</a> or this page’s <a href="#prices">meal plans</a>.`,
+    a: `${privateChefPricing.headline} That is a day rate for one professional chef plus a dedicated assistant at your villa — not a per-person marketplace fee. Weekly bookings take ${STAY_DISCOUNTS.weekly.off * 100}% off the full-day rate; monthly take ${STAY_DISCOUNTS.monthly.off * 100}% off. Groceries are billed separately at cost with receipts. See this page’s <a href="#prices">full-day rate</a> or the <a href="/pricing">pricing page</a>.`,
   },
   {
     q: 'How much does it cost to hire a private chef in Bali per day?',
-    a: 'Daily villa chef hire (chef + assistant) is published as three plans: one meal from IDR 1,000,000++/day (IDR 1,210,000 all-in), two meals IDR 1,800,000++/day (IDR 2,178,000 all-in), three meals IDR 2,700,000++/day (IDR 3,267,000 all-in). Groceries are at cost with receipts. See <a href="#prices">meal plans</a>.',
+    a: 'Stay chef starts at a full day of staff: IDR 2,700,000++/day (IDR 3,267,000 all-in) for chef + assistant, about 10 guests. You get three meals; assign each as breakfast, lunch or dinner however you want. Groceries at cost with receipts. Weekly −10% and monthly −20% on that full-day rate only. One lunch, dinner or party is <a href="/catering">catering</a>.',
   },
   {
     q: 'How much does a private chef cost in Bali for a couple?',
-    a: 'For two people, most bookings use One Meal a Day at IDR 1,000,000++ (IDR 1,210,000 all-in) for dinner, or Two Meals if you want breakfast plus dinner. That is a luxury choice versus a restaurant for couples — published rates let you decide before you message. Groceries are extra at cost. Compare romantic formats on <a href="/fine-dining/romantic-dinner">romantic dinner</a>.',
+    a: 'One dinner for two is <a href="/catering">catering</a> (food included) — not a stay-chef booking. Stay chef is a full day of staff at IDR 2,700,000++ (IDR 3,267,000 all-in), with three meals you place as breakfast, lunch or dinner as you like. Groceries extra at cost. Compare romantic formats on <a href="/fine-dining/romantic-dinner">romantic dinner</a>.',
   },
   {
     q: 'How much does a private chef cost in Bali for a family of 6?',
-    a: 'Six people on Two Meals a Day is IDR 1,800,000++ for the chef team (about IDR 300,000 each before food), or IDR 1,620,000++ per day at the weekly rate for 7+ days. All-in chef team for a week of two meals is roughly IDR 13.7M before groceries. Worked example is on this page; full maths: <a href="/blog/private-chef-cost-bali">private chef cost guide</a>.',
+    a: 'Six people on a full day of staff is IDR 2,700,000++ for the chef team (about IDR 450,000 each before food), or IDR 2,430,000++ per day at the weekly rate for 7+ days. Groceries extra at cost. Worked example is on this page; full maths: <a href="/blog/private-chef-cost-bali">private chef cost guide</a>.',
   },
   {
     q: 'What is included in the private chef day rate?',
-    a: 'Chef + dedicated assistant, menu planning around your tastes and allergies, grocery sourcing and market runs, cooking, plating, table service, and full kitchen cleanup after every meal. Alcohol, premium ingredients (lobster, imported wagyu) and tax/service (++) sit outside the day rate and are quoted before you confirm. Compare formats on <a href="/private-chef-bali#prices">meal plans</a>.',
+    a: 'Chef + dedicated assistant, menu planning around your tastes and allergies, grocery sourcing and market runs, cooking, plating, table service, and full kitchen cleanup after every meal. Alcohol, premium ingredients (lobster, imported wagyu) and tax/service (++) sit outside the day rate and are quoted before you confirm. Stay rate on <a href="/private-chef-bali#prices">prices</a>. One meal is <a href="/catering">catering</a>.',
   },
   {
     q: 'Are groceries included when I hire a private chef in Bali?',
@@ -387,7 +385,7 @@ const FAQS = [
   },
   {
     q: 'How do I hire a private chef for my Bali villa?',
-    a: 'Message us on WhatsApp with your villa area, dates, guest count and how many meals per day you want. We reply within two hours with an available head chef, a sample menu and the all-in total. A 50% deposit confirms the dates. You do not need to own the villa — most guests are renting Airbnbs or villa complexes. Start on <a href="/book">book</a> or <a href="/quote">request a quote</a>.',
+    a: 'Message us on WhatsApp with your villa area, dates, guest count and that you want a stay chef. Stay chef starts at a full day of staff — three meals you place as breakfast, lunch or dinner. We reply within two hours with an available head chef, a sample menu and the all-in total. A 50% deposit confirms the dates. You do not need to own the villa. One meal is <a href="/catering">catering</a>. Start on <a href="/book">book</a> or <a href="/quote">request a quote</a>.',
   },
   {
     q: 'Can a private chef cook in our villa kitchen in Bali?',
@@ -407,7 +405,7 @@ const FAQS = [
   },
   {
     q: 'Is one meal breakfast, lunch or dinner?',
-    a: 'Whichever you want, and you can change it day to day. Most guests take dinner. Families often take breakfast + dinner and eat out at lunch. The One / Two / Three Meals plans are meal-count based, not day-part locked — details under <a href="#prices">prices</a>.',
+    a: 'You buy a full day of staff — three meals — and assign each as breakfast, lunch or dinner however you want, including three breakfasts. The meals are flexible credits, not locked to breakfast + lunch + dinner. One lunch, dinner or party on its own is <a href="/catering">catering</a> (food included). Details under <a href="#prices">prices</a>.',
   },
   {
     q: 'Can I choose the cuisine and a specific chef?',
@@ -427,7 +425,7 @@ const FAQS = [
   },
   {
     q: 'Can I book a last-minute private chef in Bali?',
-    a: 'Often yes for one or two meals if a chef is free in your area. Large multi-day programmes and peak-season dates need more notice. For event-scale last-minute food without full service, <a href="/catering/drop-off-catering">drop-off catering</a> can be a faster backup.',
+    a: 'Often yes for catering if a chef is free in your area. Stay chef needs a villa and kitchen inspection first, so it is not a same-day one-meal product. Large multi-day programmes and peak-season dates need more notice. For event-scale last-minute food without full stay service, <a href="/catering/drop-off-catering">drop-off catering</a> can be a faster backup.',
   },
   {
     q: 'What deposit do you require and when is the balance due?',
@@ -443,7 +441,7 @@ const FAQS = [
   },
   {
     q: 'Is hiring a private chef cheaper than restaurants in Bali?',
-    a: 'For couples on one dinner, it is a luxury choice rather than a pure saving. For groups of six or more on two meals a day, the day rate split per person is often less than one mid-range Seminyak dinner — plus no taxis, no tables, no “what shall we eat” debate. Worked example above on this page; full maths on <a href="/blog/private-chef-cost-bali">private chef cost guide</a>.',
+    a: 'One dinner for a couple is <a href="/catering">catering</a> (food included) — a luxury choice rather than a pure saving. For groups of six or more on a full day of staff, the day rate split per person is often less than one mid-range Seminyak dinner — plus no taxis, no tables, no “what shall we eat” debate. Worked example above on this page; full maths on <a href="/blog/private-chef-cost-bali">private chef cost guide</a>.',
   },
   {
     q: 'What if our chef cannot make it on the day?',
@@ -455,7 +453,7 @@ const FAQS = [
   },
   {
     q: 'When does the chef arrive and how long do they stay?',
-    a: 'For a single dinner, expect arrival about 2–3 hours before service. For multi-meal days the team works to your schedule — breakfast prep can start early, dinner service later. After the last plate they clean and leave; they do not sleep at the villa unless you book <a href="/staffing/live-in-chef">live-in chef</a> placement.',
+    a: 'For a single dinner, that is <a href="/catering">catering</a> — expect arrival about 2–3 hours before service. For a stay chef full day the team works to your three meals — breakfast prep can start early, dinner service later. After the last plate they clean and leave; they do not sleep at the villa unless you book <a href="/staffing/live-in-chef">live-in chef</a> placement.',
   },
   {
     q: 'Can you handle BBQ nights and open-flame cooking at the villa?',
@@ -463,7 +461,7 @@ const FAQS = [
   },
   {
     q: 'What is the difference between a daily private chef and fine dining in Bali?',
-    a: 'Daily private chef is a meal-count day rate (from IDR 1,000,000++/day) with groceries at cost — ideal for stays. Fine dining is a multi-course tasting experience with a larger brigade and all ingredients included in the per-person price. See <a href="/fine-dining">fine dining</a> and <a href="/fine-dining/tasting-menu">tasting menus</a>.',
+    a: 'Daily private chef is a full day of staff at IDR 2,700,000++/day (IDR 3,267,000 all-in) with groceries at cost — three flexible meals for a stay. Fine dining is a multi-course tasting experience with a larger brigade and all ingredients included in the per-person price. See <a href="/fine-dining">fine dining</a> and <a href="/fine-dining/tasting-menu">tasting menus</a>.',
   },
   {
     q: 'Can I hire a private chef for a wedding or large event in Bali?',
@@ -512,7 +510,7 @@ const FAQS = [
   },
   {
     q: 'What is the difference between a personal chef and a private chef?',
-    a: 'People use both terms loosely. On this site: a private chef booking is often one occasion or a short stay; a personal / daily chef arrangement covers recurring meals across days or weeks (our meal-count day rates). Both are available. <a href="/private-chef-bali">Daily plans →</a> · <a href="/fine-dining">Occasion fine dining →</a>',
+    a: 'People use both terms loosely. On this site: a stay chef is a full day of staff with three flexible meals; one occasion dinner is <a href="/catering">catering</a> or <a href="/fine-dining">fine dining</a>. Both are available. <a href="/private-chef-bali">Stay chef →</a>',
   },
   {
     q: 'Is hiring a private chef worth it in Bali?',
@@ -520,7 +518,7 @@ const FAQS = [
   },
   {
     q: 'Can I hire a private chef for my villa in Bali?',
-    a: 'Yes. Message WhatsApp with date, area, guest count and whether you want one dinner or multi-meal days. We reply within about two hours with availability and a clear quote. <a href="/book">Book →</a> · <a href="/quote">Quote →</a>',
+    a: 'Yes. Message WhatsApp with date, area, guest count and whether you want a stay chef (full day of staff) or one dinner. One dinner is catering. We reply within about two hours with availability and a clear quote. <a href="/book">Book →</a> · <a href="/quote">Quote →</a>',
   },
   {
     q: 'Can I hire a private chef and a bartender together in Bali?',
@@ -539,31 +537,32 @@ export default function PrivateChefPillarPage() {
     serviceWithAggregateOfferSchema({
       name: 'Private Chef Bali',
       description:
-        'Hire a private chef in Bali for your villa. One, two or three meals a day cooked and served by a named head chef and a dedicated assistant. Transparent day rates, groceries at cost.',
+        'Hire a private chef in Bali for a villa stay. Full-day staff minimum — three meals, each breakfast, lunch or dinner as you choose. Chef + assistant, groceries at cost. One meal is catering.',
       url: CANONICAL,
-      lowPrice: String(planDailyRate(MEAL_PLANS[0], 'monthly')),
-      highPrice: String(MEAL_PLANS[MEAL_PLANS.length - 1].daily),
+      lowPrice: String(planDailyRate(STAY_CHEF_PLAN, 'monthly')),
+      highPrice: String(STAY_CHEF_PLAN.daily),
       priceCurrency: 'IDR',
       unitText: 'per day',
     }),
-    // Each meal plan as its own Offer, so the three rates are individually
-    // machine-readable rather than collapsing into a single price range.
+    // Stay chef is one Offer: full-day staff at the three-meal rate.
     {
       '@context': 'https://schema.org',
       '@type': 'OfferCatalog',
-      name: 'Private chef meal plans in Bali',
+      name: 'Private chef stay rates in Bali',
       url: `${CANONICAL}#prices`,
-      itemListElement: MEAL_PLANS.map((plan, i) => ({
-        '@type': 'Offer',
-        position: i + 1,
-        name: plan.name,
-        description: plan.summary,
-        price: String(plan.daily),
-        priceCurrency: 'IDR',
-        url: `${CANONICAL}#prices`,
-        availability: 'https://schema.org/InStock',
-        eligibleQuantity: { '@type': 'QuantitativeValue', unitText: 'per day' },
-      })),
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          position: 1,
+          name: STAY_CHEF_PLAN.name,
+          description: STAY_CHEF_PLAN.summary,
+          price: String(STAY_CHEF_PLAN.daily),
+          priceCurrency: 'IDR',
+          url: `${CANONICAL}#prices`,
+          availability: 'https://schema.org/InStock',
+          eligibleQuantity: { '@type': 'QuantitativeValue', unitText: 'per day' },
+        },
+      ],
     },
     howToSchema({
       name: 'How to hire a private chef in Bali',
@@ -592,10 +591,10 @@ export default function PrivateChefPillarPage() {
   return (
     <>
       <SeoHead
-        title={meta?.title ?? 'Private Chef Bali | Prices From IDR 1,000,000++ Per Day | myCHEF'}
+        title={meta?.title ?? 'Private Chef Bali | Full-Day Villa Chef from IDR 2.7M++ | myCHEF'}
         description={
           meta?.description ??
-          'Hire a private chef in Bali. One meal IDR 1M++, two meals IDR 1.8M++, three meals IDR 2.7M++ per day. Chef + assistant, groceries at cost. WhatsApp myCHEF.'
+          'Stay chef in Bali starts at a full day of staff: IDR 2,700,000++ (IDR 3,267,000 all-in). Three meals as breakfast, lunch or dinner as you choose. One meal is catering.'
         }
         canonical={CANONICAL}
         ogImage={`${SITE}/generated/pcb-story-03-restaurant-service.webp`}
@@ -630,17 +629,22 @@ export default function PrivateChefPillarPage() {
           </h1>
           {/* Price kept outside H1 so crawlers never see “BaliFrom …” concatenation. */}
           <p className="text-[#C5A028] italic font-playfair text-2xl sm:text-3xl mt-3 max-w-4xl">
-            From {formatIDR(MEAL_PLANS[0].daily)}++ a day ({formatIDR(Math.round(MEAL_PLANS[0].daily * 1.21))} all-in)
+            Full-day staff from {formatIDR(STAY_CHEF_PLAN.daily)}++ a day (
+            {formatIDR(planDailyRateAllIn(STAY_CHEF_PLAN, 'daily'))} all-in)
           </p>
           <p className="text-white/70 text-sm sm:text-base mt-2 max-w-2xl">
-            Published day rates — hire a private chef in Bali without waiting for a quote.
+            Stay chef for a villa or Airbnb — three meals, used as breakfast, lunch or dinner as you choose.
           </p>
 
           <p className="text-white/75 text-base sm:text-lg max-w-2xl mt-6 leading-relaxed">
-            Hire a private chef Bali team for your villa or Airbnb stay: chef + assistant, one meal from{' '}
-            {formatIDR(MEAL_PLANS[0].daily)}++, two meals {formatIDR(MEAL_PLANS[1]?.daily ?? 1_800_000)}++, three meals{' '}
-            {formatIDR(MEAL_PLANS[2]?.daily ?? 2_700_000)}++ per day. Groceries at cost with receipts. WhatsApp for
-            availability — every rate is published below.
+            We come with staff only. Groceries extra at cost with receipts. Because a stay chef needs a villa
+            inspection and a full kitchen walkthrough to our standard, you cannot buy a single meal of private
+            chef. The minimum is one full day of staff at the published three-meal rate. One lunch, dinner or
+            party is{' '}
+            <a href="/catering" className="text-[#C5A028] hover:underline">
+              catering
+            </a>{' '}
+            — food included.
           </p>
           <p className="text-white/70 text-sm sm:text-base mt-4 max-w-2xl leading-relaxed">
             <strong className="text-white">Short answer:</strong> HACCP-certified private chef + assistant, groceries at
@@ -713,77 +717,116 @@ export default function PrivateChefPillarPage() {
             How much does a private chef in Bali cost?
           </h2>
           <p className="text-[#1A1A1A]/65 mt-5 max-w-2xl leading-relaxed">
-            One rate, per day, based on how many meals you want cooked. Most private chef companies
-            in Bali make you send an enquiry to find out what they charge — here is the whole thing.
-            Every rate covers one professional chef plus a dedicated assistant, at your villa, for a
-            full service day.
+            Stay chef starts at a full day of staff — one professional chef plus a dedicated
+            assistant, at your villa. You get three meals; use each as breakfast, lunch or dinner
+            however you want. We inspect the villa and kitchen first so the kitchen meets our
+            standard. We arrive with the team, not a full catering kit. One lunch, dinner or party
+            is catering (food included).
           </p>
 
-          {/* Three plan cards */}
+          {/* Stay product first; one-meal and two-meal are not bookable stay SKUs */}
           <div className="grid gap-5 md:grid-cols-3 mt-12">
-            {MEAL_PLANS.map((plan, i) => (
-              <div
-                key={plan.key}
-                className={`relative border p-7 flex flex-col ${
-                  i === 1
-                    ? 'border-[#C5A028] bg-white shadow-[0_2px_30px_rgba(197,160,40,0.12)]'
-                    : 'border-[#1A1A1A]/12 bg-white'
-                }`}
-              >
-                {i === 1 && (
-                  <span className="absolute -top-3 left-7 bg-[#C5A028] text-[#0E0E0E] text-[10px] font-bold tracking-[0.18em] uppercase px-3 py-1">
-                    Most booked
-                  </span>
-                )}
-
-                <p className="text-[#C5A028] text-[11px] tracking-[0.2em] uppercase">
-                  {plan.meals} {plan.meals === 1 ? 'meal' : 'meals'} a day
+            <div className="relative border border-[#C5A028] bg-white shadow-[0_2px_30px_rgba(197,160,40,0.12)] p-7 flex flex-col">
+              <span className="absolute -top-3 left-7 bg-[#C5A028] text-[#0E0E0E] text-[10px] font-bold tracking-[0.18em] uppercase px-3 py-1">
+                Most booked
+              </span>
+              <p className="text-[#C5A028] text-[11px] tracking-[0.2em] uppercase">Full day of staff</p>
+              <h3 className="text-2xl font-playfair text-[#1A1A1A] mt-2">{STAY_CHEF_PLAN.name}</h3>
+              <p className="text-4xl font-playfair text-[#1A1A1A] mt-6 tabular-nums">
+                {formatIDR(STAY_CHEF_PLAN.daily)}
+                <span className="text-base text-[#1A1A1A]/45 font-normal">++</span>
+              </p>
+              <p className="text-[#1A1A1A]/45 text-sm mt-1">per day</p>
+              <p className="text-[#1A1A1A]/60 text-sm mt-1">
+                {formatIDR(planDailyRateAllIn(STAY_CHEF_PLAN, 'daily'))} all-in
+              </p>
+              <p className="text-[#1A1A1A]/70 text-sm mt-6 leading-relaxed flex-1">
+                {STAY_CHEF_PLAN.summary}
+              </p>
+              <div className="mt-6 pt-5 border-t border-[#1A1A1A]/10 space-y-2 text-sm">
+                <p className="flex gap-2 text-[#1A1A1A]/70">
+                  <Utensils className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  {STAY_CHEF_PLAN.covers}
                 </p>
-                <h3 className="text-2xl font-playfair text-[#1A1A1A] mt-2">{plan.name}</h3>
-
-                <p className="text-4xl font-playfair text-[#1A1A1A] mt-6 tabular-nums">
-                  {formatIDR(plan.daily)}
-                  <span className="text-base text-[#1A1A1A]/45 font-normal">++</span>
+                <p className="flex gap-2 text-[#1A1A1A]/70">
+                  <Check className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  Chef + dedicated assistant · ~10 guests
                 </p>
-                <p className="text-[#1A1A1A]/45 text-sm mt-1">per day</p>
-                <p className="text-[#1A1A1A]/60 text-sm mt-1">
-                  {formatIDR(Math.round(plan.daily * 1.21))} all-in
+                <p className="flex gap-2 text-[#1A1A1A]/70">
+                  <Receipt className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  Groceries at cost, receipts given
                 </p>
-
-                <p className="text-[#1A1A1A]/70 text-sm mt-6 leading-relaxed flex-1">
-                  {plan.summary}
-                </p>
-
-                <div className="mt-6 pt-5 border-t border-[#1A1A1A]/10 space-y-2 text-sm">
-                  <p className="flex gap-2 text-[#1A1A1A]/70">
-                    <Utensils className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
-                    {plan.covers}
-                  </p>
-                  <p className="flex gap-2 text-[#1A1A1A]/70">
-                    <Check className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
-                    Chef + dedicated assistant
-                  </p>
-                  <p className="flex gap-2 text-[#1A1A1A]/70">
-                    <Receipt className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
-                    Groceries at cost, receipts given
-                  </p>
-                </div>
-
-                <p className="text-[#1A1A1A]/50 text-xs mt-5 italic">Best for: {plan.bestFor}</p>
-
-                <a
-                  href={waForPlan(plan.name)}
-                  data-source={`private-chef-pillar-plan-${plan.key}`}
-                  className={`mt-6 text-center py-3.5 text-sm font-semibold tracking-wide transition-colors ${
-                    i === 1
-                      ? 'bg-[#C5A028] text-[#0E0E0E] hover:bg-[#d4af37]'
-                      : 'border border-[#1A1A1A]/20 text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white'
-                  }`}
-                >
-                  Check {plan.name} availability
-                </a>
               </div>
-            ))}
+              <p className="text-[#1A1A1A]/50 text-xs mt-5 italic">Best for: {STAY_CHEF_PLAN.bestFor}</p>
+              <a
+                href={waForPlan(STAY_CHEF_PLAN.name)}
+                data-source="private-chef-pillar-plan-three-meals"
+                className="mt-6 text-center py-3.5 text-sm font-semibold tracking-wide bg-[#C5A028] text-[#0E0E0E] hover:bg-[#d4af37] transition-colors"
+              >
+                Check full-day availability
+              </a>
+            </div>
+
+            <div className="relative border border-[#1A1A1A]/12 bg-white p-7 flex flex-col">
+              <p className="text-[#C5A028] text-[11px] tracking-[0.2em] uppercase">One meal / one party</p>
+              <h3 className="text-2xl font-playfair text-[#1A1A1A] mt-2">That is catering</h3>
+              <p className="text-2xl font-playfair text-[#1A1A1A] mt-6">Food included</p>
+              <p className="text-[#1A1A1A]/45 text-sm mt-1">Not a stay-chef booking</p>
+              <p className="text-[#1A1A1A]/70 text-sm mt-6 leading-relaxed flex-1">
+                One lunch, dinner or party is catering. We bring food and kit. Stay chef is staff
+                only, after a villa and kitchen inspection — that setup is not done for one meal.
+              </p>
+              <div className="mt-6 pt-5 border-t border-[#1A1A1A]/10 space-y-2 text-sm">
+                <p className="flex gap-2 text-[#1A1A1A]/70">
+                  <Utensils className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  One lunch, dinner or party
+                </p>
+                <p className="flex gap-2 text-[#1A1A1A]/70">
+                  <Check className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  Groceries included in the catering quote
+                </p>
+              </div>
+              <p className="text-[#1A1A1A]/50 text-xs mt-5 italic">Best for: a single sitting, not a stay</p>
+              <Link
+                to="/catering"
+                className="mt-6 text-center py-3.5 text-sm font-semibold tracking-wide border border-[#1A1A1A]/20 text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white transition-colors"
+              >
+                See catering
+              </Link>
+            </div>
+
+            <div className="relative border border-[#1A1A1A]/12 bg-white p-7 flex flex-col">
+              <p className="text-[#C5A028] text-[11px] tracking-[0.2em] uppercase">Two sittings</p>
+              <h3 className="text-2xl font-playfair text-[#1A1A1A] mt-2">Still a full day</h3>
+              <p className="text-2xl font-playfair text-[#1A1A1A] mt-6">Minimum is three meals</p>
+              <p className="text-[#1A1A1A]/45 text-sm mt-1">
+                At {formatIDRPlusPlus(STAY_CHEF_PLAN.daily)} / {formatIDR(planDailyRateAllIn(STAY_CHEF_PLAN, 'daily'))}{' '}
+                all-in
+              </p>
+              <p className="text-[#1A1A1A]/70 text-sm mt-6 leading-relaxed flex-1">
+                Two meals is not a stay-chef SKU. The minimum is a full day of staff — three
+                flexible meals at the published three-meal rate. Use two of them and keep the third
+                as you like, or assign all three as breakfasts, lunches or dinners.
+              </p>
+              <div className="mt-6 pt-5 border-t border-[#1A1A1A]/10 space-y-2 text-sm">
+                <p className="flex gap-2 text-[#1A1A1A]/70">
+                  <Utensils className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  Three flexible meal credits
+                </p>
+                <p className="flex gap-2 text-[#1A1A1A]/70">
+                  <Check className="w-4 h-4 text-[#C5A028] shrink-0 mt-0.5" />
+                  Weekly −10% and monthly −20% on this full-day rate only
+                </p>
+              </div>
+              <p className="text-[#1A1A1A]/50 text-xs mt-5 italic">Best for: any stay that needs the kitchen to our standard</p>
+              <a
+                href={waForPlan(STAY_CHEF_PLAN.name)}
+                data-source="private-chef-pillar-plan-two-meals-redirect"
+                className="mt-6 text-center py-3.5 text-sm font-semibold tracking-wide border border-[#1A1A1A]/20 text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white transition-colors"
+              >
+                Book the full-day stay chef
+              </a>
+            </div>
           </div>
 
           {/* Length-of-stay table */}
@@ -791,21 +834,21 @@ export default function PrivateChefPillarPage() {
             Staying longer? The day rate drops.
           </h3>
           <p className="text-[#1A1A1A]/60 max-w-2xl text-sm leading-relaxed mb-7">
-            Book seven days or more and every day costs {STAY_DISCOUNTS.weekly.off * 100}% less.
-            Twenty-eight days or more and it drops {STAY_DISCOUNTS.monthly.off * 100}%. The discount
-            applies automatically — you do not have to ask for it.
+            Book seven days or more and every full-day rate costs {STAY_DISCOUNTS.weekly.off * 100}% less.
+            Twenty-eight days or more and it drops {STAY_DISCOUNTS.monthly.off * 100}%. Discounts apply
+            to the full-day stay-chef rate only — automatically, you do not have to ask.
           </p>
 
           <div className="overflow-x-auto -mx-5 sm:mx-0 px-5 sm:px-0">
             <table className="w-full min-w-[620px] border-collapse bg-white border border-[#1A1A1A]/12">
               <caption className="sr-only">
-                Private chef Bali day rates by meal plan and length of stay, in Indonesian rupiah
+                Private chef Bali full-day stay rate by length of stay, in Indonesian rupiah
                 before tax and service charge
               </caption>
               <thead>
                 <tr className="bg-[#1A1A1A] text-white text-left">
                   <th scope="col" className="p-4 text-xs tracking-[0.14em] uppercase font-medium">
-                    Meals per day
+                    Stay chef
                   </th>
                   <th scope="col" className="p-4 text-xs tracking-[0.14em] uppercase font-medium">
                     1–6 days
@@ -819,26 +862,24 @@ export default function PrivateChefPillarPage() {
                 </tr>
               </thead>
               <tbody>
-                {MEAL_PLANS.map((plan) => (
-                  <tr key={plan.key} className="border-t border-[#1A1A1A]/10">
-                    <th scope="row" className="p-4 text-left font-medium text-[#1A1A1A]">
-                      {plan.name}
-                      <span className="block text-[#1A1A1A]/45 text-xs font-normal mt-0.5">
-                        {plan.covers}
+                <tr className="border-t border-[#1A1A1A]/10">
+                  <th scope="row" className="p-4 text-left font-medium text-[#1A1A1A]">
+                    {STAY_CHEF_PLAN.name}
+                    <span className="block text-[#1A1A1A]/45 text-xs font-normal mt-0.5">
+                      {STAY_CHEF_PLAN.covers}
+                    </span>
+                  </th>
+                  {(['daily', 'weekly', 'monthly'] as const).map((stay) => (
+                    <td key={stay} className="p-4 tabular-nums align-top">
+                      <span className="text-[#1A1A1A] font-medium">
+                        {formatIDRPlusPlus(planDailyRate(STAY_CHEF_PLAN, stay))}
                       </span>
-                    </th>
-                    {(['daily', 'weekly', 'monthly'] as const).map((stay) => (
-                      <td key={stay} className="p-4 tabular-nums align-top">
-                        <span className="text-[#1A1A1A] font-medium">
-                          {formatIDRPlusPlus(planDailyRate(plan, stay))}
-                        </span>
-                        <span className="block text-[#1A1A1A]/45 text-xs mt-0.5">
-                          {formatIDR(planDailyRateAllIn(plan, stay))} all-in
-                        </span>
-                      </td>
-                    ))}
-                  </tr>
-                ))}
+                      <span className="block text-[#1A1A1A]/45 text-xs mt-0.5">
+                        {formatIDR(planDailyRateAllIn(STAY_CHEF_PLAN, stay))} all-in
+                      </span>
+                    </td>
+                  ))}
+                </tr>
               </tbody>
             </table>
           </div>
@@ -846,7 +887,11 @@ export default function PrivateChefPillarPage() {
           <p className="text-[#1A1A1A]/55 text-xs sm:text-sm mt-5 leading-relaxed max-w-3xl">
             All rates are per day and cover one chef plus one dedicated assistant.{' '}
             {privateChefPricing.qualifier} A {siteFacts.depositPercent}% deposit confirms your dates;
-            the balance is due {siteFacts.balanceTiming}.
+            the balance is due {siteFacts.balanceTiming}. One lunch, dinner or party is{' '}
+            <Link to="/catering" className="text-[#C5A028] hover:underline">
+              catering
+            </Link>
+            , not a stay-chef row.
           </p>
 
           {/* Grocery cost reality + staffing — guest-facing only */}
@@ -935,7 +980,7 @@ export default function PrivateChefPillarPage() {
             <div>
               <p className="text-white font-playfair text-xl">Ready for a fixed all-in quote?</p>
               <p className="text-white/55 text-sm mt-2 max-w-xl leading-relaxed">
-                Send dates, guest count, villa area and meals per day. Reply within 2 hours. Replacement
+                Send dates, guest count and villa area. Stay chef is a full day of staff. Reply within 2 hours. Replacement
                 chef within 2 hours or 100% refund for that service · 50% deposit only.
               </p>
             </div>
@@ -1313,16 +1358,16 @@ export default function PrivateChefPillarPage() {
           </h2>
           <div className="prose prose-lg mt-7 text-[#1A1A1A]/75 max-w-none space-y-5 leading-relaxed">
             <p>
-              For two people taking one dinner a day, a private chef is a treat rather than a saving
-              — IDR 1,000,000++ plus groceries against a restaurant bill of maybe IDR 600,000. You
-              are paying for the villa setting, the tailored menu and not having to book a car.
+              One dinner for two is catering, not a stay-chef booking. Stay chef is a full day of
+              staff at IDR 2,700,000++ plus groceries — you are paying for the villa kitchen to our
+              standard, the tailored menus, and not having to book a car.
             </p>
             <p>
-              For a group, the maths changes completely. Six people on two meals a day is IDR
-              1,800,000++ for the chef team, which is around IDR 300,000 each for the day before food.
+              For a group, the maths changes completely. Six people on a full day of staff is IDR
+              2,700,000++ for the chef team, which is around IDR 450,000 each for the day before food.
               A single mid-range dinner for six in Seminyak costs more than that, and you still have
-              breakfast to sort out. By the time you are eight or ten people, a chef is comfortably
-              cheaper than eating out and considerably less hassle.
+              breakfast and lunch to sort out. By the time you are eight or ten people, a chef is
+              comfortably cheaper than eating out and considerably less hassle.
             </p>
             <p>
               The other thing worth naming: the marketplace platforms quote per person per event,
@@ -1336,20 +1381,20 @@ export default function PrivateChefPillarPage() {
           <div className="mt-10 border border-[#C5A028]/30 bg-[#FAF8F4] p-7">
             <p className="text-[#1A1A1A] font-medium">Worked example — family of six, seven days</p>
             <p className="text-[#1A1A1A]/70 text-sm mt-3 leading-relaxed">
-              Two meals a day at the weekly rate:{' '}
+              Full-day stay chef at the weekly rate:{' '}
               <strong className="text-[#1A1A1A]">
-                {formatIDRPlusPlus(planDailyRate(MEAL_PLANS[1], 'weekly'))} per day
+                {formatIDRPlusPlus(planDailyRate(STAY_CHEF_PLAN, 'weekly'))} per day
               </strong>{' '}
               ={' '}
               <strong className="text-[#1A1A1A]">
-                {formatIDR(planDailyRate(MEAL_PLANS[1], 'weekly') * 7)}++
+                {formatIDR(planDailyRate(STAY_CHEF_PLAN, 'weekly') * 7)}++
               </strong>{' '}
               for the week, or{' '}
               <strong className="text-[#1A1A1A]">
-                {formatIDR(planDailyRateAllIn(MEAL_PLANS[1], 'weekly') * 7)}
+                {formatIDR(planDailyRateAllIn(STAY_CHEF_PLAN, 'weekly') * 7)}
               </strong>{' '}
               all-in. Groceries on top at cost. That is roughly{' '}
-              {formatIDR(Math.round((planDailyRateAllIn(MEAL_PLANS[1], 'weekly') * 7) / 6 / 7))} per
+              {formatIDR(Math.round((planDailyRateAllIn(STAY_CHEF_PLAN, 'weekly') * 7) / 6 / 7))} per
               person per day for the chef team.
             </p>
           </div>
@@ -1494,7 +1539,7 @@ export default function PrivateChefPillarPage() {
         <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center border border-[#C5A028]/30 bg-[#FAF8F4] p-8 sm:p-10">
           <h2 className="text-2xl sm:text-3xl font-playfair text-[#1A1A1A]">Still deciding?</h2>
           <p className="text-[#1A1A1A]/65 text-sm mt-3 leading-relaxed max-w-xl mx-auto">
-            Send date, guest count, villa area and meals per day — fixed quote within 2 hours.
+            Send date, guest count and villa area — stay chef is a full day of staff. Fixed quote within 2 hours.
             Replacement chef within 2 hours or 100% refund for that service · 50% deposit only.
           </p>
           <a
@@ -1531,9 +1576,10 @@ export default function PrivateChefPillarPage() {
             Hire a private chef for your Bali villa
           </h2>
           <p className="text-white/60 text-center mt-5 max-w-xl mx-auto leading-relaxed">
-            From {formatIDR(MEAL_PLANS[0].daily)}++ a day ({formatIDR(Math.round(MEAL_PLANS[0].daily * 1.21))} all-in) —
-            chef + assistant, groceries at cost with receipts, full cleanup. We reply within two hours
-            with availability and a fixed all-in total.
+            Full-day staff from {formatIDR(STAY_CHEF_PLAN.daily)}++ a day (
+            {formatIDR(planDailyRateAllIn(STAY_CHEF_PLAN, 'daily'))} all-in) — chef + assistant,
+            three flexible meals, groceries at cost with receipts, full cleanup. We reply within two
+            hours with availability and a fixed all-in total.
           </p>
 
           {/*

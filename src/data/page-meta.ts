@@ -137,7 +137,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/private-chef/seminyak',
     title: 'Private Chef in Seminyak, Bali | Hire a Chef for Your Villa',
     description:
-      'Hire a private chef in Seminyak, Bali. Villa dinners, fine dining, catering and events. HACCP-certified chefs from IDR 1M++/day. Fixed quotes via WhatsApp.',
+      'Stay chef in Bali from IDR 2.7M++/day (full day of staff). Villa dinners, fine dining, catering and events. HACCP-certified chefs. Fixed quotes via WhatsApp.',
     canonical: `${SITE}/private-chef/seminyak`,
     h1: 'Private Chef in Seminyak, Bali',
   },
@@ -245,7 +245,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/private-chef/kuta',
     title: 'Private Chef in Kuta, Bali | Villa Dinner & Catering',
     description:
-      'Hire a private chef in Kuta, Bali. Villa dinners, group catering and birthday parties. HACCP chefs from IDR 1M++/day. Transparent quotes — WhatsApp myCHEF.',
+      'Stay chef in Kuta, Bali from IDR 2.7M++/day (full day of staff). Villa dinners, group catering and birthday parties. HACCP chefs. Transparent quotes — WhatsApp myCHEF.',
     canonical: `${SITE}/private-chef/kuta`,
     h1: 'Private Chef in Kuta, Bali',
   },
@@ -866,7 +866,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/blog/private-chef-cost-bali',
     title: 'How Much Does a Private Chef in Bali Cost? (2026 Guide)',
     description:
-      'Private chef costs in Bali from IDR 1M++/day (chef + assistant) to IDR 20M+ events. Real 2026 pricing, inclusions and how to book via WhatsApp myCHEF.',
+      'Stay chef in Bali is a full day of staff from IDR 2.7M++/day (IDR 3,267,000 all-in). One meal is catering. Real 2026 pricing, groceries at cost. WhatsApp myCHEF.',
     canonical: `${SITE}/blog/private-chef-cost-bali`,
     h1: 'How Much Does a Private Chef in Bali Cost?',
   },
@@ -2281,9 +2281,9 @@ export const PAGE_META: Record<string, PageMeta> = {
   // now 301s here. This is the only page that publishes private chef day rates.
   'private-chef-bali': {
     path: '/private-chef-bali',
-    title: 'Private Chef Bali | Villa Chef Hire from IDR 1M++/Day',
+    title: 'Private Chef Bali | Full-Day Villa Chef from IDR 2.7M++',
     description:
-      'Hire a private chef in Bali for your villa or Airbnb: from IDR 1M++/day, groceries at cost, HACCP-certified team. Fixed quote on WhatsApp in 2 hours.',
+      'Stay chef in Bali starts at a full day of staff: IDR 2,700,000++ (IDR 3,267,000 all-in). Three meals, each breakfast, lunch or dinner as you choose. One meal is catering.',
     canonical: `${SITE}/private-chef-bali`,
     h1: 'Private Chef Bali',
     ogImage: `${SITE}/generated/pcb-story-03-restaurant-service.webp`,
@@ -2485,7 +2485,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/pricing',
     title: 'Private Chef Bali Prices | Catering & Event Pricing | myCHEF',
     description:
-      'Bali private chef, catering & event prices: day rates from IDR 1M++, per-guest catering from IDR 700K++. No hidden fees. WhatsApp quote in 1 hour.',
+      'Bali private chef stay rates from IDR 2.7M++ a full day; catering from IDR 700K++ per guest. No hidden fees. WhatsApp quote in 1 hour.',
     canonical: `${SITE}/pricing`,
     h1: 'Private Chef, Catering & Event Pricing in Bali',
     ogImage: `${SITE}/generated/catering-catering-hero-lg.webp`,

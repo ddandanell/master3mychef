@@ -61,9 +61,9 @@ const SERVICES = [
   },
   {
     name: 'Sunrise breakfast & private chef',
-    range: 'From IDR 1M++ / day',
+    range: 'From IDR 2.7M++ / day',
     for: 'Multi-day stays',
-    detail: 'Daily chef meal plans for family holidays — published day rates.',
+    detail: 'Full-day stay chef for family holidays — three flexible meals.',
   },
   {
     name: 'Mobile cocktail bar',

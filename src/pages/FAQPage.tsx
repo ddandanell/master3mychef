@@ -24,7 +24,7 @@ const WHATSAPP_URL = 'https://wa.me/6289674072020'
 const QUICK_FACTS = [
   { label: 'Replies', value: 'Within 2 hours', icon: Clock3 },
   { label: 'Confirmation', value: 'Within 24 hours', icon: MessageCircle },
-  { label: 'Daily chef', value: 'From IDR 1M++/day', icon: Wallet },
+  { label: 'Daily chef', value: 'From IDR 2.7M++/day', icon: Wallet },
   { label: 'Deposit', value: '50% to confirm', icon: Wallet },
   { label: 'WhatsApp', value: '+62 896-7407-2020', icon: MessageCircle },
 ]
@@ -38,7 +38,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
     items: [
       {
         q: 'How much does a private chef in Bali cost?',
-        a: 'Daily villa chef hire starts at <strong>IDR 1,000,000++ per day</strong> for one meal (chef + assistant). Two meals: IDR 1,800,000++/day. Three meals: IDR 2,700,000++/day. Weekly −10%, monthly −20%. Event catering dinners typically from IDR 700K/person ++; fine dining tasting menus are quoted per person with ingredients included. <a href="/private-chef-bali">Private chef prices →</a> · <a href="/pricing">full price tables →</a>',
+        a: 'Stay chef is a full day of staff at <strong>IDR 2,700,000++ per day</strong> (IDR 3,267,000 all-in) for chef + assistant, about 10 guests. Three meals — each breakfast, lunch or dinner as you choose. Weekly −10%, monthly −20% on that full-day rate only. One lunch, dinner or party is catering (food included). Event catering dinners typically from IDR 700K/person ++; fine dining tasting menus are quoted per person with ingredients included. <a href="/private-chef-bali">Private chef prices →</a> · <a href="/pricing">full price tables →</a>',
       },
       {
         q: 'What does "++" mean on myCHEF prices?',
@@ -66,7 +66,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'How much does a private chef cost per day, per month or per hour?',
-        a: '<strong>Per day:</strong> IDR 1M++ / 1.8M++ / 2.7M++ for 1 / 2 / 3 meals (chef + assistant; groceries at cost). <strong>Per month:</strong> same day rates with −20% from 28+ days, or a live-in proposal. <strong>Per hour:</strong> we do not sell a bare chef hourly rate — day rates and per-person event menus keep shopping, cooking and cleanup in one package. <a href="/private-chef-bali">Day rates →</a> · <a href="/pricing">All pricing →</a>',
+        a: '<strong>Per day:</strong> stay chef is IDR 2,700,000++ (IDR 3,267,000 all-in) for a full day of staff — chef + assistant, three flexible meals, groceries at cost. <strong>Per month:</strong> same full-day rate with −20% from 28+ days, or a live-in proposal. <strong>Per hour:</strong> we do not sell a bare chef hourly rate. One meal is catering. <a href="/private-chef-bali">Day rates →</a> · <a href="/pricing">All pricing →</a>',
       },
       {
         q: 'Is a private chef worth it in Bali?',
@@ -198,7 +198,7 @@ const FAQ_CATEGORIES: FAQCategory[] = [
       },
       {
         q: 'Do you offer weekly or monthly private chef service?',
-        a: 'Yes — from IDR 1,000,000++/day with 10% off at 7+ days and 20% off at 28+ days. Chef + assistant; groceries at cost. Weekly stays include Chef Rotation. <a href="/private-chef-bali">Daily private chef →</a> · <a href="/staffing/live-in-chef">Live-in chef →</a>',
+        a: 'Yes — from IDR 2,700,000++/day for a full day of staff, with 10% off at 7+ days and 20% off at 28+ days on that full-day rate only. Chef + assistant; three flexible meals; groceries at cost. One meal is catering. Weekly stays include Chef Rotation. <a href="/private-chef-bali">Daily private chef →</a> · <a href="/staffing/live-in-chef">Live-in chef →</a>',
       },
       {
         q: "What if my chef can't make it?",

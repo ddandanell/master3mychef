@@ -17,7 +17,7 @@ This service is popular among digital nomads on extended stays, expat families m
     id: 'how-it-works',
     type: 'content',
     title: 'How Daily Chef Service Works',
-    body: `**1. Consultation and menu planning** — We begin with a brief consultation to understand your household size, dietary requirements, cuisine preferences, and meal schedule. Do you want breakfast only? All three meals? Meal prep on set days? We design the service around your life, not a fixed package.
+    body: `**1. Consultation and menu planning** — We begin with a brief consultation to understand your household size, dietary requirements, cuisine preferences, and meal schedule. Stay chef is a full day of staff with three flexible meals. One lunch, dinner or party is catering. We design the service around your life, not a one-meal stay SKU.
 
 **2. Chef matching** — We match you with a chef whose experience and cooking style fits your needs. For families: a chef comfortable with children's meals and diverse menus. For health-conscious clients: a chef skilled in organic, plant-based, and therapeutic diets. For adventurous eaters: a chef who can move confidently between Indonesian, Western, and Asian cuisines.
 
@@ -31,19 +31,15 @@ This service is popular among digital nomads on extended stays, expat families m
     id: 'pricing',
     type: 'content',
     title: 'Daily Chef Service Rates in Bali',
-    body: `Every daily chef booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Our published rates:
+    body: `Every daily chef booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Stay chef starts at a full day of staff — you cannot buy a single meal of private chef.
 
-**One Meal a Day**
-Cook and serve one meal: IDR 1,000,000++ per day
-Weekly rate (10% off): IDR 900,000++ per day · Monthly rate (20% off): IDR 800,000++ per day
-
-**Two Meals a Day**
-Cook and serve two meals: IDR 1,800,000++ per day
-Weekly rate (10% off): IDR 1,620,000++ per day · Monthly rate (20% off): IDR 1,440,000++ per day
-
-**Three Meals a Day**
-Cook and serve breakfast, lunch and dinner: IDR 2,700,000++ per day
+**Full-day stay chef (three flexible meals)**
+Cook and serve three meals: IDR 2,700,000++ per day
 Weekly rate (10% off): IDR 2,430,000++ per day · Monthly rate (20% off): IDR 2,160,000++ per day
+
+Those three meals are credits, not locked to breakfast + lunch + dinner. Use each as breakfast, lunch or dinner however you want — including three breakfasts.
+
+One lunch, dinner or party is catering (food included). We inspect the villa and kitchen first so the kitchen meets our standard; we arrive with the team, not a full catering kit — that setup is not done for one meal.
 
 Our chefs are specialists across Japanese, Western, Indonesian and Balinese, Italian, French, Mediterranean, Chinese, international and healthy cuisine, with more available on request. Most come from head or senior chef roles in five-star hotels and high-end restaurants, speak excellent English, and are assigned to match your preferred cuisine.
 
@@ -61,7 +57,7 @@ Prices are subject to a 10% service charge and 11% tax. A ${siteFacts.depositPer
 
 **Villa owners and property managers** — For villas with regular guest turnovers, a daily chef service creates a premium offering that justifies higher rental rates. Guests staying 1–4 weeks often book chef service as part of the villa package.
 
-**Retirees and long-stay travelers** — Many retirees in Bali prefer eating at home over restaurants but don't want the effort of daily cooking. A one-meal-a-day chef booking at IDR 1,000,000++ per day — less at the weekly and monthly rates — is often cheaper than eating out as a household, with better quality and zero effort.
+**Retirees and long-stay travelers** — Many retirees in Bali prefer eating at home over restaurants but don't want the effort of daily cooking. A full-day stay chef at IDR 2,700,000++ per day — less at the weekly and monthly rates — with three meals placed as you like is often cheaper than eating out as a household, with better quality and zero effort.
 
 **Wellness and health-focused residents** — Clients following strict dietary protocols — anti-inflammatory, ketogenic, Ayurvedic, low-FODMAP, or clinical elimination diets — need a chef who can execute specific recipes consistently. We match these clients with specialist chefs.`,
   },
@@ -132,7 +128,7 @@ export default function DailyChefServiceBaliPage() {
       title="Daily Chef Service Bali — Part-Time Cook Hire for Villa Stays & Expat Life"
       seoTitle="Daily Chef Service Bali — Regular In-Villa Cooking | myCHEF"
       description="Hire a daily chef in Bali for consistent home-cooked meals. Part-time and full-day options for villa stays, expat families, and digital nomads."
-      seoDescription="Daily chef service in Bali for expats, long-stay villa guests and families. Half-day, full-day and complete full-day rates with weekly and monthly discounts. Market sourcing included. From IDR 1,000,000++/day."
+      seoDescription="Daily chef service in Bali for expats, long-stay villa guests and families. Full-day staff minimum with weekly and monthly discounts. Market sourcing included. From IDR 2,700,000++/day."
       h1="Daily Chef Service Bali — Part-Time In-Villa Chef for Extended Stays & Expat Life"
       subtitle="Regular home cooking for villa renters, expat families, and digital nomads — without the complexity of full-time staff."
       heroImage="/images/blog/daily-chef-service-bali.jpg"
@@ -151,7 +147,7 @@ export default function DailyChefServiceBaliPage() {
         'in villa cook bali',
         'expat chef bali',
       ]}
-      highlights={['Chef + Assistant Included', 'Market Sourcing Included', 'Chef Rotation on 7+ Day Bookings', 'From IDR 1,000,000++/day']}
+      highlights={['Chef + Assistant Included', 'Market Sourcing Included', 'Chef Rotation on 7+ Day Bookings', 'From IDR 2,700,000++/day']}
       sections={sections}
       faqs={faqs}
       relatedPages={relatedPages}

@@ -876,7 +876,7 @@ const FAQS = [
   { question: 'What is not included in the estimate?', answer: 'Alcohol (except wine pairing), specialty equipment rentals, venue decorations, and transport outside standard service areas are not included.' },
   { question: 'Can I adjust the menu after getting a quote?', answer: 'Yes. Your proposal is not final until you pay the deposit. We can adjust menus, guest counts, and add-ons at any time before booking confirmation.' },
   { question: 'Where are full prices listed?', answer: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
-  { question: 'Daily chef rates?', answer: 'IDR 1M++ / 1.8M++ / 2.7M++ for 1/2/3 meals per day.' },
+  { question: 'Daily chef rates?', answer: 'Stay chef is a full day of staff: IDR 2,700,000++ (IDR 3,267,000 all-in). Three flexible meals. One meal is catering.' },
   { question: 'What is included vs groceries?', answer: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
   { question: 'Weekly and monthly discounts?', answer: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
   { question: 'Deposit?', answer: 'Usually 50%.' },

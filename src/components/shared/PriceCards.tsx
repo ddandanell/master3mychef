@@ -10,8 +10,8 @@ export interface PriceCardItem {
 const DEFAULT_CARDS: PriceCardItem[] = [
   {
     title: 'Daily villa chef',
-    price: 'IDR 1,000,000++',
-    detail: '1 meal / day · chef + assistant · groceries at cost',
+    price: 'IDR 2,700,000++',
+    detail: 'Full-day staff · three flexible meals · chef + assistant · groceries at cost',
     href: '/private-chef-bali',
   },
   {

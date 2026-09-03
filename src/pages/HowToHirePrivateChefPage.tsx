@@ -7,13 +7,13 @@ const WA_LINK = 'https://wa.me/6289674072020?text=' + encodeURIComponent('Hi myC
 
 const FAQS = [
   { question: 'Private chef vs personal chef — what is the difference?', answer: 'In Bali villa language they are often used interchangeably, but <strong>private chef</strong> usually means a booked professional service (day rate or event menu, HACCP, cleanup, backup cover). <strong>Personal chef</strong> often implies a longer household relationship (weekly meal prep, live-in, or retainer). myCHEF covers both: holiday day rates on <a href="/private-chef-bali">private chef Bali</a> and longer placements via <a href="/staffing/live-in-chef">live-in chef</a> / <a href="/staffing/household-staff">household chef</a>.' },
-  { question: 'How much is a private chef in Bali per day?', answer: 'Daily rates depend on meals per day, with weekly and monthly discounts on longer stays. See <a href="/private-chef-bali">private chef Bali</a> and <a href="/pricing">pricing</a>. <a href="/private-chef-bali">Private chef Bali</a>.' },
+  { question: 'How much is a private chef in Bali per day?', answer: 'Stay chef is a full day of staff at IDR 2,700,000++ (IDR 3,267,000 all-in), with weekly and monthly discounts on longer stays. One meal is catering. See <a href="/private-chef-bali">private chef Bali</a> and <a href="/pricing">pricing</a>.' },
   { question: 'Are groceries included?', answer: 'Shopping work is included; food is billed at cost with receipts on daily hire.' },
   { question: 'What is Chef Rotation?', answer: 'On 7+ day bookings you can request different specialist chefs by day at no extra day-rate charge.' },
   { question: 'Can the chef cook in our villa kitchen?', answer: 'Yes — standard villa kitchens work; we bring specialised tools when needed.' },
   { question: 'Is this cheaper than restaurants for groups?', answer: 'For six+ people on two meals/day, the day rate split often beats mid-range restaurant totals plus taxis.' },
   { question: 'Can I request a specific chef?', answer: 'Yes for multi-day stays when available. Meet the team: <a href="/chefs">chefs</a>.' },
-  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is meal-count day rates. <a href="/fine-dining">Fine dining</a>.' },
+  { question: 'Fine dining vs daily chef?', answer: 'Fine dining is multi-course event pricing; daily chef is a full-day staff stay rate. One meal is catering. <a href="/fine-dining">Fine dining</a>.' },
   { question: 'Do you cover my area?', answer: 'Island-wide. <a href="/locations">Locations</a>.' },
   { question: 'Kids menus with daily chef?', answer: 'Yes — <a href="/kids-menus">kids menus</a> and parallel adult meals.' },
   { question: 'Live-in vs daily chef?', answer: 'Live-in is long-term placement (<a href="/staffing/live-in-chef">live-in chef</a>); daily is holiday day-rate hire.' },

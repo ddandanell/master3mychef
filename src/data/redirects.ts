@@ -54,6 +54,19 @@ export const REDIRECTS: Redirect[] = [
     statusCode: 301,
   },
 
+  {
+    from: '/price-guide',
+    to: '/pricing',
+    reason: '2026-09 P0: Price Guide product killed; soft-404 → pricing hub (not private-chef-bali).',
+    statusCode: 301,
+  },
+  {
+    from: '/price-guide/',
+    to: '/pricing',
+    reason: 'Trailing-slash twin of /price-guide → /pricing.',
+    statusCode: 301,
+  },
+
   // --- Renames ---
   { from: '/families', to: '/dining-styles', reason: 'Page renamed 2026-07: menu families hub → /dining-styles (same content, new canonical URL)' },
 

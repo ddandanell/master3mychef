@@ -106,7 +106,7 @@ const FAQS = [
   },
   {
     q: 'How much do services cost?',
-    a: 'Private chef from IDR 1,000,000++/day; many dinners from ~IDR 700K–1.25M+/person depending on format. Full tables: <a href="/pricing">pricing</a>.',
+    a: 'Stay chef from IDR 2,700,000++/day (IDR 3,267,000 all-in, full day of staff); many dinners from ~IDR 700K–1.25M+/person depending on format. One meal is catering. Full tables: <a href="/pricing">pricing</a>.',
   },
   {
     q: 'Which service is right for a family villa week?',

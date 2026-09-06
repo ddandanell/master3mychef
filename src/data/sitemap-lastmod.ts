@@ -175,3 +175,4 @@ export const SITEMAP_LASTMOD: Record<string, string> = {
   "/experiences/whiskey-cigar-experience": "2026-08-07",
   "/experiences/romantic-proposal-dinner": "2026-08-06",
 }
+// deploy poke 2026-09-07 P0 SEO (re-trigger after Actions startup_failure)

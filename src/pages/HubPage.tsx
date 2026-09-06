@@ -24,6 +24,7 @@ import SeoHead, {
   postalAddressSchema,
 } from '@/components/SeoHead'
 import { getPageMeta } from '@/data/page-meta'
+import { getLocationCanonical } from '@/data/siteArchitecture'
 import {
   siteFacts,
   STAY_CHEF_PLAN,
@@ -157,6 +158,75 @@ const COMPARISON_ROWS = [
   { feature: 'Waiters, bar, extra staff', freelance: 'Rarely', marketplace: 'No', mychef: 'Quoted when you need them' },
   { feature: 'Itemised quote before you pay', freelance: 'Sometimes', marketplace: 'Platform estimate', mychef: 'Always — chef all-in, catering ++ and all-in' },
   { feature: 'Kitchen left spotless', freelance: 'Hopefully', marketplace: '—', mychef: 'Guaranteed' },
+]
+
+const JOURNAL_LINKS = [
+  {
+    title: 'How to Host a Villa Dinner Party in Bali (Complete Guide)',
+    path: '/private-dining-indonesia',
+  },
+  {
+    title: 'Bali Wedding Catering Cost: What to Budget in 2026',
+    path: '/bali-wedding-catering-packages',
+  },
+  {
+    title: 'The Bali Floating Breakfast: History, Recipes & How to Order One',
+    path: '/catering/floating-breakfast',
+  },
+  {
+    title: 'Holiday Chef Bali: Christmas, New Year & Festive Season Dining',
+    path: '/blog/holiday-chef-bali',
+  },
+  {
+    title: 'Wedding Private Chef in Bali: Planning & Logistics Guide',
+    path: '/blog/wedding-private-chef-bali-planning-guide',
+  },
+  {
+    title: 'Corporate Events & Team Dining in Bali: Private Chef',
+    path: '/blog/corporate-events-catering-bali-team-dining',
+  },
+  {
+    title: 'Fine Dining Trends in Bali 2026: Modern Innovations',
+    path: '/blog/fine-dining-trends-bali-2026-innovations',
+  },
+  {
+    title: 'Chef Qualifications & Credentials: Hiring Guide for Bali',
+    path: '/blog/chef-qualifications-credentials-bali-hiring',
+  },
+]
+
+const LOCATION_AREAS = [
+  { name: 'Seminyak', slug: 'seminyak', image: '/generated/mychef-location-bali-city-seminyak.webp' },
+  { name: 'Canggu', slug: 'canggu', image: '/generated/mychef-location-bali-city-canggu.webp' },
+  { name: 'Ubud', slug: 'ubud', image: '/generated/mychef-location-bali-city-ubud.webp' },
+  { name: 'Uluwatu', slug: 'uluwatu', image: '/generated/mychef-location-bali-city-uluwatu.webp' },
+  { name: 'Sanur', slug: 'sanur', image: '/generated/mychef-location-bali-city-sanur.webp' },
+  { name: 'Nusa Dua', slug: 'nusa-dua', image: '/generated/mychef-location-bali-city-nusa-dua.webp' },
+  { name: 'Jimbaran', slug: 'jimbaran', image: '/generated/mychef-location-bali-city-jimbaran.webp' },
+  { name: 'Berawa', slug: 'berawa', image: '/generated/mychef-location-bali-city-berawa.webp' },
+  { name: 'Pererenan', slug: 'pererenan', image: '/generated/mychef-location-bali-city-pererenan.webp' },
+  { name: 'Bukit', slug: 'bukit', image: '/generated/mychef-location-bali-city-bukit.webp' },
+] as const
+
+const GUIDE_CARDS = [
+  {
+    path: '/blog/how-to-hire-private-chef-bali-complete-guide',
+    emoji: '👨‍🍳',
+    title: 'How to Hire a Private Chef in Bali',
+    desc: 'Step-by-step: find, vet and book a stay chef for your villa — full-day staff, groceries at cost.',
+  },
+  {
+    path: '/blog/wedding-private-chef-bali-planning-guide',
+    emoji: '💍',
+    title: 'Planning a Wedding with a Private Chef',
+    desc: 'Coordinate celebration menus, timeline and service — stacked on catering, not a separate hero.',
+  },
+  {
+    path: '/blog/private-chef-cost-bali',
+    emoji: '📋',
+    title: 'Private Chef Cost Guide for Bali',
+    desc: 'What a full-day stay chef costs vs one-meal catering — then see published tables on pricing.',
+  },
 ]
 
 const FAQS = [
@@ -802,6 +872,11 @@ export default function HubPage() {
               </div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Link to="/chefs" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
+              Meet the team <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -1052,6 +1127,138 @@ export default function HubPage() {
           <div className="text-center">
             <Link to="/why-mychef" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
               Why villas across Bali choose myCHEF <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* WHERE WE SERVE — soft links to existing /locations/{area} only */}
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-14 md:mb-20">
+            <p className="u-label mb-4">Where We Serve</p>
+            <h2 className="u-heading text-3xl md:text-5xl mb-4">Where We Serve</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              Stay chef and one-meal catering across Bali&apos;s main villa areas — link through to the location you need.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            {LOCATION_AREAS.map((city) => (
+              <Link
+                key={city.slug}
+                to={getLocationCanonical(city.slug)}
+                className="group relative rounded-2xl overflow-hidden aspect-[4/3] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              >
+                <img
+                  src={city.image}
+                  alt={`Villa chef and catering in ${city.name}, Bali by myCHEF`}
+                  width={800}
+                  height={600}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 flex items-end p-4">
+                  <div>
+                    <p className="text-white font-medium text-sm">{city.name}</p>
+                    <p className="text-white/[60%] text-xs">Stay &amp; catering</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <p className="text-center mt-10 text-sm" style={{ color: 'var(--u-text-muted)' }}>
+            Areas we cover:{' '}
+            {[
+              { name: 'Seminyak', slug: 'seminyak' },
+              { name: 'Canggu', slug: 'canggu' },
+              { name: 'Ubud', slug: 'ubud' },
+              { name: 'Uluwatu', slug: 'uluwatu' },
+              { name: 'Sanur', slug: 'sanur' },
+              { name: 'Nusa Dua', slug: 'nusa-dua' },
+              { name: 'Jimbaran', slug: 'jimbaran' },
+              { name: 'Berawa', slug: 'berawa' },
+              { name: 'Pererenan', slug: 'pererenan' },
+              { name: 'Bukit Peninsula', slug: 'bukit' },
+            ].map((city, idx, arr) => (
+              <span key={city.slug}>
+                <Link to={getLocationCanonical(city.slug)} className="hover:text-[#C5A028] hover:underline focus:outline-none focus:ring-2 focus:ring-[#C5A028] rounded">
+                  {city.name}
+                </Link>
+                {idx < arr.length - 1 ? ' · ' : ''}
+              </span>
+            ))}
+          </p>
+          <div className="text-center mt-6">
+            <Link to="/locations" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
+              View All Locations <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* JOURNAL — internal links to existing posts */}
+      <section className="px-5 py-12 sm:px-6 md:py-16" style={{ background: 'var(--u-bg-alt)' }}>
+        <div className="max-w-[1100px] mx-auto rounded-[28px] border border-black/5 bg-white p-8 md:p-10">
+          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-[560px]">
+              <p className="u-label mb-3">Journal</p>
+              <h2 className="u-heading text-3xl md:text-4xl mb-4">Explore Our Journal</h2>
+              <p style={{ color: 'var(--u-text-muted)' }}>
+                Planning a full-day stay chef, one-meal catering, or a wedding weekend? Practical hosting guides from the myCHEF journal.
+              </p>
+            </div>
+            <Link to="/journal" className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase transition-all hover:gap-4 focus:outline-none focus:ring-2 focus:ring-[#C5A028]" style={{ color: 'var(--u-accent)' }}>
+              Visit the Journal <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {JOURNAL_LINKS.map((article) => (
+              <Link
+                key={article.path}
+                to={article.path}
+                className="rounded-2xl border border-black/5 bg-[#FAFAF8] px-5 py-5 text-sm font-medium transition-colors hover:border-[#C5A028] hover:text-[#C5A028] focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+              >
+                {article.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BLOG & GUIDES — existing posts only */}
+      <section className="px-5 py-12 sm:px-6 md:py-24 md:px-6" style={{ background: 'var(--u-bg)' }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="u-label mb-4">Blog &amp; Guides</p>
+            <h2 className="u-heading text-4xl md:text-5xl mb-4">Expert Guides for Your Bali Event</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--u-text-muted)' }}>
+              Hire a stay chef, plan wedding catering, or read the cost guide — then book private chef Bali or one-meal catering.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {GUIDE_CARDS.map((card) => (
+              <Link
+                key={card.path}
+                to={card.path}
+                className="group rounded-2xl border overflow-hidden hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#C5A028]"
+                style={{ borderColor: 'var(--u-border)', background: 'var(--u-surface)' }}
+              >
+                <div className="h-48 bg-gradient-to-br from-[#C5A028]/20 to-[#C5A028]/5 flex items-center justify-center">
+                  <span className="text-[#C5A028] font-serif text-3xl">{card.emoji}</span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-[#C5A028] transition-colors" style={{ color: 'var(--u-text)' }}>{card.title}</h3>
+                  <p className="text-sm mb-4" style={{ color: 'var(--u-text-muted)' }}>{card.desc}</p>
+                  <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--u-accent)' }}>Read More <ArrowRight className="w-3 h-3" /></span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link to="/journal" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-widest uppercase rounded-full transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white" style={{ background: '#C5A028', color: '#1A1A1A' }}>
+              View All Articles <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

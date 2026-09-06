@@ -82,8 +82,8 @@ export const CHEF_FOR_HIRE_INDONESIA_CONTENT = `
   <p>There is no single national price because the formats differ — so here are the real anchors per format:</p>
   <ul>
     <li><strong>Private dinners:</strong> from IDR 700K per person; tasting menus from IDR 950–980K per person</li>
-    <li><strong>Chef days (Bali):</strong> from IDR 1,000,000++ per day for one meal, with one professional chef and one dedicated assistant included; groceries at cost with receipts</li>
-    <li><strong>Weekly chef service:</strong> from IDR 900,000++ per day at the weekly rate (10% off standard); monthly rate from IDR 800,000++ per day (20% off)</li>
+    <li><strong>Chef days (Bali):</strong> stay chef from IDR 2,700,000++ per day (IDR 3,267,000 all-in) for a full day of staff — three flexible meals, chef + assistant; groceries at cost with receipts. One meal is catering.</li>
+    <li><strong>Weekly / monthly stay chef:</strong> IDR 2,430,000++ per day weekly (−10%); IDR 2,160,000++ per day monthly (−20%) on the full-day rate only</li>
     <li><strong>Live-in placement:</strong> tailored quote from our staffing team, based on the household brief</li>
     <li><strong>Service staff:</strong> waiters and sommeliers from IDR 250K per hour; bartenders from IDR 500,000++ per guest</li>
   </ul>

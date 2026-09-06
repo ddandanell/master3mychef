@@ -70,7 +70,7 @@ const FAQS = [
   },
   {
     question: 'Are your prices published or do I have to enquire first?',
-    answer: 'Day rates and many menu starts are published — private chef from IDR 1,000,000++/day and dining-style collections with open starting prices. Full tables on <a href="/pricing">pricing</a>.',
+    answer: 'Day rates and many menu starts are published — stay chef from IDR 2,700,000++/day (full day of staff; IDR 3,267,000 all-in) and dining-style collections with open starting prices. One meal is catering. Full tables on <a href="/pricing">pricing</a>.',
   },
   {
     question: 'What does "++" mean on myCHEF prices?',

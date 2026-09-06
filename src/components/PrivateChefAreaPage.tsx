@@ -454,7 +454,7 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       // shares its @id, so any divergence splits the entity in Google's graph.
       telephone: siteFacts.phoneDisplay,
       address: postalAddressSchema,
-      priceRange: 'IDR 1,000,000++ – IDR 2,700,000++',
+      priceRange: 'IDR 2,700,000++',
       image: `${SITE}/og-image.webp`,
       areaServed: { '@type': 'Place', name: `${area.name}, Bali, Indonesia` },
       geo: {
@@ -476,12 +476,12 @@ export default function PrivateChefAreaPage({ slug }: { slug: string }) {
       offers: {
         '@type': 'Offer',
         priceCurrency: 'IDR',
-        price: '2500000',
+        price: '2700000',
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           priceCurrency: 'IDR',
-          price: '2500000',
-          unitText: 'per day for one meal, from',
+          price: '2700000',
+          unitText: 'per day, full day of staff, from',
         },
         availability: 'https://schema.org/InStock',
         url: canonical,

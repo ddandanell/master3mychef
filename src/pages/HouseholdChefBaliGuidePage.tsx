@@ -36,9 +36,7 @@ const SECTIONS: PageSection[] = [
     title: 'How Much Does a Household Chef Cost in Bali?',
     body: `<p>Every household chef booking includes one professional chef and one dedicated assistant. Groceries are charged separately at cost, supported by receipts. Our published rates:</p>
     <ul style="list-style:disc;padding-left:1.5rem;margin-top:0.75rem;display:flex;flex-direction:column;gap:0.5rem;">
-      <li><strong>Half day:</strong> Cook and serve one meal, plus one additional meal prepared for later (no service for the prepared meal) — IDR 1,000,000++ per day standard · IDR 900,000++ per day at the weekly rate (10% off) · IDR 800,000++ per day at the monthly rate (20% off).</li>
-      <li><strong>Full day:</strong> Cook and serve two meals, plus one additional meal prepared for later — IDR 1,800,000++ per day standard · IDR 1,620,000++ per day weekly · IDR 1,440,000++ per day monthly.</li>
-      <li><strong>Complete full day:</strong> Cook and serve breakfast, lunch and dinner — IDR 2,700,000++ per day standard · IDR 2,430,000++ per day weekly · IDR 2,160,000++ per day monthly.</li>
+      <li><strong>Full-day stay chef (minimum):</strong> Three flexible meals (each breakfast, lunch or dinner as you choose) — IDR 2,700,000++ per day standard · IDR 2,430,000++ weekly · IDR 2,160,000++ monthly. Chef + assistant. One meal is catering.</li>
     </ul>
     <p style="margin-top:0.75rem;">A 3 days/week or 5 days/week schedule is billed at the monthly daily rate for the plan you choose. Our chefs are specialists across Japanese, Western, Indonesian and Balinese, Italian, French, Mediterranean, Chinese, international and healthy cuisine, with more available on request — most come from head or senior chef roles in five-star hotels and high-end restaurants and speak excellent English, and your chef is assigned to match your preferred cuisine. Prices are subject to a 10% service charge and 11% tax. For a full comparison see our <a href="/blog/private-chef-cost-bali" class="text-[#7E6410] hover:underline font-medium">Bali private chef cost guide</a>.</p>`,
   },

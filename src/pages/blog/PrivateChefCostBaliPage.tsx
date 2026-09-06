@@ -76,7 +76,7 @@ const FAQS = [
   { q: 'Payment methods?', a: 'Bank transfer and major cards; deposit then balance as quoted.' },
   { q: 'Last-minute private chef?', a: 'Often possible outside peak — WhatsApp availability.' },
   { q: 'Where are full prices listed?', a: 'On <a href="/pricing">pricing</a> and the private chef meal-plan table at <a href="/private-chef-bali">private chef Bali</a>.' },
-  { q: 'Daily chef rates?', a: 'Published day rates depend on how many meals you want cooked.' },
+  { q: 'Daily chef rates?', a: 'Stay chef is a full day of staff: IDR 2,700,000++ (IDR 3,267,000 all-in). Three flexible meals. One meal is catering.' },
   { q: 'What is included vs groceries?', a: 'Daily hire: labor included, groceries at cost. Many event packages include food in the per-person price.' },
   { q: 'Weekly and monthly discounts?', a: '−10% at 7+ days, −20% at 28+ days on daily chef rates.' },
   { q: 'Deposit?', a: 'Usually 50%.' },
@@ -92,7 +92,7 @@ export default function PrivateChefCostBaliPageBlog() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: 'How Much Does a Private Chef in Bali Cost? [2026 Guide]',
-    description: 'Private chef costs in Bali start from IDR 1M/day for a villa chef and assistant pair to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book.',
+    description: 'Stay chef in Bali is a full day of staff from IDR 2.7M++/day (IDR 3,267,000 all-in). One meal is catering. Real 2026 pricing, what is included, and how to book.',
     author: {
       '@type': 'Organization',
       name: 'myCHEF.id',
@@ -106,7 +106,7 @@ export default function PrivateChefCostBaliPageBlog() {
         url: `${SITE}/og-image.webp`,
       },
     },
-    datePublished: '2025-01-15',
+    datePublished: '2026-09-07',
     dateModified: new Date().toISOString().split('T')[0],
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -124,7 +124,7 @@ export default function PrivateChefCostBaliPageBlog() {
     <div className="bg-[#FAFAF8] text-[#1A1A1A]">
       <SeoHead
         title="How Much Does a Private Chef in Bali Cost? [2026 Guide] — myCHEF"
-        description="Private chef costs in Bali start from IDR 1M/day for a villa chef and assistant pair to IDR 20M+ for large events. Get real 2026 pricing, what is included, and how to book."
+        description="Stay chef in Bali is a full day of staff from IDR 2.7M++/day (IDR 3,267,000 all-in). One meal is catering. Real 2026 pricing, what is included, and how to book."
         canonical={CANONICAL}
         ogType="article"
         ogImage="/og-image.webp"

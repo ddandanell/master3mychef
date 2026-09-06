@@ -563,7 +563,7 @@ export const LANDING_PAGES: ContentEntry[] = [
               "name": "How much does healthy meal delivery cost in Bali?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Weekly in-villa chef service starts from IDR 900,000++ per day at the weekly rate (10% off standard). One-off half-day bookings start from IDR 1,000,000++ with groceries billed at cost. Every booking includes one chef and one dedicated assistant."
+                "text": "Weekly stay chef is IDR 2,430,000++ per day (−10% on the full-day IDR 2,700,000++ rate). One lunch, dinner or party is catering (food included), not a stay-chef half-day SKU. Groceries at cost on stay hire. Every booking includes one chef and one dedicated assistant."
               }
             },
             {

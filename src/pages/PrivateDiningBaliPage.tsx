@@ -85,7 +85,7 @@ myCHEF delivers both -- and everything in between.
     title: 'Private Dining Pricing in Bali',
     body: `Cost depends on the type of experience, guest count, menu complexity, and staffing:
 
-**Casual Daily Chef Service** -- Complete full day (breakfast, lunch and dinner cooked and served by one chef with a dedicated assistant) at IDR 2,700,000++/day; half-day and full-day options from IDR 1,000,000++/day. Weekly rate 10% off, monthly rate 20% off. Groceries charged separately at cost, supported by receipts. Prices are subject to a 10% service charge and 11% tax.
+**Casual Daily Chef Service** -- Full-day stay chef (three flexible meals, chef + assistant) at IDR 2,700,000++/day (IDR 3,267,000 all-in). One meal is catering — not a stay-chef SKU. Weekly rate 10% off, monthly rate 20% off. Groceries charged separately at cost, supported by receipts. Prices are subject to a 10% service charge and 11% tax.
 
 **Single Occasion Dinner (2--8 guests)** -- From IDR 700,000/person for a 3-course dinner including chef, ingredients, and light service. Add a sommelier or dedicated service staff for larger or more formal occasions.
 

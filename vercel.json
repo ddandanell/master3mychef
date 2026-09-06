@@ -45,6 +45,16 @@
       "statusCode": 301
     },
     {
+      "source": "/price-guide",
+      "destination": "/pricing",
+      "statusCode": 301
+    },
+    {
+      "source": "/price-guide/",
+      "destination": "/pricing",
+      "statusCode": 301
+    },
+    {
       "source": "/families",
       "destination": "/dining-styles",
       "permanent": true
